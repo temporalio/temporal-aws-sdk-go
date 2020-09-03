@@ -13,6 +13,8 @@ func NewEC2InstanceConnectActivities(client ec2instanceconnectiface.EC2InstanceC
     return &EC2InstanceConnectActivities{client: client}
 }
 
+
 func (a *EC2InstanceConnectActivities) SendSSHPublicKey(input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
     return a.client.SendSSHPublicKey(input)
 }
+

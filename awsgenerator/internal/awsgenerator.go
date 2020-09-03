@@ -11,11 +11,48 @@ import (
 
 var methodSuffixesToSkip = []string{"WithContext", "Request", "Pages"}
 
+type MethodDefinition struct {
+	// Method name
+	Name string
+	// Input package name
+	InputPackage string
+	// Input structure name
+	Input string
+	// Output package name
+	OutputPackage string
+	// Output structure name
+	Output string
+}
 type InterfaceDefinition struct {
 	// Service name
 	Name string
-	// Service method names
-	Methods []string
+	// Service methods
+	Methods []*MethodDefinition
+}
+
+func (i InterfaceDefinition) Imports() []string {
+	packages := make(map[string]bool)
+	for _, method := range i.Methods {
+		packages[method.InputPackage] = true
+		packages[method.OutputPackage] = true
+	}
+	delete(packages, "")
+	result := make([]string, 0, len(packages))
+	for p := range packages {
+		result = append(result, p)
+	}
+	return result
+}
+
+func (i InterfaceDefinition) String() string {
+	result := i.Name + ": "
+	for i, method := range i.Methods {
+		if i > 0 {
+			result += ", "
+		}
+		result += fmt.Sprintf("%v", method.Name)
+	}
+	return result
 }
 
 type AWSSDKParser struct {
@@ -71,31 +108,37 @@ func (p *AWSSDKParser) parse(fileName string) (definition InterfaceDefinition, e
 	if err != nil {
 		return InterfaceDefinition{}, err
 	}
-	v := NewAWSInterfaceVisitor()
+	v := NewAWSInterfaceVisitor(fileSet)
 	ast.Walk(v, file)
 	return v.definition, nil
 }
 
 type AWSInterfaceVisitor struct {
-	definition InterfaceDefinition
+	fileSet       *token.FileSet
+	definition    InterfaceDefinition
+	currentMethod *MethodDefinition
 }
 
-func NewAWSInterfaceVisitor() *AWSInterfaceVisitor {
-	return &AWSInterfaceVisitor{}
+func NewAWSInterfaceVisitor(fileSet *token.FileSet) *AWSInterfaceVisitor {
+	return &AWSInterfaceVisitor{fileSet: fileSet}
 }
 
 func (g *AWSInterfaceVisitor) Visit(node ast.Node) ast.Visitor {
+	if g == nil {
+		return nil
+	}
 	switch n := node.(type) {
 	case *ast.TypeSpec:
 		g.visitTypeSpec(n)
 		return g
 
 	case *ast.FuncType:
-		return nil
+		g.visitFuncType(n)
+		return g
 
 	case *ast.Field:
-		g.visitField(n)
-		return nil
+		return g.visitField(n)
+
 	default:
 		return g
 	}
@@ -110,18 +153,34 @@ func (g *AWSInterfaceVisitor) visitTypeSpec(n *ast.TypeSpec) {
 	g.definition.Name = name[:len(name)-3]
 }
 
-func (g *AWSInterfaceVisitor) visitField(n *ast.Field) {
+func (g *AWSInterfaceVisitor) visitField(n *ast.Field) *AWSInterfaceVisitor {
 	if len(n.Names) > 0 {
 		name := n.Names[0].Name
 		for _, postfix := range methodSuffixesToSkip {
 			if strings.HasSuffix(name, postfix) {
-				return
+				return nil
 			}
 		}
-		g.definition.Methods = append(g.definition.Methods, name)
+		g.currentMethod = &MethodDefinition{Name: name}
+		g.definition.Methods = append(g.definition.Methods, g.currentMethod)
+		//ast.Print(g.fileSet, n)
 	}
+	return g
 }
 
 func (g *AWSInterfaceVisitor) String() string {
 	return fmt.Sprintf("%v", g.definition)
+}
+
+func (g *AWSInterfaceVisitor) visitFuncType(n *ast.FuncType) {
+	//ast.Print(g.fileSet, n.Params.List[0].Type)
+	inputExpr := n.Params.List[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
+	g.currentMethod.InputPackage = inputExpr.X.(*ast.Ident).Name
+	g.currentMethod.Input = inputExpr.Sel.Name
+	results := n.Results.List
+	if len(results) == 2 {
+		resultExpr := results[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
+		g.currentMethod.OutputPackage = resultExpr.X.(*ast.Ident).Name
+		g.currentMethod.Output = resultExpr.Sel.Name
+	}
 }

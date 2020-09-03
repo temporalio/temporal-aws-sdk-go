@@ -13,14 +13,20 @@ func NewCloudSearchDomainActivities(client cloudsearchdomainiface.CloudSearchDom
     return &CloudSearchDomainActivities{client: client}
 }
 
+
 func (a *CloudSearchDomainActivities) Search(input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error) {
     return a.client.Search(input)
 }
+
+
 
 func (a *CloudSearchDomainActivities) Suggest(input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
     return a.client.Suggest(input)
 }
 
+
+
 func (a *CloudSearchDomainActivities) UploadDocuments(input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
     return a.client.UploadDocuments(input)
 }
+

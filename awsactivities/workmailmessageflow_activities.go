@@ -13,6 +13,8 @@ func NewWorkMailMessageFlowActivities(client workmailmessageflowiface.WorkMailMe
     return &WorkMailMessageFlowActivities{client: client}
 }
 
+
 func (a *WorkMailMessageFlowActivities) GetRawMessageContent(input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
     return a.client.GetRawMessageContent(input)
 }
+

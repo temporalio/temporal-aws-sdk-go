@@ -13,18 +13,26 @@ func NewMarketplaceMeteringActivities(client marketplacemeteringiface.Marketplac
     return &MarketplaceMeteringActivities{client: client}
 }
 
+
 func (a *MarketplaceMeteringActivities) BatchMeterUsage(input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error) {
     return a.client.BatchMeterUsage(input)
 }
+
+
 
 func (a *MarketplaceMeteringActivities) MeterUsage(input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error) {
     return a.client.MeterUsage(input)
 }
 
+
+
 func (a *MarketplaceMeteringActivities) RegisterUsage(input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error) {
     return a.client.RegisterUsage(input)
 }
 
+
+
 func (a *MarketplaceMeteringActivities) ResolveCustomer(input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error) {
     return a.client.ResolveCustomer(input)
 }
+

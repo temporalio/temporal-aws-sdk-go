@@ -3,7 +3,9 @@
 package awsactivities
 
 import (
-	"github.com/aws/aws-sdk-go/service/{{ $lowerName }}"
+{{- range .Imports }}
+	"github.com/aws/aws-sdk-go/service/{{ . }}"
+{{- end }}
 	"github.com/aws/aws-sdk-go/service/{{ $lowerName }}/{{ $lowerName }}iface"
 )
 
@@ -15,10 +17,16 @@ func New{{ $name }}Activities(client {{ $lowerName }}iface.{{ $name }}API) *{{ $
     return &{{ $name }}Activities{client: client}
 }
 
-{{- range .Methods }}
+{{- range $i, $method := .Methods }}
 
-func (a *{{ $name }}Activities) {{ . }}(input *{{ $lowerName }}.{{.}}Input) (*{{ $lowerName }}.{{.}}Output, error) {
-    return a.client.{{ . }}(input)
+{{ if HasPrefix $method.Name "Wait" }}
+func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) error {
+    return a.client.{{ $method.Name }}(input)
 }
+{{ else }}
+func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
+    return a.client.{{ $method.Name }}(input)
+}
+{{ end }}
 
 {{- end }}

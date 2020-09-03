@@ -13,22 +13,32 @@ func NewLexRuntimeServiceActivities(client lexruntimeserviceiface.LexRuntimeServ
     return &LexRuntimeServiceActivities{client: client}
 }
 
+
 func (a *LexRuntimeServiceActivities) DeleteSession(input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error) {
     return a.client.DeleteSession(input)
 }
+
+
 
 func (a *LexRuntimeServiceActivities) GetSession(input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error) {
     return a.client.GetSession(input)
 }
 
+
+
 func (a *LexRuntimeServiceActivities) PostContent(input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error) {
     return a.client.PostContent(input)
 }
+
+
 
 func (a *LexRuntimeServiceActivities) PostText(input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error) {
     return a.client.PostText(input)
 }
 
+
+
 func (a *LexRuntimeServiceActivities) PutSession(input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error) {
     return a.client.PutSession(input)
 }
+

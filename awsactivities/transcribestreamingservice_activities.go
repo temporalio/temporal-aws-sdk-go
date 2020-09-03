@@ -13,6 +13,8 @@ func NewTranscribeStreamingServiceActivities(client transcribestreamingserviceif
     return &TranscribeStreamingServiceActivities{client: client}
 }
 
+
 func (a *TranscribeStreamingServiceActivities) StartStreamTranscription(input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
     return a.client.StartStreamTranscription(input)
 }
+

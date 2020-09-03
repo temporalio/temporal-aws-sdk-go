@@ -13,10 +13,14 @@ func NewMarketplaceCommerceAnalyticsActivities(client marketplacecommerceanalyti
     return &MarketplaceCommerceAnalyticsActivities{client: client}
 }
 
+
 func (a *MarketplaceCommerceAnalyticsActivities) GenerateDataSet(input *marketplacecommerceanalytics.GenerateDataSetInput) (*marketplacecommerceanalytics.GenerateDataSetOutput, error) {
     return a.client.GenerateDataSet(input)
 }
 
+
+
 func (a *MarketplaceCommerceAnalyticsActivities) StartSupportDataExport(input *marketplacecommerceanalytics.StartSupportDataExportInput) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
     return a.client.StartSupportDataExport(input)
 }
+

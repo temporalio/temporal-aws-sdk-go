@@ -13,6 +13,8 @@ func NewQLDBSessionActivities(client qldbsessioniface.QLDBSessionAPI) *QLDBSessi
     return &QLDBSessionActivities{client: client}
 }
 
+
 func (a *QLDBSessionActivities) SendCommand(input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
     return a.client.SendCommand(input)
 }
+

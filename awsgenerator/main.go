@@ -42,7 +42,7 @@ func main() {
 	}
 	app.Action = func(c *cli.Context) error {
 		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
-		//return parser.ParseAwsService("pi", func(service string, definition gen.InterfaceDefinition) error {
+		//return parser.ParseAwsService("cloudformation", func(service string, definition internal.InterfaceDefinition) error {
 		//	fmt.Println(definition)
 		//	return generateCode(templateDir, outputDir, definition)
 		//})
@@ -58,8 +58,9 @@ func main() {
 
 func generateCode(templateDir string, outputDir string, definition internal.InterfaceDefinition) error {
 	funcMap := template.FuncMap{
-		"ToUpper": strings.ToUpper,
-		"ToLower": strings.ToLower,
+		"ToUpper":   strings.ToUpper,
+		"ToLower":   strings.ToLower,
+		"HasPrefix": strings.HasPrefix,
 	}
 
 	//templates, err := template.ParseGlob(templateDir + "/*")

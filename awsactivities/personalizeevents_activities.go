@@ -13,6 +13,8 @@ func NewPersonalizeEventsActivities(client personalizeeventsiface.PersonalizeEve
     return &PersonalizeEventsActivities{client: client}
 }
 
+
 func (a *PersonalizeEventsActivities) PutEvents(input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
     return a.client.PutEvents(input)
 }
+
