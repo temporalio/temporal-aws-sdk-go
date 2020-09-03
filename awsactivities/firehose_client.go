@@ -1,0 +1,244 @@
+package awsactivities
+
+import (
+	"github.com/aws/aws-sdk-go/service/firehose"
+	"go.temporal.io/sdk/workflow"
+)
+
+type FirehoseClient interface {
+    CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error)
+    CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamResult
+
+    DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error)
+    DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *FirehoseDeleteDeliveryStreamResult
+
+    DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error)
+    DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *FirehoseDescribeDeliveryStreamResult
+
+    ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error)
+    ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *FirehoseListDeliveryStreamsResult
+
+    ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error)
+    ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *FirehoseListTagsForDeliveryStreamResult
+
+    PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error)
+    PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *FirehosePutRecordResult
+
+    PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error)
+    PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *FirehosePutRecordBatchResult
+
+    StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error)
+    StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *FirehoseStartDeliveryStreamEncryptionResult
+
+    StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error)
+    StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *FirehoseStopDeliveryStreamEncryptionResult
+
+    TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error)
+    TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *FirehoseTagDeliveryStreamResult
+
+    UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error)
+    UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *FirehoseUntagDeliveryStreamResult
+
+    UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error)
+    UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationResult
+}
+type FirehoseCreateDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseCreateDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.CreateDeliveryStreamOutput, error) {
+    var output firehose.CreateDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseDeleteDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseDeleteDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.DeleteDeliveryStreamOutput, error) {
+    var output firehose.DeleteDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseDescribeDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseDescribeDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.DescribeDeliveryStreamOutput, error) {
+    var output firehose.DescribeDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseListDeliveryStreamsResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseListDeliveryStreamsResult) Get(ctx workflow.Context) (*firehose.ListDeliveryStreamsOutput, error) {
+    var output firehose.ListDeliveryStreamsOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseListTagsForDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseListTagsForDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.ListTagsForDeliveryStreamOutput, error) {
+    var output firehose.ListTagsForDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehosePutRecordResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehosePutRecordResult) Get(ctx workflow.Context) (*firehose.PutRecordOutput, error) {
+    var output firehose.PutRecordOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehosePutRecordBatchResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehosePutRecordBatchResult) Get(ctx workflow.Context) (*firehose.PutRecordBatchOutput, error) {
+    var output firehose.PutRecordBatchOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseStartDeliveryStreamEncryptionResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseStartDeliveryStreamEncryptionResult) Get(ctx workflow.Context) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
+    var output firehose.StartDeliveryStreamEncryptionOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseStopDeliveryStreamEncryptionResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseStopDeliveryStreamEncryptionResult) Get(ctx workflow.Context) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
+    var output firehose.StopDeliveryStreamEncryptionOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseTagDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseTagDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.TagDeliveryStreamOutput, error) {
+    var output firehose.TagDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseUntagDeliveryStreamResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseUntagDeliveryStreamResult) Get(ctx workflow.Context) (*firehose.UntagDeliveryStreamOutput, error) {
+    var output firehose.UntagDeliveryStreamOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type FirehoseUpdateDestinationResult struct {
+	Result workflow.Future
+}
+
+func (r *FirehoseUpdateDestinationResult) Get(ctx workflow.Context) (*firehose.UpdateDestinationOutput, error) {
+    var output firehose.UpdateDestinationOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+
+type FirehoseStub struct {
+    activities FirehoseClient
+}
+
+func NewFirehoseStub() FirehoseClient {
+    return &FirehoseStub{}
+}
+
+func (a *FirehoseStub) CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error) {
+    var output firehose.CreateDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.CreateDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error) {
+    var output firehose.DeleteDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.DeleteDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error) {
+    var output firehose.DescribeDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.DescribeDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error) {
+    var output firehose.ListDeliveryStreamsOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.ListDeliveryStreams, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error) {
+    var output firehose.ListTagsForDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error) {
+    var output firehose.PutRecordOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.PutRecord, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error) {
+    var output firehose.PutRecordBatchOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.PutRecordBatch, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
+    var output firehose.StartDeliveryStreamEncryptionOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.StartDeliveryStreamEncryption, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
+    var output firehose.StopDeliveryStreamEncryptionOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.StopDeliveryStreamEncryption, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error) {
+    var output firehose.TagDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.TagDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error) {
+    var output firehose.UntagDeliveryStreamOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.UntagDeliveryStream, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *FirehoseStub) UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error) {
+    var output firehose.UpdateDestinationOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.UpdateDestination, input).Get(ctx, &output)
+    return &output, err
+}

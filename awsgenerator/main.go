@@ -56,20 +56,31 @@ func main() {
 	}
 }
 
+func toPrefix(packageName string) string {
+	if packageName == "" {
+		return packageName
+	}
+	return strings.ToUpper(packageName[0:1]) + packageName[1:]
+}
+
 func generateCode(templateDir string, outputDir string, definition internal.InterfaceDefinition) error {
 	funcMap := template.FuncMap{
 		"ToUpper":   strings.ToUpper,
 		"ToLower":   strings.ToLower,
 		"HasPrefix": strings.HasPrefix,
+		"ToPrefix":  toPrefix,
 	}
 
+	//templateFile := "aws_activity.go.tmpl"
+	templateFile := "client.go.tmpl"
 	//templates, err := template.ParseGlob(templateDir + "/*")
 	// https://stackoverflow.com/a/49043639/1664318 for the New parameter
-	templates, err := template.New("aws_activity.go.tmpl").Funcs(funcMap).ParseGlob(templateDir + "/*")
+	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(templateDir + "/" + templateFile)
 	if err != nil {
 		return err
 	}
-	outputFile := outputDir + "/" + strings.ToLower(definition.Name) + "_activities.go"
+	output := templateFile[0 : len(templateFile)-5]
+	outputFile := outputDir + "/" + strings.ToLower(definition.Name) + "_" + output
 	f, err := os.Create(outputFile)
 	if err != nil {
 		return err
