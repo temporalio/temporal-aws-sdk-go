@@ -12,7 +12,8 @@ import (
 
 var methodSuffixesToSkip = []string{"WithContext", "Request", "Pages"}
 var blacklistedMethods = map[string]string{
-	"Lambda": "InvokeAsync", // deprecated and conflicts with generated code
+	// deprecated and conflicts with generated code for Invoke
+	"Lambda": "InvokeAsync",
 }
 
 type MethodDefinition struct {

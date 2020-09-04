@@ -130,6 +130,7 @@ type WorkDocsClient interface {
     UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error)
     UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *WorkdocsUpdateUserResult
 }
+
 type WorkdocsAbortDocumentVersionUploadResult struct {
 	Result workflow.Future
 }
@@ -540,7 +541,6 @@ func (r *WorkdocsUpdateUserResult) Get(ctx workflow.Context) (*workdocs.UpdateUs
     return &output, err
 }
 
-
 type WorkDocsStub struct {
     activities awsactivities.WorkDocsActivities
 }
@@ -548,6 +548,7 @@ type WorkDocsStub struct {
 func NewWorkDocsStub() WorkDocsClient {
     return &WorkDocsStub{}
 }
+
 func (a *WorkDocsStub) AbortDocumentVersionUpload(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error) {
     var output workdocs.AbortDocumentVersionUploadOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AbortDocumentVersionUpload, input).Get(ctx, &output)
@@ -558,6 +559,7 @@ func (a *WorkDocsStub) AbortDocumentVersionUploadAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.AbortDocumentVersionUpload, input)
     return &WorkdocsAbortDocumentVersionUploadResult{Result: future}
 }
+
 func (a *WorkDocsStub) ActivateUser(ctx workflow.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error) {
     var output workdocs.ActivateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ActivateUser, input).Get(ctx, &output)
@@ -568,6 +570,7 @@ func (a *WorkDocsStub) ActivateUserAsync(ctx workflow.Context, input *workdocs.A
     future := workflow.ExecuteActivity(ctx, a.activities.ActivateUser, input)
     return &WorkdocsActivateUserResult{Result: future}
 }
+
 func (a *WorkDocsStub) AddResourcePermissions(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error) {
     var output workdocs.AddResourcePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddResourcePermissions, input).Get(ctx, &output)
@@ -578,6 +581,7 @@ func (a *WorkDocsStub) AddResourcePermissionsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.AddResourcePermissions, input)
     return &WorkdocsAddResourcePermissionsResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateComment(ctx workflow.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error) {
     var output workdocs.CreateCommentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateComment, input).Get(ctx, &output)
@@ -588,6 +592,7 @@ func (a *WorkDocsStub) CreateCommentAsync(ctx workflow.Context, input *workdocs.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateComment, input)
     return &WorkdocsCreateCommentResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateCustomMetadata(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error) {
     var output workdocs.CreateCustomMetadataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCustomMetadata, input).Get(ctx, &output)
@@ -598,6 +603,7 @@ func (a *WorkDocsStub) CreateCustomMetadataAsync(ctx workflow.Context, input *wo
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCustomMetadata, input)
     return &WorkdocsCreateCustomMetadataResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateFolder(ctx workflow.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error) {
     var output workdocs.CreateFolderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFolder, input).Get(ctx, &output)
@@ -608,6 +614,7 @@ func (a *WorkDocsStub) CreateFolderAsync(ctx workflow.Context, input *workdocs.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFolder, input)
     return &WorkdocsCreateFolderResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateLabels(ctx workflow.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error) {
     var output workdocs.CreateLabelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLabels, input).Get(ctx, &output)
@@ -618,6 +625,7 @@ func (a *WorkDocsStub) CreateLabelsAsync(ctx workflow.Context, input *workdocs.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLabels, input)
     return &WorkdocsCreateLabelsResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateNotificationSubscription(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error) {
     var output workdocs.CreateNotificationSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateNotificationSubscription, input).Get(ctx, &output)
@@ -628,6 +636,7 @@ func (a *WorkDocsStub) CreateNotificationSubscriptionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateNotificationSubscription, input)
     return &WorkdocsCreateNotificationSubscriptionResult{Result: future}
 }
+
 func (a *WorkDocsStub) CreateUser(ctx workflow.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error) {
     var output workdocs.CreateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input).Get(ctx, &output)
@@ -638,6 +647,7 @@ func (a *WorkDocsStub) CreateUserAsync(ctx workflow.Context, input *workdocs.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input)
     return &WorkdocsCreateUserResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeactivateUser(ctx workflow.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error) {
     var output workdocs.DeactivateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeactivateUser, input).Get(ctx, &output)
@@ -648,6 +658,7 @@ func (a *WorkDocsStub) DeactivateUserAsync(ctx workflow.Context, input *workdocs
     future := workflow.ExecuteActivity(ctx, a.activities.DeactivateUser, input)
     return &WorkdocsDeactivateUserResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteComment(ctx workflow.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error) {
     var output workdocs.DeleteCommentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteComment, input).Get(ctx, &output)
@@ -658,6 +669,7 @@ func (a *WorkDocsStub) DeleteCommentAsync(ctx workflow.Context, input *workdocs.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteComment, input)
     return &WorkdocsDeleteCommentResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteCustomMetadata(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error) {
     var output workdocs.DeleteCustomMetadataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomMetadata, input).Get(ctx, &output)
@@ -668,6 +680,7 @@ func (a *WorkDocsStub) DeleteCustomMetadataAsync(ctx workflow.Context, input *wo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomMetadata, input)
     return &WorkdocsDeleteCustomMetadataResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteDocument(ctx workflow.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error) {
     var output workdocs.DeleteDocumentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input).Get(ctx, &output)
@@ -678,6 +691,7 @@ func (a *WorkDocsStub) DeleteDocumentAsync(ctx workflow.Context, input *workdocs
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input)
     return &WorkdocsDeleteDocumentResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteFolder(ctx workflow.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error) {
     var output workdocs.DeleteFolderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFolder, input).Get(ctx, &output)
@@ -688,6 +702,7 @@ func (a *WorkDocsStub) DeleteFolderAsync(ctx workflow.Context, input *workdocs.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFolder, input)
     return &WorkdocsDeleteFolderResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteFolderContents(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error) {
     var output workdocs.DeleteFolderContentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFolderContents, input).Get(ctx, &output)
@@ -698,6 +713,7 @@ func (a *WorkDocsStub) DeleteFolderContentsAsync(ctx workflow.Context, input *wo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFolderContents, input)
     return &WorkdocsDeleteFolderContentsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteLabels(ctx workflow.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error) {
     var output workdocs.DeleteLabelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLabels, input).Get(ctx, &output)
@@ -708,6 +724,7 @@ func (a *WorkDocsStub) DeleteLabelsAsync(ctx workflow.Context, input *workdocs.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLabels, input)
     return &WorkdocsDeleteLabelsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteNotificationSubscription(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
     var output workdocs.DeleteNotificationSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNotificationSubscription, input).Get(ctx, &output)
@@ -718,6 +735,7 @@ func (a *WorkDocsStub) DeleteNotificationSubscriptionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNotificationSubscription, input)
     return &WorkdocsDeleteNotificationSubscriptionResult{Result: future}
 }
+
 func (a *WorkDocsStub) DeleteUser(ctx workflow.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error) {
     var output workdocs.DeleteUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input).Get(ctx, &output)
@@ -728,6 +746,7 @@ func (a *WorkDocsStub) DeleteUserAsync(ctx workflow.Context, input *workdocs.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input)
     return &WorkdocsDeleteUserResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeActivities(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error) {
     var output workdocs.DescribeActivitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeActivities, input).Get(ctx, &output)
@@ -738,6 +757,7 @@ func (a *WorkDocsStub) DescribeActivitiesAsync(ctx workflow.Context, input *work
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeActivities, input)
     return &WorkdocsDescribeActivitiesResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeComments(ctx workflow.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error) {
     var output workdocs.DescribeCommentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeComments, input).Get(ctx, &output)
@@ -748,6 +768,7 @@ func (a *WorkDocsStub) DescribeCommentsAsync(ctx workflow.Context, input *workdo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeComments, input)
     return &WorkdocsDescribeCommentsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeDocumentVersions(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error) {
     var output workdocs.DescribeDocumentVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentVersions, input).Get(ctx, &output)
@@ -758,6 +779,7 @@ func (a *WorkDocsStub) DescribeDocumentVersionsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentVersions, input)
     return &WorkdocsDescribeDocumentVersionsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeFolderContents(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error) {
     var output workdocs.DescribeFolderContentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFolderContents, input).Get(ctx, &output)
@@ -768,6 +790,7 @@ func (a *WorkDocsStub) DescribeFolderContentsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFolderContents, input)
     return &WorkdocsDescribeFolderContentsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeGroups(ctx workflow.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
     var output workdocs.DescribeGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGroups, input).Get(ctx, &output)
@@ -778,6 +801,7 @@ func (a *WorkDocsStub) DescribeGroupsAsync(ctx workflow.Context, input *workdocs
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGroups, input)
     return &WorkdocsDescribeGroupsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeNotificationSubscriptions(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
     var output workdocs.DescribeNotificationSubscriptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationSubscriptions, input).Get(ctx, &output)
@@ -788,6 +812,7 @@ func (a *WorkDocsStub) DescribeNotificationSubscriptionsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationSubscriptions, input)
     return &WorkdocsDescribeNotificationSubscriptionsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeResourcePermissions(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error) {
     var output workdocs.DescribeResourcePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeResourcePermissions, input).Get(ctx, &output)
@@ -798,6 +823,7 @@ func (a *WorkDocsStub) DescribeResourcePermissionsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeResourcePermissions, input)
     return &WorkdocsDescribeResourcePermissionsResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeRootFolders(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error) {
     var output workdocs.DescribeRootFoldersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRootFolders, input).Get(ctx, &output)
@@ -808,6 +834,7 @@ func (a *WorkDocsStub) DescribeRootFoldersAsync(ctx workflow.Context, input *wor
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRootFolders, input)
     return &WorkdocsDescribeRootFoldersResult{Result: future}
 }
+
 func (a *WorkDocsStub) DescribeUsers(ctx workflow.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error) {
     var output workdocs.DescribeUsersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUsers, input).Get(ctx, &output)
@@ -818,6 +845,7 @@ func (a *WorkDocsStub) DescribeUsersAsync(ctx workflow.Context, input *workdocs.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUsers, input)
     return &WorkdocsDescribeUsersResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetCurrentUser(ctx workflow.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error) {
     var output workdocs.GetCurrentUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCurrentUser, input).Get(ctx, &output)
@@ -828,6 +856,7 @@ func (a *WorkDocsStub) GetCurrentUserAsync(ctx workflow.Context, input *workdocs
     future := workflow.ExecuteActivity(ctx, a.activities.GetCurrentUser, input)
     return &WorkdocsGetCurrentUserResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetDocument(ctx workflow.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error) {
     var output workdocs.GetDocumentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input).Get(ctx, &output)
@@ -838,6 +867,7 @@ func (a *WorkDocsStub) GetDocumentAsync(ctx workflow.Context, input *workdocs.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input)
     return &WorkdocsGetDocumentResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetDocumentPath(ctx workflow.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error) {
     var output workdocs.GetDocumentPathOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDocumentPath, input).Get(ctx, &output)
@@ -848,6 +878,7 @@ func (a *WorkDocsStub) GetDocumentPathAsync(ctx workflow.Context, input *workdoc
     future := workflow.ExecuteActivity(ctx, a.activities.GetDocumentPath, input)
     return &WorkdocsGetDocumentPathResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetDocumentVersion(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error) {
     var output workdocs.GetDocumentVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDocumentVersion, input).Get(ctx, &output)
@@ -858,6 +889,7 @@ func (a *WorkDocsStub) GetDocumentVersionAsync(ctx workflow.Context, input *work
     future := workflow.ExecuteActivity(ctx, a.activities.GetDocumentVersion, input)
     return &WorkdocsGetDocumentVersionResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetFolder(ctx workflow.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error) {
     var output workdocs.GetFolderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFolder, input).Get(ctx, &output)
@@ -868,6 +900,7 @@ func (a *WorkDocsStub) GetFolderAsync(ctx workflow.Context, input *workdocs.GetF
     future := workflow.ExecuteActivity(ctx, a.activities.GetFolder, input)
     return &WorkdocsGetFolderResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetFolderPath(ctx workflow.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error) {
     var output workdocs.GetFolderPathOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFolderPath, input).Get(ctx, &output)
@@ -878,6 +911,7 @@ func (a *WorkDocsStub) GetFolderPathAsync(ctx workflow.Context, input *workdocs.
     future := workflow.ExecuteActivity(ctx, a.activities.GetFolderPath, input)
     return &WorkdocsGetFolderPathResult{Result: future}
 }
+
 func (a *WorkDocsStub) GetResources(ctx workflow.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error) {
     var output workdocs.GetResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetResources, input).Get(ctx, &output)
@@ -888,6 +922,7 @@ func (a *WorkDocsStub) GetResourcesAsync(ctx workflow.Context, input *workdocs.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetResources, input)
     return &WorkdocsGetResourcesResult{Result: future}
 }
+
 func (a *WorkDocsStub) InitiateDocumentVersionUpload(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
     var output workdocs.InitiateDocumentVersionUploadOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InitiateDocumentVersionUpload, input).Get(ctx, &output)
@@ -898,6 +933,7 @@ func (a *WorkDocsStub) InitiateDocumentVersionUploadAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.InitiateDocumentVersionUpload, input)
     return &WorkdocsInitiateDocumentVersionUploadResult{Result: future}
 }
+
 func (a *WorkDocsStub) RemoveAllResourcePermissions(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
     var output workdocs.RemoveAllResourcePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveAllResourcePermissions, input).Get(ctx, &output)
@@ -908,6 +944,7 @@ func (a *WorkDocsStub) RemoveAllResourcePermissionsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveAllResourcePermissions, input)
     return &WorkdocsRemoveAllResourcePermissionsResult{Result: future}
 }
+
 func (a *WorkDocsStub) RemoveResourcePermission(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error) {
     var output workdocs.RemoveResourcePermissionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveResourcePermission, input).Get(ctx, &output)
@@ -918,6 +955,7 @@ func (a *WorkDocsStub) RemoveResourcePermissionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveResourcePermission, input)
     return &WorkdocsRemoveResourcePermissionResult{Result: future}
 }
+
 func (a *WorkDocsStub) UpdateDocument(ctx workflow.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error) {
     var output workdocs.UpdateDocumentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input).Get(ctx, &output)
@@ -928,6 +966,7 @@ func (a *WorkDocsStub) UpdateDocumentAsync(ctx workflow.Context, input *workdocs
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input)
     return &WorkdocsUpdateDocumentResult{Result: future}
 }
+
 func (a *WorkDocsStub) UpdateDocumentVersion(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error) {
     var output workdocs.UpdateDocumentVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentVersion, input).Get(ctx, &output)
@@ -938,6 +977,7 @@ func (a *WorkDocsStub) UpdateDocumentVersionAsync(ctx workflow.Context, input *w
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentVersion, input)
     return &WorkdocsUpdateDocumentVersionResult{Result: future}
 }
+
 func (a *WorkDocsStub) UpdateFolder(ctx workflow.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error) {
     var output workdocs.UpdateFolderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFolder, input).Get(ctx, &output)
@@ -948,6 +988,7 @@ func (a *WorkDocsStub) UpdateFolderAsync(ctx workflow.Context, input *workdocs.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFolder, input)
     return &WorkdocsUpdateFolderResult{Result: future}
 }
+
 func (a *WorkDocsStub) UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error) {
     var output workdocs.UpdateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUser, input).Get(ctx, &output)

@@ -160,6 +160,7 @@ type OrganizationsClient interface {
     UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error)
     UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyResult
 }
+
 type OrganizationsAcceptHandshakeResult struct {
 	Result workflow.Future
 }
@@ -670,7 +671,6 @@ func (r *OrganizationsUpdatePolicyResult) Get(ctx workflow.Context) (*organizati
     return &output, err
 }
 
-
 type OrganizationsStub struct {
     activities awsactivities.OrganizationsActivities
 }
@@ -678,6 +678,7 @@ type OrganizationsStub struct {
 func NewOrganizationsStub() OrganizationsClient {
     return &OrganizationsStub{}
 }
+
 func (a *OrganizationsStub) AcceptHandshake(ctx workflow.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error) {
     var output organizations.AcceptHandshakeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptHandshake, input).Get(ctx, &output)
@@ -688,6 +689,7 @@ func (a *OrganizationsStub) AcceptHandshakeAsync(ctx workflow.Context, input *or
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptHandshake, input)
     return &OrganizationsAcceptHandshakeResult{Result: future}
 }
+
 func (a *OrganizationsStub) AttachPolicy(ctx workflow.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error) {
     var output organizations.AttachPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachPolicy, input).Get(ctx, &output)
@@ -698,6 +700,7 @@ func (a *OrganizationsStub) AttachPolicyAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.AttachPolicy, input)
     return &OrganizationsAttachPolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) CancelHandshake(ctx workflow.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error) {
     var output organizations.CancelHandshakeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelHandshake, input).Get(ctx, &output)
@@ -708,6 +711,7 @@ func (a *OrganizationsStub) CancelHandshakeAsync(ctx workflow.Context, input *or
     future := workflow.ExecuteActivity(ctx, a.activities.CancelHandshake, input)
     return &OrganizationsCancelHandshakeResult{Result: future}
 }
+
 func (a *OrganizationsStub) CreateAccount(ctx workflow.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error) {
     var output organizations.CreateAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAccount, input).Get(ctx, &output)
@@ -718,6 +722,7 @@ func (a *OrganizationsStub) CreateAccountAsync(ctx workflow.Context, input *orga
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAccount, input)
     return &OrganizationsCreateAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) CreateGovCloudAccount(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error) {
     var output organizations.CreateGovCloudAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGovCloudAccount, input).Get(ctx, &output)
@@ -728,6 +733,7 @@ func (a *OrganizationsStub) CreateGovCloudAccountAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGovCloudAccount, input)
     return &OrganizationsCreateGovCloudAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) CreateOrganization(ctx workflow.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error) {
     var output organizations.CreateOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOrganization, input).Get(ctx, &output)
@@ -738,6 +744,7 @@ func (a *OrganizationsStub) CreateOrganizationAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOrganization, input)
     return &OrganizationsCreateOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) CreateOrganizationalUnit(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error) {
     var output organizations.CreateOrganizationalUnitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOrganizationalUnit, input).Get(ctx, &output)
@@ -748,6 +755,7 @@ func (a *OrganizationsStub) CreateOrganizationalUnitAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOrganizationalUnit, input)
     return &OrganizationsCreateOrganizationalUnitResult{Result: future}
 }
+
 func (a *OrganizationsStub) CreatePolicy(ctx workflow.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error) {
     var output organizations.CreatePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePolicy, input).Get(ctx, &output)
@@ -758,6 +766,7 @@ func (a *OrganizationsStub) CreatePolicyAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePolicy, input)
     return &OrganizationsCreatePolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) DeclineHandshake(ctx workflow.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error) {
     var output organizations.DeclineHandshakeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeclineHandshake, input).Get(ctx, &output)
@@ -768,6 +777,7 @@ func (a *OrganizationsStub) DeclineHandshakeAsync(ctx workflow.Context, input *o
     future := workflow.ExecuteActivity(ctx, a.activities.DeclineHandshake, input)
     return &OrganizationsDeclineHandshakeResult{Result: future}
 }
+
 func (a *OrganizationsStub) DeleteOrganization(ctx workflow.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error) {
     var output organizations.DeleteOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganization, input).Get(ctx, &output)
@@ -778,6 +788,7 @@ func (a *OrganizationsStub) DeleteOrganizationAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganization, input)
     return &OrganizationsDeleteOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) DeleteOrganizationalUnit(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error) {
     var output organizations.DeleteOrganizationalUnitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationalUnit, input).Get(ctx, &output)
@@ -788,6 +799,7 @@ func (a *OrganizationsStub) DeleteOrganizationalUnitAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationalUnit, input)
     return &OrganizationsDeleteOrganizationalUnitResult{Result: future}
 }
+
 func (a *OrganizationsStub) DeletePolicy(ctx workflow.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error) {
     var output organizations.DeletePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input).Get(ctx, &output)
@@ -798,6 +810,7 @@ func (a *OrganizationsStub) DeletePolicyAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input)
     return &OrganizationsDeletePolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) DeregisterDelegatedAdministrator(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
     var output organizations.DeregisterDelegatedAdministratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeregisterDelegatedAdministrator, input).Get(ctx, &output)
@@ -808,6 +821,7 @@ func (a *OrganizationsStub) DeregisterDelegatedAdministratorAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DeregisterDelegatedAdministrator, input)
     return &OrganizationsDeregisterDelegatedAdministratorResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeAccount(ctx workflow.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error) {
     var output organizations.DescribeAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccount, input).Get(ctx, &output)
@@ -818,6 +832,7 @@ func (a *OrganizationsStub) DescribeAccountAsync(ctx workflow.Context, input *or
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccount, input)
     return &OrganizationsDescribeAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeCreateAccountStatus(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error) {
     var output organizations.DescribeCreateAccountStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCreateAccountStatus, input).Get(ctx, &output)
@@ -828,6 +843,7 @@ func (a *OrganizationsStub) DescribeCreateAccountStatusAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCreateAccountStatus, input)
     return &OrganizationsDescribeCreateAccountStatusResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeEffectivePolicy(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error) {
     var output organizations.DescribeEffectivePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePolicy, input).Get(ctx, &output)
@@ -838,6 +854,7 @@ func (a *OrganizationsStub) DescribeEffectivePolicyAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePolicy, input)
     return &OrganizationsDescribeEffectivePolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeHandshake(ctx workflow.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error) {
     var output organizations.DescribeHandshakeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeHandshake, input).Get(ctx, &output)
@@ -848,6 +865,7 @@ func (a *OrganizationsStub) DescribeHandshakeAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeHandshake, input)
     return &OrganizationsDescribeHandshakeResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeOrganization(ctx workflow.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error) {
     var output organizations.DescribeOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganization, input).Get(ctx, &output)
@@ -858,6 +876,7 @@ func (a *OrganizationsStub) DescribeOrganizationAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganization, input)
     return &OrganizationsDescribeOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribeOrganizationalUnit(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error) {
     var output organizations.DescribeOrganizationalUnitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationalUnit, input).Get(ctx, &output)
@@ -868,6 +887,7 @@ func (a *OrganizationsStub) DescribeOrganizationalUnitAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationalUnit, input)
     return &OrganizationsDescribeOrganizationalUnitResult{Result: future}
 }
+
 func (a *OrganizationsStub) DescribePolicy(ctx workflow.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error) {
     var output organizations.DescribePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePolicy, input).Get(ctx, &output)
@@ -878,6 +898,7 @@ func (a *OrganizationsStub) DescribePolicyAsync(ctx workflow.Context, input *org
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePolicy, input)
     return &OrganizationsDescribePolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) DetachPolicy(ctx workflow.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error) {
     var output organizations.DetachPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachPolicy, input).Get(ctx, &output)
@@ -888,6 +909,7 @@ func (a *OrganizationsStub) DetachPolicyAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.DetachPolicy, input)
     return &OrganizationsDetachPolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) DisableAWSServiceAccess(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error) {
     var output organizations.DisableAWSServiceAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableAWSServiceAccess, input).Get(ctx, &output)
@@ -898,6 +920,7 @@ func (a *OrganizationsStub) DisableAWSServiceAccessAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DisableAWSServiceAccess, input)
     return &OrganizationsDisableAWSServiceAccessResult{Result: future}
 }
+
 func (a *OrganizationsStub) DisablePolicyType(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error) {
     var output organizations.DisablePolicyTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisablePolicyType, input).Get(ctx, &output)
@@ -908,6 +931,7 @@ func (a *OrganizationsStub) DisablePolicyTypeAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DisablePolicyType, input)
     return &OrganizationsDisablePolicyTypeResult{Result: future}
 }
+
 func (a *OrganizationsStub) EnableAWSServiceAccess(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error) {
     var output organizations.EnableAWSServiceAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableAWSServiceAccess, input).Get(ctx, &output)
@@ -918,6 +942,7 @@ func (a *OrganizationsStub) EnableAWSServiceAccessAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.EnableAWSServiceAccess, input)
     return &OrganizationsEnableAWSServiceAccessResult{Result: future}
 }
+
 func (a *OrganizationsStub) EnableAllFeatures(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error) {
     var output organizations.EnableAllFeaturesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableAllFeatures, input).Get(ctx, &output)
@@ -928,6 +953,7 @@ func (a *OrganizationsStub) EnableAllFeaturesAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.EnableAllFeatures, input)
     return &OrganizationsEnableAllFeaturesResult{Result: future}
 }
+
 func (a *OrganizationsStub) EnablePolicyType(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error) {
     var output organizations.EnablePolicyTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnablePolicyType, input).Get(ctx, &output)
@@ -938,6 +964,7 @@ func (a *OrganizationsStub) EnablePolicyTypeAsync(ctx workflow.Context, input *o
     future := workflow.ExecuteActivity(ctx, a.activities.EnablePolicyType, input)
     return &OrganizationsEnablePolicyTypeResult{Result: future}
 }
+
 func (a *OrganizationsStub) InviteAccountToOrganization(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error) {
     var output organizations.InviteAccountToOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InviteAccountToOrganization, input).Get(ctx, &output)
@@ -948,6 +975,7 @@ func (a *OrganizationsStub) InviteAccountToOrganizationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.InviteAccountToOrganization, input)
     return &OrganizationsInviteAccountToOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) LeaveOrganization(ctx workflow.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error) {
     var output organizations.LeaveOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.LeaveOrganization, input).Get(ctx, &output)
@@ -958,6 +986,7 @@ func (a *OrganizationsStub) LeaveOrganizationAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.LeaveOrganization, input)
     return &OrganizationsLeaveOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListAWSServiceAccessForOrganization(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
     var output organizations.ListAWSServiceAccessForOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAWSServiceAccessForOrganization, input).Get(ctx, &output)
@@ -968,6 +997,7 @@ func (a *OrganizationsStub) ListAWSServiceAccessForOrganizationAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.ListAWSServiceAccessForOrganization, input)
     return &OrganizationsListAWSServiceAccessForOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListAccounts(ctx workflow.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error) {
     var output organizations.ListAccountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccounts, input).Get(ctx, &output)
@@ -978,6 +1008,7 @@ func (a *OrganizationsStub) ListAccountsAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccounts, input)
     return &OrganizationsListAccountsResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListAccountsForParent(ctx workflow.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error) {
     var output organizations.ListAccountsForParentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccountsForParent, input).Get(ctx, &output)
@@ -988,6 +1019,7 @@ func (a *OrganizationsStub) ListAccountsForParentAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccountsForParent, input)
     return &OrganizationsListAccountsForParentResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListChildren(ctx workflow.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error) {
     var output organizations.ListChildrenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListChildren, input).Get(ctx, &output)
@@ -998,6 +1030,7 @@ func (a *OrganizationsStub) ListChildrenAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.ListChildren, input)
     return &OrganizationsListChildrenResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListCreateAccountStatus(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error) {
     var output organizations.ListCreateAccountStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListCreateAccountStatus, input).Get(ctx, &output)
@@ -1008,6 +1041,7 @@ func (a *OrganizationsStub) ListCreateAccountStatusAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListCreateAccountStatus, input)
     return &OrganizationsListCreateAccountStatusResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListDelegatedAdministrators(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error) {
     var output organizations.ListDelegatedAdministratorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDelegatedAdministrators, input).Get(ctx, &output)
@@ -1018,6 +1052,7 @@ func (a *OrganizationsStub) ListDelegatedAdministratorsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListDelegatedAdministrators, input)
     return &OrganizationsListDelegatedAdministratorsResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListDelegatedServicesForAccount(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error) {
     var output organizations.ListDelegatedServicesForAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDelegatedServicesForAccount, input).Get(ctx, &output)
@@ -1028,6 +1063,7 @@ func (a *OrganizationsStub) ListDelegatedServicesForAccountAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.ListDelegatedServicesForAccount, input)
     return &OrganizationsListDelegatedServicesForAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListHandshakesForAccount(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error) {
     var output organizations.ListHandshakesForAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHandshakesForAccount, input).Get(ctx, &output)
@@ -1038,6 +1074,7 @@ func (a *OrganizationsStub) ListHandshakesForAccountAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListHandshakesForAccount, input)
     return &OrganizationsListHandshakesForAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListHandshakesForOrganization(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error) {
     var output organizations.ListHandshakesForOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHandshakesForOrganization, input).Get(ctx, &output)
@@ -1048,6 +1085,7 @@ func (a *OrganizationsStub) ListHandshakesForOrganizationAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.ListHandshakesForOrganization, input)
     return &OrganizationsListHandshakesForOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListOrganizationalUnitsForParent(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
     var output organizations.ListOrganizationalUnitsForParentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationalUnitsForParent, input).Get(ctx, &output)
@@ -1058,6 +1096,7 @@ func (a *OrganizationsStub) ListOrganizationalUnitsForParentAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationalUnitsForParent, input)
     return &OrganizationsListOrganizationalUnitsForParentResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListParents(ctx workflow.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error) {
     var output organizations.ListParentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListParents, input).Get(ctx, &output)
@@ -1068,6 +1107,7 @@ func (a *OrganizationsStub) ListParentsAsync(ctx workflow.Context, input *organi
     future := workflow.ExecuteActivity(ctx, a.activities.ListParents, input)
     return &OrganizationsListParentsResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListPolicies(ctx workflow.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error) {
     var output organizations.ListPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPolicies, input).Get(ctx, &output)
@@ -1078,6 +1118,7 @@ func (a *OrganizationsStub) ListPoliciesAsync(ctx workflow.Context, input *organ
     future := workflow.ExecuteActivity(ctx, a.activities.ListPolicies, input)
     return &OrganizationsListPoliciesResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListPoliciesForTarget(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error) {
     var output organizations.ListPoliciesForTargetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPoliciesForTarget, input).Get(ctx, &output)
@@ -1088,6 +1129,7 @@ func (a *OrganizationsStub) ListPoliciesForTargetAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListPoliciesForTarget, input)
     return &OrganizationsListPoliciesForTargetResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListRoots(ctx workflow.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error) {
     var output organizations.ListRootsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRoots, input).Get(ctx, &output)
@@ -1098,6 +1140,7 @@ func (a *OrganizationsStub) ListRootsAsync(ctx workflow.Context, input *organiza
     future := workflow.ExecuteActivity(ctx, a.activities.ListRoots, input)
     return &OrganizationsListRootsResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListTagsForResource(ctx workflow.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error) {
     var output organizations.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1108,6 +1151,7 @@ func (a *OrganizationsStub) ListTagsForResourceAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &OrganizationsListTagsForResourceResult{Result: future}
 }
+
 func (a *OrganizationsStub) ListTargetsForPolicy(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error) {
     var output organizations.ListTargetsForPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTargetsForPolicy, input).Get(ctx, &output)
@@ -1118,6 +1162,7 @@ func (a *OrganizationsStub) ListTargetsForPolicyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListTargetsForPolicy, input)
     return &OrganizationsListTargetsForPolicyResult{Result: future}
 }
+
 func (a *OrganizationsStub) MoveAccount(ctx workflow.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error) {
     var output organizations.MoveAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.MoveAccount, input).Get(ctx, &output)
@@ -1128,6 +1173,7 @@ func (a *OrganizationsStub) MoveAccountAsync(ctx workflow.Context, input *organi
     future := workflow.ExecuteActivity(ctx, a.activities.MoveAccount, input)
     return &OrganizationsMoveAccountResult{Result: future}
 }
+
 func (a *OrganizationsStub) RegisterDelegatedAdministrator(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error) {
     var output organizations.RegisterDelegatedAdministratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RegisterDelegatedAdministrator, input).Get(ctx, &output)
@@ -1138,6 +1184,7 @@ func (a *OrganizationsStub) RegisterDelegatedAdministratorAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.RegisterDelegatedAdministrator, input)
     return &OrganizationsRegisterDelegatedAdministratorResult{Result: future}
 }
+
 func (a *OrganizationsStub) RemoveAccountFromOrganization(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error) {
     var output organizations.RemoveAccountFromOrganizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveAccountFromOrganization, input).Get(ctx, &output)
@@ -1148,6 +1195,7 @@ func (a *OrganizationsStub) RemoveAccountFromOrganizationAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveAccountFromOrganization, input)
     return &OrganizationsRemoveAccountFromOrganizationResult{Result: future}
 }
+
 func (a *OrganizationsStub) TagResource(ctx workflow.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error) {
     var output organizations.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1158,6 +1206,7 @@ func (a *OrganizationsStub) TagResourceAsync(ctx workflow.Context, input *organi
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &OrganizationsTagResourceResult{Result: future}
 }
+
 func (a *OrganizationsStub) UntagResource(ctx workflow.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error) {
     var output organizations.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1168,6 +1217,7 @@ func (a *OrganizationsStub) UntagResourceAsync(ctx workflow.Context, input *orga
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &OrganizationsUntagResourceResult{Result: future}
 }
+
 func (a *OrganizationsStub) UpdateOrganizationalUnit(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error) {
     var output organizations.UpdateOrganizationalUnitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateOrganizationalUnit, input).Get(ctx, &output)
@@ -1178,6 +1228,7 @@ func (a *OrganizationsStub) UpdateOrganizationalUnitAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateOrganizationalUnit, input)
     return &OrganizationsUpdateOrganizationalUnitResult{Result: future}
 }
+
 func (a *OrganizationsStub) UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error) {
     var output organizations.UpdatePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdatePolicy, input).Get(ctx, &output)

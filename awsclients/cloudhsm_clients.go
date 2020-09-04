@@ -67,6 +67,7 @@ type CloudHSMClient interface {
     RemoveTagsFromResource(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) (*cloudhsm.RemoveTagsFromResourceOutput, error)
     RemoveTagsFromResourceAsync(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) *CloudhsmRemoveTagsFromResourceResult
 }
+
 type CloudhsmAddTagsToResourceResult struct {
 	Result workflow.Future
 }
@@ -267,7 +268,6 @@ func (r *CloudhsmRemoveTagsFromResourceResult) Get(ctx workflow.Context) (*cloud
     return &output, err
 }
 
-
 type CloudHSMStub struct {
     activities awsactivities.CloudHSMActivities
 }
@@ -275,6 +275,7 @@ type CloudHSMStub struct {
 func NewCloudHSMStub() CloudHSMClient {
     return &CloudHSMStub{}
 }
+
 func (a *CloudHSMStub) AddTagsToResource(ctx workflow.Context, input *cloudhsm.AddTagsToResourceInput) (*cloudhsm.AddTagsToResourceOutput, error) {
     var output cloudhsm.AddTagsToResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input).Get(ctx, &output)
@@ -285,6 +286,7 @@ func (a *CloudHSMStub) AddTagsToResourceAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input)
     return &CloudhsmAddTagsToResourceResult{Result: future}
 }
+
 func (a *CloudHSMStub) CreateHapg(ctx workflow.Context, input *cloudhsm.CreateHapgInput) (*cloudhsm.CreateHapgOutput, error) {
     var output cloudhsm.CreateHapgOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHapg, input).Get(ctx, &output)
@@ -295,6 +297,7 @@ func (a *CloudHSMStub) CreateHapgAsync(ctx workflow.Context, input *cloudhsm.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHapg, input)
     return &CloudhsmCreateHapgResult{Result: future}
 }
+
 func (a *CloudHSMStub) CreateHsm(ctx workflow.Context, input *cloudhsm.CreateHsmInput) (*cloudhsm.CreateHsmOutput, error) {
     var output cloudhsm.CreateHsmOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHsm, input).Get(ctx, &output)
@@ -305,6 +308,7 @@ func (a *CloudHSMStub) CreateHsmAsync(ctx workflow.Context, input *cloudhsm.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHsm, input)
     return &CloudhsmCreateHsmResult{Result: future}
 }
+
 func (a *CloudHSMStub) CreateLunaClient(ctx workflow.Context, input *cloudhsm.CreateLunaClientInput) (*cloudhsm.CreateLunaClientOutput, error) {
     var output cloudhsm.CreateLunaClientOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLunaClient, input).Get(ctx, &output)
@@ -315,6 +319,7 @@ func (a *CloudHSMStub) CreateLunaClientAsync(ctx workflow.Context, input *cloudh
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLunaClient, input)
     return &CloudhsmCreateLunaClientResult{Result: future}
 }
+
 func (a *CloudHSMStub) DeleteHapg(ctx workflow.Context, input *cloudhsm.DeleteHapgInput) (*cloudhsm.DeleteHapgOutput, error) {
     var output cloudhsm.DeleteHapgOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHapg, input).Get(ctx, &output)
@@ -325,6 +330,7 @@ func (a *CloudHSMStub) DeleteHapgAsync(ctx workflow.Context, input *cloudhsm.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHapg, input)
     return &CloudhsmDeleteHapgResult{Result: future}
 }
+
 func (a *CloudHSMStub) DeleteHsm(ctx workflow.Context, input *cloudhsm.DeleteHsmInput) (*cloudhsm.DeleteHsmOutput, error) {
     var output cloudhsm.DeleteHsmOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHsm, input).Get(ctx, &output)
@@ -335,6 +341,7 @@ func (a *CloudHSMStub) DeleteHsmAsync(ctx workflow.Context, input *cloudhsm.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHsm, input)
     return &CloudhsmDeleteHsmResult{Result: future}
 }
+
 func (a *CloudHSMStub) DeleteLunaClient(ctx workflow.Context, input *cloudhsm.DeleteLunaClientInput) (*cloudhsm.DeleteLunaClientOutput, error) {
     var output cloudhsm.DeleteLunaClientOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLunaClient, input).Get(ctx, &output)
@@ -345,6 +352,7 @@ func (a *CloudHSMStub) DeleteLunaClientAsync(ctx workflow.Context, input *cloudh
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLunaClient, input)
     return &CloudhsmDeleteLunaClientResult{Result: future}
 }
+
 func (a *CloudHSMStub) DescribeHapg(ctx workflow.Context, input *cloudhsm.DescribeHapgInput) (*cloudhsm.DescribeHapgOutput, error) {
     var output cloudhsm.DescribeHapgOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeHapg, input).Get(ctx, &output)
@@ -355,6 +363,7 @@ func (a *CloudHSMStub) DescribeHapgAsync(ctx workflow.Context, input *cloudhsm.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeHapg, input)
     return &CloudhsmDescribeHapgResult{Result: future}
 }
+
 func (a *CloudHSMStub) DescribeHsm(ctx workflow.Context, input *cloudhsm.DescribeHsmInput) (*cloudhsm.DescribeHsmOutput, error) {
     var output cloudhsm.DescribeHsmOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeHsm, input).Get(ctx, &output)
@@ -365,6 +374,7 @@ func (a *CloudHSMStub) DescribeHsmAsync(ctx workflow.Context, input *cloudhsm.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeHsm, input)
     return &CloudhsmDescribeHsmResult{Result: future}
 }
+
 func (a *CloudHSMStub) DescribeLunaClient(ctx workflow.Context, input *cloudhsm.DescribeLunaClientInput) (*cloudhsm.DescribeLunaClientOutput, error) {
     var output cloudhsm.DescribeLunaClientOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLunaClient, input).Get(ctx, &output)
@@ -375,6 +385,7 @@ func (a *CloudHSMStub) DescribeLunaClientAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLunaClient, input)
     return &CloudhsmDescribeLunaClientResult{Result: future}
 }
+
 func (a *CloudHSMStub) GetConfig(ctx workflow.Context, input *cloudhsm.GetConfigInput) (*cloudhsm.GetConfigOutput, error) {
     var output cloudhsm.GetConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConfig, input).Get(ctx, &output)
@@ -385,6 +396,7 @@ func (a *CloudHSMStub) GetConfigAsync(ctx workflow.Context, input *cloudhsm.GetC
     future := workflow.ExecuteActivity(ctx, a.activities.GetConfig, input)
     return &CloudhsmGetConfigResult{Result: future}
 }
+
 func (a *CloudHSMStub) ListAvailableZones(ctx workflow.Context, input *cloudhsm.ListAvailableZonesInput) (*cloudhsm.ListAvailableZonesOutput, error) {
     var output cloudhsm.ListAvailableZonesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAvailableZones, input).Get(ctx, &output)
@@ -395,6 +407,7 @@ func (a *CloudHSMStub) ListAvailableZonesAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.ListAvailableZones, input)
     return &CloudhsmListAvailableZonesResult{Result: future}
 }
+
 func (a *CloudHSMStub) ListHapgs(ctx workflow.Context, input *cloudhsm.ListHapgsInput) (*cloudhsm.ListHapgsOutput, error) {
     var output cloudhsm.ListHapgsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHapgs, input).Get(ctx, &output)
@@ -405,6 +418,7 @@ func (a *CloudHSMStub) ListHapgsAsync(ctx workflow.Context, input *cloudhsm.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListHapgs, input)
     return &CloudhsmListHapgsResult{Result: future}
 }
+
 func (a *CloudHSMStub) ListHsms(ctx workflow.Context, input *cloudhsm.ListHsmsInput) (*cloudhsm.ListHsmsOutput, error) {
     var output cloudhsm.ListHsmsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHsms, input).Get(ctx, &output)
@@ -415,6 +429,7 @@ func (a *CloudHSMStub) ListHsmsAsync(ctx workflow.Context, input *cloudhsm.ListH
     future := workflow.ExecuteActivity(ctx, a.activities.ListHsms, input)
     return &CloudhsmListHsmsResult{Result: future}
 }
+
 func (a *CloudHSMStub) ListLunaClients(ctx workflow.Context, input *cloudhsm.ListLunaClientsInput) (*cloudhsm.ListLunaClientsOutput, error) {
     var output cloudhsm.ListLunaClientsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListLunaClients, input).Get(ctx, &output)
@@ -425,6 +440,7 @@ func (a *CloudHSMStub) ListLunaClientsAsync(ctx workflow.Context, input *cloudhs
     future := workflow.ExecuteActivity(ctx, a.activities.ListLunaClients, input)
     return &CloudhsmListLunaClientsResult{Result: future}
 }
+
 func (a *CloudHSMStub) ListTagsForResource(ctx workflow.Context, input *cloudhsm.ListTagsForResourceInput) (*cloudhsm.ListTagsForResourceOutput, error) {
     var output cloudhsm.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -435,6 +451,7 @@ func (a *CloudHSMStub) ListTagsForResourceAsync(ctx workflow.Context, input *clo
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &CloudhsmListTagsForResourceResult{Result: future}
 }
+
 func (a *CloudHSMStub) ModifyHapg(ctx workflow.Context, input *cloudhsm.ModifyHapgInput) (*cloudhsm.ModifyHapgOutput, error) {
     var output cloudhsm.ModifyHapgOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyHapg, input).Get(ctx, &output)
@@ -445,6 +462,7 @@ func (a *CloudHSMStub) ModifyHapgAsync(ctx workflow.Context, input *cloudhsm.Mod
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyHapg, input)
     return &CloudhsmModifyHapgResult{Result: future}
 }
+
 func (a *CloudHSMStub) ModifyHsm(ctx workflow.Context, input *cloudhsm.ModifyHsmInput) (*cloudhsm.ModifyHsmOutput, error) {
     var output cloudhsm.ModifyHsmOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyHsm, input).Get(ctx, &output)
@@ -455,6 +473,7 @@ func (a *CloudHSMStub) ModifyHsmAsync(ctx workflow.Context, input *cloudhsm.Modi
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyHsm, input)
     return &CloudhsmModifyHsmResult{Result: future}
 }
+
 func (a *CloudHSMStub) ModifyLunaClient(ctx workflow.Context, input *cloudhsm.ModifyLunaClientInput) (*cloudhsm.ModifyLunaClientOutput, error) {
     var output cloudhsm.ModifyLunaClientOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyLunaClient, input).Get(ctx, &output)
@@ -465,6 +484,7 @@ func (a *CloudHSMStub) ModifyLunaClientAsync(ctx workflow.Context, input *cloudh
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyLunaClient, input)
     return &CloudhsmModifyLunaClientResult{Result: future}
 }
+
 func (a *CloudHSMStub) RemoveTagsFromResource(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) (*cloudhsm.RemoveTagsFromResourceOutput, error) {
     var output cloudhsm.RemoveTagsFromResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input).Get(ctx, &output)

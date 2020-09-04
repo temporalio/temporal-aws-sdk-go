@@ -61,6 +61,7 @@ type MediaPackageClient interface {
     UpdateOriginEndpoint(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error)
     UpdateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) *MediapackageUpdateOriginEndpointResult
 }
+
 type MediapackageCreateChannelResult struct {
 	Result workflow.Future
 }
@@ -241,7 +242,6 @@ func (r *MediapackageUpdateOriginEndpointResult) Get(ctx workflow.Context) (*med
     return &output, err
 }
 
-
 type MediaPackageStub struct {
     activities awsactivities.MediaPackageActivities
 }
@@ -249,6 +249,7 @@ type MediaPackageStub struct {
 func NewMediaPackageStub() MediaPackageClient {
     return &MediaPackageStub{}
 }
+
 func (a *MediaPackageStub) CreateChannel(ctx workflow.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error) {
     var output mediapackage.CreateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input).Get(ctx, &output)
@@ -259,6 +260,7 @@ func (a *MediaPackageStub) CreateChannelAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input)
     return &MediapackageCreateChannelResult{Result: future}
 }
+
 func (a *MediaPackageStub) CreateHarvestJob(ctx workflow.Context, input *mediapackage.CreateHarvestJobInput) (*mediapackage.CreateHarvestJobOutput, error) {
     var output mediapackage.CreateHarvestJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHarvestJob, input).Get(ctx, &output)
@@ -269,6 +271,7 @@ func (a *MediaPackageStub) CreateHarvestJobAsync(ctx workflow.Context, input *me
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHarvestJob, input)
     return &MediapackageCreateHarvestJobResult{Result: future}
 }
+
 func (a *MediaPackageStub) CreateOriginEndpoint(ctx workflow.Context, input *mediapackage.CreateOriginEndpointInput) (*mediapackage.CreateOriginEndpointOutput, error) {
     var output mediapackage.CreateOriginEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOriginEndpoint, input).Get(ctx, &output)
@@ -279,6 +282,7 @@ func (a *MediaPackageStub) CreateOriginEndpointAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOriginEndpoint, input)
     return &MediapackageCreateOriginEndpointResult{Result: future}
 }
+
 func (a *MediaPackageStub) DeleteChannel(ctx workflow.Context, input *mediapackage.DeleteChannelInput) (*mediapackage.DeleteChannelOutput, error) {
     var output mediapackage.DeleteChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input).Get(ctx, &output)
@@ -289,6 +293,7 @@ func (a *MediaPackageStub) DeleteChannelAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input)
     return &MediapackageDeleteChannelResult{Result: future}
 }
+
 func (a *MediaPackageStub) DeleteOriginEndpoint(ctx workflow.Context, input *mediapackage.DeleteOriginEndpointInput) (*mediapackage.DeleteOriginEndpointOutput, error) {
     var output mediapackage.DeleteOriginEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOriginEndpoint, input).Get(ctx, &output)
@@ -299,6 +304,7 @@ func (a *MediaPackageStub) DeleteOriginEndpointAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOriginEndpoint, input)
     return &MediapackageDeleteOriginEndpointResult{Result: future}
 }
+
 func (a *MediaPackageStub) DescribeChannel(ctx workflow.Context, input *mediapackage.DescribeChannelInput) (*mediapackage.DescribeChannelOutput, error) {
     var output mediapackage.DescribeChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeChannel, input).Get(ctx, &output)
@@ -309,6 +315,7 @@ func (a *MediaPackageStub) DescribeChannelAsync(ctx workflow.Context, input *med
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeChannel, input)
     return &MediapackageDescribeChannelResult{Result: future}
 }
+
 func (a *MediaPackageStub) DescribeHarvestJob(ctx workflow.Context, input *mediapackage.DescribeHarvestJobInput) (*mediapackage.DescribeHarvestJobOutput, error) {
     var output mediapackage.DescribeHarvestJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeHarvestJob, input).Get(ctx, &output)
@@ -319,6 +326,7 @@ func (a *MediaPackageStub) DescribeHarvestJobAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeHarvestJob, input)
     return &MediapackageDescribeHarvestJobResult{Result: future}
 }
+
 func (a *MediaPackageStub) DescribeOriginEndpoint(ctx workflow.Context, input *mediapackage.DescribeOriginEndpointInput) (*mediapackage.DescribeOriginEndpointOutput, error) {
     var output mediapackage.DescribeOriginEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOriginEndpoint, input).Get(ctx, &output)
@@ -329,6 +337,7 @@ func (a *MediaPackageStub) DescribeOriginEndpointAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOriginEndpoint, input)
     return &MediapackageDescribeOriginEndpointResult{Result: future}
 }
+
 func (a *MediaPackageStub) ListChannels(ctx workflow.Context, input *mediapackage.ListChannelsInput) (*mediapackage.ListChannelsOutput, error) {
     var output mediapackage.ListChannelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input).Get(ctx, &output)
@@ -339,6 +348,7 @@ func (a *MediaPackageStub) ListChannelsAsync(ctx workflow.Context, input *mediap
     future := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input)
     return &MediapackageListChannelsResult{Result: future}
 }
+
 func (a *MediaPackageStub) ListHarvestJobs(ctx workflow.Context, input *mediapackage.ListHarvestJobsInput) (*mediapackage.ListHarvestJobsOutput, error) {
     var output mediapackage.ListHarvestJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHarvestJobs, input).Get(ctx, &output)
@@ -349,6 +359,7 @@ func (a *MediaPackageStub) ListHarvestJobsAsync(ctx workflow.Context, input *med
     future := workflow.ExecuteActivity(ctx, a.activities.ListHarvestJobs, input)
     return &MediapackageListHarvestJobsResult{Result: future}
 }
+
 func (a *MediaPackageStub) ListOriginEndpoints(ctx workflow.Context, input *mediapackage.ListOriginEndpointsInput) (*mediapackage.ListOriginEndpointsOutput, error) {
     var output mediapackage.ListOriginEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOriginEndpoints, input).Get(ctx, &output)
@@ -359,6 +370,7 @@ func (a *MediaPackageStub) ListOriginEndpointsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListOriginEndpoints, input)
     return &MediapackageListOriginEndpointsResult{Result: future}
 }
+
 func (a *MediaPackageStub) ListTagsForResource(ctx workflow.Context, input *mediapackage.ListTagsForResourceInput) (*mediapackage.ListTagsForResourceOutput, error) {
     var output mediapackage.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -369,6 +381,7 @@ func (a *MediaPackageStub) ListTagsForResourceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &MediapackageListTagsForResourceResult{Result: future}
 }
+
 func (a *MediaPackageStub) RotateChannelCredentials(ctx workflow.Context, input *mediapackage.RotateChannelCredentialsInput) (*mediapackage.RotateChannelCredentialsOutput, error) {
     var output mediapackage.RotateChannelCredentialsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RotateChannelCredentials, input).Get(ctx, &output)
@@ -379,6 +392,7 @@ func (a *MediaPackageStub) RotateChannelCredentialsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.RotateChannelCredentials, input)
     return &MediapackageRotateChannelCredentialsResult{Result: future}
 }
+
 func (a *MediaPackageStub) RotateIngestEndpointCredentials(ctx workflow.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) (*mediapackage.RotateIngestEndpointCredentialsOutput, error) {
     var output mediapackage.RotateIngestEndpointCredentialsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RotateIngestEndpointCredentials, input).Get(ctx, &output)
@@ -389,6 +403,7 @@ func (a *MediaPackageStub) RotateIngestEndpointCredentialsAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.RotateIngestEndpointCredentials, input)
     return &MediapackageRotateIngestEndpointCredentialsResult{Result: future}
 }
+
 func (a *MediaPackageStub) TagResource(ctx workflow.Context, input *mediapackage.TagResourceInput) (*mediapackage.TagResourceOutput, error) {
     var output mediapackage.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -399,6 +414,7 @@ func (a *MediaPackageStub) TagResourceAsync(ctx workflow.Context, input *mediapa
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &MediapackageTagResourceResult{Result: future}
 }
+
 func (a *MediaPackageStub) UntagResource(ctx workflow.Context, input *mediapackage.UntagResourceInput) (*mediapackage.UntagResourceOutput, error) {
     var output mediapackage.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -409,6 +425,7 @@ func (a *MediaPackageStub) UntagResourceAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &MediapackageUntagResourceResult{Result: future}
 }
+
 func (a *MediaPackageStub) UpdateChannel(ctx workflow.Context, input *mediapackage.UpdateChannelInput) (*mediapackage.UpdateChannelOutput, error) {
     var output mediapackage.UpdateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateChannel, input).Get(ctx, &output)
@@ -419,6 +436,7 @@ func (a *MediaPackageStub) UpdateChannelAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateChannel, input)
     return &MediapackageUpdateChannelResult{Result: future}
 }
+
 func (a *MediaPackageStub) UpdateOriginEndpoint(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error) {
     var output mediapackage.UpdateOriginEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateOriginEndpoint, input).Get(ctx, &output)

@@ -151,6 +151,7 @@ type BackupClient interface {
     UpdateRegionSettings(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) (*backup.UpdateRegionSettingsOutput, error)
     UpdateRegionSettingsAsync(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) *BackupUpdateRegionSettingsResult
 }
+
 type BackupCreateBackupPlanResult struct {
 	Result workflow.Future
 }
@@ -631,7 +632,6 @@ func (r *BackupUpdateRegionSettingsResult) Get(ctx workflow.Context) (*backup.Up
     return &output, err
 }
 
-
 type BackupStub struct {
     activities awsactivities.BackupActivities
 }
@@ -639,6 +639,7 @@ type BackupStub struct {
 func NewBackupStub() BackupClient {
     return &BackupStub{}
 }
+
 func (a *BackupStub) CreateBackupPlan(ctx workflow.Context, input *backup.CreateBackupPlanInput) (*backup.CreateBackupPlanOutput, error) {
     var output backup.CreateBackupPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBackupPlan, input).Get(ctx, &output)
@@ -649,6 +650,7 @@ func (a *BackupStub) CreateBackupPlanAsync(ctx workflow.Context, input *backup.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBackupPlan, input)
     return &BackupCreateBackupPlanResult{Result: future}
 }
+
 func (a *BackupStub) CreateBackupSelection(ctx workflow.Context, input *backup.CreateBackupSelectionInput) (*backup.CreateBackupSelectionOutput, error) {
     var output backup.CreateBackupSelectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBackupSelection, input).Get(ctx, &output)
@@ -659,6 +661,7 @@ func (a *BackupStub) CreateBackupSelectionAsync(ctx workflow.Context, input *bac
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBackupSelection, input)
     return &BackupCreateBackupSelectionResult{Result: future}
 }
+
 func (a *BackupStub) CreateBackupVault(ctx workflow.Context, input *backup.CreateBackupVaultInput) (*backup.CreateBackupVaultOutput, error) {
     var output backup.CreateBackupVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBackupVault, input).Get(ctx, &output)
@@ -669,6 +672,7 @@ func (a *BackupStub) CreateBackupVaultAsync(ctx workflow.Context, input *backup.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBackupVault, input)
     return &BackupCreateBackupVaultResult{Result: future}
 }
+
 func (a *BackupStub) DeleteBackupPlan(ctx workflow.Context, input *backup.DeleteBackupPlanInput) (*backup.DeleteBackupPlanOutput, error) {
     var output backup.DeleteBackupPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupPlan, input).Get(ctx, &output)
@@ -679,6 +683,7 @@ func (a *BackupStub) DeleteBackupPlanAsync(ctx workflow.Context, input *backup.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupPlan, input)
     return &BackupDeleteBackupPlanResult{Result: future}
 }
+
 func (a *BackupStub) DeleteBackupSelection(ctx workflow.Context, input *backup.DeleteBackupSelectionInput) (*backup.DeleteBackupSelectionOutput, error) {
     var output backup.DeleteBackupSelectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupSelection, input).Get(ctx, &output)
@@ -689,6 +694,7 @@ func (a *BackupStub) DeleteBackupSelectionAsync(ctx workflow.Context, input *bac
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupSelection, input)
     return &BackupDeleteBackupSelectionResult{Result: future}
 }
+
 func (a *BackupStub) DeleteBackupVault(ctx workflow.Context, input *backup.DeleteBackupVaultInput) (*backup.DeleteBackupVaultOutput, error) {
     var output backup.DeleteBackupVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVault, input).Get(ctx, &output)
@@ -699,6 +705,7 @@ func (a *BackupStub) DeleteBackupVaultAsync(ctx workflow.Context, input *backup.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVault, input)
     return &BackupDeleteBackupVaultResult{Result: future}
 }
+
 func (a *BackupStub) DeleteBackupVaultAccessPolicy(ctx workflow.Context, input *backup.DeleteBackupVaultAccessPolicyInput) (*backup.DeleteBackupVaultAccessPolicyOutput, error) {
     var output backup.DeleteBackupVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVaultAccessPolicy, input).Get(ctx, &output)
@@ -709,6 +716,7 @@ func (a *BackupStub) DeleteBackupVaultAccessPolicyAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVaultAccessPolicy, input)
     return &BackupDeleteBackupVaultAccessPolicyResult{Result: future}
 }
+
 func (a *BackupStub) DeleteBackupVaultNotifications(ctx workflow.Context, input *backup.DeleteBackupVaultNotificationsInput) (*backup.DeleteBackupVaultNotificationsOutput, error) {
     var output backup.DeleteBackupVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVaultNotifications, input).Get(ctx, &output)
@@ -719,6 +727,7 @@ func (a *BackupStub) DeleteBackupVaultNotificationsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackupVaultNotifications, input)
     return &BackupDeleteBackupVaultNotificationsResult{Result: future}
 }
+
 func (a *BackupStub) DeleteRecoveryPoint(ctx workflow.Context, input *backup.DeleteRecoveryPointInput) (*backup.DeleteRecoveryPointOutput, error) {
     var output backup.DeleteRecoveryPointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRecoveryPoint, input).Get(ctx, &output)
@@ -729,6 +738,7 @@ func (a *BackupStub) DeleteRecoveryPointAsync(ctx workflow.Context, input *backu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRecoveryPoint, input)
     return &BackupDeleteRecoveryPointResult{Result: future}
 }
+
 func (a *BackupStub) DescribeBackupJob(ctx workflow.Context, input *backup.DescribeBackupJobInput) (*backup.DescribeBackupJobOutput, error) {
     var output backup.DescribeBackupJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBackupJob, input).Get(ctx, &output)
@@ -739,6 +749,7 @@ func (a *BackupStub) DescribeBackupJobAsync(ctx workflow.Context, input *backup.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBackupJob, input)
     return &BackupDescribeBackupJobResult{Result: future}
 }
+
 func (a *BackupStub) DescribeBackupVault(ctx workflow.Context, input *backup.DescribeBackupVaultInput) (*backup.DescribeBackupVaultOutput, error) {
     var output backup.DescribeBackupVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBackupVault, input).Get(ctx, &output)
@@ -749,6 +760,7 @@ func (a *BackupStub) DescribeBackupVaultAsync(ctx workflow.Context, input *backu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBackupVault, input)
     return &BackupDescribeBackupVaultResult{Result: future}
 }
+
 func (a *BackupStub) DescribeCopyJob(ctx workflow.Context, input *backup.DescribeCopyJobInput) (*backup.DescribeCopyJobOutput, error) {
     var output backup.DescribeCopyJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCopyJob, input).Get(ctx, &output)
@@ -759,6 +771,7 @@ func (a *BackupStub) DescribeCopyJobAsync(ctx workflow.Context, input *backup.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCopyJob, input)
     return &BackupDescribeCopyJobResult{Result: future}
 }
+
 func (a *BackupStub) DescribeProtectedResource(ctx workflow.Context, input *backup.DescribeProtectedResourceInput) (*backup.DescribeProtectedResourceOutput, error) {
     var output backup.DescribeProtectedResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProtectedResource, input).Get(ctx, &output)
@@ -769,6 +782,7 @@ func (a *BackupStub) DescribeProtectedResourceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProtectedResource, input)
     return &BackupDescribeProtectedResourceResult{Result: future}
 }
+
 func (a *BackupStub) DescribeRecoveryPoint(ctx workflow.Context, input *backup.DescribeRecoveryPointInput) (*backup.DescribeRecoveryPointOutput, error) {
     var output backup.DescribeRecoveryPointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRecoveryPoint, input).Get(ctx, &output)
@@ -779,6 +793,7 @@ func (a *BackupStub) DescribeRecoveryPointAsync(ctx workflow.Context, input *bac
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRecoveryPoint, input)
     return &BackupDescribeRecoveryPointResult{Result: future}
 }
+
 func (a *BackupStub) DescribeRegionSettings(ctx workflow.Context, input *backup.DescribeRegionSettingsInput) (*backup.DescribeRegionSettingsOutput, error) {
     var output backup.DescribeRegionSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRegionSettings, input).Get(ctx, &output)
@@ -789,6 +804,7 @@ func (a *BackupStub) DescribeRegionSettingsAsync(ctx workflow.Context, input *ba
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRegionSettings, input)
     return &BackupDescribeRegionSettingsResult{Result: future}
 }
+
 func (a *BackupStub) DescribeRestoreJob(ctx workflow.Context, input *backup.DescribeRestoreJobInput) (*backup.DescribeRestoreJobOutput, error) {
     var output backup.DescribeRestoreJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRestoreJob, input).Get(ctx, &output)
@@ -799,6 +815,7 @@ func (a *BackupStub) DescribeRestoreJobAsync(ctx workflow.Context, input *backup
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRestoreJob, input)
     return &BackupDescribeRestoreJobResult{Result: future}
 }
+
 func (a *BackupStub) ExportBackupPlanTemplate(ctx workflow.Context, input *backup.ExportBackupPlanTemplateInput) (*backup.ExportBackupPlanTemplateOutput, error) {
     var output backup.ExportBackupPlanTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExportBackupPlanTemplate, input).Get(ctx, &output)
@@ -809,6 +826,7 @@ func (a *BackupStub) ExportBackupPlanTemplateAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ExportBackupPlanTemplate, input)
     return &BackupExportBackupPlanTemplateResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupPlan(ctx workflow.Context, input *backup.GetBackupPlanInput) (*backup.GetBackupPlanOutput, error) {
     var output backup.GetBackupPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlan, input).Get(ctx, &output)
@@ -819,6 +837,7 @@ func (a *BackupStub) GetBackupPlanAsync(ctx workflow.Context, input *backup.GetB
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlan, input)
     return &BackupGetBackupPlanResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupPlanFromJSON(ctx workflow.Context, input *backup.GetBackupPlanFromJSONInput) (*backup.GetBackupPlanFromJSONOutput, error) {
     var output backup.GetBackupPlanFromJSONOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlanFromJSON, input).Get(ctx, &output)
@@ -829,6 +848,7 @@ func (a *BackupStub) GetBackupPlanFromJSONAsync(ctx workflow.Context, input *bac
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlanFromJSON, input)
     return &BackupGetBackupPlanFromJSONResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupPlanFromTemplate(ctx workflow.Context, input *backup.GetBackupPlanFromTemplateInput) (*backup.GetBackupPlanFromTemplateOutput, error) {
     var output backup.GetBackupPlanFromTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlanFromTemplate, input).Get(ctx, &output)
@@ -839,6 +859,7 @@ func (a *BackupStub) GetBackupPlanFromTemplateAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupPlanFromTemplate, input)
     return &BackupGetBackupPlanFromTemplateResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupSelection(ctx workflow.Context, input *backup.GetBackupSelectionInput) (*backup.GetBackupSelectionOutput, error) {
     var output backup.GetBackupSelectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupSelection, input).Get(ctx, &output)
@@ -849,6 +870,7 @@ func (a *BackupStub) GetBackupSelectionAsync(ctx workflow.Context, input *backup
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupSelection, input)
     return &BackupGetBackupSelectionResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupVaultAccessPolicy(ctx workflow.Context, input *backup.GetBackupVaultAccessPolicyInput) (*backup.GetBackupVaultAccessPolicyOutput, error) {
     var output backup.GetBackupVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupVaultAccessPolicy, input).Get(ctx, &output)
@@ -859,6 +881,7 @@ func (a *BackupStub) GetBackupVaultAccessPolicyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupVaultAccessPolicy, input)
     return &BackupGetBackupVaultAccessPolicyResult{Result: future}
 }
+
 func (a *BackupStub) GetBackupVaultNotifications(ctx workflow.Context, input *backup.GetBackupVaultNotificationsInput) (*backup.GetBackupVaultNotificationsOutput, error) {
     var output backup.GetBackupVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackupVaultNotifications, input).Get(ctx, &output)
@@ -869,6 +892,7 @@ func (a *BackupStub) GetBackupVaultNotificationsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackupVaultNotifications, input)
     return &BackupGetBackupVaultNotificationsResult{Result: future}
 }
+
 func (a *BackupStub) GetRecoveryPointRestoreMetadata(ctx workflow.Context, input *backup.GetRecoveryPointRestoreMetadataInput) (*backup.GetRecoveryPointRestoreMetadataOutput, error) {
     var output backup.GetRecoveryPointRestoreMetadataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRecoveryPointRestoreMetadata, input).Get(ctx, &output)
@@ -879,6 +903,7 @@ func (a *BackupStub) GetRecoveryPointRestoreMetadataAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GetRecoveryPointRestoreMetadata, input)
     return &BackupGetRecoveryPointRestoreMetadataResult{Result: future}
 }
+
 func (a *BackupStub) GetSupportedResourceTypes(ctx workflow.Context, input *backup.GetSupportedResourceTypesInput) (*backup.GetSupportedResourceTypesOutput, error) {
     var output backup.GetSupportedResourceTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSupportedResourceTypes, input).Get(ctx, &output)
@@ -889,6 +914,7 @@ func (a *BackupStub) GetSupportedResourceTypesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetSupportedResourceTypes, input)
     return &BackupGetSupportedResourceTypesResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupJobs(ctx workflow.Context, input *backup.ListBackupJobsInput) (*backup.ListBackupJobsOutput, error) {
     var output backup.ListBackupJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupJobs, input).Get(ctx, &output)
@@ -899,6 +925,7 @@ func (a *BackupStub) ListBackupJobsAsync(ctx workflow.Context, input *backup.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupJobs, input)
     return &BackupListBackupJobsResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupPlanTemplates(ctx workflow.Context, input *backup.ListBackupPlanTemplatesInput) (*backup.ListBackupPlanTemplatesOutput, error) {
     var output backup.ListBackupPlanTemplatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlanTemplates, input).Get(ctx, &output)
@@ -909,6 +936,7 @@ func (a *BackupStub) ListBackupPlanTemplatesAsync(ctx workflow.Context, input *b
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlanTemplates, input)
     return &BackupListBackupPlanTemplatesResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupPlanVersions(ctx workflow.Context, input *backup.ListBackupPlanVersionsInput) (*backup.ListBackupPlanVersionsOutput, error) {
     var output backup.ListBackupPlanVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlanVersions, input).Get(ctx, &output)
@@ -919,6 +947,7 @@ func (a *BackupStub) ListBackupPlanVersionsAsync(ctx workflow.Context, input *ba
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlanVersions, input)
     return &BackupListBackupPlanVersionsResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupPlans(ctx workflow.Context, input *backup.ListBackupPlansInput) (*backup.ListBackupPlansOutput, error) {
     var output backup.ListBackupPlansOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlans, input).Get(ctx, &output)
@@ -929,6 +958,7 @@ func (a *BackupStub) ListBackupPlansAsync(ctx workflow.Context, input *backup.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupPlans, input)
     return &BackupListBackupPlansResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupSelections(ctx workflow.Context, input *backup.ListBackupSelectionsInput) (*backup.ListBackupSelectionsOutput, error) {
     var output backup.ListBackupSelectionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupSelections, input).Get(ctx, &output)
@@ -939,6 +969,7 @@ func (a *BackupStub) ListBackupSelectionsAsync(ctx workflow.Context, input *back
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupSelections, input)
     return &BackupListBackupSelectionsResult{Result: future}
 }
+
 func (a *BackupStub) ListBackupVaults(ctx workflow.Context, input *backup.ListBackupVaultsInput) (*backup.ListBackupVaultsOutput, error) {
     var output backup.ListBackupVaultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackupVaults, input).Get(ctx, &output)
@@ -949,6 +980,7 @@ func (a *BackupStub) ListBackupVaultsAsync(ctx workflow.Context, input *backup.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackupVaults, input)
     return &BackupListBackupVaultsResult{Result: future}
 }
+
 func (a *BackupStub) ListCopyJobs(ctx workflow.Context, input *backup.ListCopyJobsInput) (*backup.ListCopyJobsOutput, error) {
     var output backup.ListCopyJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListCopyJobs, input).Get(ctx, &output)
@@ -959,6 +991,7 @@ func (a *BackupStub) ListCopyJobsAsync(ctx workflow.Context, input *backup.ListC
     future := workflow.ExecuteActivity(ctx, a.activities.ListCopyJobs, input)
     return &BackupListCopyJobsResult{Result: future}
 }
+
 func (a *BackupStub) ListProtectedResources(ctx workflow.Context, input *backup.ListProtectedResourcesInput) (*backup.ListProtectedResourcesOutput, error) {
     var output backup.ListProtectedResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProtectedResources, input).Get(ctx, &output)
@@ -969,6 +1002,7 @@ func (a *BackupStub) ListProtectedResourcesAsync(ctx workflow.Context, input *ba
     future := workflow.ExecuteActivity(ctx, a.activities.ListProtectedResources, input)
     return &BackupListProtectedResourcesResult{Result: future}
 }
+
 func (a *BackupStub) ListRecoveryPointsByBackupVault(ctx workflow.Context, input *backup.ListRecoveryPointsByBackupVaultInput) (*backup.ListRecoveryPointsByBackupVaultOutput, error) {
     var output backup.ListRecoveryPointsByBackupVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRecoveryPointsByBackupVault, input).Get(ctx, &output)
@@ -979,6 +1013,7 @@ func (a *BackupStub) ListRecoveryPointsByBackupVaultAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListRecoveryPointsByBackupVault, input)
     return &BackupListRecoveryPointsByBackupVaultResult{Result: future}
 }
+
 func (a *BackupStub) ListRecoveryPointsByResource(ctx workflow.Context, input *backup.ListRecoveryPointsByResourceInput) (*backup.ListRecoveryPointsByResourceOutput, error) {
     var output backup.ListRecoveryPointsByResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRecoveryPointsByResource, input).Get(ctx, &output)
@@ -989,6 +1024,7 @@ func (a *BackupStub) ListRecoveryPointsByResourceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListRecoveryPointsByResource, input)
     return &BackupListRecoveryPointsByResourceResult{Result: future}
 }
+
 func (a *BackupStub) ListRestoreJobs(ctx workflow.Context, input *backup.ListRestoreJobsInput) (*backup.ListRestoreJobsOutput, error) {
     var output backup.ListRestoreJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRestoreJobs, input).Get(ctx, &output)
@@ -999,6 +1035,7 @@ func (a *BackupStub) ListRestoreJobsAsync(ctx workflow.Context, input *backup.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListRestoreJobs, input)
     return &BackupListRestoreJobsResult{Result: future}
 }
+
 func (a *BackupStub) ListTags(ctx workflow.Context, input *backup.ListTagsInput) (*backup.ListTagsOutput, error) {
     var output backup.ListTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTags, input).Get(ctx, &output)
@@ -1009,6 +1046,7 @@ func (a *BackupStub) ListTagsAsync(ctx workflow.Context, input *backup.ListTagsI
     future := workflow.ExecuteActivity(ctx, a.activities.ListTags, input)
     return &BackupListTagsResult{Result: future}
 }
+
 func (a *BackupStub) PutBackupVaultAccessPolicy(ctx workflow.Context, input *backup.PutBackupVaultAccessPolicyInput) (*backup.PutBackupVaultAccessPolicyOutput, error) {
     var output backup.PutBackupVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutBackupVaultAccessPolicy, input).Get(ctx, &output)
@@ -1019,6 +1057,7 @@ func (a *BackupStub) PutBackupVaultAccessPolicyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.PutBackupVaultAccessPolicy, input)
     return &BackupPutBackupVaultAccessPolicyResult{Result: future}
 }
+
 func (a *BackupStub) PutBackupVaultNotifications(ctx workflow.Context, input *backup.PutBackupVaultNotificationsInput) (*backup.PutBackupVaultNotificationsOutput, error) {
     var output backup.PutBackupVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutBackupVaultNotifications, input).Get(ctx, &output)
@@ -1029,6 +1068,7 @@ func (a *BackupStub) PutBackupVaultNotificationsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.PutBackupVaultNotifications, input)
     return &BackupPutBackupVaultNotificationsResult{Result: future}
 }
+
 func (a *BackupStub) StartBackupJob(ctx workflow.Context, input *backup.StartBackupJobInput) (*backup.StartBackupJobOutput, error) {
     var output backup.StartBackupJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartBackupJob, input).Get(ctx, &output)
@@ -1039,6 +1079,7 @@ func (a *BackupStub) StartBackupJobAsync(ctx workflow.Context, input *backup.Sta
     future := workflow.ExecuteActivity(ctx, a.activities.StartBackupJob, input)
     return &BackupStartBackupJobResult{Result: future}
 }
+
 func (a *BackupStub) StartCopyJob(ctx workflow.Context, input *backup.StartCopyJobInput) (*backup.StartCopyJobOutput, error) {
     var output backup.StartCopyJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartCopyJob, input).Get(ctx, &output)
@@ -1049,6 +1090,7 @@ func (a *BackupStub) StartCopyJobAsync(ctx workflow.Context, input *backup.Start
     future := workflow.ExecuteActivity(ctx, a.activities.StartCopyJob, input)
     return &BackupStartCopyJobResult{Result: future}
 }
+
 func (a *BackupStub) StartRestoreJob(ctx workflow.Context, input *backup.StartRestoreJobInput) (*backup.StartRestoreJobOutput, error) {
     var output backup.StartRestoreJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartRestoreJob, input).Get(ctx, &output)
@@ -1059,6 +1101,7 @@ func (a *BackupStub) StartRestoreJobAsync(ctx workflow.Context, input *backup.St
     future := workflow.ExecuteActivity(ctx, a.activities.StartRestoreJob, input)
     return &BackupStartRestoreJobResult{Result: future}
 }
+
 func (a *BackupStub) StopBackupJob(ctx workflow.Context, input *backup.StopBackupJobInput) (*backup.StopBackupJobOutput, error) {
     var output backup.StopBackupJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopBackupJob, input).Get(ctx, &output)
@@ -1069,6 +1112,7 @@ func (a *BackupStub) StopBackupJobAsync(ctx workflow.Context, input *backup.Stop
     future := workflow.ExecuteActivity(ctx, a.activities.StopBackupJob, input)
     return &BackupStopBackupJobResult{Result: future}
 }
+
 func (a *BackupStub) TagResource(ctx workflow.Context, input *backup.TagResourceInput) (*backup.TagResourceOutput, error) {
     var output backup.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1079,6 +1123,7 @@ func (a *BackupStub) TagResourceAsync(ctx workflow.Context, input *backup.TagRes
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &BackupTagResourceResult{Result: future}
 }
+
 func (a *BackupStub) UntagResource(ctx workflow.Context, input *backup.UntagResourceInput) (*backup.UntagResourceOutput, error) {
     var output backup.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1089,6 +1134,7 @@ func (a *BackupStub) UntagResourceAsync(ctx workflow.Context, input *backup.Unta
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &BackupUntagResourceResult{Result: future}
 }
+
 func (a *BackupStub) UpdateBackupPlan(ctx workflow.Context, input *backup.UpdateBackupPlanInput) (*backup.UpdateBackupPlanOutput, error) {
     var output backup.UpdateBackupPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBackupPlan, input).Get(ctx, &output)
@@ -1099,6 +1145,7 @@ func (a *BackupStub) UpdateBackupPlanAsync(ctx workflow.Context, input *backup.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBackupPlan, input)
     return &BackupUpdateBackupPlanResult{Result: future}
 }
+
 func (a *BackupStub) UpdateRecoveryPointLifecycle(ctx workflow.Context, input *backup.UpdateRecoveryPointLifecycleInput) (*backup.UpdateRecoveryPointLifecycleOutput, error) {
     var output backup.UpdateRecoveryPointLifecycleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRecoveryPointLifecycle, input).Get(ctx, &output)
@@ -1109,6 +1156,7 @@ func (a *BackupStub) UpdateRecoveryPointLifecycleAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRecoveryPointLifecycle, input)
     return &BackupUpdateRecoveryPointLifecycleResult{Result: future}
 }
+
 func (a *BackupStub) UpdateRegionSettings(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) (*backup.UpdateRegionSettingsOutput, error) {
     var output backup.UpdateRegionSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRegionSettings, input).Get(ctx, &output)

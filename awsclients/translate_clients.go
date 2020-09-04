@@ -34,6 +34,7 @@ type TranslateClient interface {
     Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error)
     TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextResult
 }
+
 type TranslateDeleteTerminologyResult struct {
 	Result workflow.Future
 }
@@ -124,7 +125,6 @@ func (r *TranslateTextResult) Get(ctx workflow.Context) (*translate.TextOutput, 
     return &output, err
 }
 
-
 type TranslateStub struct {
     activities awsactivities.TranslateActivities
 }
@@ -132,6 +132,7 @@ type TranslateStub struct {
 func NewTranslateStub() TranslateClient {
     return &TranslateStub{}
 }
+
 func (a *TranslateStub) DeleteTerminology(ctx workflow.Context, input *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error) {
     var output translate.DeleteTerminologyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTerminology, input).Get(ctx, &output)
@@ -142,6 +143,7 @@ func (a *TranslateStub) DeleteTerminologyAsync(ctx workflow.Context, input *tran
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTerminology, input)
     return &TranslateDeleteTerminologyResult{Result: future}
 }
+
 func (a *TranslateStub) DescribeTextTranslationJob(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error) {
     var output translate.DescribeTextTranslationJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTextTranslationJob, input).Get(ctx, &output)
@@ -152,6 +154,7 @@ func (a *TranslateStub) DescribeTextTranslationJobAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTextTranslationJob, input)
     return &TranslateDescribeTextTranslationJobResult{Result: future}
 }
+
 func (a *TranslateStub) GetTerminology(ctx workflow.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error) {
     var output translate.GetTerminologyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTerminology, input).Get(ctx, &output)
@@ -162,6 +165,7 @@ func (a *TranslateStub) GetTerminologyAsync(ctx workflow.Context, input *transla
     future := workflow.ExecuteActivity(ctx, a.activities.GetTerminology, input)
     return &TranslateGetTerminologyResult{Result: future}
 }
+
 func (a *TranslateStub) ImportTerminology(ctx workflow.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error) {
     var output translate.ImportTerminologyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportTerminology, input).Get(ctx, &output)
@@ -172,6 +176,7 @@ func (a *TranslateStub) ImportTerminologyAsync(ctx workflow.Context, input *tran
     future := workflow.ExecuteActivity(ctx, a.activities.ImportTerminology, input)
     return &TranslateImportTerminologyResult{Result: future}
 }
+
 func (a *TranslateStub) ListTerminologies(ctx workflow.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error) {
     var output translate.ListTerminologiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTerminologies, input).Get(ctx, &output)
@@ -182,6 +187,7 @@ func (a *TranslateStub) ListTerminologiesAsync(ctx workflow.Context, input *tran
     future := workflow.ExecuteActivity(ctx, a.activities.ListTerminologies, input)
     return &TranslateListTerminologiesResult{Result: future}
 }
+
 func (a *TranslateStub) ListTextTranslationJobs(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error) {
     var output translate.ListTextTranslationJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTextTranslationJobs, input).Get(ctx, &output)
@@ -192,6 +198,7 @@ func (a *TranslateStub) ListTextTranslationJobsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListTextTranslationJobs, input)
     return &TranslateListTextTranslationJobsResult{Result: future}
 }
+
 func (a *TranslateStub) StartTextTranslationJob(ctx workflow.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error) {
     var output translate.StartTextTranslationJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartTextTranslationJob, input).Get(ctx, &output)
@@ -202,6 +209,7 @@ func (a *TranslateStub) StartTextTranslationJobAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.StartTextTranslationJob, input)
     return &TranslateStartTextTranslationJobResult{Result: future}
 }
+
 func (a *TranslateStub) StopTextTranslationJob(ctx workflow.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error) {
     var output translate.StopTextTranslationJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopTextTranslationJob, input).Get(ctx, &output)
@@ -212,6 +220,7 @@ func (a *TranslateStub) StopTextTranslationJobAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.StopTextTranslationJob, input)
     return &TranslateStopTextTranslationJobResult{Result: future}
 }
+
 func (a *TranslateStub) Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error) {
     var output translate.TextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Text, input).Get(ctx, &output)

@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,8 +14,6 @@ func NewKinesisVideoMediaActivities(client kinesisvideomediaiface.KinesisVideoMe
     return &KinesisVideoMediaActivities{client: client}
 }
 
-
 func (a *KinesisVideoMediaActivities) GetMedia(input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error) {
     return a.client.GetMedia(input)
 }
-

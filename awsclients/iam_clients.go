@@ -431,6 +431,7 @@ type IAMClient interface {
     WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error
     WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error
     WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error}
+
 type IamAddClientIDToOpenIDConnectProviderResult struct {
 	Result workflow.Future
 }
@@ -1831,7 +1832,6 @@ func (r *IamUploadSigningCertificateResult) Get(ctx workflow.Context) (*iam.Uplo
     return &output, err
 }
 
-
 type IAMStub struct {
     activities awsactivities.IAMActivities
 }
@@ -1839,6 +1839,7 @@ type IAMStub struct {
 func NewIAMStub() IAMClient {
     return &IAMStub{}
 }
+
 func (a *IAMStub) AddClientIDToOpenIDConnectProvider(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) (*iam.AddClientIDToOpenIDConnectProviderOutput, error) {
     var output iam.AddClientIDToOpenIDConnectProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddClientIDToOpenIDConnectProvider, input).Get(ctx, &output)
@@ -1849,6 +1850,7 @@ func (a *IAMStub) AddClientIDToOpenIDConnectProviderAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.AddClientIDToOpenIDConnectProvider, input)
     return &IamAddClientIDToOpenIDConnectProviderResult{Result: future}
 }
+
 func (a *IAMStub) AddRoleToInstanceProfile(ctx workflow.Context, input *iam.AddRoleToInstanceProfileInput) (*iam.AddRoleToInstanceProfileOutput, error) {
     var output iam.AddRoleToInstanceProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddRoleToInstanceProfile, input).Get(ctx, &output)
@@ -1859,6 +1861,7 @@ func (a *IAMStub) AddRoleToInstanceProfileAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.AddRoleToInstanceProfile, input)
     return &IamAddRoleToInstanceProfileResult{Result: future}
 }
+
 func (a *IAMStub) AddUserToGroup(ctx workflow.Context, input *iam.AddUserToGroupInput) (*iam.AddUserToGroupOutput, error) {
     var output iam.AddUserToGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddUserToGroup, input).Get(ctx, &output)
@@ -1869,6 +1872,7 @@ func (a *IAMStub) AddUserToGroupAsync(ctx workflow.Context, input *iam.AddUserTo
     future := workflow.ExecuteActivity(ctx, a.activities.AddUserToGroup, input)
     return &IamAddUserToGroupResult{Result: future}
 }
+
 func (a *IAMStub) AttachGroupPolicy(ctx workflow.Context, input *iam.AttachGroupPolicyInput) (*iam.AttachGroupPolicyOutput, error) {
     var output iam.AttachGroupPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachGroupPolicy, input).Get(ctx, &output)
@@ -1879,6 +1883,7 @@ func (a *IAMStub) AttachGroupPolicyAsync(ctx workflow.Context, input *iam.Attach
     future := workflow.ExecuteActivity(ctx, a.activities.AttachGroupPolicy, input)
     return &IamAttachGroupPolicyResult{Result: future}
 }
+
 func (a *IAMStub) AttachRolePolicy(ctx workflow.Context, input *iam.AttachRolePolicyInput) (*iam.AttachRolePolicyOutput, error) {
     var output iam.AttachRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachRolePolicy, input).Get(ctx, &output)
@@ -1889,6 +1894,7 @@ func (a *IAMStub) AttachRolePolicyAsync(ctx workflow.Context, input *iam.AttachR
     future := workflow.ExecuteActivity(ctx, a.activities.AttachRolePolicy, input)
     return &IamAttachRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) AttachUserPolicy(ctx workflow.Context, input *iam.AttachUserPolicyInput) (*iam.AttachUserPolicyOutput, error) {
     var output iam.AttachUserPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachUserPolicy, input).Get(ctx, &output)
@@ -1899,6 +1905,7 @@ func (a *IAMStub) AttachUserPolicyAsync(ctx workflow.Context, input *iam.AttachU
     future := workflow.ExecuteActivity(ctx, a.activities.AttachUserPolicy, input)
     return &IamAttachUserPolicyResult{Result: future}
 }
+
 func (a *IAMStub) ChangePassword(ctx workflow.Context, input *iam.ChangePasswordInput) (*iam.ChangePasswordOutput, error) {
     var output iam.ChangePasswordOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ChangePassword, input).Get(ctx, &output)
@@ -1909,6 +1916,7 @@ func (a *IAMStub) ChangePasswordAsync(ctx workflow.Context, input *iam.ChangePas
     future := workflow.ExecuteActivity(ctx, a.activities.ChangePassword, input)
     return &IamChangePasswordResult{Result: future}
 }
+
 func (a *IAMStub) CreateAccessKey(ctx workflow.Context, input *iam.CreateAccessKeyInput) (*iam.CreateAccessKeyOutput, error) {
     var output iam.CreateAccessKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAccessKey, input).Get(ctx, &output)
@@ -1919,6 +1927,7 @@ func (a *IAMStub) CreateAccessKeyAsync(ctx workflow.Context, input *iam.CreateAc
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAccessKey, input)
     return &IamCreateAccessKeyResult{Result: future}
 }
+
 func (a *IAMStub) CreateAccountAlias(ctx workflow.Context, input *iam.CreateAccountAliasInput) (*iam.CreateAccountAliasOutput, error) {
     var output iam.CreateAccountAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAccountAlias, input).Get(ctx, &output)
@@ -1929,6 +1938,7 @@ func (a *IAMStub) CreateAccountAliasAsync(ctx workflow.Context, input *iam.Creat
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAccountAlias, input)
     return &IamCreateAccountAliasResult{Result: future}
 }
+
 func (a *IAMStub) CreateGroup(ctx workflow.Context, input *iam.CreateGroupInput) (*iam.CreateGroupOutput, error) {
     var output iam.CreateGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGroup, input).Get(ctx, &output)
@@ -1939,6 +1949,7 @@ func (a *IAMStub) CreateGroupAsync(ctx workflow.Context, input *iam.CreateGroupI
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGroup, input)
     return &IamCreateGroupResult{Result: future}
 }
+
 func (a *IAMStub) CreateInstanceProfile(ctx workflow.Context, input *iam.CreateInstanceProfileInput) (*iam.CreateInstanceProfileOutput, error) {
     var output iam.CreateInstanceProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateInstanceProfile, input).Get(ctx, &output)
@@ -1949,6 +1960,7 @@ func (a *IAMStub) CreateInstanceProfileAsync(ctx workflow.Context, input *iam.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateInstanceProfile, input)
     return &IamCreateInstanceProfileResult{Result: future}
 }
+
 func (a *IAMStub) CreateLoginProfile(ctx workflow.Context, input *iam.CreateLoginProfileInput) (*iam.CreateLoginProfileOutput, error) {
     var output iam.CreateLoginProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLoginProfile, input).Get(ctx, &output)
@@ -1959,6 +1971,7 @@ func (a *IAMStub) CreateLoginProfileAsync(ctx workflow.Context, input *iam.Creat
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLoginProfile, input)
     return &IamCreateLoginProfileResult{Result: future}
 }
+
 func (a *IAMStub) CreateOpenIDConnectProvider(ctx workflow.Context, input *iam.CreateOpenIDConnectProviderInput) (*iam.CreateOpenIDConnectProviderOutput, error) {
     var output iam.CreateOpenIDConnectProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOpenIDConnectProvider, input).Get(ctx, &output)
@@ -1969,6 +1982,7 @@ func (a *IAMStub) CreateOpenIDConnectProviderAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOpenIDConnectProvider, input)
     return &IamCreateOpenIDConnectProviderResult{Result: future}
 }
+
 func (a *IAMStub) CreatePolicy(ctx workflow.Context, input *iam.CreatePolicyInput) (*iam.CreatePolicyOutput, error) {
     var output iam.CreatePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePolicy, input).Get(ctx, &output)
@@ -1979,6 +1993,7 @@ func (a *IAMStub) CreatePolicyAsync(ctx workflow.Context, input *iam.CreatePolic
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePolicy, input)
     return &IamCreatePolicyResult{Result: future}
 }
+
 func (a *IAMStub) CreatePolicyVersion(ctx workflow.Context, input *iam.CreatePolicyVersionInput) (*iam.CreatePolicyVersionOutput, error) {
     var output iam.CreatePolicyVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePolicyVersion, input).Get(ctx, &output)
@@ -1989,6 +2004,7 @@ func (a *IAMStub) CreatePolicyVersionAsync(ctx workflow.Context, input *iam.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePolicyVersion, input)
     return &IamCreatePolicyVersionResult{Result: future}
 }
+
 func (a *IAMStub) CreateRole(ctx workflow.Context, input *iam.CreateRoleInput) (*iam.CreateRoleOutput, error) {
     var output iam.CreateRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRole, input).Get(ctx, &output)
@@ -1999,6 +2015,7 @@ func (a *IAMStub) CreateRoleAsync(ctx workflow.Context, input *iam.CreateRoleInp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRole, input)
     return &IamCreateRoleResult{Result: future}
 }
+
 func (a *IAMStub) CreateSAMLProvider(ctx workflow.Context, input *iam.CreateSAMLProviderInput) (*iam.CreateSAMLProviderOutput, error) {
     var output iam.CreateSAMLProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSAMLProvider, input).Get(ctx, &output)
@@ -2009,6 +2026,7 @@ func (a *IAMStub) CreateSAMLProviderAsync(ctx workflow.Context, input *iam.Creat
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSAMLProvider, input)
     return &IamCreateSAMLProviderResult{Result: future}
 }
+
 func (a *IAMStub) CreateServiceLinkedRole(ctx workflow.Context, input *iam.CreateServiceLinkedRoleInput) (*iam.CreateServiceLinkedRoleOutput, error) {
     var output iam.CreateServiceLinkedRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateServiceLinkedRole, input).Get(ctx, &output)
@@ -2019,6 +2037,7 @@ func (a *IAMStub) CreateServiceLinkedRoleAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateServiceLinkedRole, input)
     return &IamCreateServiceLinkedRoleResult{Result: future}
 }
+
 func (a *IAMStub) CreateServiceSpecificCredential(ctx workflow.Context, input *iam.CreateServiceSpecificCredentialInput) (*iam.CreateServiceSpecificCredentialOutput, error) {
     var output iam.CreateServiceSpecificCredentialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateServiceSpecificCredential, input).Get(ctx, &output)
@@ -2029,6 +2048,7 @@ func (a *IAMStub) CreateServiceSpecificCredentialAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateServiceSpecificCredential, input)
     return &IamCreateServiceSpecificCredentialResult{Result: future}
 }
+
 func (a *IAMStub) CreateUser(ctx workflow.Context, input *iam.CreateUserInput) (*iam.CreateUserOutput, error) {
     var output iam.CreateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input).Get(ctx, &output)
@@ -2039,6 +2059,7 @@ func (a *IAMStub) CreateUserAsync(ctx workflow.Context, input *iam.CreateUserInp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input)
     return &IamCreateUserResult{Result: future}
 }
+
 func (a *IAMStub) CreateVirtualMFADevice(ctx workflow.Context, input *iam.CreateVirtualMFADeviceInput) (*iam.CreateVirtualMFADeviceOutput, error) {
     var output iam.CreateVirtualMFADeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVirtualMFADevice, input).Get(ctx, &output)
@@ -2049,6 +2070,7 @@ func (a *IAMStub) CreateVirtualMFADeviceAsync(ctx workflow.Context, input *iam.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVirtualMFADevice, input)
     return &IamCreateVirtualMFADeviceResult{Result: future}
 }
+
 func (a *IAMStub) DeactivateMFADevice(ctx workflow.Context, input *iam.DeactivateMFADeviceInput) (*iam.DeactivateMFADeviceOutput, error) {
     var output iam.DeactivateMFADeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeactivateMFADevice, input).Get(ctx, &output)
@@ -2059,6 +2081,7 @@ func (a *IAMStub) DeactivateMFADeviceAsync(ctx workflow.Context, input *iam.Deac
     future := workflow.ExecuteActivity(ctx, a.activities.DeactivateMFADevice, input)
     return &IamDeactivateMFADeviceResult{Result: future}
 }
+
 func (a *IAMStub) DeleteAccessKey(ctx workflow.Context, input *iam.DeleteAccessKeyInput) (*iam.DeleteAccessKeyOutput, error) {
     var output iam.DeleteAccessKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessKey, input).Get(ctx, &output)
@@ -2069,6 +2092,7 @@ func (a *IAMStub) DeleteAccessKeyAsync(ctx workflow.Context, input *iam.DeleteAc
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessKey, input)
     return &IamDeleteAccessKeyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteAccountAlias(ctx workflow.Context, input *iam.DeleteAccountAliasInput) (*iam.DeleteAccountAliasOutput, error) {
     var output iam.DeleteAccountAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccountAlias, input).Get(ctx, &output)
@@ -2079,6 +2103,7 @@ func (a *IAMStub) DeleteAccountAliasAsync(ctx workflow.Context, input *iam.Delet
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccountAlias, input)
     return &IamDeleteAccountAliasResult{Result: future}
 }
+
 func (a *IAMStub) DeleteAccountPasswordPolicy(ctx workflow.Context, input *iam.DeleteAccountPasswordPolicyInput) (*iam.DeleteAccountPasswordPolicyOutput, error) {
     var output iam.DeleteAccountPasswordPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccountPasswordPolicy, input).Get(ctx, &output)
@@ -2089,6 +2114,7 @@ func (a *IAMStub) DeleteAccountPasswordPolicyAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccountPasswordPolicy, input)
     return &IamDeleteAccountPasswordPolicyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteGroup(ctx workflow.Context, input *iam.DeleteGroupInput) (*iam.DeleteGroupOutput, error) {
     var output iam.DeleteGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGroup, input).Get(ctx, &output)
@@ -2099,6 +2125,7 @@ func (a *IAMStub) DeleteGroupAsync(ctx workflow.Context, input *iam.DeleteGroupI
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGroup, input)
     return &IamDeleteGroupResult{Result: future}
 }
+
 func (a *IAMStub) DeleteGroupPolicy(ctx workflow.Context, input *iam.DeleteGroupPolicyInput) (*iam.DeleteGroupPolicyOutput, error) {
     var output iam.DeleteGroupPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGroupPolicy, input).Get(ctx, &output)
@@ -2109,6 +2136,7 @@ func (a *IAMStub) DeleteGroupPolicyAsync(ctx workflow.Context, input *iam.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGroupPolicy, input)
     return &IamDeleteGroupPolicyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteInstanceProfile(ctx workflow.Context, input *iam.DeleteInstanceProfileInput) (*iam.DeleteInstanceProfileOutput, error) {
     var output iam.DeleteInstanceProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInstanceProfile, input).Get(ctx, &output)
@@ -2119,6 +2147,7 @@ func (a *IAMStub) DeleteInstanceProfileAsync(ctx workflow.Context, input *iam.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInstanceProfile, input)
     return &IamDeleteInstanceProfileResult{Result: future}
 }
+
 func (a *IAMStub) DeleteLoginProfile(ctx workflow.Context, input *iam.DeleteLoginProfileInput) (*iam.DeleteLoginProfileOutput, error) {
     var output iam.DeleteLoginProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLoginProfile, input).Get(ctx, &output)
@@ -2129,6 +2158,7 @@ func (a *IAMStub) DeleteLoginProfileAsync(ctx workflow.Context, input *iam.Delet
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLoginProfile, input)
     return &IamDeleteLoginProfileResult{Result: future}
 }
+
 func (a *IAMStub) DeleteOpenIDConnectProvider(ctx workflow.Context, input *iam.DeleteOpenIDConnectProviderInput) (*iam.DeleteOpenIDConnectProviderOutput, error) {
     var output iam.DeleteOpenIDConnectProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOpenIDConnectProvider, input).Get(ctx, &output)
@@ -2139,6 +2169,7 @@ func (a *IAMStub) DeleteOpenIDConnectProviderAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOpenIDConnectProvider, input)
     return &IamDeleteOpenIDConnectProviderResult{Result: future}
 }
+
 func (a *IAMStub) DeletePolicy(ctx workflow.Context, input *iam.DeletePolicyInput) (*iam.DeletePolicyOutput, error) {
     var output iam.DeletePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input).Get(ctx, &output)
@@ -2149,6 +2180,7 @@ func (a *IAMStub) DeletePolicyAsync(ctx workflow.Context, input *iam.DeletePolic
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input)
     return &IamDeletePolicyResult{Result: future}
 }
+
 func (a *IAMStub) DeletePolicyVersion(ctx workflow.Context, input *iam.DeletePolicyVersionInput) (*iam.DeletePolicyVersionOutput, error) {
     var output iam.DeletePolicyVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePolicyVersion, input).Get(ctx, &output)
@@ -2159,6 +2191,7 @@ func (a *IAMStub) DeletePolicyVersionAsync(ctx workflow.Context, input *iam.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePolicyVersion, input)
     return &IamDeletePolicyVersionResult{Result: future}
 }
+
 func (a *IAMStub) DeleteRole(ctx workflow.Context, input *iam.DeleteRoleInput) (*iam.DeleteRoleOutput, error) {
     var output iam.DeleteRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRole, input).Get(ctx, &output)
@@ -2169,6 +2202,7 @@ func (a *IAMStub) DeleteRoleAsync(ctx workflow.Context, input *iam.DeleteRoleInp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRole, input)
     return &IamDeleteRoleResult{Result: future}
 }
+
 func (a *IAMStub) DeleteRolePermissionsBoundary(ctx workflow.Context, input *iam.DeleteRolePermissionsBoundaryInput) (*iam.DeleteRolePermissionsBoundaryOutput, error) {
     var output iam.DeleteRolePermissionsBoundaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRolePermissionsBoundary, input).Get(ctx, &output)
@@ -2179,6 +2213,7 @@ func (a *IAMStub) DeleteRolePermissionsBoundaryAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRolePermissionsBoundary, input)
     return &IamDeleteRolePermissionsBoundaryResult{Result: future}
 }
+
 func (a *IAMStub) DeleteRolePolicy(ctx workflow.Context, input *iam.DeleteRolePolicyInput) (*iam.DeleteRolePolicyOutput, error) {
     var output iam.DeleteRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRolePolicy, input).Get(ctx, &output)
@@ -2189,6 +2224,7 @@ func (a *IAMStub) DeleteRolePolicyAsync(ctx workflow.Context, input *iam.DeleteR
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRolePolicy, input)
     return &IamDeleteRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteSAMLProvider(ctx workflow.Context, input *iam.DeleteSAMLProviderInput) (*iam.DeleteSAMLProviderOutput, error) {
     var output iam.DeleteSAMLProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSAMLProvider, input).Get(ctx, &output)
@@ -2199,6 +2235,7 @@ func (a *IAMStub) DeleteSAMLProviderAsync(ctx workflow.Context, input *iam.Delet
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSAMLProvider, input)
     return &IamDeleteSAMLProviderResult{Result: future}
 }
+
 func (a *IAMStub) DeleteSSHPublicKey(ctx workflow.Context, input *iam.DeleteSSHPublicKeyInput) (*iam.DeleteSSHPublicKeyOutput, error) {
     var output iam.DeleteSSHPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSSHPublicKey, input).Get(ctx, &output)
@@ -2209,6 +2246,7 @@ func (a *IAMStub) DeleteSSHPublicKeyAsync(ctx workflow.Context, input *iam.Delet
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSSHPublicKey, input)
     return &IamDeleteSSHPublicKeyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteServerCertificate(ctx workflow.Context, input *iam.DeleteServerCertificateInput) (*iam.DeleteServerCertificateOutput, error) {
     var output iam.DeleteServerCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteServerCertificate, input).Get(ctx, &output)
@@ -2219,6 +2257,7 @@ func (a *IAMStub) DeleteServerCertificateAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteServerCertificate, input)
     return &IamDeleteServerCertificateResult{Result: future}
 }
+
 func (a *IAMStub) DeleteServiceLinkedRole(ctx workflow.Context, input *iam.DeleteServiceLinkedRoleInput) (*iam.DeleteServiceLinkedRoleOutput, error) {
     var output iam.DeleteServiceLinkedRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceLinkedRole, input).Get(ctx, &output)
@@ -2229,6 +2268,7 @@ func (a *IAMStub) DeleteServiceLinkedRoleAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceLinkedRole, input)
     return &IamDeleteServiceLinkedRoleResult{Result: future}
 }
+
 func (a *IAMStub) DeleteServiceSpecificCredential(ctx workflow.Context, input *iam.DeleteServiceSpecificCredentialInput) (*iam.DeleteServiceSpecificCredentialOutput, error) {
     var output iam.DeleteServiceSpecificCredentialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceSpecificCredential, input).Get(ctx, &output)
@@ -2239,6 +2279,7 @@ func (a *IAMStub) DeleteServiceSpecificCredentialAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceSpecificCredential, input)
     return &IamDeleteServiceSpecificCredentialResult{Result: future}
 }
+
 func (a *IAMStub) DeleteSigningCertificate(ctx workflow.Context, input *iam.DeleteSigningCertificateInput) (*iam.DeleteSigningCertificateOutput, error) {
     var output iam.DeleteSigningCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSigningCertificate, input).Get(ctx, &output)
@@ -2249,6 +2290,7 @@ func (a *IAMStub) DeleteSigningCertificateAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSigningCertificate, input)
     return &IamDeleteSigningCertificateResult{Result: future}
 }
+
 func (a *IAMStub) DeleteUser(ctx workflow.Context, input *iam.DeleteUserInput) (*iam.DeleteUserOutput, error) {
     var output iam.DeleteUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input).Get(ctx, &output)
@@ -2259,6 +2301,7 @@ func (a *IAMStub) DeleteUserAsync(ctx workflow.Context, input *iam.DeleteUserInp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input)
     return &IamDeleteUserResult{Result: future}
 }
+
 func (a *IAMStub) DeleteUserPermissionsBoundary(ctx workflow.Context, input *iam.DeleteUserPermissionsBoundaryInput) (*iam.DeleteUserPermissionsBoundaryOutput, error) {
     var output iam.DeleteUserPermissionsBoundaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUserPermissionsBoundary, input).Get(ctx, &output)
@@ -2269,6 +2312,7 @@ func (a *IAMStub) DeleteUserPermissionsBoundaryAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUserPermissionsBoundary, input)
     return &IamDeleteUserPermissionsBoundaryResult{Result: future}
 }
+
 func (a *IAMStub) DeleteUserPolicy(ctx workflow.Context, input *iam.DeleteUserPolicyInput) (*iam.DeleteUserPolicyOutput, error) {
     var output iam.DeleteUserPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUserPolicy, input).Get(ctx, &output)
@@ -2279,6 +2323,7 @@ func (a *IAMStub) DeleteUserPolicyAsync(ctx workflow.Context, input *iam.DeleteU
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUserPolicy, input)
     return &IamDeleteUserPolicyResult{Result: future}
 }
+
 func (a *IAMStub) DeleteVirtualMFADevice(ctx workflow.Context, input *iam.DeleteVirtualMFADeviceInput) (*iam.DeleteVirtualMFADeviceOutput, error) {
     var output iam.DeleteVirtualMFADeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVirtualMFADevice, input).Get(ctx, &output)
@@ -2289,6 +2334,7 @@ func (a *IAMStub) DeleteVirtualMFADeviceAsync(ctx workflow.Context, input *iam.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVirtualMFADevice, input)
     return &IamDeleteVirtualMFADeviceResult{Result: future}
 }
+
 func (a *IAMStub) DetachGroupPolicy(ctx workflow.Context, input *iam.DetachGroupPolicyInput) (*iam.DetachGroupPolicyOutput, error) {
     var output iam.DetachGroupPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachGroupPolicy, input).Get(ctx, &output)
@@ -2299,6 +2345,7 @@ func (a *IAMStub) DetachGroupPolicyAsync(ctx workflow.Context, input *iam.Detach
     future := workflow.ExecuteActivity(ctx, a.activities.DetachGroupPolicy, input)
     return &IamDetachGroupPolicyResult{Result: future}
 }
+
 func (a *IAMStub) DetachRolePolicy(ctx workflow.Context, input *iam.DetachRolePolicyInput) (*iam.DetachRolePolicyOutput, error) {
     var output iam.DetachRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachRolePolicy, input).Get(ctx, &output)
@@ -2309,6 +2356,7 @@ func (a *IAMStub) DetachRolePolicyAsync(ctx workflow.Context, input *iam.DetachR
     future := workflow.ExecuteActivity(ctx, a.activities.DetachRolePolicy, input)
     return &IamDetachRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) DetachUserPolicy(ctx workflow.Context, input *iam.DetachUserPolicyInput) (*iam.DetachUserPolicyOutput, error) {
     var output iam.DetachUserPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachUserPolicy, input).Get(ctx, &output)
@@ -2319,6 +2367,7 @@ func (a *IAMStub) DetachUserPolicyAsync(ctx workflow.Context, input *iam.DetachU
     future := workflow.ExecuteActivity(ctx, a.activities.DetachUserPolicy, input)
     return &IamDetachUserPolicyResult{Result: future}
 }
+
 func (a *IAMStub) EnableMFADevice(ctx workflow.Context, input *iam.EnableMFADeviceInput) (*iam.EnableMFADeviceOutput, error) {
     var output iam.EnableMFADeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableMFADevice, input).Get(ctx, &output)
@@ -2329,6 +2378,7 @@ func (a *IAMStub) EnableMFADeviceAsync(ctx workflow.Context, input *iam.EnableMF
     future := workflow.ExecuteActivity(ctx, a.activities.EnableMFADevice, input)
     return &IamEnableMFADeviceResult{Result: future}
 }
+
 func (a *IAMStub) GenerateCredentialReport(ctx workflow.Context, input *iam.GenerateCredentialReportInput) (*iam.GenerateCredentialReportOutput, error) {
     var output iam.GenerateCredentialReportOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateCredentialReport, input).Get(ctx, &output)
@@ -2339,6 +2389,7 @@ func (a *IAMStub) GenerateCredentialReportAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateCredentialReport, input)
     return &IamGenerateCredentialReportResult{Result: future}
 }
+
 func (a *IAMStub) GenerateOrganizationsAccessReport(ctx workflow.Context, input *iam.GenerateOrganizationsAccessReportInput) (*iam.GenerateOrganizationsAccessReportOutput, error) {
     var output iam.GenerateOrganizationsAccessReportOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateOrganizationsAccessReport, input).Get(ctx, &output)
@@ -2349,6 +2400,7 @@ func (a *IAMStub) GenerateOrganizationsAccessReportAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateOrganizationsAccessReport, input)
     return &IamGenerateOrganizationsAccessReportResult{Result: future}
 }
+
 func (a *IAMStub) GenerateServiceLastAccessedDetails(ctx workflow.Context, input *iam.GenerateServiceLastAccessedDetailsInput) (*iam.GenerateServiceLastAccessedDetailsOutput, error) {
     var output iam.GenerateServiceLastAccessedDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateServiceLastAccessedDetails, input).Get(ctx, &output)
@@ -2359,6 +2411,7 @@ func (a *IAMStub) GenerateServiceLastAccessedDetailsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateServiceLastAccessedDetails, input)
     return &IamGenerateServiceLastAccessedDetailsResult{Result: future}
 }
+
 func (a *IAMStub) GetAccessKeyLastUsed(ctx workflow.Context, input *iam.GetAccessKeyLastUsedInput) (*iam.GetAccessKeyLastUsedOutput, error) {
     var output iam.GetAccessKeyLastUsedOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccessKeyLastUsed, input).Get(ctx, &output)
@@ -2369,6 +2422,7 @@ func (a *IAMStub) GetAccessKeyLastUsedAsync(ctx workflow.Context, input *iam.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccessKeyLastUsed, input)
     return &IamGetAccessKeyLastUsedResult{Result: future}
 }
+
 func (a *IAMStub) GetAccountAuthorizationDetails(ctx workflow.Context, input *iam.GetAccountAuthorizationDetailsInput) (*iam.GetAccountAuthorizationDetailsOutput, error) {
     var output iam.GetAccountAuthorizationDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccountAuthorizationDetails, input).Get(ctx, &output)
@@ -2379,6 +2433,7 @@ func (a *IAMStub) GetAccountAuthorizationDetailsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccountAuthorizationDetails, input)
     return &IamGetAccountAuthorizationDetailsResult{Result: future}
 }
+
 func (a *IAMStub) GetAccountPasswordPolicy(ctx workflow.Context, input *iam.GetAccountPasswordPolicyInput) (*iam.GetAccountPasswordPolicyOutput, error) {
     var output iam.GetAccountPasswordPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccountPasswordPolicy, input).Get(ctx, &output)
@@ -2389,6 +2444,7 @@ func (a *IAMStub) GetAccountPasswordPolicyAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccountPasswordPolicy, input)
     return &IamGetAccountPasswordPolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetAccountSummary(ctx workflow.Context, input *iam.GetAccountSummaryInput) (*iam.GetAccountSummaryOutput, error) {
     var output iam.GetAccountSummaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccountSummary, input).Get(ctx, &output)
@@ -2399,6 +2455,7 @@ func (a *IAMStub) GetAccountSummaryAsync(ctx workflow.Context, input *iam.GetAcc
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccountSummary, input)
     return &IamGetAccountSummaryResult{Result: future}
 }
+
 func (a *IAMStub) GetContextKeysForCustomPolicy(ctx workflow.Context, input *iam.GetContextKeysForCustomPolicyInput) (*iam.GetContextKeysForPolicyResponse, error) {
     var output iam.GetContextKeysForPolicyResponse
     err := workflow.ExecuteActivity(ctx, a.activities.GetContextKeysForCustomPolicy, input).Get(ctx, &output)
@@ -2409,6 +2466,7 @@ func (a *IAMStub) GetContextKeysForCustomPolicyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetContextKeysForCustomPolicy, input)
     return &IamGetContextKeysForCustomPolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetContextKeysForPrincipalPolicy(ctx workflow.Context, input *iam.GetContextKeysForPrincipalPolicyInput) (*iam.GetContextKeysForPolicyResponse, error) {
     var output iam.GetContextKeysForPolicyResponse
     err := workflow.ExecuteActivity(ctx, a.activities.GetContextKeysForPrincipalPolicy, input).Get(ctx, &output)
@@ -2419,6 +2477,7 @@ func (a *IAMStub) GetContextKeysForPrincipalPolicyAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetContextKeysForPrincipalPolicy, input)
     return &IamGetContextKeysForPrincipalPolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetCredentialReport(ctx workflow.Context, input *iam.GetCredentialReportInput) (*iam.GetCredentialReportOutput, error) {
     var output iam.GetCredentialReportOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCredentialReport, input).Get(ctx, &output)
@@ -2429,6 +2488,7 @@ func (a *IAMStub) GetCredentialReportAsync(ctx workflow.Context, input *iam.GetC
     future := workflow.ExecuteActivity(ctx, a.activities.GetCredentialReport, input)
     return &IamGetCredentialReportResult{Result: future}
 }
+
 func (a *IAMStub) GetGroup(ctx workflow.Context, input *iam.GetGroupInput) (*iam.GetGroupOutput, error) {
     var output iam.GetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGroup, input).Get(ctx, &output)
@@ -2439,6 +2499,7 @@ func (a *IAMStub) GetGroupAsync(ctx workflow.Context, input *iam.GetGroupInput) 
     future := workflow.ExecuteActivity(ctx, a.activities.GetGroup, input)
     return &IamGetGroupResult{Result: future}
 }
+
 func (a *IAMStub) GetGroupPolicy(ctx workflow.Context, input *iam.GetGroupPolicyInput) (*iam.GetGroupPolicyOutput, error) {
     var output iam.GetGroupPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGroupPolicy, input).Get(ctx, &output)
@@ -2449,6 +2510,7 @@ func (a *IAMStub) GetGroupPolicyAsync(ctx workflow.Context, input *iam.GetGroupP
     future := workflow.ExecuteActivity(ctx, a.activities.GetGroupPolicy, input)
     return &IamGetGroupPolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetInstanceProfile(ctx workflow.Context, input *iam.GetInstanceProfileInput) (*iam.GetInstanceProfileOutput, error) {
     var output iam.GetInstanceProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetInstanceProfile, input).Get(ctx, &output)
@@ -2459,6 +2521,7 @@ func (a *IAMStub) GetInstanceProfileAsync(ctx workflow.Context, input *iam.GetIn
     future := workflow.ExecuteActivity(ctx, a.activities.GetInstanceProfile, input)
     return &IamGetInstanceProfileResult{Result: future}
 }
+
 func (a *IAMStub) GetLoginProfile(ctx workflow.Context, input *iam.GetLoginProfileInput) (*iam.GetLoginProfileOutput, error) {
     var output iam.GetLoginProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLoginProfile, input).Get(ctx, &output)
@@ -2469,6 +2532,7 @@ func (a *IAMStub) GetLoginProfileAsync(ctx workflow.Context, input *iam.GetLogin
     future := workflow.ExecuteActivity(ctx, a.activities.GetLoginProfile, input)
     return &IamGetLoginProfileResult{Result: future}
 }
+
 func (a *IAMStub) GetOpenIDConnectProvider(ctx workflow.Context, input *iam.GetOpenIDConnectProviderInput) (*iam.GetOpenIDConnectProviderOutput, error) {
     var output iam.GetOpenIDConnectProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetOpenIDConnectProvider, input).Get(ctx, &output)
@@ -2479,6 +2543,7 @@ func (a *IAMStub) GetOpenIDConnectProviderAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.GetOpenIDConnectProvider, input)
     return &IamGetOpenIDConnectProviderResult{Result: future}
 }
+
 func (a *IAMStub) GetOrganizationsAccessReport(ctx workflow.Context, input *iam.GetOrganizationsAccessReportInput) (*iam.GetOrganizationsAccessReportOutput, error) {
     var output iam.GetOrganizationsAccessReportOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationsAccessReport, input).Get(ctx, &output)
@@ -2489,6 +2554,7 @@ func (a *IAMStub) GetOrganizationsAccessReportAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationsAccessReport, input)
     return &IamGetOrganizationsAccessReportResult{Result: future}
 }
+
 func (a *IAMStub) GetPolicy(ctx workflow.Context, input *iam.GetPolicyInput) (*iam.GetPolicyOutput, error) {
     var output iam.GetPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPolicy, input).Get(ctx, &output)
@@ -2499,6 +2565,7 @@ func (a *IAMStub) GetPolicyAsync(ctx workflow.Context, input *iam.GetPolicyInput
     future := workflow.ExecuteActivity(ctx, a.activities.GetPolicy, input)
     return &IamGetPolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetPolicyVersion(ctx workflow.Context, input *iam.GetPolicyVersionInput) (*iam.GetPolicyVersionOutput, error) {
     var output iam.GetPolicyVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPolicyVersion, input).Get(ctx, &output)
@@ -2509,6 +2576,7 @@ func (a *IAMStub) GetPolicyVersionAsync(ctx workflow.Context, input *iam.GetPoli
     future := workflow.ExecuteActivity(ctx, a.activities.GetPolicyVersion, input)
     return &IamGetPolicyVersionResult{Result: future}
 }
+
 func (a *IAMStub) GetRole(ctx workflow.Context, input *iam.GetRoleInput) (*iam.GetRoleOutput, error) {
     var output iam.GetRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRole, input).Get(ctx, &output)
@@ -2519,6 +2587,7 @@ func (a *IAMStub) GetRoleAsync(ctx workflow.Context, input *iam.GetRoleInput) *I
     future := workflow.ExecuteActivity(ctx, a.activities.GetRole, input)
     return &IamGetRoleResult{Result: future}
 }
+
 func (a *IAMStub) GetRolePolicy(ctx workflow.Context, input *iam.GetRolePolicyInput) (*iam.GetRolePolicyOutput, error) {
     var output iam.GetRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRolePolicy, input).Get(ctx, &output)
@@ -2529,6 +2598,7 @@ func (a *IAMStub) GetRolePolicyAsync(ctx workflow.Context, input *iam.GetRolePol
     future := workflow.ExecuteActivity(ctx, a.activities.GetRolePolicy, input)
     return &IamGetRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) GetSAMLProvider(ctx workflow.Context, input *iam.GetSAMLProviderInput) (*iam.GetSAMLProviderOutput, error) {
     var output iam.GetSAMLProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSAMLProvider, input).Get(ctx, &output)
@@ -2539,6 +2609,7 @@ func (a *IAMStub) GetSAMLProviderAsync(ctx workflow.Context, input *iam.GetSAMLP
     future := workflow.ExecuteActivity(ctx, a.activities.GetSAMLProvider, input)
     return &IamGetSAMLProviderResult{Result: future}
 }
+
 func (a *IAMStub) GetSSHPublicKey(ctx workflow.Context, input *iam.GetSSHPublicKeyInput) (*iam.GetSSHPublicKeyOutput, error) {
     var output iam.GetSSHPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSSHPublicKey, input).Get(ctx, &output)
@@ -2549,6 +2620,7 @@ func (a *IAMStub) GetSSHPublicKeyAsync(ctx workflow.Context, input *iam.GetSSHPu
     future := workflow.ExecuteActivity(ctx, a.activities.GetSSHPublicKey, input)
     return &IamGetSSHPublicKeyResult{Result: future}
 }
+
 func (a *IAMStub) GetServerCertificate(ctx workflow.Context, input *iam.GetServerCertificateInput) (*iam.GetServerCertificateOutput, error) {
     var output iam.GetServerCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetServerCertificate, input).Get(ctx, &output)
@@ -2559,6 +2631,7 @@ func (a *IAMStub) GetServerCertificateAsync(ctx workflow.Context, input *iam.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetServerCertificate, input)
     return &IamGetServerCertificateResult{Result: future}
 }
+
 func (a *IAMStub) GetServiceLastAccessedDetails(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsInput) (*iam.GetServiceLastAccessedDetailsOutput, error) {
     var output iam.GetServiceLastAccessedDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetServiceLastAccessedDetails, input).Get(ctx, &output)
@@ -2569,6 +2642,7 @@ func (a *IAMStub) GetServiceLastAccessedDetailsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetServiceLastAccessedDetails, input)
     return &IamGetServiceLastAccessedDetailsResult{Result: future}
 }
+
 func (a *IAMStub) GetServiceLastAccessedDetailsWithEntities(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsWithEntitiesInput) (*iam.GetServiceLastAccessedDetailsWithEntitiesOutput, error) {
     var output iam.GetServiceLastAccessedDetailsWithEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetServiceLastAccessedDetailsWithEntities, input).Get(ctx, &output)
@@ -2579,6 +2653,7 @@ func (a *IAMStub) GetServiceLastAccessedDetailsWithEntitiesAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.GetServiceLastAccessedDetailsWithEntities, input)
     return &IamGetServiceLastAccessedDetailsWithEntitiesResult{Result: future}
 }
+
 func (a *IAMStub) GetServiceLinkedRoleDeletionStatus(ctx workflow.Context, input *iam.GetServiceLinkedRoleDeletionStatusInput) (*iam.GetServiceLinkedRoleDeletionStatusOutput, error) {
     var output iam.GetServiceLinkedRoleDeletionStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetServiceLinkedRoleDeletionStatus, input).Get(ctx, &output)
@@ -2589,6 +2664,7 @@ func (a *IAMStub) GetServiceLinkedRoleDeletionStatusAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GetServiceLinkedRoleDeletionStatus, input)
     return &IamGetServiceLinkedRoleDeletionStatusResult{Result: future}
 }
+
 func (a *IAMStub) GetUser(ctx workflow.Context, input *iam.GetUserInput) (*iam.GetUserOutput, error) {
     var output iam.GetUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUser, input).Get(ctx, &output)
@@ -2599,6 +2675,7 @@ func (a *IAMStub) GetUserAsync(ctx workflow.Context, input *iam.GetUserInput) *I
     future := workflow.ExecuteActivity(ctx, a.activities.GetUser, input)
     return &IamGetUserResult{Result: future}
 }
+
 func (a *IAMStub) GetUserPolicy(ctx workflow.Context, input *iam.GetUserPolicyInput) (*iam.GetUserPolicyOutput, error) {
     var output iam.GetUserPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUserPolicy, input).Get(ctx, &output)
@@ -2609,6 +2686,7 @@ func (a *IAMStub) GetUserPolicyAsync(ctx workflow.Context, input *iam.GetUserPol
     future := workflow.ExecuteActivity(ctx, a.activities.GetUserPolicy, input)
     return &IamGetUserPolicyResult{Result: future}
 }
+
 func (a *IAMStub) ListAccessKeys(ctx workflow.Context, input *iam.ListAccessKeysInput) (*iam.ListAccessKeysOutput, error) {
     var output iam.ListAccessKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccessKeys, input).Get(ctx, &output)
@@ -2619,6 +2697,7 @@ func (a *IAMStub) ListAccessKeysAsync(ctx workflow.Context, input *iam.ListAcces
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccessKeys, input)
     return &IamListAccessKeysResult{Result: future}
 }
+
 func (a *IAMStub) ListAccountAliases(ctx workflow.Context, input *iam.ListAccountAliasesInput) (*iam.ListAccountAliasesOutput, error) {
     var output iam.ListAccountAliasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccountAliases, input).Get(ctx, &output)
@@ -2629,6 +2708,7 @@ func (a *IAMStub) ListAccountAliasesAsync(ctx workflow.Context, input *iam.ListA
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccountAliases, input)
     return &IamListAccountAliasesResult{Result: future}
 }
+
 func (a *IAMStub) ListAttachedGroupPolicies(ctx workflow.Context, input *iam.ListAttachedGroupPoliciesInput) (*iam.ListAttachedGroupPoliciesOutput, error) {
     var output iam.ListAttachedGroupPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAttachedGroupPolicies, input).Get(ctx, &output)
@@ -2639,6 +2719,7 @@ func (a *IAMStub) ListAttachedGroupPoliciesAsync(ctx workflow.Context, input *ia
     future := workflow.ExecuteActivity(ctx, a.activities.ListAttachedGroupPolicies, input)
     return &IamListAttachedGroupPoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListAttachedRolePolicies(ctx workflow.Context, input *iam.ListAttachedRolePoliciesInput) (*iam.ListAttachedRolePoliciesOutput, error) {
     var output iam.ListAttachedRolePoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAttachedRolePolicies, input).Get(ctx, &output)
@@ -2649,6 +2730,7 @@ func (a *IAMStub) ListAttachedRolePoliciesAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.ListAttachedRolePolicies, input)
     return &IamListAttachedRolePoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListAttachedUserPolicies(ctx workflow.Context, input *iam.ListAttachedUserPoliciesInput) (*iam.ListAttachedUserPoliciesOutput, error) {
     var output iam.ListAttachedUserPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAttachedUserPolicies, input).Get(ctx, &output)
@@ -2659,6 +2741,7 @@ func (a *IAMStub) ListAttachedUserPoliciesAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.ListAttachedUserPolicies, input)
     return &IamListAttachedUserPoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListEntitiesForPolicy(ctx workflow.Context, input *iam.ListEntitiesForPolicyInput) (*iam.ListEntitiesForPolicyOutput, error) {
     var output iam.ListEntitiesForPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesForPolicy, input).Get(ctx, &output)
@@ -2669,6 +2752,7 @@ func (a *IAMStub) ListEntitiesForPolicyAsync(ctx workflow.Context, input *iam.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesForPolicy, input)
     return &IamListEntitiesForPolicyResult{Result: future}
 }
+
 func (a *IAMStub) ListGroupPolicies(ctx workflow.Context, input *iam.ListGroupPoliciesInput) (*iam.ListGroupPoliciesOutput, error) {
     var output iam.ListGroupPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGroupPolicies, input).Get(ctx, &output)
@@ -2679,6 +2763,7 @@ func (a *IAMStub) ListGroupPoliciesAsync(ctx workflow.Context, input *iam.ListGr
     future := workflow.ExecuteActivity(ctx, a.activities.ListGroupPolicies, input)
     return &IamListGroupPoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListGroups(ctx workflow.Context, input *iam.ListGroupsInput) (*iam.ListGroupsOutput, error) {
     var output iam.ListGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGroups, input).Get(ctx, &output)
@@ -2689,6 +2774,7 @@ func (a *IAMStub) ListGroupsAsync(ctx workflow.Context, input *iam.ListGroupsInp
     future := workflow.ExecuteActivity(ctx, a.activities.ListGroups, input)
     return &IamListGroupsResult{Result: future}
 }
+
 func (a *IAMStub) ListGroupsForUser(ctx workflow.Context, input *iam.ListGroupsForUserInput) (*iam.ListGroupsForUserOutput, error) {
     var output iam.ListGroupsForUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGroupsForUser, input).Get(ctx, &output)
@@ -2699,6 +2785,7 @@ func (a *IAMStub) ListGroupsForUserAsync(ctx workflow.Context, input *iam.ListGr
     future := workflow.ExecuteActivity(ctx, a.activities.ListGroupsForUser, input)
     return &IamListGroupsForUserResult{Result: future}
 }
+
 func (a *IAMStub) ListInstanceProfiles(ctx workflow.Context, input *iam.ListInstanceProfilesInput) (*iam.ListInstanceProfilesOutput, error) {
     var output iam.ListInstanceProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInstanceProfiles, input).Get(ctx, &output)
@@ -2709,6 +2796,7 @@ func (a *IAMStub) ListInstanceProfilesAsync(ctx workflow.Context, input *iam.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListInstanceProfiles, input)
     return &IamListInstanceProfilesResult{Result: future}
 }
+
 func (a *IAMStub) ListInstanceProfilesForRole(ctx workflow.Context, input *iam.ListInstanceProfilesForRoleInput) (*iam.ListInstanceProfilesForRoleOutput, error) {
     var output iam.ListInstanceProfilesForRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInstanceProfilesForRole, input).Get(ctx, &output)
@@ -2719,6 +2807,7 @@ func (a *IAMStub) ListInstanceProfilesForRoleAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListInstanceProfilesForRole, input)
     return &IamListInstanceProfilesForRoleResult{Result: future}
 }
+
 func (a *IAMStub) ListMFADevices(ctx workflow.Context, input *iam.ListMFADevicesInput) (*iam.ListMFADevicesOutput, error) {
     var output iam.ListMFADevicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMFADevices, input).Get(ctx, &output)
@@ -2729,6 +2818,7 @@ func (a *IAMStub) ListMFADevicesAsync(ctx workflow.Context, input *iam.ListMFADe
     future := workflow.ExecuteActivity(ctx, a.activities.ListMFADevices, input)
     return &IamListMFADevicesResult{Result: future}
 }
+
 func (a *IAMStub) ListOpenIDConnectProviders(ctx workflow.Context, input *iam.ListOpenIDConnectProvidersInput) (*iam.ListOpenIDConnectProvidersOutput, error) {
     var output iam.ListOpenIDConnectProvidersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOpenIDConnectProviders, input).Get(ctx, &output)
@@ -2739,6 +2829,7 @@ func (a *IAMStub) ListOpenIDConnectProvidersAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.ListOpenIDConnectProviders, input)
     return &IamListOpenIDConnectProvidersResult{Result: future}
 }
+
 func (a *IAMStub) ListPolicies(ctx workflow.Context, input *iam.ListPoliciesInput) (*iam.ListPoliciesOutput, error) {
     var output iam.ListPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPolicies, input).Get(ctx, &output)
@@ -2749,6 +2840,7 @@ func (a *IAMStub) ListPoliciesAsync(ctx workflow.Context, input *iam.ListPolicie
     future := workflow.ExecuteActivity(ctx, a.activities.ListPolicies, input)
     return &IamListPoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListPoliciesGrantingServiceAccess(ctx workflow.Context, input *iam.ListPoliciesGrantingServiceAccessInput) (*iam.ListPoliciesGrantingServiceAccessOutput, error) {
     var output iam.ListPoliciesGrantingServiceAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPoliciesGrantingServiceAccess, input).Get(ctx, &output)
@@ -2759,6 +2851,7 @@ func (a *IAMStub) ListPoliciesGrantingServiceAccessAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListPoliciesGrantingServiceAccess, input)
     return &IamListPoliciesGrantingServiceAccessResult{Result: future}
 }
+
 func (a *IAMStub) ListPolicyVersions(ctx workflow.Context, input *iam.ListPolicyVersionsInput) (*iam.ListPolicyVersionsOutput, error) {
     var output iam.ListPolicyVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPolicyVersions, input).Get(ctx, &output)
@@ -2769,6 +2862,7 @@ func (a *IAMStub) ListPolicyVersionsAsync(ctx workflow.Context, input *iam.ListP
     future := workflow.ExecuteActivity(ctx, a.activities.ListPolicyVersions, input)
     return &IamListPolicyVersionsResult{Result: future}
 }
+
 func (a *IAMStub) ListRolePolicies(ctx workflow.Context, input *iam.ListRolePoliciesInput) (*iam.ListRolePoliciesOutput, error) {
     var output iam.ListRolePoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRolePolicies, input).Get(ctx, &output)
@@ -2779,6 +2873,7 @@ func (a *IAMStub) ListRolePoliciesAsync(ctx workflow.Context, input *iam.ListRol
     future := workflow.ExecuteActivity(ctx, a.activities.ListRolePolicies, input)
     return &IamListRolePoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListRoleTags(ctx workflow.Context, input *iam.ListRoleTagsInput) (*iam.ListRoleTagsOutput, error) {
     var output iam.ListRoleTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRoleTags, input).Get(ctx, &output)
@@ -2789,6 +2884,7 @@ func (a *IAMStub) ListRoleTagsAsync(ctx workflow.Context, input *iam.ListRoleTag
     future := workflow.ExecuteActivity(ctx, a.activities.ListRoleTags, input)
     return &IamListRoleTagsResult{Result: future}
 }
+
 func (a *IAMStub) ListRoles(ctx workflow.Context, input *iam.ListRolesInput) (*iam.ListRolesOutput, error) {
     var output iam.ListRolesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRoles, input).Get(ctx, &output)
@@ -2799,6 +2895,7 @@ func (a *IAMStub) ListRolesAsync(ctx workflow.Context, input *iam.ListRolesInput
     future := workflow.ExecuteActivity(ctx, a.activities.ListRoles, input)
     return &IamListRolesResult{Result: future}
 }
+
 func (a *IAMStub) ListSAMLProviders(ctx workflow.Context, input *iam.ListSAMLProvidersInput) (*iam.ListSAMLProvidersOutput, error) {
     var output iam.ListSAMLProvidersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSAMLProviders, input).Get(ctx, &output)
@@ -2809,6 +2906,7 @@ func (a *IAMStub) ListSAMLProvidersAsync(ctx workflow.Context, input *iam.ListSA
     future := workflow.ExecuteActivity(ctx, a.activities.ListSAMLProviders, input)
     return &IamListSAMLProvidersResult{Result: future}
 }
+
 func (a *IAMStub) ListSSHPublicKeys(ctx workflow.Context, input *iam.ListSSHPublicKeysInput) (*iam.ListSSHPublicKeysOutput, error) {
     var output iam.ListSSHPublicKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSSHPublicKeys, input).Get(ctx, &output)
@@ -2819,6 +2917,7 @@ func (a *IAMStub) ListSSHPublicKeysAsync(ctx workflow.Context, input *iam.ListSS
     future := workflow.ExecuteActivity(ctx, a.activities.ListSSHPublicKeys, input)
     return &IamListSSHPublicKeysResult{Result: future}
 }
+
 func (a *IAMStub) ListServerCertificates(ctx workflow.Context, input *iam.ListServerCertificatesInput) (*iam.ListServerCertificatesOutput, error) {
     var output iam.ListServerCertificatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListServerCertificates, input).Get(ctx, &output)
@@ -2829,6 +2928,7 @@ func (a *IAMStub) ListServerCertificatesAsync(ctx workflow.Context, input *iam.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListServerCertificates, input)
     return &IamListServerCertificatesResult{Result: future}
 }
+
 func (a *IAMStub) ListServiceSpecificCredentials(ctx workflow.Context, input *iam.ListServiceSpecificCredentialsInput) (*iam.ListServiceSpecificCredentialsOutput, error) {
     var output iam.ListServiceSpecificCredentialsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListServiceSpecificCredentials, input).Get(ctx, &output)
@@ -2839,6 +2939,7 @@ func (a *IAMStub) ListServiceSpecificCredentialsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListServiceSpecificCredentials, input)
     return &IamListServiceSpecificCredentialsResult{Result: future}
 }
+
 func (a *IAMStub) ListSigningCertificates(ctx workflow.Context, input *iam.ListSigningCertificatesInput) (*iam.ListSigningCertificatesOutput, error) {
     var output iam.ListSigningCertificatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSigningCertificates, input).Get(ctx, &output)
@@ -2849,6 +2950,7 @@ func (a *IAMStub) ListSigningCertificatesAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.ListSigningCertificates, input)
     return &IamListSigningCertificatesResult{Result: future}
 }
+
 func (a *IAMStub) ListUserPolicies(ctx workflow.Context, input *iam.ListUserPoliciesInput) (*iam.ListUserPoliciesOutput, error) {
     var output iam.ListUserPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUserPolicies, input).Get(ctx, &output)
@@ -2859,6 +2961,7 @@ func (a *IAMStub) ListUserPoliciesAsync(ctx workflow.Context, input *iam.ListUse
     future := workflow.ExecuteActivity(ctx, a.activities.ListUserPolicies, input)
     return &IamListUserPoliciesResult{Result: future}
 }
+
 func (a *IAMStub) ListUserTags(ctx workflow.Context, input *iam.ListUserTagsInput) (*iam.ListUserTagsOutput, error) {
     var output iam.ListUserTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUserTags, input).Get(ctx, &output)
@@ -2869,6 +2972,7 @@ func (a *IAMStub) ListUserTagsAsync(ctx workflow.Context, input *iam.ListUserTag
     future := workflow.ExecuteActivity(ctx, a.activities.ListUserTags, input)
     return &IamListUserTagsResult{Result: future}
 }
+
 func (a *IAMStub) ListUsers(ctx workflow.Context, input *iam.ListUsersInput) (*iam.ListUsersOutput, error) {
     var output iam.ListUsersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUsers, input).Get(ctx, &output)
@@ -2879,6 +2983,7 @@ func (a *IAMStub) ListUsersAsync(ctx workflow.Context, input *iam.ListUsersInput
     future := workflow.ExecuteActivity(ctx, a.activities.ListUsers, input)
     return &IamListUsersResult{Result: future}
 }
+
 func (a *IAMStub) ListVirtualMFADevices(ctx workflow.Context, input *iam.ListVirtualMFADevicesInput) (*iam.ListVirtualMFADevicesOutput, error) {
     var output iam.ListVirtualMFADevicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVirtualMFADevices, input).Get(ctx, &output)
@@ -2889,6 +2994,7 @@ func (a *IAMStub) ListVirtualMFADevicesAsync(ctx workflow.Context, input *iam.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListVirtualMFADevices, input)
     return &IamListVirtualMFADevicesResult{Result: future}
 }
+
 func (a *IAMStub) PutGroupPolicy(ctx workflow.Context, input *iam.PutGroupPolicyInput) (*iam.PutGroupPolicyOutput, error) {
     var output iam.PutGroupPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutGroupPolicy, input).Get(ctx, &output)
@@ -2899,6 +3005,7 @@ func (a *IAMStub) PutGroupPolicyAsync(ctx workflow.Context, input *iam.PutGroupP
     future := workflow.ExecuteActivity(ctx, a.activities.PutGroupPolicy, input)
     return &IamPutGroupPolicyResult{Result: future}
 }
+
 func (a *IAMStub) PutRolePermissionsBoundary(ctx workflow.Context, input *iam.PutRolePermissionsBoundaryInput) (*iam.PutRolePermissionsBoundaryOutput, error) {
     var output iam.PutRolePermissionsBoundaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRolePermissionsBoundary, input).Get(ctx, &output)
@@ -2909,6 +3016,7 @@ func (a *IAMStub) PutRolePermissionsBoundaryAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.PutRolePermissionsBoundary, input)
     return &IamPutRolePermissionsBoundaryResult{Result: future}
 }
+
 func (a *IAMStub) PutRolePolicy(ctx workflow.Context, input *iam.PutRolePolicyInput) (*iam.PutRolePolicyOutput, error) {
     var output iam.PutRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRolePolicy, input).Get(ctx, &output)
@@ -2919,6 +3027,7 @@ func (a *IAMStub) PutRolePolicyAsync(ctx workflow.Context, input *iam.PutRolePol
     future := workflow.ExecuteActivity(ctx, a.activities.PutRolePolicy, input)
     return &IamPutRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) PutUserPermissionsBoundary(ctx workflow.Context, input *iam.PutUserPermissionsBoundaryInput) (*iam.PutUserPermissionsBoundaryOutput, error) {
     var output iam.PutUserPermissionsBoundaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutUserPermissionsBoundary, input).Get(ctx, &output)
@@ -2929,6 +3038,7 @@ func (a *IAMStub) PutUserPermissionsBoundaryAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.PutUserPermissionsBoundary, input)
     return &IamPutUserPermissionsBoundaryResult{Result: future}
 }
+
 func (a *IAMStub) PutUserPolicy(ctx workflow.Context, input *iam.PutUserPolicyInput) (*iam.PutUserPolicyOutput, error) {
     var output iam.PutUserPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutUserPolicy, input).Get(ctx, &output)
@@ -2939,6 +3049,7 @@ func (a *IAMStub) PutUserPolicyAsync(ctx workflow.Context, input *iam.PutUserPol
     future := workflow.ExecuteActivity(ctx, a.activities.PutUserPolicy, input)
     return &IamPutUserPolicyResult{Result: future}
 }
+
 func (a *IAMStub) RemoveClientIDFromOpenIDConnectProvider(ctx workflow.Context, input *iam.RemoveClientIDFromOpenIDConnectProviderInput) (*iam.RemoveClientIDFromOpenIDConnectProviderOutput, error) {
     var output iam.RemoveClientIDFromOpenIDConnectProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveClientIDFromOpenIDConnectProvider, input).Get(ctx, &output)
@@ -2949,6 +3060,7 @@ func (a *IAMStub) RemoveClientIDFromOpenIDConnectProviderAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveClientIDFromOpenIDConnectProvider, input)
     return &IamRemoveClientIDFromOpenIDConnectProviderResult{Result: future}
 }
+
 func (a *IAMStub) RemoveRoleFromInstanceProfile(ctx workflow.Context, input *iam.RemoveRoleFromInstanceProfileInput) (*iam.RemoveRoleFromInstanceProfileOutput, error) {
     var output iam.RemoveRoleFromInstanceProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromInstanceProfile, input).Get(ctx, &output)
@@ -2959,6 +3071,7 @@ func (a *IAMStub) RemoveRoleFromInstanceProfileAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromInstanceProfile, input)
     return &IamRemoveRoleFromInstanceProfileResult{Result: future}
 }
+
 func (a *IAMStub) RemoveUserFromGroup(ctx workflow.Context, input *iam.RemoveUserFromGroupInput) (*iam.RemoveUserFromGroupOutput, error) {
     var output iam.RemoveUserFromGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveUserFromGroup, input).Get(ctx, &output)
@@ -2969,6 +3082,7 @@ func (a *IAMStub) RemoveUserFromGroupAsync(ctx workflow.Context, input *iam.Remo
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveUserFromGroup, input)
     return &IamRemoveUserFromGroupResult{Result: future}
 }
+
 func (a *IAMStub) ResetServiceSpecificCredential(ctx workflow.Context, input *iam.ResetServiceSpecificCredentialInput) (*iam.ResetServiceSpecificCredentialOutput, error) {
     var output iam.ResetServiceSpecificCredentialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSpecificCredential, input).Get(ctx, &output)
@@ -2979,6 +3093,7 @@ func (a *IAMStub) ResetServiceSpecificCredentialAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSpecificCredential, input)
     return &IamResetServiceSpecificCredentialResult{Result: future}
 }
+
 func (a *IAMStub) ResyncMFADevice(ctx workflow.Context, input *iam.ResyncMFADeviceInput) (*iam.ResyncMFADeviceOutput, error) {
     var output iam.ResyncMFADeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResyncMFADevice, input).Get(ctx, &output)
@@ -2989,6 +3104,7 @@ func (a *IAMStub) ResyncMFADeviceAsync(ctx workflow.Context, input *iam.ResyncMF
     future := workflow.ExecuteActivity(ctx, a.activities.ResyncMFADevice, input)
     return &IamResyncMFADeviceResult{Result: future}
 }
+
 func (a *IAMStub) SetDefaultPolicyVersion(ctx workflow.Context, input *iam.SetDefaultPolicyVersionInput) (*iam.SetDefaultPolicyVersionOutput, error) {
     var output iam.SetDefaultPolicyVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetDefaultPolicyVersion, input).Get(ctx, &output)
@@ -2999,6 +3115,7 @@ func (a *IAMStub) SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.SetDefaultPolicyVersion, input)
     return &IamSetDefaultPolicyVersionResult{Result: future}
 }
+
 func (a *IAMStub) SetSecurityTokenServicePreferences(ctx workflow.Context, input *iam.SetSecurityTokenServicePreferencesInput) (*iam.SetSecurityTokenServicePreferencesOutput, error) {
     var output iam.SetSecurityTokenServicePreferencesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetSecurityTokenServicePreferences, input).Get(ctx, &output)
@@ -3009,6 +3126,7 @@ func (a *IAMStub) SetSecurityTokenServicePreferencesAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.SetSecurityTokenServicePreferences, input)
     return &IamSetSecurityTokenServicePreferencesResult{Result: future}
 }
+
 func (a *IAMStub) SimulateCustomPolicy(ctx workflow.Context, input *iam.SimulateCustomPolicyInput) (*iam.SimulatePolicyResponse, error) {
     var output iam.SimulatePolicyResponse
     err := workflow.ExecuteActivity(ctx, a.activities.SimulateCustomPolicy, input).Get(ctx, &output)
@@ -3019,6 +3137,7 @@ func (a *IAMStub) SimulateCustomPolicyAsync(ctx workflow.Context, input *iam.Sim
     future := workflow.ExecuteActivity(ctx, a.activities.SimulateCustomPolicy, input)
     return &IamSimulateCustomPolicyResult{Result: future}
 }
+
 func (a *IAMStub) SimulatePrincipalPolicy(ctx workflow.Context, input *iam.SimulatePrincipalPolicyInput) (*iam.SimulatePolicyResponse, error) {
     var output iam.SimulatePolicyResponse
     err := workflow.ExecuteActivity(ctx, a.activities.SimulatePrincipalPolicy, input).Get(ctx, &output)
@@ -3029,6 +3148,7 @@ func (a *IAMStub) SimulatePrincipalPolicyAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.SimulatePrincipalPolicy, input)
     return &IamSimulatePrincipalPolicyResult{Result: future}
 }
+
 func (a *IAMStub) TagRole(ctx workflow.Context, input *iam.TagRoleInput) (*iam.TagRoleOutput, error) {
     var output iam.TagRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagRole, input).Get(ctx, &output)
@@ -3039,6 +3159,7 @@ func (a *IAMStub) TagRoleAsync(ctx workflow.Context, input *iam.TagRoleInput) *I
     future := workflow.ExecuteActivity(ctx, a.activities.TagRole, input)
     return &IamTagRoleResult{Result: future}
 }
+
 func (a *IAMStub) TagUser(ctx workflow.Context, input *iam.TagUserInput) (*iam.TagUserOutput, error) {
     var output iam.TagUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagUser, input).Get(ctx, &output)
@@ -3049,6 +3170,7 @@ func (a *IAMStub) TagUserAsync(ctx workflow.Context, input *iam.TagUserInput) *I
     future := workflow.ExecuteActivity(ctx, a.activities.TagUser, input)
     return &IamTagUserResult{Result: future}
 }
+
 func (a *IAMStub) UntagRole(ctx workflow.Context, input *iam.UntagRoleInput) (*iam.UntagRoleOutput, error) {
     var output iam.UntagRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagRole, input).Get(ctx, &output)
@@ -3059,6 +3181,7 @@ func (a *IAMStub) UntagRoleAsync(ctx workflow.Context, input *iam.UntagRoleInput
     future := workflow.ExecuteActivity(ctx, a.activities.UntagRole, input)
     return &IamUntagRoleResult{Result: future}
 }
+
 func (a *IAMStub) UntagUser(ctx workflow.Context, input *iam.UntagUserInput) (*iam.UntagUserOutput, error) {
     var output iam.UntagUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagUser, input).Get(ctx, &output)
@@ -3069,6 +3192,7 @@ func (a *IAMStub) UntagUserAsync(ctx workflow.Context, input *iam.UntagUserInput
     future := workflow.ExecuteActivity(ctx, a.activities.UntagUser, input)
     return &IamUntagUserResult{Result: future}
 }
+
 func (a *IAMStub) UpdateAccessKey(ctx workflow.Context, input *iam.UpdateAccessKeyInput) (*iam.UpdateAccessKeyOutput, error) {
     var output iam.UpdateAccessKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAccessKey, input).Get(ctx, &output)
@@ -3079,6 +3203,7 @@ func (a *IAMStub) UpdateAccessKeyAsync(ctx workflow.Context, input *iam.UpdateAc
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAccessKey, input)
     return &IamUpdateAccessKeyResult{Result: future}
 }
+
 func (a *IAMStub) UpdateAccountPasswordPolicy(ctx workflow.Context, input *iam.UpdateAccountPasswordPolicyInput) (*iam.UpdateAccountPasswordPolicyOutput, error) {
     var output iam.UpdateAccountPasswordPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountPasswordPolicy, input).Get(ctx, &output)
@@ -3089,6 +3214,7 @@ func (a *IAMStub) UpdateAccountPasswordPolicyAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountPasswordPolicy, input)
     return &IamUpdateAccountPasswordPolicyResult{Result: future}
 }
+
 func (a *IAMStub) UpdateAssumeRolePolicy(ctx workflow.Context, input *iam.UpdateAssumeRolePolicyInput) (*iam.UpdateAssumeRolePolicyOutput, error) {
     var output iam.UpdateAssumeRolePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAssumeRolePolicy, input).Get(ctx, &output)
@@ -3099,6 +3225,7 @@ func (a *IAMStub) UpdateAssumeRolePolicyAsync(ctx workflow.Context, input *iam.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAssumeRolePolicy, input)
     return &IamUpdateAssumeRolePolicyResult{Result: future}
 }
+
 func (a *IAMStub) UpdateGroup(ctx workflow.Context, input *iam.UpdateGroupInput) (*iam.UpdateGroupOutput, error) {
     var output iam.UpdateGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGroup, input).Get(ctx, &output)
@@ -3109,6 +3236,7 @@ func (a *IAMStub) UpdateGroupAsync(ctx workflow.Context, input *iam.UpdateGroupI
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGroup, input)
     return &IamUpdateGroupResult{Result: future}
 }
+
 func (a *IAMStub) UpdateLoginProfile(ctx workflow.Context, input *iam.UpdateLoginProfileInput) (*iam.UpdateLoginProfileOutput, error) {
     var output iam.UpdateLoginProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateLoginProfile, input).Get(ctx, &output)
@@ -3119,6 +3247,7 @@ func (a *IAMStub) UpdateLoginProfileAsync(ctx workflow.Context, input *iam.Updat
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateLoginProfile, input)
     return &IamUpdateLoginProfileResult{Result: future}
 }
+
 func (a *IAMStub) UpdateOpenIDConnectProviderThumbprint(ctx workflow.Context, input *iam.UpdateOpenIDConnectProviderThumbprintInput) (*iam.UpdateOpenIDConnectProviderThumbprintOutput, error) {
     var output iam.UpdateOpenIDConnectProviderThumbprintOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateOpenIDConnectProviderThumbprint, input).Get(ctx, &output)
@@ -3129,6 +3258,7 @@ func (a *IAMStub) UpdateOpenIDConnectProviderThumbprintAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateOpenIDConnectProviderThumbprint, input)
     return &IamUpdateOpenIDConnectProviderThumbprintResult{Result: future}
 }
+
 func (a *IAMStub) UpdateRole(ctx workflow.Context, input *iam.UpdateRoleInput) (*iam.UpdateRoleOutput, error) {
     var output iam.UpdateRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRole, input).Get(ctx, &output)
@@ -3139,6 +3269,7 @@ func (a *IAMStub) UpdateRoleAsync(ctx workflow.Context, input *iam.UpdateRoleInp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRole, input)
     return &IamUpdateRoleResult{Result: future}
 }
+
 func (a *IAMStub) UpdateRoleDescription(ctx workflow.Context, input *iam.UpdateRoleDescriptionInput) (*iam.UpdateRoleDescriptionOutput, error) {
     var output iam.UpdateRoleDescriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRoleDescription, input).Get(ctx, &output)
@@ -3149,6 +3280,7 @@ func (a *IAMStub) UpdateRoleDescriptionAsync(ctx workflow.Context, input *iam.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRoleDescription, input)
     return &IamUpdateRoleDescriptionResult{Result: future}
 }
+
 func (a *IAMStub) UpdateSAMLProvider(ctx workflow.Context, input *iam.UpdateSAMLProviderInput) (*iam.UpdateSAMLProviderOutput, error) {
     var output iam.UpdateSAMLProviderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSAMLProvider, input).Get(ctx, &output)
@@ -3159,6 +3291,7 @@ func (a *IAMStub) UpdateSAMLProviderAsync(ctx workflow.Context, input *iam.Updat
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSAMLProvider, input)
     return &IamUpdateSAMLProviderResult{Result: future}
 }
+
 func (a *IAMStub) UpdateSSHPublicKey(ctx workflow.Context, input *iam.UpdateSSHPublicKeyInput) (*iam.UpdateSSHPublicKeyOutput, error) {
     var output iam.UpdateSSHPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSSHPublicKey, input).Get(ctx, &output)
@@ -3169,6 +3302,7 @@ func (a *IAMStub) UpdateSSHPublicKeyAsync(ctx workflow.Context, input *iam.Updat
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSSHPublicKey, input)
     return &IamUpdateSSHPublicKeyResult{Result: future}
 }
+
 func (a *IAMStub) UpdateServerCertificate(ctx workflow.Context, input *iam.UpdateServerCertificateInput) (*iam.UpdateServerCertificateOutput, error) {
     var output iam.UpdateServerCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateServerCertificate, input).Get(ctx, &output)
@@ -3179,6 +3313,7 @@ func (a *IAMStub) UpdateServerCertificateAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateServerCertificate, input)
     return &IamUpdateServerCertificateResult{Result: future}
 }
+
 func (a *IAMStub) UpdateServiceSpecificCredential(ctx workflow.Context, input *iam.UpdateServiceSpecificCredentialInput) (*iam.UpdateServiceSpecificCredentialOutput, error) {
     var output iam.UpdateServiceSpecificCredentialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSpecificCredential, input).Get(ctx, &output)
@@ -3189,6 +3324,7 @@ func (a *IAMStub) UpdateServiceSpecificCredentialAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSpecificCredential, input)
     return &IamUpdateServiceSpecificCredentialResult{Result: future}
 }
+
 func (a *IAMStub) UpdateSigningCertificate(ctx workflow.Context, input *iam.UpdateSigningCertificateInput) (*iam.UpdateSigningCertificateOutput, error) {
     var output iam.UpdateSigningCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSigningCertificate, input).Get(ctx, &output)
@@ -3199,6 +3335,7 @@ func (a *IAMStub) UpdateSigningCertificateAsync(ctx workflow.Context, input *iam
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSigningCertificate, input)
     return &IamUpdateSigningCertificateResult{Result: future}
 }
+
 func (a *IAMStub) UpdateUser(ctx workflow.Context, input *iam.UpdateUserInput) (*iam.UpdateUserOutput, error) {
     var output iam.UpdateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUser, input).Get(ctx, &output)
@@ -3209,6 +3346,7 @@ func (a *IAMStub) UpdateUserAsync(ctx workflow.Context, input *iam.UpdateUserInp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateUser, input)
     return &IamUpdateUserResult{Result: future}
 }
+
 func (a *IAMStub) UploadSSHPublicKey(ctx workflow.Context, input *iam.UploadSSHPublicKeyInput) (*iam.UploadSSHPublicKeyOutput, error) {
     var output iam.UploadSSHPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadSSHPublicKey, input).Get(ctx, &output)
@@ -3219,6 +3357,7 @@ func (a *IAMStub) UploadSSHPublicKeyAsync(ctx workflow.Context, input *iam.Uploa
     future := workflow.ExecuteActivity(ctx, a.activities.UploadSSHPublicKey, input)
     return &IamUploadSSHPublicKeyResult{Result: future}
 }
+
 func (a *IAMStub) UploadServerCertificate(ctx workflow.Context, input *iam.UploadServerCertificateInput) (*iam.UploadServerCertificateOutput, error) {
     var output iam.UploadServerCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadServerCertificate, input).Get(ctx, &output)
@@ -3229,6 +3368,7 @@ func (a *IAMStub) UploadServerCertificateAsync(ctx workflow.Context, input *iam.
     future := workflow.ExecuteActivity(ctx, a.activities.UploadServerCertificate, input)
     return &IamUploadServerCertificateResult{Result: future}
 }
+
 func (a *IAMStub) UploadSigningCertificate(ctx workflow.Context, input *iam.UploadSigningCertificateInput) (*iam.UploadSigningCertificateOutput, error) {
     var output iam.UploadSigningCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadSigningCertificate, input).Get(ctx, &output)
@@ -3248,6 +3388,7 @@ func (a *IAMStub) WaitUntilInstanceProfileExistsAsync(ctx workflow.Context, inpu
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInstanceProfileExists, input)
 }
 
+
 func (a *IAMStub) WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilPolicyExists, input).Get(ctx, nil)
 }
@@ -3255,6 +3396,7 @@ func (a *IAMStub) WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPoli
 func (a *IAMStub) WaitUntilPolicyExistsAsync(ctx workflow.Context, input *iam.GetPolicyInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilPolicyExists, input)
 }
+
 
 func (a *IAMStub) WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilRoleExists, input).Get(ctx, nil)
@@ -3264,6 +3406,7 @@ func (a *IAMStub) WaitUntilRoleExistsAsync(ctx workflow.Context, input *iam.GetR
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilRoleExists, input)
 }
 
+
 func (a *IAMStub) WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilUserExists, input).Get(ctx, nil)
 }
@@ -3271,3 +3414,4 @@ func (a *IAMStub) WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserIn
 func (a *IAMStub) WaitUntilUserExistsAsync(ctx workflow.Context, input *iam.GetUserInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilUserExists, input)
 }
+

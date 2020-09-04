@@ -34,6 +34,7 @@ type ComputeOptimizerClient interface {
     UpdateEnrollmentStatus(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) (*computeoptimizer.UpdateEnrollmentStatusOutput, error)
     UpdateEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) *ComputeoptimizerUpdateEnrollmentStatusResult
 }
+
 type ComputeoptimizerDescribeRecommendationExportJobsResult struct {
 	Result workflow.Future
 }
@@ -124,7 +125,6 @@ func (r *ComputeoptimizerUpdateEnrollmentStatusResult) Get(ctx workflow.Context)
     return &output, err
 }
 
-
 type ComputeOptimizerStub struct {
     activities awsactivities.ComputeOptimizerActivities
 }
@@ -132,6 +132,7 @@ type ComputeOptimizerStub struct {
 func NewComputeOptimizerStub() ComputeOptimizerClient {
     return &ComputeOptimizerStub{}
 }
+
 func (a *ComputeOptimizerStub) DescribeRecommendationExportJobs(ctx workflow.Context, input *computeoptimizer.DescribeRecommendationExportJobsInput) (*computeoptimizer.DescribeRecommendationExportJobsOutput, error) {
     var output computeoptimizer.DescribeRecommendationExportJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRecommendationExportJobs, input).Get(ctx, &output)
@@ -142,6 +143,7 @@ func (a *ComputeOptimizerStub) DescribeRecommendationExportJobsAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRecommendationExportJobs, input)
     return &ComputeoptimizerDescribeRecommendationExportJobsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) ExportAutoScalingGroupRecommendations(ctx workflow.Context, input *computeoptimizer.ExportAutoScalingGroupRecommendationsInput) (*computeoptimizer.ExportAutoScalingGroupRecommendationsOutput, error) {
     var output computeoptimizer.ExportAutoScalingGroupRecommendationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExportAutoScalingGroupRecommendations, input).Get(ctx, &output)
@@ -152,6 +154,7 @@ func (a *ComputeOptimizerStub) ExportAutoScalingGroupRecommendationsAsync(ctx wo
     future := workflow.ExecuteActivity(ctx, a.activities.ExportAutoScalingGroupRecommendations, input)
     return &ComputeoptimizerExportAutoScalingGroupRecommendationsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) ExportEC2InstanceRecommendations(ctx workflow.Context, input *computeoptimizer.ExportEC2InstanceRecommendationsInput) (*computeoptimizer.ExportEC2InstanceRecommendationsOutput, error) {
     var output computeoptimizer.ExportEC2InstanceRecommendationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExportEC2InstanceRecommendations, input).Get(ctx, &output)
@@ -162,6 +165,7 @@ func (a *ComputeOptimizerStub) ExportEC2InstanceRecommendationsAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.ExportEC2InstanceRecommendations, input)
     return &ComputeoptimizerExportEC2InstanceRecommendationsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) GetAutoScalingGroupRecommendations(ctx workflow.Context, input *computeoptimizer.GetAutoScalingGroupRecommendationsInput) (*computeoptimizer.GetAutoScalingGroupRecommendationsOutput, error) {
     var output computeoptimizer.GetAutoScalingGroupRecommendationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAutoScalingGroupRecommendations, input).Get(ctx, &output)
@@ -172,6 +176,7 @@ func (a *ComputeOptimizerStub) GetAutoScalingGroupRecommendationsAsync(ctx workf
     future := workflow.ExecuteActivity(ctx, a.activities.GetAutoScalingGroupRecommendations, input)
     return &ComputeoptimizerGetAutoScalingGroupRecommendationsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) GetEC2InstanceRecommendations(ctx workflow.Context, input *computeoptimizer.GetEC2InstanceRecommendationsInput) (*computeoptimizer.GetEC2InstanceRecommendationsOutput, error) {
     var output computeoptimizer.GetEC2InstanceRecommendationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEC2InstanceRecommendations, input).Get(ctx, &output)
@@ -182,6 +187,7 @@ func (a *ComputeOptimizerStub) GetEC2InstanceRecommendationsAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.GetEC2InstanceRecommendations, input)
     return &ComputeoptimizerGetEC2InstanceRecommendationsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) GetEC2RecommendationProjectedMetrics(ctx workflow.Context, input *computeoptimizer.GetEC2RecommendationProjectedMetricsInput) (*computeoptimizer.GetEC2RecommendationProjectedMetricsOutput, error) {
     var output computeoptimizer.GetEC2RecommendationProjectedMetricsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEC2RecommendationProjectedMetrics, input).Get(ctx, &output)
@@ -192,6 +198,7 @@ func (a *ComputeOptimizerStub) GetEC2RecommendationProjectedMetricsAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.GetEC2RecommendationProjectedMetrics, input)
     return &ComputeoptimizerGetEC2RecommendationProjectedMetricsResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) GetEnrollmentStatus(ctx workflow.Context, input *computeoptimizer.GetEnrollmentStatusInput) (*computeoptimizer.GetEnrollmentStatusOutput, error) {
     var output computeoptimizer.GetEnrollmentStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEnrollmentStatus, input).Get(ctx, &output)
@@ -202,6 +209,7 @@ func (a *ComputeOptimizerStub) GetEnrollmentStatusAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetEnrollmentStatus, input)
     return &ComputeoptimizerGetEnrollmentStatusResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) GetRecommendationSummaries(ctx workflow.Context, input *computeoptimizer.GetRecommendationSummariesInput) (*computeoptimizer.GetRecommendationSummariesOutput, error) {
     var output computeoptimizer.GetRecommendationSummariesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRecommendationSummaries, input).Get(ctx, &output)
@@ -212,6 +220,7 @@ func (a *ComputeOptimizerStub) GetRecommendationSummariesAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.GetRecommendationSummaries, input)
     return &ComputeoptimizerGetRecommendationSummariesResult{Result: future}
 }
+
 func (a *ComputeOptimizerStub) UpdateEnrollmentStatus(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) (*computeoptimizer.UpdateEnrollmentStatusOutput, error) {
     var output computeoptimizer.UpdateEnrollmentStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEnrollmentStatus, input).Get(ctx, &output)

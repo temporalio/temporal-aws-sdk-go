@@ -174,6 +174,7 @@ type DatabaseMigrationServiceClient interface {
     WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
     WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
     WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
+
 type DatabasemigrationserviceAddTagsToResourceResult struct {
 	Result workflow.Future
 }
@@ -704,7 +705,6 @@ func (r *DatabasemigrationserviceTestConnectionResult) Get(ctx workflow.Context)
     return &output, err
 }
 
-
 type DatabaseMigrationServiceStub struct {
     activities awsactivities.DatabaseMigrationServiceActivities
 }
@@ -712,6 +712,7 @@ type DatabaseMigrationServiceStub struct {
 func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
     return &DatabaseMigrationServiceStub{}
 }
+
 func (a *DatabaseMigrationServiceStub) AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error) {
     var output databasemigrationservice.AddTagsToResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input).Get(ctx, &output)
@@ -722,6 +723,7 @@ func (a *DatabaseMigrationServiceStub) AddTagsToResourceAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input)
     return &DatabasemigrationserviceAddTagsToResourceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) (*databasemigrationservice.ApplyPendingMaintenanceActionOutput, error) {
     var output databasemigrationservice.ApplyPendingMaintenanceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ApplyPendingMaintenanceAction, input).Get(ctx, &output)
@@ -732,6 +734,7 @@ func (a *DatabaseMigrationServiceStub) ApplyPendingMaintenanceActionAsync(ctx wo
     future := workflow.ExecuteActivity(ctx, a.activities.ApplyPendingMaintenanceAction, input)
     return &DatabasemigrationserviceApplyPendingMaintenanceActionResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CancelReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) (*databasemigrationservice.CancelReplicationTaskAssessmentRunOutput, error) {
     var output databasemigrationservice.CancelReplicationTaskAssessmentRunOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelReplicationTaskAssessmentRun, input).Get(ctx, &output)
@@ -742,6 +745,7 @@ func (a *DatabaseMigrationServiceStub) CancelReplicationTaskAssessmentRunAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.CancelReplicationTaskAssessmentRun, input)
     return &DatabasemigrationserviceCancelReplicationTaskAssessmentRunResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CreateEndpoint(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) (*databasemigrationservice.CreateEndpointOutput, error) {
     var output databasemigrationservice.CreateEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEndpoint, input).Get(ctx, &output)
@@ -752,6 +756,7 @@ func (a *DatabaseMigrationServiceStub) CreateEndpointAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEndpoint, input)
     return &DatabasemigrationserviceCreateEndpointResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CreateEventSubscription(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) (*databasemigrationservice.CreateEventSubscriptionOutput, error) {
     var output databasemigrationservice.CreateEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEventSubscription, input).Get(ctx, &output)
@@ -762,6 +767,7 @@ func (a *DatabaseMigrationServiceStub) CreateEventSubscriptionAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEventSubscription, input)
     return &DatabasemigrationserviceCreateEventSubscriptionResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CreateReplicationInstance(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) (*databasemigrationservice.CreateReplicationInstanceOutput, error) {
     var output databasemigrationservice.CreateReplicationInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationInstance, input).Get(ctx, &output)
@@ -772,6 +778,7 @@ func (a *DatabaseMigrationServiceStub) CreateReplicationInstanceAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationInstance, input)
     return &DatabasemigrationserviceCreateReplicationInstanceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CreateReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) (*databasemigrationservice.CreateReplicationSubnetGroupOutput, error) {
     var output databasemigrationservice.CreateReplicationSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationSubnetGroup, input).Get(ctx, &output)
@@ -782,6 +789,7 @@ func (a *DatabaseMigrationServiceStub) CreateReplicationSubnetGroupAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationSubnetGroup, input)
     return &DatabasemigrationserviceCreateReplicationSubnetGroupResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) CreateReplicationTask(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) (*databasemigrationservice.CreateReplicationTaskOutput, error) {
     var output databasemigrationservice.CreateReplicationTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationTask, input).Get(ctx, &output)
@@ -792,6 +800,7 @@ func (a *DatabaseMigrationServiceStub) CreateReplicationTaskAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateReplicationTask, input)
     return &DatabasemigrationserviceCreateReplicationTaskResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteCertificate(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) (*databasemigrationservice.DeleteCertificateOutput, error) {
     var output databasemigrationservice.DeleteCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCertificate, input).Get(ctx, &output)
@@ -802,6 +811,7 @@ func (a *DatabaseMigrationServiceStub) DeleteCertificateAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCertificate, input)
     return &DatabasemigrationserviceDeleteCertificateResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteConnection(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) (*databasemigrationservice.DeleteConnectionOutput, error) {
     var output databasemigrationservice.DeleteConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input).Get(ctx, &output)
@@ -812,6 +822,7 @@ func (a *DatabaseMigrationServiceStub) DeleteConnectionAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input)
     return &DatabasemigrationserviceDeleteConnectionResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteEndpoint(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) (*databasemigrationservice.DeleteEndpointOutput, error) {
     var output databasemigrationservice.DeleteEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input).Get(ctx, &output)
@@ -822,6 +833,7 @@ func (a *DatabaseMigrationServiceStub) DeleteEndpointAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input)
     return &DatabasemigrationserviceDeleteEndpointResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteEventSubscription(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) (*databasemigrationservice.DeleteEventSubscriptionOutput, error) {
     var output databasemigrationservice.DeleteEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEventSubscription, input).Get(ctx, &output)
@@ -832,6 +844,7 @@ func (a *DatabaseMigrationServiceStub) DeleteEventSubscriptionAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEventSubscription, input)
     return &DatabasemigrationserviceDeleteEventSubscriptionResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteReplicationInstance(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) (*databasemigrationservice.DeleteReplicationInstanceOutput, error) {
     var output databasemigrationservice.DeleteReplicationInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationInstance, input).Get(ctx, &output)
@@ -842,6 +855,7 @@ func (a *DatabaseMigrationServiceStub) DeleteReplicationInstanceAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationInstance, input)
     return &DatabasemigrationserviceDeleteReplicationInstanceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) (*databasemigrationservice.DeleteReplicationSubnetGroupOutput, error) {
     var output databasemigrationservice.DeleteReplicationSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationSubnetGroup, input).Get(ctx, &output)
@@ -852,6 +866,7 @@ func (a *DatabaseMigrationServiceStub) DeleteReplicationSubnetGroupAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationSubnetGroup, input)
     return &DatabasemigrationserviceDeleteReplicationSubnetGroupResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTask(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) (*databasemigrationservice.DeleteReplicationTaskOutput, error) {
     var output databasemigrationservice.DeleteReplicationTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationTask, input).Get(ctx, &output)
@@ -862,6 +877,7 @@ func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationTask, input)
     return &DatabasemigrationserviceDeleteReplicationTaskResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) (*databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput, error) {
     var output databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationTaskAssessmentRun, input).Get(ctx, &output)
@@ -872,6 +888,7 @@ func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAssessmentRunAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReplicationTaskAssessmentRun, input)
     return &DatabasemigrationserviceDeleteReplicationTaskAssessmentRunResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeAccountAttributes(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) (*databasemigrationservice.DescribeAccountAttributesOutput, error) {
     var output databasemigrationservice.DescribeAccountAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountAttributes, input).Get(ctx, &output)
@@ -882,6 +899,7 @@ func (a *DatabaseMigrationServiceStub) DescribeAccountAttributesAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountAttributes, input)
     return &DatabasemigrationserviceDescribeAccountAttributesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeApplicableIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) (*databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput, error) {
     var output databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeApplicableIndividualAssessments, input).Get(ctx, &output)
@@ -892,6 +910,7 @@ func (a *DatabaseMigrationServiceStub) DescribeApplicableIndividualAssessmentsAs
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeApplicableIndividualAssessments, input)
     return &DatabasemigrationserviceDescribeApplicableIndividualAssessmentsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeCertificates(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) (*databasemigrationservice.DescribeCertificatesOutput, error) {
     var output databasemigrationservice.DescribeCertificatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCertificates, input).Get(ctx, &output)
@@ -902,6 +921,7 @@ func (a *DatabaseMigrationServiceStub) DescribeCertificatesAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCertificates, input)
     return &DatabasemigrationserviceDescribeCertificatesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeConnections(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) (*databasemigrationservice.DescribeConnectionsOutput, error) {
     var output databasemigrationservice.DescribeConnectionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConnections, input).Get(ctx, &output)
@@ -912,6 +932,7 @@ func (a *DatabaseMigrationServiceStub) DescribeConnectionsAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConnections, input)
     return &DatabasemigrationserviceDescribeConnectionsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeEndpointTypes(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) (*databasemigrationservice.DescribeEndpointTypesOutput, error) {
     var output databasemigrationservice.DescribeEndpointTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpointTypes, input).Get(ctx, &output)
@@ -922,6 +943,7 @@ func (a *DatabaseMigrationServiceStub) DescribeEndpointTypesAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpointTypes, input)
     return &DatabasemigrationserviceDescribeEndpointTypesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeEndpoints(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) (*databasemigrationservice.DescribeEndpointsOutput, error) {
     var output databasemigrationservice.DescribeEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoints, input).Get(ctx, &output)
@@ -932,6 +954,7 @@ func (a *DatabaseMigrationServiceStub) DescribeEndpointsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoints, input)
     return &DatabasemigrationserviceDescribeEndpointsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeEventCategories(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) (*databasemigrationservice.DescribeEventCategoriesOutput, error) {
     var output databasemigrationservice.DescribeEventCategoriesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventCategories, input).Get(ctx, &output)
@@ -942,6 +965,7 @@ func (a *DatabaseMigrationServiceStub) DescribeEventCategoriesAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventCategories, input)
     return &DatabasemigrationserviceDescribeEventCategoriesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeEventSubscriptions(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) (*databasemigrationservice.DescribeEventSubscriptionsOutput, error) {
     var output databasemigrationservice.DescribeEventSubscriptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSubscriptions, input).Get(ctx, &output)
@@ -952,6 +976,7 @@ func (a *DatabaseMigrationServiceStub) DescribeEventSubscriptionsAsync(ctx workf
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSubscriptions, input)
     return &DatabasemigrationserviceDescribeEventSubscriptionsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeEvents(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) (*databasemigrationservice.DescribeEventsOutput, error) {
     var output databasemigrationservice.DescribeEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEvents, input).Get(ctx, &output)
@@ -962,6 +987,7 @@ func (a *DatabaseMigrationServiceStub) DescribeEventsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEvents, input)
     return &DatabasemigrationserviceDescribeEventsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeOrderableReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) (*databasemigrationservice.DescribeOrderableReplicationInstancesOutput, error) {
     var output databasemigrationservice.DescribeOrderableReplicationInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrderableReplicationInstances, input).Get(ctx, &output)
@@ -972,6 +998,7 @@ func (a *DatabaseMigrationServiceStub) DescribeOrderableReplicationInstancesAsyn
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrderableReplicationInstances, input)
     return &DatabasemigrationserviceDescribeOrderableReplicationInstancesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) (*databasemigrationservice.DescribePendingMaintenanceActionsOutput, error) {
     var output databasemigrationservice.DescribePendingMaintenanceActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePendingMaintenanceActions, input).Get(ctx, &output)
@@ -982,6 +1009,7 @@ func (a *DatabaseMigrationServiceStub) DescribePendingMaintenanceActionsAsync(ct
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePendingMaintenanceActions, input)
     return &DatabasemigrationserviceDescribePendingMaintenanceActionsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeRefreshSchemasStatus(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) (*databasemigrationservice.DescribeRefreshSchemasStatusOutput, error) {
     var output databasemigrationservice.DescribeRefreshSchemasStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRefreshSchemasStatus, input).Get(ctx, &output)
@@ -992,6 +1020,7 @@ func (a *DatabaseMigrationServiceStub) DescribeRefreshSchemasStatusAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRefreshSchemasStatus, input)
     return &DatabasemigrationserviceDescribeRefreshSchemasStatusResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstanceTaskLogs(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error) {
     var output databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationInstanceTaskLogs, input).Get(ctx, &output)
@@ -1002,6 +1031,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationInstanceTaskLogsAsync(
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationInstanceTaskLogs, input)
     return &DatabasemigrationserviceDescribeReplicationInstanceTaskLogsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) (*databasemigrationservice.DescribeReplicationInstancesOutput, error) {
     var output databasemigrationservice.DescribeReplicationInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationInstances, input).Get(ctx, &output)
@@ -1012,6 +1042,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationInstancesAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationInstances, input)
     return &DatabasemigrationserviceDescribeReplicationInstancesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationSubnetGroups(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) (*databasemigrationservice.DescribeReplicationSubnetGroupsOutput, error) {
     var output databasemigrationservice.DescribeReplicationSubnetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationSubnetGroups, input).Get(ctx, &output)
@@ -1022,6 +1053,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationSubnetGroupsAsync(ctx 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationSubnetGroups, input)
     return &DatabasemigrationserviceDescribeReplicationSubnetGroupsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentResults(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error) {
     var output databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskAssessmentResults, input).Get(ctx, &output)
@@ -1032,6 +1064,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentResultsA
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskAssessmentResults, input)
     return &DatabasemigrationserviceDescribeReplicationTaskAssessmentResultsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentRuns(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput, error) {
     var output databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskAssessmentRuns, input).Get(ctx, &output)
@@ -1042,6 +1075,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentRunsAsyn
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskAssessmentRuns, input)
     return &DatabasemigrationserviceDescribeReplicationTaskAssessmentRunsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) (*databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput, error) {
     var output databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskIndividualAssessments, input).Get(ctx, &output)
@@ -1052,6 +1086,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskIndividualAssessme
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTaskIndividualAssessments, input)
     return &DatabasemigrationserviceDescribeReplicationTaskIndividualAssessmentsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTasks(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) (*databasemigrationservice.DescribeReplicationTasksOutput, error) {
     var output databasemigrationservice.DescribeReplicationTasksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTasks, input).Get(ctx, &output)
@@ -1062,6 +1097,7 @@ func (a *DatabaseMigrationServiceStub) DescribeReplicationTasksAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReplicationTasks, input)
     return &DatabasemigrationserviceDescribeReplicationTasksResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeSchemas(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) (*databasemigrationservice.DescribeSchemasOutput, error) {
     var output databasemigrationservice.DescribeSchemasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSchemas, input).Get(ctx, &output)
@@ -1072,6 +1108,7 @@ func (a *DatabaseMigrationServiceStub) DescribeSchemasAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSchemas, input)
     return &DatabasemigrationserviceDescribeSchemasResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) DescribeTableStatistics(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) (*databasemigrationservice.DescribeTableStatisticsOutput, error) {
     var output databasemigrationservice.DescribeTableStatisticsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTableStatistics, input).Get(ctx, &output)
@@ -1082,6 +1119,7 @@ func (a *DatabaseMigrationServiceStub) DescribeTableStatisticsAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTableStatistics, input)
     return &DatabasemigrationserviceDescribeTableStatisticsResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ImportCertificate(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) (*databasemigrationservice.ImportCertificateOutput, error) {
     var output databasemigrationservice.ImportCertificateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportCertificate, input).Get(ctx, &output)
@@ -1092,6 +1130,7 @@ func (a *DatabaseMigrationServiceStub) ImportCertificateAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ImportCertificate, input)
     return &DatabasemigrationserviceImportCertificateResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ListTagsForResource(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) (*databasemigrationservice.ListTagsForResourceOutput, error) {
     var output databasemigrationservice.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1102,6 +1141,7 @@ func (a *DatabaseMigrationServiceStub) ListTagsForResourceAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &DatabasemigrationserviceListTagsForResourceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ModifyEndpoint(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) (*databasemigrationservice.ModifyEndpointOutput, error) {
     var output databasemigrationservice.ModifyEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyEndpoint, input).Get(ctx, &output)
@@ -1112,6 +1152,7 @@ func (a *DatabaseMigrationServiceStub) ModifyEndpointAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyEndpoint, input)
     return &DatabasemigrationserviceModifyEndpointResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ModifyEventSubscription(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) (*databasemigrationservice.ModifyEventSubscriptionOutput, error) {
     var output databasemigrationservice.ModifyEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyEventSubscription, input).Get(ctx, &output)
@@ -1122,6 +1163,7 @@ func (a *DatabaseMigrationServiceStub) ModifyEventSubscriptionAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyEventSubscription, input)
     return &DatabasemigrationserviceModifyEventSubscriptionResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ModifyReplicationInstance(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) (*databasemigrationservice.ModifyReplicationInstanceOutput, error) {
     var output databasemigrationservice.ModifyReplicationInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationInstance, input).Get(ctx, &output)
@@ -1132,6 +1174,7 @@ func (a *DatabaseMigrationServiceStub) ModifyReplicationInstanceAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationInstance, input)
     return &DatabasemigrationserviceModifyReplicationInstanceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ModifyReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) (*databasemigrationservice.ModifyReplicationSubnetGroupOutput, error) {
     var output databasemigrationservice.ModifyReplicationSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationSubnetGroup, input).Get(ctx, &output)
@@ -1142,6 +1185,7 @@ func (a *DatabaseMigrationServiceStub) ModifyReplicationSubnetGroupAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationSubnetGroup, input)
     return &DatabasemigrationserviceModifyReplicationSubnetGroupResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ModifyReplicationTask(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) (*databasemigrationservice.ModifyReplicationTaskOutput, error) {
     var output databasemigrationservice.ModifyReplicationTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationTask, input).Get(ctx, &output)
@@ -1152,6 +1196,7 @@ func (a *DatabaseMigrationServiceStub) ModifyReplicationTaskAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyReplicationTask, input)
     return &DatabasemigrationserviceModifyReplicationTaskResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) RebootReplicationInstance(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) (*databasemigrationservice.RebootReplicationInstanceOutput, error) {
     var output databasemigrationservice.RebootReplicationInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RebootReplicationInstance, input).Get(ctx, &output)
@@ -1162,6 +1207,7 @@ func (a *DatabaseMigrationServiceStub) RebootReplicationInstanceAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.RebootReplicationInstance, input)
     return &DatabasemigrationserviceRebootReplicationInstanceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) RefreshSchemas(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) (*databasemigrationservice.RefreshSchemasOutput, error) {
     var output databasemigrationservice.RefreshSchemasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RefreshSchemas, input).Get(ctx, &output)
@@ -1172,6 +1218,7 @@ func (a *DatabaseMigrationServiceStub) RefreshSchemasAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.RefreshSchemas, input)
     return &DatabasemigrationserviceRefreshSchemasResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) ReloadTables(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) (*databasemigrationservice.ReloadTablesOutput, error) {
     var output databasemigrationservice.ReloadTablesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ReloadTables, input).Get(ctx, &output)
@@ -1182,6 +1229,7 @@ func (a *DatabaseMigrationServiceStub) ReloadTablesAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ReloadTables, input)
     return &DatabasemigrationserviceReloadTablesResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) RemoveTagsFromResource(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) (*databasemigrationservice.RemoveTagsFromResourceOutput, error) {
     var output databasemigrationservice.RemoveTagsFromResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input).Get(ctx, &output)
@@ -1192,6 +1240,7 @@ func (a *DatabaseMigrationServiceStub) RemoveTagsFromResourceAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input)
     return &DatabasemigrationserviceRemoveTagsFromResourceResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) StartReplicationTask(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) (*databasemigrationservice.StartReplicationTaskOutput, error) {
     var output databasemigrationservice.StartReplicationTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTask, input).Get(ctx, &output)
@@ -1202,6 +1251,7 @@ func (a *DatabaseMigrationServiceStub) StartReplicationTaskAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTask, input)
     return &DatabasemigrationserviceStartReplicationTaskResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessment(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error) {
     var output databasemigrationservice.StartReplicationTaskAssessmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTaskAssessment, input).Get(ctx, &output)
@@ -1212,6 +1262,7 @@ func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentAsync(ctx w
     future := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTaskAssessment, input)
     return &DatabasemigrationserviceStartReplicationTaskAssessmentResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) (*databasemigrationservice.StartReplicationTaskAssessmentRunOutput, error) {
     var output databasemigrationservice.StartReplicationTaskAssessmentRunOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTaskAssessmentRun, input).Get(ctx, &output)
@@ -1222,6 +1273,7 @@ func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentRunAsync(ct
     future := workflow.ExecuteActivity(ctx, a.activities.StartReplicationTaskAssessmentRun, input)
     return &DatabasemigrationserviceStartReplicationTaskAssessmentRunResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) StopReplicationTask(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) (*databasemigrationservice.StopReplicationTaskOutput, error) {
     var output databasemigrationservice.StopReplicationTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopReplicationTask, input).Get(ctx, &output)
@@ -1232,6 +1284,7 @@ func (a *DatabaseMigrationServiceStub) StopReplicationTaskAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.StopReplicationTask, input)
     return &DatabasemigrationserviceStopReplicationTaskResult{Result: future}
 }
+
 func (a *DatabaseMigrationServiceStub) TestConnection(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) (*databasemigrationservice.TestConnectionOutput, error) {
     var output databasemigrationservice.TestConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TestConnection, input).Get(ctx, &output)
@@ -1251,6 +1304,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeletedAsync(ctx workflo
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilEndpointDeleted, input)
 }
 
+
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationInstanceAvailable, input).Get(ctx, nil)
 }
@@ -1258,6 +1312,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailable(ctx
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationInstanceAvailable, input)
 }
+
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationInstanceDeleted, input).Get(ctx, nil)
@@ -1267,6 +1322,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeletedAsync(
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationInstanceDeleted, input)
 }
 
+
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskDeleted, input).Get(ctx, nil)
 }
@@ -1274,6 +1330,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeleted(ctx workf
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskDeleted, input)
 }
+
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskReady, input).Get(ctx, nil)
@@ -1283,6 +1340,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReadyAsync(ctx wo
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskReady, input)
 }
 
+
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskRunning, input).Get(ctx, nil)
 }
@@ -1290,6 +1348,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunning(ctx workf
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskRunning, input)
 }
+
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskStopped, input).Get(ctx, nil)
@@ -1299,6 +1358,7 @@ func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStoppedAsync(ctx 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilReplicationTaskStopped, input)
 }
 
+
 func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTestConnectionSucceeds, input).Get(ctx, nil)
 }
@@ -1306,3 +1366,4 @@ func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceeds(ctx workf
 func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTestConnectionSucceeds, input)
 }
+

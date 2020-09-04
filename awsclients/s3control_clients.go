@@ -64,6 +64,7 @@ type S3ControlClient interface {
     UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error)
     UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3controlUpdateJobStatusResult
 }
+
 type S3controlCreateAccessPointResult struct {
 	Result workflow.Future
 }
@@ -254,7 +255,6 @@ func (r *S3controlUpdateJobStatusResult) Get(ctx workflow.Context) (*s3control.U
     return &output, err
 }
 
-
 type S3ControlStub struct {
     activities awsactivities.S3ControlActivities
 }
@@ -262,6 +262,7 @@ type S3ControlStub struct {
 func NewS3ControlStub() S3ControlClient {
     return &S3ControlStub{}
 }
+
 func (a *S3ControlStub) CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAccessPointInput) (*s3control.CreateAccessPointOutput, error) {
     var output s3control.CreateAccessPointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAccessPoint, input).Get(ctx, &output)
@@ -272,6 +273,7 @@ func (a *S3ControlStub) CreateAccessPointAsync(ctx workflow.Context, input *s3co
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAccessPoint, input)
     return &S3controlCreateAccessPointResult{Result: future}
 }
+
 func (a *S3ControlStub) CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) (*s3control.CreateJobOutput, error) {
     var output s3control.CreateJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateJob, input).Get(ctx, &output)
@@ -282,6 +284,7 @@ func (a *S3ControlStub) CreateJobAsync(ctx workflow.Context, input *s3control.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateJob, input)
     return &S3controlCreateJobResult{Result: future}
 }
+
 func (a *S3ControlStub) DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAccessPointInput) (*s3control.DeleteAccessPointOutput, error) {
     var output s3control.DeleteAccessPointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessPoint, input).Get(ctx, &output)
@@ -292,6 +295,7 @@ func (a *S3ControlStub) DeleteAccessPointAsync(ctx workflow.Context, input *s3co
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessPoint, input)
     return &S3controlDeleteAccessPointResult{Result: future}
 }
+
 func (a *S3ControlStub) DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) (*s3control.DeleteAccessPointPolicyOutput, error) {
     var output s3control.DeleteAccessPointPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessPointPolicy, input).Get(ctx, &output)
@@ -302,6 +306,7 @@ func (a *S3ControlStub) DeleteAccessPointPolicyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessPointPolicy, input)
     return &S3controlDeleteAccessPointPolicyResult{Result: future}
 }
+
 func (a *S3ControlStub) DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) (*s3control.DeleteJobTaggingOutput, error) {
     var output s3control.DeleteJobTaggingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteJobTagging, input).Get(ctx, &output)
@@ -312,6 +317,7 @@ func (a *S3ControlStub) DeleteJobTaggingAsync(ctx workflow.Context, input *s3con
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteJobTagging, input)
     return &S3controlDeleteJobTaggingResult{Result: future}
 }
+
 func (a *S3ControlStub) DeletePublicAccessBlock(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) (*s3control.DeletePublicAccessBlockOutput, error) {
     var output s3control.DeletePublicAccessBlockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePublicAccessBlock, input).Get(ctx, &output)
@@ -322,6 +328,7 @@ func (a *S3ControlStub) DeletePublicAccessBlockAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePublicAccessBlock, input)
     return &S3controlDeletePublicAccessBlockResult{Result: future}
 }
+
 func (a *S3ControlStub) DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInput) (*s3control.DescribeJobOutput, error) {
     var output s3control.DescribeJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input).Get(ctx, &output)
@@ -332,6 +339,7 @@ func (a *S3ControlStub) DescribeJobAsync(ctx workflow.Context, input *s3control.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input)
     return &S3controlDescribeJobResult{Result: future}
 }
+
 func (a *S3ControlStub) GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPointInput) (*s3control.GetAccessPointOutput, error) {
     var output s3control.GetAccessPointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccessPoint, input).Get(ctx, &output)
@@ -342,6 +350,7 @@ func (a *S3ControlStub) GetAccessPointAsync(ctx workflow.Context, input *s3contr
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccessPoint, input)
     return &S3controlGetAccessPointResult{Result: future}
 }
+
 func (a *S3ControlStub) GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) (*s3control.GetAccessPointPolicyOutput, error) {
     var output s3control.GetAccessPointPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccessPointPolicy, input).Get(ctx, &output)
@@ -352,6 +361,7 @@ func (a *S3ControlStub) GetAccessPointPolicyAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccessPointPolicy, input)
     return &S3controlGetAccessPointPolicyResult{Result: future}
 }
+
 func (a *S3ControlStub) GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) (*s3control.GetAccessPointPolicyStatusOutput, error) {
     var output s3control.GetAccessPointPolicyStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccessPointPolicyStatus, input).Get(ctx, &output)
@@ -362,6 +372,7 @@ func (a *S3ControlStub) GetAccessPointPolicyStatusAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccessPointPolicyStatus, input)
     return &S3controlGetAccessPointPolicyStatusResult{Result: future}
 }
+
 func (a *S3ControlStub) GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggingInput) (*s3control.GetJobTaggingOutput, error) {
     var output s3control.GetJobTaggingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJobTagging, input).Get(ctx, &output)
@@ -372,6 +383,7 @@ func (a *S3ControlStub) GetJobTaggingAsync(ctx workflow.Context, input *s3contro
     future := workflow.ExecuteActivity(ctx, a.activities.GetJobTagging, input)
     return &S3controlGetJobTaggingResult{Result: future}
 }
+
 func (a *S3ControlStub) GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) (*s3control.GetPublicAccessBlockOutput, error) {
     var output s3control.GetPublicAccessBlockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPublicAccessBlock, input).Get(ctx, &output)
@@ -382,6 +394,7 @@ func (a *S3ControlStub) GetPublicAccessBlockAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.GetPublicAccessBlock, input)
     return &S3controlGetPublicAccessBlockResult{Result: future}
 }
+
 func (a *S3ControlStub) ListAccessPoints(ctx workflow.Context, input *s3control.ListAccessPointsInput) (*s3control.ListAccessPointsOutput, error) {
     var output s3control.ListAccessPointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccessPoints, input).Get(ctx, &output)
@@ -392,6 +405,7 @@ func (a *S3ControlStub) ListAccessPointsAsync(ctx workflow.Context, input *s3con
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccessPoints, input)
     return &S3controlListAccessPointsResult{Result: future}
 }
+
 func (a *S3ControlStub) ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*s3control.ListJobsOutput, error) {
     var output s3control.ListJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input).Get(ctx, &output)
@@ -402,6 +416,7 @@ func (a *S3ControlStub) ListJobsAsync(ctx workflow.Context, input *s3control.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input)
     return &S3controlListJobsResult{Result: future}
 }
+
 func (a *S3ControlStub) PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) (*s3control.PutAccessPointPolicyOutput, error) {
     var output s3control.PutAccessPointPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutAccessPointPolicy, input).Get(ctx, &output)
@@ -412,6 +427,7 @@ func (a *S3ControlStub) PutAccessPointPolicyAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.PutAccessPointPolicy, input)
     return &S3controlPutAccessPointPolicyResult{Result: future}
 }
+
 func (a *S3ControlStub) PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggingInput) (*s3control.PutJobTaggingOutput, error) {
     var output s3control.PutJobTaggingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutJobTagging, input).Get(ctx, &output)
@@ -422,6 +438,7 @@ func (a *S3ControlStub) PutJobTaggingAsync(ctx workflow.Context, input *s3contro
     future := workflow.ExecuteActivity(ctx, a.activities.PutJobTagging, input)
     return &S3controlPutJobTaggingResult{Result: future}
 }
+
 func (a *S3ControlStub) PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) (*s3control.PutPublicAccessBlockOutput, error) {
     var output s3control.PutPublicAccessBlockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutPublicAccessBlock, input).Get(ctx, &output)
@@ -432,6 +449,7 @@ func (a *S3ControlStub) PutPublicAccessBlockAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.PutPublicAccessBlock, input)
     return &S3controlPutPublicAccessBlockResult{Result: future}
 }
+
 func (a *S3ControlStub) UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) (*s3control.UpdateJobPriorityOutput, error) {
     var output s3control.UpdateJobPriorityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateJobPriority, input).Get(ctx, &output)
@@ -442,6 +460,7 @@ func (a *S3ControlStub) UpdateJobPriorityAsync(ctx workflow.Context, input *s3co
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateJobPriority, input)
     return &S3controlUpdateJobPriorityResult{Result: future}
 }
+
 func (a *S3ControlStub) UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error) {
     var output s3control.UpdateJobStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateJobStatus, input).Get(ctx, &output)

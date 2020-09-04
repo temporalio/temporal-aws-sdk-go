@@ -118,6 +118,7 @@ type AmplifyClient interface {
     UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error)
     UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookResult
 }
+
 type AmplifyCreateAppResult struct {
 	Result workflow.Future
 }
@@ -488,7 +489,6 @@ func (r *AmplifyUpdateWebhookResult) Get(ctx workflow.Context) (*amplify.UpdateW
     return &output, err
 }
 
-
 type AmplifyStub struct {
     activities awsactivities.AmplifyActivities
 }
@@ -496,6 +496,7 @@ type AmplifyStub struct {
 func NewAmplifyStub() AmplifyClient {
     return &AmplifyStub{}
 }
+
 func (a *AmplifyStub) CreateApp(ctx workflow.Context, input *amplify.CreateAppInput) (*amplify.CreateAppOutput, error) {
     var output amplify.CreateAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApp, input).Get(ctx, &output)
@@ -506,6 +507,7 @@ func (a *AmplifyStub) CreateAppAsync(ctx workflow.Context, input *amplify.Create
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApp, input)
     return &AmplifyCreateAppResult{Result: future}
 }
+
 func (a *AmplifyStub) CreateBackendEnvironment(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error) {
     var output amplify.CreateBackendEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBackendEnvironment, input).Get(ctx, &output)
@@ -516,6 +518,7 @@ func (a *AmplifyStub) CreateBackendEnvironmentAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBackendEnvironment, input)
     return &AmplifyCreateBackendEnvironmentResult{Result: future}
 }
+
 func (a *AmplifyStub) CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error) {
     var output amplify.CreateBranchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBranch, input).Get(ctx, &output)
@@ -526,6 +529,7 @@ func (a *AmplifyStub) CreateBranchAsync(ctx workflow.Context, input *amplify.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBranch, input)
     return &AmplifyCreateBranchResult{Result: future}
 }
+
 func (a *AmplifyStub) CreateDeployment(ctx workflow.Context, input *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error) {
     var output amplify.CreateDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDeployment, input).Get(ctx, &output)
@@ -536,6 +540,7 @@ func (a *AmplifyStub) CreateDeploymentAsync(ctx workflow.Context, input *amplify
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDeployment, input)
     return &AmplifyCreateDeploymentResult{Result: future}
 }
+
 func (a *AmplifyStub) CreateDomainAssociation(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error) {
     var output amplify.CreateDomainAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDomainAssociation, input).Get(ctx, &output)
@@ -546,6 +551,7 @@ func (a *AmplifyStub) CreateDomainAssociationAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDomainAssociation, input)
     return &AmplifyCreateDomainAssociationResult{Result: future}
 }
+
 func (a *AmplifyStub) CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error) {
     var output amplify.CreateWebhookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateWebhook, input).Get(ctx, &output)
@@ -556,6 +562,7 @@ func (a *AmplifyStub) CreateWebhookAsync(ctx workflow.Context, input *amplify.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateWebhook, input)
     return &AmplifyCreateWebhookResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error) {
     var output amplify.DeleteAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApp, input).Get(ctx, &output)
@@ -566,6 +573,7 @@ func (a *AmplifyStub) DeleteAppAsync(ctx workflow.Context, input *amplify.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApp, input)
     return &AmplifyDeleteAppResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteBackendEnvironment(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error) {
     var output amplify.DeleteBackendEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackendEnvironment, input).Get(ctx, &output)
@@ -576,6 +584,7 @@ func (a *AmplifyStub) DeleteBackendEnvironmentAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackendEnvironment, input)
     return &AmplifyDeleteBackendEnvironmentResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error) {
     var output amplify.DeleteBranchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBranch, input).Get(ctx, &output)
@@ -586,6 +595,7 @@ func (a *AmplifyStub) DeleteBranchAsync(ctx workflow.Context, input *amplify.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBranch, input)
     return &AmplifyDeleteBranchResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteDomainAssociation(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error) {
     var output amplify.DeleteDomainAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainAssociation, input).Get(ctx, &output)
@@ -596,6 +606,7 @@ func (a *AmplifyStub) DeleteDomainAssociationAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainAssociation, input)
     return &AmplifyDeleteDomainAssociationResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error) {
     var output amplify.DeleteJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteJob, input).Get(ctx, &output)
@@ -606,6 +617,7 @@ func (a *AmplifyStub) DeleteJobAsync(ctx workflow.Context, input *amplify.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteJob, input)
     return &AmplifyDeleteJobResult{Result: future}
 }
+
 func (a *AmplifyStub) DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error) {
     var output amplify.DeleteWebhookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteWebhook, input).Get(ctx, &output)
@@ -616,6 +628,7 @@ func (a *AmplifyStub) DeleteWebhookAsync(ctx workflow.Context, input *amplify.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteWebhook, input)
     return &AmplifyDeleteWebhookResult{Result: future}
 }
+
 func (a *AmplifyStub) GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error) {
     var output amplify.GenerateAccessLogsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateAccessLogs, input).Get(ctx, &output)
@@ -626,6 +639,7 @@ func (a *AmplifyStub) GenerateAccessLogsAsync(ctx workflow.Context, input *ampli
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateAccessLogs, input)
     return &AmplifyGenerateAccessLogsResult{Result: future}
 }
+
 func (a *AmplifyStub) GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplify.GetAppOutput, error) {
     var output amplify.GetAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApp, input).Get(ctx, &output)
@@ -636,6 +650,7 @@ func (a *AmplifyStub) GetAppAsync(ctx workflow.Context, input *amplify.GetAppInp
     future := workflow.ExecuteActivity(ctx, a.activities.GetApp, input)
     return &AmplifyGetAppResult{Result: future}
 }
+
 func (a *AmplifyStub) GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error) {
     var output amplify.GetArtifactUrlOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetArtifactUrl, input).Get(ctx, &output)
@@ -646,6 +661,7 @@ func (a *AmplifyStub) GetArtifactUrlAsync(ctx workflow.Context, input *amplify.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetArtifactUrl, input)
     return &AmplifyGetArtifactUrlResult{Result: future}
 }
+
 func (a *AmplifyStub) GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error) {
     var output amplify.GetBackendEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBackendEnvironment, input).Get(ctx, &output)
@@ -656,6 +672,7 @@ func (a *AmplifyStub) GetBackendEnvironmentAsync(ctx workflow.Context, input *am
     future := workflow.ExecuteActivity(ctx, a.activities.GetBackendEnvironment, input)
     return &AmplifyGetBackendEnvironmentResult{Result: future}
 }
+
 func (a *AmplifyStub) GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*amplify.GetBranchOutput, error) {
     var output amplify.GetBranchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBranch, input).Get(ctx, &output)
@@ -666,6 +683,7 @@ func (a *AmplifyStub) GetBranchAsync(ctx workflow.Context, input *amplify.GetBra
     future := workflow.ExecuteActivity(ctx, a.activities.GetBranch, input)
     return &AmplifyGetBranchResult{Result: future}
 }
+
 func (a *AmplifyStub) GetDomainAssociation(ctx workflow.Context, input *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error) {
     var output amplify.GetDomainAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDomainAssociation, input).Get(ctx, &output)
@@ -676,6 +694,7 @@ func (a *AmplifyStub) GetDomainAssociationAsync(ctx workflow.Context, input *amp
     future := workflow.ExecuteActivity(ctx, a.activities.GetDomainAssociation, input)
     return &AmplifyGetDomainAssociationResult{Result: future}
 }
+
 func (a *AmplifyStub) GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplify.GetJobOutput, error) {
     var output amplify.GetJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJob, input).Get(ctx, &output)
@@ -686,6 +705,7 @@ func (a *AmplifyStub) GetJobAsync(ctx workflow.Context, input *amplify.GetJobInp
     future := workflow.ExecuteActivity(ctx, a.activities.GetJob, input)
     return &AmplifyGetJobResult{Result: future}
 }
+
 func (a *AmplifyStub) GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error) {
     var output amplify.GetWebhookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetWebhook, input).Get(ctx, &output)
@@ -696,6 +716,7 @@ func (a *AmplifyStub) GetWebhookAsync(ctx workflow.Context, input *amplify.GetWe
     future := workflow.ExecuteActivity(ctx, a.activities.GetWebhook, input)
     return &AmplifyGetWebhookResult{Result: future}
 }
+
 func (a *AmplifyStub) ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*amplify.ListAppsOutput, error) {
     var output amplify.ListAppsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListApps, input).Get(ctx, &output)
@@ -706,6 +727,7 @@ func (a *AmplifyStub) ListAppsAsync(ctx workflow.Context, input *amplify.ListApp
     future := workflow.ExecuteActivity(ctx, a.activities.ListApps, input)
     return &AmplifyListAppsResult{Result: future}
 }
+
 func (a *AmplifyStub) ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error) {
     var output amplify.ListArtifactsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListArtifacts, input).Get(ctx, &output)
@@ -716,6 +738,7 @@ func (a *AmplifyStub) ListArtifactsAsync(ctx workflow.Context, input *amplify.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListArtifacts, input)
     return &AmplifyListArtifactsResult{Result: future}
 }
+
 func (a *AmplifyStub) ListBackendEnvironments(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error) {
     var output amplify.ListBackendEnvironmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackendEnvironments, input).Get(ctx, &output)
@@ -726,6 +749,7 @@ func (a *AmplifyStub) ListBackendEnvironmentsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackendEnvironments, input)
     return &AmplifyListBackendEnvironmentsResult{Result: future}
 }
+
 func (a *AmplifyStub) ListBranches(ctx workflow.Context, input *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error) {
     var output amplify.ListBranchesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBranches, input).Get(ctx, &output)
@@ -736,6 +760,7 @@ func (a *AmplifyStub) ListBranchesAsync(ctx workflow.Context, input *amplify.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListBranches, input)
     return &AmplifyListBranchesResult{Result: future}
 }
+
 func (a *AmplifyStub) ListDomainAssociations(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error) {
     var output amplify.ListDomainAssociationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDomainAssociations, input).Get(ctx, &output)
@@ -746,6 +771,7 @@ func (a *AmplifyStub) ListDomainAssociationsAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.ListDomainAssociations, input)
     return &AmplifyListDomainAssociationsResult{Result: future}
 }
+
 func (a *AmplifyStub) ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*amplify.ListJobsOutput, error) {
     var output amplify.ListJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input).Get(ctx, &output)
@@ -756,6 +782,7 @@ func (a *AmplifyStub) ListJobsAsync(ctx workflow.Context, input *amplify.ListJob
     future := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input)
     return &AmplifyListJobsResult{Result: future}
 }
+
 func (a *AmplifyStub) ListTagsForResource(ctx workflow.Context, input *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error) {
     var output amplify.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -766,6 +793,7 @@ func (a *AmplifyStub) ListTagsForResourceAsync(ctx workflow.Context, input *ampl
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &AmplifyListTagsForResourceResult{Result: future}
 }
+
 func (a *AmplifyStub) ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error) {
     var output amplify.ListWebhooksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListWebhooks, input).Get(ctx, &output)
@@ -776,6 +804,7 @@ func (a *AmplifyStub) ListWebhooksAsync(ctx workflow.Context, input *amplify.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListWebhooks, input)
     return &AmplifyListWebhooksResult{Result: future}
 }
+
 func (a *AmplifyStub) StartDeployment(ctx workflow.Context, input *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error) {
     var output amplify.StartDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDeployment, input).Get(ctx, &output)
@@ -786,6 +815,7 @@ func (a *AmplifyStub) StartDeploymentAsync(ctx workflow.Context, input *amplify.
     future := workflow.ExecuteActivity(ctx, a.activities.StartDeployment, input)
     return &AmplifyStartDeploymentResult{Result: future}
 }
+
 func (a *AmplifyStub) StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*amplify.StartJobOutput, error) {
     var output amplify.StartJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartJob, input).Get(ctx, &output)
@@ -796,6 +826,7 @@ func (a *AmplifyStub) StartJobAsync(ctx workflow.Context, input *amplify.StartJo
     future := workflow.ExecuteActivity(ctx, a.activities.StartJob, input)
     return &AmplifyStartJobResult{Result: future}
 }
+
 func (a *AmplifyStub) StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*amplify.StopJobOutput, error) {
     var output amplify.StopJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopJob, input).Get(ctx, &output)
@@ -806,6 +837,7 @@ func (a *AmplifyStub) StopJobAsync(ctx workflow.Context, input *amplify.StopJobI
     future := workflow.ExecuteActivity(ctx, a.activities.StopJob, input)
     return &AmplifyStopJobResult{Result: future}
 }
+
 func (a *AmplifyStub) TagResource(ctx workflow.Context, input *amplify.TagResourceInput) (*amplify.TagResourceOutput, error) {
     var output amplify.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -816,6 +848,7 @@ func (a *AmplifyStub) TagResourceAsync(ctx workflow.Context, input *amplify.TagR
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &AmplifyTagResourceResult{Result: future}
 }
+
 func (a *AmplifyStub) UntagResource(ctx workflow.Context, input *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error) {
     var output amplify.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -826,6 +859,7 @@ func (a *AmplifyStub) UntagResourceAsync(ctx workflow.Context, input *amplify.Un
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &AmplifyUntagResourceResult{Result: future}
 }
+
 func (a *AmplifyStub) UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error) {
     var output amplify.UpdateAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApp, input).Get(ctx, &output)
@@ -836,6 +870,7 @@ func (a *AmplifyStub) UpdateAppAsync(ctx workflow.Context, input *amplify.Update
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApp, input)
     return &AmplifyUpdateAppResult{Result: future}
 }
+
 func (a *AmplifyStub) UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error) {
     var output amplify.UpdateBranchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBranch, input).Get(ctx, &output)
@@ -846,6 +881,7 @@ func (a *AmplifyStub) UpdateBranchAsync(ctx workflow.Context, input *amplify.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBranch, input)
     return &AmplifyUpdateBranchResult{Result: future}
 }
+
 func (a *AmplifyStub) UpdateDomainAssociation(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error) {
     var output amplify.UpdateDomainAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDomainAssociation, input).Get(ctx, &output)
@@ -856,6 +892,7 @@ func (a *AmplifyStub) UpdateDomainAssociationAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDomainAssociation, input)
     return &AmplifyUpdateDomainAssociationResult{Result: future}
 }
+
 func (a *AmplifyStub) UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error) {
     var output amplify.UpdateWebhookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateWebhook, input).Get(ctx, &output)

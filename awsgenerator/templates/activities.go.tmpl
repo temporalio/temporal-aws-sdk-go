@@ -1,3 +1,4 @@
+
 {{ $name := .Name -}}
 {{ $lowerName := .Name |ToLower -}}
 package awsactivities
@@ -19,14 +20,14 @@ func New{{ $name }}Activities(client {{ $lowerName }}iface.{{ $name }}API) *{{ $
 
 {{- range $i, $method := .Methods }}
 
-{{ if HasPrefix $method.Name "Wait" }}
+{{ if HasPrefix $method.Name "Wait" -}}
 func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) error {
     return a.client.{{ $method.Name }}(input)
 }
-{{ else }}
+{{- else -}}
 func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
     return a.client.{{ $method.Name }}(input)
 }
-{{ end }}
+{{- end }}
 
 {{- end }}

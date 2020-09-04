@@ -70,6 +70,7 @@ type ComprehendMedicalClient interface {
     StopRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) (*comprehendmedical.StopRxNormInferenceJobOutput, error)
     StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendmedicalStopRxNormInferenceJobResult
 }
+
 type ComprehendmedicalDescribeEntitiesDetectionV2JobResult struct {
 	Result workflow.Future
 }
@@ -280,7 +281,6 @@ func (r *ComprehendmedicalStopRxNormInferenceJobResult) Get(ctx workflow.Context
     return &output, err
 }
 
-
 type ComprehendMedicalStub struct {
     activities awsactivities.ComprehendMedicalActivities
 }
@@ -288,6 +288,7 @@ type ComprehendMedicalStub struct {
 func NewComprehendMedicalStub() ComprehendMedicalClient {
     return &ComprehendMedicalStub{}
 }
+
 func (a *ComprehendMedicalStub) DescribeEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.DescribeEntitiesDetectionV2JobInput) (*comprehendmedical.DescribeEntitiesDetectionV2JobOutput, error) {
     var output comprehendmedical.DescribeEntitiesDetectionV2JobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEntitiesDetectionV2Job, input).Get(ctx, &output)
@@ -298,6 +299,7 @@ func (a *ComprehendMedicalStub) DescribeEntitiesDetectionV2JobAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEntitiesDetectionV2Job, input)
     return &ComprehendmedicalDescribeEntitiesDetectionV2JobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeICD10CMInferenceJobInput) (*comprehendmedical.DescribeICD10CMInferenceJobOutput, error) {
     var output comprehendmedical.DescribeICD10CMInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeICD10CMInferenceJob, input).Get(ctx, &output)
@@ -308,6 +310,7 @@ func (a *ComprehendMedicalStub) DescribeICD10CMInferenceJobAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeICD10CMInferenceJob, input)
     return &ComprehendmedicalDescribeICD10CMInferenceJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DescribePHIDetectionJob(ctx workflow.Context, input *comprehendmedical.DescribePHIDetectionJobInput) (*comprehendmedical.DescribePHIDetectionJobOutput, error) {
     var output comprehendmedical.DescribePHIDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePHIDetectionJob, input).Get(ctx, &output)
@@ -318,6 +321,7 @@ func (a *ComprehendMedicalStub) DescribePHIDetectionJobAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePHIDetectionJob, input)
     return &ComprehendmedicalDescribePHIDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DescribeRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.DescribeRxNormInferenceJobInput) (*comprehendmedical.DescribeRxNormInferenceJobOutput, error) {
     var output comprehendmedical.DescribeRxNormInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRxNormInferenceJob, input).Get(ctx, &output)
@@ -328,6 +332,7 @@ func (a *ComprehendMedicalStub) DescribeRxNormInferenceJobAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRxNormInferenceJob, input)
     return &ComprehendmedicalDescribeRxNormInferenceJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DetectEntities(ctx workflow.Context, input *comprehendmedical.DetectEntitiesInput) (*comprehendmedical.DetectEntitiesOutput, error) {
     var output comprehendmedical.DetectEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectEntities, input).Get(ctx, &output)
@@ -338,6 +343,7 @@ func (a *ComprehendMedicalStub) DetectEntitiesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DetectEntities, input)
     return &ComprehendmedicalDetectEntitiesResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DetectEntitiesV2(ctx workflow.Context, input *comprehendmedical.DetectEntitiesV2Input) (*comprehendmedical.DetectEntitiesV2Output, error) {
     var output comprehendmedical.DetectEntitiesV2Output
     err := workflow.ExecuteActivity(ctx, a.activities.DetectEntitiesV2, input).Get(ctx, &output)
@@ -348,6 +354,7 @@ func (a *ComprehendMedicalStub) DetectEntitiesV2Async(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DetectEntitiesV2, input)
     return &ComprehendmedicalDetectEntitiesV2Result{Result: future}
 }
+
 func (a *ComprehendMedicalStub) DetectPHI(ctx workflow.Context, input *comprehendmedical.DetectPHIInput) (*comprehendmedical.DetectPHIOutput, error) {
     var output comprehendmedical.DetectPHIOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectPHI, input).Get(ctx, &output)
@@ -358,6 +365,7 @@ func (a *ComprehendMedicalStub) DetectPHIAsync(ctx workflow.Context, input *comp
     future := workflow.ExecuteActivity(ctx, a.activities.DetectPHI, input)
     return &ComprehendmedicalDetectPHIResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) InferICD10CM(ctx workflow.Context, input *comprehendmedical.InferICD10CMInput) (*comprehendmedical.InferICD10CMOutput, error) {
     var output comprehendmedical.InferICD10CMOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InferICD10CM, input).Get(ctx, &output)
@@ -368,6 +376,7 @@ func (a *ComprehendMedicalStub) InferICD10CMAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.InferICD10CM, input)
     return &ComprehendmedicalInferICD10CMResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) InferRxNorm(ctx workflow.Context, input *comprehendmedical.InferRxNormInput) (*comprehendmedical.InferRxNormOutput, error) {
     var output comprehendmedical.InferRxNormOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InferRxNorm, input).Get(ctx, &output)
@@ -378,6 +387,7 @@ func (a *ComprehendMedicalStub) InferRxNormAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.InferRxNorm, input)
     return &ComprehendmedicalInferRxNormResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) ListEntitiesDetectionV2Jobs(ctx workflow.Context, input *comprehendmedical.ListEntitiesDetectionV2JobsInput) (*comprehendmedical.ListEntitiesDetectionV2JobsOutput, error) {
     var output comprehendmedical.ListEntitiesDetectionV2JobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesDetectionV2Jobs, input).Get(ctx, &output)
@@ -388,6 +398,7 @@ func (a *ComprehendMedicalStub) ListEntitiesDetectionV2JobsAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesDetectionV2Jobs, input)
     return &ComprehendmedicalListEntitiesDetectionV2JobsResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) ListICD10CMInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListICD10CMInferenceJobsInput) (*comprehendmedical.ListICD10CMInferenceJobsOutput, error) {
     var output comprehendmedical.ListICD10CMInferenceJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListICD10CMInferenceJobs, input).Get(ctx, &output)
@@ -398,6 +409,7 @@ func (a *ComprehendMedicalStub) ListICD10CMInferenceJobsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListICD10CMInferenceJobs, input)
     return &ComprehendmedicalListICD10CMInferenceJobsResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) ListPHIDetectionJobs(ctx workflow.Context, input *comprehendmedical.ListPHIDetectionJobsInput) (*comprehendmedical.ListPHIDetectionJobsOutput, error) {
     var output comprehendmedical.ListPHIDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPHIDetectionJobs, input).Get(ctx, &output)
@@ -408,6 +420,7 @@ func (a *ComprehendMedicalStub) ListPHIDetectionJobsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListPHIDetectionJobs, input)
     return &ComprehendmedicalListPHIDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) ListRxNormInferenceJobs(ctx workflow.Context, input *comprehendmedical.ListRxNormInferenceJobsInput) (*comprehendmedical.ListRxNormInferenceJobsOutput, error) {
     var output comprehendmedical.ListRxNormInferenceJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRxNormInferenceJobs, input).Get(ctx, &output)
@@ -418,6 +431,7 @@ func (a *ComprehendMedicalStub) ListRxNormInferenceJobsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListRxNormInferenceJobs, input)
     return &ComprehendmedicalListRxNormInferenceJobsResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StartEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StartEntitiesDetectionV2JobInput) (*comprehendmedical.StartEntitiesDetectionV2JobOutput, error) {
     var output comprehendmedical.StartEntitiesDetectionV2JobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartEntitiesDetectionV2Job, input).Get(ctx, &output)
@@ -428,6 +442,7 @@ func (a *ComprehendMedicalStub) StartEntitiesDetectionV2JobAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.StartEntitiesDetectionV2Job, input)
     return &ComprehendmedicalStartEntitiesDetectionV2JobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StartICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StartICD10CMInferenceJobInput) (*comprehendmedical.StartICD10CMInferenceJobOutput, error) {
     var output comprehendmedical.StartICD10CMInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartICD10CMInferenceJob, input).Get(ctx, &output)
@@ -438,6 +453,7 @@ func (a *ComprehendMedicalStub) StartICD10CMInferenceJobAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.StartICD10CMInferenceJob, input)
     return &ComprehendmedicalStartICD10CMInferenceJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StartPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StartPHIDetectionJobInput) (*comprehendmedical.StartPHIDetectionJobOutput, error) {
     var output comprehendmedical.StartPHIDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartPHIDetectionJob, input).Get(ctx, &output)
@@ -448,6 +464,7 @@ func (a *ComprehendMedicalStub) StartPHIDetectionJobAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.StartPHIDetectionJob, input)
     return &ComprehendmedicalStartPHIDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StartRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StartRxNormInferenceJobInput) (*comprehendmedical.StartRxNormInferenceJobOutput, error) {
     var output comprehendmedical.StartRxNormInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartRxNormInferenceJob, input).Get(ctx, &output)
@@ -458,6 +475,7 @@ func (a *ComprehendMedicalStub) StartRxNormInferenceJobAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.StartRxNormInferenceJob, input)
     return &ComprehendmedicalStartRxNormInferenceJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StopEntitiesDetectionV2Job(ctx workflow.Context, input *comprehendmedical.StopEntitiesDetectionV2JobInput) (*comprehendmedical.StopEntitiesDetectionV2JobOutput, error) {
     var output comprehendmedical.StopEntitiesDetectionV2JobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopEntitiesDetectionV2Job, input).Get(ctx, &output)
@@ -468,6 +486,7 @@ func (a *ComprehendMedicalStub) StopEntitiesDetectionV2JobAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.StopEntitiesDetectionV2Job, input)
     return &ComprehendmedicalStopEntitiesDetectionV2JobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StopICD10CMInferenceJob(ctx workflow.Context, input *comprehendmedical.StopICD10CMInferenceJobInput) (*comprehendmedical.StopICD10CMInferenceJobOutput, error) {
     var output comprehendmedical.StopICD10CMInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopICD10CMInferenceJob, input).Get(ctx, &output)
@@ -478,6 +497,7 @@ func (a *ComprehendMedicalStub) StopICD10CMInferenceJobAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.StopICD10CMInferenceJob, input)
     return &ComprehendmedicalStopICD10CMInferenceJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StopPHIDetectionJob(ctx workflow.Context, input *comprehendmedical.StopPHIDetectionJobInput) (*comprehendmedical.StopPHIDetectionJobOutput, error) {
     var output comprehendmedical.StopPHIDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopPHIDetectionJob, input).Get(ctx, &output)
@@ -488,6 +508,7 @@ func (a *ComprehendMedicalStub) StopPHIDetectionJobAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.StopPHIDetectionJob, input)
     return &ComprehendmedicalStopPHIDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendMedicalStub) StopRxNormInferenceJob(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) (*comprehendmedical.StopRxNormInferenceJobOutput, error) {
     var output comprehendmedical.StopRxNormInferenceJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopRxNormInferenceJob, input).Get(ctx, &output)

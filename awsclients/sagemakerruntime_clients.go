@@ -10,6 +10,7 @@ type SageMakerRuntimeClient interface {
     InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error)
     InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
 }
+
 type SagemakerruntimeInvokeEndpointResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *SagemakerruntimeInvokeEndpointResult) Get(ctx workflow.Context) (*sagem
     return &output, err
 }
 
-
 type SageMakerRuntimeStub struct {
     activities awsactivities.SageMakerRuntimeActivities
 }
@@ -28,6 +28,7 @@ type SageMakerRuntimeStub struct {
 func NewSageMakerRuntimeStub() SageMakerRuntimeClient {
     return &SageMakerRuntimeStub{}
 }
+
 func (a *SageMakerRuntimeStub) InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
     var output sagemakerruntime.InvokeEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InvokeEndpoint, input).Get(ctx, &output)

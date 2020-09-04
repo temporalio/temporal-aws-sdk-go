@@ -145,6 +145,7 @@ type KMSClient interface {
     Verify(ctx workflow.Context, input *kms.VerifyInput) (*kms.VerifyOutput, error)
     VerifyAsync(ctx workflow.Context, input *kms.VerifyInput) *KmsVerifyResult
 }
+
 type KmsCancelKeyDeletionResult struct {
 	Result workflow.Future
 }
@@ -605,7 +606,6 @@ func (r *KmsVerifyResult) Get(ctx workflow.Context) (*kms.VerifyOutput, error) {
     return &output, err
 }
 
-
 type KMSStub struct {
     activities awsactivities.KMSActivities
 }
@@ -613,6 +613,7 @@ type KMSStub struct {
 func NewKMSStub() KMSClient {
     return &KMSStub{}
 }
+
 func (a *KMSStub) CancelKeyDeletion(ctx workflow.Context, input *kms.CancelKeyDeletionInput) (*kms.CancelKeyDeletionOutput, error) {
     var output kms.CancelKeyDeletionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelKeyDeletion, input).Get(ctx, &output)
@@ -623,6 +624,7 @@ func (a *KMSStub) CancelKeyDeletionAsync(ctx workflow.Context, input *kms.Cancel
     future := workflow.ExecuteActivity(ctx, a.activities.CancelKeyDeletion, input)
     return &KmsCancelKeyDeletionResult{Result: future}
 }
+
 func (a *KMSStub) ConnectCustomKeyStore(ctx workflow.Context, input *kms.ConnectCustomKeyStoreInput) (*kms.ConnectCustomKeyStoreOutput, error) {
     var output kms.ConnectCustomKeyStoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ConnectCustomKeyStore, input).Get(ctx, &output)
@@ -633,6 +635,7 @@ func (a *KMSStub) ConnectCustomKeyStoreAsync(ctx workflow.Context, input *kms.Co
     future := workflow.ExecuteActivity(ctx, a.activities.ConnectCustomKeyStore, input)
     return &KmsConnectCustomKeyStoreResult{Result: future}
 }
+
 func (a *KMSStub) CreateAlias(ctx workflow.Context, input *kms.CreateAliasInput) (*kms.CreateAliasOutput, error) {
     var output kms.CreateAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAlias, input).Get(ctx, &output)
@@ -643,6 +646,7 @@ func (a *KMSStub) CreateAliasAsync(ctx workflow.Context, input *kms.CreateAliasI
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAlias, input)
     return &KmsCreateAliasResult{Result: future}
 }
+
 func (a *KMSStub) CreateCustomKeyStore(ctx workflow.Context, input *kms.CreateCustomKeyStoreInput) (*kms.CreateCustomKeyStoreOutput, error) {
     var output kms.CreateCustomKeyStoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCustomKeyStore, input).Get(ctx, &output)
@@ -653,6 +657,7 @@ func (a *KMSStub) CreateCustomKeyStoreAsync(ctx workflow.Context, input *kms.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCustomKeyStore, input)
     return &KmsCreateCustomKeyStoreResult{Result: future}
 }
+
 func (a *KMSStub) CreateGrant(ctx workflow.Context, input *kms.CreateGrantInput) (*kms.CreateGrantOutput, error) {
     var output kms.CreateGrantOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGrant, input).Get(ctx, &output)
@@ -663,6 +668,7 @@ func (a *KMSStub) CreateGrantAsync(ctx workflow.Context, input *kms.CreateGrantI
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGrant, input)
     return &KmsCreateGrantResult{Result: future}
 }
+
 func (a *KMSStub) CreateKey(ctx workflow.Context, input *kms.CreateKeyInput) (*kms.CreateKeyOutput, error) {
     var output kms.CreateKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateKey, input).Get(ctx, &output)
@@ -673,6 +679,7 @@ func (a *KMSStub) CreateKeyAsync(ctx workflow.Context, input *kms.CreateKeyInput
     future := workflow.ExecuteActivity(ctx, a.activities.CreateKey, input)
     return &KmsCreateKeyResult{Result: future}
 }
+
 func (a *KMSStub) Decrypt(ctx workflow.Context, input *kms.DecryptInput) (*kms.DecryptOutput, error) {
     var output kms.DecryptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Decrypt, input).Get(ctx, &output)
@@ -683,6 +690,7 @@ func (a *KMSStub) DecryptAsync(ctx workflow.Context, input *kms.DecryptInput) *K
     future := workflow.ExecuteActivity(ctx, a.activities.Decrypt, input)
     return &KmsDecryptResult{Result: future}
 }
+
 func (a *KMSStub) DeleteAlias(ctx workflow.Context, input *kms.DeleteAliasInput) (*kms.DeleteAliasOutput, error) {
     var output kms.DeleteAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAlias, input).Get(ctx, &output)
@@ -693,6 +701,7 @@ func (a *KMSStub) DeleteAliasAsync(ctx workflow.Context, input *kms.DeleteAliasI
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAlias, input)
     return &KmsDeleteAliasResult{Result: future}
 }
+
 func (a *KMSStub) DeleteCustomKeyStore(ctx workflow.Context, input *kms.DeleteCustomKeyStoreInput) (*kms.DeleteCustomKeyStoreOutput, error) {
     var output kms.DeleteCustomKeyStoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomKeyStore, input).Get(ctx, &output)
@@ -703,6 +712,7 @@ func (a *KMSStub) DeleteCustomKeyStoreAsync(ctx workflow.Context, input *kms.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomKeyStore, input)
     return &KmsDeleteCustomKeyStoreResult{Result: future}
 }
+
 func (a *KMSStub) DeleteImportedKeyMaterial(ctx workflow.Context, input *kms.DeleteImportedKeyMaterialInput) (*kms.DeleteImportedKeyMaterialOutput, error) {
     var output kms.DeleteImportedKeyMaterialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteImportedKeyMaterial, input).Get(ctx, &output)
@@ -713,6 +723,7 @@ func (a *KMSStub) DeleteImportedKeyMaterialAsync(ctx workflow.Context, input *km
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteImportedKeyMaterial, input)
     return &KmsDeleteImportedKeyMaterialResult{Result: future}
 }
+
 func (a *KMSStub) DescribeCustomKeyStores(ctx workflow.Context, input *kms.DescribeCustomKeyStoresInput) (*kms.DescribeCustomKeyStoresOutput, error) {
     var output kms.DescribeCustomKeyStoresOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCustomKeyStores, input).Get(ctx, &output)
@@ -723,6 +734,7 @@ func (a *KMSStub) DescribeCustomKeyStoresAsync(ctx workflow.Context, input *kms.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCustomKeyStores, input)
     return &KmsDescribeCustomKeyStoresResult{Result: future}
 }
+
 func (a *KMSStub) DescribeKey(ctx workflow.Context, input *kms.DescribeKeyInput) (*kms.DescribeKeyOutput, error) {
     var output kms.DescribeKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeKey, input).Get(ctx, &output)
@@ -733,6 +745,7 @@ func (a *KMSStub) DescribeKeyAsync(ctx workflow.Context, input *kms.DescribeKeyI
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeKey, input)
     return &KmsDescribeKeyResult{Result: future}
 }
+
 func (a *KMSStub) DisableKey(ctx workflow.Context, input *kms.DisableKeyInput) (*kms.DisableKeyOutput, error) {
     var output kms.DisableKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableKey, input).Get(ctx, &output)
@@ -743,6 +756,7 @@ func (a *KMSStub) DisableKeyAsync(ctx workflow.Context, input *kms.DisableKeyInp
     future := workflow.ExecuteActivity(ctx, a.activities.DisableKey, input)
     return &KmsDisableKeyResult{Result: future}
 }
+
 func (a *KMSStub) DisableKeyRotation(ctx workflow.Context, input *kms.DisableKeyRotationInput) (*kms.DisableKeyRotationOutput, error) {
     var output kms.DisableKeyRotationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableKeyRotation, input).Get(ctx, &output)
@@ -753,6 +767,7 @@ func (a *KMSStub) DisableKeyRotationAsync(ctx workflow.Context, input *kms.Disab
     future := workflow.ExecuteActivity(ctx, a.activities.DisableKeyRotation, input)
     return &KmsDisableKeyRotationResult{Result: future}
 }
+
 func (a *KMSStub) DisconnectCustomKeyStore(ctx workflow.Context, input *kms.DisconnectCustomKeyStoreInput) (*kms.DisconnectCustomKeyStoreOutput, error) {
     var output kms.DisconnectCustomKeyStoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisconnectCustomKeyStore, input).Get(ctx, &output)
@@ -763,6 +778,7 @@ func (a *KMSStub) DisconnectCustomKeyStoreAsync(ctx workflow.Context, input *kms
     future := workflow.ExecuteActivity(ctx, a.activities.DisconnectCustomKeyStore, input)
     return &KmsDisconnectCustomKeyStoreResult{Result: future}
 }
+
 func (a *KMSStub) EnableKey(ctx workflow.Context, input *kms.EnableKeyInput) (*kms.EnableKeyOutput, error) {
     var output kms.EnableKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableKey, input).Get(ctx, &output)
@@ -773,6 +789,7 @@ func (a *KMSStub) EnableKeyAsync(ctx workflow.Context, input *kms.EnableKeyInput
     future := workflow.ExecuteActivity(ctx, a.activities.EnableKey, input)
     return &KmsEnableKeyResult{Result: future}
 }
+
 func (a *KMSStub) EnableKeyRotation(ctx workflow.Context, input *kms.EnableKeyRotationInput) (*kms.EnableKeyRotationOutput, error) {
     var output kms.EnableKeyRotationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableKeyRotation, input).Get(ctx, &output)
@@ -783,6 +800,7 @@ func (a *KMSStub) EnableKeyRotationAsync(ctx workflow.Context, input *kms.Enable
     future := workflow.ExecuteActivity(ctx, a.activities.EnableKeyRotation, input)
     return &KmsEnableKeyRotationResult{Result: future}
 }
+
 func (a *KMSStub) Encrypt(ctx workflow.Context, input *kms.EncryptInput) (*kms.EncryptOutput, error) {
     var output kms.EncryptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Encrypt, input).Get(ctx, &output)
@@ -793,6 +811,7 @@ func (a *KMSStub) EncryptAsync(ctx workflow.Context, input *kms.EncryptInput) *K
     future := workflow.ExecuteActivity(ctx, a.activities.Encrypt, input)
     return &KmsEncryptResult{Result: future}
 }
+
 func (a *KMSStub) GenerateDataKey(ctx workflow.Context, input *kms.GenerateDataKeyInput) (*kms.GenerateDataKeyOutput, error) {
     var output kms.GenerateDataKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKey, input).Get(ctx, &output)
@@ -803,6 +822,7 @@ func (a *KMSStub) GenerateDataKeyAsync(ctx workflow.Context, input *kms.Generate
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKey, input)
     return &KmsGenerateDataKeyResult{Result: future}
 }
+
 func (a *KMSStub) GenerateDataKeyPair(ctx workflow.Context, input *kms.GenerateDataKeyPairInput) (*kms.GenerateDataKeyPairOutput, error) {
     var output kms.GenerateDataKeyPairOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyPair, input).Get(ctx, &output)
@@ -813,6 +833,7 @@ func (a *KMSStub) GenerateDataKeyPairAsync(ctx workflow.Context, input *kms.Gene
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyPair, input)
     return &KmsGenerateDataKeyPairResult{Result: future}
 }
+
 func (a *KMSStub) GenerateDataKeyPairWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) (*kms.GenerateDataKeyPairWithoutPlaintextOutput, error) {
     var output kms.GenerateDataKeyPairWithoutPlaintextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyPairWithoutPlaintext, input).Get(ctx, &output)
@@ -823,6 +844,7 @@ func (a *KMSStub) GenerateDataKeyPairWithoutPlaintextAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyPairWithoutPlaintext, input)
     return &KmsGenerateDataKeyPairWithoutPlaintextResult{Result: future}
 }
+
 func (a *KMSStub) GenerateDataKeyWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) (*kms.GenerateDataKeyWithoutPlaintextOutput, error) {
     var output kms.GenerateDataKeyWithoutPlaintextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyWithoutPlaintext, input).Get(ctx, &output)
@@ -833,6 +855,7 @@ func (a *KMSStub) GenerateDataKeyWithoutPlaintextAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateDataKeyWithoutPlaintext, input)
     return &KmsGenerateDataKeyWithoutPlaintextResult{Result: future}
 }
+
 func (a *KMSStub) GenerateRandom(ctx workflow.Context, input *kms.GenerateRandomInput) (*kms.GenerateRandomOutput, error) {
     var output kms.GenerateRandomOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GenerateRandom, input).Get(ctx, &output)
@@ -843,6 +866,7 @@ func (a *KMSStub) GenerateRandomAsync(ctx workflow.Context, input *kms.GenerateR
     future := workflow.ExecuteActivity(ctx, a.activities.GenerateRandom, input)
     return &KmsGenerateRandomResult{Result: future}
 }
+
 func (a *KMSStub) GetKeyPolicy(ctx workflow.Context, input *kms.GetKeyPolicyInput) (*kms.GetKeyPolicyOutput, error) {
     var output kms.GetKeyPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetKeyPolicy, input).Get(ctx, &output)
@@ -853,6 +877,7 @@ func (a *KMSStub) GetKeyPolicyAsync(ctx workflow.Context, input *kms.GetKeyPolic
     future := workflow.ExecuteActivity(ctx, a.activities.GetKeyPolicy, input)
     return &KmsGetKeyPolicyResult{Result: future}
 }
+
 func (a *KMSStub) GetKeyRotationStatus(ctx workflow.Context, input *kms.GetKeyRotationStatusInput) (*kms.GetKeyRotationStatusOutput, error) {
     var output kms.GetKeyRotationStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetKeyRotationStatus, input).Get(ctx, &output)
@@ -863,6 +888,7 @@ func (a *KMSStub) GetKeyRotationStatusAsync(ctx workflow.Context, input *kms.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetKeyRotationStatus, input)
     return &KmsGetKeyRotationStatusResult{Result: future}
 }
+
 func (a *KMSStub) GetParametersForImport(ctx workflow.Context, input *kms.GetParametersForImportInput) (*kms.GetParametersForImportOutput, error) {
     var output kms.GetParametersForImportOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetParametersForImport, input).Get(ctx, &output)
@@ -873,6 +899,7 @@ func (a *KMSStub) GetParametersForImportAsync(ctx workflow.Context, input *kms.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetParametersForImport, input)
     return &KmsGetParametersForImportResult{Result: future}
 }
+
 func (a *KMSStub) GetPublicKey(ctx workflow.Context, input *kms.GetPublicKeyInput) (*kms.GetPublicKeyOutput, error) {
     var output kms.GetPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPublicKey, input).Get(ctx, &output)
@@ -883,6 +910,7 @@ func (a *KMSStub) GetPublicKeyAsync(ctx workflow.Context, input *kms.GetPublicKe
     future := workflow.ExecuteActivity(ctx, a.activities.GetPublicKey, input)
     return &KmsGetPublicKeyResult{Result: future}
 }
+
 func (a *KMSStub) ImportKeyMaterial(ctx workflow.Context, input *kms.ImportKeyMaterialInput) (*kms.ImportKeyMaterialOutput, error) {
     var output kms.ImportKeyMaterialOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportKeyMaterial, input).Get(ctx, &output)
@@ -893,6 +921,7 @@ func (a *KMSStub) ImportKeyMaterialAsync(ctx workflow.Context, input *kms.Import
     future := workflow.ExecuteActivity(ctx, a.activities.ImportKeyMaterial, input)
     return &KmsImportKeyMaterialResult{Result: future}
 }
+
 func (a *KMSStub) ListAliases(ctx workflow.Context, input *kms.ListAliasesInput) (*kms.ListAliasesOutput, error) {
     var output kms.ListAliasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAliases, input).Get(ctx, &output)
@@ -903,6 +932,7 @@ func (a *KMSStub) ListAliasesAsync(ctx workflow.Context, input *kms.ListAliasesI
     future := workflow.ExecuteActivity(ctx, a.activities.ListAliases, input)
     return &KmsListAliasesResult{Result: future}
 }
+
 func (a *KMSStub) ListGrants(ctx workflow.Context, input *kms.ListGrantsInput) (*kms.ListGrantsResponse, error) {
     var output kms.ListGrantsResponse
     err := workflow.ExecuteActivity(ctx, a.activities.ListGrants, input).Get(ctx, &output)
@@ -913,6 +943,7 @@ func (a *KMSStub) ListGrantsAsync(ctx workflow.Context, input *kms.ListGrantsInp
     future := workflow.ExecuteActivity(ctx, a.activities.ListGrants, input)
     return &KmsListGrantsResult{Result: future}
 }
+
 func (a *KMSStub) ListKeyPolicies(ctx workflow.Context, input *kms.ListKeyPoliciesInput) (*kms.ListKeyPoliciesOutput, error) {
     var output kms.ListKeyPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListKeyPolicies, input).Get(ctx, &output)
@@ -923,6 +954,7 @@ func (a *KMSStub) ListKeyPoliciesAsync(ctx workflow.Context, input *kms.ListKeyP
     future := workflow.ExecuteActivity(ctx, a.activities.ListKeyPolicies, input)
     return &KmsListKeyPoliciesResult{Result: future}
 }
+
 func (a *KMSStub) ListKeys(ctx workflow.Context, input *kms.ListKeysInput) (*kms.ListKeysOutput, error) {
     var output kms.ListKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListKeys, input).Get(ctx, &output)
@@ -933,6 +965,7 @@ func (a *KMSStub) ListKeysAsync(ctx workflow.Context, input *kms.ListKeysInput) 
     future := workflow.ExecuteActivity(ctx, a.activities.ListKeys, input)
     return &KmsListKeysResult{Result: future}
 }
+
 func (a *KMSStub) ListResourceTags(ctx workflow.Context, input *kms.ListResourceTagsInput) (*kms.ListResourceTagsOutput, error) {
     var output kms.ListResourceTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListResourceTags, input).Get(ctx, &output)
@@ -943,6 +976,7 @@ func (a *KMSStub) ListResourceTagsAsync(ctx workflow.Context, input *kms.ListRes
     future := workflow.ExecuteActivity(ctx, a.activities.ListResourceTags, input)
     return &KmsListResourceTagsResult{Result: future}
 }
+
 func (a *KMSStub) ListRetirableGrants(ctx workflow.Context, input *kms.ListRetirableGrantsInput) (*kms.ListGrantsResponse, error) {
     var output kms.ListGrantsResponse
     err := workflow.ExecuteActivity(ctx, a.activities.ListRetirableGrants, input).Get(ctx, &output)
@@ -953,6 +987,7 @@ func (a *KMSStub) ListRetirableGrantsAsync(ctx workflow.Context, input *kms.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListRetirableGrants, input)
     return &KmsListRetirableGrantsResult{Result: future}
 }
+
 func (a *KMSStub) PutKeyPolicy(ctx workflow.Context, input *kms.PutKeyPolicyInput) (*kms.PutKeyPolicyOutput, error) {
     var output kms.PutKeyPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutKeyPolicy, input).Get(ctx, &output)
@@ -963,6 +998,7 @@ func (a *KMSStub) PutKeyPolicyAsync(ctx workflow.Context, input *kms.PutKeyPolic
     future := workflow.ExecuteActivity(ctx, a.activities.PutKeyPolicy, input)
     return &KmsPutKeyPolicyResult{Result: future}
 }
+
 func (a *KMSStub) ReEncrypt(ctx workflow.Context, input *kms.ReEncryptInput) (*kms.ReEncryptOutput, error) {
     var output kms.ReEncryptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ReEncrypt, input).Get(ctx, &output)
@@ -973,6 +1009,7 @@ func (a *KMSStub) ReEncryptAsync(ctx workflow.Context, input *kms.ReEncryptInput
     future := workflow.ExecuteActivity(ctx, a.activities.ReEncrypt, input)
     return &KmsReEncryptResult{Result: future}
 }
+
 func (a *KMSStub) RetireGrant(ctx workflow.Context, input *kms.RetireGrantInput) (*kms.RetireGrantOutput, error) {
     var output kms.RetireGrantOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RetireGrant, input).Get(ctx, &output)
@@ -983,6 +1020,7 @@ func (a *KMSStub) RetireGrantAsync(ctx workflow.Context, input *kms.RetireGrantI
     future := workflow.ExecuteActivity(ctx, a.activities.RetireGrant, input)
     return &KmsRetireGrantResult{Result: future}
 }
+
 func (a *KMSStub) RevokeGrant(ctx workflow.Context, input *kms.RevokeGrantInput) (*kms.RevokeGrantOutput, error) {
     var output kms.RevokeGrantOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RevokeGrant, input).Get(ctx, &output)
@@ -993,6 +1031,7 @@ func (a *KMSStub) RevokeGrantAsync(ctx workflow.Context, input *kms.RevokeGrantI
     future := workflow.ExecuteActivity(ctx, a.activities.RevokeGrant, input)
     return &KmsRevokeGrantResult{Result: future}
 }
+
 func (a *KMSStub) ScheduleKeyDeletion(ctx workflow.Context, input *kms.ScheduleKeyDeletionInput) (*kms.ScheduleKeyDeletionOutput, error) {
     var output kms.ScheduleKeyDeletionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ScheduleKeyDeletion, input).Get(ctx, &output)
@@ -1003,6 +1042,7 @@ func (a *KMSStub) ScheduleKeyDeletionAsync(ctx workflow.Context, input *kms.Sche
     future := workflow.ExecuteActivity(ctx, a.activities.ScheduleKeyDeletion, input)
     return &KmsScheduleKeyDeletionResult{Result: future}
 }
+
 func (a *KMSStub) Sign(ctx workflow.Context, input *kms.SignInput) (*kms.SignOutput, error) {
     var output kms.SignOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Sign, input).Get(ctx, &output)
@@ -1013,6 +1053,7 @@ func (a *KMSStub) SignAsync(ctx workflow.Context, input *kms.SignInput) *KmsSign
     future := workflow.ExecuteActivity(ctx, a.activities.Sign, input)
     return &KmsSignResult{Result: future}
 }
+
 func (a *KMSStub) TagResource(ctx workflow.Context, input *kms.TagResourceInput) (*kms.TagResourceOutput, error) {
     var output kms.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1023,6 +1064,7 @@ func (a *KMSStub) TagResourceAsync(ctx workflow.Context, input *kms.TagResourceI
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &KmsTagResourceResult{Result: future}
 }
+
 func (a *KMSStub) UntagResource(ctx workflow.Context, input *kms.UntagResourceInput) (*kms.UntagResourceOutput, error) {
     var output kms.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1033,6 +1075,7 @@ func (a *KMSStub) UntagResourceAsync(ctx workflow.Context, input *kms.UntagResou
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &KmsUntagResourceResult{Result: future}
 }
+
 func (a *KMSStub) UpdateAlias(ctx workflow.Context, input *kms.UpdateAliasInput) (*kms.UpdateAliasOutput, error) {
     var output kms.UpdateAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAlias, input).Get(ctx, &output)
@@ -1043,6 +1086,7 @@ func (a *KMSStub) UpdateAliasAsync(ctx workflow.Context, input *kms.UpdateAliasI
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAlias, input)
     return &KmsUpdateAliasResult{Result: future}
 }
+
 func (a *KMSStub) UpdateCustomKeyStore(ctx workflow.Context, input *kms.UpdateCustomKeyStoreInput) (*kms.UpdateCustomKeyStoreOutput, error) {
     var output kms.UpdateCustomKeyStoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomKeyStore, input).Get(ctx, &output)
@@ -1053,6 +1097,7 @@ func (a *KMSStub) UpdateCustomKeyStoreAsync(ctx workflow.Context, input *kms.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomKeyStore, input)
     return &KmsUpdateCustomKeyStoreResult{Result: future}
 }
+
 func (a *KMSStub) UpdateKeyDescription(ctx workflow.Context, input *kms.UpdateKeyDescriptionInput) (*kms.UpdateKeyDescriptionOutput, error) {
     var output kms.UpdateKeyDescriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateKeyDescription, input).Get(ctx, &output)
@@ -1063,6 +1108,7 @@ func (a *KMSStub) UpdateKeyDescriptionAsync(ctx workflow.Context, input *kms.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateKeyDescription, input)
     return &KmsUpdateKeyDescriptionResult{Result: future}
 }
+
 func (a *KMSStub) Verify(ctx workflow.Context, input *kms.VerifyInput) (*kms.VerifyOutput, error) {
     var output kms.VerifyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Verify, input).Get(ctx, &output)

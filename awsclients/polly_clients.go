@@ -34,6 +34,7 @@ type PollyClient interface {
     SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error)
     SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechResult
 }
+
 type PollyDeleteLexiconResult struct {
 	Result workflow.Future
 }
@@ -124,7 +125,6 @@ func (r *PollySynthesizeSpeechResult) Get(ctx workflow.Context) (*polly.Synthesi
     return &output, err
 }
 
-
 type PollyStub struct {
     activities awsactivities.PollyActivities
 }
@@ -132,6 +132,7 @@ type PollyStub struct {
 func NewPollyStub() PollyClient {
     return &PollyStub{}
 }
+
 func (a *PollyStub) DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error) {
     var output polly.DeleteLexiconOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLexicon, input).Get(ctx, &output)
@@ -142,6 +143,7 @@ func (a *PollyStub) DeleteLexiconAsync(ctx workflow.Context, input *polly.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLexicon, input)
     return &PollyDeleteLexiconResult{Result: future}
 }
+
 func (a *PollyStub) DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error) {
     var output polly.DescribeVoicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVoices, input).Get(ctx, &output)
@@ -152,6 +154,7 @@ func (a *PollyStub) DescribeVoicesAsync(ctx workflow.Context, input *polly.Descr
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVoices, input)
     return &PollyDescribeVoicesResult{Result: future}
 }
+
 func (a *PollyStub) GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error) {
     var output polly.GetLexiconOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLexicon, input).Get(ctx, &output)
@@ -162,6 +165,7 @@ func (a *PollyStub) GetLexiconAsync(ctx workflow.Context, input *polly.GetLexico
     future := workflow.ExecuteActivity(ctx, a.activities.GetLexicon, input)
     return &PollyGetLexiconResult{Result: future}
 }
+
 func (a *PollyStub) GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error) {
     var output polly.GetSpeechSynthesisTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSpeechSynthesisTask, input).Get(ctx, &output)
@@ -172,6 +176,7 @@ func (a *PollyStub) GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *pol
     future := workflow.ExecuteActivity(ctx, a.activities.GetSpeechSynthesisTask, input)
     return &PollyGetSpeechSynthesisTaskResult{Result: future}
 }
+
 func (a *PollyStub) ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error) {
     var output polly.ListLexiconsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListLexicons, input).Get(ctx, &output)
@@ -182,6 +187,7 @@ func (a *PollyStub) ListLexiconsAsync(ctx workflow.Context, input *polly.ListLex
     future := workflow.ExecuteActivity(ctx, a.activities.ListLexicons, input)
     return &PollyListLexiconsResult{Result: future}
 }
+
 func (a *PollyStub) ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error) {
     var output polly.ListSpeechSynthesisTasksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSpeechSynthesisTasks, input).Get(ctx, &output)
@@ -192,6 +198,7 @@ func (a *PollyStub) ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.ListSpeechSynthesisTasks, input)
     return &PollyListSpeechSynthesisTasksResult{Result: future}
 }
+
 func (a *PollyStub) PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error) {
     var output polly.PutLexiconOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutLexicon, input).Get(ctx, &output)
@@ -202,6 +209,7 @@ func (a *PollyStub) PutLexiconAsync(ctx workflow.Context, input *polly.PutLexico
     future := workflow.ExecuteActivity(ctx, a.activities.PutLexicon, input)
     return &PollyPutLexiconResult{Result: future}
 }
+
 func (a *PollyStub) StartSpeechSynthesisTask(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error) {
     var output polly.StartSpeechSynthesisTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartSpeechSynthesisTask, input).Get(ctx, &output)
@@ -212,6 +220,7 @@ func (a *PollyStub) StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.StartSpeechSynthesisTask, input)
     return &PollyStartSpeechSynthesisTaskResult{Result: future}
 }
+
 func (a *PollyStub) SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error) {
     var output polly.SynthesizeSpeechOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SynthesizeSpeech, input).Get(ctx, &output)

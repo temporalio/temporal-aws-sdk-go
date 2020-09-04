@@ -16,6 +16,7 @@ type CloudSearchDomainClient interface {
     UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error)
     UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult
 }
+
 type CloudsearchdomainSearchResult struct {
 	Result workflow.Future
 }
@@ -46,7 +47,6 @@ func (r *CloudsearchdomainUploadDocumentsResult) Get(ctx workflow.Context) (*clo
     return &output, err
 }
 
-
 type CloudSearchDomainStub struct {
     activities awsactivities.CloudSearchDomainActivities
 }
@@ -54,6 +54,7 @@ type CloudSearchDomainStub struct {
 func NewCloudSearchDomainStub() CloudSearchDomainClient {
     return &CloudSearchDomainStub{}
 }
+
 func (a *CloudSearchDomainStub) Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error) {
     var output cloudsearchdomain.SearchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Search, input).Get(ctx, &output)
@@ -64,6 +65,7 @@ func (a *CloudSearchDomainStub) SearchAsync(ctx workflow.Context, input *cloudse
     future := workflow.ExecuteActivity(ctx, a.activities.Search, input)
     return &CloudsearchdomainSearchResult{Result: future}
 }
+
 func (a *CloudSearchDomainStub) Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
     var output cloudsearchdomain.SuggestOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Suggest, input).Get(ctx, &output)
@@ -74,6 +76,7 @@ func (a *CloudSearchDomainStub) SuggestAsync(ctx workflow.Context, input *clouds
     future := workflow.ExecuteActivity(ctx, a.activities.Suggest, input)
     return &CloudsearchdomainSuggestResult{Result: future}
 }
+
 func (a *CloudSearchDomainStub) UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
     var output cloudsearchdomain.UploadDocumentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadDocuments, input).Get(ctx, &output)

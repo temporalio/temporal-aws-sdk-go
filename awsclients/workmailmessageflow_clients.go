@@ -10,6 +10,7 @@ type WorkMailMessageFlowClient interface {
     GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
     GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult
 }
+
 type WorkmailmessageflowGetRawMessageContentResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *WorkmailmessageflowGetRawMessageContentResult) Get(ctx workflow.Context
     return &output, err
 }
 
-
 type WorkMailMessageFlowStub struct {
     activities awsactivities.WorkMailMessageFlowActivities
 }
@@ -28,6 +28,7 @@ type WorkMailMessageFlowStub struct {
 func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
     return &WorkMailMessageFlowStub{}
 }
+
 func (a *WorkMailMessageFlowStub) GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
     var output workmailmessageflow.GetRawMessageContentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRawMessageContent, input).Get(ctx, &output)

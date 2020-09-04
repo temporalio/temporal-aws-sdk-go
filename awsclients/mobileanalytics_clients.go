@@ -10,6 +10,7 @@ type MobileAnalyticsClient interface {
     PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error)
     PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult
 }
+
 type MobileanalyticsPutEventsResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *MobileanalyticsPutEventsResult) Get(ctx workflow.Context) (*mobileanaly
     return &output, err
 }
 
-
 type MobileAnalyticsStub struct {
     activities awsactivities.MobileAnalyticsActivities
 }
@@ -28,6 +28,7 @@ type MobileAnalyticsStub struct {
 func NewMobileAnalyticsStub() MobileAnalyticsClient {
     return &MobileAnalyticsStub{}
 }
+
 func (a *MobileAnalyticsStub) PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error) {
     var output mobileanalytics.PutEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)

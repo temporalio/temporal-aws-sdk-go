@@ -16,6 +16,7 @@ type PricingClient interface {
     GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error)
     GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsResult
 }
+
 type PricingDescribeServicesResult struct {
 	Result workflow.Future
 }
@@ -46,7 +47,6 @@ func (r *PricingGetProductsResult) Get(ctx workflow.Context) (*pricing.GetProduc
     return &output, err
 }
 
-
 type PricingStub struct {
     activities awsactivities.PricingActivities
 }
@@ -54,6 +54,7 @@ type PricingStub struct {
 func NewPricingStub() PricingClient {
     return &PricingStub{}
 }
+
 func (a *PricingStub) DescribeServices(ctx workflow.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
     var output pricing.DescribeServicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeServices, input).Get(ctx, &output)
@@ -64,6 +65,7 @@ func (a *PricingStub) DescribeServicesAsync(ctx workflow.Context, input *pricing
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeServices, input)
     return &PricingDescribeServicesResult{Result: future}
 }
+
 func (a *PricingStub) GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
     var output pricing.GetAttributeValuesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAttributeValues, input).Get(ctx, &output)
@@ -74,6 +76,7 @@ func (a *PricingStub) GetAttributeValuesAsync(ctx workflow.Context, input *prici
     future := workflow.ExecuteActivity(ctx, a.activities.GetAttributeValues, input)
     return &PricingGetAttributeValuesResult{Result: future}
 }
+
 func (a *PricingStub) GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
     var output pricing.GetProductsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetProducts, input).Get(ctx, &output)

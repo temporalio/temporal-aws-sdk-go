@@ -220,6 +220,7 @@ type ApiGatewayV2Client interface {
     UpdateVpcLink(ctx workflow.Context, input *apigatewayv2.UpdateVpcLinkInput) (*apigatewayv2.UpdateVpcLinkOutput, error)
     UpdateVpcLinkAsync(ctx workflow.Context, input *apigatewayv2.UpdateVpcLinkInput) *Apigatewayv2UpdateVpcLinkResult
 }
+
 type Apigatewayv2CreateApiResult struct {
 	Result workflow.Future
 }
@@ -930,7 +931,6 @@ func (r *Apigatewayv2UpdateVpcLinkResult) Get(ctx workflow.Context) (*apigateway
     return &output, err
 }
 
-
 type ApiGatewayV2Stub struct {
     activities awsactivities.ApiGatewayV2Activities
 }
@@ -938,6 +938,7 @@ type ApiGatewayV2Stub struct {
 func NewApiGatewayV2Stub() ApiGatewayV2Client {
     return &ApiGatewayV2Stub{}
 }
+
 func (a *ApiGatewayV2Stub) CreateApi(ctx workflow.Context, input *apigatewayv2.CreateApiInput) (*apigatewayv2.CreateApiOutput, error) {
     var output apigatewayv2.CreateApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApi, input).Get(ctx, &output)
@@ -948,6 +949,7 @@ func (a *ApiGatewayV2Stub) CreateApiAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApi, input)
     return &Apigatewayv2CreateApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateApiMapping(ctx workflow.Context, input *apigatewayv2.CreateApiMappingInput) (*apigatewayv2.CreateApiMappingOutput, error) {
     var output apigatewayv2.CreateApiMappingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApiMapping, input).Get(ctx, &output)
@@ -958,6 +960,7 @@ func (a *ApiGatewayV2Stub) CreateApiMappingAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApiMapping, input)
     return &Apigatewayv2CreateApiMappingResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateAuthorizer(ctx workflow.Context, input *apigatewayv2.CreateAuthorizerInput) (*apigatewayv2.CreateAuthorizerOutput, error) {
     var output apigatewayv2.CreateAuthorizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAuthorizer, input).Get(ctx, &output)
@@ -968,6 +971,7 @@ func (a *ApiGatewayV2Stub) CreateAuthorizerAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAuthorizer, input)
     return &Apigatewayv2CreateAuthorizerResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateDeployment(ctx workflow.Context, input *apigatewayv2.CreateDeploymentInput) (*apigatewayv2.CreateDeploymentOutput, error) {
     var output apigatewayv2.CreateDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDeployment, input).Get(ctx, &output)
@@ -978,6 +982,7 @@ func (a *ApiGatewayV2Stub) CreateDeploymentAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDeployment, input)
     return &Apigatewayv2CreateDeploymentResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateDomainName(ctx workflow.Context, input *apigatewayv2.CreateDomainNameInput) (*apigatewayv2.CreateDomainNameOutput, error) {
     var output apigatewayv2.CreateDomainNameOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDomainName, input).Get(ctx, &output)
@@ -988,6 +993,7 @@ func (a *ApiGatewayV2Stub) CreateDomainNameAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDomainName, input)
     return &Apigatewayv2CreateDomainNameResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateIntegration(ctx workflow.Context, input *apigatewayv2.CreateIntegrationInput) (*apigatewayv2.CreateIntegrationOutput, error) {
     var output apigatewayv2.CreateIntegrationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateIntegration, input).Get(ctx, &output)
@@ -998,6 +1004,7 @@ func (a *ApiGatewayV2Stub) CreateIntegrationAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.CreateIntegration, input)
     return &Apigatewayv2CreateIntegrationResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateIntegrationResponse(ctx workflow.Context, input *apigatewayv2.CreateIntegrationResponseInput) (*apigatewayv2.CreateIntegrationResponseOutput, error) {
     var output apigatewayv2.CreateIntegrationResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateIntegrationResponse, input).Get(ctx, &output)
@@ -1008,6 +1015,7 @@ func (a *ApiGatewayV2Stub) CreateIntegrationResponseAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateIntegrationResponse, input)
     return &Apigatewayv2CreateIntegrationResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateModel(ctx workflow.Context, input *apigatewayv2.CreateModelInput) (*apigatewayv2.CreateModelOutput, error) {
     var output apigatewayv2.CreateModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateModel, input).Get(ctx, &output)
@@ -1018,6 +1026,7 @@ func (a *ApiGatewayV2Stub) CreateModelAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.CreateModel, input)
     return &Apigatewayv2CreateModelResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateRoute(ctx workflow.Context, input *apigatewayv2.CreateRouteInput) (*apigatewayv2.CreateRouteOutput, error) {
     var output apigatewayv2.CreateRouteOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRoute, input).Get(ctx, &output)
@@ -1028,6 +1037,7 @@ func (a *ApiGatewayV2Stub) CreateRouteAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRoute, input)
     return &Apigatewayv2CreateRouteResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateRouteResponse(ctx workflow.Context, input *apigatewayv2.CreateRouteResponseInput) (*apigatewayv2.CreateRouteResponseOutput, error) {
     var output apigatewayv2.CreateRouteResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRouteResponse, input).Get(ctx, &output)
@@ -1038,6 +1048,7 @@ func (a *ApiGatewayV2Stub) CreateRouteResponseAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRouteResponse, input)
     return &Apigatewayv2CreateRouteResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateStage(ctx workflow.Context, input *apigatewayv2.CreateStageInput) (*apigatewayv2.CreateStageOutput, error) {
     var output apigatewayv2.CreateStageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStage, input).Get(ctx, &output)
@@ -1048,6 +1059,7 @@ func (a *ApiGatewayV2Stub) CreateStageAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStage, input)
     return &Apigatewayv2CreateStageResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) CreateVpcLink(ctx workflow.Context, input *apigatewayv2.CreateVpcLinkInput) (*apigatewayv2.CreateVpcLinkOutput, error) {
     var output apigatewayv2.CreateVpcLinkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVpcLink, input).Get(ctx, &output)
@@ -1058,6 +1070,7 @@ func (a *ApiGatewayV2Stub) CreateVpcLinkAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVpcLink, input)
     return &Apigatewayv2CreateVpcLinkResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteAccessLogSettings(ctx workflow.Context, input *apigatewayv2.DeleteAccessLogSettingsInput) (*apigatewayv2.DeleteAccessLogSettingsOutput, error) {
     var output apigatewayv2.DeleteAccessLogSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessLogSettings, input).Get(ctx, &output)
@@ -1068,6 +1081,7 @@ func (a *ApiGatewayV2Stub) DeleteAccessLogSettingsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccessLogSettings, input)
     return &Apigatewayv2DeleteAccessLogSettingsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteApi(ctx workflow.Context, input *apigatewayv2.DeleteApiInput) (*apigatewayv2.DeleteApiOutput, error) {
     var output apigatewayv2.DeleteApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApi, input).Get(ctx, &output)
@@ -1078,6 +1092,7 @@ func (a *ApiGatewayV2Stub) DeleteApiAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApi, input)
     return &Apigatewayv2DeleteApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteApiMapping(ctx workflow.Context, input *apigatewayv2.DeleteApiMappingInput) (*apigatewayv2.DeleteApiMappingOutput, error) {
     var output apigatewayv2.DeleteApiMappingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApiMapping, input).Get(ctx, &output)
@@ -1088,6 +1103,7 @@ func (a *ApiGatewayV2Stub) DeleteApiMappingAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApiMapping, input)
     return &Apigatewayv2DeleteApiMappingResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteAuthorizer(ctx workflow.Context, input *apigatewayv2.DeleteAuthorizerInput) (*apigatewayv2.DeleteAuthorizerOutput, error) {
     var output apigatewayv2.DeleteAuthorizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAuthorizer, input).Get(ctx, &output)
@@ -1098,6 +1114,7 @@ func (a *ApiGatewayV2Stub) DeleteAuthorizerAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAuthorizer, input)
     return &Apigatewayv2DeleteAuthorizerResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteCorsConfiguration(ctx workflow.Context, input *apigatewayv2.DeleteCorsConfigurationInput) (*apigatewayv2.DeleteCorsConfigurationOutput, error) {
     var output apigatewayv2.DeleteCorsConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCorsConfiguration, input).Get(ctx, &output)
@@ -1108,6 +1125,7 @@ func (a *ApiGatewayV2Stub) DeleteCorsConfigurationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCorsConfiguration, input)
     return &Apigatewayv2DeleteCorsConfigurationResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteDeployment(ctx workflow.Context, input *apigatewayv2.DeleteDeploymentInput) (*apigatewayv2.DeleteDeploymentOutput, error) {
     var output apigatewayv2.DeleteDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDeployment, input).Get(ctx, &output)
@@ -1118,6 +1136,7 @@ func (a *ApiGatewayV2Stub) DeleteDeploymentAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDeployment, input)
     return &Apigatewayv2DeleteDeploymentResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteDomainName(ctx workflow.Context, input *apigatewayv2.DeleteDomainNameInput) (*apigatewayv2.DeleteDomainNameOutput, error) {
     var output apigatewayv2.DeleteDomainNameOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainName, input).Get(ctx, &output)
@@ -1128,6 +1147,7 @@ func (a *ApiGatewayV2Stub) DeleteDomainNameAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainName, input)
     return &Apigatewayv2DeleteDomainNameResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteIntegration(ctx workflow.Context, input *apigatewayv2.DeleteIntegrationInput) (*apigatewayv2.DeleteIntegrationOutput, error) {
     var output apigatewayv2.DeleteIntegrationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteIntegration, input).Get(ctx, &output)
@@ -1138,6 +1158,7 @@ func (a *ApiGatewayV2Stub) DeleteIntegrationAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteIntegration, input)
     return &Apigatewayv2DeleteIntegrationResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteIntegrationResponse(ctx workflow.Context, input *apigatewayv2.DeleteIntegrationResponseInput) (*apigatewayv2.DeleteIntegrationResponseOutput, error) {
     var output apigatewayv2.DeleteIntegrationResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteIntegrationResponse, input).Get(ctx, &output)
@@ -1148,6 +1169,7 @@ func (a *ApiGatewayV2Stub) DeleteIntegrationResponseAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteIntegrationResponse, input)
     return &Apigatewayv2DeleteIntegrationResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteModel(ctx workflow.Context, input *apigatewayv2.DeleteModelInput) (*apigatewayv2.DeleteModelOutput, error) {
     var output apigatewayv2.DeleteModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteModel, input).Get(ctx, &output)
@@ -1158,6 +1180,7 @@ func (a *ApiGatewayV2Stub) DeleteModelAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteModel, input)
     return &Apigatewayv2DeleteModelResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteRoute(ctx workflow.Context, input *apigatewayv2.DeleteRouteInput) (*apigatewayv2.DeleteRouteOutput, error) {
     var output apigatewayv2.DeleteRouteOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRoute, input).Get(ctx, &output)
@@ -1168,6 +1191,7 @@ func (a *ApiGatewayV2Stub) DeleteRouteAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRoute, input)
     return &Apigatewayv2DeleteRouteResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteRouteRequestParameter(ctx workflow.Context, input *apigatewayv2.DeleteRouteRequestParameterInput) (*apigatewayv2.DeleteRouteRequestParameterOutput, error) {
     var output apigatewayv2.DeleteRouteRequestParameterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteRequestParameter, input).Get(ctx, &output)
@@ -1178,6 +1202,7 @@ func (a *ApiGatewayV2Stub) DeleteRouteRequestParameterAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteRequestParameter, input)
     return &Apigatewayv2DeleteRouteRequestParameterResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteRouteResponse(ctx workflow.Context, input *apigatewayv2.DeleteRouteResponseInput) (*apigatewayv2.DeleteRouteResponseOutput, error) {
     var output apigatewayv2.DeleteRouteResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteResponse, input).Get(ctx, &output)
@@ -1188,6 +1213,7 @@ func (a *ApiGatewayV2Stub) DeleteRouteResponseAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteResponse, input)
     return &Apigatewayv2DeleteRouteResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteRouteSettings(ctx workflow.Context, input *apigatewayv2.DeleteRouteSettingsInput) (*apigatewayv2.DeleteRouteSettingsOutput, error) {
     var output apigatewayv2.DeleteRouteSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteSettings, input).Get(ctx, &output)
@@ -1198,6 +1224,7 @@ func (a *ApiGatewayV2Stub) DeleteRouteSettingsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRouteSettings, input)
     return &Apigatewayv2DeleteRouteSettingsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteStage(ctx workflow.Context, input *apigatewayv2.DeleteStageInput) (*apigatewayv2.DeleteStageOutput, error) {
     var output apigatewayv2.DeleteStageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStage, input).Get(ctx, &output)
@@ -1208,6 +1235,7 @@ func (a *ApiGatewayV2Stub) DeleteStageAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStage, input)
     return &Apigatewayv2DeleteStageResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) DeleteVpcLink(ctx workflow.Context, input *apigatewayv2.DeleteVpcLinkInput) (*apigatewayv2.DeleteVpcLinkOutput, error) {
     var output apigatewayv2.DeleteVpcLinkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcLink, input).Get(ctx, &output)
@@ -1218,6 +1246,7 @@ func (a *ApiGatewayV2Stub) DeleteVpcLinkAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcLink, input)
     return &Apigatewayv2DeleteVpcLinkResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) ExportApi(ctx workflow.Context, input *apigatewayv2.ExportApiInput) (*apigatewayv2.ExportApiOutput, error) {
     var output apigatewayv2.ExportApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExportApi, input).Get(ctx, &output)
@@ -1228,6 +1257,7 @@ func (a *ApiGatewayV2Stub) ExportApiAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.ExportApi, input)
     return &Apigatewayv2ExportApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetApi(ctx workflow.Context, input *apigatewayv2.GetApiInput) (*apigatewayv2.GetApiOutput, error) {
     var output apigatewayv2.GetApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApi, input).Get(ctx, &output)
@@ -1238,6 +1268,7 @@ func (a *ApiGatewayV2Stub) GetApiAsync(ctx workflow.Context, input *apigatewayv2
     future := workflow.ExecuteActivity(ctx, a.activities.GetApi, input)
     return &Apigatewayv2GetApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetApiMapping(ctx workflow.Context, input *apigatewayv2.GetApiMappingInput) (*apigatewayv2.GetApiMappingOutput, error) {
     var output apigatewayv2.GetApiMappingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApiMapping, input).Get(ctx, &output)
@@ -1248,6 +1279,7 @@ func (a *ApiGatewayV2Stub) GetApiMappingAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.GetApiMapping, input)
     return &Apigatewayv2GetApiMappingResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetApiMappings(ctx workflow.Context, input *apigatewayv2.GetApiMappingsInput) (*apigatewayv2.GetApiMappingsOutput, error) {
     var output apigatewayv2.GetApiMappingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApiMappings, input).Get(ctx, &output)
@@ -1258,6 +1290,7 @@ func (a *ApiGatewayV2Stub) GetApiMappingsAsync(ctx workflow.Context, input *apig
     future := workflow.ExecuteActivity(ctx, a.activities.GetApiMappings, input)
     return &Apigatewayv2GetApiMappingsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetApis(ctx workflow.Context, input *apigatewayv2.GetApisInput) (*apigatewayv2.GetApisOutput, error) {
     var output apigatewayv2.GetApisOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApis, input).Get(ctx, &output)
@@ -1268,6 +1301,7 @@ func (a *ApiGatewayV2Stub) GetApisAsync(ctx workflow.Context, input *apigatewayv
     future := workflow.ExecuteActivity(ctx, a.activities.GetApis, input)
     return &Apigatewayv2GetApisResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetAuthorizer(ctx workflow.Context, input *apigatewayv2.GetAuthorizerInput) (*apigatewayv2.GetAuthorizerOutput, error) {
     var output apigatewayv2.GetAuthorizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizer, input).Get(ctx, &output)
@@ -1278,6 +1312,7 @@ func (a *ApiGatewayV2Stub) GetAuthorizerAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizer, input)
     return &Apigatewayv2GetAuthorizerResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetAuthorizers(ctx workflow.Context, input *apigatewayv2.GetAuthorizersInput) (*apigatewayv2.GetAuthorizersOutput, error) {
     var output apigatewayv2.GetAuthorizersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizers, input).Get(ctx, &output)
@@ -1288,6 +1323,7 @@ func (a *ApiGatewayV2Stub) GetAuthorizersAsync(ctx workflow.Context, input *apig
     future := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizers, input)
     return &Apigatewayv2GetAuthorizersResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetDeployment(ctx workflow.Context, input *apigatewayv2.GetDeploymentInput) (*apigatewayv2.GetDeploymentOutput, error) {
     var output apigatewayv2.GetDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDeployment, input).Get(ctx, &output)
@@ -1298,6 +1334,7 @@ func (a *ApiGatewayV2Stub) GetDeploymentAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.GetDeployment, input)
     return &Apigatewayv2GetDeploymentResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetDeployments(ctx workflow.Context, input *apigatewayv2.GetDeploymentsInput) (*apigatewayv2.GetDeploymentsOutput, error) {
     var output apigatewayv2.GetDeploymentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDeployments, input).Get(ctx, &output)
@@ -1308,6 +1345,7 @@ func (a *ApiGatewayV2Stub) GetDeploymentsAsync(ctx workflow.Context, input *apig
     future := workflow.ExecuteActivity(ctx, a.activities.GetDeployments, input)
     return &Apigatewayv2GetDeploymentsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetDomainName(ctx workflow.Context, input *apigatewayv2.GetDomainNameInput) (*apigatewayv2.GetDomainNameOutput, error) {
     var output apigatewayv2.GetDomainNameOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDomainName, input).Get(ctx, &output)
@@ -1318,6 +1356,7 @@ func (a *ApiGatewayV2Stub) GetDomainNameAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.GetDomainName, input)
     return &Apigatewayv2GetDomainNameResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetDomainNames(ctx workflow.Context, input *apigatewayv2.GetDomainNamesInput) (*apigatewayv2.GetDomainNamesOutput, error) {
     var output apigatewayv2.GetDomainNamesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDomainNames, input).Get(ctx, &output)
@@ -1328,6 +1367,7 @@ func (a *ApiGatewayV2Stub) GetDomainNamesAsync(ctx workflow.Context, input *apig
     future := workflow.ExecuteActivity(ctx, a.activities.GetDomainNames, input)
     return &Apigatewayv2GetDomainNamesResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetIntegration(ctx workflow.Context, input *apigatewayv2.GetIntegrationInput) (*apigatewayv2.GetIntegrationOutput, error) {
     var output apigatewayv2.GetIntegrationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetIntegration, input).Get(ctx, &output)
@@ -1338,6 +1378,7 @@ func (a *ApiGatewayV2Stub) GetIntegrationAsync(ctx workflow.Context, input *apig
     future := workflow.ExecuteActivity(ctx, a.activities.GetIntegration, input)
     return &Apigatewayv2GetIntegrationResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetIntegrationResponse(ctx workflow.Context, input *apigatewayv2.GetIntegrationResponseInput) (*apigatewayv2.GetIntegrationResponseOutput, error) {
     var output apigatewayv2.GetIntegrationResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetIntegrationResponse, input).Get(ctx, &output)
@@ -1348,6 +1389,7 @@ func (a *ApiGatewayV2Stub) GetIntegrationResponseAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetIntegrationResponse, input)
     return &Apigatewayv2GetIntegrationResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetIntegrationResponses(ctx workflow.Context, input *apigatewayv2.GetIntegrationResponsesInput) (*apigatewayv2.GetIntegrationResponsesOutput, error) {
     var output apigatewayv2.GetIntegrationResponsesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetIntegrationResponses, input).Get(ctx, &output)
@@ -1358,6 +1400,7 @@ func (a *ApiGatewayV2Stub) GetIntegrationResponsesAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetIntegrationResponses, input)
     return &Apigatewayv2GetIntegrationResponsesResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetIntegrations(ctx workflow.Context, input *apigatewayv2.GetIntegrationsInput) (*apigatewayv2.GetIntegrationsOutput, error) {
     var output apigatewayv2.GetIntegrationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetIntegrations, input).Get(ctx, &output)
@@ -1368,6 +1411,7 @@ func (a *ApiGatewayV2Stub) GetIntegrationsAsync(ctx workflow.Context, input *api
     future := workflow.ExecuteActivity(ctx, a.activities.GetIntegrations, input)
     return &Apigatewayv2GetIntegrationsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetModel(ctx workflow.Context, input *apigatewayv2.GetModelInput) (*apigatewayv2.GetModelOutput, error) {
     var output apigatewayv2.GetModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetModel, input).Get(ctx, &output)
@@ -1378,6 +1422,7 @@ func (a *ApiGatewayV2Stub) GetModelAsync(ctx workflow.Context, input *apigateway
     future := workflow.ExecuteActivity(ctx, a.activities.GetModel, input)
     return &Apigatewayv2GetModelResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetModelTemplate(ctx workflow.Context, input *apigatewayv2.GetModelTemplateInput) (*apigatewayv2.GetModelTemplateOutput, error) {
     var output apigatewayv2.GetModelTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetModelTemplate, input).Get(ctx, &output)
@@ -1388,6 +1433,7 @@ func (a *ApiGatewayV2Stub) GetModelTemplateAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.GetModelTemplate, input)
     return &Apigatewayv2GetModelTemplateResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetModels(ctx workflow.Context, input *apigatewayv2.GetModelsInput) (*apigatewayv2.GetModelsOutput, error) {
     var output apigatewayv2.GetModelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetModels, input).Get(ctx, &output)
@@ -1398,6 +1444,7 @@ func (a *ApiGatewayV2Stub) GetModelsAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.GetModels, input)
     return &Apigatewayv2GetModelsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetRoute(ctx workflow.Context, input *apigatewayv2.GetRouteInput) (*apigatewayv2.GetRouteOutput, error) {
     var output apigatewayv2.GetRouteOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRoute, input).Get(ctx, &output)
@@ -1408,6 +1455,7 @@ func (a *ApiGatewayV2Stub) GetRouteAsync(ctx workflow.Context, input *apigateway
     future := workflow.ExecuteActivity(ctx, a.activities.GetRoute, input)
     return &Apigatewayv2GetRouteResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetRouteResponse(ctx workflow.Context, input *apigatewayv2.GetRouteResponseInput) (*apigatewayv2.GetRouteResponseOutput, error) {
     var output apigatewayv2.GetRouteResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRouteResponse, input).Get(ctx, &output)
@@ -1418,6 +1466,7 @@ func (a *ApiGatewayV2Stub) GetRouteResponseAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.GetRouteResponse, input)
     return &Apigatewayv2GetRouteResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetRouteResponses(ctx workflow.Context, input *apigatewayv2.GetRouteResponsesInput) (*apigatewayv2.GetRouteResponsesOutput, error) {
     var output apigatewayv2.GetRouteResponsesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRouteResponses, input).Get(ctx, &output)
@@ -1428,6 +1477,7 @@ func (a *ApiGatewayV2Stub) GetRouteResponsesAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.GetRouteResponses, input)
     return &Apigatewayv2GetRouteResponsesResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetRoutes(ctx workflow.Context, input *apigatewayv2.GetRoutesInput) (*apigatewayv2.GetRoutesOutput, error) {
     var output apigatewayv2.GetRoutesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRoutes, input).Get(ctx, &output)
@@ -1438,6 +1488,7 @@ func (a *ApiGatewayV2Stub) GetRoutesAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.GetRoutes, input)
     return &Apigatewayv2GetRoutesResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetStage(ctx workflow.Context, input *apigatewayv2.GetStageInput) (*apigatewayv2.GetStageOutput, error) {
     var output apigatewayv2.GetStageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStage, input).Get(ctx, &output)
@@ -1448,6 +1499,7 @@ func (a *ApiGatewayV2Stub) GetStageAsync(ctx workflow.Context, input *apigateway
     future := workflow.ExecuteActivity(ctx, a.activities.GetStage, input)
     return &Apigatewayv2GetStageResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetStages(ctx workflow.Context, input *apigatewayv2.GetStagesInput) (*apigatewayv2.GetStagesOutput, error) {
     var output apigatewayv2.GetStagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStages, input).Get(ctx, &output)
@@ -1458,6 +1510,7 @@ func (a *ApiGatewayV2Stub) GetStagesAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.GetStages, input)
     return &Apigatewayv2GetStagesResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetTags(ctx workflow.Context, input *apigatewayv2.GetTagsInput) (*apigatewayv2.GetTagsOutput, error) {
     var output apigatewayv2.GetTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTags, input).Get(ctx, &output)
@@ -1468,6 +1521,7 @@ func (a *ApiGatewayV2Stub) GetTagsAsync(ctx workflow.Context, input *apigatewayv
     future := workflow.ExecuteActivity(ctx, a.activities.GetTags, input)
     return &Apigatewayv2GetTagsResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetVpcLink(ctx workflow.Context, input *apigatewayv2.GetVpcLinkInput) (*apigatewayv2.GetVpcLinkOutput, error) {
     var output apigatewayv2.GetVpcLinkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVpcLink, input).Get(ctx, &output)
@@ -1478,6 +1532,7 @@ func (a *ApiGatewayV2Stub) GetVpcLinkAsync(ctx workflow.Context, input *apigatew
     future := workflow.ExecuteActivity(ctx, a.activities.GetVpcLink, input)
     return &Apigatewayv2GetVpcLinkResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) GetVpcLinks(ctx workflow.Context, input *apigatewayv2.GetVpcLinksInput) (*apigatewayv2.GetVpcLinksOutput, error) {
     var output apigatewayv2.GetVpcLinksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVpcLinks, input).Get(ctx, &output)
@@ -1488,6 +1543,7 @@ func (a *ApiGatewayV2Stub) GetVpcLinksAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.GetVpcLinks, input)
     return &Apigatewayv2GetVpcLinksResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) ImportApi(ctx workflow.Context, input *apigatewayv2.ImportApiInput) (*apigatewayv2.ImportApiOutput, error) {
     var output apigatewayv2.ImportApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportApi, input).Get(ctx, &output)
@@ -1498,6 +1554,7 @@ func (a *ApiGatewayV2Stub) ImportApiAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.ImportApi, input)
     return &Apigatewayv2ImportApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) ReimportApi(ctx workflow.Context, input *apigatewayv2.ReimportApiInput) (*apigatewayv2.ReimportApiOutput, error) {
     var output apigatewayv2.ReimportApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ReimportApi, input).Get(ctx, &output)
@@ -1508,6 +1565,7 @@ func (a *ApiGatewayV2Stub) ReimportApiAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.ReimportApi, input)
     return &Apigatewayv2ReimportApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) TagResource(ctx workflow.Context, input *apigatewayv2.TagResourceInput) (*apigatewayv2.TagResourceOutput, error) {
     var output apigatewayv2.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1518,6 +1576,7 @@ func (a *ApiGatewayV2Stub) TagResourceAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &Apigatewayv2TagResourceResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UntagResource(ctx workflow.Context, input *apigatewayv2.UntagResourceInput) (*apigatewayv2.UntagResourceOutput, error) {
     var output apigatewayv2.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1528,6 +1587,7 @@ func (a *ApiGatewayV2Stub) UntagResourceAsync(ctx workflow.Context, input *apiga
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &Apigatewayv2UntagResourceResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateApi(ctx workflow.Context, input *apigatewayv2.UpdateApiInput) (*apigatewayv2.UpdateApiOutput, error) {
     var output apigatewayv2.UpdateApiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApi, input).Get(ctx, &output)
@@ -1538,6 +1598,7 @@ func (a *ApiGatewayV2Stub) UpdateApiAsync(ctx workflow.Context, input *apigatewa
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApi, input)
     return &Apigatewayv2UpdateApiResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateApiMapping(ctx workflow.Context, input *apigatewayv2.UpdateApiMappingInput) (*apigatewayv2.UpdateApiMappingOutput, error) {
     var output apigatewayv2.UpdateApiMappingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApiMapping, input).Get(ctx, &output)
@@ -1548,6 +1609,7 @@ func (a *ApiGatewayV2Stub) UpdateApiMappingAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApiMapping, input)
     return &Apigatewayv2UpdateApiMappingResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateAuthorizer(ctx workflow.Context, input *apigatewayv2.UpdateAuthorizerInput) (*apigatewayv2.UpdateAuthorizerOutput, error) {
     var output apigatewayv2.UpdateAuthorizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAuthorizer, input).Get(ctx, &output)
@@ -1558,6 +1620,7 @@ func (a *ApiGatewayV2Stub) UpdateAuthorizerAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAuthorizer, input)
     return &Apigatewayv2UpdateAuthorizerResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateDeployment(ctx workflow.Context, input *apigatewayv2.UpdateDeploymentInput) (*apigatewayv2.UpdateDeploymentOutput, error) {
     var output apigatewayv2.UpdateDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDeployment, input).Get(ctx, &output)
@@ -1568,6 +1631,7 @@ func (a *ApiGatewayV2Stub) UpdateDeploymentAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDeployment, input)
     return &Apigatewayv2UpdateDeploymentResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateDomainName(ctx workflow.Context, input *apigatewayv2.UpdateDomainNameInput) (*apigatewayv2.UpdateDomainNameOutput, error) {
     var output apigatewayv2.UpdateDomainNameOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDomainName, input).Get(ctx, &output)
@@ -1578,6 +1642,7 @@ func (a *ApiGatewayV2Stub) UpdateDomainNameAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDomainName, input)
     return &Apigatewayv2UpdateDomainNameResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateIntegration(ctx workflow.Context, input *apigatewayv2.UpdateIntegrationInput) (*apigatewayv2.UpdateIntegrationOutput, error) {
     var output apigatewayv2.UpdateIntegrationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateIntegration, input).Get(ctx, &output)
@@ -1588,6 +1653,7 @@ func (a *ApiGatewayV2Stub) UpdateIntegrationAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateIntegration, input)
     return &Apigatewayv2UpdateIntegrationResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateIntegrationResponse(ctx workflow.Context, input *apigatewayv2.UpdateIntegrationResponseInput) (*apigatewayv2.UpdateIntegrationResponseOutput, error) {
     var output apigatewayv2.UpdateIntegrationResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateIntegrationResponse, input).Get(ctx, &output)
@@ -1598,6 +1664,7 @@ func (a *ApiGatewayV2Stub) UpdateIntegrationResponseAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateIntegrationResponse, input)
     return &Apigatewayv2UpdateIntegrationResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateModel(ctx workflow.Context, input *apigatewayv2.UpdateModelInput) (*apigatewayv2.UpdateModelOutput, error) {
     var output apigatewayv2.UpdateModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateModel, input).Get(ctx, &output)
@@ -1608,6 +1675,7 @@ func (a *ApiGatewayV2Stub) UpdateModelAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateModel, input)
     return &Apigatewayv2UpdateModelResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateRoute(ctx workflow.Context, input *apigatewayv2.UpdateRouteInput) (*apigatewayv2.UpdateRouteOutput, error) {
     var output apigatewayv2.UpdateRouteOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRoute, input).Get(ctx, &output)
@@ -1618,6 +1686,7 @@ func (a *ApiGatewayV2Stub) UpdateRouteAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRoute, input)
     return &Apigatewayv2UpdateRouteResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateRouteResponse(ctx workflow.Context, input *apigatewayv2.UpdateRouteResponseInput) (*apigatewayv2.UpdateRouteResponseOutput, error) {
     var output apigatewayv2.UpdateRouteResponseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRouteResponse, input).Get(ctx, &output)
@@ -1628,6 +1697,7 @@ func (a *ApiGatewayV2Stub) UpdateRouteResponseAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRouteResponse, input)
     return &Apigatewayv2UpdateRouteResponseResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateStage(ctx workflow.Context, input *apigatewayv2.UpdateStageInput) (*apigatewayv2.UpdateStageOutput, error) {
     var output apigatewayv2.UpdateStageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateStage, input).Get(ctx, &output)
@@ -1638,6 +1708,7 @@ func (a *ApiGatewayV2Stub) UpdateStageAsync(ctx workflow.Context, input *apigate
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateStage, input)
     return &Apigatewayv2UpdateStageResult{Result: future}
 }
+
 func (a *ApiGatewayV2Stub) UpdateVpcLink(ctx workflow.Context, input *apigatewayv2.UpdateVpcLinkInput) (*apigatewayv2.UpdateVpcLinkOutput, error) {
     var output apigatewayv2.UpdateVpcLinkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVpcLink, input).Get(ctx, &output)

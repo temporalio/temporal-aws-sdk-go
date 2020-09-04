@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,20 +14,14 @@ func NewPricingActivities(client pricingiface.PricingAPI) *PricingActivities {
     return &PricingActivities{client: client}
 }
 
-
 func (a *PricingActivities) DescribeServices(input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
     return a.client.DescribeServices(input)
 }
-
-
 
 func (a *PricingActivities) GetAttributeValues(input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
     return a.client.GetAttributeValues(input)
 }
 
-
-
 func (a *PricingActivities) GetProducts(input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
     return a.client.GetProducts(input)
 }
-

@@ -13,6 +13,7 @@ type PersonalizeRuntimeClient interface {
     GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error)
     GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult
 }
+
 type PersonalizeruntimeGetPersonalizedRankingResult struct {
 	Result workflow.Future
 }
@@ -33,7 +34,6 @@ func (r *PersonalizeruntimeGetRecommendationsResult) Get(ctx workflow.Context) (
     return &output, err
 }
 
-
 type PersonalizeRuntimeStub struct {
     activities awsactivities.PersonalizeRuntimeActivities
 }
@@ -41,6 +41,7 @@ type PersonalizeRuntimeStub struct {
 func NewPersonalizeRuntimeStub() PersonalizeRuntimeClient {
     return &PersonalizeRuntimeStub{}
 }
+
 func (a *PersonalizeRuntimeStub) GetPersonalizedRanking(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
     var output personalizeruntime.GetPersonalizedRankingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPersonalizedRanking, input).Get(ctx, &output)
@@ -51,6 +52,7 @@ func (a *PersonalizeRuntimeStub) GetPersonalizedRankingAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetPersonalizedRanking, input)
     return &PersonalizeruntimeGetPersonalizedRankingResult{Result: future}
 }
+
 func (a *PersonalizeRuntimeStub) GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
     var output personalizeruntime.GetRecommendationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRecommendations, input).Get(ctx, &output)

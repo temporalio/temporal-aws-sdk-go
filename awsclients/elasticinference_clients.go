@@ -25,6 +25,7 @@ type ElasticInferenceClient interface {
     UntagResource(ctx workflow.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error)
     UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceResult
 }
+
 type ElasticinferenceDescribeAcceleratorOfferingsResult struct {
 	Result workflow.Future
 }
@@ -85,7 +86,6 @@ func (r *ElasticinferenceUntagResourceResult) Get(ctx workflow.Context) (*elasti
     return &output, err
 }
 
-
 type ElasticInferenceStub struct {
     activities awsactivities.ElasticInferenceActivities
 }
@@ -93,6 +93,7 @@ type ElasticInferenceStub struct {
 func NewElasticInferenceStub() ElasticInferenceClient {
     return &ElasticInferenceStub{}
 }
+
 func (a *ElasticInferenceStub) DescribeAcceleratorOfferings(ctx workflow.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
     var output elasticinference.DescribeAcceleratorOfferingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorOfferings, input).Get(ctx, &output)
@@ -103,6 +104,7 @@ func (a *ElasticInferenceStub) DescribeAcceleratorOfferingsAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorOfferings, input)
     return &ElasticinferenceDescribeAcceleratorOfferingsResult{Result: future}
 }
+
 func (a *ElasticInferenceStub) DescribeAcceleratorTypes(ctx workflow.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
     var output elasticinference.DescribeAcceleratorTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorTypes, input).Get(ctx, &output)
@@ -113,6 +115,7 @@ func (a *ElasticInferenceStub) DescribeAcceleratorTypesAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorTypes, input)
     return &ElasticinferenceDescribeAcceleratorTypesResult{Result: future}
 }
+
 func (a *ElasticInferenceStub) DescribeAccelerators(ctx workflow.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
     var output elasticinference.DescribeAcceleratorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccelerators, input).Get(ctx, &output)
@@ -123,6 +126,7 @@ func (a *ElasticInferenceStub) DescribeAcceleratorsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccelerators, input)
     return &ElasticinferenceDescribeAcceleratorsResult{Result: future}
 }
+
 func (a *ElasticInferenceStub) ListTagsForResource(ctx workflow.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
     var output elasticinference.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -133,6 +137,7 @@ func (a *ElasticInferenceStub) ListTagsForResourceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &ElasticinferenceListTagsForResourceResult{Result: future}
 }
+
 func (a *ElasticInferenceStub) TagResource(ctx workflow.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
     var output elasticinference.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -143,6 +148,7 @@ func (a *ElasticInferenceStub) TagResourceAsync(ctx workflow.Context, input *ela
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &ElasticinferenceTagResourceResult{Result: future}
 }
+
 func (a *ElasticInferenceStub) UntagResource(ctx workflow.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
     var output elasticinference.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)

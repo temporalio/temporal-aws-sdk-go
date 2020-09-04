@@ -88,6 +88,7 @@ type TranscribeServiceClient interface {
     UpdateVocabularyFilter(ctx workflow.Context, input *transcribeservice.UpdateVocabularyFilterInput) (*transcribeservice.UpdateVocabularyFilterOutput, error)
     UpdateVocabularyFilterAsync(ctx workflow.Context, input *transcribeservice.UpdateVocabularyFilterInput) *TranscribeserviceUpdateVocabularyFilterResult
 }
+
 type TranscribeserviceCreateLanguageModelResult struct {
 	Result workflow.Future
 }
@@ -358,7 +359,6 @@ func (r *TranscribeserviceUpdateVocabularyFilterResult) Get(ctx workflow.Context
     return &output, err
 }
 
-
 type TranscribeServiceStub struct {
     activities awsactivities.TranscribeServiceActivities
 }
@@ -366,6 +366,7 @@ type TranscribeServiceStub struct {
 func NewTranscribeServiceStub() TranscribeServiceClient {
     return &TranscribeServiceStub{}
 }
+
 func (a *TranscribeServiceStub) CreateLanguageModel(ctx workflow.Context, input *transcribeservice.CreateLanguageModelInput) (*transcribeservice.CreateLanguageModelOutput, error) {
     var output transcribeservice.CreateLanguageModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLanguageModel, input).Get(ctx, &output)
@@ -376,6 +377,7 @@ func (a *TranscribeServiceStub) CreateLanguageModelAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLanguageModel, input)
     return &TranscribeserviceCreateLanguageModelResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) CreateMedicalVocabulary(ctx workflow.Context, input *transcribeservice.CreateMedicalVocabularyInput) (*transcribeservice.CreateMedicalVocabularyOutput, error) {
     var output transcribeservice.CreateMedicalVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMedicalVocabulary, input).Get(ctx, &output)
@@ -386,6 +388,7 @@ func (a *TranscribeServiceStub) CreateMedicalVocabularyAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMedicalVocabulary, input)
     return &TranscribeserviceCreateMedicalVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) CreateVocabulary(ctx workflow.Context, input *transcribeservice.CreateVocabularyInput) (*transcribeservice.CreateVocabularyOutput, error) {
     var output transcribeservice.CreateVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVocabulary, input).Get(ctx, &output)
@@ -396,6 +399,7 @@ func (a *TranscribeServiceStub) CreateVocabularyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVocabulary, input)
     return &TranscribeserviceCreateVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) CreateVocabularyFilter(ctx workflow.Context, input *transcribeservice.CreateVocabularyFilterInput) (*transcribeservice.CreateVocabularyFilterOutput, error) {
     var output transcribeservice.CreateVocabularyFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVocabularyFilter, input).Get(ctx, &output)
@@ -406,6 +410,7 @@ func (a *TranscribeServiceStub) CreateVocabularyFilterAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVocabularyFilter, input)
     return &TranscribeserviceCreateVocabularyFilterResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteLanguageModel(ctx workflow.Context, input *transcribeservice.DeleteLanguageModelInput) (*transcribeservice.DeleteLanguageModelOutput, error) {
     var output transcribeservice.DeleteLanguageModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLanguageModel, input).Get(ctx, &output)
@@ -416,6 +421,7 @@ func (a *TranscribeServiceStub) DeleteLanguageModelAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLanguageModel, input)
     return &TranscribeserviceDeleteLanguageModelResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteMedicalTranscriptionJob(ctx workflow.Context, input *transcribeservice.DeleteMedicalTranscriptionJobInput) (*transcribeservice.DeleteMedicalTranscriptionJobOutput, error) {
     var output transcribeservice.DeleteMedicalTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMedicalTranscriptionJob, input).Get(ctx, &output)
@@ -426,6 +432,7 @@ func (a *TranscribeServiceStub) DeleteMedicalTranscriptionJobAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMedicalTranscriptionJob, input)
     return &TranscribeserviceDeleteMedicalTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteMedicalVocabulary(ctx workflow.Context, input *transcribeservice.DeleteMedicalVocabularyInput) (*transcribeservice.DeleteMedicalVocabularyOutput, error) {
     var output transcribeservice.DeleteMedicalVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMedicalVocabulary, input).Get(ctx, &output)
@@ -436,6 +443,7 @@ func (a *TranscribeServiceStub) DeleteMedicalVocabularyAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMedicalVocabulary, input)
     return &TranscribeserviceDeleteMedicalVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteTranscriptionJob(ctx workflow.Context, input *transcribeservice.DeleteTranscriptionJobInput) (*transcribeservice.DeleteTranscriptionJobOutput, error) {
     var output transcribeservice.DeleteTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTranscriptionJob, input).Get(ctx, &output)
@@ -446,6 +454,7 @@ func (a *TranscribeServiceStub) DeleteTranscriptionJobAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTranscriptionJob, input)
     return &TranscribeserviceDeleteTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteVocabulary(ctx workflow.Context, input *transcribeservice.DeleteVocabularyInput) (*transcribeservice.DeleteVocabularyOutput, error) {
     var output transcribeservice.DeleteVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVocabulary, input).Get(ctx, &output)
@@ -456,6 +465,7 @@ func (a *TranscribeServiceStub) DeleteVocabularyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVocabulary, input)
     return &TranscribeserviceDeleteVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DeleteVocabularyFilter(ctx workflow.Context, input *transcribeservice.DeleteVocabularyFilterInput) (*transcribeservice.DeleteVocabularyFilterOutput, error) {
     var output transcribeservice.DeleteVocabularyFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVocabularyFilter, input).Get(ctx, &output)
@@ -466,6 +476,7 @@ func (a *TranscribeServiceStub) DeleteVocabularyFilterAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVocabularyFilter, input)
     return &TranscribeserviceDeleteVocabularyFilterResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) DescribeLanguageModel(ctx workflow.Context, input *transcribeservice.DescribeLanguageModelInput) (*transcribeservice.DescribeLanguageModelOutput, error) {
     var output transcribeservice.DescribeLanguageModelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLanguageModel, input).Get(ctx, &output)
@@ -476,6 +487,7 @@ func (a *TranscribeServiceStub) DescribeLanguageModelAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLanguageModel, input)
     return &TranscribeserviceDescribeLanguageModelResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) GetMedicalTranscriptionJob(ctx workflow.Context, input *transcribeservice.GetMedicalTranscriptionJobInput) (*transcribeservice.GetMedicalTranscriptionJobOutput, error) {
     var output transcribeservice.GetMedicalTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMedicalTranscriptionJob, input).Get(ctx, &output)
@@ -486,6 +498,7 @@ func (a *TranscribeServiceStub) GetMedicalTranscriptionJobAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.GetMedicalTranscriptionJob, input)
     return &TranscribeserviceGetMedicalTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) GetMedicalVocabulary(ctx workflow.Context, input *transcribeservice.GetMedicalVocabularyInput) (*transcribeservice.GetMedicalVocabularyOutput, error) {
     var output transcribeservice.GetMedicalVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMedicalVocabulary, input).Get(ctx, &output)
@@ -496,6 +509,7 @@ func (a *TranscribeServiceStub) GetMedicalVocabularyAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GetMedicalVocabulary, input)
     return &TranscribeserviceGetMedicalVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) GetTranscriptionJob(ctx workflow.Context, input *transcribeservice.GetTranscriptionJobInput) (*transcribeservice.GetTranscriptionJobOutput, error) {
     var output transcribeservice.GetTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTranscriptionJob, input).Get(ctx, &output)
@@ -506,6 +520,7 @@ func (a *TranscribeServiceStub) GetTranscriptionJobAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GetTranscriptionJob, input)
     return &TranscribeserviceGetTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) GetVocabulary(ctx workflow.Context, input *transcribeservice.GetVocabularyInput) (*transcribeservice.GetVocabularyOutput, error) {
     var output transcribeservice.GetVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVocabulary, input).Get(ctx, &output)
@@ -516,6 +531,7 @@ func (a *TranscribeServiceStub) GetVocabularyAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetVocabulary, input)
     return &TranscribeserviceGetVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) GetVocabularyFilter(ctx workflow.Context, input *transcribeservice.GetVocabularyFilterInput) (*transcribeservice.GetVocabularyFilterOutput, error) {
     var output transcribeservice.GetVocabularyFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVocabularyFilter, input).Get(ctx, &output)
@@ -526,6 +542,7 @@ func (a *TranscribeServiceStub) GetVocabularyFilterAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GetVocabularyFilter, input)
     return &TranscribeserviceGetVocabularyFilterResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListLanguageModels(ctx workflow.Context, input *transcribeservice.ListLanguageModelsInput) (*transcribeservice.ListLanguageModelsOutput, error) {
     var output transcribeservice.ListLanguageModelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListLanguageModels, input).Get(ctx, &output)
@@ -536,6 +553,7 @@ func (a *TranscribeServiceStub) ListLanguageModelsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListLanguageModels, input)
     return &TranscribeserviceListLanguageModelsResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListMedicalTranscriptionJobs(ctx workflow.Context, input *transcribeservice.ListMedicalTranscriptionJobsInput) (*transcribeservice.ListMedicalTranscriptionJobsOutput, error) {
     var output transcribeservice.ListMedicalTranscriptionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMedicalTranscriptionJobs, input).Get(ctx, &output)
@@ -546,6 +564,7 @@ func (a *TranscribeServiceStub) ListMedicalTranscriptionJobsAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ListMedicalTranscriptionJobs, input)
     return &TranscribeserviceListMedicalTranscriptionJobsResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListMedicalVocabularies(ctx workflow.Context, input *transcribeservice.ListMedicalVocabulariesInput) (*transcribeservice.ListMedicalVocabulariesOutput, error) {
     var output transcribeservice.ListMedicalVocabulariesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMedicalVocabularies, input).Get(ctx, &output)
@@ -556,6 +575,7 @@ func (a *TranscribeServiceStub) ListMedicalVocabulariesAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListMedicalVocabularies, input)
     return &TranscribeserviceListMedicalVocabulariesResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListTranscriptionJobs(ctx workflow.Context, input *transcribeservice.ListTranscriptionJobsInput) (*transcribeservice.ListTranscriptionJobsOutput, error) {
     var output transcribeservice.ListTranscriptionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTranscriptionJobs, input).Get(ctx, &output)
@@ -566,6 +586,7 @@ func (a *TranscribeServiceStub) ListTranscriptionJobsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ListTranscriptionJobs, input)
     return &TranscribeserviceListTranscriptionJobsResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListVocabularies(ctx workflow.Context, input *transcribeservice.ListVocabulariesInput) (*transcribeservice.ListVocabulariesOutput, error) {
     var output transcribeservice.ListVocabulariesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVocabularies, input).Get(ctx, &output)
@@ -576,6 +597,7 @@ func (a *TranscribeServiceStub) ListVocabulariesAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListVocabularies, input)
     return &TranscribeserviceListVocabulariesResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) ListVocabularyFilters(ctx workflow.Context, input *transcribeservice.ListVocabularyFiltersInput) (*transcribeservice.ListVocabularyFiltersOutput, error) {
     var output transcribeservice.ListVocabularyFiltersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVocabularyFilters, input).Get(ctx, &output)
@@ -586,6 +608,7 @@ func (a *TranscribeServiceStub) ListVocabularyFiltersAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ListVocabularyFilters, input)
     return &TranscribeserviceListVocabularyFiltersResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) StartMedicalTranscriptionJob(ctx workflow.Context, input *transcribeservice.StartMedicalTranscriptionJobInput) (*transcribeservice.StartMedicalTranscriptionJobOutput, error) {
     var output transcribeservice.StartMedicalTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMedicalTranscriptionJob, input).Get(ctx, &output)
@@ -596,6 +619,7 @@ func (a *TranscribeServiceStub) StartMedicalTranscriptionJobAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.StartMedicalTranscriptionJob, input)
     return &TranscribeserviceStartMedicalTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) StartTranscriptionJob(ctx workflow.Context, input *transcribeservice.StartTranscriptionJobInput) (*transcribeservice.StartTranscriptionJobOutput, error) {
     var output transcribeservice.StartTranscriptionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartTranscriptionJob, input).Get(ctx, &output)
@@ -606,6 +630,7 @@ func (a *TranscribeServiceStub) StartTranscriptionJobAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.StartTranscriptionJob, input)
     return &TranscribeserviceStartTranscriptionJobResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) UpdateMedicalVocabulary(ctx workflow.Context, input *transcribeservice.UpdateMedicalVocabularyInput) (*transcribeservice.UpdateMedicalVocabularyOutput, error) {
     var output transcribeservice.UpdateMedicalVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMedicalVocabulary, input).Get(ctx, &output)
@@ -616,6 +641,7 @@ func (a *TranscribeServiceStub) UpdateMedicalVocabularyAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMedicalVocabulary, input)
     return &TranscribeserviceUpdateMedicalVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) UpdateVocabulary(ctx workflow.Context, input *transcribeservice.UpdateVocabularyInput) (*transcribeservice.UpdateVocabularyOutput, error) {
     var output transcribeservice.UpdateVocabularyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVocabulary, input).Get(ctx, &output)
@@ -626,6 +652,7 @@ func (a *TranscribeServiceStub) UpdateVocabularyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateVocabulary, input)
     return &TranscribeserviceUpdateVocabularyResult{Result: future}
 }
+
 func (a *TranscribeServiceStub) UpdateVocabularyFilter(ctx workflow.Context, input *transcribeservice.UpdateVocabularyFilterInput) (*transcribeservice.UpdateVocabularyFilterOutput, error) {
     var output transcribeservice.UpdateVocabularyFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVocabularyFilter, input).Get(ctx, &output)

@@ -82,6 +82,7 @@ type GlobalAcceleratorClient interface {
     WithdrawByoipCidr(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) (*globalaccelerator.WithdrawByoipCidrOutput, error)
     WithdrawByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) *GlobalacceleratorWithdrawByoipCidrResult
 }
+
 type GlobalacceleratorAdvertiseByoipCidrResult struct {
 	Result workflow.Future
 }
@@ -332,7 +333,6 @@ func (r *GlobalacceleratorWithdrawByoipCidrResult) Get(ctx workflow.Context) (*g
     return &output, err
 }
 
-
 type GlobalAcceleratorStub struct {
     activities awsactivities.GlobalAcceleratorActivities
 }
@@ -340,6 +340,7 @@ type GlobalAcceleratorStub struct {
 func NewGlobalAcceleratorStub() GlobalAcceleratorClient {
     return &GlobalAcceleratorStub{}
 }
+
 func (a *GlobalAcceleratorStub) AdvertiseByoipCidr(ctx workflow.Context, input *globalaccelerator.AdvertiseByoipCidrInput) (*globalaccelerator.AdvertiseByoipCidrOutput, error) {
     var output globalaccelerator.AdvertiseByoipCidrOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AdvertiseByoipCidr, input).Get(ctx, &output)
@@ -350,6 +351,7 @@ func (a *GlobalAcceleratorStub) AdvertiseByoipCidrAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.AdvertiseByoipCidr, input)
     return &GlobalacceleratorAdvertiseByoipCidrResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) CreateAccelerator(ctx workflow.Context, input *globalaccelerator.CreateAcceleratorInput) (*globalaccelerator.CreateAcceleratorOutput, error) {
     var output globalaccelerator.CreateAcceleratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAccelerator, input).Get(ctx, &output)
@@ -360,6 +362,7 @@ func (a *GlobalAcceleratorStub) CreateAcceleratorAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAccelerator, input)
     return &GlobalacceleratorCreateAcceleratorResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) CreateEndpointGroup(ctx workflow.Context, input *globalaccelerator.CreateEndpointGroupInput) (*globalaccelerator.CreateEndpointGroupOutput, error) {
     var output globalaccelerator.CreateEndpointGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEndpointGroup, input).Get(ctx, &output)
@@ -370,6 +373,7 @@ func (a *GlobalAcceleratorStub) CreateEndpointGroupAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEndpointGroup, input)
     return &GlobalacceleratorCreateEndpointGroupResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) CreateListener(ctx workflow.Context, input *globalaccelerator.CreateListenerInput) (*globalaccelerator.CreateListenerOutput, error) {
     var output globalaccelerator.CreateListenerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateListener, input).Get(ctx, &output)
@@ -380,6 +384,7 @@ func (a *GlobalAcceleratorStub) CreateListenerAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateListener, input)
     return &GlobalacceleratorCreateListenerResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DeleteAccelerator(ctx workflow.Context, input *globalaccelerator.DeleteAcceleratorInput) (*globalaccelerator.DeleteAcceleratorOutput, error) {
     var output globalaccelerator.DeleteAcceleratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAccelerator, input).Get(ctx, &output)
@@ -390,6 +395,7 @@ func (a *GlobalAcceleratorStub) DeleteAcceleratorAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAccelerator, input)
     return &GlobalacceleratorDeleteAcceleratorResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DeleteEndpointGroup(ctx workflow.Context, input *globalaccelerator.DeleteEndpointGroupInput) (*globalaccelerator.DeleteEndpointGroupOutput, error) {
     var output globalaccelerator.DeleteEndpointGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpointGroup, input).Get(ctx, &output)
@@ -400,6 +406,7 @@ func (a *GlobalAcceleratorStub) DeleteEndpointGroupAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpointGroup, input)
     return &GlobalacceleratorDeleteEndpointGroupResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DeleteListener(ctx workflow.Context, input *globalaccelerator.DeleteListenerInput) (*globalaccelerator.DeleteListenerOutput, error) {
     var output globalaccelerator.DeleteListenerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteListener, input).Get(ctx, &output)
@@ -410,6 +417,7 @@ func (a *GlobalAcceleratorStub) DeleteListenerAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteListener, input)
     return &GlobalacceleratorDeleteListenerResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DeprovisionByoipCidr(ctx workflow.Context, input *globalaccelerator.DeprovisionByoipCidrInput) (*globalaccelerator.DeprovisionByoipCidrOutput, error) {
     var output globalaccelerator.DeprovisionByoipCidrOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeprovisionByoipCidr, input).Get(ctx, &output)
@@ -420,6 +428,7 @@ func (a *GlobalAcceleratorStub) DeprovisionByoipCidrAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DeprovisionByoipCidr, input)
     return &GlobalacceleratorDeprovisionByoipCidrResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DescribeAccelerator(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorInput) (*globalaccelerator.DescribeAcceleratorOutput, error) {
     var output globalaccelerator.DescribeAcceleratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccelerator, input).Get(ctx, &output)
@@ -430,6 +439,7 @@ func (a *GlobalAcceleratorStub) DescribeAcceleratorAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccelerator, input)
     return &GlobalacceleratorDescribeAcceleratorResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DescribeAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorAttributesInput) (*globalaccelerator.DescribeAcceleratorAttributesOutput, error) {
     var output globalaccelerator.DescribeAcceleratorAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorAttributes, input).Get(ctx, &output)
@@ -440,6 +450,7 @@ func (a *GlobalAcceleratorStub) DescribeAcceleratorAttributesAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAcceleratorAttributes, input)
     return &GlobalacceleratorDescribeAcceleratorAttributesResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DescribeEndpointGroup(ctx workflow.Context, input *globalaccelerator.DescribeEndpointGroupInput) (*globalaccelerator.DescribeEndpointGroupOutput, error) {
     var output globalaccelerator.DescribeEndpointGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpointGroup, input).Get(ctx, &output)
@@ -450,6 +461,7 @@ func (a *GlobalAcceleratorStub) DescribeEndpointGroupAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpointGroup, input)
     return &GlobalacceleratorDescribeEndpointGroupResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) DescribeListener(ctx workflow.Context, input *globalaccelerator.DescribeListenerInput) (*globalaccelerator.DescribeListenerOutput, error) {
     var output globalaccelerator.DescribeListenerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeListener, input).Get(ctx, &output)
@@ -460,6 +472,7 @@ func (a *GlobalAcceleratorStub) DescribeListenerAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeListener, input)
     return &GlobalacceleratorDescribeListenerResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ListAccelerators(ctx workflow.Context, input *globalaccelerator.ListAcceleratorsInput) (*globalaccelerator.ListAcceleratorsOutput, error) {
     var output globalaccelerator.ListAcceleratorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccelerators, input).Get(ctx, &output)
@@ -470,6 +483,7 @@ func (a *GlobalAcceleratorStub) ListAcceleratorsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccelerators, input)
     return &GlobalacceleratorListAcceleratorsResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ListByoipCidrs(ctx workflow.Context, input *globalaccelerator.ListByoipCidrsInput) (*globalaccelerator.ListByoipCidrsOutput, error) {
     var output globalaccelerator.ListByoipCidrsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListByoipCidrs, input).Get(ctx, &output)
@@ -480,6 +494,7 @@ func (a *GlobalAcceleratorStub) ListByoipCidrsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListByoipCidrs, input)
     return &GlobalacceleratorListByoipCidrsResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ListEndpointGroups(ctx workflow.Context, input *globalaccelerator.ListEndpointGroupsInput) (*globalaccelerator.ListEndpointGroupsOutput, error) {
     var output globalaccelerator.ListEndpointGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEndpointGroups, input).Get(ctx, &output)
@@ -490,6 +505,7 @@ func (a *GlobalAcceleratorStub) ListEndpointGroupsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListEndpointGroups, input)
     return &GlobalacceleratorListEndpointGroupsResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ListListeners(ctx workflow.Context, input *globalaccelerator.ListListenersInput) (*globalaccelerator.ListListenersOutput, error) {
     var output globalaccelerator.ListListenersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListListeners, input).Get(ctx, &output)
@@ -500,6 +516,7 @@ func (a *GlobalAcceleratorStub) ListListenersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListListeners, input)
     return &GlobalacceleratorListListenersResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ListTagsForResource(ctx workflow.Context, input *globalaccelerator.ListTagsForResourceInput) (*globalaccelerator.ListTagsForResourceOutput, error) {
     var output globalaccelerator.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -510,6 +527,7 @@ func (a *GlobalAcceleratorStub) ListTagsForResourceAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &GlobalacceleratorListTagsForResourceResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) ProvisionByoipCidr(ctx workflow.Context, input *globalaccelerator.ProvisionByoipCidrInput) (*globalaccelerator.ProvisionByoipCidrOutput, error) {
     var output globalaccelerator.ProvisionByoipCidrOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ProvisionByoipCidr, input).Get(ctx, &output)
@@ -520,6 +538,7 @@ func (a *GlobalAcceleratorStub) ProvisionByoipCidrAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ProvisionByoipCidr, input)
     return &GlobalacceleratorProvisionByoipCidrResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) TagResource(ctx workflow.Context, input *globalaccelerator.TagResourceInput) (*globalaccelerator.TagResourceOutput, error) {
     var output globalaccelerator.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -530,6 +549,7 @@ func (a *GlobalAcceleratorStub) TagResourceAsync(ctx workflow.Context, input *gl
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &GlobalacceleratorTagResourceResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) UntagResource(ctx workflow.Context, input *globalaccelerator.UntagResourceInput) (*globalaccelerator.UntagResourceOutput, error) {
     var output globalaccelerator.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -540,6 +560,7 @@ func (a *GlobalAcceleratorStub) UntagResourceAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &GlobalacceleratorUntagResourceResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) UpdateAccelerator(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorInput) (*globalaccelerator.UpdateAcceleratorOutput, error) {
     var output globalaccelerator.UpdateAcceleratorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAccelerator, input).Get(ctx, &output)
@@ -550,6 +571,7 @@ func (a *GlobalAcceleratorStub) UpdateAcceleratorAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAccelerator, input)
     return &GlobalacceleratorUpdateAcceleratorResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) UpdateAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorAttributesInput) (*globalaccelerator.UpdateAcceleratorAttributesOutput, error) {
     var output globalaccelerator.UpdateAcceleratorAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAcceleratorAttributes, input).Get(ctx, &output)
@@ -560,6 +582,7 @@ func (a *GlobalAcceleratorStub) UpdateAcceleratorAttributesAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAcceleratorAttributes, input)
     return &GlobalacceleratorUpdateAcceleratorAttributesResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) UpdateEndpointGroup(ctx workflow.Context, input *globalaccelerator.UpdateEndpointGroupInput) (*globalaccelerator.UpdateEndpointGroupOutput, error) {
     var output globalaccelerator.UpdateEndpointGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpointGroup, input).Get(ctx, &output)
@@ -570,6 +593,7 @@ func (a *GlobalAcceleratorStub) UpdateEndpointGroupAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpointGroup, input)
     return &GlobalacceleratorUpdateEndpointGroupResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) UpdateListener(ctx workflow.Context, input *globalaccelerator.UpdateListenerInput) (*globalaccelerator.UpdateListenerOutput, error) {
     var output globalaccelerator.UpdateListenerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateListener, input).Get(ctx, &output)
@@ -580,6 +604,7 @@ func (a *GlobalAcceleratorStub) UpdateListenerAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateListener, input)
     return &GlobalacceleratorUpdateListenerResult{Result: future}
 }
+
 func (a *GlobalAcceleratorStub) WithdrawByoipCidr(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) (*globalaccelerator.WithdrawByoipCidrOutput, error) {
     var output globalaccelerator.WithdrawByoipCidrOutput
     err := workflow.ExecuteActivity(ctx, a.activities.WithdrawByoipCidr, input).Get(ctx, &output)

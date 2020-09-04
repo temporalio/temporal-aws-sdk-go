@@ -73,6 +73,7 @@ type IVSClient interface {
     UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error)
     UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IvsUpdateChannelResult
 }
+
 type IvsBatchGetChannelResult struct {
 	Result workflow.Future
 }
@@ -293,7 +294,6 @@ func (r *IvsUpdateChannelResult) Get(ctx workflow.Context) (*ivs.UpdateChannelOu
     return &output, err
 }
 
-
 type IVSStub struct {
     activities awsactivities.IVSActivities
 }
@@ -301,6 +301,7 @@ type IVSStub struct {
 func NewIVSStub() IVSClient {
     return &IVSStub{}
 }
+
 func (a *IVSStub) BatchGetChannel(ctx workflow.Context, input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error) {
     var output ivs.BatchGetChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchGetChannel, input).Get(ctx, &output)
@@ -311,6 +312,7 @@ func (a *IVSStub) BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGet
     future := workflow.ExecuteActivity(ctx, a.activities.BatchGetChannel, input)
     return &IvsBatchGetChannelResult{Result: future}
 }
+
 func (a *IVSStub) BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error) {
     var output ivs.BatchGetStreamKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchGetStreamKey, input).Get(ctx, &output)
@@ -321,6 +323,7 @@ func (a *IVSStub) BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchG
     future := workflow.ExecuteActivity(ctx, a.activities.BatchGetStreamKey, input)
     return &IvsBatchGetStreamKeyResult{Result: future}
 }
+
 func (a *IVSStub) CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error) {
     var output ivs.CreateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input).Get(ctx, &output)
@@ -331,6 +334,7 @@ func (a *IVSStub) CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChan
     future := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input)
     return &IvsCreateChannelResult{Result: future}
 }
+
 func (a *IVSStub) CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error) {
     var output ivs.CreateStreamKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStreamKey, input).Get(ctx, &output)
@@ -341,6 +345,7 @@ func (a *IVSStub) CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateSt
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStreamKey, input)
     return &IvsCreateStreamKeyResult{Result: future}
 }
+
 func (a *IVSStub) DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error) {
     var output ivs.DeleteChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input).Get(ctx, &output)
@@ -351,6 +356,7 @@ func (a *IVSStub) DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChan
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input)
     return &IvsDeleteChannelResult{Result: future}
 }
+
 func (a *IVSStub) DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error) {
     var output ivs.DeletePlaybackKeyPairOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePlaybackKeyPair, input).Get(ctx, &output)
@@ -361,6 +367,7 @@ func (a *IVSStub) DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePlaybackKeyPair, input)
     return &IvsDeletePlaybackKeyPairResult{Result: future}
 }
+
 func (a *IVSStub) DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error) {
     var output ivs.DeleteStreamKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStreamKey, input).Get(ctx, &output)
@@ -371,6 +378,7 @@ func (a *IVSStub) DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteSt
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStreamKey, input)
     return &IvsDeleteStreamKeyResult{Result: future}
 }
+
 func (a *IVSStub) GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error) {
     var output ivs.GetChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetChannel, input).Get(ctx, &output)
@@ -381,6 +389,7 @@ func (a *IVSStub) GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInp
     future := workflow.ExecuteActivity(ctx, a.activities.GetChannel, input)
     return &IvsGetChannelResult{Result: future}
 }
+
 func (a *IVSStub) GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error) {
     var output ivs.GetPlaybackKeyPairOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPlaybackKeyPair, input).Get(ctx, &output)
@@ -391,6 +400,7 @@ func (a *IVSStub) GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPl
     future := workflow.ExecuteActivity(ctx, a.activities.GetPlaybackKeyPair, input)
     return &IvsGetPlaybackKeyPairResult{Result: future}
 }
+
 func (a *IVSStub) GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error) {
     var output ivs.GetStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStream, input).Get(ctx, &output)
@@ -401,6 +411,7 @@ func (a *IVSStub) GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput
     future := workflow.ExecuteActivity(ctx, a.activities.GetStream, input)
     return &IvsGetStreamResult{Result: future}
 }
+
 func (a *IVSStub) GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error) {
     var output ivs.GetStreamKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStreamKey, input).Get(ctx, &output)
@@ -411,6 +422,7 @@ func (a *IVSStub) GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKe
     future := workflow.ExecuteActivity(ctx, a.activities.GetStreamKey, input)
     return &IvsGetStreamKeyResult{Result: future}
 }
+
 func (a *IVSStub) ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error) {
     var output ivs.ImportPlaybackKeyPairOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportPlaybackKeyPair, input).Get(ctx, &output)
@@ -421,6 +433,7 @@ func (a *IVSStub) ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.Im
     future := workflow.ExecuteActivity(ctx, a.activities.ImportPlaybackKeyPair, input)
     return &IvsImportPlaybackKeyPairResult{Result: future}
 }
+
 func (a *IVSStub) ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error) {
     var output ivs.ListChannelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input).Get(ctx, &output)
@@ -431,6 +444,7 @@ func (a *IVSStub) ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannel
     future := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input)
     return &IvsListChannelsResult{Result: future}
 }
+
 func (a *IVSStub) ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error) {
     var output ivs.ListPlaybackKeyPairsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPlaybackKeyPairs, input).Get(ctx, &output)
@@ -441,6 +455,7 @@ func (a *IVSStub) ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListPlaybackKeyPairs, input)
     return &IvsListPlaybackKeyPairsResult{Result: future}
 }
+
 func (a *IVSStub) ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error) {
     var output ivs.ListStreamKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStreamKeys, input).Get(ctx, &output)
@@ -451,6 +466,7 @@ func (a *IVSStub) ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStrea
     future := workflow.ExecuteActivity(ctx, a.activities.ListStreamKeys, input)
     return &IvsListStreamKeysResult{Result: future}
 }
+
 func (a *IVSStub) ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error) {
     var output ivs.ListStreamsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStreams, input).Get(ctx, &output)
@@ -461,6 +477,7 @@ func (a *IVSStub) ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsI
     future := workflow.ExecuteActivity(ctx, a.activities.ListStreams, input)
     return &IvsListStreamsResult{Result: future}
 }
+
 func (a *IVSStub) ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error) {
     var output ivs.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -471,6 +488,7 @@ func (a *IVSStub) ListTagsForResourceAsync(ctx workflow.Context, input *ivs.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &IvsListTagsForResourceResult{Result: future}
 }
+
 func (a *IVSStub) PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error) {
     var output ivs.PutMetadataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutMetadata, input).Get(ctx, &output)
@@ -481,6 +499,7 @@ func (a *IVSStub) PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataI
     future := workflow.ExecuteActivity(ctx, a.activities.PutMetadata, input)
     return &IvsPutMetadataResult{Result: future}
 }
+
 func (a *IVSStub) StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error) {
     var output ivs.StopStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopStream, input).Get(ctx, &output)
@@ -491,6 +510,7 @@ func (a *IVSStub) StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInp
     future := workflow.ExecuteActivity(ctx, a.activities.StopStream, input)
     return &IvsStopStreamResult{Result: future}
 }
+
 func (a *IVSStub) TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error) {
     var output ivs.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -501,6 +521,7 @@ func (a *IVSStub) TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceI
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &IvsTagResourceResult{Result: future}
 }
+
 func (a *IVSStub) UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error) {
     var output ivs.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -511,6 +532,7 @@ func (a *IVSStub) UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResou
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &IvsUntagResourceResult{Result: future}
 }
+
 func (a *IVSStub) UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error) {
     var output ivs.UpdateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateChannel, input).Get(ctx, &output)

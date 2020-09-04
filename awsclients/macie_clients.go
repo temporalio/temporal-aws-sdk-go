@@ -28,6 +28,7 @@ type MacieClient interface {
     UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error)
     UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult
 }
+
 type MacieAssociateMemberAccountResult struct {
 	Result workflow.Future
 }
@@ -98,7 +99,6 @@ func (r *MacieUpdateS3ResourcesResult) Get(ctx workflow.Context) (*macie.UpdateS
     return &output, err
 }
 
-
 type MacieStub struct {
     activities awsactivities.MacieActivities
 }
@@ -106,6 +106,7 @@ type MacieStub struct {
 func NewMacieStub() MacieClient {
     return &MacieStub{}
 }
+
 func (a *MacieStub) AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error) {
     var output macie.AssociateMemberAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateMemberAccount, input).Get(ctx, &output)
@@ -116,6 +117,7 @@ func (a *MacieStub) AssociateMemberAccountAsync(ctx workflow.Context, input *mac
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateMemberAccount, input)
     return &MacieAssociateMemberAccountResult{Result: future}
 }
+
 func (a *MacieStub) AssociateS3Resources(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error) {
     var output macie.AssociateS3ResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateS3Resources, input).Get(ctx, &output)
@@ -126,6 +128,7 @@ func (a *MacieStub) AssociateS3ResourcesAsync(ctx workflow.Context, input *macie
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateS3Resources, input)
     return &MacieAssociateS3ResourcesResult{Result: future}
 }
+
 func (a *MacieStub) DisassociateMemberAccount(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error) {
     var output macie.DisassociateMemberAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateMemberAccount, input).Get(ctx, &output)
@@ -136,6 +139,7 @@ func (a *MacieStub) DisassociateMemberAccountAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateMemberAccount, input)
     return &MacieDisassociateMemberAccountResult{Result: future}
 }
+
 func (a *MacieStub) DisassociateS3Resources(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error) {
     var output macie.DisassociateS3ResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateS3Resources, input).Get(ctx, &output)
@@ -146,6 +150,7 @@ func (a *MacieStub) DisassociateS3ResourcesAsync(ctx workflow.Context, input *ma
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateS3Resources, input)
     return &MacieDisassociateS3ResourcesResult{Result: future}
 }
+
 func (a *MacieStub) ListMemberAccounts(ctx workflow.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error) {
     var output macie.ListMemberAccountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMemberAccounts, input).Get(ctx, &output)
@@ -156,6 +161,7 @@ func (a *MacieStub) ListMemberAccountsAsync(ctx workflow.Context, input *macie.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListMemberAccounts, input)
     return &MacieListMemberAccountsResult{Result: future}
 }
+
 func (a *MacieStub) ListS3Resources(ctx workflow.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error) {
     var output macie.ListS3ResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListS3Resources, input).Get(ctx, &output)
@@ -166,6 +172,7 @@ func (a *MacieStub) ListS3ResourcesAsync(ctx workflow.Context, input *macie.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListS3Resources, input)
     return &MacieListS3ResourcesResult{Result: future}
 }
+
 func (a *MacieStub) UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error) {
     var output macie.UpdateS3ResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateS3Resources, input).Get(ctx, &output)

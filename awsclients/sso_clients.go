@@ -19,6 +19,7 @@ type SSOClient interface {
     Logout(ctx workflow.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error)
     LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *SsoLogoutResult
 }
+
 type SsoGetRoleCredentialsResult struct {
 	Result workflow.Future
 }
@@ -59,7 +60,6 @@ func (r *SsoLogoutResult) Get(ctx workflow.Context) (*sso.LogoutOutput, error) {
     return &output, err
 }
 
-
 type SSOStub struct {
     activities awsactivities.SSOActivities
 }
@@ -67,6 +67,7 @@ type SSOStub struct {
 func NewSSOStub() SSOClient {
     return &SSOStub{}
 }
+
 func (a *SSOStub) GetRoleCredentials(ctx workflow.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
     var output sso.GetRoleCredentialsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRoleCredentials, input).Get(ctx, &output)
@@ -77,6 +78,7 @@ func (a *SSOStub) GetRoleCredentialsAsync(ctx workflow.Context, input *sso.GetRo
     future := workflow.ExecuteActivity(ctx, a.activities.GetRoleCredentials, input)
     return &SsoGetRoleCredentialsResult{Result: future}
 }
+
 func (a *SSOStub) ListAccountRoles(ctx workflow.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
     var output sso.ListAccountRolesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccountRoles, input).Get(ctx, &output)
@@ -87,6 +89,7 @@ func (a *SSOStub) ListAccountRolesAsync(ctx workflow.Context, input *sso.ListAcc
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccountRoles, input)
     return &SsoListAccountRolesResult{Result: future}
 }
+
 func (a *SSOStub) ListAccounts(ctx workflow.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
     var output sso.ListAccountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAccounts, input).Get(ctx, &output)
@@ -97,6 +100,7 @@ func (a *SSOStub) ListAccountsAsync(ctx workflow.Context, input *sso.ListAccount
     future := workflow.ExecuteActivity(ctx, a.activities.ListAccounts, input)
     return &SsoListAccountsResult{Result: future}
 }
+
 func (a *SSOStub) Logout(ctx workflow.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error) {
     var output sso.LogoutOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Logout, input).Get(ctx, &output)

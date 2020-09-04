@@ -49,6 +49,7 @@ type SupportClient interface {
     ResolveCase(ctx workflow.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error)
     ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *SupportResolveCaseResult
 }
+
 type SupportAddAttachmentsToSetResult struct {
 	Result workflow.Future
 }
@@ -189,7 +190,6 @@ func (r *SupportResolveCaseResult) Get(ctx workflow.Context) (*support.ResolveCa
     return &output, err
 }
 
-
 type SupportStub struct {
     activities awsactivities.SupportActivities
 }
@@ -197,6 +197,7 @@ type SupportStub struct {
 func NewSupportStub() SupportClient {
     return &SupportStub{}
 }
+
 func (a *SupportStub) AddAttachmentsToSet(ctx workflow.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error) {
     var output support.AddAttachmentsToSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddAttachmentsToSet, input).Get(ctx, &output)
@@ -207,6 +208,7 @@ func (a *SupportStub) AddAttachmentsToSetAsync(ctx workflow.Context, input *supp
     future := workflow.ExecuteActivity(ctx, a.activities.AddAttachmentsToSet, input)
     return &SupportAddAttachmentsToSetResult{Result: future}
 }
+
 func (a *SupportStub) AddCommunicationToCase(ctx workflow.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error) {
     var output support.AddCommunicationToCaseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddCommunicationToCase, input).Get(ctx, &output)
@@ -217,6 +219,7 @@ func (a *SupportStub) AddCommunicationToCaseAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.AddCommunicationToCase, input)
     return &SupportAddCommunicationToCaseResult{Result: future}
 }
+
 func (a *SupportStub) CreateCase(ctx workflow.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error) {
     var output support.CreateCaseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCase, input).Get(ctx, &output)
@@ -227,6 +230,7 @@ func (a *SupportStub) CreateCaseAsync(ctx workflow.Context, input *support.Creat
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCase, input)
     return &SupportCreateCaseResult{Result: future}
 }
+
 func (a *SupportStub) DescribeAttachment(ctx workflow.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error) {
     var output support.DescribeAttachmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAttachment, input).Get(ctx, &output)
@@ -237,6 +241,7 @@ func (a *SupportStub) DescribeAttachmentAsync(ctx workflow.Context, input *suppo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAttachment, input)
     return &SupportDescribeAttachmentResult{Result: future}
 }
+
 func (a *SupportStub) DescribeCases(ctx workflow.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error) {
     var output support.DescribeCasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCases, input).Get(ctx, &output)
@@ -247,6 +252,7 @@ func (a *SupportStub) DescribeCasesAsync(ctx workflow.Context, input *support.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCases, input)
     return &SupportDescribeCasesResult{Result: future}
 }
+
 func (a *SupportStub) DescribeCommunications(ctx workflow.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error) {
     var output support.DescribeCommunicationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCommunications, input).Get(ctx, &output)
@@ -257,6 +263,7 @@ func (a *SupportStub) DescribeCommunicationsAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCommunications, input)
     return &SupportDescribeCommunicationsResult{Result: future}
 }
+
 func (a *SupportStub) DescribeServices(ctx workflow.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error) {
     var output support.DescribeServicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeServices, input).Get(ctx, &output)
@@ -267,6 +274,7 @@ func (a *SupportStub) DescribeServicesAsync(ctx workflow.Context, input *support
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeServices, input)
     return &SupportDescribeServicesResult{Result: future}
 }
+
 func (a *SupportStub) DescribeSeverityLevels(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error) {
     var output support.DescribeSeverityLevelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSeverityLevels, input).Get(ctx, &output)
@@ -277,6 +285,7 @@ func (a *SupportStub) DescribeSeverityLevelsAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSeverityLevels, input)
     return &SupportDescribeSeverityLevelsResult{Result: future}
 }
+
 func (a *SupportStub) DescribeTrustedAdvisorCheckRefreshStatuses(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error) {
     var output support.DescribeTrustedAdvisorCheckRefreshStatusesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckRefreshStatuses, input).Get(ctx, &output)
@@ -287,6 +296,7 @@ func (a *SupportStub) DescribeTrustedAdvisorCheckRefreshStatusesAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckRefreshStatuses, input)
     return &SupportDescribeTrustedAdvisorCheckRefreshStatusesResult{Result: future}
 }
+
 func (a *SupportStub) DescribeTrustedAdvisorCheckResult(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error) {
     var output support.DescribeTrustedAdvisorCheckResultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckResult, input).Get(ctx, &output)
@@ -297,6 +307,7 @@ func (a *SupportStub) DescribeTrustedAdvisorCheckResultAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckResult, input)
     return &SupportDescribeTrustedAdvisorCheckResultResult{Result: future}
 }
+
 func (a *SupportStub) DescribeTrustedAdvisorCheckSummaries(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error) {
     var output support.DescribeTrustedAdvisorCheckSummariesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckSummaries, input).Get(ctx, &output)
@@ -307,6 +318,7 @@ func (a *SupportStub) DescribeTrustedAdvisorCheckSummariesAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorCheckSummaries, input)
     return &SupportDescribeTrustedAdvisorCheckSummariesResult{Result: future}
 }
+
 func (a *SupportStub) DescribeTrustedAdvisorChecks(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error) {
     var output support.DescribeTrustedAdvisorChecksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorChecks, input).Get(ctx, &output)
@@ -317,6 +329,7 @@ func (a *SupportStub) DescribeTrustedAdvisorChecksAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTrustedAdvisorChecks, input)
     return &SupportDescribeTrustedAdvisorChecksResult{Result: future}
 }
+
 func (a *SupportStub) RefreshTrustedAdvisorCheck(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error) {
     var output support.RefreshTrustedAdvisorCheckOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RefreshTrustedAdvisorCheck, input).Get(ctx, &output)
@@ -327,6 +340,7 @@ func (a *SupportStub) RefreshTrustedAdvisorCheckAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.RefreshTrustedAdvisorCheck, input)
     return &SupportRefreshTrustedAdvisorCheckResult{Result: future}
 }
+
 func (a *SupportStub) ResolveCase(ctx workflow.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error) {
     var output support.ResolveCaseOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResolveCase, input).Get(ctx, &output)

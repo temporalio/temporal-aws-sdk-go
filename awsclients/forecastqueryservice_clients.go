@@ -10,6 +10,7 @@ type ForecastQueryServiceClient interface {
     QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error)
     QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult
 }
+
 type ForecastqueryserviceQueryForecastResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *ForecastqueryserviceQueryForecastResult) Get(ctx workflow.Context) (*fo
     return &output, err
 }
 
-
 type ForecastQueryServiceStub struct {
     activities awsactivities.ForecastQueryServiceActivities
 }
@@ -28,6 +28,7 @@ type ForecastQueryServiceStub struct {
 func NewForecastQueryServiceStub() ForecastQueryServiceClient {
     return &ForecastQueryServiceStub{}
 }
+
 func (a *ForecastQueryServiceStub) QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error) {
     var output forecastqueryservice.QueryForecastOutput
     err := workflow.ExecuteActivity(ctx, a.activities.QueryForecast, input).Get(ctx, &output)

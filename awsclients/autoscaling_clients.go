@@ -181,6 +181,7 @@ type AutoScalingClient interface {
     WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
     WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
     WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error}
+
 type AutoscalingAttachInstancesResult struct {
 	Result workflow.Future
 }
@@ -751,7 +752,6 @@ func (r *AutoscalingUpdateAutoScalingGroupResult) Get(ctx workflow.Context) (*au
     return &output, err
 }
 
-
 type AutoScalingStub struct {
     activities awsactivities.AutoScalingActivities
 }
@@ -759,6 +759,7 @@ type AutoScalingStub struct {
 func NewAutoScalingStub() AutoScalingClient {
     return &AutoScalingStub{}
 }
+
 func (a *AutoScalingStub) AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error) {
     var output autoscaling.AttachInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachInstances, input).Get(ctx, &output)
@@ -769,6 +770,7 @@ func (a *AutoScalingStub) AttachInstancesAsync(ctx workflow.Context, input *auto
     future := workflow.ExecuteActivity(ctx, a.activities.AttachInstances, input)
     return &AutoscalingAttachInstancesResult{Result: future}
 }
+
 func (a *AutoScalingStub) AttachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error) {
     var output autoscaling.AttachLoadBalancerTargetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachLoadBalancerTargetGroups, input).Get(ctx, &output)
@@ -779,6 +781,7 @@ func (a *AutoScalingStub) AttachLoadBalancerTargetGroupsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.AttachLoadBalancerTargetGroups, input)
     return &AutoscalingAttachLoadBalancerTargetGroupsResult{Result: future}
 }
+
 func (a *AutoScalingStub) AttachLoadBalancers(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) (*autoscaling.AttachLoadBalancersOutput, error) {
     var output autoscaling.AttachLoadBalancersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AttachLoadBalancers, input).Get(ctx, &output)
@@ -789,6 +792,7 @@ func (a *AutoScalingStub) AttachLoadBalancersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.AttachLoadBalancers, input)
     return &AutoscalingAttachLoadBalancersResult{Result: future}
 }
+
 func (a *AutoScalingStub) BatchDeleteScheduledAction(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) (*autoscaling.BatchDeleteScheduledActionOutput, error) {
     var output autoscaling.BatchDeleteScheduledActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDeleteScheduledAction, input).Get(ctx, &output)
@@ -799,6 +803,7 @@ func (a *AutoScalingStub) BatchDeleteScheduledActionAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDeleteScheduledAction, input)
     return &AutoscalingBatchDeleteScheduledActionResult{Result: future}
 }
+
 func (a *AutoScalingStub) BatchPutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error) {
     var output autoscaling.BatchPutScheduledUpdateGroupActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchPutScheduledUpdateGroupAction, input).Get(ctx, &output)
@@ -809,6 +814,7 @@ func (a *AutoScalingStub) BatchPutScheduledUpdateGroupActionAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.BatchPutScheduledUpdateGroupAction, input)
     return &AutoscalingBatchPutScheduledUpdateGroupActionResult{Result: future}
 }
+
 func (a *AutoScalingStub) CancelInstanceRefresh(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) (*autoscaling.CancelInstanceRefreshOutput, error) {
     var output autoscaling.CancelInstanceRefreshOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelInstanceRefresh, input).Get(ctx, &output)
@@ -819,6 +825,7 @@ func (a *AutoScalingStub) CancelInstanceRefreshAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CancelInstanceRefresh, input)
     return &AutoscalingCancelInstanceRefreshResult{Result: future}
 }
+
 func (a *AutoScalingStub) CompleteLifecycleAction(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) (*autoscaling.CompleteLifecycleActionOutput, error) {
     var output autoscaling.CompleteLifecycleActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CompleteLifecycleAction, input).Get(ctx, &output)
@@ -829,6 +836,7 @@ func (a *AutoScalingStub) CompleteLifecycleActionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CompleteLifecycleAction, input)
     return &AutoscalingCompleteLifecycleActionResult{Result: future}
 }
+
 func (a *AutoScalingStub) CreateAutoScalingGroup(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) (*autoscaling.CreateAutoScalingGroupOutput, error) {
     var output autoscaling.CreateAutoScalingGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAutoScalingGroup, input).Get(ctx, &output)
@@ -839,6 +847,7 @@ func (a *AutoScalingStub) CreateAutoScalingGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAutoScalingGroup, input)
     return &AutoscalingCreateAutoScalingGroupResult{Result: future}
 }
+
 func (a *AutoScalingStub) CreateLaunchConfiguration(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) (*autoscaling.CreateLaunchConfigurationOutput, error) {
     var output autoscaling.CreateLaunchConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLaunchConfiguration, input).Get(ctx, &output)
@@ -849,6 +858,7 @@ func (a *AutoScalingStub) CreateLaunchConfigurationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLaunchConfiguration, input)
     return &AutoscalingCreateLaunchConfigurationResult{Result: future}
 }
+
 func (a *AutoScalingStub) CreateOrUpdateTags(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) (*autoscaling.CreateOrUpdateTagsOutput, error) {
     var output autoscaling.CreateOrUpdateTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOrUpdateTags, input).Get(ctx, &output)
@@ -859,6 +869,7 @@ func (a *AutoScalingStub) CreateOrUpdateTagsAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOrUpdateTags, input)
     return &AutoscalingCreateOrUpdateTagsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteAutoScalingGroup(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) (*autoscaling.DeleteAutoScalingGroupOutput, error) {
     var output autoscaling.DeleteAutoScalingGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAutoScalingGroup, input).Get(ctx, &output)
@@ -869,6 +880,7 @@ func (a *AutoScalingStub) DeleteAutoScalingGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAutoScalingGroup, input)
     return &AutoscalingDeleteAutoScalingGroupResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteLaunchConfiguration(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) (*autoscaling.DeleteLaunchConfigurationOutput, error) {
     var output autoscaling.DeleteLaunchConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLaunchConfiguration, input).Get(ctx, &output)
@@ -879,6 +891,7 @@ func (a *AutoScalingStub) DeleteLaunchConfigurationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLaunchConfiguration, input)
     return &AutoscalingDeleteLaunchConfigurationResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteLifecycleHook(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) (*autoscaling.DeleteLifecycleHookOutput, error) {
     var output autoscaling.DeleteLifecycleHookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLifecycleHook, input).Get(ctx, &output)
@@ -889,6 +902,7 @@ func (a *AutoScalingStub) DeleteLifecycleHookAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLifecycleHook, input)
     return &AutoscalingDeleteLifecycleHookResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteNotificationConfiguration(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) (*autoscaling.DeleteNotificationConfigurationOutput, error) {
     var output autoscaling.DeleteNotificationConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNotificationConfiguration, input).Get(ctx, &output)
@@ -899,6 +913,7 @@ func (a *AutoScalingStub) DeleteNotificationConfigurationAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNotificationConfiguration, input)
     return &AutoscalingDeleteNotificationConfigurationResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeletePolicy(ctx workflow.Context, input *autoscaling.DeletePolicyInput) (*autoscaling.DeletePolicyOutput, error) {
     var output autoscaling.DeletePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input).Get(ctx, &output)
@@ -909,6 +924,7 @@ func (a *AutoScalingStub) DeletePolicyAsync(ctx workflow.Context, input *autosca
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePolicy, input)
     return &AutoscalingDeletePolicyResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteScheduledAction(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) (*autoscaling.DeleteScheduledActionOutput, error) {
     var output autoscaling.DeleteScheduledActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteScheduledAction, input).Get(ctx, &output)
@@ -919,6 +935,7 @@ func (a *AutoScalingStub) DeleteScheduledActionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteScheduledAction, input)
     return &AutoscalingDeleteScheduledActionResult{Result: future}
 }
+
 func (a *AutoScalingStub) DeleteTags(ctx workflow.Context, input *autoscaling.DeleteTagsInput) (*autoscaling.DeleteTagsOutput, error) {
     var output autoscaling.DeleteTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTags, input).Get(ctx, &output)
@@ -929,6 +946,7 @@ func (a *AutoScalingStub) DeleteTagsAsync(ctx workflow.Context, input *autoscali
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTags, input)
     return &AutoscalingDeleteTagsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeAccountLimits(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) (*autoscaling.DescribeAccountLimitsOutput, error) {
     var output autoscaling.DescribeAccountLimitsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountLimits, input).Get(ctx, &output)
@@ -939,6 +957,7 @@ func (a *AutoScalingStub) DescribeAccountLimitsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountLimits, input)
     return &AutoscalingDescribeAccountLimitsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeAdjustmentTypes(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) (*autoscaling.DescribeAdjustmentTypesOutput, error) {
     var output autoscaling.DescribeAdjustmentTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAdjustmentTypes, input).Get(ctx, &output)
@@ -949,6 +968,7 @@ func (a *AutoScalingStub) DescribeAdjustmentTypesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAdjustmentTypes, input)
     return &AutoscalingDescribeAdjustmentTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeAutoScalingGroups(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) (*autoscaling.DescribeAutoScalingGroupsOutput, error) {
     var output autoscaling.DescribeAutoScalingGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingGroups, input).Get(ctx, &output)
@@ -959,6 +979,7 @@ func (a *AutoScalingStub) DescribeAutoScalingGroupsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingGroups, input)
     return &AutoscalingDescribeAutoScalingGroupsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeAutoScalingInstances(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) (*autoscaling.DescribeAutoScalingInstancesOutput, error) {
     var output autoscaling.DescribeAutoScalingInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingInstances, input).Get(ctx, &output)
@@ -969,6 +990,7 @@ func (a *AutoScalingStub) DescribeAutoScalingInstancesAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingInstances, input)
     return &AutoscalingDescribeAutoScalingInstancesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeAutoScalingNotificationTypes(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error) {
     var output autoscaling.DescribeAutoScalingNotificationTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingNotificationTypes, input).Get(ctx, &output)
@@ -979,6 +1001,7 @@ func (a *AutoScalingStub) DescribeAutoScalingNotificationTypesAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutoScalingNotificationTypes, input)
     return &AutoscalingDescribeAutoScalingNotificationTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeInstanceRefreshes(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) (*autoscaling.DescribeInstanceRefreshesOutput, error) {
     var output autoscaling.DescribeInstanceRefreshesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceRefreshes, input).Get(ctx, &output)
@@ -989,6 +1012,7 @@ func (a *AutoScalingStub) DescribeInstanceRefreshesAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceRefreshes, input)
     return &AutoscalingDescribeInstanceRefreshesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeLaunchConfigurations(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) (*autoscaling.DescribeLaunchConfigurationsOutput, error) {
     var output autoscaling.DescribeLaunchConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLaunchConfigurations, input).Get(ctx, &output)
@@ -999,6 +1023,7 @@ func (a *AutoScalingStub) DescribeLaunchConfigurationsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLaunchConfigurations, input)
     return &AutoscalingDescribeLaunchConfigurationsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeLifecycleHookTypes(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) (*autoscaling.DescribeLifecycleHookTypesOutput, error) {
     var output autoscaling.DescribeLifecycleHookTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLifecycleHookTypes, input).Get(ctx, &output)
@@ -1009,6 +1034,7 @@ func (a *AutoScalingStub) DescribeLifecycleHookTypesAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLifecycleHookTypes, input)
     return &AutoscalingDescribeLifecycleHookTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeLifecycleHooks(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) (*autoscaling.DescribeLifecycleHooksOutput, error) {
     var output autoscaling.DescribeLifecycleHooksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLifecycleHooks, input).Get(ctx, &output)
@@ -1019,6 +1045,7 @@ func (a *AutoScalingStub) DescribeLifecycleHooksAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLifecycleHooks, input)
     return &AutoscalingDescribeLifecycleHooksResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error) {
     var output autoscaling.DescribeLoadBalancerTargetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLoadBalancerTargetGroups, input).Get(ctx, &output)
@@ -1029,6 +1056,7 @@ func (a *AutoScalingStub) DescribeLoadBalancerTargetGroupsAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLoadBalancerTargetGroups, input)
     return &AutoscalingDescribeLoadBalancerTargetGroupsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeLoadBalancers(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) (*autoscaling.DescribeLoadBalancersOutput, error) {
     var output autoscaling.DescribeLoadBalancersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLoadBalancers, input).Get(ctx, &output)
@@ -1039,6 +1067,7 @@ func (a *AutoScalingStub) DescribeLoadBalancersAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLoadBalancers, input)
     return &AutoscalingDescribeLoadBalancersResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeMetricCollectionTypes(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) (*autoscaling.DescribeMetricCollectionTypesOutput, error) {
     var output autoscaling.DescribeMetricCollectionTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMetricCollectionTypes, input).Get(ctx, &output)
@@ -1049,6 +1078,7 @@ func (a *AutoScalingStub) DescribeMetricCollectionTypesAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMetricCollectionTypes, input)
     return &AutoscalingDescribeMetricCollectionTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeNotificationConfigurations(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) (*autoscaling.DescribeNotificationConfigurationsOutput, error) {
     var output autoscaling.DescribeNotificationConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationConfigurations, input).Get(ctx, &output)
@@ -1059,6 +1089,7 @@ func (a *AutoScalingStub) DescribeNotificationConfigurationsAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationConfigurations, input)
     return &AutoscalingDescribeNotificationConfigurationsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribePolicies(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) (*autoscaling.DescribePoliciesOutput, error) {
     var output autoscaling.DescribePoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePolicies, input).Get(ctx, &output)
@@ -1069,6 +1100,7 @@ func (a *AutoScalingStub) DescribePoliciesAsync(ctx workflow.Context, input *aut
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePolicies, input)
     return &AutoscalingDescribePoliciesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeScalingActivities(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) (*autoscaling.DescribeScalingActivitiesOutput, error) {
     var output autoscaling.DescribeScalingActivitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingActivities, input).Get(ctx, &output)
@@ -1079,6 +1111,7 @@ func (a *AutoScalingStub) DescribeScalingActivitiesAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingActivities, input)
     return &AutoscalingDescribeScalingActivitiesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeScalingProcessTypes(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) (*autoscaling.DescribeScalingProcessTypesOutput, error) {
     var output autoscaling.DescribeScalingProcessTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingProcessTypes, input).Get(ctx, &output)
@@ -1089,6 +1122,7 @@ func (a *AutoScalingStub) DescribeScalingProcessTypesAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingProcessTypes, input)
     return &AutoscalingDescribeScalingProcessTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeScheduledActions(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) (*autoscaling.DescribeScheduledActionsOutput, error) {
     var output autoscaling.DescribeScheduledActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeScheduledActions, input).Get(ctx, &output)
@@ -1099,6 +1133,7 @@ func (a *AutoScalingStub) DescribeScheduledActionsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeScheduledActions, input)
     return &AutoscalingDescribeScheduledActionsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeTags(ctx workflow.Context, input *autoscaling.DescribeTagsInput) (*autoscaling.DescribeTagsOutput, error) {
     var output autoscaling.DescribeTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTags, input).Get(ctx, &output)
@@ -1109,6 +1144,7 @@ func (a *AutoScalingStub) DescribeTagsAsync(ctx workflow.Context, input *autosca
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTags, input)
     return &AutoscalingDescribeTagsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DescribeTerminationPolicyTypes(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) (*autoscaling.DescribeTerminationPolicyTypesOutput, error) {
     var output autoscaling.DescribeTerminationPolicyTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTerminationPolicyTypes, input).Get(ctx, &output)
@@ -1119,6 +1155,7 @@ func (a *AutoScalingStub) DescribeTerminationPolicyTypesAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTerminationPolicyTypes, input)
     return &AutoscalingDescribeTerminationPolicyTypesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DetachInstances(ctx workflow.Context, input *autoscaling.DetachInstancesInput) (*autoscaling.DetachInstancesOutput, error) {
     var output autoscaling.DetachInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachInstances, input).Get(ctx, &output)
@@ -1129,6 +1166,7 @@ func (a *AutoScalingStub) DetachInstancesAsync(ctx workflow.Context, input *auto
     future := workflow.ExecuteActivity(ctx, a.activities.DetachInstances, input)
     return &AutoscalingDetachInstancesResult{Result: future}
 }
+
 func (a *AutoScalingStub) DetachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error) {
     var output autoscaling.DetachLoadBalancerTargetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachLoadBalancerTargetGroups, input).Get(ctx, &output)
@@ -1139,6 +1177,7 @@ func (a *AutoScalingStub) DetachLoadBalancerTargetGroupsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DetachLoadBalancerTargetGroups, input)
     return &AutoscalingDetachLoadBalancerTargetGroupsResult{Result: future}
 }
+
 func (a *AutoScalingStub) DetachLoadBalancers(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) (*autoscaling.DetachLoadBalancersOutput, error) {
     var output autoscaling.DetachLoadBalancersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetachLoadBalancers, input).Get(ctx, &output)
@@ -1149,6 +1188,7 @@ func (a *AutoScalingStub) DetachLoadBalancersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DetachLoadBalancers, input)
     return &AutoscalingDetachLoadBalancersResult{Result: future}
 }
+
 func (a *AutoScalingStub) DisableMetricsCollection(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) (*autoscaling.DisableMetricsCollectionOutput, error) {
     var output autoscaling.DisableMetricsCollectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableMetricsCollection, input).Get(ctx, &output)
@@ -1159,6 +1199,7 @@ func (a *AutoScalingStub) DisableMetricsCollectionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DisableMetricsCollection, input)
     return &AutoscalingDisableMetricsCollectionResult{Result: future}
 }
+
 func (a *AutoScalingStub) EnableMetricsCollection(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) (*autoscaling.EnableMetricsCollectionOutput, error) {
     var output autoscaling.EnableMetricsCollectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableMetricsCollection, input).Get(ctx, &output)
@@ -1169,6 +1210,7 @@ func (a *AutoScalingStub) EnableMetricsCollectionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.EnableMetricsCollection, input)
     return &AutoscalingEnableMetricsCollectionResult{Result: future}
 }
+
 func (a *AutoScalingStub) EnterStandby(ctx workflow.Context, input *autoscaling.EnterStandbyInput) (*autoscaling.EnterStandbyOutput, error) {
     var output autoscaling.EnterStandbyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnterStandby, input).Get(ctx, &output)
@@ -1179,6 +1221,7 @@ func (a *AutoScalingStub) EnterStandbyAsync(ctx workflow.Context, input *autosca
     future := workflow.ExecuteActivity(ctx, a.activities.EnterStandby, input)
     return &AutoscalingEnterStandbyResult{Result: future}
 }
+
 func (a *AutoScalingStub) ExecutePolicy(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) (*autoscaling.ExecutePolicyOutput, error) {
     var output autoscaling.ExecutePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExecutePolicy, input).Get(ctx, &output)
@@ -1189,6 +1232,7 @@ func (a *AutoScalingStub) ExecutePolicyAsync(ctx workflow.Context, input *autosc
     future := workflow.ExecuteActivity(ctx, a.activities.ExecutePolicy, input)
     return &AutoscalingExecutePolicyResult{Result: future}
 }
+
 func (a *AutoScalingStub) ExitStandby(ctx workflow.Context, input *autoscaling.ExitStandbyInput) (*autoscaling.ExitStandbyOutput, error) {
     var output autoscaling.ExitStandbyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExitStandby, input).Get(ctx, &output)
@@ -1199,6 +1243,7 @@ func (a *AutoScalingStub) ExitStandbyAsync(ctx workflow.Context, input *autoscal
     future := workflow.ExecuteActivity(ctx, a.activities.ExitStandby, input)
     return &AutoscalingExitStandbyResult{Result: future}
 }
+
 func (a *AutoScalingStub) PutLifecycleHook(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) (*autoscaling.PutLifecycleHookOutput, error) {
     var output autoscaling.PutLifecycleHookOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutLifecycleHook, input).Get(ctx, &output)
@@ -1209,6 +1254,7 @@ func (a *AutoScalingStub) PutLifecycleHookAsync(ctx workflow.Context, input *aut
     future := workflow.ExecuteActivity(ctx, a.activities.PutLifecycleHook, input)
     return &AutoscalingPutLifecycleHookResult{Result: future}
 }
+
 func (a *AutoScalingStub) PutNotificationConfiguration(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) (*autoscaling.PutNotificationConfigurationOutput, error) {
     var output autoscaling.PutNotificationConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutNotificationConfiguration, input).Get(ctx, &output)
@@ -1219,6 +1265,7 @@ func (a *AutoScalingStub) PutNotificationConfigurationAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.PutNotificationConfiguration, input)
     return &AutoscalingPutNotificationConfigurationResult{Result: future}
 }
+
 func (a *AutoScalingStub) PutScalingPolicy(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) (*autoscaling.PutScalingPolicyOutput, error) {
     var output autoscaling.PutScalingPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutScalingPolicy, input).Get(ctx, &output)
@@ -1229,6 +1276,7 @@ func (a *AutoScalingStub) PutScalingPolicyAsync(ctx workflow.Context, input *aut
     future := workflow.ExecuteActivity(ctx, a.activities.PutScalingPolicy, input)
     return &AutoscalingPutScalingPolicyResult{Result: future}
 }
+
 func (a *AutoScalingStub) PutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) (*autoscaling.PutScheduledUpdateGroupActionOutput, error) {
     var output autoscaling.PutScheduledUpdateGroupActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutScheduledUpdateGroupAction, input).Get(ctx, &output)
@@ -1239,6 +1287,7 @@ func (a *AutoScalingStub) PutScheduledUpdateGroupActionAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.PutScheduledUpdateGroupAction, input)
     return &AutoscalingPutScheduledUpdateGroupActionResult{Result: future}
 }
+
 func (a *AutoScalingStub) RecordLifecycleActionHeartbeat(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error) {
     var output autoscaling.RecordLifecycleActionHeartbeatOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RecordLifecycleActionHeartbeat, input).Get(ctx, &output)
@@ -1249,6 +1298,7 @@ func (a *AutoScalingStub) RecordLifecycleActionHeartbeatAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.RecordLifecycleActionHeartbeat, input)
     return &AutoscalingRecordLifecycleActionHeartbeatResult{Result: future}
 }
+
 func (a *AutoScalingStub) ResumeProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.ResumeProcessesOutput, error) {
     var output autoscaling.ResumeProcessesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResumeProcesses, input).Get(ctx, &output)
@@ -1259,6 +1309,7 @@ func (a *AutoScalingStub) ResumeProcessesAsync(ctx workflow.Context, input *auto
     future := workflow.ExecuteActivity(ctx, a.activities.ResumeProcesses, input)
     return &AutoscalingResumeProcessesResult{Result: future}
 }
+
 func (a *AutoScalingStub) SetDesiredCapacity(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) (*autoscaling.SetDesiredCapacityOutput, error) {
     var output autoscaling.SetDesiredCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetDesiredCapacity, input).Get(ctx, &output)
@@ -1269,6 +1320,7 @@ func (a *AutoScalingStub) SetDesiredCapacityAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.SetDesiredCapacity, input)
     return &AutoscalingSetDesiredCapacityResult{Result: future}
 }
+
 func (a *AutoScalingStub) SetInstanceHealth(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) (*autoscaling.SetInstanceHealthOutput, error) {
     var output autoscaling.SetInstanceHealthOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetInstanceHealth, input).Get(ctx, &output)
@@ -1279,6 +1331,7 @@ func (a *AutoScalingStub) SetInstanceHealthAsync(ctx workflow.Context, input *au
     future := workflow.ExecuteActivity(ctx, a.activities.SetInstanceHealth, input)
     return &AutoscalingSetInstanceHealthResult{Result: future}
 }
+
 func (a *AutoScalingStub) SetInstanceProtection(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) (*autoscaling.SetInstanceProtectionOutput, error) {
     var output autoscaling.SetInstanceProtectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetInstanceProtection, input).Get(ctx, &output)
@@ -1289,6 +1342,7 @@ func (a *AutoScalingStub) SetInstanceProtectionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.SetInstanceProtection, input)
     return &AutoscalingSetInstanceProtectionResult{Result: future}
 }
+
 func (a *AutoScalingStub) StartInstanceRefresh(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) (*autoscaling.StartInstanceRefreshOutput, error) {
     var output autoscaling.StartInstanceRefreshOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartInstanceRefresh, input).Get(ctx, &output)
@@ -1299,6 +1353,7 @@ func (a *AutoScalingStub) StartInstanceRefreshAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.StartInstanceRefresh, input)
     return &AutoscalingStartInstanceRefreshResult{Result: future}
 }
+
 func (a *AutoScalingStub) SuspendProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.SuspendProcessesOutput, error) {
     var output autoscaling.SuspendProcessesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SuspendProcesses, input).Get(ctx, &output)
@@ -1309,6 +1364,7 @@ func (a *AutoScalingStub) SuspendProcessesAsync(ctx workflow.Context, input *aut
     future := workflow.ExecuteActivity(ctx, a.activities.SuspendProcesses, input)
     return &AutoscalingSuspendProcessesResult{Result: future}
 }
+
 func (a *AutoScalingStub) TerminateInstanceInAutoScalingGroup(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error) {
     var output autoscaling.TerminateInstanceInAutoScalingGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TerminateInstanceInAutoScalingGroup, input).Get(ctx, &output)
@@ -1319,6 +1375,7 @@ func (a *AutoScalingStub) TerminateInstanceInAutoScalingGroupAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.TerminateInstanceInAutoScalingGroup, input)
     return &AutoscalingTerminateInstanceInAutoScalingGroupResult{Result: future}
 }
+
 func (a *AutoScalingStub) UpdateAutoScalingGroup(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) (*autoscaling.UpdateAutoScalingGroupOutput, error) {
     var output autoscaling.UpdateAutoScalingGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAutoScalingGroup, input).Get(ctx, &output)
@@ -1338,6 +1395,7 @@ func (a *AutoScalingStub) WaitUntilGroupExistsAsync(ctx workflow.Context, input 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilGroupExists, input)
 }
 
+
 func (a *AutoScalingStub) WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilGroupInService, input).Get(ctx, nil)
 }
@@ -1346,6 +1404,7 @@ func (a *AutoScalingStub) WaitUntilGroupInServiceAsync(ctx workflow.Context, inp
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilGroupInService, input)
 }
 
+
 func (a *AutoScalingStub) WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilGroupNotExists, input).Get(ctx, nil)
 }
@@ -1353,3 +1412,4 @@ func (a *AutoScalingStub) WaitUntilGroupNotExists(ctx workflow.Context, input *a
 func (a *AutoScalingStub) WaitUntilGroupNotExistsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilGroupNotExists, input)
 }
+

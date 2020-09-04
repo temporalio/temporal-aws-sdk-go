@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,14 +14,10 @@ func NewKinesisVideoSignalingChannelsActivities(client kinesisvideosignalingchan
     return &KinesisVideoSignalingChannelsActivities{client: client}
 }
 
-
 func (a *KinesisVideoSignalingChannelsActivities) GetIceServerConfig(input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
     return a.client.GetIceServerConfig(input)
 }
 
-
-
 func (a *KinesisVideoSignalingChannelsActivities) SendAlexaOfferToMaster(input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
     return a.client.SendAlexaOfferToMaster(input)
 }
-

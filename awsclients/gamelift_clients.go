@@ -277,6 +277,7 @@ type GameLiftClient interface {
     ValidateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) (*gamelift.ValidateMatchmakingRuleSetOutput, error)
     ValidateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) *GameliftValidateMatchmakingRuleSetResult
 }
+
 type GameliftAcceptMatchResult struct {
 	Result workflow.Future
 }
@@ -1177,7 +1178,6 @@ func (r *GameliftValidateMatchmakingRuleSetResult) Get(ctx workflow.Context) (*g
     return &output, err
 }
 
-
 type GameLiftStub struct {
     activities awsactivities.GameLiftActivities
 }
@@ -1185,6 +1185,7 @@ type GameLiftStub struct {
 func NewGameLiftStub() GameLiftClient {
     return &GameLiftStub{}
 }
+
 func (a *GameLiftStub) AcceptMatch(ctx workflow.Context, input *gamelift.AcceptMatchInput) (*gamelift.AcceptMatchOutput, error) {
     var output gamelift.AcceptMatchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptMatch, input).Get(ctx, &output)
@@ -1195,6 +1196,7 @@ func (a *GameLiftStub) AcceptMatchAsync(ctx workflow.Context, input *gamelift.Ac
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptMatch, input)
     return &GameliftAcceptMatchResult{Result: future}
 }
+
 func (a *GameLiftStub) ClaimGameServer(ctx workflow.Context, input *gamelift.ClaimGameServerInput) (*gamelift.ClaimGameServerOutput, error) {
     var output gamelift.ClaimGameServerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ClaimGameServer, input).Get(ctx, &output)
@@ -1205,6 +1207,7 @@ func (a *GameLiftStub) ClaimGameServerAsync(ctx workflow.Context, input *gamelif
     future := workflow.ExecuteActivity(ctx, a.activities.ClaimGameServer, input)
     return &GameliftClaimGameServerResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateAlias(ctx workflow.Context, input *gamelift.CreateAliasInput) (*gamelift.CreateAliasOutput, error) {
     var output gamelift.CreateAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAlias, input).Get(ctx, &output)
@@ -1215,6 +1218,7 @@ func (a *GameLiftStub) CreateAliasAsync(ctx workflow.Context, input *gamelift.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAlias, input)
     return &GameliftCreateAliasResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateBuild(ctx workflow.Context, input *gamelift.CreateBuildInput) (*gamelift.CreateBuildOutput, error) {
     var output gamelift.CreateBuildOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBuild, input).Get(ctx, &output)
@@ -1225,6 +1229,7 @@ func (a *GameLiftStub) CreateBuildAsync(ctx workflow.Context, input *gamelift.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBuild, input)
     return &GameliftCreateBuildResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateFleet(ctx workflow.Context, input *gamelift.CreateFleetInput) (*gamelift.CreateFleetOutput, error) {
     var output gamelift.CreateFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFleet, input).Get(ctx, &output)
@@ -1235,6 +1240,7 @@ func (a *GameLiftStub) CreateFleetAsync(ctx workflow.Context, input *gamelift.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFleet, input)
     return &GameliftCreateFleetResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateGameServerGroup(ctx workflow.Context, input *gamelift.CreateGameServerGroupInput) (*gamelift.CreateGameServerGroupOutput, error) {
     var output gamelift.CreateGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGameServerGroup, input).Get(ctx, &output)
@@ -1245,6 +1251,7 @@ func (a *GameLiftStub) CreateGameServerGroupAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGameServerGroup, input)
     return &GameliftCreateGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateGameSession(ctx workflow.Context, input *gamelift.CreateGameSessionInput) (*gamelift.CreateGameSessionOutput, error) {
     var output gamelift.CreateGameSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGameSession, input).Get(ctx, &output)
@@ -1255,6 +1262,7 @@ func (a *GameLiftStub) CreateGameSessionAsync(ctx workflow.Context, input *gamel
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGameSession, input)
     return &GameliftCreateGameSessionResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateGameSessionQueue(ctx workflow.Context, input *gamelift.CreateGameSessionQueueInput) (*gamelift.CreateGameSessionQueueOutput, error) {
     var output gamelift.CreateGameSessionQueueOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGameSessionQueue, input).Get(ctx, &output)
@@ -1265,6 +1273,7 @@ func (a *GameLiftStub) CreateGameSessionQueueAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGameSessionQueue, input)
     return &GameliftCreateGameSessionQueueResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.CreateMatchmakingConfigurationInput) (*gamelift.CreateMatchmakingConfigurationOutput, error) {
     var output gamelift.CreateMatchmakingConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMatchmakingConfiguration, input).Get(ctx, &output)
@@ -1275,6 +1284,7 @@ func (a *GameLiftStub) CreateMatchmakingConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMatchmakingConfiguration, input)
     return &GameliftCreateMatchmakingConfigurationResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.CreateMatchmakingRuleSetInput) (*gamelift.CreateMatchmakingRuleSetOutput, error) {
     var output gamelift.CreateMatchmakingRuleSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMatchmakingRuleSet, input).Get(ctx, &output)
@@ -1285,6 +1295,7 @@ func (a *GameLiftStub) CreateMatchmakingRuleSetAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMatchmakingRuleSet, input)
     return &GameliftCreateMatchmakingRuleSetResult{Result: future}
 }
+
 func (a *GameLiftStub) CreatePlayerSession(ctx workflow.Context, input *gamelift.CreatePlayerSessionInput) (*gamelift.CreatePlayerSessionOutput, error) {
     var output gamelift.CreatePlayerSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePlayerSession, input).Get(ctx, &output)
@@ -1295,6 +1306,7 @@ func (a *GameLiftStub) CreatePlayerSessionAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePlayerSession, input)
     return &GameliftCreatePlayerSessionResult{Result: future}
 }
+
 func (a *GameLiftStub) CreatePlayerSessions(ctx workflow.Context, input *gamelift.CreatePlayerSessionsInput) (*gamelift.CreatePlayerSessionsOutput, error) {
     var output gamelift.CreatePlayerSessionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePlayerSessions, input).Get(ctx, &output)
@@ -1305,6 +1317,7 @@ func (a *GameLiftStub) CreatePlayerSessionsAsync(ctx workflow.Context, input *ga
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePlayerSessions, input)
     return &GameliftCreatePlayerSessionsResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateScript(ctx workflow.Context, input *gamelift.CreateScriptInput) (*gamelift.CreateScriptOutput, error) {
     var output gamelift.CreateScriptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateScript, input).Get(ctx, &output)
@@ -1315,6 +1328,7 @@ func (a *GameLiftStub) CreateScriptAsync(ctx workflow.Context, input *gamelift.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateScript, input)
     return &GameliftCreateScriptResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.CreateVpcPeeringAuthorizationInput) (*gamelift.CreateVpcPeeringAuthorizationOutput, error) {
     var output gamelift.CreateVpcPeeringAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVpcPeeringAuthorization, input).Get(ctx, &output)
@@ -1325,6 +1339,7 @@ func (a *GameLiftStub) CreateVpcPeeringAuthorizationAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVpcPeeringAuthorization, input)
     return &GameliftCreateVpcPeeringAuthorizationResult{Result: future}
 }
+
 func (a *GameLiftStub) CreateVpcPeeringConnection(ctx workflow.Context, input *gamelift.CreateVpcPeeringConnectionInput) (*gamelift.CreateVpcPeeringConnectionOutput, error) {
     var output gamelift.CreateVpcPeeringConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVpcPeeringConnection, input).Get(ctx, &output)
@@ -1335,6 +1350,7 @@ func (a *GameLiftStub) CreateVpcPeeringConnectionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVpcPeeringConnection, input)
     return &GameliftCreateVpcPeeringConnectionResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteAlias(ctx workflow.Context, input *gamelift.DeleteAliasInput) (*gamelift.DeleteAliasOutput, error) {
     var output gamelift.DeleteAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAlias, input).Get(ctx, &output)
@@ -1345,6 +1361,7 @@ func (a *GameLiftStub) DeleteAliasAsync(ctx workflow.Context, input *gamelift.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAlias, input)
     return &GameliftDeleteAliasResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteBuild(ctx workflow.Context, input *gamelift.DeleteBuildInput) (*gamelift.DeleteBuildOutput, error) {
     var output gamelift.DeleteBuildOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBuild, input).Get(ctx, &output)
@@ -1355,6 +1372,7 @@ func (a *GameLiftStub) DeleteBuildAsync(ctx workflow.Context, input *gamelift.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBuild, input)
     return &GameliftDeleteBuildResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteFleet(ctx workflow.Context, input *gamelift.DeleteFleetInput) (*gamelift.DeleteFleetOutput, error) {
     var output gamelift.DeleteFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFleet, input).Get(ctx, &output)
@@ -1365,6 +1383,7 @@ func (a *GameLiftStub) DeleteFleetAsync(ctx workflow.Context, input *gamelift.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFleet, input)
     return &GameliftDeleteFleetResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteGameServerGroup(ctx workflow.Context, input *gamelift.DeleteGameServerGroupInput) (*gamelift.DeleteGameServerGroupOutput, error) {
     var output gamelift.DeleteGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGameServerGroup, input).Get(ctx, &output)
@@ -1375,6 +1394,7 @@ func (a *GameLiftStub) DeleteGameServerGroupAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGameServerGroup, input)
     return &GameliftDeleteGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteGameSessionQueue(ctx workflow.Context, input *gamelift.DeleteGameSessionQueueInput) (*gamelift.DeleteGameSessionQueueOutput, error) {
     var output gamelift.DeleteGameSessionQueueOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGameSessionQueue, input).Get(ctx, &output)
@@ -1385,6 +1405,7 @@ func (a *GameLiftStub) DeleteGameSessionQueueAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGameSessionQueue, input)
     return &GameliftDeleteGameSessionQueueResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteMatchmakingConfiguration(ctx workflow.Context, input *gamelift.DeleteMatchmakingConfigurationInput) (*gamelift.DeleteMatchmakingConfigurationOutput, error) {
     var output gamelift.DeleteMatchmakingConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMatchmakingConfiguration, input).Get(ctx, &output)
@@ -1395,6 +1416,7 @@ func (a *GameLiftStub) DeleteMatchmakingConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMatchmakingConfiguration, input)
     return &GameliftDeleteMatchmakingConfigurationResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteMatchmakingRuleSet(ctx workflow.Context, input *gamelift.DeleteMatchmakingRuleSetInput) (*gamelift.DeleteMatchmakingRuleSetOutput, error) {
     var output gamelift.DeleteMatchmakingRuleSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMatchmakingRuleSet, input).Get(ctx, &output)
@@ -1405,6 +1427,7 @@ func (a *GameLiftStub) DeleteMatchmakingRuleSetAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMatchmakingRuleSet, input)
     return &GameliftDeleteMatchmakingRuleSetResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteScalingPolicy(ctx workflow.Context, input *gamelift.DeleteScalingPolicyInput) (*gamelift.DeleteScalingPolicyOutput, error) {
     var output gamelift.DeleteScalingPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteScalingPolicy, input).Get(ctx, &output)
@@ -1415,6 +1438,7 @@ func (a *GameLiftStub) DeleteScalingPolicyAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteScalingPolicy, input)
     return &GameliftDeleteScalingPolicyResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteScript(ctx workflow.Context, input *gamelift.DeleteScriptInput) (*gamelift.DeleteScriptOutput, error) {
     var output gamelift.DeleteScriptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteScript, input).Get(ctx, &output)
@@ -1425,6 +1449,7 @@ func (a *GameLiftStub) DeleteScriptAsync(ctx workflow.Context, input *gamelift.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteScript, input)
     return &GameliftDeleteScriptResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.DeleteVpcPeeringAuthorizationInput) (*gamelift.DeleteVpcPeeringAuthorizationOutput, error) {
     var output gamelift.DeleteVpcPeeringAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcPeeringAuthorization, input).Get(ctx, &output)
@@ -1435,6 +1460,7 @@ func (a *GameLiftStub) DeleteVpcPeeringAuthorizationAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcPeeringAuthorization, input)
     return &GameliftDeleteVpcPeeringAuthorizationResult{Result: future}
 }
+
 func (a *GameLiftStub) DeleteVpcPeeringConnection(ctx workflow.Context, input *gamelift.DeleteVpcPeeringConnectionInput) (*gamelift.DeleteVpcPeeringConnectionOutput, error) {
     var output gamelift.DeleteVpcPeeringConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcPeeringConnection, input).Get(ctx, &output)
@@ -1445,6 +1471,7 @@ func (a *GameLiftStub) DeleteVpcPeeringConnectionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVpcPeeringConnection, input)
     return &GameliftDeleteVpcPeeringConnectionResult{Result: future}
 }
+
 func (a *GameLiftStub) DeregisterGameServer(ctx workflow.Context, input *gamelift.DeregisterGameServerInput) (*gamelift.DeregisterGameServerOutput, error) {
     var output gamelift.DeregisterGameServerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeregisterGameServer, input).Get(ctx, &output)
@@ -1455,6 +1482,7 @@ func (a *GameLiftStub) DeregisterGameServerAsync(ctx workflow.Context, input *ga
     future := workflow.ExecuteActivity(ctx, a.activities.DeregisterGameServer, input)
     return &GameliftDeregisterGameServerResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeAlias(ctx workflow.Context, input *gamelift.DescribeAliasInput) (*gamelift.DescribeAliasOutput, error) {
     var output gamelift.DescribeAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAlias, input).Get(ctx, &output)
@@ -1465,6 +1493,7 @@ func (a *GameLiftStub) DescribeAliasAsync(ctx workflow.Context, input *gamelift.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAlias, input)
     return &GameliftDescribeAliasResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeBuild(ctx workflow.Context, input *gamelift.DescribeBuildInput) (*gamelift.DescribeBuildOutput, error) {
     var output gamelift.DescribeBuildOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBuild, input).Get(ctx, &output)
@@ -1475,6 +1504,7 @@ func (a *GameLiftStub) DescribeBuildAsync(ctx workflow.Context, input *gamelift.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBuild, input)
     return &GameliftDescribeBuildResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeEC2InstanceLimits(ctx workflow.Context, input *gamelift.DescribeEC2InstanceLimitsInput) (*gamelift.DescribeEC2InstanceLimitsOutput, error) {
     var output gamelift.DescribeEC2InstanceLimitsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEC2InstanceLimits, input).Get(ctx, &output)
@@ -1485,6 +1515,7 @@ func (a *GameLiftStub) DescribeEC2InstanceLimitsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEC2InstanceLimits, input)
     return &GameliftDescribeEC2InstanceLimitsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeFleetAttributes(ctx workflow.Context, input *gamelift.DescribeFleetAttributesInput) (*gamelift.DescribeFleetAttributesOutput, error) {
     var output gamelift.DescribeFleetAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetAttributes, input).Get(ctx, &output)
@@ -1495,6 +1526,7 @@ func (a *GameLiftStub) DescribeFleetAttributesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetAttributes, input)
     return &GameliftDescribeFleetAttributesResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeFleetCapacity(ctx workflow.Context, input *gamelift.DescribeFleetCapacityInput) (*gamelift.DescribeFleetCapacityOutput, error) {
     var output gamelift.DescribeFleetCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetCapacity, input).Get(ctx, &output)
@@ -1505,6 +1537,7 @@ func (a *GameLiftStub) DescribeFleetCapacityAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetCapacity, input)
     return &GameliftDescribeFleetCapacityResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeFleetEvents(ctx workflow.Context, input *gamelift.DescribeFleetEventsInput) (*gamelift.DescribeFleetEventsOutput, error) {
     var output gamelift.DescribeFleetEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetEvents, input).Get(ctx, &output)
@@ -1515,6 +1548,7 @@ func (a *GameLiftStub) DescribeFleetEventsAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetEvents, input)
     return &GameliftDescribeFleetEventsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeFleetPortSettings(ctx workflow.Context, input *gamelift.DescribeFleetPortSettingsInput) (*gamelift.DescribeFleetPortSettingsOutput, error) {
     var output gamelift.DescribeFleetPortSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetPortSettings, input).Get(ctx, &output)
@@ -1525,6 +1559,7 @@ func (a *GameLiftStub) DescribeFleetPortSettingsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetPortSettings, input)
     return &GameliftDescribeFleetPortSettingsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeFleetUtilization(ctx workflow.Context, input *gamelift.DescribeFleetUtilizationInput) (*gamelift.DescribeFleetUtilizationOutput, error) {
     var output gamelift.DescribeFleetUtilizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetUtilization, input).Get(ctx, &output)
@@ -1535,6 +1570,7 @@ func (a *GameLiftStub) DescribeFleetUtilizationAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleetUtilization, input)
     return &GameliftDescribeFleetUtilizationResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameServer(ctx workflow.Context, input *gamelift.DescribeGameServerInput) (*gamelift.DescribeGameServerOutput, error) {
     var output gamelift.DescribeGameServerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServer, input).Get(ctx, &output)
@@ -1545,6 +1581,7 @@ func (a *GameLiftStub) DescribeGameServerAsync(ctx workflow.Context, input *game
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServer, input)
     return &GameliftDescribeGameServerResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameServerGroup(ctx workflow.Context, input *gamelift.DescribeGameServerGroupInput) (*gamelift.DescribeGameServerGroupOutput, error) {
     var output gamelift.DescribeGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServerGroup, input).Get(ctx, &output)
@@ -1555,6 +1592,7 @@ func (a *GameLiftStub) DescribeGameServerGroupAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServerGroup, input)
     return &GameliftDescribeGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameServerInstances(ctx workflow.Context, input *gamelift.DescribeGameServerInstancesInput) (*gamelift.DescribeGameServerInstancesOutput, error) {
     var output gamelift.DescribeGameServerInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServerInstances, input).Get(ctx, &output)
@@ -1565,6 +1603,7 @@ func (a *GameLiftStub) DescribeGameServerInstancesAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameServerInstances, input)
     return &GameliftDescribeGameServerInstancesResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameSessionDetails(ctx workflow.Context, input *gamelift.DescribeGameSessionDetailsInput) (*gamelift.DescribeGameSessionDetailsOutput, error) {
     var output gamelift.DescribeGameSessionDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionDetails, input).Get(ctx, &output)
@@ -1575,6 +1614,7 @@ func (a *GameLiftStub) DescribeGameSessionDetailsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionDetails, input)
     return &GameliftDescribeGameSessionDetailsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameSessionPlacement(ctx workflow.Context, input *gamelift.DescribeGameSessionPlacementInput) (*gamelift.DescribeGameSessionPlacementOutput, error) {
     var output gamelift.DescribeGameSessionPlacementOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionPlacement, input).Get(ctx, &output)
@@ -1585,6 +1625,7 @@ func (a *GameLiftStub) DescribeGameSessionPlacementAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionPlacement, input)
     return &GameliftDescribeGameSessionPlacementResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameSessionQueues(ctx workflow.Context, input *gamelift.DescribeGameSessionQueuesInput) (*gamelift.DescribeGameSessionQueuesOutput, error) {
     var output gamelift.DescribeGameSessionQueuesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionQueues, input).Get(ctx, &output)
@@ -1595,6 +1636,7 @@ func (a *GameLiftStub) DescribeGameSessionQueuesAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessionQueues, input)
     return &GameliftDescribeGameSessionQueuesResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeGameSessions(ctx workflow.Context, input *gamelift.DescribeGameSessionsInput) (*gamelift.DescribeGameSessionsOutput, error) {
     var output gamelift.DescribeGameSessionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessions, input).Get(ctx, &output)
@@ -1605,6 +1647,7 @@ func (a *GameLiftStub) DescribeGameSessionsAsync(ctx workflow.Context, input *ga
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGameSessions, input)
     return &GameliftDescribeGameSessionsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeInstances(ctx workflow.Context, input *gamelift.DescribeInstancesInput) (*gamelift.DescribeInstancesOutput, error) {
     var output gamelift.DescribeInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstances, input).Get(ctx, &output)
@@ -1615,6 +1658,7 @@ func (a *GameLiftStub) DescribeInstancesAsync(ctx workflow.Context, input *gamel
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstances, input)
     return &GameliftDescribeInstancesResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeMatchmaking(ctx workflow.Context, input *gamelift.DescribeMatchmakingInput) (*gamelift.DescribeMatchmakingOutput, error) {
     var output gamelift.DescribeMatchmakingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmaking, input).Get(ctx, &output)
@@ -1625,6 +1669,7 @@ func (a *GameLiftStub) DescribeMatchmakingAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmaking, input)
     return &GameliftDescribeMatchmakingResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeMatchmakingConfigurations(ctx workflow.Context, input *gamelift.DescribeMatchmakingConfigurationsInput) (*gamelift.DescribeMatchmakingConfigurationsOutput, error) {
     var output gamelift.DescribeMatchmakingConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmakingConfigurations, input).Get(ctx, &output)
@@ -1635,6 +1680,7 @@ func (a *GameLiftStub) DescribeMatchmakingConfigurationsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmakingConfigurations, input)
     return &GameliftDescribeMatchmakingConfigurationsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeMatchmakingRuleSets(ctx workflow.Context, input *gamelift.DescribeMatchmakingRuleSetsInput) (*gamelift.DescribeMatchmakingRuleSetsOutput, error) {
     var output gamelift.DescribeMatchmakingRuleSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmakingRuleSets, input).Get(ctx, &output)
@@ -1645,6 +1691,7 @@ func (a *GameLiftStub) DescribeMatchmakingRuleSetsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMatchmakingRuleSets, input)
     return &GameliftDescribeMatchmakingRuleSetsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribePlayerSessions(ctx workflow.Context, input *gamelift.DescribePlayerSessionsInput) (*gamelift.DescribePlayerSessionsOutput, error) {
     var output gamelift.DescribePlayerSessionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePlayerSessions, input).Get(ctx, &output)
@@ -1655,6 +1702,7 @@ func (a *GameLiftStub) DescribePlayerSessionsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePlayerSessions, input)
     return &GameliftDescribePlayerSessionsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeRuntimeConfiguration(ctx workflow.Context, input *gamelift.DescribeRuntimeConfigurationInput) (*gamelift.DescribeRuntimeConfigurationOutput, error) {
     var output gamelift.DescribeRuntimeConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRuntimeConfiguration, input).Get(ctx, &output)
@@ -1665,6 +1713,7 @@ func (a *GameLiftStub) DescribeRuntimeConfigurationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRuntimeConfiguration, input)
     return &GameliftDescribeRuntimeConfigurationResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeScalingPolicies(ctx workflow.Context, input *gamelift.DescribeScalingPoliciesInput) (*gamelift.DescribeScalingPoliciesOutput, error) {
     var output gamelift.DescribeScalingPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingPolicies, input).Get(ctx, &output)
@@ -1675,6 +1724,7 @@ func (a *GameLiftStub) DescribeScalingPoliciesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeScalingPolicies, input)
     return &GameliftDescribeScalingPoliciesResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeScript(ctx workflow.Context, input *gamelift.DescribeScriptInput) (*gamelift.DescribeScriptOutput, error) {
     var output gamelift.DescribeScriptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeScript, input).Get(ctx, &output)
@@ -1685,6 +1735,7 @@ func (a *GameLiftStub) DescribeScriptAsync(ctx workflow.Context, input *gamelift
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeScript, input)
     return &GameliftDescribeScriptResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeVpcPeeringAuthorizations(ctx workflow.Context, input *gamelift.DescribeVpcPeeringAuthorizationsInput) (*gamelift.DescribeVpcPeeringAuthorizationsOutput, error) {
     var output gamelift.DescribeVpcPeeringAuthorizationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVpcPeeringAuthorizations, input).Get(ctx, &output)
@@ -1695,6 +1746,7 @@ func (a *GameLiftStub) DescribeVpcPeeringAuthorizationsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVpcPeeringAuthorizations, input)
     return &GameliftDescribeVpcPeeringAuthorizationsResult{Result: future}
 }
+
 func (a *GameLiftStub) DescribeVpcPeeringConnections(ctx workflow.Context, input *gamelift.DescribeVpcPeeringConnectionsInput) (*gamelift.DescribeVpcPeeringConnectionsOutput, error) {
     var output gamelift.DescribeVpcPeeringConnectionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVpcPeeringConnections, input).Get(ctx, &output)
@@ -1705,6 +1757,7 @@ func (a *GameLiftStub) DescribeVpcPeeringConnectionsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVpcPeeringConnections, input)
     return &GameliftDescribeVpcPeeringConnectionsResult{Result: future}
 }
+
 func (a *GameLiftStub) GetGameSessionLogUrl(ctx workflow.Context, input *gamelift.GetGameSessionLogUrlInput) (*gamelift.GetGameSessionLogUrlOutput, error) {
     var output gamelift.GetGameSessionLogUrlOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGameSessionLogUrl, input).Get(ctx, &output)
@@ -1715,6 +1768,7 @@ func (a *GameLiftStub) GetGameSessionLogUrlAsync(ctx workflow.Context, input *ga
     future := workflow.ExecuteActivity(ctx, a.activities.GetGameSessionLogUrl, input)
     return &GameliftGetGameSessionLogUrlResult{Result: future}
 }
+
 func (a *GameLiftStub) GetInstanceAccess(ctx workflow.Context, input *gamelift.GetInstanceAccessInput) (*gamelift.GetInstanceAccessOutput, error) {
     var output gamelift.GetInstanceAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetInstanceAccess, input).Get(ctx, &output)
@@ -1725,6 +1779,7 @@ func (a *GameLiftStub) GetInstanceAccessAsync(ctx workflow.Context, input *gamel
     future := workflow.ExecuteActivity(ctx, a.activities.GetInstanceAccess, input)
     return &GameliftGetInstanceAccessResult{Result: future}
 }
+
 func (a *GameLiftStub) ListAliases(ctx workflow.Context, input *gamelift.ListAliasesInput) (*gamelift.ListAliasesOutput, error) {
     var output gamelift.ListAliasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAliases, input).Get(ctx, &output)
@@ -1735,6 +1790,7 @@ func (a *GameLiftStub) ListAliasesAsync(ctx workflow.Context, input *gamelift.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListAliases, input)
     return &GameliftListAliasesResult{Result: future}
 }
+
 func (a *GameLiftStub) ListBuilds(ctx workflow.Context, input *gamelift.ListBuildsInput) (*gamelift.ListBuildsOutput, error) {
     var output gamelift.ListBuildsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBuilds, input).Get(ctx, &output)
@@ -1745,6 +1801,7 @@ func (a *GameLiftStub) ListBuildsAsync(ctx workflow.Context, input *gamelift.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListBuilds, input)
     return &GameliftListBuildsResult{Result: future}
 }
+
 func (a *GameLiftStub) ListFleets(ctx workflow.Context, input *gamelift.ListFleetsInput) (*gamelift.ListFleetsOutput, error) {
     var output gamelift.ListFleetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFleets, input).Get(ctx, &output)
@@ -1755,6 +1812,7 @@ func (a *GameLiftStub) ListFleetsAsync(ctx workflow.Context, input *gamelift.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListFleets, input)
     return &GameliftListFleetsResult{Result: future}
 }
+
 func (a *GameLiftStub) ListGameServerGroups(ctx workflow.Context, input *gamelift.ListGameServerGroupsInput) (*gamelift.ListGameServerGroupsOutput, error) {
     var output gamelift.ListGameServerGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGameServerGroups, input).Get(ctx, &output)
@@ -1765,6 +1823,7 @@ func (a *GameLiftStub) ListGameServerGroupsAsync(ctx workflow.Context, input *ga
     future := workflow.ExecuteActivity(ctx, a.activities.ListGameServerGroups, input)
     return &GameliftListGameServerGroupsResult{Result: future}
 }
+
 func (a *GameLiftStub) ListGameServers(ctx workflow.Context, input *gamelift.ListGameServersInput) (*gamelift.ListGameServersOutput, error) {
     var output gamelift.ListGameServersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGameServers, input).Get(ctx, &output)
@@ -1775,6 +1834,7 @@ func (a *GameLiftStub) ListGameServersAsync(ctx workflow.Context, input *gamelif
     future := workflow.ExecuteActivity(ctx, a.activities.ListGameServers, input)
     return &GameliftListGameServersResult{Result: future}
 }
+
 func (a *GameLiftStub) ListScripts(ctx workflow.Context, input *gamelift.ListScriptsInput) (*gamelift.ListScriptsOutput, error) {
     var output gamelift.ListScriptsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListScripts, input).Get(ctx, &output)
@@ -1785,6 +1845,7 @@ func (a *GameLiftStub) ListScriptsAsync(ctx workflow.Context, input *gamelift.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListScripts, input)
     return &GameliftListScriptsResult{Result: future}
 }
+
 func (a *GameLiftStub) ListTagsForResource(ctx workflow.Context, input *gamelift.ListTagsForResourceInput) (*gamelift.ListTagsForResourceOutput, error) {
     var output gamelift.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1795,6 +1856,7 @@ func (a *GameLiftStub) ListTagsForResourceAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &GameliftListTagsForResourceResult{Result: future}
 }
+
 func (a *GameLiftStub) PutScalingPolicy(ctx workflow.Context, input *gamelift.PutScalingPolicyInput) (*gamelift.PutScalingPolicyOutput, error) {
     var output gamelift.PutScalingPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutScalingPolicy, input).Get(ctx, &output)
@@ -1805,6 +1867,7 @@ func (a *GameLiftStub) PutScalingPolicyAsync(ctx workflow.Context, input *gameli
     future := workflow.ExecuteActivity(ctx, a.activities.PutScalingPolicy, input)
     return &GameliftPutScalingPolicyResult{Result: future}
 }
+
 func (a *GameLiftStub) RegisterGameServer(ctx workflow.Context, input *gamelift.RegisterGameServerInput) (*gamelift.RegisterGameServerOutput, error) {
     var output gamelift.RegisterGameServerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RegisterGameServer, input).Get(ctx, &output)
@@ -1815,6 +1878,7 @@ func (a *GameLiftStub) RegisterGameServerAsync(ctx workflow.Context, input *game
     future := workflow.ExecuteActivity(ctx, a.activities.RegisterGameServer, input)
     return &GameliftRegisterGameServerResult{Result: future}
 }
+
 func (a *GameLiftStub) RequestUploadCredentials(ctx workflow.Context, input *gamelift.RequestUploadCredentialsInput) (*gamelift.RequestUploadCredentialsOutput, error) {
     var output gamelift.RequestUploadCredentialsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RequestUploadCredentials, input).Get(ctx, &output)
@@ -1825,6 +1889,7 @@ func (a *GameLiftStub) RequestUploadCredentialsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.RequestUploadCredentials, input)
     return &GameliftRequestUploadCredentialsResult{Result: future}
 }
+
 func (a *GameLiftStub) ResolveAlias(ctx workflow.Context, input *gamelift.ResolveAliasInput) (*gamelift.ResolveAliasOutput, error) {
     var output gamelift.ResolveAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResolveAlias, input).Get(ctx, &output)
@@ -1835,6 +1900,7 @@ func (a *GameLiftStub) ResolveAliasAsync(ctx workflow.Context, input *gamelift.R
     future := workflow.ExecuteActivity(ctx, a.activities.ResolveAlias, input)
     return &GameliftResolveAliasResult{Result: future}
 }
+
 func (a *GameLiftStub) ResumeGameServerGroup(ctx workflow.Context, input *gamelift.ResumeGameServerGroupInput) (*gamelift.ResumeGameServerGroupOutput, error) {
     var output gamelift.ResumeGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResumeGameServerGroup, input).Get(ctx, &output)
@@ -1845,6 +1911,7 @@ func (a *GameLiftStub) ResumeGameServerGroupAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.ResumeGameServerGroup, input)
     return &GameliftResumeGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) SearchGameSessions(ctx workflow.Context, input *gamelift.SearchGameSessionsInput) (*gamelift.SearchGameSessionsOutput, error) {
     var output gamelift.SearchGameSessionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchGameSessions, input).Get(ctx, &output)
@@ -1855,6 +1922,7 @@ func (a *GameLiftStub) SearchGameSessionsAsync(ctx workflow.Context, input *game
     future := workflow.ExecuteActivity(ctx, a.activities.SearchGameSessions, input)
     return &GameliftSearchGameSessionsResult{Result: future}
 }
+
 func (a *GameLiftStub) StartFleetActions(ctx workflow.Context, input *gamelift.StartFleetActionsInput) (*gamelift.StartFleetActionsOutput, error) {
     var output gamelift.StartFleetActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartFleetActions, input).Get(ctx, &output)
@@ -1865,6 +1933,7 @@ func (a *GameLiftStub) StartFleetActionsAsync(ctx workflow.Context, input *gamel
     future := workflow.ExecuteActivity(ctx, a.activities.StartFleetActions, input)
     return &GameliftStartFleetActionsResult{Result: future}
 }
+
 func (a *GameLiftStub) StartGameSessionPlacement(ctx workflow.Context, input *gamelift.StartGameSessionPlacementInput) (*gamelift.StartGameSessionPlacementOutput, error) {
     var output gamelift.StartGameSessionPlacementOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartGameSessionPlacement, input).Get(ctx, &output)
@@ -1875,6 +1944,7 @@ func (a *GameLiftStub) StartGameSessionPlacementAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.StartGameSessionPlacement, input)
     return &GameliftStartGameSessionPlacementResult{Result: future}
 }
+
 func (a *GameLiftStub) StartMatchBackfill(ctx workflow.Context, input *gamelift.StartMatchBackfillInput) (*gamelift.StartMatchBackfillOutput, error) {
     var output gamelift.StartMatchBackfillOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMatchBackfill, input).Get(ctx, &output)
@@ -1885,6 +1955,7 @@ func (a *GameLiftStub) StartMatchBackfillAsync(ctx workflow.Context, input *game
     future := workflow.ExecuteActivity(ctx, a.activities.StartMatchBackfill, input)
     return &GameliftStartMatchBackfillResult{Result: future}
 }
+
 func (a *GameLiftStub) StartMatchmaking(ctx workflow.Context, input *gamelift.StartMatchmakingInput) (*gamelift.StartMatchmakingOutput, error) {
     var output gamelift.StartMatchmakingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMatchmaking, input).Get(ctx, &output)
@@ -1895,6 +1966,7 @@ func (a *GameLiftStub) StartMatchmakingAsync(ctx workflow.Context, input *gameli
     future := workflow.ExecuteActivity(ctx, a.activities.StartMatchmaking, input)
     return &GameliftStartMatchmakingResult{Result: future}
 }
+
 func (a *GameLiftStub) StopFleetActions(ctx workflow.Context, input *gamelift.StopFleetActionsInput) (*gamelift.StopFleetActionsOutput, error) {
     var output gamelift.StopFleetActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopFleetActions, input).Get(ctx, &output)
@@ -1905,6 +1977,7 @@ func (a *GameLiftStub) StopFleetActionsAsync(ctx workflow.Context, input *gameli
     future := workflow.ExecuteActivity(ctx, a.activities.StopFleetActions, input)
     return &GameliftStopFleetActionsResult{Result: future}
 }
+
 func (a *GameLiftStub) StopGameSessionPlacement(ctx workflow.Context, input *gamelift.StopGameSessionPlacementInput) (*gamelift.StopGameSessionPlacementOutput, error) {
     var output gamelift.StopGameSessionPlacementOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopGameSessionPlacement, input).Get(ctx, &output)
@@ -1915,6 +1988,7 @@ func (a *GameLiftStub) StopGameSessionPlacementAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.StopGameSessionPlacement, input)
     return &GameliftStopGameSessionPlacementResult{Result: future}
 }
+
 func (a *GameLiftStub) StopMatchmaking(ctx workflow.Context, input *gamelift.StopMatchmakingInput) (*gamelift.StopMatchmakingOutput, error) {
     var output gamelift.StopMatchmakingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopMatchmaking, input).Get(ctx, &output)
@@ -1925,6 +1999,7 @@ func (a *GameLiftStub) StopMatchmakingAsync(ctx workflow.Context, input *gamelif
     future := workflow.ExecuteActivity(ctx, a.activities.StopMatchmaking, input)
     return &GameliftStopMatchmakingResult{Result: future}
 }
+
 func (a *GameLiftStub) SuspendGameServerGroup(ctx workflow.Context, input *gamelift.SuspendGameServerGroupInput) (*gamelift.SuspendGameServerGroupOutput, error) {
     var output gamelift.SuspendGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SuspendGameServerGroup, input).Get(ctx, &output)
@@ -1935,6 +2010,7 @@ func (a *GameLiftStub) SuspendGameServerGroupAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.SuspendGameServerGroup, input)
     return &GameliftSuspendGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) TagResource(ctx workflow.Context, input *gamelift.TagResourceInput) (*gamelift.TagResourceOutput, error) {
     var output gamelift.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1945,6 +2021,7 @@ func (a *GameLiftStub) TagResourceAsync(ctx workflow.Context, input *gamelift.Ta
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &GameliftTagResourceResult{Result: future}
 }
+
 func (a *GameLiftStub) UntagResource(ctx workflow.Context, input *gamelift.UntagResourceInput) (*gamelift.UntagResourceOutput, error) {
     var output gamelift.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1955,6 +2032,7 @@ func (a *GameLiftStub) UntagResourceAsync(ctx workflow.Context, input *gamelift.
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &GameliftUntagResourceResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateAlias(ctx workflow.Context, input *gamelift.UpdateAliasInput) (*gamelift.UpdateAliasOutput, error) {
     var output gamelift.UpdateAliasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAlias, input).Get(ctx, &output)
@@ -1965,6 +2043,7 @@ func (a *GameLiftStub) UpdateAliasAsync(ctx workflow.Context, input *gamelift.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAlias, input)
     return &GameliftUpdateAliasResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateBuild(ctx workflow.Context, input *gamelift.UpdateBuildInput) (*gamelift.UpdateBuildOutput, error) {
     var output gamelift.UpdateBuildOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBuild, input).Get(ctx, &output)
@@ -1975,6 +2054,7 @@ func (a *GameLiftStub) UpdateBuildAsync(ctx workflow.Context, input *gamelift.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBuild, input)
     return &GameliftUpdateBuildResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateFleetAttributes(ctx workflow.Context, input *gamelift.UpdateFleetAttributesInput) (*gamelift.UpdateFleetAttributesOutput, error) {
     var output gamelift.UpdateFleetAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetAttributes, input).Get(ctx, &output)
@@ -1985,6 +2065,7 @@ func (a *GameLiftStub) UpdateFleetAttributesAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetAttributes, input)
     return &GameliftUpdateFleetAttributesResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateFleetCapacity(ctx workflow.Context, input *gamelift.UpdateFleetCapacityInput) (*gamelift.UpdateFleetCapacityOutput, error) {
     var output gamelift.UpdateFleetCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetCapacity, input).Get(ctx, &output)
@@ -1995,6 +2076,7 @@ func (a *GameLiftStub) UpdateFleetCapacityAsync(ctx workflow.Context, input *gam
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetCapacity, input)
     return &GameliftUpdateFleetCapacityResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateFleetPortSettings(ctx workflow.Context, input *gamelift.UpdateFleetPortSettingsInput) (*gamelift.UpdateFleetPortSettingsOutput, error) {
     var output gamelift.UpdateFleetPortSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetPortSettings, input).Get(ctx, &output)
@@ -2005,6 +2087,7 @@ func (a *GameLiftStub) UpdateFleetPortSettingsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFleetPortSettings, input)
     return &GameliftUpdateFleetPortSettingsResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateGameServer(ctx workflow.Context, input *gamelift.UpdateGameServerInput) (*gamelift.UpdateGameServerOutput, error) {
     var output gamelift.UpdateGameServerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGameServer, input).Get(ctx, &output)
@@ -2015,6 +2098,7 @@ func (a *GameLiftStub) UpdateGameServerAsync(ctx workflow.Context, input *gameli
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGameServer, input)
     return &GameliftUpdateGameServerResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateGameServerGroup(ctx workflow.Context, input *gamelift.UpdateGameServerGroupInput) (*gamelift.UpdateGameServerGroupOutput, error) {
     var output gamelift.UpdateGameServerGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGameServerGroup, input).Get(ctx, &output)
@@ -2025,6 +2109,7 @@ func (a *GameLiftStub) UpdateGameServerGroupAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGameServerGroup, input)
     return &GameliftUpdateGameServerGroupResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateGameSession(ctx workflow.Context, input *gamelift.UpdateGameSessionInput) (*gamelift.UpdateGameSessionOutput, error) {
     var output gamelift.UpdateGameSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGameSession, input).Get(ctx, &output)
@@ -2035,6 +2120,7 @@ func (a *GameLiftStub) UpdateGameSessionAsync(ctx workflow.Context, input *gamel
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGameSession, input)
     return &GameliftUpdateGameSessionResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateGameSessionQueue(ctx workflow.Context, input *gamelift.UpdateGameSessionQueueInput) (*gamelift.UpdateGameSessionQueueOutput, error) {
     var output gamelift.UpdateGameSessionQueueOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGameSessionQueue, input).Get(ctx, &output)
@@ -2045,6 +2131,7 @@ func (a *GameLiftStub) UpdateGameSessionQueueAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGameSessionQueue, input)
     return &GameliftUpdateGameSessionQueueResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.UpdateMatchmakingConfigurationInput) (*gamelift.UpdateMatchmakingConfigurationOutput, error) {
     var output gamelift.UpdateMatchmakingConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMatchmakingConfiguration, input).Get(ctx, &output)
@@ -2055,6 +2142,7 @@ func (a *GameLiftStub) UpdateMatchmakingConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMatchmakingConfiguration, input)
     return &GameliftUpdateMatchmakingConfigurationResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateRuntimeConfiguration(ctx workflow.Context, input *gamelift.UpdateRuntimeConfigurationInput) (*gamelift.UpdateRuntimeConfigurationOutput, error) {
     var output gamelift.UpdateRuntimeConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRuntimeConfiguration, input).Get(ctx, &output)
@@ -2065,6 +2153,7 @@ func (a *GameLiftStub) UpdateRuntimeConfigurationAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRuntimeConfiguration, input)
     return &GameliftUpdateRuntimeConfigurationResult{Result: future}
 }
+
 func (a *GameLiftStub) UpdateScript(ctx workflow.Context, input *gamelift.UpdateScriptInput) (*gamelift.UpdateScriptOutput, error) {
     var output gamelift.UpdateScriptOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateScript, input).Get(ctx, &output)
@@ -2075,6 +2164,7 @@ func (a *GameLiftStub) UpdateScriptAsync(ctx workflow.Context, input *gamelift.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateScript, input)
     return &GameliftUpdateScriptResult{Result: future}
 }
+
 func (a *GameLiftStub) ValidateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) (*gamelift.ValidateMatchmakingRuleSetOutput, error) {
     var output gamelift.ValidateMatchmakingRuleSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ValidateMatchmakingRuleSet, input).Get(ctx, &output)

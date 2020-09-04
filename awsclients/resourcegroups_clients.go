@@ -52,6 +52,7 @@ type ResourceGroupsClient interface {
     UpdateGroupQuery(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) (*resourcegroups.UpdateGroupQueryOutput, error)
     UpdateGroupQueryAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) *ResourcegroupsUpdateGroupQueryResult
 }
+
 type ResourcegroupsCreateGroupResult struct {
 	Result workflow.Future
 }
@@ -202,7 +203,6 @@ func (r *ResourcegroupsUpdateGroupQueryResult) Get(ctx workflow.Context) (*resou
     return &output, err
 }
 
-
 type ResourceGroupsStub struct {
     activities awsactivities.ResourceGroupsActivities
 }
@@ -210,6 +210,7 @@ type ResourceGroupsStub struct {
 func NewResourceGroupsStub() ResourceGroupsClient {
     return &ResourceGroupsStub{}
 }
+
 func (a *ResourceGroupsStub) CreateGroup(ctx workflow.Context, input *resourcegroups.CreateGroupInput) (*resourcegroups.CreateGroupOutput, error) {
     var output resourcegroups.CreateGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGroup, input).Get(ctx, &output)
@@ -220,6 +221,7 @@ func (a *ResourceGroupsStub) CreateGroupAsync(ctx workflow.Context, input *resou
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGroup, input)
     return &ResourcegroupsCreateGroupResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) DeleteGroup(ctx workflow.Context, input *resourcegroups.DeleteGroupInput) (*resourcegroups.DeleteGroupOutput, error) {
     var output resourcegroups.DeleteGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGroup, input).Get(ctx, &output)
@@ -230,6 +232,7 @@ func (a *ResourceGroupsStub) DeleteGroupAsync(ctx workflow.Context, input *resou
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGroup, input)
     return &ResourcegroupsDeleteGroupResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) GetGroup(ctx workflow.Context, input *resourcegroups.GetGroupInput) (*resourcegroups.GetGroupOutput, error) {
     var output resourcegroups.GetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGroup, input).Get(ctx, &output)
@@ -240,6 +243,7 @@ func (a *ResourceGroupsStub) GetGroupAsync(ctx workflow.Context, input *resource
     future := workflow.ExecuteActivity(ctx, a.activities.GetGroup, input)
     return &ResourcegroupsGetGroupResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) GetGroupConfiguration(ctx workflow.Context, input *resourcegroups.GetGroupConfigurationInput) (*resourcegroups.GetGroupConfigurationOutput, error) {
     var output resourcegroups.GetGroupConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGroupConfiguration, input).Get(ctx, &output)
@@ -250,6 +254,7 @@ func (a *ResourceGroupsStub) GetGroupConfigurationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetGroupConfiguration, input)
     return &ResourcegroupsGetGroupConfigurationResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) GetGroupQuery(ctx workflow.Context, input *resourcegroups.GetGroupQueryInput) (*resourcegroups.GetGroupQueryOutput, error) {
     var output resourcegroups.GetGroupQueryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGroupQuery, input).Get(ctx, &output)
@@ -260,6 +265,7 @@ func (a *ResourceGroupsStub) GetGroupQueryAsync(ctx workflow.Context, input *res
     future := workflow.ExecuteActivity(ctx, a.activities.GetGroupQuery, input)
     return &ResourcegroupsGetGroupQueryResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) GetTags(ctx workflow.Context, input *resourcegroups.GetTagsInput) (*resourcegroups.GetTagsOutput, error) {
     var output resourcegroups.GetTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTags, input).Get(ctx, &output)
@@ -270,6 +276,7 @@ func (a *ResourceGroupsStub) GetTagsAsync(ctx workflow.Context, input *resourceg
     future := workflow.ExecuteActivity(ctx, a.activities.GetTags, input)
     return &ResourcegroupsGetTagsResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) GroupResources(ctx workflow.Context, input *resourcegroups.GroupResourcesInput) (*resourcegroups.GroupResourcesOutput, error) {
     var output resourcegroups.GroupResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GroupResources, input).Get(ctx, &output)
@@ -280,6 +287,7 @@ func (a *ResourceGroupsStub) GroupResourcesAsync(ctx workflow.Context, input *re
     future := workflow.ExecuteActivity(ctx, a.activities.GroupResources, input)
     return &ResourcegroupsGroupResourcesResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) ListGroupResources(ctx workflow.Context, input *resourcegroups.ListGroupResourcesInput) (*resourcegroups.ListGroupResourcesOutput, error) {
     var output resourcegroups.ListGroupResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGroupResources, input).Get(ctx, &output)
@@ -290,6 +298,7 @@ func (a *ResourceGroupsStub) ListGroupResourcesAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListGroupResources, input)
     return &ResourcegroupsListGroupResourcesResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) ListGroups(ctx workflow.Context, input *resourcegroups.ListGroupsInput) (*resourcegroups.ListGroupsOutput, error) {
     var output resourcegroups.ListGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGroups, input).Get(ctx, &output)
@@ -300,6 +309,7 @@ func (a *ResourceGroupsStub) ListGroupsAsync(ctx workflow.Context, input *resour
     future := workflow.ExecuteActivity(ctx, a.activities.ListGroups, input)
     return &ResourcegroupsListGroupsResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) SearchResources(ctx workflow.Context, input *resourcegroups.SearchResourcesInput) (*resourcegroups.SearchResourcesOutput, error) {
     var output resourcegroups.SearchResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchResources, input).Get(ctx, &output)
@@ -310,6 +320,7 @@ func (a *ResourceGroupsStub) SearchResourcesAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.SearchResources, input)
     return &ResourcegroupsSearchResourcesResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) Tag(ctx workflow.Context, input *resourcegroups.TagInput) (*resourcegroups.TagOutput, error) {
     var output resourcegroups.TagOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Tag, input).Get(ctx, &output)
@@ -320,6 +331,7 @@ func (a *ResourceGroupsStub) TagAsync(ctx workflow.Context, input *resourcegroup
     future := workflow.ExecuteActivity(ctx, a.activities.Tag, input)
     return &ResourcegroupsTagResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) UngroupResources(ctx workflow.Context, input *resourcegroups.UngroupResourcesInput) (*resourcegroups.UngroupResourcesOutput, error) {
     var output resourcegroups.UngroupResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UngroupResources, input).Get(ctx, &output)
@@ -330,6 +342,7 @@ func (a *ResourceGroupsStub) UngroupResourcesAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UngroupResources, input)
     return &ResourcegroupsUngroupResourcesResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) Untag(ctx workflow.Context, input *resourcegroups.UntagInput) (*resourcegroups.UntagOutput, error) {
     var output resourcegroups.UntagOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Untag, input).Get(ctx, &output)
@@ -340,6 +353,7 @@ func (a *ResourceGroupsStub) UntagAsync(ctx workflow.Context, input *resourcegro
     future := workflow.ExecuteActivity(ctx, a.activities.Untag, input)
     return &ResourcegroupsUntagResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) UpdateGroup(ctx workflow.Context, input *resourcegroups.UpdateGroupInput) (*resourcegroups.UpdateGroupOutput, error) {
     var output resourcegroups.UpdateGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGroup, input).Get(ctx, &output)
@@ -350,6 +364,7 @@ func (a *ResourceGroupsStub) UpdateGroupAsync(ctx workflow.Context, input *resou
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGroup, input)
     return &ResourcegroupsUpdateGroupResult{Result: future}
 }
+
 func (a *ResourceGroupsStub) UpdateGroupQuery(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) (*resourcegroups.UpdateGroupQueryOutput, error) {
     var output resourcegroups.UpdateGroupQueryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGroupQuery, input).Get(ctx, &output)

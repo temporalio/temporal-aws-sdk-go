@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,44 +14,30 @@ func NewIoTSecureTunnelingActivities(client iotsecuretunnelingiface.IoTSecureTun
     return &IoTSecureTunnelingActivities{client: client}
 }
 
-
 func (a *IoTSecureTunnelingActivities) CloseTunnel(input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error) {
     return a.client.CloseTunnel(input)
 }
-
-
 
 func (a *IoTSecureTunnelingActivities) DescribeTunnel(input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error) {
     return a.client.DescribeTunnel(input)
 }
 
-
-
 func (a *IoTSecureTunnelingActivities) ListTagsForResource(input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error) {
     return a.client.ListTagsForResource(input)
 }
-
-
 
 func (a *IoTSecureTunnelingActivities) ListTunnels(input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error) {
     return a.client.ListTunnels(input)
 }
 
-
-
 func (a *IoTSecureTunnelingActivities) OpenTunnel(input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error) {
     return a.client.OpenTunnel(input)
 }
-
-
 
 func (a *IoTSecureTunnelingActivities) TagResource(input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error) {
     return a.client.TagResource(input)
 }
 
-
-
 func (a *IoTSecureTunnelingActivities) UntagResource(input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error) {
     return a.client.UntagResource(input)
 }
-

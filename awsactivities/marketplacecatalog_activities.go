@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,38 +14,26 @@ func NewMarketplaceCatalogActivities(client marketplacecatalogiface.MarketplaceC
     return &MarketplaceCatalogActivities{client: client}
 }
 
-
 func (a *MarketplaceCatalogActivities) CancelChangeSet(input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error) {
     return a.client.CancelChangeSet(input)
 }
-
-
 
 func (a *MarketplaceCatalogActivities) DescribeChangeSet(input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error) {
     return a.client.DescribeChangeSet(input)
 }
 
-
-
 func (a *MarketplaceCatalogActivities) DescribeEntity(input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error) {
     return a.client.DescribeEntity(input)
 }
-
-
 
 func (a *MarketplaceCatalogActivities) ListChangeSets(input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error) {
     return a.client.ListChangeSets(input)
 }
 
-
-
 func (a *MarketplaceCatalogActivities) ListEntities(input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error) {
     return a.client.ListEntities(input)
 }
 
-
-
 func (a *MarketplaceCatalogActivities) StartChangeSet(input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error) {
     return a.client.StartChangeSet(input)
 }
-

@@ -343,6 +343,7 @@ type PinpointClient interface {
     UpdateVoiceTemplate(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) (*pinpoint.UpdateVoiceTemplateOutput, error)
     UpdateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) *PinpointUpdateVoiceTemplateResult
 }
+
 type PinpointCreateAppResult struct {
 	Result workflow.Future
 }
@@ -1463,7 +1464,6 @@ func (r *PinpointUpdateVoiceTemplateResult) Get(ctx workflow.Context) (*pinpoint
     return &output, err
 }
 
-
 type PinpointStub struct {
     activities awsactivities.PinpointActivities
 }
@@ -1471,6 +1471,7 @@ type PinpointStub struct {
 func NewPinpointStub() PinpointClient {
     return &PinpointStub{}
 }
+
 func (a *PinpointStub) CreateApp(ctx workflow.Context, input *pinpoint.CreateAppInput) (*pinpoint.CreateAppOutput, error) {
     var output pinpoint.CreateAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApp, input).Get(ctx, &output)
@@ -1481,6 +1482,7 @@ func (a *PinpointStub) CreateAppAsync(ctx workflow.Context, input *pinpoint.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApp, input)
     return &PinpointCreateAppResult{Result: future}
 }
+
 func (a *PinpointStub) CreateCampaign(ctx workflow.Context, input *pinpoint.CreateCampaignInput) (*pinpoint.CreateCampaignOutput, error) {
     var output pinpoint.CreateCampaignOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCampaign, input).Get(ctx, &output)
@@ -1491,6 +1493,7 @@ func (a *PinpointStub) CreateCampaignAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCampaign, input)
     return &PinpointCreateCampaignResult{Result: future}
 }
+
 func (a *PinpointStub) CreateEmailTemplate(ctx workflow.Context, input *pinpoint.CreateEmailTemplateInput) (*pinpoint.CreateEmailTemplateOutput, error) {
     var output pinpoint.CreateEmailTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEmailTemplate, input).Get(ctx, &output)
@@ -1501,6 +1504,7 @@ func (a *PinpointStub) CreateEmailTemplateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEmailTemplate, input)
     return &PinpointCreateEmailTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) CreateExportJob(ctx workflow.Context, input *pinpoint.CreateExportJobInput) (*pinpoint.CreateExportJobOutput, error) {
     var output pinpoint.CreateExportJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateExportJob, input).Get(ctx, &output)
@@ -1511,6 +1515,7 @@ func (a *PinpointStub) CreateExportJobAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.CreateExportJob, input)
     return &PinpointCreateExportJobResult{Result: future}
 }
+
 func (a *PinpointStub) CreateImportJob(ctx workflow.Context, input *pinpoint.CreateImportJobInput) (*pinpoint.CreateImportJobOutput, error) {
     var output pinpoint.CreateImportJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateImportJob, input).Get(ctx, &output)
@@ -1521,6 +1526,7 @@ func (a *PinpointStub) CreateImportJobAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.CreateImportJob, input)
     return &PinpointCreateImportJobResult{Result: future}
 }
+
 func (a *PinpointStub) CreateJourney(ctx workflow.Context, input *pinpoint.CreateJourneyInput) (*pinpoint.CreateJourneyOutput, error) {
     var output pinpoint.CreateJourneyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateJourney, input).Get(ctx, &output)
@@ -1531,6 +1537,7 @@ func (a *PinpointStub) CreateJourneyAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateJourney, input)
     return &PinpointCreateJourneyResult{Result: future}
 }
+
 func (a *PinpointStub) CreatePushTemplate(ctx workflow.Context, input *pinpoint.CreatePushTemplateInput) (*pinpoint.CreatePushTemplateOutput, error) {
     var output pinpoint.CreatePushTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePushTemplate, input).Get(ctx, &output)
@@ -1541,6 +1548,7 @@ func (a *PinpointStub) CreatePushTemplateAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePushTemplate, input)
     return &PinpointCreatePushTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) CreateRecommenderConfiguration(ctx workflow.Context, input *pinpoint.CreateRecommenderConfigurationInput) (*pinpoint.CreateRecommenderConfigurationOutput, error) {
     var output pinpoint.CreateRecommenderConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRecommenderConfiguration, input).Get(ctx, &output)
@@ -1551,6 +1559,7 @@ func (a *PinpointStub) CreateRecommenderConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRecommenderConfiguration, input)
     return &PinpointCreateRecommenderConfigurationResult{Result: future}
 }
+
 func (a *PinpointStub) CreateSegment(ctx workflow.Context, input *pinpoint.CreateSegmentInput) (*pinpoint.CreateSegmentOutput, error) {
     var output pinpoint.CreateSegmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSegment, input).Get(ctx, &output)
@@ -1561,6 +1570,7 @@ func (a *PinpointStub) CreateSegmentAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSegment, input)
     return &PinpointCreateSegmentResult{Result: future}
 }
+
 func (a *PinpointStub) CreateSmsTemplate(ctx workflow.Context, input *pinpoint.CreateSmsTemplateInput) (*pinpoint.CreateSmsTemplateOutput, error) {
     var output pinpoint.CreateSmsTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSmsTemplate, input).Get(ctx, &output)
@@ -1571,6 +1581,7 @@ func (a *PinpointStub) CreateSmsTemplateAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSmsTemplate, input)
     return &PinpointCreateSmsTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) CreateVoiceTemplate(ctx workflow.Context, input *pinpoint.CreateVoiceTemplateInput) (*pinpoint.CreateVoiceTemplateOutput, error) {
     var output pinpoint.CreateVoiceTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVoiceTemplate, input).Get(ctx, &output)
@@ -1581,6 +1592,7 @@ func (a *PinpointStub) CreateVoiceTemplateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVoiceTemplate, input)
     return &PinpointCreateVoiceTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteAdmChannel(ctx workflow.Context, input *pinpoint.DeleteAdmChannelInput) (*pinpoint.DeleteAdmChannelOutput, error) {
     var output pinpoint.DeleteAdmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAdmChannel, input).Get(ctx, &output)
@@ -1591,6 +1603,7 @@ func (a *PinpointStub) DeleteAdmChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAdmChannel, input)
     return &PinpointDeleteAdmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteApnsChannel(ctx workflow.Context, input *pinpoint.DeleteApnsChannelInput) (*pinpoint.DeleteApnsChannelOutput, error) {
     var output pinpoint.DeleteApnsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsChannel, input).Get(ctx, &output)
@@ -1601,6 +1614,7 @@ func (a *PinpointStub) DeleteApnsChannelAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsChannel, input)
     return &PinpointDeleteApnsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteApnsSandboxChannel(ctx workflow.Context, input *pinpoint.DeleteApnsSandboxChannelInput) (*pinpoint.DeleteApnsSandboxChannelOutput, error) {
     var output pinpoint.DeleteApnsSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsSandboxChannel, input).Get(ctx, &output)
@@ -1611,6 +1625,7 @@ func (a *PinpointStub) DeleteApnsSandboxChannelAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsSandboxChannel, input)
     return &PinpointDeleteApnsSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteApnsVoipChannel(ctx workflow.Context, input *pinpoint.DeleteApnsVoipChannelInput) (*pinpoint.DeleteApnsVoipChannelOutput, error) {
     var output pinpoint.DeleteApnsVoipChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsVoipChannel, input).Get(ctx, &output)
@@ -1621,6 +1636,7 @@ func (a *PinpointStub) DeleteApnsVoipChannelAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsVoipChannel, input)
     return &PinpointDeleteApnsVoipChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.DeleteApnsVoipSandboxChannelInput) (*pinpoint.DeleteApnsVoipSandboxChannelOutput, error) {
     var output pinpoint.DeleteApnsVoipSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsVoipSandboxChannel, input).Get(ctx, &output)
@@ -1631,6 +1647,7 @@ func (a *PinpointStub) DeleteApnsVoipSandboxChannelAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApnsVoipSandboxChannel, input)
     return &PinpointDeleteApnsVoipSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteApp(ctx workflow.Context, input *pinpoint.DeleteAppInput) (*pinpoint.DeleteAppOutput, error) {
     var output pinpoint.DeleteAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApp, input).Get(ctx, &output)
@@ -1641,6 +1658,7 @@ func (a *PinpointStub) DeleteAppAsync(ctx workflow.Context, input *pinpoint.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApp, input)
     return &PinpointDeleteAppResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteBaiduChannel(ctx workflow.Context, input *pinpoint.DeleteBaiduChannelInput) (*pinpoint.DeleteBaiduChannelOutput, error) {
     var output pinpoint.DeleteBaiduChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBaiduChannel, input).Get(ctx, &output)
@@ -1651,6 +1669,7 @@ func (a *PinpointStub) DeleteBaiduChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBaiduChannel, input)
     return &PinpointDeleteBaiduChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteCampaign(ctx workflow.Context, input *pinpoint.DeleteCampaignInput) (*pinpoint.DeleteCampaignOutput, error) {
     var output pinpoint.DeleteCampaignOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCampaign, input).Get(ctx, &output)
@@ -1661,6 +1680,7 @@ func (a *PinpointStub) DeleteCampaignAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCampaign, input)
     return &PinpointDeleteCampaignResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteEmailChannel(ctx workflow.Context, input *pinpoint.DeleteEmailChannelInput) (*pinpoint.DeleteEmailChannelOutput, error) {
     var output pinpoint.DeleteEmailChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEmailChannel, input).Get(ctx, &output)
@@ -1671,6 +1691,7 @@ func (a *PinpointStub) DeleteEmailChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEmailChannel, input)
     return &PinpointDeleteEmailChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteEmailTemplate(ctx workflow.Context, input *pinpoint.DeleteEmailTemplateInput) (*pinpoint.DeleteEmailTemplateOutput, error) {
     var output pinpoint.DeleteEmailTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEmailTemplate, input).Get(ctx, &output)
@@ -1681,6 +1702,7 @@ func (a *PinpointStub) DeleteEmailTemplateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEmailTemplate, input)
     return &PinpointDeleteEmailTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteEndpoint(ctx workflow.Context, input *pinpoint.DeleteEndpointInput) (*pinpoint.DeleteEndpointOutput, error) {
     var output pinpoint.DeleteEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input).Get(ctx, &output)
@@ -1691,6 +1713,7 @@ func (a *PinpointStub) DeleteEndpointAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input)
     return &PinpointDeleteEndpointResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteEventStream(ctx workflow.Context, input *pinpoint.DeleteEventStreamInput) (*pinpoint.DeleteEventStreamOutput, error) {
     var output pinpoint.DeleteEventStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEventStream, input).Get(ctx, &output)
@@ -1701,6 +1724,7 @@ func (a *PinpointStub) DeleteEventStreamAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEventStream, input)
     return &PinpointDeleteEventStreamResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteGcmChannel(ctx workflow.Context, input *pinpoint.DeleteGcmChannelInput) (*pinpoint.DeleteGcmChannelOutput, error) {
     var output pinpoint.DeleteGcmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGcmChannel, input).Get(ctx, &output)
@@ -1711,6 +1735,7 @@ func (a *PinpointStub) DeleteGcmChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGcmChannel, input)
     return &PinpointDeleteGcmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteJourney(ctx workflow.Context, input *pinpoint.DeleteJourneyInput) (*pinpoint.DeleteJourneyOutput, error) {
     var output pinpoint.DeleteJourneyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteJourney, input).Get(ctx, &output)
@@ -1721,6 +1746,7 @@ func (a *PinpointStub) DeleteJourneyAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteJourney, input)
     return &PinpointDeleteJourneyResult{Result: future}
 }
+
 func (a *PinpointStub) DeletePushTemplate(ctx workflow.Context, input *pinpoint.DeletePushTemplateInput) (*pinpoint.DeletePushTemplateOutput, error) {
     var output pinpoint.DeletePushTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePushTemplate, input).Get(ctx, &output)
@@ -1731,6 +1757,7 @@ func (a *PinpointStub) DeletePushTemplateAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePushTemplate, input)
     return &PinpointDeletePushTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteRecommenderConfiguration(ctx workflow.Context, input *pinpoint.DeleteRecommenderConfigurationInput) (*pinpoint.DeleteRecommenderConfigurationOutput, error) {
     var output pinpoint.DeleteRecommenderConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRecommenderConfiguration, input).Get(ctx, &output)
@@ -1741,6 +1768,7 @@ func (a *PinpointStub) DeleteRecommenderConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRecommenderConfiguration, input)
     return &PinpointDeleteRecommenderConfigurationResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteSegment(ctx workflow.Context, input *pinpoint.DeleteSegmentInput) (*pinpoint.DeleteSegmentOutput, error) {
     var output pinpoint.DeleteSegmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSegment, input).Get(ctx, &output)
@@ -1751,6 +1779,7 @@ func (a *PinpointStub) DeleteSegmentAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSegment, input)
     return &PinpointDeleteSegmentResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteSmsChannel(ctx workflow.Context, input *pinpoint.DeleteSmsChannelInput) (*pinpoint.DeleteSmsChannelOutput, error) {
     var output pinpoint.DeleteSmsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSmsChannel, input).Get(ctx, &output)
@@ -1761,6 +1790,7 @@ func (a *PinpointStub) DeleteSmsChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSmsChannel, input)
     return &PinpointDeleteSmsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteSmsTemplate(ctx workflow.Context, input *pinpoint.DeleteSmsTemplateInput) (*pinpoint.DeleteSmsTemplateOutput, error) {
     var output pinpoint.DeleteSmsTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSmsTemplate, input).Get(ctx, &output)
@@ -1771,6 +1801,7 @@ func (a *PinpointStub) DeleteSmsTemplateAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSmsTemplate, input)
     return &PinpointDeleteSmsTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteUserEndpoints(ctx workflow.Context, input *pinpoint.DeleteUserEndpointsInput) (*pinpoint.DeleteUserEndpointsOutput, error) {
     var output pinpoint.DeleteUserEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUserEndpoints, input).Get(ctx, &output)
@@ -1781,6 +1812,7 @@ func (a *PinpointStub) DeleteUserEndpointsAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUserEndpoints, input)
     return &PinpointDeleteUserEndpointsResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteVoiceChannel(ctx workflow.Context, input *pinpoint.DeleteVoiceChannelInput) (*pinpoint.DeleteVoiceChannelOutput, error) {
     var output pinpoint.DeleteVoiceChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVoiceChannel, input).Get(ctx, &output)
@@ -1791,6 +1823,7 @@ func (a *PinpointStub) DeleteVoiceChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVoiceChannel, input)
     return &PinpointDeleteVoiceChannelResult{Result: future}
 }
+
 func (a *PinpointStub) DeleteVoiceTemplate(ctx workflow.Context, input *pinpoint.DeleteVoiceTemplateInput) (*pinpoint.DeleteVoiceTemplateOutput, error) {
     var output pinpoint.DeleteVoiceTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVoiceTemplate, input).Get(ctx, &output)
@@ -1801,6 +1834,7 @@ func (a *PinpointStub) DeleteVoiceTemplateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVoiceTemplate, input)
     return &PinpointDeleteVoiceTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) GetAdmChannel(ctx workflow.Context, input *pinpoint.GetAdmChannelInput) (*pinpoint.GetAdmChannelOutput, error) {
     var output pinpoint.GetAdmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAdmChannel, input).Get(ctx, &output)
@@ -1811,6 +1845,7 @@ func (a *PinpointStub) GetAdmChannelAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.GetAdmChannel, input)
     return &PinpointGetAdmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetApnsChannel(ctx workflow.Context, input *pinpoint.GetApnsChannelInput) (*pinpoint.GetApnsChannelOutput, error) {
     var output pinpoint.GetApnsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApnsChannel, input).Get(ctx, &output)
@@ -1821,6 +1856,7 @@ func (a *PinpointStub) GetApnsChannelAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.GetApnsChannel, input)
     return &PinpointGetApnsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetApnsSandboxChannel(ctx workflow.Context, input *pinpoint.GetApnsSandboxChannelInput) (*pinpoint.GetApnsSandboxChannelOutput, error) {
     var output pinpoint.GetApnsSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApnsSandboxChannel, input).Get(ctx, &output)
@@ -1831,6 +1867,7 @@ func (a *PinpointStub) GetApnsSandboxChannelAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.GetApnsSandboxChannel, input)
     return &PinpointGetApnsSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetApnsVoipChannel(ctx workflow.Context, input *pinpoint.GetApnsVoipChannelInput) (*pinpoint.GetApnsVoipChannelOutput, error) {
     var output pinpoint.GetApnsVoipChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApnsVoipChannel, input).Get(ctx, &output)
@@ -1841,6 +1878,7 @@ func (a *PinpointStub) GetApnsVoipChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.GetApnsVoipChannel, input)
     return &PinpointGetApnsVoipChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.GetApnsVoipSandboxChannelInput) (*pinpoint.GetApnsVoipSandboxChannelOutput, error) {
     var output pinpoint.GetApnsVoipSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApnsVoipSandboxChannel, input).Get(ctx, &output)
@@ -1851,6 +1889,7 @@ func (a *PinpointStub) GetApnsVoipSandboxChannelAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.GetApnsVoipSandboxChannel, input)
     return &PinpointGetApnsVoipSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetApp(ctx workflow.Context, input *pinpoint.GetAppInput) (*pinpoint.GetAppOutput, error) {
     var output pinpoint.GetAppOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApp, input).Get(ctx, &output)
@@ -1861,6 +1900,7 @@ func (a *PinpointStub) GetAppAsync(ctx workflow.Context, input *pinpoint.GetAppI
     future := workflow.ExecuteActivity(ctx, a.activities.GetApp, input)
     return &PinpointGetAppResult{Result: future}
 }
+
 func (a *PinpointStub) GetApplicationDateRangeKpi(ctx workflow.Context, input *pinpoint.GetApplicationDateRangeKpiInput) (*pinpoint.GetApplicationDateRangeKpiOutput, error) {
     var output pinpoint.GetApplicationDateRangeKpiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApplicationDateRangeKpi, input).Get(ctx, &output)
@@ -1871,6 +1911,7 @@ func (a *PinpointStub) GetApplicationDateRangeKpiAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetApplicationDateRangeKpi, input)
     return &PinpointGetApplicationDateRangeKpiResult{Result: future}
 }
+
 func (a *PinpointStub) GetApplicationSettings(ctx workflow.Context, input *pinpoint.GetApplicationSettingsInput) (*pinpoint.GetApplicationSettingsOutput, error) {
     var output pinpoint.GetApplicationSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApplicationSettings, input).Get(ctx, &output)
@@ -1881,6 +1922,7 @@ func (a *PinpointStub) GetApplicationSettingsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetApplicationSettings, input)
     return &PinpointGetApplicationSettingsResult{Result: future}
 }
+
 func (a *PinpointStub) GetApps(ctx workflow.Context, input *pinpoint.GetAppsInput) (*pinpoint.GetAppsOutput, error) {
     var output pinpoint.GetAppsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApps, input).Get(ctx, &output)
@@ -1891,6 +1933,7 @@ func (a *PinpointStub) GetAppsAsync(ctx workflow.Context, input *pinpoint.GetApp
     future := workflow.ExecuteActivity(ctx, a.activities.GetApps, input)
     return &PinpointGetAppsResult{Result: future}
 }
+
 func (a *PinpointStub) GetBaiduChannel(ctx workflow.Context, input *pinpoint.GetBaiduChannelInput) (*pinpoint.GetBaiduChannelOutput, error) {
     var output pinpoint.GetBaiduChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBaiduChannel, input).Get(ctx, &output)
@@ -1901,6 +1944,7 @@ func (a *PinpointStub) GetBaiduChannelAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.GetBaiduChannel, input)
     return &PinpointGetBaiduChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaign(ctx workflow.Context, input *pinpoint.GetCampaignInput) (*pinpoint.GetCampaignOutput, error) {
     var output pinpoint.GetCampaignOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaign, input).Get(ctx, &output)
@@ -1911,6 +1955,7 @@ func (a *PinpointStub) GetCampaignAsync(ctx workflow.Context, input *pinpoint.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaign, input)
     return &PinpointGetCampaignResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaignActivities(ctx workflow.Context, input *pinpoint.GetCampaignActivitiesInput) (*pinpoint.GetCampaignActivitiesOutput, error) {
     var output pinpoint.GetCampaignActivitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaignActivities, input).Get(ctx, &output)
@@ -1921,6 +1966,7 @@ func (a *PinpointStub) GetCampaignActivitiesAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaignActivities, input)
     return &PinpointGetCampaignActivitiesResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaignDateRangeKpi(ctx workflow.Context, input *pinpoint.GetCampaignDateRangeKpiInput) (*pinpoint.GetCampaignDateRangeKpiOutput, error) {
     var output pinpoint.GetCampaignDateRangeKpiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaignDateRangeKpi, input).Get(ctx, &output)
@@ -1931,6 +1977,7 @@ func (a *PinpointStub) GetCampaignDateRangeKpiAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaignDateRangeKpi, input)
     return &PinpointGetCampaignDateRangeKpiResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaignVersion(ctx workflow.Context, input *pinpoint.GetCampaignVersionInput) (*pinpoint.GetCampaignVersionOutput, error) {
     var output pinpoint.GetCampaignVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaignVersion, input).Get(ctx, &output)
@@ -1941,6 +1988,7 @@ func (a *PinpointStub) GetCampaignVersionAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaignVersion, input)
     return &PinpointGetCampaignVersionResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaignVersions(ctx workflow.Context, input *pinpoint.GetCampaignVersionsInput) (*pinpoint.GetCampaignVersionsOutput, error) {
     var output pinpoint.GetCampaignVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaignVersions, input).Get(ctx, &output)
@@ -1951,6 +1999,7 @@ func (a *PinpointStub) GetCampaignVersionsAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaignVersions, input)
     return &PinpointGetCampaignVersionsResult{Result: future}
 }
+
 func (a *PinpointStub) GetCampaigns(ctx workflow.Context, input *pinpoint.GetCampaignsInput) (*pinpoint.GetCampaignsOutput, error) {
     var output pinpoint.GetCampaignsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCampaigns, input).Get(ctx, &output)
@@ -1961,6 +2010,7 @@ func (a *PinpointStub) GetCampaignsAsync(ctx workflow.Context, input *pinpoint.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetCampaigns, input)
     return &PinpointGetCampaignsResult{Result: future}
 }
+
 func (a *PinpointStub) GetChannels(ctx workflow.Context, input *pinpoint.GetChannelsInput) (*pinpoint.GetChannelsOutput, error) {
     var output pinpoint.GetChannelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetChannels, input).Get(ctx, &output)
@@ -1971,6 +2021,7 @@ func (a *PinpointStub) GetChannelsAsync(ctx workflow.Context, input *pinpoint.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetChannels, input)
     return &PinpointGetChannelsResult{Result: future}
 }
+
 func (a *PinpointStub) GetEmailChannel(ctx workflow.Context, input *pinpoint.GetEmailChannelInput) (*pinpoint.GetEmailChannelOutput, error) {
     var output pinpoint.GetEmailChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEmailChannel, input).Get(ctx, &output)
@@ -1981,6 +2032,7 @@ func (a *PinpointStub) GetEmailChannelAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.GetEmailChannel, input)
     return &PinpointGetEmailChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetEmailTemplate(ctx workflow.Context, input *pinpoint.GetEmailTemplateInput) (*pinpoint.GetEmailTemplateOutput, error) {
     var output pinpoint.GetEmailTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEmailTemplate, input).Get(ctx, &output)
@@ -1991,6 +2043,7 @@ func (a *PinpointStub) GetEmailTemplateAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.GetEmailTemplate, input)
     return &PinpointGetEmailTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) GetEndpoint(ctx workflow.Context, input *pinpoint.GetEndpointInput) (*pinpoint.GetEndpointOutput, error) {
     var output pinpoint.GetEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEndpoint, input).Get(ctx, &output)
@@ -2001,6 +2054,7 @@ func (a *PinpointStub) GetEndpointAsync(ctx workflow.Context, input *pinpoint.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetEndpoint, input)
     return &PinpointGetEndpointResult{Result: future}
 }
+
 func (a *PinpointStub) GetEventStream(ctx workflow.Context, input *pinpoint.GetEventStreamInput) (*pinpoint.GetEventStreamOutput, error) {
     var output pinpoint.GetEventStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEventStream, input).Get(ctx, &output)
@@ -2011,6 +2065,7 @@ func (a *PinpointStub) GetEventStreamAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.GetEventStream, input)
     return &PinpointGetEventStreamResult{Result: future}
 }
+
 func (a *PinpointStub) GetExportJob(ctx workflow.Context, input *pinpoint.GetExportJobInput) (*pinpoint.GetExportJobOutput, error) {
     var output pinpoint.GetExportJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetExportJob, input).Get(ctx, &output)
@@ -2021,6 +2076,7 @@ func (a *PinpointStub) GetExportJobAsync(ctx workflow.Context, input *pinpoint.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetExportJob, input)
     return &PinpointGetExportJobResult{Result: future}
 }
+
 func (a *PinpointStub) GetExportJobs(ctx workflow.Context, input *pinpoint.GetExportJobsInput) (*pinpoint.GetExportJobsOutput, error) {
     var output pinpoint.GetExportJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetExportJobs, input).Get(ctx, &output)
@@ -2031,6 +2087,7 @@ func (a *PinpointStub) GetExportJobsAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.GetExportJobs, input)
     return &PinpointGetExportJobsResult{Result: future}
 }
+
 func (a *PinpointStub) GetGcmChannel(ctx workflow.Context, input *pinpoint.GetGcmChannelInput) (*pinpoint.GetGcmChannelOutput, error) {
     var output pinpoint.GetGcmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGcmChannel, input).Get(ctx, &output)
@@ -2041,6 +2098,7 @@ func (a *PinpointStub) GetGcmChannelAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.GetGcmChannel, input)
     return &PinpointGetGcmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetImportJob(ctx workflow.Context, input *pinpoint.GetImportJobInput) (*pinpoint.GetImportJobOutput, error) {
     var output pinpoint.GetImportJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetImportJob, input).Get(ctx, &output)
@@ -2051,6 +2109,7 @@ func (a *PinpointStub) GetImportJobAsync(ctx workflow.Context, input *pinpoint.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetImportJob, input)
     return &PinpointGetImportJobResult{Result: future}
 }
+
 func (a *PinpointStub) GetImportJobs(ctx workflow.Context, input *pinpoint.GetImportJobsInput) (*pinpoint.GetImportJobsOutput, error) {
     var output pinpoint.GetImportJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetImportJobs, input).Get(ctx, &output)
@@ -2061,6 +2120,7 @@ func (a *PinpointStub) GetImportJobsAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.GetImportJobs, input)
     return &PinpointGetImportJobsResult{Result: future}
 }
+
 func (a *PinpointStub) GetJourney(ctx workflow.Context, input *pinpoint.GetJourneyInput) (*pinpoint.GetJourneyOutput, error) {
     var output pinpoint.GetJourneyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJourney, input).Get(ctx, &output)
@@ -2071,6 +2131,7 @@ func (a *PinpointStub) GetJourneyAsync(ctx workflow.Context, input *pinpoint.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetJourney, input)
     return &PinpointGetJourneyResult{Result: future}
 }
+
 func (a *PinpointStub) GetJourneyDateRangeKpi(ctx workflow.Context, input *pinpoint.GetJourneyDateRangeKpiInput) (*pinpoint.GetJourneyDateRangeKpiOutput, error) {
     var output pinpoint.GetJourneyDateRangeKpiOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJourneyDateRangeKpi, input).Get(ctx, &output)
@@ -2081,6 +2142,7 @@ func (a *PinpointStub) GetJourneyDateRangeKpiAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetJourneyDateRangeKpi, input)
     return &PinpointGetJourneyDateRangeKpiResult{Result: future}
 }
+
 func (a *PinpointStub) GetJourneyExecutionActivityMetrics(ctx workflow.Context, input *pinpoint.GetJourneyExecutionActivityMetricsInput) (*pinpoint.GetJourneyExecutionActivityMetricsOutput, error) {
     var output pinpoint.GetJourneyExecutionActivityMetricsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJourneyExecutionActivityMetrics, input).Get(ctx, &output)
@@ -2091,6 +2153,7 @@ func (a *PinpointStub) GetJourneyExecutionActivityMetricsAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.GetJourneyExecutionActivityMetrics, input)
     return &PinpointGetJourneyExecutionActivityMetricsResult{Result: future}
 }
+
 func (a *PinpointStub) GetJourneyExecutionMetrics(ctx workflow.Context, input *pinpoint.GetJourneyExecutionMetricsInput) (*pinpoint.GetJourneyExecutionMetricsOutput, error) {
     var output pinpoint.GetJourneyExecutionMetricsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJourneyExecutionMetrics, input).Get(ctx, &output)
@@ -2101,6 +2164,7 @@ func (a *PinpointStub) GetJourneyExecutionMetricsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetJourneyExecutionMetrics, input)
     return &PinpointGetJourneyExecutionMetricsResult{Result: future}
 }
+
 func (a *PinpointStub) GetPushTemplate(ctx workflow.Context, input *pinpoint.GetPushTemplateInput) (*pinpoint.GetPushTemplateOutput, error) {
     var output pinpoint.GetPushTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPushTemplate, input).Get(ctx, &output)
@@ -2111,6 +2175,7 @@ func (a *PinpointStub) GetPushTemplateAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.GetPushTemplate, input)
     return &PinpointGetPushTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) GetRecommenderConfiguration(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationInput) (*pinpoint.GetRecommenderConfigurationOutput, error) {
     var output pinpoint.GetRecommenderConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRecommenderConfiguration, input).Get(ctx, &output)
@@ -2121,6 +2186,7 @@ func (a *PinpointStub) GetRecommenderConfigurationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetRecommenderConfiguration, input)
     return &PinpointGetRecommenderConfigurationResult{Result: future}
 }
+
 func (a *PinpointStub) GetRecommenderConfigurations(ctx workflow.Context, input *pinpoint.GetRecommenderConfigurationsInput) (*pinpoint.GetRecommenderConfigurationsOutput, error) {
     var output pinpoint.GetRecommenderConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRecommenderConfigurations, input).Get(ctx, &output)
@@ -2131,6 +2197,7 @@ func (a *PinpointStub) GetRecommenderConfigurationsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GetRecommenderConfigurations, input)
     return &PinpointGetRecommenderConfigurationsResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegment(ctx workflow.Context, input *pinpoint.GetSegmentInput) (*pinpoint.GetSegmentOutput, error) {
     var output pinpoint.GetSegmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegment, input).Get(ctx, &output)
@@ -2141,6 +2208,7 @@ func (a *PinpointStub) GetSegmentAsync(ctx workflow.Context, input *pinpoint.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegment, input)
     return &PinpointGetSegmentResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegmentExportJobs(ctx workflow.Context, input *pinpoint.GetSegmentExportJobsInput) (*pinpoint.GetSegmentExportJobsOutput, error) {
     var output pinpoint.GetSegmentExportJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegmentExportJobs, input).Get(ctx, &output)
@@ -2151,6 +2219,7 @@ func (a *PinpointStub) GetSegmentExportJobsAsync(ctx workflow.Context, input *pi
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegmentExportJobs, input)
     return &PinpointGetSegmentExportJobsResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegmentImportJobs(ctx workflow.Context, input *pinpoint.GetSegmentImportJobsInput) (*pinpoint.GetSegmentImportJobsOutput, error) {
     var output pinpoint.GetSegmentImportJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegmentImportJobs, input).Get(ctx, &output)
@@ -2161,6 +2230,7 @@ func (a *PinpointStub) GetSegmentImportJobsAsync(ctx workflow.Context, input *pi
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegmentImportJobs, input)
     return &PinpointGetSegmentImportJobsResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegmentVersion(ctx workflow.Context, input *pinpoint.GetSegmentVersionInput) (*pinpoint.GetSegmentVersionOutput, error) {
     var output pinpoint.GetSegmentVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegmentVersion, input).Get(ctx, &output)
@@ -2171,6 +2241,7 @@ func (a *PinpointStub) GetSegmentVersionAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegmentVersion, input)
     return &PinpointGetSegmentVersionResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegmentVersions(ctx workflow.Context, input *pinpoint.GetSegmentVersionsInput) (*pinpoint.GetSegmentVersionsOutput, error) {
     var output pinpoint.GetSegmentVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegmentVersions, input).Get(ctx, &output)
@@ -2181,6 +2252,7 @@ func (a *PinpointStub) GetSegmentVersionsAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegmentVersions, input)
     return &PinpointGetSegmentVersionsResult{Result: future}
 }
+
 func (a *PinpointStub) GetSegments(ctx workflow.Context, input *pinpoint.GetSegmentsInput) (*pinpoint.GetSegmentsOutput, error) {
     var output pinpoint.GetSegmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegments, input).Get(ctx, &output)
@@ -2191,6 +2263,7 @@ func (a *PinpointStub) GetSegmentsAsync(ctx workflow.Context, input *pinpoint.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegments, input)
     return &PinpointGetSegmentsResult{Result: future}
 }
+
 func (a *PinpointStub) GetSmsChannel(ctx workflow.Context, input *pinpoint.GetSmsChannelInput) (*pinpoint.GetSmsChannelOutput, error) {
     var output pinpoint.GetSmsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSmsChannel, input).Get(ctx, &output)
@@ -2201,6 +2274,7 @@ func (a *PinpointStub) GetSmsChannelAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.GetSmsChannel, input)
     return &PinpointGetSmsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetSmsTemplate(ctx workflow.Context, input *pinpoint.GetSmsTemplateInput) (*pinpoint.GetSmsTemplateOutput, error) {
     var output pinpoint.GetSmsTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSmsTemplate, input).Get(ctx, &output)
@@ -2211,6 +2285,7 @@ func (a *PinpointStub) GetSmsTemplateAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.GetSmsTemplate, input)
     return &PinpointGetSmsTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) GetUserEndpoints(ctx workflow.Context, input *pinpoint.GetUserEndpointsInput) (*pinpoint.GetUserEndpointsOutput, error) {
     var output pinpoint.GetUserEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUserEndpoints, input).Get(ctx, &output)
@@ -2221,6 +2296,7 @@ func (a *PinpointStub) GetUserEndpointsAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.GetUserEndpoints, input)
     return &PinpointGetUserEndpointsResult{Result: future}
 }
+
 func (a *PinpointStub) GetVoiceChannel(ctx workflow.Context, input *pinpoint.GetVoiceChannelInput) (*pinpoint.GetVoiceChannelOutput, error) {
     var output pinpoint.GetVoiceChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVoiceChannel, input).Get(ctx, &output)
@@ -2231,6 +2307,7 @@ func (a *PinpointStub) GetVoiceChannelAsync(ctx workflow.Context, input *pinpoin
     future := workflow.ExecuteActivity(ctx, a.activities.GetVoiceChannel, input)
     return &PinpointGetVoiceChannelResult{Result: future}
 }
+
 func (a *PinpointStub) GetVoiceTemplate(ctx workflow.Context, input *pinpoint.GetVoiceTemplateInput) (*pinpoint.GetVoiceTemplateOutput, error) {
     var output pinpoint.GetVoiceTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVoiceTemplate, input).Get(ctx, &output)
@@ -2241,6 +2318,7 @@ func (a *PinpointStub) GetVoiceTemplateAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.GetVoiceTemplate, input)
     return &PinpointGetVoiceTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) ListJourneys(ctx workflow.Context, input *pinpoint.ListJourneysInput) (*pinpoint.ListJourneysOutput, error) {
     var output pinpoint.ListJourneysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListJourneys, input).Get(ctx, &output)
@@ -2251,6 +2329,7 @@ func (a *PinpointStub) ListJourneysAsync(ctx workflow.Context, input *pinpoint.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListJourneys, input)
     return &PinpointListJourneysResult{Result: future}
 }
+
 func (a *PinpointStub) ListTagsForResource(ctx workflow.Context, input *pinpoint.ListTagsForResourceInput) (*pinpoint.ListTagsForResourceOutput, error) {
     var output pinpoint.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -2261,6 +2340,7 @@ func (a *PinpointStub) ListTagsForResourceAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &PinpointListTagsForResourceResult{Result: future}
 }
+
 func (a *PinpointStub) ListTemplateVersions(ctx workflow.Context, input *pinpoint.ListTemplateVersionsInput) (*pinpoint.ListTemplateVersionsOutput, error) {
     var output pinpoint.ListTemplateVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTemplateVersions, input).Get(ctx, &output)
@@ -2271,6 +2351,7 @@ func (a *PinpointStub) ListTemplateVersionsAsync(ctx workflow.Context, input *pi
     future := workflow.ExecuteActivity(ctx, a.activities.ListTemplateVersions, input)
     return &PinpointListTemplateVersionsResult{Result: future}
 }
+
 func (a *PinpointStub) ListTemplates(ctx workflow.Context, input *pinpoint.ListTemplatesInput) (*pinpoint.ListTemplatesOutput, error) {
     var output pinpoint.ListTemplatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input).Get(ctx, &output)
@@ -2281,6 +2362,7 @@ func (a *PinpointStub) ListTemplatesAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input)
     return &PinpointListTemplatesResult{Result: future}
 }
+
 func (a *PinpointStub) PhoneNumberValidate(ctx workflow.Context, input *pinpoint.PhoneNumberValidateInput) (*pinpoint.PhoneNumberValidateOutput, error) {
     var output pinpoint.PhoneNumberValidateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PhoneNumberValidate, input).Get(ctx, &output)
@@ -2291,6 +2373,7 @@ func (a *PinpointStub) PhoneNumberValidateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.PhoneNumberValidate, input)
     return &PinpointPhoneNumberValidateResult{Result: future}
 }
+
 func (a *PinpointStub) PutEventStream(ctx workflow.Context, input *pinpoint.PutEventStreamInput) (*pinpoint.PutEventStreamOutput, error) {
     var output pinpoint.PutEventStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEventStream, input).Get(ctx, &output)
@@ -2301,6 +2384,7 @@ func (a *PinpointStub) PutEventStreamAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.PutEventStream, input)
     return &PinpointPutEventStreamResult{Result: future}
 }
+
 func (a *PinpointStub) PutEvents(ctx workflow.Context, input *pinpoint.PutEventsInput) (*pinpoint.PutEventsOutput, error) {
     var output pinpoint.PutEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)
@@ -2311,6 +2395,7 @@ func (a *PinpointStub) PutEventsAsync(ctx workflow.Context, input *pinpoint.PutE
     future := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input)
     return &PinpointPutEventsResult{Result: future}
 }
+
 func (a *PinpointStub) RemoveAttributes(ctx workflow.Context, input *pinpoint.RemoveAttributesInput) (*pinpoint.RemoveAttributesOutput, error) {
     var output pinpoint.RemoveAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveAttributes, input).Get(ctx, &output)
@@ -2321,6 +2406,7 @@ func (a *PinpointStub) RemoveAttributesAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveAttributes, input)
     return &PinpointRemoveAttributesResult{Result: future}
 }
+
 func (a *PinpointStub) SendMessages(ctx workflow.Context, input *pinpoint.SendMessagesInput) (*pinpoint.SendMessagesOutput, error) {
     var output pinpoint.SendMessagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendMessages, input).Get(ctx, &output)
@@ -2331,6 +2417,7 @@ func (a *PinpointStub) SendMessagesAsync(ctx workflow.Context, input *pinpoint.S
     future := workflow.ExecuteActivity(ctx, a.activities.SendMessages, input)
     return &PinpointSendMessagesResult{Result: future}
 }
+
 func (a *PinpointStub) SendUsersMessages(ctx workflow.Context, input *pinpoint.SendUsersMessagesInput) (*pinpoint.SendUsersMessagesOutput, error) {
     var output pinpoint.SendUsersMessagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendUsersMessages, input).Get(ctx, &output)
@@ -2341,6 +2428,7 @@ func (a *PinpointStub) SendUsersMessagesAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.SendUsersMessages, input)
     return &PinpointSendUsersMessagesResult{Result: future}
 }
+
 func (a *PinpointStub) TagResource(ctx workflow.Context, input *pinpoint.TagResourceInput) (*pinpoint.TagResourceOutput, error) {
     var output pinpoint.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -2351,6 +2439,7 @@ func (a *PinpointStub) TagResourceAsync(ctx workflow.Context, input *pinpoint.Ta
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &PinpointTagResourceResult{Result: future}
 }
+
 func (a *PinpointStub) UntagResource(ctx workflow.Context, input *pinpoint.UntagResourceInput) (*pinpoint.UntagResourceOutput, error) {
     var output pinpoint.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -2361,6 +2450,7 @@ func (a *PinpointStub) UntagResourceAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &PinpointUntagResourceResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateAdmChannel(ctx workflow.Context, input *pinpoint.UpdateAdmChannelInput) (*pinpoint.UpdateAdmChannelOutput, error) {
     var output pinpoint.UpdateAdmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateAdmChannel, input).Get(ctx, &output)
@@ -2371,6 +2461,7 @@ func (a *PinpointStub) UpdateAdmChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateAdmChannel, input)
     return &PinpointUpdateAdmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateApnsChannel(ctx workflow.Context, input *pinpoint.UpdateApnsChannelInput) (*pinpoint.UpdateApnsChannelOutput, error) {
     var output pinpoint.UpdateApnsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsChannel, input).Get(ctx, &output)
@@ -2381,6 +2472,7 @@ func (a *PinpointStub) UpdateApnsChannelAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsChannel, input)
     return &PinpointUpdateApnsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateApnsSandboxChannel(ctx workflow.Context, input *pinpoint.UpdateApnsSandboxChannelInput) (*pinpoint.UpdateApnsSandboxChannelOutput, error) {
     var output pinpoint.UpdateApnsSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsSandboxChannel, input).Get(ctx, &output)
@@ -2391,6 +2483,7 @@ func (a *PinpointStub) UpdateApnsSandboxChannelAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsSandboxChannel, input)
     return &PinpointUpdateApnsSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateApnsVoipChannel(ctx workflow.Context, input *pinpoint.UpdateApnsVoipChannelInput) (*pinpoint.UpdateApnsVoipChannelOutput, error) {
     var output pinpoint.UpdateApnsVoipChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsVoipChannel, input).Get(ctx, &output)
@@ -2401,6 +2494,7 @@ func (a *PinpointStub) UpdateApnsVoipChannelAsync(ctx workflow.Context, input *p
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsVoipChannel, input)
     return &PinpointUpdateApnsVoipChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateApnsVoipSandboxChannel(ctx workflow.Context, input *pinpoint.UpdateApnsVoipSandboxChannelInput) (*pinpoint.UpdateApnsVoipSandboxChannelOutput, error) {
     var output pinpoint.UpdateApnsVoipSandboxChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsVoipSandboxChannel, input).Get(ctx, &output)
@@ -2411,6 +2505,7 @@ func (a *PinpointStub) UpdateApnsVoipSandboxChannelAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApnsVoipSandboxChannel, input)
     return &PinpointUpdateApnsVoipSandboxChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateApplicationSettings(ctx workflow.Context, input *pinpoint.UpdateApplicationSettingsInput) (*pinpoint.UpdateApplicationSettingsOutput, error) {
     var output pinpoint.UpdateApplicationSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApplicationSettings, input).Get(ctx, &output)
@@ -2421,6 +2516,7 @@ func (a *PinpointStub) UpdateApplicationSettingsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApplicationSettings, input)
     return &PinpointUpdateApplicationSettingsResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateBaiduChannel(ctx workflow.Context, input *pinpoint.UpdateBaiduChannelInput) (*pinpoint.UpdateBaiduChannelOutput, error) {
     var output pinpoint.UpdateBaiduChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBaiduChannel, input).Get(ctx, &output)
@@ -2431,6 +2527,7 @@ func (a *PinpointStub) UpdateBaiduChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBaiduChannel, input)
     return &PinpointUpdateBaiduChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateCampaign(ctx workflow.Context, input *pinpoint.UpdateCampaignInput) (*pinpoint.UpdateCampaignOutput, error) {
     var output pinpoint.UpdateCampaignOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateCampaign, input).Get(ctx, &output)
@@ -2441,6 +2538,7 @@ func (a *PinpointStub) UpdateCampaignAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateCampaign, input)
     return &PinpointUpdateCampaignResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateEmailChannel(ctx workflow.Context, input *pinpoint.UpdateEmailChannelInput) (*pinpoint.UpdateEmailChannelOutput, error) {
     var output pinpoint.UpdateEmailChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEmailChannel, input).Get(ctx, &output)
@@ -2451,6 +2549,7 @@ func (a *PinpointStub) UpdateEmailChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEmailChannel, input)
     return &PinpointUpdateEmailChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateEmailTemplate(ctx workflow.Context, input *pinpoint.UpdateEmailTemplateInput) (*pinpoint.UpdateEmailTemplateOutput, error) {
     var output pinpoint.UpdateEmailTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEmailTemplate, input).Get(ctx, &output)
@@ -2461,6 +2560,7 @@ func (a *PinpointStub) UpdateEmailTemplateAsync(ctx workflow.Context, input *pin
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEmailTemplate, input)
     return &PinpointUpdateEmailTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateEndpoint(ctx workflow.Context, input *pinpoint.UpdateEndpointInput) (*pinpoint.UpdateEndpointOutput, error) {
     var output pinpoint.UpdateEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpoint, input).Get(ctx, &output)
@@ -2471,6 +2571,7 @@ func (a *PinpointStub) UpdateEndpointAsync(ctx workflow.Context, input *pinpoint
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpoint, input)
     return &PinpointUpdateEndpointResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateEndpointsBatch(ctx workflow.Context, input *pinpoint.UpdateEndpointsBatchInput) (*pinpoint.UpdateEndpointsBatchOutput, error) {
     var output pinpoint.UpdateEndpointsBatchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpointsBatch, input).Get(ctx, &output)
@@ -2481,6 +2582,7 @@ func (a *PinpointStub) UpdateEndpointsBatchAsync(ctx workflow.Context, input *pi
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpointsBatch, input)
     return &PinpointUpdateEndpointsBatchResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateGcmChannel(ctx workflow.Context, input *pinpoint.UpdateGcmChannelInput) (*pinpoint.UpdateGcmChannelOutput, error) {
     var output pinpoint.UpdateGcmChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGcmChannel, input).Get(ctx, &output)
@@ -2491,6 +2593,7 @@ func (a *PinpointStub) UpdateGcmChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGcmChannel, input)
     return &PinpointUpdateGcmChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateJourney(ctx workflow.Context, input *pinpoint.UpdateJourneyInput) (*pinpoint.UpdateJourneyOutput, error) {
     var output pinpoint.UpdateJourneyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateJourney, input).Get(ctx, &output)
@@ -2501,6 +2604,7 @@ func (a *PinpointStub) UpdateJourneyAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateJourney, input)
     return &PinpointUpdateJourneyResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateJourneyState(ctx workflow.Context, input *pinpoint.UpdateJourneyStateInput) (*pinpoint.UpdateJourneyStateOutput, error) {
     var output pinpoint.UpdateJourneyStateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateJourneyState, input).Get(ctx, &output)
@@ -2511,6 +2615,7 @@ func (a *PinpointStub) UpdateJourneyStateAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateJourneyState, input)
     return &PinpointUpdateJourneyStateResult{Result: future}
 }
+
 func (a *PinpointStub) UpdatePushTemplate(ctx workflow.Context, input *pinpoint.UpdatePushTemplateInput) (*pinpoint.UpdatePushTemplateOutput, error) {
     var output pinpoint.UpdatePushTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdatePushTemplate, input).Get(ctx, &output)
@@ -2521,6 +2626,7 @@ func (a *PinpointStub) UpdatePushTemplateAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdatePushTemplate, input)
     return &PinpointUpdatePushTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateRecommenderConfiguration(ctx workflow.Context, input *pinpoint.UpdateRecommenderConfigurationInput) (*pinpoint.UpdateRecommenderConfigurationOutput, error) {
     var output pinpoint.UpdateRecommenderConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRecommenderConfiguration, input).Get(ctx, &output)
@@ -2531,6 +2637,7 @@ func (a *PinpointStub) UpdateRecommenderConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRecommenderConfiguration, input)
     return &PinpointUpdateRecommenderConfigurationResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateSegment(ctx workflow.Context, input *pinpoint.UpdateSegmentInput) (*pinpoint.UpdateSegmentOutput, error) {
     var output pinpoint.UpdateSegmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSegment, input).Get(ctx, &output)
@@ -2541,6 +2648,7 @@ func (a *PinpointStub) UpdateSegmentAsync(ctx workflow.Context, input *pinpoint.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSegment, input)
     return &PinpointUpdateSegmentResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateSmsChannel(ctx workflow.Context, input *pinpoint.UpdateSmsChannelInput) (*pinpoint.UpdateSmsChannelOutput, error) {
     var output pinpoint.UpdateSmsChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSmsChannel, input).Get(ctx, &output)
@@ -2551,6 +2659,7 @@ func (a *PinpointStub) UpdateSmsChannelAsync(ctx workflow.Context, input *pinpoi
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSmsChannel, input)
     return &PinpointUpdateSmsChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateSmsTemplate(ctx workflow.Context, input *pinpoint.UpdateSmsTemplateInput) (*pinpoint.UpdateSmsTemplateOutput, error) {
     var output pinpoint.UpdateSmsTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSmsTemplate, input).Get(ctx, &output)
@@ -2561,6 +2670,7 @@ func (a *PinpointStub) UpdateSmsTemplateAsync(ctx workflow.Context, input *pinpo
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSmsTemplate, input)
     return &PinpointUpdateSmsTemplateResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateTemplateActiveVersion(ctx workflow.Context, input *pinpoint.UpdateTemplateActiveVersionInput) (*pinpoint.UpdateTemplateActiveVersionOutput, error) {
     var output pinpoint.UpdateTemplateActiveVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplateActiveVersion, input).Get(ctx, &output)
@@ -2571,6 +2681,7 @@ func (a *PinpointStub) UpdateTemplateActiveVersionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplateActiveVersion, input)
     return &PinpointUpdateTemplateActiveVersionResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateVoiceChannel(ctx workflow.Context, input *pinpoint.UpdateVoiceChannelInput) (*pinpoint.UpdateVoiceChannelOutput, error) {
     var output pinpoint.UpdateVoiceChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVoiceChannel, input).Get(ctx, &output)
@@ -2581,6 +2692,7 @@ func (a *PinpointStub) UpdateVoiceChannelAsync(ctx workflow.Context, input *pinp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateVoiceChannel, input)
     return &PinpointUpdateVoiceChannelResult{Result: future}
 }
+
 func (a *PinpointStub) UpdateVoiceTemplate(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) (*pinpoint.UpdateVoiceTemplateOutput, error) {
     var output pinpoint.UpdateVoiceTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVoiceTemplate, input).Get(ctx, &output)

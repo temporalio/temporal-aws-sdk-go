@@ -160,6 +160,7 @@ type ComprehendClient interface {
     UpdateEndpoint(ctx workflow.Context, input *comprehend.UpdateEndpointInput) (*comprehend.UpdateEndpointOutput, error)
     UpdateEndpointAsync(ctx workflow.Context, input *comprehend.UpdateEndpointInput) *ComprehendUpdateEndpointResult
 }
+
 type ComprehendBatchDetectDominantLanguageResult struct {
 	Result workflow.Future
 }
@@ -670,7 +671,6 @@ func (r *ComprehendUpdateEndpointResult) Get(ctx workflow.Context) (*comprehend.
     return &output, err
 }
 
-
 type ComprehendStub struct {
     activities awsactivities.ComprehendActivities
 }
@@ -678,6 +678,7 @@ type ComprehendStub struct {
 func NewComprehendStub() ComprehendClient {
     return &ComprehendStub{}
 }
+
 func (a *ComprehendStub) BatchDetectDominantLanguage(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) (*comprehend.BatchDetectDominantLanguageOutput, error) {
     var output comprehend.BatchDetectDominantLanguageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDetectDominantLanguage, input).Get(ctx, &output)
@@ -688,6 +689,7 @@ func (a *ComprehendStub) BatchDetectDominantLanguageAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDetectDominantLanguage, input)
     return &ComprehendBatchDetectDominantLanguageResult{Result: future}
 }
+
 func (a *ComprehendStub) BatchDetectEntities(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) (*comprehend.BatchDetectEntitiesOutput, error) {
     var output comprehend.BatchDetectEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDetectEntities, input).Get(ctx, &output)
@@ -698,6 +700,7 @@ func (a *ComprehendStub) BatchDetectEntitiesAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDetectEntities, input)
     return &ComprehendBatchDetectEntitiesResult{Result: future}
 }
+
 func (a *ComprehendStub) BatchDetectKeyPhrases(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) (*comprehend.BatchDetectKeyPhrasesOutput, error) {
     var output comprehend.BatchDetectKeyPhrasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDetectKeyPhrases, input).Get(ctx, &output)
@@ -708,6 +711,7 @@ func (a *ComprehendStub) BatchDetectKeyPhrasesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDetectKeyPhrases, input)
     return &ComprehendBatchDetectKeyPhrasesResult{Result: future}
 }
+
 func (a *ComprehendStub) BatchDetectSentiment(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) (*comprehend.BatchDetectSentimentOutput, error) {
     var output comprehend.BatchDetectSentimentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDetectSentiment, input).Get(ctx, &output)
@@ -718,6 +722,7 @@ func (a *ComprehendStub) BatchDetectSentimentAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDetectSentiment, input)
     return &ComprehendBatchDetectSentimentResult{Result: future}
 }
+
 func (a *ComprehendStub) BatchDetectSyntax(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) (*comprehend.BatchDetectSyntaxOutput, error) {
     var output comprehend.BatchDetectSyntaxOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDetectSyntax, input).Get(ctx, &output)
@@ -728,6 +733,7 @@ func (a *ComprehendStub) BatchDetectSyntaxAsync(ctx workflow.Context, input *com
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDetectSyntax, input)
     return &ComprehendBatchDetectSyntaxResult{Result: future}
 }
+
 func (a *ComprehendStub) ClassifyDocument(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) (*comprehend.ClassifyDocumentOutput, error) {
     var output comprehend.ClassifyDocumentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ClassifyDocument, input).Get(ctx, &output)
@@ -738,6 +744,7 @@ func (a *ComprehendStub) ClassifyDocumentAsync(ctx workflow.Context, input *comp
     future := workflow.ExecuteActivity(ctx, a.activities.ClassifyDocument, input)
     return &ComprehendClassifyDocumentResult{Result: future}
 }
+
 func (a *ComprehendStub) CreateDocumentClassifier(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) (*comprehend.CreateDocumentClassifierOutput, error) {
     var output comprehend.CreateDocumentClassifierOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDocumentClassifier, input).Get(ctx, &output)
@@ -748,6 +755,7 @@ func (a *ComprehendStub) CreateDocumentClassifierAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDocumentClassifier, input)
     return &ComprehendCreateDocumentClassifierResult{Result: future}
 }
+
 func (a *ComprehendStub) CreateEndpoint(ctx workflow.Context, input *comprehend.CreateEndpointInput) (*comprehend.CreateEndpointOutput, error) {
     var output comprehend.CreateEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEndpoint, input).Get(ctx, &output)
@@ -758,6 +766,7 @@ func (a *ComprehendStub) CreateEndpointAsync(ctx workflow.Context, input *compre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEndpoint, input)
     return &ComprehendCreateEndpointResult{Result: future}
 }
+
 func (a *ComprehendStub) CreateEntityRecognizer(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) (*comprehend.CreateEntityRecognizerOutput, error) {
     var output comprehend.CreateEntityRecognizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEntityRecognizer, input).Get(ctx, &output)
@@ -768,6 +777,7 @@ func (a *ComprehendStub) CreateEntityRecognizerAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEntityRecognizer, input)
     return &ComprehendCreateEntityRecognizerResult{Result: future}
 }
+
 func (a *ComprehendStub) DeleteDocumentClassifier(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) (*comprehend.DeleteDocumentClassifierOutput, error) {
     var output comprehend.DeleteDocumentClassifierOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDocumentClassifier, input).Get(ctx, &output)
@@ -778,6 +788,7 @@ func (a *ComprehendStub) DeleteDocumentClassifierAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDocumentClassifier, input)
     return &ComprehendDeleteDocumentClassifierResult{Result: future}
 }
+
 func (a *ComprehendStub) DeleteEndpoint(ctx workflow.Context, input *comprehend.DeleteEndpointInput) (*comprehend.DeleteEndpointOutput, error) {
     var output comprehend.DeleteEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input).Get(ctx, &output)
@@ -788,6 +799,7 @@ func (a *ComprehendStub) DeleteEndpointAsync(ctx workflow.Context, input *compre
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEndpoint, input)
     return &ComprehendDeleteEndpointResult{Result: future}
 }
+
 func (a *ComprehendStub) DeleteEntityRecognizer(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) (*comprehend.DeleteEntityRecognizerOutput, error) {
     var output comprehend.DeleteEntityRecognizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEntityRecognizer, input).Get(ctx, &output)
@@ -798,6 +810,7 @@ func (a *ComprehendStub) DeleteEntityRecognizerAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEntityRecognizer, input)
     return &ComprehendDeleteEntityRecognizerResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeDocumentClassificationJob(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) (*comprehend.DescribeDocumentClassificationJobOutput, error) {
     var output comprehend.DescribeDocumentClassificationJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentClassificationJob, input).Get(ctx, &output)
@@ -808,6 +821,7 @@ func (a *ComprehendStub) DescribeDocumentClassificationJobAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentClassificationJob, input)
     return &ComprehendDescribeDocumentClassificationJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeDocumentClassifier(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) (*comprehend.DescribeDocumentClassifierOutput, error) {
     var output comprehend.DescribeDocumentClassifierOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentClassifier, input).Get(ctx, &output)
@@ -818,6 +832,7 @@ func (a *ComprehendStub) DescribeDocumentClassifierAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentClassifier, input)
     return &ComprehendDescribeDocumentClassifierResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) (*comprehend.DescribeDominantLanguageDetectionJobOutput, error) {
     var output comprehend.DescribeDominantLanguageDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDominantLanguageDetectionJob, input).Get(ctx, &output)
@@ -828,6 +843,7 @@ func (a *ComprehendStub) DescribeDominantLanguageDetectionJobAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDominantLanguageDetectionJob, input)
     return &ComprehendDescribeDominantLanguageDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeEndpoint(ctx workflow.Context, input *comprehend.DescribeEndpointInput) (*comprehend.DescribeEndpointOutput, error) {
     var output comprehend.DescribeEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoint, input).Get(ctx, &output)
@@ -838,6 +854,7 @@ func (a *ComprehendStub) DescribeEndpointAsync(ctx workflow.Context, input *comp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoint, input)
     return &ComprehendDescribeEndpointResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) (*comprehend.DescribeEntitiesDetectionJobOutput, error) {
     var output comprehend.DescribeEntitiesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEntitiesDetectionJob, input).Get(ctx, &output)
@@ -848,6 +865,7 @@ func (a *ComprehendStub) DescribeEntitiesDetectionJobAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEntitiesDetectionJob, input)
     return &ComprehendDescribeEntitiesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeEntityRecognizer(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) (*comprehend.DescribeEntityRecognizerOutput, error) {
     var output comprehend.DescribeEntityRecognizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEntityRecognizer, input).Get(ctx, &output)
@@ -858,6 +876,7 @@ func (a *ComprehendStub) DescribeEntityRecognizerAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEntityRecognizer, input)
     return &ComprehendDescribeEntityRecognizerResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) (*comprehend.DescribeKeyPhrasesDetectionJobOutput, error) {
     var output comprehend.DescribeKeyPhrasesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeKeyPhrasesDetectionJob, input).Get(ctx, &output)
@@ -868,6 +887,7 @@ func (a *ComprehendStub) DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeKeyPhrasesDetectionJob, input)
     return &ComprehendDescribeKeyPhrasesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error) {
     var output comprehend.DescribeSentimentDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSentimentDetectionJob, input).Get(ctx, &output)
@@ -878,6 +898,7 @@ func (a *ComprehendStub) DescribeSentimentDetectionJobAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSentimentDetectionJob, input)
     return &ComprehendDescribeSentimentDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DescribeTopicsDetectionJob(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) (*comprehend.DescribeTopicsDetectionJobOutput, error) {
     var output comprehend.DescribeTopicsDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTopicsDetectionJob, input).Get(ctx, &output)
@@ -888,6 +909,7 @@ func (a *ComprehendStub) DescribeTopicsDetectionJobAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTopicsDetectionJob, input)
     return &ComprehendDescribeTopicsDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) DetectDominantLanguage(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) (*comprehend.DetectDominantLanguageOutput, error) {
     var output comprehend.DetectDominantLanguageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectDominantLanguage, input).Get(ctx, &output)
@@ -898,6 +920,7 @@ func (a *ComprehendStub) DetectDominantLanguageAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DetectDominantLanguage, input)
     return &ComprehendDetectDominantLanguageResult{Result: future}
 }
+
 func (a *ComprehendStub) DetectEntities(ctx workflow.Context, input *comprehend.DetectEntitiesInput) (*comprehend.DetectEntitiesOutput, error) {
     var output comprehend.DetectEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectEntities, input).Get(ctx, &output)
@@ -908,6 +931,7 @@ func (a *ComprehendStub) DetectEntitiesAsync(ctx workflow.Context, input *compre
     future := workflow.ExecuteActivity(ctx, a.activities.DetectEntities, input)
     return &ComprehendDetectEntitiesResult{Result: future}
 }
+
 func (a *ComprehendStub) DetectKeyPhrases(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) (*comprehend.DetectKeyPhrasesOutput, error) {
     var output comprehend.DetectKeyPhrasesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectKeyPhrases, input).Get(ctx, &output)
@@ -918,6 +942,7 @@ func (a *ComprehendStub) DetectKeyPhrasesAsync(ctx workflow.Context, input *comp
     future := workflow.ExecuteActivity(ctx, a.activities.DetectKeyPhrases, input)
     return &ComprehendDetectKeyPhrasesResult{Result: future}
 }
+
 func (a *ComprehendStub) DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error) {
     var output comprehend.DetectSentimentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectSentiment, input).Get(ctx, &output)
@@ -928,6 +953,7 @@ func (a *ComprehendStub) DetectSentimentAsync(ctx workflow.Context, input *compr
     future := workflow.ExecuteActivity(ctx, a.activities.DetectSentiment, input)
     return &ComprehendDetectSentimentResult{Result: future}
 }
+
 func (a *ComprehendStub) DetectSyntax(ctx workflow.Context, input *comprehend.DetectSyntaxInput) (*comprehend.DetectSyntaxOutput, error) {
     var output comprehend.DetectSyntaxOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectSyntax, input).Get(ctx, &output)
@@ -938,6 +964,7 @@ func (a *ComprehendStub) DetectSyntaxAsync(ctx workflow.Context, input *comprehe
     future := workflow.ExecuteActivity(ctx, a.activities.DetectSyntax, input)
     return &ComprehendDetectSyntaxResult{Result: future}
 }
+
 func (a *ComprehendStub) ListDocumentClassificationJobs(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) (*comprehend.ListDocumentClassificationJobsOutput, error) {
     var output comprehend.ListDocumentClassificationJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDocumentClassificationJobs, input).Get(ctx, &output)
@@ -948,6 +975,7 @@ func (a *ComprehendStub) ListDocumentClassificationJobsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListDocumentClassificationJobs, input)
     return &ComprehendListDocumentClassificationJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListDocumentClassifiers(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) (*comprehend.ListDocumentClassifiersOutput, error) {
     var output comprehend.ListDocumentClassifiersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDocumentClassifiers, input).Get(ctx, &output)
@@ -958,6 +986,7 @@ func (a *ComprehendStub) ListDocumentClassifiersAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListDocumentClassifiers, input)
     return &ComprehendListDocumentClassifiersResult{Result: future}
 }
+
 func (a *ComprehendStub) ListDominantLanguageDetectionJobs(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) (*comprehend.ListDominantLanguageDetectionJobsOutput, error) {
     var output comprehend.ListDominantLanguageDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDominantLanguageDetectionJobs, input).Get(ctx, &output)
@@ -968,6 +997,7 @@ func (a *ComprehendStub) ListDominantLanguageDetectionJobsAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.ListDominantLanguageDetectionJobs, input)
     return &ComprehendListDominantLanguageDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListEndpoints(ctx workflow.Context, input *comprehend.ListEndpointsInput) (*comprehend.ListEndpointsOutput, error) {
     var output comprehend.ListEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEndpoints, input).Get(ctx, &output)
@@ -978,6 +1008,7 @@ func (a *ComprehendStub) ListEndpointsAsync(ctx workflow.Context, input *compreh
     future := workflow.ExecuteActivity(ctx, a.activities.ListEndpoints, input)
     return &ComprehendListEndpointsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) (*comprehend.ListEntitiesDetectionJobsOutput, error) {
     var output comprehend.ListEntitiesDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesDetectionJobs, input).Get(ctx, &output)
@@ -988,6 +1019,7 @@ func (a *ComprehendStub) ListEntitiesDetectionJobsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListEntitiesDetectionJobs, input)
     return &ComprehendListEntitiesDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListEntityRecognizers(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) (*comprehend.ListEntityRecognizersOutput, error) {
     var output comprehend.ListEntityRecognizersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEntityRecognizers, input).Get(ctx, &output)
@@ -998,6 +1030,7 @@ func (a *ComprehendStub) ListEntityRecognizersAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListEntityRecognizers, input)
     return &ComprehendListEntityRecognizersResult{Result: future}
 }
+
 func (a *ComprehendStub) ListKeyPhrasesDetectionJobs(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) (*comprehend.ListKeyPhrasesDetectionJobsOutput, error) {
     var output comprehend.ListKeyPhrasesDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListKeyPhrasesDetectionJobs, input).Get(ctx, &output)
@@ -1008,6 +1041,7 @@ func (a *ComprehendStub) ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListKeyPhrasesDetectionJobs, input)
     return &ComprehendListKeyPhrasesDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error) {
     var output comprehend.ListSentimentDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSentimentDetectionJobs, input).Get(ctx, &output)
@@ -1018,6 +1052,7 @@ func (a *ComprehendStub) ListSentimentDetectionJobsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListSentimentDetectionJobs, input)
     return &ComprehendListSentimentDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) ListTagsForResource(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) (*comprehend.ListTagsForResourceOutput, error) {
     var output comprehend.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1028,6 +1063,7 @@ func (a *ComprehendStub) ListTagsForResourceAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &ComprehendListTagsForResourceResult{Result: future}
 }
+
 func (a *ComprehendStub) ListTopicsDetectionJobs(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) (*comprehend.ListTopicsDetectionJobsOutput, error) {
     var output comprehend.ListTopicsDetectionJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTopicsDetectionJobs, input).Get(ctx, &output)
@@ -1038,6 +1074,7 @@ func (a *ComprehendStub) ListTopicsDetectionJobsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListTopicsDetectionJobs, input)
     return &ComprehendListTopicsDetectionJobsResult{Result: future}
 }
+
 func (a *ComprehendStub) StartDocumentClassificationJob(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) (*comprehend.StartDocumentClassificationJobOutput, error) {
     var output comprehend.StartDocumentClassificationJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDocumentClassificationJob, input).Get(ctx, &output)
@@ -1048,6 +1085,7 @@ func (a *ComprehendStub) StartDocumentClassificationJobAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.StartDocumentClassificationJob, input)
     return &ComprehendStartDocumentClassificationJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StartDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) (*comprehend.StartDominantLanguageDetectionJobOutput, error) {
     var output comprehend.StartDominantLanguageDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDominantLanguageDetectionJob, input).Get(ctx, &output)
@@ -1058,6 +1096,7 @@ func (a *ComprehendStub) StartDominantLanguageDetectionJobAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.StartDominantLanguageDetectionJob, input)
     return &ComprehendStartDominantLanguageDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StartEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) (*comprehend.StartEntitiesDetectionJobOutput, error) {
     var output comprehend.StartEntitiesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartEntitiesDetectionJob, input).Get(ctx, &output)
@@ -1068,6 +1107,7 @@ func (a *ComprehendStub) StartEntitiesDetectionJobAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.StartEntitiesDetectionJob, input)
     return &ComprehendStartEntitiesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StartKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) (*comprehend.StartKeyPhrasesDetectionJobOutput, error) {
     var output comprehend.StartKeyPhrasesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartKeyPhrasesDetectionJob, input).Get(ctx, &output)
@@ -1078,6 +1118,7 @@ func (a *ComprehendStub) StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.StartKeyPhrasesDetectionJob, input)
     return &ComprehendStartKeyPhrasesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error) {
     var output comprehend.StartSentimentDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartSentimentDetectionJob, input).Get(ctx, &output)
@@ -1088,6 +1129,7 @@ func (a *ComprehendStub) StartSentimentDetectionJobAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.StartSentimentDetectionJob, input)
     return &ComprehendStartSentimentDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StartTopicsDetectionJob(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) (*comprehend.StartTopicsDetectionJobOutput, error) {
     var output comprehend.StartTopicsDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartTopicsDetectionJob, input).Get(ctx, &output)
@@ -1098,6 +1140,7 @@ func (a *ComprehendStub) StartTopicsDetectionJobAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.StartTopicsDetectionJob, input)
     return &ComprehendStartTopicsDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StopDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) (*comprehend.StopDominantLanguageDetectionJobOutput, error) {
     var output comprehend.StopDominantLanguageDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopDominantLanguageDetectionJob, input).Get(ctx, &output)
@@ -1108,6 +1151,7 @@ func (a *ComprehendStub) StopDominantLanguageDetectionJobAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.StopDominantLanguageDetectionJob, input)
     return &ComprehendStopDominantLanguageDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StopEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) (*comprehend.StopEntitiesDetectionJobOutput, error) {
     var output comprehend.StopEntitiesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopEntitiesDetectionJob, input).Get(ctx, &output)
@@ -1118,6 +1162,7 @@ func (a *ComprehendStub) StopEntitiesDetectionJobAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.StopEntitiesDetectionJob, input)
     return &ComprehendStopEntitiesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StopKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) (*comprehend.StopKeyPhrasesDetectionJobOutput, error) {
     var output comprehend.StopKeyPhrasesDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopKeyPhrasesDetectionJob, input).Get(ctx, &output)
@@ -1128,6 +1173,7 @@ func (a *ComprehendStub) StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.StopKeyPhrasesDetectionJob, input)
     return &ComprehendStopKeyPhrasesDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error) {
     var output comprehend.StopSentimentDetectionJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopSentimentDetectionJob, input).Get(ctx, &output)
@@ -1138,6 +1184,7 @@ func (a *ComprehendStub) StopSentimentDetectionJobAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.StopSentimentDetectionJob, input)
     return &ComprehendStopSentimentDetectionJobResult{Result: future}
 }
+
 func (a *ComprehendStub) StopTrainingDocumentClassifier(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) (*comprehend.StopTrainingDocumentClassifierOutput, error) {
     var output comprehend.StopTrainingDocumentClassifierOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopTrainingDocumentClassifier, input).Get(ctx, &output)
@@ -1148,6 +1195,7 @@ func (a *ComprehendStub) StopTrainingDocumentClassifierAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.StopTrainingDocumentClassifier, input)
     return &ComprehendStopTrainingDocumentClassifierResult{Result: future}
 }
+
 func (a *ComprehendStub) StopTrainingEntityRecognizer(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) (*comprehend.StopTrainingEntityRecognizerOutput, error) {
     var output comprehend.StopTrainingEntityRecognizerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopTrainingEntityRecognizer, input).Get(ctx, &output)
@@ -1158,6 +1206,7 @@ func (a *ComprehendStub) StopTrainingEntityRecognizerAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.StopTrainingEntityRecognizer, input)
     return &ComprehendStopTrainingEntityRecognizerResult{Result: future}
 }
+
 func (a *ComprehendStub) TagResource(ctx workflow.Context, input *comprehend.TagResourceInput) (*comprehend.TagResourceOutput, error) {
     var output comprehend.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1168,6 +1217,7 @@ func (a *ComprehendStub) TagResourceAsync(ctx workflow.Context, input *comprehen
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &ComprehendTagResourceResult{Result: future}
 }
+
 func (a *ComprehendStub) UntagResource(ctx workflow.Context, input *comprehend.UntagResourceInput) (*comprehend.UntagResourceOutput, error) {
     var output comprehend.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1178,6 +1228,7 @@ func (a *ComprehendStub) UntagResourceAsync(ctx workflow.Context, input *compreh
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &ComprehendUntagResourceResult{Result: future}
 }
+
 func (a *ComprehendStub) UpdateEndpoint(ctx workflow.Context, input *comprehend.UpdateEndpointInput) (*comprehend.UpdateEndpointOutput, error) {
     var output comprehend.UpdateEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEndpoint, input).Get(ctx, &output)

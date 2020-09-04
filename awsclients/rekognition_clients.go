@@ -150,6 +150,7 @@ type RekognitionClient interface {
 
     WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
     WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error}
+
 type RekognitionCompareFacesResult struct {
 	Result workflow.Future
 }
@@ -620,7 +621,6 @@ func (r *RekognitionStopStreamProcessorResult) Get(ctx workflow.Context) (*rekog
     return &output, err
 }
 
-
 type RekognitionStub struct {
     activities awsactivities.RekognitionActivities
 }
@@ -628,6 +628,7 @@ type RekognitionStub struct {
 func NewRekognitionStub() RekognitionClient {
     return &RekognitionStub{}
 }
+
 func (a *RekognitionStub) CompareFaces(ctx workflow.Context, input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error) {
     var output rekognition.CompareFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CompareFaces, input).Get(ctx, &output)
@@ -638,6 +639,7 @@ func (a *RekognitionStub) CompareFacesAsync(ctx workflow.Context, input *rekogni
     future := workflow.ExecuteActivity(ctx, a.activities.CompareFaces, input)
     return &RekognitionCompareFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) CreateCollection(ctx workflow.Context, input *rekognition.CreateCollectionInput) (*rekognition.CreateCollectionOutput, error) {
     var output rekognition.CreateCollectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCollection, input).Get(ctx, &output)
@@ -648,6 +650,7 @@ func (a *RekognitionStub) CreateCollectionAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCollection, input)
     return &RekognitionCreateCollectionResult{Result: future}
 }
+
 func (a *RekognitionStub) CreateProject(ctx workflow.Context, input *rekognition.CreateProjectInput) (*rekognition.CreateProjectOutput, error) {
     var output rekognition.CreateProjectOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProject, input).Get(ctx, &output)
@@ -658,6 +661,7 @@ func (a *RekognitionStub) CreateProjectAsync(ctx workflow.Context, input *rekogn
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProject, input)
     return &RekognitionCreateProjectResult{Result: future}
 }
+
 func (a *RekognitionStub) CreateProjectVersion(ctx workflow.Context, input *rekognition.CreateProjectVersionInput) (*rekognition.CreateProjectVersionOutput, error) {
     var output rekognition.CreateProjectVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProjectVersion, input).Get(ctx, &output)
@@ -668,6 +672,7 @@ func (a *RekognitionStub) CreateProjectVersionAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProjectVersion, input)
     return &RekognitionCreateProjectVersionResult{Result: future}
 }
+
 func (a *RekognitionStub) CreateStreamProcessor(ctx workflow.Context, input *rekognition.CreateStreamProcessorInput) (*rekognition.CreateStreamProcessorOutput, error) {
     var output rekognition.CreateStreamProcessorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStreamProcessor, input).Get(ctx, &output)
@@ -678,6 +683,7 @@ func (a *RekognitionStub) CreateStreamProcessorAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStreamProcessor, input)
     return &RekognitionCreateStreamProcessorResult{Result: future}
 }
+
 func (a *RekognitionStub) DeleteCollection(ctx workflow.Context, input *rekognition.DeleteCollectionInput) (*rekognition.DeleteCollectionOutput, error) {
     var output rekognition.DeleteCollectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCollection, input).Get(ctx, &output)
@@ -688,6 +694,7 @@ func (a *RekognitionStub) DeleteCollectionAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCollection, input)
     return &RekognitionDeleteCollectionResult{Result: future}
 }
+
 func (a *RekognitionStub) DeleteFaces(ctx workflow.Context, input *rekognition.DeleteFacesInput) (*rekognition.DeleteFacesOutput, error) {
     var output rekognition.DeleteFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFaces, input).Get(ctx, &output)
@@ -698,6 +705,7 @@ func (a *RekognitionStub) DeleteFacesAsync(ctx workflow.Context, input *rekognit
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFaces, input)
     return &RekognitionDeleteFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) DeleteProject(ctx workflow.Context, input *rekognition.DeleteProjectInput) (*rekognition.DeleteProjectOutput, error) {
     var output rekognition.DeleteProjectOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteProject, input).Get(ctx, &output)
@@ -708,6 +716,7 @@ func (a *RekognitionStub) DeleteProjectAsync(ctx workflow.Context, input *rekogn
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteProject, input)
     return &RekognitionDeleteProjectResult{Result: future}
 }
+
 func (a *RekognitionStub) DeleteProjectVersion(ctx workflow.Context, input *rekognition.DeleteProjectVersionInput) (*rekognition.DeleteProjectVersionOutput, error) {
     var output rekognition.DeleteProjectVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteProjectVersion, input).Get(ctx, &output)
@@ -718,6 +727,7 @@ func (a *RekognitionStub) DeleteProjectVersionAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteProjectVersion, input)
     return &RekognitionDeleteProjectVersionResult{Result: future}
 }
+
 func (a *RekognitionStub) DeleteStreamProcessor(ctx workflow.Context, input *rekognition.DeleteStreamProcessorInput) (*rekognition.DeleteStreamProcessorOutput, error) {
     var output rekognition.DeleteStreamProcessorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStreamProcessor, input).Get(ctx, &output)
@@ -728,6 +738,7 @@ func (a *RekognitionStub) DeleteStreamProcessorAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStreamProcessor, input)
     return &RekognitionDeleteStreamProcessorResult{Result: future}
 }
+
 func (a *RekognitionStub) DescribeCollection(ctx workflow.Context, input *rekognition.DescribeCollectionInput) (*rekognition.DescribeCollectionOutput, error) {
     var output rekognition.DescribeCollectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCollection, input).Get(ctx, &output)
@@ -738,6 +749,7 @@ func (a *RekognitionStub) DescribeCollectionAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCollection, input)
     return &RekognitionDescribeCollectionResult{Result: future}
 }
+
 func (a *RekognitionStub) DescribeProjectVersions(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) (*rekognition.DescribeProjectVersionsOutput, error) {
     var output rekognition.DescribeProjectVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProjectVersions, input).Get(ctx, &output)
@@ -748,6 +760,7 @@ func (a *RekognitionStub) DescribeProjectVersionsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProjectVersions, input)
     return &RekognitionDescribeProjectVersionsResult{Result: future}
 }
+
 func (a *RekognitionStub) DescribeProjects(ctx workflow.Context, input *rekognition.DescribeProjectsInput) (*rekognition.DescribeProjectsOutput, error) {
     var output rekognition.DescribeProjectsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProjects, input).Get(ctx, &output)
@@ -758,6 +771,7 @@ func (a *RekognitionStub) DescribeProjectsAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProjects, input)
     return &RekognitionDescribeProjectsResult{Result: future}
 }
+
 func (a *RekognitionStub) DescribeStreamProcessor(ctx workflow.Context, input *rekognition.DescribeStreamProcessorInput) (*rekognition.DescribeStreamProcessorOutput, error) {
     var output rekognition.DescribeStreamProcessorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStreamProcessor, input).Get(ctx, &output)
@@ -768,6 +782,7 @@ func (a *RekognitionStub) DescribeStreamProcessorAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStreamProcessor, input)
     return &RekognitionDescribeStreamProcessorResult{Result: future}
 }
+
 func (a *RekognitionStub) DetectCustomLabels(ctx workflow.Context, input *rekognition.DetectCustomLabelsInput) (*rekognition.DetectCustomLabelsOutput, error) {
     var output rekognition.DetectCustomLabelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectCustomLabels, input).Get(ctx, &output)
@@ -778,6 +793,7 @@ func (a *RekognitionStub) DetectCustomLabelsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DetectCustomLabels, input)
     return &RekognitionDetectCustomLabelsResult{Result: future}
 }
+
 func (a *RekognitionStub) DetectFaces(ctx workflow.Context, input *rekognition.DetectFacesInput) (*rekognition.DetectFacesOutput, error) {
     var output rekognition.DetectFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectFaces, input).Get(ctx, &output)
@@ -788,6 +804,7 @@ func (a *RekognitionStub) DetectFacesAsync(ctx workflow.Context, input *rekognit
     future := workflow.ExecuteActivity(ctx, a.activities.DetectFaces, input)
     return &RekognitionDetectFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) DetectLabels(ctx workflow.Context, input *rekognition.DetectLabelsInput) (*rekognition.DetectLabelsOutput, error) {
     var output rekognition.DetectLabelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectLabels, input).Get(ctx, &output)
@@ -798,6 +815,7 @@ func (a *RekognitionStub) DetectLabelsAsync(ctx workflow.Context, input *rekogni
     future := workflow.ExecuteActivity(ctx, a.activities.DetectLabels, input)
     return &RekognitionDetectLabelsResult{Result: future}
 }
+
 func (a *RekognitionStub) DetectModerationLabels(ctx workflow.Context, input *rekognition.DetectModerationLabelsInput) (*rekognition.DetectModerationLabelsOutput, error) {
     var output rekognition.DetectModerationLabelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectModerationLabels, input).Get(ctx, &output)
@@ -808,6 +826,7 @@ func (a *RekognitionStub) DetectModerationLabelsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DetectModerationLabels, input)
     return &RekognitionDetectModerationLabelsResult{Result: future}
 }
+
 func (a *RekognitionStub) DetectText(ctx workflow.Context, input *rekognition.DetectTextInput) (*rekognition.DetectTextOutput, error) {
     var output rekognition.DetectTextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectText, input).Get(ctx, &output)
@@ -818,6 +837,7 @@ func (a *RekognitionStub) DetectTextAsync(ctx workflow.Context, input *rekogniti
     future := workflow.ExecuteActivity(ctx, a.activities.DetectText, input)
     return &RekognitionDetectTextResult{Result: future}
 }
+
 func (a *RekognitionStub) GetCelebrityInfo(ctx workflow.Context, input *rekognition.GetCelebrityInfoInput) (*rekognition.GetCelebrityInfoOutput, error) {
     var output rekognition.GetCelebrityInfoOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCelebrityInfo, input).Get(ctx, &output)
@@ -828,6 +848,7 @@ func (a *RekognitionStub) GetCelebrityInfoAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.GetCelebrityInfo, input)
     return &RekognitionGetCelebrityInfoResult{Result: future}
 }
+
 func (a *RekognitionStub) GetCelebrityRecognition(ctx workflow.Context, input *rekognition.GetCelebrityRecognitionInput) (*rekognition.GetCelebrityRecognitionOutput, error) {
     var output rekognition.GetCelebrityRecognitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCelebrityRecognition, input).Get(ctx, &output)
@@ -838,6 +859,7 @@ func (a *RekognitionStub) GetCelebrityRecognitionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetCelebrityRecognition, input)
     return &RekognitionGetCelebrityRecognitionResult{Result: future}
 }
+
 func (a *RekognitionStub) GetContentModeration(ctx workflow.Context, input *rekognition.GetContentModerationInput) (*rekognition.GetContentModerationOutput, error) {
     var output rekognition.GetContentModerationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetContentModeration, input).Get(ctx, &output)
@@ -848,6 +870,7 @@ func (a *RekognitionStub) GetContentModerationAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetContentModeration, input)
     return &RekognitionGetContentModerationResult{Result: future}
 }
+
 func (a *RekognitionStub) GetFaceDetection(ctx workflow.Context, input *rekognition.GetFaceDetectionInput) (*rekognition.GetFaceDetectionOutput, error) {
     var output rekognition.GetFaceDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFaceDetection, input).Get(ctx, &output)
@@ -858,6 +881,7 @@ func (a *RekognitionStub) GetFaceDetectionAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.GetFaceDetection, input)
     return &RekognitionGetFaceDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) GetFaceSearch(ctx workflow.Context, input *rekognition.GetFaceSearchInput) (*rekognition.GetFaceSearchOutput, error) {
     var output rekognition.GetFaceSearchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFaceSearch, input).Get(ctx, &output)
@@ -868,6 +892,7 @@ func (a *RekognitionStub) GetFaceSearchAsync(ctx workflow.Context, input *rekogn
     future := workflow.ExecuteActivity(ctx, a.activities.GetFaceSearch, input)
     return &RekognitionGetFaceSearchResult{Result: future}
 }
+
 func (a *RekognitionStub) GetLabelDetection(ctx workflow.Context, input *rekognition.GetLabelDetectionInput) (*rekognition.GetLabelDetectionOutput, error) {
     var output rekognition.GetLabelDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLabelDetection, input).Get(ctx, &output)
@@ -878,6 +903,7 @@ func (a *RekognitionStub) GetLabelDetectionAsync(ctx workflow.Context, input *re
     future := workflow.ExecuteActivity(ctx, a.activities.GetLabelDetection, input)
     return &RekognitionGetLabelDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) GetPersonTracking(ctx workflow.Context, input *rekognition.GetPersonTrackingInput) (*rekognition.GetPersonTrackingOutput, error) {
     var output rekognition.GetPersonTrackingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPersonTracking, input).Get(ctx, &output)
@@ -888,6 +914,7 @@ func (a *RekognitionStub) GetPersonTrackingAsync(ctx workflow.Context, input *re
     future := workflow.ExecuteActivity(ctx, a.activities.GetPersonTracking, input)
     return &RekognitionGetPersonTrackingResult{Result: future}
 }
+
 func (a *RekognitionStub) GetSegmentDetection(ctx workflow.Context, input *rekognition.GetSegmentDetectionInput) (*rekognition.GetSegmentDetectionOutput, error) {
     var output rekognition.GetSegmentDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSegmentDetection, input).Get(ctx, &output)
@@ -898,6 +925,7 @@ func (a *RekognitionStub) GetSegmentDetectionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetSegmentDetection, input)
     return &RekognitionGetSegmentDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) GetTextDetection(ctx workflow.Context, input *rekognition.GetTextDetectionInput) (*rekognition.GetTextDetectionOutput, error) {
     var output rekognition.GetTextDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTextDetection, input).Get(ctx, &output)
@@ -908,6 +936,7 @@ func (a *RekognitionStub) GetTextDetectionAsync(ctx workflow.Context, input *rek
     future := workflow.ExecuteActivity(ctx, a.activities.GetTextDetection, input)
     return &RekognitionGetTextDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) IndexFaces(ctx workflow.Context, input *rekognition.IndexFacesInput) (*rekognition.IndexFacesOutput, error) {
     var output rekognition.IndexFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.IndexFaces, input).Get(ctx, &output)
@@ -918,6 +947,7 @@ func (a *RekognitionStub) IndexFacesAsync(ctx workflow.Context, input *rekogniti
     future := workflow.ExecuteActivity(ctx, a.activities.IndexFaces, input)
     return &RekognitionIndexFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) ListCollections(ctx workflow.Context, input *rekognition.ListCollectionsInput) (*rekognition.ListCollectionsOutput, error) {
     var output rekognition.ListCollectionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListCollections, input).Get(ctx, &output)
@@ -928,6 +958,7 @@ func (a *RekognitionStub) ListCollectionsAsync(ctx workflow.Context, input *reko
     future := workflow.ExecuteActivity(ctx, a.activities.ListCollections, input)
     return &RekognitionListCollectionsResult{Result: future}
 }
+
 func (a *RekognitionStub) ListFaces(ctx workflow.Context, input *rekognition.ListFacesInput) (*rekognition.ListFacesOutput, error) {
     var output rekognition.ListFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFaces, input).Get(ctx, &output)
@@ -938,6 +969,7 @@ func (a *RekognitionStub) ListFacesAsync(ctx workflow.Context, input *rekognitio
     future := workflow.ExecuteActivity(ctx, a.activities.ListFaces, input)
     return &RekognitionListFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) ListStreamProcessors(ctx workflow.Context, input *rekognition.ListStreamProcessorsInput) (*rekognition.ListStreamProcessorsOutput, error) {
     var output rekognition.ListStreamProcessorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStreamProcessors, input).Get(ctx, &output)
@@ -948,6 +980,7 @@ func (a *RekognitionStub) ListStreamProcessorsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListStreamProcessors, input)
     return &RekognitionListStreamProcessorsResult{Result: future}
 }
+
 func (a *RekognitionStub) RecognizeCelebrities(ctx workflow.Context, input *rekognition.RecognizeCelebritiesInput) (*rekognition.RecognizeCelebritiesOutput, error) {
     var output rekognition.RecognizeCelebritiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RecognizeCelebrities, input).Get(ctx, &output)
@@ -958,6 +991,7 @@ func (a *RekognitionStub) RecognizeCelebritiesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.RecognizeCelebrities, input)
     return &RekognitionRecognizeCelebritiesResult{Result: future}
 }
+
 func (a *RekognitionStub) SearchFaces(ctx workflow.Context, input *rekognition.SearchFacesInput) (*rekognition.SearchFacesOutput, error) {
     var output rekognition.SearchFacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchFaces, input).Get(ctx, &output)
@@ -968,6 +1002,7 @@ func (a *RekognitionStub) SearchFacesAsync(ctx workflow.Context, input *rekognit
     future := workflow.ExecuteActivity(ctx, a.activities.SearchFaces, input)
     return &RekognitionSearchFacesResult{Result: future}
 }
+
 func (a *RekognitionStub) SearchFacesByImage(ctx workflow.Context, input *rekognition.SearchFacesByImageInput) (*rekognition.SearchFacesByImageOutput, error) {
     var output rekognition.SearchFacesByImageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchFacesByImage, input).Get(ctx, &output)
@@ -978,6 +1013,7 @@ func (a *RekognitionStub) SearchFacesByImageAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.SearchFacesByImage, input)
     return &RekognitionSearchFacesByImageResult{Result: future}
 }
+
 func (a *RekognitionStub) StartCelebrityRecognition(ctx workflow.Context, input *rekognition.StartCelebrityRecognitionInput) (*rekognition.StartCelebrityRecognitionOutput, error) {
     var output rekognition.StartCelebrityRecognitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartCelebrityRecognition, input).Get(ctx, &output)
@@ -988,6 +1024,7 @@ func (a *RekognitionStub) StartCelebrityRecognitionAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.StartCelebrityRecognition, input)
     return &RekognitionStartCelebrityRecognitionResult{Result: future}
 }
+
 func (a *RekognitionStub) StartContentModeration(ctx workflow.Context, input *rekognition.StartContentModerationInput) (*rekognition.StartContentModerationOutput, error) {
     var output rekognition.StartContentModerationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartContentModeration, input).Get(ctx, &output)
@@ -998,6 +1035,7 @@ func (a *RekognitionStub) StartContentModerationAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.StartContentModeration, input)
     return &RekognitionStartContentModerationResult{Result: future}
 }
+
 func (a *RekognitionStub) StartFaceDetection(ctx workflow.Context, input *rekognition.StartFaceDetectionInput) (*rekognition.StartFaceDetectionOutput, error) {
     var output rekognition.StartFaceDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartFaceDetection, input).Get(ctx, &output)
@@ -1008,6 +1046,7 @@ func (a *RekognitionStub) StartFaceDetectionAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.StartFaceDetection, input)
     return &RekognitionStartFaceDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) StartFaceSearch(ctx workflow.Context, input *rekognition.StartFaceSearchInput) (*rekognition.StartFaceSearchOutput, error) {
     var output rekognition.StartFaceSearchOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartFaceSearch, input).Get(ctx, &output)
@@ -1018,6 +1057,7 @@ func (a *RekognitionStub) StartFaceSearchAsync(ctx workflow.Context, input *reko
     future := workflow.ExecuteActivity(ctx, a.activities.StartFaceSearch, input)
     return &RekognitionStartFaceSearchResult{Result: future}
 }
+
 func (a *RekognitionStub) StartLabelDetection(ctx workflow.Context, input *rekognition.StartLabelDetectionInput) (*rekognition.StartLabelDetectionOutput, error) {
     var output rekognition.StartLabelDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartLabelDetection, input).Get(ctx, &output)
@@ -1028,6 +1068,7 @@ func (a *RekognitionStub) StartLabelDetectionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.StartLabelDetection, input)
     return &RekognitionStartLabelDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) StartPersonTracking(ctx workflow.Context, input *rekognition.StartPersonTrackingInput) (*rekognition.StartPersonTrackingOutput, error) {
     var output rekognition.StartPersonTrackingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartPersonTracking, input).Get(ctx, &output)
@@ -1038,6 +1079,7 @@ func (a *RekognitionStub) StartPersonTrackingAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.StartPersonTracking, input)
     return &RekognitionStartPersonTrackingResult{Result: future}
 }
+
 func (a *RekognitionStub) StartProjectVersion(ctx workflow.Context, input *rekognition.StartProjectVersionInput) (*rekognition.StartProjectVersionOutput, error) {
     var output rekognition.StartProjectVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartProjectVersion, input).Get(ctx, &output)
@@ -1048,6 +1090,7 @@ func (a *RekognitionStub) StartProjectVersionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.StartProjectVersion, input)
     return &RekognitionStartProjectVersionResult{Result: future}
 }
+
 func (a *RekognitionStub) StartSegmentDetection(ctx workflow.Context, input *rekognition.StartSegmentDetectionInput) (*rekognition.StartSegmentDetectionOutput, error) {
     var output rekognition.StartSegmentDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartSegmentDetection, input).Get(ctx, &output)
@@ -1058,6 +1101,7 @@ func (a *RekognitionStub) StartSegmentDetectionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.StartSegmentDetection, input)
     return &RekognitionStartSegmentDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) StartStreamProcessor(ctx workflow.Context, input *rekognition.StartStreamProcessorInput) (*rekognition.StartStreamProcessorOutput, error) {
     var output rekognition.StartStreamProcessorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartStreamProcessor, input).Get(ctx, &output)
@@ -1068,6 +1112,7 @@ func (a *RekognitionStub) StartStreamProcessorAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.StartStreamProcessor, input)
     return &RekognitionStartStreamProcessorResult{Result: future}
 }
+
 func (a *RekognitionStub) StartTextDetection(ctx workflow.Context, input *rekognition.StartTextDetectionInput) (*rekognition.StartTextDetectionOutput, error) {
     var output rekognition.StartTextDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartTextDetection, input).Get(ctx, &output)
@@ -1078,6 +1123,7 @@ func (a *RekognitionStub) StartTextDetectionAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.StartTextDetection, input)
     return &RekognitionStartTextDetectionResult{Result: future}
 }
+
 func (a *RekognitionStub) StopProjectVersion(ctx workflow.Context, input *rekognition.StopProjectVersionInput) (*rekognition.StopProjectVersionOutput, error) {
     var output rekognition.StopProjectVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopProjectVersion, input).Get(ctx, &output)
@@ -1088,6 +1134,7 @@ func (a *RekognitionStub) StopProjectVersionAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.StopProjectVersion, input)
     return &RekognitionStopProjectVersionResult{Result: future}
 }
+
 func (a *RekognitionStub) StopStreamProcessor(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) (*rekognition.StopStreamProcessorOutput, error) {
     var output rekognition.StopStreamProcessorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopStreamProcessor, input).Get(ctx, &output)
@@ -1107,6 +1154,7 @@ func (a *RekognitionStub) WaitUntilProjectVersionRunningAsync(ctx workflow.Conte
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilProjectVersionRunning, input)
 }
 
+
 func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilProjectVersionTrainingCompleted, input).Get(ctx, nil)
 }
@@ -1114,3 +1162,4 @@ func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompleted(ctx workflow.
 func (a *RekognitionStub) WaitUntilProjectVersionTrainingCompletedAsync(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilProjectVersionTrainingCompleted, input)
 }
+

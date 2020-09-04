@@ -46,6 +46,7 @@ type Cloud9Client interface {
     UpdateEnvironmentMembership(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) (*cloud9.UpdateEnvironmentMembershipOutput, error)
     UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipResult
 }
+
 type Cloud9CreateEnvironmentEC2Result struct {
 	Result workflow.Future
 }
@@ -176,7 +177,6 @@ func (r *Cloud9UpdateEnvironmentMembershipResult) Get(ctx workflow.Context) (*cl
     return &output, err
 }
 
-
 type Cloud9Stub struct {
     activities awsactivities.Cloud9Activities
 }
@@ -184,6 +184,7 @@ type Cloud9Stub struct {
 func NewCloud9Stub() Cloud9Client {
     return &Cloud9Stub{}
 }
+
 func (a *Cloud9Stub) CreateEnvironmentEC2(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) (*cloud9.CreateEnvironmentEC2Output, error) {
     var output cloud9.CreateEnvironmentEC2Output
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironmentEC2, input).Get(ctx, &output)
@@ -194,6 +195,7 @@ func (a *Cloud9Stub) CreateEnvironmentEC2Async(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironmentEC2, input)
     return &Cloud9CreateEnvironmentEC2Result{Result: future}
 }
+
 func (a *Cloud9Stub) CreateEnvironmentMembership(ctx workflow.Context, input *cloud9.CreateEnvironmentMembershipInput) (*cloud9.CreateEnvironmentMembershipOutput, error) {
     var output cloud9.CreateEnvironmentMembershipOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironmentMembership, input).Get(ctx, &output)
@@ -204,6 +206,7 @@ func (a *Cloud9Stub) CreateEnvironmentMembershipAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironmentMembership, input)
     return &Cloud9CreateEnvironmentMembershipResult{Result: future}
 }
+
 func (a *Cloud9Stub) DeleteEnvironment(ctx workflow.Context, input *cloud9.DeleteEnvironmentInput) (*cloud9.DeleteEnvironmentOutput, error) {
     var output cloud9.DeleteEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironment, input).Get(ctx, &output)
@@ -214,6 +217,7 @@ func (a *Cloud9Stub) DeleteEnvironmentAsync(ctx workflow.Context, input *cloud9.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironment, input)
     return &Cloud9DeleteEnvironmentResult{Result: future}
 }
+
 func (a *Cloud9Stub) DeleteEnvironmentMembership(ctx workflow.Context, input *cloud9.DeleteEnvironmentMembershipInput) (*cloud9.DeleteEnvironmentMembershipOutput, error) {
     var output cloud9.DeleteEnvironmentMembershipOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironmentMembership, input).Get(ctx, &output)
@@ -224,6 +228,7 @@ func (a *Cloud9Stub) DeleteEnvironmentMembershipAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironmentMembership, input)
     return &Cloud9DeleteEnvironmentMembershipResult{Result: future}
 }
+
 func (a *Cloud9Stub) DescribeEnvironmentMemberships(ctx workflow.Context, input *cloud9.DescribeEnvironmentMembershipsInput) (*cloud9.DescribeEnvironmentMembershipsOutput, error) {
     var output cloud9.DescribeEnvironmentMembershipsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironmentMemberships, input).Get(ctx, &output)
@@ -234,6 +239,7 @@ func (a *Cloud9Stub) DescribeEnvironmentMembershipsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironmentMemberships, input)
     return &Cloud9DescribeEnvironmentMembershipsResult{Result: future}
 }
+
 func (a *Cloud9Stub) DescribeEnvironmentStatus(ctx workflow.Context, input *cloud9.DescribeEnvironmentStatusInput) (*cloud9.DescribeEnvironmentStatusOutput, error) {
     var output cloud9.DescribeEnvironmentStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironmentStatus, input).Get(ctx, &output)
@@ -244,6 +250,7 @@ func (a *Cloud9Stub) DescribeEnvironmentStatusAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironmentStatus, input)
     return &Cloud9DescribeEnvironmentStatusResult{Result: future}
 }
+
 func (a *Cloud9Stub) DescribeEnvironments(ctx workflow.Context, input *cloud9.DescribeEnvironmentsInput) (*cloud9.DescribeEnvironmentsOutput, error) {
     var output cloud9.DescribeEnvironmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironments, input).Get(ctx, &output)
@@ -254,6 +261,7 @@ func (a *Cloud9Stub) DescribeEnvironmentsAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEnvironments, input)
     return &Cloud9DescribeEnvironmentsResult{Result: future}
 }
+
 func (a *Cloud9Stub) ListEnvironments(ctx workflow.Context, input *cloud9.ListEnvironmentsInput) (*cloud9.ListEnvironmentsOutput, error) {
     var output cloud9.ListEnvironmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEnvironments, input).Get(ctx, &output)
@@ -264,6 +272,7 @@ func (a *Cloud9Stub) ListEnvironmentsAsync(ctx workflow.Context, input *cloud9.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListEnvironments, input)
     return &Cloud9ListEnvironmentsResult{Result: future}
 }
+
 func (a *Cloud9Stub) ListTagsForResource(ctx workflow.Context, input *cloud9.ListTagsForResourceInput) (*cloud9.ListTagsForResourceOutput, error) {
     var output cloud9.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -274,6 +283,7 @@ func (a *Cloud9Stub) ListTagsForResourceAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &Cloud9ListTagsForResourceResult{Result: future}
 }
+
 func (a *Cloud9Stub) TagResource(ctx workflow.Context, input *cloud9.TagResourceInput) (*cloud9.TagResourceOutput, error) {
     var output cloud9.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -284,6 +294,7 @@ func (a *Cloud9Stub) TagResourceAsync(ctx workflow.Context, input *cloud9.TagRes
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &Cloud9TagResourceResult{Result: future}
 }
+
 func (a *Cloud9Stub) UntagResource(ctx workflow.Context, input *cloud9.UntagResourceInput) (*cloud9.UntagResourceOutput, error) {
     var output cloud9.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -294,6 +305,7 @@ func (a *Cloud9Stub) UntagResourceAsync(ctx workflow.Context, input *cloud9.Unta
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &Cloud9UntagResourceResult{Result: future}
 }
+
 func (a *Cloud9Stub) UpdateEnvironment(ctx workflow.Context, input *cloud9.UpdateEnvironmentInput) (*cloud9.UpdateEnvironmentOutput, error) {
     var output cloud9.UpdateEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEnvironment, input).Get(ctx, &output)
@@ -304,6 +316,7 @@ func (a *Cloud9Stub) UpdateEnvironmentAsync(ctx workflow.Context, input *cloud9.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEnvironment, input)
     return &Cloud9UpdateEnvironmentResult{Result: future}
 }
+
 func (a *Cloud9Stub) UpdateEnvironmentMembership(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) (*cloud9.UpdateEnvironmentMembershipOutput, error) {
     var output cloud9.UpdateEnvironmentMembershipOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEnvironmentMembership, input).Get(ctx, &output)

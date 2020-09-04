@@ -44,6 +44,7 @@ type SignerClient interface {
     UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceResult
 
     WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error}
+
 type SignerCancelSigningProfileResult struct {
 	Result workflow.Future
 }
@@ -164,7 +165,6 @@ func (r *SignerUntagResourceResult) Get(ctx workflow.Context) (*signer.UntagReso
     return &output, err
 }
 
-
 type SignerStub struct {
     activities awsactivities.SignerActivities
 }
@@ -172,6 +172,7 @@ type SignerStub struct {
 func NewSignerStub() SignerClient {
     return &SignerStub{}
 }
+
 func (a *SignerStub) CancelSigningProfile(ctx workflow.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
     var output signer.CancelSigningProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelSigningProfile, input).Get(ctx, &output)
@@ -182,6 +183,7 @@ func (a *SignerStub) CancelSigningProfileAsync(ctx workflow.Context, input *sign
     future := workflow.ExecuteActivity(ctx, a.activities.CancelSigningProfile, input)
     return &SignerCancelSigningProfileResult{Result: future}
 }
+
 func (a *SignerStub) DescribeSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error) {
     var output signer.DescribeSigningJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSigningJob, input).Get(ctx, &output)
@@ -192,6 +194,7 @@ func (a *SignerStub) DescribeSigningJobAsync(ctx workflow.Context, input *signer
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSigningJob, input)
     return &SignerDescribeSigningJobResult{Result: future}
 }
+
 func (a *SignerStub) GetSigningPlatform(ctx workflow.Context, input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error) {
     var output signer.GetSigningPlatformOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSigningPlatform, input).Get(ctx, &output)
@@ -202,6 +205,7 @@ func (a *SignerStub) GetSigningPlatformAsync(ctx workflow.Context, input *signer
     future := workflow.ExecuteActivity(ctx, a.activities.GetSigningPlatform, input)
     return &SignerGetSigningPlatformResult{Result: future}
 }
+
 func (a *SignerStub) GetSigningProfile(ctx workflow.Context, input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error) {
     var output signer.GetSigningProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSigningProfile, input).Get(ctx, &output)
@@ -212,6 +216,7 @@ func (a *SignerStub) GetSigningProfileAsync(ctx workflow.Context, input *signer.
     future := workflow.ExecuteActivity(ctx, a.activities.GetSigningProfile, input)
     return &SignerGetSigningProfileResult{Result: future}
 }
+
 func (a *SignerStub) ListSigningJobs(ctx workflow.Context, input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error) {
     var output signer.ListSigningJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSigningJobs, input).Get(ctx, &output)
@@ -222,6 +227,7 @@ func (a *SignerStub) ListSigningJobsAsync(ctx workflow.Context, input *signer.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListSigningJobs, input)
     return &SignerListSigningJobsResult{Result: future}
 }
+
 func (a *SignerStub) ListSigningPlatforms(ctx workflow.Context, input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error) {
     var output signer.ListSigningPlatformsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSigningPlatforms, input).Get(ctx, &output)
@@ -232,6 +238,7 @@ func (a *SignerStub) ListSigningPlatformsAsync(ctx workflow.Context, input *sign
     future := workflow.ExecuteActivity(ctx, a.activities.ListSigningPlatforms, input)
     return &SignerListSigningPlatformsResult{Result: future}
 }
+
 func (a *SignerStub) ListSigningProfiles(ctx workflow.Context, input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error) {
     var output signer.ListSigningProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSigningProfiles, input).Get(ctx, &output)
@@ -242,6 +249,7 @@ func (a *SignerStub) ListSigningProfilesAsync(ctx workflow.Context, input *signe
     future := workflow.ExecuteActivity(ctx, a.activities.ListSigningProfiles, input)
     return &SignerListSigningProfilesResult{Result: future}
 }
+
 func (a *SignerStub) ListTagsForResource(ctx workflow.Context, input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error) {
     var output signer.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -252,6 +260,7 @@ func (a *SignerStub) ListTagsForResourceAsync(ctx workflow.Context, input *signe
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &SignerListTagsForResourceResult{Result: future}
 }
+
 func (a *SignerStub) PutSigningProfile(ctx workflow.Context, input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error) {
     var output signer.PutSigningProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutSigningProfile, input).Get(ctx, &output)
@@ -262,6 +271,7 @@ func (a *SignerStub) PutSigningProfileAsync(ctx workflow.Context, input *signer.
     future := workflow.ExecuteActivity(ctx, a.activities.PutSigningProfile, input)
     return &SignerPutSigningProfileResult{Result: future}
 }
+
 func (a *SignerStub) StartSigningJob(ctx workflow.Context, input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error) {
     var output signer.StartSigningJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartSigningJob, input).Get(ctx, &output)
@@ -272,6 +282,7 @@ func (a *SignerStub) StartSigningJobAsync(ctx workflow.Context, input *signer.St
     future := workflow.ExecuteActivity(ctx, a.activities.StartSigningJob, input)
     return &SignerStartSigningJobResult{Result: future}
 }
+
 func (a *SignerStub) TagResource(ctx workflow.Context, input *signer.TagResourceInput) (*signer.TagResourceOutput, error) {
     var output signer.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -282,6 +293,7 @@ func (a *SignerStub) TagResourceAsync(ctx workflow.Context, input *signer.TagRes
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &SignerTagResourceResult{Result: future}
 }
+
 func (a *SignerStub) UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error) {
     var output signer.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -300,3 +312,4 @@ func (a *SignerStub) WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *
 func (a *SignerStub) WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilSuccessfulSigningJob, input)
 }
+

@@ -132,6 +132,7 @@ type DynamoDBClient interface {
 
     WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
     WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error}
+
 type DynamodbBatchGetItemResult struct {
 	Result workflow.Future
 }
@@ -542,7 +543,6 @@ func (r *DynamodbUpdateTimeToLiveResult) Get(ctx workflow.Context) (*dynamodb.Up
     return &output, err
 }
 
-
 type DynamoDBStub struct {
     activities awsactivities.DynamoDBActivities
 }
@@ -550,6 +550,7 @@ type DynamoDBStub struct {
 func NewDynamoDBStub() DynamoDBClient {
     return &DynamoDBStub{}
 }
+
 func (a *DynamoDBStub) BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
     var output dynamodb.BatchGetItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchGetItem, input).Get(ctx, &output)
@@ -560,6 +561,7 @@ func (a *DynamoDBStub) BatchGetItemAsync(ctx workflow.Context, input *dynamodb.B
     future := workflow.ExecuteActivity(ctx, a.activities.BatchGetItem, input)
     return &DynamodbBatchGetItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) BatchWriteItem(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error) {
     var output dynamodb.BatchWriteItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchWriteItem, input).Get(ctx, &output)
@@ -570,6 +572,7 @@ func (a *DynamoDBStub) BatchWriteItemAsync(ctx workflow.Context, input *dynamodb
     future := workflow.ExecuteActivity(ctx, a.activities.BatchWriteItem, input)
     return &DynamodbBatchWriteItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) CreateBackup(ctx workflow.Context, input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
     var output dynamodb.CreateBackupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBackup, input).Get(ctx, &output)
@@ -580,6 +583,7 @@ func (a *DynamoDBStub) CreateBackupAsync(ctx workflow.Context, input *dynamodb.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBackup, input)
     return &DynamodbCreateBackupResult{Result: future}
 }
+
 func (a *DynamoDBStub) CreateGlobalTable(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
     var output dynamodb.CreateGlobalTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGlobalTable, input).Get(ctx, &output)
@@ -590,6 +594,7 @@ func (a *DynamoDBStub) CreateGlobalTableAsync(ctx workflow.Context, input *dynam
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGlobalTable, input)
     return &DynamodbCreateGlobalTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) CreateTable(ctx workflow.Context, input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error) {
     var output dynamodb.CreateTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTable, input).Get(ctx, &output)
@@ -600,6 +605,7 @@ func (a *DynamoDBStub) CreateTableAsync(ctx workflow.Context, input *dynamodb.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTable, input)
     return &DynamodbCreateTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) DeleteBackup(ctx workflow.Context, input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
     var output dynamodb.DeleteBackupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBackup, input).Get(ctx, &output)
@@ -610,6 +616,7 @@ func (a *DynamoDBStub) DeleteBackupAsync(ctx workflow.Context, input *dynamodb.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBackup, input)
     return &DynamodbDeleteBackupResult{Result: future}
 }
+
 func (a *DynamoDBStub) DeleteItem(ctx workflow.Context, input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error) {
     var output dynamodb.DeleteItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteItem, input).Get(ctx, &output)
@@ -620,6 +627,7 @@ func (a *DynamoDBStub) DeleteItemAsync(ctx workflow.Context, input *dynamodb.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteItem, input)
     return &DynamodbDeleteItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) DeleteTable(ctx workflow.Context, input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error) {
     var output dynamodb.DeleteTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTable, input).Get(ctx, &output)
@@ -630,6 +638,7 @@ func (a *DynamoDBStub) DeleteTableAsync(ctx workflow.Context, input *dynamodb.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTable, input)
     return &DynamodbDeleteTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeBackup(ctx workflow.Context, input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
     var output dynamodb.DescribeBackupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBackup, input).Get(ctx, &output)
@@ -640,6 +649,7 @@ func (a *DynamoDBStub) DescribeBackupAsync(ctx workflow.Context, input *dynamodb
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBackup, input)
     return &DynamodbDescribeBackupResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeContinuousBackups(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
     var output dynamodb.DescribeContinuousBackupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeContinuousBackups, input).Get(ctx, &output)
@@ -650,6 +660,7 @@ func (a *DynamoDBStub) DescribeContinuousBackupsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeContinuousBackups, input)
     return &DynamodbDescribeContinuousBackupsResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeContributorInsights(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error) {
     var output dynamodb.DescribeContributorInsightsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeContributorInsights, input).Get(ctx, &output)
@@ -660,6 +671,7 @@ func (a *DynamoDBStub) DescribeContributorInsightsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeContributorInsights, input)
     return &DynamodbDescribeContributorInsightsResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeEndpoints(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
     var output dynamodb.DescribeEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoints, input).Get(ctx, &output)
@@ -670,6 +682,7 @@ func (a *DynamoDBStub) DescribeEndpointsAsync(ctx workflow.Context, input *dynam
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEndpoints, input)
     return &DynamodbDescribeEndpointsResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeGlobalTable(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
     var output dynamodb.DescribeGlobalTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalTable, input).Get(ctx, &output)
@@ -680,6 +693,7 @@ func (a *DynamoDBStub) DescribeGlobalTableAsync(ctx workflow.Context, input *dyn
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalTable, input)
     return &DynamodbDescribeGlobalTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeGlobalTableSettings(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
     var output dynamodb.DescribeGlobalTableSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalTableSettings, input).Get(ctx, &output)
@@ -690,6 +704,7 @@ func (a *DynamoDBStub) DescribeGlobalTableSettingsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalTableSettings, input)
     return &DynamodbDescribeGlobalTableSettingsResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeLimits(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error) {
     var output dynamodb.DescribeLimitsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLimits, input).Get(ctx, &output)
@@ -700,6 +715,7 @@ func (a *DynamoDBStub) DescribeLimitsAsync(ctx workflow.Context, input *dynamodb
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLimits, input)
     return &DynamodbDescribeLimitsResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeTable(ctx workflow.Context, input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error) {
     var output dynamodb.DescribeTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTable, input).Get(ctx, &output)
@@ -710,6 +726,7 @@ func (a *DynamoDBStub) DescribeTableAsync(ctx workflow.Context, input *dynamodb.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTable, input)
     return &DynamodbDescribeTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
     var output dynamodb.DescribeTableReplicaAutoScalingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTableReplicaAutoScaling, input).Get(ctx, &output)
@@ -720,6 +737,7 @@ func (a *DynamoDBStub) DescribeTableReplicaAutoScalingAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTableReplicaAutoScaling, input)
     return &DynamodbDescribeTableReplicaAutoScalingResult{Result: future}
 }
+
 func (a *DynamoDBStub) DescribeTimeToLive(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error) {
     var output dynamodb.DescribeTimeToLiveOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTimeToLive, input).Get(ctx, &output)
@@ -730,6 +748,7 @@ func (a *DynamoDBStub) DescribeTimeToLiveAsync(ctx workflow.Context, input *dyna
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTimeToLive, input)
     return &DynamodbDescribeTimeToLiveResult{Result: future}
 }
+
 func (a *DynamoDBStub) GetItem(ctx workflow.Context, input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error) {
     var output dynamodb.GetItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetItem, input).Get(ctx, &output)
@@ -740,6 +759,7 @@ func (a *DynamoDBStub) GetItemAsync(ctx workflow.Context, input *dynamodb.GetIte
     future := workflow.ExecuteActivity(ctx, a.activities.GetItem, input)
     return &DynamodbGetItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) ListBackups(ctx workflow.Context, input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
     var output dynamodb.ListBackupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBackups, input).Get(ctx, &output)
@@ -750,6 +770,7 @@ func (a *DynamoDBStub) ListBackupsAsync(ctx workflow.Context, input *dynamodb.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListBackups, input)
     return &DynamodbListBackupsResult{Result: future}
 }
+
 func (a *DynamoDBStub) ListContributorInsights(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error) {
     var output dynamodb.ListContributorInsightsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListContributorInsights, input).Get(ctx, &output)
@@ -760,6 +781,7 @@ func (a *DynamoDBStub) ListContributorInsightsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListContributorInsights, input)
     return &DynamodbListContributorInsightsResult{Result: future}
 }
+
 func (a *DynamoDBStub) ListGlobalTables(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
     var output dynamodb.ListGlobalTablesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGlobalTables, input).Get(ctx, &output)
@@ -770,6 +792,7 @@ func (a *DynamoDBStub) ListGlobalTablesAsync(ctx workflow.Context, input *dynamo
     future := workflow.ExecuteActivity(ctx, a.activities.ListGlobalTables, input)
     return &DynamodbListGlobalTablesResult{Result: future}
 }
+
 func (a *DynamoDBStub) ListTables(ctx workflow.Context, input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error) {
     var output dynamodb.ListTablesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTables, input).Get(ctx, &output)
@@ -780,6 +803,7 @@ func (a *DynamoDBStub) ListTablesAsync(ctx workflow.Context, input *dynamodb.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListTables, input)
     return &DynamodbListTablesResult{Result: future}
 }
+
 func (a *DynamoDBStub) ListTagsOfResource(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error) {
     var output dynamodb.ListTagsOfResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsOfResource, input).Get(ctx, &output)
@@ -790,6 +814,7 @@ func (a *DynamoDBStub) ListTagsOfResourceAsync(ctx workflow.Context, input *dyna
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsOfResource, input)
     return &DynamodbListTagsOfResourceResult{Result: future}
 }
+
 func (a *DynamoDBStub) PutItem(ctx workflow.Context, input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error) {
     var output dynamodb.PutItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutItem, input).Get(ctx, &output)
@@ -800,6 +825,7 @@ func (a *DynamoDBStub) PutItemAsync(ctx workflow.Context, input *dynamodb.PutIte
     future := workflow.ExecuteActivity(ctx, a.activities.PutItem, input)
     return &DynamodbPutItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) Query(ctx workflow.Context, input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error) {
     var output dynamodb.QueryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Query, input).Get(ctx, &output)
@@ -810,6 +836,7 @@ func (a *DynamoDBStub) QueryAsync(ctx workflow.Context, input *dynamodb.QueryInp
     future := workflow.ExecuteActivity(ctx, a.activities.Query, input)
     return &DynamodbQueryResult{Result: future}
 }
+
 func (a *DynamoDBStub) RestoreTableFromBackup(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
     var output dynamodb.RestoreTableFromBackupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreTableFromBackup, input).Get(ctx, &output)
@@ -820,6 +847,7 @@ func (a *DynamoDBStub) RestoreTableFromBackupAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreTableFromBackup, input)
     return &DynamodbRestoreTableFromBackupResult{Result: future}
 }
+
 func (a *DynamoDBStub) RestoreTableToPointInTime(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
     var output dynamodb.RestoreTableToPointInTimeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreTableToPointInTime, input).Get(ctx, &output)
@@ -830,6 +858,7 @@ func (a *DynamoDBStub) RestoreTableToPointInTimeAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreTableToPointInTime, input)
     return &DynamodbRestoreTableToPointInTimeResult{Result: future}
 }
+
 func (a *DynamoDBStub) Scan(ctx workflow.Context, input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error) {
     var output dynamodb.ScanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.Scan, input).Get(ctx, &output)
@@ -840,6 +869,7 @@ func (a *DynamoDBStub) ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput
     future := workflow.ExecuteActivity(ctx, a.activities.Scan, input)
     return &DynamodbScanResult{Result: future}
 }
+
 func (a *DynamoDBStub) TagResource(ctx workflow.Context, input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error) {
     var output dynamodb.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -850,6 +880,7 @@ func (a *DynamoDBStub) TagResourceAsync(ctx workflow.Context, input *dynamodb.Ta
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &DynamodbTagResourceResult{Result: future}
 }
+
 func (a *DynamoDBStub) TransactGetItems(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error) {
     var output dynamodb.TransactGetItemsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TransactGetItems, input).Get(ctx, &output)
@@ -860,6 +891,7 @@ func (a *DynamoDBStub) TransactGetItemsAsync(ctx workflow.Context, input *dynamo
     future := workflow.ExecuteActivity(ctx, a.activities.TransactGetItems, input)
     return &DynamodbTransactGetItemsResult{Result: future}
 }
+
 func (a *DynamoDBStub) TransactWriteItems(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error) {
     var output dynamodb.TransactWriteItemsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TransactWriteItems, input).Get(ctx, &output)
@@ -870,6 +902,7 @@ func (a *DynamoDBStub) TransactWriteItemsAsync(ctx workflow.Context, input *dyna
     future := workflow.ExecuteActivity(ctx, a.activities.TransactWriteItems, input)
     return &DynamodbTransactWriteItemsResult{Result: future}
 }
+
 func (a *DynamoDBStub) UntagResource(ctx workflow.Context, input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error) {
     var output dynamodb.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -880,6 +913,7 @@ func (a *DynamoDBStub) UntagResourceAsync(ctx workflow.Context, input *dynamodb.
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &DynamodbUntagResourceResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateContinuousBackups(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error) {
     var output dynamodb.UpdateContinuousBackupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateContinuousBackups, input).Get(ctx, &output)
@@ -890,6 +924,7 @@ func (a *DynamoDBStub) UpdateContinuousBackupsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateContinuousBackups, input)
     return &DynamodbUpdateContinuousBackupsResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateContributorInsights(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error) {
     var output dynamodb.UpdateContributorInsightsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateContributorInsights, input).Get(ctx, &output)
@@ -900,6 +935,7 @@ func (a *DynamoDBStub) UpdateContributorInsightsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateContributorInsights, input)
     return &DynamodbUpdateContributorInsightsResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateGlobalTable(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
     var output dynamodb.UpdateGlobalTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGlobalTable, input).Get(ctx, &output)
@@ -910,6 +946,7 @@ func (a *DynamoDBStub) UpdateGlobalTableAsync(ctx workflow.Context, input *dynam
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGlobalTable, input)
     return &DynamodbUpdateGlobalTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateGlobalTableSettings(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
     var output dynamodb.UpdateGlobalTableSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateGlobalTableSettings, input).Get(ctx, &output)
@@ -920,6 +957,7 @@ func (a *DynamoDBStub) UpdateGlobalTableSettingsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateGlobalTableSettings, input)
     return &DynamodbUpdateGlobalTableSettingsResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateItem(ctx workflow.Context, input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error) {
     var output dynamodb.UpdateItemOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateItem, input).Get(ctx, &output)
@@ -930,6 +968,7 @@ func (a *DynamoDBStub) UpdateItemAsync(ctx workflow.Context, input *dynamodb.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateItem, input)
     return &DynamodbUpdateItemResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateTable(ctx workflow.Context, input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error) {
     var output dynamodb.UpdateTableOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTable, input).Get(ctx, &output)
@@ -940,6 +979,7 @@ func (a *DynamoDBStub) UpdateTableAsync(ctx workflow.Context, input *dynamodb.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateTable, input)
     return &DynamodbUpdateTableResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
     var output dynamodb.UpdateTableReplicaAutoScalingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTableReplicaAutoScaling, input).Get(ctx, &output)
@@ -950,6 +990,7 @@ func (a *DynamoDBStub) UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateTableReplicaAutoScaling, input)
     return &DynamodbUpdateTableReplicaAutoScalingResult{Result: future}
 }
+
 func (a *DynamoDBStub) UpdateTimeToLive(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error) {
     var output dynamodb.UpdateTimeToLiveOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTimeToLive, input).Get(ctx, &output)
@@ -969,6 +1010,7 @@ func (a *DynamoDBStub) WaitUntilTableExistsAsync(ctx workflow.Context, input *dy
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTableExists, input)
 }
 
+
 func (a *DynamoDBStub) WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTableNotExists, input).Get(ctx, nil)
 }
@@ -976,3 +1018,4 @@ func (a *DynamoDBStub) WaitUntilTableNotExists(ctx workflow.Context, input *dyna
 func (a *DynamoDBStub) WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTableNotExists, input)
 }
+

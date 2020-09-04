@@ -64,6 +64,7 @@ type SnowballClient interface {
     UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error)
     UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult
 }
+
 type SnowballCancelClusterResult struct {
 	Result workflow.Future
 }
@@ -254,7 +255,6 @@ func (r *SnowballUpdateJobResult) Get(ctx workflow.Context) (*snowball.UpdateJob
     return &output, err
 }
 
-
 type SnowballStub struct {
     activities awsactivities.SnowballActivities
 }
@@ -262,6 +262,7 @@ type SnowballStub struct {
 func NewSnowballStub() SnowballClient {
     return &SnowballStub{}
 }
+
 func (a *SnowballStub) CancelCluster(ctx workflow.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error) {
     var output snowball.CancelClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelCluster, input).Get(ctx, &output)
@@ -272,6 +273,7 @@ func (a *SnowballStub) CancelClusterAsync(ctx workflow.Context, input *snowball.
     future := workflow.ExecuteActivity(ctx, a.activities.CancelCluster, input)
     return &SnowballCancelClusterResult{Result: future}
 }
+
 func (a *SnowballStub) CancelJob(ctx workflow.Context, input *snowball.CancelJobInput) (*snowball.CancelJobOutput, error) {
     var output snowball.CancelJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelJob, input).Get(ctx, &output)
@@ -282,6 +284,7 @@ func (a *SnowballStub) CancelJobAsync(ctx workflow.Context, input *snowball.Canc
     future := workflow.ExecuteActivity(ctx, a.activities.CancelJob, input)
     return &SnowballCancelJobResult{Result: future}
 }
+
 func (a *SnowballStub) CreateAddress(ctx workflow.Context, input *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error) {
     var output snowball.CreateAddressOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAddress, input).Get(ctx, &output)
@@ -292,6 +295,7 @@ func (a *SnowballStub) CreateAddressAsync(ctx workflow.Context, input *snowball.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAddress, input)
     return &SnowballCreateAddressResult{Result: future}
 }
+
 func (a *SnowballStub) CreateCluster(ctx workflow.Context, input *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error) {
     var output snowball.CreateClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input).Get(ctx, &output)
@@ -302,6 +306,7 @@ func (a *SnowballStub) CreateClusterAsync(ctx workflow.Context, input *snowball.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input)
     return &SnowballCreateClusterResult{Result: future}
 }
+
 func (a *SnowballStub) CreateJob(ctx workflow.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error) {
     var output snowball.CreateJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateJob, input).Get(ctx, &output)
@@ -312,6 +317,7 @@ func (a *SnowballStub) CreateJobAsync(ctx workflow.Context, input *snowball.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateJob, input)
     return &SnowballCreateJobResult{Result: future}
 }
+
 func (a *SnowballStub) DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error) {
     var output snowball.DescribeAddressOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAddress, input).Get(ctx, &output)
@@ -322,6 +328,7 @@ func (a *SnowballStub) DescribeAddressAsync(ctx workflow.Context, input *snowbal
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAddress, input)
     return &SnowballDescribeAddressResult{Result: future}
 }
+
 func (a *SnowballStub) DescribeAddresses(ctx workflow.Context, input *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error) {
     var output snowball.DescribeAddressesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAddresses, input).Get(ctx, &output)
@@ -332,6 +339,7 @@ func (a *SnowballStub) DescribeAddressesAsync(ctx workflow.Context, input *snowb
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAddresses, input)
     return &SnowballDescribeAddressesResult{Result: future}
 }
+
 func (a *SnowballStub) DescribeCluster(ctx workflow.Context, input *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error) {
     var output snowball.DescribeClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input).Get(ctx, &output)
@@ -342,6 +350,7 @@ func (a *SnowballStub) DescribeClusterAsync(ctx workflow.Context, input *snowbal
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input)
     return &SnowballDescribeClusterResult{Result: future}
 }
+
 func (a *SnowballStub) DescribeJob(ctx workflow.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error) {
     var output snowball.DescribeJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input).Get(ctx, &output)
@@ -352,6 +361,7 @@ func (a *SnowballStub) DescribeJobAsync(ctx workflow.Context, input *snowball.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input)
     return &SnowballDescribeJobResult{Result: future}
 }
+
 func (a *SnowballStub) GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error) {
     var output snowball.GetJobManifestOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJobManifest, input).Get(ctx, &output)
@@ -362,6 +372,7 @@ func (a *SnowballStub) GetJobManifestAsync(ctx workflow.Context, input *snowball
     future := workflow.ExecuteActivity(ctx, a.activities.GetJobManifest, input)
     return &SnowballGetJobManifestResult{Result: future}
 }
+
 func (a *SnowballStub) GetJobUnlockCode(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error) {
     var output snowball.GetJobUnlockCodeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJobUnlockCode, input).Get(ctx, &output)
@@ -372,6 +383,7 @@ func (a *SnowballStub) GetJobUnlockCodeAsync(ctx workflow.Context, input *snowba
     future := workflow.ExecuteActivity(ctx, a.activities.GetJobUnlockCode, input)
     return &SnowballGetJobUnlockCodeResult{Result: future}
 }
+
 func (a *SnowballStub) GetSnowballUsage(ctx workflow.Context, input *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error) {
     var output snowball.GetSnowballUsageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSnowballUsage, input).Get(ctx, &output)
@@ -382,6 +394,7 @@ func (a *SnowballStub) GetSnowballUsageAsync(ctx workflow.Context, input *snowba
     future := workflow.ExecuteActivity(ctx, a.activities.GetSnowballUsage, input)
     return &SnowballGetSnowballUsageResult{Result: future}
 }
+
 func (a *SnowballStub) GetSoftwareUpdates(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error) {
     var output snowball.GetSoftwareUpdatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSoftwareUpdates, input).Get(ctx, &output)
@@ -392,6 +405,7 @@ func (a *SnowballStub) GetSoftwareUpdatesAsync(ctx workflow.Context, input *snow
     future := workflow.ExecuteActivity(ctx, a.activities.GetSoftwareUpdates, input)
     return &SnowballGetSoftwareUpdatesResult{Result: future}
 }
+
 func (a *SnowballStub) ListClusterJobs(ctx workflow.Context, input *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error) {
     var output snowball.ListClusterJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListClusterJobs, input).Get(ctx, &output)
@@ -402,6 +416,7 @@ func (a *SnowballStub) ListClusterJobsAsync(ctx workflow.Context, input *snowbal
     future := workflow.ExecuteActivity(ctx, a.activities.ListClusterJobs, input)
     return &SnowballListClusterJobsResult{Result: future}
 }
+
 func (a *SnowballStub) ListClusters(ctx workflow.Context, input *snowball.ListClustersInput) (*snowball.ListClustersOutput, error) {
     var output snowball.ListClustersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input).Get(ctx, &output)
@@ -412,6 +427,7 @@ func (a *SnowballStub) ListClustersAsync(ctx workflow.Context, input *snowball.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input)
     return &SnowballListClustersResult{Result: future}
 }
+
 func (a *SnowballStub) ListCompatibleImages(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error) {
     var output snowball.ListCompatibleImagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListCompatibleImages, input).Get(ctx, &output)
@@ -422,6 +438,7 @@ func (a *SnowballStub) ListCompatibleImagesAsync(ctx workflow.Context, input *sn
     future := workflow.ExecuteActivity(ctx, a.activities.ListCompatibleImages, input)
     return &SnowballListCompatibleImagesResult{Result: future}
 }
+
 func (a *SnowballStub) ListJobs(ctx workflow.Context, input *snowball.ListJobsInput) (*snowball.ListJobsOutput, error) {
     var output snowball.ListJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input).Get(ctx, &output)
@@ -432,6 +449,7 @@ func (a *SnowballStub) ListJobsAsync(ctx workflow.Context, input *snowball.ListJ
     future := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input)
     return &SnowballListJobsResult{Result: future}
 }
+
 func (a *SnowballStub) UpdateCluster(ctx workflow.Context, input *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error) {
     var output snowball.UpdateClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateCluster, input).Get(ctx, &output)
@@ -442,6 +460,7 @@ func (a *SnowballStub) UpdateClusterAsync(ctx workflow.Context, input *snowball.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateCluster, input)
     return &SnowballUpdateClusterResult{Result: future}
 }
+
 func (a *SnowballStub) UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error) {
     var output snowball.UpdateJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateJob, input).Get(ctx, &output)

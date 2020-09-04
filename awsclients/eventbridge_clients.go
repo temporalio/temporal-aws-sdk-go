@@ -100,6 +100,7 @@ type EventBridgeClient interface {
     UntagResource(ctx workflow.Context, input *eventbridge.UntagResourceInput) (*eventbridge.UntagResourceOutput, error)
     UntagResourceAsync(ctx workflow.Context, input *eventbridge.UntagResourceInput) *EventbridgeUntagResourceResult
 }
+
 type EventbridgeActivateEventSourceResult struct {
 	Result workflow.Future
 }
@@ -410,7 +411,6 @@ func (r *EventbridgeUntagResourceResult) Get(ctx workflow.Context) (*eventbridge
     return &output, err
 }
 
-
 type EventBridgeStub struct {
     activities awsactivities.EventBridgeActivities
 }
@@ -418,6 +418,7 @@ type EventBridgeStub struct {
 func NewEventBridgeStub() EventBridgeClient {
     return &EventBridgeStub{}
 }
+
 func (a *EventBridgeStub) ActivateEventSource(ctx workflow.Context, input *eventbridge.ActivateEventSourceInput) (*eventbridge.ActivateEventSourceOutput, error) {
     var output eventbridge.ActivateEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ActivateEventSource, input).Get(ctx, &output)
@@ -428,6 +429,7 @@ func (a *EventBridgeStub) ActivateEventSourceAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ActivateEventSource, input)
     return &EventbridgeActivateEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) CreateEventBus(ctx workflow.Context, input *eventbridge.CreateEventBusInput) (*eventbridge.CreateEventBusOutput, error) {
     var output eventbridge.CreateEventBusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEventBus, input).Get(ctx, &output)
@@ -438,6 +440,7 @@ func (a *EventBridgeStub) CreateEventBusAsync(ctx workflow.Context, input *event
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEventBus, input)
     return &EventbridgeCreateEventBusResult{Result: future}
 }
+
 func (a *EventBridgeStub) CreatePartnerEventSource(ctx workflow.Context, input *eventbridge.CreatePartnerEventSourceInput) (*eventbridge.CreatePartnerEventSourceOutput, error) {
     var output eventbridge.CreatePartnerEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePartnerEventSource, input).Get(ctx, &output)
@@ -448,6 +451,7 @@ func (a *EventBridgeStub) CreatePartnerEventSourceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePartnerEventSource, input)
     return &EventbridgeCreatePartnerEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) DeactivateEventSource(ctx workflow.Context, input *eventbridge.DeactivateEventSourceInput) (*eventbridge.DeactivateEventSourceOutput, error) {
     var output eventbridge.DeactivateEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeactivateEventSource, input).Get(ctx, &output)
@@ -458,6 +462,7 @@ func (a *EventBridgeStub) DeactivateEventSourceAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeactivateEventSource, input)
     return &EventbridgeDeactivateEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) DeleteEventBus(ctx workflow.Context, input *eventbridge.DeleteEventBusInput) (*eventbridge.DeleteEventBusOutput, error) {
     var output eventbridge.DeleteEventBusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEventBus, input).Get(ctx, &output)
@@ -468,6 +473,7 @@ func (a *EventBridgeStub) DeleteEventBusAsync(ctx workflow.Context, input *event
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEventBus, input)
     return &EventbridgeDeleteEventBusResult{Result: future}
 }
+
 func (a *EventBridgeStub) DeletePartnerEventSource(ctx workflow.Context, input *eventbridge.DeletePartnerEventSourceInput) (*eventbridge.DeletePartnerEventSourceOutput, error) {
     var output eventbridge.DeletePartnerEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePartnerEventSource, input).Get(ctx, &output)
@@ -478,6 +484,7 @@ func (a *EventBridgeStub) DeletePartnerEventSourceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePartnerEventSource, input)
     return &EventbridgeDeletePartnerEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) DeleteRule(ctx workflow.Context, input *eventbridge.DeleteRuleInput) (*eventbridge.DeleteRuleOutput, error) {
     var output eventbridge.DeleteRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRule, input).Get(ctx, &output)
@@ -488,6 +495,7 @@ func (a *EventBridgeStub) DeleteRuleAsync(ctx workflow.Context, input *eventbrid
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRule, input)
     return &EventbridgeDeleteRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) DescribeEventBus(ctx workflow.Context, input *eventbridge.DescribeEventBusInput) (*eventbridge.DescribeEventBusOutput, error) {
     var output eventbridge.DescribeEventBusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventBus, input).Get(ctx, &output)
@@ -498,6 +506,7 @@ func (a *EventBridgeStub) DescribeEventBusAsync(ctx workflow.Context, input *eve
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventBus, input)
     return &EventbridgeDescribeEventBusResult{Result: future}
 }
+
 func (a *EventBridgeStub) DescribeEventSource(ctx workflow.Context, input *eventbridge.DescribeEventSourceInput) (*eventbridge.DescribeEventSourceOutput, error) {
     var output eventbridge.DescribeEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSource, input).Get(ctx, &output)
@@ -508,6 +517,7 @@ func (a *EventBridgeStub) DescribeEventSourceAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSource, input)
     return &EventbridgeDescribeEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) DescribePartnerEventSource(ctx workflow.Context, input *eventbridge.DescribePartnerEventSourceInput) (*eventbridge.DescribePartnerEventSourceOutput, error) {
     var output eventbridge.DescribePartnerEventSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePartnerEventSource, input).Get(ctx, &output)
@@ -518,6 +528,7 @@ func (a *EventBridgeStub) DescribePartnerEventSourceAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePartnerEventSource, input)
     return &EventbridgeDescribePartnerEventSourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) DescribeRule(ctx workflow.Context, input *eventbridge.DescribeRuleInput) (*eventbridge.DescribeRuleOutput, error) {
     var output eventbridge.DescribeRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRule, input).Get(ctx, &output)
@@ -528,6 +539,7 @@ func (a *EventBridgeStub) DescribeRuleAsync(ctx workflow.Context, input *eventbr
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRule, input)
     return &EventbridgeDescribeRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) DisableRule(ctx workflow.Context, input *eventbridge.DisableRuleInput) (*eventbridge.DisableRuleOutput, error) {
     var output eventbridge.DisableRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableRule, input).Get(ctx, &output)
@@ -538,6 +550,7 @@ func (a *EventBridgeStub) DisableRuleAsync(ctx workflow.Context, input *eventbri
     future := workflow.ExecuteActivity(ctx, a.activities.DisableRule, input)
     return &EventbridgeDisableRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) EnableRule(ctx workflow.Context, input *eventbridge.EnableRuleInput) (*eventbridge.EnableRuleOutput, error) {
     var output eventbridge.EnableRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableRule, input).Get(ctx, &output)
@@ -548,6 +561,7 @@ func (a *EventBridgeStub) EnableRuleAsync(ctx workflow.Context, input *eventbrid
     future := workflow.ExecuteActivity(ctx, a.activities.EnableRule, input)
     return &EventbridgeEnableRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListEventBuses(ctx workflow.Context, input *eventbridge.ListEventBusesInput) (*eventbridge.ListEventBusesOutput, error) {
     var output eventbridge.ListEventBusesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEventBuses, input).Get(ctx, &output)
@@ -558,6 +572,7 @@ func (a *EventBridgeStub) ListEventBusesAsync(ctx workflow.Context, input *event
     future := workflow.ExecuteActivity(ctx, a.activities.ListEventBuses, input)
     return &EventbridgeListEventBusesResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListEventSources(ctx workflow.Context, input *eventbridge.ListEventSourcesInput) (*eventbridge.ListEventSourcesOutput, error) {
     var output eventbridge.ListEventSourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEventSources, input).Get(ctx, &output)
@@ -568,6 +583,7 @@ func (a *EventBridgeStub) ListEventSourcesAsync(ctx workflow.Context, input *eve
     future := workflow.ExecuteActivity(ctx, a.activities.ListEventSources, input)
     return &EventbridgeListEventSourcesResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListPartnerEventSourceAccounts(ctx workflow.Context, input *eventbridge.ListPartnerEventSourceAccountsInput) (*eventbridge.ListPartnerEventSourceAccountsOutput, error) {
     var output eventbridge.ListPartnerEventSourceAccountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPartnerEventSourceAccounts, input).Get(ctx, &output)
@@ -578,6 +594,7 @@ func (a *EventBridgeStub) ListPartnerEventSourceAccountsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListPartnerEventSourceAccounts, input)
     return &EventbridgeListPartnerEventSourceAccountsResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListPartnerEventSources(ctx workflow.Context, input *eventbridge.ListPartnerEventSourcesInput) (*eventbridge.ListPartnerEventSourcesOutput, error) {
     var output eventbridge.ListPartnerEventSourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPartnerEventSources, input).Get(ctx, &output)
@@ -588,6 +605,7 @@ func (a *EventBridgeStub) ListPartnerEventSourcesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListPartnerEventSources, input)
     return &EventbridgeListPartnerEventSourcesResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListRuleNamesByTarget(ctx workflow.Context, input *eventbridge.ListRuleNamesByTargetInput) (*eventbridge.ListRuleNamesByTargetOutput, error) {
     var output eventbridge.ListRuleNamesByTargetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRuleNamesByTarget, input).Get(ctx, &output)
@@ -598,6 +616,7 @@ func (a *EventBridgeStub) ListRuleNamesByTargetAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListRuleNamesByTarget, input)
     return &EventbridgeListRuleNamesByTargetResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListRules(ctx workflow.Context, input *eventbridge.ListRulesInput) (*eventbridge.ListRulesOutput, error) {
     var output eventbridge.ListRulesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRules, input).Get(ctx, &output)
@@ -608,6 +627,7 @@ func (a *EventBridgeStub) ListRulesAsync(ctx workflow.Context, input *eventbridg
     future := workflow.ExecuteActivity(ctx, a.activities.ListRules, input)
     return &EventbridgeListRulesResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListTagsForResource(ctx workflow.Context, input *eventbridge.ListTagsForResourceInput) (*eventbridge.ListTagsForResourceOutput, error) {
     var output eventbridge.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -618,6 +638,7 @@ func (a *EventBridgeStub) ListTagsForResourceAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &EventbridgeListTagsForResourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) ListTargetsByRule(ctx workflow.Context, input *eventbridge.ListTargetsByRuleInput) (*eventbridge.ListTargetsByRuleOutput, error) {
     var output eventbridge.ListTargetsByRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTargetsByRule, input).Get(ctx, &output)
@@ -628,6 +649,7 @@ func (a *EventBridgeStub) ListTargetsByRuleAsync(ctx workflow.Context, input *ev
     future := workflow.ExecuteActivity(ctx, a.activities.ListTargetsByRule, input)
     return &EventbridgeListTargetsByRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) PutEvents(ctx workflow.Context, input *eventbridge.PutEventsInput) (*eventbridge.PutEventsOutput, error) {
     var output eventbridge.PutEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)
@@ -638,6 +660,7 @@ func (a *EventBridgeStub) PutEventsAsync(ctx workflow.Context, input *eventbridg
     future := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input)
     return &EventbridgePutEventsResult{Result: future}
 }
+
 func (a *EventBridgeStub) PutPartnerEvents(ctx workflow.Context, input *eventbridge.PutPartnerEventsInput) (*eventbridge.PutPartnerEventsOutput, error) {
     var output eventbridge.PutPartnerEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutPartnerEvents, input).Get(ctx, &output)
@@ -648,6 +671,7 @@ func (a *EventBridgeStub) PutPartnerEventsAsync(ctx workflow.Context, input *eve
     future := workflow.ExecuteActivity(ctx, a.activities.PutPartnerEvents, input)
     return &EventbridgePutPartnerEventsResult{Result: future}
 }
+
 func (a *EventBridgeStub) PutPermission(ctx workflow.Context, input *eventbridge.PutPermissionInput) (*eventbridge.PutPermissionOutput, error) {
     var output eventbridge.PutPermissionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutPermission, input).Get(ctx, &output)
@@ -658,6 +682,7 @@ func (a *EventBridgeStub) PutPermissionAsync(ctx workflow.Context, input *eventb
     future := workflow.ExecuteActivity(ctx, a.activities.PutPermission, input)
     return &EventbridgePutPermissionResult{Result: future}
 }
+
 func (a *EventBridgeStub) PutRule(ctx workflow.Context, input *eventbridge.PutRuleInput) (*eventbridge.PutRuleOutput, error) {
     var output eventbridge.PutRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRule, input).Get(ctx, &output)
@@ -668,6 +693,7 @@ func (a *EventBridgeStub) PutRuleAsync(ctx workflow.Context, input *eventbridge.
     future := workflow.ExecuteActivity(ctx, a.activities.PutRule, input)
     return &EventbridgePutRuleResult{Result: future}
 }
+
 func (a *EventBridgeStub) PutTargets(ctx workflow.Context, input *eventbridge.PutTargetsInput) (*eventbridge.PutTargetsOutput, error) {
     var output eventbridge.PutTargetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutTargets, input).Get(ctx, &output)
@@ -678,6 +704,7 @@ func (a *EventBridgeStub) PutTargetsAsync(ctx workflow.Context, input *eventbrid
     future := workflow.ExecuteActivity(ctx, a.activities.PutTargets, input)
     return &EventbridgePutTargetsResult{Result: future}
 }
+
 func (a *EventBridgeStub) RemovePermission(ctx workflow.Context, input *eventbridge.RemovePermissionInput) (*eventbridge.RemovePermissionOutput, error) {
     var output eventbridge.RemovePermissionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemovePermission, input).Get(ctx, &output)
@@ -688,6 +715,7 @@ func (a *EventBridgeStub) RemovePermissionAsync(ctx workflow.Context, input *eve
     future := workflow.ExecuteActivity(ctx, a.activities.RemovePermission, input)
     return &EventbridgeRemovePermissionResult{Result: future}
 }
+
 func (a *EventBridgeStub) RemoveTargets(ctx workflow.Context, input *eventbridge.RemoveTargetsInput) (*eventbridge.RemoveTargetsOutput, error) {
     var output eventbridge.RemoveTargetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTargets, input).Get(ctx, &output)
@@ -698,6 +726,7 @@ func (a *EventBridgeStub) RemoveTargetsAsync(ctx workflow.Context, input *eventb
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveTargets, input)
     return &EventbridgeRemoveTargetsResult{Result: future}
 }
+
 func (a *EventBridgeStub) TagResource(ctx workflow.Context, input *eventbridge.TagResourceInput) (*eventbridge.TagResourceOutput, error) {
     var output eventbridge.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -708,6 +737,7 @@ func (a *EventBridgeStub) TagResourceAsync(ctx workflow.Context, input *eventbri
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &EventbridgeTagResourceResult{Result: future}
 }
+
 func (a *EventBridgeStub) TestEventPattern(ctx workflow.Context, input *eventbridge.TestEventPatternInput) (*eventbridge.TestEventPatternOutput, error) {
     var output eventbridge.TestEventPatternOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TestEventPattern, input).Get(ctx, &output)
@@ -718,6 +748,7 @@ func (a *EventBridgeStub) TestEventPatternAsync(ctx workflow.Context, input *eve
     future := workflow.ExecuteActivity(ctx, a.activities.TestEventPattern, input)
     return &EventbridgeTestEventPatternResult{Result: future}
 }
+
 func (a *EventBridgeStub) UntagResource(ctx workflow.Context, input *eventbridge.UntagResourceInput) (*eventbridge.UntagResourceOutput, error) {
     var output eventbridge.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)

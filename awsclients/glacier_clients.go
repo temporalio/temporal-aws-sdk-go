@@ -108,6 +108,7 @@ type GlacierClient interface {
 
     WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
     WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error}
+
 type GlacierAbortMultipartUploadResult struct {
 	Result workflow.Future
 }
@@ -438,7 +439,6 @@ func (r *GlacierUploadMultipartPartResult) Get(ctx workflow.Context) (*glacier.U
     return &output, err
 }
 
-
 type GlacierStub struct {
     activities awsactivities.GlacierActivities
 }
@@ -446,6 +446,7 @@ type GlacierStub struct {
 func NewGlacierStub() GlacierClient {
     return &GlacierStub{}
 }
+
 func (a *GlacierStub) AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) (*glacier.AbortMultipartUploadOutput, error) {
     var output glacier.AbortMultipartUploadOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AbortMultipartUpload, input).Get(ctx, &output)
@@ -456,6 +457,7 @@ func (a *GlacierStub) AbortMultipartUploadAsync(ctx workflow.Context, input *gla
     future := workflow.ExecuteActivity(ctx, a.activities.AbortMultipartUpload, input)
     return &GlacierAbortMultipartUploadResult{Result: future}
 }
+
 func (a *GlacierStub) AbortVaultLock(ctx workflow.Context, input *glacier.AbortVaultLockInput) (*glacier.AbortVaultLockOutput, error) {
     var output glacier.AbortVaultLockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AbortVaultLock, input).Get(ctx, &output)
@@ -466,6 +468,7 @@ func (a *GlacierStub) AbortVaultLockAsync(ctx workflow.Context, input *glacier.A
     future := workflow.ExecuteActivity(ctx, a.activities.AbortVaultLock, input)
     return &GlacierAbortVaultLockResult{Result: future}
 }
+
 func (a *GlacierStub) AddTagsToVault(ctx workflow.Context, input *glacier.AddTagsToVaultInput) (*glacier.AddTagsToVaultOutput, error) {
     var output glacier.AddTagsToVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToVault, input).Get(ctx, &output)
@@ -476,6 +479,7 @@ func (a *GlacierStub) AddTagsToVaultAsync(ctx workflow.Context, input *glacier.A
     future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToVault, input)
     return &GlacierAddTagsToVaultResult{Result: future}
 }
+
 func (a *GlacierStub) CompleteMultipartUpload(ctx workflow.Context, input *glacier.CompleteMultipartUploadInput) (*glacier.ArchiveCreationOutput, error) {
     var output glacier.ArchiveCreationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CompleteMultipartUpload, input).Get(ctx, &output)
@@ -486,6 +490,7 @@ func (a *GlacierStub) CompleteMultipartUploadAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CompleteMultipartUpload, input)
     return &GlacierCompleteMultipartUploadResult{Result: future}
 }
+
 func (a *GlacierStub) CompleteVaultLock(ctx workflow.Context, input *glacier.CompleteVaultLockInput) (*glacier.CompleteVaultLockOutput, error) {
     var output glacier.CompleteVaultLockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CompleteVaultLock, input).Get(ctx, &output)
@@ -496,6 +501,7 @@ func (a *GlacierStub) CompleteVaultLockAsync(ctx workflow.Context, input *glacie
     future := workflow.ExecuteActivity(ctx, a.activities.CompleteVaultLock, input)
     return &GlacierCompleteVaultLockResult{Result: future}
 }
+
 func (a *GlacierStub) CreateVault(ctx workflow.Context, input *glacier.CreateVaultInput) (*glacier.CreateVaultOutput, error) {
     var output glacier.CreateVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVault, input).Get(ctx, &output)
@@ -506,6 +512,7 @@ func (a *GlacierStub) CreateVaultAsync(ctx workflow.Context, input *glacier.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVault, input)
     return &GlacierCreateVaultResult{Result: future}
 }
+
 func (a *GlacierStub) DeleteArchive(ctx workflow.Context, input *glacier.DeleteArchiveInput) (*glacier.DeleteArchiveOutput, error) {
     var output glacier.DeleteArchiveOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteArchive, input).Get(ctx, &output)
@@ -516,6 +523,7 @@ func (a *GlacierStub) DeleteArchiveAsync(ctx workflow.Context, input *glacier.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteArchive, input)
     return &GlacierDeleteArchiveResult{Result: future}
 }
+
 func (a *GlacierStub) DeleteVault(ctx workflow.Context, input *glacier.DeleteVaultInput) (*glacier.DeleteVaultOutput, error) {
     var output glacier.DeleteVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVault, input).Get(ctx, &output)
@@ -526,6 +534,7 @@ func (a *GlacierStub) DeleteVaultAsync(ctx workflow.Context, input *glacier.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVault, input)
     return &GlacierDeleteVaultResult{Result: future}
 }
+
 func (a *GlacierStub) DeleteVaultAccessPolicy(ctx workflow.Context, input *glacier.DeleteVaultAccessPolicyInput) (*glacier.DeleteVaultAccessPolicyOutput, error) {
     var output glacier.DeleteVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVaultAccessPolicy, input).Get(ctx, &output)
@@ -536,6 +545,7 @@ func (a *GlacierStub) DeleteVaultAccessPolicyAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVaultAccessPolicy, input)
     return &GlacierDeleteVaultAccessPolicyResult{Result: future}
 }
+
 func (a *GlacierStub) DeleteVaultNotifications(ctx workflow.Context, input *glacier.DeleteVaultNotificationsInput) (*glacier.DeleteVaultNotificationsOutput, error) {
     var output glacier.DeleteVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVaultNotifications, input).Get(ctx, &output)
@@ -546,6 +556,7 @@ func (a *GlacierStub) DeleteVaultNotificationsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVaultNotifications, input)
     return &GlacierDeleteVaultNotificationsResult{Result: future}
 }
+
 func (a *GlacierStub) DescribeJob(ctx workflow.Context, input *glacier.DescribeJobInput) (*glacier.JobDescription, error) {
     var output glacier.JobDescription
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input).Get(ctx, &output)
@@ -556,6 +567,7 @@ func (a *GlacierStub) DescribeJobAsync(ctx workflow.Context, input *glacier.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeJob, input)
     return &GlacierDescribeJobResult{Result: future}
 }
+
 func (a *GlacierStub) DescribeVault(ctx workflow.Context, input *glacier.DescribeVaultInput) (*glacier.DescribeVaultOutput, error) {
     var output glacier.DescribeVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVault, input).Get(ctx, &output)
@@ -566,6 +578,7 @@ func (a *GlacierStub) DescribeVaultAsync(ctx workflow.Context, input *glacier.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVault, input)
     return &GlacierDescribeVaultResult{Result: future}
 }
+
 func (a *GlacierStub) GetDataRetrievalPolicy(ctx workflow.Context, input *glacier.GetDataRetrievalPolicyInput) (*glacier.GetDataRetrievalPolicyOutput, error) {
     var output glacier.GetDataRetrievalPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDataRetrievalPolicy, input).Get(ctx, &output)
@@ -576,6 +589,7 @@ func (a *GlacierStub) GetDataRetrievalPolicyAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.GetDataRetrievalPolicy, input)
     return &GlacierGetDataRetrievalPolicyResult{Result: future}
 }
+
 func (a *GlacierStub) GetJobOutput(ctx workflow.Context, input *glacier.GetJobOutputInput) (*glacier.GetJobOutputOutput, error) {
     var output glacier.GetJobOutputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetJobOutput, input).Get(ctx, &output)
@@ -586,6 +600,7 @@ func (a *GlacierStub) GetJobOutputAsync(ctx workflow.Context, input *glacier.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetJobOutput, input)
     return &GlacierGetJobOutputResult{Result: future}
 }
+
 func (a *GlacierStub) GetVaultAccessPolicy(ctx workflow.Context, input *glacier.GetVaultAccessPolicyInput) (*glacier.GetVaultAccessPolicyOutput, error) {
     var output glacier.GetVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVaultAccessPolicy, input).Get(ctx, &output)
@@ -596,6 +611,7 @@ func (a *GlacierStub) GetVaultAccessPolicyAsync(ctx workflow.Context, input *gla
     future := workflow.ExecuteActivity(ctx, a.activities.GetVaultAccessPolicy, input)
     return &GlacierGetVaultAccessPolicyResult{Result: future}
 }
+
 func (a *GlacierStub) GetVaultLock(ctx workflow.Context, input *glacier.GetVaultLockInput) (*glacier.GetVaultLockOutput, error) {
     var output glacier.GetVaultLockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVaultLock, input).Get(ctx, &output)
@@ -606,6 +622,7 @@ func (a *GlacierStub) GetVaultLockAsync(ctx workflow.Context, input *glacier.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetVaultLock, input)
     return &GlacierGetVaultLockResult{Result: future}
 }
+
 func (a *GlacierStub) GetVaultNotifications(ctx workflow.Context, input *glacier.GetVaultNotificationsInput) (*glacier.GetVaultNotificationsOutput, error) {
     var output glacier.GetVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetVaultNotifications, input).Get(ctx, &output)
@@ -616,6 +633,7 @@ func (a *GlacierStub) GetVaultNotificationsAsync(ctx workflow.Context, input *gl
     future := workflow.ExecuteActivity(ctx, a.activities.GetVaultNotifications, input)
     return &GlacierGetVaultNotificationsResult{Result: future}
 }
+
 func (a *GlacierStub) InitiateJob(ctx workflow.Context, input *glacier.InitiateJobInput) (*glacier.InitiateJobOutput, error) {
     var output glacier.InitiateJobOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InitiateJob, input).Get(ctx, &output)
@@ -626,6 +644,7 @@ func (a *GlacierStub) InitiateJobAsync(ctx workflow.Context, input *glacier.Init
     future := workflow.ExecuteActivity(ctx, a.activities.InitiateJob, input)
     return &GlacierInitiateJobResult{Result: future}
 }
+
 func (a *GlacierStub) InitiateMultipartUpload(ctx workflow.Context, input *glacier.InitiateMultipartUploadInput) (*glacier.InitiateMultipartUploadOutput, error) {
     var output glacier.InitiateMultipartUploadOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InitiateMultipartUpload, input).Get(ctx, &output)
@@ -636,6 +655,7 @@ func (a *GlacierStub) InitiateMultipartUploadAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.InitiateMultipartUpload, input)
     return &GlacierInitiateMultipartUploadResult{Result: future}
 }
+
 func (a *GlacierStub) InitiateVaultLock(ctx workflow.Context, input *glacier.InitiateVaultLockInput) (*glacier.InitiateVaultLockOutput, error) {
     var output glacier.InitiateVaultLockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InitiateVaultLock, input).Get(ctx, &output)
@@ -646,6 +666,7 @@ func (a *GlacierStub) InitiateVaultLockAsync(ctx workflow.Context, input *glacie
     future := workflow.ExecuteActivity(ctx, a.activities.InitiateVaultLock, input)
     return &GlacierInitiateVaultLockResult{Result: future}
 }
+
 func (a *GlacierStub) ListJobs(ctx workflow.Context, input *glacier.ListJobsInput) (*glacier.ListJobsOutput, error) {
     var output glacier.ListJobsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input).Get(ctx, &output)
@@ -656,6 +677,7 @@ func (a *GlacierStub) ListJobsAsync(ctx workflow.Context, input *glacier.ListJob
     future := workflow.ExecuteActivity(ctx, a.activities.ListJobs, input)
     return &GlacierListJobsResult{Result: future}
 }
+
 func (a *GlacierStub) ListMultipartUploads(ctx workflow.Context, input *glacier.ListMultipartUploadsInput) (*glacier.ListMultipartUploadsOutput, error) {
     var output glacier.ListMultipartUploadsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMultipartUploads, input).Get(ctx, &output)
@@ -666,6 +688,7 @@ func (a *GlacierStub) ListMultipartUploadsAsync(ctx workflow.Context, input *gla
     future := workflow.ExecuteActivity(ctx, a.activities.ListMultipartUploads, input)
     return &GlacierListMultipartUploadsResult{Result: future}
 }
+
 func (a *GlacierStub) ListParts(ctx workflow.Context, input *glacier.ListPartsInput) (*glacier.ListPartsOutput, error) {
     var output glacier.ListPartsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListParts, input).Get(ctx, &output)
@@ -676,6 +699,7 @@ func (a *GlacierStub) ListPartsAsync(ctx workflow.Context, input *glacier.ListPa
     future := workflow.ExecuteActivity(ctx, a.activities.ListParts, input)
     return &GlacierListPartsResult{Result: future}
 }
+
 func (a *GlacierStub) ListProvisionedCapacity(ctx workflow.Context, input *glacier.ListProvisionedCapacityInput) (*glacier.ListProvisionedCapacityOutput, error) {
     var output glacier.ListProvisionedCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProvisionedCapacity, input).Get(ctx, &output)
@@ -686,6 +710,7 @@ func (a *GlacierStub) ListProvisionedCapacityAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListProvisionedCapacity, input)
     return &GlacierListProvisionedCapacityResult{Result: future}
 }
+
 func (a *GlacierStub) ListTagsForVault(ctx workflow.Context, input *glacier.ListTagsForVaultInput) (*glacier.ListTagsForVaultOutput, error) {
     var output glacier.ListTagsForVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForVault, input).Get(ctx, &output)
@@ -696,6 +721,7 @@ func (a *GlacierStub) ListTagsForVaultAsync(ctx workflow.Context, input *glacier
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForVault, input)
     return &GlacierListTagsForVaultResult{Result: future}
 }
+
 func (a *GlacierStub) ListVaults(ctx workflow.Context, input *glacier.ListVaultsInput) (*glacier.ListVaultsOutput, error) {
     var output glacier.ListVaultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVaults, input).Get(ctx, &output)
@@ -706,6 +732,7 @@ func (a *GlacierStub) ListVaultsAsync(ctx workflow.Context, input *glacier.ListV
     future := workflow.ExecuteActivity(ctx, a.activities.ListVaults, input)
     return &GlacierListVaultsResult{Result: future}
 }
+
 func (a *GlacierStub) PurchaseProvisionedCapacity(ctx workflow.Context, input *glacier.PurchaseProvisionedCapacityInput) (*glacier.PurchaseProvisionedCapacityOutput, error) {
     var output glacier.PurchaseProvisionedCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PurchaseProvisionedCapacity, input).Get(ctx, &output)
@@ -716,6 +743,7 @@ func (a *GlacierStub) PurchaseProvisionedCapacityAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.PurchaseProvisionedCapacity, input)
     return &GlacierPurchaseProvisionedCapacityResult{Result: future}
 }
+
 func (a *GlacierStub) RemoveTagsFromVault(ctx workflow.Context, input *glacier.RemoveTagsFromVaultInput) (*glacier.RemoveTagsFromVaultOutput, error) {
     var output glacier.RemoveTagsFromVaultOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromVault, input).Get(ctx, &output)
@@ -726,6 +754,7 @@ func (a *GlacierStub) RemoveTagsFromVaultAsync(ctx workflow.Context, input *glac
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromVault, input)
     return &GlacierRemoveTagsFromVaultResult{Result: future}
 }
+
 func (a *GlacierStub) SetDataRetrievalPolicy(ctx workflow.Context, input *glacier.SetDataRetrievalPolicyInput) (*glacier.SetDataRetrievalPolicyOutput, error) {
     var output glacier.SetDataRetrievalPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetDataRetrievalPolicy, input).Get(ctx, &output)
@@ -736,6 +765,7 @@ func (a *GlacierStub) SetDataRetrievalPolicyAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.SetDataRetrievalPolicy, input)
     return &GlacierSetDataRetrievalPolicyResult{Result: future}
 }
+
 func (a *GlacierStub) SetVaultAccessPolicy(ctx workflow.Context, input *glacier.SetVaultAccessPolicyInput) (*glacier.SetVaultAccessPolicyOutput, error) {
     var output glacier.SetVaultAccessPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetVaultAccessPolicy, input).Get(ctx, &output)
@@ -746,6 +776,7 @@ func (a *GlacierStub) SetVaultAccessPolicyAsync(ctx workflow.Context, input *gla
     future := workflow.ExecuteActivity(ctx, a.activities.SetVaultAccessPolicy, input)
     return &GlacierSetVaultAccessPolicyResult{Result: future}
 }
+
 func (a *GlacierStub) SetVaultNotifications(ctx workflow.Context, input *glacier.SetVaultNotificationsInput) (*glacier.SetVaultNotificationsOutput, error) {
     var output glacier.SetVaultNotificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetVaultNotifications, input).Get(ctx, &output)
@@ -756,6 +787,7 @@ func (a *GlacierStub) SetVaultNotificationsAsync(ctx workflow.Context, input *gl
     future := workflow.ExecuteActivity(ctx, a.activities.SetVaultNotifications, input)
     return &GlacierSetVaultNotificationsResult{Result: future}
 }
+
 func (a *GlacierStub) UploadArchive(ctx workflow.Context, input *glacier.UploadArchiveInput) (*glacier.ArchiveCreationOutput, error) {
     var output glacier.ArchiveCreationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadArchive, input).Get(ctx, &output)
@@ -766,6 +798,7 @@ func (a *GlacierStub) UploadArchiveAsync(ctx workflow.Context, input *glacier.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UploadArchive, input)
     return &GlacierUploadArchiveResult{Result: future}
 }
+
 func (a *GlacierStub) UploadMultipartPart(ctx workflow.Context, input *glacier.UploadMultipartPartInput) (*glacier.UploadMultipartPartOutput, error) {
     var output glacier.UploadMultipartPartOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadMultipartPart, input).Get(ctx, &output)
@@ -785,6 +818,7 @@ func (a *GlacierStub) WaitUntilVaultExistsAsync(ctx workflow.Context, input *gla
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilVaultExists, input)
 }
 
+
 func (a *GlacierStub) WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilVaultNotExists, input).Get(ctx, nil)
 }
@@ -792,3 +826,4 @@ func (a *GlacierStub) WaitUntilVaultNotExists(ctx workflow.Context, input *glaci
 func (a *GlacierStub) WaitUntilVaultNotExistsAsync(ctx workflow.Context, input *glacier.DescribeVaultInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilVaultNotExists, input)
 }
+

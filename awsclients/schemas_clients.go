@@ -98,6 +98,7 @@ type SchemasClient interface {
     UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
 
     WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error}
+
 type SchemasCreateDiscovererResult struct {
 	Result workflow.Future
 }
@@ -398,7 +399,6 @@ func (r *SchemasUpdateSchemaResult) Get(ctx workflow.Context) (*schemas.UpdateSc
     return &output, err
 }
 
-
 type SchemasStub struct {
     activities awsactivities.SchemasActivities
 }
@@ -406,6 +406,7 @@ type SchemasStub struct {
 func NewSchemasStub() SchemasClient {
     return &SchemasStub{}
 }
+
 func (a *SchemasStub) CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
     var output schemas.CreateDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDiscoverer, input).Get(ctx, &output)
@@ -416,6 +417,7 @@ func (a *SchemasStub) CreateDiscovererAsync(ctx workflow.Context, input *schemas
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDiscoverer, input)
     return &SchemasCreateDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error) {
     var output schemas.CreateRegistryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRegistry, input).Get(ctx, &output)
@@ -426,6 +428,7 @@ func (a *SchemasStub) CreateRegistryAsync(ctx workflow.Context, input *schemas.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRegistry, input)
     return &SchemasCreateRegistryResult{Result: future}
 }
+
 func (a *SchemasStub) CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error) {
     var output schemas.CreateSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSchema, input).Get(ctx, &output)
@@ -436,6 +439,7 @@ func (a *SchemasStub) CreateSchemaAsync(ctx workflow.Context, input *schemas.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSchema, input)
     return &SchemasCreateSchemaResult{Result: future}
 }
+
 func (a *SchemasStub) DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error) {
     var output schemas.DeleteDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDiscoverer, input).Get(ctx, &output)
@@ -446,6 +450,7 @@ func (a *SchemasStub) DeleteDiscovererAsync(ctx workflow.Context, input *schemas
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDiscoverer, input)
     return &SchemasDeleteDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error) {
     var output schemas.DeleteRegistryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRegistry, input).Get(ctx, &output)
@@ -456,6 +461,7 @@ func (a *SchemasStub) DeleteRegistryAsync(ctx workflow.Context, input *schemas.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRegistry, input)
     return &SchemasDeleteRegistryResult{Result: future}
 }
+
 func (a *SchemasStub) DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error) {
     var output schemas.DeleteResourcePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteResourcePolicy, input).Get(ctx, &output)
@@ -466,6 +472,7 @@ func (a *SchemasStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *sch
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteResourcePolicy, input)
     return &SchemasDeleteResourcePolicyResult{Result: future}
 }
+
 func (a *SchemasStub) DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error) {
     var output schemas.DeleteSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSchema, input).Get(ctx, &output)
@@ -476,6 +483,7 @@ func (a *SchemasStub) DeleteSchemaAsync(ctx workflow.Context, input *schemas.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSchema, input)
     return &SchemasDeleteSchemaResult{Result: future}
 }
+
 func (a *SchemasStub) DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error) {
     var output schemas.DeleteSchemaVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSchemaVersion, input).Get(ctx, &output)
@@ -486,6 +494,7 @@ func (a *SchemasStub) DeleteSchemaVersionAsync(ctx workflow.Context, input *sche
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSchemaVersion, input)
     return &SchemasDeleteSchemaVersionResult{Result: future}
 }
+
 func (a *SchemasStub) DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error) {
     var output schemas.DescribeCodeBindingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCodeBinding, input).Get(ctx, &output)
@@ -496,6 +505,7 @@ func (a *SchemasStub) DescribeCodeBindingAsync(ctx workflow.Context, input *sche
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCodeBinding, input)
     return &SchemasDescribeCodeBindingResult{Result: future}
 }
+
 func (a *SchemasStub) DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error) {
     var output schemas.DescribeDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDiscoverer, input).Get(ctx, &output)
@@ -506,6 +516,7 @@ func (a *SchemasStub) DescribeDiscovererAsync(ctx workflow.Context, input *schem
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDiscoverer, input)
     return &SchemasDescribeDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error) {
     var output schemas.DescribeRegistryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRegistry, input).Get(ctx, &output)
@@ -516,6 +527,7 @@ func (a *SchemasStub) DescribeRegistryAsync(ctx workflow.Context, input *schemas
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRegistry, input)
     return &SchemasDescribeRegistryResult{Result: future}
 }
+
 func (a *SchemasStub) DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error) {
     var output schemas.DescribeSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSchema, input).Get(ctx, &output)
@@ -526,6 +538,7 @@ func (a *SchemasStub) DescribeSchemaAsync(ctx workflow.Context, input *schemas.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSchema, input)
     return &SchemasDescribeSchemaResult{Result: future}
 }
+
 func (a *SchemasStub) GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
     var output schemas.GetCodeBindingSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCodeBindingSource, input).Get(ctx, &output)
@@ -536,6 +549,7 @@ func (a *SchemasStub) GetCodeBindingSourceAsync(ctx workflow.Context, input *sch
     future := workflow.ExecuteActivity(ctx, a.activities.GetCodeBindingSource, input)
     return &SchemasGetCodeBindingSourceResult{Result: future}
 }
+
 func (a *SchemasStub) GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error) {
     var output schemas.GetDiscoveredSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDiscoveredSchema, input).Get(ctx, &output)
@@ -546,6 +560,7 @@ func (a *SchemasStub) GetDiscoveredSchemaAsync(ctx workflow.Context, input *sche
     future := workflow.ExecuteActivity(ctx, a.activities.GetDiscoveredSchema, input)
     return &SchemasGetDiscoveredSchemaResult{Result: future}
 }
+
 func (a *SchemasStub) GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error) {
     var output schemas.GetResourcePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetResourcePolicy, input).Get(ctx, &output)
@@ -556,6 +571,7 @@ func (a *SchemasStub) GetResourcePolicyAsync(ctx workflow.Context, input *schema
     future := workflow.ExecuteActivity(ctx, a.activities.GetResourcePolicy, input)
     return &SchemasGetResourcePolicyResult{Result: future}
 }
+
 func (a *SchemasStub) ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error) {
     var output schemas.ListDiscoverersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDiscoverers, input).Get(ctx, &output)
@@ -566,6 +582,7 @@ func (a *SchemasStub) ListDiscoverersAsync(ctx workflow.Context, input *schemas.
     future := workflow.ExecuteActivity(ctx, a.activities.ListDiscoverers, input)
     return &SchemasListDiscoverersResult{Result: future}
 }
+
 func (a *SchemasStub) ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error) {
     var output schemas.ListRegistriesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRegistries, input).Get(ctx, &output)
@@ -576,6 +593,7 @@ func (a *SchemasStub) ListRegistriesAsync(ctx workflow.Context, input *schemas.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListRegistries, input)
     return &SchemasListRegistriesResult{Result: future}
 }
+
 func (a *SchemasStub) ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error) {
     var output schemas.ListSchemaVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSchemaVersions, input).Get(ctx, &output)
@@ -586,6 +604,7 @@ func (a *SchemasStub) ListSchemaVersionsAsync(ctx workflow.Context, input *schem
     future := workflow.ExecuteActivity(ctx, a.activities.ListSchemaVersions, input)
     return &SchemasListSchemaVersionsResult{Result: future}
 }
+
 func (a *SchemasStub) ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error) {
     var output schemas.ListSchemasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSchemas, input).Get(ctx, &output)
@@ -596,6 +615,7 @@ func (a *SchemasStub) ListSchemasAsync(ctx workflow.Context, input *schemas.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListSchemas, input)
     return &SchemasListSchemasResult{Result: future}
 }
+
 func (a *SchemasStub) ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error) {
     var output schemas.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -606,6 +626,7 @@ func (a *SchemasStub) ListTagsForResourceAsync(ctx workflow.Context, input *sche
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &SchemasListTagsForResourceResult{Result: future}
 }
+
 func (a *SchemasStub) PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error) {
     var output schemas.PutCodeBindingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutCodeBinding, input).Get(ctx, &output)
@@ -616,6 +637,7 @@ func (a *SchemasStub) PutCodeBindingAsync(ctx workflow.Context, input *schemas.P
     future := workflow.ExecuteActivity(ctx, a.activities.PutCodeBinding, input)
     return &SchemasPutCodeBindingResult{Result: future}
 }
+
 func (a *SchemasStub) PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error) {
     var output schemas.PutResourcePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutResourcePolicy, input).Get(ctx, &output)
@@ -626,6 +648,7 @@ func (a *SchemasStub) PutResourcePolicyAsync(ctx workflow.Context, input *schema
     future := workflow.ExecuteActivity(ctx, a.activities.PutResourcePolicy, input)
     return &SchemasPutResourcePolicyResult{Result: future}
 }
+
 func (a *SchemasStub) SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error) {
     var output schemas.SearchSchemasOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchSchemas, input).Get(ctx, &output)
@@ -636,6 +659,7 @@ func (a *SchemasStub) SearchSchemasAsync(ctx workflow.Context, input *schemas.Se
     future := workflow.ExecuteActivity(ctx, a.activities.SearchSchemas, input)
     return &SchemasSearchSchemasResult{Result: future}
 }
+
 func (a *SchemasStub) StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error) {
     var output schemas.StartDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDiscoverer, input).Get(ctx, &output)
@@ -646,6 +670,7 @@ func (a *SchemasStub) StartDiscovererAsync(ctx workflow.Context, input *schemas.
     future := workflow.ExecuteActivity(ctx, a.activities.StartDiscoverer, input)
     return &SchemasStartDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error) {
     var output schemas.StopDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopDiscoverer, input).Get(ctx, &output)
@@ -656,6 +681,7 @@ func (a *SchemasStub) StopDiscovererAsync(ctx workflow.Context, input *schemas.S
     future := workflow.ExecuteActivity(ctx, a.activities.StopDiscoverer, input)
     return &SchemasStopDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error) {
     var output schemas.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -666,6 +692,7 @@ func (a *SchemasStub) TagResourceAsync(ctx workflow.Context, input *schemas.TagR
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &SchemasTagResourceResult{Result: future}
 }
+
 func (a *SchemasStub) UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error) {
     var output schemas.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -676,6 +703,7 @@ func (a *SchemasStub) UntagResourceAsync(ctx workflow.Context, input *schemas.Un
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &SchemasUntagResourceResult{Result: future}
 }
+
 func (a *SchemasStub) UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error) {
     var output schemas.UpdateDiscovererOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDiscoverer, input).Get(ctx, &output)
@@ -686,6 +714,7 @@ func (a *SchemasStub) UpdateDiscovererAsync(ctx workflow.Context, input *schemas
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDiscoverer, input)
     return &SchemasUpdateDiscovererResult{Result: future}
 }
+
 func (a *SchemasStub) UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error) {
     var output schemas.UpdateRegistryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRegistry, input).Get(ctx, &output)
@@ -696,6 +725,7 @@ func (a *SchemasStub) UpdateRegistryAsync(ctx workflow.Context, input *schemas.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateRegistry, input)
     return &SchemasUpdateRegistryResult{Result: future}
 }
+
 func (a *SchemasStub) UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error) {
     var output schemas.UpdateSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSchema, input).Get(ctx, &output)
@@ -714,3 +744,4 @@ func (a *SchemasStub) WaitUntilCodeBindingExists(ctx workflow.Context, input *sc
 func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilCodeBindingExists, input)
 }
+

@@ -85,6 +85,7 @@ type KinesisAnalyticsV2Client interface {
     UpdateApplication(ctx workflow.Context, input *kinesisanalyticsv2.UpdateApplicationInput) (*kinesisanalyticsv2.UpdateApplicationOutput, error)
     UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalyticsv2.UpdateApplicationInput) *Kinesisanalyticsv2UpdateApplicationResult
 }
+
 type Kinesisanalyticsv2AddApplicationCloudWatchLoggingOptionResult struct {
 	Result workflow.Future
 }
@@ -345,7 +346,6 @@ func (r *Kinesisanalyticsv2UpdateApplicationResult) Get(ctx workflow.Context) (*
     return &output, err
 }
 
-
 type KinesisAnalyticsV2Stub struct {
     activities awsactivities.KinesisAnalyticsV2Activities
 }
@@ -353,6 +353,7 @@ type KinesisAnalyticsV2Stub struct {
 func NewKinesisAnalyticsV2Stub() KinesisAnalyticsV2Client {
     return &KinesisAnalyticsV2Stub{}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionInput) (*kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionOutput, error) {
     var output kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationCloudWatchLoggingOption, input).Get(ctx, &output)
@@ -363,6 +364,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationCloudWatchLoggingOptionAsync(ctx 
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationCloudWatchLoggingOption, input)
     return &Kinesisanalyticsv2AddApplicationCloudWatchLoggingOptionResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationInput(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationInputInput) (*kinesisanalyticsv2.AddApplicationInputOutput, error) {
     var output kinesisanalyticsv2.AddApplicationInputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationInput, input).Get(ctx, &output)
@@ -373,6 +375,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationInputAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationInput, input)
     return &Kinesisanalyticsv2AddApplicationInputResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationInputProcessingConfigurationInput) (*kinesisanalyticsv2.AddApplicationInputProcessingConfigurationOutput, error) {
     var output kinesisanalyticsv2.AddApplicationInputProcessingConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationInputProcessingConfiguration, input).Get(ctx, &output)
@@ -383,6 +386,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationInputProcessingConfigurationAsync
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationInputProcessingConfiguration, input)
     return &Kinesisanalyticsv2AddApplicationInputProcessingConfigurationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationOutput(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationOutputInput) (*kinesisanalyticsv2.AddApplicationOutputOutput, error) {
     var output kinesisanalyticsv2.AddApplicationOutputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationOutput, input).Get(ctx, &output)
@@ -393,6 +397,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationOutputAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationOutput, input)
     return &Kinesisanalyticsv2AddApplicationOutputResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationReferenceDataSourceInput) (*kinesisanalyticsv2.AddApplicationReferenceDataSourceOutput, error) {
     var output kinesisanalyticsv2.AddApplicationReferenceDataSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationReferenceDataSource, input).Get(ctx, &output)
@@ -403,6 +408,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationReferenceDataSourceAsync(ctx work
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationReferenceDataSource, input)
     return &Kinesisanalyticsv2AddApplicationReferenceDataSourceResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) AddApplicationVpcConfiguration(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationVpcConfigurationInput) (*kinesisanalyticsv2.AddApplicationVpcConfigurationOutput, error) {
     var output kinesisanalyticsv2.AddApplicationVpcConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddApplicationVpcConfiguration, input).Get(ctx, &output)
@@ -413,6 +419,7 @@ func (a *KinesisAnalyticsV2Stub) AddApplicationVpcConfigurationAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.AddApplicationVpcConfiguration, input)
     return &Kinesisanalyticsv2AddApplicationVpcConfigurationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) CreateApplication(ctx workflow.Context, input *kinesisanalyticsv2.CreateApplicationInput) (*kinesisanalyticsv2.CreateApplicationOutput, error) {
     var output kinesisanalyticsv2.CreateApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApplication, input).Get(ctx, &output)
@@ -423,6 +430,7 @@ func (a *KinesisAnalyticsV2Stub) CreateApplicationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApplication, input)
     return &Kinesisanalyticsv2CreateApplicationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) CreateApplicationSnapshot(ctx workflow.Context, input *kinesisanalyticsv2.CreateApplicationSnapshotInput) (*kinesisanalyticsv2.CreateApplicationSnapshotOutput, error) {
     var output kinesisanalyticsv2.CreateApplicationSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApplicationSnapshot, input).Get(ctx, &output)
@@ -433,6 +441,7 @@ func (a *KinesisAnalyticsV2Stub) CreateApplicationSnapshotAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApplicationSnapshot, input)
     return &Kinesisanalyticsv2CreateApplicationSnapshotResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplication(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationInput) (*kinesisanalyticsv2.DeleteApplicationOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplication, input).Get(ctx, &output)
@@ -443,6 +452,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplication, input)
     return &Kinesisanalyticsv2DeleteApplicationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationCloudWatchLoggingOptionInput) (*kinesisanalyticsv2.DeleteApplicationCloudWatchLoggingOptionOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationCloudWatchLoggingOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationCloudWatchLoggingOption, input).Get(ctx, &output)
@@ -453,6 +463,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationCloudWatchLoggingOptionAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationCloudWatchLoggingOption, input)
     return &Kinesisanalyticsv2DeleteApplicationCloudWatchLoggingOptionResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationInputProcessingConfiguration(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationInputProcessingConfigurationInput) (*kinesisanalyticsv2.DeleteApplicationInputProcessingConfigurationOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationInputProcessingConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationInputProcessingConfiguration, input).Get(ctx, &output)
@@ -463,6 +474,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationInputProcessingConfigurationAs
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationInputProcessingConfiguration, input)
     return &Kinesisanalyticsv2DeleteApplicationInputProcessingConfigurationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationOutput(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationOutputInput) (*kinesisanalyticsv2.DeleteApplicationOutputOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationOutputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationOutput, input).Get(ctx, &output)
@@ -473,6 +485,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationOutputAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationOutput, input)
     return &Kinesisanalyticsv2DeleteApplicationOutputResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationReferenceDataSource(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationReferenceDataSourceInput) (*kinesisanalyticsv2.DeleteApplicationReferenceDataSourceOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationReferenceDataSourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationReferenceDataSource, input).Get(ctx, &output)
@@ -483,6 +496,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationReferenceDataSourceAsync(ctx w
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationReferenceDataSource, input)
     return &Kinesisanalyticsv2DeleteApplicationReferenceDataSourceResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationSnapshot(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationSnapshotInput) (*kinesisanalyticsv2.DeleteApplicationSnapshotOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationSnapshot, input).Get(ctx, &output)
@@ -493,6 +507,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationSnapshotAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationSnapshot, input)
     return &Kinesisanalyticsv2DeleteApplicationSnapshotResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DeleteApplicationVpcConfiguration(ctx workflow.Context, input *kinesisanalyticsv2.DeleteApplicationVpcConfigurationInput) (*kinesisanalyticsv2.DeleteApplicationVpcConfigurationOutput, error) {
     var output kinesisanalyticsv2.DeleteApplicationVpcConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationVpcConfiguration, input).Get(ctx, &output)
@@ -503,6 +518,7 @@ func (a *KinesisAnalyticsV2Stub) DeleteApplicationVpcConfigurationAsync(ctx work
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplicationVpcConfiguration, input)
     return &Kinesisanalyticsv2DeleteApplicationVpcConfigurationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DescribeApplication(ctx workflow.Context, input *kinesisanalyticsv2.DescribeApplicationInput) (*kinesisanalyticsv2.DescribeApplicationOutput, error) {
     var output kinesisanalyticsv2.DescribeApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeApplication, input).Get(ctx, &output)
@@ -513,6 +529,7 @@ func (a *KinesisAnalyticsV2Stub) DescribeApplicationAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeApplication, input)
     return &Kinesisanalyticsv2DescribeApplicationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DescribeApplicationSnapshot(ctx workflow.Context, input *kinesisanalyticsv2.DescribeApplicationSnapshotInput) (*kinesisanalyticsv2.DescribeApplicationSnapshotOutput, error) {
     var output kinesisanalyticsv2.DescribeApplicationSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeApplicationSnapshot, input).Get(ctx, &output)
@@ -523,6 +540,7 @@ func (a *KinesisAnalyticsV2Stub) DescribeApplicationSnapshotAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeApplicationSnapshot, input)
     return &Kinesisanalyticsv2DescribeApplicationSnapshotResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) DiscoverInputSchema(ctx workflow.Context, input *kinesisanalyticsv2.DiscoverInputSchemaInput) (*kinesisanalyticsv2.DiscoverInputSchemaOutput, error) {
     var output kinesisanalyticsv2.DiscoverInputSchemaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DiscoverInputSchema, input).Get(ctx, &output)
@@ -533,6 +551,7 @@ func (a *KinesisAnalyticsV2Stub) DiscoverInputSchemaAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DiscoverInputSchema, input)
     return &Kinesisanalyticsv2DiscoverInputSchemaResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) ListApplicationSnapshots(ctx workflow.Context, input *kinesisanalyticsv2.ListApplicationSnapshotsInput) (*kinesisanalyticsv2.ListApplicationSnapshotsOutput, error) {
     var output kinesisanalyticsv2.ListApplicationSnapshotsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListApplicationSnapshots, input).Get(ctx, &output)
@@ -543,6 +562,7 @@ func (a *KinesisAnalyticsV2Stub) ListApplicationSnapshotsAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.ListApplicationSnapshots, input)
     return &Kinesisanalyticsv2ListApplicationSnapshotsResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) ListApplications(ctx workflow.Context, input *kinesisanalyticsv2.ListApplicationsInput) (*kinesisanalyticsv2.ListApplicationsOutput, error) {
     var output kinesisanalyticsv2.ListApplicationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListApplications, input).Get(ctx, &output)
@@ -553,6 +573,7 @@ func (a *KinesisAnalyticsV2Stub) ListApplicationsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListApplications, input)
     return &Kinesisanalyticsv2ListApplicationsResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) ListTagsForResource(ctx workflow.Context, input *kinesisanalyticsv2.ListTagsForResourceInput) (*kinesisanalyticsv2.ListTagsForResourceOutput, error) {
     var output kinesisanalyticsv2.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -563,6 +584,7 @@ func (a *KinesisAnalyticsV2Stub) ListTagsForResourceAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &Kinesisanalyticsv2ListTagsForResourceResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) StartApplication(ctx workflow.Context, input *kinesisanalyticsv2.StartApplicationInput) (*kinesisanalyticsv2.StartApplicationOutput, error) {
     var output kinesisanalyticsv2.StartApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartApplication, input).Get(ctx, &output)
@@ -573,6 +595,7 @@ func (a *KinesisAnalyticsV2Stub) StartApplicationAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.StartApplication, input)
     return &Kinesisanalyticsv2StartApplicationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) StopApplication(ctx workflow.Context, input *kinesisanalyticsv2.StopApplicationInput) (*kinesisanalyticsv2.StopApplicationOutput, error) {
     var output kinesisanalyticsv2.StopApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopApplication, input).Get(ctx, &output)
@@ -583,6 +606,7 @@ func (a *KinesisAnalyticsV2Stub) StopApplicationAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.StopApplication, input)
     return &Kinesisanalyticsv2StopApplicationResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) TagResource(ctx workflow.Context, input *kinesisanalyticsv2.TagResourceInput) (*kinesisanalyticsv2.TagResourceOutput, error) {
     var output kinesisanalyticsv2.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -593,6 +617,7 @@ func (a *KinesisAnalyticsV2Stub) TagResourceAsync(ctx workflow.Context, input *k
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &Kinesisanalyticsv2TagResourceResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) UntagResource(ctx workflow.Context, input *kinesisanalyticsv2.UntagResourceInput) (*kinesisanalyticsv2.UntagResourceOutput, error) {
     var output kinesisanalyticsv2.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -603,6 +628,7 @@ func (a *KinesisAnalyticsV2Stub) UntagResourceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &Kinesisanalyticsv2UntagResourceResult{Result: future}
 }
+
 func (a *KinesisAnalyticsV2Stub) UpdateApplication(ctx workflow.Context, input *kinesisanalyticsv2.UpdateApplicationInput) (*kinesisanalyticsv2.UpdateApplicationOutput, error) {
     var output kinesisanalyticsv2.UpdateApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApplication, input).Get(ctx, &output)

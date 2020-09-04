@@ -61,6 +61,7 @@ type CloudTrailClient interface {
     UpdateTrail(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) (*cloudtrail.UpdateTrailOutput, error)
     UpdateTrailAsync(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) *CloudtrailUpdateTrailResult
 }
+
 type CloudtrailAddTagsResult struct {
 	Result workflow.Future
 }
@@ -241,7 +242,6 @@ func (r *CloudtrailUpdateTrailResult) Get(ctx workflow.Context) (*cloudtrail.Upd
     return &output, err
 }
 
-
 type CloudTrailStub struct {
     activities awsactivities.CloudTrailActivities
 }
@@ -249,6 +249,7 @@ type CloudTrailStub struct {
 func NewCloudTrailStub() CloudTrailClient {
     return &CloudTrailStub{}
 }
+
 func (a *CloudTrailStub) AddTags(ctx workflow.Context, input *cloudtrail.AddTagsInput) (*cloudtrail.AddTagsOutput, error) {
     var output cloudtrail.AddTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddTags, input).Get(ctx, &output)
@@ -259,6 +260,7 @@ func (a *CloudTrailStub) AddTagsAsync(ctx workflow.Context, input *cloudtrail.Ad
     future := workflow.ExecuteActivity(ctx, a.activities.AddTags, input)
     return &CloudtrailAddTagsResult{Result: future}
 }
+
 func (a *CloudTrailStub) CreateTrail(ctx workflow.Context, input *cloudtrail.CreateTrailInput) (*cloudtrail.CreateTrailOutput, error) {
     var output cloudtrail.CreateTrailOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTrail, input).Get(ctx, &output)
@@ -269,6 +271,7 @@ func (a *CloudTrailStub) CreateTrailAsync(ctx workflow.Context, input *cloudtrai
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTrail, input)
     return &CloudtrailCreateTrailResult{Result: future}
 }
+
 func (a *CloudTrailStub) DeleteTrail(ctx workflow.Context, input *cloudtrail.DeleteTrailInput) (*cloudtrail.DeleteTrailOutput, error) {
     var output cloudtrail.DeleteTrailOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTrail, input).Get(ctx, &output)
@@ -279,6 +282,7 @@ func (a *CloudTrailStub) DeleteTrailAsync(ctx workflow.Context, input *cloudtrai
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTrail, input)
     return &CloudtrailDeleteTrailResult{Result: future}
 }
+
 func (a *CloudTrailStub) DescribeTrails(ctx workflow.Context, input *cloudtrail.DescribeTrailsInput) (*cloudtrail.DescribeTrailsOutput, error) {
     var output cloudtrail.DescribeTrailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTrails, input).Get(ctx, &output)
@@ -289,6 +293,7 @@ func (a *CloudTrailStub) DescribeTrailsAsync(ctx workflow.Context, input *cloudt
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTrails, input)
     return &CloudtrailDescribeTrailsResult{Result: future}
 }
+
 func (a *CloudTrailStub) GetEventSelectors(ctx workflow.Context, input *cloudtrail.GetEventSelectorsInput) (*cloudtrail.GetEventSelectorsOutput, error) {
     var output cloudtrail.GetEventSelectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEventSelectors, input).Get(ctx, &output)
@@ -299,6 +304,7 @@ func (a *CloudTrailStub) GetEventSelectorsAsync(ctx workflow.Context, input *clo
     future := workflow.ExecuteActivity(ctx, a.activities.GetEventSelectors, input)
     return &CloudtrailGetEventSelectorsResult{Result: future}
 }
+
 func (a *CloudTrailStub) GetInsightSelectors(ctx workflow.Context, input *cloudtrail.GetInsightSelectorsInput) (*cloudtrail.GetInsightSelectorsOutput, error) {
     var output cloudtrail.GetInsightSelectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetInsightSelectors, input).Get(ctx, &output)
@@ -309,6 +315,7 @@ func (a *CloudTrailStub) GetInsightSelectorsAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.GetInsightSelectors, input)
     return &CloudtrailGetInsightSelectorsResult{Result: future}
 }
+
 func (a *CloudTrailStub) GetTrail(ctx workflow.Context, input *cloudtrail.GetTrailInput) (*cloudtrail.GetTrailOutput, error) {
     var output cloudtrail.GetTrailOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTrail, input).Get(ctx, &output)
@@ -319,6 +326,7 @@ func (a *CloudTrailStub) GetTrailAsync(ctx workflow.Context, input *cloudtrail.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetTrail, input)
     return &CloudtrailGetTrailResult{Result: future}
 }
+
 func (a *CloudTrailStub) GetTrailStatus(ctx workflow.Context, input *cloudtrail.GetTrailStatusInput) (*cloudtrail.GetTrailStatusOutput, error) {
     var output cloudtrail.GetTrailStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTrailStatus, input).Get(ctx, &output)
@@ -329,6 +337,7 @@ func (a *CloudTrailStub) GetTrailStatusAsync(ctx workflow.Context, input *cloudt
     future := workflow.ExecuteActivity(ctx, a.activities.GetTrailStatus, input)
     return &CloudtrailGetTrailStatusResult{Result: future}
 }
+
 func (a *CloudTrailStub) ListPublicKeys(ctx workflow.Context, input *cloudtrail.ListPublicKeysInput) (*cloudtrail.ListPublicKeysOutput, error) {
     var output cloudtrail.ListPublicKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPublicKeys, input).Get(ctx, &output)
@@ -339,6 +348,7 @@ func (a *CloudTrailStub) ListPublicKeysAsync(ctx workflow.Context, input *cloudt
     future := workflow.ExecuteActivity(ctx, a.activities.ListPublicKeys, input)
     return &CloudtrailListPublicKeysResult{Result: future}
 }
+
 func (a *CloudTrailStub) ListTags(ctx workflow.Context, input *cloudtrail.ListTagsInput) (*cloudtrail.ListTagsOutput, error) {
     var output cloudtrail.ListTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTags, input).Get(ctx, &output)
@@ -349,6 +359,7 @@ func (a *CloudTrailStub) ListTagsAsync(ctx workflow.Context, input *cloudtrail.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListTags, input)
     return &CloudtrailListTagsResult{Result: future}
 }
+
 func (a *CloudTrailStub) ListTrails(ctx workflow.Context, input *cloudtrail.ListTrailsInput) (*cloudtrail.ListTrailsOutput, error) {
     var output cloudtrail.ListTrailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrails, input).Get(ctx, &output)
@@ -359,6 +370,7 @@ func (a *CloudTrailStub) ListTrailsAsync(ctx workflow.Context, input *cloudtrail
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrails, input)
     return &CloudtrailListTrailsResult{Result: future}
 }
+
 func (a *CloudTrailStub) LookupEvents(ctx workflow.Context, input *cloudtrail.LookupEventsInput) (*cloudtrail.LookupEventsOutput, error) {
     var output cloudtrail.LookupEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.LookupEvents, input).Get(ctx, &output)
@@ -369,6 +381,7 @@ func (a *CloudTrailStub) LookupEventsAsync(ctx workflow.Context, input *cloudtra
     future := workflow.ExecuteActivity(ctx, a.activities.LookupEvents, input)
     return &CloudtrailLookupEventsResult{Result: future}
 }
+
 func (a *CloudTrailStub) PutEventSelectors(ctx workflow.Context, input *cloudtrail.PutEventSelectorsInput) (*cloudtrail.PutEventSelectorsOutput, error) {
     var output cloudtrail.PutEventSelectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEventSelectors, input).Get(ctx, &output)
@@ -379,6 +392,7 @@ func (a *CloudTrailStub) PutEventSelectorsAsync(ctx workflow.Context, input *clo
     future := workflow.ExecuteActivity(ctx, a.activities.PutEventSelectors, input)
     return &CloudtrailPutEventSelectorsResult{Result: future}
 }
+
 func (a *CloudTrailStub) PutInsightSelectors(ctx workflow.Context, input *cloudtrail.PutInsightSelectorsInput) (*cloudtrail.PutInsightSelectorsOutput, error) {
     var output cloudtrail.PutInsightSelectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutInsightSelectors, input).Get(ctx, &output)
@@ -389,6 +403,7 @@ func (a *CloudTrailStub) PutInsightSelectorsAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.PutInsightSelectors, input)
     return &CloudtrailPutInsightSelectorsResult{Result: future}
 }
+
 func (a *CloudTrailStub) RemoveTags(ctx workflow.Context, input *cloudtrail.RemoveTagsInput) (*cloudtrail.RemoveTagsOutput, error) {
     var output cloudtrail.RemoveTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTags, input).Get(ctx, &output)
@@ -399,6 +414,7 @@ func (a *CloudTrailStub) RemoveTagsAsync(ctx workflow.Context, input *cloudtrail
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveTags, input)
     return &CloudtrailRemoveTagsResult{Result: future}
 }
+
 func (a *CloudTrailStub) StartLogging(ctx workflow.Context, input *cloudtrail.StartLoggingInput) (*cloudtrail.StartLoggingOutput, error) {
     var output cloudtrail.StartLoggingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartLogging, input).Get(ctx, &output)
@@ -409,6 +425,7 @@ func (a *CloudTrailStub) StartLoggingAsync(ctx workflow.Context, input *cloudtra
     future := workflow.ExecuteActivity(ctx, a.activities.StartLogging, input)
     return &CloudtrailStartLoggingResult{Result: future}
 }
+
 func (a *CloudTrailStub) StopLogging(ctx workflow.Context, input *cloudtrail.StopLoggingInput) (*cloudtrail.StopLoggingOutput, error) {
     var output cloudtrail.StopLoggingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopLogging, input).Get(ctx, &output)
@@ -419,6 +436,7 @@ func (a *CloudTrailStub) StopLoggingAsync(ctx workflow.Context, input *cloudtrai
     future := workflow.ExecuteActivity(ctx, a.activities.StopLogging, input)
     return &CloudtrailStopLoggingResult{Result: future}
 }
+
 func (a *CloudTrailStub) UpdateTrail(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) (*cloudtrail.UpdateTrailOutput, error) {
     var output cloudtrail.UpdateTrailOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTrail, input).Get(ctx, &output)

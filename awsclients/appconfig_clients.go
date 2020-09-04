@@ -106,6 +106,7 @@ type AppConfigClient interface {
     ValidateConfiguration(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error)
     ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppconfigValidateConfigurationResult
 }
+
 type AppconfigCreateApplicationResult struct {
 	Result workflow.Future
 }
@@ -436,7 +437,6 @@ func (r *AppconfigValidateConfigurationResult) Get(ctx workflow.Context) (*appco
     return &output, err
 }
 
-
 type AppConfigStub struct {
     activities awsactivities.AppConfigActivities
 }
@@ -444,6 +444,7 @@ type AppConfigStub struct {
 func NewAppConfigStub() AppConfigClient {
     return &AppConfigStub{}
 }
+
 func (a *AppConfigStub) CreateApplication(ctx workflow.Context, input *appconfig.CreateApplicationInput) (*appconfig.CreateApplicationOutput, error) {
     var output appconfig.CreateApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateApplication, input).Get(ctx, &output)
@@ -454,6 +455,7 @@ func (a *AppConfigStub) CreateApplicationAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.CreateApplication, input)
     return &AppconfigCreateApplicationResult{Result: future}
 }
+
 func (a *AppConfigStub) CreateConfigurationProfile(ctx workflow.Context, input *appconfig.CreateConfigurationProfileInput) (*appconfig.CreateConfigurationProfileOutput, error) {
     var output appconfig.CreateConfigurationProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationProfile, input).Get(ctx, &output)
@@ -464,6 +466,7 @@ func (a *AppConfigStub) CreateConfigurationProfileAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationProfile, input)
     return &AppconfigCreateConfigurationProfileResult{Result: future}
 }
+
 func (a *AppConfigStub) CreateDeploymentStrategy(ctx workflow.Context, input *appconfig.CreateDeploymentStrategyInput) (*appconfig.CreateDeploymentStrategyOutput, error) {
     var output appconfig.CreateDeploymentStrategyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDeploymentStrategy, input).Get(ctx, &output)
@@ -474,6 +477,7 @@ func (a *AppConfigStub) CreateDeploymentStrategyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDeploymentStrategy, input)
     return &AppconfigCreateDeploymentStrategyResult{Result: future}
 }
+
 func (a *AppConfigStub) CreateEnvironment(ctx workflow.Context, input *appconfig.CreateEnvironmentInput) (*appconfig.CreateEnvironmentOutput, error) {
     var output appconfig.CreateEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironment, input).Get(ctx, &output)
@@ -484,6 +488,7 @@ func (a *AppConfigStub) CreateEnvironmentAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEnvironment, input)
     return &AppconfigCreateEnvironmentResult{Result: future}
 }
+
 func (a *AppConfigStub) CreateHostedConfigurationVersion(ctx workflow.Context, input *appconfig.CreateHostedConfigurationVersionInput) (*appconfig.CreateHostedConfigurationVersionOutput, error) {
     var output appconfig.CreateHostedConfigurationVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHostedConfigurationVersion, input).Get(ctx, &output)
@@ -494,6 +499,7 @@ func (a *AppConfigStub) CreateHostedConfigurationVersionAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHostedConfigurationVersion, input)
     return &AppconfigCreateHostedConfigurationVersionResult{Result: future}
 }
+
 func (a *AppConfigStub) DeleteApplication(ctx workflow.Context, input *appconfig.DeleteApplicationInput) (*appconfig.DeleteApplicationOutput, error) {
     var output appconfig.DeleteApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteApplication, input).Get(ctx, &output)
@@ -504,6 +510,7 @@ func (a *AppConfigStub) DeleteApplicationAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteApplication, input)
     return &AppconfigDeleteApplicationResult{Result: future}
 }
+
 func (a *AppConfigStub) DeleteConfigurationProfile(ctx workflow.Context, input *appconfig.DeleteConfigurationProfileInput) (*appconfig.DeleteConfigurationProfileOutput, error) {
     var output appconfig.DeleteConfigurationProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationProfile, input).Get(ctx, &output)
@@ -514,6 +521,7 @@ func (a *AppConfigStub) DeleteConfigurationProfileAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationProfile, input)
     return &AppconfigDeleteConfigurationProfileResult{Result: future}
 }
+
 func (a *AppConfigStub) DeleteDeploymentStrategy(ctx workflow.Context, input *appconfig.DeleteDeploymentStrategyInput) (*appconfig.DeleteDeploymentStrategyOutput, error) {
     var output appconfig.DeleteDeploymentStrategyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDeploymentStrategy, input).Get(ctx, &output)
@@ -524,6 +532,7 @@ func (a *AppConfigStub) DeleteDeploymentStrategyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDeploymentStrategy, input)
     return &AppconfigDeleteDeploymentStrategyResult{Result: future}
 }
+
 func (a *AppConfigStub) DeleteEnvironment(ctx workflow.Context, input *appconfig.DeleteEnvironmentInput) (*appconfig.DeleteEnvironmentOutput, error) {
     var output appconfig.DeleteEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironment, input).Get(ctx, &output)
@@ -534,6 +543,7 @@ func (a *AppConfigStub) DeleteEnvironmentAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEnvironment, input)
     return &AppconfigDeleteEnvironmentResult{Result: future}
 }
+
 func (a *AppConfigStub) DeleteHostedConfigurationVersion(ctx workflow.Context, input *appconfig.DeleteHostedConfigurationVersionInput) (*appconfig.DeleteHostedConfigurationVersionOutput, error) {
     var output appconfig.DeleteHostedConfigurationVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHostedConfigurationVersion, input).Get(ctx, &output)
@@ -544,6 +554,7 @@ func (a *AppConfigStub) DeleteHostedConfigurationVersionAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHostedConfigurationVersion, input)
     return &AppconfigDeleteHostedConfigurationVersionResult{Result: future}
 }
+
 func (a *AppConfigStub) GetApplication(ctx workflow.Context, input *appconfig.GetApplicationInput) (*appconfig.GetApplicationOutput, error) {
     var output appconfig.GetApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetApplication, input).Get(ctx, &output)
@@ -554,6 +565,7 @@ func (a *AppConfigStub) GetApplicationAsync(ctx workflow.Context, input *appconf
     future := workflow.ExecuteActivity(ctx, a.activities.GetApplication, input)
     return &AppconfigGetApplicationResult{Result: future}
 }
+
 func (a *AppConfigStub) GetConfiguration(ctx workflow.Context, input *appconfig.GetConfigurationInput) (*appconfig.GetConfigurationOutput, error) {
     var output appconfig.GetConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConfiguration, input).Get(ctx, &output)
@@ -564,6 +576,7 @@ func (a *AppConfigStub) GetConfigurationAsync(ctx workflow.Context, input *appco
     future := workflow.ExecuteActivity(ctx, a.activities.GetConfiguration, input)
     return &AppconfigGetConfigurationResult{Result: future}
 }
+
 func (a *AppConfigStub) GetConfigurationProfile(ctx workflow.Context, input *appconfig.GetConfigurationProfileInput) (*appconfig.GetConfigurationProfileOutput, error) {
     var output appconfig.GetConfigurationProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConfigurationProfile, input).Get(ctx, &output)
@@ -574,6 +587,7 @@ func (a *AppConfigStub) GetConfigurationProfileAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetConfigurationProfile, input)
     return &AppconfigGetConfigurationProfileResult{Result: future}
 }
+
 func (a *AppConfigStub) GetDeployment(ctx workflow.Context, input *appconfig.GetDeploymentInput) (*appconfig.GetDeploymentOutput, error) {
     var output appconfig.GetDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDeployment, input).Get(ctx, &output)
@@ -584,6 +598,7 @@ func (a *AppConfigStub) GetDeploymentAsync(ctx workflow.Context, input *appconfi
     future := workflow.ExecuteActivity(ctx, a.activities.GetDeployment, input)
     return &AppconfigGetDeploymentResult{Result: future}
 }
+
 func (a *AppConfigStub) GetDeploymentStrategy(ctx workflow.Context, input *appconfig.GetDeploymentStrategyInput) (*appconfig.GetDeploymentStrategyOutput, error) {
     var output appconfig.GetDeploymentStrategyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDeploymentStrategy, input).Get(ctx, &output)
@@ -594,6 +609,7 @@ func (a *AppConfigStub) GetDeploymentStrategyAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetDeploymentStrategy, input)
     return &AppconfigGetDeploymentStrategyResult{Result: future}
 }
+
 func (a *AppConfigStub) GetEnvironment(ctx workflow.Context, input *appconfig.GetEnvironmentInput) (*appconfig.GetEnvironmentOutput, error) {
     var output appconfig.GetEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEnvironment, input).Get(ctx, &output)
@@ -604,6 +620,7 @@ func (a *AppConfigStub) GetEnvironmentAsync(ctx workflow.Context, input *appconf
     future := workflow.ExecuteActivity(ctx, a.activities.GetEnvironment, input)
     return &AppconfigGetEnvironmentResult{Result: future}
 }
+
 func (a *AppConfigStub) GetHostedConfigurationVersion(ctx workflow.Context, input *appconfig.GetHostedConfigurationVersionInput) (*appconfig.GetHostedConfigurationVersionOutput, error) {
     var output appconfig.GetHostedConfigurationVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHostedConfigurationVersion, input).Get(ctx, &output)
@@ -614,6 +631,7 @@ func (a *AppConfigStub) GetHostedConfigurationVersionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GetHostedConfigurationVersion, input)
     return &AppconfigGetHostedConfigurationVersionResult{Result: future}
 }
+
 func (a *AppConfigStub) ListApplications(ctx workflow.Context, input *appconfig.ListApplicationsInput) (*appconfig.ListApplicationsOutput, error) {
     var output appconfig.ListApplicationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListApplications, input).Get(ctx, &output)
@@ -624,6 +642,7 @@ func (a *AppConfigStub) ListApplicationsAsync(ctx workflow.Context, input *appco
     future := workflow.ExecuteActivity(ctx, a.activities.ListApplications, input)
     return &AppconfigListApplicationsResult{Result: future}
 }
+
 func (a *AppConfigStub) ListConfigurationProfiles(ctx workflow.Context, input *appconfig.ListConfigurationProfilesInput) (*appconfig.ListConfigurationProfilesOutput, error) {
     var output appconfig.ListConfigurationProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationProfiles, input).Get(ctx, &output)
@@ -634,6 +653,7 @@ func (a *AppConfigStub) ListConfigurationProfilesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationProfiles, input)
     return &AppconfigListConfigurationProfilesResult{Result: future}
 }
+
 func (a *AppConfigStub) ListDeploymentStrategies(ctx workflow.Context, input *appconfig.ListDeploymentStrategiesInput) (*appconfig.ListDeploymentStrategiesOutput, error) {
     var output appconfig.ListDeploymentStrategiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDeploymentStrategies, input).Get(ctx, &output)
@@ -644,6 +664,7 @@ func (a *AppConfigStub) ListDeploymentStrategiesAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListDeploymentStrategies, input)
     return &AppconfigListDeploymentStrategiesResult{Result: future}
 }
+
 func (a *AppConfigStub) ListDeployments(ctx workflow.Context, input *appconfig.ListDeploymentsInput) (*appconfig.ListDeploymentsOutput, error) {
     var output appconfig.ListDeploymentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDeployments, input).Get(ctx, &output)
@@ -654,6 +675,7 @@ func (a *AppConfigStub) ListDeploymentsAsync(ctx workflow.Context, input *appcon
     future := workflow.ExecuteActivity(ctx, a.activities.ListDeployments, input)
     return &AppconfigListDeploymentsResult{Result: future}
 }
+
 func (a *AppConfigStub) ListEnvironments(ctx workflow.Context, input *appconfig.ListEnvironmentsInput) (*appconfig.ListEnvironmentsOutput, error) {
     var output appconfig.ListEnvironmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListEnvironments, input).Get(ctx, &output)
@@ -664,6 +686,7 @@ func (a *AppConfigStub) ListEnvironmentsAsync(ctx workflow.Context, input *appco
     future := workflow.ExecuteActivity(ctx, a.activities.ListEnvironments, input)
     return &AppconfigListEnvironmentsResult{Result: future}
 }
+
 func (a *AppConfigStub) ListHostedConfigurationVersions(ctx workflow.Context, input *appconfig.ListHostedConfigurationVersionsInput) (*appconfig.ListHostedConfigurationVersionsOutput, error) {
     var output appconfig.ListHostedConfigurationVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHostedConfigurationVersions, input).Get(ctx, &output)
@@ -674,6 +697,7 @@ func (a *AppConfigStub) ListHostedConfigurationVersionsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListHostedConfigurationVersions, input)
     return &AppconfigListHostedConfigurationVersionsResult{Result: future}
 }
+
 func (a *AppConfigStub) ListTagsForResource(ctx workflow.Context, input *appconfig.ListTagsForResourceInput) (*appconfig.ListTagsForResourceOutput, error) {
     var output appconfig.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -684,6 +708,7 @@ func (a *AppConfigStub) ListTagsForResourceAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &AppconfigListTagsForResourceResult{Result: future}
 }
+
 func (a *AppConfigStub) StartDeployment(ctx workflow.Context, input *appconfig.StartDeploymentInput) (*appconfig.StartDeploymentOutput, error) {
     var output appconfig.StartDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDeployment, input).Get(ctx, &output)
@@ -694,6 +719,7 @@ func (a *AppConfigStub) StartDeploymentAsync(ctx workflow.Context, input *appcon
     future := workflow.ExecuteActivity(ctx, a.activities.StartDeployment, input)
     return &AppconfigStartDeploymentResult{Result: future}
 }
+
 func (a *AppConfigStub) StopDeployment(ctx workflow.Context, input *appconfig.StopDeploymentInput) (*appconfig.StopDeploymentOutput, error) {
     var output appconfig.StopDeploymentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopDeployment, input).Get(ctx, &output)
@@ -704,6 +730,7 @@ func (a *AppConfigStub) StopDeploymentAsync(ctx workflow.Context, input *appconf
     future := workflow.ExecuteActivity(ctx, a.activities.StopDeployment, input)
     return &AppconfigStopDeploymentResult{Result: future}
 }
+
 func (a *AppConfigStub) TagResource(ctx workflow.Context, input *appconfig.TagResourceInput) (*appconfig.TagResourceOutput, error) {
     var output appconfig.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -714,6 +741,7 @@ func (a *AppConfigStub) TagResourceAsync(ctx workflow.Context, input *appconfig.
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &AppconfigTagResourceResult{Result: future}
 }
+
 func (a *AppConfigStub) UntagResource(ctx workflow.Context, input *appconfig.UntagResourceInput) (*appconfig.UntagResourceOutput, error) {
     var output appconfig.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -724,6 +752,7 @@ func (a *AppConfigStub) UntagResourceAsync(ctx workflow.Context, input *appconfi
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &AppconfigUntagResourceResult{Result: future}
 }
+
 func (a *AppConfigStub) UpdateApplication(ctx workflow.Context, input *appconfig.UpdateApplicationInput) (*appconfig.UpdateApplicationOutput, error) {
     var output appconfig.UpdateApplicationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateApplication, input).Get(ctx, &output)
@@ -734,6 +763,7 @@ func (a *AppConfigStub) UpdateApplicationAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateApplication, input)
     return &AppconfigUpdateApplicationResult{Result: future}
 }
+
 func (a *AppConfigStub) UpdateConfigurationProfile(ctx workflow.Context, input *appconfig.UpdateConfigurationProfileInput) (*appconfig.UpdateConfigurationProfileOutput, error) {
     var output appconfig.UpdateConfigurationProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationProfile, input).Get(ctx, &output)
@@ -744,6 +774,7 @@ func (a *AppConfigStub) UpdateConfigurationProfileAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationProfile, input)
     return &AppconfigUpdateConfigurationProfileResult{Result: future}
 }
+
 func (a *AppConfigStub) UpdateDeploymentStrategy(ctx workflow.Context, input *appconfig.UpdateDeploymentStrategyInput) (*appconfig.UpdateDeploymentStrategyOutput, error) {
     var output appconfig.UpdateDeploymentStrategyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDeploymentStrategy, input).Get(ctx, &output)
@@ -754,6 +785,7 @@ func (a *AppConfigStub) UpdateDeploymentStrategyAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDeploymentStrategy, input)
     return &AppconfigUpdateDeploymentStrategyResult{Result: future}
 }
+
 func (a *AppConfigStub) UpdateEnvironment(ctx workflow.Context, input *appconfig.UpdateEnvironmentInput) (*appconfig.UpdateEnvironmentOutput, error) {
     var output appconfig.UpdateEnvironmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateEnvironment, input).Get(ctx, &output)
@@ -764,6 +796,7 @@ func (a *AppConfigStub) UpdateEnvironmentAsync(ctx workflow.Context, input *appc
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateEnvironment, input)
     return &AppconfigUpdateEnvironmentResult{Result: future}
 }
+
 func (a *AppConfigStub) ValidateConfiguration(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) (*appconfig.ValidateConfigurationOutput, error) {
     var output appconfig.ValidateConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ValidateConfiguration, input).Get(ctx, &output)

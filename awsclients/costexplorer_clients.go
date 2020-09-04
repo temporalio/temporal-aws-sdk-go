@@ -64,6 +64,7 @@ type CostExplorerClient interface {
     UpdateCostCategoryDefinition(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) (*costexplorer.UpdateCostCategoryDefinitionOutput, error)
     UpdateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) *CostexplorerUpdateCostCategoryDefinitionResult
 }
+
 type CostexplorerCreateCostCategoryDefinitionResult struct {
 	Result workflow.Future
 }
@@ -254,7 +255,6 @@ func (r *CostexplorerUpdateCostCategoryDefinitionResult) Get(ctx workflow.Contex
     return &output, err
 }
 
-
 type CostExplorerStub struct {
     activities awsactivities.CostExplorerActivities
 }
@@ -262,6 +262,7 @@ type CostExplorerStub struct {
 func NewCostExplorerStub() CostExplorerClient {
     return &CostExplorerStub{}
 }
+
 func (a *CostExplorerStub) CreateCostCategoryDefinition(ctx workflow.Context, input *costexplorer.CreateCostCategoryDefinitionInput) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
     var output costexplorer.CreateCostCategoryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCostCategoryDefinition, input).Get(ctx, &output)
@@ -272,6 +273,7 @@ func (a *CostExplorerStub) CreateCostCategoryDefinitionAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCostCategoryDefinition, input)
     return &CostexplorerCreateCostCategoryDefinitionResult{Result: future}
 }
+
 func (a *CostExplorerStub) DeleteCostCategoryDefinition(ctx workflow.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
     var output costexplorer.DeleteCostCategoryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCostCategoryDefinition, input).Get(ctx, &output)
@@ -282,6 +284,7 @@ func (a *CostExplorerStub) DeleteCostCategoryDefinitionAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCostCategoryDefinition, input)
     return &CostexplorerDeleteCostCategoryDefinitionResult{Result: future}
 }
+
 func (a *CostExplorerStub) DescribeCostCategoryDefinition(ctx workflow.Context, input *costexplorer.DescribeCostCategoryDefinitionInput) (*costexplorer.DescribeCostCategoryDefinitionOutput, error) {
     var output costexplorer.DescribeCostCategoryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCostCategoryDefinition, input).Get(ctx, &output)
@@ -292,6 +295,7 @@ func (a *CostExplorerStub) DescribeCostCategoryDefinitionAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCostCategoryDefinition, input)
     return &CostexplorerDescribeCostCategoryDefinitionResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetCostAndUsage(ctx workflow.Context, input *costexplorer.GetCostAndUsageInput) (*costexplorer.GetCostAndUsageOutput, error) {
     var output costexplorer.GetCostAndUsageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCostAndUsage, input).Get(ctx, &output)
@@ -302,6 +306,7 @@ func (a *CostExplorerStub) GetCostAndUsageAsync(ctx workflow.Context, input *cos
     future := workflow.ExecuteActivity(ctx, a.activities.GetCostAndUsage, input)
     return &CostexplorerGetCostAndUsageResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetCostAndUsageWithResources(ctx workflow.Context, input *costexplorer.GetCostAndUsageWithResourcesInput) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
     var output costexplorer.GetCostAndUsageWithResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCostAndUsageWithResources, input).Get(ctx, &output)
@@ -312,6 +317,7 @@ func (a *CostExplorerStub) GetCostAndUsageWithResourcesAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetCostAndUsageWithResources, input)
     return &CostexplorerGetCostAndUsageWithResourcesResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetCostForecast(ctx workflow.Context, input *costexplorer.GetCostForecastInput) (*costexplorer.GetCostForecastOutput, error) {
     var output costexplorer.GetCostForecastOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCostForecast, input).Get(ctx, &output)
@@ -322,6 +328,7 @@ func (a *CostExplorerStub) GetCostForecastAsync(ctx workflow.Context, input *cos
     future := workflow.ExecuteActivity(ctx, a.activities.GetCostForecast, input)
     return &CostexplorerGetCostForecastResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetDimensionValues(ctx workflow.Context, input *costexplorer.GetDimensionValuesInput) (*costexplorer.GetDimensionValuesOutput, error) {
     var output costexplorer.GetDimensionValuesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDimensionValues, input).Get(ctx, &output)
@@ -332,6 +339,7 @@ func (a *CostExplorerStub) GetDimensionValuesAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetDimensionValues, input)
     return &CostexplorerGetDimensionValuesResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetReservationCoverage(ctx workflow.Context, input *costexplorer.GetReservationCoverageInput) (*costexplorer.GetReservationCoverageOutput, error) {
     var output costexplorer.GetReservationCoverageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetReservationCoverage, input).Get(ctx, &output)
@@ -342,6 +350,7 @@ func (a *CostExplorerStub) GetReservationCoverageAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetReservationCoverage, input)
     return &CostexplorerGetReservationCoverageResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetReservationPurchaseRecommendation(ctx workflow.Context, input *costexplorer.GetReservationPurchaseRecommendationInput) (*costexplorer.GetReservationPurchaseRecommendationOutput, error) {
     var output costexplorer.GetReservationPurchaseRecommendationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetReservationPurchaseRecommendation, input).Get(ctx, &output)
@@ -352,6 +361,7 @@ func (a *CostExplorerStub) GetReservationPurchaseRecommendationAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.GetReservationPurchaseRecommendation, input)
     return &CostexplorerGetReservationPurchaseRecommendationResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetReservationUtilization(ctx workflow.Context, input *costexplorer.GetReservationUtilizationInput) (*costexplorer.GetReservationUtilizationOutput, error) {
     var output costexplorer.GetReservationUtilizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetReservationUtilization, input).Get(ctx, &output)
@@ -362,6 +372,7 @@ func (a *CostExplorerStub) GetReservationUtilizationAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GetReservationUtilization, input)
     return &CostexplorerGetReservationUtilizationResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetRightsizingRecommendation(ctx workflow.Context, input *costexplorer.GetRightsizingRecommendationInput) (*costexplorer.GetRightsizingRecommendationOutput, error) {
     var output costexplorer.GetRightsizingRecommendationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRightsizingRecommendation, input).Get(ctx, &output)
@@ -372,6 +383,7 @@ func (a *CostExplorerStub) GetRightsizingRecommendationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetRightsizingRecommendation, input)
     return &CostexplorerGetRightsizingRecommendationResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetSavingsPlansCoverage(ctx workflow.Context, input *costexplorer.GetSavingsPlansCoverageInput) (*costexplorer.GetSavingsPlansCoverageOutput, error) {
     var output costexplorer.GetSavingsPlansCoverageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansCoverage, input).Get(ctx, &output)
@@ -382,6 +394,7 @@ func (a *CostExplorerStub) GetSavingsPlansCoverageAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansCoverage, input)
     return &CostexplorerGetSavingsPlansCoverageResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetSavingsPlansPurchaseRecommendation(ctx workflow.Context, input *costexplorer.GetSavingsPlansPurchaseRecommendationInput) (*costexplorer.GetSavingsPlansPurchaseRecommendationOutput, error) {
     var output costexplorer.GetSavingsPlansPurchaseRecommendationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansPurchaseRecommendation, input).Get(ctx, &output)
@@ -392,6 +405,7 @@ func (a *CostExplorerStub) GetSavingsPlansPurchaseRecommendationAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansPurchaseRecommendation, input)
     return &CostexplorerGetSavingsPlansPurchaseRecommendationResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetSavingsPlansUtilization(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationInput) (*costexplorer.GetSavingsPlansUtilizationOutput, error) {
     var output costexplorer.GetSavingsPlansUtilizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansUtilization, input).Get(ctx, &output)
@@ -402,6 +416,7 @@ func (a *CostExplorerStub) GetSavingsPlansUtilizationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansUtilization, input)
     return &CostexplorerGetSavingsPlansUtilizationResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetSavingsPlansUtilizationDetails(ctx workflow.Context, input *costexplorer.GetSavingsPlansUtilizationDetailsInput) (*costexplorer.GetSavingsPlansUtilizationDetailsOutput, error) {
     var output costexplorer.GetSavingsPlansUtilizationDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansUtilizationDetails, input).Get(ctx, &output)
@@ -412,6 +427,7 @@ func (a *CostExplorerStub) GetSavingsPlansUtilizationDetailsAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.GetSavingsPlansUtilizationDetails, input)
     return &CostexplorerGetSavingsPlansUtilizationDetailsResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetTags(ctx workflow.Context, input *costexplorer.GetTagsInput) (*costexplorer.GetTagsOutput, error) {
     var output costexplorer.GetTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTags, input).Get(ctx, &output)
@@ -422,6 +438,7 @@ func (a *CostExplorerStub) GetTagsAsync(ctx workflow.Context, input *costexplore
     future := workflow.ExecuteActivity(ctx, a.activities.GetTags, input)
     return &CostexplorerGetTagsResult{Result: future}
 }
+
 func (a *CostExplorerStub) GetUsageForecast(ctx workflow.Context, input *costexplorer.GetUsageForecastInput) (*costexplorer.GetUsageForecastOutput, error) {
     var output costexplorer.GetUsageForecastOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUsageForecast, input).Get(ctx, &output)
@@ -432,6 +449,7 @@ func (a *CostExplorerStub) GetUsageForecastAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.GetUsageForecast, input)
     return &CostexplorerGetUsageForecastResult{Result: future}
 }
+
 func (a *CostExplorerStub) ListCostCategoryDefinitions(ctx workflow.Context, input *costexplorer.ListCostCategoryDefinitionsInput) (*costexplorer.ListCostCategoryDefinitionsOutput, error) {
     var output costexplorer.ListCostCategoryDefinitionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListCostCategoryDefinitions, input).Get(ctx, &output)
@@ -442,6 +460,7 @@ func (a *CostExplorerStub) ListCostCategoryDefinitionsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.ListCostCategoryDefinitions, input)
     return &CostexplorerListCostCategoryDefinitionsResult{Result: future}
 }
+
 func (a *CostExplorerStub) UpdateCostCategoryDefinition(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {
     var output costexplorer.UpdateCostCategoryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateCostCategoryDefinition, input).Get(ctx, &output)

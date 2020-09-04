@@ -150,6 +150,7 @@ type AppStreamClient interface {
 
     WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
     WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
+
 type AppstreamAssociateFleetResult struct {
 	Result workflow.Future
 }
@@ -620,7 +621,6 @@ func (r *AppstreamUpdateStackResult) Get(ctx workflow.Context) (*appstream.Updat
     return &output, err
 }
 
-
 type AppStreamStub struct {
     activities awsactivities.AppStreamActivities
 }
@@ -628,6 +628,7 @@ type AppStreamStub struct {
 func NewAppStreamStub() AppStreamClient {
     return &AppStreamStub{}
 }
+
 func (a *AppStreamStub) AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error) {
     var output appstream.AssociateFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateFleet, input).Get(ctx, &output)
@@ -638,6 +639,7 @@ func (a *AppStreamStub) AssociateFleetAsync(ctx workflow.Context, input *appstre
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateFleet, input)
     return &AppstreamAssociateFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) BatchAssociateUserStack(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) (*appstream.BatchAssociateUserStackOutput, error) {
     var output appstream.BatchAssociateUserStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchAssociateUserStack, input).Get(ctx, &output)
@@ -648,6 +650,7 @@ func (a *AppStreamStub) BatchAssociateUserStackAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.BatchAssociateUserStack, input)
     return &AppstreamBatchAssociateUserStackResult{Result: future}
 }
+
 func (a *AppStreamStub) BatchDisassociateUserStack(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) (*appstream.BatchDisassociateUserStackOutput, error) {
     var output appstream.BatchDisassociateUserStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDisassociateUserStack, input).Get(ctx, &output)
@@ -658,6 +661,7 @@ func (a *AppStreamStub) BatchDisassociateUserStackAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDisassociateUserStack, input)
     return &AppstreamBatchDisassociateUserStackResult{Result: future}
 }
+
 func (a *AppStreamStub) CopyImage(ctx workflow.Context, input *appstream.CopyImageInput) (*appstream.CopyImageOutput, error) {
     var output appstream.CopyImageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyImage, input).Get(ctx, &output)
@@ -668,6 +672,7 @@ func (a *AppStreamStub) CopyImageAsync(ctx workflow.Context, input *appstream.Co
     future := workflow.ExecuteActivity(ctx, a.activities.CopyImage, input)
     return &AppstreamCopyImageResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateDirectoryConfig(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) (*appstream.CreateDirectoryConfigOutput, error) {
     var output appstream.CreateDirectoryConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDirectoryConfig, input).Get(ctx, &output)
@@ -678,6 +683,7 @@ func (a *AppStreamStub) CreateDirectoryConfigAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDirectoryConfig, input)
     return &AppstreamCreateDirectoryConfigResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateFleet(ctx workflow.Context, input *appstream.CreateFleetInput) (*appstream.CreateFleetOutput, error) {
     var output appstream.CreateFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFleet, input).Get(ctx, &output)
@@ -688,6 +694,7 @@ func (a *AppStreamStub) CreateFleetAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFleet, input)
     return &AppstreamCreateFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateImageBuilder(ctx workflow.Context, input *appstream.CreateImageBuilderInput) (*appstream.CreateImageBuilderOutput, error) {
     var output appstream.CreateImageBuilderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateImageBuilder, input).Get(ctx, &output)
@@ -698,6 +705,7 @@ func (a *AppStreamStub) CreateImageBuilderAsync(ctx workflow.Context, input *app
     future := workflow.ExecuteActivity(ctx, a.activities.CreateImageBuilder, input)
     return &AppstreamCreateImageBuilderResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateImageBuilderStreamingURL(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) (*appstream.CreateImageBuilderStreamingURLOutput, error) {
     var output appstream.CreateImageBuilderStreamingURLOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateImageBuilderStreamingURL, input).Get(ctx, &output)
@@ -708,6 +716,7 @@ func (a *AppStreamStub) CreateImageBuilderStreamingURLAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.CreateImageBuilderStreamingURL, input)
     return &AppstreamCreateImageBuilderStreamingURLResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateStack(ctx workflow.Context, input *appstream.CreateStackInput) (*appstream.CreateStackOutput, error) {
     var output appstream.CreateStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStack, input).Get(ctx, &output)
@@ -718,6 +727,7 @@ func (a *AppStreamStub) CreateStackAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStack, input)
     return &AppstreamCreateStackResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateStreamingURL(ctx workflow.Context, input *appstream.CreateStreamingURLInput) (*appstream.CreateStreamingURLOutput, error) {
     var output appstream.CreateStreamingURLOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStreamingURL, input).Get(ctx, &output)
@@ -728,6 +738,7 @@ func (a *AppStreamStub) CreateStreamingURLAsync(ctx workflow.Context, input *app
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStreamingURL, input)
     return &AppstreamCreateStreamingURLResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateUsageReportSubscription(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) (*appstream.CreateUsageReportSubscriptionOutput, error) {
     var output appstream.CreateUsageReportSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateUsageReportSubscription, input).Get(ctx, &output)
@@ -738,6 +749,7 @@ func (a *AppStreamStub) CreateUsageReportSubscriptionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateUsageReportSubscription, input)
     return &AppstreamCreateUsageReportSubscriptionResult{Result: future}
 }
+
 func (a *AppStreamStub) CreateUser(ctx workflow.Context, input *appstream.CreateUserInput) (*appstream.CreateUserOutput, error) {
     var output appstream.CreateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input).Get(ctx, &output)
@@ -748,6 +760,7 @@ func (a *AppStreamStub) CreateUserAsync(ctx workflow.Context, input *appstream.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input)
     return &AppstreamCreateUserResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteDirectoryConfig(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) (*appstream.DeleteDirectoryConfigOutput, error) {
     var output appstream.DeleteDirectoryConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectoryConfig, input).Get(ctx, &output)
@@ -758,6 +771,7 @@ func (a *AppStreamStub) DeleteDirectoryConfigAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectoryConfig, input)
     return &AppstreamDeleteDirectoryConfigResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteFleet(ctx workflow.Context, input *appstream.DeleteFleetInput) (*appstream.DeleteFleetOutput, error) {
     var output appstream.DeleteFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFleet, input).Get(ctx, &output)
@@ -768,6 +782,7 @@ func (a *AppStreamStub) DeleteFleetAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFleet, input)
     return &AppstreamDeleteFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteImage(ctx workflow.Context, input *appstream.DeleteImageInput) (*appstream.DeleteImageOutput, error) {
     var output appstream.DeleteImageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteImage, input).Get(ctx, &output)
@@ -778,6 +793,7 @@ func (a *AppStreamStub) DeleteImageAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteImage, input)
     return &AppstreamDeleteImageResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteImageBuilder(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) (*appstream.DeleteImageBuilderOutput, error) {
     var output appstream.DeleteImageBuilderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteImageBuilder, input).Get(ctx, &output)
@@ -788,6 +804,7 @@ func (a *AppStreamStub) DeleteImageBuilderAsync(ctx workflow.Context, input *app
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteImageBuilder, input)
     return &AppstreamDeleteImageBuilderResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteImagePermissions(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) (*appstream.DeleteImagePermissionsOutput, error) {
     var output appstream.DeleteImagePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteImagePermissions, input).Get(ctx, &output)
@@ -798,6 +815,7 @@ func (a *AppStreamStub) DeleteImagePermissionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteImagePermissions, input)
     return &AppstreamDeleteImagePermissionsResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteStack(ctx workflow.Context, input *appstream.DeleteStackInput) (*appstream.DeleteStackOutput, error) {
     var output appstream.DeleteStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStack, input).Get(ctx, &output)
@@ -808,6 +826,7 @@ func (a *AppStreamStub) DeleteStackAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStack, input)
     return &AppstreamDeleteStackResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteUsageReportSubscription(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) (*appstream.DeleteUsageReportSubscriptionOutput, error) {
     var output appstream.DeleteUsageReportSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUsageReportSubscription, input).Get(ctx, &output)
@@ -818,6 +837,7 @@ func (a *AppStreamStub) DeleteUsageReportSubscriptionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUsageReportSubscription, input)
     return &AppstreamDeleteUsageReportSubscriptionResult{Result: future}
 }
+
 func (a *AppStreamStub) DeleteUser(ctx workflow.Context, input *appstream.DeleteUserInput) (*appstream.DeleteUserOutput, error) {
     var output appstream.DeleteUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input).Get(ctx, &output)
@@ -828,6 +848,7 @@ func (a *AppStreamStub) DeleteUserAsync(ctx workflow.Context, input *appstream.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input)
     return &AppstreamDeleteUserResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeDirectoryConfigs(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) (*appstream.DescribeDirectoryConfigsOutput, error) {
     var output appstream.DescribeDirectoryConfigsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectoryConfigs, input).Get(ctx, &output)
@@ -838,6 +859,7 @@ func (a *AppStreamStub) DescribeDirectoryConfigsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectoryConfigs, input)
     return &AppstreamDescribeDirectoryConfigsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeFleets(ctx workflow.Context, input *appstream.DescribeFleetsInput) (*appstream.DescribeFleetsOutput, error) {
     var output appstream.DescribeFleetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFleets, input).Get(ctx, &output)
@@ -848,6 +870,7 @@ func (a *AppStreamStub) DescribeFleetsAsync(ctx workflow.Context, input *appstre
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFleets, input)
     return &AppstreamDescribeFleetsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeImageBuilders(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) (*appstream.DescribeImageBuildersOutput, error) {
     var output appstream.DescribeImageBuildersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeImageBuilders, input).Get(ctx, &output)
@@ -858,6 +881,7 @@ func (a *AppStreamStub) DescribeImageBuildersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeImageBuilders, input)
     return &AppstreamDescribeImageBuildersResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeImagePermissions(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) (*appstream.DescribeImagePermissionsOutput, error) {
     var output appstream.DescribeImagePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeImagePermissions, input).Get(ctx, &output)
@@ -868,6 +892,7 @@ func (a *AppStreamStub) DescribeImagePermissionsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeImagePermissions, input)
     return &AppstreamDescribeImagePermissionsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeImages(ctx workflow.Context, input *appstream.DescribeImagesInput) (*appstream.DescribeImagesOutput, error) {
     var output appstream.DescribeImagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeImages, input).Get(ctx, &output)
@@ -878,6 +903,7 @@ func (a *AppStreamStub) DescribeImagesAsync(ctx workflow.Context, input *appstre
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeImages, input)
     return &AppstreamDescribeImagesResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeSessions(ctx workflow.Context, input *appstream.DescribeSessionsInput) (*appstream.DescribeSessionsOutput, error) {
     var output appstream.DescribeSessionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input).Get(ctx, &output)
@@ -888,6 +914,7 @@ func (a *AppStreamStub) DescribeSessionsAsync(ctx workflow.Context, input *appst
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input)
     return &AppstreamDescribeSessionsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeStacks(ctx workflow.Context, input *appstream.DescribeStacksInput) (*appstream.DescribeStacksOutput, error) {
     var output appstream.DescribeStacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStacks, input).Get(ctx, &output)
@@ -898,6 +925,7 @@ func (a *AppStreamStub) DescribeStacksAsync(ctx workflow.Context, input *appstre
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStacks, input)
     return &AppstreamDescribeStacksResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeUsageReportSubscriptions(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) (*appstream.DescribeUsageReportSubscriptionsOutput, error) {
     var output appstream.DescribeUsageReportSubscriptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUsageReportSubscriptions, input).Get(ctx, &output)
@@ -908,6 +936,7 @@ func (a *AppStreamStub) DescribeUsageReportSubscriptionsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUsageReportSubscriptions, input)
     return &AppstreamDescribeUsageReportSubscriptionsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeUserStackAssociations(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) (*appstream.DescribeUserStackAssociationsOutput, error) {
     var output appstream.DescribeUserStackAssociationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUserStackAssociations, input).Get(ctx, &output)
@@ -918,6 +947,7 @@ func (a *AppStreamStub) DescribeUserStackAssociationsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUserStackAssociations, input)
     return &AppstreamDescribeUserStackAssociationsResult{Result: future}
 }
+
 func (a *AppStreamStub) DescribeUsers(ctx workflow.Context, input *appstream.DescribeUsersInput) (*appstream.DescribeUsersOutput, error) {
     var output appstream.DescribeUsersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUsers, input).Get(ctx, &output)
@@ -928,6 +958,7 @@ func (a *AppStreamStub) DescribeUsersAsync(ctx workflow.Context, input *appstrea
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUsers, input)
     return &AppstreamDescribeUsersResult{Result: future}
 }
+
 func (a *AppStreamStub) DisableUser(ctx workflow.Context, input *appstream.DisableUserInput) (*appstream.DisableUserOutput, error) {
     var output appstream.DisableUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableUser, input).Get(ctx, &output)
@@ -938,6 +969,7 @@ func (a *AppStreamStub) DisableUserAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.DisableUser, input)
     return &AppstreamDisableUserResult{Result: future}
 }
+
 func (a *AppStreamStub) DisassociateFleet(ctx workflow.Context, input *appstream.DisassociateFleetInput) (*appstream.DisassociateFleetOutput, error) {
     var output appstream.DisassociateFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateFleet, input).Get(ctx, &output)
@@ -948,6 +980,7 @@ func (a *AppStreamStub) DisassociateFleetAsync(ctx workflow.Context, input *apps
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateFleet, input)
     return &AppstreamDisassociateFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) EnableUser(ctx workflow.Context, input *appstream.EnableUserInput) (*appstream.EnableUserOutput, error) {
     var output appstream.EnableUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableUser, input).Get(ctx, &output)
@@ -958,6 +991,7 @@ func (a *AppStreamStub) EnableUserAsync(ctx workflow.Context, input *appstream.E
     future := workflow.ExecuteActivity(ctx, a.activities.EnableUser, input)
     return &AppstreamEnableUserResult{Result: future}
 }
+
 func (a *AppStreamStub) ExpireSession(ctx workflow.Context, input *appstream.ExpireSessionInput) (*appstream.ExpireSessionOutput, error) {
     var output appstream.ExpireSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExpireSession, input).Get(ctx, &output)
@@ -968,6 +1002,7 @@ func (a *AppStreamStub) ExpireSessionAsync(ctx workflow.Context, input *appstrea
     future := workflow.ExecuteActivity(ctx, a.activities.ExpireSession, input)
     return &AppstreamExpireSessionResult{Result: future}
 }
+
 func (a *AppStreamStub) ListAssociatedFleets(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) (*appstream.ListAssociatedFleetsOutput, error) {
     var output appstream.ListAssociatedFleetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAssociatedFleets, input).Get(ctx, &output)
@@ -978,6 +1013,7 @@ func (a *AppStreamStub) ListAssociatedFleetsAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.ListAssociatedFleets, input)
     return &AppstreamListAssociatedFleetsResult{Result: future}
 }
+
 func (a *AppStreamStub) ListAssociatedStacks(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) (*appstream.ListAssociatedStacksOutput, error) {
     var output appstream.ListAssociatedStacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAssociatedStacks, input).Get(ctx, &output)
@@ -988,6 +1024,7 @@ func (a *AppStreamStub) ListAssociatedStacksAsync(ctx workflow.Context, input *a
     future := workflow.ExecuteActivity(ctx, a.activities.ListAssociatedStacks, input)
     return &AppstreamListAssociatedStacksResult{Result: future}
 }
+
 func (a *AppStreamStub) ListTagsForResource(ctx workflow.Context, input *appstream.ListTagsForResourceInput) (*appstream.ListTagsForResourceOutput, error) {
     var output appstream.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -998,6 +1035,7 @@ func (a *AppStreamStub) ListTagsForResourceAsync(ctx workflow.Context, input *ap
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &AppstreamListTagsForResourceResult{Result: future}
 }
+
 func (a *AppStreamStub) StartFleet(ctx workflow.Context, input *appstream.StartFleetInput) (*appstream.StartFleetOutput, error) {
     var output appstream.StartFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartFleet, input).Get(ctx, &output)
@@ -1008,6 +1046,7 @@ func (a *AppStreamStub) StartFleetAsync(ctx workflow.Context, input *appstream.S
     future := workflow.ExecuteActivity(ctx, a.activities.StartFleet, input)
     return &AppstreamStartFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) StartImageBuilder(ctx workflow.Context, input *appstream.StartImageBuilderInput) (*appstream.StartImageBuilderOutput, error) {
     var output appstream.StartImageBuilderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartImageBuilder, input).Get(ctx, &output)
@@ -1018,6 +1057,7 @@ func (a *AppStreamStub) StartImageBuilderAsync(ctx workflow.Context, input *apps
     future := workflow.ExecuteActivity(ctx, a.activities.StartImageBuilder, input)
     return &AppstreamStartImageBuilderResult{Result: future}
 }
+
 func (a *AppStreamStub) StopFleet(ctx workflow.Context, input *appstream.StopFleetInput) (*appstream.StopFleetOutput, error) {
     var output appstream.StopFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopFleet, input).Get(ctx, &output)
@@ -1028,6 +1068,7 @@ func (a *AppStreamStub) StopFleetAsync(ctx workflow.Context, input *appstream.St
     future := workflow.ExecuteActivity(ctx, a.activities.StopFleet, input)
     return &AppstreamStopFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) StopImageBuilder(ctx workflow.Context, input *appstream.StopImageBuilderInput) (*appstream.StopImageBuilderOutput, error) {
     var output appstream.StopImageBuilderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopImageBuilder, input).Get(ctx, &output)
@@ -1038,6 +1079,7 @@ func (a *AppStreamStub) StopImageBuilderAsync(ctx workflow.Context, input *appst
     future := workflow.ExecuteActivity(ctx, a.activities.StopImageBuilder, input)
     return &AppstreamStopImageBuilderResult{Result: future}
 }
+
 func (a *AppStreamStub) TagResource(ctx workflow.Context, input *appstream.TagResourceInput) (*appstream.TagResourceOutput, error) {
     var output appstream.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1048,6 +1090,7 @@ func (a *AppStreamStub) TagResourceAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &AppstreamTagResourceResult{Result: future}
 }
+
 func (a *AppStreamStub) UntagResource(ctx workflow.Context, input *appstream.UntagResourceInput) (*appstream.UntagResourceOutput, error) {
     var output appstream.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1058,6 +1101,7 @@ func (a *AppStreamStub) UntagResourceAsync(ctx workflow.Context, input *appstrea
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &AppstreamUntagResourceResult{Result: future}
 }
+
 func (a *AppStreamStub) UpdateDirectoryConfig(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) (*appstream.UpdateDirectoryConfigOutput, error) {
     var output appstream.UpdateDirectoryConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDirectoryConfig, input).Get(ctx, &output)
@@ -1068,6 +1112,7 @@ func (a *AppStreamStub) UpdateDirectoryConfigAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDirectoryConfig, input)
     return &AppstreamUpdateDirectoryConfigResult{Result: future}
 }
+
 func (a *AppStreamStub) UpdateFleet(ctx workflow.Context, input *appstream.UpdateFleetInput) (*appstream.UpdateFleetOutput, error) {
     var output appstream.UpdateFleetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFleet, input).Get(ctx, &output)
@@ -1078,6 +1123,7 @@ func (a *AppStreamStub) UpdateFleetAsync(ctx workflow.Context, input *appstream.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFleet, input)
     return &AppstreamUpdateFleetResult{Result: future}
 }
+
 func (a *AppStreamStub) UpdateImagePermissions(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) (*appstream.UpdateImagePermissionsOutput, error) {
     var output appstream.UpdateImagePermissionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateImagePermissions, input).Get(ctx, &output)
@@ -1088,6 +1134,7 @@ func (a *AppStreamStub) UpdateImagePermissionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateImagePermissions, input)
     return &AppstreamUpdateImagePermissionsResult{Result: future}
 }
+
 func (a *AppStreamStub) UpdateStack(ctx workflow.Context, input *appstream.UpdateStackInput) (*appstream.UpdateStackOutput, error) {
     var output appstream.UpdateStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateStack, input).Get(ctx, &output)
@@ -1107,6 +1154,7 @@ func (a *AppStreamStub) WaitUntilFleetStartedAsync(ctx workflow.Context, input *
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilFleetStarted, input)
 }
 
+
 func (a *AppStreamStub) WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilFleetStopped, input).Get(ctx, nil)
 }
@@ -1114,3 +1162,4 @@ func (a *AppStreamStub) WaitUntilFleetStopped(ctx workflow.Context, input *appst
 func (a *AppStreamStub) WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilFleetStopped, input)
 }
+

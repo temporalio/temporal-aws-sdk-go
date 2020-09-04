@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,8 +14,6 @@ func NewSageMakerRuntimeActivities(client sagemakerruntimeiface.SageMakerRuntime
     return &SageMakerRuntimeActivities{client: client}
 }
 
-
 func (a *SageMakerRuntimeActivities) InvokeEndpoint(input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
     return a.client.InvokeEndpoint(input)
 }
-

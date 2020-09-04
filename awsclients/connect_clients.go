@@ -106,6 +106,7 @@ type ConnectClient interface {
     UpdateUserSecurityProfiles(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error)
     UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *ConnectUpdateUserSecurityProfilesResult
 }
+
 type ConnectCreateUserResult struct {
 	Result workflow.Future
 }
@@ -436,7 +437,6 @@ func (r *ConnectUpdateUserSecurityProfilesResult) Get(ctx workflow.Context) (*co
     return &output, err
 }
 
-
 type ConnectStub struct {
     activities awsactivities.ConnectActivities
 }
@@ -444,6 +444,7 @@ type ConnectStub struct {
 func NewConnectStub() ConnectClient {
     return &ConnectStub{}
 }
+
 func (a *ConnectStub) CreateUser(ctx workflow.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
     var output connect.CreateUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input).Get(ctx, &output)
@@ -454,6 +455,7 @@ func (a *ConnectStub) CreateUserAsync(ctx workflow.Context, input *connect.Creat
     future := workflow.ExecuteActivity(ctx, a.activities.CreateUser, input)
     return &ConnectCreateUserResult{Result: future}
 }
+
 func (a *ConnectStub) DeleteUser(ctx workflow.Context, input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error) {
     var output connect.DeleteUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input).Get(ctx, &output)
@@ -464,6 +466,7 @@ func (a *ConnectStub) DeleteUserAsync(ctx workflow.Context, input *connect.Delet
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteUser, input)
     return &ConnectDeleteUserResult{Result: future}
 }
+
 func (a *ConnectStub) DescribeUser(ctx workflow.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
     var output connect.DescribeUserOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUser, input).Get(ctx, &output)
@@ -474,6 +477,7 @@ func (a *ConnectStub) DescribeUserAsync(ctx workflow.Context, input *connect.Des
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUser, input)
     return &ConnectDescribeUserResult{Result: future}
 }
+
 func (a *ConnectStub) DescribeUserHierarchyGroup(ctx workflow.Context, input *connect.DescribeUserHierarchyGroupInput) (*connect.DescribeUserHierarchyGroupOutput, error) {
     var output connect.DescribeUserHierarchyGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUserHierarchyGroup, input).Get(ctx, &output)
@@ -484,6 +488,7 @@ func (a *ConnectStub) DescribeUserHierarchyGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUserHierarchyGroup, input)
     return &ConnectDescribeUserHierarchyGroupResult{Result: future}
 }
+
 func (a *ConnectStub) DescribeUserHierarchyStructure(ctx workflow.Context, input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error) {
     var output connect.DescribeUserHierarchyStructureOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUserHierarchyStructure, input).Get(ctx, &output)
@@ -494,6 +499,7 @@ func (a *ConnectStub) DescribeUserHierarchyStructureAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUserHierarchyStructure, input)
     return &ConnectDescribeUserHierarchyStructureResult{Result: future}
 }
+
 func (a *ConnectStub) GetContactAttributes(ctx workflow.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
     var output connect.GetContactAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetContactAttributes, input).Get(ctx, &output)
@@ -504,6 +510,7 @@ func (a *ConnectStub) GetContactAttributesAsync(ctx workflow.Context, input *con
     future := workflow.ExecuteActivity(ctx, a.activities.GetContactAttributes, input)
     return &ConnectGetContactAttributesResult{Result: future}
 }
+
 func (a *ConnectStub) GetCurrentMetricData(ctx workflow.Context, input *connect.GetCurrentMetricDataInput) (*connect.GetCurrentMetricDataOutput, error) {
     var output connect.GetCurrentMetricDataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCurrentMetricData, input).Get(ctx, &output)
@@ -514,6 +521,7 @@ func (a *ConnectStub) GetCurrentMetricDataAsync(ctx workflow.Context, input *con
     future := workflow.ExecuteActivity(ctx, a.activities.GetCurrentMetricData, input)
     return &ConnectGetCurrentMetricDataResult{Result: future}
 }
+
 func (a *ConnectStub) GetFederationToken(ctx workflow.Context, input *connect.GetFederationTokenInput) (*connect.GetFederationTokenOutput, error) {
     var output connect.GetFederationTokenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFederationToken, input).Get(ctx, &output)
@@ -524,6 +532,7 @@ func (a *ConnectStub) GetFederationTokenAsync(ctx workflow.Context, input *conne
     future := workflow.ExecuteActivity(ctx, a.activities.GetFederationToken, input)
     return &ConnectGetFederationTokenResult{Result: future}
 }
+
 func (a *ConnectStub) GetMetricData(ctx workflow.Context, input *connect.GetMetricDataInput) (*connect.GetMetricDataOutput, error) {
     var output connect.GetMetricDataOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMetricData, input).Get(ctx, &output)
@@ -534,6 +543,7 @@ func (a *ConnectStub) GetMetricDataAsync(ctx workflow.Context, input *connect.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetMetricData, input)
     return &ConnectGetMetricDataResult{Result: future}
 }
+
 func (a *ConnectStub) ListContactFlows(ctx workflow.Context, input *connect.ListContactFlowsInput) (*connect.ListContactFlowsOutput, error) {
     var output connect.ListContactFlowsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListContactFlows, input).Get(ctx, &output)
@@ -544,6 +554,7 @@ func (a *ConnectStub) ListContactFlowsAsync(ctx workflow.Context, input *connect
     future := workflow.ExecuteActivity(ctx, a.activities.ListContactFlows, input)
     return &ConnectListContactFlowsResult{Result: future}
 }
+
 func (a *ConnectStub) ListHoursOfOperations(ctx workflow.Context, input *connect.ListHoursOfOperationsInput) (*connect.ListHoursOfOperationsOutput, error) {
     var output connect.ListHoursOfOperationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHoursOfOperations, input).Get(ctx, &output)
@@ -554,6 +565,7 @@ func (a *ConnectStub) ListHoursOfOperationsAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.ListHoursOfOperations, input)
     return &ConnectListHoursOfOperationsResult{Result: future}
 }
+
 func (a *ConnectStub) ListPhoneNumbers(ctx workflow.Context, input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error) {
     var output connect.ListPhoneNumbersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPhoneNumbers, input).Get(ctx, &output)
@@ -564,6 +576,7 @@ func (a *ConnectStub) ListPhoneNumbersAsync(ctx workflow.Context, input *connect
     future := workflow.ExecuteActivity(ctx, a.activities.ListPhoneNumbers, input)
     return &ConnectListPhoneNumbersResult{Result: future}
 }
+
 func (a *ConnectStub) ListQueues(ctx workflow.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
     var output connect.ListQueuesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListQueues, input).Get(ctx, &output)
@@ -574,6 +587,7 @@ func (a *ConnectStub) ListQueuesAsync(ctx workflow.Context, input *connect.ListQ
     future := workflow.ExecuteActivity(ctx, a.activities.ListQueues, input)
     return &ConnectListQueuesResult{Result: future}
 }
+
 func (a *ConnectStub) ListRoutingProfiles(ctx workflow.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
     var output connect.ListRoutingProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRoutingProfiles, input).Get(ctx, &output)
@@ -584,6 +598,7 @@ func (a *ConnectStub) ListRoutingProfilesAsync(ctx workflow.Context, input *conn
     future := workflow.ExecuteActivity(ctx, a.activities.ListRoutingProfiles, input)
     return &ConnectListRoutingProfilesResult{Result: future}
 }
+
 func (a *ConnectStub) ListSecurityProfiles(ctx workflow.Context, input *connect.ListSecurityProfilesInput) (*connect.ListSecurityProfilesOutput, error) {
     var output connect.ListSecurityProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListSecurityProfiles, input).Get(ctx, &output)
@@ -594,6 +609,7 @@ func (a *ConnectStub) ListSecurityProfilesAsync(ctx workflow.Context, input *con
     future := workflow.ExecuteActivity(ctx, a.activities.ListSecurityProfiles, input)
     return &ConnectListSecurityProfilesResult{Result: future}
 }
+
 func (a *ConnectStub) ListTagsForResource(ctx workflow.Context, input *connect.ListTagsForResourceInput) (*connect.ListTagsForResourceOutput, error) {
     var output connect.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -604,6 +620,7 @@ func (a *ConnectStub) ListTagsForResourceAsync(ctx workflow.Context, input *conn
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &ConnectListTagsForResourceResult{Result: future}
 }
+
 func (a *ConnectStub) ListUserHierarchyGroups(ctx workflow.Context, input *connect.ListUserHierarchyGroupsInput) (*connect.ListUserHierarchyGroupsOutput, error) {
     var output connect.ListUserHierarchyGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUserHierarchyGroups, input).Get(ctx, &output)
@@ -614,6 +631,7 @@ func (a *ConnectStub) ListUserHierarchyGroupsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListUserHierarchyGroups, input)
     return &ConnectListUserHierarchyGroupsResult{Result: future}
 }
+
 func (a *ConnectStub) ListUsers(ctx workflow.Context, input *connect.ListUsersInput) (*connect.ListUsersOutput, error) {
     var output connect.ListUsersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUsers, input).Get(ctx, &output)
@@ -624,6 +642,7 @@ func (a *ConnectStub) ListUsersAsync(ctx workflow.Context, input *connect.ListUs
     future := workflow.ExecuteActivity(ctx, a.activities.ListUsers, input)
     return &ConnectListUsersResult{Result: future}
 }
+
 func (a *ConnectStub) ResumeContactRecording(ctx workflow.Context, input *connect.ResumeContactRecordingInput) (*connect.ResumeContactRecordingOutput, error) {
     var output connect.ResumeContactRecordingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ResumeContactRecording, input).Get(ctx, &output)
@@ -634,6 +653,7 @@ func (a *ConnectStub) ResumeContactRecordingAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.ResumeContactRecording, input)
     return &ConnectResumeContactRecordingResult{Result: future}
 }
+
 func (a *ConnectStub) StartChatContact(ctx workflow.Context, input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error) {
     var output connect.StartChatContactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartChatContact, input).Get(ctx, &output)
@@ -644,6 +664,7 @@ func (a *ConnectStub) StartChatContactAsync(ctx workflow.Context, input *connect
     future := workflow.ExecuteActivity(ctx, a.activities.StartChatContact, input)
     return &ConnectStartChatContactResult{Result: future}
 }
+
 func (a *ConnectStub) StartContactRecording(ctx workflow.Context, input *connect.StartContactRecordingInput) (*connect.StartContactRecordingOutput, error) {
     var output connect.StartContactRecordingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartContactRecording, input).Get(ctx, &output)
@@ -654,6 +675,7 @@ func (a *ConnectStub) StartContactRecordingAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.StartContactRecording, input)
     return &ConnectStartContactRecordingResult{Result: future}
 }
+
 func (a *ConnectStub) StartOutboundVoiceContact(ctx workflow.Context, input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error) {
     var output connect.StartOutboundVoiceContactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartOutboundVoiceContact, input).Get(ctx, &output)
@@ -664,6 +686,7 @@ func (a *ConnectStub) StartOutboundVoiceContactAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.StartOutboundVoiceContact, input)
     return &ConnectStartOutboundVoiceContactResult{Result: future}
 }
+
 func (a *ConnectStub) StopContact(ctx workflow.Context, input *connect.StopContactInput) (*connect.StopContactOutput, error) {
     var output connect.StopContactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopContact, input).Get(ctx, &output)
@@ -674,6 +697,7 @@ func (a *ConnectStub) StopContactAsync(ctx workflow.Context, input *connect.Stop
     future := workflow.ExecuteActivity(ctx, a.activities.StopContact, input)
     return &ConnectStopContactResult{Result: future}
 }
+
 func (a *ConnectStub) StopContactRecording(ctx workflow.Context, input *connect.StopContactRecordingInput) (*connect.StopContactRecordingOutput, error) {
     var output connect.StopContactRecordingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopContactRecording, input).Get(ctx, &output)
@@ -684,6 +708,7 @@ func (a *ConnectStub) StopContactRecordingAsync(ctx workflow.Context, input *con
     future := workflow.ExecuteActivity(ctx, a.activities.StopContactRecording, input)
     return &ConnectStopContactRecordingResult{Result: future}
 }
+
 func (a *ConnectStub) SuspendContactRecording(ctx workflow.Context, input *connect.SuspendContactRecordingInput) (*connect.SuspendContactRecordingOutput, error) {
     var output connect.SuspendContactRecordingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SuspendContactRecording, input).Get(ctx, &output)
@@ -694,6 +719,7 @@ func (a *ConnectStub) SuspendContactRecordingAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.SuspendContactRecording, input)
     return &ConnectSuspendContactRecordingResult{Result: future}
 }
+
 func (a *ConnectStub) TagResource(ctx workflow.Context, input *connect.TagResourceInput) (*connect.TagResourceOutput, error) {
     var output connect.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -704,6 +730,7 @@ func (a *ConnectStub) TagResourceAsync(ctx workflow.Context, input *connect.TagR
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &ConnectTagResourceResult{Result: future}
 }
+
 func (a *ConnectStub) UntagResource(ctx workflow.Context, input *connect.UntagResourceInput) (*connect.UntagResourceOutput, error) {
     var output connect.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -714,6 +741,7 @@ func (a *ConnectStub) UntagResourceAsync(ctx workflow.Context, input *connect.Un
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &ConnectUntagResourceResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateContactAttributes(ctx workflow.Context, input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error) {
     var output connect.UpdateContactAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateContactAttributes, input).Get(ctx, &output)
@@ -724,6 +752,7 @@ func (a *ConnectStub) UpdateContactAttributesAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateContactAttributes, input)
     return &ConnectUpdateContactAttributesResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateUserHierarchy(ctx workflow.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {
     var output connect.UpdateUserHierarchyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUserHierarchy, input).Get(ctx, &output)
@@ -734,6 +763,7 @@ func (a *ConnectStub) UpdateUserHierarchyAsync(ctx workflow.Context, input *conn
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateUserHierarchy, input)
     return &ConnectUpdateUserHierarchyResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateUserIdentityInfo(ctx workflow.Context, input *connect.UpdateUserIdentityInfoInput) (*connect.UpdateUserIdentityInfoOutput, error) {
     var output connect.UpdateUserIdentityInfoOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUserIdentityInfo, input).Get(ctx, &output)
@@ -744,6 +774,7 @@ func (a *ConnectStub) UpdateUserIdentityInfoAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateUserIdentityInfo, input)
     return &ConnectUpdateUserIdentityInfoResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateUserPhoneConfig(ctx workflow.Context, input *connect.UpdateUserPhoneConfigInput) (*connect.UpdateUserPhoneConfigOutput, error) {
     var output connect.UpdateUserPhoneConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUserPhoneConfig, input).Get(ctx, &output)
@@ -754,6 +785,7 @@ func (a *ConnectStub) UpdateUserPhoneConfigAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateUserPhoneConfig, input)
     return &ConnectUpdateUserPhoneConfigResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateUserRoutingProfile(ctx workflow.Context, input *connect.UpdateUserRoutingProfileInput) (*connect.UpdateUserRoutingProfileOutput, error) {
     var output connect.UpdateUserRoutingProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUserRoutingProfile, input).Get(ctx, &output)
@@ -764,6 +796,7 @@ func (a *ConnectStub) UpdateUserRoutingProfileAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateUserRoutingProfile, input)
     return &ConnectUpdateUserRoutingProfileResult{Result: future}
 }
+
 func (a *ConnectStub) UpdateUserSecurityProfiles(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error) {
     var output connect.UpdateUserSecurityProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateUserSecurityProfiles, input).Get(ctx, &output)

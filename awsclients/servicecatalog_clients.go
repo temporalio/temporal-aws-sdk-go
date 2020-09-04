@@ -256,6 +256,7 @@ type ServiceCatalogClient interface {
     UpdateTagOption(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) (*servicecatalog.UpdateTagOptionOutput, error)
     UpdateTagOptionAsync(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) *ServicecatalogUpdateTagOptionResult
 }
+
 type ServicecatalogAcceptPortfolioShareResult struct {
 	Result workflow.Future
 }
@@ -1086,7 +1087,6 @@ func (r *ServicecatalogUpdateTagOptionResult) Get(ctx workflow.Context) (*servic
     return &output, err
 }
 
-
 type ServiceCatalogStub struct {
     activities awsactivities.ServiceCatalogActivities
 }
@@ -1094,6 +1094,7 @@ type ServiceCatalogStub struct {
 func NewServiceCatalogStub() ServiceCatalogClient {
     return &ServiceCatalogStub{}
 }
+
 func (a *ServiceCatalogStub) AcceptPortfolioShare(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) (*servicecatalog.AcceptPortfolioShareOutput, error) {
     var output servicecatalog.AcceptPortfolioShareOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptPortfolioShare, input).Get(ctx, &output)
@@ -1104,6 +1105,7 @@ func (a *ServiceCatalogStub) AcceptPortfolioShareAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptPortfolioShare, input)
     return &ServicecatalogAcceptPortfolioShareResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) AssociateBudgetWithResource(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) (*servicecatalog.AssociateBudgetWithResourceOutput, error) {
     var output servicecatalog.AssociateBudgetWithResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateBudgetWithResource, input).Get(ctx, &output)
@@ -1114,6 +1116,7 @@ func (a *ServiceCatalogStub) AssociateBudgetWithResourceAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateBudgetWithResource, input)
     return &ServicecatalogAssociateBudgetWithResourceResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) AssociatePrincipalWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) (*servicecatalog.AssociatePrincipalWithPortfolioOutput, error) {
     var output servicecatalog.AssociatePrincipalWithPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociatePrincipalWithPortfolio, input).Get(ctx, &output)
@@ -1124,6 +1127,7 @@ func (a *ServiceCatalogStub) AssociatePrincipalWithPortfolioAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.AssociatePrincipalWithPortfolio, input)
     return &ServicecatalogAssociatePrincipalWithPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) AssociateProductWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) (*servicecatalog.AssociateProductWithPortfolioOutput, error) {
     var output servicecatalog.AssociateProductWithPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateProductWithPortfolio, input).Get(ctx, &output)
@@ -1134,6 +1138,7 @@ func (a *ServiceCatalogStub) AssociateProductWithPortfolioAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateProductWithPortfolio, input)
     return &ServicecatalogAssociateProductWithPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) AssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput, error) {
     var output servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateServiceActionWithProvisioningArtifact, input).Get(ctx, &output)
@@ -1144,6 +1149,7 @@ func (a *ServiceCatalogStub) AssociateServiceActionWithProvisioningArtifactAsync
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateServiceActionWithProvisioningArtifact, input)
     return &ServicecatalogAssociateServiceActionWithProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) AssociateTagOptionWithResource(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) (*servicecatalog.AssociateTagOptionWithResourceOutput, error) {
     var output servicecatalog.AssociateTagOptionWithResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateTagOptionWithResource, input).Get(ctx, &output)
@@ -1154,6 +1160,7 @@ func (a *ServiceCatalogStub) AssociateTagOptionWithResourceAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateTagOptionWithResource, input)
     return &ServicecatalogAssociateTagOptionWithResourceResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) BatchAssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput, error) {
     var output servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchAssociateServiceActionWithProvisioningArtifact, input).Get(ctx, &output)
@@ -1164,6 +1171,7 @@ func (a *ServiceCatalogStub) BatchAssociateServiceActionWithProvisioningArtifact
     future := workflow.ExecuteActivity(ctx, a.activities.BatchAssociateServiceActionWithProvisioningArtifact, input)
     return &ServicecatalogBatchAssociateServiceActionWithProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) BatchDisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput, error) {
     var output servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchDisassociateServiceActionFromProvisioningArtifact, input).Get(ctx, &output)
@@ -1174,6 +1182,7 @@ func (a *ServiceCatalogStub) BatchDisassociateServiceActionFromProvisioningArtif
     future := workflow.ExecuteActivity(ctx, a.activities.BatchDisassociateServiceActionFromProvisioningArtifact, input)
     return &ServicecatalogBatchDisassociateServiceActionFromProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CopyProduct(ctx workflow.Context, input *servicecatalog.CopyProductInput) (*servicecatalog.CopyProductOutput, error) {
     var output servicecatalog.CopyProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyProduct, input).Get(ctx, &output)
@@ -1184,6 +1193,7 @@ func (a *ServiceCatalogStub) CopyProductAsync(ctx workflow.Context, input *servi
     future := workflow.ExecuteActivity(ctx, a.activities.CopyProduct, input)
     return &ServicecatalogCopyProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateConstraint(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) (*servicecatalog.CreateConstraintOutput, error) {
     var output servicecatalog.CreateConstraintOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateConstraint, input).Get(ctx, &output)
@@ -1194,6 +1204,7 @@ func (a *ServiceCatalogStub) CreateConstraintAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateConstraint, input)
     return &ServicecatalogCreateConstraintResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreatePortfolio(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) (*servicecatalog.CreatePortfolioOutput, error) {
     var output servicecatalog.CreatePortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePortfolio, input).Get(ctx, &output)
@@ -1204,6 +1215,7 @@ func (a *ServiceCatalogStub) CreatePortfolioAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePortfolio, input)
     return &ServicecatalogCreatePortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreatePortfolioShare(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) (*servicecatalog.CreatePortfolioShareOutput, error) {
     var output servicecatalog.CreatePortfolioShareOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePortfolioShare, input).Get(ctx, &output)
@@ -1214,6 +1226,7 @@ func (a *ServiceCatalogStub) CreatePortfolioShareAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePortfolioShare, input)
     return &ServicecatalogCreatePortfolioShareResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateProduct(ctx workflow.Context, input *servicecatalog.CreateProductInput) (*servicecatalog.CreateProductOutput, error) {
     var output servicecatalog.CreateProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProduct, input).Get(ctx, &output)
@@ -1224,6 +1237,7 @@ func (a *ServiceCatalogStub) CreateProductAsync(ctx workflow.Context, input *ser
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProduct, input)
     return &ServicecatalogCreateProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) (*servicecatalog.CreateProvisionedProductPlanOutput, error) {
     var output servicecatalog.CreateProvisionedProductPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProvisionedProductPlan, input).Get(ctx, &output)
@@ -1234,6 +1248,7 @@ func (a *ServiceCatalogStub) CreateProvisionedProductPlanAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProvisionedProductPlan, input)
     return &ServicecatalogCreateProvisionedProductPlanResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) (*servicecatalog.CreateProvisioningArtifactOutput, error) {
     var output servicecatalog.CreateProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProvisioningArtifact, input).Get(ctx, &output)
@@ -1244,6 +1259,7 @@ func (a *ServiceCatalogStub) CreateProvisioningArtifactAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProvisioningArtifact, input)
     return &ServicecatalogCreateProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateServiceAction(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) (*servicecatalog.CreateServiceActionOutput, error) {
     var output servicecatalog.CreateServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateServiceAction, input).Get(ctx, &output)
@@ -1254,6 +1270,7 @@ func (a *ServiceCatalogStub) CreateServiceActionAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateServiceAction, input)
     return &ServicecatalogCreateServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) CreateTagOption(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) (*servicecatalog.CreateTagOptionOutput, error) {
     var output servicecatalog.CreateTagOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTagOption, input).Get(ctx, &output)
@@ -1264,6 +1281,7 @@ func (a *ServiceCatalogStub) CreateTagOptionAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTagOption, input)
     return &ServicecatalogCreateTagOptionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteConstraint(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) (*servicecatalog.DeleteConstraintOutput, error) {
     var output servicecatalog.DeleteConstraintOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConstraint, input).Get(ctx, &output)
@@ -1274,6 +1292,7 @@ func (a *ServiceCatalogStub) DeleteConstraintAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConstraint, input)
     return &ServicecatalogDeleteConstraintResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeletePortfolio(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) (*servicecatalog.DeletePortfolioOutput, error) {
     var output servicecatalog.DeletePortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePortfolio, input).Get(ctx, &output)
@@ -1284,6 +1303,7 @@ func (a *ServiceCatalogStub) DeletePortfolioAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePortfolio, input)
     return &ServicecatalogDeletePortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeletePortfolioShare(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) (*servicecatalog.DeletePortfolioShareOutput, error) {
     var output servicecatalog.DeletePortfolioShareOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePortfolioShare, input).Get(ctx, &output)
@@ -1294,6 +1314,7 @@ func (a *ServiceCatalogStub) DeletePortfolioShareAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePortfolioShare, input)
     return &ServicecatalogDeletePortfolioShareResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteProduct(ctx workflow.Context, input *servicecatalog.DeleteProductInput) (*servicecatalog.DeleteProductOutput, error) {
     var output servicecatalog.DeleteProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteProduct, input).Get(ctx, &output)
@@ -1304,6 +1325,7 @@ func (a *ServiceCatalogStub) DeleteProductAsync(ctx workflow.Context, input *ser
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteProduct, input)
     return &ServicecatalogDeleteProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) (*servicecatalog.DeleteProvisionedProductPlanOutput, error) {
     var output servicecatalog.DeleteProvisionedProductPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteProvisionedProductPlan, input).Get(ctx, &output)
@@ -1314,6 +1336,7 @@ func (a *ServiceCatalogStub) DeleteProvisionedProductPlanAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteProvisionedProductPlan, input)
     return &ServicecatalogDeleteProvisionedProductPlanResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) (*servicecatalog.DeleteProvisioningArtifactOutput, error) {
     var output servicecatalog.DeleteProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteProvisioningArtifact, input).Get(ctx, &output)
@@ -1324,6 +1347,7 @@ func (a *ServiceCatalogStub) DeleteProvisioningArtifactAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteProvisioningArtifact, input)
     return &ServicecatalogDeleteProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteServiceAction(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) (*servicecatalog.DeleteServiceActionOutput, error) {
     var output servicecatalog.DeleteServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceAction, input).Get(ctx, &output)
@@ -1334,6 +1358,7 @@ func (a *ServiceCatalogStub) DeleteServiceActionAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteServiceAction, input)
     return &ServicecatalogDeleteServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DeleteTagOption(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) (*servicecatalog.DeleteTagOptionOutput, error) {
     var output servicecatalog.DeleteTagOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTagOption, input).Get(ctx, &output)
@@ -1344,6 +1369,7 @@ func (a *ServiceCatalogStub) DeleteTagOptionAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTagOption, input)
     return &ServicecatalogDeleteTagOptionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeConstraint(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) (*servicecatalog.DescribeConstraintOutput, error) {
     var output servicecatalog.DescribeConstraintOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConstraint, input).Get(ctx, &output)
@@ -1354,6 +1380,7 @@ func (a *ServiceCatalogStub) DescribeConstraintAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConstraint, input)
     return &ServicecatalogDescribeConstraintResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeCopyProductStatus(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) (*servicecatalog.DescribeCopyProductStatusOutput, error) {
     var output servicecatalog.DescribeCopyProductStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCopyProductStatus, input).Get(ctx, &output)
@@ -1364,6 +1391,7 @@ func (a *ServiceCatalogStub) DescribeCopyProductStatusAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCopyProductStatus, input)
     return &ServicecatalogDescribeCopyProductStatusResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribePortfolio(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) (*servicecatalog.DescribePortfolioOutput, error) {
     var output servicecatalog.DescribePortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePortfolio, input).Get(ctx, &output)
@@ -1374,6 +1402,7 @@ func (a *ServiceCatalogStub) DescribePortfolioAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePortfolio, input)
     return &ServicecatalogDescribePortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribePortfolioShareStatus(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) (*servicecatalog.DescribePortfolioShareStatusOutput, error) {
     var output servicecatalog.DescribePortfolioShareStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePortfolioShareStatus, input).Get(ctx, &output)
@@ -1384,6 +1413,7 @@ func (a *ServiceCatalogStub) DescribePortfolioShareStatusAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePortfolioShareStatus, input)
     return &ServicecatalogDescribePortfolioShareStatusResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProduct(ctx workflow.Context, input *servicecatalog.DescribeProductInput) (*servicecatalog.DescribeProductOutput, error) {
     var output servicecatalog.DescribeProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProduct, input).Get(ctx, &output)
@@ -1394,6 +1424,7 @@ func (a *ServiceCatalogStub) DescribeProductAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProduct, input)
     return &ServicecatalogDescribeProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProductAsAdmin(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) (*servicecatalog.DescribeProductAsAdminOutput, error) {
     var output servicecatalog.DescribeProductAsAdminOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProductAsAdmin, input).Get(ctx, &output)
@@ -1404,6 +1435,7 @@ func (a *ServiceCatalogStub) DescribeProductAsAdminAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProductAsAdmin, input)
     return &ServicecatalogDescribeProductAsAdminResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProductView(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) (*servicecatalog.DescribeProductViewOutput, error) {
     var output servicecatalog.DescribeProductViewOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProductView, input).Get(ctx, &output)
@@ -1414,6 +1446,7 @@ func (a *ServiceCatalogStub) DescribeProductViewAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProductView, input)
     return &ServicecatalogDescribeProductViewResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProvisionedProduct(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) (*servicecatalog.DescribeProvisionedProductOutput, error) {
     var output servicecatalog.DescribeProvisionedProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisionedProduct, input).Get(ctx, &output)
@@ -1424,6 +1457,7 @@ func (a *ServiceCatalogStub) DescribeProvisionedProductAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisionedProduct, input)
     return &ServicecatalogDescribeProvisionedProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) (*servicecatalog.DescribeProvisionedProductPlanOutput, error) {
     var output servicecatalog.DescribeProvisionedProductPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisionedProductPlan, input).Get(ctx, &output)
@@ -1434,6 +1468,7 @@ func (a *ServiceCatalogStub) DescribeProvisionedProductPlanAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisionedProductPlan, input)
     return &ServicecatalogDescribeProvisionedProductPlanResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) (*servicecatalog.DescribeProvisioningArtifactOutput, error) {
     var output servicecatalog.DescribeProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisioningArtifact, input).Get(ctx, &output)
@@ -1444,6 +1479,7 @@ func (a *ServiceCatalogStub) DescribeProvisioningArtifactAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisioningArtifact, input)
     return &ServicecatalogDescribeProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeProvisioningParameters(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) (*servicecatalog.DescribeProvisioningParametersOutput, error) {
     var output servicecatalog.DescribeProvisioningParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisioningParameters, input).Get(ctx, &output)
@@ -1454,6 +1490,7 @@ func (a *ServiceCatalogStub) DescribeProvisioningParametersAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeProvisioningParameters, input)
     return &ServicecatalogDescribeProvisioningParametersResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeRecord(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) (*servicecatalog.DescribeRecordOutput, error) {
     var output servicecatalog.DescribeRecordOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRecord, input).Get(ctx, &output)
@@ -1464,6 +1501,7 @@ func (a *ServiceCatalogStub) DescribeRecordAsync(ctx workflow.Context, input *se
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRecord, input)
     return &ServicecatalogDescribeRecordResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeServiceAction(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) (*servicecatalog.DescribeServiceActionOutput, error) {
     var output servicecatalog.DescribeServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeServiceAction, input).Get(ctx, &output)
@@ -1474,6 +1512,7 @@ func (a *ServiceCatalogStub) DescribeServiceActionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeServiceAction, input)
     return &ServicecatalogDescribeServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeServiceActionExecutionParameters(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) (*servicecatalog.DescribeServiceActionExecutionParametersOutput, error) {
     var output servicecatalog.DescribeServiceActionExecutionParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeServiceActionExecutionParameters, input).Get(ctx, &output)
@@ -1484,6 +1523,7 @@ func (a *ServiceCatalogStub) DescribeServiceActionExecutionParametersAsync(ctx w
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeServiceActionExecutionParameters, input)
     return &ServicecatalogDescribeServiceActionExecutionParametersResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DescribeTagOption(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) (*servicecatalog.DescribeTagOptionOutput, error) {
     var output servicecatalog.DescribeTagOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTagOption, input).Get(ctx, &output)
@@ -1494,6 +1534,7 @@ func (a *ServiceCatalogStub) DescribeTagOptionAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTagOption, input)
     return &ServicecatalogDescribeTagOptionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) (*servicecatalog.DisableAWSOrganizationsAccessOutput, error) {
     var output servicecatalog.DisableAWSOrganizationsAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableAWSOrganizationsAccess, input).Get(ctx, &output)
@@ -1504,6 +1545,7 @@ func (a *ServiceCatalogStub) DisableAWSOrganizationsAccessAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DisableAWSOrganizationsAccess, input)
     return &ServicecatalogDisableAWSOrganizationsAccessResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisassociateBudgetFromResource(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) (*servicecatalog.DisassociateBudgetFromResourceOutput, error) {
     var output servicecatalog.DisassociateBudgetFromResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateBudgetFromResource, input).Get(ctx, &output)
@@ -1514,6 +1556,7 @@ func (a *ServiceCatalogStub) DisassociateBudgetFromResourceAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateBudgetFromResource, input)
     return &ServicecatalogDisassociateBudgetFromResourceResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisassociatePrincipalFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) (*servicecatalog.DisassociatePrincipalFromPortfolioOutput, error) {
     var output servicecatalog.DisassociatePrincipalFromPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociatePrincipalFromPortfolio, input).Get(ctx, &output)
@@ -1524,6 +1567,7 @@ func (a *ServiceCatalogStub) DisassociatePrincipalFromPortfolioAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociatePrincipalFromPortfolio, input)
     return &ServicecatalogDisassociatePrincipalFromPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisassociateProductFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) (*servicecatalog.DisassociateProductFromPortfolioOutput, error) {
     var output servicecatalog.DisassociateProductFromPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateProductFromPortfolio, input).Get(ctx, &output)
@@ -1534,6 +1578,7 @@ func (a *ServiceCatalogStub) DisassociateProductFromPortfolioAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateProductFromPortfolio, input)
     return &ServicecatalogDisassociateProductFromPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput, error) {
     var output servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateServiceActionFromProvisioningArtifact, input).Get(ctx, &output)
@@ -1544,6 +1589,7 @@ func (a *ServiceCatalogStub) DisassociateServiceActionFromProvisioningArtifactAs
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateServiceActionFromProvisioningArtifact, input)
     return &ServicecatalogDisassociateServiceActionFromProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) DisassociateTagOptionFromResource(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) (*servicecatalog.DisassociateTagOptionFromResourceOutput, error) {
     var output servicecatalog.DisassociateTagOptionFromResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateTagOptionFromResource, input).Get(ctx, &output)
@@ -1554,6 +1600,7 @@ func (a *ServiceCatalogStub) DisassociateTagOptionFromResourceAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateTagOptionFromResource, input)
     return &ServicecatalogDisassociateTagOptionFromResourceResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) EnableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) (*servicecatalog.EnableAWSOrganizationsAccessOutput, error) {
     var output servicecatalog.EnableAWSOrganizationsAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableAWSOrganizationsAccess, input).Get(ctx, &output)
@@ -1564,6 +1611,7 @@ func (a *ServiceCatalogStub) EnableAWSOrganizationsAccessAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.EnableAWSOrganizationsAccess, input)
     return &ServicecatalogEnableAWSOrganizationsAccessResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ExecuteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error) {
     var output servicecatalog.ExecuteProvisionedProductPlanOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExecuteProvisionedProductPlan, input).Get(ctx, &output)
@@ -1574,6 +1622,7 @@ func (a *ServiceCatalogStub) ExecuteProvisionedProductPlanAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.ExecuteProvisionedProductPlan, input)
     return &ServicecatalogExecuteProvisionedProductPlanResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ExecuteProvisionedProductServiceAction(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) (*servicecatalog.ExecuteProvisionedProductServiceActionOutput, error) {
     var output servicecatalog.ExecuteProvisionedProductServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExecuteProvisionedProductServiceAction, input).Get(ctx, &output)
@@ -1584,6 +1633,7 @@ func (a *ServiceCatalogStub) ExecuteProvisionedProductServiceActionAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.ExecuteProvisionedProductServiceAction, input)
     return &ServicecatalogExecuteProvisionedProductServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatus(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error) {
     var output servicecatalog.GetAWSOrganizationsAccessStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAWSOrganizationsAccessStatus, input).Get(ctx, &output)
@@ -1594,6 +1644,7 @@ func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatusAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.GetAWSOrganizationsAccessStatus, input)
     return &ServicecatalogGetAWSOrganizationsAccessStatusResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error) {
     var output servicecatalog.ListAcceptedPortfolioSharesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAcceptedPortfolioShares, input).Get(ctx, &output)
@@ -1604,6 +1655,7 @@ func (a *ServiceCatalogStub) ListAcceptedPortfolioSharesAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListAcceptedPortfolioShares, input)
     return &ServicecatalogListAcceptedPortfolioSharesResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListBudgetsForResource(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) (*servicecatalog.ListBudgetsForResourceOutput, error) {
     var output servicecatalog.ListBudgetsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBudgetsForResource, input).Get(ctx, &output)
@@ -1614,6 +1666,7 @@ func (a *ServiceCatalogStub) ListBudgetsForResourceAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListBudgetsForResource, input)
     return &ServicecatalogListBudgetsForResourceResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListConstraintsForPortfolio(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) (*servicecatalog.ListConstraintsForPortfolioOutput, error) {
     var output servicecatalog.ListConstraintsForPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListConstraintsForPortfolio, input).Get(ctx, &output)
@@ -1624,6 +1677,7 @@ func (a *ServiceCatalogStub) ListConstraintsForPortfolioAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListConstraintsForPortfolio, input)
     return &ServicecatalogListConstraintsForPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListLaunchPaths(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) (*servicecatalog.ListLaunchPathsOutput, error) {
     var output servicecatalog.ListLaunchPathsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListLaunchPaths, input).Get(ctx, &output)
@@ -1634,6 +1688,7 @@ func (a *ServiceCatalogStub) ListLaunchPathsAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.ListLaunchPaths, input)
     return &ServicecatalogListLaunchPathsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListOrganizationPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) (*servicecatalog.ListOrganizationPortfolioAccessOutput, error) {
     var output servicecatalog.ListOrganizationPortfolioAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationPortfolioAccess, input).Get(ctx, &output)
@@ -1644,6 +1699,7 @@ func (a *ServiceCatalogStub) ListOrganizationPortfolioAccessAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationPortfolioAccess, input)
     return &ServicecatalogListOrganizationPortfolioAccessResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) (*servicecatalog.ListPortfolioAccessOutput, error) {
     var output servicecatalog.ListPortfolioAccessOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPortfolioAccess, input).Get(ctx, &output)
@@ -1654,6 +1710,7 @@ func (a *ServiceCatalogStub) ListPortfolioAccessAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListPortfolioAccess, input)
     return &ServicecatalogListPortfolioAccessResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListPortfolios(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) (*servicecatalog.ListPortfoliosOutput, error) {
     var output servicecatalog.ListPortfoliosOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPortfolios, input).Get(ctx, &output)
@@ -1664,6 +1721,7 @@ func (a *ServiceCatalogStub) ListPortfoliosAsync(ctx workflow.Context, input *se
     future := workflow.ExecuteActivity(ctx, a.activities.ListPortfolios, input)
     return &ServicecatalogListPortfoliosResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListPortfoliosForProduct(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) (*servicecatalog.ListPortfoliosForProductOutput, error) {
     var output servicecatalog.ListPortfoliosForProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPortfoliosForProduct, input).Get(ctx, &output)
@@ -1674,6 +1732,7 @@ func (a *ServiceCatalogStub) ListPortfoliosForProductAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ListPortfoliosForProduct, input)
     return &ServicecatalogListPortfoliosForProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListPrincipalsForPortfolio(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) (*servicecatalog.ListPrincipalsForPortfolioOutput, error) {
     var output servicecatalog.ListPrincipalsForPortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPrincipalsForPortfolio, input).Get(ctx, &output)
@@ -1684,6 +1743,7 @@ func (a *ServiceCatalogStub) ListPrincipalsForPortfolioAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.ListPrincipalsForPortfolio, input)
     return &ServicecatalogListPrincipalsForPortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListProvisionedProductPlans(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) (*servicecatalog.ListProvisionedProductPlansOutput, error) {
     var output servicecatalog.ListProvisionedProductPlansOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProvisionedProductPlans, input).Get(ctx, &output)
@@ -1694,6 +1754,7 @@ func (a *ServiceCatalogStub) ListProvisionedProductPlansAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListProvisionedProductPlans, input)
     return &ServicecatalogListProvisionedProductPlansResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListProvisioningArtifacts(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) (*servicecatalog.ListProvisioningArtifactsOutput, error) {
     var output servicecatalog.ListProvisioningArtifactsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProvisioningArtifacts, input).Get(ctx, &output)
@@ -1704,6 +1765,7 @@ func (a *ServiceCatalogStub) ListProvisioningArtifactsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.ListProvisioningArtifacts, input)
     return &ServicecatalogListProvisioningArtifactsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListProvisioningArtifactsForServiceAction(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) (*servicecatalog.ListProvisioningArtifactsForServiceActionOutput, error) {
     var output servicecatalog.ListProvisioningArtifactsForServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProvisioningArtifactsForServiceAction, input).Get(ctx, &output)
@@ -1714,6 +1776,7 @@ func (a *ServiceCatalogStub) ListProvisioningArtifactsForServiceActionAsync(ctx 
     future := workflow.ExecuteActivity(ctx, a.activities.ListProvisioningArtifactsForServiceAction, input)
     return &ServicecatalogListProvisioningArtifactsForServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListRecordHistory(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) (*servicecatalog.ListRecordHistoryOutput, error) {
     var output servicecatalog.ListRecordHistoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRecordHistory, input).Get(ctx, &output)
@@ -1724,6 +1787,7 @@ func (a *ServiceCatalogStub) ListRecordHistoryAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListRecordHistory, input)
     return &ServicecatalogListRecordHistoryResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListResourcesForTagOption(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) (*servicecatalog.ListResourcesForTagOptionOutput, error) {
     var output servicecatalog.ListResourcesForTagOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListResourcesForTagOption, input).Get(ctx, &output)
@@ -1734,6 +1798,7 @@ func (a *ServiceCatalogStub) ListResourcesForTagOptionAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.ListResourcesForTagOption, input)
     return &ServicecatalogListResourcesForTagOptionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListServiceActions(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) (*servicecatalog.ListServiceActionsOutput, error) {
     var output servicecatalog.ListServiceActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListServiceActions, input).Get(ctx, &output)
@@ -1744,6 +1809,7 @@ func (a *ServiceCatalogStub) ListServiceActionsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListServiceActions, input)
     return &ServicecatalogListServiceActionsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListServiceActionsForProvisioningArtifact(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) (*servicecatalog.ListServiceActionsForProvisioningArtifactOutput, error) {
     var output servicecatalog.ListServiceActionsForProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListServiceActionsForProvisioningArtifact, input).Get(ctx, &output)
@@ -1754,6 +1820,7 @@ func (a *ServiceCatalogStub) ListServiceActionsForProvisioningArtifactAsync(ctx 
     future := workflow.ExecuteActivity(ctx, a.activities.ListServiceActionsForProvisioningArtifact, input)
     return &ServicecatalogListServiceActionsForProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListStackInstancesForProvisionedProduct(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) (*servicecatalog.ListStackInstancesForProvisionedProductOutput, error) {
     var output servicecatalog.ListStackInstancesForProvisionedProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackInstancesForProvisionedProduct, input).Get(ctx, &output)
@@ -1764,6 +1831,7 @@ func (a *ServiceCatalogStub) ListStackInstancesForProvisionedProductAsync(ctx wo
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackInstancesForProvisionedProduct, input)
     return &ServicecatalogListStackInstancesForProvisionedProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ListTagOptions(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) (*servicecatalog.ListTagOptionsOutput, error) {
     var output servicecatalog.ListTagOptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagOptions, input).Get(ctx, &output)
@@ -1774,6 +1842,7 @@ func (a *ServiceCatalogStub) ListTagOptionsAsync(ctx workflow.Context, input *se
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagOptions, input)
     return &ServicecatalogListTagOptionsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ProvisionProduct(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) (*servicecatalog.ProvisionProductOutput, error) {
     var output servicecatalog.ProvisionProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ProvisionProduct, input).Get(ctx, &output)
@@ -1784,6 +1853,7 @@ func (a *ServiceCatalogStub) ProvisionProductAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ProvisionProduct, input)
     return &ServicecatalogProvisionProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) RejectPortfolioShare(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) (*servicecatalog.RejectPortfolioShareOutput, error) {
     var output servicecatalog.RejectPortfolioShareOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RejectPortfolioShare, input).Get(ctx, &output)
@@ -1794,6 +1864,7 @@ func (a *ServiceCatalogStub) RejectPortfolioShareAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.RejectPortfolioShare, input)
     return &ServicecatalogRejectPortfolioShareResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) ScanProvisionedProducts(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) (*servicecatalog.ScanProvisionedProductsOutput, error) {
     var output servicecatalog.ScanProvisionedProductsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ScanProvisionedProducts, input).Get(ctx, &output)
@@ -1804,6 +1875,7 @@ func (a *ServiceCatalogStub) ScanProvisionedProductsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ScanProvisionedProducts, input)
     return &ServicecatalogScanProvisionedProductsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) SearchProducts(ctx workflow.Context, input *servicecatalog.SearchProductsInput) (*servicecatalog.SearchProductsOutput, error) {
     var output servicecatalog.SearchProductsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchProducts, input).Get(ctx, &output)
@@ -1814,6 +1886,7 @@ func (a *ServiceCatalogStub) SearchProductsAsync(ctx workflow.Context, input *se
     future := workflow.ExecuteActivity(ctx, a.activities.SearchProducts, input)
     return &ServicecatalogSearchProductsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) SearchProductsAsAdmin(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) (*servicecatalog.SearchProductsAsAdminOutput, error) {
     var output servicecatalog.SearchProductsAsAdminOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchProductsAsAdmin, input).Get(ctx, &output)
@@ -1824,6 +1897,7 @@ func (a *ServiceCatalogStub) SearchProductsAsAdminAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.SearchProductsAsAdmin, input)
     return &ServicecatalogSearchProductsAsAdminResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) SearchProvisionedProducts(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) (*servicecatalog.SearchProvisionedProductsOutput, error) {
     var output servicecatalog.SearchProvisionedProductsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchProvisionedProducts, input).Get(ctx, &output)
@@ -1834,6 +1908,7 @@ func (a *ServiceCatalogStub) SearchProvisionedProductsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.SearchProvisionedProducts, input)
     return &ServicecatalogSearchProvisionedProductsResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) TerminateProvisionedProduct(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) (*servicecatalog.TerminateProvisionedProductOutput, error) {
     var output servicecatalog.TerminateProvisionedProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TerminateProvisionedProduct, input).Get(ctx, &output)
@@ -1844,6 +1919,7 @@ func (a *ServiceCatalogStub) TerminateProvisionedProductAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.TerminateProvisionedProduct, input)
     return &ServicecatalogTerminateProvisionedProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateConstraint(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) (*servicecatalog.UpdateConstraintOutput, error) {
     var output servicecatalog.UpdateConstraintOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateConstraint, input).Get(ctx, &output)
@@ -1854,6 +1930,7 @@ func (a *ServiceCatalogStub) UpdateConstraintAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateConstraint, input)
     return &ServicecatalogUpdateConstraintResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdatePortfolio(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) (*servicecatalog.UpdatePortfolioOutput, error) {
     var output servicecatalog.UpdatePortfolioOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdatePortfolio, input).Get(ctx, &output)
@@ -1864,6 +1941,7 @@ func (a *ServiceCatalogStub) UpdatePortfolioAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.UpdatePortfolio, input)
     return &ServicecatalogUpdatePortfolioResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateProduct(ctx workflow.Context, input *servicecatalog.UpdateProductInput) (*servicecatalog.UpdateProductOutput, error) {
     var output servicecatalog.UpdateProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateProduct, input).Get(ctx, &output)
@@ -1874,6 +1952,7 @@ func (a *ServiceCatalogStub) UpdateProductAsync(ctx workflow.Context, input *ser
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateProduct, input)
     return &ServicecatalogUpdateProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateProvisionedProduct(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) (*servicecatalog.UpdateProvisionedProductOutput, error) {
     var output servicecatalog.UpdateProvisionedProductOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisionedProduct, input).Get(ctx, &output)
@@ -1884,6 +1963,7 @@ func (a *ServiceCatalogStub) UpdateProvisionedProductAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisionedProduct, input)
     return &ServicecatalogUpdateProvisionedProductResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateProvisionedProductProperties(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) (*servicecatalog.UpdateProvisionedProductPropertiesOutput, error) {
     var output servicecatalog.UpdateProvisionedProductPropertiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisionedProductProperties, input).Get(ctx, &output)
@@ -1894,6 +1974,7 @@ func (a *ServiceCatalogStub) UpdateProvisionedProductPropertiesAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisionedProductProperties, input)
     return &ServicecatalogUpdateProvisionedProductPropertiesResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) (*servicecatalog.UpdateProvisioningArtifactOutput, error) {
     var output servicecatalog.UpdateProvisioningArtifactOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisioningArtifact, input).Get(ctx, &output)
@@ -1904,6 +1985,7 @@ func (a *ServiceCatalogStub) UpdateProvisioningArtifactAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateProvisioningArtifact, input)
     return &ServicecatalogUpdateProvisioningArtifactResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateServiceAction(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) (*servicecatalog.UpdateServiceActionOutput, error) {
     var output servicecatalog.UpdateServiceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceAction, input).Get(ctx, &output)
@@ -1914,6 +1996,7 @@ func (a *ServiceCatalogStub) UpdateServiceActionAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceAction, input)
     return &ServicecatalogUpdateServiceActionResult{Result: future}
 }
+
 func (a *ServiceCatalogStub) UpdateTagOption(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) (*servicecatalog.UpdateTagOptionOutput, error) {
     var output servicecatalog.UpdateTagOptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTagOption, input).Get(ctx, &output)

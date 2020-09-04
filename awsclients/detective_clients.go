@@ -43,6 +43,7 @@ type DetectiveClient interface {
     StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error)
     StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberResult
 }
+
 type DetectiveAcceptInvitationResult struct {
 	Result workflow.Future
 }
@@ -163,7 +164,6 @@ func (r *DetectiveStartMonitoringMemberResult) Get(ctx workflow.Context) (*detec
     return &output, err
 }
 
-
 type DetectiveStub struct {
     activities awsactivities.DetectiveActivities
 }
@@ -171,6 +171,7 @@ type DetectiveStub struct {
 func NewDetectiveStub() DetectiveClient {
     return &DetectiveStub{}
 }
+
 func (a *DetectiveStub) AcceptInvitation(ctx workflow.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error) {
     var output detective.AcceptInvitationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptInvitation, input).Get(ctx, &output)
@@ -181,6 +182,7 @@ func (a *DetectiveStub) AcceptInvitationAsync(ctx workflow.Context, input *detec
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptInvitation, input)
     return &DetectiveAcceptInvitationResult{Result: future}
 }
+
 func (a *DetectiveStub) CreateGraph(ctx workflow.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error) {
     var output detective.CreateGraphOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGraph, input).Get(ctx, &output)
@@ -191,6 +193,7 @@ func (a *DetectiveStub) CreateGraphAsync(ctx workflow.Context, input *detective.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGraph, input)
     return &DetectiveCreateGraphResult{Result: future}
 }
+
 func (a *DetectiveStub) CreateMembers(ctx workflow.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error) {
     var output detective.CreateMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMembers, input).Get(ctx, &output)
@@ -201,6 +204,7 @@ func (a *DetectiveStub) CreateMembersAsync(ctx workflow.Context, input *detectiv
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMembers, input)
     return &DetectiveCreateMembersResult{Result: future}
 }
+
 func (a *DetectiveStub) DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error) {
     var output detective.DeleteGraphOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGraph, input).Get(ctx, &output)
@@ -211,6 +215,7 @@ func (a *DetectiveStub) DeleteGraphAsync(ctx workflow.Context, input *detective.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGraph, input)
     return &DetectiveDeleteGraphResult{Result: future}
 }
+
 func (a *DetectiveStub) DeleteMembers(ctx workflow.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error) {
     var output detective.DeleteMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMembers, input).Get(ctx, &output)
@@ -221,6 +226,7 @@ func (a *DetectiveStub) DeleteMembersAsync(ctx workflow.Context, input *detectiv
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMembers, input)
     return &DetectiveDeleteMembersResult{Result: future}
 }
+
 func (a *DetectiveStub) DisassociateMembership(ctx workflow.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error) {
     var output detective.DisassociateMembershipOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateMembership, input).Get(ctx, &output)
@@ -231,6 +237,7 @@ func (a *DetectiveStub) DisassociateMembershipAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateMembership, input)
     return &DetectiveDisassociateMembershipResult{Result: future}
 }
+
 func (a *DetectiveStub) GetMembers(ctx workflow.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error) {
     var output detective.GetMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMembers, input).Get(ctx, &output)
@@ -241,6 +248,7 @@ func (a *DetectiveStub) GetMembersAsync(ctx workflow.Context, input *detective.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetMembers, input)
     return &DetectiveGetMembersResult{Result: future}
 }
+
 func (a *DetectiveStub) ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error) {
     var output detective.ListGraphsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGraphs, input).Get(ctx, &output)
@@ -251,6 +259,7 @@ func (a *DetectiveStub) ListGraphsAsync(ctx workflow.Context, input *detective.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListGraphs, input)
     return &DetectiveListGraphsResult{Result: future}
 }
+
 func (a *DetectiveStub) ListInvitations(ctx workflow.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error) {
     var output detective.ListInvitationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input).Get(ctx, &output)
@@ -261,6 +270,7 @@ func (a *DetectiveStub) ListInvitationsAsync(ctx workflow.Context, input *detect
     future := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input)
     return &DetectiveListInvitationsResult{Result: future}
 }
+
 func (a *DetectiveStub) ListMembers(ctx workflow.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error) {
     var output detective.ListMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input).Get(ctx, &output)
@@ -271,6 +281,7 @@ func (a *DetectiveStub) ListMembersAsync(ctx workflow.Context, input *detective.
     future := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input)
     return &DetectiveListMembersResult{Result: future}
 }
+
 func (a *DetectiveStub) RejectInvitation(ctx workflow.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error) {
     var output detective.RejectInvitationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RejectInvitation, input).Get(ctx, &output)
@@ -281,6 +292,7 @@ func (a *DetectiveStub) RejectInvitationAsync(ctx workflow.Context, input *detec
     future := workflow.ExecuteActivity(ctx, a.activities.RejectInvitation, input)
     return &DetectiveRejectInvitationResult{Result: future}
 }
+
 func (a *DetectiveStub) StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error) {
     var output detective.StartMonitoringMemberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMonitoringMember, input).Get(ctx, &output)

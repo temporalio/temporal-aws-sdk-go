@@ -133,6 +133,7 @@ type CloudWatchLogsClient interface {
     UntagLogGroup(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) (*cloudwatchlogs.UntagLogGroupOutput, error)
     UntagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) *CloudwatchlogsUntagLogGroupResult
 }
+
 type CloudwatchlogsAssociateKmsKeyResult struct {
 	Result workflow.Future
 }
@@ -553,7 +554,6 @@ func (r *CloudwatchlogsUntagLogGroupResult) Get(ctx workflow.Context) (*cloudwat
     return &output, err
 }
 
-
 type CloudWatchLogsStub struct {
     activities awsactivities.CloudWatchLogsActivities
 }
@@ -561,6 +561,7 @@ type CloudWatchLogsStub struct {
 func NewCloudWatchLogsStub() CloudWatchLogsClient {
     return &CloudWatchLogsStub{}
 }
+
 func (a *CloudWatchLogsStub) AssociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.AssociateKmsKeyInput) (*cloudwatchlogs.AssociateKmsKeyOutput, error) {
     var output cloudwatchlogs.AssociateKmsKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateKmsKey, input).Get(ctx, &output)
@@ -571,6 +572,7 @@ func (a *CloudWatchLogsStub) AssociateKmsKeyAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateKmsKey, input)
     return &CloudwatchlogsAssociateKmsKeyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) CancelExportTask(ctx workflow.Context, input *cloudwatchlogs.CancelExportTaskInput) (*cloudwatchlogs.CancelExportTaskOutput, error) {
     var output cloudwatchlogs.CancelExportTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelExportTask, input).Get(ctx, &output)
@@ -581,6 +583,7 @@ func (a *CloudWatchLogsStub) CancelExportTaskAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CancelExportTask, input)
     return &CloudwatchlogsCancelExportTaskResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) CreateExportTask(ctx workflow.Context, input *cloudwatchlogs.CreateExportTaskInput) (*cloudwatchlogs.CreateExportTaskOutput, error) {
     var output cloudwatchlogs.CreateExportTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateExportTask, input).Get(ctx, &output)
@@ -591,6 +594,7 @@ func (a *CloudWatchLogsStub) CreateExportTaskAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateExportTask, input)
     return &CloudwatchlogsCreateExportTaskResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) CreateLogGroup(ctx workflow.Context, input *cloudwatchlogs.CreateLogGroupInput) (*cloudwatchlogs.CreateLogGroupOutput, error) {
     var output cloudwatchlogs.CreateLogGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLogGroup, input).Get(ctx, &output)
@@ -601,6 +605,7 @@ func (a *CloudWatchLogsStub) CreateLogGroupAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLogGroup, input)
     return &CloudwatchlogsCreateLogGroupResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) CreateLogStream(ctx workflow.Context, input *cloudwatchlogs.CreateLogStreamInput) (*cloudwatchlogs.CreateLogStreamOutput, error) {
     var output cloudwatchlogs.CreateLogStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLogStream, input).Get(ctx, &output)
@@ -611,6 +616,7 @@ func (a *CloudWatchLogsStub) CreateLogStreamAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLogStream, input)
     return &CloudwatchlogsCreateLogStreamResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteDestination(ctx workflow.Context, input *cloudwatchlogs.DeleteDestinationInput) (*cloudwatchlogs.DeleteDestinationOutput, error) {
     var output cloudwatchlogs.DeleteDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDestination, input).Get(ctx, &output)
@@ -621,6 +627,7 @@ func (a *CloudWatchLogsStub) DeleteDestinationAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDestination, input)
     return &CloudwatchlogsDeleteDestinationResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteLogGroup(ctx workflow.Context, input *cloudwatchlogs.DeleteLogGroupInput) (*cloudwatchlogs.DeleteLogGroupOutput, error) {
     var output cloudwatchlogs.DeleteLogGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLogGroup, input).Get(ctx, &output)
@@ -631,6 +638,7 @@ func (a *CloudWatchLogsStub) DeleteLogGroupAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLogGroup, input)
     return &CloudwatchlogsDeleteLogGroupResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteLogStream(ctx workflow.Context, input *cloudwatchlogs.DeleteLogStreamInput) (*cloudwatchlogs.DeleteLogStreamOutput, error) {
     var output cloudwatchlogs.DeleteLogStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLogStream, input).Get(ctx, &output)
@@ -641,6 +649,7 @@ func (a *CloudWatchLogsStub) DeleteLogStreamAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLogStream, input)
     return &CloudwatchlogsDeleteLogStreamResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteMetricFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteMetricFilterInput) (*cloudwatchlogs.DeleteMetricFilterOutput, error) {
     var output cloudwatchlogs.DeleteMetricFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMetricFilter, input).Get(ctx, &output)
@@ -651,6 +660,7 @@ func (a *CloudWatchLogsStub) DeleteMetricFilterAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMetricFilter, input)
     return &CloudwatchlogsDeleteMetricFilterResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) (*cloudwatchlogs.DeleteQueryDefinitionOutput, error) {
     var output cloudwatchlogs.DeleteQueryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteQueryDefinition, input).Get(ctx, &output)
@@ -661,6 +671,7 @@ func (a *CloudWatchLogsStub) DeleteQueryDefinitionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteQueryDefinition, input)
     return &CloudwatchlogsDeleteQueryDefinitionResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) (*cloudwatchlogs.DeleteResourcePolicyOutput, error) {
     var output cloudwatchlogs.DeleteResourcePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteResourcePolicy, input).Get(ctx, &output)
@@ -671,6 +682,7 @@ func (a *CloudWatchLogsStub) DeleteResourcePolicyAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteResourcePolicy, input)
     return &CloudwatchlogsDeleteResourcePolicyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) (*cloudwatchlogs.DeleteRetentionPolicyOutput, error) {
     var output cloudwatchlogs.DeleteRetentionPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRetentionPolicy, input).Get(ctx, &output)
@@ -681,6 +693,7 @@ func (a *CloudWatchLogsStub) DeleteRetentionPolicyAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRetentionPolicy, input)
     return &CloudwatchlogsDeleteRetentionPolicyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DeleteSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) (*cloudwatchlogs.DeleteSubscriptionFilterOutput, error) {
     var output cloudwatchlogs.DeleteSubscriptionFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSubscriptionFilter, input).Get(ctx, &output)
@@ -691,6 +704,7 @@ func (a *CloudWatchLogsStub) DeleteSubscriptionFilterAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSubscriptionFilter, input)
     return &CloudwatchlogsDeleteSubscriptionFilterResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeDestinations(ctx workflow.Context, input *cloudwatchlogs.DescribeDestinationsInput) (*cloudwatchlogs.DescribeDestinationsOutput, error) {
     var output cloudwatchlogs.DescribeDestinationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDestinations, input).Get(ctx, &output)
@@ -701,6 +715,7 @@ func (a *CloudWatchLogsStub) DescribeDestinationsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDestinations, input)
     return &CloudwatchlogsDescribeDestinationsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeExportTasks(ctx workflow.Context, input *cloudwatchlogs.DescribeExportTasksInput) (*cloudwatchlogs.DescribeExportTasksOutput, error) {
     var output cloudwatchlogs.DescribeExportTasksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeExportTasks, input).Get(ctx, &output)
@@ -711,6 +726,7 @@ func (a *CloudWatchLogsStub) DescribeExportTasksAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeExportTasks, input)
     return &CloudwatchlogsDescribeExportTasksResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeLogGroups(ctx workflow.Context, input *cloudwatchlogs.DescribeLogGroupsInput) (*cloudwatchlogs.DescribeLogGroupsOutput, error) {
     var output cloudwatchlogs.DescribeLogGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLogGroups, input).Get(ctx, &output)
@@ -721,6 +737,7 @@ func (a *CloudWatchLogsStub) DescribeLogGroupsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLogGroups, input)
     return &CloudwatchlogsDescribeLogGroupsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeLogStreams(ctx workflow.Context, input *cloudwatchlogs.DescribeLogStreamsInput) (*cloudwatchlogs.DescribeLogStreamsOutput, error) {
     var output cloudwatchlogs.DescribeLogStreamsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLogStreams, input).Get(ctx, &output)
@@ -731,6 +748,7 @@ func (a *CloudWatchLogsStub) DescribeLogStreamsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLogStreams, input)
     return &CloudwatchlogsDescribeLogStreamsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeMetricFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) (*cloudwatchlogs.DescribeMetricFiltersOutput, error) {
     var output cloudwatchlogs.DescribeMetricFiltersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMetricFilters, input).Get(ctx, &output)
@@ -741,6 +759,7 @@ func (a *CloudWatchLogsStub) DescribeMetricFiltersAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMetricFilters, input)
     return &CloudwatchlogsDescribeMetricFiltersResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeQueries(ctx workflow.Context, input *cloudwatchlogs.DescribeQueriesInput) (*cloudwatchlogs.DescribeQueriesOutput, error) {
     var output cloudwatchlogs.DescribeQueriesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeQueries, input).Get(ctx, &output)
@@ -751,6 +770,7 @@ func (a *CloudWatchLogsStub) DescribeQueriesAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeQueries, input)
     return &CloudwatchlogsDescribeQueriesResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeQueryDefinitions(ctx workflow.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) (*cloudwatchlogs.DescribeQueryDefinitionsOutput, error) {
     var output cloudwatchlogs.DescribeQueryDefinitionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeQueryDefinitions, input).Get(ctx, &output)
@@ -761,6 +781,7 @@ func (a *CloudWatchLogsStub) DescribeQueryDefinitionsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeQueryDefinitions, input)
     return &CloudwatchlogsDescribeQueryDefinitionsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeResourcePolicies(ctx workflow.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) (*cloudwatchlogs.DescribeResourcePoliciesOutput, error) {
     var output cloudwatchlogs.DescribeResourcePoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeResourcePolicies, input).Get(ctx, &output)
@@ -771,6 +792,7 @@ func (a *CloudWatchLogsStub) DescribeResourcePoliciesAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeResourcePolicies, input)
     return &CloudwatchlogsDescribeResourcePoliciesResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DescribeSubscriptionFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) (*cloudwatchlogs.DescribeSubscriptionFiltersOutput, error) {
     var output cloudwatchlogs.DescribeSubscriptionFiltersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSubscriptionFilters, input).Get(ctx, &output)
@@ -781,6 +803,7 @@ func (a *CloudWatchLogsStub) DescribeSubscriptionFiltersAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSubscriptionFilters, input)
     return &CloudwatchlogsDescribeSubscriptionFiltersResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) DisassociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) (*cloudwatchlogs.DisassociateKmsKeyOutput, error) {
     var output cloudwatchlogs.DisassociateKmsKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateKmsKey, input).Get(ctx, &output)
@@ -791,6 +814,7 @@ func (a *CloudWatchLogsStub) DisassociateKmsKeyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateKmsKey, input)
     return &CloudwatchlogsDisassociateKmsKeyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) FilterLogEvents(ctx workflow.Context, input *cloudwatchlogs.FilterLogEventsInput) (*cloudwatchlogs.FilterLogEventsOutput, error) {
     var output cloudwatchlogs.FilterLogEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.FilterLogEvents, input).Get(ctx, &output)
@@ -801,6 +825,7 @@ func (a *CloudWatchLogsStub) FilterLogEventsAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.FilterLogEvents, input)
     return &CloudwatchlogsFilterLogEventsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) GetLogEvents(ctx workflow.Context, input *cloudwatchlogs.GetLogEventsInput) (*cloudwatchlogs.GetLogEventsOutput, error) {
     var output cloudwatchlogs.GetLogEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLogEvents, input).Get(ctx, &output)
@@ -811,6 +836,7 @@ func (a *CloudWatchLogsStub) GetLogEventsAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.GetLogEvents, input)
     return &CloudwatchlogsGetLogEventsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) GetLogGroupFields(ctx workflow.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) (*cloudwatchlogs.GetLogGroupFieldsOutput, error) {
     var output cloudwatchlogs.GetLogGroupFieldsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLogGroupFields, input).Get(ctx, &output)
@@ -821,6 +847,7 @@ func (a *CloudWatchLogsStub) GetLogGroupFieldsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetLogGroupFields, input)
     return &CloudwatchlogsGetLogGroupFieldsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) GetLogRecord(ctx workflow.Context, input *cloudwatchlogs.GetLogRecordInput) (*cloudwatchlogs.GetLogRecordOutput, error) {
     var output cloudwatchlogs.GetLogRecordOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetLogRecord, input).Get(ctx, &output)
@@ -831,6 +858,7 @@ func (a *CloudWatchLogsStub) GetLogRecordAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.GetLogRecord, input)
     return &CloudwatchlogsGetLogRecordResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) GetQueryResults(ctx workflow.Context, input *cloudwatchlogs.GetQueryResultsInput) (*cloudwatchlogs.GetQueryResultsOutput, error) {
     var output cloudwatchlogs.GetQueryResultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetQueryResults, input).Get(ctx, &output)
@@ -841,6 +869,7 @@ func (a *CloudWatchLogsStub) GetQueryResultsAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.GetQueryResults, input)
     return &CloudwatchlogsGetQueryResultsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) ListTagsLogGroup(ctx workflow.Context, input *cloudwatchlogs.ListTagsLogGroupInput) (*cloudwatchlogs.ListTagsLogGroupOutput, error) {
     var output cloudwatchlogs.ListTagsLogGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsLogGroup, input).Get(ctx, &output)
@@ -851,6 +880,7 @@ func (a *CloudWatchLogsStub) ListTagsLogGroupAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsLogGroup, input)
     return &CloudwatchlogsListTagsLogGroupResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutDestination(ctx workflow.Context, input *cloudwatchlogs.PutDestinationInput) (*cloudwatchlogs.PutDestinationOutput, error) {
     var output cloudwatchlogs.PutDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutDestination, input).Get(ctx, &output)
@@ -861,6 +891,7 @@ func (a *CloudWatchLogsStub) PutDestinationAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.PutDestination, input)
     return &CloudwatchlogsPutDestinationResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutDestinationPolicy(ctx workflow.Context, input *cloudwatchlogs.PutDestinationPolicyInput) (*cloudwatchlogs.PutDestinationPolicyOutput, error) {
     var output cloudwatchlogs.PutDestinationPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutDestinationPolicy, input).Get(ctx, &output)
@@ -871,6 +902,7 @@ func (a *CloudWatchLogsStub) PutDestinationPolicyAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.PutDestinationPolicy, input)
     return &CloudwatchlogsPutDestinationPolicyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutLogEvents(ctx workflow.Context, input *cloudwatchlogs.PutLogEventsInput) (*cloudwatchlogs.PutLogEventsOutput, error) {
     var output cloudwatchlogs.PutLogEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutLogEvents, input).Get(ctx, &output)
@@ -881,6 +913,7 @@ func (a *CloudWatchLogsStub) PutLogEventsAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.PutLogEvents, input)
     return &CloudwatchlogsPutLogEventsResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutMetricFilter(ctx workflow.Context, input *cloudwatchlogs.PutMetricFilterInput) (*cloudwatchlogs.PutMetricFilterOutput, error) {
     var output cloudwatchlogs.PutMetricFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutMetricFilter, input).Get(ctx, &output)
@@ -891,6 +924,7 @@ func (a *CloudWatchLogsStub) PutMetricFilterAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.PutMetricFilter, input)
     return &CloudwatchlogsPutMetricFilterResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.PutQueryDefinitionInput) (*cloudwatchlogs.PutQueryDefinitionOutput, error) {
     var output cloudwatchlogs.PutQueryDefinitionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutQueryDefinition, input).Get(ctx, &output)
@@ -901,6 +935,7 @@ func (a *CloudWatchLogsStub) PutQueryDefinitionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.PutQueryDefinition, input)
     return &CloudwatchlogsPutQueryDefinitionResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.PutResourcePolicyInput) (*cloudwatchlogs.PutResourcePolicyOutput, error) {
     var output cloudwatchlogs.PutResourcePolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutResourcePolicy, input).Get(ctx, &output)
@@ -911,6 +946,7 @@ func (a *CloudWatchLogsStub) PutResourcePolicyAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.PutResourcePolicy, input)
     return &CloudwatchlogsPutResourcePolicyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.PutRetentionPolicyInput) (*cloudwatchlogs.PutRetentionPolicyOutput, error) {
     var output cloudwatchlogs.PutRetentionPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRetentionPolicy, input).Get(ctx, &output)
@@ -921,6 +957,7 @@ func (a *CloudWatchLogsStub) PutRetentionPolicyAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.PutRetentionPolicy, input)
     return &CloudwatchlogsPutRetentionPolicyResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) PutSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) (*cloudwatchlogs.PutSubscriptionFilterOutput, error) {
     var output cloudwatchlogs.PutSubscriptionFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutSubscriptionFilter, input).Get(ctx, &output)
@@ -931,6 +968,7 @@ func (a *CloudWatchLogsStub) PutSubscriptionFilterAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.PutSubscriptionFilter, input)
     return &CloudwatchlogsPutSubscriptionFilterResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) StartQuery(ctx workflow.Context, input *cloudwatchlogs.StartQueryInput) (*cloudwatchlogs.StartQueryOutput, error) {
     var output cloudwatchlogs.StartQueryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartQuery, input).Get(ctx, &output)
@@ -941,6 +979,7 @@ func (a *CloudWatchLogsStub) StartQueryAsync(ctx workflow.Context, input *cloudw
     future := workflow.ExecuteActivity(ctx, a.activities.StartQuery, input)
     return &CloudwatchlogsStartQueryResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) StopQuery(ctx workflow.Context, input *cloudwatchlogs.StopQueryInput) (*cloudwatchlogs.StopQueryOutput, error) {
     var output cloudwatchlogs.StopQueryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopQuery, input).Get(ctx, &output)
@@ -951,6 +990,7 @@ func (a *CloudWatchLogsStub) StopQueryAsync(ctx workflow.Context, input *cloudwa
     future := workflow.ExecuteActivity(ctx, a.activities.StopQuery, input)
     return &CloudwatchlogsStopQueryResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) TagLogGroup(ctx workflow.Context, input *cloudwatchlogs.TagLogGroupInput) (*cloudwatchlogs.TagLogGroupOutput, error) {
     var output cloudwatchlogs.TagLogGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagLogGroup, input).Get(ctx, &output)
@@ -961,6 +1001,7 @@ func (a *CloudWatchLogsStub) TagLogGroupAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.TagLogGroup, input)
     return &CloudwatchlogsTagLogGroupResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) TestMetricFilter(ctx workflow.Context, input *cloudwatchlogs.TestMetricFilterInput) (*cloudwatchlogs.TestMetricFilterOutput, error) {
     var output cloudwatchlogs.TestMetricFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TestMetricFilter, input).Get(ctx, &output)
@@ -971,6 +1012,7 @@ func (a *CloudWatchLogsStub) TestMetricFilterAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.TestMetricFilter, input)
     return &CloudwatchlogsTestMetricFilterResult{Result: future}
 }
+
 func (a *CloudWatchLogsStub) UntagLogGroup(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) (*cloudwatchlogs.UntagLogGroupOutput, error) {
     var output cloudwatchlogs.UntagLogGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagLogGroup, input).Get(ctx, &output)

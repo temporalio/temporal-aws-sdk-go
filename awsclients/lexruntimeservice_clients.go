@@ -22,6 +22,7 @@ type LexRuntimeServiceClient interface {
     PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error)
     PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionResult
 }
+
 type LexruntimeserviceDeleteSessionResult struct {
 	Result workflow.Future
 }
@@ -72,7 +73,6 @@ func (r *LexruntimeservicePutSessionResult) Get(ctx workflow.Context) (*lexrunti
     return &output, err
 }
 
-
 type LexRuntimeServiceStub struct {
     activities awsactivities.LexRuntimeServiceActivities
 }
@@ -80,6 +80,7 @@ type LexRuntimeServiceStub struct {
 func NewLexRuntimeServiceStub() LexRuntimeServiceClient {
     return &LexRuntimeServiceStub{}
 }
+
 func (a *LexRuntimeServiceStub) DeleteSession(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error) {
     var output lexruntimeservice.DeleteSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSession, input).Get(ctx, &output)
@@ -90,6 +91,7 @@ func (a *LexRuntimeServiceStub) DeleteSessionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSession, input)
     return &LexruntimeserviceDeleteSessionResult{Result: future}
 }
+
 func (a *LexRuntimeServiceStub) GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error) {
     var output lexruntimeservice.GetSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSession, input).Get(ctx, &output)
@@ -100,6 +102,7 @@ func (a *LexRuntimeServiceStub) GetSessionAsync(ctx workflow.Context, input *lex
     future := workflow.ExecuteActivity(ctx, a.activities.GetSession, input)
     return &LexruntimeserviceGetSessionResult{Result: future}
 }
+
 func (a *LexRuntimeServiceStub) PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error) {
     var output lexruntimeservice.PostContentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PostContent, input).Get(ctx, &output)
@@ -110,6 +113,7 @@ func (a *LexRuntimeServiceStub) PostContentAsync(ctx workflow.Context, input *le
     future := workflow.ExecuteActivity(ctx, a.activities.PostContent, input)
     return &LexruntimeservicePostContentResult{Result: future}
 }
+
 func (a *LexRuntimeServiceStub) PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error) {
     var output lexruntimeservice.PostTextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PostText, input).Get(ctx, &output)
@@ -120,6 +124,7 @@ func (a *LexRuntimeServiceStub) PostTextAsync(ctx workflow.Context, input *lexru
     future := workflow.ExecuteActivity(ctx, a.activities.PostText, input)
     return &LexruntimeservicePostTextResult{Result: future}
 }
+
 func (a *LexRuntimeServiceStub) PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error) {
     var output lexruntimeservice.PutSessionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutSession, input).Get(ctx, &output)

@@ -40,6 +40,7 @@ type CodeStarConnectionsClient interface {
     UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error)
     UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodestarconnectionsUntagResourceResult
 }
+
 type CodestarconnectionsCreateConnectionResult struct {
 	Result workflow.Future
 }
@@ -150,7 +151,6 @@ func (r *CodestarconnectionsUntagResourceResult) Get(ctx workflow.Context) (*cod
     return &output, err
 }
 
-
 type CodeStarConnectionsStub struct {
     activities awsactivities.CodeStarConnectionsActivities
 }
@@ -158,6 +158,7 @@ type CodeStarConnectionsStub struct {
 func NewCodeStarConnectionsStub() CodeStarConnectionsClient {
     return &CodeStarConnectionsStub{}
 }
+
 func (a *CodeStarConnectionsStub) CreateConnection(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error) {
     var output codestarconnections.CreateConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateConnection, input).Get(ctx, &output)
@@ -168,6 +169,7 @@ func (a *CodeStarConnectionsStub) CreateConnectionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.CreateConnection, input)
     return &CodestarconnectionsCreateConnectionResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) CreateHost(ctx workflow.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error) {
     var output codestarconnections.CreateHostOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHost, input).Get(ctx, &output)
@@ -178,6 +180,7 @@ func (a *CodeStarConnectionsStub) CreateHostAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHost, input)
     return &CodestarconnectionsCreateHostResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) DeleteConnection(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error) {
     var output codestarconnections.DeleteConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input).Get(ctx, &output)
@@ -188,6 +191,7 @@ func (a *CodeStarConnectionsStub) DeleteConnectionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input)
     return &CodestarconnectionsDeleteConnectionResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) DeleteHost(ctx workflow.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error) {
     var output codestarconnections.DeleteHostOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHost, input).Get(ctx, &output)
@@ -198,6 +202,7 @@ func (a *CodeStarConnectionsStub) DeleteHostAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHost, input)
     return &CodestarconnectionsDeleteHostResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) GetConnection(ctx workflow.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error) {
     var output codestarconnections.GetConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConnection, input).Get(ctx, &output)
@@ -208,6 +213,7 @@ func (a *CodeStarConnectionsStub) GetConnectionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetConnection, input)
     return &CodestarconnectionsGetConnectionResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) GetHost(ctx workflow.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error) {
     var output codestarconnections.GetHostOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHost, input).Get(ctx, &output)
@@ -218,6 +224,7 @@ func (a *CodeStarConnectionsStub) GetHostAsync(ctx workflow.Context, input *code
     future := workflow.ExecuteActivity(ctx, a.activities.GetHost, input)
     return &CodestarconnectionsGetHostResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) ListConnections(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error) {
     var output codestarconnections.ListConnectionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListConnections, input).Get(ctx, &output)
@@ -228,6 +235,7 @@ func (a *CodeStarConnectionsStub) ListConnectionsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListConnections, input)
     return &CodestarconnectionsListConnectionsResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) ListHosts(ctx workflow.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error) {
     var output codestarconnections.ListHostsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHosts, input).Get(ctx, &output)
@@ -238,6 +246,7 @@ func (a *CodeStarConnectionsStub) ListHostsAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.ListHosts, input)
     return &CodestarconnectionsListHostsResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) ListTagsForResource(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error) {
     var output codestarconnections.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -248,6 +257,7 @@ func (a *CodeStarConnectionsStub) ListTagsForResourceAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &CodestarconnectionsListTagsForResourceResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) TagResource(ctx workflow.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error) {
     var output codestarconnections.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -258,6 +268,7 @@ func (a *CodeStarConnectionsStub) TagResourceAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &CodestarconnectionsTagResourceResult{Result: future}
 }
+
 func (a *CodeStarConnectionsStub) UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error) {
     var output codestarconnections.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)

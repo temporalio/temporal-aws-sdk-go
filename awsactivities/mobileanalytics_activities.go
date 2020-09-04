@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,8 +14,6 @@ func NewMobileAnalyticsActivities(client mobileanalyticsiface.MobileAnalyticsAPI
     return &MobileAnalyticsActivities{client: client}
 }
 
-
 func (a *MobileAnalyticsActivities) PutEvents(input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error) {
     return a.client.PutEvents(input)
 }
-

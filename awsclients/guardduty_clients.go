@@ -181,6 +181,7 @@ type GuardDutyClient interface {
     UpdateThreatIntelSet(ctx workflow.Context, input *guardduty.UpdateThreatIntelSetInput) (*guardduty.UpdateThreatIntelSetOutput, error)
     UpdateThreatIntelSetAsync(ctx workflow.Context, input *guardduty.UpdateThreatIntelSetInput) *GuarddutyUpdateThreatIntelSetResult
 }
+
 type GuarddutyAcceptInvitationResult struct {
 	Result workflow.Future
 }
@@ -761,7 +762,6 @@ func (r *GuarddutyUpdateThreatIntelSetResult) Get(ctx workflow.Context) (*guardd
     return &output, err
 }
 
-
 type GuardDutyStub struct {
     activities awsactivities.GuardDutyActivities
 }
@@ -769,6 +769,7 @@ type GuardDutyStub struct {
 func NewGuardDutyStub() GuardDutyClient {
     return &GuardDutyStub{}
 }
+
 func (a *GuardDutyStub) AcceptInvitation(ctx workflow.Context, input *guardduty.AcceptInvitationInput) (*guardduty.AcceptInvitationOutput, error) {
     var output guardduty.AcceptInvitationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptInvitation, input).Get(ctx, &output)
@@ -779,6 +780,7 @@ func (a *GuardDutyStub) AcceptInvitationAsync(ctx workflow.Context, input *guard
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptInvitation, input)
     return &GuarddutyAcceptInvitationResult{Result: future}
 }
+
 func (a *GuardDutyStub) ArchiveFindings(ctx workflow.Context, input *guardduty.ArchiveFindingsInput) (*guardduty.ArchiveFindingsOutput, error) {
     var output guardduty.ArchiveFindingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ArchiveFindings, input).Get(ctx, &output)
@@ -789,6 +791,7 @@ func (a *GuardDutyStub) ArchiveFindingsAsync(ctx workflow.Context, input *guardd
     future := workflow.ExecuteActivity(ctx, a.activities.ArchiveFindings, input)
     return &GuarddutyArchiveFindingsResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateDetector(ctx workflow.Context, input *guardduty.CreateDetectorInput) (*guardduty.CreateDetectorOutput, error) {
     var output guardduty.CreateDetectorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDetector, input).Get(ctx, &output)
@@ -799,6 +802,7 @@ func (a *GuardDutyStub) CreateDetectorAsync(ctx workflow.Context, input *guarddu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDetector, input)
     return &GuarddutyCreateDetectorResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateFilter(ctx workflow.Context, input *guardduty.CreateFilterInput) (*guardduty.CreateFilterOutput, error) {
     var output guardduty.CreateFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFilter, input).Get(ctx, &output)
@@ -809,6 +813,7 @@ func (a *GuardDutyStub) CreateFilterAsync(ctx workflow.Context, input *guardduty
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFilter, input)
     return &GuarddutyCreateFilterResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateIPSet(ctx workflow.Context, input *guardduty.CreateIPSetInput) (*guardduty.CreateIPSetOutput, error) {
     var output guardduty.CreateIPSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateIPSet, input).Get(ctx, &output)
@@ -819,6 +824,7 @@ func (a *GuardDutyStub) CreateIPSetAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateIPSet, input)
     return &GuarddutyCreateIPSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateMembers(ctx workflow.Context, input *guardduty.CreateMembersInput) (*guardduty.CreateMembersOutput, error) {
     var output guardduty.CreateMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMembers, input).Get(ctx, &output)
@@ -829,6 +835,7 @@ func (a *GuardDutyStub) CreateMembersAsync(ctx workflow.Context, input *guarddut
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMembers, input)
     return &GuarddutyCreateMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreatePublishingDestination(ctx workflow.Context, input *guardduty.CreatePublishingDestinationInput) (*guardduty.CreatePublishingDestinationOutput, error) {
     var output guardduty.CreatePublishingDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePublishingDestination, input).Get(ctx, &output)
@@ -839,6 +846,7 @@ func (a *GuardDutyStub) CreatePublishingDestinationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePublishingDestination, input)
     return &GuarddutyCreatePublishingDestinationResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateSampleFindings(ctx workflow.Context, input *guardduty.CreateSampleFindingsInput) (*guardduty.CreateSampleFindingsOutput, error) {
     var output guardduty.CreateSampleFindingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSampleFindings, input).Get(ctx, &output)
@@ -849,6 +857,7 @@ func (a *GuardDutyStub) CreateSampleFindingsAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSampleFindings, input)
     return &GuarddutyCreateSampleFindingsResult{Result: future}
 }
+
 func (a *GuardDutyStub) CreateThreatIntelSet(ctx workflow.Context, input *guardduty.CreateThreatIntelSetInput) (*guardduty.CreateThreatIntelSetOutput, error) {
     var output guardduty.CreateThreatIntelSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateThreatIntelSet, input).Get(ctx, &output)
@@ -859,6 +868,7 @@ func (a *GuardDutyStub) CreateThreatIntelSetAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.CreateThreatIntelSet, input)
     return &GuarddutyCreateThreatIntelSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeclineInvitations(ctx workflow.Context, input *guardduty.DeclineInvitationsInput) (*guardduty.DeclineInvitationsOutput, error) {
     var output guardduty.DeclineInvitationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeclineInvitations, input).Get(ctx, &output)
@@ -869,6 +879,7 @@ func (a *GuardDutyStub) DeclineInvitationsAsync(ctx workflow.Context, input *gua
     future := workflow.ExecuteActivity(ctx, a.activities.DeclineInvitations, input)
     return &GuarddutyDeclineInvitationsResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteDetector(ctx workflow.Context, input *guardduty.DeleteDetectorInput) (*guardduty.DeleteDetectorOutput, error) {
     var output guardduty.DeleteDetectorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDetector, input).Get(ctx, &output)
@@ -879,6 +890,7 @@ func (a *GuardDutyStub) DeleteDetectorAsync(ctx workflow.Context, input *guarddu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDetector, input)
     return &GuarddutyDeleteDetectorResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteFilter(ctx workflow.Context, input *guardduty.DeleteFilterInput) (*guardduty.DeleteFilterOutput, error) {
     var output guardduty.DeleteFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFilter, input).Get(ctx, &output)
@@ -889,6 +901,7 @@ func (a *GuardDutyStub) DeleteFilterAsync(ctx workflow.Context, input *guardduty
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFilter, input)
     return &GuarddutyDeleteFilterResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteIPSet(ctx workflow.Context, input *guardduty.DeleteIPSetInput) (*guardduty.DeleteIPSetOutput, error) {
     var output guardduty.DeleteIPSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteIPSet, input).Get(ctx, &output)
@@ -899,6 +912,7 @@ func (a *GuardDutyStub) DeleteIPSetAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteIPSet, input)
     return &GuarddutyDeleteIPSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteInvitations(ctx workflow.Context, input *guardduty.DeleteInvitationsInput) (*guardduty.DeleteInvitationsOutput, error) {
     var output guardduty.DeleteInvitationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInvitations, input).Get(ctx, &output)
@@ -909,6 +923,7 @@ func (a *GuardDutyStub) DeleteInvitationsAsync(ctx workflow.Context, input *guar
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInvitations, input)
     return &GuarddutyDeleteInvitationsResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteMembers(ctx workflow.Context, input *guardduty.DeleteMembersInput) (*guardduty.DeleteMembersOutput, error) {
     var output guardduty.DeleteMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMembers, input).Get(ctx, &output)
@@ -919,6 +934,7 @@ func (a *GuardDutyStub) DeleteMembersAsync(ctx workflow.Context, input *guarddut
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMembers, input)
     return &GuarddutyDeleteMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeletePublishingDestination(ctx workflow.Context, input *guardduty.DeletePublishingDestinationInput) (*guardduty.DeletePublishingDestinationOutput, error) {
     var output guardduty.DeletePublishingDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePublishingDestination, input).Get(ctx, &output)
@@ -929,6 +945,7 @@ func (a *GuardDutyStub) DeletePublishingDestinationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePublishingDestination, input)
     return &GuarddutyDeletePublishingDestinationResult{Result: future}
 }
+
 func (a *GuardDutyStub) DeleteThreatIntelSet(ctx workflow.Context, input *guardduty.DeleteThreatIntelSetInput) (*guardduty.DeleteThreatIntelSetOutput, error) {
     var output guardduty.DeleteThreatIntelSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteThreatIntelSet, input).Get(ctx, &output)
@@ -939,6 +956,7 @@ func (a *GuardDutyStub) DeleteThreatIntelSetAsync(ctx workflow.Context, input *g
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteThreatIntelSet, input)
     return &GuarddutyDeleteThreatIntelSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) DescribeOrganizationConfiguration(ctx workflow.Context, input *guardduty.DescribeOrganizationConfigurationInput) (*guardduty.DescribeOrganizationConfigurationOutput, error) {
     var output guardduty.DescribeOrganizationConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfiguration, input).Get(ctx, &output)
@@ -949,6 +967,7 @@ func (a *GuardDutyStub) DescribeOrganizationConfigurationAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfiguration, input)
     return &GuarddutyDescribeOrganizationConfigurationResult{Result: future}
 }
+
 func (a *GuardDutyStub) DescribePublishingDestination(ctx workflow.Context, input *guardduty.DescribePublishingDestinationInput) (*guardduty.DescribePublishingDestinationOutput, error) {
     var output guardduty.DescribePublishingDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePublishingDestination, input).Get(ctx, &output)
@@ -959,6 +978,7 @@ func (a *GuardDutyStub) DescribePublishingDestinationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePublishingDestination, input)
     return &GuarddutyDescribePublishingDestinationResult{Result: future}
 }
+
 func (a *GuardDutyStub) DisableOrganizationAdminAccount(ctx workflow.Context, input *guardduty.DisableOrganizationAdminAccountInput) (*guardduty.DisableOrganizationAdminAccountOutput, error) {
     var output guardduty.DisableOrganizationAdminAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisableOrganizationAdminAccount, input).Get(ctx, &output)
@@ -969,6 +989,7 @@ func (a *GuardDutyStub) DisableOrganizationAdminAccountAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DisableOrganizationAdminAccount, input)
     return &GuarddutyDisableOrganizationAdminAccountResult{Result: future}
 }
+
 func (a *GuardDutyStub) DisassociateFromMasterAccount(ctx workflow.Context, input *guardduty.DisassociateFromMasterAccountInput) (*guardduty.DisassociateFromMasterAccountOutput, error) {
     var output guardduty.DisassociateFromMasterAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateFromMasterAccount, input).Get(ctx, &output)
@@ -979,6 +1000,7 @@ func (a *GuardDutyStub) DisassociateFromMasterAccountAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateFromMasterAccount, input)
     return &GuarddutyDisassociateFromMasterAccountResult{Result: future}
 }
+
 func (a *GuardDutyStub) DisassociateMembers(ctx workflow.Context, input *guardduty.DisassociateMembersInput) (*guardduty.DisassociateMembersOutput, error) {
     var output guardduty.DisassociateMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateMembers, input).Get(ctx, &output)
@@ -989,6 +1011,7 @@ func (a *GuardDutyStub) DisassociateMembersAsync(ctx workflow.Context, input *gu
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateMembers, input)
     return &GuarddutyDisassociateMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) EnableOrganizationAdminAccount(ctx workflow.Context, input *guardduty.EnableOrganizationAdminAccountInput) (*guardduty.EnableOrganizationAdminAccountOutput, error) {
     var output guardduty.EnableOrganizationAdminAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EnableOrganizationAdminAccount, input).Get(ctx, &output)
@@ -999,6 +1022,7 @@ func (a *GuardDutyStub) EnableOrganizationAdminAccountAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.EnableOrganizationAdminAccount, input)
     return &GuarddutyEnableOrganizationAdminAccountResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetDetector(ctx workflow.Context, input *guardduty.GetDetectorInput) (*guardduty.GetDetectorOutput, error) {
     var output guardduty.GetDetectorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDetector, input).Get(ctx, &output)
@@ -1009,6 +1033,7 @@ func (a *GuardDutyStub) GetDetectorAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.GetDetector, input)
     return &GuarddutyGetDetectorResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetFilter(ctx workflow.Context, input *guardduty.GetFilterInput) (*guardduty.GetFilterOutput, error) {
     var output guardduty.GetFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFilter, input).Get(ctx, &output)
@@ -1019,6 +1044,7 @@ func (a *GuardDutyStub) GetFilterAsync(ctx workflow.Context, input *guardduty.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetFilter, input)
     return &GuarddutyGetFilterResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetFindings(ctx workflow.Context, input *guardduty.GetFindingsInput) (*guardduty.GetFindingsOutput, error) {
     var output guardduty.GetFindingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFindings, input).Get(ctx, &output)
@@ -1029,6 +1055,7 @@ func (a *GuardDutyStub) GetFindingsAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.GetFindings, input)
     return &GuarddutyGetFindingsResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetFindingsStatistics(ctx workflow.Context, input *guardduty.GetFindingsStatisticsInput) (*guardduty.GetFindingsStatisticsOutput, error) {
     var output guardduty.GetFindingsStatisticsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFindingsStatistics, input).Get(ctx, &output)
@@ -1039,6 +1066,7 @@ func (a *GuardDutyStub) GetFindingsStatisticsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.GetFindingsStatistics, input)
     return &GuarddutyGetFindingsStatisticsResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetIPSet(ctx workflow.Context, input *guardduty.GetIPSetInput) (*guardduty.GetIPSetOutput, error) {
     var output guardduty.GetIPSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetIPSet, input).Get(ctx, &output)
@@ -1049,6 +1077,7 @@ func (a *GuardDutyStub) GetIPSetAsync(ctx workflow.Context, input *guardduty.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetIPSet, input)
     return &GuarddutyGetIPSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetInvitationsCount(ctx workflow.Context, input *guardduty.GetInvitationsCountInput) (*guardduty.GetInvitationsCountOutput, error) {
     var output guardduty.GetInvitationsCountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetInvitationsCount, input).Get(ctx, &output)
@@ -1059,6 +1088,7 @@ func (a *GuardDutyStub) GetInvitationsCountAsync(ctx workflow.Context, input *gu
     future := workflow.ExecuteActivity(ctx, a.activities.GetInvitationsCount, input)
     return &GuarddutyGetInvitationsCountResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetMasterAccount(ctx workflow.Context, input *guardduty.GetMasterAccountInput) (*guardduty.GetMasterAccountOutput, error) {
     var output guardduty.GetMasterAccountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMasterAccount, input).Get(ctx, &output)
@@ -1069,6 +1099,7 @@ func (a *GuardDutyStub) GetMasterAccountAsync(ctx workflow.Context, input *guard
     future := workflow.ExecuteActivity(ctx, a.activities.GetMasterAccount, input)
     return &GuarddutyGetMasterAccountResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetMemberDetectors(ctx workflow.Context, input *guardduty.GetMemberDetectorsInput) (*guardduty.GetMemberDetectorsOutput, error) {
     var output guardduty.GetMemberDetectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMemberDetectors, input).Get(ctx, &output)
@@ -1079,6 +1110,7 @@ func (a *GuardDutyStub) GetMemberDetectorsAsync(ctx workflow.Context, input *gua
     future := workflow.ExecuteActivity(ctx, a.activities.GetMemberDetectors, input)
     return &GuarddutyGetMemberDetectorsResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetMembers(ctx workflow.Context, input *guardduty.GetMembersInput) (*guardduty.GetMembersOutput, error) {
     var output guardduty.GetMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMembers, input).Get(ctx, &output)
@@ -1089,6 +1121,7 @@ func (a *GuardDutyStub) GetMembersAsync(ctx workflow.Context, input *guardduty.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetMembers, input)
     return &GuarddutyGetMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetThreatIntelSet(ctx workflow.Context, input *guardduty.GetThreatIntelSetInput) (*guardduty.GetThreatIntelSetOutput, error) {
     var output guardduty.GetThreatIntelSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetThreatIntelSet, input).Get(ctx, &output)
@@ -1099,6 +1132,7 @@ func (a *GuardDutyStub) GetThreatIntelSetAsync(ctx workflow.Context, input *guar
     future := workflow.ExecuteActivity(ctx, a.activities.GetThreatIntelSet, input)
     return &GuarddutyGetThreatIntelSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) GetUsageStatistics(ctx workflow.Context, input *guardduty.GetUsageStatisticsInput) (*guardduty.GetUsageStatisticsOutput, error) {
     var output guardduty.GetUsageStatisticsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUsageStatistics, input).Get(ctx, &output)
@@ -1109,6 +1143,7 @@ func (a *GuardDutyStub) GetUsageStatisticsAsync(ctx workflow.Context, input *gua
     future := workflow.ExecuteActivity(ctx, a.activities.GetUsageStatistics, input)
     return &GuarddutyGetUsageStatisticsResult{Result: future}
 }
+
 func (a *GuardDutyStub) InviteMembers(ctx workflow.Context, input *guardduty.InviteMembersInput) (*guardduty.InviteMembersOutput, error) {
     var output guardduty.InviteMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.InviteMembers, input).Get(ctx, &output)
@@ -1119,6 +1154,7 @@ func (a *GuardDutyStub) InviteMembersAsync(ctx workflow.Context, input *guarddut
     future := workflow.ExecuteActivity(ctx, a.activities.InviteMembers, input)
     return &GuarddutyInviteMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListDetectors(ctx workflow.Context, input *guardduty.ListDetectorsInput) (*guardduty.ListDetectorsOutput, error) {
     var output guardduty.ListDetectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDetectors, input).Get(ctx, &output)
@@ -1129,6 +1165,7 @@ func (a *GuardDutyStub) ListDetectorsAsync(ctx workflow.Context, input *guarddut
     future := workflow.ExecuteActivity(ctx, a.activities.ListDetectors, input)
     return &GuarddutyListDetectorsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListFilters(ctx workflow.Context, input *guardduty.ListFiltersInput) (*guardduty.ListFiltersOutput, error) {
     var output guardduty.ListFiltersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFilters, input).Get(ctx, &output)
@@ -1139,6 +1176,7 @@ func (a *GuardDutyStub) ListFiltersAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.ListFilters, input)
     return &GuarddutyListFiltersResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListFindings(ctx workflow.Context, input *guardduty.ListFindingsInput) (*guardduty.ListFindingsOutput, error) {
     var output guardduty.ListFindingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFindings, input).Get(ctx, &output)
@@ -1149,6 +1187,7 @@ func (a *GuardDutyStub) ListFindingsAsync(ctx workflow.Context, input *guardduty
     future := workflow.ExecuteActivity(ctx, a.activities.ListFindings, input)
     return &GuarddutyListFindingsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListIPSets(ctx workflow.Context, input *guardduty.ListIPSetsInput) (*guardduty.ListIPSetsOutput, error) {
     var output guardduty.ListIPSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListIPSets, input).Get(ctx, &output)
@@ -1159,6 +1198,7 @@ func (a *GuardDutyStub) ListIPSetsAsync(ctx workflow.Context, input *guardduty.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListIPSets, input)
     return &GuarddutyListIPSetsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListInvitations(ctx workflow.Context, input *guardduty.ListInvitationsInput) (*guardduty.ListInvitationsOutput, error) {
     var output guardduty.ListInvitationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input).Get(ctx, &output)
@@ -1169,6 +1209,7 @@ func (a *GuardDutyStub) ListInvitationsAsync(ctx workflow.Context, input *guardd
     future := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input)
     return &GuarddutyListInvitationsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListMembers(ctx workflow.Context, input *guardduty.ListMembersInput) (*guardduty.ListMembersOutput, error) {
     var output guardduty.ListMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input).Get(ctx, &output)
@@ -1179,6 +1220,7 @@ func (a *GuardDutyStub) ListMembersAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input)
     return &GuarddutyListMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListOrganizationAdminAccounts(ctx workflow.Context, input *guardduty.ListOrganizationAdminAccountsInput) (*guardduty.ListOrganizationAdminAccountsOutput, error) {
     var output guardduty.ListOrganizationAdminAccountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationAdminAccounts, input).Get(ctx, &output)
@@ -1189,6 +1231,7 @@ func (a *GuardDutyStub) ListOrganizationAdminAccountsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.ListOrganizationAdminAccounts, input)
     return &GuarddutyListOrganizationAdminAccountsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListPublishingDestinations(ctx workflow.Context, input *guardduty.ListPublishingDestinationsInput) (*guardduty.ListPublishingDestinationsOutput, error) {
     var output guardduty.ListPublishingDestinationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPublishingDestinations, input).Get(ctx, &output)
@@ -1199,6 +1242,7 @@ func (a *GuardDutyStub) ListPublishingDestinationsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListPublishingDestinations, input)
     return &GuarddutyListPublishingDestinationsResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListTagsForResource(ctx workflow.Context, input *guardduty.ListTagsForResourceInput) (*guardduty.ListTagsForResourceOutput, error) {
     var output guardduty.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1209,6 +1253,7 @@ func (a *GuardDutyStub) ListTagsForResourceAsync(ctx workflow.Context, input *gu
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &GuarddutyListTagsForResourceResult{Result: future}
 }
+
 func (a *GuardDutyStub) ListThreatIntelSets(ctx workflow.Context, input *guardduty.ListThreatIntelSetsInput) (*guardduty.ListThreatIntelSetsOutput, error) {
     var output guardduty.ListThreatIntelSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListThreatIntelSets, input).Get(ctx, &output)
@@ -1219,6 +1264,7 @@ func (a *GuardDutyStub) ListThreatIntelSetsAsync(ctx workflow.Context, input *gu
     future := workflow.ExecuteActivity(ctx, a.activities.ListThreatIntelSets, input)
     return &GuarddutyListThreatIntelSetsResult{Result: future}
 }
+
 func (a *GuardDutyStub) StartMonitoringMembers(ctx workflow.Context, input *guardduty.StartMonitoringMembersInput) (*guardduty.StartMonitoringMembersOutput, error) {
     var output guardduty.StartMonitoringMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMonitoringMembers, input).Get(ctx, &output)
@@ -1229,6 +1275,7 @@ func (a *GuardDutyStub) StartMonitoringMembersAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.StartMonitoringMembers, input)
     return &GuarddutyStartMonitoringMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) StopMonitoringMembers(ctx workflow.Context, input *guardduty.StopMonitoringMembersInput) (*guardduty.StopMonitoringMembersOutput, error) {
     var output guardduty.StopMonitoringMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopMonitoringMembers, input).Get(ctx, &output)
@@ -1239,6 +1286,7 @@ func (a *GuardDutyStub) StopMonitoringMembersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.StopMonitoringMembers, input)
     return &GuarddutyStopMonitoringMembersResult{Result: future}
 }
+
 func (a *GuardDutyStub) TagResource(ctx workflow.Context, input *guardduty.TagResourceInput) (*guardduty.TagResourceOutput, error) {
     var output guardduty.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1249,6 +1297,7 @@ func (a *GuardDutyStub) TagResourceAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &GuarddutyTagResourceResult{Result: future}
 }
+
 func (a *GuardDutyStub) UnarchiveFindings(ctx workflow.Context, input *guardduty.UnarchiveFindingsInput) (*guardduty.UnarchiveFindingsOutput, error) {
     var output guardduty.UnarchiveFindingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UnarchiveFindings, input).Get(ctx, &output)
@@ -1259,6 +1308,7 @@ func (a *GuardDutyStub) UnarchiveFindingsAsync(ctx workflow.Context, input *guar
     future := workflow.ExecuteActivity(ctx, a.activities.UnarchiveFindings, input)
     return &GuarddutyUnarchiveFindingsResult{Result: future}
 }
+
 func (a *GuardDutyStub) UntagResource(ctx workflow.Context, input *guardduty.UntagResourceInput) (*guardduty.UntagResourceOutput, error) {
     var output guardduty.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1269,6 +1319,7 @@ func (a *GuardDutyStub) UntagResourceAsync(ctx workflow.Context, input *guarddut
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &GuarddutyUntagResourceResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateDetector(ctx workflow.Context, input *guardduty.UpdateDetectorInput) (*guardduty.UpdateDetectorOutput, error) {
     var output guardduty.UpdateDetectorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDetector, input).Get(ctx, &output)
@@ -1279,6 +1330,7 @@ func (a *GuardDutyStub) UpdateDetectorAsync(ctx workflow.Context, input *guarddu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDetector, input)
     return &GuarddutyUpdateDetectorResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateFilter(ctx workflow.Context, input *guardduty.UpdateFilterInput) (*guardduty.UpdateFilterOutput, error) {
     var output guardduty.UpdateFilterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFilter, input).Get(ctx, &output)
@@ -1289,6 +1341,7 @@ func (a *GuardDutyStub) UpdateFilterAsync(ctx workflow.Context, input *guardduty
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFilter, input)
     return &GuarddutyUpdateFilterResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateFindingsFeedback(ctx workflow.Context, input *guardduty.UpdateFindingsFeedbackInput) (*guardduty.UpdateFindingsFeedbackOutput, error) {
     var output guardduty.UpdateFindingsFeedbackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFindingsFeedback, input).Get(ctx, &output)
@@ -1299,6 +1352,7 @@ func (a *GuardDutyStub) UpdateFindingsFeedbackAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFindingsFeedback, input)
     return &GuarddutyUpdateFindingsFeedbackResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateIPSet(ctx workflow.Context, input *guardduty.UpdateIPSetInput) (*guardduty.UpdateIPSetOutput, error) {
     var output guardduty.UpdateIPSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateIPSet, input).Get(ctx, &output)
@@ -1309,6 +1363,7 @@ func (a *GuardDutyStub) UpdateIPSetAsync(ctx workflow.Context, input *guardduty.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateIPSet, input)
     return &GuarddutyUpdateIPSetResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateMemberDetectors(ctx workflow.Context, input *guardduty.UpdateMemberDetectorsInput) (*guardduty.UpdateMemberDetectorsOutput, error) {
     var output guardduty.UpdateMemberDetectorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMemberDetectors, input).Get(ctx, &output)
@@ -1319,6 +1374,7 @@ func (a *GuardDutyStub) UpdateMemberDetectorsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMemberDetectors, input)
     return &GuarddutyUpdateMemberDetectorsResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateOrganizationConfiguration(ctx workflow.Context, input *guardduty.UpdateOrganizationConfigurationInput) (*guardduty.UpdateOrganizationConfigurationOutput, error) {
     var output guardduty.UpdateOrganizationConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateOrganizationConfiguration, input).Get(ctx, &output)
@@ -1329,6 +1385,7 @@ func (a *GuardDutyStub) UpdateOrganizationConfigurationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateOrganizationConfiguration, input)
     return &GuarddutyUpdateOrganizationConfigurationResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdatePublishingDestination(ctx workflow.Context, input *guardduty.UpdatePublishingDestinationInput) (*guardduty.UpdatePublishingDestinationOutput, error) {
     var output guardduty.UpdatePublishingDestinationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdatePublishingDestination, input).Get(ctx, &output)
@@ -1339,6 +1396,7 @@ func (a *GuardDutyStub) UpdatePublishingDestinationAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.UpdatePublishingDestination, input)
     return &GuarddutyUpdatePublishingDestinationResult{Result: future}
 }
+
 func (a *GuardDutyStub) UpdateThreatIntelSet(ctx workflow.Context, input *guardduty.UpdateThreatIntelSetInput) (*guardduty.UpdateThreatIntelSetOutput, error) {
     var output guardduty.UpdateThreatIntelSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateThreatIntelSet, input).Get(ctx, &output)

@@ -25,6 +25,7 @@ type TextractClient interface {
     StartDocumentTextDetection(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) (*textract.StartDocumentTextDetectionOutput, error)
     StartDocumentTextDetectionAsync(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) *TextractStartDocumentTextDetectionResult
 }
+
 type TextractAnalyzeDocumentResult struct {
 	Result workflow.Future
 }
@@ -85,7 +86,6 @@ func (r *TextractStartDocumentTextDetectionResult) Get(ctx workflow.Context) (*t
     return &output, err
 }
 
-
 type TextractStub struct {
     activities awsactivities.TextractActivities
 }
@@ -93,6 +93,7 @@ type TextractStub struct {
 func NewTextractStub() TextractClient {
     return &TextractStub{}
 }
+
 func (a *TextractStub) AnalyzeDocument(ctx workflow.Context, input *textract.AnalyzeDocumentInput) (*textract.AnalyzeDocumentOutput, error) {
     var output textract.AnalyzeDocumentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AnalyzeDocument, input).Get(ctx, &output)
@@ -103,6 +104,7 @@ func (a *TextractStub) AnalyzeDocumentAsync(ctx workflow.Context, input *textrac
     future := workflow.ExecuteActivity(ctx, a.activities.AnalyzeDocument, input)
     return &TextractAnalyzeDocumentResult{Result: future}
 }
+
 func (a *TextractStub) DetectDocumentText(ctx workflow.Context, input *textract.DetectDocumentTextInput) (*textract.DetectDocumentTextOutput, error) {
     var output textract.DetectDocumentTextOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectDocumentText, input).Get(ctx, &output)
@@ -113,6 +115,7 @@ func (a *TextractStub) DetectDocumentTextAsync(ctx workflow.Context, input *text
     future := workflow.ExecuteActivity(ctx, a.activities.DetectDocumentText, input)
     return &TextractDetectDocumentTextResult{Result: future}
 }
+
 func (a *TextractStub) GetDocumentAnalysis(ctx workflow.Context, input *textract.GetDocumentAnalysisInput) (*textract.GetDocumentAnalysisOutput, error) {
     var output textract.GetDocumentAnalysisOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDocumentAnalysis, input).Get(ctx, &output)
@@ -123,6 +126,7 @@ func (a *TextractStub) GetDocumentAnalysisAsync(ctx workflow.Context, input *tex
     future := workflow.ExecuteActivity(ctx, a.activities.GetDocumentAnalysis, input)
     return &TextractGetDocumentAnalysisResult{Result: future}
 }
+
 func (a *TextractStub) GetDocumentTextDetection(ctx workflow.Context, input *textract.GetDocumentTextDetectionInput) (*textract.GetDocumentTextDetectionOutput, error) {
     var output textract.GetDocumentTextDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDocumentTextDetection, input).Get(ctx, &output)
@@ -133,6 +137,7 @@ func (a *TextractStub) GetDocumentTextDetectionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetDocumentTextDetection, input)
     return &TextractGetDocumentTextDetectionResult{Result: future}
 }
+
 func (a *TextractStub) StartDocumentAnalysis(ctx workflow.Context, input *textract.StartDocumentAnalysisInput) (*textract.StartDocumentAnalysisOutput, error) {
     var output textract.StartDocumentAnalysisOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDocumentAnalysis, input).Get(ctx, &output)
@@ -143,6 +148,7 @@ func (a *TextractStub) StartDocumentAnalysisAsync(ctx workflow.Context, input *t
     future := workflow.ExecuteActivity(ctx, a.activities.StartDocumentAnalysis, input)
     return &TextractStartDocumentAnalysisResult{Result: future}
 }
+
 func (a *TextractStub) StartDocumentTextDetection(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) (*textract.StartDocumentTextDetectionOutput, error) {
     var output textract.StartDocumentTextDetectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDocumentTextDetection, input).Get(ctx, &output)

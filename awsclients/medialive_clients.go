@@ -159,6 +159,7 @@ type MediaLiveClient interface {
     WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
     WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
     WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error}
+
 type MedialiveBatchUpdateScheduleResult struct {
 	Result workflow.Future
 }
@@ -629,7 +630,6 @@ func (r *MedialiveUpdateReservationResult) Get(ctx workflow.Context) (*medialive
     return &output, err
 }
 
-
 type MediaLiveStub struct {
     activities awsactivities.MediaLiveActivities
 }
@@ -637,6 +637,7 @@ type MediaLiveStub struct {
 func NewMediaLiveStub() MediaLiveClient {
     return &MediaLiveStub{}
 }
+
 func (a *MediaLiveStub) BatchUpdateSchedule(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
     var output medialive.BatchUpdateScheduleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchUpdateSchedule, input).Get(ctx, &output)
@@ -647,6 +648,7 @@ func (a *MediaLiveStub) BatchUpdateScheduleAsync(ctx workflow.Context, input *me
     future := workflow.ExecuteActivity(ctx, a.activities.BatchUpdateSchedule, input)
     return &MedialiveBatchUpdateScheduleResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateChannel(ctx workflow.Context, input *medialive.CreateChannelInput) (*medialive.CreateChannelOutput, error) {
     var output medialive.CreateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input).Get(ctx, &output)
@@ -657,6 +659,7 @@ func (a *MediaLiveStub) CreateChannelAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.CreateChannel, input)
     return &MedialiveCreateChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateInput(ctx workflow.Context, input *medialive.CreateInputInput) (*medialive.CreateInputOutput, error) {
     var output medialive.CreateInputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateInput, input).Get(ctx, &output)
@@ -667,6 +670,7 @@ func (a *MediaLiveStub) CreateInputAsync(ctx workflow.Context, input *medialive.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateInput, input)
     return &MedialiveCreateInputResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateInputSecurityGroup(ctx workflow.Context, input *medialive.CreateInputSecurityGroupInput) (*medialive.CreateInputSecurityGroupOutput, error) {
     var output medialive.CreateInputSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateInputSecurityGroup, input).Get(ctx, &output)
@@ -677,6 +681,7 @@ func (a *MediaLiveStub) CreateInputSecurityGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateInputSecurityGroup, input)
     return &MedialiveCreateInputSecurityGroupResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateMultiplex(ctx workflow.Context, input *medialive.CreateMultiplexInput) (*medialive.CreateMultiplexOutput, error) {
     var output medialive.CreateMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMultiplex, input).Get(ctx, &output)
@@ -687,6 +692,7 @@ func (a *MediaLiveStub) CreateMultiplexAsync(ctx workflow.Context, input *medial
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMultiplex, input)
     return &MedialiveCreateMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateMultiplexProgram(ctx workflow.Context, input *medialive.CreateMultiplexProgramInput) (*medialive.CreateMultiplexProgramOutput, error) {
     var output medialive.CreateMultiplexProgramOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMultiplexProgram, input).Get(ctx, &output)
@@ -697,6 +703,7 @@ func (a *MediaLiveStub) CreateMultiplexProgramAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMultiplexProgram, input)
     return &MedialiveCreateMultiplexProgramResult{Result: future}
 }
+
 func (a *MediaLiveStub) CreateTags(ctx workflow.Context, input *medialive.CreateTagsInput) (*medialive.CreateTagsOutput, error) {
     var output medialive.CreateTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTags, input).Get(ctx, &output)
@@ -707,6 +714,7 @@ func (a *MediaLiveStub) CreateTagsAsync(ctx workflow.Context, input *medialive.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTags, input)
     return &MedialiveCreateTagsResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteChannel(ctx workflow.Context, input *medialive.DeleteChannelInput) (*medialive.DeleteChannelOutput, error) {
     var output medialive.DeleteChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input).Get(ctx, &output)
@@ -717,6 +725,7 @@ func (a *MediaLiveStub) DeleteChannelAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteChannel, input)
     return &MedialiveDeleteChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteInput(ctx workflow.Context, input *medialive.DeleteInputInput) (*medialive.DeleteInputOutput, error) {
     var output medialive.DeleteInputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInput, input).Get(ctx, &output)
@@ -727,6 +736,7 @@ func (a *MediaLiveStub) DeleteInputAsync(ctx workflow.Context, input *medialive.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInput, input)
     return &MedialiveDeleteInputResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteInputSecurityGroup(ctx workflow.Context, input *medialive.DeleteInputSecurityGroupInput) (*medialive.DeleteInputSecurityGroupOutput, error) {
     var output medialive.DeleteInputSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInputSecurityGroup, input).Get(ctx, &output)
@@ -737,6 +747,7 @@ func (a *MediaLiveStub) DeleteInputSecurityGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInputSecurityGroup, input)
     return &MedialiveDeleteInputSecurityGroupResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteMultiplex(ctx workflow.Context, input *medialive.DeleteMultiplexInput) (*medialive.DeleteMultiplexOutput, error) {
     var output medialive.DeleteMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMultiplex, input).Get(ctx, &output)
@@ -747,6 +758,7 @@ func (a *MediaLiveStub) DeleteMultiplexAsync(ctx workflow.Context, input *medial
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMultiplex, input)
     return &MedialiveDeleteMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteMultiplexProgram(ctx workflow.Context, input *medialive.DeleteMultiplexProgramInput) (*medialive.DeleteMultiplexProgramOutput, error) {
     var output medialive.DeleteMultiplexProgramOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMultiplexProgram, input).Get(ctx, &output)
@@ -757,6 +769,7 @@ func (a *MediaLiveStub) DeleteMultiplexProgramAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMultiplexProgram, input)
     return &MedialiveDeleteMultiplexProgramResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteReservation(ctx workflow.Context, input *medialive.DeleteReservationInput) (*medialive.DeleteReservationOutput, error) {
     var output medialive.DeleteReservationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReservation, input).Get(ctx, &output)
@@ -767,6 +780,7 @@ func (a *MediaLiveStub) DeleteReservationAsync(ctx workflow.Context, input *medi
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReservation, input)
     return &MedialiveDeleteReservationResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteSchedule(ctx workflow.Context, input *medialive.DeleteScheduleInput) (*medialive.DeleteScheduleOutput, error) {
     var output medialive.DeleteScheduleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSchedule, input).Get(ctx, &output)
@@ -777,6 +791,7 @@ func (a *MediaLiveStub) DeleteScheduleAsync(ctx workflow.Context, input *mediali
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSchedule, input)
     return &MedialiveDeleteScheduleResult{Result: future}
 }
+
 func (a *MediaLiveStub) DeleteTags(ctx workflow.Context, input *medialive.DeleteTagsInput) (*medialive.DeleteTagsOutput, error) {
     var output medialive.DeleteTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTags, input).Get(ctx, &output)
@@ -787,6 +802,7 @@ func (a *MediaLiveStub) DeleteTagsAsync(ctx workflow.Context, input *medialive.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTags, input)
     return &MedialiveDeleteTagsResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeChannel(ctx workflow.Context, input *medialive.DescribeChannelInput) (*medialive.DescribeChannelOutput, error) {
     var output medialive.DescribeChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeChannel, input).Get(ctx, &output)
@@ -797,6 +813,7 @@ func (a *MediaLiveStub) DescribeChannelAsync(ctx workflow.Context, input *medial
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeChannel, input)
     return &MedialiveDescribeChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeInput(ctx workflow.Context, input *medialive.DescribeInputInput) (*medialive.DescribeInputOutput, error) {
     var output medialive.DescribeInputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInput, input).Get(ctx, &output)
@@ -807,6 +824,7 @@ func (a *MediaLiveStub) DescribeInputAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInput, input)
     return &MedialiveDescribeInputResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeInputDevice(ctx workflow.Context, input *medialive.DescribeInputDeviceInput) (*medialive.DescribeInputDeviceOutput, error) {
     var output medialive.DescribeInputDeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInputDevice, input).Get(ctx, &output)
@@ -817,6 +835,7 @@ func (a *MediaLiveStub) DescribeInputDeviceAsync(ctx workflow.Context, input *me
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInputDevice, input)
     return &MedialiveDescribeInputDeviceResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeInputDeviceThumbnail(ctx workflow.Context, input *medialive.DescribeInputDeviceThumbnailInput) (*medialive.DescribeInputDeviceThumbnailOutput, error) {
     var output medialive.DescribeInputDeviceThumbnailOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInputDeviceThumbnail, input).Get(ctx, &output)
@@ -827,6 +846,7 @@ func (a *MediaLiveStub) DescribeInputDeviceThumbnailAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInputDeviceThumbnail, input)
     return &MedialiveDescribeInputDeviceThumbnailResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeInputSecurityGroup(ctx workflow.Context, input *medialive.DescribeInputSecurityGroupInput) (*medialive.DescribeInputSecurityGroupOutput, error) {
     var output medialive.DescribeInputSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInputSecurityGroup, input).Get(ctx, &output)
@@ -837,6 +857,7 @@ func (a *MediaLiveStub) DescribeInputSecurityGroupAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInputSecurityGroup, input)
     return &MedialiveDescribeInputSecurityGroupResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeMultiplex(ctx workflow.Context, input *medialive.DescribeMultiplexInput) (*medialive.DescribeMultiplexOutput, error) {
     var output medialive.DescribeMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMultiplex, input).Get(ctx, &output)
@@ -847,6 +868,7 @@ func (a *MediaLiveStub) DescribeMultiplexAsync(ctx workflow.Context, input *medi
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMultiplex, input)
     return &MedialiveDescribeMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeMultiplexProgram(ctx workflow.Context, input *medialive.DescribeMultiplexProgramInput) (*medialive.DescribeMultiplexProgramOutput, error) {
     var output medialive.DescribeMultiplexProgramOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeMultiplexProgram, input).Get(ctx, &output)
@@ -857,6 +879,7 @@ func (a *MediaLiveStub) DescribeMultiplexProgramAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeMultiplexProgram, input)
     return &MedialiveDescribeMultiplexProgramResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeOffering(ctx workflow.Context, input *medialive.DescribeOfferingInput) (*medialive.DescribeOfferingOutput, error) {
     var output medialive.DescribeOfferingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOffering, input).Get(ctx, &output)
@@ -867,6 +890,7 @@ func (a *MediaLiveStub) DescribeOfferingAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOffering, input)
     return &MedialiveDescribeOfferingResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeReservation(ctx workflow.Context, input *medialive.DescribeReservationInput) (*medialive.DescribeReservationOutput, error) {
     var output medialive.DescribeReservationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReservation, input).Get(ctx, &output)
@@ -877,6 +901,7 @@ func (a *MediaLiveStub) DescribeReservationAsync(ctx workflow.Context, input *me
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReservation, input)
     return &MedialiveDescribeReservationResult{Result: future}
 }
+
 func (a *MediaLiveStub) DescribeSchedule(ctx workflow.Context, input *medialive.DescribeScheduleInput) (*medialive.DescribeScheduleOutput, error) {
     var output medialive.DescribeScheduleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSchedule, input).Get(ctx, &output)
@@ -887,6 +912,7 @@ func (a *MediaLiveStub) DescribeScheduleAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSchedule, input)
     return &MedialiveDescribeScheduleResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListChannels(ctx workflow.Context, input *medialive.ListChannelsInput) (*medialive.ListChannelsOutput, error) {
     var output medialive.ListChannelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input).Get(ctx, &output)
@@ -897,6 +923,7 @@ func (a *MediaLiveStub) ListChannelsAsync(ctx workflow.Context, input *medialive
     future := workflow.ExecuteActivity(ctx, a.activities.ListChannels, input)
     return &MedialiveListChannelsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListInputDevices(ctx workflow.Context, input *medialive.ListInputDevicesInput) (*medialive.ListInputDevicesOutput, error) {
     var output medialive.ListInputDevicesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInputDevices, input).Get(ctx, &output)
@@ -907,6 +934,7 @@ func (a *MediaLiveStub) ListInputDevicesAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.ListInputDevices, input)
     return &MedialiveListInputDevicesResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListInputSecurityGroups(ctx workflow.Context, input *medialive.ListInputSecurityGroupsInput) (*medialive.ListInputSecurityGroupsOutput, error) {
     var output medialive.ListInputSecurityGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInputSecurityGroups, input).Get(ctx, &output)
@@ -917,6 +945,7 @@ func (a *MediaLiveStub) ListInputSecurityGroupsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListInputSecurityGroups, input)
     return &MedialiveListInputSecurityGroupsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListInputs(ctx workflow.Context, input *medialive.ListInputsInput) (*medialive.ListInputsOutput, error) {
     var output medialive.ListInputsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInputs, input).Get(ctx, &output)
@@ -927,6 +956,7 @@ func (a *MediaLiveStub) ListInputsAsync(ctx workflow.Context, input *medialive.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListInputs, input)
     return &MedialiveListInputsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListMultiplexPrograms(ctx workflow.Context, input *medialive.ListMultiplexProgramsInput) (*medialive.ListMultiplexProgramsOutput, error) {
     var output medialive.ListMultiplexProgramsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMultiplexPrograms, input).Get(ctx, &output)
@@ -937,6 +967,7 @@ func (a *MediaLiveStub) ListMultiplexProgramsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListMultiplexPrograms, input)
     return &MedialiveListMultiplexProgramsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListMultiplexes(ctx workflow.Context, input *medialive.ListMultiplexesInput) (*medialive.ListMultiplexesOutput, error) {
     var output medialive.ListMultiplexesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMultiplexes, input).Get(ctx, &output)
@@ -947,6 +978,7 @@ func (a *MediaLiveStub) ListMultiplexesAsync(ctx workflow.Context, input *medial
     future := workflow.ExecuteActivity(ctx, a.activities.ListMultiplexes, input)
     return &MedialiveListMultiplexesResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListOfferings(ctx workflow.Context, input *medialive.ListOfferingsInput) (*medialive.ListOfferingsOutput, error) {
     var output medialive.ListOfferingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListOfferings, input).Get(ctx, &output)
@@ -957,6 +989,7 @@ func (a *MediaLiveStub) ListOfferingsAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.ListOfferings, input)
     return &MedialiveListOfferingsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListReservations(ctx workflow.Context, input *medialive.ListReservationsInput) (*medialive.ListReservationsOutput, error) {
     var output medialive.ListReservationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListReservations, input).Get(ctx, &output)
@@ -967,6 +1000,7 @@ func (a *MediaLiveStub) ListReservationsAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.ListReservations, input)
     return &MedialiveListReservationsResult{Result: future}
 }
+
 func (a *MediaLiveStub) ListTagsForResource(ctx workflow.Context, input *medialive.ListTagsForResourceInput) (*medialive.ListTagsForResourceOutput, error) {
     var output medialive.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -977,6 +1011,7 @@ func (a *MediaLiveStub) ListTagsForResourceAsync(ctx workflow.Context, input *me
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &MedialiveListTagsForResourceResult{Result: future}
 }
+
 func (a *MediaLiveStub) PurchaseOffering(ctx workflow.Context, input *medialive.PurchaseOfferingInput) (*medialive.PurchaseOfferingOutput, error) {
     var output medialive.PurchaseOfferingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PurchaseOffering, input).Get(ctx, &output)
@@ -987,6 +1022,7 @@ func (a *MediaLiveStub) PurchaseOfferingAsync(ctx workflow.Context, input *media
     future := workflow.ExecuteActivity(ctx, a.activities.PurchaseOffering, input)
     return &MedialivePurchaseOfferingResult{Result: future}
 }
+
 func (a *MediaLiveStub) StartChannel(ctx workflow.Context, input *medialive.StartChannelInput) (*medialive.StartChannelOutput, error) {
     var output medialive.StartChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartChannel, input).Get(ctx, &output)
@@ -997,6 +1033,7 @@ func (a *MediaLiveStub) StartChannelAsync(ctx workflow.Context, input *medialive
     future := workflow.ExecuteActivity(ctx, a.activities.StartChannel, input)
     return &MedialiveStartChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) StartMultiplex(ctx workflow.Context, input *medialive.StartMultiplexInput) (*medialive.StartMultiplexOutput, error) {
     var output medialive.StartMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartMultiplex, input).Get(ctx, &output)
@@ -1007,6 +1044,7 @@ func (a *MediaLiveStub) StartMultiplexAsync(ctx workflow.Context, input *mediali
     future := workflow.ExecuteActivity(ctx, a.activities.StartMultiplex, input)
     return &MedialiveStartMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) StopChannel(ctx workflow.Context, input *medialive.StopChannelInput) (*medialive.StopChannelOutput, error) {
     var output medialive.StopChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopChannel, input).Get(ctx, &output)
@@ -1017,6 +1055,7 @@ func (a *MediaLiveStub) StopChannelAsync(ctx workflow.Context, input *medialive.
     future := workflow.ExecuteActivity(ctx, a.activities.StopChannel, input)
     return &MedialiveStopChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) StopMultiplex(ctx workflow.Context, input *medialive.StopMultiplexInput) (*medialive.StopMultiplexOutput, error) {
     var output medialive.StopMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopMultiplex, input).Get(ctx, &output)
@@ -1027,6 +1066,7 @@ func (a *MediaLiveStub) StopMultiplexAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.StopMultiplex, input)
     return &MedialiveStopMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateChannel(ctx workflow.Context, input *medialive.UpdateChannelInput) (*medialive.UpdateChannelOutput, error) {
     var output medialive.UpdateChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateChannel, input).Get(ctx, &output)
@@ -1037,6 +1077,7 @@ func (a *MediaLiveStub) UpdateChannelAsync(ctx workflow.Context, input *medialiv
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateChannel, input)
     return &MedialiveUpdateChannelResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateChannelClass(ctx workflow.Context, input *medialive.UpdateChannelClassInput) (*medialive.UpdateChannelClassOutput, error) {
     var output medialive.UpdateChannelClassOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateChannelClass, input).Get(ctx, &output)
@@ -1047,6 +1088,7 @@ func (a *MediaLiveStub) UpdateChannelClassAsync(ctx workflow.Context, input *med
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateChannelClass, input)
     return &MedialiveUpdateChannelClassResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateInput(ctx workflow.Context, input *medialive.UpdateInputInput) (*medialive.UpdateInputOutput, error) {
     var output medialive.UpdateInputOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateInput, input).Get(ctx, &output)
@@ -1057,6 +1099,7 @@ func (a *MediaLiveStub) UpdateInputAsync(ctx workflow.Context, input *medialive.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateInput, input)
     return &MedialiveUpdateInputResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateInputDevice(ctx workflow.Context, input *medialive.UpdateInputDeviceInput) (*medialive.UpdateInputDeviceOutput, error) {
     var output medialive.UpdateInputDeviceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateInputDevice, input).Get(ctx, &output)
@@ -1067,6 +1110,7 @@ func (a *MediaLiveStub) UpdateInputDeviceAsync(ctx workflow.Context, input *medi
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateInputDevice, input)
     return &MedialiveUpdateInputDeviceResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateInputSecurityGroup(ctx workflow.Context, input *medialive.UpdateInputSecurityGroupInput) (*medialive.UpdateInputSecurityGroupOutput, error) {
     var output medialive.UpdateInputSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateInputSecurityGroup, input).Get(ctx, &output)
@@ -1077,6 +1121,7 @@ func (a *MediaLiveStub) UpdateInputSecurityGroupAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateInputSecurityGroup, input)
     return &MedialiveUpdateInputSecurityGroupResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateMultiplex(ctx workflow.Context, input *medialive.UpdateMultiplexInput) (*medialive.UpdateMultiplexOutput, error) {
     var output medialive.UpdateMultiplexOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMultiplex, input).Get(ctx, &output)
@@ -1087,6 +1132,7 @@ func (a *MediaLiveStub) UpdateMultiplexAsync(ctx workflow.Context, input *medial
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMultiplex, input)
     return &MedialiveUpdateMultiplexResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateMultiplexProgram(ctx workflow.Context, input *medialive.UpdateMultiplexProgramInput) (*medialive.UpdateMultiplexProgramOutput, error) {
     var output medialive.UpdateMultiplexProgramOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMultiplexProgram, input).Get(ctx, &output)
@@ -1097,6 +1143,7 @@ func (a *MediaLiveStub) UpdateMultiplexProgramAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMultiplexProgram, input)
     return &MedialiveUpdateMultiplexProgramResult{Result: future}
 }
+
 func (a *MediaLiveStub) UpdateReservation(ctx workflow.Context, input *medialive.UpdateReservationInput) (*medialive.UpdateReservationOutput, error) {
     var output medialive.UpdateReservationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateReservation, input).Get(ctx, &output)
@@ -1116,6 +1163,7 @@ func (a *MediaLiveStub) WaitUntilChannelCreatedAsync(ctx workflow.Context, input
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelCreated, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilChannelDeleted(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelDeleted, input).Get(ctx, nil)
 }
@@ -1123,6 +1171,7 @@ func (a *MediaLiveStub) WaitUntilChannelDeleted(ctx workflow.Context, input *med
 func (a *MediaLiveStub) WaitUntilChannelDeletedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelDeleted, input)
 }
+
 
 func (a *MediaLiveStub) WaitUntilChannelRunning(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelRunning, input).Get(ctx, nil)
@@ -1132,6 +1181,7 @@ func (a *MediaLiveStub) WaitUntilChannelRunningAsync(ctx workflow.Context, input
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelRunning, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilChannelStopped(ctx workflow.Context, input *medialive.DescribeChannelInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelStopped, input).Get(ctx, nil)
 }
@@ -1139,6 +1189,7 @@ func (a *MediaLiveStub) WaitUntilChannelStopped(ctx workflow.Context, input *med
 func (a *MediaLiveStub) WaitUntilChannelStoppedAsync(ctx workflow.Context, input *medialive.DescribeChannelInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChannelStopped, input)
 }
+
 
 func (a *MediaLiveStub) WaitUntilInputAttached(ctx workflow.Context, input *medialive.DescribeInputInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputAttached, input).Get(ctx, nil)
@@ -1148,6 +1199,7 @@ func (a *MediaLiveStub) WaitUntilInputAttachedAsync(ctx workflow.Context, input 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputAttached, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilInputDeleted(ctx workflow.Context, input *medialive.DescribeInputInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputDeleted, input).Get(ctx, nil)
 }
@@ -1155,6 +1207,7 @@ func (a *MediaLiveStub) WaitUntilInputDeleted(ctx workflow.Context, input *media
 func (a *MediaLiveStub) WaitUntilInputDeletedAsync(ctx workflow.Context, input *medialive.DescribeInputInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputDeleted, input)
 }
+
 
 func (a *MediaLiveStub) WaitUntilInputDetached(ctx workflow.Context, input *medialive.DescribeInputInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputDetached, input).Get(ctx, nil)
@@ -1164,6 +1217,7 @@ func (a *MediaLiveStub) WaitUntilInputDetachedAsync(ctx workflow.Context, input 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilInputDetached, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilMultiplexCreated(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexCreated, input).Get(ctx, nil)
 }
@@ -1171,6 +1225,7 @@ func (a *MediaLiveStub) WaitUntilMultiplexCreated(ctx workflow.Context, input *m
 func (a *MediaLiveStub) WaitUntilMultiplexCreatedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexCreated, input)
 }
+
 
 func (a *MediaLiveStub) WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexDeleted, input).Get(ctx, nil)
@@ -1180,6 +1235,7 @@ func (a *MediaLiveStub) WaitUntilMultiplexDeletedAsync(ctx workflow.Context, inp
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexDeleted, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexRunning, input).Get(ctx, nil)
 }
@@ -1188,6 +1244,7 @@ func (a *MediaLiveStub) WaitUntilMultiplexRunningAsync(ctx workflow.Context, inp
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexRunning, input)
 }
 
+
 func (a *MediaLiveStub) WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexStopped, input).Get(ctx, nil)
 }
@@ -1195,3 +1252,4 @@ func (a *MediaLiveStub) WaitUntilMultiplexStopped(ctx workflow.Context, input *m
 func (a *MediaLiveStub) WaitUntilMultiplexStoppedAsync(ctx workflow.Context, input *medialive.DescribeMultiplexInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilMultiplexStopped, input)
 }
+

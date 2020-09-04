@@ -13,6 +13,7 @@ type PIClient interface {
     GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error)
     GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult
 }
+
 type PiDescribeDimensionKeysResult struct {
 	Result workflow.Future
 }
@@ -33,7 +34,6 @@ func (r *PiGetResourceMetricsResult) Get(ctx workflow.Context) (*pi.GetResourceM
     return &output, err
 }
 
-
 type PIStub struct {
     activities awsactivities.PIActivities
 }
@@ -41,6 +41,7 @@ type PIStub struct {
 func NewPIStub() PIClient {
     return &PIStub{}
 }
+
 func (a *PIStub) DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error) {
     var output pi.DescribeDimensionKeysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDimensionKeys, input).Get(ctx, &output)
@@ -51,6 +52,7 @@ func (a *PIStub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDimensionKeys, input)
     return &PiDescribeDimensionKeysResult{Result: future}
 }
+
 func (a *PIStub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
     var output pi.GetResourceMetricsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetResourceMetrics, input).Get(ctx, &output)

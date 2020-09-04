@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,14 +14,10 @@ func NewPersonalizeRuntimeActivities(client personalizeruntimeiface.PersonalizeR
     return &PersonalizeRuntimeActivities{client: client}
 }
 
-
 func (a *PersonalizeRuntimeActivities) GetPersonalizedRanking(input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
     return a.client.GetPersonalizedRanking(input)
 }
 
-
-
 func (a *PersonalizeRuntimeActivities) GetRecommendations(input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
     return a.client.GetRecommendations(input)
 }
-

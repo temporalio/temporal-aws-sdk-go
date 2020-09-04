@@ -16,6 +16,7 @@ type SSOOIDCClient interface {
     StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error)
     StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult
 }
+
 type SsooidcCreateTokenResult struct {
 	Result workflow.Future
 }
@@ -46,7 +47,6 @@ func (r *SsooidcStartDeviceAuthorizationResult) Get(ctx workflow.Context) (*ssoo
     return &output, err
 }
 
-
 type SSOOIDCStub struct {
     activities awsactivities.SSOOIDCActivities
 }
@@ -54,6 +54,7 @@ type SSOOIDCStub struct {
 func NewSSOOIDCStub() SSOOIDCClient {
     return &SSOOIDCStub{}
 }
+
 func (a *SSOOIDCStub) CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error) {
     var output ssooidc.CreateTokenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateToken, input).Get(ctx, &output)
@@ -64,6 +65,7 @@ func (a *SSOOIDCStub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateToken, input)
     return &SsooidcCreateTokenResult{Result: future}
 }
+
 func (a *SSOOIDCStub) RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error) {
     var output ssooidc.RegisterClientOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RegisterClient, input).Get(ctx, &output)
@@ -74,6 +76,7 @@ func (a *SSOOIDCStub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.R
     future := workflow.ExecuteActivity(ctx, a.activities.RegisterClient, input)
     return &SsooidcRegisterClientResult{Result: future}
 }
+
 func (a *SSOOIDCStub) StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error) {
     var output ssooidc.StartDeviceAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDeviceAuthorization, input).Get(ctx, &output)

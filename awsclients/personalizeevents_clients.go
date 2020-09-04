@@ -10,6 +10,7 @@ type PersonalizeEventsClient interface {
     PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
     PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
 }
+
 type PersonalizeeventsPutEventsResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *PersonalizeeventsPutEventsResult) Get(ctx workflow.Context) (*personali
     return &output, err
 }
 
-
 type PersonalizeEventsStub struct {
     activities awsactivities.PersonalizeEventsActivities
 }
@@ -28,6 +28,7 @@ type PersonalizeEventsStub struct {
 func NewPersonalizeEventsStub() PersonalizeEventsClient {
     return &PersonalizeEventsStub{}
 }
+
 func (a *PersonalizeEventsStub) PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
     var output personalizeevents.PutEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)

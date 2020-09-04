@@ -67,6 +67,7 @@ type ManagedBlockchainClient interface {
     VoteOnProposal(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) (*managedblockchain.VoteOnProposalOutput, error)
     VoteOnProposalAsync(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) *ManagedblockchainVoteOnProposalResult
 }
+
 type ManagedblockchainCreateMemberResult struct {
 	Result workflow.Future
 }
@@ -267,7 +268,6 @@ func (r *ManagedblockchainVoteOnProposalResult) Get(ctx workflow.Context) (*mana
     return &output, err
 }
 
-
 type ManagedBlockchainStub struct {
     activities awsactivities.ManagedBlockchainActivities
 }
@@ -275,6 +275,7 @@ type ManagedBlockchainStub struct {
 func NewManagedBlockchainStub() ManagedBlockchainClient {
     return &ManagedBlockchainStub{}
 }
+
 func (a *ManagedBlockchainStub) CreateMember(ctx workflow.Context, input *managedblockchain.CreateMemberInput) (*managedblockchain.CreateMemberOutput, error) {
     var output managedblockchain.CreateMemberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateMember, input).Get(ctx, &output)
@@ -285,6 +286,7 @@ func (a *ManagedBlockchainStub) CreateMemberAsync(ctx workflow.Context, input *m
     future := workflow.ExecuteActivity(ctx, a.activities.CreateMember, input)
     return &ManagedblockchainCreateMemberResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) CreateNetwork(ctx workflow.Context, input *managedblockchain.CreateNetworkInput) (*managedblockchain.CreateNetworkOutput, error) {
     var output managedblockchain.CreateNetworkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateNetwork, input).Get(ctx, &output)
@@ -295,6 +297,7 @@ func (a *ManagedBlockchainStub) CreateNetworkAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateNetwork, input)
     return &ManagedblockchainCreateNetworkResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) CreateNode(ctx workflow.Context, input *managedblockchain.CreateNodeInput) (*managedblockchain.CreateNodeOutput, error) {
     var output managedblockchain.CreateNodeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateNode, input).Get(ctx, &output)
@@ -305,6 +308,7 @@ func (a *ManagedBlockchainStub) CreateNodeAsync(ctx workflow.Context, input *man
     future := workflow.ExecuteActivity(ctx, a.activities.CreateNode, input)
     return &ManagedblockchainCreateNodeResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) CreateProposal(ctx workflow.Context, input *managedblockchain.CreateProposalInput) (*managedblockchain.CreateProposalOutput, error) {
     var output managedblockchain.CreateProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateProposal, input).Get(ctx, &output)
@@ -315,6 +319,7 @@ func (a *ManagedBlockchainStub) CreateProposalAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateProposal, input)
     return &ManagedblockchainCreateProposalResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) DeleteMember(ctx workflow.Context, input *managedblockchain.DeleteMemberInput) (*managedblockchain.DeleteMemberOutput, error) {
     var output managedblockchain.DeleteMemberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteMember, input).Get(ctx, &output)
@@ -325,6 +330,7 @@ func (a *ManagedBlockchainStub) DeleteMemberAsync(ctx workflow.Context, input *m
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteMember, input)
     return &ManagedblockchainDeleteMemberResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) DeleteNode(ctx workflow.Context, input *managedblockchain.DeleteNodeInput) (*managedblockchain.DeleteNodeOutput, error) {
     var output managedblockchain.DeleteNodeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNode, input).Get(ctx, &output)
@@ -335,6 +341,7 @@ func (a *ManagedBlockchainStub) DeleteNodeAsync(ctx workflow.Context, input *man
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNode, input)
     return &ManagedblockchainDeleteNodeResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) GetMember(ctx workflow.Context, input *managedblockchain.GetMemberInput) (*managedblockchain.GetMemberOutput, error) {
     var output managedblockchain.GetMemberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetMember, input).Get(ctx, &output)
@@ -345,6 +352,7 @@ func (a *ManagedBlockchainStub) GetMemberAsync(ctx workflow.Context, input *mana
     future := workflow.ExecuteActivity(ctx, a.activities.GetMember, input)
     return &ManagedblockchainGetMemberResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) GetNetwork(ctx workflow.Context, input *managedblockchain.GetNetworkInput) (*managedblockchain.GetNetworkOutput, error) {
     var output managedblockchain.GetNetworkOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetNetwork, input).Get(ctx, &output)
@@ -355,6 +363,7 @@ func (a *ManagedBlockchainStub) GetNetworkAsync(ctx workflow.Context, input *man
     future := workflow.ExecuteActivity(ctx, a.activities.GetNetwork, input)
     return &ManagedblockchainGetNetworkResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) GetNode(ctx workflow.Context, input *managedblockchain.GetNodeInput) (*managedblockchain.GetNodeOutput, error) {
     var output managedblockchain.GetNodeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetNode, input).Get(ctx, &output)
@@ -365,6 +374,7 @@ func (a *ManagedBlockchainStub) GetNodeAsync(ctx workflow.Context, input *manage
     future := workflow.ExecuteActivity(ctx, a.activities.GetNode, input)
     return &ManagedblockchainGetNodeResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) GetProposal(ctx workflow.Context, input *managedblockchain.GetProposalInput) (*managedblockchain.GetProposalOutput, error) {
     var output managedblockchain.GetProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetProposal, input).Get(ctx, &output)
@@ -375,6 +385,7 @@ func (a *ManagedBlockchainStub) GetProposalAsync(ctx workflow.Context, input *ma
     future := workflow.ExecuteActivity(ctx, a.activities.GetProposal, input)
     return &ManagedblockchainGetProposalResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListInvitations(ctx workflow.Context, input *managedblockchain.ListInvitationsInput) (*managedblockchain.ListInvitationsOutput, error) {
     var output managedblockchain.ListInvitationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input).Get(ctx, &output)
@@ -385,6 +396,7 @@ func (a *ManagedBlockchainStub) ListInvitationsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListInvitations, input)
     return &ManagedblockchainListInvitationsResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListMembers(ctx workflow.Context, input *managedblockchain.ListMembersInput) (*managedblockchain.ListMembersOutput, error) {
     var output managedblockchain.ListMembersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input).Get(ctx, &output)
@@ -395,6 +407,7 @@ func (a *ManagedBlockchainStub) ListMembersAsync(ctx workflow.Context, input *ma
     future := workflow.ExecuteActivity(ctx, a.activities.ListMembers, input)
     return &ManagedblockchainListMembersResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListNetworks(ctx workflow.Context, input *managedblockchain.ListNetworksInput) (*managedblockchain.ListNetworksOutput, error) {
     var output managedblockchain.ListNetworksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListNetworks, input).Get(ctx, &output)
@@ -405,6 +418,7 @@ func (a *ManagedBlockchainStub) ListNetworksAsync(ctx workflow.Context, input *m
     future := workflow.ExecuteActivity(ctx, a.activities.ListNetworks, input)
     return &ManagedblockchainListNetworksResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListNodes(ctx workflow.Context, input *managedblockchain.ListNodesInput) (*managedblockchain.ListNodesOutput, error) {
     var output managedblockchain.ListNodesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListNodes, input).Get(ctx, &output)
@@ -415,6 +429,7 @@ func (a *ManagedBlockchainStub) ListNodesAsync(ctx workflow.Context, input *mana
     future := workflow.ExecuteActivity(ctx, a.activities.ListNodes, input)
     return &ManagedblockchainListNodesResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListProposalVotes(ctx workflow.Context, input *managedblockchain.ListProposalVotesInput) (*managedblockchain.ListProposalVotesOutput, error) {
     var output managedblockchain.ListProposalVotesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProposalVotes, input).Get(ctx, &output)
@@ -425,6 +440,7 @@ func (a *ManagedBlockchainStub) ListProposalVotesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListProposalVotes, input)
     return &ManagedblockchainListProposalVotesResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) ListProposals(ctx workflow.Context, input *managedblockchain.ListProposalsInput) (*managedblockchain.ListProposalsOutput, error) {
     var output managedblockchain.ListProposalsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListProposals, input).Get(ctx, &output)
@@ -435,6 +451,7 @@ func (a *ManagedBlockchainStub) ListProposalsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListProposals, input)
     return &ManagedblockchainListProposalsResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) RejectInvitation(ctx workflow.Context, input *managedblockchain.RejectInvitationInput) (*managedblockchain.RejectInvitationOutput, error) {
     var output managedblockchain.RejectInvitationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RejectInvitation, input).Get(ctx, &output)
@@ -445,6 +462,7 @@ func (a *ManagedBlockchainStub) RejectInvitationAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.RejectInvitation, input)
     return &ManagedblockchainRejectInvitationResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) UpdateMember(ctx workflow.Context, input *managedblockchain.UpdateMemberInput) (*managedblockchain.UpdateMemberOutput, error) {
     var output managedblockchain.UpdateMemberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMember, input).Get(ctx, &output)
@@ -455,6 +473,7 @@ func (a *ManagedBlockchainStub) UpdateMemberAsync(ctx workflow.Context, input *m
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateMember, input)
     return &ManagedblockchainUpdateMemberResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) UpdateNode(ctx workflow.Context, input *managedblockchain.UpdateNodeInput) (*managedblockchain.UpdateNodeOutput, error) {
     var output managedblockchain.UpdateNodeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateNode, input).Get(ctx, &output)
@@ -465,6 +484,7 @@ func (a *ManagedBlockchainStub) UpdateNodeAsync(ctx workflow.Context, input *man
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateNode, input)
     return &ManagedblockchainUpdateNodeResult{Result: future}
 }
+
 func (a *ManagedBlockchainStub) VoteOnProposal(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) (*managedblockchain.VoteOnProposalOutput, error) {
     var output managedblockchain.VoteOnProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.VoteOnProposal, input).Get(ctx, &output)

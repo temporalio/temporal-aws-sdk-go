@@ -175,6 +175,7 @@ type DirectConnectClient interface {
     UpdateVirtualInterfaceAttributes(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error)
     UpdateVirtualInterfaceAttributesAsync(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) *DirectconnectUpdateVirtualInterfaceAttributesResult
 }
+
 type DirectconnectAcceptDirectConnectGatewayAssociationProposalResult struct {
 	Result workflow.Future
 }
@@ -735,7 +736,6 @@ func (r *DirectconnectUpdateVirtualInterfaceAttributesResult) Get(ctx workflow.C
     return &output, err
 }
 
-
 type DirectConnectStub struct {
     activities awsactivities.DirectConnectActivities
 }
@@ -743,6 +743,7 @@ type DirectConnectStub struct {
 func NewDirectConnectStub() DirectConnectClient {
     return &DirectConnectStub{}
 }
+
 func (a *DirectConnectStub) AcceptDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.AcceptDirectConnectGatewayAssociationProposalInput) (*directconnect.AcceptDirectConnectGatewayAssociationProposalOutput, error) {
     var output directconnect.AcceptDirectConnectGatewayAssociationProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AcceptDirectConnectGatewayAssociationProposal, input).Get(ctx, &output)
@@ -753,6 +754,7 @@ func (a *DirectConnectStub) AcceptDirectConnectGatewayAssociationProposalAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.AcceptDirectConnectGatewayAssociationProposal, input)
     return &DirectconnectAcceptDirectConnectGatewayAssociationProposalResult{Result: future}
 }
+
 func (a *DirectConnectStub) AllocateConnectionOnInterconnect(ctx workflow.Context, input *directconnect.AllocateConnectionOnInterconnectInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.AllocateConnectionOnInterconnect, input).Get(ctx, &output)
@@ -763,6 +765,7 @@ func (a *DirectConnectStub) AllocateConnectionOnInterconnectAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.AllocateConnectionOnInterconnect, input)
     return &DirectconnectAllocateConnectionOnInterconnectResult{Result: future}
 }
+
 func (a *DirectConnectStub) AllocateHostedConnection(ctx workflow.Context, input *directconnect.AllocateHostedConnectionInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.AllocateHostedConnection, input).Get(ctx, &output)
@@ -773,6 +776,7 @@ func (a *DirectConnectStub) AllocateHostedConnectionAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.AllocateHostedConnection, input)
     return &DirectconnectAllocateHostedConnectionResult{Result: future}
 }
+
 func (a *DirectConnectStub) AllocatePrivateVirtualInterface(ctx workflow.Context, input *directconnect.AllocatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
     var output directconnect.VirtualInterface
     err := workflow.ExecuteActivity(ctx, a.activities.AllocatePrivateVirtualInterface, input).Get(ctx, &output)
@@ -783,6 +787,7 @@ func (a *DirectConnectStub) AllocatePrivateVirtualInterfaceAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.AllocatePrivateVirtualInterface, input)
     return &DirectconnectAllocatePrivateVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) AllocatePublicVirtualInterface(ctx workflow.Context, input *directconnect.AllocatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
     var output directconnect.VirtualInterface
     err := workflow.ExecuteActivity(ctx, a.activities.AllocatePublicVirtualInterface, input).Get(ctx, &output)
@@ -793,6 +798,7 @@ func (a *DirectConnectStub) AllocatePublicVirtualInterfaceAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.AllocatePublicVirtualInterface, input)
     return &DirectconnectAllocatePublicVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) AllocateTransitVirtualInterface(ctx workflow.Context, input *directconnect.AllocateTransitVirtualInterfaceInput) (*directconnect.AllocateTransitVirtualInterfaceOutput, error) {
     var output directconnect.AllocateTransitVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AllocateTransitVirtualInterface, input).Get(ctx, &output)
@@ -803,6 +809,7 @@ func (a *DirectConnectStub) AllocateTransitVirtualInterfaceAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.AllocateTransitVirtualInterface, input)
     return &DirectconnectAllocateTransitVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) AssociateConnectionWithLag(ctx workflow.Context, input *directconnect.AssociateConnectionWithLagInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateConnectionWithLag, input).Get(ctx, &output)
@@ -813,6 +820,7 @@ func (a *DirectConnectStub) AssociateConnectionWithLagAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateConnectionWithLag, input)
     return &DirectconnectAssociateConnectionWithLagResult{Result: future}
 }
+
 func (a *DirectConnectStub) AssociateHostedConnection(ctx workflow.Context, input *directconnect.AssociateHostedConnectionInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateHostedConnection, input).Get(ctx, &output)
@@ -823,6 +831,7 @@ func (a *DirectConnectStub) AssociateHostedConnectionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateHostedConnection, input)
     return &DirectconnectAssociateHostedConnectionResult{Result: future}
 }
+
 func (a *DirectConnectStub) AssociateVirtualInterface(ctx workflow.Context, input *directconnect.AssociateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
     var output directconnect.VirtualInterface
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateVirtualInterface, input).Get(ctx, &output)
@@ -833,6 +842,7 @@ func (a *DirectConnectStub) AssociateVirtualInterfaceAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateVirtualInterface, input)
     return &DirectconnectAssociateVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) ConfirmConnection(ctx workflow.Context, input *directconnect.ConfirmConnectionInput) (*directconnect.ConfirmConnectionOutput, error) {
     var output directconnect.ConfirmConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ConfirmConnection, input).Get(ctx, &output)
@@ -843,6 +853,7 @@ func (a *DirectConnectStub) ConfirmConnectionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ConfirmConnection, input)
     return &DirectconnectConfirmConnectionResult{Result: future}
 }
+
 func (a *DirectConnectStub) ConfirmPrivateVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmPrivateVirtualInterfaceInput) (*directconnect.ConfirmPrivateVirtualInterfaceOutput, error) {
     var output directconnect.ConfirmPrivateVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ConfirmPrivateVirtualInterface, input).Get(ctx, &output)
@@ -853,6 +864,7 @@ func (a *DirectConnectStub) ConfirmPrivateVirtualInterfaceAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.ConfirmPrivateVirtualInterface, input)
     return &DirectconnectConfirmPrivateVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) ConfirmPublicVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmPublicVirtualInterfaceInput) (*directconnect.ConfirmPublicVirtualInterfaceOutput, error) {
     var output directconnect.ConfirmPublicVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ConfirmPublicVirtualInterface, input).Get(ctx, &output)
@@ -863,6 +875,7 @@ func (a *DirectConnectStub) ConfirmPublicVirtualInterfaceAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.ConfirmPublicVirtualInterface, input)
     return &DirectconnectConfirmPublicVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) ConfirmTransitVirtualInterface(ctx workflow.Context, input *directconnect.ConfirmTransitVirtualInterfaceInput) (*directconnect.ConfirmTransitVirtualInterfaceOutput, error) {
     var output directconnect.ConfirmTransitVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ConfirmTransitVirtualInterface, input).Get(ctx, &output)
@@ -873,6 +886,7 @@ func (a *DirectConnectStub) ConfirmTransitVirtualInterfaceAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.ConfirmTransitVirtualInterface, input)
     return &DirectconnectConfirmTransitVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateBGPPeer(ctx workflow.Context, input *directconnect.CreateBGPPeerInput) (*directconnect.CreateBGPPeerOutput, error) {
     var output directconnect.CreateBGPPeerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBGPPeer, input).Get(ctx, &output)
@@ -883,6 +897,7 @@ func (a *DirectConnectStub) CreateBGPPeerAsync(ctx workflow.Context, input *dire
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBGPPeer, input)
     return &DirectconnectCreateBGPPeerResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateConnection(ctx workflow.Context, input *directconnect.CreateConnectionInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.CreateConnection, input).Get(ctx, &output)
@@ -893,6 +908,7 @@ func (a *DirectConnectStub) CreateConnectionAsync(ctx workflow.Context, input *d
     future := workflow.ExecuteActivity(ctx, a.activities.CreateConnection, input)
     return &DirectconnectCreateConnectionResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateDirectConnectGateway(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayInput) (*directconnect.CreateDirectConnectGatewayOutput, error) {
     var output directconnect.CreateDirectConnectGatewayOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGateway, input).Get(ctx, &output)
@@ -903,6 +919,7 @@ func (a *DirectConnectStub) CreateDirectConnectGatewayAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGateway, input)
     return &DirectconnectCreateDirectConnectGatewayResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationInput) (*directconnect.CreateDirectConnectGatewayAssociationOutput, error) {
     var output directconnect.CreateDirectConnectGatewayAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGatewayAssociation, input).Get(ctx, &output)
@@ -913,6 +930,7 @@ func (a *DirectConnectStub) CreateDirectConnectGatewayAssociationAsync(ctx workf
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGatewayAssociation, input)
     return &DirectconnectCreateDirectConnectGatewayAssociationResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.CreateDirectConnectGatewayAssociationProposalInput) (*directconnect.CreateDirectConnectGatewayAssociationProposalOutput, error) {
     var output directconnect.CreateDirectConnectGatewayAssociationProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGatewayAssociationProposal, input).Get(ctx, &output)
@@ -923,6 +941,7 @@ func (a *DirectConnectStub) CreateDirectConnectGatewayAssociationProposalAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDirectConnectGatewayAssociationProposal, input)
     return &DirectconnectCreateDirectConnectGatewayAssociationProposalResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateInterconnect(ctx workflow.Context, input *directconnect.CreateInterconnectInput) (*directconnect.Interconnect, error) {
     var output directconnect.Interconnect
     err := workflow.ExecuteActivity(ctx, a.activities.CreateInterconnect, input).Get(ctx, &output)
@@ -933,6 +952,7 @@ func (a *DirectConnectStub) CreateInterconnectAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateInterconnect, input)
     return &DirectconnectCreateInterconnectResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateLag(ctx workflow.Context, input *directconnect.CreateLagInput) (*directconnect.Lag, error) {
     var output directconnect.Lag
     err := workflow.ExecuteActivity(ctx, a.activities.CreateLag, input).Get(ctx, &output)
@@ -943,6 +963,7 @@ func (a *DirectConnectStub) CreateLagAsync(ctx workflow.Context, input *directco
     future := workflow.ExecuteActivity(ctx, a.activities.CreateLag, input)
     return &DirectconnectCreateLagResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreatePrivateVirtualInterface(ctx workflow.Context, input *directconnect.CreatePrivateVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
     var output directconnect.VirtualInterface
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePrivateVirtualInterface, input).Get(ctx, &output)
@@ -953,6 +974,7 @@ func (a *DirectConnectStub) CreatePrivateVirtualInterfaceAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePrivateVirtualInterface, input)
     return &DirectconnectCreatePrivateVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreatePublicVirtualInterface(ctx workflow.Context, input *directconnect.CreatePublicVirtualInterfaceInput) (*directconnect.VirtualInterface, error) {
     var output directconnect.VirtualInterface
     err := workflow.ExecuteActivity(ctx, a.activities.CreatePublicVirtualInterface, input).Get(ctx, &output)
@@ -963,6 +985,7 @@ func (a *DirectConnectStub) CreatePublicVirtualInterfaceAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.CreatePublicVirtualInterface, input)
     return &DirectconnectCreatePublicVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) CreateTransitVirtualInterface(ctx workflow.Context, input *directconnect.CreateTransitVirtualInterfaceInput) (*directconnect.CreateTransitVirtualInterfaceOutput, error) {
     var output directconnect.CreateTransitVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTransitVirtualInterface, input).Get(ctx, &output)
@@ -973,6 +996,7 @@ func (a *DirectConnectStub) CreateTransitVirtualInterfaceAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTransitVirtualInterface, input)
     return &DirectconnectCreateTransitVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteBGPPeer(ctx workflow.Context, input *directconnect.DeleteBGPPeerInput) (*directconnect.DeleteBGPPeerOutput, error) {
     var output directconnect.DeleteBGPPeerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBGPPeer, input).Get(ctx, &output)
@@ -983,6 +1007,7 @@ func (a *DirectConnectStub) DeleteBGPPeerAsync(ctx workflow.Context, input *dire
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBGPPeer, input)
     return &DirectconnectDeleteBGPPeerResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteConnection(ctx workflow.Context, input *directconnect.DeleteConnectionInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input).Get(ctx, &output)
@@ -993,6 +1018,7 @@ func (a *DirectConnectStub) DeleteConnectionAsync(ctx workflow.Context, input *d
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConnection, input)
     return &DirectconnectDeleteConnectionResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteDirectConnectGateway(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayInput) (*directconnect.DeleteDirectConnectGatewayOutput, error) {
     var output directconnect.DeleteDirectConnectGatewayOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGateway, input).Get(ctx, &output)
@@ -1003,6 +1029,7 @@ func (a *DirectConnectStub) DeleteDirectConnectGatewayAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGateway, input)
     return &DirectconnectDeleteDirectConnectGatewayResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationInput) (*directconnect.DeleteDirectConnectGatewayAssociationOutput, error) {
     var output directconnect.DeleteDirectConnectGatewayAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGatewayAssociation, input).Get(ctx, &output)
@@ -1013,6 +1040,7 @@ func (a *DirectConnectStub) DeleteDirectConnectGatewayAssociationAsync(ctx workf
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGatewayAssociation, input)
     return &DirectconnectDeleteDirectConnectGatewayAssociationResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteDirectConnectGatewayAssociationProposal(ctx workflow.Context, input *directconnect.DeleteDirectConnectGatewayAssociationProposalInput) (*directconnect.DeleteDirectConnectGatewayAssociationProposalOutput, error) {
     var output directconnect.DeleteDirectConnectGatewayAssociationProposalOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGatewayAssociationProposal, input).Get(ctx, &output)
@@ -1023,6 +1051,7 @@ func (a *DirectConnectStub) DeleteDirectConnectGatewayAssociationProposalAsync(c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDirectConnectGatewayAssociationProposal, input)
     return &DirectconnectDeleteDirectConnectGatewayAssociationProposalResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteInterconnect(ctx workflow.Context, input *directconnect.DeleteInterconnectInput) (*directconnect.DeleteInterconnectOutput, error) {
     var output directconnect.DeleteInterconnectOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInterconnect, input).Get(ctx, &output)
@@ -1033,6 +1062,7 @@ func (a *DirectConnectStub) DeleteInterconnectAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInterconnect, input)
     return &DirectconnectDeleteInterconnectResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteLag(ctx workflow.Context, input *directconnect.DeleteLagInput) (*directconnect.Lag, error) {
     var output directconnect.Lag
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteLag, input).Get(ctx, &output)
@@ -1043,6 +1073,7 @@ func (a *DirectConnectStub) DeleteLagAsync(ctx workflow.Context, input *directco
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteLag, input)
     return &DirectconnectDeleteLagResult{Result: future}
 }
+
 func (a *DirectConnectStub) DeleteVirtualInterface(ctx workflow.Context, input *directconnect.DeleteVirtualInterfaceInput) (*directconnect.DeleteVirtualInterfaceOutput, error) {
     var output directconnect.DeleteVirtualInterfaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVirtualInterface, input).Get(ctx, &output)
@@ -1053,6 +1084,7 @@ func (a *DirectConnectStub) DeleteVirtualInterfaceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVirtualInterface, input)
     return &DirectconnectDeleteVirtualInterfaceResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeConnectionLoa(ctx workflow.Context, input *directconnect.DescribeConnectionLoaInput) (*directconnect.DescribeConnectionLoaOutput, error) {
     var output directconnect.DescribeConnectionLoaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConnectionLoa, input).Get(ctx, &output)
@@ -1063,6 +1095,7 @@ func (a *DirectConnectStub) DescribeConnectionLoaAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConnectionLoa, input)
     return &DirectconnectDescribeConnectionLoaResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeConnections(ctx workflow.Context, input *directconnect.DescribeConnectionsInput) (*directconnect.Connections, error) {
     var output directconnect.Connections
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConnections, input).Get(ctx, &output)
@@ -1073,6 +1106,7 @@ func (a *DirectConnectStub) DescribeConnectionsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConnections, input)
     return &DirectconnectDescribeConnectionsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeConnectionsOnInterconnect(ctx workflow.Context, input *directconnect.DescribeConnectionsOnInterconnectInput) (*directconnect.Connections, error) {
     var output directconnect.Connections
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConnectionsOnInterconnect, input).Get(ctx, &output)
@@ -1083,6 +1117,7 @@ func (a *DirectConnectStub) DescribeConnectionsOnInterconnectAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConnectionsOnInterconnect, input)
     return &DirectconnectDescribeConnectionsOnInterconnectResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeDirectConnectGatewayAssociationProposals(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationProposalsInput) (*directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput, error) {
     var output directconnect.DescribeDirectConnectGatewayAssociationProposalsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAssociationProposals, input).Get(ctx, &output)
@@ -1093,6 +1128,7 @@ func (a *DirectConnectStub) DescribeDirectConnectGatewayAssociationProposalsAsyn
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAssociationProposals, input)
     return &DirectconnectDescribeDirectConnectGatewayAssociationProposalsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeDirectConnectGatewayAssociations(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAssociationsInput) (*directconnect.DescribeDirectConnectGatewayAssociationsOutput, error) {
     var output directconnect.DescribeDirectConnectGatewayAssociationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAssociations, input).Get(ctx, &output)
@@ -1103,6 +1139,7 @@ func (a *DirectConnectStub) DescribeDirectConnectGatewayAssociationsAsync(ctx wo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAssociations, input)
     return &DirectconnectDescribeDirectConnectGatewayAssociationsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeDirectConnectGatewayAttachments(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewayAttachmentsInput) (*directconnect.DescribeDirectConnectGatewayAttachmentsOutput, error) {
     var output directconnect.DescribeDirectConnectGatewayAttachmentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAttachments, input).Get(ctx, &output)
@@ -1113,6 +1150,7 @@ func (a *DirectConnectStub) DescribeDirectConnectGatewayAttachmentsAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGatewayAttachments, input)
     return &DirectconnectDescribeDirectConnectGatewayAttachmentsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeDirectConnectGateways(ctx workflow.Context, input *directconnect.DescribeDirectConnectGatewaysInput) (*directconnect.DescribeDirectConnectGatewaysOutput, error) {
     var output directconnect.DescribeDirectConnectGatewaysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGateways, input).Get(ctx, &output)
@@ -1123,6 +1161,7 @@ func (a *DirectConnectStub) DescribeDirectConnectGatewaysAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDirectConnectGateways, input)
     return &DirectconnectDescribeDirectConnectGatewaysResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeHostedConnections(ctx workflow.Context, input *directconnect.DescribeHostedConnectionsInput) (*directconnect.Connections, error) {
     var output directconnect.Connections
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeHostedConnections, input).Get(ctx, &output)
@@ -1133,6 +1172,7 @@ func (a *DirectConnectStub) DescribeHostedConnectionsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeHostedConnections, input)
     return &DirectconnectDescribeHostedConnectionsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeInterconnectLoa(ctx workflow.Context, input *directconnect.DescribeInterconnectLoaInput) (*directconnect.DescribeInterconnectLoaOutput, error) {
     var output directconnect.DescribeInterconnectLoaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInterconnectLoa, input).Get(ctx, &output)
@@ -1143,6 +1183,7 @@ func (a *DirectConnectStub) DescribeInterconnectLoaAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInterconnectLoa, input)
     return &DirectconnectDescribeInterconnectLoaResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeInterconnects(ctx workflow.Context, input *directconnect.DescribeInterconnectsInput) (*directconnect.DescribeInterconnectsOutput, error) {
     var output directconnect.DescribeInterconnectsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInterconnects, input).Get(ctx, &output)
@@ -1153,6 +1194,7 @@ func (a *DirectConnectStub) DescribeInterconnectsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInterconnects, input)
     return &DirectconnectDescribeInterconnectsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeLags(ctx workflow.Context, input *directconnect.DescribeLagsInput) (*directconnect.DescribeLagsOutput, error) {
     var output directconnect.DescribeLagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLags, input).Get(ctx, &output)
@@ -1163,6 +1205,7 @@ func (a *DirectConnectStub) DescribeLagsAsync(ctx workflow.Context, input *direc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLags, input)
     return &DirectconnectDescribeLagsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeLoa(ctx workflow.Context, input *directconnect.DescribeLoaInput) (*directconnect.Loa, error) {
     var output directconnect.Loa
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLoa, input).Get(ctx, &output)
@@ -1173,6 +1216,7 @@ func (a *DirectConnectStub) DescribeLoaAsync(ctx workflow.Context, input *direct
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLoa, input)
     return &DirectconnectDescribeLoaResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeLocations(ctx workflow.Context, input *directconnect.DescribeLocationsInput) (*directconnect.DescribeLocationsOutput, error) {
     var output directconnect.DescribeLocationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeLocations, input).Get(ctx, &output)
@@ -1183,6 +1227,7 @@ func (a *DirectConnectStub) DescribeLocationsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeLocations, input)
     return &DirectconnectDescribeLocationsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeTags(ctx workflow.Context, input *directconnect.DescribeTagsInput) (*directconnect.DescribeTagsOutput, error) {
     var output directconnect.DescribeTagsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTags, input).Get(ctx, &output)
@@ -1193,6 +1238,7 @@ func (a *DirectConnectStub) DescribeTagsAsync(ctx workflow.Context, input *direc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTags, input)
     return &DirectconnectDescribeTagsResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeVirtualGateways(ctx workflow.Context, input *directconnect.DescribeVirtualGatewaysInput) (*directconnect.DescribeVirtualGatewaysOutput, error) {
     var output directconnect.DescribeVirtualGatewaysOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVirtualGateways, input).Get(ctx, &output)
@@ -1203,6 +1249,7 @@ func (a *DirectConnectStub) DescribeVirtualGatewaysAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVirtualGateways, input)
     return &DirectconnectDescribeVirtualGatewaysResult{Result: future}
 }
+
 func (a *DirectConnectStub) DescribeVirtualInterfaces(ctx workflow.Context, input *directconnect.DescribeVirtualInterfacesInput) (*directconnect.DescribeVirtualInterfacesOutput, error) {
     var output directconnect.DescribeVirtualInterfacesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeVirtualInterfaces, input).Get(ctx, &output)
@@ -1213,6 +1260,7 @@ func (a *DirectConnectStub) DescribeVirtualInterfacesAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeVirtualInterfaces, input)
     return &DirectconnectDescribeVirtualInterfacesResult{Result: future}
 }
+
 func (a *DirectConnectStub) DisassociateConnectionFromLag(ctx workflow.Context, input *directconnect.DisassociateConnectionFromLagInput) (*directconnect.Connection, error) {
     var output directconnect.Connection
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateConnectionFromLag, input).Get(ctx, &output)
@@ -1223,6 +1271,7 @@ func (a *DirectConnectStub) DisassociateConnectionFromLagAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateConnectionFromLag, input)
     return &DirectconnectDisassociateConnectionFromLagResult{Result: future}
 }
+
 func (a *DirectConnectStub) ListVirtualInterfaceTestHistory(ctx workflow.Context, input *directconnect.ListVirtualInterfaceTestHistoryInput) (*directconnect.ListVirtualInterfaceTestHistoryOutput, error) {
     var output directconnect.ListVirtualInterfaceTestHistoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVirtualInterfaceTestHistory, input).Get(ctx, &output)
@@ -1233,6 +1282,7 @@ func (a *DirectConnectStub) ListVirtualInterfaceTestHistoryAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.ListVirtualInterfaceTestHistory, input)
     return &DirectconnectListVirtualInterfaceTestHistoryResult{Result: future}
 }
+
 func (a *DirectConnectStub) StartBgpFailoverTest(ctx workflow.Context, input *directconnect.StartBgpFailoverTestInput) (*directconnect.StartBgpFailoverTestOutput, error) {
     var output directconnect.StartBgpFailoverTestOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartBgpFailoverTest, input).Get(ctx, &output)
@@ -1243,6 +1293,7 @@ func (a *DirectConnectStub) StartBgpFailoverTestAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.StartBgpFailoverTest, input)
     return &DirectconnectStartBgpFailoverTestResult{Result: future}
 }
+
 func (a *DirectConnectStub) StopBgpFailoverTest(ctx workflow.Context, input *directconnect.StopBgpFailoverTestInput) (*directconnect.StopBgpFailoverTestOutput, error) {
     var output directconnect.StopBgpFailoverTestOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopBgpFailoverTest, input).Get(ctx, &output)
@@ -1253,6 +1304,7 @@ func (a *DirectConnectStub) StopBgpFailoverTestAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.StopBgpFailoverTest, input)
     return &DirectconnectStopBgpFailoverTestResult{Result: future}
 }
+
 func (a *DirectConnectStub) TagResource(ctx workflow.Context, input *directconnect.TagResourceInput) (*directconnect.TagResourceOutput, error) {
     var output directconnect.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1263,6 +1315,7 @@ func (a *DirectConnectStub) TagResourceAsync(ctx workflow.Context, input *direct
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &DirectconnectTagResourceResult{Result: future}
 }
+
 func (a *DirectConnectStub) UntagResource(ctx workflow.Context, input *directconnect.UntagResourceInput) (*directconnect.UntagResourceOutput, error) {
     var output directconnect.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -1273,6 +1326,7 @@ func (a *DirectConnectStub) UntagResourceAsync(ctx workflow.Context, input *dire
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &DirectconnectUntagResourceResult{Result: future}
 }
+
 func (a *DirectConnectStub) UpdateDirectConnectGatewayAssociation(ctx workflow.Context, input *directconnect.UpdateDirectConnectGatewayAssociationInput) (*directconnect.UpdateDirectConnectGatewayAssociationOutput, error) {
     var output directconnect.UpdateDirectConnectGatewayAssociationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateDirectConnectGatewayAssociation, input).Get(ctx, &output)
@@ -1283,6 +1337,7 @@ func (a *DirectConnectStub) UpdateDirectConnectGatewayAssociationAsync(ctx workf
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateDirectConnectGatewayAssociation, input)
     return &DirectconnectUpdateDirectConnectGatewayAssociationResult{Result: future}
 }
+
 func (a *DirectConnectStub) UpdateLag(ctx workflow.Context, input *directconnect.UpdateLagInput) (*directconnect.Lag, error) {
     var output directconnect.Lag
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateLag, input).Get(ctx, &output)
@@ -1293,6 +1348,7 @@ func (a *DirectConnectStub) UpdateLagAsync(ctx workflow.Context, input *directco
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateLag, input)
     return &DirectconnectUpdateLagResult{Result: future}
 }
+
 func (a *DirectConnectStub) UpdateVirtualInterfaceAttributes(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) (*directconnect.UpdateVirtualInterfaceAttributesOutput, error) {
     var output directconnect.UpdateVirtualInterfaceAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateVirtualInterfaceAttributes, input).Get(ctx, &output)

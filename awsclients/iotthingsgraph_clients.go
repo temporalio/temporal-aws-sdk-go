@@ -112,6 +112,7 @@ type IoTThingsGraphClient interface {
     UploadEntityDefinitions(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) (*iotthingsgraph.UploadEntityDefinitionsOutput, error)
     UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IotthingsgraphUploadEntityDefinitionsResult
 }
+
 type IotthingsgraphAssociateEntityToThingResult struct {
 	Result workflow.Future
 }
@@ -462,7 +463,6 @@ func (r *IotthingsgraphUploadEntityDefinitionsResult) Get(ctx workflow.Context) 
     return &output, err
 }
 
-
 type IoTThingsGraphStub struct {
     activities awsactivities.IoTThingsGraphActivities
 }
@@ -470,6 +470,7 @@ type IoTThingsGraphStub struct {
 func NewIoTThingsGraphStub() IoTThingsGraphClient {
     return &IoTThingsGraphStub{}
 }
+
 func (a *IoTThingsGraphStub) AssociateEntityToThing(ctx workflow.Context, input *iotthingsgraph.AssociateEntityToThingInput) (*iotthingsgraph.AssociateEntityToThingOutput, error) {
     var output iotthingsgraph.AssociateEntityToThingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateEntityToThing, input).Get(ctx, &output)
@@ -480,6 +481,7 @@ func (a *IoTThingsGraphStub) AssociateEntityToThingAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateEntityToThing, input)
     return &IotthingsgraphAssociateEntityToThingResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) CreateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.CreateFlowTemplateInput) (*iotthingsgraph.CreateFlowTemplateOutput, error) {
     var output iotthingsgraph.CreateFlowTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFlowTemplate, input).Get(ctx, &output)
@@ -490,6 +492,7 @@ func (a *IoTThingsGraphStub) CreateFlowTemplateAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFlowTemplate, input)
     return &IotthingsgraphCreateFlowTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) CreateSystemInstance(ctx workflow.Context, input *iotthingsgraph.CreateSystemInstanceInput) (*iotthingsgraph.CreateSystemInstanceOutput, error) {
     var output iotthingsgraph.CreateSystemInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSystemInstance, input).Get(ctx, &output)
@@ -500,6 +503,7 @@ func (a *IoTThingsGraphStub) CreateSystemInstanceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSystemInstance, input)
     return &IotthingsgraphCreateSystemInstanceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) CreateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.CreateSystemTemplateInput) (*iotthingsgraph.CreateSystemTemplateOutput, error) {
     var output iotthingsgraph.CreateSystemTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSystemTemplate, input).Get(ctx, &output)
@@ -510,6 +514,7 @@ func (a *IoTThingsGraphStub) CreateSystemTemplateAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSystemTemplate, input)
     return &IotthingsgraphCreateSystemTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeleteFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteFlowTemplateInput) (*iotthingsgraph.DeleteFlowTemplateOutput, error) {
     var output iotthingsgraph.DeleteFlowTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFlowTemplate, input).Get(ctx, &output)
@@ -520,6 +525,7 @@ func (a *IoTThingsGraphStub) DeleteFlowTemplateAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFlowTemplate, input)
     return &IotthingsgraphDeleteFlowTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeleteNamespace(ctx workflow.Context, input *iotthingsgraph.DeleteNamespaceInput) (*iotthingsgraph.DeleteNamespaceOutput, error) {
     var output iotthingsgraph.DeleteNamespaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNamespace, input).Get(ctx, &output)
@@ -530,6 +536,7 @@ func (a *IoTThingsGraphStub) DeleteNamespaceAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNamespace, input)
     return &IotthingsgraphDeleteNamespaceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeleteSystemInstance(ctx workflow.Context, input *iotthingsgraph.DeleteSystemInstanceInput) (*iotthingsgraph.DeleteSystemInstanceOutput, error) {
     var output iotthingsgraph.DeleteSystemInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSystemInstance, input).Get(ctx, &output)
@@ -540,6 +547,7 @@ func (a *IoTThingsGraphStub) DeleteSystemInstanceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSystemInstance, input)
     return &IotthingsgraphDeleteSystemInstanceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeleteSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeleteSystemTemplateInput) (*iotthingsgraph.DeleteSystemTemplateOutput, error) {
     var output iotthingsgraph.DeleteSystemTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSystemTemplate, input).Get(ctx, &output)
@@ -550,6 +558,7 @@ func (a *IoTThingsGraphStub) DeleteSystemTemplateAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSystemTemplate, input)
     return &IotthingsgraphDeleteSystemTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.DeploySystemInstanceInput) (*iotthingsgraph.DeploySystemInstanceOutput, error) {
     var output iotthingsgraph.DeploySystemInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeploySystemInstance, input).Get(ctx, &output)
@@ -560,6 +569,7 @@ func (a *IoTThingsGraphStub) DeploySystemInstanceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeploySystemInstance, input)
     return &IotthingsgraphDeploySystemInstanceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeprecateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateFlowTemplateInput) (*iotthingsgraph.DeprecateFlowTemplateOutput, error) {
     var output iotthingsgraph.DeprecateFlowTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeprecateFlowTemplate, input).Get(ctx, &output)
@@ -570,6 +580,7 @@ func (a *IoTThingsGraphStub) DeprecateFlowTemplateAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DeprecateFlowTemplate, input)
     return &IotthingsgraphDeprecateFlowTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DeprecateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.DeprecateSystemTemplateInput) (*iotthingsgraph.DeprecateSystemTemplateOutput, error) {
     var output iotthingsgraph.DeprecateSystemTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeprecateSystemTemplate, input).Get(ctx, &output)
@@ -580,6 +591,7 @@ func (a *IoTThingsGraphStub) DeprecateSystemTemplateAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DeprecateSystemTemplate, input)
     return &IotthingsgraphDeprecateSystemTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DescribeNamespace(ctx workflow.Context, input *iotthingsgraph.DescribeNamespaceInput) (*iotthingsgraph.DescribeNamespaceOutput, error) {
     var output iotthingsgraph.DescribeNamespaceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeNamespace, input).Get(ctx, &output)
@@ -590,6 +602,7 @@ func (a *IoTThingsGraphStub) DescribeNamespaceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeNamespace, input)
     return &IotthingsgraphDescribeNamespaceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) DissociateEntityFromThing(ctx workflow.Context, input *iotthingsgraph.DissociateEntityFromThingInput) (*iotthingsgraph.DissociateEntityFromThingOutput, error) {
     var output iotthingsgraph.DissociateEntityFromThingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DissociateEntityFromThing, input).Get(ctx, &output)
@@ -600,6 +613,7 @@ func (a *IoTThingsGraphStub) DissociateEntityFromThingAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DissociateEntityFromThing, input)
     return &IotthingsgraphDissociateEntityFromThingResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetEntities(ctx workflow.Context, input *iotthingsgraph.GetEntitiesInput) (*iotthingsgraph.GetEntitiesOutput, error) {
     var output iotthingsgraph.GetEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetEntities, input).Get(ctx, &output)
@@ -610,6 +624,7 @@ func (a *IoTThingsGraphStub) GetEntitiesAsync(ctx workflow.Context, input *iotth
     future := workflow.ExecuteActivity(ctx, a.activities.GetEntities, input)
     return &IotthingsgraphGetEntitiesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetFlowTemplate(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateInput) (*iotthingsgraph.GetFlowTemplateOutput, error) {
     var output iotthingsgraph.GetFlowTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFlowTemplate, input).Get(ctx, &output)
@@ -620,6 +635,7 @@ func (a *IoTThingsGraphStub) GetFlowTemplateAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.GetFlowTemplate, input)
     return &IotthingsgraphGetFlowTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetFlowTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetFlowTemplateRevisionsInput) (*iotthingsgraph.GetFlowTemplateRevisionsOutput, error) {
     var output iotthingsgraph.GetFlowTemplateRevisionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFlowTemplateRevisions, input).Get(ctx, &output)
@@ -630,6 +646,7 @@ func (a *IoTThingsGraphStub) GetFlowTemplateRevisionsAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GetFlowTemplateRevisions, input)
     return &IotthingsgraphGetFlowTemplateRevisionsResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetNamespaceDeletionStatus(ctx workflow.Context, input *iotthingsgraph.GetNamespaceDeletionStatusInput) (*iotthingsgraph.GetNamespaceDeletionStatusOutput, error) {
     var output iotthingsgraph.GetNamespaceDeletionStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetNamespaceDeletionStatus, input).Get(ctx, &output)
@@ -640,6 +657,7 @@ func (a *IoTThingsGraphStub) GetNamespaceDeletionStatusAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetNamespaceDeletionStatus, input)
     return &IotthingsgraphGetNamespaceDeletionStatusResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetSystemInstance(ctx workflow.Context, input *iotthingsgraph.GetSystemInstanceInput) (*iotthingsgraph.GetSystemInstanceOutput, error) {
     var output iotthingsgraph.GetSystemInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSystemInstance, input).Get(ctx, &output)
@@ -650,6 +668,7 @@ func (a *IoTThingsGraphStub) GetSystemInstanceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetSystemInstance, input)
     return &IotthingsgraphGetSystemInstanceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetSystemTemplate(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateInput) (*iotthingsgraph.GetSystemTemplateOutput, error) {
     var output iotthingsgraph.GetSystemTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSystemTemplate, input).Get(ctx, &output)
@@ -660,6 +679,7 @@ func (a *IoTThingsGraphStub) GetSystemTemplateAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetSystemTemplate, input)
     return &IotthingsgraphGetSystemTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetSystemTemplateRevisions(ctx workflow.Context, input *iotthingsgraph.GetSystemTemplateRevisionsInput) (*iotthingsgraph.GetSystemTemplateRevisionsOutput, error) {
     var output iotthingsgraph.GetSystemTemplateRevisionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSystemTemplateRevisions, input).Get(ctx, &output)
@@ -670,6 +690,7 @@ func (a *IoTThingsGraphStub) GetSystemTemplateRevisionsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetSystemTemplateRevisions, input)
     return &IotthingsgraphGetSystemTemplateRevisionsResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) GetUploadStatus(ctx workflow.Context, input *iotthingsgraph.GetUploadStatusInput) (*iotthingsgraph.GetUploadStatusOutput, error) {
     var output iotthingsgraph.GetUploadStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetUploadStatus, input).Get(ctx, &output)
@@ -680,6 +701,7 @@ func (a *IoTThingsGraphStub) GetUploadStatusAsync(ctx workflow.Context, input *i
     future := workflow.ExecuteActivity(ctx, a.activities.GetUploadStatus, input)
     return &IotthingsgraphGetUploadStatusResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) ListFlowExecutionMessages(ctx workflow.Context, input *iotthingsgraph.ListFlowExecutionMessagesInput) (*iotthingsgraph.ListFlowExecutionMessagesOutput, error) {
     var output iotthingsgraph.ListFlowExecutionMessagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFlowExecutionMessages, input).Get(ctx, &output)
@@ -690,6 +712,7 @@ func (a *IoTThingsGraphStub) ListFlowExecutionMessagesAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.ListFlowExecutionMessages, input)
     return &IotthingsgraphListFlowExecutionMessagesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) ListTagsForResource(ctx workflow.Context, input *iotthingsgraph.ListTagsForResourceInput) (*iotthingsgraph.ListTagsForResourceOutput, error) {
     var output iotthingsgraph.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -700,6 +723,7 @@ func (a *IoTThingsGraphStub) ListTagsForResourceAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &IotthingsgraphListTagsForResourceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchEntities(ctx workflow.Context, input *iotthingsgraph.SearchEntitiesInput) (*iotthingsgraph.SearchEntitiesOutput, error) {
     var output iotthingsgraph.SearchEntitiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchEntities, input).Get(ctx, &output)
@@ -710,6 +734,7 @@ func (a *IoTThingsGraphStub) SearchEntitiesAsync(ctx workflow.Context, input *io
     future := workflow.ExecuteActivity(ctx, a.activities.SearchEntities, input)
     return &IotthingsgraphSearchEntitiesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchFlowExecutions(ctx workflow.Context, input *iotthingsgraph.SearchFlowExecutionsInput) (*iotthingsgraph.SearchFlowExecutionsOutput, error) {
     var output iotthingsgraph.SearchFlowExecutionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchFlowExecutions, input).Get(ctx, &output)
@@ -720,6 +745,7 @@ func (a *IoTThingsGraphStub) SearchFlowExecutionsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.SearchFlowExecutions, input)
     return &IotthingsgraphSearchFlowExecutionsResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchFlowTemplates(ctx workflow.Context, input *iotthingsgraph.SearchFlowTemplatesInput) (*iotthingsgraph.SearchFlowTemplatesOutput, error) {
     var output iotthingsgraph.SearchFlowTemplatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchFlowTemplates, input).Get(ctx, &output)
@@ -730,6 +756,7 @@ func (a *IoTThingsGraphStub) SearchFlowTemplatesAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.SearchFlowTemplates, input)
     return &IotthingsgraphSearchFlowTemplatesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchSystemInstances(ctx workflow.Context, input *iotthingsgraph.SearchSystemInstancesInput) (*iotthingsgraph.SearchSystemInstancesOutput, error) {
     var output iotthingsgraph.SearchSystemInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchSystemInstances, input).Get(ctx, &output)
@@ -740,6 +767,7 @@ func (a *IoTThingsGraphStub) SearchSystemInstancesAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.SearchSystemInstances, input)
     return &IotthingsgraphSearchSystemInstancesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchSystemTemplates(ctx workflow.Context, input *iotthingsgraph.SearchSystemTemplatesInput) (*iotthingsgraph.SearchSystemTemplatesOutput, error) {
     var output iotthingsgraph.SearchSystemTemplatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchSystemTemplates, input).Get(ctx, &output)
@@ -750,6 +778,7 @@ func (a *IoTThingsGraphStub) SearchSystemTemplatesAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.SearchSystemTemplates, input)
     return &IotthingsgraphSearchSystemTemplatesResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) SearchThings(ctx workflow.Context, input *iotthingsgraph.SearchThingsInput) (*iotthingsgraph.SearchThingsOutput, error) {
     var output iotthingsgraph.SearchThingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SearchThings, input).Get(ctx, &output)
@@ -760,6 +789,7 @@ func (a *IoTThingsGraphStub) SearchThingsAsync(ctx workflow.Context, input *iott
     future := workflow.ExecuteActivity(ctx, a.activities.SearchThings, input)
     return &IotthingsgraphSearchThingsResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) TagResource(ctx workflow.Context, input *iotthingsgraph.TagResourceInput) (*iotthingsgraph.TagResourceOutput, error) {
     var output iotthingsgraph.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -770,6 +800,7 @@ func (a *IoTThingsGraphStub) TagResourceAsync(ctx workflow.Context, input *iotth
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &IotthingsgraphTagResourceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) UndeploySystemInstance(ctx workflow.Context, input *iotthingsgraph.UndeploySystemInstanceInput) (*iotthingsgraph.UndeploySystemInstanceOutput, error) {
     var output iotthingsgraph.UndeploySystemInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UndeploySystemInstance, input).Get(ctx, &output)
@@ -780,6 +811,7 @@ func (a *IoTThingsGraphStub) UndeploySystemInstanceAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.UndeploySystemInstance, input)
     return &IotthingsgraphUndeploySystemInstanceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) UntagResource(ctx workflow.Context, input *iotthingsgraph.UntagResourceInput) (*iotthingsgraph.UntagResourceOutput, error) {
     var output iotthingsgraph.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -790,6 +822,7 @@ func (a *IoTThingsGraphStub) UntagResourceAsync(ctx workflow.Context, input *iot
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &IotthingsgraphUntagResourceResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) UpdateFlowTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateFlowTemplateInput) (*iotthingsgraph.UpdateFlowTemplateOutput, error) {
     var output iotthingsgraph.UpdateFlowTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowTemplate, input).Get(ctx, &output)
@@ -800,6 +833,7 @@ func (a *IoTThingsGraphStub) UpdateFlowTemplateAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowTemplate, input)
     return &IotthingsgraphUpdateFlowTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) UpdateSystemTemplate(ctx workflow.Context, input *iotthingsgraph.UpdateSystemTemplateInput) (*iotthingsgraph.UpdateSystemTemplateOutput, error) {
     var output iotthingsgraph.UpdateSystemTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSystemTemplate, input).Get(ctx, &output)
@@ -810,6 +844,7 @@ func (a *IoTThingsGraphStub) UpdateSystemTemplateAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateSystemTemplate, input)
     return &IotthingsgraphUpdateSystemTemplateResult{Result: future}
 }
+
 func (a *IoTThingsGraphStub) UploadEntityDefinitions(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) (*iotthingsgraph.UploadEntityDefinitionsOutput, error) {
     var output iotthingsgraph.UploadEntityDefinitionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UploadEntityDefinitions, input).Get(ctx, &output)

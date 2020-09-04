@@ -241,6 +241,7 @@ type ConfigServiceClient interface {
     UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error)
     UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceResult
 }
+
 type ConfigserviceBatchGetAggregateResourceConfigResult struct {
 	Result workflow.Future
 }
@@ -1021,7 +1022,6 @@ func (r *ConfigserviceUntagResourceResult) Get(ctx workflow.Context) (*configser
     return &output, err
 }
 
-
 type ConfigServiceStub struct {
     activities awsactivities.ConfigServiceActivities
 }
@@ -1029,6 +1029,7 @@ type ConfigServiceStub struct {
 func NewConfigServiceStub() ConfigServiceClient {
     return &ConfigServiceStub{}
 }
+
 func (a *ConfigServiceStub) BatchGetAggregateResourceConfig(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) (*configservice.BatchGetAggregateResourceConfigOutput, error) {
     var output configservice.BatchGetAggregateResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchGetAggregateResourceConfig, input).Get(ctx, &output)
@@ -1039,6 +1040,7 @@ func (a *ConfigServiceStub) BatchGetAggregateResourceConfigAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.BatchGetAggregateResourceConfig, input)
     return &ConfigserviceBatchGetAggregateResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) BatchGetResourceConfig(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) (*configservice.BatchGetResourceConfigOutput, error) {
     var output configservice.BatchGetResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BatchGetResourceConfig, input).Get(ctx, &output)
@@ -1049,6 +1051,7 @@ func (a *ConfigServiceStub) BatchGetResourceConfigAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.BatchGetResourceConfig, input)
     return &ConfigserviceBatchGetResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteAggregationAuthorization(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) (*configservice.DeleteAggregationAuthorizationOutput, error) {
     var output configservice.DeleteAggregationAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteAggregationAuthorization, input).Get(ctx, &output)
@@ -1059,6 +1062,7 @@ func (a *ConfigServiceStub) DeleteAggregationAuthorizationAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteAggregationAuthorization, input)
     return &ConfigserviceDeleteAggregationAuthorizationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteConfigRule(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) (*configservice.DeleteConfigRuleOutput, error) {
     var output configservice.DeleteConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigRule, input).Get(ctx, &output)
@@ -1069,6 +1073,7 @@ func (a *ConfigServiceStub) DeleteConfigRuleAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigRule, input)
     return &ConfigserviceDeleteConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteConfigurationAggregator(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) (*configservice.DeleteConfigurationAggregatorOutput, error) {
     var output configservice.DeleteConfigurationAggregatorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationAggregator, input).Get(ctx, &output)
@@ -1079,6 +1084,7 @@ func (a *ConfigServiceStub) DeleteConfigurationAggregatorAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationAggregator, input)
     return &ConfigserviceDeleteConfigurationAggregatorResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteConfigurationRecorder(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) (*configservice.DeleteConfigurationRecorderOutput, error) {
     var output configservice.DeleteConfigurationRecorderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationRecorder, input).Get(ctx, &output)
@@ -1089,6 +1095,7 @@ func (a *ConfigServiceStub) DeleteConfigurationRecorderAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationRecorder, input)
     return &ConfigserviceDeleteConfigurationRecorderResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteConformancePack(ctx workflow.Context, input *configservice.DeleteConformancePackInput) (*configservice.DeleteConformancePackOutput, error) {
     var output configservice.DeleteConformancePackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConformancePack, input).Get(ctx, &output)
@@ -1099,6 +1106,7 @@ func (a *ConfigServiceStub) DeleteConformancePackAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConformancePack, input)
     return &ConfigserviceDeleteConformancePackResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteDeliveryChannel(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) (*configservice.DeleteDeliveryChannelOutput, error) {
     var output configservice.DeleteDeliveryChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDeliveryChannel, input).Get(ctx, &output)
@@ -1109,6 +1117,7 @@ func (a *ConfigServiceStub) DeleteDeliveryChannelAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDeliveryChannel, input)
     return &ConfigserviceDeleteDeliveryChannelResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteEvaluationResults(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) (*configservice.DeleteEvaluationResultsOutput, error) {
     var output configservice.DeleteEvaluationResultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEvaluationResults, input).Get(ctx, &output)
@@ -1119,6 +1128,7 @@ func (a *ConfigServiceStub) DeleteEvaluationResultsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEvaluationResults, input)
     return &ConfigserviceDeleteEvaluationResultsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteOrganizationConfigRule(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) (*configservice.DeleteOrganizationConfigRuleOutput, error) {
     var output configservice.DeleteOrganizationConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationConfigRule, input).Get(ctx, &output)
@@ -1129,6 +1139,7 @@ func (a *ConfigServiceStub) DeleteOrganizationConfigRuleAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationConfigRule, input)
     return &ConfigserviceDeleteOrganizationConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteOrganizationConformancePack(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) (*configservice.DeleteOrganizationConformancePackOutput, error) {
     var output configservice.DeleteOrganizationConformancePackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationConformancePack, input).Get(ctx, &output)
@@ -1139,6 +1150,7 @@ func (a *ConfigServiceStub) DeleteOrganizationConformancePackAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOrganizationConformancePack, input)
     return &ConfigserviceDeleteOrganizationConformancePackResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteRemediationConfiguration(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) (*configservice.DeleteRemediationConfigurationOutput, error) {
     var output configservice.DeleteRemediationConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRemediationConfiguration, input).Get(ctx, &output)
@@ -1149,6 +1161,7 @@ func (a *ConfigServiceStub) DeleteRemediationConfigurationAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRemediationConfiguration, input)
     return &ConfigserviceDeleteRemediationConfigurationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteRemediationExceptions(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) (*configservice.DeleteRemediationExceptionsOutput, error) {
     var output configservice.DeleteRemediationExceptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRemediationExceptions, input).Get(ctx, &output)
@@ -1159,6 +1172,7 @@ func (a *ConfigServiceStub) DeleteRemediationExceptionsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRemediationExceptions, input)
     return &ConfigserviceDeleteRemediationExceptionsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteResourceConfig(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) (*configservice.DeleteResourceConfigOutput, error) {
     var output configservice.DeleteResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceConfig, input).Get(ctx, &output)
@@ -1169,6 +1183,7 @@ func (a *ConfigServiceStub) DeleteResourceConfigAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceConfig, input)
     return &ConfigserviceDeleteResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeleteRetentionConfiguration(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) (*configservice.DeleteRetentionConfigurationOutput, error) {
     var output configservice.DeleteRetentionConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRetentionConfiguration, input).Get(ctx, &output)
@@ -1179,6 +1194,7 @@ func (a *ConfigServiceStub) DeleteRetentionConfigurationAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRetentionConfiguration, input)
     return &ConfigserviceDeleteRetentionConfigurationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DeliverConfigSnapshot(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) (*configservice.DeliverConfigSnapshotOutput, error) {
     var output configservice.DeliverConfigSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeliverConfigSnapshot, input).Get(ctx, &output)
@@ -1189,6 +1205,7 @@ func (a *ConfigServiceStub) DeliverConfigSnapshotAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeliverConfigSnapshot, input)
     return &ConfigserviceDeliverConfigSnapshotResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRules(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error) {
     var output configservice.DescribeAggregateComplianceByConfigRulesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAggregateComplianceByConfigRules, input).Get(ctx, &output)
@@ -1199,6 +1216,7 @@ func (a *ConfigServiceStub) DescribeAggregateComplianceByConfigRulesAsync(ctx wo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAggregateComplianceByConfigRules, input)
     return &ConfigserviceDescribeAggregateComplianceByConfigRulesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeAggregationAuthorizations(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) (*configservice.DescribeAggregationAuthorizationsOutput, error) {
     var output configservice.DescribeAggregationAuthorizationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAggregationAuthorizations, input).Get(ctx, &output)
@@ -1209,6 +1227,7 @@ func (a *ConfigServiceStub) DescribeAggregationAuthorizationsAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAggregationAuthorizations, input)
     return &ConfigserviceDescribeAggregationAuthorizationsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeComplianceByConfigRule(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) (*configservice.DescribeComplianceByConfigRuleOutput, error) {
     var output configservice.DescribeComplianceByConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeComplianceByConfigRule, input).Get(ctx, &output)
@@ -1219,6 +1238,7 @@ func (a *ConfigServiceStub) DescribeComplianceByConfigRuleAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeComplianceByConfigRule, input)
     return &ConfigserviceDescribeComplianceByConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeComplianceByResource(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) (*configservice.DescribeComplianceByResourceOutput, error) {
     var output configservice.DescribeComplianceByResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeComplianceByResource, input).Get(ctx, &output)
@@ -1229,6 +1249,7 @@ func (a *ConfigServiceStub) DescribeComplianceByResourceAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeComplianceByResource, input)
     return &ConfigserviceDescribeComplianceByResourceResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatus(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error) {
     var output configservice.DescribeConfigRuleEvaluationStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigRuleEvaluationStatus, input).Get(ctx, &output)
@@ -1239,6 +1260,7 @@ func (a *ConfigServiceStub) DescribeConfigRuleEvaluationStatusAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigRuleEvaluationStatus, input)
     return &ConfigserviceDescribeConfigRuleEvaluationStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigRules(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) (*configservice.DescribeConfigRulesOutput, error) {
     var output configservice.DescribeConfigRulesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigRules, input).Get(ctx, &output)
@@ -1249,6 +1271,7 @@ func (a *ConfigServiceStub) DescribeConfigRulesAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigRules, input)
     return &ConfigserviceDescribeConfigRulesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatus(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error) {
     var output configservice.DescribeConfigurationAggregatorSourcesStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationAggregatorSourcesStatus, input).Get(ctx, &output)
@@ -1259,6 +1282,7 @@ func (a *ConfigServiceStub) DescribeConfigurationAggregatorSourcesStatusAsync(ct
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationAggregatorSourcesStatus, input)
     return &ConfigserviceDescribeConfigurationAggregatorSourcesStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigurationAggregators(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) (*configservice.DescribeConfigurationAggregatorsOutput, error) {
     var output configservice.DescribeConfigurationAggregatorsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationAggregators, input).Get(ctx, &output)
@@ -1269,6 +1293,7 @@ func (a *ConfigServiceStub) DescribeConfigurationAggregatorsAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationAggregators, input)
     return &ConfigserviceDescribeConfigurationAggregatorsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigurationRecorderStatus(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) (*configservice.DescribeConfigurationRecorderStatusOutput, error) {
     var output configservice.DescribeConfigurationRecorderStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRecorderStatus, input).Get(ctx, &output)
@@ -1279,6 +1304,7 @@ func (a *ConfigServiceStub) DescribeConfigurationRecorderStatusAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRecorderStatus, input)
     return &ConfigserviceDescribeConfigurationRecorderStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConfigurationRecorders(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) (*configservice.DescribeConfigurationRecordersOutput, error) {
     var output configservice.DescribeConfigurationRecordersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRecorders, input).Get(ctx, &output)
@@ -1289,6 +1315,7 @@ func (a *ConfigServiceStub) DescribeConfigurationRecordersAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRecorders, input)
     return &ConfigserviceDescribeConfigurationRecordersResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConformancePackCompliance(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) (*configservice.DescribeConformancePackComplianceOutput, error) {
     var output configservice.DescribeConformancePackComplianceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePackCompliance, input).Get(ctx, &output)
@@ -1299,6 +1326,7 @@ func (a *ConfigServiceStub) DescribeConformancePackComplianceAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePackCompliance, input)
     return &ConfigserviceDescribeConformancePackComplianceResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConformancePackStatus(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) (*configservice.DescribeConformancePackStatusOutput, error) {
     var output configservice.DescribeConformancePackStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePackStatus, input).Get(ctx, &output)
@@ -1309,6 +1337,7 @@ func (a *ConfigServiceStub) DescribeConformancePackStatusAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePackStatus, input)
     return &ConfigserviceDescribeConformancePackStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeConformancePacks(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) (*configservice.DescribeConformancePacksOutput, error) {
     var output configservice.DescribeConformancePacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePacks, input).Get(ctx, &output)
@@ -1319,6 +1348,7 @@ func (a *ConfigServiceStub) DescribeConformancePacksAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConformancePacks, input)
     return &ConfigserviceDescribeConformancePacksResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeDeliveryChannelStatus(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) (*configservice.DescribeDeliveryChannelStatusOutput, error) {
     var output configservice.DescribeDeliveryChannelStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDeliveryChannelStatus, input).Get(ctx, &output)
@@ -1329,6 +1359,7 @@ func (a *ConfigServiceStub) DescribeDeliveryChannelStatusAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDeliveryChannelStatus, input)
     return &ConfigserviceDescribeDeliveryChannelStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeDeliveryChannels(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) (*configservice.DescribeDeliveryChannelsOutput, error) {
     var output configservice.DescribeDeliveryChannelsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDeliveryChannels, input).Get(ctx, &output)
@@ -1339,6 +1370,7 @@ func (a *ConfigServiceStub) DescribeDeliveryChannelsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDeliveryChannels, input)
     return &ConfigserviceDescribeDeliveryChannelsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error) {
     var output configservice.DescribeOrganizationConfigRuleStatusesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfigRuleStatuses, input).Get(ctx, &output)
@@ -1349,6 +1381,7 @@ func (a *ConfigServiceStub) DescribeOrganizationConfigRuleStatusesAsync(ctx work
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfigRuleStatuses, input)
     return &ConfigserviceDescribeOrganizationConfigRuleStatusesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeOrganizationConfigRules(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) (*configservice.DescribeOrganizationConfigRulesOutput, error) {
     var output configservice.DescribeOrganizationConfigRulesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfigRules, input).Get(ctx, &output)
@@ -1359,6 +1392,7 @@ func (a *ConfigServiceStub) DescribeOrganizationConfigRulesAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConfigRules, input)
     return &ConfigserviceDescribeOrganizationConfigRulesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error) {
     var output configservice.DescribeOrganizationConformancePackStatusesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConformancePackStatuses, input).Get(ctx, &output)
@@ -1369,6 +1403,7 @@ func (a *ConfigServiceStub) DescribeOrganizationConformancePackStatusesAsync(ctx
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConformancePackStatuses, input)
     return &ConfigserviceDescribeOrganizationConformancePackStatusesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeOrganizationConformancePacks(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) (*configservice.DescribeOrganizationConformancePacksOutput, error) {
     var output configservice.DescribeOrganizationConformancePacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConformancePacks, input).Get(ctx, &output)
@@ -1379,6 +1414,7 @@ func (a *ConfigServiceStub) DescribeOrganizationConformancePacksAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrganizationConformancePacks, input)
     return &ConfigserviceDescribeOrganizationConformancePacksResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribePendingAggregationRequests(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) (*configservice.DescribePendingAggregationRequestsOutput, error) {
     var output configservice.DescribePendingAggregationRequestsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePendingAggregationRequests, input).Get(ctx, &output)
@@ -1389,6 +1425,7 @@ func (a *ConfigServiceStub) DescribePendingAggregationRequestsAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePendingAggregationRequests, input)
     return &ConfigserviceDescribePendingAggregationRequestsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeRemediationConfigurations(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) (*configservice.DescribeRemediationConfigurationsOutput, error) {
     var output configservice.DescribeRemediationConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationConfigurations, input).Get(ctx, &output)
@@ -1399,6 +1436,7 @@ func (a *ConfigServiceStub) DescribeRemediationConfigurationsAsync(ctx workflow.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationConfigurations, input)
     return &ConfigserviceDescribeRemediationConfigurationsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeRemediationExceptions(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) (*configservice.DescribeRemediationExceptionsOutput, error) {
     var output configservice.DescribeRemediationExceptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationExceptions, input).Get(ctx, &output)
@@ -1409,6 +1447,7 @@ func (a *ConfigServiceStub) DescribeRemediationExceptionsAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationExceptions, input)
     return &ConfigserviceDescribeRemediationExceptionsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeRemediationExecutionStatus(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) (*configservice.DescribeRemediationExecutionStatusOutput, error) {
     var output configservice.DescribeRemediationExecutionStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationExecutionStatus, input).Get(ctx, &output)
@@ -1419,6 +1458,7 @@ func (a *ConfigServiceStub) DescribeRemediationExecutionStatusAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRemediationExecutionStatus, input)
     return &ConfigserviceDescribeRemediationExecutionStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) DescribeRetentionConfigurations(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) (*configservice.DescribeRetentionConfigurationsOutput, error) {
     var output configservice.DescribeRetentionConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRetentionConfigurations, input).Get(ctx, &output)
@@ -1429,6 +1469,7 @@ func (a *ConfigServiceStub) DescribeRetentionConfigurationsAsync(ctx workflow.Co
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRetentionConfigurations, input)
     return &ConfigserviceDescribeRetentionConfigurationsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error) {
     var output configservice.GetAggregateComplianceDetailsByConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAggregateComplianceDetailsByConfigRule, input).Get(ctx, &output)
@@ -1439,6 +1480,7 @@ func (a *ConfigServiceStub) GetAggregateComplianceDetailsByConfigRuleAsync(ctx w
     future := workflow.ExecuteActivity(ctx, a.activities.GetAggregateComplianceDetailsByConfigRule, input)
     return &ConfigserviceGetAggregateComplianceDetailsByConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummary(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error) {
     var output configservice.GetAggregateConfigRuleComplianceSummaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAggregateConfigRuleComplianceSummary, input).Get(ctx, &output)
@@ -1449,6 +1491,7 @@ func (a *ConfigServiceStub) GetAggregateConfigRuleComplianceSummaryAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.GetAggregateConfigRuleComplianceSummary, input)
     return &ConfigserviceGetAggregateConfigRuleComplianceSummaryResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error) {
     var output configservice.GetAggregateDiscoveredResourceCountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAggregateDiscoveredResourceCounts, input).Get(ctx, &output)
@@ -1459,6 +1502,7 @@ func (a *ConfigServiceStub) GetAggregateDiscoveredResourceCountsAsync(ctx workfl
     future := workflow.ExecuteActivity(ctx, a.activities.GetAggregateDiscoveredResourceCounts, input)
     return &ConfigserviceGetAggregateDiscoveredResourceCountsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetAggregateResourceConfig(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) (*configservice.GetAggregateResourceConfigOutput, error) {
     var output configservice.GetAggregateResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAggregateResourceConfig, input).Get(ctx, &output)
@@ -1469,6 +1513,7 @@ func (a *ConfigServiceStub) GetAggregateResourceConfigAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.GetAggregateResourceConfig, input)
     return &ConfigserviceGetAggregateResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) (*configservice.GetComplianceDetailsByConfigRuleOutput, error) {
     var output configservice.GetComplianceDetailsByConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetComplianceDetailsByConfigRule, input).Get(ctx, &output)
@@ -1479,6 +1524,7 @@ func (a *ConfigServiceStub) GetComplianceDetailsByConfigRuleAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.GetComplianceDetailsByConfigRule, input)
     return &ConfigserviceGetComplianceDetailsByConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetComplianceDetailsByResource(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) (*configservice.GetComplianceDetailsByResourceOutput, error) {
     var output configservice.GetComplianceDetailsByResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetComplianceDetailsByResource, input).Get(ctx, &output)
@@ -1489,6 +1535,7 @@ func (a *ConfigServiceStub) GetComplianceDetailsByResourceAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.GetComplianceDetailsByResource, input)
     return &ConfigserviceGetComplianceDetailsByResourceResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetComplianceSummaryByConfigRule(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) (*configservice.GetComplianceSummaryByConfigRuleOutput, error) {
     var output configservice.GetComplianceSummaryByConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetComplianceSummaryByConfigRule, input).Get(ctx, &output)
@@ -1499,6 +1546,7 @@ func (a *ConfigServiceStub) GetComplianceSummaryByConfigRuleAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.GetComplianceSummaryByConfigRule, input)
     return &ConfigserviceGetComplianceSummaryByConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetComplianceSummaryByResourceType(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) (*configservice.GetComplianceSummaryByResourceTypeOutput, error) {
     var output configservice.GetComplianceSummaryByResourceTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetComplianceSummaryByResourceType, input).Get(ctx, &output)
@@ -1509,6 +1557,7 @@ func (a *ConfigServiceStub) GetComplianceSummaryByResourceTypeAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.GetComplianceSummaryByResourceType, input)
     return &ConfigserviceGetComplianceSummaryByResourceTypeResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetConformancePackComplianceDetails(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) (*configservice.GetConformancePackComplianceDetailsOutput, error) {
     var output configservice.GetConformancePackComplianceDetailsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConformancePackComplianceDetails, input).Get(ctx, &output)
@@ -1519,6 +1568,7 @@ func (a *ConfigServiceStub) GetConformancePackComplianceDetailsAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.GetConformancePackComplianceDetails, input)
     return &ConfigserviceGetConformancePackComplianceDetailsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetConformancePackComplianceSummary(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) (*configservice.GetConformancePackComplianceSummaryOutput, error) {
     var output configservice.GetConformancePackComplianceSummaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetConformancePackComplianceSummary, input).Get(ctx, &output)
@@ -1529,6 +1579,7 @@ func (a *ConfigServiceStub) GetConformancePackComplianceSummaryAsync(ctx workflo
     future := workflow.ExecuteActivity(ctx, a.activities.GetConformancePackComplianceSummary, input)
     return &ConfigserviceGetConformancePackComplianceSummaryResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) (*configservice.GetDiscoveredResourceCountsOutput, error) {
     var output configservice.GetDiscoveredResourceCountsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDiscoveredResourceCounts, input).Get(ctx, &output)
@@ -1539,6 +1590,7 @@ func (a *ConfigServiceStub) GetDiscoveredResourceCountsAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.GetDiscoveredResourceCounts, input)
     return &ConfigserviceGetDiscoveredResourceCountsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error) {
     var output configservice.GetOrganizationConfigRuleDetailedStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationConfigRuleDetailedStatus, input).Get(ctx, &output)
@@ -1549,6 +1601,7 @@ func (a *ConfigServiceStub) GetOrganizationConfigRuleDetailedStatusAsync(ctx wor
     future := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationConfigRuleDetailedStatus, input)
     return &ConfigserviceGetOrganizationConfigRuleDetailedStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error) {
     var output configservice.GetOrganizationConformancePackDetailedStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationConformancePackDetailedStatus, input).Get(ctx, &output)
@@ -1559,6 +1612,7 @@ func (a *ConfigServiceStub) GetOrganizationConformancePackDetailedStatusAsync(ct
     future := workflow.ExecuteActivity(ctx, a.activities.GetOrganizationConformancePackDetailedStatus, input)
     return &ConfigserviceGetOrganizationConformancePackDetailedStatusResult{Result: future}
 }
+
 func (a *ConfigServiceStub) GetResourceConfigHistory(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) (*configservice.GetResourceConfigHistoryOutput, error) {
     var output configservice.GetResourceConfigHistoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetResourceConfigHistory, input).Get(ctx, &output)
@@ -1569,6 +1623,7 @@ func (a *ConfigServiceStub) GetResourceConfigHistoryAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.GetResourceConfigHistory, input)
     return &ConfigserviceGetResourceConfigHistoryResult{Result: future}
 }
+
 func (a *ConfigServiceStub) ListAggregateDiscoveredResources(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) (*configservice.ListAggregateDiscoveredResourcesOutput, error) {
     var output configservice.ListAggregateDiscoveredResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAggregateDiscoveredResources, input).Get(ctx, &output)
@@ -1579,6 +1634,7 @@ func (a *ConfigServiceStub) ListAggregateDiscoveredResourcesAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ListAggregateDiscoveredResources, input)
     return &ConfigserviceListAggregateDiscoveredResourcesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) ListDiscoveredResources(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) (*configservice.ListDiscoveredResourcesOutput, error) {
     var output configservice.ListDiscoveredResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDiscoveredResources, input).Get(ctx, &output)
@@ -1589,6 +1645,7 @@ func (a *ConfigServiceStub) ListDiscoveredResourcesAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListDiscoveredResources, input)
     return &ConfigserviceListDiscoveredResourcesResult{Result: future}
 }
+
 func (a *ConfigServiceStub) ListTagsForResource(ctx workflow.Context, input *configservice.ListTagsForResourceInput) (*configservice.ListTagsForResourceOutput, error) {
     var output configservice.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1599,6 +1656,7 @@ func (a *ConfigServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &ConfigserviceListTagsForResourceResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutAggregationAuthorization(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) (*configservice.PutAggregationAuthorizationOutput, error) {
     var output configservice.PutAggregationAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutAggregationAuthorization, input).Get(ctx, &output)
@@ -1609,6 +1667,7 @@ func (a *ConfigServiceStub) PutAggregationAuthorizationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.PutAggregationAuthorization, input)
     return &ConfigservicePutAggregationAuthorizationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutConfigRule(ctx workflow.Context, input *configservice.PutConfigRuleInput) (*configservice.PutConfigRuleOutput, error) {
     var output configservice.PutConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutConfigRule, input).Get(ctx, &output)
@@ -1619,6 +1678,7 @@ func (a *ConfigServiceStub) PutConfigRuleAsync(ctx workflow.Context, input *conf
     future := workflow.ExecuteActivity(ctx, a.activities.PutConfigRule, input)
     return &ConfigservicePutConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutConfigurationAggregator(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) (*configservice.PutConfigurationAggregatorOutput, error) {
     var output configservice.PutConfigurationAggregatorOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationAggregator, input).Get(ctx, &output)
@@ -1629,6 +1689,7 @@ func (a *ConfigServiceStub) PutConfigurationAggregatorAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationAggregator, input)
     return &ConfigservicePutConfigurationAggregatorResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutConfigurationRecorder(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) (*configservice.PutConfigurationRecorderOutput, error) {
     var output configservice.PutConfigurationRecorderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationRecorder, input).Get(ctx, &output)
@@ -1639,6 +1700,7 @@ func (a *ConfigServiceStub) PutConfigurationRecorderAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationRecorder, input)
     return &ConfigservicePutConfigurationRecorderResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutConformancePack(ctx workflow.Context, input *configservice.PutConformancePackInput) (*configservice.PutConformancePackOutput, error) {
     var output configservice.PutConformancePackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutConformancePack, input).Get(ctx, &output)
@@ -1649,6 +1711,7 @@ func (a *ConfigServiceStub) PutConformancePackAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.PutConformancePack, input)
     return &ConfigservicePutConformancePackResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutDeliveryChannel(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) (*configservice.PutDeliveryChannelOutput, error) {
     var output configservice.PutDeliveryChannelOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutDeliveryChannel, input).Get(ctx, &output)
@@ -1659,6 +1722,7 @@ func (a *ConfigServiceStub) PutDeliveryChannelAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.PutDeliveryChannel, input)
     return &ConfigservicePutDeliveryChannelResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutEvaluations(ctx workflow.Context, input *configservice.PutEvaluationsInput) (*configservice.PutEvaluationsOutput, error) {
     var output configservice.PutEvaluationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutEvaluations, input).Get(ctx, &output)
@@ -1669,6 +1733,7 @@ func (a *ConfigServiceStub) PutEvaluationsAsync(ctx workflow.Context, input *con
     future := workflow.ExecuteActivity(ctx, a.activities.PutEvaluations, input)
     return &ConfigservicePutEvaluationsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutOrganizationConfigRule(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) (*configservice.PutOrganizationConfigRuleOutput, error) {
     var output configservice.PutOrganizationConfigRuleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutOrganizationConfigRule, input).Get(ctx, &output)
@@ -1679,6 +1744,7 @@ func (a *ConfigServiceStub) PutOrganizationConfigRuleAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.PutOrganizationConfigRule, input)
     return &ConfigservicePutOrganizationConfigRuleResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutOrganizationConformancePack(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) (*configservice.PutOrganizationConformancePackOutput, error) {
     var output configservice.PutOrganizationConformancePackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutOrganizationConformancePack, input).Get(ctx, &output)
@@ -1689,6 +1755,7 @@ func (a *ConfigServiceStub) PutOrganizationConformancePackAsync(ctx workflow.Con
     future := workflow.ExecuteActivity(ctx, a.activities.PutOrganizationConformancePack, input)
     return &ConfigservicePutOrganizationConformancePackResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutRemediationConfigurations(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) (*configservice.PutRemediationConfigurationsOutput, error) {
     var output configservice.PutRemediationConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRemediationConfigurations, input).Get(ctx, &output)
@@ -1699,6 +1766,7 @@ func (a *ConfigServiceStub) PutRemediationConfigurationsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.PutRemediationConfigurations, input)
     return &ConfigservicePutRemediationConfigurationsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutRemediationExceptions(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) (*configservice.PutRemediationExceptionsOutput, error) {
     var output configservice.PutRemediationExceptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRemediationExceptions, input).Get(ctx, &output)
@@ -1709,6 +1777,7 @@ func (a *ConfigServiceStub) PutRemediationExceptionsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.PutRemediationExceptions, input)
     return &ConfigservicePutRemediationExceptionsResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutResourceConfig(ctx workflow.Context, input *configservice.PutResourceConfigInput) (*configservice.PutResourceConfigOutput, error) {
     var output configservice.PutResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutResourceConfig, input).Get(ctx, &output)
@@ -1719,6 +1788,7 @@ func (a *ConfigServiceStub) PutResourceConfigAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.PutResourceConfig, input)
     return &ConfigservicePutResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) PutRetentionConfiguration(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) (*configservice.PutRetentionConfigurationOutput, error) {
     var output configservice.PutRetentionConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRetentionConfiguration, input).Get(ctx, &output)
@@ -1729,6 +1799,7 @@ func (a *ConfigServiceStub) PutRetentionConfigurationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.PutRetentionConfiguration, input)
     return &ConfigservicePutRetentionConfigurationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) SelectAggregateResourceConfig(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) (*configservice.SelectAggregateResourceConfigOutput, error) {
     var output configservice.SelectAggregateResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SelectAggregateResourceConfig, input).Get(ctx, &output)
@@ -1739,6 +1810,7 @@ func (a *ConfigServiceStub) SelectAggregateResourceConfigAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.SelectAggregateResourceConfig, input)
     return &ConfigserviceSelectAggregateResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) SelectResourceConfig(ctx workflow.Context, input *configservice.SelectResourceConfigInput) (*configservice.SelectResourceConfigOutput, error) {
     var output configservice.SelectResourceConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SelectResourceConfig, input).Get(ctx, &output)
@@ -1749,6 +1821,7 @@ func (a *ConfigServiceStub) SelectResourceConfigAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.SelectResourceConfig, input)
     return &ConfigserviceSelectResourceConfigResult{Result: future}
 }
+
 func (a *ConfigServiceStub) StartConfigRulesEvaluation(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) (*configservice.StartConfigRulesEvaluationOutput, error) {
     var output configservice.StartConfigRulesEvaluationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartConfigRulesEvaluation, input).Get(ctx, &output)
@@ -1759,6 +1832,7 @@ func (a *ConfigServiceStub) StartConfigRulesEvaluationAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.StartConfigRulesEvaluation, input)
     return &ConfigserviceStartConfigRulesEvaluationResult{Result: future}
 }
+
 func (a *ConfigServiceStub) StartConfigurationRecorder(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) (*configservice.StartConfigurationRecorderOutput, error) {
     var output configservice.StartConfigurationRecorderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartConfigurationRecorder, input).Get(ctx, &output)
@@ -1769,6 +1843,7 @@ func (a *ConfigServiceStub) StartConfigurationRecorderAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.StartConfigurationRecorder, input)
     return &ConfigserviceStartConfigurationRecorderResult{Result: future}
 }
+
 func (a *ConfigServiceStub) StartRemediationExecution(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) (*configservice.StartRemediationExecutionOutput, error) {
     var output configservice.StartRemediationExecutionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartRemediationExecution, input).Get(ctx, &output)
@@ -1779,6 +1854,7 @@ func (a *ConfigServiceStub) StartRemediationExecutionAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.StartRemediationExecution, input)
     return &ConfigserviceStartRemediationExecutionResult{Result: future}
 }
+
 func (a *ConfigServiceStub) StopConfigurationRecorder(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) (*configservice.StopConfigurationRecorderOutput, error) {
     var output configservice.StopConfigurationRecorderOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopConfigurationRecorder, input).Get(ctx, &output)
@@ -1789,6 +1865,7 @@ func (a *ConfigServiceStub) StopConfigurationRecorderAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.StopConfigurationRecorder, input)
     return &ConfigserviceStopConfigurationRecorderResult{Result: future}
 }
+
 func (a *ConfigServiceStub) TagResource(ctx workflow.Context, input *configservice.TagResourceInput) (*configservice.TagResourceOutput, error) {
     var output configservice.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -1799,6 +1876,7 @@ func (a *ConfigServiceStub) TagResourceAsync(ctx workflow.Context, input *config
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &ConfigserviceTagResourceResult{Result: future}
 }
+
 func (a *ConfigServiceStub) UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error) {
     var output configservice.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)

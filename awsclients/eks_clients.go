@@ -74,6 +74,7 @@ type EKSClient interface {
     WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error
     WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
     WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error}
+
 type EksCreateClusterResult struct {
 	Result workflow.Future
 }
@@ -284,7 +285,6 @@ func (r *EksUpdateNodegroupVersionResult) Get(ctx workflow.Context) (*eks.Update
     return &output, err
 }
 
-
 type EKSStub struct {
     activities awsactivities.EKSActivities
 }
@@ -292,6 +292,7 @@ type EKSStub struct {
 func NewEKSStub() EKSClient {
     return &EKSStub{}
 }
+
 func (a *EKSStub) CreateCluster(ctx workflow.Context, input *eks.CreateClusterInput) (*eks.CreateClusterOutput, error) {
     var output eks.CreateClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input).Get(ctx, &output)
@@ -302,6 +303,7 @@ func (a *EKSStub) CreateClusterAsync(ctx workflow.Context, input *eks.CreateClus
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input)
     return &EksCreateClusterResult{Result: future}
 }
+
 func (a *EKSStub) CreateFargateProfile(ctx workflow.Context, input *eks.CreateFargateProfileInput) (*eks.CreateFargateProfileOutput, error) {
     var output eks.CreateFargateProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateFargateProfile, input).Get(ctx, &output)
@@ -312,6 +314,7 @@ func (a *EKSStub) CreateFargateProfileAsync(ctx workflow.Context, input *eks.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateFargateProfile, input)
     return &EksCreateFargateProfileResult{Result: future}
 }
+
 func (a *EKSStub) CreateNodegroup(ctx workflow.Context, input *eks.CreateNodegroupInput) (*eks.CreateNodegroupOutput, error) {
     var output eks.CreateNodegroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateNodegroup, input).Get(ctx, &output)
@@ -322,6 +325,7 @@ func (a *EKSStub) CreateNodegroupAsync(ctx workflow.Context, input *eks.CreateNo
     future := workflow.ExecuteActivity(ctx, a.activities.CreateNodegroup, input)
     return &EksCreateNodegroupResult{Result: future}
 }
+
 func (a *EKSStub) DeleteCluster(ctx workflow.Context, input *eks.DeleteClusterInput) (*eks.DeleteClusterOutput, error) {
     var output eks.DeleteClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCluster, input).Get(ctx, &output)
@@ -332,6 +336,7 @@ func (a *EKSStub) DeleteClusterAsync(ctx workflow.Context, input *eks.DeleteClus
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCluster, input)
     return &EksDeleteClusterResult{Result: future}
 }
+
 func (a *EKSStub) DeleteFargateProfile(ctx workflow.Context, input *eks.DeleteFargateProfileInput) (*eks.DeleteFargateProfileOutput, error) {
     var output eks.DeleteFargateProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteFargateProfile, input).Get(ctx, &output)
@@ -342,6 +347,7 @@ func (a *EKSStub) DeleteFargateProfileAsync(ctx workflow.Context, input *eks.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteFargateProfile, input)
     return &EksDeleteFargateProfileResult{Result: future}
 }
+
 func (a *EKSStub) DeleteNodegroup(ctx workflow.Context, input *eks.DeleteNodegroupInput) (*eks.DeleteNodegroupOutput, error) {
     var output eks.DeleteNodegroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNodegroup, input).Get(ctx, &output)
@@ -352,6 +358,7 @@ func (a *EKSStub) DeleteNodegroupAsync(ctx workflow.Context, input *eks.DeleteNo
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNodegroup, input)
     return &EksDeleteNodegroupResult{Result: future}
 }
+
 func (a *EKSStub) DescribeCluster(ctx workflow.Context, input *eks.DescribeClusterInput) (*eks.DescribeClusterOutput, error) {
     var output eks.DescribeClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input).Get(ctx, &output)
@@ -362,6 +369,7 @@ func (a *EKSStub) DescribeClusterAsync(ctx workflow.Context, input *eks.Describe
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input)
     return &EksDescribeClusterResult{Result: future}
 }
+
 func (a *EKSStub) DescribeFargateProfile(ctx workflow.Context, input *eks.DescribeFargateProfileInput) (*eks.DescribeFargateProfileOutput, error) {
     var output eks.DescribeFargateProfileOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeFargateProfile, input).Get(ctx, &output)
@@ -372,6 +380,7 @@ func (a *EKSStub) DescribeFargateProfileAsync(ctx workflow.Context, input *eks.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeFargateProfile, input)
     return &EksDescribeFargateProfileResult{Result: future}
 }
+
 func (a *EKSStub) DescribeNodegroup(ctx workflow.Context, input *eks.DescribeNodegroupInput) (*eks.DescribeNodegroupOutput, error) {
     var output eks.DescribeNodegroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeNodegroup, input).Get(ctx, &output)
@@ -382,6 +391,7 @@ func (a *EKSStub) DescribeNodegroupAsync(ctx workflow.Context, input *eks.Descri
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeNodegroup, input)
     return &EksDescribeNodegroupResult{Result: future}
 }
+
 func (a *EKSStub) DescribeUpdate(ctx workflow.Context, input *eks.DescribeUpdateInput) (*eks.DescribeUpdateOutput, error) {
     var output eks.DescribeUpdateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeUpdate, input).Get(ctx, &output)
@@ -392,6 +402,7 @@ func (a *EKSStub) DescribeUpdateAsync(ctx workflow.Context, input *eks.DescribeU
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeUpdate, input)
     return &EksDescribeUpdateResult{Result: future}
 }
+
 func (a *EKSStub) ListClusters(ctx workflow.Context, input *eks.ListClustersInput) (*eks.ListClustersOutput, error) {
     var output eks.ListClustersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input).Get(ctx, &output)
@@ -402,6 +413,7 @@ func (a *EKSStub) ListClustersAsync(ctx workflow.Context, input *eks.ListCluster
     future := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input)
     return &EksListClustersResult{Result: future}
 }
+
 func (a *EKSStub) ListFargateProfiles(ctx workflow.Context, input *eks.ListFargateProfilesInput) (*eks.ListFargateProfilesOutput, error) {
     var output eks.ListFargateProfilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListFargateProfiles, input).Get(ctx, &output)
@@ -412,6 +424,7 @@ func (a *EKSStub) ListFargateProfilesAsync(ctx workflow.Context, input *eks.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListFargateProfiles, input)
     return &EksListFargateProfilesResult{Result: future}
 }
+
 func (a *EKSStub) ListNodegroups(ctx workflow.Context, input *eks.ListNodegroupsInput) (*eks.ListNodegroupsOutput, error) {
     var output eks.ListNodegroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListNodegroups, input).Get(ctx, &output)
@@ -422,6 +435,7 @@ func (a *EKSStub) ListNodegroupsAsync(ctx workflow.Context, input *eks.ListNodeg
     future := workflow.ExecuteActivity(ctx, a.activities.ListNodegroups, input)
     return &EksListNodegroupsResult{Result: future}
 }
+
 func (a *EKSStub) ListTagsForResource(ctx workflow.Context, input *eks.ListTagsForResourceInput) (*eks.ListTagsForResourceOutput, error) {
     var output eks.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -432,6 +446,7 @@ func (a *EKSStub) ListTagsForResourceAsync(ctx workflow.Context, input *eks.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &EksListTagsForResourceResult{Result: future}
 }
+
 func (a *EKSStub) ListUpdates(ctx workflow.Context, input *eks.ListUpdatesInput) (*eks.ListUpdatesOutput, error) {
     var output eks.ListUpdatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListUpdates, input).Get(ctx, &output)
@@ -442,6 +457,7 @@ func (a *EKSStub) ListUpdatesAsync(ctx workflow.Context, input *eks.ListUpdatesI
     future := workflow.ExecuteActivity(ctx, a.activities.ListUpdates, input)
     return &EksListUpdatesResult{Result: future}
 }
+
 func (a *EKSStub) TagResource(ctx workflow.Context, input *eks.TagResourceInput) (*eks.TagResourceOutput, error) {
     var output eks.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -452,6 +468,7 @@ func (a *EKSStub) TagResourceAsync(ctx workflow.Context, input *eks.TagResourceI
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &EksTagResourceResult{Result: future}
 }
+
 func (a *EKSStub) UntagResource(ctx workflow.Context, input *eks.UntagResourceInput) (*eks.UntagResourceOutput, error) {
     var output eks.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -462,6 +479,7 @@ func (a *EKSStub) UntagResourceAsync(ctx workflow.Context, input *eks.UntagResou
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &EksUntagResourceResult{Result: future}
 }
+
 func (a *EKSStub) UpdateClusterConfig(ctx workflow.Context, input *eks.UpdateClusterConfigInput) (*eks.UpdateClusterConfigOutput, error) {
     var output eks.UpdateClusterConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterConfig, input).Get(ctx, &output)
@@ -472,6 +490,7 @@ func (a *EKSStub) UpdateClusterConfigAsync(ctx workflow.Context, input *eks.Upda
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterConfig, input)
     return &EksUpdateClusterConfigResult{Result: future}
 }
+
 func (a *EKSStub) UpdateClusterVersion(ctx workflow.Context, input *eks.UpdateClusterVersionInput) (*eks.UpdateClusterVersionOutput, error) {
     var output eks.UpdateClusterVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterVersion, input).Get(ctx, &output)
@@ -482,6 +501,7 @@ func (a *EKSStub) UpdateClusterVersionAsync(ctx workflow.Context, input *eks.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterVersion, input)
     return &EksUpdateClusterVersionResult{Result: future}
 }
+
 func (a *EKSStub) UpdateNodegroupConfig(ctx workflow.Context, input *eks.UpdateNodegroupConfigInput) (*eks.UpdateNodegroupConfigOutput, error) {
     var output eks.UpdateNodegroupConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateNodegroupConfig, input).Get(ctx, &output)
@@ -492,6 +512,7 @@ func (a *EKSStub) UpdateNodegroupConfigAsync(ctx workflow.Context, input *eks.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateNodegroupConfig, input)
     return &EksUpdateNodegroupConfigResult{Result: future}
 }
+
 func (a *EKSStub) UpdateNodegroupVersion(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) (*eks.UpdateNodegroupVersionOutput, error) {
     var output eks.UpdateNodegroupVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateNodegroupVersion, input).Get(ctx, &output)
@@ -511,6 +532,7 @@ func (a *EKSStub) WaitUntilClusterActiveAsync(ctx workflow.Context, input *eks.D
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilClusterActive, input)
 }
 
+
 func (a *EKSStub) WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilClusterDeleted, input).Get(ctx, nil)
 }
@@ -518,6 +540,7 @@ func (a *EKSStub) WaitUntilClusterDeleted(ctx workflow.Context, input *eks.Descr
 func (a *EKSStub) WaitUntilClusterDeletedAsync(ctx workflow.Context, input *eks.DescribeClusterInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilClusterDeleted, input)
 }
+
 
 func (a *EKSStub) WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilNodegroupActive, input).Get(ctx, nil)
@@ -527,6 +550,7 @@ func (a *EKSStub) WaitUntilNodegroupActiveAsync(ctx workflow.Context, input *eks
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilNodegroupActive, input)
 }
 
+
 func (a *EKSStub) WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilNodegroupDeleted, input).Get(ctx, nil)
 }
@@ -534,3 +558,4 @@ func (a *EKSStub) WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.Des
 func (a *EKSStub) WaitUntilNodegroupDeletedAsync(ctx workflow.Context, input *eks.DescribeNodegroupInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilNodegroupDeleted, input)
 }
+

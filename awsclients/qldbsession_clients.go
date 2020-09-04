@@ -10,6 +10,7 @@ type QLDBSessionClient interface {
     SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error)
     SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult
 }
+
 type QldbsessionSendCommandResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *QldbsessionSendCommandResult) Get(ctx workflow.Context) (*qldbsession.S
     return &output, err
 }
 
-
 type QLDBSessionStub struct {
     activities awsactivities.QLDBSessionActivities
 }
@@ -28,6 +28,7 @@ type QLDBSessionStub struct {
 func NewQLDBSessionStub() QLDBSessionClient {
     return &QLDBSessionStub{}
 }
+
 func (a *QLDBSessionStub) SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
     var output qldbsession.SendCommandOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendCommand, input).Get(ctx, &output)

@@ -118,6 +118,7 @@ type MTurkClient interface {
     UpdateQualificationType(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error)
     UpdateQualificationTypeAsync(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) *MturkUpdateQualificationTypeResult
 }
+
 type MturkApproveAssignmentResult struct {
 	Result workflow.Future
 }
@@ -488,7 +489,6 @@ func (r *MturkUpdateQualificationTypeResult) Get(ctx workflow.Context) (*mturk.U
     return &output, err
 }
 
-
 type MTurkStub struct {
     activities awsactivities.MTurkActivities
 }
@@ -496,6 +496,7 @@ type MTurkStub struct {
 func NewMTurkStub() MTurkClient {
     return &MTurkStub{}
 }
+
 func (a *MTurkStub) ApproveAssignment(ctx workflow.Context, input *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error) {
     var output mturk.ApproveAssignmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ApproveAssignment, input).Get(ctx, &output)
@@ -506,6 +507,7 @@ func (a *MTurkStub) ApproveAssignmentAsync(ctx workflow.Context, input *mturk.Ap
     future := workflow.ExecuteActivity(ctx, a.activities.ApproveAssignment, input)
     return &MturkApproveAssignmentResult{Result: future}
 }
+
 func (a *MTurkStub) AssociateQualificationWithWorker(ctx workflow.Context, input *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error) {
     var output mturk.AssociateQualificationWithWorkerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateQualificationWithWorker, input).Get(ctx, &output)
@@ -516,6 +518,7 @@ func (a *MTurkStub) AssociateQualificationWithWorkerAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateQualificationWithWorker, input)
     return &MturkAssociateQualificationWithWorkerResult{Result: future}
 }
+
 func (a *MTurkStub) CreateAdditionalAssignmentsForHIT(ctx workflow.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error) {
     var output mturk.CreateAdditionalAssignmentsForHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateAdditionalAssignmentsForHIT, input).Get(ctx, &output)
@@ -526,6 +529,7 @@ func (a *MTurkStub) CreateAdditionalAssignmentsForHITAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.CreateAdditionalAssignmentsForHIT, input)
     return &MturkCreateAdditionalAssignmentsForHITResult{Result: future}
 }
+
 func (a *MTurkStub) CreateHIT(ctx workflow.Context, input *mturk.CreateHITInput) (*mturk.CreateHITOutput, error) {
     var output mturk.CreateHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHIT, input).Get(ctx, &output)
@@ -536,6 +540,7 @@ func (a *MTurkStub) CreateHITAsync(ctx workflow.Context, input *mturk.CreateHITI
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHIT, input)
     return &MturkCreateHITResult{Result: future}
 }
+
 func (a *MTurkStub) CreateHITType(ctx workflow.Context, input *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error) {
     var output mturk.CreateHITTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHITType, input).Get(ctx, &output)
@@ -546,6 +551,7 @@ func (a *MTurkStub) CreateHITTypeAsync(ctx workflow.Context, input *mturk.Create
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHITType, input)
     return &MturkCreateHITTypeResult{Result: future}
 }
+
 func (a *MTurkStub) CreateHITWithHITType(ctx workflow.Context, input *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error) {
     var output mturk.CreateHITWithHITTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHITWithHITType, input).Get(ctx, &output)
@@ -556,6 +562,7 @@ func (a *MTurkStub) CreateHITWithHITTypeAsync(ctx workflow.Context, input *mturk
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHITWithHITType, input)
     return &MturkCreateHITWithHITTypeResult{Result: future}
 }
+
 func (a *MTurkStub) CreateQualificationType(ctx workflow.Context, input *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error) {
     var output mturk.CreateQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateQualificationType, input).Get(ctx, &output)
@@ -566,6 +573,7 @@ func (a *MTurkStub) CreateQualificationTypeAsync(ctx workflow.Context, input *mt
     future := workflow.ExecuteActivity(ctx, a.activities.CreateQualificationType, input)
     return &MturkCreateQualificationTypeResult{Result: future}
 }
+
 func (a *MTurkStub) CreateWorkerBlock(ctx workflow.Context, input *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error) {
     var output mturk.CreateWorkerBlockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateWorkerBlock, input).Get(ctx, &output)
@@ -576,6 +584,7 @@ func (a *MTurkStub) CreateWorkerBlockAsync(ctx workflow.Context, input *mturk.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateWorkerBlock, input)
     return &MturkCreateWorkerBlockResult{Result: future}
 }
+
 func (a *MTurkStub) DeleteHIT(ctx workflow.Context, input *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error) {
     var output mturk.DeleteHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHIT, input).Get(ctx, &output)
@@ -586,6 +595,7 @@ func (a *MTurkStub) DeleteHITAsync(ctx workflow.Context, input *mturk.DeleteHITI
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHIT, input)
     return &MturkDeleteHITResult{Result: future}
 }
+
 func (a *MTurkStub) DeleteQualificationType(ctx workflow.Context, input *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error) {
     var output mturk.DeleteQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteQualificationType, input).Get(ctx, &output)
@@ -596,6 +606,7 @@ func (a *MTurkStub) DeleteQualificationTypeAsync(ctx workflow.Context, input *mt
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteQualificationType, input)
     return &MturkDeleteQualificationTypeResult{Result: future}
 }
+
 func (a *MTurkStub) DeleteWorkerBlock(ctx workflow.Context, input *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error) {
     var output mturk.DeleteWorkerBlockOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteWorkerBlock, input).Get(ctx, &output)
@@ -606,6 +617,7 @@ func (a *MTurkStub) DeleteWorkerBlockAsync(ctx workflow.Context, input *mturk.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteWorkerBlock, input)
     return &MturkDeleteWorkerBlockResult{Result: future}
 }
+
 func (a *MTurkStub) DisassociateQualificationFromWorker(ctx workflow.Context, input *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error) {
     var output mturk.DisassociateQualificationFromWorkerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateQualificationFromWorker, input).Get(ctx, &output)
@@ -616,6 +628,7 @@ func (a *MTurkStub) DisassociateQualificationFromWorkerAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateQualificationFromWorker, input)
     return &MturkDisassociateQualificationFromWorkerResult{Result: future}
 }
+
 func (a *MTurkStub) GetAccountBalance(ctx workflow.Context, input *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error) {
     var output mturk.GetAccountBalanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccountBalance, input).Get(ctx, &output)
@@ -626,6 +639,7 @@ func (a *MTurkStub) GetAccountBalanceAsync(ctx workflow.Context, input *mturk.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccountBalance, input)
     return &MturkGetAccountBalanceResult{Result: future}
 }
+
 func (a *MTurkStub) GetAssignment(ctx workflow.Context, input *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error) {
     var output mturk.GetAssignmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAssignment, input).Get(ctx, &output)
@@ -636,6 +650,7 @@ func (a *MTurkStub) GetAssignmentAsync(ctx workflow.Context, input *mturk.GetAss
     future := workflow.ExecuteActivity(ctx, a.activities.GetAssignment, input)
     return &MturkGetAssignmentResult{Result: future}
 }
+
 func (a *MTurkStub) GetFileUploadURL(ctx workflow.Context, input *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error) {
     var output mturk.GetFileUploadURLOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFileUploadURL, input).Get(ctx, &output)
@@ -646,6 +661,7 @@ func (a *MTurkStub) GetFileUploadURLAsync(ctx workflow.Context, input *mturk.Get
     future := workflow.ExecuteActivity(ctx, a.activities.GetFileUploadURL, input)
     return &MturkGetFileUploadURLResult{Result: future}
 }
+
 func (a *MTurkStub) GetHIT(ctx workflow.Context, input *mturk.GetHITInput) (*mturk.GetHITOutput, error) {
     var output mturk.GetHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHIT, input).Get(ctx, &output)
@@ -656,6 +672,7 @@ func (a *MTurkStub) GetHITAsync(ctx workflow.Context, input *mturk.GetHITInput) 
     future := workflow.ExecuteActivity(ctx, a.activities.GetHIT, input)
     return &MturkGetHITResult{Result: future}
 }
+
 func (a *MTurkStub) GetQualificationScore(ctx workflow.Context, input *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error) {
     var output mturk.GetQualificationScoreOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetQualificationScore, input).Get(ctx, &output)
@@ -666,6 +683,7 @@ func (a *MTurkStub) GetQualificationScoreAsync(ctx workflow.Context, input *mtur
     future := workflow.ExecuteActivity(ctx, a.activities.GetQualificationScore, input)
     return &MturkGetQualificationScoreResult{Result: future}
 }
+
 func (a *MTurkStub) GetQualificationType(ctx workflow.Context, input *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error) {
     var output mturk.GetQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetQualificationType, input).Get(ctx, &output)
@@ -676,6 +694,7 @@ func (a *MTurkStub) GetQualificationTypeAsync(ctx workflow.Context, input *mturk
     future := workflow.ExecuteActivity(ctx, a.activities.GetQualificationType, input)
     return &MturkGetQualificationTypeResult{Result: future}
 }
+
 func (a *MTurkStub) ListAssignmentsForHIT(ctx workflow.Context, input *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error) {
     var output mturk.ListAssignmentsForHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListAssignmentsForHIT, input).Get(ctx, &output)
@@ -686,6 +705,7 @@ func (a *MTurkStub) ListAssignmentsForHITAsync(ctx workflow.Context, input *mtur
     future := workflow.ExecuteActivity(ctx, a.activities.ListAssignmentsForHIT, input)
     return &MturkListAssignmentsForHITResult{Result: future}
 }
+
 func (a *MTurkStub) ListBonusPayments(ctx workflow.Context, input *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error) {
     var output mturk.ListBonusPaymentsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListBonusPayments, input).Get(ctx, &output)
@@ -696,6 +716,7 @@ func (a *MTurkStub) ListBonusPaymentsAsync(ctx workflow.Context, input *mturk.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListBonusPayments, input)
     return &MturkListBonusPaymentsResult{Result: future}
 }
+
 func (a *MTurkStub) ListHITs(ctx workflow.Context, input *mturk.ListHITsInput) (*mturk.ListHITsOutput, error) {
     var output mturk.ListHITsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHITs, input).Get(ctx, &output)
@@ -706,6 +727,7 @@ func (a *MTurkStub) ListHITsAsync(ctx workflow.Context, input *mturk.ListHITsInp
     future := workflow.ExecuteActivity(ctx, a.activities.ListHITs, input)
     return &MturkListHITsResult{Result: future}
 }
+
 func (a *MTurkStub) ListHITsForQualificationType(ctx workflow.Context, input *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error) {
     var output mturk.ListHITsForQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHITsForQualificationType, input).Get(ctx, &output)
@@ -716,6 +738,7 @@ func (a *MTurkStub) ListHITsForQualificationTypeAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListHITsForQualificationType, input)
     return &MturkListHITsForQualificationTypeResult{Result: future}
 }
+
 func (a *MTurkStub) ListQualificationRequests(ctx workflow.Context, input *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error) {
     var output mturk.ListQualificationRequestsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListQualificationRequests, input).Get(ctx, &output)
@@ -726,6 +749,7 @@ func (a *MTurkStub) ListQualificationRequestsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListQualificationRequests, input)
     return &MturkListQualificationRequestsResult{Result: future}
 }
+
 func (a *MTurkStub) ListQualificationTypes(ctx workflow.Context, input *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error) {
     var output mturk.ListQualificationTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListQualificationTypes, input).Get(ctx, &output)
@@ -736,6 +760,7 @@ func (a *MTurkStub) ListQualificationTypesAsync(ctx workflow.Context, input *mtu
     future := workflow.ExecuteActivity(ctx, a.activities.ListQualificationTypes, input)
     return &MturkListQualificationTypesResult{Result: future}
 }
+
 func (a *MTurkStub) ListReviewPolicyResultsForHIT(ctx workflow.Context, input *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error) {
     var output mturk.ListReviewPolicyResultsForHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListReviewPolicyResultsForHIT, input).Get(ctx, &output)
@@ -746,6 +771,7 @@ func (a *MTurkStub) ListReviewPolicyResultsForHITAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.ListReviewPolicyResultsForHIT, input)
     return &MturkListReviewPolicyResultsForHITResult{Result: future}
 }
+
 func (a *MTurkStub) ListReviewableHITs(ctx workflow.Context, input *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error) {
     var output mturk.ListReviewableHITsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListReviewableHITs, input).Get(ctx, &output)
@@ -756,6 +782,7 @@ func (a *MTurkStub) ListReviewableHITsAsync(ctx workflow.Context, input *mturk.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListReviewableHITs, input)
     return &MturkListReviewableHITsResult{Result: future}
 }
+
 func (a *MTurkStub) ListWorkerBlocks(ctx workflow.Context, input *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error) {
     var output mturk.ListWorkerBlocksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListWorkerBlocks, input).Get(ctx, &output)
@@ -766,6 +793,7 @@ func (a *MTurkStub) ListWorkerBlocksAsync(ctx workflow.Context, input *mturk.Lis
     future := workflow.ExecuteActivity(ctx, a.activities.ListWorkerBlocks, input)
     return &MturkListWorkerBlocksResult{Result: future}
 }
+
 func (a *MTurkStub) ListWorkersWithQualificationType(ctx workflow.Context, input *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error) {
     var output mturk.ListWorkersWithQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListWorkersWithQualificationType, input).Get(ctx, &output)
@@ -776,6 +804,7 @@ func (a *MTurkStub) ListWorkersWithQualificationTypeAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.ListWorkersWithQualificationType, input)
     return &MturkListWorkersWithQualificationTypeResult{Result: future}
 }
+
 func (a *MTurkStub) NotifyWorkers(ctx workflow.Context, input *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error) {
     var output mturk.NotifyWorkersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.NotifyWorkers, input).Get(ctx, &output)
@@ -786,6 +815,7 @@ func (a *MTurkStub) NotifyWorkersAsync(ctx workflow.Context, input *mturk.Notify
     future := workflow.ExecuteActivity(ctx, a.activities.NotifyWorkers, input)
     return &MturkNotifyWorkersResult{Result: future}
 }
+
 func (a *MTurkStub) RejectAssignment(ctx workflow.Context, input *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error) {
     var output mturk.RejectAssignmentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RejectAssignment, input).Get(ctx, &output)
@@ -796,6 +826,7 @@ func (a *MTurkStub) RejectAssignmentAsync(ctx workflow.Context, input *mturk.Rej
     future := workflow.ExecuteActivity(ctx, a.activities.RejectAssignment, input)
     return &MturkRejectAssignmentResult{Result: future}
 }
+
 func (a *MTurkStub) SendBonus(ctx workflow.Context, input *mturk.SendBonusInput) (*mturk.SendBonusOutput, error) {
     var output mturk.SendBonusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendBonus, input).Get(ctx, &output)
@@ -806,6 +837,7 @@ func (a *MTurkStub) SendBonusAsync(ctx workflow.Context, input *mturk.SendBonusI
     future := workflow.ExecuteActivity(ctx, a.activities.SendBonus, input)
     return &MturkSendBonusResult{Result: future}
 }
+
 func (a *MTurkStub) SendTestEventNotification(ctx workflow.Context, input *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error) {
     var output mturk.SendTestEventNotificationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendTestEventNotification, input).Get(ctx, &output)
@@ -816,6 +848,7 @@ func (a *MTurkStub) SendTestEventNotificationAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.SendTestEventNotification, input)
     return &MturkSendTestEventNotificationResult{Result: future}
 }
+
 func (a *MTurkStub) UpdateExpirationForHIT(ctx workflow.Context, input *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error) {
     var output mturk.UpdateExpirationForHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateExpirationForHIT, input).Get(ctx, &output)
@@ -826,6 +859,7 @@ func (a *MTurkStub) UpdateExpirationForHITAsync(ctx workflow.Context, input *mtu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateExpirationForHIT, input)
     return &MturkUpdateExpirationForHITResult{Result: future}
 }
+
 func (a *MTurkStub) UpdateHITReviewStatus(ctx workflow.Context, input *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error) {
     var output mturk.UpdateHITReviewStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateHITReviewStatus, input).Get(ctx, &output)
@@ -836,6 +870,7 @@ func (a *MTurkStub) UpdateHITReviewStatusAsync(ctx workflow.Context, input *mtur
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateHITReviewStatus, input)
     return &MturkUpdateHITReviewStatusResult{Result: future}
 }
+
 func (a *MTurkStub) UpdateHITTypeOfHIT(ctx workflow.Context, input *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error) {
     var output mturk.UpdateHITTypeOfHITOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateHITTypeOfHIT, input).Get(ctx, &output)
@@ -846,6 +881,7 @@ func (a *MTurkStub) UpdateHITTypeOfHITAsync(ctx workflow.Context, input *mturk.U
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateHITTypeOfHIT, input)
     return &MturkUpdateHITTypeOfHITResult{Result: future}
 }
+
 func (a *MTurkStub) UpdateNotificationSettings(ctx workflow.Context, input *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error) {
     var output mturk.UpdateNotificationSettingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateNotificationSettings, input).Get(ctx, &output)
@@ -856,6 +892,7 @@ func (a *MTurkStub) UpdateNotificationSettingsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateNotificationSettings, input)
     return &MturkUpdateNotificationSettingsResult{Result: future}
 }
+
 func (a *MTurkStub) UpdateQualificationType(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error) {
     var output mturk.UpdateQualificationTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateQualificationType, input).Get(ctx, &output)

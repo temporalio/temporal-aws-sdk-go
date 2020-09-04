@@ -31,6 +31,7 @@ type STSClient interface {
     GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error)
     GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult
 }
+
 type StsAssumeRoleResult struct {
 	Result workflow.Future
 }
@@ -111,7 +112,6 @@ func (r *StsGetSessionTokenResult) Get(ctx workflow.Context) (*sts.GetSessionTok
     return &output, err
 }
 
-
 type STSStub struct {
     activities awsactivities.STSActivities
 }
@@ -119,6 +119,7 @@ type STSStub struct {
 func NewSTSStub() STSClient {
     return &STSStub{}
 }
+
 func (a *STSStub) AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error) {
     var output sts.AssumeRoleOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssumeRole, input).Get(ctx, &output)
@@ -129,6 +130,7 @@ func (a *STSStub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInp
     future := workflow.ExecuteActivity(ctx, a.activities.AssumeRole, input)
     return &StsAssumeRoleResult{Result: future}
 }
+
 func (a *STSStub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error) {
     var output sts.AssumeRoleWithSAMLOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssumeRoleWithSAML, input).Get(ctx, &output)
@@ -139,6 +141,7 @@ func (a *STSStub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.Assum
     future := workflow.ExecuteActivity(ctx, a.activities.AssumeRoleWithSAML, input)
     return &StsAssumeRoleWithSAMLResult{Result: future}
 }
+
 func (a *STSStub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error) {
     var output sts.AssumeRoleWithWebIdentityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssumeRoleWithWebIdentity, input).Get(ctx, &output)
@@ -149,6 +152,7 @@ func (a *STSStub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *st
     future := workflow.ExecuteActivity(ctx, a.activities.AssumeRoleWithWebIdentity, input)
     return &StsAssumeRoleWithWebIdentityResult{Result: future}
 }
+
 func (a *STSStub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error) {
     var output sts.DecodeAuthorizationMessageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DecodeAuthorizationMessage, input).Get(ctx, &output)
@@ -159,6 +163,7 @@ func (a *STSStub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *s
     future := workflow.ExecuteActivity(ctx, a.activities.DecodeAuthorizationMessage, input)
     return &StsDecodeAuthorizationMessageResult{Result: future}
 }
+
 func (a *STSStub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error) {
     var output sts.GetAccessKeyInfoOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccessKeyInfo, input).Get(ctx, &output)
@@ -169,6 +174,7 @@ func (a *STSStub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAcce
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccessKeyInfo, input)
     return &StsGetAccessKeyInfoResult{Result: future}
 }
+
 func (a *STSStub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error) {
     var output sts.GetCallerIdentityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCallerIdentity, input).Get(ctx, &output)
@@ -179,6 +185,7 @@ func (a *STSStub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCal
     future := workflow.ExecuteActivity(ctx, a.activities.GetCallerIdentity, input)
     return &StsGetCallerIdentityResult{Result: future}
 }
+
 func (a *STSStub) GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error) {
     var output sts.GetFederationTokenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetFederationToken, input).Get(ctx, &output)
@@ -189,6 +196,7 @@ func (a *STSStub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFe
     future := workflow.ExecuteActivity(ctx, a.activities.GetFederationToken, input)
     return &StsGetFederationTokenResult{Result: future}
 }
+
 func (a *STSStub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error) {
     var output sts.GetSessionTokenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetSessionToken, input).Get(ctx, &output)

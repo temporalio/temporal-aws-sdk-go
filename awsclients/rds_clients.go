@@ -403,6 +403,7 @@ type RDSClient interface {
     WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
     WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
     WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error}
+
 type RdsAddRoleToDBClusterResult struct {
 	Result workflow.Future
 }
@@ -1703,7 +1704,6 @@ func (r *RdsStopDBInstanceResult) Get(ctx workflow.Context) (*rds.StopDBInstance
     return &output, err
 }
 
-
 type RDSStub struct {
     activities awsactivities.RDSActivities
 }
@@ -1711,6 +1711,7 @@ type RDSStub struct {
 func NewRDSStub() RDSClient {
     return &RDSStub{}
 }
+
 func (a *RDSStub) AddRoleToDBCluster(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error) {
     var output rds.AddRoleToDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddRoleToDBCluster, input).Get(ctx, &output)
@@ -1721,6 +1722,7 @@ func (a *RDSStub) AddRoleToDBClusterAsync(ctx workflow.Context, input *rds.AddRo
     future := workflow.ExecuteActivity(ctx, a.activities.AddRoleToDBCluster, input)
     return &RdsAddRoleToDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) AddRoleToDBInstance(ctx workflow.Context, input *rds.AddRoleToDBInstanceInput) (*rds.AddRoleToDBInstanceOutput, error) {
     var output rds.AddRoleToDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddRoleToDBInstance, input).Get(ctx, &output)
@@ -1731,6 +1733,7 @@ func (a *RDSStub) AddRoleToDBInstanceAsync(ctx workflow.Context, input *rds.AddR
     future := workflow.ExecuteActivity(ctx, a.activities.AddRoleToDBInstance, input)
     return &RdsAddRoleToDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) AddSourceIdentifierToSubscription(ctx workflow.Context, input *rds.AddSourceIdentifierToSubscriptionInput) (*rds.AddSourceIdentifierToSubscriptionOutput, error) {
     var output rds.AddSourceIdentifierToSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddSourceIdentifierToSubscription, input).Get(ctx, &output)
@@ -1741,6 +1744,7 @@ func (a *RDSStub) AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.AddSourceIdentifierToSubscription, input)
     return &RdsAddSourceIdentifierToSubscriptionResult{Result: future}
 }
+
 func (a *RDSStub) AddTagsToResource(ctx workflow.Context, input *rds.AddTagsToResourceInput) (*rds.AddTagsToResourceOutput, error) {
     var output rds.AddTagsToResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input).Get(ctx, &output)
@@ -1751,6 +1755,7 @@ func (a *RDSStub) AddTagsToResourceAsync(ctx workflow.Context, input *rds.AddTag
     future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input)
     return &RdsAddTagsToResourceResult{Result: future}
 }
+
 func (a *RDSStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *rds.ApplyPendingMaintenanceActionInput) (*rds.ApplyPendingMaintenanceActionOutput, error) {
     var output rds.ApplyPendingMaintenanceActionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ApplyPendingMaintenanceAction, input).Get(ctx, &output)
@@ -1761,6 +1766,7 @@ func (a *RDSStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ApplyPendingMaintenanceAction, input)
     return &RdsApplyPendingMaintenanceActionResult{Result: future}
 }
+
 func (a *RDSStub) AuthorizeDBSecurityGroupIngress(ctx workflow.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) (*rds.AuthorizeDBSecurityGroupIngressOutput, error) {
     var output rds.AuthorizeDBSecurityGroupIngressOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AuthorizeDBSecurityGroupIngress, input).Get(ctx, &output)
@@ -1771,6 +1777,7 @@ func (a *RDSStub) AuthorizeDBSecurityGroupIngressAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.AuthorizeDBSecurityGroupIngress, input)
     return &RdsAuthorizeDBSecurityGroupIngressResult{Result: future}
 }
+
 func (a *RDSStub) BacktrackDBCluster(ctx workflow.Context, input *rds.BacktrackDBClusterInput) (*rds.BacktrackDBClusterOutput, error) {
     var output rds.BacktrackDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.BacktrackDBCluster, input).Get(ctx, &output)
@@ -1781,6 +1788,7 @@ func (a *RDSStub) BacktrackDBClusterAsync(ctx workflow.Context, input *rds.Backt
     future := workflow.ExecuteActivity(ctx, a.activities.BacktrackDBCluster, input)
     return &RdsBacktrackDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) CancelExportTask(ctx workflow.Context, input *rds.CancelExportTaskInput) (*rds.CancelExportTaskOutput, error) {
     var output rds.CancelExportTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelExportTask, input).Get(ctx, &output)
@@ -1791,6 +1799,7 @@ func (a *RDSStub) CancelExportTaskAsync(ctx workflow.Context, input *rds.CancelE
     future := workflow.ExecuteActivity(ctx, a.activities.CancelExportTask, input)
     return &RdsCancelExportTaskResult{Result: future}
 }
+
 func (a *RDSStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *rds.CopyDBClusterParameterGroupInput) (*rds.CopyDBClusterParameterGroupOutput, error) {
     var output rds.CopyDBClusterParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyDBClusterParameterGroup, input).Get(ctx, &output)
@@ -1801,6 +1810,7 @@ func (a *RDSStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CopyDBClusterParameterGroup, input)
     return &RdsCopyDBClusterParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) CopyDBClusterSnapshot(ctx workflow.Context, input *rds.CopyDBClusterSnapshotInput) (*rds.CopyDBClusterSnapshotOutput, error) {
     var output rds.CopyDBClusterSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyDBClusterSnapshot, input).Get(ctx, &output)
@@ -1811,6 +1821,7 @@ func (a *RDSStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *rds.Co
     future := workflow.ExecuteActivity(ctx, a.activities.CopyDBClusterSnapshot, input)
     return &RdsCopyDBClusterSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) CopyDBParameterGroup(ctx workflow.Context, input *rds.CopyDBParameterGroupInput) (*rds.CopyDBParameterGroupOutput, error) {
     var output rds.CopyDBParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyDBParameterGroup, input).Get(ctx, &output)
@@ -1821,6 +1832,7 @@ func (a *RDSStub) CopyDBParameterGroupAsync(ctx workflow.Context, input *rds.Cop
     future := workflow.ExecuteActivity(ctx, a.activities.CopyDBParameterGroup, input)
     return &RdsCopyDBParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) CopyDBSnapshot(ctx workflow.Context, input *rds.CopyDBSnapshotInput) (*rds.CopyDBSnapshotOutput, error) {
     var output rds.CopyDBSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyDBSnapshot, input).Get(ctx, &output)
@@ -1831,6 +1843,7 @@ func (a *RDSStub) CopyDBSnapshotAsync(ctx workflow.Context, input *rds.CopyDBSna
     future := workflow.ExecuteActivity(ctx, a.activities.CopyDBSnapshot, input)
     return &RdsCopyDBSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) CopyOptionGroup(ctx workflow.Context, input *rds.CopyOptionGroupInput) (*rds.CopyOptionGroupOutput, error) {
     var output rds.CopyOptionGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyOptionGroup, input).Get(ctx, &output)
@@ -1841,6 +1854,7 @@ func (a *RDSStub) CopyOptionGroupAsync(ctx workflow.Context, input *rds.CopyOpti
     future := workflow.ExecuteActivity(ctx, a.activities.CopyOptionGroup, input)
     return &RdsCopyOptionGroupResult{Result: future}
 }
+
 func (a *RDSStub) CreateCustomAvailabilityZone(ctx workflow.Context, input *rds.CreateCustomAvailabilityZoneInput) (*rds.CreateCustomAvailabilityZoneOutput, error) {
     var output rds.CreateCustomAvailabilityZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCustomAvailabilityZone, input).Get(ctx, &output)
@@ -1851,6 +1865,7 @@ func (a *RDSStub) CreateCustomAvailabilityZoneAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCustomAvailabilityZone, input)
     return &RdsCreateCustomAvailabilityZoneResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBCluster(ctx workflow.Context, input *rds.CreateDBClusterInput) (*rds.CreateDBClusterOutput, error) {
     var output rds.CreateDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBCluster, input).Get(ctx, &output)
@@ -1861,6 +1876,7 @@ func (a *RDSStub) CreateDBClusterAsync(ctx workflow.Context, input *rds.CreateDB
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBCluster, input)
     return &RdsCreateDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBClusterEndpoint(ctx workflow.Context, input *rds.CreateDBClusterEndpointInput) (*rds.CreateDBClusterEndpointOutput, error) {
     var output rds.CreateDBClusterEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterEndpoint, input).Get(ctx, &output)
@@ -1871,6 +1887,7 @@ func (a *RDSStub) CreateDBClusterEndpointAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterEndpoint, input)
     return &RdsCreateDBClusterEndpointResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBClusterParameterGroup(ctx workflow.Context, input *rds.CreateDBClusterParameterGroupInput) (*rds.CreateDBClusterParameterGroupOutput, error) {
     var output rds.CreateDBClusterParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterParameterGroup, input).Get(ctx, &output)
@@ -1881,6 +1898,7 @@ func (a *RDSStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterParameterGroup, input)
     return &RdsCreateDBClusterParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBClusterSnapshot(ctx workflow.Context, input *rds.CreateDBClusterSnapshotInput) (*rds.CreateDBClusterSnapshotOutput, error) {
     var output rds.CreateDBClusterSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterSnapshot, input).Get(ctx, &output)
@@ -1891,6 +1909,7 @@ func (a *RDSStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBClusterSnapshot, input)
     return &RdsCreateDBClusterSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBInstance(ctx workflow.Context, input *rds.CreateDBInstanceInput) (*rds.CreateDBInstanceOutput, error) {
     var output rds.CreateDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBInstance, input).Get(ctx, &output)
@@ -1901,6 +1920,7 @@ func (a *RDSStub) CreateDBInstanceAsync(ctx workflow.Context, input *rds.CreateD
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBInstance, input)
     return &RdsCreateDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBInstanceReadReplica(ctx workflow.Context, input *rds.CreateDBInstanceReadReplicaInput) (*rds.CreateDBInstanceReadReplicaOutput, error) {
     var output rds.CreateDBInstanceReadReplicaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBInstanceReadReplica, input).Get(ctx, &output)
@@ -1911,6 +1931,7 @@ func (a *RDSStub) CreateDBInstanceReadReplicaAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBInstanceReadReplica, input)
     return &RdsCreateDBInstanceReadReplicaResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBParameterGroup(ctx workflow.Context, input *rds.CreateDBParameterGroupInput) (*rds.CreateDBParameterGroupOutput, error) {
     var output rds.CreateDBParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBParameterGroup, input).Get(ctx, &output)
@@ -1921,6 +1942,7 @@ func (a *RDSStub) CreateDBParameterGroupAsync(ctx workflow.Context, input *rds.C
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBParameterGroup, input)
     return &RdsCreateDBParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBProxy(ctx workflow.Context, input *rds.CreateDBProxyInput) (*rds.CreateDBProxyOutput, error) {
     var output rds.CreateDBProxyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBProxy, input).Get(ctx, &output)
@@ -1931,6 +1953,7 @@ func (a *RDSStub) CreateDBProxyAsync(ctx workflow.Context, input *rds.CreateDBPr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBProxy, input)
     return &RdsCreateDBProxyResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBSecurityGroup(ctx workflow.Context, input *rds.CreateDBSecurityGroupInput) (*rds.CreateDBSecurityGroupOutput, error) {
     var output rds.CreateDBSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBSecurityGroup, input).Get(ctx, &output)
@@ -1941,6 +1964,7 @@ func (a *RDSStub) CreateDBSecurityGroupAsync(ctx workflow.Context, input *rds.Cr
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBSecurityGroup, input)
     return &RdsCreateDBSecurityGroupResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBSnapshot(ctx workflow.Context, input *rds.CreateDBSnapshotInput) (*rds.CreateDBSnapshotOutput, error) {
     var output rds.CreateDBSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBSnapshot, input).Get(ctx, &output)
@@ -1951,6 +1975,7 @@ func (a *RDSStub) CreateDBSnapshotAsync(ctx workflow.Context, input *rds.CreateD
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBSnapshot, input)
     return &RdsCreateDBSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) CreateDBSubnetGroup(ctx workflow.Context, input *rds.CreateDBSubnetGroupInput) (*rds.CreateDBSubnetGroupOutput, error) {
     var output rds.CreateDBSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDBSubnetGroup, input).Get(ctx, &output)
@@ -1961,6 +1986,7 @@ func (a *RDSStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *rds.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDBSubnetGroup, input)
     return &RdsCreateDBSubnetGroupResult{Result: future}
 }
+
 func (a *RDSStub) CreateEventSubscription(ctx workflow.Context, input *rds.CreateEventSubscriptionInput) (*rds.CreateEventSubscriptionOutput, error) {
     var output rds.CreateEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateEventSubscription, input).Get(ctx, &output)
@@ -1971,6 +1997,7 @@ func (a *RDSStub) CreateEventSubscriptionAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateEventSubscription, input)
     return &RdsCreateEventSubscriptionResult{Result: future}
 }
+
 func (a *RDSStub) CreateGlobalCluster(ctx workflow.Context, input *rds.CreateGlobalClusterInput) (*rds.CreateGlobalClusterOutput, error) {
     var output rds.CreateGlobalClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateGlobalCluster, input).Get(ctx, &output)
@@ -1981,6 +2008,7 @@ func (a *RDSStub) CreateGlobalClusterAsync(ctx workflow.Context, input *rds.Crea
     future := workflow.ExecuteActivity(ctx, a.activities.CreateGlobalCluster, input)
     return &RdsCreateGlobalClusterResult{Result: future}
 }
+
 func (a *RDSStub) CreateOptionGroup(ctx workflow.Context, input *rds.CreateOptionGroupInput) (*rds.CreateOptionGroupOutput, error) {
     var output rds.CreateOptionGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateOptionGroup, input).Get(ctx, &output)
@@ -1991,6 +2019,7 @@ func (a *RDSStub) CreateOptionGroupAsync(ctx workflow.Context, input *rds.Create
     future := workflow.ExecuteActivity(ctx, a.activities.CreateOptionGroup, input)
     return &RdsCreateOptionGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteCustomAvailabilityZone(ctx workflow.Context, input *rds.DeleteCustomAvailabilityZoneInput) (*rds.DeleteCustomAvailabilityZoneOutput, error) {
     var output rds.DeleteCustomAvailabilityZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomAvailabilityZone, input).Get(ctx, &output)
@@ -2001,6 +2030,7 @@ func (a *RDSStub) DeleteCustomAvailabilityZoneAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomAvailabilityZone, input)
     return &RdsDeleteCustomAvailabilityZoneResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBCluster(ctx workflow.Context, input *rds.DeleteDBClusterInput) (*rds.DeleteDBClusterOutput, error) {
     var output rds.DeleteDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBCluster, input).Get(ctx, &output)
@@ -2011,6 +2041,7 @@ func (a *RDSStub) DeleteDBClusterAsync(ctx workflow.Context, input *rds.DeleteDB
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBCluster, input)
     return &RdsDeleteDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBClusterEndpoint(ctx workflow.Context, input *rds.DeleteDBClusterEndpointInput) (*rds.DeleteDBClusterEndpointOutput, error) {
     var output rds.DeleteDBClusterEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterEndpoint, input).Get(ctx, &output)
@@ -2021,6 +2052,7 @@ func (a *RDSStub) DeleteDBClusterEndpointAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterEndpoint, input)
     return &RdsDeleteDBClusterEndpointResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input *rds.DeleteDBClusterParameterGroupInput) (*rds.DeleteDBClusterParameterGroupOutput, error) {
     var output rds.DeleteDBClusterParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterParameterGroup, input).Get(ctx, &output)
@@ -2031,6 +2063,7 @@ func (a *RDSStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterParameterGroup, input)
     return &RdsDeleteDBClusterParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *rds.DeleteDBClusterSnapshotInput) (*rds.DeleteDBClusterSnapshotOutput, error) {
     var output rds.DeleteDBClusterSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterSnapshot, input).Get(ctx, &output)
@@ -2041,6 +2074,7 @@ func (a *RDSStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBClusterSnapshot, input)
     return &RdsDeleteDBClusterSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBInstance(ctx workflow.Context, input *rds.DeleteDBInstanceInput) (*rds.DeleteDBInstanceOutput, error) {
     var output rds.DeleteDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBInstance, input).Get(ctx, &output)
@@ -2051,6 +2085,7 @@ func (a *RDSStub) DeleteDBInstanceAsync(ctx workflow.Context, input *rds.DeleteD
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBInstance, input)
     return &RdsDeleteDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBInstanceAutomatedBackup(ctx workflow.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) (*rds.DeleteDBInstanceAutomatedBackupOutput, error) {
     var output rds.DeleteDBInstanceAutomatedBackupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBInstanceAutomatedBackup, input).Get(ctx, &output)
@@ -2061,6 +2096,7 @@ func (a *RDSStub) DeleteDBInstanceAutomatedBackupAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBInstanceAutomatedBackup, input)
     return &RdsDeleteDBInstanceAutomatedBackupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBParameterGroup(ctx workflow.Context, input *rds.DeleteDBParameterGroupInput) (*rds.DeleteDBParameterGroupOutput, error) {
     var output rds.DeleteDBParameterGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBParameterGroup, input).Get(ctx, &output)
@@ -2071,6 +2107,7 @@ func (a *RDSStub) DeleteDBParameterGroupAsync(ctx workflow.Context, input *rds.D
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBParameterGroup, input)
     return &RdsDeleteDBParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBProxy(ctx workflow.Context, input *rds.DeleteDBProxyInput) (*rds.DeleteDBProxyOutput, error) {
     var output rds.DeleteDBProxyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBProxy, input).Get(ctx, &output)
@@ -2081,6 +2118,7 @@ func (a *RDSStub) DeleteDBProxyAsync(ctx workflow.Context, input *rds.DeleteDBPr
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBProxy, input)
     return &RdsDeleteDBProxyResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBSecurityGroup(ctx workflow.Context, input *rds.DeleteDBSecurityGroupInput) (*rds.DeleteDBSecurityGroupOutput, error) {
     var output rds.DeleteDBSecurityGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSecurityGroup, input).Get(ctx, &output)
@@ -2091,6 +2129,7 @@ func (a *RDSStub) DeleteDBSecurityGroupAsync(ctx workflow.Context, input *rds.De
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSecurityGroup, input)
     return &RdsDeleteDBSecurityGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBSnapshot(ctx workflow.Context, input *rds.DeleteDBSnapshotInput) (*rds.DeleteDBSnapshotOutput, error) {
     var output rds.DeleteDBSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSnapshot, input).Get(ctx, &output)
@@ -2101,6 +2140,7 @@ func (a *RDSStub) DeleteDBSnapshotAsync(ctx workflow.Context, input *rds.DeleteD
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSnapshot, input)
     return &RdsDeleteDBSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) DeleteDBSubnetGroup(ctx workflow.Context, input *rds.DeleteDBSubnetGroupInput) (*rds.DeleteDBSubnetGroupOutput, error) {
     var output rds.DeleteDBSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSubnetGroup, input).Get(ctx, &output)
@@ -2111,6 +2151,7 @@ func (a *RDSStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *rds.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDBSubnetGroup, input)
     return &RdsDeleteDBSubnetGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeleteEventSubscription(ctx workflow.Context, input *rds.DeleteEventSubscriptionInput) (*rds.DeleteEventSubscriptionOutput, error) {
     var output rds.DeleteEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteEventSubscription, input).Get(ctx, &output)
@@ -2121,6 +2162,7 @@ func (a *RDSStub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteEventSubscription, input)
     return &RdsDeleteEventSubscriptionResult{Result: future}
 }
+
 func (a *RDSStub) DeleteGlobalCluster(ctx workflow.Context, input *rds.DeleteGlobalClusterInput) (*rds.DeleteGlobalClusterOutput, error) {
     var output rds.DeleteGlobalClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteGlobalCluster, input).Get(ctx, &output)
@@ -2131,6 +2173,7 @@ func (a *RDSStub) DeleteGlobalClusterAsync(ctx workflow.Context, input *rds.Dele
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteGlobalCluster, input)
     return &RdsDeleteGlobalClusterResult{Result: future}
 }
+
 func (a *RDSStub) DeleteInstallationMedia(ctx workflow.Context, input *rds.DeleteInstallationMediaInput) (*rds.DeleteInstallationMediaOutput, error) {
     var output rds.DeleteInstallationMediaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteInstallationMedia, input).Get(ctx, &output)
@@ -2141,6 +2184,7 @@ func (a *RDSStub) DeleteInstallationMediaAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteInstallationMedia, input)
     return &RdsDeleteInstallationMediaResult{Result: future}
 }
+
 func (a *RDSStub) DeleteOptionGroup(ctx workflow.Context, input *rds.DeleteOptionGroupInput) (*rds.DeleteOptionGroupOutput, error) {
     var output rds.DeleteOptionGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteOptionGroup, input).Get(ctx, &output)
@@ -2151,6 +2195,7 @@ func (a *RDSStub) DeleteOptionGroupAsync(ctx workflow.Context, input *rds.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteOptionGroup, input)
     return &RdsDeleteOptionGroupResult{Result: future}
 }
+
 func (a *RDSStub) DeregisterDBProxyTargets(ctx workflow.Context, input *rds.DeregisterDBProxyTargetsInput) (*rds.DeregisterDBProxyTargetsOutput, error) {
     var output rds.DeregisterDBProxyTargetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeregisterDBProxyTargets, input).Get(ctx, &output)
@@ -2161,6 +2206,7 @@ func (a *RDSStub) DeregisterDBProxyTargetsAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.DeregisterDBProxyTargets, input)
     return &RdsDeregisterDBProxyTargetsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeAccountAttributes(ctx workflow.Context, input *rds.DescribeAccountAttributesInput) (*rds.DescribeAccountAttributesOutput, error) {
     var output rds.DescribeAccountAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountAttributes, input).Get(ctx, &output)
@@ -2171,6 +2217,7 @@ func (a *RDSStub) DescribeAccountAttributesAsync(ctx workflow.Context, input *rd
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountAttributes, input)
     return &RdsDescribeAccountAttributesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeCertificates(ctx workflow.Context, input *rds.DescribeCertificatesInput) (*rds.DescribeCertificatesOutput, error) {
     var output rds.DescribeCertificatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCertificates, input).Get(ctx, &output)
@@ -2181,6 +2228,7 @@ func (a *RDSStub) DescribeCertificatesAsync(ctx workflow.Context, input *rds.Des
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCertificates, input)
     return &RdsDescribeCertificatesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeCustomAvailabilityZones(ctx workflow.Context, input *rds.DescribeCustomAvailabilityZonesInput) (*rds.DescribeCustomAvailabilityZonesOutput, error) {
     var output rds.DescribeCustomAvailabilityZonesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCustomAvailabilityZones, input).Get(ctx, &output)
@@ -2191,6 +2239,7 @@ func (a *RDSStub) DescribeCustomAvailabilityZonesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCustomAvailabilityZones, input)
     return &RdsDescribeCustomAvailabilityZonesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterBacktracks(ctx workflow.Context, input *rds.DescribeDBClusterBacktracksInput) (*rds.DescribeDBClusterBacktracksOutput, error) {
     var output rds.DescribeDBClusterBacktracksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterBacktracks, input).Get(ctx, &output)
@@ -2201,6 +2250,7 @@ func (a *RDSStub) DescribeDBClusterBacktracksAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterBacktracks, input)
     return &RdsDescribeDBClusterBacktracksResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterEndpoints(ctx workflow.Context, input *rds.DescribeDBClusterEndpointsInput) (*rds.DescribeDBClusterEndpointsOutput, error) {
     var output rds.DescribeDBClusterEndpointsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterEndpoints, input).Get(ctx, &output)
@@ -2211,6 +2261,7 @@ func (a *RDSStub) DescribeDBClusterEndpointsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterEndpoints, input)
     return &RdsDescribeDBClusterEndpointsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterParameterGroups(ctx workflow.Context, input *rds.DescribeDBClusterParameterGroupsInput) (*rds.DescribeDBClusterParameterGroupsOutput, error) {
     var output rds.DescribeDBClusterParameterGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterParameterGroups, input).Get(ctx, &output)
@@ -2221,6 +2272,7 @@ func (a *RDSStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterParameterGroups, input)
     return &RdsDescribeDBClusterParameterGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterParameters(ctx workflow.Context, input *rds.DescribeDBClusterParametersInput) (*rds.DescribeDBClusterParametersOutput, error) {
     var output rds.DescribeDBClusterParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterParameters, input).Get(ctx, &output)
@@ -2231,6 +2283,7 @@ func (a *RDSStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterParameters, input)
     return &RdsDescribeDBClusterParametersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) (*rds.DescribeDBClusterSnapshotAttributesOutput, error) {
     var output rds.DescribeDBClusterSnapshotAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterSnapshotAttributes, input).Get(ctx, &output)
@@ -2241,6 +2294,7 @@ func (a *RDSStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterSnapshotAttributes, input)
     return &RdsDescribeDBClusterSnapshotAttributesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) (*rds.DescribeDBClusterSnapshotsOutput, error) {
     var output rds.DescribeDBClusterSnapshotsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterSnapshots, input).Get(ctx, &output)
@@ -2251,6 +2305,7 @@ func (a *RDSStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusterSnapshots, input)
     return &RdsDescribeDBClusterSnapshotsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBClusters(ctx workflow.Context, input *rds.DescribeDBClustersInput) (*rds.DescribeDBClustersOutput, error) {
     var output rds.DescribeDBClustersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusters, input).Get(ctx, &output)
@@ -2261,6 +2316,7 @@ func (a *RDSStub) DescribeDBClustersAsync(ctx workflow.Context, input *rds.Descr
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBClusters, input)
     return &RdsDescribeDBClustersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBEngineVersions(ctx workflow.Context, input *rds.DescribeDBEngineVersionsInput) (*rds.DescribeDBEngineVersionsOutput, error) {
     var output rds.DescribeDBEngineVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBEngineVersions, input).Get(ctx, &output)
@@ -2271,6 +2327,7 @@ func (a *RDSStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBEngineVersions, input)
     return &RdsDescribeDBEngineVersionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBInstanceAutomatedBackups(ctx workflow.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) (*rds.DescribeDBInstanceAutomatedBackupsOutput, error) {
     var output rds.DescribeDBInstanceAutomatedBackupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBInstanceAutomatedBackups, input).Get(ctx, &output)
@@ -2281,6 +2338,7 @@ func (a *RDSStub) DescribeDBInstanceAutomatedBackupsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBInstanceAutomatedBackups, input)
     return &RdsDescribeDBInstanceAutomatedBackupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBInstances(ctx workflow.Context, input *rds.DescribeDBInstancesInput) (*rds.DescribeDBInstancesOutput, error) {
     var output rds.DescribeDBInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBInstances, input).Get(ctx, &output)
@@ -2291,6 +2349,7 @@ func (a *RDSStub) DescribeDBInstancesAsync(ctx workflow.Context, input *rds.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBInstances, input)
     return &RdsDescribeDBInstancesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBLogFiles(ctx workflow.Context, input *rds.DescribeDBLogFilesInput) (*rds.DescribeDBLogFilesOutput, error) {
     var output rds.DescribeDBLogFilesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBLogFiles, input).Get(ctx, &output)
@@ -2301,6 +2360,7 @@ func (a *RDSStub) DescribeDBLogFilesAsync(ctx workflow.Context, input *rds.Descr
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBLogFiles, input)
     return &RdsDescribeDBLogFilesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBParameterGroups(ctx workflow.Context, input *rds.DescribeDBParameterGroupsInput) (*rds.DescribeDBParameterGroupsOutput, error) {
     var output rds.DescribeDBParameterGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBParameterGroups, input).Get(ctx, &output)
@@ -2311,6 +2371,7 @@ func (a *RDSStub) DescribeDBParameterGroupsAsync(ctx workflow.Context, input *rd
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBParameterGroups, input)
     return &RdsDescribeDBParameterGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBParameters(ctx workflow.Context, input *rds.DescribeDBParametersInput) (*rds.DescribeDBParametersOutput, error) {
     var output rds.DescribeDBParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBParameters, input).Get(ctx, &output)
@@ -2321,6 +2382,7 @@ func (a *RDSStub) DescribeDBParametersAsync(ctx workflow.Context, input *rds.Des
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBParameters, input)
     return &RdsDescribeDBParametersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBProxies(ctx workflow.Context, input *rds.DescribeDBProxiesInput) (*rds.DescribeDBProxiesOutput, error) {
     var output rds.DescribeDBProxiesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxies, input).Get(ctx, &output)
@@ -2331,6 +2393,7 @@ func (a *RDSStub) DescribeDBProxiesAsync(ctx workflow.Context, input *rds.Descri
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxies, input)
     return &RdsDescribeDBProxiesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBProxyTargetGroups(ctx workflow.Context, input *rds.DescribeDBProxyTargetGroupsInput) (*rds.DescribeDBProxyTargetGroupsOutput, error) {
     var output rds.DescribeDBProxyTargetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxyTargetGroups, input).Get(ctx, &output)
@@ -2341,6 +2404,7 @@ func (a *RDSStub) DescribeDBProxyTargetGroupsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxyTargetGroups, input)
     return &RdsDescribeDBProxyTargetGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBProxyTargets(ctx workflow.Context, input *rds.DescribeDBProxyTargetsInput) (*rds.DescribeDBProxyTargetsOutput, error) {
     var output rds.DescribeDBProxyTargetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxyTargets, input).Get(ctx, &output)
@@ -2351,6 +2415,7 @@ func (a *RDSStub) DescribeDBProxyTargetsAsync(ctx workflow.Context, input *rds.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBProxyTargets, input)
     return &RdsDescribeDBProxyTargetsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBSecurityGroups(ctx workflow.Context, input *rds.DescribeDBSecurityGroupsInput) (*rds.DescribeDBSecurityGroupsOutput, error) {
     var output rds.DescribeDBSecurityGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSecurityGroups, input).Get(ctx, &output)
@@ -2361,6 +2426,7 @@ func (a *RDSStub) DescribeDBSecurityGroupsAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSecurityGroups, input)
     return &RdsDescribeDBSecurityGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBSnapshotAttributesInput) (*rds.DescribeDBSnapshotAttributesOutput, error) {
     var output rds.DescribeDBSnapshotAttributesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSnapshotAttributes, input).Get(ctx, &output)
@@ -2371,6 +2437,7 @@ func (a *RDSStub) DescribeDBSnapshotAttributesAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSnapshotAttributes, input)
     return &RdsDescribeDBSnapshotAttributesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBSnapshots(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) (*rds.DescribeDBSnapshotsOutput, error) {
     var output rds.DescribeDBSnapshotsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSnapshots, input).Get(ctx, &output)
@@ -2381,6 +2448,7 @@ func (a *RDSStub) DescribeDBSnapshotsAsync(ctx workflow.Context, input *rds.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSnapshots, input)
     return &RdsDescribeDBSnapshotsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeDBSubnetGroups(ctx workflow.Context, input *rds.DescribeDBSubnetGroupsInput) (*rds.DescribeDBSubnetGroupsOutput, error) {
     var output rds.DescribeDBSubnetGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSubnetGroups, input).Get(ctx, &output)
@@ -2391,6 +2459,7 @@ func (a *RDSStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *rds.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDBSubnetGroups, input)
     return &RdsDescribeDBSubnetGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultClusterParametersInput) (*rds.DescribeEngineDefaultClusterParametersOutput, error) {
     var output rds.DescribeEngineDefaultClusterParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEngineDefaultClusterParameters, input).Get(ctx, &output)
@@ -2401,6 +2470,7 @@ func (a *RDSStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEngineDefaultClusterParameters, input)
     return &RdsDescribeEngineDefaultClusterParametersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeEngineDefaultParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultParametersInput) (*rds.DescribeEngineDefaultParametersOutput, error) {
     var output rds.DescribeEngineDefaultParametersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEngineDefaultParameters, input).Get(ctx, &output)
@@ -2411,6 +2481,7 @@ func (a *RDSStub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEngineDefaultParameters, input)
     return &RdsDescribeEngineDefaultParametersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeEventCategories(ctx workflow.Context, input *rds.DescribeEventCategoriesInput) (*rds.DescribeEventCategoriesOutput, error) {
     var output rds.DescribeEventCategoriesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventCategories, input).Get(ctx, &output)
@@ -2421,6 +2492,7 @@ func (a *RDSStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventCategories, input)
     return &RdsDescribeEventCategoriesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeEventSubscriptions(ctx workflow.Context, input *rds.DescribeEventSubscriptionsInput) (*rds.DescribeEventSubscriptionsOutput, error) {
     var output rds.DescribeEventSubscriptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSubscriptions, input).Get(ctx, &output)
@@ -2431,6 +2503,7 @@ func (a *RDSStub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEventSubscriptions, input)
     return &RdsDescribeEventSubscriptionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeEvents(ctx workflow.Context, input *rds.DescribeEventsInput) (*rds.DescribeEventsOutput, error) {
     var output rds.DescribeEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeEvents, input).Get(ctx, &output)
@@ -2441,6 +2514,7 @@ func (a *RDSStub) DescribeEventsAsync(ctx workflow.Context, input *rds.DescribeE
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeEvents, input)
     return &RdsDescribeEventsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeExportTasks(ctx workflow.Context, input *rds.DescribeExportTasksInput) (*rds.DescribeExportTasksOutput, error) {
     var output rds.DescribeExportTasksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeExportTasks, input).Get(ctx, &output)
@@ -2451,6 +2525,7 @@ func (a *RDSStub) DescribeExportTasksAsync(ctx workflow.Context, input *rds.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeExportTasks, input)
     return &RdsDescribeExportTasksResult{Result: future}
 }
+
 func (a *RDSStub) DescribeGlobalClusters(ctx workflow.Context, input *rds.DescribeGlobalClustersInput) (*rds.DescribeGlobalClustersOutput, error) {
     var output rds.DescribeGlobalClustersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalClusters, input).Get(ctx, &output)
@@ -2461,6 +2536,7 @@ func (a *RDSStub) DescribeGlobalClustersAsync(ctx workflow.Context, input *rds.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeGlobalClusters, input)
     return &RdsDescribeGlobalClustersResult{Result: future}
 }
+
 func (a *RDSStub) DescribeInstallationMedia(ctx workflow.Context, input *rds.DescribeInstallationMediaInput) (*rds.DescribeInstallationMediaOutput, error) {
     var output rds.DescribeInstallationMediaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstallationMedia, input).Get(ctx, &output)
@@ -2471,6 +2547,7 @@ func (a *RDSStub) DescribeInstallationMediaAsync(ctx workflow.Context, input *rd
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstallationMedia, input)
     return &RdsDescribeInstallationMediaResult{Result: future}
 }
+
 func (a *RDSStub) DescribeOptionGroupOptions(ctx workflow.Context, input *rds.DescribeOptionGroupOptionsInput) (*rds.DescribeOptionGroupOptionsOutput, error) {
     var output rds.DescribeOptionGroupOptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOptionGroupOptions, input).Get(ctx, &output)
@@ -2481,6 +2558,7 @@ func (a *RDSStub) DescribeOptionGroupOptionsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOptionGroupOptions, input)
     return &RdsDescribeOptionGroupOptionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeOptionGroups(ctx workflow.Context, input *rds.DescribeOptionGroupsInput) (*rds.DescribeOptionGroupsOutput, error) {
     var output rds.DescribeOptionGroupsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOptionGroups, input).Get(ctx, &output)
@@ -2491,6 +2569,7 @@ func (a *RDSStub) DescribeOptionGroupsAsync(ctx workflow.Context, input *rds.Des
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOptionGroups, input)
     return &RdsDescribeOptionGroupsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) (*rds.DescribeOrderableDBInstanceOptionsOutput, error) {
     var output rds.DescribeOrderableDBInstanceOptionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeOrderableDBInstanceOptions, input).Get(ctx, &output)
@@ -2501,6 +2580,7 @@ func (a *RDSStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeOrderableDBInstanceOptions, input)
     return &RdsDescribeOrderableDBInstanceOptionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *rds.DescribePendingMaintenanceActionsInput) (*rds.DescribePendingMaintenanceActionsOutput, error) {
     var output rds.DescribePendingMaintenanceActionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePendingMaintenanceActions, input).Get(ctx, &output)
@@ -2511,6 +2591,7 @@ func (a *RDSStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePendingMaintenanceActions, input)
     return &RdsDescribePendingMaintenanceActionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeReservedDBInstances(ctx workflow.Context, input *rds.DescribeReservedDBInstancesInput) (*rds.DescribeReservedDBInstancesOutput, error) {
     var output rds.DescribeReservedDBInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReservedDBInstances, input).Get(ctx, &output)
@@ -2521,6 +2602,7 @@ func (a *RDSStub) DescribeReservedDBInstancesAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReservedDBInstances, input)
     return &RdsDescribeReservedDBInstancesResult{Result: future}
 }
+
 func (a *RDSStub) DescribeReservedDBInstancesOfferings(ctx workflow.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) (*rds.DescribeReservedDBInstancesOfferingsOutput, error) {
     var output rds.DescribeReservedDBInstancesOfferingsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeReservedDBInstancesOfferings, input).Get(ctx, &output)
@@ -2531,6 +2613,7 @@ func (a *RDSStub) DescribeReservedDBInstancesOfferingsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeReservedDBInstancesOfferings, input)
     return &RdsDescribeReservedDBInstancesOfferingsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeSourceRegions(ctx workflow.Context, input *rds.DescribeSourceRegionsInput) (*rds.DescribeSourceRegionsOutput, error) {
     var output rds.DescribeSourceRegionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSourceRegions, input).Get(ctx, &output)
@@ -2541,6 +2624,7 @@ func (a *RDSStub) DescribeSourceRegionsAsync(ctx workflow.Context, input *rds.De
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSourceRegions, input)
     return &RdsDescribeSourceRegionsResult{Result: future}
 }
+
 func (a *RDSStub) DescribeValidDBInstanceModifications(ctx workflow.Context, input *rds.DescribeValidDBInstanceModificationsInput) (*rds.DescribeValidDBInstanceModificationsOutput, error) {
     var output rds.DescribeValidDBInstanceModificationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeValidDBInstanceModifications, input).Get(ctx, &output)
@@ -2551,6 +2635,7 @@ func (a *RDSStub) DescribeValidDBInstanceModificationsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeValidDBInstanceModifications, input)
     return &RdsDescribeValidDBInstanceModificationsResult{Result: future}
 }
+
 func (a *RDSStub) DownloadDBLogFilePortion(ctx workflow.Context, input *rds.DownloadDBLogFilePortionInput) (*rds.DownloadDBLogFilePortionOutput, error) {
     var output rds.DownloadDBLogFilePortionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DownloadDBLogFilePortion, input).Get(ctx, &output)
@@ -2561,6 +2646,7 @@ func (a *RDSStub) DownloadDBLogFilePortionAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.DownloadDBLogFilePortion, input)
     return &RdsDownloadDBLogFilePortionResult{Result: future}
 }
+
 func (a *RDSStub) FailoverDBCluster(ctx workflow.Context, input *rds.FailoverDBClusterInput) (*rds.FailoverDBClusterOutput, error) {
     var output rds.FailoverDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.FailoverDBCluster, input).Get(ctx, &output)
@@ -2571,6 +2657,7 @@ func (a *RDSStub) FailoverDBClusterAsync(ctx workflow.Context, input *rds.Failov
     future := workflow.ExecuteActivity(ctx, a.activities.FailoverDBCluster, input)
     return &RdsFailoverDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) ImportInstallationMedia(ctx workflow.Context, input *rds.ImportInstallationMediaInput) (*rds.ImportInstallationMediaOutput, error) {
     var output rds.ImportInstallationMediaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ImportInstallationMedia, input).Get(ctx, &output)
@@ -2581,6 +2668,7 @@ func (a *RDSStub) ImportInstallationMediaAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.ImportInstallationMedia, input)
     return &RdsImportInstallationMediaResult{Result: future}
 }
+
 func (a *RDSStub) ListTagsForResource(ctx workflow.Context, input *rds.ListTagsForResourceInput) (*rds.ListTagsForResourceOutput, error) {
     var output rds.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -2591,6 +2679,7 @@ func (a *RDSStub) ListTagsForResourceAsync(ctx workflow.Context, input *rds.List
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &RdsListTagsForResourceResult{Result: future}
 }
+
 func (a *RDSStub) ModifyCertificates(ctx workflow.Context, input *rds.ModifyCertificatesInput) (*rds.ModifyCertificatesOutput, error) {
     var output rds.ModifyCertificatesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyCertificates, input).Get(ctx, &output)
@@ -2601,6 +2690,7 @@ func (a *RDSStub) ModifyCertificatesAsync(ctx workflow.Context, input *rds.Modif
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyCertificates, input)
     return &RdsModifyCertificatesResult{Result: future}
 }
+
 func (a *RDSStub) ModifyCurrentDBClusterCapacity(ctx workflow.Context, input *rds.ModifyCurrentDBClusterCapacityInput) (*rds.ModifyCurrentDBClusterCapacityOutput, error) {
     var output rds.ModifyCurrentDBClusterCapacityOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyCurrentDBClusterCapacity, input).Get(ctx, &output)
@@ -2611,6 +2701,7 @@ func (a *RDSStub) ModifyCurrentDBClusterCapacityAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyCurrentDBClusterCapacity, input)
     return &RdsModifyCurrentDBClusterCapacityResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBCluster(ctx workflow.Context, input *rds.ModifyDBClusterInput) (*rds.ModifyDBClusterOutput, error) {
     var output rds.ModifyDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBCluster, input).Get(ctx, &output)
@@ -2621,6 +2712,7 @@ func (a *RDSStub) ModifyDBClusterAsync(ctx workflow.Context, input *rds.ModifyDB
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBCluster, input)
     return &RdsModifyDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBClusterEndpoint(ctx workflow.Context, input *rds.ModifyDBClusterEndpointInput) (*rds.ModifyDBClusterEndpointOutput, error) {
     var output rds.ModifyDBClusterEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterEndpoint, input).Get(ctx, &output)
@@ -2631,6 +2723,7 @@ func (a *RDSStub) ModifyDBClusterEndpointAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterEndpoint, input)
     return &RdsModifyDBClusterEndpointResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input *rds.ModifyDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error) {
     var output rds.DBClusterParameterGroupNameMessage
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterParameterGroup, input).Get(ctx, &output)
@@ -2641,6 +2734,7 @@ func (a *RDSStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterParameterGroup, input)
     return &RdsModifyDBClusterParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) (*rds.ModifyDBClusterSnapshotAttributeOutput, error) {
     var output rds.ModifyDBClusterSnapshotAttributeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterSnapshotAttribute, input).Get(ctx, &output)
@@ -2651,6 +2745,7 @@ func (a *RDSStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBClusterSnapshotAttribute, input)
     return &RdsModifyDBClusterSnapshotAttributeResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBInstance(ctx workflow.Context, input *rds.ModifyDBInstanceInput) (*rds.ModifyDBInstanceOutput, error) {
     var output rds.ModifyDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBInstance, input).Get(ctx, &output)
@@ -2661,6 +2756,7 @@ func (a *RDSStub) ModifyDBInstanceAsync(ctx workflow.Context, input *rds.ModifyD
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBInstance, input)
     return &RdsModifyDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBParameterGroup(ctx workflow.Context, input *rds.ModifyDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error) {
     var output rds.DBParameterGroupNameMessage
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBParameterGroup, input).Get(ctx, &output)
@@ -2671,6 +2767,7 @@ func (a *RDSStub) ModifyDBParameterGroupAsync(ctx workflow.Context, input *rds.M
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBParameterGroup, input)
     return &RdsModifyDBParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBProxy(ctx workflow.Context, input *rds.ModifyDBProxyInput) (*rds.ModifyDBProxyOutput, error) {
     var output rds.ModifyDBProxyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBProxy, input).Get(ctx, &output)
@@ -2681,6 +2778,7 @@ func (a *RDSStub) ModifyDBProxyAsync(ctx workflow.Context, input *rds.ModifyDBPr
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBProxy, input)
     return &RdsModifyDBProxyResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBProxyTargetGroup(ctx workflow.Context, input *rds.ModifyDBProxyTargetGroupInput) (*rds.ModifyDBProxyTargetGroupOutput, error) {
     var output rds.ModifyDBProxyTargetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBProxyTargetGroup, input).Get(ctx, &output)
@@ -2691,6 +2789,7 @@ func (a *RDSStub) ModifyDBProxyTargetGroupAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBProxyTargetGroup, input)
     return &RdsModifyDBProxyTargetGroupResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBSnapshot(ctx workflow.Context, input *rds.ModifyDBSnapshotInput) (*rds.ModifyDBSnapshotOutput, error) {
     var output rds.ModifyDBSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSnapshot, input).Get(ctx, &output)
@@ -2701,6 +2800,7 @@ func (a *RDSStub) ModifyDBSnapshotAsync(ctx workflow.Context, input *rds.ModifyD
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSnapshot, input)
     return &RdsModifyDBSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBSnapshotAttributeInput) (*rds.ModifyDBSnapshotAttributeOutput, error) {
     var output rds.ModifyDBSnapshotAttributeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSnapshotAttribute, input).Get(ctx, &output)
@@ -2711,6 +2811,7 @@ func (a *RDSStub) ModifyDBSnapshotAttributeAsync(ctx workflow.Context, input *rd
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSnapshotAttribute, input)
     return &RdsModifyDBSnapshotAttributeResult{Result: future}
 }
+
 func (a *RDSStub) ModifyDBSubnetGroup(ctx workflow.Context, input *rds.ModifyDBSubnetGroupInput) (*rds.ModifyDBSubnetGroupOutput, error) {
     var output rds.ModifyDBSubnetGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSubnetGroup, input).Get(ctx, &output)
@@ -2721,6 +2822,7 @@ func (a *RDSStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *rds.Modi
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyDBSubnetGroup, input)
     return &RdsModifyDBSubnetGroupResult{Result: future}
 }
+
 func (a *RDSStub) ModifyEventSubscription(ctx workflow.Context, input *rds.ModifyEventSubscriptionInput) (*rds.ModifyEventSubscriptionOutput, error) {
     var output rds.ModifyEventSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyEventSubscription, input).Get(ctx, &output)
@@ -2731,6 +2833,7 @@ func (a *RDSStub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyEventSubscription, input)
     return &RdsModifyEventSubscriptionResult{Result: future}
 }
+
 func (a *RDSStub) ModifyGlobalCluster(ctx workflow.Context, input *rds.ModifyGlobalClusterInput) (*rds.ModifyGlobalClusterOutput, error) {
     var output rds.ModifyGlobalClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyGlobalCluster, input).Get(ctx, &output)
@@ -2741,6 +2844,7 @@ func (a *RDSStub) ModifyGlobalClusterAsync(ctx workflow.Context, input *rds.Modi
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyGlobalCluster, input)
     return &RdsModifyGlobalClusterResult{Result: future}
 }
+
 func (a *RDSStub) ModifyOptionGroup(ctx workflow.Context, input *rds.ModifyOptionGroupInput) (*rds.ModifyOptionGroupOutput, error) {
     var output rds.ModifyOptionGroupOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ModifyOptionGroup, input).Get(ctx, &output)
@@ -2751,6 +2855,7 @@ func (a *RDSStub) ModifyOptionGroupAsync(ctx workflow.Context, input *rds.Modify
     future := workflow.ExecuteActivity(ctx, a.activities.ModifyOptionGroup, input)
     return &RdsModifyOptionGroupResult{Result: future}
 }
+
 func (a *RDSStub) PromoteReadReplica(ctx workflow.Context, input *rds.PromoteReadReplicaInput) (*rds.PromoteReadReplicaOutput, error) {
     var output rds.PromoteReadReplicaOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PromoteReadReplica, input).Get(ctx, &output)
@@ -2761,6 +2866,7 @@ func (a *RDSStub) PromoteReadReplicaAsync(ctx workflow.Context, input *rds.Promo
     future := workflow.ExecuteActivity(ctx, a.activities.PromoteReadReplica, input)
     return &RdsPromoteReadReplicaResult{Result: future}
 }
+
 func (a *RDSStub) PromoteReadReplicaDBCluster(ctx workflow.Context, input *rds.PromoteReadReplicaDBClusterInput) (*rds.PromoteReadReplicaDBClusterOutput, error) {
     var output rds.PromoteReadReplicaDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PromoteReadReplicaDBCluster, input).Get(ctx, &output)
@@ -2771,6 +2877,7 @@ func (a *RDSStub) PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.PromoteReadReplicaDBCluster, input)
     return &RdsPromoteReadReplicaDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) PurchaseReservedDBInstancesOffering(ctx workflow.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) (*rds.PurchaseReservedDBInstancesOfferingOutput, error) {
     var output rds.PurchaseReservedDBInstancesOfferingOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PurchaseReservedDBInstancesOffering, input).Get(ctx, &output)
@@ -2781,6 +2888,7 @@ func (a *RDSStub) PurchaseReservedDBInstancesOfferingAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.PurchaseReservedDBInstancesOffering, input)
     return &RdsPurchaseReservedDBInstancesOfferingResult{Result: future}
 }
+
 func (a *RDSStub) RebootDBInstance(ctx workflow.Context, input *rds.RebootDBInstanceInput) (*rds.RebootDBInstanceOutput, error) {
     var output rds.RebootDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RebootDBInstance, input).Get(ctx, &output)
@@ -2791,6 +2899,7 @@ func (a *RDSStub) RebootDBInstanceAsync(ctx workflow.Context, input *rds.RebootD
     future := workflow.ExecuteActivity(ctx, a.activities.RebootDBInstance, input)
     return &RdsRebootDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) RegisterDBProxyTargets(ctx workflow.Context, input *rds.RegisterDBProxyTargetsInput) (*rds.RegisterDBProxyTargetsOutput, error) {
     var output rds.RegisterDBProxyTargetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RegisterDBProxyTargets, input).Get(ctx, &output)
@@ -2801,6 +2910,7 @@ func (a *RDSStub) RegisterDBProxyTargetsAsync(ctx workflow.Context, input *rds.R
     future := workflow.ExecuteActivity(ctx, a.activities.RegisterDBProxyTargets, input)
     return &RdsRegisterDBProxyTargetsResult{Result: future}
 }
+
 func (a *RDSStub) RemoveFromGlobalCluster(ctx workflow.Context, input *rds.RemoveFromGlobalClusterInput) (*rds.RemoveFromGlobalClusterOutput, error) {
     var output rds.RemoveFromGlobalClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveFromGlobalCluster, input).Get(ctx, &output)
@@ -2811,6 +2921,7 @@ func (a *RDSStub) RemoveFromGlobalClusterAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveFromGlobalCluster, input)
     return &RdsRemoveFromGlobalClusterResult{Result: future}
 }
+
 func (a *RDSStub) RemoveRoleFromDBCluster(ctx workflow.Context, input *rds.RemoveRoleFromDBClusterInput) (*rds.RemoveRoleFromDBClusterOutput, error) {
     var output rds.RemoveRoleFromDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromDBCluster, input).Get(ctx, &output)
@@ -2821,6 +2932,7 @@ func (a *RDSStub) RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromDBCluster, input)
     return &RdsRemoveRoleFromDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) RemoveRoleFromDBInstance(ctx workflow.Context, input *rds.RemoveRoleFromDBInstanceInput) (*rds.RemoveRoleFromDBInstanceOutput, error) {
     var output rds.RemoveRoleFromDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromDBInstance, input).Get(ctx, &output)
@@ -2831,6 +2943,7 @@ func (a *RDSStub) RemoveRoleFromDBInstanceAsync(ctx workflow.Context, input *rds
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveRoleFromDBInstance, input)
     return &RdsRemoveRoleFromDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) (*rds.RemoveSourceIdentifierFromSubscriptionOutput, error) {
     var output rds.RemoveSourceIdentifierFromSubscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveSourceIdentifierFromSubscription, input).Get(ctx, &output)
@@ -2841,6 +2954,7 @@ func (a *RDSStub) RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveSourceIdentifierFromSubscription, input)
     return &RdsRemoveSourceIdentifierFromSubscriptionResult{Result: future}
 }
+
 func (a *RDSStub) RemoveTagsFromResource(ctx workflow.Context, input *rds.RemoveTagsFromResourceInput) (*rds.RemoveTagsFromResourceOutput, error) {
     var output rds.RemoveTagsFromResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input).Get(ctx, &output)
@@ -2851,6 +2965,7 @@ func (a *RDSStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *rds.R
     future := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input)
     return &RdsRemoveTagsFromResourceResult{Result: future}
 }
+
 func (a *RDSStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *rds.ResetDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error) {
     var output rds.DBClusterParameterGroupNameMessage
     err := workflow.ExecuteActivity(ctx, a.activities.ResetDBClusterParameterGroup, input).Get(ctx, &output)
@@ -2861,6 +2976,7 @@ func (a *RDSStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ResetDBClusterParameterGroup, input)
     return &RdsResetDBClusterParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) ResetDBParameterGroup(ctx workflow.Context, input *rds.ResetDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error) {
     var output rds.DBParameterGroupNameMessage
     err := workflow.ExecuteActivity(ctx, a.activities.ResetDBParameterGroup, input).Get(ctx, &output)
@@ -2871,6 +2987,7 @@ func (a *RDSStub) ResetDBParameterGroupAsync(ctx workflow.Context, input *rds.Re
     future := workflow.ExecuteActivity(ctx, a.activities.ResetDBParameterGroup, input)
     return &RdsResetDBParameterGroupResult{Result: future}
 }
+
 func (a *RDSStub) RestoreDBClusterFromS3(ctx workflow.Context, input *rds.RestoreDBClusterFromS3Input) (*rds.RestoreDBClusterFromS3Output, error) {
     var output rds.RestoreDBClusterFromS3Output
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterFromS3, input).Get(ctx, &output)
@@ -2881,6 +2998,7 @@ func (a *RDSStub) RestoreDBClusterFromS3Async(ctx workflow.Context, input *rds.R
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterFromS3, input)
     return &RdsRestoreDBClusterFromS3Result{Result: future}
 }
+
 func (a *RDSStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *rds.RestoreDBClusterFromSnapshotInput) (*rds.RestoreDBClusterFromSnapshotOutput, error) {
     var output rds.RestoreDBClusterFromSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterFromSnapshot, input).Get(ctx, &output)
@@ -2891,6 +3009,7 @@ func (a *RDSStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterFromSnapshot, input)
     return &RdsRestoreDBClusterFromSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input *rds.RestoreDBClusterToPointInTimeInput) (*rds.RestoreDBClusterToPointInTimeOutput, error) {
     var output rds.RestoreDBClusterToPointInTimeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterToPointInTime, input).Get(ctx, &output)
@@ -2901,6 +3020,7 @@ func (a *RDSStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBClusterToPointInTime, input)
     return &RdsRestoreDBClusterToPointInTimeResult{Result: future}
 }
+
 func (a *RDSStub) RestoreDBInstanceFromDBSnapshot(ctx workflow.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) (*rds.RestoreDBInstanceFromDBSnapshotOutput, error) {
     var output rds.RestoreDBInstanceFromDBSnapshotOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceFromDBSnapshot, input).Get(ctx, &output)
@@ -2911,6 +3031,7 @@ func (a *RDSStub) RestoreDBInstanceFromDBSnapshotAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceFromDBSnapshot, input)
     return &RdsRestoreDBInstanceFromDBSnapshotResult{Result: future}
 }
+
 func (a *RDSStub) RestoreDBInstanceFromS3(ctx workflow.Context, input *rds.RestoreDBInstanceFromS3Input) (*rds.RestoreDBInstanceFromS3Output, error) {
     var output rds.RestoreDBInstanceFromS3Output
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceFromS3, input).Get(ctx, &output)
@@ -2921,6 +3042,7 @@ func (a *RDSStub) RestoreDBInstanceFromS3Async(ctx workflow.Context, input *rds.
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceFromS3, input)
     return &RdsRestoreDBInstanceFromS3Result{Result: future}
 }
+
 func (a *RDSStub) RestoreDBInstanceToPointInTime(ctx workflow.Context, input *rds.RestoreDBInstanceToPointInTimeInput) (*rds.RestoreDBInstanceToPointInTimeOutput, error) {
     var output rds.RestoreDBInstanceToPointInTimeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceToPointInTime, input).Get(ctx, &output)
@@ -2931,6 +3053,7 @@ func (a *RDSStub) RestoreDBInstanceToPointInTimeAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.RestoreDBInstanceToPointInTime, input)
     return &RdsRestoreDBInstanceToPointInTimeResult{Result: future}
 }
+
 func (a *RDSStub) RevokeDBSecurityGroupIngress(ctx workflow.Context, input *rds.RevokeDBSecurityGroupIngressInput) (*rds.RevokeDBSecurityGroupIngressOutput, error) {
     var output rds.RevokeDBSecurityGroupIngressOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RevokeDBSecurityGroupIngress, input).Get(ctx, &output)
@@ -2941,6 +3064,7 @@ func (a *RDSStub) RevokeDBSecurityGroupIngressAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.RevokeDBSecurityGroupIngress, input)
     return &RdsRevokeDBSecurityGroupIngressResult{Result: future}
 }
+
 func (a *RDSStub) StartActivityStream(ctx workflow.Context, input *rds.StartActivityStreamInput) (*rds.StartActivityStreamOutput, error) {
     var output rds.StartActivityStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartActivityStream, input).Get(ctx, &output)
@@ -2951,6 +3075,7 @@ func (a *RDSStub) StartActivityStreamAsync(ctx workflow.Context, input *rds.Star
     future := workflow.ExecuteActivity(ctx, a.activities.StartActivityStream, input)
     return &RdsStartActivityStreamResult{Result: future}
 }
+
 func (a *RDSStub) StartDBCluster(ctx workflow.Context, input *rds.StartDBClusterInput) (*rds.StartDBClusterOutput, error) {
     var output rds.StartDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDBCluster, input).Get(ctx, &output)
@@ -2961,6 +3086,7 @@ func (a *RDSStub) StartDBClusterAsync(ctx workflow.Context, input *rds.StartDBCl
     future := workflow.ExecuteActivity(ctx, a.activities.StartDBCluster, input)
     return &RdsStartDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) StartDBInstance(ctx workflow.Context, input *rds.StartDBInstanceInput) (*rds.StartDBInstanceOutput, error) {
     var output rds.StartDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartDBInstance, input).Get(ctx, &output)
@@ -2971,6 +3097,7 @@ func (a *RDSStub) StartDBInstanceAsync(ctx workflow.Context, input *rds.StartDBI
     future := workflow.ExecuteActivity(ctx, a.activities.StartDBInstance, input)
     return &RdsStartDBInstanceResult{Result: future}
 }
+
 func (a *RDSStub) StartExportTask(ctx workflow.Context, input *rds.StartExportTaskInput) (*rds.StartExportTaskOutput, error) {
     var output rds.StartExportTaskOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartExportTask, input).Get(ctx, &output)
@@ -2981,6 +3108,7 @@ func (a *RDSStub) StartExportTaskAsync(ctx workflow.Context, input *rds.StartExp
     future := workflow.ExecuteActivity(ctx, a.activities.StartExportTask, input)
     return &RdsStartExportTaskResult{Result: future}
 }
+
 func (a *RDSStub) StopActivityStream(ctx workflow.Context, input *rds.StopActivityStreamInput) (*rds.StopActivityStreamOutput, error) {
     var output rds.StopActivityStreamOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopActivityStream, input).Get(ctx, &output)
@@ -2991,6 +3119,7 @@ func (a *RDSStub) StopActivityStreamAsync(ctx workflow.Context, input *rds.StopA
     future := workflow.ExecuteActivity(ctx, a.activities.StopActivityStream, input)
     return &RdsStopActivityStreamResult{Result: future}
 }
+
 func (a *RDSStub) StopDBCluster(ctx workflow.Context, input *rds.StopDBClusterInput) (*rds.StopDBClusterOutput, error) {
     var output rds.StopDBClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopDBCluster, input).Get(ctx, &output)
@@ -3001,6 +3130,7 @@ func (a *RDSStub) StopDBClusterAsync(ctx workflow.Context, input *rds.StopDBClus
     future := workflow.ExecuteActivity(ctx, a.activities.StopDBCluster, input)
     return &RdsStopDBClusterResult{Result: future}
 }
+
 func (a *RDSStub) StopDBInstance(ctx workflow.Context, input *rds.StopDBInstanceInput) (*rds.StopDBInstanceOutput, error) {
     var output rds.StopDBInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopDBInstance, input).Get(ctx, &output)
@@ -3020,6 +3150,7 @@ func (a *RDSStub) WaitUntilDBClusterSnapshotAvailableAsync(ctx workflow.Context,
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBClusterSnapshotAvailable, input)
 }
 
+
 func (a *RDSStub) WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBClusterSnapshotDeleted, input).Get(ctx, nil)
 }
@@ -3027,6 +3158,7 @@ func (a *RDSStub) WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input 
 func (a *RDSStub) WaitUntilDBClusterSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBClusterSnapshotDeleted, input)
 }
+
 
 func (a *RDSStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBInstanceAvailable, input).Get(ctx, nil)
@@ -3036,6 +3168,7 @@ func (a *RDSStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBInstanceAvailable, input)
 }
 
+
 func (a *RDSStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBInstanceDeleted, input).Get(ctx, nil)
 }
@@ -3043,6 +3176,7 @@ func (a *RDSStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.De
 func (a *RDSStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBInstanceDeleted, input)
 }
+
 
 func (a *RDSStub) WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBSnapshotAvailable, input).Get(ctx, nil)
@@ -3052,6 +3186,7 @@ func (a *RDSStub) WaitUntilDBSnapshotAvailableAsync(ctx workflow.Context, input 
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBSnapshotAvailable, input)
 }
 
+
 func (a *RDSStub) WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBSnapshotDeleted, input).Get(ctx, nil)
 }
@@ -3059,3 +3194,4 @@ func (a *RDSStub) WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.De
 func (a *RDSStub) WaitUntilDBSnapshotDeletedAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilDBSnapshotDeleted, input)
 }
+

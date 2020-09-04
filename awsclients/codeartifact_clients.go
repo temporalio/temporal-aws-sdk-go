@@ -100,6 +100,7 @@ type CodeArtifactClient interface {
     UpdateRepository(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) (*codeartifact.UpdateRepositoryOutput, error)
     UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *CodeartifactUpdateRepositoryResult
 }
+
 type CodeartifactAssociateExternalConnectionResult struct {
 	Result workflow.Future
 }
@@ -410,7 +411,6 @@ func (r *CodeartifactUpdateRepositoryResult) Get(ctx workflow.Context) (*codeart
     return &output, err
 }
 
-
 type CodeArtifactStub struct {
     activities awsactivities.CodeArtifactActivities
 }
@@ -418,6 +418,7 @@ type CodeArtifactStub struct {
 func NewCodeArtifactStub() CodeArtifactClient {
     return &CodeArtifactStub{}
 }
+
 func (a *CodeArtifactStub) AssociateExternalConnection(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) (*codeartifact.AssociateExternalConnectionOutput, error) {
     var output codeartifact.AssociateExternalConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateExternalConnection, input).Get(ctx, &output)
@@ -428,6 +429,7 @@ func (a *CodeArtifactStub) AssociateExternalConnectionAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateExternalConnection, input)
     return &CodeartifactAssociateExternalConnectionResult{Result: future}
 }
+
 func (a *CodeArtifactStub) CopyPackageVersions(ctx workflow.Context, input *codeartifact.CopyPackageVersionsInput) (*codeartifact.CopyPackageVersionsOutput, error) {
     var output codeartifact.CopyPackageVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CopyPackageVersions, input).Get(ctx, &output)
@@ -438,6 +440,7 @@ func (a *CodeArtifactStub) CopyPackageVersionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CopyPackageVersions, input)
     return &CodeartifactCopyPackageVersionsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) CreateDomain(ctx workflow.Context, input *codeartifact.CreateDomainInput) (*codeartifact.CreateDomainOutput, error) {
     var output codeartifact.CreateDomainOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateDomain, input).Get(ctx, &output)
@@ -448,6 +451,7 @@ func (a *CodeArtifactStub) CreateDomainAsync(ctx workflow.Context, input *codear
     future := workflow.ExecuteActivity(ctx, a.activities.CreateDomain, input)
     return &CodeartifactCreateDomainResult{Result: future}
 }
+
 func (a *CodeArtifactStub) CreateRepository(ctx workflow.Context, input *codeartifact.CreateRepositoryInput) (*codeartifact.CreateRepositoryOutput, error) {
     var output codeartifact.CreateRepositoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateRepository, input).Get(ctx, &output)
@@ -458,6 +462,7 @@ func (a *CodeArtifactStub) CreateRepositoryAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.CreateRepository, input)
     return &CodeartifactCreateRepositoryResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DeleteDomain(ctx workflow.Context, input *codeartifact.DeleteDomainInput) (*codeartifact.DeleteDomainOutput, error) {
     var output codeartifact.DeleteDomainOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDomain, input).Get(ctx, &output)
@@ -468,6 +473,7 @@ func (a *CodeArtifactStub) DeleteDomainAsync(ctx workflow.Context, input *codear
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDomain, input)
     return &CodeartifactDeleteDomainResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DeleteDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteDomainPermissionsPolicyInput) (*codeartifact.DeleteDomainPermissionsPolicyOutput, error) {
     var output codeartifact.DeleteDomainPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainPermissionsPolicy, input).Get(ctx, &output)
@@ -478,6 +484,7 @@ func (a *CodeArtifactStub) DeleteDomainPermissionsPolicyAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteDomainPermissionsPolicy, input)
     return &CodeartifactDeleteDomainPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DeletePackageVersions(ctx workflow.Context, input *codeartifact.DeletePackageVersionsInput) (*codeartifact.DeletePackageVersionsOutput, error) {
     var output codeartifact.DeletePackageVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeletePackageVersions, input).Get(ctx, &output)
@@ -488,6 +495,7 @@ func (a *CodeArtifactStub) DeletePackageVersionsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePackageVersions, input)
     return &CodeartifactDeletePackageVersionsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DeleteRepository(ctx workflow.Context, input *codeartifact.DeleteRepositoryInput) (*codeartifact.DeleteRepositoryOutput, error) {
     var output codeartifact.DeleteRepositoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRepository, input).Get(ctx, &output)
@@ -498,6 +506,7 @@ func (a *CodeArtifactStub) DeleteRepositoryAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRepository, input)
     return &CodeartifactDeleteRepositoryResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DeleteRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.DeleteRepositoryPermissionsPolicyInput) (*codeartifact.DeleteRepositoryPermissionsPolicyOutput, error) {
     var output codeartifact.DeleteRepositoryPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteRepositoryPermissionsPolicy, input).Get(ctx, &output)
@@ -508,6 +517,7 @@ func (a *CodeArtifactStub) DeleteRepositoryPermissionsPolicyAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteRepositoryPermissionsPolicy, input)
     return &CodeartifactDeleteRepositoryPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DescribeDomain(ctx workflow.Context, input *codeartifact.DescribeDomainInput) (*codeartifact.DescribeDomainOutput, error) {
     var output codeartifact.DescribeDomainOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeDomain, input).Get(ctx, &output)
@@ -518,6 +528,7 @@ func (a *CodeArtifactStub) DescribeDomainAsync(ctx workflow.Context, input *code
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeDomain, input)
     return &CodeartifactDescribeDomainResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DescribePackageVersion(ctx workflow.Context, input *codeartifact.DescribePackageVersionInput) (*codeartifact.DescribePackageVersionOutput, error) {
     var output codeartifact.DescribePackageVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribePackageVersion, input).Get(ctx, &output)
@@ -528,6 +539,7 @@ func (a *CodeArtifactStub) DescribePackageVersionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribePackageVersion, input)
     return &CodeartifactDescribePackageVersionResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DescribeRepository(ctx workflow.Context, input *codeartifact.DescribeRepositoryInput) (*codeartifact.DescribeRepositoryOutput, error) {
     var output codeartifact.DescribeRepositoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeRepository, input).Get(ctx, &output)
@@ -538,6 +550,7 @@ func (a *CodeArtifactStub) DescribeRepositoryAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeRepository, input)
     return &CodeartifactDescribeRepositoryResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DisassociateExternalConnection(ctx workflow.Context, input *codeartifact.DisassociateExternalConnectionInput) (*codeartifact.DisassociateExternalConnectionOutput, error) {
     var output codeartifact.DisassociateExternalConnectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateExternalConnection, input).Get(ctx, &output)
@@ -548,6 +561,7 @@ func (a *CodeArtifactStub) DisassociateExternalConnectionAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateExternalConnection, input)
     return &CodeartifactDisassociateExternalConnectionResult{Result: future}
 }
+
 func (a *CodeArtifactStub) DisposePackageVersions(ctx workflow.Context, input *codeartifact.DisposePackageVersionsInput) (*codeartifact.DisposePackageVersionsOutput, error) {
     var output codeartifact.DisposePackageVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisposePackageVersions, input).Get(ctx, &output)
@@ -558,6 +572,7 @@ func (a *CodeArtifactStub) DisposePackageVersionsAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DisposePackageVersions, input)
     return &CodeartifactDisposePackageVersionsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetAuthorizationToken(ctx workflow.Context, input *codeartifact.GetAuthorizationTokenInput) (*codeartifact.GetAuthorizationTokenOutput, error) {
     var output codeartifact.GetAuthorizationTokenOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizationToken, input).Get(ctx, &output)
@@ -568,6 +583,7 @@ func (a *CodeArtifactStub) GetAuthorizationTokenAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.GetAuthorizationToken, input)
     return &CodeartifactGetAuthorizationTokenResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetDomainPermissionsPolicyInput) (*codeartifact.GetDomainPermissionsPolicyOutput, error) {
     var output codeartifact.GetDomainPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetDomainPermissionsPolicy, input).Get(ctx, &output)
@@ -578,6 +594,7 @@ func (a *CodeArtifactStub) GetDomainPermissionsPolicyAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GetDomainPermissionsPolicy, input)
     return &CodeartifactGetDomainPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetPackageVersionAsset(ctx workflow.Context, input *codeartifact.GetPackageVersionAssetInput) (*codeartifact.GetPackageVersionAssetOutput, error) {
     var output codeartifact.GetPackageVersionAssetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPackageVersionAsset, input).Get(ctx, &output)
@@ -588,6 +605,7 @@ func (a *CodeArtifactStub) GetPackageVersionAssetAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.GetPackageVersionAsset, input)
     return &CodeartifactGetPackageVersionAssetResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetPackageVersionReadme(ctx workflow.Context, input *codeartifact.GetPackageVersionReadmeInput) (*codeartifact.GetPackageVersionReadmeOutput, error) {
     var output codeartifact.GetPackageVersionReadmeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetPackageVersionReadme, input).Get(ctx, &output)
@@ -598,6 +616,7 @@ func (a *CodeArtifactStub) GetPackageVersionReadmeAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.GetPackageVersionReadme, input)
     return &CodeartifactGetPackageVersionReadmeResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetRepositoryEndpoint(ctx workflow.Context, input *codeartifact.GetRepositoryEndpointInput) (*codeartifact.GetRepositoryEndpointOutput, error) {
     var output codeartifact.GetRepositoryEndpointOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRepositoryEndpoint, input).Get(ctx, &output)
@@ -608,6 +627,7 @@ func (a *CodeArtifactStub) GetRepositoryEndpointAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.GetRepositoryEndpoint, input)
     return &CodeartifactGetRepositoryEndpointResult{Result: future}
 }
+
 func (a *CodeArtifactStub) GetRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.GetRepositoryPermissionsPolicyInput) (*codeartifact.GetRepositoryPermissionsPolicyOutput, error) {
     var output codeartifact.GetRepositoryPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetRepositoryPermissionsPolicy, input).Get(ctx, &output)
@@ -618,6 +638,7 @@ func (a *CodeArtifactStub) GetRepositoryPermissionsPolicyAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.GetRepositoryPermissionsPolicy, input)
     return &CodeartifactGetRepositoryPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListDomains(ctx workflow.Context, input *codeartifact.ListDomainsInput) (*codeartifact.ListDomainsOutput, error) {
     var output codeartifact.ListDomainsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDomains, input).Get(ctx, &output)
@@ -628,6 +649,7 @@ func (a *CodeArtifactStub) ListDomainsAsync(ctx workflow.Context, input *codeart
     future := workflow.ExecuteActivity(ctx, a.activities.ListDomains, input)
     return &CodeartifactListDomainsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListPackageVersionAssets(ctx workflow.Context, input *codeartifact.ListPackageVersionAssetsInput) (*codeartifact.ListPackageVersionAssetsOutput, error) {
     var output codeartifact.ListPackageVersionAssetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersionAssets, input).Get(ctx, &output)
@@ -638,6 +660,7 @@ func (a *CodeArtifactStub) ListPackageVersionAssetsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersionAssets, input)
     return &CodeartifactListPackageVersionAssetsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListPackageVersionDependencies(ctx workflow.Context, input *codeartifact.ListPackageVersionDependenciesInput) (*codeartifact.ListPackageVersionDependenciesOutput, error) {
     var output codeartifact.ListPackageVersionDependenciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersionDependencies, input).Get(ctx, &output)
@@ -648,6 +671,7 @@ func (a *CodeArtifactStub) ListPackageVersionDependenciesAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersionDependencies, input)
     return &CodeartifactListPackageVersionDependenciesResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListPackageVersions(ctx workflow.Context, input *codeartifact.ListPackageVersionsInput) (*codeartifact.ListPackageVersionsOutput, error) {
     var output codeartifact.ListPackageVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersions, input).Get(ctx, &output)
@@ -658,6 +682,7 @@ func (a *CodeArtifactStub) ListPackageVersionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListPackageVersions, input)
     return &CodeartifactListPackageVersionsResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListPackages(ctx workflow.Context, input *codeartifact.ListPackagesInput) (*codeartifact.ListPackagesOutput, error) {
     var output codeartifact.ListPackagesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListPackages, input).Get(ctx, &output)
@@ -668,6 +693,7 @@ func (a *CodeArtifactStub) ListPackagesAsync(ctx workflow.Context, input *codear
     future := workflow.ExecuteActivity(ctx, a.activities.ListPackages, input)
     return &CodeartifactListPackagesResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListRepositories(ctx workflow.Context, input *codeartifact.ListRepositoriesInput) (*codeartifact.ListRepositoriesOutput, error) {
     var output codeartifact.ListRepositoriesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRepositories, input).Get(ctx, &output)
@@ -678,6 +704,7 @@ func (a *CodeArtifactStub) ListRepositoriesAsync(ctx workflow.Context, input *co
     future := workflow.ExecuteActivity(ctx, a.activities.ListRepositories, input)
     return &CodeartifactListRepositoriesResult{Result: future}
 }
+
 func (a *CodeArtifactStub) ListRepositoriesInDomain(ctx workflow.Context, input *codeartifact.ListRepositoriesInDomainInput) (*codeartifact.ListRepositoriesInDomainOutput, error) {
     var output codeartifact.ListRepositoriesInDomainOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListRepositoriesInDomain, input).Get(ctx, &output)
@@ -688,6 +715,7 @@ func (a *CodeArtifactStub) ListRepositoriesInDomainAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListRepositoriesInDomain, input)
     return &CodeartifactListRepositoriesInDomainResult{Result: future}
 }
+
 func (a *CodeArtifactStub) PutDomainPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutDomainPermissionsPolicyInput) (*codeartifact.PutDomainPermissionsPolicyOutput, error) {
     var output codeartifact.PutDomainPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutDomainPermissionsPolicy, input).Get(ctx, &output)
@@ -698,6 +726,7 @@ func (a *CodeArtifactStub) PutDomainPermissionsPolicyAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.PutDomainPermissionsPolicy, input)
     return &CodeartifactPutDomainPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) PutRepositoryPermissionsPolicy(ctx workflow.Context, input *codeartifact.PutRepositoryPermissionsPolicyInput) (*codeartifact.PutRepositoryPermissionsPolicyOutput, error) {
     var output codeartifact.PutRepositoryPermissionsPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.PutRepositoryPermissionsPolicy, input).Get(ctx, &output)
@@ -708,6 +737,7 @@ func (a *CodeArtifactStub) PutRepositoryPermissionsPolicyAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.PutRepositoryPermissionsPolicy, input)
     return &CodeartifactPutRepositoryPermissionsPolicyResult{Result: future}
 }
+
 func (a *CodeArtifactStub) UpdatePackageVersionsStatus(ctx workflow.Context, input *codeartifact.UpdatePackageVersionsStatusInput) (*codeartifact.UpdatePackageVersionsStatusOutput, error) {
     var output codeartifact.UpdatePackageVersionsStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdatePackageVersionsStatus, input).Get(ctx, &output)
@@ -718,6 +748,7 @@ func (a *CodeArtifactStub) UpdatePackageVersionsStatusAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.UpdatePackageVersionsStatus, input)
     return &CodeartifactUpdatePackageVersionsStatusResult{Result: future}
 }
+
 func (a *CodeArtifactStub) UpdateRepository(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) (*codeartifact.UpdateRepositoryOutput, error) {
     var output codeartifact.UpdateRepositoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateRepository, input).Get(ctx, &output)

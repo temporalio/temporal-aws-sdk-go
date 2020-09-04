@@ -179,6 +179,7 @@ type Route53Client interface {
     UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceResult
 
     WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error}
+
 type Route53AssociateVPCWithHostedZoneResult struct {
 	Result workflow.Future
 }
@@ -749,7 +750,6 @@ func (r *Route53UpdateTrafficPolicyInstanceResult) Get(ctx workflow.Context) (*r
     return &output, err
 }
 
-
 type Route53Stub struct {
     activities awsactivities.Route53Activities
 }
@@ -757,6 +757,7 @@ type Route53Stub struct {
 func NewRoute53Stub() Route53Client {
     return &Route53Stub{}
 }
+
 func (a *Route53Stub) AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error) {
     var output route53.AssociateVPCWithHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.AssociateVPCWithHostedZone, input).Get(ctx, &output)
@@ -767,6 +768,7 @@ func (a *Route53Stub) AssociateVPCWithHostedZoneAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateVPCWithHostedZone, input)
     return &Route53AssociateVPCWithHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) ChangeResourceRecordSets(ctx workflow.Context, input *route53.ChangeResourceRecordSetsInput) (*route53.ChangeResourceRecordSetsOutput, error) {
     var output route53.ChangeResourceRecordSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ChangeResourceRecordSets, input).Get(ctx, &output)
@@ -777,6 +779,7 @@ func (a *Route53Stub) ChangeResourceRecordSetsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ChangeResourceRecordSets, input)
     return &Route53ChangeResourceRecordSetsResult{Result: future}
 }
+
 func (a *Route53Stub) ChangeTagsForResource(ctx workflow.Context, input *route53.ChangeTagsForResourceInput) (*route53.ChangeTagsForResourceOutput, error) {
     var output route53.ChangeTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ChangeTagsForResource, input).Get(ctx, &output)
@@ -787,6 +790,7 @@ func (a *Route53Stub) ChangeTagsForResourceAsync(ctx workflow.Context, input *ro
     future := workflow.ExecuteActivity(ctx, a.activities.ChangeTagsForResource, input)
     return &Route53ChangeTagsForResourceResult{Result: future}
 }
+
 func (a *Route53Stub) CreateHealthCheck(ctx workflow.Context, input *route53.CreateHealthCheckInput) (*route53.CreateHealthCheckOutput, error) {
     var output route53.CreateHealthCheckOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHealthCheck, input).Get(ctx, &output)
@@ -797,6 +801,7 @@ func (a *Route53Stub) CreateHealthCheckAsync(ctx workflow.Context, input *route5
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHealthCheck, input)
     return &Route53CreateHealthCheckResult{Result: future}
 }
+
 func (a *Route53Stub) CreateHostedZone(ctx workflow.Context, input *route53.CreateHostedZoneInput) (*route53.CreateHostedZoneOutput, error) {
     var output route53.CreateHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateHostedZone, input).Get(ctx, &output)
@@ -807,6 +812,7 @@ func (a *Route53Stub) CreateHostedZoneAsync(ctx workflow.Context, input *route53
     future := workflow.ExecuteActivity(ctx, a.activities.CreateHostedZone, input)
     return &Route53CreateHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) CreateQueryLoggingConfig(ctx workflow.Context, input *route53.CreateQueryLoggingConfigInput) (*route53.CreateQueryLoggingConfigOutput, error) {
     var output route53.CreateQueryLoggingConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateQueryLoggingConfig, input).Get(ctx, &output)
@@ -817,6 +823,7 @@ func (a *Route53Stub) CreateQueryLoggingConfigAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CreateQueryLoggingConfig, input)
     return &Route53CreateQueryLoggingConfigResult{Result: future}
 }
+
 func (a *Route53Stub) CreateReusableDelegationSet(ctx workflow.Context, input *route53.CreateReusableDelegationSetInput) (*route53.CreateReusableDelegationSetOutput, error) {
     var output route53.CreateReusableDelegationSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateReusableDelegationSet, input).Get(ctx, &output)
@@ -827,6 +834,7 @@ func (a *Route53Stub) CreateReusableDelegationSetAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateReusableDelegationSet, input)
     return &Route53CreateReusableDelegationSetResult{Result: future}
 }
+
 func (a *Route53Stub) CreateTrafficPolicy(ctx workflow.Context, input *route53.CreateTrafficPolicyInput) (*route53.CreateTrafficPolicyOutput, error) {
     var output route53.CreateTrafficPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicy, input).Get(ctx, &output)
@@ -837,6 +845,7 @@ func (a *Route53Stub) CreateTrafficPolicyAsync(ctx workflow.Context, input *rout
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicy, input)
     return &Route53CreateTrafficPolicyResult{Result: future}
 }
+
 func (a *Route53Stub) CreateTrafficPolicyInstance(ctx workflow.Context, input *route53.CreateTrafficPolicyInstanceInput) (*route53.CreateTrafficPolicyInstanceOutput, error) {
     var output route53.CreateTrafficPolicyInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicyInstance, input).Get(ctx, &output)
@@ -847,6 +856,7 @@ func (a *Route53Stub) CreateTrafficPolicyInstanceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicyInstance, input)
     return &Route53CreateTrafficPolicyInstanceResult{Result: future}
 }
+
 func (a *Route53Stub) CreateTrafficPolicyVersion(ctx workflow.Context, input *route53.CreateTrafficPolicyVersionInput) (*route53.CreateTrafficPolicyVersionOutput, error) {
     var output route53.CreateTrafficPolicyVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicyVersion, input).Get(ctx, &output)
@@ -857,6 +867,7 @@ func (a *Route53Stub) CreateTrafficPolicyVersionAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.CreateTrafficPolicyVersion, input)
     return &Route53CreateTrafficPolicyVersionResult{Result: future}
 }
+
 func (a *Route53Stub) CreateVPCAssociationAuthorization(ctx workflow.Context, input *route53.CreateVPCAssociationAuthorizationInput) (*route53.CreateVPCAssociationAuthorizationOutput, error) {
     var output route53.CreateVPCAssociationAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateVPCAssociationAuthorization, input).Get(ctx, &output)
@@ -867,6 +878,7 @@ func (a *Route53Stub) CreateVPCAssociationAuthorizationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.CreateVPCAssociationAuthorization, input)
     return &Route53CreateVPCAssociationAuthorizationResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteHealthCheck(ctx workflow.Context, input *route53.DeleteHealthCheckInput) (*route53.DeleteHealthCheckOutput, error) {
     var output route53.DeleteHealthCheckOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHealthCheck, input).Get(ctx, &output)
@@ -877,6 +889,7 @@ func (a *Route53Stub) DeleteHealthCheckAsync(ctx workflow.Context, input *route5
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHealthCheck, input)
     return &Route53DeleteHealthCheckResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteHostedZone(ctx workflow.Context, input *route53.DeleteHostedZoneInput) (*route53.DeleteHostedZoneOutput, error) {
     var output route53.DeleteHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteHostedZone, input).Get(ctx, &output)
@@ -887,6 +900,7 @@ func (a *Route53Stub) DeleteHostedZoneAsync(ctx workflow.Context, input *route53
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteHostedZone, input)
     return &Route53DeleteHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteQueryLoggingConfig(ctx workflow.Context, input *route53.DeleteQueryLoggingConfigInput) (*route53.DeleteQueryLoggingConfigOutput, error) {
     var output route53.DeleteQueryLoggingConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteQueryLoggingConfig, input).Get(ctx, &output)
@@ -897,6 +911,7 @@ func (a *Route53Stub) DeleteQueryLoggingConfigAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteQueryLoggingConfig, input)
     return &Route53DeleteQueryLoggingConfigResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteReusableDelegationSet(ctx workflow.Context, input *route53.DeleteReusableDelegationSetInput) (*route53.DeleteReusableDelegationSetOutput, error) {
     var output route53.DeleteReusableDelegationSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteReusableDelegationSet, input).Get(ctx, &output)
@@ -907,6 +922,7 @@ func (a *Route53Stub) DeleteReusableDelegationSetAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteReusableDelegationSet, input)
     return &Route53DeleteReusableDelegationSetResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteTrafficPolicy(ctx workflow.Context, input *route53.DeleteTrafficPolicyInput) (*route53.DeleteTrafficPolicyOutput, error) {
     var output route53.DeleteTrafficPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTrafficPolicy, input).Get(ctx, &output)
@@ -917,6 +933,7 @@ func (a *Route53Stub) DeleteTrafficPolicyAsync(ctx workflow.Context, input *rout
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTrafficPolicy, input)
     return &Route53DeleteTrafficPolicyResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteTrafficPolicyInstance(ctx workflow.Context, input *route53.DeleteTrafficPolicyInstanceInput) (*route53.DeleteTrafficPolicyInstanceOutput, error) {
     var output route53.DeleteTrafficPolicyInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteTrafficPolicyInstance, input).Get(ctx, &output)
@@ -927,6 +944,7 @@ func (a *Route53Stub) DeleteTrafficPolicyInstanceAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteTrafficPolicyInstance, input)
     return &Route53DeleteTrafficPolicyInstanceResult{Result: future}
 }
+
 func (a *Route53Stub) DeleteVPCAssociationAuthorization(ctx workflow.Context, input *route53.DeleteVPCAssociationAuthorizationInput) (*route53.DeleteVPCAssociationAuthorizationOutput, error) {
     var output route53.DeleteVPCAssociationAuthorizationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteVPCAssociationAuthorization, input).Get(ctx, &output)
@@ -937,6 +955,7 @@ func (a *Route53Stub) DeleteVPCAssociationAuthorizationAsync(ctx workflow.Contex
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteVPCAssociationAuthorization, input)
     return &Route53DeleteVPCAssociationAuthorizationResult{Result: future}
 }
+
 func (a *Route53Stub) DisassociateVPCFromHostedZone(ctx workflow.Context, input *route53.DisassociateVPCFromHostedZoneInput) (*route53.DisassociateVPCFromHostedZoneOutput, error) {
     var output route53.DisassociateVPCFromHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DisassociateVPCFromHostedZone, input).Get(ctx, &output)
@@ -947,6 +966,7 @@ func (a *Route53Stub) DisassociateVPCFromHostedZoneAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DisassociateVPCFromHostedZone, input)
     return &Route53DisassociateVPCFromHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) GetAccountLimit(ctx workflow.Context, input *route53.GetAccountLimitInput) (*route53.GetAccountLimitOutput, error) {
     var output route53.GetAccountLimitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetAccountLimit, input).Get(ctx, &output)
@@ -957,6 +977,7 @@ func (a *Route53Stub) GetAccountLimitAsync(ctx workflow.Context, input *route53.
     future := workflow.ExecuteActivity(ctx, a.activities.GetAccountLimit, input)
     return &Route53GetAccountLimitResult{Result: future}
 }
+
 func (a *Route53Stub) GetChange(ctx workflow.Context, input *route53.GetChangeInput) (*route53.GetChangeOutput, error) {
     var output route53.GetChangeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetChange, input).Get(ctx, &output)
@@ -967,6 +988,7 @@ func (a *Route53Stub) GetChangeAsync(ctx workflow.Context, input *route53.GetCha
     future := workflow.ExecuteActivity(ctx, a.activities.GetChange, input)
     return &Route53GetChangeResult{Result: future}
 }
+
 func (a *Route53Stub) GetCheckerIpRanges(ctx workflow.Context, input *route53.GetCheckerIpRangesInput) (*route53.GetCheckerIpRangesOutput, error) {
     var output route53.GetCheckerIpRangesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCheckerIpRanges, input).Get(ctx, &output)
@@ -977,6 +999,7 @@ func (a *Route53Stub) GetCheckerIpRangesAsync(ctx workflow.Context, input *route
     future := workflow.ExecuteActivity(ctx, a.activities.GetCheckerIpRanges, input)
     return &Route53GetCheckerIpRangesResult{Result: future}
 }
+
 func (a *Route53Stub) GetGeoLocation(ctx workflow.Context, input *route53.GetGeoLocationInput) (*route53.GetGeoLocationOutput, error) {
     var output route53.GetGeoLocationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetGeoLocation, input).Get(ctx, &output)
@@ -987,6 +1010,7 @@ func (a *Route53Stub) GetGeoLocationAsync(ctx workflow.Context, input *route53.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetGeoLocation, input)
     return &Route53GetGeoLocationResult{Result: future}
 }
+
 func (a *Route53Stub) GetHealthCheck(ctx workflow.Context, input *route53.GetHealthCheckInput) (*route53.GetHealthCheckOutput, error) {
     var output route53.GetHealthCheckOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheck, input).Get(ctx, &output)
@@ -997,6 +1021,7 @@ func (a *Route53Stub) GetHealthCheckAsync(ctx workflow.Context, input *route53.G
     future := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheck, input)
     return &Route53GetHealthCheckResult{Result: future}
 }
+
 func (a *Route53Stub) GetHealthCheckCount(ctx workflow.Context, input *route53.GetHealthCheckCountInput) (*route53.GetHealthCheckCountOutput, error) {
     var output route53.GetHealthCheckCountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckCount, input).Get(ctx, &output)
@@ -1007,6 +1032,7 @@ func (a *Route53Stub) GetHealthCheckCountAsync(ctx workflow.Context, input *rout
     future := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckCount, input)
     return &Route53GetHealthCheckCountResult{Result: future}
 }
+
 func (a *Route53Stub) GetHealthCheckLastFailureReason(ctx workflow.Context, input *route53.GetHealthCheckLastFailureReasonInput) (*route53.GetHealthCheckLastFailureReasonOutput, error) {
     var output route53.GetHealthCheckLastFailureReasonOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckLastFailureReason, input).Get(ctx, &output)
@@ -1017,6 +1043,7 @@ func (a *Route53Stub) GetHealthCheckLastFailureReasonAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckLastFailureReason, input)
     return &Route53GetHealthCheckLastFailureReasonResult{Result: future}
 }
+
 func (a *Route53Stub) GetHealthCheckStatus(ctx workflow.Context, input *route53.GetHealthCheckStatusInput) (*route53.GetHealthCheckStatusOutput, error) {
     var output route53.GetHealthCheckStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckStatus, input).Get(ctx, &output)
@@ -1027,6 +1054,7 @@ func (a *Route53Stub) GetHealthCheckStatusAsync(ctx workflow.Context, input *rou
     future := workflow.ExecuteActivity(ctx, a.activities.GetHealthCheckStatus, input)
     return &Route53GetHealthCheckStatusResult{Result: future}
 }
+
 func (a *Route53Stub) GetHostedZone(ctx workflow.Context, input *route53.GetHostedZoneInput) (*route53.GetHostedZoneOutput, error) {
     var output route53.GetHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHostedZone, input).Get(ctx, &output)
@@ -1037,6 +1065,7 @@ func (a *Route53Stub) GetHostedZoneAsync(ctx workflow.Context, input *route53.Ge
     future := workflow.ExecuteActivity(ctx, a.activities.GetHostedZone, input)
     return &Route53GetHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) GetHostedZoneCount(ctx workflow.Context, input *route53.GetHostedZoneCountInput) (*route53.GetHostedZoneCountOutput, error) {
     var output route53.GetHostedZoneCountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHostedZoneCount, input).Get(ctx, &output)
@@ -1047,6 +1076,7 @@ func (a *Route53Stub) GetHostedZoneCountAsync(ctx workflow.Context, input *route
     future := workflow.ExecuteActivity(ctx, a.activities.GetHostedZoneCount, input)
     return &Route53GetHostedZoneCountResult{Result: future}
 }
+
 func (a *Route53Stub) GetHostedZoneLimit(ctx workflow.Context, input *route53.GetHostedZoneLimitInput) (*route53.GetHostedZoneLimitOutput, error) {
     var output route53.GetHostedZoneLimitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetHostedZoneLimit, input).Get(ctx, &output)
@@ -1057,6 +1087,7 @@ func (a *Route53Stub) GetHostedZoneLimitAsync(ctx workflow.Context, input *route
     future := workflow.ExecuteActivity(ctx, a.activities.GetHostedZoneLimit, input)
     return &Route53GetHostedZoneLimitResult{Result: future}
 }
+
 func (a *Route53Stub) GetQueryLoggingConfig(ctx workflow.Context, input *route53.GetQueryLoggingConfigInput) (*route53.GetQueryLoggingConfigOutput, error) {
     var output route53.GetQueryLoggingConfigOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetQueryLoggingConfig, input).Get(ctx, &output)
@@ -1067,6 +1098,7 @@ func (a *Route53Stub) GetQueryLoggingConfigAsync(ctx workflow.Context, input *ro
     future := workflow.ExecuteActivity(ctx, a.activities.GetQueryLoggingConfig, input)
     return &Route53GetQueryLoggingConfigResult{Result: future}
 }
+
 func (a *Route53Stub) GetReusableDelegationSet(ctx workflow.Context, input *route53.GetReusableDelegationSetInput) (*route53.GetReusableDelegationSetOutput, error) {
     var output route53.GetReusableDelegationSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetReusableDelegationSet, input).Get(ctx, &output)
@@ -1077,6 +1109,7 @@ func (a *Route53Stub) GetReusableDelegationSetAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetReusableDelegationSet, input)
     return &Route53GetReusableDelegationSetResult{Result: future}
 }
+
 func (a *Route53Stub) GetReusableDelegationSetLimit(ctx workflow.Context, input *route53.GetReusableDelegationSetLimitInput) (*route53.GetReusableDelegationSetLimitOutput, error) {
     var output route53.GetReusableDelegationSetLimitOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetReusableDelegationSetLimit, input).Get(ctx, &output)
@@ -1087,6 +1120,7 @@ func (a *Route53Stub) GetReusableDelegationSetLimitAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GetReusableDelegationSetLimit, input)
     return &Route53GetReusableDelegationSetLimitResult{Result: future}
 }
+
 func (a *Route53Stub) GetTrafficPolicy(ctx workflow.Context, input *route53.GetTrafficPolicyInput) (*route53.GetTrafficPolicyOutput, error) {
     var output route53.GetTrafficPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicy, input).Get(ctx, &output)
@@ -1097,6 +1131,7 @@ func (a *Route53Stub) GetTrafficPolicyAsync(ctx workflow.Context, input *route53
     future := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicy, input)
     return &Route53GetTrafficPolicyResult{Result: future}
 }
+
 func (a *Route53Stub) GetTrafficPolicyInstance(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceInput) (*route53.GetTrafficPolicyInstanceOutput, error) {
     var output route53.GetTrafficPolicyInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicyInstance, input).Get(ctx, &output)
@@ -1107,6 +1142,7 @@ func (a *Route53Stub) GetTrafficPolicyInstanceAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicyInstance, input)
     return &Route53GetTrafficPolicyInstanceResult{Result: future}
 }
+
 func (a *Route53Stub) GetTrafficPolicyInstanceCount(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceCountInput) (*route53.GetTrafficPolicyInstanceCountOutput, error) {
     var output route53.GetTrafficPolicyInstanceCountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicyInstanceCount, input).Get(ctx, &output)
@@ -1117,6 +1153,7 @@ func (a *Route53Stub) GetTrafficPolicyInstanceCountAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.GetTrafficPolicyInstanceCount, input)
     return &Route53GetTrafficPolicyInstanceCountResult{Result: future}
 }
+
 func (a *Route53Stub) ListGeoLocations(ctx workflow.Context, input *route53.ListGeoLocationsInput) (*route53.ListGeoLocationsOutput, error) {
     var output route53.ListGeoLocationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListGeoLocations, input).Get(ctx, &output)
@@ -1127,6 +1164,7 @@ func (a *Route53Stub) ListGeoLocationsAsync(ctx workflow.Context, input *route53
     future := workflow.ExecuteActivity(ctx, a.activities.ListGeoLocations, input)
     return &Route53ListGeoLocationsResult{Result: future}
 }
+
 func (a *Route53Stub) ListHealthChecks(ctx workflow.Context, input *route53.ListHealthChecksInput) (*route53.ListHealthChecksOutput, error) {
     var output route53.ListHealthChecksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHealthChecks, input).Get(ctx, &output)
@@ -1137,6 +1175,7 @@ func (a *Route53Stub) ListHealthChecksAsync(ctx workflow.Context, input *route53
     future := workflow.ExecuteActivity(ctx, a.activities.ListHealthChecks, input)
     return &Route53ListHealthChecksResult{Result: future}
 }
+
 func (a *Route53Stub) ListHostedZones(ctx workflow.Context, input *route53.ListHostedZonesInput) (*route53.ListHostedZonesOutput, error) {
     var output route53.ListHostedZonesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHostedZones, input).Get(ctx, &output)
@@ -1147,6 +1186,7 @@ func (a *Route53Stub) ListHostedZonesAsync(ctx workflow.Context, input *route53.
     future := workflow.ExecuteActivity(ctx, a.activities.ListHostedZones, input)
     return &Route53ListHostedZonesResult{Result: future}
 }
+
 func (a *Route53Stub) ListHostedZonesByName(ctx workflow.Context, input *route53.ListHostedZonesByNameInput) (*route53.ListHostedZonesByNameOutput, error) {
     var output route53.ListHostedZonesByNameOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHostedZonesByName, input).Get(ctx, &output)
@@ -1157,6 +1197,7 @@ func (a *Route53Stub) ListHostedZonesByNameAsync(ctx workflow.Context, input *ro
     future := workflow.ExecuteActivity(ctx, a.activities.ListHostedZonesByName, input)
     return &Route53ListHostedZonesByNameResult{Result: future}
 }
+
 func (a *Route53Stub) ListHostedZonesByVPC(ctx workflow.Context, input *route53.ListHostedZonesByVPCInput) (*route53.ListHostedZonesByVPCOutput, error) {
     var output route53.ListHostedZonesByVPCOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListHostedZonesByVPC, input).Get(ctx, &output)
@@ -1167,6 +1208,7 @@ func (a *Route53Stub) ListHostedZonesByVPCAsync(ctx workflow.Context, input *rou
     future := workflow.ExecuteActivity(ctx, a.activities.ListHostedZonesByVPC, input)
     return &Route53ListHostedZonesByVPCResult{Result: future}
 }
+
 func (a *Route53Stub) ListQueryLoggingConfigs(ctx workflow.Context, input *route53.ListQueryLoggingConfigsInput) (*route53.ListQueryLoggingConfigsOutput, error) {
     var output route53.ListQueryLoggingConfigsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListQueryLoggingConfigs, input).Get(ctx, &output)
@@ -1177,6 +1219,7 @@ func (a *Route53Stub) ListQueryLoggingConfigsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListQueryLoggingConfigs, input)
     return &Route53ListQueryLoggingConfigsResult{Result: future}
 }
+
 func (a *Route53Stub) ListResourceRecordSets(ctx workflow.Context, input *route53.ListResourceRecordSetsInput) (*route53.ListResourceRecordSetsOutput, error) {
     var output route53.ListResourceRecordSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListResourceRecordSets, input).Get(ctx, &output)
@@ -1187,6 +1230,7 @@ func (a *Route53Stub) ListResourceRecordSetsAsync(ctx workflow.Context, input *r
     future := workflow.ExecuteActivity(ctx, a.activities.ListResourceRecordSets, input)
     return &Route53ListResourceRecordSetsResult{Result: future}
 }
+
 func (a *Route53Stub) ListReusableDelegationSets(ctx workflow.Context, input *route53.ListReusableDelegationSetsInput) (*route53.ListReusableDelegationSetsOutput, error) {
     var output route53.ListReusableDelegationSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListReusableDelegationSets, input).Get(ctx, &output)
@@ -1197,6 +1241,7 @@ func (a *Route53Stub) ListReusableDelegationSetsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListReusableDelegationSets, input)
     return &Route53ListReusableDelegationSetsResult{Result: future}
 }
+
 func (a *Route53Stub) ListTagsForResource(ctx workflow.Context, input *route53.ListTagsForResourceInput) (*route53.ListTagsForResourceOutput, error) {
     var output route53.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -1207,6 +1252,7 @@ func (a *Route53Stub) ListTagsForResourceAsync(ctx workflow.Context, input *rout
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &Route53ListTagsForResourceResult{Result: future}
 }
+
 func (a *Route53Stub) ListTagsForResources(ctx workflow.Context, input *route53.ListTagsForResourcesInput) (*route53.ListTagsForResourcesOutput, error) {
     var output route53.ListTagsForResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResources, input).Get(ctx, &output)
@@ -1217,6 +1263,7 @@ func (a *Route53Stub) ListTagsForResourcesAsync(ctx workflow.Context, input *rou
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResources, input)
     return &Route53ListTagsForResourcesResult{Result: future}
 }
+
 func (a *Route53Stub) ListTrafficPolicies(ctx workflow.Context, input *route53.ListTrafficPoliciesInput) (*route53.ListTrafficPoliciesOutput, error) {
     var output route53.ListTrafficPoliciesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicies, input).Get(ctx, &output)
@@ -1227,6 +1274,7 @@ func (a *Route53Stub) ListTrafficPoliciesAsync(ctx workflow.Context, input *rout
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicies, input)
     return &Route53ListTrafficPoliciesResult{Result: future}
 }
+
 func (a *Route53Stub) ListTrafficPolicyInstances(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesInput) (*route53.ListTrafficPolicyInstancesOutput, error) {
     var output route53.ListTrafficPolicyInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstances, input).Get(ctx, &output)
@@ -1237,6 +1285,7 @@ func (a *Route53Stub) ListTrafficPolicyInstancesAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstances, input)
     return &Route53ListTrafficPolicyInstancesResult{Result: future}
 }
+
 func (a *Route53Stub) ListTrafficPolicyInstancesByHostedZone(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByHostedZoneInput) (*route53.ListTrafficPolicyInstancesByHostedZoneOutput, error) {
     var output route53.ListTrafficPolicyInstancesByHostedZoneOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstancesByHostedZone, input).Get(ctx, &output)
@@ -1247,6 +1296,7 @@ func (a *Route53Stub) ListTrafficPolicyInstancesByHostedZoneAsync(ctx workflow.C
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstancesByHostedZone, input)
     return &Route53ListTrafficPolicyInstancesByHostedZoneResult{Result: future}
 }
+
 func (a *Route53Stub) ListTrafficPolicyInstancesByPolicy(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByPolicyInput) (*route53.ListTrafficPolicyInstancesByPolicyOutput, error) {
     var output route53.ListTrafficPolicyInstancesByPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstancesByPolicy, input).Get(ctx, &output)
@@ -1257,6 +1307,7 @@ func (a *Route53Stub) ListTrafficPolicyInstancesByPolicyAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyInstancesByPolicy, input)
     return &Route53ListTrafficPolicyInstancesByPolicyResult{Result: future}
 }
+
 func (a *Route53Stub) ListTrafficPolicyVersions(ctx workflow.Context, input *route53.ListTrafficPolicyVersionsInput) (*route53.ListTrafficPolicyVersionsOutput, error) {
     var output route53.ListTrafficPolicyVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyVersions, input).Get(ctx, &output)
@@ -1267,6 +1318,7 @@ func (a *Route53Stub) ListTrafficPolicyVersionsAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListTrafficPolicyVersions, input)
     return &Route53ListTrafficPolicyVersionsResult{Result: future}
 }
+
 func (a *Route53Stub) ListVPCAssociationAuthorizations(ctx workflow.Context, input *route53.ListVPCAssociationAuthorizationsInput) (*route53.ListVPCAssociationAuthorizationsOutput, error) {
     var output route53.ListVPCAssociationAuthorizationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListVPCAssociationAuthorizations, input).Get(ctx, &output)
@@ -1277,6 +1329,7 @@ func (a *Route53Stub) ListVPCAssociationAuthorizationsAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.ListVPCAssociationAuthorizations, input)
     return &Route53ListVPCAssociationAuthorizationsResult{Result: future}
 }
+
 func (a *Route53Stub) TestDNSAnswer(ctx workflow.Context, input *route53.TestDNSAnswerInput) (*route53.TestDNSAnswerOutput, error) {
     var output route53.TestDNSAnswerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TestDNSAnswer, input).Get(ctx, &output)
@@ -1287,6 +1340,7 @@ func (a *Route53Stub) TestDNSAnswerAsync(ctx workflow.Context, input *route53.Te
     future := workflow.ExecuteActivity(ctx, a.activities.TestDNSAnswer, input)
     return &Route53TestDNSAnswerResult{Result: future}
 }
+
 func (a *Route53Stub) UpdateHealthCheck(ctx workflow.Context, input *route53.UpdateHealthCheckInput) (*route53.UpdateHealthCheckOutput, error) {
     var output route53.UpdateHealthCheckOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateHealthCheck, input).Get(ctx, &output)
@@ -1297,6 +1351,7 @@ func (a *Route53Stub) UpdateHealthCheckAsync(ctx workflow.Context, input *route5
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateHealthCheck, input)
     return &Route53UpdateHealthCheckResult{Result: future}
 }
+
 func (a *Route53Stub) UpdateHostedZoneComment(ctx workflow.Context, input *route53.UpdateHostedZoneCommentInput) (*route53.UpdateHostedZoneCommentOutput, error) {
     var output route53.UpdateHostedZoneCommentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateHostedZoneComment, input).Get(ctx, &output)
@@ -1307,6 +1362,7 @@ func (a *Route53Stub) UpdateHostedZoneCommentAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateHostedZoneComment, input)
     return &Route53UpdateHostedZoneCommentResult{Result: future}
 }
+
 func (a *Route53Stub) UpdateTrafficPolicyComment(ctx workflow.Context, input *route53.UpdateTrafficPolicyCommentInput) (*route53.UpdateTrafficPolicyCommentOutput, error) {
     var output route53.UpdateTrafficPolicyCommentOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTrafficPolicyComment, input).Get(ctx, &output)
@@ -1317,6 +1373,7 @@ func (a *Route53Stub) UpdateTrafficPolicyCommentAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateTrafficPolicyComment, input)
     return &Route53UpdateTrafficPolicyCommentResult{Result: future}
 }
+
 func (a *Route53Stub) UpdateTrafficPolicyInstance(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) (*route53.UpdateTrafficPolicyInstanceOutput, error) {
     var output route53.UpdateTrafficPolicyInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTrafficPolicyInstance, input).Get(ctx, &output)
@@ -1335,3 +1392,4 @@ func (a *Route53Stub) WaitUntilResourceRecordSetsChanged(ctx workflow.Context, i
 func (a *Route53Stub) WaitUntilResourceRecordSetsChangedAsync(ctx workflow.Context, input *route53.GetChangeInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilResourceRecordSetsChanged, input)
 }
+

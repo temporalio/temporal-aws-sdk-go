@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,8 +14,6 @@ func NewForecastQueryServiceActivities(client forecastqueryserviceiface.Forecast
     return &ForecastQueryServiceActivities{client: client}
 }
 
-
 func (a *ForecastQueryServiceActivities) QueryForecast(input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error) {
     return a.client.QueryForecast(input)
 }
-

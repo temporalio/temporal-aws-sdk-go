@@ -21,8 +21,7 @@ type {{ $name }}Client interface {
 {{ end }}
 {{- end -}}
 }
-
-{{- range $i, $method := .Methods }}
+{{range $i, $method := .Methods }}
 {{- $prefix := ToPrefix $method.OutputPackage }}
 {{- if and (not (HasPrefix $method.Name "Wait")) (not (IsDuplicatedOutput $method.OutputPackage $method.Output)) }}
 type {{ $prefix }}{{ $method.Name }}Result struct {
@@ -36,7 +35,6 @@ func (r *{{ $prefix }}{{ $method.Name }}Result) Get(ctx workflow.Context) (*{{ $
 }
 {{ end }}
 {{- end }}
-
 type {{ $name }}Stub struct {
     activities awsactivities.{{ $name }}Activities
 }
@@ -44,7 +42,6 @@ type {{ $name }}Stub struct {
 func New{{ $name }}Stub() {{ $name }}Client {
     return &{{ $name }}Stub{}
 }
-
 {{- range $i, $method := .Methods }}
 {{- $prefix := ToPrefix $method.OutputPackage }}
 {{ if HasPrefix $method.Name "Wait" }}
@@ -55,8 +52,7 @@ func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $me
 func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input)
 }
-
-{{- else -}}
+{{ else }}
 func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
     var output {{ $method.OutputPackage }}.{{ $method.Output }}
     err := workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input).Get(ctx, &output)

@@ -10,6 +10,7 @@ type TranscribeStreamingServiceClient interface {
     StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error)
     StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult
 }
+
 type TranscribestreamingserviceStartStreamTranscriptionResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *TranscribestreamingserviceStartStreamTranscriptionResult) Get(ctx workf
     return &output, err
 }
 
-
 type TranscribeStreamingServiceStub struct {
     activities awsactivities.TranscribeStreamingServiceActivities
 }
@@ -28,6 +28,7 @@ type TranscribeStreamingServiceStub struct {
 func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
     return &TranscribeStreamingServiceStub{}
 }
+
 func (a *TranscribeStreamingServiceStub) StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
     var output transcribestreamingservice.StartStreamTranscriptionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StartStreamTranscription, input).Get(ctx, &output)

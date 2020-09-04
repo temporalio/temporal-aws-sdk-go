@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -13,8 +14,6 @@ func NewMarketplaceEntitlementServiceActivities(client marketplaceentitlementser
     return &MarketplaceEntitlementServiceActivities{client: client}
 }
 
-
 func (a *MarketplaceEntitlementServiceActivities) GetEntitlements(input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
     return a.client.GetEntitlements(input)
 }
-

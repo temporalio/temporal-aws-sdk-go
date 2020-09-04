@@ -85,6 +85,7 @@ type KafkaClient interface {
     UpdateMonitoring(ctx workflow.Context, input *kafka.UpdateMonitoringInput) (*kafka.UpdateMonitoringOutput, error)
     UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringResult
 }
+
 type KafkaCreateClusterResult struct {
 	Result workflow.Future
 }
@@ -345,7 +346,6 @@ func (r *KafkaUpdateMonitoringResult) Get(ctx workflow.Context) (*kafka.UpdateMo
     return &output, err
 }
 
-
 type KafkaStub struct {
     activities awsactivities.KafkaActivities
 }
@@ -353,6 +353,7 @@ type KafkaStub struct {
 func NewKafkaStub() KafkaClient {
     return &KafkaStub{}
 }
+
 func (a *KafkaStub) CreateCluster(ctx workflow.Context, input *kafka.CreateClusterInput) (*kafka.CreateClusterOutput, error) {
     var output kafka.CreateClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input).Get(ctx, &output)
@@ -363,6 +364,7 @@ func (a *KafkaStub) CreateClusterAsync(ctx workflow.Context, input *kafka.Create
     future := workflow.ExecuteActivity(ctx, a.activities.CreateCluster, input)
     return &KafkaCreateClusterResult{Result: future}
 }
+
 func (a *KafkaStub) CreateConfiguration(ctx workflow.Context, input *kafka.CreateConfigurationInput) (*kafka.CreateConfigurationOutput, error) {
     var output kafka.CreateConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateConfiguration, input).Get(ctx, &output)
@@ -373,6 +375,7 @@ func (a *KafkaStub) CreateConfigurationAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.CreateConfiguration, input)
     return &KafkaCreateConfigurationResult{Result: future}
 }
+
 func (a *KafkaStub) DeleteCluster(ctx workflow.Context, input *kafka.DeleteClusterInput) (*kafka.DeleteClusterOutput, error) {
     var output kafka.DeleteClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteCluster, input).Get(ctx, &output)
@@ -383,6 +386,7 @@ func (a *KafkaStub) DeleteClusterAsync(ctx workflow.Context, input *kafka.Delete
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteCluster, input)
     return &KafkaDeleteClusterResult{Result: future}
 }
+
 func (a *KafkaStub) DeleteConfiguration(ctx workflow.Context, input *kafka.DeleteConfigurationInput) (*kafka.DeleteConfigurationOutput, error) {
     var output kafka.DeleteConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfiguration, input).Get(ctx, &output)
@@ -393,6 +397,7 @@ func (a *KafkaStub) DeleteConfigurationAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfiguration, input)
     return &KafkaDeleteConfigurationResult{Result: future}
 }
+
 func (a *KafkaStub) DescribeCluster(ctx workflow.Context, input *kafka.DescribeClusterInput) (*kafka.DescribeClusterOutput, error) {
     var output kafka.DescribeClusterOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input).Get(ctx, &output)
@@ -403,6 +408,7 @@ func (a *KafkaStub) DescribeClusterAsync(ctx workflow.Context, input *kafka.Desc
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeCluster, input)
     return &KafkaDescribeClusterResult{Result: future}
 }
+
 func (a *KafkaStub) DescribeClusterOperation(ctx workflow.Context, input *kafka.DescribeClusterOperationInput) (*kafka.DescribeClusterOperationOutput, error) {
     var output kafka.DescribeClusterOperationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeClusterOperation, input).Get(ctx, &output)
@@ -413,6 +419,7 @@ func (a *KafkaStub) DescribeClusterOperationAsync(ctx workflow.Context, input *k
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeClusterOperation, input)
     return &KafkaDescribeClusterOperationResult{Result: future}
 }
+
 func (a *KafkaStub) DescribeConfiguration(ctx workflow.Context, input *kafka.DescribeConfigurationInput) (*kafka.DescribeConfigurationOutput, error) {
     var output kafka.DescribeConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfiguration, input).Get(ctx, &output)
@@ -423,6 +430,7 @@ func (a *KafkaStub) DescribeConfigurationAsync(ctx workflow.Context, input *kafk
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfiguration, input)
     return &KafkaDescribeConfigurationResult{Result: future}
 }
+
 func (a *KafkaStub) DescribeConfigurationRevision(ctx workflow.Context, input *kafka.DescribeConfigurationRevisionInput) (*kafka.DescribeConfigurationRevisionOutput, error) {
     var output kafka.DescribeConfigurationRevisionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRevision, input).Get(ctx, &output)
@@ -433,6 +441,7 @@ func (a *KafkaStub) DescribeConfigurationRevisionAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationRevision, input)
     return &KafkaDescribeConfigurationRevisionResult{Result: future}
 }
+
 func (a *KafkaStub) GetBootstrapBrokers(ctx workflow.Context, input *kafka.GetBootstrapBrokersInput) (*kafka.GetBootstrapBrokersOutput, error) {
     var output kafka.GetBootstrapBrokersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetBootstrapBrokers, input).Get(ctx, &output)
@@ -443,6 +452,7 @@ func (a *KafkaStub) GetBootstrapBrokersAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.GetBootstrapBrokers, input)
     return &KafkaGetBootstrapBrokersResult{Result: future}
 }
+
 func (a *KafkaStub) GetCompatibleKafkaVersions(ctx workflow.Context, input *kafka.GetCompatibleKafkaVersionsInput) (*kafka.GetCompatibleKafkaVersionsOutput, error) {
     var output kafka.GetCompatibleKafkaVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetCompatibleKafkaVersions, input).Get(ctx, &output)
@@ -453,6 +463,7 @@ func (a *KafkaStub) GetCompatibleKafkaVersionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.GetCompatibleKafkaVersions, input)
     return &KafkaGetCompatibleKafkaVersionsResult{Result: future}
 }
+
 func (a *KafkaStub) ListClusterOperations(ctx workflow.Context, input *kafka.ListClusterOperationsInput) (*kafka.ListClusterOperationsOutput, error) {
     var output kafka.ListClusterOperationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListClusterOperations, input).Get(ctx, &output)
@@ -463,6 +474,7 @@ func (a *KafkaStub) ListClusterOperationsAsync(ctx workflow.Context, input *kafk
     future := workflow.ExecuteActivity(ctx, a.activities.ListClusterOperations, input)
     return &KafkaListClusterOperationsResult{Result: future}
 }
+
 func (a *KafkaStub) ListClusters(ctx workflow.Context, input *kafka.ListClustersInput) (*kafka.ListClustersOutput, error) {
     var output kafka.ListClustersOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input).Get(ctx, &output)
@@ -473,6 +485,7 @@ func (a *KafkaStub) ListClustersAsync(ctx workflow.Context, input *kafka.ListClu
     future := workflow.ExecuteActivity(ctx, a.activities.ListClusters, input)
     return &KafkaListClustersResult{Result: future}
 }
+
 func (a *KafkaStub) ListConfigurationRevisions(ctx workflow.Context, input *kafka.ListConfigurationRevisionsInput) (*kafka.ListConfigurationRevisionsOutput, error) {
     var output kafka.ListConfigurationRevisionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationRevisions, input).Get(ctx, &output)
@@ -483,6 +496,7 @@ func (a *KafkaStub) ListConfigurationRevisionsAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationRevisions, input)
     return &KafkaListConfigurationRevisionsResult{Result: future}
 }
+
 func (a *KafkaStub) ListConfigurations(ctx workflow.Context, input *kafka.ListConfigurationsInput) (*kafka.ListConfigurationsOutput, error) {
     var output kafka.ListConfigurationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListConfigurations, input).Get(ctx, &output)
@@ -493,6 +507,7 @@ func (a *KafkaStub) ListConfigurationsAsync(ctx workflow.Context, input *kafka.L
     future := workflow.ExecuteActivity(ctx, a.activities.ListConfigurations, input)
     return &KafkaListConfigurationsResult{Result: future}
 }
+
 func (a *KafkaStub) ListKafkaVersions(ctx workflow.Context, input *kafka.ListKafkaVersionsInput) (*kafka.ListKafkaVersionsOutput, error) {
     var output kafka.ListKafkaVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListKafkaVersions, input).Get(ctx, &output)
@@ -503,6 +518,7 @@ func (a *KafkaStub) ListKafkaVersionsAsync(ctx workflow.Context, input *kafka.Li
     future := workflow.ExecuteActivity(ctx, a.activities.ListKafkaVersions, input)
     return &KafkaListKafkaVersionsResult{Result: future}
 }
+
 func (a *KafkaStub) ListNodes(ctx workflow.Context, input *kafka.ListNodesInput) (*kafka.ListNodesOutput, error) {
     var output kafka.ListNodesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListNodes, input).Get(ctx, &output)
@@ -513,6 +529,7 @@ func (a *KafkaStub) ListNodesAsync(ctx workflow.Context, input *kafka.ListNodesI
     future := workflow.ExecuteActivity(ctx, a.activities.ListNodes, input)
     return &KafkaListNodesResult{Result: future}
 }
+
 func (a *KafkaStub) ListTagsForResource(ctx workflow.Context, input *kafka.ListTagsForResourceInput) (*kafka.ListTagsForResourceOutput, error) {
     var output kafka.ListTagsForResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
@@ -523,6 +540,7 @@ func (a *KafkaStub) ListTagsForResourceAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
     return &KafkaListTagsForResourceResult{Result: future}
 }
+
 func (a *KafkaStub) RebootBroker(ctx workflow.Context, input *kafka.RebootBrokerInput) (*kafka.RebootBrokerOutput, error) {
     var output kafka.RebootBrokerOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RebootBroker, input).Get(ctx, &output)
@@ -533,6 +551,7 @@ func (a *KafkaStub) RebootBrokerAsync(ctx workflow.Context, input *kafka.RebootB
     future := workflow.ExecuteActivity(ctx, a.activities.RebootBroker, input)
     return &KafkaRebootBrokerResult{Result: future}
 }
+
 func (a *KafkaStub) TagResource(ctx workflow.Context, input *kafka.TagResourceInput) (*kafka.TagResourceOutput, error) {
     var output kafka.TagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
@@ -543,6 +562,7 @@ func (a *KafkaStub) TagResourceAsync(ctx workflow.Context, input *kafka.TagResou
     future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
     return &KafkaTagResourceResult{Result: future}
 }
+
 func (a *KafkaStub) UntagResource(ctx workflow.Context, input *kafka.UntagResourceInput) (*kafka.UntagResourceOutput, error) {
     var output kafka.UntagResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
@@ -553,6 +573,7 @@ func (a *KafkaStub) UntagResourceAsync(ctx workflow.Context, input *kafka.UntagR
     future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
     return &KafkaUntagResourceResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateBrokerCount(ctx workflow.Context, input *kafka.UpdateBrokerCountInput) (*kafka.UpdateBrokerCountOutput, error) {
     var output kafka.UpdateBrokerCountOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBrokerCount, input).Get(ctx, &output)
@@ -563,6 +584,7 @@ func (a *KafkaStub) UpdateBrokerCountAsync(ctx workflow.Context, input *kafka.Up
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBrokerCount, input)
     return &KafkaUpdateBrokerCountResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateBrokerStorage(ctx workflow.Context, input *kafka.UpdateBrokerStorageInput) (*kafka.UpdateBrokerStorageOutput, error) {
     var output kafka.UpdateBrokerStorageOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBrokerStorage, input).Get(ctx, &output)
@@ -573,6 +595,7 @@ func (a *KafkaStub) UpdateBrokerStorageAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBrokerStorage, input)
     return &KafkaUpdateBrokerStorageResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateClusterConfiguration(ctx workflow.Context, input *kafka.UpdateClusterConfigurationInput) (*kafka.UpdateClusterConfigurationOutput, error) {
     var output kafka.UpdateClusterConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterConfiguration, input).Get(ctx, &output)
@@ -583,6 +606,7 @@ func (a *KafkaStub) UpdateClusterConfigurationAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterConfiguration, input)
     return &KafkaUpdateClusterConfigurationResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateClusterKafkaVersion(ctx workflow.Context, input *kafka.UpdateClusterKafkaVersionInput) (*kafka.UpdateClusterKafkaVersionOutput, error) {
     var output kafka.UpdateClusterKafkaVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterKafkaVersion, input).Get(ctx, &output)
@@ -593,6 +617,7 @@ func (a *KafkaStub) UpdateClusterKafkaVersionAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateClusterKafkaVersion, input)
     return &KafkaUpdateClusterKafkaVersionResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateConfiguration(ctx workflow.Context, input *kafka.UpdateConfigurationInput) (*kafka.UpdateConfigurationOutput, error) {
     var output kafka.UpdateConfigurationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfiguration, input).Get(ctx, &output)
@@ -603,6 +628,7 @@ func (a *KafkaStub) UpdateConfigurationAsync(ctx workflow.Context, input *kafka.
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfiguration, input)
     return &KafkaUpdateConfigurationResult{Result: future}
 }
+
 func (a *KafkaStub) UpdateMonitoring(ctx workflow.Context, input *kafka.UpdateMonitoringInput) (*kafka.UpdateMonitoringOutput, error) {
     var output kafka.UpdateMonitoringOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateMonitoring, input).Get(ctx, &output)

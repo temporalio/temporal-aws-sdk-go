@@ -180,6 +180,7 @@ type CloudFormationClient interface {
     WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
     WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
     WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error}
+
 type CloudformationCancelUpdateStackResult struct {
 	Result workflow.Future
 }
@@ -730,7 +731,6 @@ func (r *CloudformationValidateTemplateResult) Get(ctx workflow.Context) (*cloud
     return &output, err
 }
 
-
 type CloudFormationStub struct {
     activities awsactivities.CloudFormationActivities
 }
@@ -738,6 +738,7 @@ type CloudFormationStub struct {
 func NewCloudFormationStub() CloudFormationClient {
     return &CloudFormationStub{}
 }
+
 func (a *CloudFormationStub) CancelUpdateStack(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
     var output cloudformation.CancelUpdateStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CancelUpdateStack, input).Get(ctx, &output)
@@ -748,6 +749,7 @@ func (a *CloudFormationStub) CancelUpdateStackAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.CancelUpdateStack, input)
     return &CloudformationCancelUpdateStackResult{Result: future}
 }
+
 func (a *CloudFormationStub) ContinueUpdateRollback(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) (*cloudformation.ContinueUpdateRollbackOutput, error) {
     var output cloudformation.ContinueUpdateRollbackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ContinueUpdateRollback, input).Get(ctx, &output)
@@ -758,6 +760,7 @@ func (a *CloudFormationStub) ContinueUpdateRollbackAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ContinueUpdateRollback, input)
     return &CloudformationContinueUpdateRollbackResult{Result: future}
 }
+
 func (a *CloudFormationStub) CreateChangeSet(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error) {
     var output cloudformation.CreateChangeSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateChangeSet, input).Get(ctx, &output)
@@ -768,6 +771,7 @@ func (a *CloudFormationStub) CreateChangeSetAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.CreateChangeSet, input)
     return &CloudformationCreateChangeSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) CreateStack(ctx workflow.Context, input *cloudformation.CreateStackInput) (*cloudformation.CreateStackOutput, error) {
     var output cloudformation.CreateStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStack, input).Get(ctx, &output)
@@ -778,6 +782,7 @@ func (a *CloudFormationStub) CreateStackAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStack, input)
     return &CloudformationCreateStackResult{Result: future}
 }
+
 func (a *CloudFormationStub) CreateStackInstances(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) (*cloudformation.CreateStackInstancesOutput, error) {
     var output cloudformation.CreateStackInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStackInstances, input).Get(ctx, &output)
@@ -788,6 +793,7 @@ func (a *CloudFormationStub) CreateStackInstancesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStackInstances, input)
     return &CloudformationCreateStackInstancesResult{Result: future}
 }
+
 func (a *CloudFormationStub) CreateStackSet(ctx workflow.Context, input *cloudformation.CreateStackSetInput) (*cloudformation.CreateStackSetOutput, error) {
     var output cloudformation.CreateStackSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStackSet, input).Get(ctx, &output)
@@ -798,6 +804,7 @@ func (a *CloudFormationStub) CreateStackSetAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.CreateStackSet, input)
     return &CloudformationCreateStackSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) DeleteChangeSet(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) (*cloudformation.DeleteChangeSetOutput, error) {
     var output cloudformation.DeleteChangeSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteChangeSet, input).Get(ctx, &output)
@@ -808,6 +815,7 @@ func (a *CloudFormationStub) DeleteChangeSetAsync(ctx workflow.Context, input *c
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteChangeSet, input)
     return &CloudformationDeleteChangeSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) DeleteStack(ctx workflow.Context, input *cloudformation.DeleteStackInput) (*cloudformation.DeleteStackOutput, error) {
     var output cloudformation.DeleteStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStack, input).Get(ctx, &output)
@@ -818,6 +826,7 @@ func (a *CloudFormationStub) DeleteStackAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStack, input)
     return &CloudformationDeleteStackResult{Result: future}
 }
+
 func (a *CloudFormationStub) DeleteStackInstances(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) (*cloudformation.DeleteStackInstancesOutput, error) {
     var output cloudformation.DeleteStackInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStackInstances, input).Get(ctx, &output)
@@ -828,6 +837,7 @@ func (a *CloudFormationStub) DeleteStackInstancesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStackInstances, input)
     return &CloudformationDeleteStackInstancesResult{Result: future}
 }
+
 func (a *CloudFormationStub) DeleteStackSet(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) (*cloudformation.DeleteStackSetOutput, error) {
     var output cloudformation.DeleteStackSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteStackSet, input).Get(ctx, &output)
@@ -838,6 +848,7 @@ func (a *CloudFormationStub) DeleteStackSetAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteStackSet, input)
     return &CloudformationDeleteStackSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) DeregisterType(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) (*cloudformation.DeregisterTypeOutput, error) {
     var output cloudformation.DeregisterTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeregisterType, input).Get(ctx, &output)
@@ -848,6 +859,7 @@ func (a *CloudFormationStub) DeregisterTypeAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.DeregisterType, input)
     return &CloudformationDeregisterTypeResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeAccountLimits(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) (*cloudformation.DescribeAccountLimitsOutput, error) {
     var output cloudformation.DescribeAccountLimitsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountLimits, input).Get(ctx, &output)
@@ -858,6 +870,7 @@ func (a *CloudFormationStub) DescribeAccountLimitsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeAccountLimits, input)
     return &CloudformationDescribeAccountLimitsResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeChangeSet(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) (*cloudformation.DescribeChangeSetOutput, error) {
     var output cloudformation.DescribeChangeSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeChangeSet, input).Get(ctx, &output)
@@ -868,6 +881,7 @@ func (a *CloudFormationStub) DescribeChangeSetAsync(ctx workflow.Context, input 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeChangeSet, input)
     return &CloudformationDescribeChangeSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackDriftDetectionStatus(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) (*cloudformation.DescribeStackDriftDetectionStatusOutput, error) {
     var output cloudformation.DescribeStackDriftDetectionStatusOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackDriftDetectionStatus, input).Get(ctx, &output)
@@ -878,6 +892,7 @@ func (a *CloudFormationStub) DescribeStackDriftDetectionStatusAsync(ctx workflow
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackDriftDetectionStatus, input)
     return &CloudformationDescribeStackDriftDetectionStatusResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackEvents(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) (*cloudformation.DescribeStackEventsOutput, error) {
     var output cloudformation.DescribeStackEventsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackEvents, input).Get(ctx, &output)
@@ -888,6 +903,7 @@ func (a *CloudFormationStub) DescribeStackEventsAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackEvents, input)
     return &CloudformationDescribeStackEventsResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackInstance(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) (*cloudformation.DescribeStackInstanceOutput, error) {
     var output cloudformation.DescribeStackInstanceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackInstance, input).Get(ctx, &output)
@@ -898,6 +914,7 @@ func (a *CloudFormationStub) DescribeStackInstanceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackInstance, input)
     return &CloudformationDescribeStackInstanceResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackResource(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) (*cloudformation.DescribeStackResourceOutput, error) {
     var output cloudformation.DescribeStackResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResource, input).Get(ctx, &output)
@@ -908,6 +925,7 @@ func (a *CloudFormationStub) DescribeStackResourceAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResource, input)
     return &CloudformationDescribeStackResourceResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackResourceDrifts(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) (*cloudformation.DescribeStackResourceDriftsOutput, error) {
     var output cloudformation.DescribeStackResourceDriftsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResourceDrifts, input).Get(ctx, &output)
@@ -918,6 +936,7 @@ func (a *CloudFormationStub) DescribeStackResourceDriftsAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResourceDrifts, input)
     return &CloudformationDescribeStackResourceDriftsResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackResources(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) (*cloudformation.DescribeStackResourcesOutput, error) {
     var output cloudformation.DescribeStackResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResources, input).Get(ctx, &output)
@@ -928,6 +947,7 @@ func (a *CloudFormationStub) DescribeStackResourcesAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackResources, input)
     return &CloudformationDescribeStackResourcesResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackSet(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) (*cloudformation.DescribeStackSetOutput, error) {
     var output cloudformation.DescribeStackSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackSet, input).Get(ctx, &output)
@@ -938,6 +958,7 @@ func (a *CloudFormationStub) DescribeStackSetAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackSet, input)
     return &CloudformationDescribeStackSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStackSetOperation(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) (*cloudformation.DescribeStackSetOperationOutput, error) {
     var output cloudformation.DescribeStackSetOperationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStackSetOperation, input).Get(ctx, &output)
@@ -948,6 +969,7 @@ func (a *CloudFormationStub) DescribeStackSetOperationAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStackSetOperation, input)
     return &CloudformationDescribeStackSetOperationResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeStacks(ctx workflow.Context, input *cloudformation.DescribeStacksInput) (*cloudformation.DescribeStacksOutput, error) {
     var output cloudformation.DescribeStacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeStacks, input).Get(ctx, &output)
@@ -958,6 +980,7 @@ func (a *CloudFormationStub) DescribeStacksAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeStacks, input)
     return &CloudformationDescribeStacksResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeType(ctx workflow.Context, input *cloudformation.DescribeTypeInput) (*cloudformation.DescribeTypeOutput, error) {
     var output cloudformation.DescribeTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeType, input).Get(ctx, &output)
@@ -968,6 +991,7 @@ func (a *CloudFormationStub) DescribeTypeAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeType, input)
     return &CloudformationDescribeTypeResult{Result: future}
 }
+
 func (a *CloudFormationStub) DescribeTypeRegistration(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) (*cloudformation.DescribeTypeRegistrationOutput, error) {
     var output cloudformation.DescribeTypeRegistrationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeTypeRegistration, input).Get(ctx, &output)
@@ -978,6 +1002,7 @@ func (a *CloudFormationStub) DescribeTypeRegistrationAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeTypeRegistration, input)
     return &CloudformationDescribeTypeRegistrationResult{Result: future}
 }
+
 func (a *CloudFormationStub) DetectStackDrift(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) (*cloudformation.DetectStackDriftOutput, error) {
     var output cloudformation.DetectStackDriftOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectStackDrift, input).Get(ctx, &output)
@@ -988,6 +1013,7 @@ func (a *CloudFormationStub) DetectStackDriftAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.DetectStackDrift, input)
     return &CloudformationDetectStackDriftResult{Result: future}
 }
+
 func (a *CloudFormationStub) DetectStackResourceDrift(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) (*cloudformation.DetectStackResourceDriftOutput, error) {
     var output cloudformation.DetectStackResourceDriftOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectStackResourceDrift, input).Get(ctx, &output)
@@ -998,6 +1024,7 @@ func (a *CloudFormationStub) DetectStackResourceDriftAsync(ctx workflow.Context,
     future := workflow.ExecuteActivity(ctx, a.activities.DetectStackResourceDrift, input)
     return &CloudformationDetectStackResourceDriftResult{Result: future}
 }
+
 func (a *CloudFormationStub) DetectStackSetDrift(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) (*cloudformation.DetectStackSetDriftOutput, error) {
     var output cloudformation.DetectStackSetDriftOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DetectStackSetDrift, input).Get(ctx, &output)
@@ -1008,6 +1035,7 @@ func (a *CloudFormationStub) DetectStackSetDriftAsync(ctx workflow.Context, inpu
     future := workflow.ExecuteActivity(ctx, a.activities.DetectStackSetDrift, input)
     return &CloudformationDetectStackSetDriftResult{Result: future}
 }
+
 func (a *CloudFormationStub) EstimateTemplateCost(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) (*cloudformation.EstimateTemplateCostOutput, error) {
     var output cloudformation.EstimateTemplateCostOutput
     err := workflow.ExecuteActivity(ctx, a.activities.EstimateTemplateCost, input).Get(ctx, &output)
@@ -1018,6 +1046,7 @@ func (a *CloudFormationStub) EstimateTemplateCostAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.EstimateTemplateCost, input)
     return &CloudformationEstimateTemplateCostResult{Result: future}
 }
+
 func (a *CloudFormationStub) ExecuteChangeSet(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) (*cloudformation.ExecuteChangeSetOutput, error) {
     var output cloudformation.ExecuteChangeSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ExecuteChangeSet, input).Get(ctx, &output)
@@ -1028,6 +1057,7 @@ func (a *CloudFormationStub) ExecuteChangeSetAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ExecuteChangeSet, input)
     return &CloudformationExecuteChangeSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) GetStackPolicy(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) (*cloudformation.GetStackPolicyOutput, error) {
     var output cloudformation.GetStackPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStackPolicy, input).Get(ctx, &output)
@@ -1038,6 +1068,7 @@ func (a *CloudFormationStub) GetStackPolicyAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.GetStackPolicy, input)
     return &CloudformationGetStackPolicyResult{Result: future}
 }
+
 func (a *CloudFormationStub) GetTemplate(ctx workflow.Context, input *cloudformation.GetTemplateInput) (*cloudformation.GetTemplateOutput, error) {
     var output cloudformation.GetTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input).Get(ctx, &output)
@@ -1048,6 +1079,7 @@ func (a *CloudFormationStub) GetTemplateAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input)
     return &CloudformationGetTemplateResult{Result: future}
 }
+
 func (a *CloudFormationStub) GetTemplateSummary(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) (*cloudformation.GetTemplateSummaryOutput, error) {
     var output cloudformation.GetTemplateSummaryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetTemplateSummary, input).Get(ctx, &output)
@@ -1058,6 +1090,7 @@ func (a *CloudFormationStub) GetTemplateSummaryAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.GetTemplateSummary, input)
     return &CloudformationGetTemplateSummaryResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListChangeSets(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) (*cloudformation.ListChangeSetsOutput, error) {
     var output cloudformation.ListChangeSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListChangeSets, input).Get(ctx, &output)
@@ -1068,6 +1101,7 @@ func (a *CloudFormationStub) ListChangeSetsAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.ListChangeSets, input)
     return &CloudformationListChangeSetsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListExports(ctx workflow.Context, input *cloudformation.ListExportsInput) (*cloudformation.ListExportsOutput, error) {
     var output cloudformation.ListExportsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListExports, input).Get(ctx, &output)
@@ -1078,6 +1112,7 @@ func (a *CloudFormationStub) ListExportsAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.ListExports, input)
     return &CloudformationListExportsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListImports(ctx workflow.Context, input *cloudformation.ListImportsInput) (*cloudformation.ListImportsOutput, error) {
     var output cloudformation.ListImportsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListImports, input).Get(ctx, &output)
@@ -1088,6 +1123,7 @@ func (a *CloudFormationStub) ListImportsAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.ListImports, input)
     return &CloudformationListImportsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStackInstances(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) (*cloudformation.ListStackInstancesOutput, error) {
     var output cloudformation.ListStackInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackInstances, input).Get(ctx, &output)
@@ -1098,6 +1134,7 @@ func (a *CloudFormationStub) ListStackInstancesAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackInstances, input)
     return &CloudformationListStackInstancesResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStackResources(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) (*cloudformation.ListStackResourcesOutput, error) {
     var output cloudformation.ListStackResourcesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackResources, input).Get(ctx, &output)
@@ -1108,6 +1145,7 @@ func (a *CloudFormationStub) ListStackResourcesAsync(ctx workflow.Context, input
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackResources, input)
     return &CloudformationListStackResourcesResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStackSetOperationResults(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) (*cloudformation.ListStackSetOperationResultsOutput, error) {
     var output cloudformation.ListStackSetOperationResultsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackSetOperationResults, input).Get(ctx, &output)
@@ -1118,6 +1156,7 @@ func (a *CloudFormationStub) ListStackSetOperationResultsAsync(ctx workflow.Cont
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackSetOperationResults, input)
     return &CloudformationListStackSetOperationResultsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStackSetOperations(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) (*cloudformation.ListStackSetOperationsOutput, error) {
     var output cloudformation.ListStackSetOperationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackSetOperations, input).Get(ctx, &output)
@@ -1128,6 +1167,7 @@ func (a *CloudFormationStub) ListStackSetOperationsAsync(ctx workflow.Context, i
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackSetOperations, input)
     return &CloudformationListStackSetOperationsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStackSets(ctx workflow.Context, input *cloudformation.ListStackSetsInput) (*cloudformation.ListStackSetsOutput, error) {
     var output cloudformation.ListStackSetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStackSets, input).Get(ctx, &output)
@@ -1138,6 +1178,7 @@ func (a *CloudFormationStub) ListStackSetsAsync(ctx workflow.Context, input *clo
     future := workflow.ExecuteActivity(ctx, a.activities.ListStackSets, input)
     return &CloudformationListStackSetsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListStacks(ctx workflow.Context, input *cloudformation.ListStacksInput) (*cloudformation.ListStacksOutput, error) {
     var output cloudformation.ListStacksOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListStacks, input).Get(ctx, &output)
@@ -1148,6 +1189,7 @@ func (a *CloudFormationStub) ListStacksAsync(ctx workflow.Context, input *cloudf
     future := workflow.ExecuteActivity(ctx, a.activities.ListStacks, input)
     return &CloudformationListStacksResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListTypeRegistrations(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) (*cloudformation.ListTypeRegistrationsOutput, error) {
     var output cloudformation.ListTypeRegistrationsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTypeRegistrations, input).Get(ctx, &output)
@@ -1158,6 +1200,7 @@ func (a *CloudFormationStub) ListTypeRegistrationsAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.ListTypeRegistrations, input)
     return &CloudformationListTypeRegistrationsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListTypeVersions(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) (*cloudformation.ListTypeVersionsOutput, error) {
     var output cloudformation.ListTypeVersionsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTypeVersions, input).Get(ctx, &output)
@@ -1168,6 +1211,7 @@ func (a *CloudFormationStub) ListTypeVersionsAsync(ctx workflow.Context, input *
     future := workflow.ExecuteActivity(ctx, a.activities.ListTypeVersions, input)
     return &CloudformationListTypeVersionsResult{Result: future}
 }
+
 func (a *CloudFormationStub) ListTypes(ctx workflow.Context, input *cloudformation.ListTypesInput) (*cloudformation.ListTypesOutput, error) {
     var output cloudformation.ListTypesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListTypes, input).Get(ctx, &output)
@@ -1178,6 +1222,7 @@ func (a *CloudFormationStub) ListTypesAsync(ctx workflow.Context, input *cloudfo
     future := workflow.ExecuteActivity(ctx, a.activities.ListTypes, input)
     return &CloudformationListTypesResult{Result: future}
 }
+
 func (a *CloudFormationStub) RecordHandlerProgress(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) (*cloudformation.RecordHandlerProgressOutput, error) {
     var output cloudformation.RecordHandlerProgressOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RecordHandlerProgress, input).Get(ctx, &output)
@@ -1188,6 +1233,7 @@ func (a *CloudFormationStub) RecordHandlerProgressAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.RecordHandlerProgress, input)
     return &CloudformationRecordHandlerProgressResult{Result: future}
 }
+
 func (a *CloudFormationStub) RegisterType(ctx workflow.Context, input *cloudformation.RegisterTypeInput) (*cloudformation.RegisterTypeOutput, error) {
     var output cloudformation.RegisterTypeOutput
     err := workflow.ExecuteActivity(ctx, a.activities.RegisterType, input).Get(ctx, &output)
@@ -1198,6 +1244,7 @@ func (a *CloudFormationStub) RegisterTypeAsync(ctx workflow.Context, input *clou
     future := workflow.ExecuteActivity(ctx, a.activities.RegisterType, input)
     return &CloudformationRegisterTypeResult{Result: future}
 }
+
 func (a *CloudFormationStub) SetStackPolicy(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) (*cloudformation.SetStackPolicyOutput, error) {
     var output cloudformation.SetStackPolicyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetStackPolicy, input).Get(ctx, &output)
@@ -1208,6 +1255,7 @@ func (a *CloudFormationStub) SetStackPolicyAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.SetStackPolicy, input)
     return &CloudformationSetStackPolicyResult{Result: future}
 }
+
 func (a *CloudFormationStub) SetTypeDefaultVersion(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) (*cloudformation.SetTypeDefaultVersionOutput, error) {
     var output cloudformation.SetTypeDefaultVersionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SetTypeDefaultVersion, input).Get(ctx, &output)
@@ -1218,6 +1266,7 @@ func (a *CloudFormationStub) SetTypeDefaultVersionAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.SetTypeDefaultVersion, input)
     return &CloudformationSetTypeDefaultVersionResult{Result: future}
 }
+
 func (a *CloudFormationStub) SignalResource(ctx workflow.Context, input *cloudformation.SignalResourceInput) (*cloudformation.SignalResourceOutput, error) {
     var output cloudformation.SignalResourceOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SignalResource, input).Get(ctx, &output)
@@ -1228,6 +1277,7 @@ func (a *CloudFormationStub) SignalResourceAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.SignalResource, input)
     return &CloudformationSignalResourceResult{Result: future}
 }
+
 func (a *CloudFormationStub) StopStackSetOperation(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) (*cloudformation.StopStackSetOperationOutput, error) {
     var output cloudformation.StopStackSetOperationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.StopStackSetOperation, input).Get(ctx, &output)
@@ -1238,6 +1288,7 @@ func (a *CloudFormationStub) StopStackSetOperationAsync(ctx workflow.Context, in
     future := workflow.ExecuteActivity(ctx, a.activities.StopStackSetOperation, input)
     return &CloudformationStopStackSetOperationResult{Result: future}
 }
+
 func (a *CloudFormationStub) UpdateStack(ctx workflow.Context, input *cloudformation.UpdateStackInput) (*cloudformation.UpdateStackOutput, error) {
     var output cloudformation.UpdateStackOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateStack, input).Get(ctx, &output)
@@ -1248,6 +1299,7 @@ func (a *CloudFormationStub) UpdateStackAsync(ctx workflow.Context, input *cloud
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateStack, input)
     return &CloudformationUpdateStackResult{Result: future}
 }
+
 func (a *CloudFormationStub) UpdateStackInstances(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error) {
     var output cloudformation.UpdateStackInstancesOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateStackInstances, input).Get(ctx, &output)
@@ -1258,6 +1310,7 @@ func (a *CloudFormationStub) UpdateStackInstancesAsync(ctx workflow.Context, inp
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateStackInstances, input)
     return &CloudformationUpdateStackInstancesResult{Result: future}
 }
+
 func (a *CloudFormationStub) UpdateStackSet(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) (*cloudformation.UpdateStackSetOutput, error) {
     var output cloudformation.UpdateStackSetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateStackSet, input).Get(ctx, &output)
@@ -1268,6 +1321,7 @@ func (a *CloudFormationStub) UpdateStackSetAsync(ctx workflow.Context, input *cl
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateStackSet, input)
     return &CloudformationUpdateStackSetResult{Result: future}
 }
+
 func (a *CloudFormationStub) UpdateTerminationProtection(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) (*cloudformation.UpdateTerminationProtectionOutput, error) {
     var output cloudformation.UpdateTerminationProtectionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateTerminationProtection, input).Get(ctx, &output)
@@ -1278,6 +1332,7 @@ func (a *CloudFormationStub) UpdateTerminationProtectionAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateTerminationProtection, input)
     return &CloudformationUpdateTerminationProtectionResult{Result: future}
 }
+
 func (a *CloudFormationStub) ValidateTemplate(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) (*cloudformation.ValidateTemplateOutput, error) {
     var output cloudformation.ValidateTemplateOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ValidateTemplate, input).Get(ctx, &output)
@@ -1297,6 +1352,7 @@ func (a *CloudFormationStub) WaitUntilChangeSetCreateCompleteAsync(ctx workflow.
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilChangeSetCreateComplete, input)
 }
 
+
 func (a *CloudFormationStub) WaitUntilStackCreateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackCreateComplete, input).Get(ctx, nil)
 }
@@ -1304,6 +1360,7 @@ func (a *CloudFormationStub) WaitUntilStackCreateComplete(ctx workflow.Context, 
 func (a *CloudFormationStub) WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackCreateComplete, input)
 }
+
 
 func (a *CloudFormationStub) WaitUntilStackDeleteComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackDeleteComplete, input).Get(ctx, nil)
@@ -1313,6 +1370,7 @@ func (a *CloudFormationStub) WaitUntilStackDeleteCompleteAsync(ctx workflow.Cont
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackDeleteComplete, input)
 }
 
+
 func (a *CloudFormationStub) WaitUntilStackExists(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackExists, input).Get(ctx, nil)
 }
@@ -1320,6 +1378,7 @@ func (a *CloudFormationStub) WaitUntilStackExists(ctx workflow.Context, input *c
 func (a *CloudFormationStub) WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackExists, input)
 }
+
 
 func (a *CloudFormationStub) WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackImportComplete, input).Get(ctx, nil)
@@ -1329,6 +1388,7 @@ func (a *CloudFormationStub) WaitUntilStackImportCompleteAsync(ctx workflow.Cont
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackImportComplete, input)
 }
 
+
 func (a *CloudFormationStub) WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackRollbackComplete, input).Get(ctx, nil)
 }
@@ -1336,6 +1396,7 @@ func (a *CloudFormationStub) WaitUntilStackRollbackComplete(ctx workflow.Context
 func (a *CloudFormationStub) WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackRollbackComplete, input)
 }
+
 
 func (a *CloudFormationStub) WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackUpdateComplete, input).Get(ctx, nil)
@@ -1345,6 +1406,7 @@ func (a *CloudFormationStub) WaitUntilStackUpdateCompleteAsync(ctx workflow.Cont
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilStackUpdateComplete, input)
 }
 
+
 func (a *CloudFormationStub) WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTypeRegistrationComplete, input).Get(ctx, nil)
 }
@@ -1352,3 +1414,4 @@ func (a *CloudFormationStub) WaitUntilTypeRegistrationComplete(ctx workflow.Cont
 func (a *CloudFormationStub) WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.WaitUntilTypeRegistrationComplete, input)
 }
+

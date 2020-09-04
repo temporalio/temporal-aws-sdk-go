@@ -10,6 +10,7 @@ type EC2InstanceConnectClient interface {
     SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error)
     SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult
 }
+
 type Ec2instanceconnectSendSSHPublicKeyResult struct {
 	Result workflow.Future
 }
@@ -20,7 +21,6 @@ func (r *Ec2instanceconnectSendSSHPublicKeyResult) Get(ctx workflow.Context) (*e
     return &output, err
 }
 
-
 type EC2InstanceConnectStub struct {
     activities awsactivities.EC2InstanceConnectActivities
 }
@@ -28,6 +28,7 @@ type EC2InstanceConnectStub struct {
 func NewEC2InstanceConnectStub() EC2InstanceConnectClient {
     return &EC2InstanceConnectStub{}
 }
+
 func (a *EC2InstanceConnectStub) SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error) {
     var output ec2instanceconnect.SendSSHPublicKeyOutput
     err := workflow.ExecuteActivity(ctx, a.activities.SendSSHPublicKey, input).Get(ctx, &output)

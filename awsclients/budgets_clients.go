@@ -49,6 +49,7 @@ type BudgetsClient interface {
     UpdateSubscriber(ctx workflow.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error)
     UpdateSubscriberAsync(ctx workflow.Context, input *budgets.UpdateSubscriberInput) *BudgetsUpdateSubscriberResult
 }
+
 type BudgetsCreateBudgetResult struct {
 	Result workflow.Future
 }
@@ -189,7 +190,6 @@ func (r *BudgetsUpdateSubscriberResult) Get(ctx workflow.Context) (*budgets.Upda
     return &output, err
 }
 
-
 type BudgetsStub struct {
     activities awsactivities.BudgetsActivities
 }
@@ -197,6 +197,7 @@ type BudgetsStub struct {
 func NewBudgetsStub() BudgetsClient {
     return &BudgetsStub{}
 }
+
 func (a *BudgetsStub) CreateBudget(ctx workflow.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error) {
     var output budgets.CreateBudgetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateBudget, input).Get(ctx, &output)
@@ -207,6 +208,7 @@ func (a *BudgetsStub) CreateBudgetAsync(ctx workflow.Context, input *budgets.Cre
     future := workflow.ExecuteActivity(ctx, a.activities.CreateBudget, input)
     return &BudgetsCreateBudgetResult{Result: future}
 }
+
 func (a *BudgetsStub) CreateNotification(ctx workflow.Context, input *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error) {
     var output budgets.CreateNotificationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateNotification, input).Get(ctx, &output)
@@ -217,6 +219,7 @@ func (a *BudgetsStub) CreateNotificationAsync(ctx workflow.Context, input *budge
     future := workflow.ExecuteActivity(ctx, a.activities.CreateNotification, input)
     return &BudgetsCreateNotificationResult{Result: future}
 }
+
 func (a *BudgetsStub) CreateSubscriber(ctx workflow.Context, input *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error) {
     var output budgets.CreateSubscriberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateSubscriber, input).Get(ctx, &output)
@@ -227,6 +230,7 @@ func (a *BudgetsStub) CreateSubscriberAsync(ctx workflow.Context, input *budgets
     future := workflow.ExecuteActivity(ctx, a.activities.CreateSubscriber, input)
     return &BudgetsCreateSubscriberResult{Result: future}
 }
+
 func (a *BudgetsStub) DeleteBudget(ctx workflow.Context, input *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error) {
     var output budgets.DeleteBudgetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteBudget, input).Get(ctx, &output)
@@ -237,6 +241,7 @@ func (a *BudgetsStub) DeleteBudgetAsync(ctx workflow.Context, input *budgets.Del
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteBudget, input)
     return &BudgetsDeleteBudgetResult{Result: future}
 }
+
 func (a *BudgetsStub) DeleteNotification(ctx workflow.Context, input *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error) {
     var output budgets.DeleteNotificationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteNotification, input).Get(ctx, &output)
@@ -247,6 +252,7 @@ func (a *BudgetsStub) DeleteNotificationAsync(ctx workflow.Context, input *budge
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteNotification, input)
     return &BudgetsDeleteNotificationResult{Result: future}
 }
+
 func (a *BudgetsStub) DeleteSubscriber(ctx workflow.Context, input *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error) {
     var output budgets.DeleteSubscriberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DeleteSubscriber, input).Get(ctx, &output)
@@ -257,6 +263,7 @@ func (a *BudgetsStub) DeleteSubscriberAsync(ctx workflow.Context, input *budgets
     future := workflow.ExecuteActivity(ctx, a.activities.DeleteSubscriber, input)
     return &BudgetsDeleteSubscriberResult{Result: future}
 }
+
 func (a *BudgetsStub) DescribeBudget(ctx workflow.Context, input *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error) {
     var output budgets.DescribeBudgetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBudget, input).Get(ctx, &output)
@@ -267,6 +274,7 @@ func (a *BudgetsStub) DescribeBudgetAsync(ctx workflow.Context, input *budgets.D
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBudget, input)
     return &BudgetsDescribeBudgetResult{Result: future}
 }
+
 func (a *BudgetsStub) DescribeBudgetPerformanceHistory(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error) {
     var output budgets.DescribeBudgetPerformanceHistoryOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBudgetPerformanceHistory, input).Get(ctx, &output)
@@ -277,6 +285,7 @@ func (a *BudgetsStub) DescribeBudgetPerformanceHistoryAsync(ctx workflow.Context
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBudgetPerformanceHistory, input)
     return &BudgetsDescribeBudgetPerformanceHistoryResult{Result: future}
 }
+
 func (a *BudgetsStub) DescribeBudgets(ctx workflow.Context, input *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error) {
     var output budgets.DescribeBudgetsOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeBudgets, input).Get(ctx, &output)
@@ -287,6 +296,7 @@ func (a *BudgetsStub) DescribeBudgetsAsync(ctx workflow.Context, input *budgets.
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeBudgets, input)
     return &BudgetsDescribeBudgetsResult{Result: future}
 }
+
 func (a *BudgetsStub) DescribeNotificationsForBudget(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error) {
     var output budgets.DescribeNotificationsForBudgetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationsForBudget, input).Get(ctx, &output)
@@ -297,6 +307,7 @@ func (a *BudgetsStub) DescribeNotificationsForBudgetAsync(ctx workflow.Context, 
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeNotificationsForBudget, input)
     return &BudgetsDescribeNotificationsForBudgetResult{Result: future}
 }
+
 func (a *BudgetsStub) DescribeSubscribersForNotification(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error) {
     var output budgets.DescribeSubscribersForNotificationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.DescribeSubscribersForNotification, input).Get(ctx, &output)
@@ -307,6 +318,7 @@ func (a *BudgetsStub) DescribeSubscribersForNotificationAsync(ctx workflow.Conte
     future := workflow.ExecuteActivity(ctx, a.activities.DescribeSubscribersForNotification, input)
     return &BudgetsDescribeSubscribersForNotificationResult{Result: future}
 }
+
 func (a *BudgetsStub) UpdateBudget(ctx workflow.Context, input *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error) {
     var output budgets.UpdateBudgetOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateBudget, input).Get(ctx, &output)
@@ -317,6 +329,7 @@ func (a *BudgetsStub) UpdateBudgetAsync(ctx workflow.Context, input *budgets.Upd
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateBudget, input)
     return &BudgetsUpdateBudgetResult{Result: future}
 }
+
 func (a *BudgetsStub) UpdateNotification(ctx workflow.Context, input *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error) {
     var output budgets.UpdateNotificationOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateNotification, input).Get(ctx, &output)
@@ -327,6 +340,7 @@ func (a *BudgetsStub) UpdateNotificationAsync(ctx workflow.Context, input *budge
     future := workflow.ExecuteActivity(ctx, a.activities.UpdateNotification, input)
     return &BudgetsUpdateNotificationResult{Result: future}
 }
+
 func (a *BudgetsStub) UpdateSubscriber(ctx workflow.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error) {
     var output budgets.UpdateSubscriberOutput
     err := workflow.ExecuteActivity(ctx, a.activities.UpdateSubscriber, input).Get(ctx, &output)
