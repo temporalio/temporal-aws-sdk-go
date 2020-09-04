@@ -37,6 +37,9 @@ type CloudFrontClient interface {
     CreatePublicKey(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error)
     CreatePublicKeyAsync(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) *CloudfrontCreatePublicKeyResult
 
+    CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error)
+    CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CloudfrontCreateRealtimeLogConfigResult
+
     CreateStreamingDistribution(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error)
     CreateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) *CloudfrontCreateStreamingDistributionResult
 
@@ -66,6 +69,9 @@ type CloudFrontClient interface {
 
     DeletePublicKey(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error)
     DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *CloudfrontDeletePublicKeyResult
+
+    DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error)
+    DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *CloudfrontDeleteRealtimeLogConfigResult
 
     DeleteStreamingDistribution(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error)
     DeleteStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) *CloudfrontDeleteStreamingDistributionResult
@@ -118,6 +124,9 @@ type CloudFrontClient interface {
     GetPublicKeyConfig(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error)
     GetPublicKeyConfigAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) *CloudfrontGetPublicKeyConfigResult
 
+    GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error)
+    GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *CloudfrontGetRealtimeLogConfigResult
+
     GetStreamingDistribution(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error)
     GetStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *CloudfrontGetStreamingDistributionResult
 
@@ -139,6 +148,9 @@ type CloudFrontClient interface {
     ListDistributionsByOriginRequestPolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error)
     ListDistributionsByOriginRequestPolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) *CloudfrontListDistributionsByOriginRequestPolicyIdResult
 
+    ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error)
+    ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *CloudfrontListDistributionsByRealtimeLogConfigResult
+
     ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error)
     ListDistributionsByWebACLIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) *CloudfrontListDistributionsByWebACLIdResult
 
@@ -156,6 +168,9 @@ type CloudFrontClient interface {
 
     ListPublicKeys(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error)
     ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *CloudfrontListPublicKeysResult
+
+    ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error)
+    ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *CloudfrontListRealtimeLogConfigsResult
 
     ListStreamingDistributions(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error)
     ListStreamingDistributionsAsync(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) *CloudfrontListStreamingDistributionsResult
@@ -189,6 +204,9 @@ type CloudFrontClient interface {
 
     UpdatePublicKey(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error)
     UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *CloudfrontUpdatePublicKeyResult
+
+    UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error)
+    UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *CloudfrontUpdateRealtimeLogConfigResult
 
     UpdateStreamingDistribution(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error)
     UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudfrontUpdateStreamingDistributionResult
@@ -297,6 +315,16 @@ func (r *CloudfrontCreatePublicKeyResult) Get(ctx workflow.Context) (*cloudfront
     return &output, err
 }
 
+type CloudfrontCreateRealtimeLogConfigResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontCreateRealtimeLogConfigResult) Get(ctx workflow.Context) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
+    var output cloudfront.CreateRealtimeLogConfigOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
 type CloudfrontCreateStreamingDistributionResult struct {
 	Result workflow.Future
 }
@@ -393,6 +421,16 @@ type CloudfrontDeletePublicKeyResult struct {
 
 func (r *CloudfrontDeletePublicKeyResult) Get(ctx workflow.Context) (*cloudfront.DeletePublicKeyOutput, error) {
     var output cloudfront.DeletePublicKeyOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type CloudfrontDeleteRealtimeLogConfigResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontDeleteRealtimeLogConfigResult) Get(ctx workflow.Context) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
+    var output cloudfront.DeleteRealtimeLogConfigOutput
     err := r.Result.Get(ctx, &output)
     return &output, err
 }
@@ -567,6 +605,16 @@ func (r *CloudfrontGetPublicKeyConfigResult) Get(ctx workflow.Context) (*cloudfr
     return &output, err
 }
 
+type CloudfrontGetRealtimeLogConfigResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontGetRealtimeLogConfigResult) Get(ctx workflow.Context) (*cloudfront.GetRealtimeLogConfigOutput, error) {
+    var output cloudfront.GetRealtimeLogConfigOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
 type CloudfrontGetStreamingDistributionResult struct {
 	Result workflow.Future
 }
@@ -637,6 +685,16 @@ func (r *CloudfrontListDistributionsByOriginRequestPolicyIdResult) Get(ctx workf
     return &output, err
 }
 
+type CloudfrontListDistributionsByRealtimeLogConfigResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontListDistributionsByRealtimeLogConfigResult) Get(ctx workflow.Context) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
+    var output cloudfront.ListDistributionsByRealtimeLogConfigOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
 type CloudfrontListDistributionsByWebACLIdResult struct {
 	Result workflow.Future
 }
@@ -693,6 +751,16 @@ type CloudfrontListPublicKeysResult struct {
 
 func (r *CloudfrontListPublicKeysResult) Get(ctx workflow.Context) (*cloudfront.ListPublicKeysOutput, error) {
     var output cloudfront.ListPublicKeysOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type CloudfrontListRealtimeLogConfigsResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontListRealtimeLogConfigsResult) Get(ctx workflow.Context) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
+    var output cloudfront.ListRealtimeLogConfigsOutput
     err := r.Result.Get(ctx, &output)
     return &output, err
 }
@@ -803,6 +871,16 @@ type CloudfrontUpdatePublicKeyResult struct {
 
 func (r *CloudfrontUpdatePublicKeyResult) Get(ctx workflow.Context) (*cloudfront.UpdatePublicKeyOutput, error) {
     var output cloudfront.UpdatePublicKeyOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type CloudfrontUpdateRealtimeLogConfigResult struct {
+	Result workflow.Future
+}
+
+func (r *CloudfrontUpdateRealtimeLogConfigResult) Get(ctx workflow.Context) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
+    var output cloudfront.UpdateRealtimeLogConfigOutput
     err := r.Result.Get(ctx, &output)
     return &output, err
 }
@@ -935,6 +1013,17 @@ func (a *CloudFrontStub) CreatePublicKeyAsync(ctx workflow.Context, input *cloud
     return &CloudfrontCreatePublicKeyResult{Result: future}
 }
 
+func (a *CloudFrontStub) CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
+    var output cloudfront.CreateRealtimeLogConfigOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.CreateRealtimeLogConfig, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CloudfrontCreateRealtimeLogConfigResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.CreateRealtimeLogConfig, input)
+    return &CloudfrontCreateRealtimeLogConfigResult{Result: future}
+}
+
 func (a *CloudFrontStub) CreateStreamingDistribution(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
     var output cloudfront.CreateStreamingDistributionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.CreateStreamingDistribution, input).Get(ctx, &output)
@@ -1043,6 +1132,17 @@ func (a *CloudFrontStub) DeletePublicKey(ctx workflow.Context, input *cloudfront
 func (a *CloudFrontStub) DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *CloudfrontDeletePublicKeyResult {
     future := workflow.ExecuteActivity(ctx, a.activities.DeletePublicKey, input)
     return &CloudfrontDeletePublicKeyResult{Result: future}
+}
+
+func (a *CloudFrontStub) DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
+    var output cloudfront.DeleteRealtimeLogConfigOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.DeleteRealtimeLogConfig, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *CloudfrontDeleteRealtimeLogConfigResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.DeleteRealtimeLogConfig, input)
+    return &CloudfrontDeleteRealtimeLogConfigResult{Result: future}
 }
 
 func (a *CloudFrontStub) DeleteStreamingDistribution(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
@@ -1232,6 +1332,17 @@ func (a *CloudFrontStub) GetPublicKeyConfigAsync(ctx workflow.Context, input *cl
     return &CloudfrontGetPublicKeyConfigResult{Result: future}
 }
 
+func (a *CloudFrontStub) GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
+    var output cloudfront.GetRealtimeLogConfigOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.GetRealtimeLogConfig, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *CloudfrontGetRealtimeLogConfigResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.GetRealtimeLogConfig, input)
+    return &CloudfrontGetRealtimeLogConfigResult{Result: future}
+}
+
 func (a *CloudFrontStub) GetStreamingDistribution(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
     var output cloudfront.GetStreamingDistributionOutput
     err := workflow.ExecuteActivity(ctx, a.activities.GetStreamingDistribution, input).Get(ctx, &output)
@@ -1309,6 +1420,17 @@ func (a *CloudFrontStub) ListDistributionsByOriginRequestPolicyIdAsync(ctx workf
     return &CloudfrontListDistributionsByOriginRequestPolicyIdResult{Result: future}
 }
 
+func (a *CloudFrontStub) ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
+    var output cloudfront.ListDistributionsByRealtimeLogConfigOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.ListDistributionsByRealtimeLogConfig, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *CloudfrontListDistributionsByRealtimeLogConfigResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.ListDistributionsByRealtimeLogConfig, input)
+    return &CloudfrontListDistributionsByRealtimeLogConfigResult{Result: future}
+}
+
 func (a *CloudFrontStub) ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
     var output cloudfront.ListDistributionsByWebACLIdOutput
     err := workflow.ExecuteActivity(ctx, a.activities.ListDistributionsByWebACLId, input).Get(ctx, &output)
@@ -1373,6 +1495,17 @@ func (a *CloudFrontStub) ListPublicKeys(ctx workflow.Context, input *cloudfront.
 func (a *CloudFrontStub) ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *CloudfrontListPublicKeysResult {
     future := workflow.ExecuteActivity(ctx, a.activities.ListPublicKeys, input)
     return &CloudfrontListPublicKeysResult{Result: future}
+}
+
+func (a *CloudFrontStub) ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
+    var output cloudfront.ListRealtimeLogConfigsOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.ListRealtimeLogConfigs, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *CloudfrontListRealtimeLogConfigsResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.ListRealtimeLogConfigs, input)
+    return &CloudfrontListRealtimeLogConfigsResult{Result: future}
 }
 
 func (a *CloudFrontStub) ListStreamingDistributions(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
@@ -1494,6 +1627,17 @@ func (a *CloudFrontStub) UpdatePublicKey(ctx workflow.Context, input *cloudfront
 func (a *CloudFrontStub) UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *CloudfrontUpdatePublicKeyResult {
     future := workflow.ExecuteActivity(ctx, a.activities.UpdatePublicKey, input)
     return &CloudfrontUpdatePublicKeyResult{Result: future}
+}
+
+func (a *CloudFrontStub) UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
+    var output cloudfront.UpdateRealtimeLogConfigOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.UpdateRealtimeLogConfig, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CloudFrontStub) UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *CloudfrontUpdateRealtimeLogConfigResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.UpdateRealtimeLogConfig, input)
+    return &CloudfrontUpdateRealtimeLogConfigResult{Result: future}
 }
 
 func (a *CloudFrontStub) UpdateStreamingDistribution(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {

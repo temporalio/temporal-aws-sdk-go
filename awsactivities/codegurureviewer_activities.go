@@ -18,6 +18,10 @@ func (a *CodeGuruReviewerActivities) AssociateRepository(input *codegurureviewer
     return a.client.AssociateRepository(input)
 }
 
+func (a *CodeGuruReviewerActivities) CreateCodeReview(input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
+    return a.client.CreateCodeReview(input)
+}
+
 func (a *CodeGuruReviewerActivities) DescribeCodeReview(input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
     return a.client.DescribeCodeReview(input)
 }

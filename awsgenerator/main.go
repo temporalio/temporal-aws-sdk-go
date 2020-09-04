@@ -25,16 +25,16 @@ func main() {
 		&cli.StringFlag{
 			Name:        "aws-sdk-dir",
 			Usage:       "location of AWS Go SDK repository",
+			Value:       "./awssdkgo",
 			EnvVars:     []string{"TEMPORAL_AWS_SDK_DIR"},
 			Destination: &sdkDir,
-			Required:    true,
 		},
 		&cli.StringFlag{
 			Name:        "output-dir",
+			Value:       ".",
 			Usage:       "generated code location",
 			EnvVars:     []string{"TEMPORAL_OUTPUT_DIR"},
 			Destination: &outputDir,
-			Required:    true,
 		},
 	}
 	app.Action = func(c *cli.Context) error {
@@ -53,4 +53,3 @@ func main() {
 		log.Fatal(err)
 	}
 }
-

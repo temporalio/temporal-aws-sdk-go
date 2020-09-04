@@ -54,6 +54,10 @@ func (a *CloudFrontActivities) CreatePublicKey(input *cloudfront.CreatePublicKey
     return a.client.CreatePublicKey(input)
 }
 
+func (a *CloudFrontActivities) CreateRealtimeLogConfig(input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
+    return a.client.CreateRealtimeLogConfig(input)
+}
+
 func (a *CloudFrontActivities) CreateStreamingDistribution(input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
     return a.client.CreateStreamingDistribution(input)
 }
@@ -92,6 +96,10 @@ func (a *CloudFrontActivities) DeleteOriginRequestPolicy(input *cloudfront.Delet
 
 func (a *CloudFrontActivities) DeletePublicKey(input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error) {
     return a.client.DeletePublicKey(input)
+}
+
+func (a *CloudFrontActivities) DeleteRealtimeLogConfig(input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
+    return a.client.DeleteRealtimeLogConfig(input)
 }
 
 func (a *CloudFrontActivities) DeleteStreamingDistribution(input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
@@ -162,6 +170,10 @@ func (a *CloudFrontActivities) GetPublicKeyConfig(input *cloudfront.GetPublicKey
     return a.client.GetPublicKeyConfig(input)
 }
 
+func (a *CloudFrontActivities) GetRealtimeLogConfig(input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
+    return a.client.GetRealtimeLogConfig(input)
+}
+
 func (a *CloudFrontActivities) GetStreamingDistribution(input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
     return a.client.GetStreamingDistribution(input)
 }
@@ -190,6 +202,10 @@ func (a *CloudFrontActivities) ListDistributionsByOriginRequestPolicyId(input *c
     return a.client.ListDistributionsByOriginRequestPolicyId(input)
 }
 
+func (a *CloudFrontActivities) ListDistributionsByRealtimeLogConfig(input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
+    return a.client.ListDistributionsByRealtimeLogConfig(input)
+}
+
 func (a *CloudFrontActivities) ListDistributionsByWebACLId(input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
     return a.client.ListDistributionsByWebACLId(input)
 }
@@ -212,6 +228,10 @@ func (a *CloudFrontActivities) ListOriginRequestPolicies(input *cloudfront.ListO
 
 func (a *CloudFrontActivities) ListPublicKeys(input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error) {
     return a.client.ListPublicKeys(input)
+}
+
+func (a *CloudFrontActivities) ListRealtimeLogConfigs(input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
+    return a.client.ListRealtimeLogConfigs(input)
 }
 
 func (a *CloudFrontActivities) ListStreamingDistributions(input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
@@ -256,6 +276,10 @@ func (a *CloudFrontActivities) UpdateOriginRequestPolicy(input *cloudfront.Updat
 
 func (a *CloudFrontActivities) UpdatePublicKey(input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error) {
     return a.client.UpdatePublicKey(input)
+}
+
+func (a *CloudFrontActivities) UpdateRealtimeLogConfig(input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
+    return a.client.UpdateRealtimeLogConfig(input)
 }
 
 func (a *CloudFrontActivities) UpdateStreamingDistribution(input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {

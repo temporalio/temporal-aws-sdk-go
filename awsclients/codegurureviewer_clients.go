@@ -10,6 +10,9 @@ type CodeGuruReviewerClient interface {
     AssociateRepository(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) (*codegurureviewer.AssociateRepositoryOutput, error)
     AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodegurureviewerAssociateRepositoryResult
 
+    CreateCodeReview(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error)
+    CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodegurureviewerCreateCodeReviewResult
+
     DescribeCodeReview(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error)
     DescribeCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) *CodegurureviewerDescribeCodeReviewResult
 
@@ -44,6 +47,16 @@ type CodegurureviewerAssociateRepositoryResult struct {
 
 func (r *CodegurureviewerAssociateRepositoryResult) Get(ctx workflow.Context) (*codegurureviewer.AssociateRepositoryOutput, error) {
     var output codegurureviewer.AssociateRepositoryOutput
+    err := r.Result.Get(ctx, &output)
+    return &output, err
+}
+
+type CodegurureviewerCreateCodeReviewResult struct {
+	Result workflow.Future
+}
+
+func (r *CodegurureviewerCreateCodeReviewResult) Get(ctx workflow.Context) (*codegurureviewer.CreateCodeReviewOutput, error) {
+    var output codegurureviewer.CreateCodeReviewOutput
     err := r.Result.Get(ctx, &output)
     return &output, err
 }
@@ -155,6 +168,17 @@ func (a *CodeGuruReviewerStub) AssociateRepository(ctx workflow.Context, input *
 func (a *CodeGuruReviewerStub) AssociateRepositoryAsync(ctx workflow.Context, input *codegurureviewer.AssociateRepositoryInput) *CodegurureviewerAssociateRepositoryResult {
     future := workflow.ExecuteActivity(ctx, a.activities.AssociateRepository, input)
     return &CodegurureviewerAssociateRepositoryResult{Result: future}
+}
+
+func (a *CodeGuruReviewerStub) CreateCodeReview(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
+    var output codegurureviewer.CreateCodeReviewOutput
+    err := workflow.ExecuteActivity(ctx, a.activities.CreateCodeReview, input).Get(ctx, &output)
+    return &output, err
+}
+
+func (a *CodeGuruReviewerStub) CreateCodeReviewAsync(ctx workflow.Context, input *codegurureviewer.CreateCodeReviewInput) *CodegurureviewerCreateCodeReviewResult {
+    future := workflow.ExecuteActivity(ctx, a.activities.CreateCodeReview, input)
+    return &CodegurureviewerCreateCodeReviewResult{Result: future}
 }
 
 func (a *CodeGuruReviewerStub) DescribeCodeReview(ctx workflow.Context, input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
