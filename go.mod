@@ -1,4 +1,4 @@
-module temporal.io/temporal-aws-sdk
+module temporal.io/aws-sdk
 
 go 1.14
 

@@ -1,13 +1,10 @@
 package main
 
 import (
+	"github.com/urfave/cli/v2"
 	"log"
 	"os"
-	"strings"
-	"temporal.io/temporal-aws-sdk/awsgenerator/internal"
-	"text/template"
-
-	"github.com/urfave/cli/v2"
+	"temporal.io/aws-sdk/awsgenerator/internal"
 )
 
 func main() {
@@ -42,12 +39,13 @@ func main() {
 	}
 	app.Action = func(c *cli.Context) error {
 		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
+		generator := internal.NewGenerator(templateDir)
 		//return parser.ParseAwsService("cloudformation", func(service string, definition internal.InterfaceDefinition) error {
 		//	fmt.Println(definition)
 		//	return generateCode(templateDir, outputDir, definition)
 		//})
 		return parser.ParseAwsSdk(func(service string, definition internal.InterfaceDefinition) error {
-			return generateCode(templateDir, outputDir, definition)
+			return generator.GenerateCode(outputDir, definition)
 		})
 	}
 	err := app.Run(os.Args)
@@ -56,34 +54,3 @@ func main() {
 	}
 }
 
-func toPrefix(packageName string) string {
-	if packageName == "" {
-		return packageName
-	}
-	return strings.ToUpper(packageName[0:1]) + packageName[1:]
-}
-
-func generateCode(templateDir string, outputDir string, definition internal.InterfaceDefinition) error {
-	funcMap := template.FuncMap{
-		"ToUpper":   strings.ToUpper,
-		"ToLower":   strings.ToLower,
-		"HasPrefix": strings.HasPrefix,
-		"ToPrefix":  toPrefix,
-	}
-
-	//templateFile := "aws_activity.go.tmpl"
-	templateFile := "client.go.tmpl"
-	//templates, err := template.ParseGlob(templateDir + "/*")
-	// https://stackoverflow.com/a/49043639/1664318 for the New parameter
-	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(templateDir + "/" + templateFile)
-	if err != nil {
-		return err
-	}
-	output := templateFile[0 : len(templateFile)-5]
-	outputFile := outputDir + "/" + strings.ToLower(definition.Name) + "_" + output
-	f, err := os.Create(outputFile)
-	if err != nil {
-		return err
-	}
-	return templates.Execute(f, definition)
-}
