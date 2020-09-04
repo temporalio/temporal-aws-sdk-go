@@ -9,7 +9,7 @@ exposed by [AWS Go SDK](https://github.com/aws/aws-sdk-go).
 Generated activities and stubs are in Go at this point. 
 Java SDK has to call them by string name until Java activity interface generation is added.  
 
-https://github.com/mfateev if you want to collaborate on this project. 
+Contact [Maxim](https://github.com/mfateev) if you want to collaborate on this project. 
 
 ## Generated Code
 
