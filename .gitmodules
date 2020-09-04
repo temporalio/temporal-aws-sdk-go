@@ -1,0 +1,3 @@
+[submodule "awssdkgo"]
+	path = awssdkgo
+	url = https://github.com/aws/aws-sdk-go
