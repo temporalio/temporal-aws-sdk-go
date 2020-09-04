@@ -36,5 +36,5 @@ go run cmd/temporal-aws-sdk-gen/main.go
 ## Templates
 
 Templates that are used for code generation are located in `cmd/temporal-aws-sdk-gen/templates` directory.
-They use Go `[text/template](https://golang.org/pkg/text/template/)` package. Each template is invoked with
+They use Go [text/template](https://golang.org/pkg/text/template/) package. Each template is invoked with
 [InterfaceDefinition](cmd/temporal-aws-sdk-gen/internal/parser.go#L31) structure as a parameter.
