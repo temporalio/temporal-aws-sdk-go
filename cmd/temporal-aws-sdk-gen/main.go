@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 	"strings"
-	"temporal.io/aws-sdk/temporal-aws-sdk-gen/internal"
+	"temporal.io/aws-sdk/cmd/temporal-aws-sdk-gen/internal"
 )
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		&cli.StringFlag{
 			Name:        "template-dir",
-			Value:       "./temporal-aws-sdk-gen/templates",
+			Value:       "./cmd/temporal-aws-sdk-gen/templates",
 			Usage:       "location of code generation template directory",
 			Destination: &templateDir,
 		},
