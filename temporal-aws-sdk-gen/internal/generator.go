@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"fmt"
 	"os"
 	"strings"
 	"text/template"
@@ -61,5 +62,6 @@ func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, o
 	for _, method := range definition.Methods {
 		g.outputStructs[method.OutputPackage+method.Output] = true
 	}
+	fmt.Println(outputFile)
 	return nil
 }

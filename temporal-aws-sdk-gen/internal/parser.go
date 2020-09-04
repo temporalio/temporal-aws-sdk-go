@@ -92,7 +92,6 @@ func (p *AWSSDKParser) ParseAwsService(serviceName string, generator func(servic
 }
 
 func (p *AWSSDKParser) processAwsService(serviceName string, fileName string, generator func(service string, definition InterfaceDefinition) error) error {
-	fmt.Println(fileName)
 	definition, err := p.parse(fileName)
 	if err != nil {
 		return fmt.Errorf("failure parsing %v: %w", fileName, err)

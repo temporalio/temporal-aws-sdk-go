@@ -4,49 +4,55 @@ import (
 	"github.com/urfave/cli/v2"
 	"log"
 	"os"
-	"temporal.io/aws-sdk/awsgenerator/internal"
+	"strings"
+	"temporal.io/aws-sdk/temporal-aws-sdk-gen/internal"
 )
 
 func main() {
-	var sdkDir, templateDir, outputDir string
+	var sdkDir, templateDir, outputDir, service string
 
 	app := cli.NewApp()
-	app.Name = "aws2temporal"
+	app.Name = "temporal-aws-sdk-gen"
 	app.Usage = "Generates Temporal Bindings for AWS SDK"
 	app.Version = "0.0.1"
 	app.Flags = []cli.Flag{
 		&cli.StringFlag{
 			Name:        "template-dir",
-			Value:       "./awsgenerator/templates",
+			Value:       "./temporal-aws-sdk-gen/templates",
 			Usage:       "location of code generation template directory",
-			EnvVars:     []string{"TEMPORAL_AWS_SDK_TEMPLATE_DIR"},
 			Destination: &templateDir,
 		},
 		&cli.StringFlag{
 			Name:        "aws-sdk-dir",
 			Usage:       "location of AWS Go SDK repository",
 			Value:       "./awssdkgo",
-			EnvVars:     []string{"TEMPORAL_AWS_SDK_DIR"},
 			Destination: &sdkDir,
 		},
 		&cli.StringFlag{
 			Name:        "output-dir",
 			Value:       ".",
 			Usage:       "generated code location",
-			EnvVars:     []string{"TEMPORAL_OUTPUT_DIR"},
 			Destination: &outputDir,
+		},
+		&cli.StringFlag{
+			Name:        "service",
+			Usage:       "service to regenerate, default is all services",
+			Destination: &service,
 		},
 	}
 	app.Action = func(c *cli.Context) error {
 		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
 		generator := internal.NewGenerator(templateDir)
-		//return parser.ParseAwsService("cloudformation", func(service string, definition internal.InterfaceDefinition) error {
-		//	fmt.Println(definition)
-		//	return generateCode(templateDir, outputDir, definition)
-		//})
-		return parser.ParseAwsSdk(func(service string, definition internal.InterfaceDefinition) error {
-			return generator.GenerateCode(outputDir, definition)
-		})
+		s := strings.ToLower(service)
+		if s != "" {
+			return parser.ParseAwsService(s, func(service string, definition internal.InterfaceDefinition) error {
+				return generator.GenerateCode(outputDir, definition)
+			})
+		} else {
+			return parser.ParseAwsSdk(func(service string, definition internal.InterfaceDefinition) error {
+				return generator.GenerateCode(outputDir, definition)
+			})
+		}
 	}
 	err := app.Run(os.Args)
 	if err != nil {
