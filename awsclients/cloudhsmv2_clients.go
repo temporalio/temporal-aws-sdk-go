@@ -7,44 +7,44 @@ import (
 )
 
 type CloudHSMV2Client interface {
-    CopyBackupToRegion(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) (*cloudhsmv2.CopyBackupToRegionOutput, error)
-    CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *Cloudhsmv2CopyBackupToRegionResult
+       CopyBackupToRegion(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) (*cloudhsmv2.CopyBackupToRegionOutput, error)
+       CopyBackupToRegionAsync(ctx workflow.Context, input *cloudhsmv2.CopyBackupToRegionInput) *Cloudhsmv2CopyBackupToRegionResult
 
-    CreateCluster(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) (*cloudhsmv2.CreateClusterOutput, error)
-    CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *Cloudhsmv2CreateClusterResult
+       CreateCluster(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) (*cloudhsmv2.CreateClusterOutput, error)
+       CreateClusterAsync(ctx workflow.Context, input *cloudhsmv2.CreateClusterInput) *Cloudhsmv2CreateClusterResult
 
-    CreateHsm(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) (*cloudhsmv2.CreateHsmOutput, error)
-    CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *Cloudhsmv2CreateHsmResult
+       CreateHsm(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) (*cloudhsmv2.CreateHsmOutput, error)
+       CreateHsmAsync(ctx workflow.Context, input *cloudhsmv2.CreateHsmInput) *Cloudhsmv2CreateHsmResult
 
-    DeleteBackup(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) (*cloudhsmv2.DeleteBackupOutput, error)
-    DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *Cloudhsmv2DeleteBackupResult
+       DeleteBackup(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) (*cloudhsmv2.DeleteBackupOutput, error)
+       DeleteBackupAsync(ctx workflow.Context, input *cloudhsmv2.DeleteBackupInput) *Cloudhsmv2DeleteBackupResult
 
-    DeleteCluster(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) (*cloudhsmv2.DeleteClusterOutput, error)
-    DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *Cloudhsmv2DeleteClusterResult
+       DeleteCluster(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) (*cloudhsmv2.DeleteClusterOutput, error)
+       DeleteClusterAsync(ctx workflow.Context, input *cloudhsmv2.DeleteClusterInput) *Cloudhsmv2DeleteClusterResult
 
-    DeleteHsm(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) (*cloudhsmv2.DeleteHsmOutput, error)
-    DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *Cloudhsmv2DeleteHsmResult
+       DeleteHsm(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) (*cloudhsmv2.DeleteHsmOutput, error)
+       DeleteHsmAsync(ctx workflow.Context, input *cloudhsmv2.DeleteHsmInput) *Cloudhsmv2DeleteHsmResult
 
-    DescribeBackups(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) (*cloudhsmv2.DescribeBackupsOutput, error)
-    DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *Cloudhsmv2DescribeBackupsResult
+       DescribeBackups(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) (*cloudhsmv2.DescribeBackupsOutput, error)
+       DescribeBackupsAsync(ctx workflow.Context, input *cloudhsmv2.DescribeBackupsInput) *Cloudhsmv2DescribeBackupsResult
 
-    DescribeClusters(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) (*cloudhsmv2.DescribeClustersOutput, error)
-    DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *Cloudhsmv2DescribeClustersResult
+       DescribeClusters(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) (*cloudhsmv2.DescribeClustersOutput, error)
+       DescribeClustersAsync(ctx workflow.Context, input *cloudhsmv2.DescribeClustersInput) *Cloudhsmv2DescribeClustersResult
 
-    InitializeCluster(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) (*cloudhsmv2.InitializeClusterOutput, error)
-    InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *Cloudhsmv2InitializeClusterResult
+       InitializeCluster(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) (*cloudhsmv2.InitializeClusterOutput, error)
+       InitializeClusterAsync(ctx workflow.Context, input *cloudhsmv2.InitializeClusterInput) *Cloudhsmv2InitializeClusterResult
 
-    ListTags(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) (*cloudhsmv2.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *Cloudhsmv2ListTagsResult
+       ListTags(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) (*cloudhsmv2.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *cloudhsmv2.ListTagsInput) *Cloudhsmv2ListTagsResult
 
-    RestoreBackup(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) (*cloudhsmv2.RestoreBackupOutput, error)
-    RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *Cloudhsmv2RestoreBackupResult
+       RestoreBackup(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) (*cloudhsmv2.RestoreBackupOutput, error)
+       RestoreBackupAsync(ctx workflow.Context, input *cloudhsmv2.RestoreBackupInput) *Cloudhsmv2RestoreBackupResult
 
-    TagResource(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) (*cloudhsmv2.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *Cloudhsmv2TagResourceResult
+       TagResource(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) (*cloudhsmv2.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *cloudhsmv2.TagResourceInput) *Cloudhsmv2TagResourceResult
 
-    UntagResource(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) (*cloudhsmv2.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *Cloudhsmv2UntagResourceResult
+       UntagResource(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) (*cloudhsmv2.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *Cloudhsmv2UntagResourceResult
 }
 
 type Cloudhsmv2CopyBackupToRegionResult struct {

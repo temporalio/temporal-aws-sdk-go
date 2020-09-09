@@ -7,47 +7,47 @@ import (
 )
 
 type SupportClient interface {
-    AddAttachmentsToSet(ctx workflow.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error)
-    AddAttachmentsToSetAsync(ctx workflow.Context, input *support.AddAttachmentsToSetInput) *SupportAddAttachmentsToSetResult
+       AddAttachmentsToSet(ctx workflow.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error)
+       AddAttachmentsToSetAsync(ctx workflow.Context, input *support.AddAttachmentsToSetInput) *SupportAddAttachmentsToSetResult
 
-    AddCommunicationToCase(ctx workflow.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error)
-    AddCommunicationToCaseAsync(ctx workflow.Context, input *support.AddCommunicationToCaseInput) *SupportAddCommunicationToCaseResult
+       AddCommunicationToCase(ctx workflow.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error)
+       AddCommunicationToCaseAsync(ctx workflow.Context, input *support.AddCommunicationToCaseInput) *SupportAddCommunicationToCaseResult
 
-    CreateCase(ctx workflow.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error)
-    CreateCaseAsync(ctx workflow.Context, input *support.CreateCaseInput) *SupportCreateCaseResult
+       CreateCase(ctx workflow.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error)
+       CreateCaseAsync(ctx workflow.Context, input *support.CreateCaseInput) *SupportCreateCaseResult
 
-    DescribeAttachment(ctx workflow.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error)
-    DescribeAttachmentAsync(ctx workflow.Context, input *support.DescribeAttachmentInput) *SupportDescribeAttachmentResult
+       DescribeAttachment(ctx workflow.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error)
+       DescribeAttachmentAsync(ctx workflow.Context, input *support.DescribeAttachmentInput) *SupportDescribeAttachmentResult
 
-    DescribeCases(ctx workflow.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error)
-    DescribeCasesAsync(ctx workflow.Context, input *support.DescribeCasesInput) *SupportDescribeCasesResult
+       DescribeCases(ctx workflow.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error)
+       DescribeCasesAsync(ctx workflow.Context, input *support.DescribeCasesInput) *SupportDescribeCasesResult
 
-    DescribeCommunications(ctx workflow.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error)
-    DescribeCommunicationsAsync(ctx workflow.Context, input *support.DescribeCommunicationsInput) *SupportDescribeCommunicationsResult
+       DescribeCommunications(ctx workflow.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error)
+       DescribeCommunicationsAsync(ctx workflow.Context, input *support.DescribeCommunicationsInput) *SupportDescribeCommunicationsResult
 
-    DescribeServices(ctx workflow.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error)
-    DescribeServicesAsync(ctx workflow.Context, input *support.DescribeServicesInput) *SupportDescribeServicesResult
+       DescribeServices(ctx workflow.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error)
+       DescribeServicesAsync(ctx workflow.Context, input *support.DescribeServicesInput) *SupportDescribeServicesResult
 
-    DescribeSeverityLevels(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error)
-    DescribeSeverityLevelsAsync(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) *SupportDescribeSeverityLevelsResult
+       DescribeSeverityLevels(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error)
+       DescribeSeverityLevelsAsync(ctx workflow.Context, input *support.DescribeSeverityLevelsInput) *SupportDescribeSeverityLevelsResult
 
-    DescribeTrustedAdvisorCheckRefreshStatuses(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error)
-    DescribeTrustedAdvisorCheckRefreshStatusesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) *SupportDescribeTrustedAdvisorCheckRefreshStatusesResult
+       DescribeTrustedAdvisorCheckRefreshStatuses(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error)
+       DescribeTrustedAdvisorCheckRefreshStatusesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) *SupportDescribeTrustedAdvisorCheckRefreshStatusesResult
 
-    DescribeTrustedAdvisorCheckResult(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error)
-    DescribeTrustedAdvisorCheckResultAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) *SupportDescribeTrustedAdvisorCheckResultResult
+       DescribeTrustedAdvisorCheckResult(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error)
+       DescribeTrustedAdvisorCheckResultAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckResultInput) *SupportDescribeTrustedAdvisorCheckResultResult
 
-    DescribeTrustedAdvisorCheckSummaries(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error)
-    DescribeTrustedAdvisorCheckSummariesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) *SupportDescribeTrustedAdvisorCheckSummariesResult
+       DescribeTrustedAdvisorCheckSummaries(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error)
+       DescribeTrustedAdvisorCheckSummariesAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) *SupportDescribeTrustedAdvisorCheckSummariesResult
 
-    DescribeTrustedAdvisorChecks(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error)
-    DescribeTrustedAdvisorChecksAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) *SupportDescribeTrustedAdvisorChecksResult
+       DescribeTrustedAdvisorChecks(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error)
+       DescribeTrustedAdvisorChecksAsync(ctx workflow.Context, input *support.DescribeTrustedAdvisorChecksInput) *SupportDescribeTrustedAdvisorChecksResult
 
-    RefreshTrustedAdvisorCheck(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error)
-    RefreshTrustedAdvisorCheckAsync(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) *SupportRefreshTrustedAdvisorCheckResult
+       RefreshTrustedAdvisorCheck(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error)
+       RefreshTrustedAdvisorCheckAsync(ctx workflow.Context, input *support.RefreshTrustedAdvisorCheckInput) *SupportRefreshTrustedAdvisorCheckResult
 
-    ResolveCase(ctx workflow.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error)
-    ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *SupportResolveCaseResult
+       ResolveCase(ctx workflow.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error)
+       ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *SupportResolveCaseResult
 }
 
 type SupportAddAttachmentsToSetResult struct {

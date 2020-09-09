@@ -7,14 +7,14 @@ import (
 )
 
 type ApiGatewayManagementApiClient interface {
-    DeleteConnection(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error)
-    DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApigatewaymanagementapiDeleteConnectionResult
+       DeleteConnection(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error)
+       DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApigatewaymanagementapiDeleteConnectionResult
 
-    GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error)
-    GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApigatewaymanagementapiGetConnectionResult
+       GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error)
+       GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApigatewaymanagementapiGetConnectionResult
 
-    PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error)
-    PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionResult
+       PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error)
+       PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionResult
 }
 
 type ApigatewaymanagementapiDeleteConnectionResult struct {

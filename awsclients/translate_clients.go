@@ -7,32 +7,32 @@ import (
 )
 
 type TranslateClient interface {
-    DeleteTerminology(ctx workflow.Context, input *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error)
-    DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *TranslateDeleteTerminologyResult
+       DeleteTerminology(ctx workflow.Context, input *translate.DeleteTerminologyInput) (*translate.DeleteTerminologyOutput, error)
+       DeleteTerminologyAsync(ctx workflow.Context, input *translate.DeleteTerminologyInput) *TranslateDeleteTerminologyResult
 
-    DescribeTextTranslationJob(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error)
-    DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *TranslateDescribeTextTranslationJobResult
+       DescribeTextTranslationJob(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) (*translate.DescribeTextTranslationJobOutput, error)
+       DescribeTextTranslationJobAsync(ctx workflow.Context, input *translate.DescribeTextTranslationJobInput) *TranslateDescribeTextTranslationJobResult
 
-    GetTerminology(ctx workflow.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error)
-    GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *TranslateGetTerminologyResult
+       GetTerminology(ctx workflow.Context, input *translate.GetTerminologyInput) (*translate.GetTerminologyOutput, error)
+       GetTerminologyAsync(ctx workflow.Context, input *translate.GetTerminologyInput) *TranslateGetTerminologyResult
 
-    ImportTerminology(ctx workflow.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error)
-    ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *TranslateImportTerminologyResult
+       ImportTerminology(ctx workflow.Context, input *translate.ImportTerminologyInput) (*translate.ImportTerminologyOutput, error)
+       ImportTerminologyAsync(ctx workflow.Context, input *translate.ImportTerminologyInput) *TranslateImportTerminologyResult
 
-    ListTerminologies(ctx workflow.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error)
-    ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *TranslateListTerminologiesResult
+       ListTerminologies(ctx workflow.Context, input *translate.ListTerminologiesInput) (*translate.ListTerminologiesOutput, error)
+       ListTerminologiesAsync(ctx workflow.Context, input *translate.ListTerminologiesInput) *TranslateListTerminologiesResult
 
-    ListTextTranslationJobs(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error)
-    ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *TranslateListTextTranslationJobsResult
+       ListTextTranslationJobs(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) (*translate.ListTextTranslationJobsOutput, error)
+       ListTextTranslationJobsAsync(ctx workflow.Context, input *translate.ListTextTranslationJobsInput) *TranslateListTextTranslationJobsResult
 
-    StartTextTranslationJob(ctx workflow.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error)
-    StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *TranslateStartTextTranslationJobResult
+       StartTextTranslationJob(ctx workflow.Context, input *translate.StartTextTranslationJobInput) (*translate.StartTextTranslationJobOutput, error)
+       StartTextTranslationJobAsync(ctx workflow.Context, input *translate.StartTextTranslationJobInput) *TranslateStartTextTranslationJobResult
 
-    StopTextTranslationJob(ctx workflow.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error)
-    StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *TranslateStopTextTranslationJobResult
+       StopTextTranslationJob(ctx workflow.Context, input *translate.StopTextTranslationJobInput) (*translate.StopTextTranslationJobOutput, error)
+       StopTextTranslationJobAsync(ctx workflow.Context, input *translate.StopTextTranslationJobInput) *TranslateStopTextTranslationJobResult
 
-    Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error)
-    TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextResult
+       Text(ctx workflow.Context, input *translate.TextInput) (*translate.TextOutput, error)
+       TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextResult
 }
 
 type TranslateDeleteTerminologyResult struct {

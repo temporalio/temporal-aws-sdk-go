@@ -7,44 +7,44 @@ import (
 )
 
 type IoT1ClickDevicesServiceClient interface {
-    ClaimDevicesByClaimCode(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error)
-    ClaimDevicesByClaimCodeAsync(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) *Iot1clickdevicesserviceClaimDevicesByClaimCodeResult
+       ClaimDevicesByClaimCode(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error)
+       ClaimDevicesByClaimCodeAsync(ctx workflow.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) *Iot1clickdevicesserviceClaimDevicesByClaimCodeResult
 
-    DescribeDevice(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) (*iot1clickdevicesservice.DescribeDeviceOutput, error)
-    DescribeDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) *Iot1clickdevicesserviceDescribeDeviceResult
+       DescribeDevice(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) (*iot1clickdevicesservice.DescribeDeviceOutput, error)
+       DescribeDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.DescribeDeviceInput) *Iot1clickdevicesserviceDescribeDeviceResult
 
-    FinalizeDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error)
-    FinalizeDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) *Iot1clickdevicesserviceFinalizeDeviceClaimResult
+       FinalizeDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error)
+       FinalizeDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) *Iot1clickdevicesserviceFinalizeDeviceClaimResult
 
-    GetDeviceMethods(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error)
-    GetDeviceMethodsAsync(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) *Iot1clickdevicesserviceGetDeviceMethodsResult
+       GetDeviceMethods(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error)
+       GetDeviceMethodsAsync(ctx workflow.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) *Iot1clickdevicesserviceGetDeviceMethodsResult
 
-    InitiateDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error)
-    InitiateDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) *Iot1clickdevicesserviceInitiateDeviceClaimResult
+       InitiateDeviceClaim(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error)
+       InitiateDeviceClaimAsync(ctx workflow.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) *Iot1clickdevicesserviceInitiateDeviceClaimResult
 
-    InvokeDeviceMethod(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error)
-    InvokeDeviceMethodAsync(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) *Iot1clickdevicesserviceInvokeDeviceMethodResult
+       InvokeDeviceMethod(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error)
+       InvokeDeviceMethodAsync(ctx workflow.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) *Iot1clickdevicesserviceInvokeDeviceMethodResult
 
-    ListDeviceEvents(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) (*iot1clickdevicesservice.ListDeviceEventsOutput, error)
-    ListDeviceEventsAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) *Iot1clickdevicesserviceListDeviceEventsResult
+       ListDeviceEvents(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) (*iot1clickdevicesservice.ListDeviceEventsOutput, error)
+       ListDeviceEventsAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) *Iot1clickdevicesserviceListDeviceEventsResult
 
-    ListDevices(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) (*iot1clickdevicesservice.ListDevicesOutput, error)
-    ListDevicesAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) *Iot1clickdevicesserviceListDevicesResult
+       ListDevices(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) (*iot1clickdevicesservice.ListDevicesOutput, error)
+       ListDevicesAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListDevicesInput) *Iot1clickdevicesserviceListDevicesResult
 
-    ListTagsForResource(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) (*iot1clickdevicesservice.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) *Iot1clickdevicesserviceListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) (*iot1clickdevicesservice.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) *Iot1clickdevicesserviceListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) (*iot1clickdevicesservice.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) *Iot1clickdevicesserviceTagResourceResult
+       TagResource(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) (*iot1clickdevicesservice.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.TagResourceInput) *Iot1clickdevicesserviceTagResourceResult
 
-    UnclaimDevice(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) (*iot1clickdevicesservice.UnclaimDeviceOutput, error)
-    UnclaimDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) *Iot1clickdevicesserviceUnclaimDeviceResult
+       UnclaimDevice(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) (*iot1clickdevicesservice.UnclaimDeviceOutput, error)
+       UnclaimDeviceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) *Iot1clickdevicesserviceUnclaimDeviceResult
 
-    UntagResource(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) (*iot1clickdevicesservice.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) *Iot1clickdevicesserviceUntagResourceResult
+       UntagResource(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) (*iot1clickdevicesservice.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *iot1clickdevicesservice.UntagResourceInput) *Iot1clickdevicesserviceUntagResourceResult
 
-    UpdateDeviceState(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error)
-    UpdateDeviceStateAsync(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) *Iot1clickdevicesserviceUpdateDeviceStateResult
+       UpdateDeviceState(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error)
+       UpdateDeviceStateAsync(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) *Iot1clickdevicesserviceUpdateDeviceStateResult
 }
 
 type Iot1clickdevicesserviceClaimDevicesByClaimCodeResult struct {

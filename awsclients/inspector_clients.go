@@ -7,116 +7,116 @@ import (
 )
 
 type InspectorClient interface {
-    AddAttributesToFindings(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error)
-    AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *InspectorAddAttributesToFindingsResult
+       AddAttributesToFindings(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error)
+       AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *InspectorAddAttributesToFindingsResult
 
-    CreateAssessmentTarget(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error)
-    CreateAssessmentTargetAsync(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) *InspectorCreateAssessmentTargetResult
+       CreateAssessmentTarget(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error)
+       CreateAssessmentTargetAsync(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) *InspectorCreateAssessmentTargetResult
 
-    CreateAssessmentTemplate(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error)
-    CreateAssessmentTemplateAsync(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) *InspectorCreateAssessmentTemplateResult
+       CreateAssessmentTemplate(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error)
+       CreateAssessmentTemplateAsync(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) *InspectorCreateAssessmentTemplateResult
 
-    CreateExclusionsPreview(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error)
-    CreateExclusionsPreviewAsync(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) *InspectorCreateExclusionsPreviewResult
+       CreateExclusionsPreview(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error)
+       CreateExclusionsPreviewAsync(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) *InspectorCreateExclusionsPreviewResult
 
-    CreateResourceGroup(ctx workflow.Context, input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error)
-    CreateResourceGroupAsync(ctx workflow.Context, input *inspector.CreateResourceGroupInput) *InspectorCreateResourceGroupResult
+       CreateResourceGroup(ctx workflow.Context, input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error)
+       CreateResourceGroupAsync(ctx workflow.Context, input *inspector.CreateResourceGroupInput) *InspectorCreateResourceGroupResult
 
-    DeleteAssessmentRun(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error)
-    DeleteAssessmentRunAsync(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) *InspectorDeleteAssessmentRunResult
+       DeleteAssessmentRun(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error)
+       DeleteAssessmentRunAsync(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) *InspectorDeleteAssessmentRunResult
 
-    DeleteAssessmentTarget(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error)
-    DeleteAssessmentTargetAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) *InspectorDeleteAssessmentTargetResult
+       DeleteAssessmentTarget(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error)
+       DeleteAssessmentTargetAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) *InspectorDeleteAssessmentTargetResult
 
-    DeleteAssessmentTemplate(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error)
-    DeleteAssessmentTemplateAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) *InspectorDeleteAssessmentTemplateResult
+       DeleteAssessmentTemplate(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error)
+       DeleteAssessmentTemplateAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) *InspectorDeleteAssessmentTemplateResult
 
-    DescribeAssessmentRuns(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error)
-    DescribeAssessmentRunsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) *InspectorDescribeAssessmentRunsResult
+       DescribeAssessmentRuns(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error)
+       DescribeAssessmentRunsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) *InspectorDescribeAssessmentRunsResult
 
-    DescribeAssessmentTargets(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error)
-    DescribeAssessmentTargetsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) *InspectorDescribeAssessmentTargetsResult
+       DescribeAssessmentTargets(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error)
+       DescribeAssessmentTargetsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) *InspectorDescribeAssessmentTargetsResult
 
-    DescribeAssessmentTemplates(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error)
-    DescribeAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) *InspectorDescribeAssessmentTemplatesResult
+       DescribeAssessmentTemplates(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error)
+       DescribeAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) *InspectorDescribeAssessmentTemplatesResult
 
-    DescribeCrossAccountAccessRole(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error)
-    DescribeCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) *InspectorDescribeCrossAccountAccessRoleResult
+       DescribeCrossAccountAccessRole(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error)
+       DescribeCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) *InspectorDescribeCrossAccountAccessRoleResult
 
-    DescribeExclusions(ctx workflow.Context, input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error)
-    DescribeExclusionsAsync(ctx workflow.Context, input *inspector.DescribeExclusionsInput) *InspectorDescribeExclusionsResult
+       DescribeExclusions(ctx workflow.Context, input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error)
+       DescribeExclusionsAsync(ctx workflow.Context, input *inspector.DescribeExclusionsInput) *InspectorDescribeExclusionsResult
 
-    DescribeFindings(ctx workflow.Context, input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error)
-    DescribeFindingsAsync(ctx workflow.Context, input *inspector.DescribeFindingsInput) *InspectorDescribeFindingsResult
+       DescribeFindings(ctx workflow.Context, input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error)
+       DescribeFindingsAsync(ctx workflow.Context, input *inspector.DescribeFindingsInput) *InspectorDescribeFindingsResult
 
-    DescribeResourceGroups(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error)
-    DescribeResourceGroupsAsync(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) *InspectorDescribeResourceGroupsResult
+       DescribeResourceGroups(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error)
+       DescribeResourceGroupsAsync(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) *InspectorDescribeResourceGroupsResult
 
-    DescribeRulesPackages(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error)
-    DescribeRulesPackagesAsync(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) *InspectorDescribeRulesPackagesResult
+       DescribeRulesPackages(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error)
+       DescribeRulesPackagesAsync(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) *InspectorDescribeRulesPackagesResult
 
-    GetAssessmentReport(ctx workflow.Context, input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error)
-    GetAssessmentReportAsync(ctx workflow.Context, input *inspector.GetAssessmentReportInput) *InspectorGetAssessmentReportResult
+       GetAssessmentReport(ctx workflow.Context, input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error)
+       GetAssessmentReportAsync(ctx workflow.Context, input *inspector.GetAssessmentReportInput) *InspectorGetAssessmentReportResult
 
-    GetExclusionsPreview(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error)
-    GetExclusionsPreviewAsync(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) *InspectorGetExclusionsPreviewResult
+       GetExclusionsPreview(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error)
+       GetExclusionsPreviewAsync(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) *InspectorGetExclusionsPreviewResult
 
-    GetTelemetryMetadata(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error)
-    GetTelemetryMetadataAsync(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) *InspectorGetTelemetryMetadataResult
+       GetTelemetryMetadata(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error)
+       GetTelemetryMetadataAsync(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) *InspectorGetTelemetryMetadataResult
 
-    ListAssessmentRunAgents(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error)
-    ListAssessmentRunAgentsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) *InspectorListAssessmentRunAgentsResult
+       ListAssessmentRunAgents(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error)
+       ListAssessmentRunAgentsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) *InspectorListAssessmentRunAgentsResult
 
-    ListAssessmentRuns(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error)
-    ListAssessmentRunsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) *InspectorListAssessmentRunsResult
+       ListAssessmentRuns(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error)
+       ListAssessmentRunsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) *InspectorListAssessmentRunsResult
 
-    ListAssessmentTargets(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error)
-    ListAssessmentTargetsAsync(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) *InspectorListAssessmentTargetsResult
+       ListAssessmentTargets(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error)
+       ListAssessmentTargetsAsync(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) *InspectorListAssessmentTargetsResult
 
-    ListAssessmentTemplates(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error)
-    ListAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) *InspectorListAssessmentTemplatesResult
+       ListAssessmentTemplates(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error)
+       ListAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) *InspectorListAssessmentTemplatesResult
 
-    ListEventSubscriptions(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error)
-    ListEventSubscriptionsAsync(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) *InspectorListEventSubscriptionsResult
+       ListEventSubscriptions(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error)
+       ListEventSubscriptionsAsync(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) *InspectorListEventSubscriptionsResult
 
-    ListExclusions(ctx workflow.Context, input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error)
-    ListExclusionsAsync(ctx workflow.Context, input *inspector.ListExclusionsInput) *InspectorListExclusionsResult
+       ListExclusions(ctx workflow.Context, input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error)
+       ListExclusionsAsync(ctx workflow.Context, input *inspector.ListExclusionsInput) *InspectorListExclusionsResult
 
-    ListFindings(ctx workflow.Context, input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error)
-    ListFindingsAsync(ctx workflow.Context, input *inspector.ListFindingsInput) *InspectorListFindingsResult
+       ListFindings(ctx workflow.Context, input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error)
+       ListFindingsAsync(ctx workflow.Context, input *inspector.ListFindingsInput) *InspectorListFindingsResult
 
-    ListRulesPackages(ctx workflow.Context, input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error)
-    ListRulesPackagesAsync(ctx workflow.Context, input *inspector.ListRulesPackagesInput) *InspectorListRulesPackagesResult
+       ListRulesPackages(ctx workflow.Context, input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error)
+       ListRulesPackagesAsync(ctx workflow.Context, input *inspector.ListRulesPackagesInput) *InspectorListRulesPackagesResult
 
-    ListTagsForResource(ctx workflow.Context, input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *inspector.ListTagsForResourceInput) *InspectorListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *inspector.ListTagsForResourceInput) *InspectorListTagsForResourceResult
 
-    PreviewAgents(ctx workflow.Context, input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error)
-    PreviewAgentsAsync(ctx workflow.Context, input *inspector.PreviewAgentsInput) *InspectorPreviewAgentsResult
+       PreviewAgents(ctx workflow.Context, input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error)
+       PreviewAgentsAsync(ctx workflow.Context, input *inspector.PreviewAgentsInput) *InspectorPreviewAgentsResult
 
-    RegisterCrossAccountAccessRole(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error)
-    RegisterCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) *InspectorRegisterCrossAccountAccessRoleResult
+       RegisterCrossAccountAccessRole(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error)
+       RegisterCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) *InspectorRegisterCrossAccountAccessRoleResult
 
-    RemoveAttributesFromFindings(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error)
-    RemoveAttributesFromFindingsAsync(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) *InspectorRemoveAttributesFromFindingsResult
+       RemoveAttributesFromFindings(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error)
+       RemoveAttributesFromFindingsAsync(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) *InspectorRemoveAttributesFromFindingsResult
 
-    SetTagsForResource(ctx workflow.Context, input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error)
-    SetTagsForResourceAsync(ctx workflow.Context, input *inspector.SetTagsForResourceInput) *InspectorSetTagsForResourceResult
+       SetTagsForResource(ctx workflow.Context, input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error)
+       SetTagsForResourceAsync(ctx workflow.Context, input *inspector.SetTagsForResourceInput) *InspectorSetTagsForResourceResult
 
-    StartAssessmentRun(ctx workflow.Context, input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error)
-    StartAssessmentRunAsync(ctx workflow.Context, input *inspector.StartAssessmentRunInput) *InspectorStartAssessmentRunResult
+       StartAssessmentRun(ctx workflow.Context, input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error)
+       StartAssessmentRunAsync(ctx workflow.Context, input *inspector.StartAssessmentRunInput) *InspectorStartAssessmentRunResult
 
-    StopAssessmentRun(ctx workflow.Context, input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error)
-    StopAssessmentRunAsync(ctx workflow.Context, input *inspector.StopAssessmentRunInput) *InspectorStopAssessmentRunResult
+       StopAssessmentRun(ctx workflow.Context, input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error)
+       StopAssessmentRunAsync(ctx workflow.Context, input *inspector.StopAssessmentRunInput) *InspectorStopAssessmentRunResult
 
-    SubscribeToEvent(ctx workflow.Context, input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error)
-    SubscribeToEventAsync(ctx workflow.Context, input *inspector.SubscribeToEventInput) *InspectorSubscribeToEventResult
+       SubscribeToEvent(ctx workflow.Context, input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error)
+       SubscribeToEventAsync(ctx workflow.Context, input *inspector.SubscribeToEventInput) *InspectorSubscribeToEventResult
 
-    UnsubscribeFromEvent(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error)
-    UnsubscribeFromEventAsync(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) *InspectorUnsubscribeFromEventResult
+       UnsubscribeFromEvent(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error)
+       UnsubscribeFromEventAsync(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) *InspectorUnsubscribeFromEventResult
 
-    UpdateAssessmentTarget(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error)
-    UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetResult
+       UpdateAssessmentTarget(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error)
+       UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetResult
 }
 
 type InspectorAddAttributesToFindingsResult struct {

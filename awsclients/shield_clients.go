@@ -7,74 +7,74 @@ import (
 )
 
 type ShieldClient interface {
-    AssociateDRTLogBucket(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error)
-    AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketResult
+       AssociateDRTLogBucket(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error)
+       AssociateDRTLogBucketAsync(ctx workflow.Context, input *shield.AssociateDRTLogBucketInput) *ShieldAssociateDRTLogBucketResult
 
-    AssociateDRTRole(ctx workflow.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error)
-    AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleResult
+       AssociateDRTRole(ctx workflow.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error)
+       AssociateDRTRoleAsync(ctx workflow.Context, input *shield.AssociateDRTRoleInput) *ShieldAssociateDRTRoleResult
 
-    AssociateHealthCheck(ctx workflow.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error)
-    AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckResult
+       AssociateHealthCheck(ctx workflow.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error)
+       AssociateHealthCheckAsync(ctx workflow.Context, input *shield.AssociateHealthCheckInput) *ShieldAssociateHealthCheckResult
 
-    AssociateProactiveEngagementDetails(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error)
-    AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsResult
+       AssociateProactiveEngagementDetails(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error)
+       AssociateProactiveEngagementDetailsAsync(ctx workflow.Context, input *shield.AssociateProactiveEngagementDetailsInput) *ShieldAssociateProactiveEngagementDetailsResult
 
-    CreateProtection(ctx workflow.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error)
-    CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionResult
+       CreateProtection(ctx workflow.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error)
+       CreateProtectionAsync(ctx workflow.Context, input *shield.CreateProtectionInput) *ShieldCreateProtectionResult
 
-    CreateSubscription(ctx workflow.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error)
-    CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionResult
+       CreateSubscription(ctx workflow.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error)
+       CreateSubscriptionAsync(ctx workflow.Context, input *shield.CreateSubscriptionInput) *ShieldCreateSubscriptionResult
 
-    DeleteProtection(ctx workflow.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error)
-    DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionResult
+       DeleteProtection(ctx workflow.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error)
+       DeleteProtectionAsync(ctx workflow.Context, input *shield.DeleteProtectionInput) *ShieldDeleteProtectionResult
 
-    DeleteSubscription(ctx workflow.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error)
-    DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionResult
+       DeleteSubscription(ctx workflow.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error)
+       DeleteSubscriptionAsync(ctx workflow.Context, input *shield.DeleteSubscriptionInput) *ShieldDeleteSubscriptionResult
 
-    DescribeAttack(ctx workflow.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error)
-    DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackResult
+       DescribeAttack(ctx workflow.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error)
+       DescribeAttackAsync(ctx workflow.Context, input *shield.DescribeAttackInput) *ShieldDescribeAttackResult
 
-    DescribeDRTAccess(ctx workflow.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error)
-    DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessResult
+       DescribeDRTAccess(ctx workflow.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error)
+       DescribeDRTAccessAsync(ctx workflow.Context, input *shield.DescribeDRTAccessInput) *ShieldDescribeDRTAccessResult
 
-    DescribeEmergencyContactSettings(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error)
-    DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsResult
+       DescribeEmergencyContactSettings(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error)
+       DescribeEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.DescribeEmergencyContactSettingsInput) *ShieldDescribeEmergencyContactSettingsResult
 
-    DescribeProtection(ctx workflow.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error)
-    DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionResult
+       DescribeProtection(ctx workflow.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error)
+       DescribeProtectionAsync(ctx workflow.Context, input *shield.DescribeProtectionInput) *ShieldDescribeProtectionResult
 
-    DescribeSubscription(ctx workflow.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error)
-    DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionResult
+       DescribeSubscription(ctx workflow.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error)
+       DescribeSubscriptionAsync(ctx workflow.Context, input *shield.DescribeSubscriptionInput) *ShieldDescribeSubscriptionResult
 
-    DisableProactiveEngagement(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error)
-    DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementResult
+       DisableProactiveEngagement(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error)
+       DisableProactiveEngagementAsync(ctx workflow.Context, input *shield.DisableProactiveEngagementInput) *ShieldDisableProactiveEngagementResult
 
-    DisassociateDRTLogBucket(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error)
-    DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketResult
+       DisassociateDRTLogBucket(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error)
+       DisassociateDRTLogBucketAsync(ctx workflow.Context, input *shield.DisassociateDRTLogBucketInput) *ShieldDisassociateDRTLogBucketResult
 
-    DisassociateDRTRole(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error)
-    DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleResult
+       DisassociateDRTRole(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error)
+       DisassociateDRTRoleAsync(ctx workflow.Context, input *shield.DisassociateDRTRoleInput) *ShieldDisassociateDRTRoleResult
 
-    DisassociateHealthCheck(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error)
-    DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckResult
+       DisassociateHealthCheck(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error)
+       DisassociateHealthCheckAsync(ctx workflow.Context, input *shield.DisassociateHealthCheckInput) *ShieldDisassociateHealthCheckResult
 
-    EnableProactiveEngagement(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error)
-    EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementResult
+       EnableProactiveEngagement(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error)
+       EnableProactiveEngagementAsync(ctx workflow.Context, input *shield.EnableProactiveEngagementInput) *ShieldEnableProactiveEngagementResult
 
-    GetSubscriptionState(ctx workflow.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error)
-    GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateResult
+       GetSubscriptionState(ctx workflow.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error)
+       GetSubscriptionStateAsync(ctx workflow.Context, input *shield.GetSubscriptionStateInput) *ShieldGetSubscriptionStateResult
 
-    ListAttacks(ctx workflow.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error)
-    ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksResult
+       ListAttacks(ctx workflow.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error)
+       ListAttacksAsync(ctx workflow.Context, input *shield.ListAttacksInput) *ShieldListAttacksResult
 
-    ListProtections(ctx workflow.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error)
-    ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsResult
+       ListProtections(ctx workflow.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error)
+       ListProtectionsAsync(ctx workflow.Context, input *shield.ListProtectionsInput) *ShieldListProtectionsResult
 
-    UpdateEmergencyContactSettings(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error)
-    UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsResult
+       UpdateEmergencyContactSettings(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error)
+       UpdateEmergencyContactSettingsAsync(ctx workflow.Context, input *shield.UpdateEmergencyContactSettingsInput) *ShieldUpdateEmergencyContactSettingsResult
 
-    UpdateSubscription(ctx workflow.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error)
-    UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionResult
+       UpdateSubscription(ctx workflow.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error)
+       UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionResult
 }
 
 type ShieldAssociateDRTLogBucketResult struct {

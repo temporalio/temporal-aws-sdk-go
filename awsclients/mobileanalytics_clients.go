@@ -7,8 +7,8 @@ import (
 )
 
 type MobileAnalyticsClient interface {
-    PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error)
-    PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult
+       PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error)
+       PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult
 }
 
 type MobileanalyticsPutEventsResult struct {

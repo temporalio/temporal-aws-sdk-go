@@ -7,41 +7,41 @@ import (
 )
 
 type DetectiveClient interface {
-    AcceptInvitation(ctx workflow.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error)
-    AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *DetectiveAcceptInvitationResult
+       AcceptInvitation(ctx workflow.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error)
+       AcceptInvitationAsync(ctx workflow.Context, input *detective.AcceptInvitationInput) *DetectiveAcceptInvitationResult
 
-    CreateGraph(ctx workflow.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error)
-    CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *DetectiveCreateGraphResult
+       CreateGraph(ctx workflow.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error)
+       CreateGraphAsync(ctx workflow.Context, input *detective.CreateGraphInput) *DetectiveCreateGraphResult
 
-    CreateMembers(ctx workflow.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error)
-    CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *DetectiveCreateMembersResult
+       CreateMembers(ctx workflow.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error)
+       CreateMembersAsync(ctx workflow.Context, input *detective.CreateMembersInput) *DetectiveCreateMembersResult
 
-    DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error)
-    DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DetectiveDeleteGraphResult
+       DeleteGraph(ctx workflow.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error)
+       DeleteGraphAsync(ctx workflow.Context, input *detective.DeleteGraphInput) *DetectiveDeleteGraphResult
 
-    DeleteMembers(ctx workflow.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error)
-    DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DetectiveDeleteMembersResult
+       DeleteMembers(ctx workflow.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error)
+       DeleteMembersAsync(ctx workflow.Context, input *detective.DeleteMembersInput) *DetectiveDeleteMembersResult
 
-    DisassociateMembership(ctx workflow.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error)
-    DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DetectiveDisassociateMembershipResult
+       DisassociateMembership(ctx workflow.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error)
+       DisassociateMembershipAsync(ctx workflow.Context, input *detective.DisassociateMembershipInput) *DetectiveDisassociateMembershipResult
 
-    GetMembers(ctx workflow.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error)
-    GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *DetectiveGetMembersResult
+       GetMembers(ctx workflow.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error)
+       GetMembersAsync(ctx workflow.Context, input *detective.GetMembersInput) *DetectiveGetMembersResult
 
-    ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error)
-    ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *DetectiveListGraphsResult
+       ListGraphs(ctx workflow.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error)
+       ListGraphsAsync(ctx workflow.Context, input *detective.ListGraphsInput) *DetectiveListGraphsResult
 
-    ListInvitations(ctx workflow.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error)
-    ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *DetectiveListInvitationsResult
+       ListInvitations(ctx workflow.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error)
+       ListInvitationsAsync(ctx workflow.Context, input *detective.ListInvitationsInput) *DetectiveListInvitationsResult
 
-    ListMembers(ctx workflow.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error)
-    ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *DetectiveListMembersResult
+       ListMembers(ctx workflow.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error)
+       ListMembersAsync(ctx workflow.Context, input *detective.ListMembersInput) *DetectiveListMembersResult
 
-    RejectInvitation(ctx workflow.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error)
-    RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *DetectiveRejectInvitationResult
+       RejectInvitation(ctx workflow.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error)
+       RejectInvitationAsync(ctx workflow.Context, input *detective.RejectInvitationInput) *DetectiveRejectInvitationResult
 
-    StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error)
-    StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberResult
+       StartMonitoringMember(ctx workflow.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error)
+       StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberResult
 }
 
 type DetectiveAcceptInvitationResult struct {

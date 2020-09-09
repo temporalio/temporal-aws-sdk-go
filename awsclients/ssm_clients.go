@@ -7,373 +7,373 @@ import (
 )
 
 type SSMClient interface {
-    AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error)
-    AddTagsToResourceAsync(ctx workflow.Context, input *ssm.AddTagsToResourceInput) *SsmAddTagsToResourceResult
+       AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error)
+       AddTagsToResourceAsync(ctx workflow.Context, input *ssm.AddTagsToResourceInput) *SsmAddTagsToResourceResult
 
-    CancelCommand(ctx workflow.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error)
-    CancelCommandAsync(ctx workflow.Context, input *ssm.CancelCommandInput) *SsmCancelCommandResult
+       CancelCommand(ctx workflow.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error)
+       CancelCommandAsync(ctx workflow.Context, input *ssm.CancelCommandInput) *SsmCancelCommandResult
 
-    CancelMaintenanceWindowExecution(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error)
-    CancelMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) *SsmCancelMaintenanceWindowExecutionResult
+       CancelMaintenanceWindowExecution(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error)
+       CancelMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) *SsmCancelMaintenanceWindowExecutionResult
 
-    CreateActivation(ctx workflow.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error)
-    CreateActivationAsync(ctx workflow.Context, input *ssm.CreateActivationInput) *SsmCreateActivationResult
+       CreateActivation(ctx workflow.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error)
+       CreateActivationAsync(ctx workflow.Context, input *ssm.CreateActivationInput) *SsmCreateActivationResult
 
-    CreateAssociation(ctx workflow.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error)
-    CreateAssociationAsync(ctx workflow.Context, input *ssm.CreateAssociationInput) *SsmCreateAssociationResult
+       CreateAssociation(ctx workflow.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error)
+       CreateAssociationAsync(ctx workflow.Context, input *ssm.CreateAssociationInput) *SsmCreateAssociationResult
 
-    CreateAssociationBatch(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error)
-    CreateAssociationBatchAsync(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) *SsmCreateAssociationBatchResult
+       CreateAssociationBatch(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error)
+       CreateAssociationBatchAsync(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) *SsmCreateAssociationBatchResult
 
-    CreateDocument(ctx workflow.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error)
-    CreateDocumentAsync(ctx workflow.Context, input *ssm.CreateDocumentInput) *SsmCreateDocumentResult
+       CreateDocument(ctx workflow.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error)
+       CreateDocumentAsync(ctx workflow.Context, input *ssm.CreateDocumentInput) *SsmCreateDocumentResult
 
-    CreateMaintenanceWindow(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error)
-    CreateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) *SsmCreateMaintenanceWindowResult
+       CreateMaintenanceWindow(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error)
+       CreateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) *SsmCreateMaintenanceWindowResult
 
-    CreateOpsItem(ctx workflow.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error)
-    CreateOpsItemAsync(ctx workflow.Context, input *ssm.CreateOpsItemInput) *SsmCreateOpsItemResult
+       CreateOpsItem(ctx workflow.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error)
+       CreateOpsItemAsync(ctx workflow.Context, input *ssm.CreateOpsItemInput) *SsmCreateOpsItemResult
 
-    CreatePatchBaseline(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error)
-    CreatePatchBaselineAsync(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) *SsmCreatePatchBaselineResult
+       CreatePatchBaseline(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error)
+       CreatePatchBaselineAsync(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) *SsmCreatePatchBaselineResult
 
-    CreateResourceDataSync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error)
-    CreateResourceDataSyncAsync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) *SsmCreateResourceDataSyncResult
+       CreateResourceDataSync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error)
+       CreateResourceDataSyncAsync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) *SsmCreateResourceDataSyncResult
 
-    DeleteActivation(ctx workflow.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error)
-    DeleteActivationAsync(ctx workflow.Context, input *ssm.DeleteActivationInput) *SsmDeleteActivationResult
+       DeleteActivation(ctx workflow.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error)
+       DeleteActivationAsync(ctx workflow.Context, input *ssm.DeleteActivationInput) *SsmDeleteActivationResult
 
-    DeleteAssociation(ctx workflow.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error)
-    DeleteAssociationAsync(ctx workflow.Context, input *ssm.DeleteAssociationInput) *SsmDeleteAssociationResult
+       DeleteAssociation(ctx workflow.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error)
+       DeleteAssociationAsync(ctx workflow.Context, input *ssm.DeleteAssociationInput) *SsmDeleteAssociationResult
 
-    DeleteDocument(ctx workflow.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error)
-    DeleteDocumentAsync(ctx workflow.Context, input *ssm.DeleteDocumentInput) *SsmDeleteDocumentResult
+       DeleteDocument(ctx workflow.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error)
+       DeleteDocumentAsync(ctx workflow.Context, input *ssm.DeleteDocumentInput) *SsmDeleteDocumentResult
 
-    DeleteInventory(ctx workflow.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error)
-    DeleteInventoryAsync(ctx workflow.Context, input *ssm.DeleteInventoryInput) *SsmDeleteInventoryResult
+       DeleteInventory(ctx workflow.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error)
+       DeleteInventoryAsync(ctx workflow.Context, input *ssm.DeleteInventoryInput) *SsmDeleteInventoryResult
 
-    DeleteMaintenanceWindow(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error)
-    DeleteMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) *SsmDeleteMaintenanceWindowResult
+       DeleteMaintenanceWindow(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error)
+       DeleteMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) *SsmDeleteMaintenanceWindowResult
 
-    DeleteParameter(ctx workflow.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error)
-    DeleteParameterAsync(ctx workflow.Context, input *ssm.DeleteParameterInput) *SsmDeleteParameterResult
+       DeleteParameter(ctx workflow.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error)
+       DeleteParameterAsync(ctx workflow.Context, input *ssm.DeleteParameterInput) *SsmDeleteParameterResult
 
-    DeleteParameters(ctx workflow.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error)
-    DeleteParametersAsync(ctx workflow.Context, input *ssm.DeleteParametersInput) *SsmDeleteParametersResult
+       DeleteParameters(ctx workflow.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error)
+       DeleteParametersAsync(ctx workflow.Context, input *ssm.DeleteParametersInput) *SsmDeleteParametersResult
 
-    DeletePatchBaseline(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error)
-    DeletePatchBaselineAsync(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) *SsmDeletePatchBaselineResult
+       DeletePatchBaseline(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error)
+       DeletePatchBaselineAsync(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) *SsmDeletePatchBaselineResult
 
-    DeleteResourceDataSync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error)
-    DeleteResourceDataSyncAsync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) *SsmDeleteResourceDataSyncResult
+       DeleteResourceDataSync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error)
+       DeleteResourceDataSyncAsync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) *SsmDeleteResourceDataSyncResult
 
-    DeregisterManagedInstance(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error)
-    DeregisterManagedInstanceAsync(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) *SsmDeregisterManagedInstanceResult
+       DeregisterManagedInstance(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error)
+       DeregisterManagedInstanceAsync(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) *SsmDeregisterManagedInstanceResult
 
-    DeregisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error)
-    DeregisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) *SsmDeregisterPatchBaselineForPatchGroupResult
+       DeregisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error)
+       DeregisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) *SsmDeregisterPatchBaselineForPatchGroupResult
 
-    DeregisterTargetFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error)
-    DeregisterTargetFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) *SsmDeregisterTargetFromMaintenanceWindowResult
+       DeregisterTargetFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error)
+       DeregisterTargetFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) *SsmDeregisterTargetFromMaintenanceWindowResult
 
-    DeregisterTaskFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error)
-    DeregisterTaskFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) *SsmDeregisterTaskFromMaintenanceWindowResult
+       DeregisterTaskFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error)
+       DeregisterTaskFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) *SsmDeregisterTaskFromMaintenanceWindowResult
 
-    DescribeActivations(ctx workflow.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error)
-    DescribeActivationsAsync(ctx workflow.Context, input *ssm.DescribeActivationsInput) *SsmDescribeActivationsResult
+       DescribeActivations(ctx workflow.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error)
+       DescribeActivationsAsync(ctx workflow.Context, input *ssm.DescribeActivationsInput) *SsmDescribeActivationsResult
 
-    DescribeAssociation(ctx workflow.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error)
-    DescribeAssociationAsync(ctx workflow.Context, input *ssm.DescribeAssociationInput) *SsmDescribeAssociationResult
+       DescribeAssociation(ctx workflow.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error)
+       DescribeAssociationAsync(ctx workflow.Context, input *ssm.DescribeAssociationInput) *SsmDescribeAssociationResult
 
-    DescribeAssociationExecutionTargets(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error)
-    DescribeAssociationExecutionTargetsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) *SsmDescribeAssociationExecutionTargetsResult
+       DescribeAssociationExecutionTargets(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error)
+       DescribeAssociationExecutionTargetsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) *SsmDescribeAssociationExecutionTargetsResult
 
-    DescribeAssociationExecutions(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error)
-    DescribeAssociationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) *SsmDescribeAssociationExecutionsResult
+       DescribeAssociationExecutions(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error)
+       DescribeAssociationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) *SsmDescribeAssociationExecutionsResult
 
-    DescribeAutomationExecutions(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error)
-    DescribeAutomationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) *SsmDescribeAutomationExecutionsResult
+       DescribeAutomationExecutions(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error)
+       DescribeAutomationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) *SsmDescribeAutomationExecutionsResult
 
-    DescribeAutomationStepExecutions(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error)
-    DescribeAutomationStepExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) *SsmDescribeAutomationStepExecutionsResult
+       DescribeAutomationStepExecutions(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error)
+       DescribeAutomationStepExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) *SsmDescribeAutomationStepExecutionsResult
 
-    DescribeAvailablePatches(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error)
-    DescribeAvailablePatchesAsync(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) *SsmDescribeAvailablePatchesResult
+       DescribeAvailablePatches(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error)
+       DescribeAvailablePatchesAsync(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) *SsmDescribeAvailablePatchesResult
 
-    DescribeDocument(ctx workflow.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error)
-    DescribeDocumentAsync(ctx workflow.Context, input *ssm.DescribeDocumentInput) *SsmDescribeDocumentResult
+       DescribeDocument(ctx workflow.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error)
+       DescribeDocumentAsync(ctx workflow.Context, input *ssm.DescribeDocumentInput) *SsmDescribeDocumentResult
 
-    DescribeDocumentPermission(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error)
-    DescribeDocumentPermissionAsync(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) *SsmDescribeDocumentPermissionResult
+       DescribeDocumentPermission(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error)
+       DescribeDocumentPermissionAsync(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) *SsmDescribeDocumentPermissionResult
 
-    DescribeEffectiveInstanceAssociations(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error)
-    DescribeEffectiveInstanceAssociationsAsync(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) *SsmDescribeEffectiveInstanceAssociationsResult
+       DescribeEffectiveInstanceAssociations(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error)
+       DescribeEffectiveInstanceAssociationsAsync(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) *SsmDescribeEffectiveInstanceAssociationsResult
 
-    DescribeEffectivePatchesForPatchBaseline(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error)
-    DescribeEffectivePatchesForPatchBaselineAsync(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) *SsmDescribeEffectivePatchesForPatchBaselineResult
+       DescribeEffectivePatchesForPatchBaseline(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error)
+       DescribeEffectivePatchesForPatchBaselineAsync(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) *SsmDescribeEffectivePatchesForPatchBaselineResult
 
-    DescribeInstanceAssociationsStatus(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error)
-    DescribeInstanceAssociationsStatusAsync(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) *SsmDescribeInstanceAssociationsStatusResult
+       DescribeInstanceAssociationsStatus(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error)
+       DescribeInstanceAssociationsStatusAsync(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) *SsmDescribeInstanceAssociationsStatusResult
 
-    DescribeInstanceInformation(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error)
-    DescribeInstanceInformationAsync(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) *SsmDescribeInstanceInformationResult
+       DescribeInstanceInformation(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error)
+       DescribeInstanceInformationAsync(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) *SsmDescribeInstanceInformationResult
 
-    DescribeInstancePatchStates(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error)
-    DescribeInstancePatchStatesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) *SsmDescribeInstancePatchStatesResult
+       DescribeInstancePatchStates(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error)
+       DescribeInstancePatchStatesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) *SsmDescribeInstancePatchStatesResult
 
-    DescribeInstancePatchStatesForPatchGroup(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error)
-    DescribeInstancePatchStatesForPatchGroupAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) *SsmDescribeInstancePatchStatesForPatchGroupResult
+       DescribeInstancePatchStatesForPatchGroup(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error)
+       DescribeInstancePatchStatesForPatchGroupAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) *SsmDescribeInstancePatchStatesForPatchGroupResult
 
-    DescribeInstancePatches(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error)
-    DescribeInstancePatchesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) *SsmDescribeInstancePatchesResult
+       DescribeInstancePatches(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error)
+       DescribeInstancePatchesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) *SsmDescribeInstancePatchesResult
 
-    DescribeInventoryDeletions(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error)
-    DescribeInventoryDeletionsAsync(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) *SsmDescribeInventoryDeletionsResult
+       DescribeInventoryDeletions(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error)
+       DescribeInventoryDeletionsAsync(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) *SsmDescribeInventoryDeletionsResult
 
-    DescribeMaintenanceWindowExecutionTaskInvocations(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error)
-    DescribeMaintenanceWindowExecutionTaskInvocationsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult
+       DescribeMaintenanceWindowExecutionTaskInvocations(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error)
+       DescribeMaintenanceWindowExecutionTaskInvocationsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult
 
-    DescribeMaintenanceWindowExecutionTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error)
-    DescribeMaintenanceWindowExecutionTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) *SsmDescribeMaintenanceWindowExecutionTasksResult
+       DescribeMaintenanceWindowExecutionTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error)
+       DescribeMaintenanceWindowExecutionTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) *SsmDescribeMaintenanceWindowExecutionTasksResult
 
-    DescribeMaintenanceWindowExecutions(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error)
-    DescribeMaintenanceWindowExecutionsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) *SsmDescribeMaintenanceWindowExecutionsResult
+       DescribeMaintenanceWindowExecutions(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error)
+       DescribeMaintenanceWindowExecutionsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) *SsmDescribeMaintenanceWindowExecutionsResult
 
-    DescribeMaintenanceWindowSchedule(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error)
-    DescribeMaintenanceWindowScheduleAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) *SsmDescribeMaintenanceWindowScheduleResult
+       DescribeMaintenanceWindowSchedule(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error)
+       DescribeMaintenanceWindowScheduleAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) *SsmDescribeMaintenanceWindowScheduleResult
 
-    DescribeMaintenanceWindowTargets(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error)
-    DescribeMaintenanceWindowTargetsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) *SsmDescribeMaintenanceWindowTargetsResult
+       DescribeMaintenanceWindowTargets(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error)
+       DescribeMaintenanceWindowTargetsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) *SsmDescribeMaintenanceWindowTargetsResult
 
-    DescribeMaintenanceWindowTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error)
-    DescribeMaintenanceWindowTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) *SsmDescribeMaintenanceWindowTasksResult
+       DescribeMaintenanceWindowTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error)
+       DescribeMaintenanceWindowTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) *SsmDescribeMaintenanceWindowTasksResult
 
-    DescribeMaintenanceWindows(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error)
-    DescribeMaintenanceWindowsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) *SsmDescribeMaintenanceWindowsResult
+       DescribeMaintenanceWindows(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error)
+       DescribeMaintenanceWindowsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) *SsmDescribeMaintenanceWindowsResult
 
-    DescribeMaintenanceWindowsForTarget(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error)
-    DescribeMaintenanceWindowsForTargetAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) *SsmDescribeMaintenanceWindowsForTargetResult
+       DescribeMaintenanceWindowsForTarget(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error)
+       DescribeMaintenanceWindowsForTargetAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) *SsmDescribeMaintenanceWindowsForTargetResult
 
-    DescribeOpsItems(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error)
-    DescribeOpsItemsAsync(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) *SsmDescribeOpsItemsResult
+       DescribeOpsItems(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error)
+       DescribeOpsItemsAsync(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) *SsmDescribeOpsItemsResult
 
-    DescribeParameters(ctx workflow.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error)
-    DescribeParametersAsync(ctx workflow.Context, input *ssm.DescribeParametersInput) *SsmDescribeParametersResult
+       DescribeParameters(ctx workflow.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error)
+       DescribeParametersAsync(ctx workflow.Context, input *ssm.DescribeParametersInput) *SsmDescribeParametersResult
 
-    DescribePatchBaselines(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error)
-    DescribePatchBaselinesAsync(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) *SsmDescribePatchBaselinesResult
+       DescribePatchBaselines(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error)
+       DescribePatchBaselinesAsync(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) *SsmDescribePatchBaselinesResult
 
-    DescribePatchGroupState(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error)
-    DescribePatchGroupStateAsync(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) *SsmDescribePatchGroupStateResult
+       DescribePatchGroupState(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error)
+       DescribePatchGroupStateAsync(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) *SsmDescribePatchGroupStateResult
 
-    DescribePatchGroups(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error)
-    DescribePatchGroupsAsync(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) *SsmDescribePatchGroupsResult
+       DescribePatchGroups(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error)
+       DescribePatchGroupsAsync(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) *SsmDescribePatchGroupsResult
 
-    DescribePatchProperties(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error)
-    DescribePatchPropertiesAsync(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) *SsmDescribePatchPropertiesResult
+       DescribePatchProperties(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error)
+       DescribePatchPropertiesAsync(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) *SsmDescribePatchPropertiesResult
 
-    DescribeSessions(ctx workflow.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error)
-    DescribeSessionsAsync(ctx workflow.Context, input *ssm.DescribeSessionsInput) *SsmDescribeSessionsResult
+       DescribeSessions(ctx workflow.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error)
+       DescribeSessionsAsync(ctx workflow.Context, input *ssm.DescribeSessionsInput) *SsmDescribeSessionsResult
 
-    GetAutomationExecution(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error)
-    GetAutomationExecutionAsync(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) *SsmGetAutomationExecutionResult
+       GetAutomationExecution(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error)
+       GetAutomationExecutionAsync(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) *SsmGetAutomationExecutionResult
 
-    GetCalendarState(ctx workflow.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error)
-    GetCalendarStateAsync(ctx workflow.Context, input *ssm.GetCalendarStateInput) *SsmGetCalendarStateResult
+       GetCalendarState(ctx workflow.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error)
+       GetCalendarStateAsync(ctx workflow.Context, input *ssm.GetCalendarStateInput) *SsmGetCalendarStateResult
 
-    GetCommandInvocation(ctx workflow.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error)
-    GetCommandInvocationAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *SsmGetCommandInvocationResult
+       GetCommandInvocation(ctx workflow.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error)
+       GetCommandInvocationAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *SsmGetCommandInvocationResult
 
-    GetConnectionStatus(ctx workflow.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error)
-    GetConnectionStatusAsync(ctx workflow.Context, input *ssm.GetConnectionStatusInput) *SsmGetConnectionStatusResult
+       GetConnectionStatus(ctx workflow.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error)
+       GetConnectionStatusAsync(ctx workflow.Context, input *ssm.GetConnectionStatusInput) *SsmGetConnectionStatusResult
 
-    GetDefaultPatchBaseline(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error)
-    GetDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) *SsmGetDefaultPatchBaselineResult
+       GetDefaultPatchBaseline(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error)
+       GetDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) *SsmGetDefaultPatchBaselineResult
 
-    GetDeployablePatchSnapshotForInstance(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error)
-    GetDeployablePatchSnapshotForInstanceAsync(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) *SsmGetDeployablePatchSnapshotForInstanceResult
+       GetDeployablePatchSnapshotForInstance(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error)
+       GetDeployablePatchSnapshotForInstanceAsync(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) *SsmGetDeployablePatchSnapshotForInstanceResult
 
-    GetDocument(ctx workflow.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error)
-    GetDocumentAsync(ctx workflow.Context, input *ssm.GetDocumentInput) *SsmGetDocumentResult
+       GetDocument(ctx workflow.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error)
+       GetDocumentAsync(ctx workflow.Context, input *ssm.GetDocumentInput) *SsmGetDocumentResult
 
-    GetInventory(ctx workflow.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error)
-    GetInventoryAsync(ctx workflow.Context, input *ssm.GetInventoryInput) *SsmGetInventoryResult
+       GetInventory(ctx workflow.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error)
+       GetInventoryAsync(ctx workflow.Context, input *ssm.GetInventoryInput) *SsmGetInventoryResult
 
-    GetInventorySchema(ctx workflow.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error)
-    GetInventorySchemaAsync(ctx workflow.Context, input *ssm.GetInventorySchemaInput) *SsmGetInventorySchemaResult
+       GetInventorySchema(ctx workflow.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error)
+       GetInventorySchemaAsync(ctx workflow.Context, input *ssm.GetInventorySchemaInput) *SsmGetInventorySchemaResult
 
-    GetMaintenanceWindow(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error)
-    GetMaintenanceWindowAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) *SsmGetMaintenanceWindowResult
+       GetMaintenanceWindow(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error)
+       GetMaintenanceWindowAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) *SsmGetMaintenanceWindowResult
 
-    GetMaintenanceWindowExecution(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error)
-    GetMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) *SsmGetMaintenanceWindowExecutionResult
+       GetMaintenanceWindowExecution(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error)
+       GetMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) *SsmGetMaintenanceWindowExecutionResult
 
-    GetMaintenanceWindowExecutionTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error)
-    GetMaintenanceWindowExecutionTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) *SsmGetMaintenanceWindowExecutionTaskResult
+       GetMaintenanceWindowExecutionTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error)
+       GetMaintenanceWindowExecutionTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) *SsmGetMaintenanceWindowExecutionTaskResult
 
-    GetMaintenanceWindowExecutionTaskInvocation(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error)
-    GetMaintenanceWindowExecutionTaskInvocationAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) *SsmGetMaintenanceWindowExecutionTaskInvocationResult
+       GetMaintenanceWindowExecutionTaskInvocation(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error)
+       GetMaintenanceWindowExecutionTaskInvocationAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) *SsmGetMaintenanceWindowExecutionTaskInvocationResult
 
-    GetMaintenanceWindowTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error)
-    GetMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) *SsmGetMaintenanceWindowTaskResult
+       GetMaintenanceWindowTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error)
+       GetMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) *SsmGetMaintenanceWindowTaskResult
 
-    GetOpsItem(ctx workflow.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error)
-    GetOpsItemAsync(ctx workflow.Context, input *ssm.GetOpsItemInput) *SsmGetOpsItemResult
+       GetOpsItem(ctx workflow.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error)
+       GetOpsItemAsync(ctx workflow.Context, input *ssm.GetOpsItemInput) *SsmGetOpsItemResult
 
-    GetOpsSummary(ctx workflow.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error)
-    GetOpsSummaryAsync(ctx workflow.Context, input *ssm.GetOpsSummaryInput) *SsmGetOpsSummaryResult
+       GetOpsSummary(ctx workflow.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error)
+       GetOpsSummaryAsync(ctx workflow.Context, input *ssm.GetOpsSummaryInput) *SsmGetOpsSummaryResult
 
-    GetParameter(ctx workflow.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error)
-    GetParameterAsync(ctx workflow.Context, input *ssm.GetParameterInput) *SsmGetParameterResult
+       GetParameter(ctx workflow.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error)
+       GetParameterAsync(ctx workflow.Context, input *ssm.GetParameterInput) *SsmGetParameterResult
 
-    GetParameterHistory(ctx workflow.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error)
-    GetParameterHistoryAsync(ctx workflow.Context, input *ssm.GetParameterHistoryInput) *SsmGetParameterHistoryResult
+       GetParameterHistory(ctx workflow.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error)
+       GetParameterHistoryAsync(ctx workflow.Context, input *ssm.GetParameterHistoryInput) *SsmGetParameterHistoryResult
 
-    GetParameters(ctx workflow.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error)
-    GetParametersAsync(ctx workflow.Context, input *ssm.GetParametersInput) *SsmGetParametersResult
+       GetParameters(ctx workflow.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error)
+       GetParametersAsync(ctx workflow.Context, input *ssm.GetParametersInput) *SsmGetParametersResult
 
-    GetParametersByPath(ctx workflow.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error)
-    GetParametersByPathAsync(ctx workflow.Context, input *ssm.GetParametersByPathInput) *SsmGetParametersByPathResult
+       GetParametersByPath(ctx workflow.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error)
+       GetParametersByPathAsync(ctx workflow.Context, input *ssm.GetParametersByPathInput) *SsmGetParametersByPathResult
 
-    GetPatchBaseline(ctx workflow.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error)
-    GetPatchBaselineAsync(ctx workflow.Context, input *ssm.GetPatchBaselineInput) *SsmGetPatchBaselineResult
+       GetPatchBaseline(ctx workflow.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error)
+       GetPatchBaselineAsync(ctx workflow.Context, input *ssm.GetPatchBaselineInput) *SsmGetPatchBaselineResult
 
-    GetPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error)
-    GetPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) *SsmGetPatchBaselineForPatchGroupResult
+       GetPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error)
+       GetPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) *SsmGetPatchBaselineForPatchGroupResult
 
-    GetServiceSetting(ctx workflow.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error)
-    GetServiceSettingAsync(ctx workflow.Context, input *ssm.GetServiceSettingInput) *SsmGetServiceSettingResult
+       GetServiceSetting(ctx workflow.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error)
+       GetServiceSettingAsync(ctx workflow.Context, input *ssm.GetServiceSettingInput) *SsmGetServiceSettingResult
 
-    LabelParameterVersion(ctx workflow.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error)
-    LabelParameterVersionAsync(ctx workflow.Context, input *ssm.LabelParameterVersionInput) *SsmLabelParameterVersionResult
+       LabelParameterVersion(ctx workflow.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error)
+       LabelParameterVersionAsync(ctx workflow.Context, input *ssm.LabelParameterVersionInput) *SsmLabelParameterVersionResult
 
-    ListAssociationVersions(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error)
-    ListAssociationVersionsAsync(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) *SsmListAssociationVersionsResult
+       ListAssociationVersions(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error)
+       ListAssociationVersionsAsync(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) *SsmListAssociationVersionsResult
 
-    ListAssociations(ctx workflow.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error)
-    ListAssociationsAsync(ctx workflow.Context, input *ssm.ListAssociationsInput) *SsmListAssociationsResult
+       ListAssociations(ctx workflow.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error)
+       ListAssociationsAsync(ctx workflow.Context, input *ssm.ListAssociationsInput) *SsmListAssociationsResult
 
-    ListCommandInvocations(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error)
-    ListCommandInvocationsAsync(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) *SsmListCommandInvocationsResult
+       ListCommandInvocations(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error)
+       ListCommandInvocationsAsync(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) *SsmListCommandInvocationsResult
 
-    ListCommands(ctx workflow.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error)
-    ListCommandsAsync(ctx workflow.Context, input *ssm.ListCommandsInput) *SsmListCommandsResult
+       ListCommands(ctx workflow.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error)
+       ListCommandsAsync(ctx workflow.Context, input *ssm.ListCommandsInput) *SsmListCommandsResult
 
-    ListComplianceItems(ctx workflow.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error)
-    ListComplianceItemsAsync(ctx workflow.Context, input *ssm.ListComplianceItemsInput) *SsmListComplianceItemsResult
+       ListComplianceItems(ctx workflow.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error)
+       ListComplianceItemsAsync(ctx workflow.Context, input *ssm.ListComplianceItemsInput) *SsmListComplianceItemsResult
 
-    ListComplianceSummaries(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error)
-    ListComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) *SsmListComplianceSummariesResult
+       ListComplianceSummaries(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error)
+       ListComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) *SsmListComplianceSummariesResult
 
-    ListDocumentVersions(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error)
-    ListDocumentVersionsAsync(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) *SsmListDocumentVersionsResult
+       ListDocumentVersions(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error)
+       ListDocumentVersionsAsync(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) *SsmListDocumentVersionsResult
 
-    ListDocuments(ctx workflow.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error)
-    ListDocumentsAsync(ctx workflow.Context, input *ssm.ListDocumentsInput) *SsmListDocumentsResult
+       ListDocuments(ctx workflow.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error)
+       ListDocumentsAsync(ctx workflow.Context, input *ssm.ListDocumentsInput) *SsmListDocumentsResult
 
-    ListInventoryEntries(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error)
-    ListInventoryEntriesAsync(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) *SsmListInventoryEntriesResult
+       ListInventoryEntries(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error)
+       ListInventoryEntriesAsync(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) *SsmListInventoryEntriesResult
 
-    ListResourceComplianceSummaries(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error)
-    ListResourceComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) *SsmListResourceComplianceSummariesResult
+       ListResourceComplianceSummaries(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error)
+       ListResourceComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) *SsmListResourceComplianceSummariesResult
 
-    ListResourceDataSync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error)
-    ListResourceDataSyncAsync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) *SsmListResourceDataSyncResult
+       ListResourceDataSync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error)
+       ListResourceDataSyncAsync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) *SsmListResourceDataSyncResult
 
-    ListTagsForResource(ctx workflow.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *ssm.ListTagsForResourceInput) *SsmListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *ssm.ListTagsForResourceInput) *SsmListTagsForResourceResult
 
-    ModifyDocumentPermission(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error)
-    ModifyDocumentPermissionAsync(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) *SsmModifyDocumentPermissionResult
+       ModifyDocumentPermission(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error)
+       ModifyDocumentPermissionAsync(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) *SsmModifyDocumentPermissionResult
 
-    PutComplianceItems(ctx workflow.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error)
-    PutComplianceItemsAsync(ctx workflow.Context, input *ssm.PutComplianceItemsInput) *SsmPutComplianceItemsResult
+       PutComplianceItems(ctx workflow.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error)
+       PutComplianceItemsAsync(ctx workflow.Context, input *ssm.PutComplianceItemsInput) *SsmPutComplianceItemsResult
 
-    PutInventory(ctx workflow.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error)
-    PutInventoryAsync(ctx workflow.Context, input *ssm.PutInventoryInput) *SsmPutInventoryResult
+       PutInventory(ctx workflow.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error)
+       PutInventoryAsync(ctx workflow.Context, input *ssm.PutInventoryInput) *SsmPutInventoryResult
 
-    PutParameter(ctx workflow.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error)
-    PutParameterAsync(ctx workflow.Context, input *ssm.PutParameterInput) *SsmPutParameterResult
+       PutParameter(ctx workflow.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error)
+       PutParameterAsync(ctx workflow.Context, input *ssm.PutParameterInput) *SsmPutParameterResult
 
-    RegisterDefaultPatchBaseline(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error)
-    RegisterDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) *SsmRegisterDefaultPatchBaselineResult
+       RegisterDefaultPatchBaseline(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error)
+       RegisterDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) *SsmRegisterDefaultPatchBaselineResult
 
-    RegisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error)
-    RegisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) *SsmRegisterPatchBaselineForPatchGroupResult
+       RegisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error)
+       RegisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) *SsmRegisterPatchBaselineForPatchGroupResult
 
-    RegisterTargetWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error)
-    RegisterTargetWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) *SsmRegisterTargetWithMaintenanceWindowResult
+       RegisterTargetWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error)
+       RegisterTargetWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) *SsmRegisterTargetWithMaintenanceWindowResult
 
-    RegisterTaskWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error)
-    RegisterTaskWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) *SsmRegisterTaskWithMaintenanceWindowResult
+       RegisterTaskWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error)
+       RegisterTaskWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) *SsmRegisterTaskWithMaintenanceWindowResult
 
-    RemoveTagsFromResource(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error)
-    RemoveTagsFromResourceAsync(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) *SsmRemoveTagsFromResourceResult
+       RemoveTagsFromResource(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error)
+       RemoveTagsFromResourceAsync(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) *SsmRemoveTagsFromResourceResult
 
-    ResetServiceSetting(ctx workflow.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error)
-    ResetServiceSettingAsync(ctx workflow.Context, input *ssm.ResetServiceSettingInput) *SsmResetServiceSettingResult
+       ResetServiceSetting(ctx workflow.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error)
+       ResetServiceSettingAsync(ctx workflow.Context, input *ssm.ResetServiceSettingInput) *SsmResetServiceSettingResult
 
-    ResumeSession(ctx workflow.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error)
-    ResumeSessionAsync(ctx workflow.Context, input *ssm.ResumeSessionInput) *SsmResumeSessionResult
+       ResumeSession(ctx workflow.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error)
+       ResumeSessionAsync(ctx workflow.Context, input *ssm.ResumeSessionInput) *SsmResumeSessionResult
 
-    SendAutomationSignal(ctx workflow.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error)
-    SendAutomationSignalAsync(ctx workflow.Context, input *ssm.SendAutomationSignalInput) *SsmSendAutomationSignalResult
+       SendAutomationSignal(ctx workflow.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error)
+       SendAutomationSignalAsync(ctx workflow.Context, input *ssm.SendAutomationSignalInput) *SsmSendAutomationSignalResult
 
-    SendCommand(ctx workflow.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error)
-    SendCommandAsync(ctx workflow.Context, input *ssm.SendCommandInput) *SsmSendCommandResult
+       SendCommand(ctx workflow.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error)
+       SendCommandAsync(ctx workflow.Context, input *ssm.SendCommandInput) *SsmSendCommandResult
 
-    StartAssociationsOnce(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error)
-    StartAssociationsOnceAsync(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) *SsmStartAssociationsOnceResult
+       StartAssociationsOnce(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error)
+       StartAssociationsOnceAsync(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) *SsmStartAssociationsOnceResult
 
-    StartAutomationExecution(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error)
-    StartAutomationExecutionAsync(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) *SsmStartAutomationExecutionResult
+       StartAutomationExecution(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error)
+       StartAutomationExecutionAsync(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) *SsmStartAutomationExecutionResult
 
-    StartSession(ctx workflow.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error)
-    StartSessionAsync(ctx workflow.Context, input *ssm.StartSessionInput) *SsmStartSessionResult
+       StartSession(ctx workflow.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error)
+       StartSessionAsync(ctx workflow.Context, input *ssm.StartSessionInput) *SsmStartSessionResult
 
-    StopAutomationExecution(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error)
-    StopAutomationExecutionAsync(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) *SsmStopAutomationExecutionResult
+       StopAutomationExecution(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error)
+       StopAutomationExecutionAsync(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) *SsmStopAutomationExecutionResult
 
-    TerminateSession(ctx workflow.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error)
-    TerminateSessionAsync(ctx workflow.Context, input *ssm.TerminateSessionInput) *SsmTerminateSessionResult
+       TerminateSession(ctx workflow.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error)
+       TerminateSessionAsync(ctx workflow.Context, input *ssm.TerminateSessionInput) *SsmTerminateSessionResult
 
-    UpdateAssociation(ctx workflow.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error)
-    UpdateAssociationAsync(ctx workflow.Context, input *ssm.UpdateAssociationInput) *SsmUpdateAssociationResult
+       UpdateAssociation(ctx workflow.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error)
+       UpdateAssociationAsync(ctx workflow.Context, input *ssm.UpdateAssociationInput) *SsmUpdateAssociationResult
 
-    UpdateAssociationStatus(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error)
-    UpdateAssociationStatusAsync(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) *SsmUpdateAssociationStatusResult
+       UpdateAssociationStatus(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error)
+       UpdateAssociationStatusAsync(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) *SsmUpdateAssociationStatusResult
 
-    UpdateDocument(ctx workflow.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error)
-    UpdateDocumentAsync(ctx workflow.Context, input *ssm.UpdateDocumentInput) *SsmUpdateDocumentResult
+       UpdateDocument(ctx workflow.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error)
+       UpdateDocumentAsync(ctx workflow.Context, input *ssm.UpdateDocumentInput) *SsmUpdateDocumentResult
 
-    UpdateDocumentDefaultVersion(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error)
-    UpdateDocumentDefaultVersionAsync(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) *SsmUpdateDocumentDefaultVersionResult
+       UpdateDocumentDefaultVersion(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error)
+       UpdateDocumentDefaultVersionAsync(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) *SsmUpdateDocumentDefaultVersionResult
 
-    UpdateMaintenanceWindow(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error)
-    UpdateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) *SsmUpdateMaintenanceWindowResult
+       UpdateMaintenanceWindow(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error)
+       UpdateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) *SsmUpdateMaintenanceWindowResult
 
-    UpdateMaintenanceWindowTarget(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error)
-    UpdateMaintenanceWindowTargetAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) *SsmUpdateMaintenanceWindowTargetResult
+       UpdateMaintenanceWindowTarget(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error)
+       UpdateMaintenanceWindowTargetAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) *SsmUpdateMaintenanceWindowTargetResult
 
-    UpdateMaintenanceWindowTask(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error)
-    UpdateMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) *SsmUpdateMaintenanceWindowTaskResult
+       UpdateMaintenanceWindowTask(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error)
+       UpdateMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) *SsmUpdateMaintenanceWindowTaskResult
 
-    UpdateManagedInstanceRole(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error)
-    UpdateManagedInstanceRoleAsync(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) *SsmUpdateManagedInstanceRoleResult
+       UpdateManagedInstanceRole(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error)
+       UpdateManagedInstanceRoleAsync(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) *SsmUpdateManagedInstanceRoleResult
 
-    UpdateOpsItem(ctx workflow.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error)
-    UpdateOpsItemAsync(ctx workflow.Context, input *ssm.UpdateOpsItemInput) *SsmUpdateOpsItemResult
+       UpdateOpsItem(ctx workflow.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error)
+       UpdateOpsItemAsync(ctx workflow.Context, input *ssm.UpdateOpsItemInput) *SsmUpdateOpsItemResult
 
-    UpdatePatchBaseline(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error)
-    UpdatePatchBaselineAsync(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) *SsmUpdatePatchBaselineResult
+       UpdatePatchBaseline(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error)
+       UpdatePatchBaselineAsync(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) *SsmUpdatePatchBaselineResult
 
-    UpdateResourceDataSync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error)
-    UpdateResourceDataSyncAsync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) *SsmUpdateResourceDataSyncResult
+       UpdateResourceDataSync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error)
+       UpdateResourceDataSyncAsync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) *SsmUpdateResourceDataSyncResult
 
-    UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
-    UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
+       UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
+       UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
 
-    WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error}
+       WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error}
 
 type SsmAddTagsToResourceResult struct {
 	Result workflow.Future

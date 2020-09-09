@@ -7,234 +7,234 @@ import (
 )
 
 type OpsWorksClient interface {
-    AssignInstance(ctx workflow.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error)
-    AssignInstanceAsync(ctx workflow.Context, input *opsworks.AssignInstanceInput) *OpsworksAssignInstanceResult
+       AssignInstance(ctx workflow.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error)
+       AssignInstanceAsync(ctx workflow.Context, input *opsworks.AssignInstanceInput) *OpsworksAssignInstanceResult
 
-    AssignVolume(ctx workflow.Context, input *opsworks.AssignVolumeInput) (*opsworks.AssignVolumeOutput, error)
-    AssignVolumeAsync(ctx workflow.Context, input *opsworks.AssignVolumeInput) *OpsworksAssignVolumeResult
+       AssignVolume(ctx workflow.Context, input *opsworks.AssignVolumeInput) (*opsworks.AssignVolumeOutput, error)
+       AssignVolumeAsync(ctx workflow.Context, input *opsworks.AssignVolumeInput) *OpsworksAssignVolumeResult
 
-    AssociateElasticIp(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) (*opsworks.AssociateElasticIpOutput, error)
-    AssociateElasticIpAsync(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) *OpsworksAssociateElasticIpResult
+       AssociateElasticIp(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) (*opsworks.AssociateElasticIpOutput, error)
+       AssociateElasticIpAsync(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) *OpsworksAssociateElasticIpResult
 
-    AttachElasticLoadBalancer(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) (*opsworks.AttachElasticLoadBalancerOutput, error)
-    AttachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) *OpsworksAttachElasticLoadBalancerResult
+       AttachElasticLoadBalancer(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) (*opsworks.AttachElasticLoadBalancerOutput, error)
+       AttachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) *OpsworksAttachElasticLoadBalancerResult
 
-    CloneStack(ctx workflow.Context, input *opsworks.CloneStackInput) (*opsworks.CloneStackOutput, error)
-    CloneStackAsync(ctx workflow.Context, input *opsworks.CloneStackInput) *OpsworksCloneStackResult
+       CloneStack(ctx workflow.Context, input *opsworks.CloneStackInput) (*opsworks.CloneStackOutput, error)
+       CloneStackAsync(ctx workflow.Context, input *opsworks.CloneStackInput) *OpsworksCloneStackResult
 
-    CreateApp(ctx workflow.Context, input *opsworks.CreateAppInput) (*opsworks.CreateAppOutput, error)
-    CreateAppAsync(ctx workflow.Context, input *opsworks.CreateAppInput) *OpsworksCreateAppResult
+       CreateApp(ctx workflow.Context, input *opsworks.CreateAppInput) (*opsworks.CreateAppOutput, error)
+       CreateAppAsync(ctx workflow.Context, input *opsworks.CreateAppInput) *OpsworksCreateAppResult
 
-    CreateDeployment(ctx workflow.Context, input *opsworks.CreateDeploymentInput) (*opsworks.CreateDeploymentOutput, error)
-    CreateDeploymentAsync(ctx workflow.Context, input *opsworks.CreateDeploymentInput) *OpsworksCreateDeploymentResult
+       CreateDeployment(ctx workflow.Context, input *opsworks.CreateDeploymentInput) (*opsworks.CreateDeploymentOutput, error)
+       CreateDeploymentAsync(ctx workflow.Context, input *opsworks.CreateDeploymentInput) *OpsworksCreateDeploymentResult
 
-    CreateInstance(ctx workflow.Context, input *opsworks.CreateInstanceInput) (*opsworks.CreateInstanceOutput, error)
-    CreateInstanceAsync(ctx workflow.Context, input *opsworks.CreateInstanceInput) *OpsworksCreateInstanceResult
+       CreateInstance(ctx workflow.Context, input *opsworks.CreateInstanceInput) (*opsworks.CreateInstanceOutput, error)
+       CreateInstanceAsync(ctx workflow.Context, input *opsworks.CreateInstanceInput) *OpsworksCreateInstanceResult
 
-    CreateLayer(ctx workflow.Context, input *opsworks.CreateLayerInput) (*opsworks.CreateLayerOutput, error)
-    CreateLayerAsync(ctx workflow.Context, input *opsworks.CreateLayerInput) *OpsworksCreateLayerResult
+       CreateLayer(ctx workflow.Context, input *opsworks.CreateLayerInput) (*opsworks.CreateLayerOutput, error)
+       CreateLayerAsync(ctx workflow.Context, input *opsworks.CreateLayerInput) *OpsworksCreateLayerResult
 
-    CreateStack(ctx workflow.Context, input *opsworks.CreateStackInput) (*opsworks.CreateStackOutput, error)
-    CreateStackAsync(ctx workflow.Context, input *opsworks.CreateStackInput) *OpsworksCreateStackResult
+       CreateStack(ctx workflow.Context, input *opsworks.CreateStackInput) (*opsworks.CreateStackOutput, error)
+       CreateStackAsync(ctx workflow.Context, input *opsworks.CreateStackInput) *OpsworksCreateStackResult
 
-    CreateUserProfile(ctx workflow.Context, input *opsworks.CreateUserProfileInput) (*opsworks.CreateUserProfileOutput, error)
-    CreateUserProfileAsync(ctx workflow.Context, input *opsworks.CreateUserProfileInput) *OpsworksCreateUserProfileResult
+       CreateUserProfile(ctx workflow.Context, input *opsworks.CreateUserProfileInput) (*opsworks.CreateUserProfileOutput, error)
+       CreateUserProfileAsync(ctx workflow.Context, input *opsworks.CreateUserProfileInput) *OpsworksCreateUserProfileResult
 
-    DeleteApp(ctx workflow.Context, input *opsworks.DeleteAppInput) (*opsworks.DeleteAppOutput, error)
-    DeleteAppAsync(ctx workflow.Context, input *opsworks.DeleteAppInput) *OpsworksDeleteAppResult
+       DeleteApp(ctx workflow.Context, input *opsworks.DeleteAppInput) (*opsworks.DeleteAppOutput, error)
+       DeleteAppAsync(ctx workflow.Context, input *opsworks.DeleteAppInput) *OpsworksDeleteAppResult
 
-    DeleteInstance(ctx workflow.Context, input *opsworks.DeleteInstanceInput) (*opsworks.DeleteInstanceOutput, error)
-    DeleteInstanceAsync(ctx workflow.Context, input *opsworks.DeleteInstanceInput) *OpsworksDeleteInstanceResult
+       DeleteInstance(ctx workflow.Context, input *opsworks.DeleteInstanceInput) (*opsworks.DeleteInstanceOutput, error)
+       DeleteInstanceAsync(ctx workflow.Context, input *opsworks.DeleteInstanceInput) *OpsworksDeleteInstanceResult
 
-    DeleteLayer(ctx workflow.Context, input *opsworks.DeleteLayerInput) (*opsworks.DeleteLayerOutput, error)
-    DeleteLayerAsync(ctx workflow.Context, input *opsworks.DeleteLayerInput) *OpsworksDeleteLayerResult
+       DeleteLayer(ctx workflow.Context, input *opsworks.DeleteLayerInput) (*opsworks.DeleteLayerOutput, error)
+       DeleteLayerAsync(ctx workflow.Context, input *opsworks.DeleteLayerInput) *OpsworksDeleteLayerResult
 
-    DeleteStack(ctx workflow.Context, input *opsworks.DeleteStackInput) (*opsworks.DeleteStackOutput, error)
-    DeleteStackAsync(ctx workflow.Context, input *opsworks.DeleteStackInput) *OpsworksDeleteStackResult
+       DeleteStack(ctx workflow.Context, input *opsworks.DeleteStackInput) (*opsworks.DeleteStackOutput, error)
+       DeleteStackAsync(ctx workflow.Context, input *opsworks.DeleteStackInput) *OpsworksDeleteStackResult
 
-    DeleteUserProfile(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) (*opsworks.DeleteUserProfileOutput, error)
-    DeleteUserProfileAsync(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) *OpsworksDeleteUserProfileResult
+       DeleteUserProfile(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) (*opsworks.DeleteUserProfileOutput, error)
+       DeleteUserProfileAsync(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) *OpsworksDeleteUserProfileResult
 
-    DeregisterEcsCluster(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) (*opsworks.DeregisterEcsClusterOutput, error)
-    DeregisterEcsClusterAsync(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) *OpsworksDeregisterEcsClusterResult
+       DeregisterEcsCluster(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) (*opsworks.DeregisterEcsClusterOutput, error)
+       DeregisterEcsClusterAsync(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) *OpsworksDeregisterEcsClusterResult
 
-    DeregisterElasticIp(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) (*opsworks.DeregisterElasticIpOutput, error)
-    DeregisterElasticIpAsync(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) *OpsworksDeregisterElasticIpResult
+       DeregisterElasticIp(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) (*opsworks.DeregisterElasticIpOutput, error)
+       DeregisterElasticIpAsync(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) *OpsworksDeregisterElasticIpResult
 
-    DeregisterInstance(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) (*opsworks.DeregisterInstanceOutput, error)
-    DeregisterInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) *OpsworksDeregisterInstanceResult
+       DeregisterInstance(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) (*opsworks.DeregisterInstanceOutput, error)
+       DeregisterInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) *OpsworksDeregisterInstanceResult
 
-    DeregisterRdsDbInstance(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) (*opsworks.DeregisterRdsDbInstanceOutput, error)
-    DeregisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) *OpsworksDeregisterRdsDbInstanceResult
+       DeregisterRdsDbInstance(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) (*opsworks.DeregisterRdsDbInstanceOutput, error)
+       DeregisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) *OpsworksDeregisterRdsDbInstanceResult
 
-    DeregisterVolume(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) (*opsworks.DeregisterVolumeOutput, error)
-    DeregisterVolumeAsync(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) *OpsworksDeregisterVolumeResult
+       DeregisterVolume(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) (*opsworks.DeregisterVolumeOutput, error)
+       DeregisterVolumeAsync(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) *OpsworksDeregisterVolumeResult
 
-    DescribeAgentVersions(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) (*opsworks.DescribeAgentVersionsOutput, error)
-    DescribeAgentVersionsAsync(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) *OpsworksDescribeAgentVersionsResult
+       DescribeAgentVersions(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) (*opsworks.DescribeAgentVersionsOutput, error)
+       DescribeAgentVersionsAsync(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) *OpsworksDescribeAgentVersionsResult
 
-    DescribeApps(ctx workflow.Context, input *opsworks.DescribeAppsInput) (*opsworks.DescribeAppsOutput, error)
-    DescribeAppsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *OpsworksDescribeAppsResult
+       DescribeApps(ctx workflow.Context, input *opsworks.DescribeAppsInput) (*opsworks.DescribeAppsOutput, error)
+       DescribeAppsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *OpsworksDescribeAppsResult
 
-    DescribeCommands(ctx workflow.Context, input *opsworks.DescribeCommandsInput) (*opsworks.DescribeCommandsOutput, error)
-    DescribeCommandsAsync(ctx workflow.Context, input *opsworks.DescribeCommandsInput) *OpsworksDescribeCommandsResult
+       DescribeCommands(ctx workflow.Context, input *opsworks.DescribeCommandsInput) (*opsworks.DescribeCommandsOutput, error)
+       DescribeCommandsAsync(ctx workflow.Context, input *opsworks.DescribeCommandsInput) *OpsworksDescribeCommandsResult
 
-    DescribeDeployments(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) (*opsworks.DescribeDeploymentsOutput, error)
-    DescribeDeploymentsAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *OpsworksDescribeDeploymentsResult
+       DescribeDeployments(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) (*opsworks.DescribeDeploymentsOutput, error)
+       DescribeDeploymentsAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *OpsworksDescribeDeploymentsResult
 
-    DescribeEcsClusters(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) (*opsworks.DescribeEcsClustersOutput, error)
-    DescribeEcsClustersAsync(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) *OpsworksDescribeEcsClustersResult
+       DescribeEcsClusters(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) (*opsworks.DescribeEcsClustersOutput, error)
+       DescribeEcsClustersAsync(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) *OpsworksDescribeEcsClustersResult
 
-    DescribeElasticIps(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) (*opsworks.DescribeElasticIpsOutput, error)
-    DescribeElasticIpsAsync(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) *OpsworksDescribeElasticIpsResult
+       DescribeElasticIps(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) (*opsworks.DescribeElasticIpsOutput, error)
+       DescribeElasticIpsAsync(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) *OpsworksDescribeElasticIpsResult
 
-    DescribeElasticLoadBalancers(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) (*opsworks.DescribeElasticLoadBalancersOutput, error)
-    DescribeElasticLoadBalancersAsync(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) *OpsworksDescribeElasticLoadBalancersResult
+       DescribeElasticLoadBalancers(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) (*opsworks.DescribeElasticLoadBalancersOutput, error)
+       DescribeElasticLoadBalancersAsync(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) *OpsworksDescribeElasticLoadBalancersResult
 
-    DescribeInstances(ctx workflow.Context, input *opsworks.DescribeInstancesInput) (*opsworks.DescribeInstancesOutput, error)
-    DescribeInstancesAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *OpsworksDescribeInstancesResult
+       DescribeInstances(ctx workflow.Context, input *opsworks.DescribeInstancesInput) (*opsworks.DescribeInstancesOutput, error)
+       DescribeInstancesAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *OpsworksDescribeInstancesResult
 
-    DescribeLayers(ctx workflow.Context, input *opsworks.DescribeLayersInput) (*opsworks.DescribeLayersOutput, error)
-    DescribeLayersAsync(ctx workflow.Context, input *opsworks.DescribeLayersInput) *OpsworksDescribeLayersResult
+       DescribeLayers(ctx workflow.Context, input *opsworks.DescribeLayersInput) (*opsworks.DescribeLayersOutput, error)
+       DescribeLayersAsync(ctx workflow.Context, input *opsworks.DescribeLayersInput) *OpsworksDescribeLayersResult
 
-    DescribeLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) (*opsworks.DescribeLoadBasedAutoScalingOutput, error)
-    DescribeLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) *OpsworksDescribeLoadBasedAutoScalingResult
+       DescribeLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) (*opsworks.DescribeLoadBasedAutoScalingOutput, error)
+       DescribeLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) *OpsworksDescribeLoadBasedAutoScalingResult
 
-    DescribeMyUserProfile(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) (*opsworks.DescribeMyUserProfileOutput, error)
-    DescribeMyUserProfileAsync(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) *OpsworksDescribeMyUserProfileResult
+       DescribeMyUserProfile(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) (*opsworks.DescribeMyUserProfileOutput, error)
+       DescribeMyUserProfileAsync(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) *OpsworksDescribeMyUserProfileResult
 
-    DescribeOperatingSystems(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error)
-    DescribeOperatingSystemsAsync(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) *OpsworksDescribeOperatingSystemsResult
+       DescribeOperatingSystems(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error)
+       DescribeOperatingSystemsAsync(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) *OpsworksDescribeOperatingSystemsResult
 
-    DescribePermissions(ctx workflow.Context, input *opsworks.DescribePermissionsInput) (*opsworks.DescribePermissionsOutput, error)
-    DescribePermissionsAsync(ctx workflow.Context, input *opsworks.DescribePermissionsInput) *OpsworksDescribePermissionsResult
+       DescribePermissions(ctx workflow.Context, input *opsworks.DescribePermissionsInput) (*opsworks.DescribePermissionsOutput, error)
+       DescribePermissionsAsync(ctx workflow.Context, input *opsworks.DescribePermissionsInput) *OpsworksDescribePermissionsResult
 
-    DescribeRaidArrays(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) (*opsworks.DescribeRaidArraysOutput, error)
-    DescribeRaidArraysAsync(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) *OpsworksDescribeRaidArraysResult
+       DescribeRaidArrays(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) (*opsworks.DescribeRaidArraysOutput, error)
+       DescribeRaidArraysAsync(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) *OpsworksDescribeRaidArraysResult
 
-    DescribeRdsDbInstances(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) (*opsworks.DescribeRdsDbInstancesOutput, error)
-    DescribeRdsDbInstancesAsync(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) *OpsworksDescribeRdsDbInstancesResult
+       DescribeRdsDbInstances(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) (*opsworks.DescribeRdsDbInstancesOutput, error)
+       DescribeRdsDbInstancesAsync(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) *OpsworksDescribeRdsDbInstancesResult
 
-    DescribeServiceErrors(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) (*opsworks.DescribeServiceErrorsOutput, error)
-    DescribeServiceErrorsAsync(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) *OpsworksDescribeServiceErrorsResult
+       DescribeServiceErrors(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) (*opsworks.DescribeServiceErrorsOutput, error)
+       DescribeServiceErrorsAsync(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) *OpsworksDescribeServiceErrorsResult
 
-    DescribeStackProvisioningParameters(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) (*opsworks.DescribeStackProvisioningParametersOutput, error)
-    DescribeStackProvisioningParametersAsync(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) *OpsworksDescribeStackProvisioningParametersResult
+       DescribeStackProvisioningParameters(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) (*opsworks.DescribeStackProvisioningParametersOutput, error)
+       DescribeStackProvisioningParametersAsync(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) *OpsworksDescribeStackProvisioningParametersResult
 
-    DescribeStackSummary(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) (*opsworks.DescribeStackSummaryOutput, error)
-    DescribeStackSummaryAsync(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) *OpsworksDescribeStackSummaryResult
+       DescribeStackSummary(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) (*opsworks.DescribeStackSummaryOutput, error)
+       DescribeStackSummaryAsync(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) *OpsworksDescribeStackSummaryResult
 
-    DescribeStacks(ctx workflow.Context, input *opsworks.DescribeStacksInput) (*opsworks.DescribeStacksOutput, error)
-    DescribeStacksAsync(ctx workflow.Context, input *opsworks.DescribeStacksInput) *OpsworksDescribeStacksResult
+       DescribeStacks(ctx workflow.Context, input *opsworks.DescribeStacksInput) (*opsworks.DescribeStacksOutput, error)
+       DescribeStacksAsync(ctx workflow.Context, input *opsworks.DescribeStacksInput) *OpsworksDescribeStacksResult
 
-    DescribeTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) (*opsworks.DescribeTimeBasedAutoScalingOutput, error)
-    DescribeTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) *OpsworksDescribeTimeBasedAutoScalingResult
+       DescribeTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) (*opsworks.DescribeTimeBasedAutoScalingOutput, error)
+       DescribeTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) *OpsworksDescribeTimeBasedAutoScalingResult
 
-    DescribeUserProfiles(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) (*opsworks.DescribeUserProfilesOutput, error)
-    DescribeUserProfilesAsync(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) *OpsworksDescribeUserProfilesResult
+       DescribeUserProfiles(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) (*opsworks.DescribeUserProfilesOutput, error)
+       DescribeUserProfilesAsync(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) *OpsworksDescribeUserProfilesResult
 
-    DescribeVolumes(ctx workflow.Context, input *opsworks.DescribeVolumesInput) (*opsworks.DescribeVolumesOutput, error)
-    DescribeVolumesAsync(ctx workflow.Context, input *opsworks.DescribeVolumesInput) *OpsworksDescribeVolumesResult
+       DescribeVolumes(ctx workflow.Context, input *opsworks.DescribeVolumesInput) (*opsworks.DescribeVolumesOutput, error)
+       DescribeVolumesAsync(ctx workflow.Context, input *opsworks.DescribeVolumesInput) *OpsworksDescribeVolumesResult
 
-    DetachElasticLoadBalancer(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) (*opsworks.DetachElasticLoadBalancerOutput, error)
-    DetachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) *OpsworksDetachElasticLoadBalancerResult
+       DetachElasticLoadBalancer(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) (*opsworks.DetachElasticLoadBalancerOutput, error)
+       DetachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) *OpsworksDetachElasticLoadBalancerResult
 
-    DisassociateElasticIp(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) (*opsworks.DisassociateElasticIpOutput, error)
-    DisassociateElasticIpAsync(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) *OpsworksDisassociateElasticIpResult
+       DisassociateElasticIp(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) (*opsworks.DisassociateElasticIpOutput, error)
+       DisassociateElasticIpAsync(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) *OpsworksDisassociateElasticIpResult
 
-    GetHostnameSuggestion(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) (*opsworks.GetHostnameSuggestionOutput, error)
-    GetHostnameSuggestionAsync(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) *OpsworksGetHostnameSuggestionResult
+       GetHostnameSuggestion(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) (*opsworks.GetHostnameSuggestionOutput, error)
+       GetHostnameSuggestionAsync(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) *OpsworksGetHostnameSuggestionResult
 
-    GrantAccess(ctx workflow.Context, input *opsworks.GrantAccessInput) (*opsworks.GrantAccessOutput, error)
-    GrantAccessAsync(ctx workflow.Context, input *opsworks.GrantAccessInput) *OpsworksGrantAccessResult
+       GrantAccess(ctx workflow.Context, input *opsworks.GrantAccessInput) (*opsworks.GrantAccessOutput, error)
+       GrantAccessAsync(ctx workflow.Context, input *opsworks.GrantAccessInput) *OpsworksGrantAccessResult
 
-    ListTags(ctx workflow.Context, input *opsworks.ListTagsInput) (*opsworks.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *opsworks.ListTagsInput) *OpsworksListTagsResult
+       ListTags(ctx workflow.Context, input *opsworks.ListTagsInput) (*opsworks.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *opsworks.ListTagsInput) *OpsworksListTagsResult
 
-    RebootInstance(ctx workflow.Context, input *opsworks.RebootInstanceInput) (*opsworks.RebootInstanceOutput, error)
-    RebootInstanceAsync(ctx workflow.Context, input *opsworks.RebootInstanceInput) *OpsworksRebootInstanceResult
+       RebootInstance(ctx workflow.Context, input *opsworks.RebootInstanceInput) (*opsworks.RebootInstanceOutput, error)
+       RebootInstanceAsync(ctx workflow.Context, input *opsworks.RebootInstanceInput) *OpsworksRebootInstanceResult
 
-    RegisterEcsCluster(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) (*opsworks.RegisterEcsClusterOutput, error)
-    RegisterEcsClusterAsync(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) *OpsworksRegisterEcsClusterResult
+       RegisterEcsCluster(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) (*opsworks.RegisterEcsClusterOutput, error)
+       RegisterEcsClusterAsync(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) *OpsworksRegisterEcsClusterResult
 
-    RegisterElasticIp(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) (*opsworks.RegisterElasticIpOutput, error)
-    RegisterElasticIpAsync(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) *OpsworksRegisterElasticIpResult
+       RegisterElasticIp(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) (*opsworks.RegisterElasticIpOutput, error)
+       RegisterElasticIpAsync(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) *OpsworksRegisterElasticIpResult
 
-    RegisterInstance(ctx workflow.Context, input *opsworks.RegisterInstanceInput) (*opsworks.RegisterInstanceOutput, error)
-    RegisterInstanceAsync(ctx workflow.Context, input *opsworks.RegisterInstanceInput) *OpsworksRegisterInstanceResult
+       RegisterInstance(ctx workflow.Context, input *opsworks.RegisterInstanceInput) (*opsworks.RegisterInstanceOutput, error)
+       RegisterInstanceAsync(ctx workflow.Context, input *opsworks.RegisterInstanceInput) *OpsworksRegisterInstanceResult
 
-    RegisterRdsDbInstance(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) (*opsworks.RegisterRdsDbInstanceOutput, error)
-    RegisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) *OpsworksRegisterRdsDbInstanceResult
+       RegisterRdsDbInstance(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) (*opsworks.RegisterRdsDbInstanceOutput, error)
+       RegisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) *OpsworksRegisterRdsDbInstanceResult
 
-    RegisterVolume(ctx workflow.Context, input *opsworks.RegisterVolumeInput) (*opsworks.RegisterVolumeOutput, error)
-    RegisterVolumeAsync(ctx workflow.Context, input *opsworks.RegisterVolumeInput) *OpsworksRegisterVolumeResult
+       RegisterVolume(ctx workflow.Context, input *opsworks.RegisterVolumeInput) (*opsworks.RegisterVolumeOutput, error)
+       RegisterVolumeAsync(ctx workflow.Context, input *opsworks.RegisterVolumeInput) *OpsworksRegisterVolumeResult
 
-    SetLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) (*opsworks.SetLoadBasedAutoScalingOutput, error)
-    SetLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) *OpsworksSetLoadBasedAutoScalingResult
+       SetLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) (*opsworks.SetLoadBasedAutoScalingOutput, error)
+       SetLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) *OpsworksSetLoadBasedAutoScalingResult
 
-    SetPermission(ctx workflow.Context, input *opsworks.SetPermissionInput) (*opsworks.SetPermissionOutput, error)
-    SetPermissionAsync(ctx workflow.Context, input *opsworks.SetPermissionInput) *OpsworksSetPermissionResult
+       SetPermission(ctx workflow.Context, input *opsworks.SetPermissionInput) (*opsworks.SetPermissionOutput, error)
+       SetPermissionAsync(ctx workflow.Context, input *opsworks.SetPermissionInput) *OpsworksSetPermissionResult
 
-    SetTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) (*opsworks.SetTimeBasedAutoScalingOutput, error)
-    SetTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) *OpsworksSetTimeBasedAutoScalingResult
+       SetTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) (*opsworks.SetTimeBasedAutoScalingOutput, error)
+       SetTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) *OpsworksSetTimeBasedAutoScalingResult
 
-    StartInstance(ctx workflow.Context, input *opsworks.StartInstanceInput) (*opsworks.StartInstanceOutput, error)
-    StartInstanceAsync(ctx workflow.Context, input *opsworks.StartInstanceInput) *OpsworksStartInstanceResult
+       StartInstance(ctx workflow.Context, input *opsworks.StartInstanceInput) (*opsworks.StartInstanceOutput, error)
+       StartInstanceAsync(ctx workflow.Context, input *opsworks.StartInstanceInput) *OpsworksStartInstanceResult
 
-    StartStack(ctx workflow.Context, input *opsworks.StartStackInput) (*opsworks.StartStackOutput, error)
-    StartStackAsync(ctx workflow.Context, input *opsworks.StartStackInput) *OpsworksStartStackResult
+       StartStack(ctx workflow.Context, input *opsworks.StartStackInput) (*opsworks.StartStackOutput, error)
+       StartStackAsync(ctx workflow.Context, input *opsworks.StartStackInput) *OpsworksStartStackResult
 
-    StopInstance(ctx workflow.Context, input *opsworks.StopInstanceInput) (*opsworks.StopInstanceOutput, error)
-    StopInstanceAsync(ctx workflow.Context, input *opsworks.StopInstanceInput) *OpsworksStopInstanceResult
+       StopInstance(ctx workflow.Context, input *opsworks.StopInstanceInput) (*opsworks.StopInstanceOutput, error)
+       StopInstanceAsync(ctx workflow.Context, input *opsworks.StopInstanceInput) *OpsworksStopInstanceResult
 
-    StopStack(ctx workflow.Context, input *opsworks.StopStackInput) (*opsworks.StopStackOutput, error)
-    StopStackAsync(ctx workflow.Context, input *opsworks.StopStackInput) *OpsworksStopStackResult
+       StopStack(ctx workflow.Context, input *opsworks.StopStackInput) (*opsworks.StopStackOutput, error)
+       StopStackAsync(ctx workflow.Context, input *opsworks.StopStackInput) *OpsworksStopStackResult
 
-    TagResource(ctx workflow.Context, input *opsworks.TagResourceInput) (*opsworks.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *opsworks.TagResourceInput) *OpsworksTagResourceResult
+       TagResource(ctx workflow.Context, input *opsworks.TagResourceInput) (*opsworks.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *opsworks.TagResourceInput) *OpsworksTagResourceResult
 
-    UnassignInstance(ctx workflow.Context, input *opsworks.UnassignInstanceInput) (*opsworks.UnassignInstanceOutput, error)
-    UnassignInstanceAsync(ctx workflow.Context, input *opsworks.UnassignInstanceInput) *OpsworksUnassignInstanceResult
+       UnassignInstance(ctx workflow.Context, input *opsworks.UnassignInstanceInput) (*opsworks.UnassignInstanceOutput, error)
+       UnassignInstanceAsync(ctx workflow.Context, input *opsworks.UnassignInstanceInput) *OpsworksUnassignInstanceResult
 
-    UnassignVolume(ctx workflow.Context, input *opsworks.UnassignVolumeInput) (*opsworks.UnassignVolumeOutput, error)
-    UnassignVolumeAsync(ctx workflow.Context, input *opsworks.UnassignVolumeInput) *OpsworksUnassignVolumeResult
+       UnassignVolume(ctx workflow.Context, input *opsworks.UnassignVolumeInput) (*opsworks.UnassignVolumeOutput, error)
+       UnassignVolumeAsync(ctx workflow.Context, input *opsworks.UnassignVolumeInput) *OpsworksUnassignVolumeResult
 
-    UntagResource(ctx workflow.Context, input *opsworks.UntagResourceInput) (*opsworks.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *opsworks.UntagResourceInput) *OpsworksUntagResourceResult
+       UntagResource(ctx workflow.Context, input *opsworks.UntagResourceInput) (*opsworks.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *opsworks.UntagResourceInput) *OpsworksUntagResourceResult
 
-    UpdateApp(ctx workflow.Context, input *opsworks.UpdateAppInput) (*opsworks.UpdateAppOutput, error)
-    UpdateAppAsync(ctx workflow.Context, input *opsworks.UpdateAppInput) *OpsworksUpdateAppResult
+       UpdateApp(ctx workflow.Context, input *opsworks.UpdateAppInput) (*opsworks.UpdateAppOutput, error)
+       UpdateAppAsync(ctx workflow.Context, input *opsworks.UpdateAppInput) *OpsworksUpdateAppResult
 
-    UpdateElasticIp(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) (*opsworks.UpdateElasticIpOutput, error)
-    UpdateElasticIpAsync(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) *OpsworksUpdateElasticIpResult
+       UpdateElasticIp(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) (*opsworks.UpdateElasticIpOutput, error)
+       UpdateElasticIpAsync(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) *OpsworksUpdateElasticIpResult
 
-    UpdateInstance(ctx workflow.Context, input *opsworks.UpdateInstanceInput) (*opsworks.UpdateInstanceOutput, error)
-    UpdateInstanceAsync(ctx workflow.Context, input *opsworks.UpdateInstanceInput) *OpsworksUpdateInstanceResult
+       UpdateInstance(ctx workflow.Context, input *opsworks.UpdateInstanceInput) (*opsworks.UpdateInstanceOutput, error)
+       UpdateInstanceAsync(ctx workflow.Context, input *opsworks.UpdateInstanceInput) *OpsworksUpdateInstanceResult
 
-    UpdateLayer(ctx workflow.Context, input *opsworks.UpdateLayerInput) (*opsworks.UpdateLayerOutput, error)
-    UpdateLayerAsync(ctx workflow.Context, input *opsworks.UpdateLayerInput) *OpsworksUpdateLayerResult
+       UpdateLayer(ctx workflow.Context, input *opsworks.UpdateLayerInput) (*opsworks.UpdateLayerOutput, error)
+       UpdateLayerAsync(ctx workflow.Context, input *opsworks.UpdateLayerInput) *OpsworksUpdateLayerResult
 
-    UpdateMyUserProfile(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) (*opsworks.UpdateMyUserProfileOutput, error)
-    UpdateMyUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) *OpsworksUpdateMyUserProfileResult
+       UpdateMyUserProfile(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) (*opsworks.UpdateMyUserProfileOutput, error)
+       UpdateMyUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) *OpsworksUpdateMyUserProfileResult
 
-    UpdateRdsDbInstance(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) (*opsworks.UpdateRdsDbInstanceOutput, error)
-    UpdateRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) *OpsworksUpdateRdsDbInstanceResult
+       UpdateRdsDbInstance(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) (*opsworks.UpdateRdsDbInstanceOutput, error)
+       UpdateRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) *OpsworksUpdateRdsDbInstanceResult
 
-    UpdateStack(ctx workflow.Context, input *opsworks.UpdateStackInput) (*opsworks.UpdateStackOutput, error)
-    UpdateStackAsync(ctx workflow.Context, input *opsworks.UpdateStackInput) *OpsworksUpdateStackResult
+       UpdateStack(ctx workflow.Context, input *opsworks.UpdateStackInput) (*opsworks.UpdateStackOutput, error)
+       UpdateStackAsync(ctx workflow.Context, input *opsworks.UpdateStackInput) *OpsworksUpdateStackResult
 
-    UpdateUserProfile(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) (*opsworks.UpdateUserProfileOutput, error)
-    UpdateUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) *OpsworksUpdateUserProfileResult
+       UpdateUserProfile(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) (*opsworks.UpdateUserProfileOutput, error)
+       UpdateUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) *OpsworksUpdateUserProfileResult
 
-    UpdateVolume(ctx workflow.Context, input *opsworks.UpdateVolumeInput) (*opsworks.UpdateVolumeOutput, error)
-    UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsworksUpdateVolumeResult
+       UpdateVolume(ctx workflow.Context, input *opsworks.UpdateVolumeInput) (*opsworks.UpdateVolumeOutput, error)
+       UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsworksUpdateVolumeResult
 
-    WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error
-    WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error
-    WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-    WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-    WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-    WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error}
+       WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error
+       WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error
+       WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+       WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+       WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+       WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error}
 
 type OpsworksAssignInstanceResult struct {
 	Result workflow.Future

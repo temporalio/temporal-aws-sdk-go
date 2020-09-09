@@ -7,98 +7,98 @@ import (
 )
 
 type EventBridgeClient interface {
-    ActivateEventSource(ctx workflow.Context, input *eventbridge.ActivateEventSourceInput) (*eventbridge.ActivateEventSourceOutput, error)
-    ActivateEventSourceAsync(ctx workflow.Context, input *eventbridge.ActivateEventSourceInput) *EventbridgeActivateEventSourceResult
+       ActivateEventSource(ctx workflow.Context, input *eventbridge.ActivateEventSourceInput) (*eventbridge.ActivateEventSourceOutput, error)
+       ActivateEventSourceAsync(ctx workflow.Context, input *eventbridge.ActivateEventSourceInput) *EventbridgeActivateEventSourceResult
 
-    CreateEventBus(ctx workflow.Context, input *eventbridge.CreateEventBusInput) (*eventbridge.CreateEventBusOutput, error)
-    CreateEventBusAsync(ctx workflow.Context, input *eventbridge.CreateEventBusInput) *EventbridgeCreateEventBusResult
+       CreateEventBus(ctx workflow.Context, input *eventbridge.CreateEventBusInput) (*eventbridge.CreateEventBusOutput, error)
+       CreateEventBusAsync(ctx workflow.Context, input *eventbridge.CreateEventBusInput) *EventbridgeCreateEventBusResult
 
-    CreatePartnerEventSource(ctx workflow.Context, input *eventbridge.CreatePartnerEventSourceInput) (*eventbridge.CreatePartnerEventSourceOutput, error)
-    CreatePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.CreatePartnerEventSourceInput) *EventbridgeCreatePartnerEventSourceResult
+       CreatePartnerEventSource(ctx workflow.Context, input *eventbridge.CreatePartnerEventSourceInput) (*eventbridge.CreatePartnerEventSourceOutput, error)
+       CreatePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.CreatePartnerEventSourceInput) *EventbridgeCreatePartnerEventSourceResult
 
-    DeactivateEventSource(ctx workflow.Context, input *eventbridge.DeactivateEventSourceInput) (*eventbridge.DeactivateEventSourceOutput, error)
-    DeactivateEventSourceAsync(ctx workflow.Context, input *eventbridge.DeactivateEventSourceInput) *EventbridgeDeactivateEventSourceResult
+       DeactivateEventSource(ctx workflow.Context, input *eventbridge.DeactivateEventSourceInput) (*eventbridge.DeactivateEventSourceOutput, error)
+       DeactivateEventSourceAsync(ctx workflow.Context, input *eventbridge.DeactivateEventSourceInput) *EventbridgeDeactivateEventSourceResult
 
-    DeleteEventBus(ctx workflow.Context, input *eventbridge.DeleteEventBusInput) (*eventbridge.DeleteEventBusOutput, error)
-    DeleteEventBusAsync(ctx workflow.Context, input *eventbridge.DeleteEventBusInput) *EventbridgeDeleteEventBusResult
+       DeleteEventBus(ctx workflow.Context, input *eventbridge.DeleteEventBusInput) (*eventbridge.DeleteEventBusOutput, error)
+       DeleteEventBusAsync(ctx workflow.Context, input *eventbridge.DeleteEventBusInput) *EventbridgeDeleteEventBusResult
 
-    DeletePartnerEventSource(ctx workflow.Context, input *eventbridge.DeletePartnerEventSourceInput) (*eventbridge.DeletePartnerEventSourceOutput, error)
-    DeletePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.DeletePartnerEventSourceInput) *EventbridgeDeletePartnerEventSourceResult
+       DeletePartnerEventSource(ctx workflow.Context, input *eventbridge.DeletePartnerEventSourceInput) (*eventbridge.DeletePartnerEventSourceOutput, error)
+       DeletePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.DeletePartnerEventSourceInput) *EventbridgeDeletePartnerEventSourceResult
 
-    DeleteRule(ctx workflow.Context, input *eventbridge.DeleteRuleInput) (*eventbridge.DeleteRuleOutput, error)
-    DeleteRuleAsync(ctx workflow.Context, input *eventbridge.DeleteRuleInput) *EventbridgeDeleteRuleResult
+       DeleteRule(ctx workflow.Context, input *eventbridge.DeleteRuleInput) (*eventbridge.DeleteRuleOutput, error)
+       DeleteRuleAsync(ctx workflow.Context, input *eventbridge.DeleteRuleInput) *EventbridgeDeleteRuleResult
 
-    DescribeEventBus(ctx workflow.Context, input *eventbridge.DescribeEventBusInput) (*eventbridge.DescribeEventBusOutput, error)
-    DescribeEventBusAsync(ctx workflow.Context, input *eventbridge.DescribeEventBusInput) *EventbridgeDescribeEventBusResult
+       DescribeEventBus(ctx workflow.Context, input *eventbridge.DescribeEventBusInput) (*eventbridge.DescribeEventBusOutput, error)
+       DescribeEventBusAsync(ctx workflow.Context, input *eventbridge.DescribeEventBusInput) *EventbridgeDescribeEventBusResult
 
-    DescribeEventSource(ctx workflow.Context, input *eventbridge.DescribeEventSourceInput) (*eventbridge.DescribeEventSourceOutput, error)
-    DescribeEventSourceAsync(ctx workflow.Context, input *eventbridge.DescribeEventSourceInput) *EventbridgeDescribeEventSourceResult
+       DescribeEventSource(ctx workflow.Context, input *eventbridge.DescribeEventSourceInput) (*eventbridge.DescribeEventSourceOutput, error)
+       DescribeEventSourceAsync(ctx workflow.Context, input *eventbridge.DescribeEventSourceInput) *EventbridgeDescribeEventSourceResult
 
-    DescribePartnerEventSource(ctx workflow.Context, input *eventbridge.DescribePartnerEventSourceInput) (*eventbridge.DescribePartnerEventSourceOutput, error)
-    DescribePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.DescribePartnerEventSourceInput) *EventbridgeDescribePartnerEventSourceResult
+       DescribePartnerEventSource(ctx workflow.Context, input *eventbridge.DescribePartnerEventSourceInput) (*eventbridge.DescribePartnerEventSourceOutput, error)
+       DescribePartnerEventSourceAsync(ctx workflow.Context, input *eventbridge.DescribePartnerEventSourceInput) *EventbridgeDescribePartnerEventSourceResult
 
-    DescribeRule(ctx workflow.Context, input *eventbridge.DescribeRuleInput) (*eventbridge.DescribeRuleOutput, error)
-    DescribeRuleAsync(ctx workflow.Context, input *eventbridge.DescribeRuleInput) *EventbridgeDescribeRuleResult
+       DescribeRule(ctx workflow.Context, input *eventbridge.DescribeRuleInput) (*eventbridge.DescribeRuleOutput, error)
+       DescribeRuleAsync(ctx workflow.Context, input *eventbridge.DescribeRuleInput) *EventbridgeDescribeRuleResult
 
-    DisableRule(ctx workflow.Context, input *eventbridge.DisableRuleInput) (*eventbridge.DisableRuleOutput, error)
-    DisableRuleAsync(ctx workflow.Context, input *eventbridge.DisableRuleInput) *EventbridgeDisableRuleResult
+       DisableRule(ctx workflow.Context, input *eventbridge.DisableRuleInput) (*eventbridge.DisableRuleOutput, error)
+       DisableRuleAsync(ctx workflow.Context, input *eventbridge.DisableRuleInput) *EventbridgeDisableRuleResult
 
-    EnableRule(ctx workflow.Context, input *eventbridge.EnableRuleInput) (*eventbridge.EnableRuleOutput, error)
-    EnableRuleAsync(ctx workflow.Context, input *eventbridge.EnableRuleInput) *EventbridgeEnableRuleResult
+       EnableRule(ctx workflow.Context, input *eventbridge.EnableRuleInput) (*eventbridge.EnableRuleOutput, error)
+       EnableRuleAsync(ctx workflow.Context, input *eventbridge.EnableRuleInput) *EventbridgeEnableRuleResult
 
-    ListEventBuses(ctx workflow.Context, input *eventbridge.ListEventBusesInput) (*eventbridge.ListEventBusesOutput, error)
-    ListEventBusesAsync(ctx workflow.Context, input *eventbridge.ListEventBusesInput) *EventbridgeListEventBusesResult
+       ListEventBuses(ctx workflow.Context, input *eventbridge.ListEventBusesInput) (*eventbridge.ListEventBusesOutput, error)
+       ListEventBusesAsync(ctx workflow.Context, input *eventbridge.ListEventBusesInput) *EventbridgeListEventBusesResult
 
-    ListEventSources(ctx workflow.Context, input *eventbridge.ListEventSourcesInput) (*eventbridge.ListEventSourcesOutput, error)
-    ListEventSourcesAsync(ctx workflow.Context, input *eventbridge.ListEventSourcesInput) *EventbridgeListEventSourcesResult
+       ListEventSources(ctx workflow.Context, input *eventbridge.ListEventSourcesInput) (*eventbridge.ListEventSourcesOutput, error)
+       ListEventSourcesAsync(ctx workflow.Context, input *eventbridge.ListEventSourcesInput) *EventbridgeListEventSourcesResult
 
-    ListPartnerEventSourceAccounts(ctx workflow.Context, input *eventbridge.ListPartnerEventSourceAccountsInput) (*eventbridge.ListPartnerEventSourceAccountsOutput, error)
-    ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *eventbridge.ListPartnerEventSourceAccountsInput) *EventbridgeListPartnerEventSourceAccountsResult
+       ListPartnerEventSourceAccounts(ctx workflow.Context, input *eventbridge.ListPartnerEventSourceAccountsInput) (*eventbridge.ListPartnerEventSourceAccountsOutput, error)
+       ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *eventbridge.ListPartnerEventSourceAccountsInput) *EventbridgeListPartnerEventSourceAccountsResult
 
-    ListPartnerEventSources(ctx workflow.Context, input *eventbridge.ListPartnerEventSourcesInput) (*eventbridge.ListPartnerEventSourcesOutput, error)
-    ListPartnerEventSourcesAsync(ctx workflow.Context, input *eventbridge.ListPartnerEventSourcesInput) *EventbridgeListPartnerEventSourcesResult
+       ListPartnerEventSources(ctx workflow.Context, input *eventbridge.ListPartnerEventSourcesInput) (*eventbridge.ListPartnerEventSourcesOutput, error)
+       ListPartnerEventSourcesAsync(ctx workflow.Context, input *eventbridge.ListPartnerEventSourcesInput) *EventbridgeListPartnerEventSourcesResult
 
-    ListRuleNamesByTarget(ctx workflow.Context, input *eventbridge.ListRuleNamesByTargetInput) (*eventbridge.ListRuleNamesByTargetOutput, error)
-    ListRuleNamesByTargetAsync(ctx workflow.Context, input *eventbridge.ListRuleNamesByTargetInput) *EventbridgeListRuleNamesByTargetResult
+       ListRuleNamesByTarget(ctx workflow.Context, input *eventbridge.ListRuleNamesByTargetInput) (*eventbridge.ListRuleNamesByTargetOutput, error)
+       ListRuleNamesByTargetAsync(ctx workflow.Context, input *eventbridge.ListRuleNamesByTargetInput) *EventbridgeListRuleNamesByTargetResult
 
-    ListRules(ctx workflow.Context, input *eventbridge.ListRulesInput) (*eventbridge.ListRulesOutput, error)
-    ListRulesAsync(ctx workflow.Context, input *eventbridge.ListRulesInput) *EventbridgeListRulesResult
+       ListRules(ctx workflow.Context, input *eventbridge.ListRulesInput) (*eventbridge.ListRulesOutput, error)
+       ListRulesAsync(ctx workflow.Context, input *eventbridge.ListRulesInput) *EventbridgeListRulesResult
 
-    ListTagsForResource(ctx workflow.Context, input *eventbridge.ListTagsForResourceInput) (*eventbridge.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *eventbridge.ListTagsForResourceInput) *EventbridgeListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *eventbridge.ListTagsForResourceInput) (*eventbridge.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *eventbridge.ListTagsForResourceInput) *EventbridgeListTagsForResourceResult
 
-    ListTargetsByRule(ctx workflow.Context, input *eventbridge.ListTargetsByRuleInput) (*eventbridge.ListTargetsByRuleOutput, error)
-    ListTargetsByRuleAsync(ctx workflow.Context, input *eventbridge.ListTargetsByRuleInput) *EventbridgeListTargetsByRuleResult
+       ListTargetsByRule(ctx workflow.Context, input *eventbridge.ListTargetsByRuleInput) (*eventbridge.ListTargetsByRuleOutput, error)
+       ListTargetsByRuleAsync(ctx workflow.Context, input *eventbridge.ListTargetsByRuleInput) *EventbridgeListTargetsByRuleResult
 
-    PutEvents(ctx workflow.Context, input *eventbridge.PutEventsInput) (*eventbridge.PutEventsOutput, error)
-    PutEventsAsync(ctx workflow.Context, input *eventbridge.PutEventsInput) *EventbridgePutEventsResult
+       PutEvents(ctx workflow.Context, input *eventbridge.PutEventsInput) (*eventbridge.PutEventsOutput, error)
+       PutEventsAsync(ctx workflow.Context, input *eventbridge.PutEventsInput) *EventbridgePutEventsResult
 
-    PutPartnerEvents(ctx workflow.Context, input *eventbridge.PutPartnerEventsInput) (*eventbridge.PutPartnerEventsOutput, error)
-    PutPartnerEventsAsync(ctx workflow.Context, input *eventbridge.PutPartnerEventsInput) *EventbridgePutPartnerEventsResult
+       PutPartnerEvents(ctx workflow.Context, input *eventbridge.PutPartnerEventsInput) (*eventbridge.PutPartnerEventsOutput, error)
+       PutPartnerEventsAsync(ctx workflow.Context, input *eventbridge.PutPartnerEventsInput) *EventbridgePutPartnerEventsResult
 
-    PutPermission(ctx workflow.Context, input *eventbridge.PutPermissionInput) (*eventbridge.PutPermissionOutput, error)
-    PutPermissionAsync(ctx workflow.Context, input *eventbridge.PutPermissionInput) *EventbridgePutPermissionResult
+       PutPermission(ctx workflow.Context, input *eventbridge.PutPermissionInput) (*eventbridge.PutPermissionOutput, error)
+       PutPermissionAsync(ctx workflow.Context, input *eventbridge.PutPermissionInput) *EventbridgePutPermissionResult
 
-    PutRule(ctx workflow.Context, input *eventbridge.PutRuleInput) (*eventbridge.PutRuleOutput, error)
-    PutRuleAsync(ctx workflow.Context, input *eventbridge.PutRuleInput) *EventbridgePutRuleResult
+       PutRule(ctx workflow.Context, input *eventbridge.PutRuleInput) (*eventbridge.PutRuleOutput, error)
+       PutRuleAsync(ctx workflow.Context, input *eventbridge.PutRuleInput) *EventbridgePutRuleResult
 
-    PutTargets(ctx workflow.Context, input *eventbridge.PutTargetsInput) (*eventbridge.PutTargetsOutput, error)
-    PutTargetsAsync(ctx workflow.Context, input *eventbridge.PutTargetsInput) *EventbridgePutTargetsResult
+       PutTargets(ctx workflow.Context, input *eventbridge.PutTargetsInput) (*eventbridge.PutTargetsOutput, error)
+       PutTargetsAsync(ctx workflow.Context, input *eventbridge.PutTargetsInput) *EventbridgePutTargetsResult
 
-    RemovePermission(ctx workflow.Context, input *eventbridge.RemovePermissionInput) (*eventbridge.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *eventbridge.RemovePermissionInput) *EventbridgeRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *eventbridge.RemovePermissionInput) (*eventbridge.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *eventbridge.RemovePermissionInput) *EventbridgeRemovePermissionResult
 
-    RemoveTargets(ctx workflow.Context, input *eventbridge.RemoveTargetsInput) (*eventbridge.RemoveTargetsOutput, error)
-    RemoveTargetsAsync(ctx workflow.Context, input *eventbridge.RemoveTargetsInput) *EventbridgeRemoveTargetsResult
+       RemoveTargets(ctx workflow.Context, input *eventbridge.RemoveTargetsInput) (*eventbridge.RemoveTargetsOutput, error)
+       RemoveTargetsAsync(ctx workflow.Context, input *eventbridge.RemoveTargetsInput) *EventbridgeRemoveTargetsResult
 
-    TagResource(ctx workflow.Context, input *eventbridge.TagResourceInput) (*eventbridge.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *eventbridge.TagResourceInput) *EventbridgeTagResourceResult
+       TagResource(ctx workflow.Context, input *eventbridge.TagResourceInput) (*eventbridge.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *eventbridge.TagResourceInput) *EventbridgeTagResourceResult
 
-    TestEventPattern(ctx workflow.Context, input *eventbridge.TestEventPatternInput) (*eventbridge.TestEventPatternOutput, error)
-    TestEventPatternAsync(ctx workflow.Context, input *eventbridge.TestEventPatternInput) *EventbridgeTestEventPatternResult
+       TestEventPattern(ctx workflow.Context, input *eventbridge.TestEventPatternInput) (*eventbridge.TestEventPatternOutput, error)
+       TestEventPatternAsync(ctx workflow.Context, input *eventbridge.TestEventPatternInput) *EventbridgeTestEventPatternResult
 
-    UntagResource(ctx workflow.Context, input *eventbridge.UntagResourceInput) (*eventbridge.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *eventbridge.UntagResourceInput) *EventbridgeUntagResourceResult
+       UntagResource(ctx workflow.Context, input *eventbridge.UntagResourceInput) (*eventbridge.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *eventbridge.UntagResourceInput) *EventbridgeUntagResourceResult
 }
 
 type EventbridgeActivateEventSourceResult struct {

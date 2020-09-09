@@ -7,107 +7,107 @@ import (
 )
 
 type IoTAnalyticsClient interface {
-    BatchPutMessage(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) (*iotanalytics.BatchPutMessageOutput, error)
-    BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IotanalyticsBatchPutMessageResult
+       BatchPutMessage(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) (*iotanalytics.BatchPutMessageOutput, error)
+       BatchPutMessageAsync(ctx workflow.Context, input *iotanalytics.BatchPutMessageInput) *IotanalyticsBatchPutMessageResult
 
-    CancelPipelineReprocessing(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) (*iotanalytics.CancelPipelineReprocessingOutput, error)
-    CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IotanalyticsCancelPipelineReprocessingResult
+       CancelPipelineReprocessing(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) (*iotanalytics.CancelPipelineReprocessingOutput, error)
+       CancelPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.CancelPipelineReprocessingInput) *IotanalyticsCancelPipelineReprocessingResult
 
-    CreateChannel(ctx workflow.Context, input *iotanalytics.CreateChannelInput) (*iotanalytics.CreateChannelOutput, error)
-    CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IotanalyticsCreateChannelResult
+       CreateChannel(ctx workflow.Context, input *iotanalytics.CreateChannelInput) (*iotanalytics.CreateChannelOutput, error)
+       CreateChannelAsync(ctx workflow.Context, input *iotanalytics.CreateChannelInput) *IotanalyticsCreateChannelResult
 
-    CreateDataset(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) (*iotanalytics.CreateDatasetOutput, error)
-    CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IotanalyticsCreateDatasetResult
+       CreateDataset(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) (*iotanalytics.CreateDatasetOutput, error)
+       CreateDatasetAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetInput) *IotanalyticsCreateDatasetResult
 
-    CreateDatasetContent(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) (*iotanalytics.CreateDatasetContentOutput, error)
-    CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IotanalyticsCreateDatasetContentResult
+       CreateDatasetContent(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) (*iotanalytics.CreateDatasetContentOutput, error)
+       CreateDatasetContentAsync(ctx workflow.Context, input *iotanalytics.CreateDatasetContentInput) *IotanalyticsCreateDatasetContentResult
 
-    CreateDatastore(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) (*iotanalytics.CreateDatastoreOutput, error)
-    CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IotanalyticsCreateDatastoreResult
+       CreateDatastore(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) (*iotanalytics.CreateDatastoreOutput, error)
+       CreateDatastoreAsync(ctx workflow.Context, input *iotanalytics.CreateDatastoreInput) *IotanalyticsCreateDatastoreResult
 
-    CreatePipeline(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) (*iotanalytics.CreatePipelineOutput, error)
-    CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IotanalyticsCreatePipelineResult
+       CreatePipeline(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) (*iotanalytics.CreatePipelineOutput, error)
+       CreatePipelineAsync(ctx workflow.Context, input *iotanalytics.CreatePipelineInput) *IotanalyticsCreatePipelineResult
 
-    DeleteChannel(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) (*iotanalytics.DeleteChannelOutput, error)
-    DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IotanalyticsDeleteChannelResult
+       DeleteChannel(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) (*iotanalytics.DeleteChannelOutput, error)
+       DeleteChannelAsync(ctx workflow.Context, input *iotanalytics.DeleteChannelInput) *IotanalyticsDeleteChannelResult
 
-    DeleteDataset(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) (*iotanalytics.DeleteDatasetOutput, error)
-    DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IotanalyticsDeleteDatasetResult
+       DeleteDataset(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) (*iotanalytics.DeleteDatasetOutput, error)
+       DeleteDatasetAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetInput) *IotanalyticsDeleteDatasetResult
 
-    DeleteDatasetContent(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) (*iotanalytics.DeleteDatasetContentOutput, error)
-    DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IotanalyticsDeleteDatasetContentResult
+       DeleteDatasetContent(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) (*iotanalytics.DeleteDatasetContentOutput, error)
+       DeleteDatasetContentAsync(ctx workflow.Context, input *iotanalytics.DeleteDatasetContentInput) *IotanalyticsDeleteDatasetContentResult
 
-    DeleteDatastore(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) (*iotanalytics.DeleteDatastoreOutput, error)
-    DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IotanalyticsDeleteDatastoreResult
+       DeleteDatastore(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) (*iotanalytics.DeleteDatastoreOutput, error)
+       DeleteDatastoreAsync(ctx workflow.Context, input *iotanalytics.DeleteDatastoreInput) *IotanalyticsDeleteDatastoreResult
 
-    DeletePipeline(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) (*iotanalytics.DeletePipelineOutput, error)
-    DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IotanalyticsDeletePipelineResult
+       DeletePipeline(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) (*iotanalytics.DeletePipelineOutput, error)
+       DeletePipelineAsync(ctx workflow.Context, input *iotanalytics.DeletePipelineInput) *IotanalyticsDeletePipelineResult
 
-    DescribeChannel(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) (*iotanalytics.DescribeChannelOutput, error)
-    DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IotanalyticsDescribeChannelResult
+       DescribeChannel(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) (*iotanalytics.DescribeChannelOutput, error)
+       DescribeChannelAsync(ctx workflow.Context, input *iotanalytics.DescribeChannelInput) *IotanalyticsDescribeChannelResult
 
-    DescribeDataset(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) (*iotanalytics.DescribeDatasetOutput, error)
-    DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IotanalyticsDescribeDatasetResult
+       DescribeDataset(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) (*iotanalytics.DescribeDatasetOutput, error)
+       DescribeDatasetAsync(ctx workflow.Context, input *iotanalytics.DescribeDatasetInput) *IotanalyticsDescribeDatasetResult
 
-    DescribeDatastore(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) (*iotanalytics.DescribeDatastoreOutput, error)
-    DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IotanalyticsDescribeDatastoreResult
+       DescribeDatastore(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) (*iotanalytics.DescribeDatastoreOutput, error)
+       DescribeDatastoreAsync(ctx workflow.Context, input *iotanalytics.DescribeDatastoreInput) *IotanalyticsDescribeDatastoreResult
 
-    DescribeLoggingOptions(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) (*iotanalytics.DescribeLoggingOptionsOutput, error)
-    DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IotanalyticsDescribeLoggingOptionsResult
+       DescribeLoggingOptions(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) (*iotanalytics.DescribeLoggingOptionsOutput, error)
+       DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.DescribeLoggingOptionsInput) *IotanalyticsDescribeLoggingOptionsResult
 
-    DescribePipeline(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) (*iotanalytics.DescribePipelineOutput, error)
-    DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IotanalyticsDescribePipelineResult
+       DescribePipeline(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) (*iotanalytics.DescribePipelineOutput, error)
+       DescribePipelineAsync(ctx workflow.Context, input *iotanalytics.DescribePipelineInput) *IotanalyticsDescribePipelineResult
 
-    GetDatasetContent(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) (*iotanalytics.GetDatasetContentOutput, error)
-    GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IotanalyticsGetDatasetContentResult
+       GetDatasetContent(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) (*iotanalytics.GetDatasetContentOutput, error)
+       GetDatasetContentAsync(ctx workflow.Context, input *iotanalytics.GetDatasetContentInput) *IotanalyticsGetDatasetContentResult
 
-    ListChannels(ctx workflow.Context, input *iotanalytics.ListChannelsInput) (*iotanalytics.ListChannelsOutput, error)
-    ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IotanalyticsListChannelsResult
+       ListChannels(ctx workflow.Context, input *iotanalytics.ListChannelsInput) (*iotanalytics.ListChannelsOutput, error)
+       ListChannelsAsync(ctx workflow.Context, input *iotanalytics.ListChannelsInput) *IotanalyticsListChannelsResult
 
-    ListDatasetContents(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) (*iotanalytics.ListDatasetContentsOutput, error)
-    ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IotanalyticsListDatasetContentsResult
+       ListDatasetContents(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) (*iotanalytics.ListDatasetContentsOutput, error)
+       ListDatasetContentsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetContentsInput) *IotanalyticsListDatasetContentsResult
 
-    ListDatasets(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) (*iotanalytics.ListDatasetsOutput, error)
-    ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IotanalyticsListDatasetsResult
+       ListDatasets(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) (*iotanalytics.ListDatasetsOutput, error)
+       ListDatasetsAsync(ctx workflow.Context, input *iotanalytics.ListDatasetsInput) *IotanalyticsListDatasetsResult
 
-    ListDatastores(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) (*iotanalytics.ListDatastoresOutput, error)
-    ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IotanalyticsListDatastoresResult
+       ListDatastores(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) (*iotanalytics.ListDatastoresOutput, error)
+       ListDatastoresAsync(ctx workflow.Context, input *iotanalytics.ListDatastoresInput) *IotanalyticsListDatastoresResult
 
-    ListPipelines(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) (*iotanalytics.ListPipelinesOutput, error)
-    ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IotanalyticsListPipelinesResult
+       ListPipelines(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) (*iotanalytics.ListPipelinesOutput, error)
+       ListPipelinesAsync(ctx workflow.Context, input *iotanalytics.ListPipelinesInput) *IotanalyticsListPipelinesResult
 
-    ListTagsForResource(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) (*iotanalytics.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IotanalyticsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) (*iotanalytics.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *iotanalytics.ListTagsForResourceInput) *IotanalyticsListTagsForResourceResult
 
-    PutLoggingOptions(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) (*iotanalytics.PutLoggingOptionsOutput, error)
-    PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IotanalyticsPutLoggingOptionsResult
+       PutLoggingOptions(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) (*iotanalytics.PutLoggingOptionsOutput, error)
+       PutLoggingOptionsAsync(ctx workflow.Context, input *iotanalytics.PutLoggingOptionsInput) *IotanalyticsPutLoggingOptionsResult
 
-    RunPipelineActivity(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) (*iotanalytics.RunPipelineActivityOutput, error)
-    RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IotanalyticsRunPipelineActivityResult
+       RunPipelineActivity(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) (*iotanalytics.RunPipelineActivityOutput, error)
+       RunPipelineActivityAsync(ctx workflow.Context, input *iotanalytics.RunPipelineActivityInput) *IotanalyticsRunPipelineActivityResult
 
-    SampleChannelData(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) (*iotanalytics.SampleChannelDataOutput, error)
-    SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IotanalyticsSampleChannelDataResult
+       SampleChannelData(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) (*iotanalytics.SampleChannelDataOutput, error)
+       SampleChannelDataAsync(ctx workflow.Context, input *iotanalytics.SampleChannelDataInput) *IotanalyticsSampleChannelDataResult
 
-    StartPipelineReprocessing(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) (*iotanalytics.StartPipelineReprocessingOutput, error)
-    StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IotanalyticsStartPipelineReprocessingResult
+       StartPipelineReprocessing(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) (*iotanalytics.StartPipelineReprocessingOutput, error)
+       StartPipelineReprocessingAsync(ctx workflow.Context, input *iotanalytics.StartPipelineReprocessingInput) *IotanalyticsStartPipelineReprocessingResult
 
-    TagResource(ctx workflow.Context, input *iotanalytics.TagResourceInput) (*iotanalytics.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IotanalyticsTagResourceResult
+       TagResource(ctx workflow.Context, input *iotanalytics.TagResourceInput) (*iotanalytics.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *iotanalytics.TagResourceInput) *IotanalyticsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *iotanalytics.UntagResourceInput) (*iotanalytics.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IotanalyticsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *iotanalytics.UntagResourceInput) (*iotanalytics.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *iotanalytics.UntagResourceInput) *IotanalyticsUntagResourceResult
 
-    UpdateChannel(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) (*iotanalytics.UpdateChannelOutput, error)
-    UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IotanalyticsUpdateChannelResult
+       UpdateChannel(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) (*iotanalytics.UpdateChannelOutput, error)
+       UpdateChannelAsync(ctx workflow.Context, input *iotanalytics.UpdateChannelInput) *IotanalyticsUpdateChannelResult
 
-    UpdateDataset(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) (*iotanalytics.UpdateDatasetOutput, error)
-    UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IotanalyticsUpdateDatasetResult
+       UpdateDataset(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) (*iotanalytics.UpdateDatasetOutput, error)
+       UpdateDatasetAsync(ctx workflow.Context, input *iotanalytics.UpdateDatasetInput) *IotanalyticsUpdateDatasetResult
 
-    UpdateDatastore(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) (*iotanalytics.UpdateDatastoreOutput, error)
-    UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IotanalyticsUpdateDatastoreResult
+       UpdateDatastore(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) (*iotanalytics.UpdateDatastoreOutput, error)
+       UpdateDatastoreAsync(ctx workflow.Context, input *iotanalytics.UpdateDatastoreInput) *IotanalyticsUpdateDatastoreResult
 
-    UpdatePipeline(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) (*iotanalytics.UpdatePipelineOutput, error)
-    UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IotanalyticsUpdatePipelineResult
+       UpdatePipeline(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) (*iotanalytics.UpdatePipelineOutput, error)
+       UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IotanalyticsUpdatePipelineResult
 }
 
 type IotanalyticsBatchPutMessageResult struct {

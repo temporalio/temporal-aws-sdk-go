@@ -7,178 +7,178 @@ import (
 )
 
 type Route53Client interface {
-    AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error)
-    AssociateVPCWithHostedZoneAsync(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) *Route53AssociateVPCWithHostedZoneResult
+       AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error)
+       AssociateVPCWithHostedZoneAsync(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) *Route53AssociateVPCWithHostedZoneResult
 
-    ChangeResourceRecordSets(ctx workflow.Context, input *route53.ChangeResourceRecordSetsInput) (*route53.ChangeResourceRecordSetsOutput, error)
-    ChangeResourceRecordSetsAsync(ctx workflow.Context, input *route53.ChangeResourceRecordSetsInput) *Route53ChangeResourceRecordSetsResult
+       ChangeResourceRecordSets(ctx workflow.Context, input *route53.ChangeResourceRecordSetsInput) (*route53.ChangeResourceRecordSetsOutput, error)
+       ChangeResourceRecordSetsAsync(ctx workflow.Context, input *route53.ChangeResourceRecordSetsInput) *Route53ChangeResourceRecordSetsResult
 
-    ChangeTagsForResource(ctx workflow.Context, input *route53.ChangeTagsForResourceInput) (*route53.ChangeTagsForResourceOutput, error)
-    ChangeTagsForResourceAsync(ctx workflow.Context, input *route53.ChangeTagsForResourceInput) *Route53ChangeTagsForResourceResult
+       ChangeTagsForResource(ctx workflow.Context, input *route53.ChangeTagsForResourceInput) (*route53.ChangeTagsForResourceOutput, error)
+       ChangeTagsForResourceAsync(ctx workflow.Context, input *route53.ChangeTagsForResourceInput) *Route53ChangeTagsForResourceResult
 
-    CreateHealthCheck(ctx workflow.Context, input *route53.CreateHealthCheckInput) (*route53.CreateHealthCheckOutput, error)
-    CreateHealthCheckAsync(ctx workflow.Context, input *route53.CreateHealthCheckInput) *Route53CreateHealthCheckResult
+       CreateHealthCheck(ctx workflow.Context, input *route53.CreateHealthCheckInput) (*route53.CreateHealthCheckOutput, error)
+       CreateHealthCheckAsync(ctx workflow.Context, input *route53.CreateHealthCheckInput) *Route53CreateHealthCheckResult
 
-    CreateHostedZone(ctx workflow.Context, input *route53.CreateHostedZoneInput) (*route53.CreateHostedZoneOutput, error)
-    CreateHostedZoneAsync(ctx workflow.Context, input *route53.CreateHostedZoneInput) *Route53CreateHostedZoneResult
+       CreateHostedZone(ctx workflow.Context, input *route53.CreateHostedZoneInput) (*route53.CreateHostedZoneOutput, error)
+       CreateHostedZoneAsync(ctx workflow.Context, input *route53.CreateHostedZoneInput) *Route53CreateHostedZoneResult
 
-    CreateQueryLoggingConfig(ctx workflow.Context, input *route53.CreateQueryLoggingConfigInput) (*route53.CreateQueryLoggingConfigOutput, error)
-    CreateQueryLoggingConfigAsync(ctx workflow.Context, input *route53.CreateQueryLoggingConfigInput) *Route53CreateQueryLoggingConfigResult
+       CreateQueryLoggingConfig(ctx workflow.Context, input *route53.CreateQueryLoggingConfigInput) (*route53.CreateQueryLoggingConfigOutput, error)
+       CreateQueryLoggingConfigAsync(ctx workflow.Context, input *route53.CreateQueryLoggingConfigInput) *Route53CreateQueryLoggingConfigResult
 
-    CreateReusableDelegationSet(ctx workflow.Context, input *route53.CreateReusableDelegationSetInput) (*route53.CreateReusableDelegationSetOutput, error)
-    CreateReusableDelegationSetAsync(ctx workflow.Context, input *route53.CreateReusableDelegationSetInput) *Route53CreateReusableDelegationSetResult
+       CreateReusableDelegationSet(ctx workflow.Context, input *route53.CreateReusableDelegationSetInput) (*route53.CreateReusableDelegationSetOutput, error)
+       CreateReusableDelegationSetAsync(ctx workflow.Context, input *route53.CreateReusableDelegationSetInput) *Route53CreateReusableDelegationSetResult
 
-    CreateTrafficPolicy(ctx workflow.Context, input *route53.CreateTrafficPolicyInput) (*route53.CreateTrafficPolicyOutput, error)
-    CreateTrafficPolicyAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyInput) *Route53CreateTrafficPolicyResult
+       CreateTrafficPolicy(ctx workflow.Context, input *route53.CreateTrafficPolicyInput) (*route53.CreateTrafficPolicyOutput, error)
+       CreateTrafficPolicyAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyInput) *Route53CreateTrafficPolicyResult
 
-    CreateTrafficPolicyInstance(ctx workflow.Context, input *route53.CreateTrafficPolicyInstanceInput) (*route53.CreateTrafficPolicyInstanceOutput, error)
-    CreateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyInstanceInput) *Route53CreateTrafficPolicyInstanceResult
+       CreateTrafficPolicyInstance(ctx workflow.Context, input *route53.CreateTrafficPolicyInstanceInput) (*route53.CreateTrafficPolicyInstanceOutput, error)
+       CreateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyInstanceInput) *Route53CreateTrafficPolicyInstanceResult
 
-    CreateTrafficPolicyVersion(ctx workflow.Context, input *route53.CreateTrafficPolicyVersionInput) (*route53.CreateTrafficPolicyVersionOutput, error)
-    CreateTrafficPolicyVersionAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyVersionInput) *Route53CreateTrafficPolicyVersionResult
+       CreateTrafficPolicyVersion(ctx workflow.Context, input *route53.CreateTrafficPolicyVersionInput) (*route53.CreateTrafficPolicyVersionOutput, error)
+       CreateTrafficPolicyVersionAsync(ctx workflow.Context, input *route53.CreateTrafficPolicyVersionInput) *Route53CreateTrafficPolicyVersionResult
 
-    CreateVPCAssociationAuthorization(ctx workflow.Context, input *route53.CreateVPCAssociationAuthorizationInput) (*route53.CreateVPCAssociationAuthorizationOutput, error)
-    CreateVPCAssociationAuthorizationAsync(ctx workflow.Context, input *route53.CreateVPCAssociationAuthorizationInput) *Route53CreateVPCAssociationAuthorizationResult
+       CreateVPCAssociationAuthorization(ctx workflow.Context, input *route53.CreateVPCAssociationAuthorizationInput) (*route53.CreateVPCAssociationAuthorizationOutput, error)
+       CreateVPCAssociationAuthorizationAsync(ctx workflow.Context, input *route53.CreateVPCAssociationAuthorizationInput) *Route53CreateVPCAssociationAuthorizationResult
 
-    DeleteHealthCheck(ctx workflow.Context, input *route53.DeleteHealthCheckInput) (*route53.DeleteHealthCheckOutput, error)
-    DeleteHealthCheckAsync(ctx workflow.Context, input *route53.DeleteHealthCheckInput) *Route53DeleteHealthCheckResult
+       DeleteHealthCheck(ctx workflow.Context, input *route53.DeleteHealthCheckInput) (*route53.DeleteHealthCheckOutput, error)
+       DeleteHealthCheckAsync(ctx workflow.Context, input *route53.DeleteHealthCheckInput) *Route53DeleteHealthCheckResult
 
-    DeleteHostedZone(ctx workflow.Context, input *route53.DeleteHostedZoneInput) (*route53.DeleteHostedZoneOutput, error)
-    DeleteHostedZoneAsync(ctx workflow.Context, input *route53.DeleteHostedZoneInput) *Route53DeleteHostedZoneResult
+       DeleteHostedZone(ctx workflow.Context, input *route53.DeleteHostedZoneInput) (*route53.DeleteHostedZoneOutput, error)
+       DeleteHostedZoneAsync(ctx workflow.Context, input *route53.DeleteHostedZoneInput) *Route53DeleteHostedZoneResult
 
-    DeleteQueryLoggingConfig(ctx workflow.Context, input *route53.DeleteQueryLoggingConfigInput) (*route53.DeleteQueryLoggingConfigOutput, error)
-    DeleteQueryLoggingConfigAsync(ctx workflow.Context, input *route53.DeleteQueryLoggingConfigInput) *Route53DeleteQueryLoggingConfigResult
+       DeleteQueryLoggingConfig(ctx workflow.Context, input *route53.DeleteQueryLoggingConfigInput) (*route53.DeleteQueryLoggingConfigOutput, error)
+       DeleteQueryLoggingConfigAsync(ctx workflow.Context, input *route53.DeleteQueryLoggingConfigInput) *Route53DeleteQueryLoggingConfigResult
 
-    DeleteReusableDelegationSet(ctx workflow.Context, input *route53.DeleteReusableDelegationSetInput) (*route53.DeleteReusableDelegationSetOutput, error)
-    DeleteReusableDelegationSetAsync(ctx workflow.Context, input *route53.DeleteReusableDelegationSetInput) *Route53DeleteReusableDelegationSetResult
+       DeleteReusableDelegationSet(ctx workflow.Context, input *route53.DeleteReusableDelegationSetInput) (*route53.DeleteReusableDelegationSetOutput, error)
+       DeleteReusableDelegationSetAsync(ctx workflow.Context, input *route53.DeleteReusableDelegationSetInput) *Route53DeleteReusableDelegationSetResult
 
-    DeleteTrafficPolicy(ctx workflow.Context, input *route53.DeleteTrafficPolicyInput) (*route53.DeleteTrafficPolicyOutput, error)
-    DeleteTrafficPolicyAsync(ctx workflow.Context, input *route53.DeleteTrafficPolicyInput) *Route53DeleteTrafficPolicyResult
+       DeleteTrafficPolicy(ctx workflow.Context, input *route53.DeleteTrafficPolicyInput) (*route53.DeleteTrafficPolicyOutput, error)
+       DeleteTrafficPolicyAsync(ctx workflow.Context, input *route53.DeleteTrafficPolicyInput) *Route53DeleteTrafficPolicyResult
 
-    DeleteTrafficPolicyInstance(ctx workflow.Context, input *route53.DeleteTrafficPolicyInstanceInput) (*route53.DeleteTrafficPolicyInstanceOutput, error)
-    DeleteTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.DeleteTrafficPolicyInstanceInput) *Route53DeleteTrafficPolicyInstanceResult
+       DeleteTrafficPolicyInstance(ctx workflow.Context, input *route53.DeleteTrafficPolicyInstanceInput) (*route53.DeleteTrafficPolicyInstanceOutput, error)
+       DeleteTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.DeleteTrafficPolicyInstanceInput) *Route53DeleteTrafficPolicyInstanceResult
 
-    DeleteVPCAssociationAuthorization(ctx workflow.Context, input *route53.DeleteVPCAssociationAuthorizationInput) (*route53.DeleteVPCAssociationAuthorizationOutput, error)
-    DeleteVPCAssociationAuthorizationAsync(ctx workflow.Context, input *route53.DeleteVPCAssociationAuthorizationInput) *Route53DeleteVPCAssociationAuthorizationResult
+       DeleteVPCAssociationAuthorization(ctx workflow.Context, input *route53.DeleteVPCAssociationAuthorizationInput) (*route53.DeleteVPCAssociationAuthorizationOutput, error)
+       DeleteVPCAssociationAuthorizationAsync(ctx workflow.Context, input *route53.DeleteVPCAssociationAuthorizationInput) *Route53DeleteVPCAssociationAuthorizationResult
 
-    DisassociateVPCFromHostedZone(ctx workflow.Context, input *route53.DisassociateVPCFromHostedZoneInput) (*route53.DisassociateVPCFromHostedZoneOutput, error)
-    DisassociateVPCFromHostedZoneAsync(ctx workflow.Context, input *route53.DisassociateVPCFromHostedZoneInput) *Route53DisassociateVPCFromHostedZoneResult
+       DisassociateVPCFromHostedZone(ctx workflow.Context, input *route53.DisassociateVPCFromHostedZoneInput) (*route53.DisassociateVPCFromHostedZoneOutput, error)
+       DisassociateVPCFromHostedZoneAsync(ctx workflow.Context, input *route53.DisassociateVPCFromHostedZoneInput) *Route53DisassociateVPCFromHostedZoneResult
 
-    GetAccountLimit(ctx workflow.Context, input *route53.GetAccountLimitInput) (*route53.GetAccountLimitOutput, error)
-    GetAccountLimitAsync(ctx workflow.Context, input *route53.GetAccountLimitInput) *Route53GetAccountLimitResult
+       GetAccountLimit(ctx workflow.Context, input *route53.GetAccountLimitInput) (*route53.GetAccountLimitOutput, error)
+       GetAccountLimitAsync(ctx workflow.Context, input *route53.GetAccountLimitInput) *Route53GetAccountLimitResult
 
-    GetChange(ctx workflow.Context, input *route53.GetChangeInput) (*route53.GetChangeOutput, error)
-    GetChangeAsync(ctx workflow.Context, input *route53.GetChangeInput) *Route53GetChangeResult
+       GetChange(ctx workflow.Context, input *route53.GetChangeInput) (*route53.GetChangeOutput, error)
+       GetChangeAsync(ctx workflow.Context, input *route53.GetChangeInput) *Route53GetChangeResult
 
-    GetCheckerIpRanges(ctx workflow.Context, input *route53.GetCheckerIpRangesInput) (*route53.GetCheckerIpRangesOutput, error)
-    GetCheckerIpRangesAsync(ctx workflow.Context, input *route53.GetCheckerIpRangesInput) *Route53GetCheckerIpRangesResult
+       GetCheckerIpRanges(ctx workflow.Context, input *route53.GetCheckerIpRangesInput) (*route53.GetCheckerIpRangesOutput, error)
+       GetCheckerIpRangesAsync(ctx workflow.Context, input *route53.GetCheckerIpRangesInput) *Route53GetCheckerIpRangesResult
 
-    GetGeoLocation(ctx workflow.Context, input *route53.GetGeoLocationInput) (*route53.GetGeoLocationOutput, error)
-    GetGeoLocationAsync(ctx workflow.Context, input *route53.GetGeoLocationInput) *Route53GetGeoLocationResult
+       GetGeoLocation(ctx workflow.Context, input *route53.GetGeoLocationInput) (*route53.GetGeoLocationOutput, error)
+       GetGeoLocationAsync(ctx workflow.Context, input *route53.GetGeoLocationInput) *Route53GetGeoLocationResult
 
-    GetHealthCheck(ctx workflow.Context, input *route53.GetHealthCheckInput) (*route53.GetHealthCheckOutput, error)
-    GetHealthCheckAsync(ctx workflow.Context, input *route53.GetHealthCheckInput) *Route53GetHealthCheckResult
+       GetHealthCheck(ctx workflow.Context, input *route53.GetHealthCheckInput) (*route53.GetHealthCheckOutput, error)
+       GetHealthCheckAsync(ctx workflow.Context, input *route53.GetHealthCheckInput) *Route53GetHealthCheckResult
 
-    GetHealthCheckCount(ctx workflow.Context, input *route53.GetHealthCheckCountInput) (*route53.GetHealthCheckCountOutput, error)
-    GetHealthCheckCountAsync(ctx workflow.Context, input *route53.GetHealthCheckCountInput) *Route53GetHealthCheckCountResult
+       GetHealthCheckCount(ctx workflow.Context, input *route53.GetHealthCheckCountInput) (*route53.GetHealthCheckCountOutput, error)
+       GetHealthCheckCountAsync(ctx workflow.Context, input *route53.GetHealthCheckCountInput) *Route53GetHealthCheckCountResult
 
-    GetHealthCheckLastFailureReason(ctx workflow.Context, input *route53.GetHealthCheckLastFailureReasonInput) (*route53.GetHealthCheckLastFailureReasonOutput, error)
-    GetHealthCheckLastFailureReasonAsync(ctx workflow.Context, input *route53.GetHealthCheckLastFailureReasonInput) *Route53GetHealthCheckLastFailureReasonResult
+       GetHealthCheckLastFailureReason(ctx workflow.Context, input *route53.GetHealthCheckLastFailureReasonInput) (*route53.GetHealthCheckLastFailureReasonOutput, error)
+       GetHealthCheckLastFailureReasonAsync(ctx workflow.Context, input *route53.GetHealthCheckLastFailureReasonInput) *Route53GetHealthCheckLastFailureReasonResult
 
-    GetHealthCheckStatus(ctx workflow.Context, input *route53.GetHealthCheckStatusInput) (*route53.GetHealthCheckStatusOutput, error)
-    GetHealthCheckStatusAsync(ctx workflow.Context, input *route53.GetHealthCheckStatusInput) *Route53GetHealthCheckStatusResult
+       GetHealthCheckStatus(ctx workflow.Context, input *route53.GetHealthCheckStatusInput) (*route53.GetHealthCheckStatusOutput, error)
+       GetHealthCheckStatusAsync(ctx workflow.Context, input *route53.GetHealthCheckStatusInput) *Route53GetHealthCheckStatusResult
 
-    GetHostedZone(ctx workflow.Context, input *route53.GetHostedZoneInput) (*route53.GetHostedZoneOutput, error)
-    GetHostedZoneAsync(ctx workflow.Context, input *route53.GetHostedZoneInput) *Route53GetHostedZoneResult
+       GetHostedZone(ctx workflow.Context, input *route53.GetHostedZoneInput) (*route53.GetHostedZoneOutput, error)
+       GetHostedZoneAsync(ctx workflow.Context, input *route53.GetHostedZoneInput) *Route53GetHostedZoneResult
 
-    GetHostedZoneCount(ctx workflow.Context, input *route53.GetHostedZoneCountInput) (*route53.GetHostedZoneCountOutput, error)
-    GetHostedZoneCountAsync(ctx workflow.Context, input *route53.GetHostedZoneCountInput) *Route53GetHostedZoneCountResult
+       GetHostedZoneCount(ctx workflow.Context, input *route53.GetHostedZoneCountInput) (*route53.GetHostedZoneCountOutput, error)
+       GetHostedZoneCountAsync(ctx workflow.Context, input *route53.GetHostedZoneCountInput) *Route53GetHostedZoneCountResult
 
-    GetHostedZoneLimit(ctx workflow.Context, input *route53.GetHostedZoneLimitInput) (*route53.GetHostedZoneLimitOutput, error)
-    GetHostedZoneLimitAsync(ctx workflow.Context, input *route53.GetHostedZoneLimitInput) *Route53GetHostedZoneLimitResult
+       GetHostedZoneLimit(ctx workflow.Context, input *route53.GetHostedZoneLimitInput) (*route53.GetHostedZoneLimitOutput, error)
+       GetHostedZoneLimitAsync(ctx workflow.Context, input *route53.GetHostedZoneLimitInput) *Route53GetHostedZoneLimitResult
 
-    GetQueryLoggingConfig(ctx workflow.Context, input *route53.GetQueryLoggingConfigInput) (*route53.GetQueryLoggingConfigOutput, error)
-    GetQueryLoggingConfigAsync(ctx workflow.Context, input *route53.GetQueryLoggingConfigInput) *Route53GetQueryLoggingConfigResult
+       GetQueryLoggingConfig(ctx workflow.Context, input *route53.GetQueryLoggingConfigInput) (*route53.GetQueryLoggingConfigOutput, error)
+       GetQueryLoggingConfigAsync(ctx workflow.Context, input *route53.GetQueryLoggingConfigInput) *Route53GetQueryLoggingConfigResult
 
-    GetReusableDelegationSet(ctx workflow.Context, input *route53.GetReusableDelegationSetInput) (*route53.GetReusableDelegationSetOutput, error)
-    GetReusableDelegationSetAsync(ctx workflow.Context, input *route53.GetReusableDelegationSetInput) *Route53GetReusableDelegationSetResult
+       GetReusableDelegationSet(ctx workflow.Context, input *route53.GetReusableDelegationSetInput) (*route53.GetReusableDelegationSetOutput, error)
+       GetReusableDelegationSetAsync(ctx workflow.Context, input *route53.GetReusableDelegationSetInput) *Route53GetReusableDelegationSetResult
 
-    GetReusableDelegationSetLimit(ctx workflow.Context, input *route53.GetReusableDelegationSetLimitInput) (*route53.GetReusableDelegationSetLimitOutput, error)
-    GetReusableDelegationSetLimitAsync(ctx workflow.Context, input *route53.GetReusableDelegationSetLimitInput) *Route53GetReusableDelegationSetLimitResult
+       GetReusableDelegationSetLimit(ctx workflow.Context, input *route53.GetReusableDelegationSetLimitInput) (*route53.GetReusableDelegationSetLimitOutput, error)
+       GetReusableDelegationSetLimitAsync(ctx workflow.Context, input *route53.GetReusableDelegationSetLimitInput) *Route53GetReusableDelegationSetLimitResult
 
-    GetTrafficPolicy(ctx workflow.Context, input *route53.GetTrafficPolicyInput) (*route53.GetTrafficPolicyOutput, error)
-    GetTrafficPolicyAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInput) *Route53GetTrafficPolicyResult
+       GetTrafficPolicy(ctx workflow.Context, input *route53.GetTrafficPolicyInput) (*route53.GetTrafficPolicyOutput, error)
+       GetTrafficPolicyAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInput) *Route53GetTrafficPolicyResult
 
-    GetTrafficPolicyInstance(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceInput) (*route53.GetTrafficPolicyInstanceOutput, error)
-    GetTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceInput) *Route53GetTrafficPolicyInstanceResult
+       GetTrafficPolicyInstance(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceInput) (*route53.GetTrafficPolicyInstanceOutput, error)
+       GetTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceInput) *Route53GetTrafficPolicyInstanceResult
 
-    GetTrafficPolicyInstanceCount(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceCountInput) (*route53.GetTrafficPolicyInstanceCountOutput, error)
-    GetTrafficPolicyInstanceCountAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceCountInput) *Route53GetTrafficPolicyInstanceCountResult
+       GetTrafficPolicyInstanceCount(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceCountInput) (*route53.GetTrafficPolicyInstanceCountOutput, error)
+       GetTrafficPolicyInstanceCountAsync(ctx workflow.Context, input *route53.GetTrafficPolicyInstanceCountInput) *Route53GetTrafficPolicyInstanceCountResult
 
-    ListGeoLocations(ctx workflow.Context, input *route53.ListGeoLocationsInput) (*route53.ListGeoLocationsOutput, error)
-    ListGeoLocationsAsync(ctx workflow.Context, input *route53.ListGeoLocationsInput) *Route53ListGeoLocationsResult
+       ListGeoLocations(ctx workflow.Context, input *route53.ListGeoLocationsInput) (*route53.ListGeoLocationsOutput, error)
+       ListGeoLocationsAsync(ctx workflow.Context, input *route53.ListGeoLocationsInput) *Route53ListGeoLocationsResult
 
-    ListHealthChecks(ctx workflow.Context, input *route53.ListHealthChecksInput) (*route53.ListHealthChecksOutput, error)
-    ListHealthChecksAsync(ctx workflow.Context, input *route53.ListHealthChecksInput) *Route53ListHealthChecksResult
+       ListHealthChecks(ctx workflow.Context, input *route53.ListHealthChecksInput) (*route53.ListHealthChecksOutput, error)
+       ListHealthChecksAsync(ctx workflow.Context, input *route53.ListHealthChecksInput) *Route53ListHealthChecksResult
 
-    ListHostedZones(ctx workflow.Context, input *route53.ListHostedZonesInput) (*route53.ListHostedZonesOutput, error)
-    ListHostedZonesAsync(ctx workflow.Context, input *route53.ListHostedZonesInput) *Route53ListHostedZonesResult
+       ListHostedZones(ctx workflow.Context, input *route53.ListHostedZonesInput) (*route53.ListHostedZonesOutput, error)
+       ListHostedZonesAsync(ctx workflow.Context, input *route53.ListHostedZonesInput) *Route53ListHostedZonesResult
 
-    ListHostedZonesByName(ctx workflow.Context, input *route53.ListHostedZonesByNameInput) (*route53.ListHostedZonesByNameOutput, error)
-    ListHostedZonesByNameAsync(ctx workflow.Context, input *route53.ListHostedZonesByNameInput) *Route53ListHostedZonesByNameResult
+       ListHostedZonesByName(ctx workflow.Context, input *route53.ListHostedZonesByNameInput) (*route53.ListHostedZonesByNameOutput, error)
+       ListHostedZonesByNameAsync(ctx workflow.Context, input *route53.ListHostedZonesByNameInput) *Route53ListHostedZonesByNameResult
 
-    ListHostedZonesByVPC(ctx workflow.Context, input *route53.ListHostedZonesByVPCInput) (*route53.ListHostedZonesByVPCOutput, error)
-    ListHostedZonesByVPCAsync(ctx workflow.Context, input *route53.ListHostedZonesByVPCInput) *Route53ListHostedZonesByVPCResult
+       ListHostedZonesByVPC(ctx workflow.Context, input *route53.ListHostedZonesByVPCInput) (*route53.ListHostedZonesByVPCOutput, error)
+       ListHostedZonesByVPCAsync(ctx workflow.Context, input *route53.ListHostedZonesByVPCInput) *Route53ListHostedZonesByVPCResult
 
-    ListQueryLoggingConfigs(ctx workflow.Context, input *route53.ListQueryLoggingConfigsInput) (*route53.ListQueryLoggingConfigsOutput, error)
-    ListQueryLoggingConfigsAsync(ctx workflow.Context, input *route53.ListQueryLoggingConfigsInput) *Route53ListQueryLoggingConfigsResult
+       ListQueryLoggingConfigs(ctx workflow.Context, input *route53.ListQueryLoggingConfigsInput) (*route53.ListQueryLoggingConfigsOutput, error)
+       ListQueryLoggingConfigsAsync(ctx workflow.Context, input *route53.ListQueryLoggingConfigsInput) *Route53ListQueryLoggingConfigsResult
 
-    ListResourceRecordSets(ctx workflow.Context, input *route53.ListResourceRecordSetsInput) (*route53.ListResourceRecordSetsOutput, error)
-    ListResourceRecordSetsAsync(ctx workflow.Context, input *route53.ListResourceRecordSetsInput) *Route53ListResourceRecordSetsResult
+       ListResourceRecordSets(ctx workflow.Context, input *route53.ListResourceRecordSetsInput) (*route53.ListResourceRecordSetsOutput, error)
+       ListResourceRecordSetsAsync(ctx workflow.Context, input *route53.ListResourceRecordSetsInput) *Route53ListResourceRecordSetsResult
 
-    ListReusableDelegationSets(ctx workflow.Context, input *route53.ListReusableDelegationSetsInput) (*route53.ListReusableDelegationSetsOutput, error)
-    ListReusableDelegationSetsAsync(ctx workflow.Context, input *route53.ListReusableDelegationSetsInput) *Route53ListReusableDelegationSetsResult
+       ListReusableDelegationSets(ctx workflow.Context, input *route53.ListReusableDelegationSetsInput) (*route53.ListReusableDelegationSetsOutput, error)
+       ListReusableDelegationSetsAsync(ctx workflow.Context, input *route53.ListReusableDelegationSetsInput) *Route53ListReusableDelegationSetsResult
 
-    ListTagsForResource(ctx workflow.Context, input *route53.ListTagsForResourceInput) (*route53.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *route53.ListTagsForResourceInput) *Route53ListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *route53.ListTagsForResourceInput) (*route53.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *route53.ListTagsForResourceInput) *Route53ListTagsForResourceResult
 
-    ListTagsForResources(ctx workflow.Context, input *route53.ListTagsForResourcesInput) (*route53.ListTagsForResourcesOutput, error)
-    ListTagsForResourcesAsync(ctx workflow.Context, input *route53.ListTagsForResourcesInput) *Route53ListTagsForResourcesResult
+       ListTagsForResources(ctx workflow.Context, input *route53.ListTagsForResourcesInput) (*route53.ListTagsForResourcesOutput, error)
+       ListTagsForResourcesAsync(ctx workflow.Context, input *route53.ListTagsForResourcesInput) *Route53ListTagsForResourcesResult
 
-    ListTrafficPolicies(ctx workflow.Context, input *route53.ListTrafficPoliciesInput) (*route53.ListTrafficPoliciesOutput, error)
-    ListTrafficPoliciesAsync(ctx workflow.Context, input *route53.ListTrafficPoliciesInput) *Route53ListTrafficPoliciesResult
+       ListTrafficPolicies(ctx workflow.Context, input *route53.ListTrafficPoliciesInput) (*route53.ListTrafficPoliciesOutput, error)
+       ListTrafficPoliciesAsync(ctx workflow.Context, input *route53.ListTrafficPoliciesInput) *Route53ListTrafficPoliciesResult
 
-    ListTrafficPolicyInstances(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesInput) (*route53.ListTrafficPolicyInstancesOutput, error)
-    ListTrafficPolicyInstancesAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesInput) *Route53ListTrafficPolicyInstancesResult
+       ListTrafficPolicyInstances(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesInput) (*route53.ListTrafficPolicyInstancesOutput, error)
+       ListTrafficPolicyInstancesAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesInput) *Route53ListTrafficPolicyInstancesResult
 
-    ListTrafficPolicyInstancesByHostedZone(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByHostedZoneInput) (*route53.ListTrafficPolicyInstancesByHostedZoneOutput, error)
-    ListTrafficPolicyInstancesByHostedZoneAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByHostedZoneInput) *Route53ListTrafficPolicyInstancesByHostedZoneResult
+       ListTrafficPolicyInstancesByHostedZone(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByHostedZoneInput) (*route53.ListTrafficPolicyInstancesByHostedZoneOutput, error)
+       ListTrafficPolicyInstancesByHostedZoneAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByHostedZoneInput) *Route53ListTrafficPolicyInstancesByHostedZoneResult
 
-    ListTrafficPolicyInstancesByPolicy(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByPolicyInput) (*route53.ListTrafficPolicyInstancesByPolicyOutput, error)
-    ListTrafficPolicyInstancesByPolicyAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByPolicyInput) *Route53ListTrafficPolicyInstancesByPolicyResult
+       ListTrafficPolicyInstancesByPolicy(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByPolicyInput) (*route53.ListTrafficPolicyInstancesByPolicyOutput, error)
+       ListTrafficPolicyInstancesByPolicyAsync(ctx workflow.Context, input *route53.ListTrafficPolicyInstancesByPolicyInput) *Route53ListTrafficPolicyInstancesByPolicyResult
 
-    ListTrafficPolicyVersions(ctx workflow.Context, input *route53.ListTrafficPolicyVersionsInput) (*route53.ListTrafficPolicyVersionsOutput, error)
-    ListTrafficPolicyVersionsAsync(ctx workflow.Context, input *route53.ListTrafficPolicyVersionsInput) *Route53ListTrafficPolicyVersionsResult
+       ListTrafficPolicyVersions(ctx workflow.Context, input *route53.ListTrafficPolicyVersionsInput) (*route53.ListTrafficPolicyVersionsOutput, error)
+       ListTrafficPolicyVersionsAsync(ctx workflow.Context, input *route53.ListTrafficPolicyVersionsInput) *Route53ListTrafficPolicyVersionsResult
 
-    ListVPCAssociationAuthorizations(ctx workflow.Context, input *route53.ListVPCAssociationAuthorizationsInput) (*route53.ListVPCAssociationAuthorizationsOutput, error)
-    ListVPCAssociationAuthorizationsAsync(ctx workflow.Context, input *route53.ListVPCAssociationAuthorizationsInput) *Route53ListVPCAssociationAuthorizationsResult
+       ListVPCAssociationAuthorizations(ctx workflow.Context, input *route53.ListVPCAssociationAuthorizationsInput) (*route53.ListVPCAssociationAuthorizationsOutput, error)
+       ListVPCAssociationAuthorizationsAsync(ctx workflow.Context, input *route53.ListVPCAssociationAuthorizationsInput) *Route53ListVPCAssociationAuthorizationsResult
 
-    TestDNSAnswer(ctx workflow.Context, input *route53.TestDNSAnswerInput) (*route53.TestDNSAnswerOutput, error)
-    TestDNSAnswerAsync(ctx workflow.Context, input *route53.TestDNSAnswerInput) *Route53TestDNSAnswerResult
+       TestDNSAnswer(ctx workflow.Context, input *route53.TestDNSAnswerInput) (*route53.TestDNSAnswerOutput, error)
+       TestDNSAnswerAsync(ctx workflow.Context, input *route53.TestDNSAnswerInput) *Route53TestDNSAnswerResult
 
-    UpdateHealthCheck(ctx workflow.Context, input *route53.UpdateHealthCheckInput) (*route53.UpdateHealthCheckOutput, error)
-    UpdateHealthCheckAsync(ctx workflow.Context, input *route53.UpdateHealthCheckInput) *Route53UpdateHealthCheckResult
+       UpdateHealthCheck(ctx workflow.Context, input *route53.UpdateHealthCheckInput) (*route53.UpdateHealthCheckOutput, error)
+       UpdateHealthCheckAsync(ctx workflow.Context, input *route53.UpdateHealthCheckInput) *Route53UpdateHealthCheckResult
 
-    UpdateHostedZoneComment(ctx workflow.Context, input *route53.UpdateHostedZoneCommentInput) (*route53.UpdateHostedZoneCommentOutput, error)
-    UpdateHostedZoneCommentAsync(ctx workflow.Context, input *route53.UpdateHostedZoneCommentInput) *Route53UpdateHostedZoneCommentResult
+       UpdateHostedZoneComment(ctx workflow.Context, input *route53.UpdateHostedZoneCommentInput) (*route53.UpdateHostedZoneCommentOutput, error)
+       UpdateHostedZoneCommentAsync(ctx workflow.Context, input *route53.UpdateHostedZoneCommentInput) *Route53UpdateHostedZoneCommentResult
 
-    UpdateTrafficPolicyComment(ctx workflow.Context, input *route53.UpdateTrafficPolicyCommentInput) (*route53.UpdateTrafficPolicyCommentOutput, error)
-    UpdateTrafficPolicyCommentAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyCommentInput) *Route53UpdateTrafficPolicyCommentResult
+       UpdateTrafficPolicyComment(ctx workflow.Context, input *route53.UpdateTrafficPolicyCommentInput) (*route53.UpdateTrafficPolicyCommentOutput, error)
+       UpdateTrafficPolicyCommentAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyCommentInput) *Route53UpdateTrafficPolicyCommentResult
 
-    UpdateTrafficPolicyInstance(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) (*route53.UpdateTrafficPolicyInstanceOutput, error)
-    UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceResult
+       UpdateTrafficPolicyInstance(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) (*route53.UpdateTrafficPolicyInstanceOutput, error)
+       UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceResult
 
-    WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error}
+       WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error}
 
 type Route53AssociateVPCWithHostedZoneResult struct {
 	Result workflow.Future

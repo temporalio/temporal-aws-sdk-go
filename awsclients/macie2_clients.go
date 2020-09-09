@@ -7,158 +7,158 @@ import (
 )
 
 type Macie2Client interface {
-    AcceptInvitation(ctx workflow.Context, input *macie2.AcceptInvitationInput) (*macie2.AcceptInvitationOutput, error)
-    AcceptInvitationAsync(ctx workflow.Context, input *macie2.AcceptInvitationInput) *Macie2AcceptInvitationResult
+       AcceptInvitation(ctx workflow.Context, input *macie2.AcceptInvitationInput) (*macie2.AcceptInvitationOutput, error)
+       AcceptInvitationAsync(ctx workflow.Context, input *macie2.AcceptInvitationInput) *Macie2AcceptInvitationResult
 
-    BatchGetCustomDataIdentifiers(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) (*macie2.BatchGetCustomDataIdentifiersOutput, error)
-    BatchGetCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) *Macie2BatchGetCustomDataIdentifiersResult
+       BatchGetCustomDataIdentifiers(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) (*macie2.BatchGetCustomDataIdentifiersOutput, error)
+       BatchGetCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.BatchGetCustomDataIdentifiersInput) *Macie2BatchGetCustomDataIdentifiersResult
 
-    CreateClassificationJob(ctx workflow.Context, input *macie2.CreateClassificationJobInput) (*macie2.CreateClassificationJobOutput, error)
-    CreateClassificationJobAsync(ctx workflow.Context, input *macie2.CreateClassificationJobInput) *Macie2CreateClassificationJobResult
+       CreateClassificationJob(ctx workflow.Context, input *macie2.CreateClassificationJobInput) (*macie2.CreateClassificationJobOutput, error)
+       CreateClassificationJobAsync(ctx workflow.Context, input *macie2.CreateClassificationJobInput) *Macie2CreateClassificationJobResult
 
-    CreateCustomDataIdentifier(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) (*macie2.CreateCustomDataIdentifierOutput, error)
-    CreateCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) *Macie2CreateCustomDataIdentifierResult
+       CreateCustomDataIdentifier(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) (*macie2.CreateCustomDataIdentifierOutput, error)
+       CreateCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.CreateCustomDataIdentifierInput) *Macie2CreateCustomDataIdentifierResult
 
-    CreateFindingsFilter(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) (*macie2.CreateFindingsFilterOutput, error)
-    CreateFindingsFilterAsync(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) *Macie2CreateFindingsFilterResult
+       CreateFindingsFilter(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) (*macie2.CreateFindingsFilterOutput, error)
+       CreateFindingsFilterAsync(ctx workflow.Context, input *macie2.CreateFindingsFilterInput) *Macie2CreateFindingsFilterResult
 
-    CreateInvitations(ctx workflow.Context, input *macie2.CreateInvitationsInput) (*macie2.CreateInvitationsOutput, error)
-    CreateInvitationsAsync(ctx workflow.Context, input *macie2.CreateInvitationsInput) *Macie2CreateInvitationsResult
+       CreateInvitations(ctx workflow.Context, input *macie2.CreateInvitationsInput) (*macie2.CreateInvitationsOutput, error)
+       CreateInvitationsAsync(ctx workflow.Context, input *macie2.CreateInvitationsInput) *Macie2CreateInvitationsResult
 
-    CreateMember(ctx workflow.Context, input *macie2.CreateMemberInput) (*macie2.CreateMemberOutput, error)
-    CreateMemberAsync(ctx workflow.Context, input *macie2.CreateMemberInput) *Macie2CreateMemberResult
+       CreateMember(ctx workflow.Context, input *macie2.CreateMemberInput) (*macie2.CreateMemberOutput, error)
+       CreateMemberAsync(ctx workflow.Context, input *macie2.CreateMemberInput) *Macie2CreateMemberResult
 
-    CreateSampleFindings(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) (*macie2.CreateSampleFindingsOutput, error)
-    CreateSampleFindingsAsync(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) *Macie2CreateSampleFindingsResult
+       CreateSampleFindings(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) (*macie2.CreateSampleFindingsOutput, error)
+       CreateSampleFindingsAsync(ctx workflow.Context, input *macie2.CreateSampleFindingsInput) *Macie2CreateSampleFindingsResult
 
-    DeclineInvitations(ctx workflow.Context, input *macie2.DeclineInvitationsInput) (*macie2.DeclineInvitationsOutput, error)
-    DeclineInvitationsAsync(ctx workflow.Context, input *macie2.DeclineInvitationsInput) *Macie2DeclineInvitationsResult
+       DeclineInvitations(ctx workflow.Context, input *macie2.DeclineInvitationsInput) (*macie2.DeclineInvitationsOutput, error)
+       DeclineInvitationsAsync(ctx workflow.Context, input *macie2.DeclineInvitationsInput) *Macie2DeclineInvitationsResult
 
-    DeleteCustomDataIdentifier(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) (*macie2.DeleteCustomDataIdentifierOutput, error)
-    DeleteCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) *Macie2DeleteCustomDataIdentifierResult
+       DeleteCustomDataIdentifier(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) (*macie2.DeleteCustomDataIdentifierOutput, error)
+       DeleteCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.DeleteCustomDataIdentifierInput) *Macie2DeleteCustomDataIdentifierResult
 
-    DeleteFindingsFilter(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) (*macie2.DeleteFindingsFilterOutput, error)
-    DeleteFindingsFilterAsync(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) *Macie2DeleteFindingsFilterResult
+       DeleteFindingsFilter(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) (*macie2.DeleteFindingsFilterOutput, error)
+       DeleteFindingsFilterAsync(ctx workflow.Context, input *macie2.DeleteFindingsFilterInput) *Macie2DeleteFindingsFilterResult
 
-    DeleteInvitations(ctx workflow.Context, input *macie2.DeleteInvitationsInput) (*macie2.DeleteInvitationsOutput, error)
-    DeleteInvitationsAsync(ctx workflow.Context, input *macie2.DeleteInvitationsInput) *Macie2DeleteInvitationsResult
+       DeleteInvitations(ctx workflow.Context, input *macie2.DeleteInvitationsInput) (*macie2.DeleteInvitationsOutput, error)
+       DeleteInvitationsAsync(ctx workflow.Context, input *macie2.DeleteInvitationsInput) *Macie2DeleteInvitationsResult
 
-    DeleteMember(ctx workflow.Context, input *macie2.DeleteMemberInput) (*macie2.DeleteMemberOutput, error)
-    DeleteMemberAsync(ctx workflow.Context, input *macie2.DeleteMemberInput) *Macie2DeleteMemberResult
+       DeleteMember(ctx workflow.Context, input *macie2.DeleteMemberInput) (*macie2.DeleteMemberOutput, error)
+       DeleteMemberAsync(ctx workflow.Context, input *macie2.DeleteMemberInput) *Macie2DeleteMemberResult
 
-    DescribeBuckets(ctx workflow.Context, input *macie2.DescribeBucketsInput) (*macie2.DescribeBucketsOutput, error)
-    DescribeBucketsAsync(ctx workflow.Context, input *macie2.DescribeBucketsInput) *Macie2DescribeBucketsResult
+       DescribeBuckets(ctx workflow.Context, input *macie2.DescribeBucketsInput) (*macie2.DescribeBucketsOutput, error)
+       DescribeBucketsAsync(ctx workflow.Context, input *macie2.DescribeBucketsInput) *Macie2DescribeBucketsResult
 
-    DescribeClassificationJob(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) (*macie2.DescribeClassificationJobOutput, error)
-    DescribeClassificationJobAsync(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) *Macie2DescribeClassificationJobResult
+       DescribeClassificationJob(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) (*macie2.DescribeClassificationJobOutput, error)
+       DescribeClassificationJobAsync(ctx workflow.Context, input *macie2.DescribeClassificationJobInput) *Macie2DescribeClassificationJobResult
 
-    DescribeOrganizationConfiguration(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) (*macie2.DescribeOrganizationConfigurationOutput, error)
-    DescribeOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) *Macie2DescribeOrganizationConfigurationResult
+       DescribeOrganizationConfiguration(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) (*macie2.DescribeOrganizationConfigurationOutput, error)
+       DescribeOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.DescribeOrganizationConfigurationInput) *Macie2DescribeOrganizationConfigurationResult
 
-    DisableMacie(ctx workflow.Context, input *macie2.DisableMacieInput) (*macie2.DisableMacieOutput, error)
-    DisableMacieAsync(ctx workflow.Context, input *macie2.DisableMacieInput) *Macie2DisableMacieResult
+       DisableMacie(ctx workflow.Context, input *macie2.DisableMacieInput) (*macie2.DisableMacieOutput, error)
+       DisableMacieAsync(ctx workflow.Context, input *macie2.DisableMacieInput) *Macie2DisableMacieResult
 
-    DisableOrganizationAdminAccount(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) (*macie2.DisableOrganizationAdminAccountOutput, error)
-    DisableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) *Macie2DisableOrganizationAdminAccountResult
+       DisableOrganizationAdminAccount(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) (*macie2.DisableOrganizationAdminAccountOutput, error)
+       DisableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.DisableOrganizationAdminAccountInput) *Macie2DisableOrganizationAdminAccountResult
 
-    DisassociateFromMasterAccount(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) (*macie2.DisassociateFromMasterAccountOutput, error)
-    DisassociateFromMasterAccountAsync(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) *Macie2DisassociateFromMasterAccountResult
+       DisassociateFromMasterAccount(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) (*macie2.DisassociateFromMasterAccountOutput, error)
+       DisassociateFromMasterAccountAsync(ctx workflow.Context, input *macie2.DisassociateFromMasterAccountInput) *Macie2DisassociateFromMasterAccountResult
 
-    DisassociateMember(ctx workflow.Context, input *macie2.DisassociateMemberInput) (*macie2.DisassociateMemberOutput, error)
-    DisassociateMemberAsync(ctx workflow.Context, input *macie2.DisassociateMemberInput) *Macie2DisassociateMemberResult
+       DisassociateMember(ctx workflow.Context, input *macie2.DisassociateMemberInput) (*macie2.DisassociateMemberOutput, error)
+       DisassociateMemberAsync(ctx workflow.Context, input *macie2.DisassociateMemberInput) *Macie2DisassociateMemberResult
 
-    EnableMacie(ctx workflow.Context, input *macie2.EnableMacieInput) (*macie2.EnableMacieOutput, error)
-    EnableMacieAsync(ctx workflow.Context, input *macie2.EnableMacieInput) *Macie2EnableMacieResult
+       EnableMacie(ctx workflow.Context, input *macie2.EnableMacieInput) (*macie2.EnableMacieOutput, error)
+       EnableMacieAsync(ctx workflow.Context, input *macie2.EnableMacieInput) *Macie2EnableMacieResult
 
-    EnableOrganizationAdminAccount(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) (*macie2.EnableOrganizationAdminAccountOutput, error)
-    EnableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) *Macie2EnableOrganizationAdminAccountResult
+       EnableOrganizationAdminAccount(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) (*macie2.EnableOrganizationAdminAccountOutput, error)
+       EnableOrganizationAdminAccountAsync(ctx workflow.Context, input *macie2.EnableOrganizationAdminAccountInput) *Macie2EnableOrganizationAdminAccountResult
 
-    GetBucketStatistics(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) (*macie2.GetBucketStatisticsOutput, error)
-    GetBucketStatisticsAsync(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) *Macie2GetBucketStatisticsResult
+       GetBucketStatistics(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) (*macie2.GetBucketStatisticsOutput, error)
+       GetBucketStatisticsAsync(ctx workflow.Context, input *macie2.GetBucketStatisticsInput) *Macie2GetBucketStatisticsResult
 
-    GetClassificationExportConfiguration(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) (*macie2.GetClassificationExportConfigurationOutput, error)
-    GetClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) *Macie2GetClassificationExportConfigurationResult
+       GetClassificationExportConfiguration(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) (*macie2.GetClassificationExportConfigurationOutput, error)
+       GetClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.GetClassificationExportConfigurationInput) *Macie2GetClassificationExportConfigurationResult
 
-    GetCustomDataIdentifier(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) (*macie2.GetCustomDataIdentifierOutput, error)
-    GetCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) *Macie2GetCustomDataIdentifierResult
+       GetCustomDataIdentifier(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) (*macie2.GetCustomDataIdentifierOutput, error)
+       GetCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.GetCustomDataIdentifierInput) *Macie2GetCustomDataIdentifierResult
 
-    GetFindingStatistics(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) (*macie2.GetFindingStatisticsOutput, error)
-    GetFindingStatisticsAsync(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) *Macie2GetFindingStatisticsResult
+       GetFindingStatistics(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) (*macie2.GetFindingStatisticsOutput, error)
+       GetFindingStatisticsAsync(ctx workflow.Context, input *macie2.GetFindingStatisticsInput) *Macie2GetFindingStatisticsResult
 
-    GetFindings(ctx workflow.Context, input *macie2.GetFindingsInput) (*macie2.GetFindingsOutput, error)
-    GetFindingsAsync(ctx workflow.Context, input *macie2.GetFindingsInput) *Macie2GetFindingsResult
+       GetFindings(ctx workflow.Context, input *macie2.GetFindingsInput) (*macie2.GetFindingsOutput, error)
+       GetFindingsAsync(ctx workflow.Context, input *macie2.GetFindingsInput) *Macie2GetFindingsResult
 
-    GetFindingsFilter(ctx workflow.Context, input *macie2.GetFindingsFilterInput) (*macie2.GetFindingsFilterOutput, error)
-    GetFindingsFilterAsync(ctx workflow.Context, input *macie2.GetFindingsFilterInput) *Macie2GetFindingsFilterResult
+       GetFindingsFilter(ctx workflow.Context, input *macie2.GetFindingsFilterInput) (*macie2.GetFindingsFilterOutput, error)
+       GetFindingsFilterAsync(ctx workflow.Context, input *macie2.GetFindingsFilterInput) *Macie2GetFindingsFilterResult
 
-    GetInvitationsCount(ctx workflow.Context, input *macie2.GetInvitationsCountInput) (*macie2.GetInvitationsCountOutput, error)
-    GetInvitationsCountAsync(ctx workflow.Context, input *macie2.GetInvitationsCountInput) *Macie2GetInvitationsCountResult
+       GetInvitationsCount(ctx workflow.Context, input *macie2.GetInvitationsCountInput) (*macie2.GetInvitationsCountOutput, error)
+       GetInvitationsCountAsync(ctx workflow.Context, input *macie2.GetInvitationsCountInput) *Macie2GetInvitationsCountResult
 
-    GetMacieSession(ctx workflow.Context, input *macie2.GetMacieSessionInput) (*macie2.GetMacieSessionOutput, error)
-    GetMacieSessionAsync(ctx workflow.Context, input *macie2.GetMacieSessionInput) *Macie2GetMacieSessionResult
+       GetMacieSession(ctx workflow.Context, input *macie2.GetMacieSessionInput) (*macie2.GetMacieSessionOutput, error)
+       GetMacieSessionAsync(ctx workflow.Context, input *macie2.GetMacieSessionInput) *Macie2GetMacieSessionResult
 
-    GetMasterAccount(ctx workflow.Context, input *macie2.GetMasterAccountInput) (*macie2.GetMasterAccountOutput, error)
-    GetMasterAccountAsync(ctx workflow.Context, input *macie2.GetMasterAccountInput) *Macie2GetMasterAccountResult
+       GetMasterAccount(ctx workflow.Context, input *macie2.GetMasterAccountInput) (*macie2.GetMasterAccountOutput, error)
+       GetMasterAccountAsync(ctx workflow.Context, input *macie2.GetMasterAccountInput) *Macie2GetMasterAccountResult
 
-    GetMember(ctx workflow.Context, input *macie2.GetMemberInput) (*macie2.GetMemberOutput, error)
-    GetMemberAsync(ctx workflow.Context, input *macie2.GetMemberInput) *Macie2GetMemberResult
+       GetMember(ctx workflow.Context, input *macie2.GetMemberInput) (*macie2.GetMemberOutput, error)
+       GetMemberAsync(ctx workflow.Context, input *macie2.GetMemberInput) *Macie2GetMemberResult
 
-    GetUsageStatistics(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) (*macie2.GetUsageStatisticsOutput, error)
-    GetUsageStatisticsAsync(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) *Macie2GetUsageStatisticsResult
+       GetUsageStatistics(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) (*macie2.GetUsageStatisticsOutput, error)
+       GetUsageStatisticsAsync(ctx workflow.Context, input *macie2.GetUsageStatisticsInput) *Macie2GetUsageStatisticsResult
 
-    GetUsageTotals(ctx workflow.Context, input *macie2.GetUsageTotalsInput) (*macie2.GetUsageTotalsOutput, error)
-    GetUsageTotalsAsync(ctx workflow.Context, input *macie2.GetUsageTotalsInput) *Macie2GetUsageTotalsResult
+       GetUsageTotals(ctx workflow.Context, input *macie2.GetUsageTotalsInput) (*macie2.GetUsageTotalsOutput, error)
+       GetUsageTotalsAsync(ctx workflow.Context, input *macie2.GetUsageTotalsInput) *Macie2GetUsageTotalsResult
 
-    ListClassificationJobs(ctx workflow.Context, input *macie2.ListClassificationJobsInput) (*macie2.ListClassificationJobsOutput, error)
-    ListClassificationJobsAsync(ctx workflow.Context, input *macie2.ListClassificationJobsInput) *Macie2ListClassificationJobsResult
+       ListClassificationJobs(ctx workflow.Context, input *macie2.ListClassificationJobsInput) (*macie2.ListClassificationJobsOutput, error)
+       ListClassificationJobsAsync(ctx workflow.Context, input *macie2.ListClassificationJobsInput) *Macie2ListClassificationJobsResult
 
-    ListCustomDataIdentifiers(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) (*macie2.ListCustomDataIdentifiersOutput, error)
-    ListCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) *Macie2ListCustomDataIdentifiersResult
+       ListCustomDataIdentifiers(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) (*macie2.ListCustomDataIdentifiersOutput, error)
+       ListCustomDataIdentifiersAsync(ctx workflow.Context, input *macie2.ListCustomDataIdentifiersInput) *Macie2ListCustomDataIdentifiersResult
 
-    ListFindings(ctx workflow.Context, input *macie2.ListFindingsInput) (*macie2.ListFindingsOutput, error)
-    ListFindingsAsync(ctx workflow.Context, input *macie2.ListFindingsInput) *Macie2ListFindingsResult
+       ListFindings(ctx workflow.Context, input *macie2.ListFindingsInput) (*macie2.ListFindingsOutput, error)
+       ListFindingsAsync(ctx workflow.Context, input *macie2.ListFindingsInput) *Macie2ListFindingsResult
 
-    ListFindingsFilters(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) (*macie2.ListFindingsFiltersOutput, error)
-    ListFindingsFiltersAsync(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) *Macie2ListFindingsFiltersResult
+       ListFindingsFilters(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) (*macie2.ListFindingsFiltersOutput, error)
+       ListFindingsFiltersAsync(ctx workflow.Context, input *macie2.ListFindingsFiltersInput) *Macie2ListFindingsFiltersResult
 
-    ListInvitations(ctx workflow.Context, input *macie2.ListInvitationsInput) (*macie2.ListInvitationsOutput, error)
-    ListInvitationsAsync(ctx workflow.Context, input *macie2.ListInvitationsInput) *Macie2ListInvitationsResult
+       ListInvitations(ctx workflow.Context, input *macie2.ListInvitationsInput) (*macie2.ListInvitationsOutput, error)
+       ListInvitationsAsync(ctx workflow.Context, input *macie2.ListInvitationsInput) *Macie2ListInvitationsResult
 
-    ListMembers(ctx workflow.Context, input *macie2.ListMembersInput) (*macie2.ListMembersOutput, error)
-    ListMembersAsync(ctx workflow.Context, input *macie2.ListMembersInput) *Macie2ListMembersResult
+       ListMembers(ctx workflow.Context, input *macie2.ListMembersInput) (*macie2.ListMembersOutput, error)
+       ListMembersAsync(ctx workflow.Context, input *macie2.ListMembersInput) *Macie2ListMembersResult
 
-    ListOrganizationAdminAccounts(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) (*macie2.ListOrganizationAdminAccountsOutput, error)
-    ListOrganizationAdminAccountsAsync(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) *Macie2ListOrganizationAdminAccountsResult
+       ListOrganizationAdminAccounts(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) (*macie2.ListOrganizationAdminAccountsOutput, error)
+       ListOrganizationAdminAccountsAsync(ctx workflow.Context, input *macie2.ListOrganizationAdminAccountsInput) *Macie2ListOrganizationAdminAccountsResult
 
-    ListTagsForResource(ctx workflow.Context, input *macie2.ListTagsForResourceInput) (*macie2.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *macie2.ListTagsForResourceInput) *Macie2ListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *macie2.ListTagsForResourceInput) (*macie2.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *macie2.ListTagsForResourceInput) *Macie2ListTagsForResourceResult
 
-    PutClassificationExportConfiguration(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) (*macie2.PutClassificationExportConfigurationOutput, error)
-    PutClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) *Macie2PutClassificationExportConfigurationResult
+       PutClassificationExportConfiguration(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) (*macie2.PutClassificationExportConfigurationOutput, error)
+       PutClassificationExportConfigurationAsync(ctx workflow.Context, input *macie2.PutClassificationExportConfigurationInput) *Macie2PutClassificationExportConfigurationResult
 
-    TagResource(ctx workflow.Context, input *macie2.TagResourceInput) (*macie2.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *macie2.TagResourceInput) *Macie2TagResourceResult
+       TagResource(ctx workflow.Context, input *macie2.TagResourceInput) (*macie2.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *macie2.TagResourceInput) *Macie2TagResourceResult
 
-    TestCustomDataIdentifier(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) (*macie2.TestCustomDataIdentifierOutput, error)
-    TestCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) *Macie2TestCustomDataIdentifierResult
+       TestCustomDataIdentifier(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) (*macie2.TestCustomDataIdentifierOutput, error)
+       TestCustomDataIdentifierAsync(ctx workflow.Context, input *macie2.TestCustomDataIdentifierInput) *Macie2TestCustomDataIdentifierResult
 
-    UntagResource(ctx workflow.Context, input *macie2.UntagResourceInput) (*macie2.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *macie2.UntagResourceInput) *Macie2UntagResourceResult
+       UntagResource(ctx workflow.Context, input *macie2.UntagResourceInput) (*macie2.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *macie2.UntagResourceInput) *Macie2UntagResourceResult
 
-    UpdateClassificationJob(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) (*macie2.UpdateClassificationJobOutput, error)
-    UpdateClassificationJobAsync(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) *Macie2UpdateClassificationJobResult
+       UpdateClassificationJob(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) (*macie2.UpdateClassificationJobOutput, error)
+       UpdateClassificationJobAsync(ctx workflow.Context, input *macie2.UpdateClassificationJobInput) *Macie2UpdateClassificationJobResult
 
-    UpdateFindingsFilter(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) (*macie2.UpdateFindingsFilterOutput, error)
-    UpdateFindingsFilterAsync(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) *Macie2UpdateFindingsFilterResult
+       UpdateFindingsFilter(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) (*macie2.UpdateFindingsFilterOutput, error)
+       UpdateFindingsFilterAsync(ctx workflow.Context, input *macie2.UpdateFindingsFilterInput) *Macie2UpdateFindingsFilterResult
 
-    UpdateMacieSession(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) (*macie2.UpdateMacieSessionOutput, error)
-    UpdateMacieSessionAsync(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) *Macie2UpdateMacieSessionResult
+       UpdateMacieSession(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) (*macie2.UpdateMacieSessionOutput, error)
+       UpdateMacieSessionAsync(ctx workflow.Context, input *macie2.UpdateMacieSessionInput) *Macie2UpdateMacieSessionResult
 
-    UpdateMemberSession(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) (*macie2.UpdateMemberSessionOutput, error)
-    UpdateMemberSessionAsync(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) *Macie2UpdateMemberSessionResult
+       UpdateMemberSession(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) (*macie2.UpdateMemberSessionOutput, error)
+       UpdateMemberSessionAsync(ctx workflow.Context, input *macie2.UpdateMemberSessionInput) *Macie2UpdateMemberSessionResult
 
-    UpdateOrganizationConfiguration(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) (*macie2.UpdateOrganizationConfigurationOutput, error)
-    UpdateOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) *Macie2UpdateOrganizationConfigurationResult
+       UpdateOrganizationConfiguration(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) (*macie2.UpdateOrganizationConfigurationOutput, error)
+       UpdateOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) *Macie2UpdateOrganizationConfigurationResult
 }
 
 type Macie2AcceptInvitationResult struct {

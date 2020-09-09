@@ -7,134 +7,134 @@ import (
 )
 
 type PersonalizeClient interface {
-    CreateBatchInferenceJob(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error)
-    CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobResult
+       CreateBatchInferenceJob(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error)
+       CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobResult
 
-    CreateCampaign(ctx workflow.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error)
-    CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignResult
+       CreateCampaign(ctx workflow.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error)
+       CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignResult
 
-    CreateDataset(ctx workflow.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error)
-    CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetResult
+       CreateDataset(ctx workflow.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error)
+       CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetResult
 
-    CreateDatasetGroup(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error)
-    CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupResult
+       CreateDatasetGroup(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error)
+       CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupResult
 
-    CreateDatasetImportJob(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error)
-    CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobResult
+       CreateDatasetImportJob(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error)
+       CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobResult
 
-    CreateEventTracker(ctx workflow.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error)
-    CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerResult
+       CreateEventTracker(ctx workflow.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error)
+       CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerResult
 
-    CreateFilter(ctx workflow.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error)
-    CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterResult
+       CreateFilter(ctx workflow.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error)
+       CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterResult
 
-    CreateSchema(ctx workflow.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error)
-    CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaResult
+       CreateSchema(ctx workflow.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error)
+       CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaResult
 
-    CreateSolution(ctx workflow.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error)
-    CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionResult
+       CreateSolution(ctx workflow.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error)
+       CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionResult
 
-    CreateSolutionVersion(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error)
-    CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionResult
+       CreateSolutionVersion(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error)
+       CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionResult
 
-    DeleteCampaign(ctx workflow.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error)
-    DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignResult
+       DeleteCampaign(ctx workflow.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error)
+       DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignResult
 
-    DeleteDataset(ctx workflow.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error)
-    DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetResult
+       DeleteDataset(ctx workflow.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error)
+       DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetResult
 
-    DeleteDatasetGroup(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error)
-    DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupResult
+       DeleteDatasetGroup(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error)
+       DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupResult
 
-    DeleteEventTracker(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error)
-    DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerResult
+       DeleteEventTracker(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error)
+       DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerResult
 
-    DeleteFilter(ctx workflow.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error)
-    DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterResult
+       DeleteFilter(ctx workflow.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error)
+       DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterResult
 
-    DeleteSchema(ctx workflow.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error)
-    DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaResult
+       DeleteSchema(ctx workflow.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error)
+       DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaResult
 
-    DeleteSolution(ctx workflow.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error)
-    DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionResult
+       DeleteSolution(ctx workflow.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error)
+       DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionResult
 
-    DescribeAlgorithm(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error)
-    DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmResult
+       DescribeAlgorithm(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error)
+       DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmResult
 
-    DescribeBatchInferenceJob(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error)
-    DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobResult
+       DescribeBatchInferenceJob(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error)
+       DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobResult
 
-    DescribeCampaign(ctx workflow.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error)
-    DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignResult
+       DescribeCampaign(ctx workflow.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error)
+       DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignResult
 
-    DescribeDataset(ctx workflow.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error)
-    DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetResult
+       DescribeDataset(ctx workflow.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error)
+       DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetResult
 
-    DescribeDatasetGroup(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error)
-    DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupResult
+       DescribeDatasetGroup(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error)
+       DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupResult
 
-    DescribeDatasetImportJob(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error)
-    DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobResult
+       DescribeDatasetImportJob(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error)
+       DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobResult
 
-    DescribeEventTracker(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error)
-    DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerResult
+       DescribeEventTracker(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error)
+       DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerResult
 
-    DescribeFeatureTransformation(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error)
-    DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationResult
+       DescribeFeatureTransformation(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error)
+       DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationResult
 
-    DescribeFilter(ctx workflow.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error)
-    DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterResult
+       DescribeFilter(ctx workflow.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error)
+       DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterResult
 
-    DescribeRecipe(ctx workflow.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error)
-    DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeResult
+       DescribeRecipe(ctx workflow.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error)
+       DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeResult
 
-    DescribeSchema(ctx workflow.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error)
-    DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaResult
+       DescribeSchema(ctx workflow.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error)
+       DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaResult
 
-    DescribeSolution(ctx workflow.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error)
-    DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionResult
+       DescribeSolution(ctx workflow.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error)
+       DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionResult
 
-    DescribeSolutionVersion(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error)
-    DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionResult
+       DescribeSolutionVersion(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error)
+       DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionResult
 
-    GetSolutionMetrics(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error)
-    GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsResult
+       GetSolutionMetrics(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error)
+       GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsResult
 
-    ListBatchInferenceJobs(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error)
-    ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsResult
+       ListBatchInferenceJobs(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error)
+       ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsResult
 
-    ListCampaigns(ctx workflow.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error)
-    ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsResult
+       ListCampaigns(ctx workflow.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error)
+       ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsResult
 
-    ListDatasetGroups(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error)
-    ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsResult
+       ListDatasetGroups(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error)
+       ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsResult
 
-    ListDatasetImportJobs(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error)
-    ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsResult
+       ListDatasetImportJobs(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error)
+       ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsResult
 
-    ListDatasets(ctx workflow.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error)
-    ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsResult
+       ListDatasets(ctx workflow.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error)
+       ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsResult
 
-    ListEventTrackers(ctx workflow.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error)
-    ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersResult
+       ListEventTrackers(ctx workflow.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error)
+       ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersResult
 
-    ListFilters(ctx workflow.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error)
-    ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersResult
+       ListFilters(ctx workflow.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error)
+       ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersResult
 
-    ListRecipes(ctx workflow.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error)
-    ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesResult
+       ListRecipes(ctx workflow.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error)
+       ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesResult
 
-    ListSchemas(ctx workflow.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error)
-    ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasResult
+       ListSchemas(ctx workflow.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error)
+       ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasResult
 
-    ListSolutionVersions(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error)
-    ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsResult
+       ListSolutionVersions(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error)
+       ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsResult
 
-    ListSolutions(ctx workflow.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error)
-    ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsResult
+       ListSolutions(ctx workflow.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error)
+       ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsResult
 
-    UpdateCampaign(ctx workflow.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error)
-    UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult
+       UpdateCampaign(ctx workflow.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error)
+       UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult
 }
 
 type PersonalizeCreateBatchInferenceJobResult struct {

@@ -7,44 +7,44 @@ import (
 )
 
 type HealthClient interface {
-    DescribeAffectedAccountsForOrganization(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error)
-    DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationResult
+       DescribeAffectedAccountsForOrganization(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error)
+       DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationResult
 
-    DescribeAffectedEntities(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error)
-    DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesResult
+       DescribeAffectedEntities(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error)
+       DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesResult
 
-    DescribeAffectedEntitiesForOrganization(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error)
-    DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationResult
+       DescribeAffectedEntitiesForOrganization(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error)
+       DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationResult
 
-    DescribeEntityAggregates(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error)
-    DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesResult
+       DescribeEntityAggregates(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error)
+       DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesResult
 
-    DescribeEventAggregates(ctx workflow.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error)
-    DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesResult
+       DescribeEventAggregates(ctx workflow.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error)
+       DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesResult
 
-    DescribeEventDetails(ctx workflow.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error)
-    DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsResult
+       DescribeEventDetails(ctx workflow.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error)
+       DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsResult
 
-    DescribeEventDetailsForOrganization(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error)
-    DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationResult
+       DescribeEventDetailsForOrganization(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error)
+       DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationResult
 
-    DescribeEventTypes(ctx workflow.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error)
-    DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesResult
+       DescribeEventTypes(ctx workflow.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error)
+       DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesResult
 
-    DescribeEvents(ctx workflow.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error)
-    DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsResult
+       DescribeEvents(ctx workflow.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error)
+       DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsResult
 
-    DescribeEventsForOrganization(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error)
-    DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationResult
+       DescribeEventsForOrganization(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error)
+       DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationResult
 
-    DescribeHealthServiceStatusForOrganization(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error)
-    DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationResult
+       DescribeHealthServiceStatusForOrganization(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error)
+       DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationResult
 
-    DisableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error)
-    DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationResult
+       DisableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error)
+       DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationResult
 
-    EnableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error)
-    EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult
+       EnableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error)
+       EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult
 }
 
 type HealthDescribeAffectedAccountsForOrganizationResult struct {

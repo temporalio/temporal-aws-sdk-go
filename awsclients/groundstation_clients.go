@@ -7,80 +7,80 @@ import (
 )
 
 type GroundStationClient interface {
-    CancelContact(ctx workflow.Context, input *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error)
-    CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundstationCancelContactResult
+       CancelContact(ctx workflow.Context, input *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error)
+       CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundstationCancelContactResult
 
-    CreateConfig(ctx workflow.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error)
-    CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundstationCreateConfigResult
+       CreateConfig(ctx workflow.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error)
+       CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundstationCreateConfigResult
 
-    CreateDataflowEndpointGroup(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error)
-    CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundstationCreateDataflowEndpointGroupResult
+       CreateDataflowEndpointGroup(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error)
+       CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundstationCreateDataflowEndpointGroupResult
 
-    CreateMissionProfile(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error)
-    CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundstationCreateMissionProfileResult
+       CreateMissionProfile(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error)
+       CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundstationCreateMissionProfileResult
 
-    DeleteConfig(ctx workflow.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error)
-    DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundstationDeleteConfigResult
+       DeleteConfig(ctx workflow.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error)
+       DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundstationDeleteConfigResult
 
-    DeleteDataflowEndpointGroup(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error)
-    DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundstationDeleteDataflowEndpointGroupResult
+       DeleteDataflowEndpointGroup(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error)
+       DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundstationDeleteDataflowEndpointGroupResult
 
-    DeleteMissionProfile(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error)
-    DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundstationDeleteMissionProfileResult
+       DeleteMissionProfile(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error)
+       DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundstationDeleteMissionProfileResult
 
-    DescribeContact(ctx workflow.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error)
-    DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundstationDescribeContactResult
+       DescribeContact(ctx workflow.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error)
+       DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundstationDescribeContactResult
 
-    GetConfig(ctx workflow.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error)
-    GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundstationGetConfigResult
+       GetConfig(ctx workflow.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error)
+       GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundstationGetConfigResult
 
-    GetDataflowEndpointGroup(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error)
-    GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundstationGetDataflowEndpointGroupResult
+       GetDataflowEndpointGroup(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error)
+       GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundstationGetDataflowEndpointGroupResult
 
-    GetMinuteUsage(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error)
-    GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundstationGetMinuteUsageResult
+       GetMinuteUsage(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error)
+       GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundstationGetMinuteUsageResult
 
-    GetMissionProfile(ctx workflow.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error)
-    GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundstationGetMissionProfileResult
+       GetMissionProfile(ctx workflow.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error)
+       GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundstationGetMissionProfileResult
 
-    GetSatellite(ctx workflow.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error)
-    GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundstationGetSatelliteResult
+       GetSatellite(ctx workflow.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error)
+       GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundstationGetSatelliteResult
 
-    ListConfigs(ctx workflow.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error)
-    ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundstationListConfigsResult
+       ListConfigs(ctx workflow.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error)
+       ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundstationListConfigsResult
 
-    ListContacts(ctx workflow.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error)
-    ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundstationListContactsResult
+       ListContacts(ctx workflow.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error)
+       ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundstationListContactsResult
 
-    ListDataflowEndpointGroups(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error)
-    ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundstationListDataflowEndpointGroupsResult
+       ListDataflowEndpointGroups(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error)
+       ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundstationListDataflowEndpointGroupsResult
 
-    ListGroundStations(ctx workflow.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error)
-    ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundstationListGroundStationsResult
+       ListGroundStations(ctx workflow.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error)
+       ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundstationListGroundStationsResult
 
-    ListMissionProfiles(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error)
-    ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundstationListMissionProfilesResult
+       ListMissionProfiles(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error)
+       ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundstationListMissionProfilesResult
 
-    ListSatellites(ctx workflow.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error)
-    ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundstationListSatellitesResult
+       ListSatellites(ctx workflow.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error)
+       ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundstationListSatellitesResult
 
-    ListTagsForResource(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundstationListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundstationListTagsForResourceResult
 
-    ReserveContact(ctx workflow.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error)
-    ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundstationReserveContactResult
+       ReserveContact(ctx workflow.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error)
+       ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundstationReserveContactResult
 
-    TagResource(ctx workflow.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundstationTagResourceResult
+       TagResource(ctx workflow.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundstationTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundstationUntagResourceResult
+       UntagResource(ctx workflow.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundstationUntagResourceResult
 
-    UpdateConfig(ctx workflow.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error)
-    UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundstationUpdateConfigResult
+       UpdateConfig(ctx workflow.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error)
+       UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundstationUpdateConfigResult
 
-    UpdateMissionProfile(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error)
-    UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileResult
+       UpdateMissionProfile(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error)
+       UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileResult
 }
 
 type GroundstationCancelContactResult struct {

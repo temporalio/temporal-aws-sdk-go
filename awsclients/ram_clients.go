@@ -7,77 +7,77 @@ import (
 )
 
 type RAMClient interface {
-    AcceptResourceShareInvitation(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error)
-    AcceptResourceShareInvitationAsync(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) *RamAcceptResourceShareInvitationResult
+       AcceptResourceShareInvitation(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error)
+       AcceptResourceShareInvitationAsync(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) *RamAcceptResourceShareInvitationResult
 
-    AssociateResourceShare(ctx workflow.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error)
-    AssociateResourceShareAsync(ctx workflow.Context, input *ram.AssociateResourceShareInput) *RamAssociateResourceShareResult
+       AssociateResourceShare(ctx workflow.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error)
+       AssociateResourceShareAsync(ctx workflow.Context, input *ram.AssociateResourceShareInput) *RamAssociateResourceShareResult
 
-    AssociateResourceSharePermission(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error)
-    AssociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) *RamAssociateResourceSharePermissionResult
+       AssociateResourceSharePermission(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error)
+       AssociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) *RamAssociateResourceSharePermissionResult
 
-    CreateResourceShare(ctx workflow.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error)
-    CreateResourceShareAsync(ctx workflow.Context, input *ram.CreateResourceShareInput) *RamCreateResourceShareResult
+       CreateResourceShare(ctx workflow.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error)
+       CreateResourceShareAsync(ctx workflow.Context, input *ram.CreateResourceShareInput) *RamCreateResourceShareResult
 
-    DeleteResourceShare(ctx workflow.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error)
-    DeleteResourceShareAsync(ctx workflow.Context, input *ram.DeleteResourceShareInput) *RamDeleteResourceShareResult
+       DeleteResourceShare(ctx workflow.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error)
+       DeleteResourceShareAsync(ctx workflow.Context, input *ram.DeleteResourceShareInput) *RamDeleteResourceShareResult
 
-    DisassociateResourceShare(ctx workflow.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error)
-    DisassociateResourceShareAsync(ctx workflow.Context, input *ram.DisassociateResourceShareInput) *RamDisassociateResourceShareResult
+       DisassociateResourceShare(ctx workflow.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error)
+       DisassociateResourceShareAsync(ctx workflow.Context, input *ram.DisassociateResourceShareInput) *RamDisassociateResourceShareResult
 
-    DisassociateResourceSharePermission(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error)
-    DisassociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) *RamDisassociateResourceSharePermissionResult
+       DisassociateResourceSharePermission(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error)
+       DisassociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) *RamDisassociateResourceSharePermissionResult
 
-    EnableSharingWithAwsOrganization(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error)
-    EnableSharingWithAwsOrganizationAsync(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) *RamEnableSharingWithAwsOrganizationResult
+       EnableSharingWithAwsOrganization(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error)
+       EnableSharingWithAwsOrganizationAsync(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) *RamEnableSharingWithAwsOrganizationResult
 
-    GetPermission(ctx workflow.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error)
-    GetPermissionAsync(ctx workflow.Context, input *ram.GetPermissionInput) *RamGetPermissionResult
+       GetPermission(ctx workflow.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error)
+       GetPermissionAsync(ctx workflow.Context, input *ram.GetPermissionInput) *RamGetPermissionResult
 
-    GetResourcePolicies(ctx workflow.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error)
-    GetResourcePoliciesAsync(ctx workflow.Context, input *ram.GetResourcePoliciesInput) *RamGetResourcePoliciesResult
+       GetResourcePolicies(ctx workflow.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error)
+       GetResourcePoliciesAsync(ctx workflow.Context, input *ram.GetResourcePoliciesInput) *RamGetResourcePoliciesResult
 
-    GetResourceShareAssociations(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error)
-    GetResourceShareAssociationsAsync(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) *RamGetResourceShareAssociationsResult
+       GetResourceShareAssociations(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error)
+       GetResourceShareAssociationsAsync(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) *RamGetResourceShareAssociationsResult
 
-    GetResourceShareInvitations(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error)
-    GetResourceShareInvitationsAsync(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) *RamGetResourceShareInvitationsResult
+       GetResourceShareInvitations(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error)
+       GetResourceShareInvitationsAsync(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) *RamGetResourceShareInvitationsResult
 
-    GetResourceShares(ctx workflow.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error)
-    GetResourceSharesAsync(ctx workflow.Context, input *ram.GetResourceSharesInput) *RamGetResourceSharesResult
+       GetResourceShares(ctx workflow.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error)
+       GetResourceSharesAsync(ctx workflow.Context, input *ram.GetResourceSharesInput) *RamGetResourceSharesResult
 
-    ListPendingInvitationResources(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error)
-    ListPendingInvitationResourcesAsync(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) *RamListPendingInvitationResourcesResult
+       ListPendingInvitationResources(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error)
+       ListPendingInvitationResourcesAsync(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) *RamListPendingInvitationResourcesResult
 
-    ListPermissions(ctx workflow.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error)
-    ListPermissionsAsync(ctx workflow.Context, input *ram.ListPermissionsInput) *RamListPermissionsResult
+       ListPermissions(ctx workflow.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error)
+       ListPermissionsAsync(ctx workflow.Context, input *ram.ListPermissionsInput) *RamListPermissionsResult
 
-    ListPrincipals(ctx workflow.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error)
-    ListPrincipalsAsync(ctx workflow.Context, input *ram.ListPrincipalsInput) *RamListPrincipalsResult
+       ListPrincipals(ctx workflow.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error)
+       ListPrincipalsAsync(ctx workflow.Context, input *ram.ListPrincipalsInput) *RamListPrincipalsResult
 
-    ListResourceSharePermissions(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error)
-    ListResourceSharePermissionsAsync(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) *RamListResourceSharePermissionsResult
+       ListResourceSharePermissions(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error)
+       ListResourceSharePermissionsAsync(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) *RamListResourceSharePermissionsResult
 
-    ListResourceTypes(ctx workflow.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error)
-    ListResourceTypesAsync(ctx workflow.Context, input *ram.ListResourceTypesInput) *RamListResourceTypesResult
+       ListResourceTypes(ctx workflow.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error)
+       ListResourceTypesAsync(ctx workflow.Context, input *ram.ListResourceTypesInput) *RamListResourceTypesResult
 
-    ListResources(ctx workflow.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error)
-    ListResourcesAsync(ctx workflow.Context, input *ram.ListResourcesInput) *RamListResourcesResult
+       ListResources(ctx workflow.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error)
+       ListResourcesAsync(ctx workflow.Context, input *ram.ListResourcesInput) *RamListResourcesResult
 
-    PromoteResourceShareCreatedFromPolicy(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error)
-    PromoteResourceShareCreatedFromPolicyAsync(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) *RamPromoteResourceShareCreatedFromPolicyResult
+       PromoteResourceShareCreatedFromPolicy(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error)
+       PromoteResourceShareCreatedFromPolicyAsync(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) *RamPromoteResourceShareCreatedFromPolicyResult
 
-    RejectResourceShareInvitation(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error)
-    RejectResourceShareInvitationAsync(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) *RamRejectResourceShareInvitationResult
+       RejectResourceShareInvitation(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error)
+       RejectResourceShareInvitationAsync(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) *RamRejectResourceShareInvitationResult
 
-    TagResource(ctx workflow.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *ram.TagResourceInput) *RamTagResourceResult
+       TagResource(ctx workflow.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *ram.TagResourceInput) *RamTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *ram.UntagResourceInput) *RamUntagResourceResult
+       UntagResource(ctx workflow.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *ram.UntagResourceInput) *RamUntagResourceResult
 
-    UpdateResourceShare(ctx workflow.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error)
-    UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RamUpdateResourceShareResult
+       UpdateResourceShare(ctx workflow.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error)
+       UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RamUpdateResourceShareResult
 }
 
 type RamAcceptResourceShareInvitationResult struct {

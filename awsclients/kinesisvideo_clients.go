@@ -7,62 +7,62 @@ import (
 )
 
 type KinesisVideoClient interface {
-    CreateSignalingChannel(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error)
-    CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisvideoCreateSignalingChannelResult
+       CreateSignalingChannel(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error)
+       CreateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.CreateSignalingChannelInput) *KinesisvideoCreateSignalingChannelResult
 
-    CreateStream(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error)
-    CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisvideoCreateStreamResult
+       CreateStream(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error)
+       CreateStreamAsync(ctx workflow.Context, input *kinesisvideo.CreateStreamInput) *KinesisvideoCreateStreamResult
 
-    DeleteSignalingChannel(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error)
-    DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisvideoDeleteSignalingChannelResult
+       DeleteSignalingChannel(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error)
+       DeleteSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DeleteSignalingChannelInput) *KinesisvideoDeleteSignalingChannelResult
 
-    DeleteStream(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error)
-    DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisvideoDeleteStreamResult
+       DeleteStream(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error)
+       DeleteStreamAsync(ctx workflow.Context, input *kinesisvideo.DeleteStreamInput) *KinesisvideoDeleteStreamResult
 
-    DescribeSignalingChannel(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error)
-    DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisvideoDescribeSignalingChannelResult
+       DescribeSignalingChannel(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error)
+       DescribeSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.DescribeSignalingChannelInput) *KinesisvideoDescribeSignalingChannelResult
 
-    DescribeStream(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error)
-    DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisvideoDescribeStreamResult
+       DescribeStream(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error)
+       DescribeStreamAsync(ctx workflow.Context, input *kinesisvideo.DescribeStreamInput) *KinesisvideoDescribeStreamResult
 
-    GetDataEndpoint(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error)
-    GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisvideoGetDataEndpointResult
+       GetDataEndpoint(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error)
+       GetDataEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetDataEndpointInput) *KinesisvideoGetDataEndpointResult
 
-    GetSignalingChannelEndpoint(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error)
-    GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisvideoGetSignalingChannelEndpointResult
+       GetSignalingChannelEndpoint(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error)
+       GetSignalingChannelEndpointAsync(ctx workflow.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) *KinesisvideoGetSignalingChannelEndpointResult
 
-    ListSignalingChannels(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error)
-    ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisvideoListSignalingChannelsResult
+       ListSignalingChannels(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error)
+       ListSignalingChannelsAsync(ctx workflow.Context, input *kinesisvideo.ListSignalingChannelsInput) *KinesisvideoListSignalingChannelsResult
 
-    ListStreams(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error)
-    ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisvideoListStreamsResult
+       ListStreams(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error)
+       ListStreamsAsync(ctx workflow.Context, input *kinesisvideo.ListStreamsInput) *KinesisvideoListStreamsResult
 
-    ListTagsForResource(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisvideoListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForResourceInput) *KinesisvideoListTagsForResourceResult
 
-    ListTagsForStream(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error)
-    ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisvideoListTagsForStreamResult
+       ListTagsForStream(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error)
+       ListTagsForStreamAsync(ctx workflow.Context, input *kinesisvideo.ListTagsForStreamInput) *KinesisvideoListTagsForStreamResult
 
-    TagResource(ctx workflow.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisvideoTagResourceResult
+       TagResource(ctx workflow.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *kinesisvideo.TagResourceInput) *KinesisvideoTagResourceResult
 
-    TagStream(ctx workflow.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error)
-    TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisvideoTagStreamResult
+       TagStream(ctx workflow.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error)
+       TagStreamAsync(ctx workflow.Context, input *kinesisvideo.TagStreamInput) *KinesisvideoTagStreamResult
 
-    UntagResource(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisvideoUntagResourceResult
+       UntagResource(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *kinesisvideo.UntagResourceInput) *KinesisvideoUntagResourceResult
 
-    UntagStream(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error)
-    UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisvideoUntagStreamResult
+       UntagStream(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error)
+       UntagStreamAsync(ctx workflow.Context, input *kinesisvideo.UntagStreamInput) *KinesisvideoUntagStreamResult
 
-    UpdateDataRetention(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error)
-    UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisvideoUpdateDataRetentionResult
+       UpdateDataRetention(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error)
+       UpdateDataRetentionAsync(ctx workflow.Context, input *kinesisvideo.UpdateDataRetentionInput) *KinesisvideoUpdateDataRetentionResult
 
-    UpdateSignalingChannel(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error)
-    UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisvideoUpdateSignalingChannelResult
+       UpdateSignalingChannel(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error)
+       UpdateSignalingChannelAsync(ctx workflow.Context, input *kinesisvideo.UpdateSignalingChannelInput) *KinesisvideoUpdateSignalingChannelResult
 
-    UpdateStream(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error)
-    UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisvideoUpdateStreamResult
+       UpdateStream(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error)
+       UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisvideoUpdateStreamResult
 }
 
 type KinesisvideoCreateSignalingChannelResult struct {

@@ -7,20 +7,20 @@ import (
 )
 
 type ConnectParticipantClient interface {
-    CreateParticipantConnection(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) (*connectparticipant.CreateParticipantConnectionOutput, error)
-    CreateParticipantConnectionAsync(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) *ConnectparticipantCreateParticipantConnectionResult
+       CreateParticipantConnection(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) (*connectparticipant.CreateParticipantConnectionOutput, error)
+       CreateParticipantConnectionAsync(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) *ConnectparticipantCreateParticipantConnectionResult
 
-    DisconnectParticipant(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) (*connectparticipant.DisconnectParticipantOutput, error)
-    DisconnectParticipantAsync(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) *ConnectparticipantDisconnectParticipantResult
+       DisconnectParticipant(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) (*connectparticipant.DisconnectParticipantOutput, error)
+       DisconnectParticipantAsync(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) *ConnectparticipantDisconnectParticipantResult
 
-    GetTranscript(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) (*connectparticipant.GetTranscriptOutput, error)
-    GetTranscriptAsync(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) *ConnectparticipantGetTranscriptResult
+       GetTranscript(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) (*connectparticipant.GetTranscriptOutput, error)
+       GetTranscriptAsync(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) *ConnectparticipantGetTranscriptResult
 
-    SendEvent(ctx workflow.Context, input *connectparticipant.SendEventInput) (*connectparticipant.SendEventOutput, error)
-    SendEventAsync(ctx workflow.Context, input *connectparticipant.SendEventInput) *ConnectparticipantSendEventResult
+       SendEvent(ctx workflow.Context, input *connectparticipant.SendEventInput) (*connectparticipant.SendEventOutput, error)
+       SendEventAsync(ctx workflow.Context, input *connectparticipant.SendEventInput) *ConnectparticipantSendEventResult
 
-    SendMessage(ctx workflow.Context, input *connectparticipant.SendMessageInput) (*connectparticipant.SendMessageOutput, error)
-    SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *ConnectparticipantSendMessageResult
+       SendMessage(ctx workflow.Context, input *connectparticipant.SendMessageInput) (*connectparticipant.SendMessageOutput, error)
+       SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *ConnectparticipantSendMessageResult
 }
 
 type ConnectparticipantCreateParticipantConnectionResult struct {

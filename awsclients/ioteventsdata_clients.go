@@ -7,17 +7,17 @@ import (
 )
 
 type IoTEventsDataClient interface {
-    BatchPutMessage(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) (*ioteventsdata.BatchPutMessageOutput, error)
-    BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *IoteventsdataBatchPutMessageResult
+       BatchPutMessage(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) (*ioteventsdata.BatchPutMessageOutput, error)
+       BatchPutMessageAsync(ctx workflow.Context, input *ioteventsdata.BatchPutMessageInput) *IoteventsdataBatchPutMessageResult
 
-    BatchUpdateDetector(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error)
-    BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *IoteventsdataBatchUpdateDetectorResult
+       BatchUpdateDetector(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error)
+       BatchUpdateDetectorAsync(ctx workflow.Context, input *ioteventsdata.BatchUpdateDetectorInput) *IoteventsdataBatchUpdateDetectorResult
 
-    DescribeDetector(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error)
-    DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *IoteventsdataDescribeDetectorResult
+       DescribeDetector(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error)
+       DescribeDetectorAsync(ctx workflow.Context, input *ioteventsdata.DescribeDetectorInput) *IoteventsdataDescribeDetectorResult
 
-    ListDetectors(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error)
-    ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *IoteventsdataListDetectorsResult
+       ListDetectors(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error)
+       ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *IoteventsdataListDetectorsResult
 }
 
 type IoteventsdataBatchPutMessageResult struct {

@@ -7,29 +7,29 @@ import (
 )
 
 type STSClient interface {
-    AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error)
-    AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *StsAssumeRoleResult
+       AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error)
+       AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *StsAssumeRoleResult
 
-    AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error)
-    AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *StsAssumeRoleWithSAMLResult
+       AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error)
+       AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *StsAssumeRoleWithSAMLResult
 
-    AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error)
-    AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *StsAssumeRoleWithWebIdentityResult
+       AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error)
+       AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *StsAssumeRoleWithWebIdentityResult
 
-    DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error)
-    DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *StsDecodeAuthorizationMessageResult
+       DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error)
+       DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *StsDecodeAuthorizationMessageResult
 
-    GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error)
-    GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *StsGetAccessKeyInfoResult
+       GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error)
+       GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *StsGetAccessKeyInfoResult
 
-    GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error)
-    GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *StsGetCallerIdentityResult
+       GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error)
+       GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *StsGetCallerIdentityResult
 
-    GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error)
-    GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *StsGetFederationTokenResult
+       GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error)
+       GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *StsGetFederationTokenResult
 
-    GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error)
-    GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult
+       GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error)
+       GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult
 }
 
 type StsAssumeRoleResult struct {

@@ -7,8 +7,8 @@ import (
 )
 
 type MarketplaceEntitlementServiceClient interface {
-    GetEntitlements(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error)
-    GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsResult
+       GetEntitlements(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error)
+       GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsResult
 }
 
 type MarketplaceentitlementserviceGetEntitlementsResult struct {

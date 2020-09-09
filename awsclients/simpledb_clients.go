@@ -7,35 +7,35 @@ import (
 )
 
 type SimpleDBClient interface {
-    BatchDeleteAttributes(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) (*simpledb.BatchDeleteAttributesOutput, error)
-    BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpledbBatchDeleteAttributesResult
+       BatchDeleteAttributes(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) (*simpledb.BatchDeleteAttributesOutput, error)
+       BatchDeleteAttributesAsync(ctx workflow.Context, input *simpledb.BatchDeleteAttributesInput) *SimpledbBatchDeleteAttributesResult
 
-    BatchPutAttributes(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error)
-    BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpledbBatchPutAttributesResult
+       BatchPutAttributes(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error)
+       BatchPutAttributesAsync(ctx workflow.Context, input *simpledb.BatchPutAttributesInput) *SimpledbBatchPutAttributesResult
 
-    CreateDomain(ctx workflow.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error)
-    CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpledbCreateDomainResult
+       CreateDomain(ctx workflow.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error)
+       CreateDomainAsync(ctx workflow.Context, input *simpledb.CreateDomainInput) *SimpledbCreateDomainResult
 
-    DeleteAttributes(ctx workflow.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error)
-    DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpledbDeleteAttributesResult
+       DeleteAttributes(ctx workflow.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error)
+       DeleteAttributesAsync(ctx workflow.Context, input *simpledb.DeleteAttributesInput) *SimpledbDeleteAttributesResult
 
-    DeleteDomain(ctx workflow.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error)
-    DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpledbDeleteDomainResult
+       DeleteDomain(ctx workflow.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error)
+       DeleteDomainAsync(ctx workflow.Context, input *simpledb.DeleteDomainInput) *SimpledbDeleteDomainResult
 
-    DomainMetadata(ctx workflow.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error)
-    DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpledbDomainMetadataResult
+       DomainMetadata(ctx workflow.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error)
+       DomainMetadataAsync(ctx workflow.Context, input *simpledb.DomainMetadataInput) *SimpledbDomainMetadataResult
 
-    GetAttributes(ctx workflow.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error)
-    GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpledbGetAttributesResult
+       GetAttributes(ctx workflow.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error)
+       GetAttributesAsync(ctx workflow.Context, input *simpledb.GetAttributesInput) *SimpledbGetAttributesResult
 
-    ListDomains(ctx workflow.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error)
-    ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpledbListDomainsResult
+       ListDomains(ctx workflow.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error)
+       ListDomainsAsync(ctx workflow.Context, input *simpledb.ListDomainsInput) *SimpledbListDomainsResult
 
-    PutAttributes(ctx workflow.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error)
-    PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpledbPutAttributesResult
+       PutAttributes(ctx workflow.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error)
+       PutAttributesAsync(ctx workflow.Context, input *simpledb.PutAttributesInput) *SimpledbPutAttributesResult
 
-    Select(ctx workflow.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error)
-    SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpledbSelectResult
+       Select(ctx workflow.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error)
+       SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpledbSelectResult
 }
 
 type SimpledbBatchDeleteAttributesResult struct {

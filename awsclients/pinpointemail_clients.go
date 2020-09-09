@@ -7,131 +7,131 @@ import (
 )
 
 type PinpointEmailClient interface {
-    CreateConfigurationSet(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) (*pinpointemail.CreateConfigurationSetOutput, error)
-    CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) *PinpointemailCreateConfigurationSetResult
+       CreateConfigurationSet(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) (*pinpointemail.CreateConfigurationSetOutput, error)
+       CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetInput) *PinpointemailCreateConfigurationSetResult
 
-    CreateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) (*pinpointemail.CreateConfigurationSetEventDestinationOutput, error)
-    CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) *PinpointemailCreateConfigurationSetEventDestinationResult
+       CreateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) (*pinpointemail.CreateConfigurationSetEventDestinationOutput, error)
+       CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.CreateConfigurationSetEventDestinationInput) *PinpointemailCreateConfigurationSetEventDestinationResult
 
-    CreateDedicatedIpPool(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) (*pinpointemail.CreateDedicatedIpPoolOutput, error)
-    CreateDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) *PinpointemailCreateDedicatedIpPoolResult
+       CreateDedicatedIpPool(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) (*pinpointemail.CreateDedicatedIpPoolOutput, error)
+       CreateDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.CreateDedicatedIpPoolInput) *PinpointemailCreateDedicatedIpPoolResult
 
-    CreateDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) (*pinpointemail.CreateDeliverabilityTestReportOutput, error)
-    CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) *PinpointemailCreateDeliverabilityTestReportResult
+       CreateDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) (*pinpointemail.CreateDeliverabilityTestReportOutput, error)
+       CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.CreateDeliverabilityTestReportInput) *PinpointemailCreateDeliverabilityTestReportResult
 
-    CreateEmailIdentity(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) (*pinpointemail.CreateEmailIdentityOutput, error)
-    CreateEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) *PinpointemailCreateEmailIdentityResult
+       CreateEmailIdentity(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) (*pinpointemail.CreateEmailIdentityOutput, error)
+       CreateEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.CreateEmailIdentityInput) *PinpointemailCreateEmailIdentityResult
 
-    DeleteConfigurationSet(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) (*pinpointemail.DeleteConfigurationSetOutput, error)
-    DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) *PinpointemailDeleteConfigurationSetResult
+       DeleteConfigurationSet(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) (*pinpointemail.DeleteConfigurationSetOutput, error)
+       DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetInput) *PinpointemailDeleteConfigurationSetResult
 
-    DeleteConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) (*pinpointemail.DeleteConfigurationSetEventDestinationOutput, error)
-    DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) *PinpointemailDeleteConfigurationSetEventDestinationResult
+       DeleteConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) (*pinpointemail.DeleteConfigurationSetEventDestinationOutput, error)
+       DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.DeleteConfigurationSetEventDestinationInput) *PinpointemailDeleteConfigurationSetEventDestinationResult
 
-    DeleteDedicatedIpPool(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) (*pinpointemail.DeleteDedicatedIpPoolOutput, error)
-    DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) *PinpointemailDeleteDedicatedIpPoolResult
+       DeleteDedicatedIpPool(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) (*pinpointemail.DeleteDedicatedIpPoolOutput, error)
+       DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *pinpointemail.DeleteDedicatedIpPoolInput) *PinpointemailDeleteDedicatedIpPoolResult
 
-    DeleteEmailIdentity(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) (*pinpointemail.DeleteEmailIdentityOutput, error)
-    DeleteEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) *PinpointemailDeleteEmailIdentityResult
+       DeleteEmailIdentity(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) (*pinpointemail.DeleteEmailIdentityOutput, error)
+       DeleteEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.DeleteEmailIdentityInput) *PinpointemailDeleteEmailIdentityResult
 
-    GetAccount(ctx workflow.Context, input *pinpointemail.GetAccountInput) (*pinpointemail.GetAccountOutput, error)
-    GetAccountAsync(ctx workflow.Context, input *pinpointemail.GetAccountInput) *PinpointemailGetAccountResult
+       GetAccount(ctx workflow.Context, input *pinpointemail.GetAccountInput) (*pinpointemail.GetAccountOutput, error)
+       GetAccountAsync(ctx workflow.Context, input *pinpointemail.GetAccountInput) *PinpointemailGetAccountResult
 
-    GetBlacklistReports(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) (*pinpointemail.GetBlacklistReportsOutput, error)
-    GetBlacklistReportsAsync(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) *PinpointemailGetBlacklistReportsResult
+       GetBlacklistReports(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) (*pinpointemail.GetBlacklistReportsOutput, error)
+       GetBlacklistReportsAsync(ctx workflow.Context, input *pinpointemail.GetBlacklistReportsInput) *PinpointemailGetBlacklistReportsResult
 
-    GetConfigurationSet(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) (*pinpointemail.GetConfigurationSetOutput, error)
-    GetConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) *PinpointemailGetConfigurationSetResult
+       GetConfigurationSet(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) (*pinpointemail.GetConfigurationSetOutput, error)
+       GetConfigurationSetAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetInput) *PinpointemailGetConfigurationSetResult
 
-    GetConfigurationSetEventDestinations(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) (*pinpointemail.GetConfigurationSetEventDestinationsOutput, error)
-    GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) *PinpointemailGetConfigurationSetEventDestinationsResult
+       GetConfigurationSetEventDestinations(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) (*pinpointemail.GetConfigurationSetEventDestinationsOutput, error)
+       GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointemail.GetConfigurationSetEventDestinationsInput) *PinpointemailGetConfigurationSetEventDestinationsResult
 
-    GetDedicatedIp(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) (*pinpointemail.GetDedicatedIpOutput, error)
-    GetDedicatedIpAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) *PinpointemailGetDedicatedIpResult
+       GetDedicatedIp(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) (*pinpointemail.GetDedicatedIpOutput, error)
+       GetDedicatedIpAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpInput) *PinpointemailGetDedicatedIpResult
 
-    GetDedicatedIps(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) (*pinpointemail.GetDedicatedIpsOutput, error)
-    GetDedicatedIpsAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) *PinpointemailGetDedicatedIpsResult
+       GetDedicatedIps(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) (*pinpointemail.GetDedicatedIpsOutput, error)
+       GetDedicatedIpsAsync(ctx workflow.Context, input *pinpointemail.GetDedicatedIpsInput) *PinpointemailGetDedicatedIpsResult
 
-    GetDeliverabilityDashboardOptions(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) (*pinpointemail.GetDeliverabilityDashboardOptionsOutput, error)
-    GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) *PinpointemailGetDeliverabilityDashboardOptionsResult
+       GetDeliverabilityDashboardOptions(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) (*pinpointemail.GetDeliverabilityDashboardOptionsOutput, error)
+       GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityDashboardOptionsInput) *PinpointemailGetDeliverabilityDashboardOptionsResult
 
-    GetDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) (*pinpointemail.GetDeliverabilityTestReportOutput, error)
-    GetDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) *PinpointemailGetDeliverabilityTestReportResult
+       GetDeliverabilityTestReport(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) (*pinpointemail.GetDeliverabilityTestReportOutput, error)
+       GetDeliverabilityTestReportAsync(ctx workflow.Context, input *pinpointemail.GetDeliverabilityTestReportInput) *PinpointemailGetDeliverabilityTestReportResult
 
-    GetDomainDeliverabilityCampaign(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) (*pinpointemail.GetDomainDeliverabilityCampaignOutput, error)
-    GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) *PinpointemailGetDomainDeliverabilityCampaignResult
+       GetDomainDeliverabilityCampaign(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) (*pinpointemail.GetDomainDeliverabilityCampaignOutput, error)
+       GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *pinpointemail.GetDomainDeliverabilityCampaignInput) *PinpointemailGetDomainDeliverabilityCampaignResult
 
-    GetDomainStatisticsReport(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) (*pinpointemail.GetDomainStatisticsReportOutput, error)
-    GetDomainStatisticsReportAsync(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) *PinpointemailGetDomainStatisticsReportResult
+       GetDomainStatisticsReport(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) (*pinpointemail.GetDomainStatisticsReportOutput, error)
+       GetDomainStatisticsReportAsync(ctx workflow.Context, input *pinpointemail.GetDomainStatisticsReportInput) *PinpointemailGetDomainStatisticsReportResult
 
-    GetEmailIdentity(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) (*pinpointemail.GetEmailIdentityOutput, error)
-    GetEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) *PinpointemailGetEmailIdentityResult
+       GetEmailIdentity(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) (*pinpointemail.GetEmailIdentityOutput, error)
+       GetEmailIdentityAsync(ctx workflow.Context, input *pinpointemail.GetEmailIdentityInput) *PinpointemailGetEmailIdentityResult
 
-    ListConfigurationSets(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) (*pinpointemail.ListConfigurationSetsOutput, error)
-    ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) *PinpointemailListConfigurationSetsResult
+       ListConfigurationSets(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) (*pinpointemail.ListConfigurationSetsOutput, error)
+       ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointemail.ListConfigurationSetsInput) *PinpointemailListConfigurationSetsResult
 
-    ListDedicatedIpPools(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) (*pinpointemail.ListDedicatedIpPoolsOutput, error)
-    ListDedicatedIpPoolsAsync(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) *PinpointemailListDedicatedIpPoolsResult
+       ListDedicatedIpPools(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) (*pinpointemail.ListDedicatedIpPoolsOutput, error)
+       ListDedicatedIpPoolsAsync(ctx workflow.Context, input *pinpointemail.ListDedicatedIpPoolsInput) *PinpointemailListDedicatedIpPoolsResult
 
-    ListDeliverabilityTestReports(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) (*pinpointemail.ListDeliverabilityTestReportsOutput, error)
-    ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) *PinpointemailListDeliverabilityTestReportsResult
+       ListDeliverabilityTestReports(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) (*pinpointemail.ListDeliverabilityTestReportsOutput, error)
+       ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *pinpointemail.ListDeliverabilityTestReportsInput) *PinpointemailListDeliverabilityTestReportsResult
 
-    ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) (*pinpointemail.ListDomainDeliverabilityCampaignsOutput, error)
-    ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) *PinpointemailListDomainDeliverabilityCampaignsResult
+       ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) (*pinpointemail.ListDomainDeliverabilityCampaignsOutput, error)
+       ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *pinpointemail.ListDomainDeliverabilityCampaignsInput) *PinpointemailListDomainDeliverabilityCampaignsResult
 
-    ListEmailIdentities(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) (*pinpointemail.ListEmailIdentitiesOutput, error)
-    ListEmailIdentitiesAsync(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) *PinpointemailListEmailIdentitiesResult
+       ListEmailIdentities(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) (*pinpointemail.ListEmailIdentitiesOutput, error)
+       ListEmailIdentitiesAsync(ctx workflow.Context, input *pinpointemail.ListEmailIdentitiesInput) *PinpointemailListEmailIdentitiesResult
 
-    ListTagsForResource(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) (*pinpointemail.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) *PinpointemailListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) (*pinpointemail.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *pinpointemail.ListTagsForResourceInput) *PinpointemailListTagsForResourceResult
 
-    PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) (*pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput, error)
-    PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) *PinpointemailPutAccountDedicatedIpWarmupAttributesResult
+       PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) (*pinpointemail.PutAccountDedicatedIpWarmupAttributesOutput, error)
+       PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountDedicatedIpWarmupAttributesInput) *PinpointemailPutAccountDedicatedIpWarmupAttributesResult
 
-    PutAccountSendingAttributes(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) (*pinpointemail.PutAccountSendingAttributesOutput, error)
-    PutAccountSendingAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) *PinpointemailPutAccountSendingAttributesResult
+       PutAccountSendingAttributes(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) (*pinpointemail.PutAccountSendingAttributesOutput, error)
+       PutAccountSendingAttributesAsync(ctx workflow.Context, input *pinpointemail.PutAccountSendingAttributesInput) *PinpointemailPutAccountSendingAttributesResult
 
-    PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) (*pinpointemail.PutConfigurationSetDeliveryOptionsOutput, error)
-    PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) *PinpointemailPutConfigurationSetDeliveryOptionsResult
+       PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) (*pinpointemail.PutConfigurationSetDeliveryOptionsOutput, error)
+       PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetDeliveryOptionsInput) *PinpointemailPutConfigurationSetDeliveryOptionsResult
 
-    PutConfigurationSetReputationOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) (*pinpointemail.PutConfigurationSetReputationOptionsOutput, error)
-    PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) *PinpointemailPutConfigurationSetReputationOptionsResult
+       PutConfigurationSetReputationOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) (*pinpointemail.PutConfigurationSetReputationOptionsOutput, error)
+       PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetReputationOptionsInput) *PinpointemailPutConfigurationSetReputationOptionsResult
 
-    PutConfigurationSetSendingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) (*pinpointemail.PutConfigurationSetSendingOptionsOutput, error)
-    PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) *PinpointemailPutConfigurationSetSendingOptionsResult
+       PutConfigurationSetSendingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) (*pinpointemail.PutConfigurationSetSendingOptionsOutput, error)
+       PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetSendingOptionsInput) *PinpointemailPutConfigurationSetSendingOptionsResult
 
-    PutConfigurationSetTrackingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) (*pinpointemail.PutConfigurationSetTrackingOptionsOutput, error)
-    PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) *PinpointemailPutConfigurationSetTrackingOptionsResult
+       PutConfigurationSetTrackingOptions(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) (*pinpointemail.PutConfigurationSetTrackingOptionsOutput, error)
+       PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *pinpointemail.PutConfigurationSetTrackingOptionsInput) *PinpointemailPutConfigurationSetTrackingOptionsResult
 
-    PutDedicatedIpInPool(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) (*pinpointemail.PutDedicatedIpInPoolOutput, error)
-    PutDedicatedIpInPoolAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) *PinpointemailPutDedicatedIpInPoolResult
+       PutDedicatedIpInPool(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) (*pinpointemail.PutDedicatedIpInPoolOutput, error)
+       PutDedicatedIpInPoolAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpInPoolInput) *PinpointemailPutDedicatedIpInPoolResult
 
-    PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) (*pinpointemail.PutDedicatedIpWarmupAttributesOutput, error)
-    PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) *PinpointemailPutDedicatedIpWarmupAttributesResult
+       PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) (*pinpointemail.PutDedicatedIpWarmupAttributesOutput, error)
+       PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *pinpointemail.PutDedicatedIpWarmupAttributesInput) *PinpointemailPutDedicatedIpWarmupAttributesResult
 
-    PutDeliverabilityDashboardOption(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) (*pinpointemail.PutDeliverabilityDashboardOptionOutput, error)
-    PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) *PinpointemailPutDeliverabilityDashboardOptionResult
+       PutDeliverabilityDashboardOption(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) (*pinpointemail.PutDeliverabilityDashboardOptionOutput, error)
+       PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *pinpointemail.PutDeliverabilityDashboardOptionInput) *PinpointemailPutDeliverabilityDashboardOptionResult
 
-    PutEmailIdentityDkimAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) (*pinpointemail.PutEmailIdentityDkimAttributesOutput, error)
-    PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) *PinpointemailPutEmailIdentityDkimAttributesResult
+       PutEmailIdentityDkimAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) (*pinpointemail.PutEmailIdentityDkimAttributesOutput, error)
+       PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityDkimAttributesInput) *PinpointemailPutEmailIdentityDkimAttributesResult
 
-    PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) (*pinpointemail.PutEmailIdentityFeedbackAttributesOutput, error)
-    PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) *PinpointemailPutEmailIdentityFeedbackAttributesResult
+       PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) (*pinpointemail.PutEmailIdentityFeedbackAttributesOutput, error)
+       PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityFeedbackAttributesInput) *PinpointemailPutEmailIdentityFeedbackAttributesResult
 
-    PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) (*pinpointemail.PutEmailIdentityMailFromAttributesOutput, error)
-    PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) *PinpointemailPutEmailIdentityMailFromAttributesResult
+       PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) (*pinpointemail.PutEmailIdentityMailFromAttributesOutput, error)
+       PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *pinpointemail.PutEmailIdentityMailFromAttributesInput) *PinpointemailPutEmailIdentityMailFromAttributesResult
 
-    SendEmail(ctx workflow.Context, input *pinpointemail.SendEmailInput) (*pinpointemail.SendEmailOutput, error)
-    SendEmailAsync(ctx workflow.Context, input *pinpointemail.SendEmailInput) *PinpointemailSendEmailResult
+       SendEmail(ctx workflow.Context, input *pinpointemail.SendEmailInput) (*pinpointemail.SendEmailOutput, error)
+       SendEmailAsync(ctx workflow.Context, input *pinpointemail.SendEmailInput) *PinpointemailSendEmailResult
 
-    TagResource(ctx workflow.Context, input *pinpointemail.TagResourceInput) (*pinpointemail.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *pinpointemail.TagResourceInput) *PinpointemailTagResourceResult
+       TagResource(ctx workflow.Context, input *pinpointemail.TagResourceInput) (*pinpointemail.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *pinpointemail.TagResourceInput) *PinpointemailTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *pinpointemail.UntagResourceInput) (*pinpointemail.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *pinpointemail.UntagResourceInput) *PinpointemailUntagResourceResult
+       UntagResource(ctx workflow.Context, input *pinpointemail.UntagResourceInput) (*pinpointemail.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *pinpointemail.UntagResourceInput) *PinpointemailUntagResourceResult
 
-    UpdateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) (*pinpointemail.UpdateConfigurationSetEventDestinationOutput, error)
-    UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) *PinpointemailUpdateConfigurationSetEventDestinationResult
+       UpdateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) (*pinpointemail.UpdateConfigurationSetEventDestinationOutput, error)
+       UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) *PinpointemailUpdateConfigurationSetEventDestinationResult
 }
 
 type PinpointemailCreateConfigurationSetResult struct {

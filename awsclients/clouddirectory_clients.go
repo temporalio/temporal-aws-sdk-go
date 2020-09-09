@@ -7,203 +7,203 @@ import (
 )
 
 type CloudDirectoryClient interface {
-    AddFacetToObject(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) (*clouddirectory.AddFacetToObjectOutput, error)
-    AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *ClouddirectoryAddFacetToObjectResult
+       AddFacetToObject(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) (*clouddirectory.AddFacetToObjectOutput, error)
+       AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *ClouddirectoryAddFacetToObjectResult
 
-    ApplySchema(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) (*clouddirectory.ApplySchemaOutput, error)
-    ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *ClouddirectoryApplySchemaResult
+       ApplySchema(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) (*clouddirectory.ApplySchemaOutput, error)
+       ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *ClouddirectoryApplySchemaResult
 
-    AttachObject(ctx workflow.Context, input *clouddirectory.AttachObjectInput) (*clouddirectory.AttachObjectOutput, error)
-    AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *ClouddirectoryAttachObjectResult
+       AttachObject(ctx workflow.Context, input *clouddirectory.AttachObjectInput) (*clouddirectory.AttachObjectOutput, error)
+       AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *ClouddirectoryAttachObjectResult
 
-    AttachPolicy(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) (*clouddirectory.AttachPolicyOutput, error)
-    AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *ClouddirectoryAttachPolicyResult
+       AttachPolicy(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) (*clouddirectory.AttachPolicyOutput, error)
+       AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *ClouddirectoryAttachPolicyResult
 
-    AttachToIndex(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) (*clouddirectory.AttachToIndexOutput, error)
-    AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *ClouddirectoryAttachToIndexResult
+       AttachToIndex(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) (*clouddirectory.AttachToIndexOutput, error)
+       AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *ClouddirectoryAttachToIndexResult
 
-    AttachTypedLink(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) (*clouddirectory.AttachTypedLinkOutput, error)
-    AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *ClouddirectoryAttachTypedLinkResult
+       AttachTypedLink(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) (*clouddirectory.AttachTypedLinkOutput, error)
+       AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *ClouddirectoryAttachTypedLinkResult
 
-    BatchRead(ctx workflow.Context, input *clouddirectory.BatchReadInput) (*clouddirectory.BatchReadOutput, error)
-    BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *ClouddirectoryBatchReadResult
+       BatchRead(ctx workflow.Context, input *clouddirectory.BatchReadInput) (*clouddirectory.BatchReadOutput, error)
+       BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *ClouddirectoryBatchReadResult
 
-    BatchWrite(ctx workflow.Context, input *clouddirectory.BatchWriteInput) (*clouddirectory.BatchWriteOutput, error)
-    BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *ClouddirectoryBatchWriteResult
+       BatchWrite(ctx workflow.Context, input *clouddirectory.BatchWriteInput) (*clouddirectory.BatchWriteOutput, error)
+       BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *ClouddirectoryBatchWriteResult
 
-    CreateDirectory(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) (*clouddirectory.CreateDirectoryOutput, error)
-    CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *ClouddirectoryCreateDirectoryResult
+       CreateDirectory(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) (*clouddirectory.CreateDirectoryOutput, error)
+       CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *ClouddirectoryCreateDirectoryResult
 
-    CreateFacet(ctx workflow.Context, input *clouddirectory.CreateFacetInput) (*clouddirectory.CreateFacetOutput, error)
-    CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *ClouddirectoryCreateFacetResult
+       CreateFacet(ctx workflow.Context, input *clouddirectory.CreateFacetInput) (*clouddirectory.CreateFacetOutput, error)
+       CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *ClouddirectoryCreateFacetResult
 
-    CreateIndex(ctx workflow.Context, input *clouddirectory.CreateIndexInput) (*clouddirectory.CreateIndexOutput, error)
-    CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *ClouddirectoryCreateIndexResult
+       CreateIndex(ctx workflow.Context, input *clouddirectory.CreateIndexInput) (*clouddirectory.CreateIndexOutput, error)
+       CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *ClouddirectoryCreateIndexResult
 
-    CreateObject(ctx workflow.Context, input *clouddirectory.CreateObjectInput) (*clouddirectory.CreateObjectOutput, error)
-    CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *ClouddirectoryCreateObjectResult
+       CreateObject(ctx workflow.Context, input *clouddirectory.CreateObjectInput) (*clouddirectory.CreateObjectOutput, error)
+       CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *ClouddirectoryCreateObjectResult
 
-    CreateSchema(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) (*clouddirectory.CreateSchemaOutput, error)
-    CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *ClouddirectoryCreateSchemaResult
+       CreateSchema(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) (*clouddirectory.CreateSchemaOutput, error)
+       CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *ClouddirectoryCreateSchemaResult
 
-    CreateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) (*clouddirectory.CreateTypedLinkFacetOutput, error)
-    CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *ClouddirectoryCreateTypedLinkFacetResult
+       CreateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) (*clouddirectory.CreateTypedLinkFacetOutput, error)
+       CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *ClouddirectoryCreateTypedLinkFacetResult
 
-    DeleteDirectory(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) (*clouddirectory.DeleteDirectoryOutput, error)
-    DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *ClouddirectoryDeleteDirectoryResult
+       DeleteDirectory(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) (*clouddirectory.DeleteDirectoryOutput, error)
+       DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *ClouddirectoryDeleteDirectoryResult
 
-    DeleteFacet(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) (*clouddirectory.DeleteFacetOutput, error)
-    DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *ClouddirectoryDeleteFacetResult
+       DeleteFacet(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) (*clouddirectory.DeleteFacetOutput, error)
+       DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *ClouddirectoryDeleteFacetResult
 
-    DeleteObject(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) (*clouddirectory.DeleteObjectOutput, error)
-    DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *ClouddirectoryDeleteObjectResult
+       DeleteObject(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) (*clouddirectory.DeleteObjectOutput, error)
+       DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *ClouddirectoryDeleteObjectResult
 
-    DeleteSchema(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) (*clouddirectory.DeleteSchemaOutput, error)
-    DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *ClouddirectoryDeleteSchemaResult
+       DeleteSchema(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) (*clouddirectory.DeleteSchemaOutput, error)
+       DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *ClouddirectoryDeleteSchemaResult
 
-    DeleteTypedLinkFacet(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) (*clouddirectory.DeleteTypedLinkFacetOutput, error)
-    DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *ClouddirectoryDeleteTypedLinkFacetResult
+       DeleteTypedLinkFacet(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) (*clouddirectory.DeleteTypedLinkFacetOutput, error)
+       DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *ClouddirectoryDeleteTypedLinkFacetResult
 
-    DetachFromIndex(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) (*clouddirectory.DetachFromIndexOutput, error)
-    DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *ClouddirectoryDetachFromIndexResult
+       DetachFromIndex(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) (*clouddirectory.DetachFromIndexOutput, error)
+       DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *ClouddirectoryDetachFromIndexResult
 
-    DetachObject(ctx workflow.Context, input *clouddirectory.DetachObjectInput) (*clouddirectory.DetachObjectOutput, error)
-    DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *ClouddirectoryDetachObjectResult
+       DetachObject(ctx workflow.Context, input *clouddirectory.DetachObjectInput) (*clouddirectory.DetachObjectOutput, error)
+       DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *ClouddirectoryDetachObjectResult
 
-    DetachPolicy(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) (*clouddirectory.DetachPolicyOutput, error)
-    DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *ClouddirectoryDetachPolicyResult
+       DetachPolicy(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) (*clouddirectory.DetachPolicyOutput, error)
+       DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *ClouddirectoryDetachPolicyResult
 
-    DetachTypedLink(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) (*clouddirectory.DetachTypedLinkOutput, error)
-    DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *ClouddirectoryDetachTypedLinkResult
+       DetachTypedLink(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) (*clouddirectory.DetachTypedLinkOutput, error)
+       DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *ClouddirectoryDetachTypedLinkResult
 
-    DisableDirectory(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) (*clouddirectory.DisableDirectoryOutput, error)
-    DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *ClouddirectoryDisableDirectoryResult
+       DisableDirectory(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) (*clouddirectory.DisableDirectoryOutput, error)
+       DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *ClouddirectoryDisableDirectoryResult
 
-    EnableDirectory(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) (*clouddirectory.EnableDirectoryOutput, error)
-    EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *ClouddirectoryEnableDirectoryResult
+       EnableDirectory(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) (*clouddirectory.EnableDirectoryOutput, error)
+       EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *ClouddirectoryEnableDirectoryResult
 
-    GetAppliedSchemaVersion(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error)
-    GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *ClouddirectoryGetAppliedSchemaVersionResult
+       GetAppliedSchemaVersion(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error)
+       GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *ClouddirectoryGetAppliedSchemaVersionResult
 
-    GetDirectory(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) (*clouddirectory.GetDirectoryOutput, error)
-    GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *ClouddirectoryGetDirectoryResult
+       GetDirectory(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) (*clouddirectory.GetDirectoryOutput, error)
+       GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *ClouddirectoryGetDirectoryResult
 
-    GetFacet(ctx workflow.Context, input *clouddirectory.GetFacetInput) (*clouddirectory.GetFacetOutput, error)
-    GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *ClouddirectoryGetFacetResult
+       GetFacet(ctx workflow.Context, input *clouddirectory.GetFacetInput) (*clouddirectory.GetFacetOutput, error)
+       GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *ClouddirectoryGetFacetResult
 
-    GetLinkAttributes(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) (*clouddirectory.GetLinkAttributesOutput, error)
-    GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *ClouddirectoryGetLinkAttributesResult
+       GetLinkAttributes(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) (*clouddirectory.GetLinkAttributesOutput, error)
+       GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *ClouddirectoryGetLinkAttributesResult
 
-    GetObjectAttributes(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) (*clouddirectory.GetObjectAttributesOutput, error)
-    GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *ClouddirectoryGetObjectAttributesResult
+       GetObjectAttributes(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) (*clouddirectory.GetObjectAttributesOutput, error)
+       GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *ClouddirectoryGetObjectAttributesResult
 
-    GetObjectInformation(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) (*clouddirectory.GetObjectInformationOutput, error)
-    GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *ClouddirectoryGetObjectInformationResult
+       GetObjectInformation(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) (*clouddirectory.GetObjectInformationOutput, error)
+       GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *ClouddirectoryGetObjectInformationResult
 
-    GetSchemaAsJson(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) (*clouddirectory.GetSchemaAsJsonOutput, error)
-    GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *ClouddirectoryGetSchemaAsJsonResult
+       GetSchemaAsJson(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) (*clouddirectory.GetSchemaAsJsonOutput, error)
+       GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *ClouddirectoryGetSchemaAsJsonResult
 
-    GetTypedLinkFacetInformation(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) (*clouddirectory.GetTypedLinkFacetInformationOutput, error)
-    GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *ClouddirectoryGetTypedLinkFacetInformationResult
+       GetTypedLinkFacetInformation(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) (*clouddirectory.GetTypedLinkFacetInformationOutput, error)
+       GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *ClouddirectoryGetTypedLinkFacetInformationResult
 
-    ListAppliedSchemaArns(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) (*clouddirectory.ListAppliedSchemaArnsOutput, error)
-    ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *ClouddirectoryListAppliedSchemaArnsResult
+       ListAppliedSchemaArns(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) (*clouddirectory.ListAppliedSchemaArnsOutput, error)
+       ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *ClouddirectoryListAppliedSchemaArnsResult
 
-    ListAttachedIndices(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) (*clouddirectory.ListAttachedIndicesOutput, error)
-    ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *ClouddirectoryListAttachedIndicesResult
+       ListAttachedIndices(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) (*clouddirectory.ListAttachedIndicesOutput, error)
+       ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *ClouddirectoryListAttachedIndicesResult
 
-    ListDevelopmentSchemaArns(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error)
-    ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *ClouddirectoryListDevelopmentSchemaArnsResult
+       ListDevelopmentSchemaArns(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error)
+       ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *ClouddirectoryListDevelopmentSchemaArnsResult
 
-    ListDirectories(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) (*clouddirectory.ListDirectoriesOutput, error)
-    ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *ClouddirectoryListDirectoriesResult
+       ListDirectories(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) (*clouddirectory.ListDirectoriesOutput, error)
+       ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *ClouddirectoryListDirectoriesResult
 
-    ListFacetAttributes(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) (*clouddirectory.ListFacetAttributesOutput, error)
-    ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *ClouddirectoryListFacetAttributesResult
+       ListFacetAttributes(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) (*clouddirectory.ListFacetAttributesOutput, error)
+       ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *ClouddirectoryListFacetAttributesResult
 
-    ListFacetNames(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) (*clouddirectory.ListFacetNamesOutput, error)
-    ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *ClouddirectoryListFacetNamesResult
+       ListFacetNames(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) (*clouddirectory.ListFacetNamesOutput, error)
+       ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *ClouddirectoryListFacetNamesResult
 
-    ListIncomingTypedLinks(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) (*clouddirectory.ListIncomingTypedLinksOutput, error)
-    ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *ClouddirectoryListIncomingTypedLinksResult
+       ListIncomingTypedLinks(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) (*clouddirectory.ListIncomingTypedLinksOutput, error)
+       ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *ClouddirectoryListIncomingTypedLinksResult
 
-    ListIndex(ctx workflow.Context, input *clouddirectory.ListIndexInput) (*clouddirectory.ListIndexOutput, error)
-    ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *ClouddirectoryListIndexResult
+       ListIndex(ctx workflow.Context, input *clouddirectory.ListIndexInput) (*clouddirectory.ListIndexOutput, error)
+       ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *ClouddirectoryListIndexResult
 
-    ListManagedSchemaArns(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) (*clouddirectory.ListManagedSchemaArnsOutput, error)
-    ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *ClouddirectoryListManagedSchemaArnsResult
+       ListManagedSchemaArns(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) (*clouddirectory.ListManagedSchemaArnsOutput, error)
+       ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *ClouddirectoryListManagedSchemaArnsResult
 
-    ListObjectAttributes(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) (*clouddirectory.ListObjectAttributesOutput, error)
-    ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *ClouddirectoryListObjectAttributesResult
+       ListObjectAttributes(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) (*clouddirectory.ListObjectAttributesOutput, error)
+       ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *ClouddirectoryListObjectAttributesResult
 
-    ListObjectChildren(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) (*clouddirectory.ListObjectChildrenOutput, error)
-    ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *ClouddirectoryListObjectChildrenResult
+       ListObjectChildren(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) (*clouddirectory.ListObjectChildrenOutput, error)
+       ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *ClouddirectoryListObjectChildrenResult
 
-    ListObjectParentPaths(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) (*clouddirectory.ListObjectParentPathsOutput, error)
-    ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *ClouddirectoryListObjectParentPathsResult
+       ListObjectParentPaths(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) (*clouddirectory.ListObjectParentPathsOutput, error)
+       ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *ClouddirectoryListObjectParentPathsResult
 
-    ListObjectParents(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) (*clouddirectory.ListObjectParentsOutput, error)
-    ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *ClouddirectoryListObjectParentsResult
+       ListObjectParents(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) (*clouddirectory.ListObjectParentsOutput, error)
+       ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *ClouddirectoryListObjectParentsResult
 
-    ListObjectPolicies(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) (*clouddirectory.ListObjectPoliciesOutput, error)
-    ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *ClouddirectoryListObjectPoliciesResult
+       ListObjectPolicies(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) (*clouddirectory.ListObjectPoliciesOutput, error)
+       ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *ClouddirectoryListObjectPoliciesResult
 
-    ListOutgoingTypedLinks(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) (*clouddirectory.ListOutgoingTypedLinksOutput, error)
-    ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *ClouddirectoryListOutgoingTypedLinksResult
+       ListOutgoingTypedLinks(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) (*clouddirectory.ListOutgoingTypedLinksOutput, error)
+       ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *ClouddirectoryListOutgoingTypedLinksResult
 
-    ListPolicyAttachments(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) (*clouddirectory.ListPolicyAttachmentsOutput, error)
-    ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *ClouddirectoryListPolicyAttachmentsResult
+       ListPolicyAttachments(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) (*clouddirectory.ListPolicyAttachmentsOutput, error)
+       ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *ClouddirectoryListPolicyAttachmentsResult
 
-    ListPublishedSchemaArns(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) (*clouddirectory.ListPublishedSchemaArnsOutput, error)
-    ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *ClouddirectoryListPublishedSchemaArnsResult
+       ListPublishedSchemaArns(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) (*clouddirectory.ListPublishedSchemaArnsOutput, error)
+       ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *ClouddirectoryListPublishedSchemaArnsResult
 
-    ListTagsForResource(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) (*clouddirectory.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *ClouddirectoryListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) (*clouddirectory.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *ClouddirectoryListTagsForResourceResult
 
-    ListTypedLinkFacetAttributes(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error)
-    ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *ClouddirectoryListTypedLinkFacetAttributesResult
+       ListTypedLinkFacetAttributes(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error)
+       ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *ClouddirectoryListTypedLinkFacetAttributesResult
 
-    ListTypedLinkFacetNames(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) (*clouddirectory.ListTypedLinkFacetNamesOutput, error)
-    ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *ClouddirectoryListTypedLinkFacetNamesResult
+       ListTypedLinkFacetNames(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) (*clouddirectory.ListTypedLinkFacetNamesOutput, error)
+       ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *ClouddirectoryListTypedLinkFacetNamesResult
 
-    LookupPolicy(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) (*clouddirectory.LookupPolicyOutput, error)
-    LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *ClouddirectoryLookupPolicyResult
+       LookupPolicy(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) (*clouddirectory.LookupPolicyOutput, error)
+       LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *ClouddirectoryLookupPolicyResult
 
-    PublishSchema(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) (*clouddirectory.PublishSchemaOutput, error)
-    PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *ClouddirectoryPublishSchemaResult
+       PublishSchema(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) (*clouddirectory.PublishSchemaOutput, error)
+       PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *ClouddirectoryPublishSchemaResult
 
-    PutSchemaFromJson(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) (*clouddirectory.PutSchemaFromJsonOutput, error)
-    PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *ClouddirectoryPutSchemaFromJsonResult
+       PutSchemaFromJson(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) (*clouddirectory.PutSchemaFromJsonOutput, error)
+       PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *ClouddirectoryPutSchemaFromJsonResult
 
-    RemoveFacetFromObject(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) (*clouddirectory.RemoveFacetFromObjectOutput, error)
-    RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *ClouddirectoryRemoveFacetFromObjectResult
+       RemoveFacetFromObject(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) (*clouddirectory.RemoveFacetFromObjectOutput, error)
+       RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *ClouddirectoryRemoveFacetFromObjectResult
 
-    TagResource(ctx workflow.Context, input *clouddirectory.TagResourceInput) (*clouddirectory.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *ClouddirectoryTagResourceResult
+       TagResource(ctx workflow.Context, input *clouddirectory.TagResourceInput) (*clouddirectory.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *ClouddirectoryTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *clouddirectory.UntagResourceInput) (*clouddirectory.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *ClouddirectoryUntagResourceResult
+       UntagResource(ctx workflow.Context, input *clouddirectory.UntagResourceInput) (*clouddirectory.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *ClouddirectoryUntagResourceResult
 
-    UpdateFacet(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) (*clouddirectory.UpdateFacetOutput, error)
-    UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *ClouddirectoryUpdateFacetResult
+       UpdateFacet(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) (*clouddirectory.UpdateFacetOutput, error)
+       UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *ClouddirectoryUpdateFacetResult
 
-    UpdateLinkAttributes(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) (*clouddirectory.UpdateLinkAttributesOutput, error)
-    UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *ClouddirectoryUpdateLinkAttributesResult
+       UpdateLinkAttributes(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) (*clouddirectory.UpdateLinkAttributesOutput, error)
+       UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *ClouddirectoryUpdateLinkAttributesResult
 
-    UpdateObjectAttributes(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) (*clouddirectory.UpdateObjectAttributesOutput, error)
-    UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *ClouddirectoryUpdateObjectAttributesResult
+       UpdateObjectAttributes(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) (*clouddirectory.UpdateObjectAttributesOutput, error)
+       UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *ClouddirectoryUpdateObjectAttributesResult
 
-    UpdateSchema(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) (*clouddirectory.UpdateSchemaOutput, error)
-    UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *ClouddirectoryUpdateSchemaResult
+       UpdateSchema(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) (*clouddirectory.UpdateSchemaOutput, error)
+       UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *ClouddirectoryUpdateSchemaResult
 
-    UpdateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) (*clouddirectory.UpdateTypedLinkFacetOutput, error)
-    UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *ClouddirectoryUpdateTypedLinkFacetResult
+       UpdateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) (*clouddirectory.UpdateTypedLinkFacetOutput, error)
+       UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *ClouddirectoryUpdateTypedLinkFacetResult
 
-    UpgradeAppliedSchema(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error)
-    UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *ClouddirectoryUpgradeAppliedSchemaResult
+       UpgradeAppliedSchema(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error)
+       UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *ClouddirectoryUpgradeAppliedSchemaResult
 
-    UpgradePublishedSchema(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error)
-    UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaResult
+       UpgradePublishedSchema(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error)
+       UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaResult
 }
 
 type ClouddirectoryAddFacetToObjectResult struct {

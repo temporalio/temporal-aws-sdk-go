@@ -7,149 +7,149 @@ import (
 )
 
 type AppStreamClient interface {
-    AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error)
-    AssociateFleetAsync(ctx workflow.Context, input *appstream.AssociateFleetInput) *AppstreamAssociateFleetResult
+       AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error)
+       AssociateFleetAsync(ctx workflow.Context, input *appstream.AssociateFleetInput) *AppstreamAssociateFleetResult
 
-    BatchAssociateUserStack(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) (*appstream.BatchAssociateUserStackOutput, error)
-    BatchAssociateUserStackAsync(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) *AppstreamBatchAssociateUserStackResult
+       BatchAssociateUserStack(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) (*appstream.BatchAssociateUserStackOutput, error)
+       BatchAssociateUserStackAsync(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) *AppstreamBatchAssociateUserStackResult
 
-    BatchDisassociateUserStack(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) (*appstream.BatchDisassociateUserStackOutput, error)
-    BatchDisassociateUserStackAsync(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) *AppstreamBatchDisassociateUserStackResult
+       BatchDisassociateUserStack(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) (*appstream.BatchDisassociateUserStackOutput, error)
+       BatchDisassociateUserStackAsync(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) *AppstreamBatchDisassociateUserStackResult
 
-    CopyImage(ctx workflow.Context, input *appstream.CopyImageInput) (*appstream.CopyImageOutput, error)
-    CopyImageAsync(ctx workflow.Context, input *appstream.CopyImageInput) *AppstreamCopyImageResult
+       CopyImage(ctx workflow.Context, input *appstream.CopyImageInput) (*appstream.CopyImageOutput, error)
+       CopyImageAsync(ctx workflow.Context, input *appstream.CopyImageInput) *AppstreamCopyImageResult
 
-    CreateDirectoryConfig(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) (*appstream.CreateDirectoryConfigOutput, error)
-    CreateDirectoryConfigAsync(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) *AppstreamCreateDirectoryConfigResult
+       CreateDirectoryConfig(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) (*appstream.CreateDirectoryConfigOutput, error)
+       CreateDirectoryConfigAsync(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) *AppstreamCreateDirectoryConfigResult
 
-    CreateFleet(ctx workflow.Context, input *appstream.CreateFleetInput) (*appstream.CreateFleetOutput, error)
-    CreateFleetAsync(ctx workflow.Context, input *appstream.CreateFleetInput) *AppstreamCreateFleetResult
+       CreateFleet(ctx workflow.Context, input *appstream.CreateFleetInput) (*appstream.CreateFleetOutput, error)
+       CreateFleetAsync(ctx workflow.Context, input *appstream.CreateFleetInput) *AppstreamCreateFleetResult
 
-    CreateImageBuilder(ctx workflow.Context, input *appstream.CreateImageBuilderInput) (*appstream.CreateImageBuilderOutput, error)
-    CreateImageBuilderAsync(ctx workflow.Context, input *appstream.CreateImageBuilderInput) *AppstreamCreateImageBuilderResult
+       CreateImageBuilder(ctx workflow.Context, input *appstream.CreateImageBuilderInput) (*appstream.CreateImageBuilderOutput, error)
+       CreateImageBuilderAsync(ctx workflow.Context, input *appstream.CreateImageBuilderInput) *AppstreamCreateImageBuilderResult
 
-    CreateImageBuilderStreamingURL(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) (*appstream.CreateImageBuilderStreamingURLOutput, error)
-    CreateImageBuilderStreamingURLAsync(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) *AppstreamCreateImageBuilderStreamingURLResult
+       CreateImageBuilderStreamingURL(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) (*appstream.CreateImageBuilderStreamingURLOutput, error)
+       CreateImageBuilderStreamingURLAsync(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) *AppstreamCreateImageBuilderStreamingURLResult
 
-    CreateStack(ctx workflow.Context, input *appstream.CreateStackInput) (*appstream.CreateStackOutput, error)
-    CreateStackAsync(ctx workflow.Context, input *appstream.CreateStackInput) *AppstreamCreateStackResult
+       CreateStack(ctx workflow.Context, input *appstream.CreateStackInput) (*appstream.CreateStackOutput, error)
+       CreateStackAsync(ctx workflow.Context, input *appstream.CreateStackInput) *AppstreamCreateStackResult
 
-    CreateStreamingURL(ctx workflow.Context, input *appstream.CreateStreamingURLInput) (*appstream.CreateStreamingURLOutput, error)
-    CreateStreamingURLAsync(ctx workflow.Context, input *appstream.CreateStreamingURLInput) *AppstreamCreateStreamingURLResult
+       CreateStreamingURL(ctx workflow.Context, input *appstream.CreateStreamingURLInput) (*appstream.CreateStreamingURLOutput, error)
+       CreateStreamingURLAsync(ctx workflow.Context, input *appstream.CreateStreamingURLInput) *AppstreamCreateStreamingURLResult
 
-    CreateUsageReportSubscription(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) (*appstream.CreateUsageReportSubscriptionOutput, error)
-    CreateUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) *AppstreamCreateUsageReportSubscriptionResult
+       CreateUsageReportSubscription(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) (*appstream.CreateUsageReportSubscriptionOutput, error)
+       CreateUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) *AppstreamCreateUsageReportSubscriptionResult
 
-    CreateUser(ctx workflow.Context, input *appstream.CreateUserInput) (*appstream.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *appstream.CreateUserInput) *AppstreamCreateUserResult
+       CreateUser(ctx workflow.Context, input *appstream.CreateUserInput) (*appstream.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *appstream.CreateUserInput) *AppstreamCreateUserResult
 
-    DeleteDirectoryConfig(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) (*appstream.DeleteDirectoryConfigOutput, error)
-    DeleteDirectoryConfigAsync(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) *AppstreamDeleteDirectoryConfigResult
+       DeleteDirectoryConfig(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) (*appstream.DeleteDirectoryConfigOutput, error)
+       DeleteDirectoryConfigAsync(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) *AppstreamDeleteDirectoryConfigResult
 
-    DeleteFleet(ctx workflow.Context, input *appstream.DeleteFleetInput) (*appstream.DeleteFleetOutput, error)
-    DeleteFleetAsync(ctx workflow.Context, input *appstream.DeleteFleetInput) *AppstreamDeleteFleetResult
+       DeleteFleet(ctx workflow.Context, input *appstream.DeleteFleetInput) (*appstream.DeleteFleetOutput, error)
+       DeleteFleetAsync(ctx workflow.Context, input *appstream.DeleteFleetInput) *AppstreamDeleteFleetResult
 
-    DeleteImage(ctx workflow.Context, input *appstream.DeleteImageInput) (*appstream.DeleteImageOutput, error)
-    DeleteImageAsync(ctx workflow.Context, input *appstream.DeleteImageInput) *AppstreamDeleteImageResult
+       DeleteImage(ctx workflow.Context, input *appstream.DeleteImageInput) (*appstream.DeleteImageOutput, error)
+       DeleteImageAsync(ctx workflow.Context, input *appstream.DeleteImageInput) *AppstreamDeleteImageResult
 
-    DeleteImageBuilder(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) (*appstream.DeleteImageBuilderOutput, error)
-    DeleteImageBuilderAsync(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) *AppstreamDeleteImageBuilderResult
+       DeleteImageBuilder(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) (*appstream.DeleteImageBuilderOutput, error)
+       DeleteImageBuilderAsync(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) *AppstreamDeleteImageBuilderResult
 
-    DeleteImagePermissions(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) (*appstream.DeleteImagePermissionsOutput, error)
-    DeleteImagePermissionsAsync(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) *AppstreamDeleteImagePermissionsResult
+       DeleteImagePermissions(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) (*appstream.DeleteImagePermissionsOutput, error)
+       DeleteImagePermissionsAsync(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) *AppstreamDeleteImagePermissionsResult
 
-    DeleteStack(ctx workflow.Context, input *appstream.DeleteStackInput) (*appstream.DeleteStackOutput, error)
-    DeleteStackAsync(ctx workflow.Context, input *appstream.DeleteStackInput) *AppstreamDeleteStackResult
+       DeleteStack(ctx workflow.Context, input *appstream.DeleteStackInput) (*appstream.DeleteStackOutput, error)
+       DeleteStackAsync(ctx workflow.Context, input *appstream.DeleteStackInput) *AppstreamDeleteStackResult
 
-    DeleteUsageReportSubscription(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) (*appstream.DeleteUsageReportSubscriptionOutput, error)
-    DeleteUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) *AppstreamDeleteUsageReportSubscriptionResult
+       DeleteUsageReportSubscription(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) (*appstream.DeleteUsageReportSubscriptionOutput, error)
+       DeleteUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) *AppstreamDeleteUsageReportSubscriptionResult
 
-    DeleteUser(ctx workflow.Context, input *appstream.DeleteUserInput) (*appstream.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *appstream.DeleteUserInput) *AppstreamDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *appstream.DeleteUserInput) (*appstream.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *appstream.DeleteUserInput) *AppstreamDeleteUserResult
 
-    DescribeDirectoryConfigs(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) (*appstream.DescribeDirectoryConfigsOutput, error)
-    DescribeDirectoryConfigsAsync(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) *AppstreamDescribeDirectoryConfigsResult
+       DescribeDirectoryConfigs(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) (*appstream.DescribeDirectoryConfigsOutput, error)
+       DescribeDirectoryConfigsAsync(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) *AppstreamDescribeDirectoryConfigsResult
 
-    DescribeFleets(ctx workflow.Context, input *appstream.DescribeFleetsInput) (*appstream.DescribeFleetsOutput, error)
-    DescribeFleetsAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *AppstreamDescribeFleetsResult
+       DescribeFleets(ctx workflow.Context, input *appstream.DescribeFleetsInput) (*appstream.DescribeFleetsOutput, error)
+       DescribeFleetsAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *AppstreamDescribeFleetsResult
 
-    DescribeImageBuilders(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) (*appstream.DescribeImageBuildersOutput, error)
-    DescribeImageBuildersAsync(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) *AppstreamDescribeImageBuildersResult
+       DescribeImageBuilders(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) (*appstream.DescribeImageBuildersOutput, error)
+       DescribeImageBuildersAsync(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) *AppstreamDescribeImageBuildersResult
 
-    DescribeImagePermissions(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) (*appstream.DescribeImagePermissionsOutput, error)
-    DescribeImagePermissionsAsync(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) *AppstreamDescribeImagePermissionsResult
+       DescribeImagePermissions(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) (*appstream.DescribeImagePermissionsOutput, error)
+       DescribeImagePermissionsAsync(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) *AppstreamDescribeImagePermissionsResult
 
-    DescribeImages(ctx workflow.Context, input *appstream.DescribeImagesInput) (*appstream.DescribeImagesOutput, error)
-    DescribeImagesAsync(ctx workflow.Context, input *appstream.DescribeImagesInput) *AppstreamDescribeImagesResult
+       DescribeImages(ctx workflow.Context, input *appstream.DescribeImagesInput) (*appstream.DescribeImagesOutput, error)
+       DescribeImagesAsync(ctx workflow.Context, input *appstream.DescribeImagesInput) *AppstreamDescribeImagesResult
 
-    DescribeSessions(ctx workflow.Context, input *appstream.DescribeSessionsInput) (*appstream.DescribeSessionsOutput, error)
-    DescribeSessionsAsync(ctx workflow.Context, input *appstream.DescribeSessionsInput) *AppstreamDescribeSessionsResult
+       DescribeSessions(ctx workflow.Context, input *appstream.DescribeSessionsInput) (*appstream.DescribeSessionsOutput, error)
+       DescribeSessionsAsync(ctx workflow.Context, input *appstream.DescribeSessionsInput) *AppstreamDescribeSessionsResult
 
-    DescribeStacks(ctx workflow.Context, input *appstream.DescribeStacksInput) (*appstream.DescribeStacksOutput, error)
-    DescribeStacksAsync(ctx workflow.Context, input *appstream.DescribeStacksInput) *AppstreamDescribeStacksResult
+       DescribeStacks(ctx workflow.Context, input *appstream.DescribeStacksInput) (*appstream.DescribeStacksOutput, error)
+       DescribeStacksAsync(ctx workflow.Context, input *appstream.DescribeStacksInput) *AppstreamDescribeStacksResult
 
-    DescribeUsageReportSubscriptions(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) (*appstream.DescribeUsageReportSubscriptionsOutput, error)
-    DescribeUsageReportSubscriptionsAsync(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) *AppstreamDescribeUsageReportSubscriptionsResult
+       DescribeUsageReportSubscriptions(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) (*appstream.DescribeUsageReportSubscriptionsOutput, error)
+       DescribeUsageReportSubscriptionsAsync(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) *AppstreamDescribeUsageReportSubscriptionsResult
 
-    DescribeUserStackAssociations(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) (*appstream.DescribeUserStackAssociationsOutput, error)
-    DescribeUserStackAssociationsAsync(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) *AppstreamDescribeUserStackAssociationsResult
+       DescribeUserStackAssociations(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) (*appstream.DescribeUserStackAssociationsOutput, error)
+       DescribeUserStackAssociationsAsync(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) *AppstreamDescribeUserStackAssociationsResult
 
-    DescribeUsers(ctx workflow.Context, input *appstream.DescribeUsersInput) (*appstream.DescribeUsersOutput, error)
-    DescribeUsersAsync(ctx workflow.Context, input *appstream.DescribeUsersInput) *AppstreamDescribeUsersResult
+       DescribeUsers(ctx workflow.Context, input *appstream.DescribeUsersInput) (*appstream.DescribeUsersOutput, error)
+       DescribeUsersAsync(ctx workflow.Context, input *appstream.DescribeUsersInput) *AppstreamDescribeUsersResult
 
-    DisableUser(ctx workflow.Context, input *appstream.DisableUserInput) (*appstream.DisableUserOutput, error)
-    DisableUserAsync(ctx workflow.Context, input *appstream.DisableUserInput) *AppstreamDisableUserResult
+       DisableUser(ctx workflow.Context, input *appstream.DisableUserInput) (*appstream.DisableUserOutput, error)
+       DisableUserAsync(ctx workflow.Context, input *appstream.DisableUserInput) *AppstreamDisableUserResult
 
-    DisassociateFleet(ctx workflow.Context, input *appstream.DisassociateFleetInput) (*appstream.DisassociateFleetOutput, error)
-    DisassociateFleetAsync(ctx workflow.Context, input *appstream.DisassociateFleetInput) *AppstreamDisassociateFleetResult
+       DisassociateFleet(ctx workflow.Context, input *appstream.DisassociateFleetInput) (*appstream.DisassociateFleetOutput, error)
+       DisassociateFleetAsync(ctx workflow.Context, input *appstream.DisassociateFleetInput) *AppstreamDisassociateFleetResult
 
-    EnableUser(ctx workflow.Context, input *appstream.EnableUserInput) (*appstream.EnableUserOutput, error)
-    EnableUserAsync(ctx workflow.Context, input *appstream.EnableUserInput) *AppstreamEnableUserResult
+       EnableUser(ctx workflow.Context, input *appstream.EnableUserInput) (*appstream.EnableUserOutput, error)
+       EnableUserAsync(ctx workflow.Context, input *appstream.EnableUserInput) *AppstreamEnableUserResult
 
-    ExpireSession(ctx workflow.Context, input *appstream.ExpireSessionInput) (*appstream.ExpireSessionOutput, error)
-    ExpireSessionAsync(ctx workflow.Context, input *appstream.ExpireSessionInput) *AppstreamExpireSessionResult
+       ExpireSession(ctx workflow.Context, input *appstream.ExpireSessionInput) (*appstream.ExpireSessionOutput, error)
+       ExpireSessionAsync(ctx workflow.Context, input *appstream.ExpireSessionInput) *AppstreamExpireSessionResult
 
-    ListAssociatedFleets(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) (*appstream.ListAssociatedFleetsOutput, error)
-    ListAssociatedFleetsAsync(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) *AppstreamListAssociatedFleetsResult
+       ListAssociatedFleets(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) (*appstream.ListAssociatedFleetsOutput, error)
+       ListAssociatedFleetsAsync(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) *AppstreamListAssociatedFleetsResult
 
-    ListAssociatedStacks(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) (*appstream.ListAssociatedStacksOutput, error)
-    ListAssociatedStacksAsync(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) *AppstreamListAssociatedStacksResult
+       ListAssociatedStacks(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) (*appstream.ListAssociatedStacksOutput, error)
+       ListAssociatedStacksAsync(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) *AppstreamListAssociatedStacksResult
 
-    ListTagsForResource(ctx workflow.Context, input *appstream.ListTagsForResourceInput) (*appstream.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *appstream.ListTagsForResourceInput) *AppstreamListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *appstream.ListTagsForResourceInput) (*appstream.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *appstream.ListTagsForResourceInput) *AppstreamListTagsForResourceResult
 
-    StartFleet(ctx workflow.Context, input *appstream.StartFleetInput) (*appstream.StartFleetOutput, error)
-    StartFleetAsync(ctx workflow.Context, input *appstream.StartFleetInput) *AppstreamStartFleetResult
+       StartFleet(ctx workflow.Context, input *appstream.StartFleetInput) (*appstream.StartFleetOutput, error)
+       StartFleetAsync(ctx workflow.Context, input *appstream.StartFleetInput) *AppstreamStartFleetResult
 
-    StartImageBuilder(ctx workflow.Context, input *appstream.StartImageBuilderInput) (*appstream.StartImageBuilderOutput, error)
-    StartImageBuilderAsync(ctx workflow.Context, input *appstream.StartImageBuilderInput) *AppstreamStartImageBuilderResult
+       StartImageBuilder(ctx workflow.Context, input *appstream.StartImageBuilderInput) (*appstream.StartImageBuilderOutput, error)
+       StartImageBuilderAsync(ctx workflow.Context, input *appstream.StartImageBuilderInput) *AppstreamStartImageBuilderResult
 
-    StopFleet(ctx workflow.Context, input *appstream.StopFleetInput) (*appstream.StopFleetOutput, error)
-    StopFleetAsync(ctx workflow.Context, input *appstream.StopFleetInput) *AppstreamStopFleetResult
+       StopFleet(ctx workflow.Context, input *appstream.StopFleetInput) (*appstream.StopFleetOutput, error)
+       StopFleetAsync(ctx workflow.Context, input *appstream.StopFleetInput) *AppstreamStopFleetResult
 
-    StopImageBuilder(ctx workflow.Context, input *appstream.StopImageBuilderInput) (*appstream.StopImageBuilderOutput, error)
-    StopImageBuilderAsync(ctx workflow.Context, input *appstream.StopImageBuilderInput) *AppstreamStopImageBuilderResult
+       StopImageBuilder(ctx workflow.Context, input *appstream.StopImageBuilderInput) (*appstream.StopImageBuilderOutput, error)
+       StopImageBuilderAsync(ctx workflow.Context, input *appstream.StopImageBuilderInput) *AppstreamStopImageBuilderResult
 
-    TagResource(ctx workflow.Context, input *appstream.TagResourceInput) (*appstream.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *appstream.TagResourceInput) *AppstreamTagResourceResult
+       TagResource(ctx workflow.Context, input *appstream.TagResourceInput) (*appstream.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *appstream.TagResourceInput) *AppstreamTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *appstream.UntagResourceInput) (*appstream.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *appstream.UntagResourceInput) *AppstreamUntagResourceResult
+       UntagResource(ctx workflow.Context, input *appstream.UntagResourceInput) (*appstream.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *appstream.UntagResourceInput) *AppstreamUntagResourceResult
 
-    UpdateDirectoryConfig(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) (*appstream.UpdateDirectoryConfigOutput, error)
-    UpdateDirectoryConfigAsync(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) *AppstreamUpdateDirectoryConfigResult
+       UpdateDirectoryConfig(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) (*appstream.UpdateDirectoryConfigOutput, error)
+       UpdateDirectoryConfigAsync(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) *AppstreamUpdateDirectoryConfigResult
 
-    UpdateFleet(ctx workflow.Context, input *appstream.UpdateFleetInput) (*appstream.UpdateFleetOutput, error)
-    UpdateFleetAsync(ctx workflow.Context, input *appstream.UpdateFleetInput) *AppstreamUpdateFleetResult
+       UpdateFleet(ctx workflow.Context, input *appstream.UpdateFleetInput) (*appstream.UpdateFleetOutput, error)
+       UpdateFleetAsync(ctx workflow.Context, input *appstream.UpdateFleetInput) *AppstreamUpdateFleetResult
 
-    UpdateImagePermissions(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) (*appstream.UpdateImagePermissionsOutput, error)
-    UpdateImagePermissionsAsync(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) *AppstreamUpdateImagePermissionsResult
+       UpdateImagePermissions(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) (*appstream.UpdateImagePermissionsOutput, error)
+       UpdateImagePermissionsAsync(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) *AppstreamUpdateImagePermissionsResult
 
-    UpdateStack(ctx workflow.Context, input *appstream.UpdateStackInput) (*appstream.UpdateStackOutput, error)
-    UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult
+       UpdateStack(ctx workflow.Context, input *appstream.UpdateStackInput) (*appstream.UpdateStackOutput, error)
+       UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult
 
-    WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-    WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
+       WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
+       WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
 
 type AppstreamAssociateFleetResult struct {
 	Result workflow.Future

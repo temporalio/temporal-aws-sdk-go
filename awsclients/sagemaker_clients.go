@@ -7,425 +7,425 @@ import (
 )
 
 type SageMakerClient interface {
-    AddTags(ctx workflow.Context, input *sagemaker.AddTagsInput) (*sagemaker.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *sagemaker.AddTagsInput) *SagemakerAddTagsResult
+       AddTags(ctx workflow.Context, input *sagemaker.AddTagsInput) (*sagemaker.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *sagemaker.AddTagsInput) *SagemakerAddTagsResult
 
-    AssociateTrialComponent(ctx workflow.Context, input *sagemaker.AssociateTrialComponentInput) (*sagemaker.AssociateTrialComponentOutput, error)
-    AssociateTrialComponentAsync(ctx workflow.Context, input *sagemaker.AssociateTrialComponentInput) *SagemakerAssociateTrialComponentResult
+       AssociateTrialComponent(ctx workflow.Context, input *sagemaker.AssociateTrialComponentInput) (*sagemaker.AssociateTrialComponentOutput, error)
+       AssociateTrialComponentAsync(ctx workflow.Context, input *sagemaker.AssociateTrialComponentInput) *SagemakerAssociateTrialComponentResult
 
-    CreateAlgorithm(ctx workflow.Context, input *sagemaker.CreateAlgorithmInput) (*sagemaker.CreateAlgorithmOutput, error)
-    CreateAlgorithmAsync(ctx workflow.Context, input *sagemaker.CreateAlgorithmInput) *SagemakerCreateAlgorithmResult
+       CreateAlgorithm(ctx workflow.Context, input *sagemaker.CreateAlgorithmInput) (*sagemaker.CreateAlgorithmOutput, error)
+       CreateAlgorithmAsync(ctx workflow.Context, input *sagemaker.CreateAlgorithmInput) *SagemakerCreateAlgorithmResult
 
-    CreateApp(ctx workflow.Context, input *sagemaker.CreateAppInput) (*sagemaker.CreateAppOutput, error)
-    CreateAppAsync(ctx workflow.Context, input *sagemaker.CreateAppInput) *SagemakerCreateAppResult
+       CreateApp(ctx workflow.Context, input *sagemaker.CreateAppInput) (*sagemaker.CreateAppOutput, error)
+       CreateAppAsync(ctx workflow.Context, input *sagemaker.CreateAppInput) *SagemakerCreateAppResult
 
-    CreateAutoMLJob(ctx workflow.Context, input *sagemaker.CreateAutoMLJobInput) (*sagemaker.CreateAutoMLJobOutput, error)
-    CreateAutoMLJobAsync(ctx workflow.Context, input *sagemaker.CreateAutoMLJobInput) *SagemakerCreateAutoMLJobResult
+       CreateAutoMLJob(ctx workflow.Context, input *sagemaker.CreateAutoMLJobInput) (*sagemaker.CreateAutoMLJobOutput, error)
+       CreateAutoMLJobAsync(ctx workflow.Context, input *sagemaker.CreateAutoMLJobInput) *SagemakerCreateAutoMLJobResult
 
-    CreateCodeRepository(ctx workflow.Context, input *sagemaker.CreateCodeRepositoryInput) (*sagemaker.CreateCodeRepositoryOutput, error)
-    CreateCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.CreateCodeRepositoryInput) *SagemakerCreateCodeRepositoryResult
+       CreateCodeRepository(ctx workflow.Context, input *sagemaker.CreateCodeRepositoryInput) (*sagemaker.CreateCodeRepositoryOutput, error)
+       CreateCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.CreateCodeRepositoryInput) *SagemakerCreateCodeRepositoryResult
 
-    CreateCompilationJob(ctx workflow.Context, input *sagemaker.CreateCompilationJobInput) (*sagemaker.CreateCompilationJobOutput, error)
-    CreateCompilationJobAsync(ctx workflow.Context, input *sagemaker.CreateCompilationJobInput) *SagemakerCreateCompilationJobResult
+       CreateCompilationJob(ctx workflow.Context, input *sagemaker.CreateCompilationJobInput) (*sagemaker.CreateCompilationJobOutput, error)
+       CreateCompilationJobAsync(ctx workflow.Context, input *sagemaker.CreateCompilationJobInput) *SagemakerCreateCompilationJobResult
 
-    CreateDomain(ctx workflow.Context, input *sagemaker.CreateDomainInput) (*sagemaker.CreateDomainOutput, error)
-    CreateDomainAsync(ctx workflow.Context, input *sagemaker.CreateDomainInput) *SagemakerCreateDomainResult
+       CreateDomain(ctx workflow.Context, input *sagemaker.CreateDomainInput) (*sagemaker.CreateDomainOutput, error)
+       CreateDomainAsync(ctx workflow.Context, input *sagemaker.CreateDomainInput) *SagemakerCreateDomainResult
 
-    CreateEndpoint(ctx workflow.Context, input *sagemaker.CreateEndpointInput) (*sagemaker.CreateEndpointOutput, error)
-    CreateEndpointAsync(ctx workflow.Context, input *sagemaker.CreateEndpointInput) *SagemakerCreateEndpointResult
+       CreateEndpoint(ctx workflow.Context, input *sagemaker.CreateEndpointInput) (*sagemaker.CreateEndpointOutput, error)
+       CreateEndpointAsync(ctx workflow.Context, input *sagemaker.CreateEndpointInput) *SagemakerCreateEndpointResult
 
-    CreateEndpointConfig(ctx workflow.Context, input *sagemaker.CreateEndpointConfigInput) (*sagemaker.CreateEndpointConfigOutput, error)
-    CreateEndpointConfigAsync(ctx workflow.Context, input *sagemaker.CreateEndpointConfigInput) *SagemakerCreateEndpointConfigResult
+       CreateEndpointConfig(ctx workflow.Context, input *sagemaker.CreateEndpointConfigInput) (*sagemaker.CreateEndpointConfigOutput, error)
+       CreateEndpointConfigAsync(ctx workflow.Context, input *sagemaker.CreateEndpointConfigInput) *SagemakerCreateEndpointConfigResult
 
-    CreateExperiment(ctx workflow.Context, input *sagemaker.CreateExperimentInput) (*sagemaker.CreateExperimentOutput, error)
-    CreateExperimentAsync(ctx workflow.Context, input *sagemaker.CreateExperimentInput) *SagemakerCreateExperimentResult
+       CreateExperiment(ctx workflow.Context, input *sagemaker.CreateExperimentInput) (*sagemaker.CreateExperimentOutput, error)
+       CreateExperimentAsync(ctx workflow.Context, input *sagemaker.CreateExperimentInput) *SagemakerCreateExperimentResult
 
-    CreateFlowDefinition(ctx workflow.Context, input *sagemaker.CreateFlowDefinitionInput) (*sagemaker.CreateFlowDefinitionOutput, error)
-    CreateFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.CreateFlowDefinitionInput) *SagemakerCreateFlowDefinitionResult
+       CreateFlowDefinition(ctx workflow.Context, input *sagemaker.CreateFlowDefinitionInput) (*sagemaker.CreateFlowDefinitionOutput, error)
+       CreateFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.CreateFlowDefinitionInput) *SagemakerCreateFlowDefinitionResult
 
-    CreateHumanTaskUi(ctx workflow.Context, input *sagemaker.CreateHumanTaskUiInput) (*sagemaker.CreateHumanTaskUiOutput, error)
-    CreateHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.CreateHumanTaskUiInput) *SagemakerCreateHumanTaskUiResult
+       CreateHumanTaskUi(ctx workflow.Context, input *sagemaker.CreateHumanTaskUiInput) (*sagemaker.CreateHumanTaskUiOutput, error)
+       CreateHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.CreateHumanTaskUiInput) *SagemakerCreateHumanTaskUiResult
 
-    CreateHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.CreateHyperParameterTuningJobInput) (*sagemaker.CreateHyperParameterTuningJobOutput, error)
-    CreateHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.CreateHyperParameterTuningJobInput) *SagemakerCreateHyperParameterTuningJobResult
+       CreateHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.CreateHyperParameterTuningJobInput) (*sagemaker.CreateHyperParameterTuningJobOutput, error)
+       CreateHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.CreateHyperParameterTuningJobInput) *SagemakerCreateHyperParameterTuningJobResult
 
-    CreateLabelingJob(ctx workflow.Context, input *sagemaker.CreateLabelingJobInput) (*sagemaker.CreateLabelingJobOutput, error)
-    CreateLabelingJobAsync(ctx workflow.Context, input *sagemaker.CreateLabelingJobInput) *SagemakerCreateLabelingJobResult
+       CreateLabelingJob(ctx workflow.Context, input *sagemaker.CreateLabelingJobInput) (*sagemaker.CreateLabelingJobOutput, error)
+       CreateLabelingJobAsync(ctx workflow.Context, input *sagemaker.CreateLabelingJobInput) *SagemakerCreateLabelingJobResult
 
-    CreateModel(ctx workflow.Context, input *sagemaker.CreateModelInput) (*sagemaker.CreateModelOutput, error)
-    CreateModelAsync(ctx workflow.Context, input *sagemaker.CreateModelInput) *SagemakerCreateModelResult
+       CreateModel(ctx workflow.Context, input *sagemaker.CreateModelInput) (*sagemaker.CreateModelOutput, error)
+       CreateModelAsync(ctx workflow.Context, input *sagemaker.CreateModelInput) *SagemakerCreateModelResult
 
-    CreateModelPackage(ctx workflow.Context, input *sagemaker.CreateModelPackageInput) (*sagemaker.CreateModelPackageOutput, error)
-    CreateModelPackageAsync(ctx workflow.Context, input *sagemaker.CreateModelPackageInput) *SagemakerCreateModelPackageResult
+       CreateModelPackage(ctx workflow.Context, input *sagemaker.CreateModelPackageInput) (*sagemaker.CreateModelPackageOutput, error)
+       CreateModelPackageAsync(ctx workflow.Context, input *sagemaker.CreateModelPackageInput) *SagemakerCreateModelPackageResult
 
-    CreateMonitoringSchedule(ctx workflow.Context, input *sagemaker.CreateMonitoringScheduleInput) (*sagemaker.CreateMonitoringScheduleOutput, error)
-    CreateMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.CreateMonitoringScheduleInput) *SagemakerCreateMonitoringScheduleResult
+       CreateMonitoringSchedule(ctx workflow.Context, input *sagemaker.CreateMonitoringScheduleInput) (*sagemaker.CreateMonitoringScheduleOutput, error)
+       CreateMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.CreateMonitoringScheduleInput) *SagemakerCreateMonitoringScheduleResult
 
-    CreateNotebookInstance(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceInput) (*sagemaker.CreateNotebookInstanceOutput, error)
-    CreateNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceInput) *SagemakerCreateNotebookInstanceResult
+       CreateNotebookInstance(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceInput) (*sagemaker.CreateNotebookInstanceOutput, error)
+       CreateNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceInput) *SagemakerCreateNotebookInstanceResult
 
-    CreateNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceLifecycleConfigInput) (*sagemaker.CreateNotebookInstanceLifecycleConfigOutput, error)
-    CreateNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceLifecycleConfigInput) *SagemakerCreateNotebookInstanceLifecycleConfigResult
+       CreateNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceLifecycleConfigInput) (*sagemaker.CreateNotebookInstanceLifecycleConfigOutput, error)
+       CreateNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.CreateNotebookInstanceLifecycleConfigInput) *SagemakerCreateNotebookInstanceLifecycleConfigResult
 
-    CreatePresignedDomainUrl(ctx workflow.Context, input *sagemaker.CreatePresignedDomainUrlInput) (*sagemaker.CreatePresignedDomainUrlOutput, error)
-    CreatePresignedDomainUrlAsync(ctx workflow.Context, input *sagemaker.CreatePresignedDomainUrlInput) *SagemakerCreatePresignedDomainUrlResult
+       CreatePresignedDomainUrl(ctx workflow.Context, input *sagemaker.CreatePresignedDomainUrlInput) (*sagemaker.CreatePresignedDomainUrlOutput, error)
+       CreatePresignedDomainUrlAsync(ctx workflow.Context, input *sagemaker.CreatePresignedDomainUrlInput) *SagemakerCreatePresignedDomainUrlResult
 
-    CreatePresignedNotebookInstanceUrl(ctx workflow.Context, input *sagemaker.CreatePresignedNotebookInstanceUrlInput) (*sagemaker.CreatePresignedNotebookInstanceUrlOutput, error)
-    CreatePresignedNotebookInstanceUrlAsync(ctx workflow.Context, input *sagemaker.CreatePresignedNotebookInstanceUrlInput) *SagemakerCreatePresignedNotebookInstanceUrlResult
+       CreatePresignedNotebookInstanceUrl(ctx workflow.Context, input *sagemaker.CreatePresignedNotebookInstanceUrlInput) (*sagemaker.CreatePresignedNotebookInstanceUrlOutput, error)
+       CreatePresignedNotebookInstanceUrlAsync(ctx workflow.Context, input *sagemaker.CreatePresignedNotebookInstanceUrlInput) *SagemakerCreatePresignedNotebookInstanceUrlResult
 
-    CreateProcessingJob(ctx workflow.Context, input *sagemaker.CreateProcessingJobInput) (*sagemaker.CreateProcessingJobOutput, error)
-    CreateProcessingJobAsync(ctx workflow.Context, input *sagemaker.CreateProcessingJobInput) *SagemakerCreateProcessingJobResult
+       CreateProcessingJob(ctx workflow.Context, input *sagemaker.CreateProcessingJobInput) (*sagemaker.CreateProcessingJobOutput, error)
+       CreateProcessingJobAsync(ctx workflow.Context, input *sagemaker.CreateProcessingJobInput) *SagemakerCreateProcessingJobResult
 
-    CreateTrainingJob(ctx workflow.Context, input *sagemaker.CreateTrainingJobInput) (*sagemaker.CreateTrainingJobOutput, error)
-    CreateTrainingJobAsync(ctx workflow.Context, input *sagemaker.CreateTrainingJobInput) *SagemakerCreateTrainingJobResult
+       CreateTrainingJob(ctx workflow.Context, input *sagemaker.CreateTrainingJobInput) (*sagemaker.CreateTrainingJobOutput, error)
+       CreateTrainingJobAsync(ctx workflow.Context, input *sagemaker.CreateTrainingJobInput) *SagemakerCreateTrainingJobResult
 
-    CreateTransformJob(ctx workflow.Context, input *sagemaker.CreateTransformJobInput) (*sagemaker.CreateTransformJobOutput, error)
-    CreateTransformJobAsync(ctx workflow.Context, input *sagemaker.CreateTransformJobInput) *SagemakerCreateTransformJobResult
+       CreateTransformJob(ctx workflow.Context, input *sagemaker.CreateTransformJobInput) (*sagemaker.CreateTransformJobOutput, error)
+       CreateTransformJobAsync(ctx workflow.Context, input *sagemaker.CreateTransformJobInput) *SagemakerCreateTransformJobResult
 
-    CreateTrial(ctx workflow.Context, input *sagemaker.CreateTrialInput) (*sagemaker.CreateTrialOutput, error)
-    CreateTrialAsync(ctx workflow.Context, input *sagemaker.CreateTrialInput) *SagemakerCreateTrialResult
+       CreateTrial(ctx workflow.Context, input *sagemaker.CreateTrialInput) (*sagemaker.CreateTrialOutput, error)
+       CreateTrialAsync(ctx workflow.Context, input *sagemaker.CreateTrialInput) *SagemakerCreateTrialResult
 
-    CreateTrialComponent(ctx workflow.Context, input *sagemaker.CreateTrialComponentInput) (*sagemaker.CreateTrialComponentOutput, error)
-    CreateTrialComponentAsync(ctx workflow.Context, input *sagemaker.CreateTrialComponentInput) *SagemakerCreateTrialComponentResult
+       CreateTrialComponent(ctx workflow.Context, input *sagemaker.CreateTrialComponentInput) (*sagemaker.CreateTrialComponentOutput, error)
+       CreateTrialComponentAsync(ctx workflow.Context, input *sagemaker.CreateTrialComponentInput) *SagemakerCreateTrialComponentResult
 
-    CreateUserProfile(ctx workflow.Context, input *sagemaker.CreateUserProfileInput) (*sagemaker.CreateUserProfileOutput, error)
-    CreateUserProfileAsync(ctx workflow.Context, input *sagemaker.CreateUserProfileInput) *SagemakerCreateUserProfileResult
+       CreateUserProfile(ctx workflow.Context, input *sagemaker.CreateUserProfileInput) (*sagemaker.CreateUserProfileOutput, error)
+       CreateUserProfileAsync(ctx workflow.Context, input *sagemaker.CreateUserProfileInput) *SagemakerCreateUserProfileResult
 
-    CreateWorkforce(ctx workflow.Context, input *sagemaker.CreateWorkforceInput) (*sagemaker.CreateWorkforceOutput, error)
-    CreateWorkforceAsync(ctx workflow.Context, input *sagemaker.CreateWorkforceInput) *SagemakerCreateWorkforceResult
+       CreateWorkforce(ctx workflow.Context, input *sagemaker.CreateWorkforceInput) (*sagemaker.CreateWorkforceOutput, error)
+       CreateWorkforceAsync(ctx workflow.Context, input *sagemaker.CreateWorkforceInput) *SagemakerCreateWorkforceResult
 
-    CreateWorkteam(ctx workflow.Context, input *sagemaker.CreateWorkteamInput) (*sagemaker.CreateWorkteamOutput, error)
-    CreateWorkteamAsync(ctx workflow.Context, input *sagemaker.CreateWorkteamInput) *SagemakerCreateWorkteamResult
+       CreateWorkteam(ctx workflow.Context, input *sagemaker.CreateWorkteamInput) (*sagemaker.CreateWorkteamOutput, error)
+       CreateWorkteamAsync(ctx workflow.Context, input *sagemaker.CreateWorkteamInput) *SagemakerCreateWorkteamResult
 
-    DeleteAlgorithm(ctx workflow.Context, input *sagemaker.DeleteAlgorithmInput) (*sagemaker.DeleteAlgorithmOutput, error)
-    DeleteAlgorithmAsync(ctx workflow.Context, input *sagemaker.DeleteAlgorithmInput) *SagemakerDeleteAlgorithmResult
+       DeleteAlgorithm(ctx workflow.Context, input *sagemaker.DeleteAlgorithmInput) (*sagemaker.DeleteAlgorithmOutput, error)
+       DeleteAlgorithmAsync(ctx workflow.Context, input *sagemaker.DeleteAlgorithmInput) *SagemakerDeleteAlgorithmResult
 
-    DeleteApp(ctx workflow.Context, input *sagemaker.DeleteAppInput) (*sagemaker.DeleteAppOutput, error)
-    DeleteAppAsync(ctx workflow.Context, input *sagemaker.DeleteAppInput) *SagemakerDeleteAppResult
+       DeleteApp(ctx workflow.Context, input *sagemaker.DeleteAppInput) (*sagemaker.DeleteAppOutput, error)
+       DeleteAppAsync(ctx workflow.Context, input *sagemaker.DeleteAppInput) *SagemakerDeleteAppResult
 
-    DeleteCodeRepository(ctx workflow.Context, input *sagemaker.DeleteCodeRepositoryInput) (*sagemaker.DeleteCodeRepositoryOutput, error)
-    DeleteCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.DeleteCodeRepositoryInput) *SagemakerDeleteCodeRepositoryResult
+       DeleteCodeRepository(ctx workflow.Context, input *sagemaker.DeleteCodeRepositoryInput) (*sagemaker.DeleteCodeRepositoryOutput, error)
+       DeleteCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.DeleteCodeRepositoryInput) *SagemakerDeleteCodeRepositoryResult
 
-    DeleteDomain(ctx workflow.Context, input *sagemaker.DeleteDomainInput) (*sagemaker.DeleteDomainOutput, error)
-    DeleteDomainAsync(ctx workflow.Context, input *sagemaker.DeleteDomainInput) *SagemakerDeleteDomainResult
+       DeleteDomain(ctx workflow.Context, input *sagemaker.DeleteDomainInput) (*sagemaker.DeleteDomainOutput, error)
+       DeleteDomainAsync(ctx workflow.Context, input *sagemaker.DeleteDomainInput) *SagemakerDeleteDomainResult
 
-    DeleteEndpoint(ctx workflow.Context, input *sagemaker.DeleteEndpointInput) (*sagemaker.DeleteEndpointOutput, error)
-    DeleteEndpointAsync(ctx workflow.Context, input *sagemaker.DeleteEndpointInput) *SagemakerDeleteEndpointResult
+       DeleteEndpoint(ctx workflow.Context, input *sagemaker.DeleteEndpointInput) (*sagemaker.DeleteEndpointOutput, error)
+       DeleteEndpointAsync(ctx workflow.Context, input *sagemaker.DeleteEndpointInput) *SagemakerDeleteEndpointResult
 
-    DeleteEndpointConfig(ctx workflow.Context, input *sagemaker.DeleteEndpointConfigInput) (*sagemaker.DeleteEndpointConfigOutput, error)
-    DeleteEndpointConfigAsync(ctx workflow.Context, input *sagemaker.DeleteEndpointConfigInput) *SagemakerDeleteEndpointConfigResult
+       DeleteEndpointConfig(ctx workflow.Context, input *sagemaker.DeleteEndpointConfigInput) (*sagemaker.DeleteEndpointConfigOutput, error)
+       DeleteEndpointConfigAsync(ctx workflow.Context, input *sagemaker.DeleteEndpointConfigInput) *SagemakerDeleteEndpointConfigResult
 
-    DeleteExperiment(ctx workflow.Context, input *sagemaker.DeleteExperimentInput) (*sagemaker.DeleteExperimentOutput, error)
-    DeleteExperimentAsync(ctx workflow.Context, input *sagemaker.DeleteExperimentInput) *SagemakerDeleteExperimentResult
+       DeleteExperiment(ctx workflow.Context, input *sagemaker.DeleteExperimentInput) (*sagemaker.DeleteExperimentOutput, error)
+       DeleteExperimentAsync(ctx workflow.Context, input *sagemaker.DeleteExperimentInput) *SagemakerDeleteExperimentResult
 
-    DeleteFlowDefinition(ctx workflow.Context, input *sagemaker.DeleteFlowDefinitionInput) (*sagemaker.DeleteFlowDefinitionOutput, error)
-    DeleteFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.DeleteFlowDefinitionInput) *SagemakerDeleteFlowDefinitionResult
+       DeleteFlowDefinition(ctx workflow.Context, input *sagemaker.DeleteFlowDefinitionInput) (*sagemaker.DeleteFlowDefinitionOutput, error)
+       DeleteFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.DeleteFlowDefinitionInput) *SagemakerDeleteFlowDefinitionResult
 
-    DeleteHumanTaskUi(ctx workflow.Context, input *sagemaker.DeleteHumanTaskUiInput) (*sagemaker.DeleteHumanTaskUiOutput, error)
-    DeleteHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.DeleteHumanTaskUiInput) *SagemakerDeleteHumanTaskUiResult
+       DeleteHumanTaskUi(ctx workflow.Context, input *sagemaker.DeleteHumanTaskUiInput) (*sagemaker.DeleteHumanTaskUiOutput, error)
+       DeleteHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.DeleteHumanTaskUiInput) *SagemakerDeleteHumanTaskUiResult
 
-    DeleteModel(ctx workflow.Context, input *sagemaker.DeleteModelInput) (*sagemaker.DeleteModelOutput, error)
-    DeleteModelAsync(ctx workflow.Context, input *sagemaker.DeleteModelInput) *SagemakerDeleteModelResult
+       DeleteModel(ctx workflow.Context, input *sagemaker.DeleteModelInput) (*sagemaker.DeleteModelOutput, error)
+       DeleteModelAsync(ctx workflow.Context, input *sagemaker.DeleteModelInput) *SagemakerDeleteModelResult
 
-    DeleteModelPackage(ctx workflow.Context, input *sagemaker.DeleteModelPackageInput) (*sagemaker.DeleteModelPackageOutput, error)
-    DeleteModelPackageAsync(ctx workflow.Context, input *sagemaker.DeleteModelPackageInput) *SagemakerDeleteModelPackageResult
+       DeleteModelPackage(ctx workflow.Context, input *sagemaker.DeleteModelPackageInput) (*sagemaker.DeleteModelPackageOutput, error)
+       DeleteModelPackageAsync(ctx workflow.Context, input *sagemaker.DeleteModelPackageInput) *SagemakerDeleteModelPackageResult
 
-    DeleteMonitoringSchedule(ctx workflow.Context, input *sagemaker.DeleteMonitoringScheduleInput) (*sagemaker.DeleteMonitoringScheduleOutput, error)
-    DeleteMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.DeleteMonitoringScheduleInput) *SagemakerDeleteMonitoringScheduleResult
+       DeleteMonitoringSchedule(ctx workflow.Context, input *sagemaker.DeleteMonitoringScheduleInput) (*sagemaker.DeleteMonitoringScheduleOutput, error)
+       DeleteMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.DeleteMonitoringScheduleInput) *SagemakerDeleteMonitoringScheduleResult
 
-    DeleteNotebookInstance(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceInput) (*sagemaker.DeleteNotebookInstanceOutput, error)
-    DeleteNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceInput) *SagemakerDeleteNotebookInstanceResult
+       DeleteNotebookInstance(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceInput) (*sagemaker.DeleteNotebookInstanceOutput, error)
+       DeleteNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceInput) *SagemakerDeleteNotebookInstanceResult
 
-    DeleteNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceLifecycleConfigInput) (*sagemaker.DeleteNotebookInstanceLifecycleConfigOutput, error)
-    DeleteNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceLifecycleConfigInput) *SagemakerDeleteNotebookInstanceLifecycleConfigResult
+       DeleteNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceLifecycleConfigInput) (*sagemaker.DeleteNotebookInstanceLifecycleConfigOutput, error)
+       DeleteNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.DeleteNotebookInstanceLifecycleConfigInput) *SagemakerDeleteNotebookInstanceLifecycleConfigResult
 
-    DeleteTags(ctx workflow.Context, input *sagemaker.DeleteTagsInput) (*sagemaker.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *sagemaker.DeleteTagsInput) *SagemakerDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *sagemaker.DeleteTagsInput) (*sagemaker.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *sagemaker.DeleteTagsInput) *SagemakerDeleteTagsResult
 
-    DeleteTrial(ctx workflow.Context, input *sagemaker.DeleteTrialInput) (*sagemaker.DeleteTrialOutput, error)
-    DeleteTrialAsync(ctx workflow.Context, input *sagemaker.DeleteTrialInput) *SagemakerDeleteTrialResult
+       DeleteTrial(ctx workflow.Context, input *sagemaker.DeleteTrialInput) (*sagemaker.DeleteTrialOutput, error)
+       DeleteTrialAsync(ctx workflow.Context, input *sagemaker.DeleteTrialInput) *SagemakerDeleteTrialResult
 
-    DeleteTrialComponent(ctx workflow.Context, input *sagemaker.DeleteTrialComponentInput) (*sagemaker.DeleteTrialComponentOutput, error)
-    DeleteTrialComponentAsync(ctx workflow.Context, input *sagemaker.DeleteTrialComponentInput) *SagemakerDeleteTrialComponentResult
+       DeleteTrialComponent(ctx workflow.Context, input *sagemaker.DeleteTrialComponentInput) (*sagemaker.DeleteTrialComponentOutput, error)
+       DeleteTrialComponentAsync(ctx workflow.Context, input *sagemaker.DeleteTrialComponentInput) *SagemakerDeleteTrialComponentResult
 
-    DeleteUserProfile(ctx workflow.Context, input *sagemaker.DeleteUserProfileInput) (*sagemaker.DeleteUserProfileOutput, error)
-    DeleteUserProfileAsync(ctx workflow.Context, input *sagemaker.DeleteUserProfileInput) *SagemakerDeleteUserProfileResult
+       DeleteUserProfile(ctx workflow.Context, input *sagemaker.DeleteUserProfileInput) (*sagemaker.DeleteUserProfileOutput, error)
+       DeleteUserProfileAsync(ctx workflow.Context, input *sagemaker.DeleteUserProfileInput) *SagemakerDeleteUserProfileResult
 
-    DeleteWorkforce(ctx workflow.Context, input *sagemaker.DeleteWorkforceInput) (*sagemaker.DeleteWorkforceOutput, error)
-    DeleteWorkforceAsync(ctx workflow.Context, input *sagemaker.DeleteWorkforceInput) *SagemakerDeleteWorkforceResult
+       DeleteWorkforce(ctx workflow.Context, input *sagemaker.DeleteWorkforceInput) (*sagemaker.DeleteWorkforceOutput, error)
+       DeleteWorkforceAsync(ctx workflow.Context, input *sagemaker.DeleteWorkforceInput) *SagemakerDeleteWorkforceResult
 
-    DeleteWorkteam(ctx workflow.Context, input *sagemaker.DeleteWorkteamInput) (*sagemaker.DeleteWorkteamOutput, error)
-    DeleteWorkteamAsync(ctx workflow.Context, input *sagemaker.DeleteWorkteamInput) *SagemakerDeleteWorkteamResult
+       DeleteWorkteam(ctx workflow.Context, input *sagemaker.DeleteWorkteamInput) (*sagemaker.DeleteWorkteamOutput, error)
+       DeleteWorkteamAsync(ctx workflow.Context, input *sagemaker.DeleteWorkteamInput) *SagemakerDeleteWorkteamResult
 
-    DescribeAlgorithm(ctx workflow.Context, input *sagemaker.DescribeAlgorithmInput) (*sagemaker.DescribeAlgorithmOutput, error)
-    DescribeAlgorithmAsync(ctx workflow.Context, input *sagemaker.DescribeAlgorithmInput) *SagemakerDescribeAlgorithmResult
+       DescribeAlgorithm(ctx workflow.Context, input *sagemaker.DescribeAlgorithmInput) (*sagemaker.DescribeAlgorithmOutput, error)
+       DescribeAlgorithmAsync(ctx workflow.Context, input *sagemaker.DescribeAlgorithmInput) *SagemakerDescribeAlgorithmResult
 
-    DescribeApp(ctx workflow.Context, input *sagemaker.DescribeAppInput) (*sagemaker.DescribeAppOutput, error)
-    DescribeAppAsync(ctx workflow.Context, input *sagemaker.DescribeAppInput) *SagemakerDescribeAppResult
+       DescribeApp(ctx workflow.Context, input *sagemaker.DescribeAppInput) (*sagemaker.DescribeAppOutput, error)
+       DescribeAppAsync(ctx workflow.Context, input *sagemaker.DescribeAppInput) *SagemakerDescribeAppResult
 
-    DescribeAutoMLJob(ctx workflow.Context, input *sagemaker.DescribeAutoMLJobInput) (*sagemaker.DescribeAutoMLJobOutput, error)
-    DescribeAutoMLJobAsync(ctx workflow.Context, input *sagemaker.DescribeAutoMLJobInput) *SagemakerDescribeAutoMLJobResult
+       DescribeAutoMLJob(ctx workflow.Context, input *sagemaker.DescribeAutoMLJobInput) (*sagemaker.DescribeAutoMLJobOutput, error)
+       DescribeAutoMLJobAsync(ctx workflow.Context, input *sagemaker.DescribeAutoMLJobInput) *SagemakerDescribeAutoMLJobResult
 
-    DescribeCodeRepository(ctx workflow.Context, input *sagemaker.DescribeCodeRepositoryInput) (*sagemaker.DescribeCodeRepositoryOutput, error)
-    DescribeCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.DescribeCodeRepositoryInput) *SagemakerDescribeCodeRepositoryResult
+       DescribeCodeRepository(ctx workflow.Context, input *sagemaker.DescribeCodeRepositoryInput) (*sagemaker.DescribeCodeRepositoryOutput, error)
+       DescribeCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.DescribeCodeRepositoryInput) *SagemakerDescribeCodeRepositoryResult
 
-    DescribeCompilationJob(ctx workflow.Context, input *sagemaker.DescribeCompilationJobInput) (*sagemaker.DescribeCompilationJobOutput, error)
-    DescribeCompilationJobAsync(ctx workflow.Context, input *sagemaker.DescribeCompilationJobInput) *SagemakerDescribeCompilationJobResult
+       DescribeCompilationJob(ctx workflow.Context, input *sagemaker.DescribeCompilationJobInput) (*sagemaker.DescribeCompilationJobOutput, error)
+       DescribeCompilationJobAsync(ctx workflow.Context, input *sagemaker.DescribeCompilationJobInput) *SagemakerDescribeCompilationJobResult
 
-    DescribeDomain(ctx workflow.Context, input *sagemaker.DescribeDomainInput) (*sagemaker.DescribeDomainOutput, error)
-    DescribeDomainAsync(ctx workflow.Context, input *sagemaker.DescribeDomainInput) *SagemakerDescribeDomainResult
+       DescribeDomain(ctx workflow.Context, input *sagemaker.DescribeDomainInput) (*sagemaker.DescribeDomainOutput, error)
+       DescribeDomainAsync(ctx workflow.Context, input *sagemaker.DescribeDomainInput) *SagemakerDescribeDomainResult
 
-    DescribeEndpoint(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) (*sagemaker.DescribeEndpointOutput, error)
-    DescribeEndpointAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *SagemakerDescribeEndpointResult
+       DescribeEndpoint(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) (*sagemaker.DescribeEndpointOutput, error)
+       DescribeEndpointAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) *SagemakerDescribeEndpointResult
 
-    DescribeEndpointConfig(ctx workflow.Context, input *sagemaker.DescribeEndpointConfigInput) (*sagemaker.DescribeEndpointConfigOutput, error)
-    DescribeEndpointConfigAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointConfigInput) *SagemakerDescribeEndpointConfigResult
+       DescribeEndpointConfig(ctx workflow.Context, input *sagemaker.DescribeEndpointConfigInput) (*sagemaker.DescribeEndpointConfigOutput, error)
+       DescribeEndpointConfigAsync(ctx workflow.Context, input *sagemaker.DescribeEndpointConfigInput) *SagemakerDescribeEndpointConfigResult
 
-    DescribeExperiment(ctx workflow.Context, input *sagemaker.DescribeExperimentInput) (*sagemaker.DescribeExperimentOutput, error)
-    DescribeExperimentAsync(ctx workflow.Context, input *sagemaker.DescribeExperimentInput) *SagemakerDescribeExperimentResult
+       DescribeExperiment(ctx workflow.Context, input *sagemaker.DescribeExperimentInput) (*sagemaker.DescribeExperimentOutput, error)
+       DescribeExperimentAsync(ctx workflow.Context, input *sagemaker.DescribeExperimentInput) *SagemakerDescribeExperimentResult
 
-    DescribeFlowDefinition(ctx workflow.Context, input *sagemaker.DescribeFlowDefinitionInput) (*sagemaker.DescribeFlowDefinitionOutput, error)
-    DescribeFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.DescribeFlowDefinitionInput) *SagemakerDescribeFlowDefinitionResult
+       DescribeFlowDefinition(ctx workflow.Context, input *sagemaker.DescribeFlowDefinitionInput) (*sagemaker.DescribeFlowDefinitionOutput, error)
+       DescribeFlowDefinitionAsync(ctx workflow.Context, input *sagemaker.DescribeFlowDefinitionInput) *SagemakerDescribeFlowDefinitionResult
 
-    DescribeHumanTaskUi(ctx workflow.Context, input *sagemaker.DescribeHumanTaskUiInput) (*sagemaker.DescribeHumanTaskUiOutput, error)
-    DescribeHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.DescribeHumanTaskUiInput) *SagemakerDescribeHumanTaskUiResult
+       DescribeHumanTaskUi(ctx workflow.Context, input *sagemaker.DescribeHumanTaskUiInput) (*sagemaker.DescribeHumanTaskUiOutput, error)
+       DescribeHumanTaskUiAsync(ctx workflow.Context, input *sagemaker.DescribeHumanTaskUiInput) *SagemakerDescribeHumanTaskUiResult
 
-    DescribeHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.DescribeHyperParameterTuningJobInput) (*sagemaker.DescribeHyperParameterTuningJobOutput, error)
-    DescribeHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.DescribeHyperParameterTuningJobInput) *SagemakerDescribeHyperParameterTuningJobResult
+       DescribeHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.DescribeHyperParameterTuningJobInput) (*sagemaker.DescribeHyperParameterTuningJobOutput, error)
+       DescribeHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.DescribeHyperParameterTuningJobInput) *SagemakerDescribeHyperParameterTuningJobResult
 
-    DescribeLabelingJob(ctx workflow.Context, input *sagemaker.DescribeLabelingJobInput) (*sagemaker.DescribeLabelingJobOutput, error)
-    DescribeLabelingJobAsync(ctx workflow.Context, input *sagemaker.DescribeLabelingJobInput) *SagemakerDescribeLabelingJobResult
+       DescribeLabelingJob(ctx workflow.Context, input *sagemaker.DescribeLabelingJobInput) (*sagemaker.DescribeLabelingJobOutput, error)
+       DescribeLabelingJobAsync(ctx workflow.Context, input *sagemaker.DescribeLabelingJobInput) *SagemakerDescribeLabelingJobResult
 
-    DescribeModel(ctx workflow.Context, input *sagemaker.DescribeModelInput) (*sagemaker.DescribeModelOutput, error)
-    DescribeModelAsync(ctx workflow.Context, input *sagemaker.DescribeModelInput) *SagemakerDescribeModelResult
+       DescribeModel(ctx workflow.Context, input *sagemaker.DescribeModelInput) (*sagemaker.DescribeModelOutput, error)
+       DescribeModelAsync(ctx workflow.Context, input *sagemaker.DescribeModelInput) *SagemakerDescribeModelResult
 
-    DescribeModelPackage(ctx workflow.Context, input *sagemaker.DescribeModelPackageInput) (*sagemaker.DescribeModelPackageOutput, error)
-    DescribeModelPackageAsync(ctx workflow.Context, input *sagemaker.DescribeModelPackageInput) *SagemakerDescribeModelPackageResult
+       DescribeModelPackage(ctx workflow.Context, input *sagemaker.DescribeModelPackageInput) (*sagemaker.DescribeModelPackageOutput, error)
+       DescribeModelPackageAsync(ctx workflow.Context, input *sagemaker.DescribeModelPackageInput) *SagemakerDescribeModelPackageResult
 
-    DescribeMonitoringSchedule(ctx workflow.Context, input *sagemaker.DescribeMonitoringScheduleInput) (*sagemaker.DescribeMonitoringScheduleOutput, error)
-    DescribeMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.DescribeMonitoringScheduleInput) *SagemakerDescribeMonitoringScheduleResult
+       DescribeMonitoringSchedule(ctx workflow.Context, input *sagemaker.DescribeMonitoringScheduleInput) (*sagemaker.DescribeMonitoringScheduleOutput, error)
+       DescribeMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.DescribeMonitoringScheduleInput) *SagemakerDescribeMonitoringScheduleResult
 
-    DescribeNotebookInstance(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) (*sagemaker.DescribeNotebookInstanceOutput, error)
-    DescribeNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *SagemakerDescribeNotebookInstanceResult
+       DescribeNotebookInstance(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) (*sagemaker.DescribeNotebookInstanceOutput, error)
+       DescribeNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) *SagemakerDescribeNotebookInstanceResult
 
-    DescribeNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceLifecycleConfigInput) (*sagemaker.DescribeNotebookInstanceLifecycleConfigOutput, error)
-    DescribeNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceLifecycleConfigInput) *SagemakerDescribeNotebookInstanceLifecycleConfigResult
+       DescribeNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceLifecycleConfigInput) (*sagemaker.DescribeNotebookInstanceLifecycleConfigOutput, error)
+       DescribeNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceLifecycleConfigInput) *SagemakerDescribeNotebookInstanceLifecycleConfigResult
 
-    DescribeProcessingJob(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) (*sagemaker.DescribeProcessingJobOutput, error)
-    DescribeProcessingJobAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) *SagemakerDescribeProcessingJobResult
+       DescribeProcessingJob(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) (*sagemaker.DescribeProcessingJobOutput, error)
+       DescribeProcessingJobAsync(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) *SagemakerDescribeProcessingJobResult
 
-    DescribeSubscribedWorkteam(ctx workflow.Context, input *sagemaker.DescribeSubscribedWorkteamInput) (*sagemaker.DescribeSubscribedWorkteamOutput, error)
-    DescribeSubscribedWorkteamAsync(ctx workflow.Context, input *sagemaker.DescribeSubscribedWorkteamInput) *SagemakerDescribeSubscribedWorkteamResult
+       DescribeSubscribedWorkteam(ctx workflow.Context, input *sagemaker.DescribeSubscribedWorkteamInput) (*sagemaker.DescribeSubscribedWorkteamOutput, error)
+       DescribeSubscribedWorkteamAsync(ctx workflow.Context, input *sagemaker.DescribeSubscribedWorkteamInput) *SagemakerDescribeSubscribedWorkteamResult
 
-    DescribeTrainingJob(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) (*sagemaker.DescribeTrainingJobOutput, error)
-    DescribeTrainingJobAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) *SagemakerDescribeTrainingJobResult
+       DescribeTrainingJob(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) (*sagemaker.DescribeTrainingJobOutput, error)
+       DescribeTrainingJobAsync(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) *SagemakerDescribeTrainingJobResult
 
-    DescribeTransformJob(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) (*sagemaker.DescribeTransformJobOutput, error)
-    DescribeTransformJobAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) *SagemakerDescribeTransformJobResult
+       DescribeTransformJob(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) (*sagemaker.DescribeTransformJobOutput, error)
+       DescribeTransformJobAsync(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) *SagemakerDescribeTransformJobResult
 
-    DescribeTrial(ctx workflow.Context, input *sagemaker.DescribeTrialInput) (*sagemaker.DescribeTrialOutput, error)
-    DescribeTrialAsync(ctx workflow.Context, input *sagemaker.DescribeTrialInput) *SagemakerDescribeTrialResult
+       DescribeTrial(ctx workflow.Context, input *sagemaker.DescribeTrialInput) (*sagemaker.DescribeTrialOutput, error)
+       DescribeTrialAsync(ctx workflow.Context, input *sagemaker.DescribeTrialInput) *SagemakerDescribeTrialResult
 
-    DescribeTrialComponent(ctx workflow.Context, input *sagemaker.DescribeTrialComponentInput) (*sagemaker.DescribeTrialComponentOutput, error)
-    DescribeTrialComponentAsync(ctx workflow.Context, input *sagemaker.DescribeTrialComponentInput) *SagemakerDescribeTrialComponentResult
+       DescribeTrialComponent(ctx workflow.Context, input *sagemaker.DescribeTrialComponentInput) (*sagemaker.DescribeTrialComponentOutput, error)
+       DescribeTrialComponentAsync(ctx workflow.Context, input *sagemaker.DescribeTrialComponentInput) *SagemakerDescribeTrialComponentResult
 
-    DescribeUserProfile(ctx workflow.Context, input *sagemaker.DescribeUserProfileInput) (*sagemaker.DescribeUserProfileOutput, error)
-    DescribeUserProfileAsync(ctx workflow.Context, input *sagemaker.DescribeUserProfileInput) *SagemakerDescribeUserProfileResult
+       DescribeUserProfile(ctx workflow.Context, input *sagemaker.DescribeUserProfileInput) (*sagemaker.DescribeUserProfileOutput, error)
+       DescribeUserProfileAsync(ctx workflow.Context, input *sagemaker.DescribeUserProfileInput) *SagemakerDescribeUserProfileResult
 
-    DescribeWorkforce(ctx workflow.Context, input *sagemaker.DescribeWorkforceInput) (*sagemaker.DescribeWorkforceOutput, error)
-    DescribeWorkforceAsync(ctx workflow.Context, input *sagemaker.DescribeWorkforceInput) *SagemakerDescribeWorkforceResult
+       DescribeWorkforce(ctx workflow.Context, input *sagemaker.DescribeWorkforceInput) (*sagemaker.DescribeWorkforceOutput, error)
+       DescribeWorkforceAsync(ctx workflow.Context, input *sagemaker.DescribeWorkforceInput) *SagemakerDescribeWorkforceResult
 
-    DescribeWorkteam(ctx workflow.Context, input *sagemaker.DescribeWorkteamInput) (*sagemaker.DescribeWorkteamOutput, error)
-    DescribeWorkteamAsync(ctx workflow.Context, input *sagemaker.DescribeWorkteamInput) *SagemakerDescribeWorkteamResult
+       DescribeWorkteam(ctx workflow.Context, input *sagemaker.DescribeWorkteamInput) (*sagemaker.DescribeWorkteamOutput, error)
+       DescribeWorkteamAsync(ctx workflow.Context, input *sagemaker.DescribeWorkteamInput) *SagemakerDescribeWorkteamResult
 
-    DisassociateTrialComponent(ctx workflow.Context, input *sagemaker.DisassociateTrialComponentInput) (*sagemaker.DisassociateTrialComponentOutput, error)
-    DisassociateTrialComponentAsync(ctx workflow.Context, input *sagemaker.DisassociateTrialComponentInput) *SagemakerDisassociateTrialComponentResult
+       DisassociateTrialComponent(ctx workflow.Context, input *sagemaker.DisassociateTrialComponentInput) (*sagemaker.DisassociateTrialComponentOutput, error)
+       DisassociateTrialComponentAsync(ctx workflow.Context, input *sagemaker.DisassociateTrialComponentInput) *SagemakerDisassociateTrialComponentResult
 
-    GetSearchSuggestions(ctx workflow.Context, input *sagemaker.GetSearchSuggestionsInput) (*sagemaker.GetSearchSuggestionsOutput, error)
-    GetSearchSuggestionsAsync(ctx workflow.Context, input *sagemaker.GetSearchSuggestionsInput) *SagemakerGetSearchSuggestionsResult
+       GetSearchSuggestions(ctx workflow.Context, input *sagemaker.GetSearchSuggestionsInput) (*sagemaker.GetSearchSuggestionsOutput, error)
+       GetSearchSuggestionsAsync(ctx workflow.Context, input *sagemaker.GetSearchSuggestionsInput) *SagemakerGetSearchSuggestionsResult
 
-    ListAlgorithms(ctx workflow.Context, input *sagemaker.ListAlgorithmsInput) (*sagemaker.ListAlgorithmsOutput, error)
-    ListAlgorithmsAsync(ctx workflow.Context, input *sagemaker.ListAlgorithmsInput) *SagemakerListAlgorithmsResult
+       ListAlgorithms(ctx workflow.Context, input *sagemaker.ListAlgorithmsInput) (*sagemaker.ListAlgorithmsOutput, error)
+       ListAlgorithmsAsync(ctx workflow.Context, input *sagemaker.ListAlgorithmsInput) *SagemakerListAlgorithmsResult
 
-    ListApps(ctx workflow.Context, input *sagemaker.ListAppsInput) (*sagemaker.ListAppsOutput, error)
-    ListAppsAsync(ctx workflow.Context, input *sagemaker.ListAppsInput) *SagemakerListAppsResult
+       ListApps(ctx workflow.Context, input *sagemaker.ListAppsInput) (*sagemaker.ListAppsOutput, error)
+       ListAppsAsync(ctx workflow.Context, input *sagemaker.ListAppsInput) *SagemakerListAppsResult
 
-    ListAutoMLJobs(ctx workflow.Context, input *sagemaker.ListAutoMLJobsInput) (*sagemaker.ListAutoMLJobsOutput, error)
-    ListAutoMLJobsAsync(ctx workflow.Context, input *sagemaker.ListAutoMLJobsInput) *SagemakerListAutoMLJobsResult
+       ListAutoMLJobs(ctx workflow.Context, input *sagemaker.ListAutoMLJobsInput) (*sagemaker.ListAutoMLJobsOutput, error)
+       ListAutoMLJobsAsync(ctx workflow.Context, input *sagemaker.ListAutoMLJobsInput) *SagemakerListAutoMLJobsResult
 
-    ListCandidatesForAutoMLJob(ctx workflow.Context, input *sagemaker.ListCandidatesForAutoMLJobInput) (*sagemaker.ListCandidatesForAutoMLJobOutput, error)
-    ListCandidatesForAutoMLJobAsync(ctx workflow.Context, input *sagemaker.ListCandidatesForAutoMLJobInput) *SagemakerListCandidatesForAutoMLJobResult
+       ListCandidatesForAutoMLJob(ctx workflow.Context, input *sagemaker.ListCandidatesForAutoMLJobInput) (*sagemaker.ListCandidatesForAutoMLJobOutput, error)
+       ListCandidatesForAutoMLJobAsync(ctx workflow.Context, input *sagemaker.ListCandidatesForAutoMLJobInput) *SagemakerListCandidatesForAutoMLJobResult
 
-    ListCodeRepositories(ctx workflow.Context, input *sagemaker.ListCodeRepositoriesInput) (*sagemaker.ListCodeRepositoriesOutput, error)
-    ListCodeRepositoriesAsync(ctx workflow.Context, input *sagemaker.ListCodeRepositoriesInput) *SagemakerListCodeRepositoriesResult
+       ListCodeRepositories(ctx workflow.Context, input *sagemaker.ListCodeRepositoriesInput) (*sagemaker.ListCodeRepositoriesOutput, error)
+       ListCodeRepositoriesAsync(ctx workflow.Context, input *sagemaker.ListCodeRepositoriesInput) *SagemakerListCodeRepositoriesResult
 
-    ListCompilationJobs(ctx workflow.Context, input *sagemaker.ListCompilationJobsInput) (*sagemaker.ListCompilationJobsOutput, error)
-    ListCompilationJobsAsync(ctx workflow.Context, input *sagemaker.ListCompilationJobsInput) *SagemakerListCompilationJobsResult
+       ListCompilationJobs(ctx workflow.Context, input *sagemaker.ListCompilationJobsInput) (*sagemaker.ListCompilationJobsOutput, error)
+       ListCompilationJobsAsync(ctx workflow.Context, input *sagemaker.ListCompilationJobsInput) *SagemakerListCompilationJobsResult
 
-    ListDomains(ctx workflow.Context, input *sagemaker.ListDomainsInput) (*sagemaker.ListDomainsOutput, error)
-    ListDomainsAsync(ctx workflow.Context, input *sagemaker.ListDomainsInput) *SagemakerListDomainsResult
+       ListDomains(ctx workflow.Context, input *sagemaker.ListDomainsInput) (*sagemaker.ListDomainsOutput, error)
+       ListDomainsAsync(ctx workflow.Context, input *sagemaker.ListDomainsInput) *SagemakerListDomainsResult
 
-    ListEndpointConfigs(ctx workflow.Context, input *sagemaker.ListEndpointConfigsInput) (*sagemaker.ListEndpointConfigsOutput, error)
-    ListEndpointConfigsAsync(ctx workflow.Context, input *sagemaker.ListEndpointConfigsInput) *SagemakerListEndpointConfigsResult
+       ListEndpointConfigs(ctx workflow.Context, input *sagemaker.ListEndpointConfigsInput) (*sagemaker.ListEndpointConfigsOutput, error)
+       ListEndpointConfigsAsync(ctx workflow.Context, input *sagemaker.ListEndpointConfigsInput) *SagemakerListEndpointConfigsResult
 
-    ListEndpoints(ctx workflow.Context, input *sagemaker.ListEndpointsInput) (*sagemaker.ListEndpointsOutput, error)
-    ListEndpointsAsync(ctx workflow.Context, input *sagemaker.ListEndpointsInput) *SagemakerListEndpointsResult
+       ListEndpoints(ctx workflow.Context, input *sagemaker.ListEndpointsInput) (*sagemaker.ListEndpointsOutput, error)
+       ListEndpointsAsync(ctx workflow.Context, input *sagemaker.ListEndpointsInput) *SagemakerListEndpointsResult
 
-    ListExperiments(ctx workflow.Context, input *sagemaker.ListExperimentsInput) (*sagemaker.ListExperimentsOutput, error)
-    ListExperimentsAsync(ctx workflow.Context, input *sagemaker.ListExperimentsInput) *SagemakerListExperimentsResult
+       ListExperiments(ctx workflow.Context, input *sagemaker.ListExperimentsInput) (*sagemaker.ListExperimentsOutput, error)
+       ListExperimentsAsync(ctx workflow.Context, input *sagemaker.ListExperimentsInput) *SagemakerListExperimentsResult
 
-    ListFlowDefinitions(ctx workflow.Context, input *sagemaker.ListFlowDefinitionsInput) (*sagemaker.ListFlowDefinitionsOutput, error)
-    ListFlowDefinitionsAsync(ctx workflow.Context, input *sagemaker.ListFlowDefinitionsInput) *SagemakerListFlowDefinitionsResult
+       ListFlowDefinitions(ctx workflow.Context, input *sagemaker.ListFlowDefinitionsInput) (*sagemaker.ListFlowDefinitionsOutput, error)
+       ListFlowDefinitionsAsync(ctx workflow.Context, input *sagemaker.ListFlowDefinitionsInput) *SagemakerListFlowDefinitionsResult
 
-    ListHumanTaskUis(ctx workflow.Context, input *sagemaker.ListHumanTaskUisInput) (*sagemaker.ListHumanTaskUisOutput, error)
-    ListHumanTaskUisAsync(ctx workflow.Context, input *sagemaker.ListHumanTaskUisInput) *SagemakerListHumanTaskUisResult
+       ListHumanTaskUis(ctx workflow.Context, input *sagemaker.ListHumanTaskUisInput) (*sagemaker.ListHumanTaskUisOutput, error)
+       ListHumanTaskUisAsync(ctx workflow.Context, input *sagemaker.ListHumanTaskUisInput) *SagemakerListHumanTaskUisResult
 
-    ListHyperParameterTuningJobs(ctx workflow.Context, input *sagemaker.ListHyperParameterTuningJobsInput) (*sagemaker.ListHyperParameterTuningJobsOutput, error)
-    ListHyperParameterTuningJobsAsync(ctx workflow.Context, input *sagemaker.ListHyperParameterTuningJobsInput) *SagemakerListHyperParameterTuningJobsResult
+       ListHyperParameterTuningJobs(ctx workflow.Context, input *sagemaker.ListHyperParameterTuningJobsInput) (*sagemaker.ListHyperParameterTuningJobsOutput, error)
+       ListHyperParameterTuningJobsAsync(ctx workflow.Context, input *sagemaker.ListHyperParameterTuningJobsInput) *SagemakerListHyperParameterTuningJobsResult
 
-    ListLabelingJobs(ctx workflow.Context, input *sagemaker.ListLabelingJobsInput) (*sagemaker.ListLabelingJobsOutput, error)
-    ListLabelingJobsAsync(ctx workflow.Context, input *sagemaker.ListLabelingJobsInput) *SagemakerListLabelingJobsResult
+       ListLabelingJobs(ctx workflow.Context, input *sagemaker.ListLabelingJobsInput) (*sagemaker.ListLabelingJobsOutput, error)
+       ListLabelingJobsAsync(ctx workflow.Context, input *sagemaker.ListLabelingJobsInput) *SagemakerListLabelingJobsResult
 
-    ListLabelingJobsForWorkteam(ctx workflow.Context, input *sagemaker.ListLabelingJobsForWorkteamInput) (*sagemaker.ListLabelingJobsForWorkteamOutput, error)
-    ListLabelingJobsForWorkteamAsync(ctx workflow.Context, input *sagemaker.ListLabelingJobsForWorkteamInput) *SagemakerListLabelingJobsForWorkteamResult
+       ListLabelingJobsForWorkteam(ctx workflow.Context, input *sagemaker.ListLabelingJobsForWorkteamInput) (*sagemaker.ListLabelingJobsForWorkteamOutput, error)
+       ListLabelingJobsForWorkteamAsync(ctx workflow.Context, input *sagemaker.ListLabelingJobsForWorkteamInput) *SagemakerListLabelingJobsForWorkteamResult
 
-    ListModelPackages(ctx workflow.Context, input *sagemaker.ListModelPackagesInput) (*sagemaker.ListModelPackagesOutput, error)
-    ListModelPackagesAsync(ctx workflow.Context, input *sagemaker.ListModelPackagesInput) *SagemakerListModelPackagesResult
+       ListModelPackages(ctx workflow.Context, input *sagemaker.ListModelPackagesInput) (*sagemaker.ListModelPackagesOutput, error)
+       ListModelPackagesAsync(ctx workflow.Context, input *sagemaker.ListModelPackagesInput) *SagemakerListModelPackagesResult
 
-    ListModels(ctx workflow.Context, input *sagemaker.ListModelsInput) (*sagemaker.ListModelsOutput, error)
-    ListModelsAsync(ctx workflow.Context, input *sagemaker.ListModelsInput) *SagemakerListModelsResult
+       ListModels(ctx workflow.Context, input *sagemaker.ListModelsInput) (*sagemaker.ListModelsOutput, error)
+       ListModelsAsync(ctx workflow.Context, input *sagemaker.ListModelsInput) *SagemakerListModelsResult
 
-    ListMonitoringExecutions(ctx workflow.Context, input *sagemaker.ListMonitoringExecutionsInput) (*sagemaker.ListMonitoringExecutionsOutput, error)
-    ListMonitoringExecutionsAsync(ctx workflow.Context, input *sagemaker.ListMonitoringExecutionsInput) *SagemakerListMonitoringExecutionsResult
+       ListMonitoringExecutions(ctx workflow.Context, input *sagemaker.ListMonitoringExecutionsInput) (*sagemaker.ListMonitoringExecutionsOutput, error)
+       ListMonitoringExecutionsAsync(ctx workflow.Context, input *sagemaker.ListMonitoringExecutionsInput) *SagemakerListMonitoringExecutionsResult
 
-    ListMonitoringSchedules(ctx workflow.Context, input *sagemaker.ListMonitoringSchedulesInput) (*sagemaker.ListMonitoringSchedulesOutput, error)
-    ListMonitoringSchedulesAsync(ctx workflow.Context, input *sagemaker.ListMonitoringSchedulesInput) *SagemakerListMonitoringSchedulesResult
+       ListMonitoringSchedules(ctx workflow.Context, input *sagemaker.ListMonitoringSchedulesInput) (*sagemaker.ListMonitoringSchedulesOutput, error)
+       ListMonitoringSchedulesAsync(ctx workflow.Context, input *sagemaker.ListMonitoringSchedulesInput) *SagemakerListMonitoringSchedulesResult
 
-    ListNotebookInstanceLifecycleConfigs(ctx workflow.Context, input *sagemaker.ListNotebookInstanceLifecycleConfigsInput) (*sagemaker.ListNotebookInstanceLifecycleConfigsOutput, error)
-    ListNotebookInstanceLifecycleConfigsAsync(ctx workflow.Context, input *sagemaker.ListNotebookInstanceLifecycleConfigsInput) *SagemakerListNotebookInstanceLifecycleConfigsResult
+       ListNotebookInstanceLifecycleConfigs(ctx workflow.Context, input *sagemaker.ListNotebookInstanceLifecycleConfigsInput) (*sagemaker.ListNotebookInstanceLifecycleConfigsOutput, error)
+       ListNotebookInstanceLifecycleConfigsAsync(ctx workflow.Context, input *sagemaker.ListNotebookInstanceLifecycleConfigsInput) *SagemakerListNotebookInstanceLifecycleConfigsResult
 
-    ListNotebookInstances(ctx workflow.Context, input *sagemaker.ListNotebookInstancesInput) (*sagemaker.ListNotebookInstancesOutput, error)
-    ListNotebookInstancesAsync(ctx workflow.Context, input *sagemaker.ListNotebookInstancesInput) *SagemakerListNotebookInstancesResult
+       ListNotebookInstances(ctx workflow.Context, input *sagemaker.ListNotebookInstancesInput) (*sagemaker.ListNotebookInstancesOutput, error)
+       ListNotebookInstancesAsync(ctx workflow.Context, input *sagemaker.ListNotebookInstancesInput) *SagemakerListNotebookInstancesResult
 
-    ListProcessingJobs(ctx workflow.Context, input *sagemaker.ListProcessingJobsInput) (*sagemaker.ListProcessingJobsOutput, error)
-    ListProcessingJobsAsync(ctx workflow.Context, input *sagemaker.ListProcessingJobsInput) *SagemakerListProcessingJobsResult
+       ListProcessingJobs(ctx workflow.Context, input *sagemaker.ListProcessingJobsInput) (*sagemaker.ListProcessingJobsOutput, error)
+       ListProcessingJobsAsync(ctx workflow.Context, input *sagemaker.ListProcessingJobsInput) *SagemakerListProcessingJobsResult
 
-    ListSubscribedWorkteams(ctx workflow.Context, input *sagemaker.ListSubscribedWorkteamsInput) (*sagemaker.ListSubscribedWorkteamsOutput, error)
-    ListSubscribedWorkteamsAsync(ctx workflow.Context, input *sagemaker.ListSubscribedWorkteamsInput) *SagemakerListSubscribedWorkteamsResult
+       ListSubscribedWorkteams(ctx workflow.Context, input *sagemaker.ListSubscribedWorkteamsInput) (*sagemaker.ListSubscribedWorkteamsOutput, error)
+       ListSubscribedWorkteamsAsync(ctx workflow.Context, input *sagemaker.ListSubscribedWorkteamsInput) *SagemakerListSubscribedWorkteamsResult
 
-    ListTags(ctx workflow.Context, input *sagemaker.ListTagsInput) (*sagemaker.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *sagemaker.ListTagsInput) *SagemakerListTagsResult
+       ListTags(ctx workflow.Context, input *sagemaker.ListTagsInput) (*sagemaker.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *sagemaker.ListTagsInput) *SagemakerListTagsResult
 
-    ListTrainingJobs(ctx workflow.Context, input *sagemaker.ListTrainingJobsInput) (*sagemaker.ListTrainingJobsOutput, error)
-    ListTrainingJobsAsync(ctx workflow.Context, input *sagemaker.ListTrainingJobsInput) *SagemakerListTrainingJobsResult
+       ListTrainingJobs(ctx workflow.Context, input *sagemaker.ListTrainingJobsInput) (*sagemaker.ListTrainingJobsOutput, error)
+       ListTrainingJobsAsync(ctx workflow.Context, input *sagemaker.ListTrainingJobsInput) *SagemakerListTrainingJobsResult
 
-    ListTrainingJobsForHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.ListTrainingJobsForHyperParameterTuningJobInput) (*sagemaker.ListTrainingJobsForHyperParameterTuningJobOutput, error)
-    ListTrainingJobsForHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.ListTrainingJobsForHyperParameterTuningJobInput) *SagemakerListTrainingJobsForHyperParameterTuningJobResult
+       ListTrainingJobsForHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.ListTrainingJobsForHyperParameterTuningJobInput) (*sagemaker.ListTrainingJobsForHyperParameterTuningJobOutput, error)
+       ListTrainingJobsForHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.ListTrainingJobsForHyperParameterTuningJobInput) *SagemakerListTrainingJobsForHyperParameterTuningJobResult
 
-    ListTransformJobs(ctx workflow.Context, input *sagemaker.ListTransformJobsInput) (*sagemaker.ListTransformJobsOutput, error)
-    ListTransformJobsAsync(ctx workflow.Context, input *sagemaker.ListTransformJobsInput) *SagemakerListTransformJobsResult
+       ListTransformJobs(ctx workflow.Context, input *sagemaker.ListTransformJobsInput) (*sagemaker.ListTransformJobsOutput, error)
+       ListTransformJobsAsync(ctx workflow.Context, input *sagemaker.ListTransformJobsInput) *SagemakerListTransformJobsResult
 
-    ListTrialComponents(ctx workflow.Context, input *sagemaker.ListTrialComponentsInput) (*sagemaker.ListTrialComponentsOutput, error)
-    ListTrialComponentsAsync(ctx workflow.Context, input *sagemaker.ListTrialComponentsInput) *SagemakerListTrialComponentsResult
+       ListTrialComponents(ctx workflow.Context, input *sagemaker.ListTrialComponentsInput) (*sagemaker.ListTrialComponentsOutput, error)
+       ListTrialComponentsAsync(ctx workflow.Context, input *sagemaker.ListTrialComponentsInput) *SagemakerListTrialComponentsResult
 
-    ListTrials(ctx workflow.Context, input *sagemaker.ListTrialsInput) (*sagemaker.ListTrialsOutput, error)
-    ListTrialsAsync(ctx workflow.Context, input *sagemaker.ListTrialsInput) *SagemakerListTrialsResult
+       ListTrials(ctx workflow.Context, input *sagemaker.ListTrialsInput) (*sagemaker.ListTrialsOutput, error)
+       ListTrialsAsync(ctx workflow.Context, input *sagemaker.ListTrialsInput) *SagemakerListTrialsResult
 
-    ListUserProfiles(ctx workflow.Context, input *sagemaker.ListUserProfilesInput) (*sagemaker.ListUserProfilesOutput, error)
-    ListUserProfilesAsync(ctx workflow.Context, input *sagemaker.ListUserProfilesInput) *SagemakerListUserProfilesResult
+       ListUserProfiles(ctx workflow.Context, input *sagemaker.ListUserProfilesInput) (*sagemaker.ListUserProfilesOutput, error)
+       ListUserProfilesAsync(ctx workflow.Context, input *sagemaker.ListUserProfilesInput) *SagemakerListUserProfilesResult
 
-    ListWorkforces(ctx workflow.Context, input *sagemaker.ListWorkforcesInput) (*sagemaker.ListWorkforcesOutput, error)
-    ListWorkforcesAsync(ctx workflow.Context, input *sagemaker.ListWorkforcesInput) *SagemakerListWorkforcesResult
+       ListWorkforces(ctx workflow.Context, input *sagemaker.ListWorkforcesInput) (*sagemaker.ListWorkforcesOutput, error)
+       ListWorkforcesAsync(ctx workflow.Context, input *sagemaker.ListWorkforcesInput) *SagemakerListWorkforcesResult
 
-    ListWorkteams(ctx workflow.Context, input *sagemaker.ListWorkteamsInput) (*sagemaker.ListWorkteamsOutput, error)
-    ListWorkteamsAsync(ctx workflow.Context, input *sagemaker.ListWorkteamsInput) *SagemakerListWorkteamsResult
+       ListWorkteams(ctx workflow.Context, input *sagemaker.ListWorkteamsInput) (*sagemaker.ListWorkteamsOutput, error)
+       ListWorkteamsAsync(ctx workflow.Context, input *sagemaker.ListWorkteamsInput) *SagemakerListWorkteamsResult
 
-    RenderUiTemplate(ctx workflow.Context, input *sagemaker.RenderUiTemplateInput) (*sagemaker.RenderUiTemplateOutput, error)
-    RenderUiTemplateAsync(ctx workflow.Context, input *sagemaker.RenderUiTemplateInput) *SagemakerRenderUiTemplateResult
+       RenderUiTemplate(ctx workflow.Context, input *sagemaker.RenderUiTemplateInput) (*sagemaker.RenderUiTemplateOutput, error)
+       RenderUiTemplateAsync(ctx workflow.Context, input *sagemaker.RenderUiTemplateInput) *SagemakerRenderUiTemplateResult
 
-    Search(ctx workflow.Context, input *sagemaker.SearchInput) (*sagemaker.SearchOutput, error)
-    SearchAsync(ctx workflow.Context, input *sagemaker.SearchInput) *SagemakerSearchResult
+       Search(ctx workflow.Context, input *sagemaker.SearchInput) (*sagemaker.SearchOutput, error)
+       SearchAsync(ctx workflow.Context, input *sagemaker.SearchInput) *SagemakerSearchResult
 
-    StartMonitoringSchedule(ctx workflow.Context, input *sagemaker.StartMonitoringScheduleInput) (*sagemaker.StartMonitoringScheduleOutput, error)
-    StartMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.StartMonitoringScheduleInput) *SagemakerStartMonitoringScheduleResult
+       StartMonitoringSchedule(ctx workflow.Context, input *sagemaker.StartMonitoringScheduleInput) (*sagemaker.StartMonitoringScheduleOutput, error)
+       StartMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.StartMonitoringScheduleInput) *SagemakerStartMonitoringScheduleResult
 
-    StartNotebookInstance(ctx workflow.Context, input *sagemaker.StartNotebookInstanceInput) (*sagemaker.StartNotebookInstanceOutput, error)
-    StartNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.StartNotebookInstanceInput) *SagemakerStartNotebookInstanceResult
+       StartNotebookInstance(ctx workflow.Context, input *sagemaker.StartNotebookInstanceInput) (*sagemaker.StartNotebookInstanceOutput, error)
+       StartNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.StartNotebookInstanceInput) *SagemakerStartNotebookInstanceResult
 
-    StopAutoMLJob(ctx workflow.Context, input *sagemaker.StopAutoMLJobInput) (*sagemaker.StopAutoMLJobOutput, error)
-    StopAutoMLJobAsync(ctx workflow.Context, input *sagemaker.StopAutoMLJobInput) *SagemakerStopAutoMLJobResult
+       StopAutoMLJob(ctx workflow.Context, input *sagemaker.StopAutoMLJobInput) (*sagemaker.StopAutoMLJobOutput, error)
+       StopAutoMLJobAsync(ctx workflow.Context, input *sagemaker.StopAutoMLJobInput) *SagemakerStopAutoMLJobResult
 
-    StopCompilationJob(ctx workflow.Context, input *sagemaker.StopCompilationJobInput) (*sagemaker.StopCompilationJobOutput, error)
-    StopCompilationJobAsync(ctx workflow.Context, input *sagemaker.StopCompilationJobInput) *SagemakerStopCompilationJobResult
+       StopCompilationJob(ctx workflow.Context, input *sagemaker.StopCompilationJobInput) (*sagemaker.StopCompilationJobOutput, error)
+       StopCompilationJobAsync(ctx workflow.Context, input *sagemaker.StopCompilationJobInput) *SagemakerStopCompilationJobResult
 
-    StopHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.StopHyperParameterTuningJobInput) (*sagemaker.StopHyperParameterTuningJobOutput, error)
-    StopHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.StopHyperParameterTuningJobInput) *SagemakerStopHyperParameterTuningJobResult
+       StopHyperParameterTuningJob(ctx workflow.Context, input *sagemaker.StopHyperParameterTuningJobInput) (*sagemaker.StopHyperParameterTuningJobOutput, error)
+       StopHyperParameterTuningJobAsync(ctx workflow.Context, input *sagemaker.StopHyperParameterTuningJobInput) *SagemakerStopHyperParameterTuningJobResult
 
-    StopLabelingJob(ctx workflow.Context, input *sagemaker.StopLabelingJobInput) (*sagemaker.StopLabelingJobOutput, error)
-    StopLabelingJobAsync(ctx workflow.Context, input *sagemaker.StopLabelingJobInput) *SagemakerStopLabelingJobResult
+       StopLabelingJob(ctx workflow.Context, input *sagemaker.StopLabelingJobInput) (*sagemaker.StopLabelingJobOutput, error)
+       StopLabelingJobAsync(ctx workflow.Context, input *sagemaker.StopLabelingJobInput) *SagemakerStopLabelingJobResult
 
-    StopMonitoringSchedule(ctx workflow.Context, input *sagemaker.StopMonitoringScheduleInput) (*sagemaker.StopMonitoringScheduleOutput, error)
-    StopMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.StopMonitoringScheduleInput) *SagemakerStopMonitoringScheduleResult
+       StopMonitoringSchedule(ctx workflow.Context, input *sagemaker.StopMonitoringScheduleInput) (*sagemaker.StopMonitoringScheduleOutput, error)
+       StopMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.StopMonitoringScheduleInput) *SagemakerStopMonitoringScheduleResult
 
-    StopNotebookInstance(ctx workflow.Context, input *sagemaker.StopNotebookInstanceInput) (*sagemaker.StopNotebookInstanceOutput, error)
-    StopNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.StopNotebookInstanceInput) *SagemakerStopNotebookInstanceResult
+       StopNotebookInstance(ctx workflow.Context, input *sagemaker.StopNotebookInstanceInput) (*sagemaker.StopNotebookInstanceOutput, error)
+       StopNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.StopNotebookInstanceInput) *SagemakerStopNotebookInstanceResult
 
-    StopProcessingJob(ctx workflow.Context, input *sagemaker.StopProcessingJobInput) (*sagemaker.StopProcessingJobOutput, error)
-    StopProcessingJobAsync(ctx workflow.Context, input *sagemaker.StopProcessingJobInput) *SagemakerStopProcessingJobResult
+       StopProcessingJob(ctx workflow.Context, input *sagemaker.StopProcessingJobInput) (*sagemaker.StopProcessingJobOutput, error)
+       StopProcessingJobAsync(ctx workflow.Context, input *sagemaker.StopProcessingJobInput) *SagemakerStopProcessingJobResult
 
-    StopTrainingJob(ctx workflow.Context, input *sagemaker.StopTrainingJobInput) (*sagemaker.StopTrainingJobOutput, error)
-    StopTrainingJobAsync(ctx workflow.Context, input *sagemaker.StopTrainingJobInput) *SagemakerStopTrainingJobResult
+       StopTrainingJob(ctx workflow.Context, input *sagemaker.StopTrainingJobInput) (*sagemaker.StopTrainingJobOutput, error)
+       StopTrainingJobAsync(ctx workflow.Context, input *sagemaker.StopTrainingJobInput) *SagemakerStopTrainingJobResult
 
-    StopTransformJob(ctx workflow.Context, input *sagemaker.StopTransformJobInput) (*sagemaker.StopTransformJobOutput, error)
-    StopTransformJobAsync(ctx workflow.Context, input *sagemaker.StopTransformJobInput) *SagemakerStopTransformJobResult
+       StopTransformJob(ctx workflow.Context, input *sagemaker.StopTransformJobInput) (*sagemaker.StopTransformJobOutput, error)
+       StopTransformJobAsync(ctx workflow.Context, input *sagemaker.StopTransformJobInput) *SagemakerStopTransformJobResult
 
-    UpdateCodeRepository(ctx workflow.Context, input *sagemaker.UpdateCodeRepositoryInput) (*sagemaker.UpdateCodeRepositoryOutput, error)
-    UpdateCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.UpdateCodeRepositoryInput) *SagemakerUpdateCodeRepositoryResult
+       UpdateCodeRepository(ctx workflow.Context, input *sagemaker.UpdateCodeRepositoryInput) (*sagemaker.UpdateCodeRepositoryOutput, error)
+       UpdateCodeRepositoryAsync(ctx workflow.Context, input *sagemaker.UpdateCodeRepositoryInput) *SagemakerUpdateCodeRepositoryResult
 
-    UpdateDomain(ctx workflow.Context, input *sagemaker.UpdateDomainInput) (*sagemaker.UpdateDomainOutput, error)
-    UpdateDomainAsync(ctx workflow.Context, input *sagemaker.UpdateDomainInput) *SagemakerUpdateDomainResult
+       UpdateDomain(ctx workflow.Context, input *sagemaker.UpdateDomainInput) (*sagemaker.UpdateDomainOutput, error)
+       UpdateDomainAsync(ctx workflow.Context, input *sagemaker.UpdateDomainInput) *SagemakerUpdateDomainResult
 
-    UpdateEndpoint(ctx workflow.Context, input *sagemaker.UpdateEndpointInput) (*sagemaker.UpdateEndpointOutput, error)
-    UpdateEndpointAsync(ctx workflow.Context, input *sagemaker.UpdateEndpointInput) *SagemakerUpdateEndpointResult
+       UpdateEndpoint(ctx workflow.Context, input *sagemaker.UpdateEndpointInput) (*sagemaker.UpdateEndpointOutput, error)
+       UpdateEndpointAsync(ctx workflow.Context, input *sagemaker.UpdateEndpointInput) *SagemakerUpdateEndpointResult
 
-    UpdateEndpointWeightsAndCapacities(ctx workflow.Context, input *sagemaker.UpdateEndpointWeightsAndCapacitiesInput) (*sagemaker.UpdateEndpointWeightsAndCapacitiesOutput, error)
-    UpdateEndpointWeightsAndCapacitiesAsync(ctx workflow.Context, input *sagemaker.UpdateEndpointWeightsAndCapacitiesInput) *SagemakerUpdateEndpointWeightsAndCapacitiesResult
+       UpdateEndpointWeightsAndCapacities(ctx workflow.Context, input *sagemaker.UpdateEndpointWeightsAndCapacitiesInput) (*sagemaker.UpdateEndpointWeightsAndCapacitiesOutput, error)
+       UpdateEndpointWeightsAndCapacitiesAsync(ctx workflow.Context, input *sagemaker.UpdateEndpointWeightsAndCapacitiesInput) *SagemakerUpdateEndpointWeightsAndCapacitiesResult
 
-    UpdateExperiment(ctx workflow.Context, input *sagemaker.UpdateExperimentInput) (*sagemaker.UpdateExperimentOutput, error)
-    UpdateExperimentAsync(ctx workflow.Context, input *sagemaker.UpdateExperimentInput) *SagemakerUpdateExperimentResult
+       UpdateExperiment(ctx workflow.Context, input *sagemaker.UpdateExperimentInput) (*sagemaker.UpdateExperimentOutput, error)
+       UpdateExperimentAsync(ctx workflow.Context, input *sagemaker.UpdateExperimentInput) *SagemakerUpdateExperimentResult
 
-    UpdateMonitoringSchedule(ctx workflow.Context, input *sagemaker.UpdateMonitoringScheduleInput) (*sagemaker.UpdateMonitoringScheduleOutput, error)
-    UpdateMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.UpdateMonitoringScheduleInput) *SagemakerUpdateMonitoringScheduleResult
+       UpdateMonitoringSchedule(ctx workflow.Context, input *sagemaker.UpdateMonitoringScheduleInput) (*sagemaker.UpdateMonitoringScheduleOutput, error)
+       UpdateMonitoringScheduleAsync(ctx workflow.Context, input *sagemaker.UpdateMonitoringScheduleInput) *SagemakerUpdateMonitoringScheduleResult
 
-    UpdateNotebookInstance(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceInput) (*sagemaker.UpdateNotebookInstanceOutput, error)
-    UpdateNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceInput) *SagemakerUpdateNotebookInstanceResult
+       UpdateNotebookInstance(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceInput) (*sagemaker.UpdateNotebookInstanceOutput, error)
+       UpdateNotebookInstanceAsync(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceInput) *SagemakerUpdateNotebookInstanceResult
 
-    UpdateNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceLifecycleConfigInput) (*sagemaker.UpdateNotebookInstanceLifecycleConfigOutput, error)
-    UpdateNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceLifecycleConfigInput) *SagemakerUpdateNotebookInstanceLifecycleConfigResult
+       UpdateNotebookInstanceLifecycleConfig(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceLifecycleConfigInput) (*sagemaker.UpdateNotebookInstanceLifecycleConfigOutput, error)
+       UpdateNotebookInstanceLifecycleConfigAsync(ctx workflow.Context, input *sagemaker.UpdateNotebookInstanceLifecycleConfigInput) *SagemakerUpdateNotebookInstanceLifecycleConfigResult
 
-    UpdateTrial(ctx workflow.Context, input *sagemaker.UpdateTrialInput) (*sagemaker.UpdateTrialOutput, error)
-    UpdateTrialAsync(ctx workflow.Context, input *sagemaker.UpdateTrialInput) *SagemakerUpdateTrialResult
+       UpdateTrial(ctx workflow.Context, input *sagemaker.UpdateTrialInput) (*sagemaker.UpdateTrialOutput, error)
+       UpdateTrialAsync(ctx workflow.Context, input *sagemaker.UpdateTrialInput) *SagemakerUpdateTrialResult
 
-    UpdateTrialComponent(ctx workflow.Context, input *sagemaker.UpdateTrialComponentInput) (*sagemaker.UpdateTrialComponentOutput, error)
-    UpdateTrialComponentAsync(ctx workflow.Context, input *sagemaker.UpdateTrialComponentInput) *SagemakerUpdateTrialComponentResult
+       UpdateTrialComponent(ctx workflow.Context, input *sagemaker.UpdateTrialComponentInput) (*sagemaker.UpdateTrialComponentOutput, error)
+       UpdateTrialComponentAsync(ctx workflow.Context, input *sagemaker.UpdateTrialComponentInput) *SagemakerUpdateTrialComponentResult
 
-    UpdateUserProfile(ctx workflow.Context, input *sagemaker.UpdateUserProfileInput) (*sagemaker.UpdateUserProfileOutput, error)
-    UpdateUserProfileAsync(ctx workflow.Context, input *sagemaker.UpdateUserProfileInput) *SagemakerUpdateUserProfileResult
+       UpdateUserProfile(ctx workflow.Context, input *sagemaker.UpdateUserProfileInput) (*sagemaker.UpdateUserProfileOutput, error)
+       UpdateUserProfileAsync(ctx workflow.Context, input *sagemaker.UpdateUserProfileInput) *SagemakerUpdateUserProfileResult
 
-    UpdateWorkforce(ctx workflow.Context, input *sagemaker.UpdateWorkforceInput) (*sagemaker.UpdateWorkforceOutput, error)
-    UpdateWorkforceAsync(ctx workflow.Context, input *sagemaker.UpdateWorkforceInput) *SagemakerUpdateWorkforceResult
+       UpdateWorkforce(ctx workflow.Context, input *sagemaker.UpdateWorkforceInput) (*sagemaker.UpdateWorkforceOutput, error)
+       UpdateWorkforceAsync(ctx workflow.Context, input *sagemaker.UpdateWorkforceInput) *SagemakerUpdateWorkforceResult
 
-    UpdateWorkteam(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) (*sagemaker.UpdateWorkteamOutput, error)
-    UpdateWorkteamAsync(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) *SagemakerUpdateWorkteamResult
+       UpdateWorkteam(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) (*sagemaker.UpdateWorkteamOutput, error)
+       UpdateWorkteamAsync(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) *SagemakerUpdateWorkteamResult
 
-    WaitUntilEndpointDeleted(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
-    WaitUntilEndpointInService(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
-    WaitUntilNotebookInstanceDeleted(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-    WaitUntilNotebookInstanceInService(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-    WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
-    WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error
-    WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error
-    WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error}
+       WaitUntilEndpointDeleted(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
+       WaitUntilEndpointInService(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
+       WaitUntilNotebookInstanceDeleted(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+       WaitUntilNotebookInstanceInService(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+       WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+       WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error
+       WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error
+       WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error}
 
 type SagemakerAddTagsResult struct {
 	Result workflow.Future

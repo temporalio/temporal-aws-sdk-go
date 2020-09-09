@@ -7,53 +7,53 @@ import (
 )
 
 type MediaPackageVodClient interface {
-    CreateAsset(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) (*mediapackagevod.CreateAssetOutput, error)
-    CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *MediapackagevodCreateAssetResult
+       CreateAsset(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) (*mediapackagevod.CreateAssetOutput, error)
+       CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *MediapackagevodCreateAssetResult
 
-    CreatePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) (*mediapackagevod.CreatePackagingConfigurationOutput, error)
-    CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *MediapackagevodCreatePackagingConfigurationResult
+       CreatePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) (*mediapackagevod.CreatePackagingConfigurationOutput, error)
+       CreatePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingConfigurationInput) *MediapackagevodCreatePackagingConfigurationResult
 
-    CreatePackagingGroup(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) (*mediapackagevod.CreatePackagingGroupOutput, error)
-    CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *MediapackagevodCreatePackagingGroupResult
+       CreatePackagingGroup(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) (*mediapackagevod.CreatePackagingGroupOutput, error)
+       CreatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.CreatePackagingGroupInput) *MediapackagevodCreatePackagingGroupResult
 
-    DeleteAsset(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) (*mediapackagevod.DeleteAssetOutput, error)
-    DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *MediapackagevodDeleteAssetResult
+       DeleteAsset(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) (*mediapackagevod.DeleteAssetOutput, error)
+       DeleteAssetAsync(ctx workflow.Context, input *mediapackagevod.DeleteAssetInput) *MediapackagevodDeleteAssetResult
 
-    DeletePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) (*mediapackagevod.DeletePackagingConfigurationOutput, error)
-    DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *MediapackagevodDeletePackagingConfigurationResult
+       DeletePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) (*mediapackagevod.DeletePackagingConfigurationOutput, error)
+       DeletePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingConfigurationInput) *MediapackagevodDeletePackagingConfigurationResult
 
-    DeletePackagingGroup(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) (*mediapackagevod.DeletePackagingGroupOutput, error)
-    DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *MediapackagevodDeletePackagingGroupResult
+       DeletePackagingGroup(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) (*mediapackagevod.DeletePackagingGroupOutput, error)
+       DeletePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DeletePackagingGroupInput) *MediapackagevodDeletePackagingGroupResult
 
-    DescribeAsset(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) (*mediapackagevod.DescribeAssetOutput, error)
-    DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *MediapackagevodDescribeAssetResult
+       DescribeAsset(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) (*mediapackagevod.DescribeAssetOutput, error)
+       DescribeAssetAsync(ctx workflow.Context, input *mediapackagevod.DescribeAssetInput) *MediapackagevodDescribeAssetResult
 
-    DescribePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) (*mediapackagevod.DescribePackagingConfigurationOutput, error)
-    DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *MediapackagevodDescribePackagingConfigurationResult
+       DescribePackagingConfiguration(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) (*mediapackagevod.DescribePackagingConfigurationOutput, error)
+       DescribePackagingConfigurationAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingConfigurationInput) *MediapackagevodDescribePackagingConfigurationResult
 
-    DescribePackagingGroup(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) (*mediapackagevod.DescribePackagingGroupOutput, error)
-    DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *MediapackagevodDescribePackagingGroupResult
+       DescribePackagingGroup(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) (*mediapackagevod.DescribePackagingGroupOutput, error)
+       DescribePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.DescribePackagingGroupInput) *MediapackagevodDescribePackagingGroupResult
 
-    ListAssets(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) (*mediapackagevod.ListAssetsOutput, error)
-    ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *MediapackagevodListAssetsResult
+       ListAssets(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) (*mediapackagevod.ListAssetsOutput, error)
+       ListAssetsAsync(ctx workflow.Context, input *mediapackagevod.ListAssetsInput) *MediapackagevodListAssetsResult
 
-    ListPackagingConfigurations(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) (*mediapackagevod.ListPackagingConfigurationsOutput, error)
-    ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *MediapackagevodListPackagingConfigurationsResult
+       ListPackagingConfigurations(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) (*mediapackagevod.ListPackagingConfigurationsOutput, error)
+       ListPackagingConfigurationsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingConfigurationsInput) *MediapackagevodListPackagingConfigurationsResult
 
-    ListPackagingGroups(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) (*mediapackagevod.ListPackagingGroupsOutput, error)
-    ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *MediapackagevodListPackagingGroupsResult
+       ListPackagingGroups(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) (*mediapackagevod.ListPackagingGroupsOutput, error)
+       ListPackagingGroupsAsync(ctx workflow.Context, input *mediapackagevod.ListPackagingGroupsInput) *MediapackagevodListPackagingGroupsResult
 
-    ListTagsForResource(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) (*mediapackagevod.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *MediapackagevodListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) (*mediapackagevod.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *mediapackagevod.ListTagsForResourceInput) *MediapackagevodListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *mediapackagevod.TagResourceInput) (*mediapackagevod.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *MediapackagevodTagResourceResult
+       TagResource(ctx workflow.Context, input *mediapackagevod.TagResourceInput) (*mediapackagevod.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *mediapackagevod.TagResourceInput) *MediapackagevodTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) (*mediapackagevod.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *MediapackagevodUntagResourceResult
+       UntagResource(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) (*mediapackagevod.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *mediapackagevod.UntagResourceInput) *MediapackagevodUntagResourceResult
 
-    UpdatePackagingGroup(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) (*mediapackagevod.UpdatePackagingGroupOutput, error)
-    UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *MediapackagevodUpdatePackagingGroupResult
+       UpdatePackagingGroup(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) (*mediapackagevod.UpdatePackagingGroupOutput, error)
+       UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *MediapackagevodUpdatePackagingGroupResult
 }
 
 type MediapackagevodCreateAssetResult struct {

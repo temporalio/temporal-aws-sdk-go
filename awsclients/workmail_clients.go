@@ -7,134 +7,134 @@ import (
 )
 
 type WorkMailClient interface {
-    AssociateDelegateToResource(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) (*workmail.AssociateDelegateToResourceOutput, error)
-    AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkmailAssociateDelegateToResourceResult
+       AssociateDelegateToResource(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) (*workmail.AssociateDelegateToResourceOutput, error)
+       AssociateDelegateToResourceAsync(ctx workflow.Context, input *workmail.AssociateDelegateToResourceInput) *WorkmailAssociateDelegateToResourceResult
 
-    AssociateMemberToGroup(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) (*workmail.AssociateMemberToGroupOutput, error)
-    AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkmailAssociateMemberToGroupResult
+       AssociateMemberToGroup(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) (*workmail.AssociateMemberToGroupOutput, error)
+       AssociateMemberToGroupAsync(ctx workflow.Context, input *workmail.AssociateMemberToGroupInput) *WorkmailAssociateMemberToGroupResult
 
-    CreateAlias(ctx workflow.Context, input *workmail.CreateAliasInput) (*workmail.CreateAliasOutput, error)
-    CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkmailCreateAliasResult
+       CreateAlias(ctx workflow.Context, input *workmail.CreateAliasInput) (*workmail.CreateAliasOutput, error)
+       CreateAliasAsync(ctx workflow.Context, input *workmail.CreateAliasInput) *WorkmailCreateAliasResult
 
-    CreateGroup(ctx workflow.Context, input *workmail.CreateGroupInput) (*workmail.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkmailCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *workmail.CreateGroupInput) (*workmail.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *workmail.CreateGroupInput) *WorkmailCreateGroupResult
 
-    CreateResource(ctx workflow.Context, input *workmail.CreateResourceInput) (*workmail.CreateResourceOutput, error)
-    CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkmailCreateResourceResult
+       CreateResource(ctx workflow.Context, input *workmail.CreateResourceInput) (*workmail.CreateResourceOutput, error)
+       CreateResourceAsync(ctx workflow.Context, input *workmail.CreateResourceInput) *WorkmailCreateResourceResult
 
-    CreateUser(ctx workflow.Context, input *workmail.CreateUserInput) (*workmail.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkmailCreateUserResult
+       CreateUser(ctx workflow.Context, input *workmail.CreateUserInput) (*workmail.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *workmail.CreateUserInput) *WorkmailCreateUserResult
 
-    DeleteAccessControlRule(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) (*workmail.DeleteAccessControlRuleOutput, error)
-    DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkmailDeleteAccessControlRuleResult
+       DeleteAccessControlRule(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) (*workmail.DeleteAccessControlRuleOutput, error)
+       DeleteAccessControlRuleAsync(ctx workflow.Context, input *workmail.DeleteAccessControlRuleInput) *WorkmailDeleteAccessControlRuleResult
 
-    DeleteAlias(ctx workflow.Context, input *workmail.DeleteAliasInput) (*workmail.DeleteAliasOutput, error)
-    DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkmailDeleteAliasResult
+       DeleteAlias(ctx workflow.Context, input *workmail.DeleteAliasInput) (*workmail.DeleteAliasOutput, error)
+       DeleteAliasAsync(ctx workflow.Context, input *workmail.DeleteAliasInput) *WorkmailDeleteAliasResult
 
-    DeleteGroup(ctx workflow.Context, input *workmail.DeleteGroupInput) (*workmail.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkmailDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *workmail.DeleteGroupInput) (*workmail.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *workmail.DeleteGroupInput) *WorkmailDeleteGroupResult
 
-    DeleteMailboxPermissions(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) (*workmail.DeleteMailboxPermissionsOutput, error)
-    DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkmailDeleteMailboxPermissionsResult
+       DeleteMailboxPermissions(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) (*workmail.DeleteMailboxPermissionsOutput, error)
+       DeleteMailboxPermissionsAsync(ctx workflow.Context, input *workmail.DeleteMailboxPermissionsInput) *WorkmailDeleteMailboxPermissionsResult
 
-    DeleteResource(ctx workflow.Context, input *workmail.DeleteResourceInput) (*workmail.DeleteResourceOutput, error)
-    DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkmailDeleteResourceResult
+       DeleteResource(ctx workflow.Context, input *workmail.DeleteResourceInput) (*workmail.DeleteResourceOutput, error)
+       DeleteResourceAsync(ctx workflow.Context, input *workmail.DeleteResourceInput) *WorkmailDeleteResourceResult
 
-    DeleteRetentionPolicy(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) (*workmail.DeleteRetentionPolicyOutput, error)
-    DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkmailDeleteRetentionPolicyResult
+       DeleteRetentionPolicy(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) (*workmail.DeleteRetentionPolicyOutput, error)
+       DeleteRetentionPolicyAsync(ctx workflow.Context, input *workmail.DeleteRetentionPolicyInput) *WorkmailDeleteRetentionPolicyResult
 
-    DeleteUser(ctx workflow.Context, input *workmail.DeleteUserInput) (*workmail.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkmailDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *workmail.DeleteUserInput) (*workmail.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *workmail.DeleteUserInput) *WorkmailDeleteUserResult
 
-    DeregisterFromWorkMail(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) (*workmail.DeregisterFromWorkMailOutput, error)
-    DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkmailDeregisterFromWorkMailResult
+       DeregisterFromWorkMail(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) (*workmail.DeregisterFromWorkMailOutput, error)
+       DeregisterFromWorkMailAsync(ctx workflow.Context, input *workmail.DeregisterFromWorkMailInput) *WorkmailDeregisterFromWorkMailResult
 
-    DescribeGroup(ctx workflow.Context, input *workmail.DescribeGroupInput) (*workmail.DescribeGroupOutput, error)
-    DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkmailDescribeGroupResult
+       DescribeGroup(ctx workflow.Context, input *workmail.DescribeGroupInput) (*workmail.DescribeGroupOutput, error)
+       DescribeGroupAsync(ctx workflow.Context, input *workmail.DescribeGroupInput) *WorkmailDescribeGroupResult
 
-    DescribeOrganization(ctx workflow.Context, input *workmail.DescribeOrganizationInput) (*workmail.DescribeOrganizationOutput, error)
-    DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkmailDescribeOrganizationResult
+       DescribeOrganization(ctx workflow.Context, input *workmail.DescribeOrganizationInput) (*workmail.DescribeOrganizationOutput, error)
+       DescribeOrganizationAsync(ctx workflow.Context, input *workmail.DescribeOrganizationInput) *WorkmailDescribeOrganizationResult
 
-    DescribeResource(ctx workflow.Context, input *workmail.DescribeResourceInput) (*workmail.DescribeResourceOutput, error)
-    DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkmailDescribeResourceResult
+       DescribeResource(ctx workflow.Context, input *workmail.DescribeResourceInput) (*workmail.DescribeResourceOutput, error)
+       DescribeResourceAsync(ctx workflow.Context, input *workmail.DescribeResourceInput) *WorkmailDescribeResourceResult
 
-    DescribeUser(ctx workflow.Context, input *workmail.DescribeUserInput) (*workmail.DescribeUserOutput, error)
-    DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkmailDescribeUserResult
+       DescribeUser(ctx workflow.Context, input *workmail.DescribeUserInput) (*workmail.DescribeUserOutput, error)
+       DescribeUserAsync(ctx workflow.Context, input *workmail.DescribeUserInput) *WorkmailDescribeUserResult
 
-    DisassociateDelegateFromResource(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) (*workmail.DisassociateDelegateFromResourceOutput, error)
-    DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkmailDisassociateDelegateFromResourceResult
+       DisassociateDelegateFromResource(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) (*workmail.DisassociateDelegateFromResourceOutput, error)
+       DisassociateDelegateFromResourceAsync(ctx workflow.Context, input *workmail.DisassociateDelegateFromResourceInput) *WorkmailDisassociateDelegateFromResourceResult
 
-    DisassociateMemberFromGroup(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) (*workmail.DisassociateMemberFromGroupOutput, error)
-    DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkmailDisassociateMemberFromGroupResult
+       DisassociateMemberFromGroup(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) (*workmail.DisassociateMemberFromGroupOutput, error)
+       DisassociateMemberFromGroupAsync(ctx workflow.Context, input *workmail.DisassociateMemberFromGroupInput) *WorkmailDisassociateMemberFromGroupResult
 
-    GetAccessControlEffect(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) (*workmail.GetAccessControlEffectOutput, error)
-    GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkmailGetAccessControlEffectResult
+       GetAccessControlEffect(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) (*workmail.GetAccessControlEffectOutput, error)
+       GetAccessControlEffectAsync(ctx workflow.Context, input *workmail.GetAccessControlEffectInput) *WorkmailGetAccessControlEffectResult
 
-    GetDefaultRetentionPolicy(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) (*workmail.GetDefaultRetentionPolicyOutput, error)
-    GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkmailGetDefaultRetentionPolicyResult
+       GetDefaultRetentionPolicy(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) (*workmail.GetDefaultRetentionPolicyOutput, error)
+       GetDefaultRetentionPolicyAsync(ctx workflow.Context, input *workmail.GetDefaultRetentionPolicyInput) *WorkmailGetDefaultRetentionPolicyResult
 
-    GetMailboxDetails(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) (*workmail.GetMailboxDetailsOutput, error)
-    GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkmailGetMailboxDetailsResult
+       GetMailboxDetails(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) (*workmail.GetMailboxDetailsOutput, error)
+       GetMailboxDetailsAsync(ctx workflow.Context, input *workmail.GetMailboxDetailsInput) *WorkmailGetMailboxDetailsResult
 
-    ListAccessControlRules(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) (*workmail.ListAccessControlRulesOutput, error)
-    ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkmailListAccessControlRulesResult
+       ListAccessControlRules(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) (*workmail.ListAccessControlRulesOutput, error)
+       ListAccessControlRulesAsync(ctx workflow.Context, input *workmail.ListAccessControlRulesInput) *WorkmailListAccessControlRulesResult
 
-    ListAliases(ctx workflow.Context, input *workmail.ListAliasesInput) (*workmail.ListAliasesOutput, error)
-    ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkmailListAliasesResult
+       ListAliases(ctx workflow.Context, input *workmail.ListAliasesInput) (*workmail.ListAliasesOutput, error)
+       ListAliasesAsync(ctx workflow.Context, input *workmail.ListAliasesInput) *WorkmailListAliasesResult
 
-    ListGroupMembers(ctx workflow.Context, input *workmail.ListGroupMembersInput) (*workmail.ListGroupMembersOutput, error)
-    ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkmailListGroupMembersResult
+       ListGroupMembers(ctx workflow.Context, input *workmail.ListGroupMembersInput) (*workmail.ListGroupMembersOutput, error)
+       ListGroupMembersAsync(ctx workflow.Context, input *workmail.ListGroupMembersInput) *WorkmailListGroupMembersResult
 
-    ListGroups(ctx workflow.Context, input *workmail.ListGroupsInput) (*workmail.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkmailListGroupsResult
+       ListGroups(ctx workflow.Context, input *workmail.ListGroupsInput) (*workmail.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *workmail.ListGroupsInput) *WorkmailListGroupsResult
 
-    ListMailboxPermissions(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) (*workmail.ListMailboxPermissionsOutput, error)
-    ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkmailListMailboxPermissionsResult
+       ListMailboxPermissions(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) (*workmail.ListMailboxPermissionsOutput, error)
+       ListMailboxPermissionsAsync(ctx workflow.Context, input *workmail.ListMailboxPermissionsInput) *WorkmailListMailboxPermissionsResult
 
-    ListOrganizations(ctx workflow.Context, input *workmail.ListOrganizationsInput) (*workmail.ListOrganizationsOutput, error)
-    ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkmailListOrganizationsResult
+       ListOrganizations(ctx workflow.Context, input *workmail.ListOrganizationsInput) (*workmail.ListOrganizationsOutput, error)
+       ListOrganizationsAsync(ctx workflow.Context, input *workmail.ListOrganizationsInput) *WorkmailListOrganizationsResult
 
-    ListResourceDelegates(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) (*workmail.ListResourceDelegatesOutput, error)
-    ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkmailListResourceDelegatesResult
+       ListResourceDelegates(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) (*workmail.ListResourceDelegatesOutput, error)
+       ListResourceDelegatesAsync(ctx workflow.Context, input *workmail.ListResourceDelegatesInput) *WorkmailListResourceDelegatesResult
 
-    ListResources(ctx workflow.Context, input *workmail.ListResourcesInput) (*workmail.ListResourcesOutput, error)
-    ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkmailListResourcesResult
+       ListResources(ctx workflow.Context, input *workmail.ListResourcesInput) (*workmail.ListResourcesOutput, error)
+       ListResourcesAsync(ctx workflow.Context, input *workmail.ListResourcesInput) *WorkmailListResourcesResult
 
-    ListTagsForResource(ctx workflow.Context, input *workmail.ListTagsForResourceInput) (*workmail.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkmailListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *workmail.ListTagsForResourceInput) (*workmail.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *workmail.ListTagsForResourceInput) *WorkmailListTagsForResourceResult
 
-    ListUsers(ctx workflow.Context, input *workmail.ListUsersInput) (*workmail.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkmailListUsersResult
+       ListUsers(ctx workflow.Context, input *workmail.ListUsersInput) (*workmail.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *workmail.ListUsersInput) *WorkmailListUsersResult
 
-    PutAccessControlRule(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) (*workmail.PutAccessControlRuleOutput, error)
-    PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkmailPutAccessControlRuleResult
+       PutAccessControlRule(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) (*workmail.PutAccessControlRuleOutput, error)
+       PutAccessControlRuleAsync(ctx workflow.Context, input *workmail.PutAccessControlRuleInput) *WorkmailPutAccessControlRuleResult
 
-    PutMailboxPermissions(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) (*workmail.PutMailboxPermissionsOutput, error)
-    PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkmailPutMailboxPermissionsResult
+       PutMailboxPermissions(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) (*workmail.PutMailboxPermissionsOutput, error)
+       PutMailboxPermissionsAsync(ctx workflow.Context, input *workmail.PutMailboxPermissionsInput) *WorkmailPutMailboxPermissionsResult
 
-    PutRetentionPolicy(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) (*workmail.PutRetentionPolicyOutput, error)
-    PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkmailPutRetentionPolicyResult
+       PutRetentionPolicy(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) (*workmail.PutRetentionPolicyOutput, error)
+       PutRetentionPolicyAsync(ctx workflow.Context, input *workmail.PutRetentionPolicyInput) *WorkmailPutRetentionPolicyResult
 
-    RegisterToWorkMail(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) (*workmail.RegisterToWorkMailOutput, error)
-    RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkmailRegisterToWorkMailResult
+       RegisterToWorkMail(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) (*workmail.RegisterToWorkMailOutput, error)
+       RegisterToWorkMailAsync(ctx workflow.Context, input *workmail.RegisterToWorkMailInput) *WorkmailRegisterToWorkMailResult
 
-    ResetPassword(ctx workflow.Context, input *workmail.ResetPasswordInput) (*workmail.ResetPasswordOutput, error)
-    ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkmailResetPasswordResult
+       ResetPassword(ctx workflow.Context, input *workmail.ResetPasswordInput) (*workmail.ResetPasswordOutput, error)
+       ResetPasswordAsync(ctx workflow.Context, input *workmail.ResetPasswordInput) *WorkmailResetPasswordResult
 
-    TagResource(ctx workflow.Context, input *workmail.TagResourceInput) (*workmail.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkmailTagResourceResult
+       TagResource(ctx workflow.Context, input *workmail.TagResourceInput) (*workmail.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *workmail.TagResourceInput) *WorkmailTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *workmail.UntagResourceInput) (*workmail.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkmailUntagResourceResult
+       UntagResource(ctx workflow.Context, input *workmail.UntagResourceInput) (*workmail.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *workmail.UntagResourceInput) *WorkmailUntagResourceResult
 
-    UpdateMailboxQuota(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) (*workmail.UpdateMailboxQuotaOutput, error)
-    UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkmailUpdateMailboxQuotaResult
+       UpdateMailboxQuota(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) (*workmail.UpdateMailboxQuotaOutput, error)
+       UpdateMailboxQuotaAsync(ctx workflow.Context, input *workmail.UpdateMailboxQuotaInput) *WorkmailUpdateMailboxQuotaResult
 
-    UpdatePrimaryEmailAddress(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) (*workmail.UpdatePrimaryEmailAddressOutput, error)
-    UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkmailUpdatePrimaryEmailAddressResult
+       UpdatePrimaryEmailAddress(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) (*workmail.UpdatePrimaryEmailAddressOutput, error)
+       UpdatePrimaryEmailAddressAsync(ctx workflow.Context, input *workmail.UpdatePrimaryEmailAddressInput) *WorkmailUpdatePrimaryEmailAddressResult
 
-    UpdateResource(ctx workflow.Context, input *workmail.UpdateResourceInput) (*workmail.UpdateResourceOutput, error)
-    UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkmailUpdateResourceResult
+       UpdateResource(ctx workflow.Context, input *workmail.UpdateResourceInput) (*workmail.UpdateResourceOutput, error)
+       UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkmailUpdateResourceResult
 }
 
 type WorkmailAssociateDelegateToResourceResult struct {

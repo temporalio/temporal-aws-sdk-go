@@ -7,134 +7,134 @@ import (
 )
 
 type DocDBClient interface {
-    AddTagsToResource(ctx workflow.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error)
-    AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceResult
+       AddTagsToResource(ctx workflow.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error)
+       AddTagsToResourceAsync(ctx workflow.Context, input *docdb.AddTagsToResourceInput) *DocdbAddTagsToResourceResult
 
-    ApplyPendingMaintenanceAction(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error)
-    ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionResult
+       ApplyPendingMaintenanceAction(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error)
+       ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *docdb.ApplyPendingMaintenanceActionInput) *DocdbApplyPendingMaintenanceActionResult
 
-    CopyDBClusterParameterGroup(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error)
-    CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupResult
+       CopyDBClusterParameterGroup(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error)
+       CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CopyDBClusterParameterGroupInput) *DocdbCopyDBClusterParameterGroupResult
 
-    CopyDBClusterSnapshot(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error)
-    CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotResult
+       CopyDBClusterSnapshot(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error)
+       CopyDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CopyDBClusterSnapshotInput) *DocdbCopyDBClusterSnapshotResult
 
-    CreateDBCluster(ctx workflow.Context, input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error)
-    CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterResult
+       CreateDBCluster(ctx workflow.Context, input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error)
+       CreateDBClusterAsync(ctx workflow.Context, input *docdb.CreateDBClusterInput) *DocdbCreateDBClusterResult
 
-    CreateDBClusterParameterGroup(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error)
-    CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupResult
+       CreateDBClusterParameterGroup(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error)
+       CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.CreateDBClusterParameterGroupInput) *DocdbCreateDBClusterParameterGroupResult
 
-    CreateDBClusterSnapshot(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error)
-    CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotResult
+       CreateDBClusterSnapshot(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error)
+       CreateDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.CreateDBClusterSnapshotInput) *DocdbCreateDBClusterSnapshotResult
 
-    CreateDBInstance(ctx workflow.Context, input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error)
-    CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceResult
+       CreateDBInstance(ctx workflow.Context, input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error)
+       CreateDBInstanceAsync(ctx workflow.Context, input *docdb.CreateDBInstanceInput) *DocdbCreateDBInstanceResult
 
-    CreateDBSubnetGroup(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error)
-    CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupResult
+       CreateDBSubnetGroup(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error)
+       CreateDBSubnetGroupAsync(ctx workflow.Context, input *docdb.CreateDBSubnetGroupInput) *DocdbCreateDBSubnetGroupResult
 
-    DeleteDBCluster(ctx workflow.Context, input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error)
-    DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterResult
+       DeleteDBCluster(ctx workflow.Context, input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error)
+       DeleteDBClusterAsync(ctx workflow.Context, input *docdb.DeleteDBClusterInput) *DocdbDeleteDBClusterResult
 
-    DeleteDBClusterParameterGroup(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error)
-    DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupResult
+       DeleteDBClusterParameterGroup(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error)
+       DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.DeleteDBClusterParameterGroupInput) *DocdbDeleteDBClusterParameterGroupResult
 
-    DeleteDBClusterSnapshot(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error)
-    DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotResult
+       DeleteDBClusterSnapshot(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error)
+       DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *docdb.DeleteDBClusterSnapshotInput) *DocdbDeleteDBClusterSnapshotResult
 
-    DeleteDBInstance(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error)
-    DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceResult
+       DeleteDBInstance(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error)
+       DeleteDBInstanceAsync(ctx workflow.Context, input *docdb.DeleteDBInstanceInput) *DocdbDeleteDBInstanceResult
 
-    DeleteDBSubnetGroup(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error)
-    DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupResult
+       DeleteDBSubnetGroup(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error)
+       DeleteDBSubnetGroupAsync(ctx workflow.Context, input *docdb.DeleteDBSubnetGroupInput) *DocdbDeleteDBSubnetGroupResult
 
-    DescribeCertificates(ctx workflow.Context, input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error)
-    DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesResult
+       DescribeCertificates(ctx workflow.Context, input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error)
+       DescribeCertificatesAsync(ctx workflow.Context, input *docdb.DescribeCertificatesInput) *DocdbDescribeCertificatesResult
 
-    DescribeDBClusterParameterGroups(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error)
-    DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsResult
+       DescribeDBClusterParameterGroups(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error)
+       DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParameterGroupsInput) *DocdbDescribeDBClusterParameterGroupsResult
 
-    DescribeDBClusterParameters(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error)
-    DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersResult
+       DescribeDBClusterParameters(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error)
+       DescribeDBClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeDBClusterParametersInput) *DocdbDescribeDBClusterParametersResult
 
-    DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error)
-    DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesResult
+       DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error)
+       DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) *DocdbDescribeDBClusterSnapshotAttributesResult
 
-    DescribeDBClusterSnapshots(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error)
-    DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsResult
+       DescribeDBClusterSnapshots(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error)
+       DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *docdb.DescribeDBClusterSnapshotsInput) *DocdbDescribeDBClusterSnapshotsResult
 
-    DescribeDBClusters(ctx workflow.Context, input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error)
-    DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersResult
+       DescribeDBClusters(ctx workflow.Context, input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error)
+       DescribeDBClustersAsync(ctx workflow.Context, input *docdb.DescribeDBClustersInput) *DocdbDescribeDBClustersResult
 
-    DescribeDBEngineVersions(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error)
-    DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsResult
+       DescribeDBEngineVersions(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error)
+       DescribeDBEngineVersionsAsync(ctx workflow.Context, input *docdb.DescribeDBEngineVersionsInput) *DocdbDescribeDBEngineVersionsResult
 
-    DescribeDBInstances(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error)
-    DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesResult
+       DescribeDBInstances(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error)
+       DescribeDBInstancesAsync(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) *DocdbDescribeDBInstancesResult
 
-    DescribeDBSubnetGroups(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error)
-    DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsResult
+       DescribeDBSubnetGroups(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error)
+       DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *docdb.DescribeDBSubnetGroupsInput) *DocdbDescribeDBSubnetGroupsResult
 
-    DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error)
-    DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersResult
+       DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error)
+       DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) *DocdbDescribeEngineDefaultClusterParametersResult
 
-    DescribeEventCategories(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error)
-    DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesResult
+       DescribeEventCategories(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error)
+       DescribeEventCategoriesAsync(ctx workflow.Context, input *docdb.DescribeEventCategoriesInput) *DocdbDescribeEventCategoriesResult
 
-    DescribeEvents(ctx workflow.Context, input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error)
-    DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsResult
+       DescribeEvents(ctx workflow.Context, input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error)
+       DescribeEventsAsync(ctx workflow.Context, input *docdb.DescribeEventsInput) *DocdbDescribeEventsResult
 
-    DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error)
-    DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsResult
+       DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error)
+       DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) *DocdbDescribeOrderableDBInstanceOptionsResult
 
-    DescribePendingMaintenanceActions(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error)
-    DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsResult
+       DescribePendingMaintenanceActions(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error)
+       DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *docdb.DescribePendingMaintenanceActionsInput) *DocdbDescribePendingMaintenanceActionsResult
 
-    FailoverDBCluster(ctx workflow.Context, input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error)
-    FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterResult
+       FailoverDBCluster(ctx workflow.Context, input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error)
+       FailoverDBClusterAsync(ctx workflow.Context, input *docdb.FailoverDBClusterInput) *DocdbFailoverDBClusterResult
 
-    ListTagsForResource(ctx workflow.Context, input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *docdb.ListTagsForResourceInput) *DocdbListTagsForResourceResult
 
-    ModifyDBCluster(ctx workflow.Context, input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error)
-    ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterResult
+       ModifyDBCluster(ctx workflow.Context, input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error)
+       ModifyDBClusterAsync(ctx workflow.Context, input *docdb.ModifyDBClusterInput) *DocdbModifyDBClusterResult
 
-    ModifyDBClusterParameterGroup(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error)
-    ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupResult
+       ModifyDBClusterParameterGroup(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error)
+       ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ModifyDBClusterParameterGroupInput) *DocdbModifyDBClusterParameterGroupResult
 
-    ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error)
-    ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeResult
+       ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error)
+       ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) *DocdbModifyDBClusterSnapshotAttributeResult
 
-    ModifyDBInstance(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error)
-    ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceResult
+       ModifyDBInstance(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error)
+       ModifyDBInstanceAsync(ctx workflow.Context, input *docdb.ModifyDBInstanceInput) *DocdbModifyDBInstanceResult
 
-    ModifyDBSubnetGroup(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error)
-    ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupResult
+       ModifyDBSubnetGroup(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error)
+       ModifyDBSubnetGroupAsync(ctx workflow.Context, input *docdb.ModifyDBSubnetGroupInput) *DocdbModifyDBSubnetGroupResult
 
-    RebootDBInstance(ctx workflow.Context, input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error)
-    RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceResult
+       RebootDBInstance(ctx workflow.Context, input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error)
+       RebootDBInstanceAsync(ctx workflow.Context, input *docdb.RebootDBInstanceInput) *DocdbRebootDBInstanceResult
 
-    RemoveTagsFromResource(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error)
-    RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceResult
+       RemoveTagsFromResource(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error)
+       RemoveTagsFromResourceAsync(ctx workflow.Context, input *docdb.RemoveTagsFromResourceInput) *DocdbRemoveTagsFromResourceResult
 
-    ResetDBClusterParameterGroup(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error)
-    ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupResult
+       ResetDBClusterParameterGroup(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error)
+       ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *docdb.ResetDBClusterParameterGroupInput) *DocdbResetDBClusterParameterGroupResult
 
-    RestoreDBClusterFromSnapshot(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error)
-    RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotResult
+       RestoreDBClusterFromSnapshot(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error)
+       RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *docdb.RestoreDBClusterFromSnapshotInput) *DocdbRestoreDBClusterFromSnapshotResult
 
-    RestoreDBClusterToPointInTime(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error)
-    RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeResult
+       RestoreDBClusterToPointInTime(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error)
+       RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *docdb.RestoreDBClusterToPointInTimeInput) *DocdbRestoreDBClusterToPointInTimeResult
 
-    StartDBCluster(ctx workflow.Context, input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error)
-    StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterResult
+       StartDBCluster(ctx workflow.Context, input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error)
+       StartDBClusterAsync(ctx workflow.Context, input *docdb.StartDBClusterInput) *DocdbStartDBClusterResult
 
-    StopDBCluster(ctx workflow.Context, input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error)
-    StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult
+       StopDBCluster(ctx workflow.Context, input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error)
+       StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult
 
-    WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-    WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error}
+       WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
+       WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error}
 
 type DocdbAddTagsToResourceResult struct {
 	Result workflow.Future

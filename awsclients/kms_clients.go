@@ -7,143 +7,143 @@ import (
 )
 
 type KMSClient interface {
-    CancelKeyDeletion(ctx workflow.Context, input *kms.CancelKeyDeletionInput) (*kms.CancelKeyDeletionOutput, error)
-    CancelKeyDeletionAsync(ctx workflow.Context, input *kms.CancelKeyDeletionInput) *KmsCancelKeyDeletionResult
+       CancelKeyDeletion(ctx workflow.Context, input *kms.CancelKeyDeletionInput) (*kms.CancelKeyDeletionOutput, error)
+       CancelKeyDeletionAsync(ctx workflow.Context, input *kms.CancelKeyDeletionInput) *KmsCancelKeyDeletionResult
 
-    ConnectCustomKeyStore(ctx workflow.Context, input *kms.ConnectCustomKeyStoreInput) (*kms.ConnectCustomKeyStoreOutput, error)
-    ConnectCustomKeyStoreAsync(ctx workflow.Context, input *kms.ConnectCustomKeyStoreInput) *KmsConnectCustomKeyStoreResult
+       ConnectCustomKeyStore(ctx workflow.Context, input *kms.ConnectCustomKeyStoreInput) (*kms.ConnectCustomKeyStoreOutput, error)
+       ConnectCustomKeyStoreAsync(ctx workflow.Context, input *kms.ConnectCustomKeyStoreInput) *KmsConnectCustomKeyStoreResult
 
-    CreateAlias(ctx workflow.Context, input *kms.CreateAliasInput) (*kms.CreateAliasOutput, error)
-    CreateAliasAsync(ctx workflow.Context, input *kms.CreateAliasInput) *KmsCreateAliasResult
+       CreateAlias(ctx workflow.Context, input *kms.CreateAliasInput) (*kms.CreateAliasOutput, error)
+       CreateAliasAsync(ctx workflow.Context, input *kms.CreateAliasInput) *KmsCreateAliasResult
 
-    CreateCustomKeyStore(ctx workflow.Context, input *kms.CreateCustomKeyStoreInput) (*kms.CreateCustomKeyStoreOutput, error)
-    CreateCustomKeyStoreAsync(ctx workflow.Context, input *kms.CreateCustomKeyStoreInput) *KmsCreateCustomKeyStoreResult
+       CreateCustomKeyStore(ctx workflow.Context, input *kms.CreateCustomKeyStoreInput) (*kms.CreateCustomKeyStoreOutput, error)
+       CreateCustomKeyStoreAsync(ctx workflow.Context, input *kms.CreateCustomKeyStoreInput) *KmsCreateCustomKeyStoreResult
 
-    CreateGrant(ctx workflow.Context, input *kms.CreateGrantInput) (*kms.CreateGrantOutput, error)
-    CreateGrantAsync(ctx workflow.Context, input *kms.CreateGrantInput) *KmsCreateGrantResult
+       CreateGrant(ctx workflow.Context, input *kms.CreateGrantInput) (*kms.CreateGrantOutput, error)
+       CreateGrantAsync(ctx workflow.Context, input *kms.CreateGrantInput) *KmsCreateGrantResult
 
-    CreateKey(ctx workflow.Context, input *kms.CreateKeyInput) (*kms.CreateKeyOutput, error)
-    CreateKeyAsync(ctx workflow.Context, input *kms.CreateKeyInput) *KmsCreateKeyResult
+       CreateKey(ctx workflow.Context, input *kms.CreateKeyInput) (*kms.CreateKeyOutput, error)
+       CreateKeyAsync(ctx workflow.Context, input *kms.CreateKeyInput) *KmsCreateKeyResult
 
-    Decrypt(ctx workflow.Context, input *kms.DecryptInput) (*kms.DecryptOutput, error)
-    DecryptAsync(ctx workflow.Context, input *kms.DecryptInput) *KmsDecryptResult
+       Decrypt(ctx workflow.Context, input *kms.DecryptInput) (*kms.DecryptOutput, error)
+       DecryptAsync(ctx workflow.Context, input *kms.DecryptInput) *KmsDecryptResult
 
-    DeleteAlias(ctx workflow.Context, input *kms.DeleteAliasInput) (*kms.DeleteAliasOutput, error)
-    DeleteAliasAsync(ctx workflow.Context, input *kms.DeleteAliasInput) *KmsDeleteAliasResult
+       DeleteAlias(ctx workflow.Context, input *kms.DeleteAliasInput) (*kms.DeleteAliasOutput, error)
+       DeleteAliasAsync(ctx workflow.Context, input *kms.DeleteAliasInput) *KmsDeleteAliasResult
 
-    DeleteCustomKeyStore(ctx workflow.Context, input *kms.DeleteCustomKeyStoreInput) (*kms.DeleteCustomKeyStoreOutput, error)
-    DeleteCustomKeyStoreAsync(ctx workflow.Context, input *kms.DeleteCustomKeyStoreInput) *KmsDeleteCustomKeyStoreResult
+       DeleteCustomKeyStore(ctx workflow.Context, input *kms.DeleteCustomKeyStoreInput) (*kms.DeleteCustomKeyStoreOutput, error)
+       DeleteCustomKeyStoreAsync(ctx workflow.Context, input *kms.DeleteCustomKeyStoreInput) *KmsDeleteCustomKeyStoreResult
 
-    DeleteImportedKeyMaterial(ctx workflow.Context, input *kms.DeleteImportedKeyMaterialInput) (*kms.DeleteImportedKeyMaterialOutput, error)
-    DeleteImportedKeyMaterialAsync(ctx workflow.Context, input *kms.DeleteImportedKeyMaterialInput) *KmsDeleteImportedKeyMaterialResult
+       DeleteImportedKeyMaterial(ctx workflow.Context, input *kms.DeleteImportedKeyMaterialInput) (*kms.DeleteImportedKeyMaterialOutput, error)
+       DeleteImportedKeyMaterialAsync(ctx workflow.Context, input *kms.DeleteImportedKeyMaterialInput) *KmsDeleteImportedKeyMaterialResult
 
-    DescribeCustomKeyStores(ctx workflow.Context, input *kms.DescribeCustomKeyStoresInput) (*kms.DescribeCustomKeyStoresOutput, error)
-    DescribeCustomKeyStoresAsync(ctx workflow.Context, input *kms.DescribeCustomKeyStoresInput) *KmsDescribeCustomKeyStoresResult
+       DescribeCustomKeyStores(ctx workflow.Context, input *kms.DescribeCustomKeyStoresInput) (*kms.DescribeCustomKeyStoresOutput, error)
+       DescribeCustomKeyStoresAsync(ctx workflow.Context, input *kms.DescribeCustomKeyStoresInput) *KmsDescribeCustomKeyStoresResult
 
-    DescribeKey(ctx workflow.Context, input *kms.DescribeKeyInput) (*kms.DescribeKeyOutput, error)
-    DescribeKeyAsync(ctx workflow.Context, input *kms.DescribeKeyInput) *KmsDescribeKeyResult
+       DescribeKey(ctx workflow.Context, input *kms.DescribeKeyInput) (*kms.DescribeKeyOutput, error)
+       DescribeKeyAsync(ctx workflow.Context, input *kms.DescribeKeyInput) *KmsDescribeKeyResult
 
-    DisableKey(ctx workflow.Context, input *kms.DisableKeyInput) (*kms.DisableKeyOutput, error)
-    DisableKeyAsync(ctx workflow.Context, input *kms.DisableKeyInput) *KmsDisableKeyResult
+       DisableKey(ctx workflow.Context, input *kms.DisableKeyInput) (*kms.DisableKeyOutput, error)
+       DisableKeyAsync(ctx workflow.Context, input *kms.DisableKeyInput) *KmsDisableKeyResult
 
-    DisableKeyRotation(ctx workflow.Context, input *kms.DisableKeyRotationInput) (*kms.DisableKeyRotationOutput, error)
-    DisableKeyRotationAsync(ctx workflow.Context, input *kms.DisableKeyRotationInput) *KmsDisableKeyRotationResult
+       DisableKeyRotation(ctx workflow.Context, input *kms.DisableKeyRotationInput) (*kms.DisableKeyRotationOutput, error)
+       DisableKeyRotationAsync(ctx workflow.Context, input *kms.DisableKeyRotationInput) *KmsDisableKeyRotationResult
 
-    DisconnectCustomKeyStore(ctx workflow.Context, input *kms.DisconnectCustomKeyStoreInput) (*kms.DisconnectCustomKeyStoreOutput, error)
-    DisconnectCustomKeyStoreAsync(ctx workflow.Context, input *kms.DisconnectCustomKeyStoreInput) *KmsDisconnectCustomKeyStoreResult
+       DisconnectCustomKeyStore(ctx workflow.Context, input *kms.DisconnectCustomKeyStoreInput) (*kms.DisconnectCustomKeyStoreOutput, error)
+       DisconnectCustomKeyStoreAsync(ctx workflow.Context, input *kms.DisconnectCustomKeyStoreInput) *KmsDisconnectCustomKeyStoreResult
 
-    EnableKey(ctx workflow.Context, input *kms.EnableKeyInput) (*kms.EnableKeyOutput, error)
-    EnableKeyAsync(ctx workflow.Context, input *kms.EnableKeyInput) *KmsEnableKeyResult
+       EnableKey(ctx workflow.Context, input *kms.EnableKeyInput) (*kms.EnableKeyOutput, error)
+       EnableKeyAsync(ctx workflow.Context, input *kms.EnableKeyInput) *KmsEnableKeyResult
 
-    EnableKeyRotation(ctx workflow.Context, input *kms.EnableKeyRotationInput) (*kms.EnableKeyRotationOutput, error)
-    EnableKeyRotationAsync(ctx workflow.Context, input *kms.EnableKeyRotationInput) *KmsEnableKeyRotationResult
+       EnableKeyRotation(ctx workflow.Context, input *kms.EnableKeyRotationInput) (*kms.EnableKeyRotationOutput, error)
+       EnableKeyRotationAsync(ctx workflow.Context, input *kms.EnableKeyRotationInput) *KmsEnableKeyRotationResult
 
-    Encrypt(ctx workflow.Context, input *kms.EncryptInput) (*kms.EncryptOutput, error)
-    EncryptAsync(ctx workflow.Context, input *kms.EncryptInput) *KmsEncryptResult
+       Encrypt(ctx workflow.Context, input *kms.EncryptInput) (*kms.EncryptOutput, error)
+       EncryptAsync(ctx workflow.Context, input *kms.EncryptInput) *KmsEncryptResult
 
-    GenerateDataKey(ctx workflow.Context, input *kms.GenerateDataKeyInput) (*kms.GenerateDataKeyOutput, error)
-    GenerateDataKeyAsync(ctx workflow.Context, input *kms.GenerateDataKeyInput) *KmsGenerateDataKeyResult
+       GenerateDataKey(ctx workflow.Context, input *kms.GenerateDataKeyInput) (*kms.GenerateDataKeyOutput, error)
+       GenerateDataKeyAsync(ctx workflow.Context, input *kms.GenerateDataKeyInput) *KmsGenerateDataKeyResult
 
-    GenerateDataKeyPair(ctx workflow.Context, input *kms.GenerateDataKeyPairInput) (*kms.GenerateDataKeyPairOutput, error)
-    GenerateDataKeyPairAsync(ctx workflow.Context, input *kms.GenerateDataKeyPairInput) *KmsGenerateDataKeyPairResult
+       GenerateDataKeyPair(ctx workflow.Context, input *kms.GenerateDataKeyPairInput) (*kms.GenerateDataKeyPairOutput, error)
+       GenerateDataKeyPairAsync(ctx workflow.Context, input *kms.GenerateDataKeyPairInput) *KmsGenerateDataKeyPairResult
 
-    GenerateDataKeyPairWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) (*kms.GenerateDataKeyPairWithoutPlaintextOutput, error)
-    GenerateDataKeyPairWithoutPlaintextAsync(ctx workflow.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) *KmsGenerateDataKeyPairWithoutPlaintextResult
+       GenerateDataKeyPairWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) (*kms.GenerateDataKeyPairWithoutPlaintextOutput, error)
+       GenerateDataKeyPairWithoutPlaintextAsync(ctx workflow.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) *KmsGenerateDataKeyPairWithoutPlaintextResult
 
-    GenerateDataKeyWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) (*kms.GenerateDataKeyWithoutPlaintextOutput, error)
-    GenerateDataKeyWithoutPlaintextAsync(ctx workflow.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) *KmsGenerateDataKeyWithoutPlaintextResult
+       GenerateDataKeyWithoutPlaintext(ctx workflow.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) (*kms.GenerateDataKeyWithoutPlaintextOutput, error)
+       GenerateDataKeyWithoutPlaintextAsync(ctx workflow.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) *KmsGenerateDataKeyWithoutPlaintextResult
 
-    GenerateRandom(ctx workflow.Context, input *kms.GenerateRandomInput) (*kms.GenerateRandomOutput, error)
-    GenerateRandomAsync(ctx workflow.Context, input *kms.GenerateRandomInput) *KmsGenerateRandomResult
+       GenerateRandom(ctx workflow.Context, input *kms.GenerateRandomInput) (*kms.GenerateRandomOutput, error)
+       GenerateRandomAsync(ctx workflow.Context, input *kms.GenerateRandomInput) *KmsGenerateRandomResult
 
-    GetKeyPolicy(ctx workflow.Context, input *kms.GetKeyPolicyInput) (*kms.GetKeyPolicyOutput, error)
-    GetKeyPolicyAsync(ctx workflow.Context, input *kms.GetKeyPolicyInput) *KmsGetKeyPolicyResult
+       GetKeyPolicy(ctx workflow.Context, input *kms.GetKeyPolicyInput) (*kms.GetKeyPolicyOutput, error)
+       GetKeyPolicyAsync(ctx workflow.Context, input *kms.GetKeyPolicyInput) *KmsGetKeyPolicyResult
 
-    GetKeyRotationStatus(ctx workflow.Context, input *kms.GetKeyRotationStatusInput) (*kms.GetKeyRotationStatusOutput, error)
-    GetKeyRotationStatusAsync(ctx workflow.Context, input *kms.GetKeyRotationStatusInput) *KmsGetKeyRotationStatusResult
+       GetKeyRotationStatus(ctx workflow.Context, input *kms.GetKeyRotationStatusInput) (*kms.GetKeyRotationStatusOutput, error)
+       GetKeyRotationStatusAsync(ctx workflow.Context, input *kms.GetKeyRotationStatusInput) *KmsGetKeyRotationStatusResult
 
-    GetParametersForImport(ctx workflow.Context, input *kms.GetParametersForImportInput) (*kms.GetParametersForImportOutput, error)
-    GetParametersForImportAsync(ctx workflow.Context, input *kms.GetParametersForImportInput) *KmsGetParametersForImportResult
+       GetParametersForImport(ctx workflow.Context, input *kms.GetParametersForImportInput) (*kms.GetParametersForImportOutput, error)
+       GetParametersForImportAsync(ctx workflow.Context, input *kms.GetParametersForImportInput) *KmsGetParametersForImportResult
 
-    GetPublicKey(ctx workflow.Context, input *kms.GetPublicKeyInput) (*kms.GetPublicKeyOutput, error)
-    GetPublicKeyAsync(ctx workflow.Context, input *kms.GetPublicKeyInput) *KmsGetPublicKeyResult
+       GetPublicKey(ctx workflow.Context, input *kms.GetPublicKeyInput) (*kms.GetPublicKeyOutput, error)
+       GetPublicKeyAsync(ctx workflow.Context, input *kms.GetPublicKeyInput) *KmsGetPublicKeyResult
 
-    ImportKeyMaterial(ctx workflow.Context, input *kms.ImportKeyMaterialInput) (*kms.ImportKeyMaterialOutput, error)
-    ImportKeyMaterialAsync(ctx workflow.Context, input *kms.ImportKeyMaterialInput) *KmsImportKeyMaterialResult
+       ImportKeyMaterial(ctx workflow.Context, input *kms.ImportKeyMaterialInput) (*kms.ImportKeyMaterialOutput, error)
+       ImportKeyMaterialAsync(ctx workflow.Context, input *kms.ImportKeyMaterialInput) *KmsImportKeyMaterialResult
 
-    ListAliases(ctx workflow.Context, input *kms.ListAliasesInput) (*kms.ListAliasesOutput, error)
-    ListAliasesAsync(ctx workflow.Context, input *kms.ListAliasesInput) *KmsListAliasesResult
+       ListAliases(ctx workflow.Context, input *kms.ListAliasesInput) (*kms.ListAliasesOutput, error)
+       ListAliasesAsync(ctx workflow.Context, input *kms.ListAliasesInput) *KmsListAliasesResult
 
-    ListGrants(ctx workflow.Context, input *kms.ListGrantsInput) (*kms.ListGrantsResponse, error)
-    ListGrantsAsync(ctx workflow.Context, input *kms.ListGrantsInput) *KmsListGrantsResult
+       ListGrants(ctx workflow.Context, input *kms.ListGrantsInput) (*kms.ListGrantsResponse, error)
+       ListGrantsAsync(ctx workflow.Context, input *kms.ListGrantsInput) *KmsListGrantsResult
 
-    ListKeyPolicies(ctx workflow.Context, input *kms.ListKeyPoliciesInput) (*kms.ListKeyPoliciesOutput, error)
-    ListKeyPoliciesAsync(ctx workflow.Context, input *kms.ListKeyPoliciesInput) *KmsListKeyPoliciesResult
+       ListKeyPolicies(ctx workflow.Context, input *kms.ListKeyPoliciesInput) (*kms.ListKeyPoliciesOutput, error)
+       ListKeyPoliciesAsync(ctx workflow.Context, input *kms.ListKeyPoliciesInput) *KmsListKeyPoliciesResult
 
-    ListKeys(ctx workflow.Context, input *kms.ListKeysInput) (*kms.ListKeysOutput, error)
-    ListKeysAsync(ctx workflow.Context, input *kms.ListKeysInput) *KmsListKeysResult
+       ListKeys(ctx workflow.Context, input *kms.ListKeysInput) (*kms.ListKeysOutput, error)
+       ListKeysAsync(ctx workflow.Context, input *kms.ListKeysInput) *KmsListKeysResult
 
-    ListResourceTags(ctx workflow.Context, input *kms.ListResourceTagsInput) (*kms.ListResourceTagsOutput, error)
-    ListResourceTagsAsync(ctx workflow.Context, input *kms.ListResourceTagsInput) *KmsListResourceTagsResult
+       ListResourceTags(ctx workflow.Context, input *kms.ListResourceTagsInput) (*kms.ListResourceTagsOutput, error)
+       ListResourceTagsAsync(ctx workflow.Context, input *kms.ListResourceTagsInput) *KmsListResourceTagsResult
 
-    ListRetirableGrants(ctx workflow.Context, input *kms.ListRetirableGrantsInput) (*kms.ListGrantsResponse, error)
-    ListRetirableGrantsAsync(ctx workflow.Context, input *kms.ListRetirableGrantsInput) *KmsListRetirableGrantsResult
+       ListRetirableGrants(ctx workflow.Context, input *kms.ListRetirableGrantsInput) (*kms.ListGrantsResponse, error)
+       ListRetirableGrantsAsync(ctx workflow.Context, input *kms.ListRetirableGrantsInput) *KmsListRetirableGrantsResult
 
-    PutKeyPolicy(ctx workflow.Context, input *kms.PutKeyPolicyInput) (*kms.PutKeyPolicyOutput, error)
-    PutKeyPolicyAsync(ctx workflow.Context, input *kms.PutKeyPolicyInput) *KmsPutKeyPolicyResult
+       PutKeyPolicy(ctx workflow.Context, input *kms.PutKeyPolicyInput) (*kms.PutKeyPolicyOutput, error)
+       PutKeyPolicyAsync(ctx workflow.Context, input *kms.PutKeyPolicyInput) *KmsPutKeyPolicyResult
 
-    ReEncrypt(ctx workflow.Context, input *kms.ReEncryptInput) (*kms.ReEncryptOutput, error)
-    ReEncryptAsync(ctx workflow.Context, input *kms.ReEncryptInput) *KmsReEncryptResult
+       ReEncrypt(ctx workflow.Context, input *kms.ReEncryptInput) (*kms.ReEncryptOutput, error)
+       ReEncryptAsync(ctx workflow.Context, input *kms.ReEncryptInput) *KmsReEncryptResult
 
-    RetireGrant(ctx workflow.Context, input *kms.RetireGrantInput) (*kms.RetireGrantOutput, error)
-    RetireGrantAsync(ctx workflow.Context, input *kms.RetireGrantInput) *KmsRetireGrantResult
+       RetireGrant(ctx workflow.Context, input *kms.RetireGrantInput) (*kms.RetireGrantOutput, error)
+       RetireGrantAsync(ctx workflow.Context, input *kms.RetireGrantInput) *KmsRetireGrantResult
 
-    RevokeGrant(ctx workflow.Context, input *kms.RevokeGrantInput) (*kms.RevokeGrantOutput, error)
-    RevokeGrantAsync(ctx workflow.Context, input *kms.RevokeGrantInput) *KmsRevokeGrantResult
+       RevokeGrant(ctx workflow.Context, input *kms.RevokeGrantInput) (*kms.RevokeGrantOutput, error)
+       RevokeGrantAsync(ctx workflow.Context, input *kms.RevokeGrantInput) *KmsRevokeGrantResult
 
-    ScheduleKeyDeletion(ctx workflow.Context, input *kms.ScheduleKeyDeletionInput) (*kms.ScheduleKeyDeletionOutput, error)
-    ScheduleKeyDeletionAsync(ctx workflow.Context, input *kms.ScheduleKeyDeletionInput) *KmsScheduleKeyDeletionResult
+       ScheduleKeyDeletion(ctx workflow.Context, input *kms.ScheduleKeyDeletionInput) (*kms.ScheduleKeyDeletionOutput, error)
+       ScheduleKeyDeletionAsync(ctx workflow.Context, input *kms.ScheduleKeyDeletionInput) *KmsScheduleKeyDeletionResult
 
-    Sign(ctx workflow.Context, input *kms.SignInput) (*kms.SignOutput, error)
-    SignAsync(ctx workflow.Context, input *kms.SignInput) *KmsSignResult
+       Sign(ctx workflow.Context, input *kms.SignInput) (*kms.SignOutput, error)
+       SignAsync(ctx workflow.Context, input *kms.SignInput) *KmsSignResult
 
-    TagResource(ctx workflow.Context, input *kms.TagResourceInput) (*kms.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *kms.TagResourceInput) *KmsTagResourceResult
+       TagResource(ctx workflow.Context, input *kms.TagResourceInput) (*kms.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *kms.TagResourceInput) *KmsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *kms.UntagResourceInput) (*kms.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *kms.UntagResourceInput) *KmsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *kms.UntagResourceInput) (*kms.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *kms.UntagResourceInput) *KmsUntagResourceResult
 
-    UpdateAlias(ctx workflow.Context, input *kms.UpdateAliasInput) (*kms.UpdateAliasOutput, error)
-    UpdateAliasAsync(ctx workflow.Context, input *kms.UpdateAliasInput) *KmsUpdateAliasResult
+       UpdateAlias(ctx workflow.Context, input *kms.UpdateAliasInput) (*kms.UpdateAliasOutput, error)
+       UpdateAliasAsync(ctx workflow.Context, input *kms.UpdateAliasInput) *KmsUpdateAliasResult
 
-    UpdateCustomKeyStore(ctx workflow.Context, input *kms.UpdateCustomKeyStoreInput) (*kms.UpdateCustomKeyStoreOutput, error)
-    UpdateCustomKeyStoreAsync(ctx workflow.Context, input *kms.UpdateCustomKeyStoreInput) *KmsUpdateCustomKeyStoreResult
+       UpdateCustomKeyStore(ctx workflow.Context, input *kms.UpdateCustomKeyStoreInput) (*kms.UpdateCustomKeyStoreOutput, error)
+       UpdateCustomKeyStoreAsync(ctx workflow.Context, input *kms.UpdateCustomKeyStoreInput) *KmsUpdateCustomKeyStoreResult
 
-    UpdateKeyDescription(ctx workflow.Context, input *kms.UpdateKeyDescriptionInput) (*kms.UpdateKeyDescriptionOutput, error)
-    UpdateKeyDescriptionAsync(ctx workflow.Context, input *kms.UpdateKeyDescriptionInput) *KmsUpdateKeyDescriptionResult
+       UpdateKeyDescription(ctx workflow.Context, input *kms.UpdateKeyDescriptionInput) (*kms.UpdateKeyDescriptionOutput, error)
+       UpdateKeyDescriptionAsync(ctx workflow.Context, input *kms.UpdateKeyDescriptionInput) *KmsUpdateKeyDescriptionResult
 
-    Verify(ctx workflow.Context, input *kms.VerifyInput) (*kms.VerifyOutput, error)
-    VerifyAsync(ctx workflow.Context, input *kms.VerifyInput) *KmsVerifyResult
+       Verify(ctx workflow.Context, input *kms.VerifyInput) (*kms.VerifyOutput, error)
+       VerifyAsync(ctx workflow.Context, input *kms.VerifyInput) *KmsVerifyResult
 }
 
 type KmsCancelKeyDeletionResult struct {

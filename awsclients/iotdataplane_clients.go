@@ -7,20 +7,20 @@ import (
 )
 
 type IoTDataPlaneClient interface {
-    DeleteThingShadow(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error)
-    DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IotdataplaneDeleteThingShadowResult
+       DeleteThingShadow(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error)
+       DeleteThingShadowAsync(ctx workflow.Context, input *iotdataplane.DeleteThingShadowInput) *IotdataplaneDeleteThingShadowResult
 
-    GetThingShadow(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error)
-    GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IotdataplaneGetThingShadowResult
+       GetThingShadow(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error)
+       GetThingShadowAsync(ctx workflow.Context, input *iotdataplane.GetThingShadowInput) *IotdataplaneGetThingShadowResult
 
-    ListNamedShadowsForThing(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error)
-    ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IotdataplaneListNamedShadowsForThingResult
+       ListNamedShadowsForThing(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error)
+       ListNamedShadowsForThingAsync(ctx workflow.Context, input *iotdataplane.ListNamedShadowsForThingInput) *IotdataplaneListNamedShadowsForThingResult
 
-    Publish(ctx workflow.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error)
-    PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IotdataplanePublishResult
+       Publish(ctx workflow.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error)
+       PublishAsync(ctx workflow.Context, input *iotdataplane.PublishInput) *IotdataplanePublishResult
 
-    UpdateThingShadow(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error)
-    UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IotdataplaneUpdateThingShadowResult
+       UpdateThingShadow(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error)
+       UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IotdataplaneUpdateThingShadowResult
 }
 
 type IotdataplaneDeleteThingShadowResult struct {

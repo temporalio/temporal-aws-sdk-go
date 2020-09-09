@@ -7,65 +7,65 @@ import (
 )
 
 type SQSClient interface {
-    AddPermission(ctx workflow.Context, input *sqs.AddPermissionInput) (*sqs.AddPermissionOutput, error)
-    AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *SqsAddPermissionResult
+       AddPermission(ctx workflow.Context, input *sqs.AddPermissionInput) (*sqs.AddPermissionOutput, error)
+       AddPermissionAsync(ctx workflow.Context, input *sqs.AddPermissionInput) *SqsAddPermissionResult
 
-    ChangeMessageVisibility(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) (*sqs.ChangeMessageVisibilityOutput, error)
-    ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *SqsChangeMessageVisibilityResult
+       ChangeMessageVisibility(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) (*sqs.ChangeMessageVisibilityOutput, error)
+       ChangeMessageVisibilityAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityInput) *SqsChangeMessageVisibilityResult
 
-    ChangeMessageVisibilityBatch(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) (*sqs.ChangeMessageVisibilityBatchOutput, error)
-    ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *SqsChangeMessageVisibilityBatchResult
+       ChangeMessageVisibilityBatch(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) (*sqs.ChangeMessageVisibilityBatchOutput, error)
+       ChangeMessageVisibilityBatchAsync(ctx workflow.Context, input *sqs.ChangeMessageVisibilityBatchInput) *SqsChangeMessageVisibilityBatchResult
 
-    CreateQueue(ctx workflow.Context, input *sqs.CreateQueueInput) (*sqs.CreateQueueOutput, error)
-    CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *SqsCreateQueueResult
+       CreateQueue(ctx workflow.Context, input *sqs.CreateQueueInput) (*sqs.CreateQueueOutput, error)
+       CreateQueueAsync(ctx workflow.Context, input *sqs.CreateQueueInput) *SqsCreateQueueResult
 
-    DeleteMessage(ctx workflow.Context, input *sqs.DeleteMessageInput) (*sqs.DeleteMessageOutput, error)
-    DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *SqsDeleteMessageResult
+       DeleteMessage(ctx workflow.Context, input *sqs.DeleteMessageInput) (*sqs.DeleteMessageOutput, error)
+       DeleteMessageAsync(ctx workflow.Context, input *sqs.DeleteMessageInput) *SqsDeleteMessageResult
 
-    DeleteMessageBatch(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) (*sqs.DeleteMessageBatchOutput, error)
-    DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *SqsDeleteMessageBatchResult
+       DeleteMessageBatch(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) (*sqs.DeleteMessageBatchOutput, error)
+       DeleteMessageBatchAsync(ctx workflow.Context, input *sqs.DeleteMessageBatchInput) *SqsDeleteMessageBatchResult
 
-    DeleteQueue(ctx workflow.Context, input *sqs.DeleteQueueInput) (*sqs.DeleteQueueOutput, error)
-    DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *SqsDeleteQueueResult
+       DeleteQueue(ctx workflow.Context, input *sqs.DeleteQueueInput) (*sqs.DeleteQueueOutput, error)
+       DeleteQueueAsync(ctx workflow.Context, input *sqs.DeleteQueueInput) *SqsDeleteQueueResult
 
-    GetQueueAttributes(ctx workflow.Context, input *sqs.GetQueueAttributesInput) (*sqs.GetQueueAttributesOutput, error)
-    GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *SqsGetQueueAttributesResult
+       GetQueueAttributes(ctx workflow.Context, input *sqs.GetQueueAttributesInput) (*sqs.GetQueueAttributesOutput, error)
+       GetQueueAttributesAsync(ctx workflow.Context, input *sqs.GetQueueAttributesInput) *SqsGetQueueAttributesResult
 
-    GetQueueUrl(ctx workflow.Context, input *sqs.GetQueueUrlInput) (*sqs.GetQueueUrlOutput, error)
-    GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *SqsGetQueueUrlResult
+       GetQueueUrl(ctx workflow.Context, input *sqs.GetQueueUrlInput) (*sqs.GetQueueUrlOutput, error)
+       GetQueueUrlAsync(ctx workflow.Context, input *sqs.GetQueueUrlInput) *SqsGetQueueUrlResult
 
-    ListDeadLetterSourceQueues(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) (*sqs.ListDeadLetterSourceQueuesOutput, error)
-    ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *SqsListDeadLetterSourceQueuesResult
+       ListDeadLetterSourceQueues(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) (*sqs.ListDeadLetterSourceQueuesOutput, error)
+       ListDeadLetterSourceQueuesAsync(ctx workflow.Context, input *sqs.ListDeadLetterSourceQueuesInput) *SqsListDeadLetterSourceQueuesResult
 
-    ListQueueTags(ctx workflow.Context, input *sqs.ListQueueTagsInput) (*sqs.ListQueueTagsOutput, error)
-    ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *SqsListQueueTagsResult
+       ListQueueTags(ctx workflow.Context, input *sqs.ListQueueTagsInput) (*sqs.ListQueueTagsOutput, error)
+       ListQueueTagsAsync(ctx workflow.Context, input *sqs.ListQueueTagsInput) *SqsListQueueTagsResult
 
-    ListQueues(ctx workflow.Context, input *sqs.ListQueuesInput) (*sqs.ListQueuesOutput, error)
-    ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *SqsListQueuesResult
+       ListQueues(ctx workflow.Context, input *sqs.ListQueuesInput) (*sqs.ListQueuesOutput, error)
+       ListQueuesAsync(ctx workflow.Context, input *sqs.ListQueuesInput) *SqsListQueuesResult
 
-    PurgeQueue(ctx workflow.Context, input *sqs.PurgeQueueInput) (*sqs.PurgeQueueOutput, error)
-    PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *SqsPurgeQueueResult
+       PurgeQueue(ctx workflow.Context, input *sqs.PurgeQueueInput) (*sqs.PurgeQueueOutput, error)
+       PurgeQueueAsync(ctx workflow.Context, input *sqs.PurgeQueueInput) *SqsPurgeQueueResult
 
-    ReceiveMessage(ctx workflow.Context, input *sqs.ReceiveMessageInput) (*sqs.ReceiveMessageOutput, error)
-    ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *SqsReceiveMessageResult
+       ReceiveMessage(ctx workflow.Context, input *sqs.ReceiveMessageInput) (*sqs.ReceiveMessageOutput, error)
+       ReceiveMessageAsync(ctx workflow.Context, input *sqs.ReceiveMessageInput) *SqsReceiveMessageResult
 
-    RemovePermission(ctx workflow.Context, input *sqs.RemovePermissionInput) (*sqs.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *SqsRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *sqs.RemovePermissionInput) (*sqs.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *sqs.RemovePermissionInput) *SqsRemovePermissionResult
 
-    SendMessage(ctx workflow.Context, input *sqs.SendMessageInput) (*sqs.SendMessageOutput, error)
-    SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SqsSendMessageResult
+       SendMessage(ctx workflow.Context, input *sqs.SendMessageInput) (*sqs.SendMessageOutput, error)
+       SendMessageAsync(ctx workflow.Context, input *sqs.SendMessageInput) *SqsSendMessageResult
 
-    SendMessageBatch(ctx workflow.Context, input *sqs.SendMessageBatchInput) (*sqs.SendMessageBatchOutput, error)
-    SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SqsSendMessageBatchResult
+       SendMessageBatch(ctx workflow.Context, input *sqs.SendMessageBatchInput) (*sqs.SendMessageBatchOutput, error)
+       SendMessageBatchAsync(ctx workflow.Context, input *sqs.SendMessageBatchInput) *SqsSendMessageBatchResult
 
-    SetQueueAttributes(ctx workflow.Context, input *sqs.SetQueueAttributesInput) (*sqs.SetQueueAttributesOutput, error)
-    SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SqsSetQueueAttributesResult
+       SetQueueAttributes(ctx workflow.Context, input *sqs.SetQueueAttributesInput) (*sqs.SetQueueAttributesOutput, error)
+       SetQueueAttributesAsync(ctx workflow.Context, input *sqs.SetQueueAttributesInput) *SqsSetQueueAttributesResult
 
-    TagQueue(ctx workflow.Context, input *sqs.TagQueueInput) (*sqs.TagQueueOutput, error)
-    TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *SqsTagQueueResult
+       TagQueue(ctx workflow.Context, input *sqs.TagQueueInput) (*sqs.TagQueueOutput, error)
+       TagQueueAsync(ctx workflow.Context, input *sqs.TagQueueInput) *SqsTagQueueResult
 
-    UntagQueue(ctx workflow.Context, input *sqs.UntagQueueInput) (*sqs.UntagQueueOutput, error)
-    UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *SqsUntagQueueResult
+       UntagQueue(ctx workflow.Context, input *sqs.UntagQueueInput) (*sqs.UntagQueueOutput, error)
+       UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *SqsUntagQueueResult
 }
 
 type SqsAddPermissionResult struct {

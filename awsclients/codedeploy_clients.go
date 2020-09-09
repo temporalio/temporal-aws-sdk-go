@@ -7,148 +7,148 @@ import (
 )
 
 type CodeDeployClient interface {
-    AddTagsToOnPremisesInstances(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error)
-    AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesResult
+       AddTagsToOnPremisesInstances(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error)
+       AddTagsToOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) *CodedeployAddTagsToOnPremisesInstancesResult
 
-    BatchGetApplicationRevisions(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) (*codedeploy.BatchGetApplicationRevisionsOutput, error)
-    BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsResult
+       BatchGetApplicationRevisions(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) (*codedeploy.BatchGetApplicationRevisionsOutput, error)
+       BatchGetApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationRevisionsInput) *CodedeployBatchGetApplicationRevisionsResult
 
-    BatchGetApplications(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) (*codedeploy.BatchGetApplicationsOutput, error)
-    BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsResult
+       BatchGetApplications(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) (*codedeploy.BatchGetApplicationsOutput, error)
+       BatchGetApplicationsAsync(ctx workflow.Context, input *codedeploy.BatchGetApplicationsInput) *CodedeployBatchGetApplicationsResult
 
-    BatchGetDeploymentGroups(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) (*codedeploy.BatchGetDeploymentGroupsOutput, error)
-    BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsResult
+       BatchGetDeploymentGroups(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) (*codedeploy.BatchGetDeploymentGroupsOutput, error)
+       BatchGetDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentGroupsInput) *CodedeployBatchGetDeploymentGroupsResult
 
-    BatchGetDeploymentInstances(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) (*codedeploy.BatchGetDeploymentInstancesOutput, error)
-    BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesResult
+       BatchGetDeploymentInstances(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) (*codedeploy.BatchGetDeploymentInstancesOutput, error)
+       BatchGetDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentInstancesInput) *CodedeployBatchGetDeploymentInstancesResult
 
-    BatchGetDeploymentTargets(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) (*codedeploy.BatchGetDeploymentTargetsOutput, error)
-    BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsResult
+       BatchGetDeploymentTargets(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) (*codedeploy.BatchGetDeploymentTargetsOutput, error)
+       BatchGetDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentTargetsInput) *CodedeployBatchGetDeploymentTargetsResult
 
-    BatchGetDeployments(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) (*codedeploy.BatchGetDeploymentsOutput, error)
-    BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsResult
+       BatchGetDeployments(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) (*codedeploy.BatchGetDeploymentsOutput, error)
+       BatchGetDeploymentsAsync(ctx workflow.Context, input *codedeploy.BatchGetDeploymentsInput) *CodedeployBatchGetDeploymentsResult
 
-    BatchGetOnPremisesInstances(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) (*codedeploy.BatchGetOnPremisesInstancesOutput, error)
-    BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesResult
+       BatchGetOnPremisesInstances(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) (*codedeploy.BatchGetOnPremisesInstancesOutput, error)
+       BatchGetOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.BatchGetOnPremisesInstancesInput) *CodedeployBatchGetOnPremisesInstancesResult
 
-    ContinueDeployment(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) (*codedeploy.ContinueDeploymentOutput, error)
-    ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentResult
+       ContinueDeployment(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) (*codedeploy.ContinueDeploymentOutput, error)
+       ContinueDeploymentAsync(ctx workflow.Context, input *codedeploy.ContinueDeploymentInput) *CodedeployContinueDeploymentResult
 
-    CreateApplication(ctx workflow.Context, input *codedeploy.CreateApplicationInput) (*codedeploy.CreateApplicationOutput, error)
-    CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationResult
+       CreateApplication(ctx workflow.Context, input *codedeploy.CreateApplicationInput) (*codedeploy.CreateApplicationOutput, error)
+       CreateApplicationAsync(ctx workflow.Context, input *codedeploy.CreateApplicationInput) *CodedeployCreateApplicationResult
 
-    CreateDeployment(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) (*codedeploy.CreateDeploymentOutput, error)
-    CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentResult
+       CreateDeployment(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) (*codedeploy.CreateDeploymentOutput, error)
+       CreateDeploymentAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentInput) *CodedeployCreateDeploymentResult
 
-    CreateDeploymentConfig(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) (*codedeploy.CreateDeploymentConfigOutput, error)
-    CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigResult
+       CreateDeploymentConfig(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) (*codedeploy.CreateDeploymentConfigOutput, error)
+       CreateDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentConfigInput) *CodedeployCreateDeploymentConfigResult
 
-    CreateDeploymentGroup(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) (*codedeploy.CreateDeploymentGroupOutput, error)
-    CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupResult
+       CreateDeploymentGroup(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) (*codedeploy.CreateDeploymentGroupOutput, error)
+       CreateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.CreateDeploymentGroupInput) *CodedeployCreateDeploymentGroupResult
 
-    DeleteApplication(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) (*codedeploy.DeleteApplicationOutput, error)
-    DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationResult
+       DeleteApplication(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) (*codedeploy.DeleteApplicationOutput, error)
+       DeleteApplicationAsync(ctx workflow.Context, input *codedeploy.DeleteApplicationInput) *CodedeployDeleteApplicationResult
 
-    DeleteDeploymentConfig(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) (*codedeploy.DeleteDeploymentConfigOutput, error)
-    DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigResult
+       DeleteDeploymentConfig(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) (*codedeploy.DeleteDeploymentConfigOutput, error)
+       DeleteDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentConfigInput) *CodedeployDeleteDeploymentConfigResult
 
-    DeleteDeploymentGroup(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) (*codedeploy.DeleteDeploymentGroupOutput, error)
-    DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupResult
+       DeleteDeploymentGroup(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) (*codedeploy.DeleteDeploymentGroupOutput, error)
+       DeleteDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.DeleteDeploymentGroupInput) *CodedeployDeleteDeploymentGroupResult
 
-    DeleteGitHubAccountToken(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) (*codedeploy.DeleteGitHubAccountTokenOutput, error)
-    DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenResult
+       DeleteGitHubAccountToken(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) (*codedeploy.DeleteGitHubAccountTokenOutput, error)
+       DeleteGitHubAccountTokenAsync(ctx workflow.Context, input *codedeploy.DeleteGitHubAccountTokenInput) *CodedeployDeleteGitHubAccountTokenResult
 
-    DeleteResourcesByExternalId(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) (*codedeploy.DeleteResourcesByExternalIdOutput, error)
-    DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdResult
+       DeleteResourcesByExternalId(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) (*codedeploy.DeleteResourcesByExternalIdOutput, error)
+       DeleteResourcesByExternalIdAsync(ctx workflow.Context, input *codedeploy.DeleteResourcesByExternalIdInput) *CodedeployDeleteResourcesByExternalIdResult
 
-    DeregisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) (*codedeploy.DeregisterOnPremisesInstanceOutput, error)
-    DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceResult
+       DeregisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) (*codedeploy.DeregisterOnPremisesInstanceOutput, error)
+       DeregisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.DeregisterOnPremisesInstanceInput) *CodedeployDeregisterOnPremisesInstanceResult
 
-    GetApplication(ctx workflow.Context, input *codedeploy.GetApplicationInput) (*codedeploy.GetApplicationOutput, error)
-    GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationResult
+       GetApplication(ctx workflow.Context, input *codedeploy.GetApplicationInput) (*codedeploy.GetApplicationOutput, error)
+       GetApplicationAsync(ctx workflow.Context, input *codedeploy.GetApplicationInput) *CodedeployGetApplicationResult
 
-    GetApplicationRevision(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) (*codedeploy.GetApplicationRevisionOutput, error)
-    GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionResult
+       GetApplicationRevision(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) (*codedeploy.GetApplicationRevisionOutput, error)
+       GetApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.GetApplicationRevisionInput) *CodedeployGetApplicationRevisionResult
 
-    GetDeployment(ctx workflow.Context, input *codedeploy.GetDeploymentInput) (*codedeploy.GetDeploymentOutput, error)
-    GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentResult
+       GetDeployment(ctx workflow.Context, input *codedeploy.GetDeploymentInput) (*codedeploy.GetDeploymentOutput, error)
+       GetDeploymentAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInput) *CodedeployGetDeploymentResult
 
-    GetDeploymentConfig(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) (*codedeploy.GetDeploymentConfigOutput, error)
-    GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigResult
+       GetDeploymentConfig(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) (*codedeploy.GetDeploymentConfigOutput, error)
+       GetDeploymentConfigAsync(ctx workflow.Context, input *codedeploy.GetDeploymentConfigInput) *CodedeployGetDeploymentConfigResult
 
-    GetDeploymentGroup(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) (*codedeploy.GetDeploymentGroupOutput, error)
-    GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupResult
+       GetDeploymentGroup(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) (*codedeploy.GetDeploymentGroupOutput, error)
+       GetDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.GetDeploymentGroupInput) *CodedeployGetDeploymentGroupResult
 
-    GetDeploymentInstance(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) (*codedeploy.GetDeploymentInstanceOutput, error)
-    GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceResult
+       GetDeploymentInstance(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) (*codedeploy.GetDeploymentInstanceOutput, error)
+       GetDeploymentInstanceAsync(ctx workflow.Context, input *codedeploy.GetDeploymentInstanceInput) *CodedeployGetDeploymentInstanceResult
 
-    GetDeploymentTarget(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) (*codedeploy.GetDeploymentTargetOutput, error)
-    GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetResult
+       GetDeploymentTarget(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) (*codedeploy.GetDeploymentTargetOutput, error)
+       GetDeploymentTargetAsync(ctx workflow.Context, input *codedeploy.GetDeploymentTargetInput) *CodedeployGetDeploymentTargetResult
 
-    GetOnPremisesInstance(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) (*codedeploy.GetOnPremisesInstanceOutput, error)
-    GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceResult
+       GetOnPremisesInstance(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) (*codedeploy.GetOnPremisesInstanceOutput, error)
+       GetOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.GetOnPremisesInstanceInput) *CodedeployGetOnPremisesInstanceResult
 
-    ListApplicationRevisions(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) (*codedeploy.ListApplicationRevisionsOutput, error)
-    ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsResult
+       ListApplicationRevisions(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) (*codedeploy.ListApplicationRevisionsOutput, error)
+       ListApplicationRevisionsAsync(ctx workflow.Context, input *codedeploy.ListApplicationRevisionsInput) *CodedeployListApplicationRevisionsResult
 
-    ListApplications(ctx workflow.Context, input *codedeploy.ListApplicationsInput) (*codedeploy.ListApplicationsOutput, error)
-    ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsResult
+       ListApplications(ctx workflow.Context, input *codedeploy.ListApplicationsInput) (*codedeploy.ListApplicationsOutput, error)
+       ListApplicationsAsync(ctx workflow.Context, input *codedeploy.ListApplicationsInput) *CodedeployListApplicationsResult
 
-    ListDeploymentConfigs(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) (*codedeploy.ListDeploymentConfigsOutput, error)
-    ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsResult
+       ListDeploymentConfigs(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) (*codedeploy.ListDeploymentConfigsOutput, error)
+       ListDeploymentConfigsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentConfigsInput) *CodedeployListDeploymentConfigsResult
 
-    ListDeploymentGroups(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) (*codedeploy.ListDeploymentGroupsOutput, error)
-    ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsResult
+       ListDeploymentGroups(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) (*codedeploy.ListDeploymentGroupsOutput, error)
+       ListDeploymentGroupsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentGroupsInput) *CodedeployListDeploymentGroupsResult
 
-    ListDeploymentInstances(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) (*codedeploy.ListDeploymentInstancesOutput, error)
-    ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesResult
+       ListDeploymentInstances(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) (*codedeploy.ListDeploymentInstancesOutput, error)
+       ListDeploymentInstancesAsync(ctx workflow.Context, input *codedeploy.ListDeploymentInstancesInput) *CodedeployListDeploymentInstancesResult
 
-    ListDeploymentTargets(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) (*codedeploy.ListDeploymentTargetsOutput, error)
-    ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsResult
+       ListDeploymentTargets(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) (*codedeploy.ListDeploymentTargetsOutput, error)
+       ListDeploymentTargetsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentTargetsInput) *CodedeployListDeploymentTargetsResult
 
-    ListDeployments(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) (*codedeploy.ListDeploymentsOutput, error)
-    ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsResult
+       ListDeployments(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) (*codedeploy.ListDeploymentsOutput, error)
+       ListDeploymentsAsync(ctx workflow.Context, input *codedeploy.ListDeploymentsInput) *CodedeployListDeploymentsResult
 
-    ListGitHubAccountTokenNames(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) (*codedeploy.ListGitHubAccountTokenNamesOutput, error)
-    ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesResult
+       ListGitHubAccountTokenNames(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) (*codedeploy.ListGitHubAccountTokenNamesOutput, error)
+       ListGitHubAccountTokenNamesAsync(ctx workflow.Context, input *codedeploy.ListGitHubAccountTokenNamesInput) *CodedeployListGitHubAccountTokenNamesResult
 
-    ListOnPremisesInstances(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) (*codedeploy.ListOnPremisesInstancesOutput, error)
-    ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesResult
+       ListOnPremisesInstances(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) (*codedeploy.ListOnPremisesInstancesOutput, error)
+       ListOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.ListOnPremisesInstancesInput) *CodedeployListOnPremisesInstancesResult
 
-    ListTagsForResource(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) (*codedeploy.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) (*codedeploy.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *codedeploy.ListTagsForResourceInput) *CodedeployListTagsForResourceResult
 
-    PutLifecycleEventHookExecutionStatus(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error)
-    PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusResult
+       PutLifecycleEventHookExecutionStatus(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) (*codedeploy.PutLifecycleEventHookExecutionStatusOutput, error)
+       PutLifecycleEventHookExecutionStatusAsync(ctx workflow.Context, input *codedeploy.PutLifecycleEventHookExecutionStatusInput) *CodedeployPutLifecycleEventHookExecutionStatusResult
 
-    RegisterApplicationRevision(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) (*codedeploy.RegisterApplicationRevisionOutput, error)
-    RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionResult
+       RegisterApplicationRevision(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) (*codedeploy.RegisterApplicationRevisionOutput, error)
+       RegisterApplicationRevisionAsync(ctx workflow.Context, input *codedeploy.RegisterApplicationRevisionInput) *CodedeployRegisterApplicationRevisionResult
 
-    RegisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) (*codedeploy.RegisterOnPremisesInstanceOutput, error)
-    RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceResult
+       RegisterOnPremisesInstance(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) (*codedeploy.RegisterOnPremisesInstanceOutput, error)
+       RegisterOnPremisesInstanceAsync(ctx workflow.Context, input *codedeploy.RegisterOnPremisesInstanceInput) *CodedeployRegisterOnPremisesInstanceResult
 
-    RemoveTagsFromOnPremisesInstances(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error)
-    RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesResult
+       RemoveTagsFromOnPremisesInstances(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) (*codedeploy.RemoveTagsFromOnPremisesInstancesOutput, error)
+       RemoveTagsFromOnPremisesInstancesAsync(ctx workflow.Context, input *codedeploy.RemoveTagsFromOnPremisesInstancesInput) *CodedeployRemoveTagsFromOnPremisesInstancesResult
 
-    SkipWaitTimeForInstanceTermination(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error)
-    SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationResult
+       SkipWaitTimeForInstanceTermination(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) (*codedeploy.SkipWaitTimeForInstanceTerminationOutput, error)
+       SkipWaitTimeForInstanceTerminationAsync(ctx workflow.Context, input *codedeploy.SkipWaitTimeForInstanceTerminationInput) *CodedeploySkipWaitTimeForInstanceTerminationResult
 
-    StopDeployment(ctx workflow.Context, input *codedeploy.StopDeploymentInput) (*codedeploy.StopDeploymentOutput, error)
-    StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentResult
+       StopDeployment(ctx workflow.Context, input *codedeploy.StopDeploymentInput) (*codedeploy.StopDeploymentOutput, error)
+       StopDeploymentAsync(ctx workflow.Context, input *codedeploy.StopDeploymentInput) *CodedeployStopDeploymentResult
 
-    TagResource(ctx workflow.Context, input *codedeploy.TagResourceInput) (*codedeploy.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceResult
+       TagResource(ctx workflow.Context, input *codedeploy.TagResourceInput) (*codedeploy.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *codedeploy.TagResourceInput) *CodedeployTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *codedeploy.UntagResourceInput) (*codedeploy.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceResult
+       UntagResource(ctx workflow.Context, input *codedeploy.UntagResourceInput) (*codedeploy.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *codedeploy.UntagResourceInput) *CodedeployUntagResourceResult
 
-    UpdateApplication(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) (*codedeploy.UpdateApplicationOutput, error)
-    UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationResult
+       UpdateApplication(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) (*codedeploy.UpdateApplicationOutput, error)
+       UpdateApplicationAsync(ctx workflow.Context, input *codedeploy.UpdateApplicationInput) *CodedeployUpdateApplicationResult
 
-    UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error)
-    UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult
+       UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error)
+       UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult
 
-    WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error}
+       WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error}
 
 type CodedeployAddTagsToOnPremisesInstancesResult struct {
 	Result workflow.Future

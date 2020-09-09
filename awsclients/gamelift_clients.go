@@ -7,275 +7,275 @@ import (
 )
 
 type GameLiftClient interface {
-    AcceptMatch(ctx workflow.Context, input *gamelift.AcceptMatchInput) (*gamelift.AcceptMatchOutput, error)
-    AcceptMatchAsync(ctx workflow.Context, input *gamelift.AcceptMatchInput) *GameliftAcceptMatchResult
+       AcceptMatch(ctx workflow.Context, input *gamelift.AcceptMatchInput) (*gamelift.AcceptMatchOutput, error)
+       AcceptMatchAsync(ctx workflow.Context, input *gamelift.AcceptMatchInput) *GameliftAcceptMatchResult
 
-    ClaimGameServer(ctx workflow.Context, input *gamelift.ClaimGameServerInput) (*gamelift.ClaimGameServerOutput, error)
-    ClaimGameServerAsync(ctx workflow.Context, input *gamelift.ClaimGameServerInput) *GameliftClaimGameServerResult
+       ClaimGameServer(ctx workflow.Context, input *gamelift.ClaimGameServerInput) (*gamelift.ClaimGameServerOutput, error)
+       ClaimGameServerAsync(ctx workflow.Context, input *gamelift.ClaimGameServerInput) *GameliftClaimGameServerResult
 
-    CreateAlias(ctx workflow.Context, input *gamelift.CreateAliasInput) (*gamelift.CreateAliasOutput, error)
-    CreateAliasAsync(ctx workflow.Context, input *gamelift.CreateAliasInput) *GameliftCreateAliasResult
+       CreateAlias(ctx workflow.Context, input *gamelift.CreateAliasInput) (*gamelift.CreateAliasOutput, error)
+       CreateAliasAsync(ctx workflow.Context, input *gamelift.CreateAliasInput) *GameliftCreateAliasResult
 
-    CreateBuild(ctx workflow.Context, input *gamelift.CreateBuildInput) (*gamelift.CreateBuildOutput, error)
-    CreateBuildAsync(ctx workflow.Context, input *gamelift.CreateBuildInput) *GameliftCreateBuildResult
+       CreateBuild(ctx workflow.Context, input *gamelift.CreateBuildInput) (*gamelift.CreateBuildOutput, error)
+       CreateBuildAsync(ctx workflow.Context, input *gamelift.CreateBuildInput) *GameliftCreateBuildResult
 
-    CreateFleet(ctx workflow.Context, input *gamelift.CreateFleetInput) (*gamelift.CreateFleetOutput, error)
-    CreateFleetAsync(ctx workflow.Context, input *gamelift.CreateFleetInput) *GameliftCreateFleetResult
+       CreateFleet(ctx workflow.Context, input *gamelift.CreateFleetInput) (*gamelift.CreateFleetOutput, error)
+       CreateFleetAsync(ctx workflow.Context, input *gamelift.CreateFleetInput) *GameliftCreateFleetResult
 
-    CreateGameServerGroup(ctx workflow.Context, input *gamelift.CreateGameServerGroupInput) (*gamelift.CreateGameServerGroupOutput, error)
-    CreateGameServerGroupAsync(ctx workflow.Context, input *gamelift.CreateGameServerGroupInput) *GameliftCreateGameServerGroupResult
+       CreateGameServerGroup(ctx workflow.Context, input *gamelift.CreateGameServerGroupInput) (*gamelift.CreateGameServerGroupOutput, error)
+       CreateGameServerGroupAsync(ctx workflow.Context, input *gamelift.CreateGameServerGroupInput) *GameliftCreateGameServerGroupResult
 
-    CreateGameSession(ctx workflow.Context, input *gamelift.CreateGameSessionInput) (*gamelift.CreateGameSessionOutput, error)
-    CreateGameSessionAsync(ctx workflow.Context, input *gamelift.CreateGameSessionInput) *GameliftCreateGameSessionResult
+       CreateGameSession(ctx workflow.Context, input *gamelift.CreateGameSessionInput) (*gamelift.CreateGameSessionOutput, error)
+       CreateGameSessionAsync(ctx workflow.Context, input *gamelift.CreateGameSessionInput) *GameliftCreateGameSessionResult
 
-    CreateGameSessionQueue(ctx workflow.Context, input *gamelift.CreateGameSessionQueueInput) (*gamelift.CreateGameSessionQueueOutput, error)
-    CreateGameSessionQueueAsync(ctx workflow.Context, input *gamelift.CreateGameSessionQueueInput) *GameliftCreateGameSessionQueueResult
+       CreateGameSessionQueue(ctx workflow.Context, input *gamelift.CreateGameSessionQueueInput) (*gamelift.CreateGameSessionQueueOutput, error)
+       CreateGameSessionQueueAsync(ctx workflow.Context, input *gamelift.CreateGameSessionQueueInput) *GameliftCreateGameSessionQueueResult
 
-    CreateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.CreateMatchmakingConfigurationInput) (*gamelift.CreateMatchmakingConfigurationOutput, error)
-    CreateMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.CreateMatchmakingConfigurationInput) *GameliftCreateMatchmakingConfigurationResult
+       CreateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.CreateMatchmakingConfigurationInput) (*gamelift.CreateMatchmakingConfigurationOutput, error)
+       CreateMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.CreateMatchmakingConfigurationInput) *GameliftCreateMatchmakingConfigurationResult
 
-    CreateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.CreateMatchmakingRuleSetInput) (*gamelift.CreateMatchmakingRuleSetOutput, error)
-    CreateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.CreateMatchmakingRuleSetInput) *GameliftCreateMatchmakingRuleSetResult
+       CreateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.CreateMatchmakingRuleSetInput) (*gamelift.CreateMatchmakingRuleSetOutput, error)
+       CreateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.CreateMatchmakingRuleSetInput) *GameliftCreateMatchmakingRuleSetResult
 
-    CreatePlayerSession(ctx workflow.Context, input *gamelift.CreatePlayerSessionInput) (*gamelift.CreatePlayerSessionOutput, error)
-    CreatePlayerSessionAsync(ctx workflow.Context, input *gamelift.CreatePlayerSessionInput) *GameliftCreatePlayerSessionResult
+       CreatePlayerSession(ctx workflow.Context, input *gamelift.CreatePlayerSessionInput) (*gamelift.CreatePlayerSessionOutput, error)
+       CreatePlayerSessionAsync(ctx workflow.Context, input *gamelift.CreatePlayerSessionInput) *GameliftCreatePlayerSessionResult
 
-    CreatePlayerSessions(ctx workflow.Context, input *gamelift.CreatePlayerSessionsInput) (*gamelift.CreatePlayerSessionsOutput, error)
-    CreatePlayerSessionsAsync(ctx workflow.Context, input *gamelift.CreatePlayerSessionsInput) *GameliftCreatePlayerSessionsResult
+       CreatePlayerSessions(ctx workflow.Context, input *gamelift.CreatePlayerSessionsInput) (*gamelift.CreatePlayerSessionsOutput, error)
+       CreatePlayerSessionsAsync(ctx workflow.Context, input *gamelift.CreatePlayerSessionsInput) *GameliftCreatePlayerSessionsResult
 
-    CreateScript(ctx workflow.Context, input *gamelift.CreateScriptInput) (*gamelift.CreateScriptOutput, error)
-    CreateScriptAsync(ctx workflow.Context, input *gamelift.CreateScriptInput) *GameliftCreateScriptResult
+       CreateScript(ctx workflow.Context, input *gamelift.CreateScriptInput) (*gamelift.CreateScriptOutput, error)
+       CreateScriptAsync(ctx workflow.Context, input *gamelift.CreateScriptInput) *GameliftCreateScriptResult
 
-    CreateVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.CreateVpcPeeringAuthorizationInput) (*gamelift.CreateVpcPeeringAuthorizationOutput, error)
-    CreateVpcPeeringAuthorizationAsync(ctx workflow.Context, input *gamelift.CreateVpcPeeringAuthorizationInput) *GameliftCreateVpcPeeringAuthorizationResult
+       CreateVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.CreateVpcPeeringAuthorizationInput) (*gamelift.CreateVpcPeeringAuthorizationOutput, error)
+       CreateVpcPeeringAuthorizationAsync(ctx workflow.Context, input *gamelift.CreateVpcPeeringAuthorizationInput) *GameliftCreateVpcPeeringAuthorizationResult
 
-    CreateVpcPeeringConnection(ctx workflow.Context, input *gamelift.CreateVpcPeeringConnectionInput) (*gamelift.CreateVpcPeeringConnectionOutput, error)
-    CreateVpcPeeringConnectionAsync(ctx workflow.Context, input *gamelift.CreateVpcPeeringConnectionInput) *GameliftCreateVpcPeeringConnectionResult
+       CreateVpcPeeringConnection(ctx workflow.Context, input *gamelift.CreateVpcPeeringConnectionInput) (*gamelift.CreateVpcPeeringConnectionOutput, error)
+       CreateVpcPeeringConnectionAsync(ctx workflow.Context, input *gamelift.CreateVpcPeeringConnectionInput) *GameliftCreateVpcPeeringConnectionResult
 
-    DeleteAlias(ctx workflow.Context, input *gamelift.DeleteAliasInput) (*gamelift.DeleteAliasOutput, error)
-    DeleteAliasAsync(ctx workflow.Context, input *gamelift.DeleteAliasInput) *GameliftDeleteAliasResult
+       DeleteAlias(ctx workflow.Context, input *gamelift.DeleteAliasInput) (*gamelift.DeleteAliasOutput, error)
+       DeleteAliasAsync(ctx workflow.Context, input *gamelift.DeleteAliasInput) *GameliftDeleteAliasResult
 
-    DeleteBuild(ctx workflow.Context, input *gamelift.DeleteBuildInput) (*gamelift.DeleteBuildOutput, error)
-    DeleteBuildAsync(ctx workflow.Context, input *gamelift.DeleteBuildInput) *GameliftDeleteBuildResult
+       DeleteBuild(ctx workflow.Context, input *gamelift.DeleteBuildInput) (*gamelift.DeleteBuildOutput, error)
+       DeleteBuildAsync(ctx workflow.Context, input *gamelift.DeleteBuildInput) *GameliftDeleteBuildResult
 
-    DeleteFleet(ctx workflow.Context, input *gamelift.DeleteFleetInput) (*gamelift.DeleteFleetOutput, error)
-    DeleteFleetAsync(ctx workflow.Context, input *gamelift.DeleteFleetInput) *GameliftDeleteFleetResult
+       DeleteFleet(ctx workflow.Context, input *gamelift.DeleteFleetInput) (*gamelift.DeleteFleetOutput, error)
+       DeleteFleetAsync(ctx workflow.Context, input *gamelift.DeleteFleetInput) *GameliftDeleteFleetResult
 
-    DeleteGameServerGroup(ctx workflow.Context, input *gamelift.DeleteGameServerGroupInput) (*gamelift.DeleteGameServerGroupOutput, error)
-    DeleteGameServerGroupAsync(ctx workflow.Context, input *gamelift.DeleteGameServerGroupInput) *GameliftDeleteGameServerGroupResult
+       DeleteGameServerGroup(ctx workflow.Context, input *gamelift.DeleteGameServerGroupInput) (*gamelift.DeleteGameServerGroupOutput, error)
+       DeleteGameServerGroupAsync(ctx workflow.Context, input *gamelift.DeleteGameServerGroupInput) *GameliftDeleteGameServerGroupResult
 
-    DeleteGameSessionQueue(ctx workflow.Context, input *gamelift.DeleteGameSessionQueueInput) (*gamelift.DeleteGameSessionQueueOutput, error)
-    DeleteGameSessionQueueAsync(ctx workflow.Context, input *gamelift.DeleteGameSessionQueueInput) *GameliftDeleteGameSessionQueueResult
+       DeleteGameSessionQueue(ctx workflow.Context, input *gamelift.DeleteGameSessionQueueInput) (*gamelift.DeleteGameSessionQueueOutput, error)
+       DeleteGameSessionQueueAsync(ctx workflow.Context, input *gamelift.DeleteGameSessionQueueInput) *GameliftDeleteGameSessionQueueResult
 
-    DeleteMatchmakingConfiguration(ctx workflow.Context, input *gamelift.DeleteMatchmakingConfigurationInput) (*gamelift.DeleteMatchmakingConfigurationOutput, error)
-    DeleteMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.DeleteMatchmakingConfigurationInput) *GameliftDeleteMatchmakingConfigurationResult
+       DeleteMatchmakingConfiguration(ctx workflow.Context, input *gamelift.DeleteMatchmakingConfigurationInput) (*gamelift.DeleteMatchmakingConfigurationOutput, error)
+       DeleteMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.DeleteMatchmakingConfigurationInput) *GameliftDeleteMatchmakingConfigurationResult
 
-    DeleteMatchmakingRuleSet(ctx workflow.Context, input *gamelift.DeleteMatchmakingRuleSetInput) (*gamelift.DeleteMatchmakingRuleSetOutput, error)
-    DeleteMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.DeleteMatchmakingRuleSetInput) *GameliftDeleteMatchmakingRuleSetResult
+       DeleteMatchmakingRuleSet(ctx workflow.Context, input *gamelift.DeleteMatchmakingRuleSetInput) (*gamelift.DeleteMatchmakingRuleSetOutput, error)
+       DeleteMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.DeleteMatchmakingRuleSetInput) *GameliftDeleteMatchmakingRuleSetResult
 
-    DeleteScalingPolicy(ctx workflow.Context, input *gamelift.DeleteScalingPolicyInput) (*gamelift.DeleteScalingPolicyOutput, error)
-    DeleteScalingPolicyAsync(ctx workflow.Context, input *gamelift.DeleteScalingPolicyInput) *GameliftDeleteScalingPolicyResult
+       DeleteScalingPolicy(ctx workflow.Context, input *gamelift.DeleteScalingPolicyInput) (*gamelift.DeleteScalingPolicyOutput, error)
+       DeleteScalingPolicyAsync(ctx workflow.Context, input *gamelift.DeleteScalingPolicyInput) *GameliftDeleteScalingPolicyResult
 
-    DeleteScript(ctx workflow.Context, input *gamelift.DeleteScriptInput) (*gamelift.DeleteScriptOutput, error)
-    DeleteScriptAsync(ctx workflow.Context, input *gamelift.DeleteScriptInput) *GameliftDeleteScriptResult
+       DeleteScript(ctx workflow.Context, input *gamelift.DeleteScriptInput) (*gamelift.DeleteScriptOutput, error)
+       DeleteScriptAsync(ctx workflow.Context, input *gamelift.DeleteScriptInput) *GameliftDeleteScriptResult
 
-    DeleteVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.DeleteVpcPeeringAuthorizationInput) (*gamelift.DeleteVpcPeeringAuthorizationOutput, error)
-    DeleteVpcPeeringAuthorizationAsync(ctx workflow.Context, input *gamelift.DeleteVpcPeeringAuthorizationInput) *GameliftDeleteVpcPeeringAuthorizationResult
+       DeleteVpcPeeringAuthorization(ctx workflow.Context, input *gamelift.DeleteVpcPeeringAuthorizationInput) (*gamelift.DeleteVpcPeeringAuthorizationOutput, error)
+       DeleteVpcPeeringAuthorizationAsync(ctx workflow.Context, input *gamelift.DeleteVpcPeeringAuthorizationInput) *GameliftDeleteVpcPeeringAuthorizationResult
 
-    DeleteVpcPeeringConnection(ctx workflow.Context, input *gamelift.DeleteVpcPeeringConnectionInput) (*gamelift.DeleteVpcPeeringConnectionOutput, error)
-    DeleteVpcPeeringConnectionAsync(ctx workflow.Context, input *gamelift.DeleteVpcPeeringConnectionInput) *GameliftDeleteVpcPeeringConnectionResult
+       DeleteVpcPeeringConnection(ctx workflow.Context, input *gamelift.DeleteVpcPeeringConnectionInput) (*gamelift.DeleteVpcPeeringConnectionOutput, error)
+       DeleteVpcPeeringConnectionAsync(ctx workflow.Context, input *gamelift.DeleteVpcPeeringConnectionInput) *GameliftDeleteVpcPeeringConnectionResult
 
-    DeregisterGameServer(ctx workflow.Context, input *gamelift.DeregisterGameServerInput) (*gamelift.DeregisterGameServerOutput, error)
-    DeregisterGameServerAsync(ctx workflow.Context, input *gamelift.DeregisterGameServerInput) *GameliftDeregisterGameServerResult
+       DeregisterGameServer(ctx workflow.Context, input *gamelift.DeregisterGameServerInput) (*gamelift.DeregisterGameServerOutput, error)
+       DeregisterGameServerAsync(ctx workflow.Context, input *gamelift.DeregisterGameServerInput) *GameliftDeregisterGameServerResult
 
-    DescribeAlias(ctx workflow.Context, input *gamelift.DescribeAliasInput) (*gamelift.DescribeAliasOutput, error)
-    DescribeAliasAsync(ctx workflow.Context, input *gamelift.DescribeAliasInput) *GameliftDescribeAliasResult
+       DescribeAlias(ctx workflow.Context, input *gamelift.DescribeAliasInput) (*gamelift.DescribeAliasOutput, error)
+       DescribeAliasAsync(ctx workflow.Context, input *gamelift.DescribeAliasInput) *GameliftDescribeAliasResult
 
-    DescribeBuild(ctx workflow.Context, input *gamelift.DescribeBuildInput) (*gamelift.DescribeBuildOutput, error)
-    DescribeBuildAsync(ctx workflow.Context, input *gamelift.DescribeBuildInput) *GameliftDescribeBuildResult
+       DescribeBuild(ctx workflow.Context, input *gamelift.DescribeBuildInput) (*gamelift.DescribeBuildOutput, error)
+       DescribeBuildAsync(ctx workflow.Context, input *gamelift.DescribeBuildInput) *GameliftDescribeBuildResult
 
-    DescribeEC2InstanceLimits(ctx workflow.Context, input *gamelift.DescribeEC2InstanceLimitsInput) (*gamelift.DescribeEC2InstanceLimitsOutput, error)
-    DescribeEC2InstanceLimitsAsync(ctx workflow.Context, input *gamelift.DescribeEC2InstanceLimitsInput) *GameliftDescribeEC2InstanceLimitsResult
+       DescribeEC2InstanceLimits(ctx workflow.Context, input *gamelift.DescribeEC2InstanceLimitsInput) (*gamelift.DescribeEC2InstanceLimitsOutput, error)
+       DescribeEC2InstanceLimitsAsync(ctx workflow.Context, input *gamelift.DescribeEC2InstanceLimitsInput) *GameliftDescribeEC2InstanceLimitsResult
 
-    DescribeFleetAttributes(ctx workflow.Context, input *gamelift.DescribeFleetAttributesInput) (*gamelift.DescribeFleetAttributesOutput, error)
-    DescribeFleetAttributesAsync(ctx workflow.Context, input *gamelift.DescribeFleetAttributesInput) *GameliftDescribeFleetAttributesResult
+       DescribeFleetAttributes(ctx workflow.Context, input *gamelift.DescribeFleetAttributesInput) (*gamelift.DescribeFleetAttributesOutput, error)
+       DescribeFleetAttributesAsync(ctx workflow.Context, input *gamelift.DescribeFleetAttributesInput) *GameliftDescribeFleetAttributesResult
 
-    DescribeFleetCapacity(ctx workflow.Context, input *gamelift.DescribeFleetCapacityInput) (*gamelift.DescribeFleetCapacityOutput, error)
-    DescribeFleetCapacityAsync(ctx workflow.Context, input *gamelift.DescribeFleetCapacityInput) *GameliftDescribeFleetCapacityResult
+       DescribeFleetCapacity(ctx workflow.Context, input *gamelift.DescribeFleetCapacityInput) (*gamelift.DescribeFleetCapacityOutput, error)
+       DescribeFleetCapacityAsync(ctx workflow.Context, input *gamelift.DescribeFleetCapacityInput) *GameliftDescribeFleetCapacityResult
 
-    DescribeFleetEvents(ctx workflow.Context, input *gamelift.DescribeFleetEventsInput) (*gamelift.DescribeFleetEventsOutput, error)
-    DescribeFleetEventsAsync(ctx workflow.Context, input *gamelift.DescribeFleetEventsInput) *GameliftDescribeFleetEventsResult
+       DescribeFleetEvents(ctx workflow.Context, input *gamelift.DescribeFleetEventsInput) (*gamelift.DescribeFleetEventsOutput, error)
+       DescribeFleetEventsAsync(ctx workflow.Context, input *gamelift.DescribeFleetEventsInput) *GameliftDescribeFleetEventsResult
 
-    DescribeFleetPortSettings(ctx workflow.Context, input *gamelift.DescribeFleetPortSettingsInput) (*gamelift.DescribeFleetPortSettingsOutput, error)
-    DescribeFleetPortSettingsAsync(ctx workflow.Context, input *gamelift.DescribeFleetPortSettingsInput) *GameliftDescribeFleetPortSettingsResult
+       DescribeFleetPortSettings(ctx workflow.Context, input *gamelift.DescribeFleetPortSettingsInput) (*gamelift.DescribeFleetPortSettingsOutput, error)
+       DescribeFleetPortSettingsAsync(ctx workflow.Context, input *gamelift.DescribeFleetPortSettingsInput) *GameliftDescribeFleetPortSettingsResult
 
-    DescribeFleetUtilization(ctx workflow.Context, input *gamelift.DescribeFleetUtilizationInput) (*gamelift.DescribeFleetUtilizationOutput, error)
-    DescribeFleetUtilizationAsync(ctx workflow.Context, input *gamelift.DescribeFleetUtilizationInput) *GameliftDescribeFleetUtilizationResult
+       DescribeFleetUtilization(ctx workflow.Context, input *gamelift.DescribeFleetUtilizationInput) (*gamelift.DescribeFleetUtilizationOutput, error)
+       DescribeFleetUtilizationAsync(ctx workflow.Context, input *gamelift.DescribeFleetUtilizationInput) *GameliftDescribeFleetUtilizationResult
 
-    DescribeGameServer(ctx workflow.Context, input *gamelift.DescribeGameServerInput) (*gamelift.DescribeGameServerOutput, error)
-    DescribeGameServerAsync(ctx workflow.Context, input *gamelift.DescribeGameServerInput) *GameliftDescribeGameServerResult
+       DescribeGameServer(ctx workflow.Context, input *gamelift.DescribeGameServerInput) (*gamelift.DescribeGameServerOutput, error)
+       DescribeGameServerAsync(ctx workflow.Context, input *gamelift.DescribeGameServerInput) *GameliftDescribeGameServerResult
 
-    DescribeGameServerGroup(ctx workflow.Context, input *gamelift.DescribeGameServerGroupInput) (*gamelift.DescribeGameServerGroupOutput, error)
-    DescribeGameServerGroupAsync(ctx workflow.Context, input *gamelift.DescribeGameServerGroupInput) *GameliftDescribeGameServerGroupResult
+       DescribeGameServerGroup(ctx workflow.Context, input *gamelift.DescribeGameServerGroupInput) (*gamelift.DescribeGameServerGroupOutput, error)
+       DescribeGameServerGroupAsync(ctx workflow.Context, input *gamelift.DescribeGameServerGroupInput) *GameliftDescribeGameServerGroupResult
 
-    DescribeGameServerInstances(ctx workflow.Context, input *gamelift.DescribeGameServerInstancesInput) (*gamelift.DescribeGameServerInstancesOutput, error)
-    DescribeGameServerInstancesAsync(ctx workflow.Context, input *gamelift.DescribeGameServerInstancesInput) *GameliftDescribeGameServerInstancesResult
+       DescribeGameServerInstances(ctx workflow.Context, input *gamelift.DescribeGameServerInstancesInput) (*gamelift.DescribeGameServerInstancesOutput, error)
+       DescribeGameServerInstancesAsync(ctx workflow.Context, input *gamelift.DescribeGameServerInstancesInput) *GameliftDescribeGameServerInstancesResult
 
-    DescribeGameSessionDetails(ctx workflow.Context, input *gamelift.DescribeGameSessionDetailsInput) (*gamelift.DescribeGameSessionDetailsOutput, error)
-    DescribeGameSessionDetailsAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionDetailsInput) *GameliftDescribeGameSessionDetailsResult
+       DescribeGameSessionDetails(ctx workflow.Context, input *gamelift.DescribeGameSessionDetailsInput) (*gamelift.DescribeGameSessionDetailsOutput, error)
+       DescribeGameSessionDetailsAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionDetailsInput) *GameliftDescribeGameSessionDetailsResult
 
-    DescribeGameSessionPlacement(ctx workflow.Context, input *gamelift.DescribeGameSessionPlacementInput) (*gamelift.DescribeGameSessionPlacementOutput, error)
-    DescribeGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionPlacementInput) *GameliftDescribeGameSessionPlacementResult
+       DescribeGameSessionPlacement(ctx workflow.Context, input *gamelift.DescribeGameSessionPlacementInput) (*gamelift.DescribeGameSessionPlacementOutput, error)
+       DescribeGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionPlacementInput) *GameliftDescribeGameSessionPlacementResult
 
-    DescribeGameSessionQueues(ctx workflow.Context, input *gamelift.DescribeGameSessionQueuesInput) (*gamelift.DescribeGameSessionQueuesOutput, error)
-    DescribeGameSessionQueuesAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionQueuesInput) *GameliftDescribeGameSessionQueuesResult
+       DescribeGameSessionQueues(ctx workflow.Context, input *gamelift.DescribeGameSessionQueuesInput) (*gamelift.DescribeGameSessionQueuesOutput, error)
+       DescribeGameSessionQueuesAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionQueuesInput) *GameliftDescribeGameSessionQueuesResult
 
-    DescribeGameSessions(ctx workflow.Context, input *gamelift.DescribeGameSessionsInput) (*gamelift.DescribeGameSessionsOutput, error)
-    DescribeGameSessionsAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionsInput) *GameliftDescribeGameSessionsResult
+       DescribeGameSessions(ctx workflow.Context, input *gamelift.DescribeGameSessionsInput) (*gamelift.DescribeGameSessionsOutput, error)
+       DescribeGameSessionsAsync(ctx workflow.Context, input *gamelift.DescribeGameSessionsInput) *GameliftDescribeGameSessionsResult
 
-    DescribeInstances(ctx workflow.Context, input *gamelift.DescribeInstancesInput) (*gamelift.DescribeInstancesOutput, error)
-    DescribeInstancesAsync(ctx workflow.Context, input *gamelift.DescribeInstancesInput) *GameliftDescribeInstancesResult
+       DescribeInstances(ctx workflow.Context, input *gamelift.DescribeInstancesInput) (*gamelift.DescribeInstancesOutput, error)
+       DescribeInstancesAsync(ctx workflow.Context, input *gamelift.DescribeInstancesInput) *GameliftDescribeInstancesResult
 
-    DescribeMatchmaking(ctx workflow.Context, input *gamelift.DescribeMatchmakingInput) (*gamelift.DescribeMatchmakingOutput, error)
-    DescribeMatchmakingAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingInput) *GameliftDescribeMatchmakingResult
+       DescribeMatchmaking(ctx workflow.Context, input *gamelift.DescribeMatchmakingInput) (*gamelift.DescribeMatchmakingOutput, error)
+       DescribeMatchmakingAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingInput) *GameliftDescribeMatchmakingResult
 
-    DescribeMatchmakingConfigurations(ctx workflow.Context, input *gamelift.DescribeMatchmakingConfigurationsInput) (*gamelift.DescribeMatchmakingConfigurationsOutput, error)
-    DescribeMatchmakingConfigurationsAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingConfigurationsInput) *GameliftDescribeMatchmakingConfigurationsResult
+       DescribeMatchmakingConfigurations(ctx workflow.Context, input *gamelift.DescribeMatchmakingConfigurationsInput) (*gamelift.DescribeMatchmakingConfigurationsOutput, error)
+       DescribeMatchmakingConfigurationsAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingConfigurationsInput) *GameliftDescribeMatchmakingConfigurationsResult
 
-    DescribeMatchmakingRuleSets(ctx workflow.Context, input *gamelift.DescribeMatchmakingRuleSetsInput) (*gamelift.DescribeMatchmakingRuleSetsOutput, error)
-    DescribeMatchmakingRuleSetsAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingRuleSetsInput) *GameliftDescribeMatchmakingRuleSetsResult
+       DescribeMatchmakingRuleSets(ctx workflow.Context, input *gamelift.DescribeMatchmakingRuleSetsInput) (*gamelift.DescribeMatchmakingRuleSetsOutput, error)
+       DescribeMatchmakingRuleSetsAsync(ctx workflow.Context, input *gamelift.DescribeMatchmakingRuleSetsInput) *GameliftDescribeMatchmakingRuleSetsResult
 
-    DescribePlayerSessions(ctx workflow.Context, input *gamelift.DescribePlayerSessionsInput) (*gamelift.DescribePlayerSessionsOutput, error)
-    DescribePlayerSessionsAsync(ctx workflow.Context, input *gamelift.DescribePlayerSessionsInput) *GameliftDescribePlayerSessionsResult
+       DescribePlayerSessions(ctx workflow.Context, input *gamelift.DescribePlayerSessionsInput) (*gamelift.DescribePlayerSessionsOutput, error)
+       DescribePlayerSessionsAsync(ctx workflow.Context, input *gamelift.DescribePlayerSessionsInput) *GameliftDescribePlayerSessionsResult
 
-    DescribeRuntimeConfiguration(ctx workflow.Context, input *gamelift.DescribeRuntimeConfigurationInput) (*gamelift.DescribeRuntimeConfigurationOutput, error)
-    DescribeRuntimeConfigurationAsync(ctx workflow.Context, input *gamelift.DescribeRuntimeConfigurationInput) *GameliftDescribeRuntimeConfigurationResult
+       DescribeRuntimeConfiguration(ctx workflow.Context, input *gamelift.DescribeRuntimeConfigurationInput) (*gamelift.DescribeRuntimeConfigurationOutput, error)
+       DescribeRuntimeConfigurationAsync(ctx workflow.Context, input *gamelift.DescribeRuntimeConfigurationInput) *GameliftDescribeRuntimeConfigurationResult
 
-    DescribeScalingPolicies(ctx workflow.Context, input *gamelift.DescribeScalingPoliciesInput) (*gamelift.DescribeScalingPoliciesOutput, error)
-    DescribeScalingPoliciesAsync(ctx workflow.Context, input *gamelift.DescribeScalingPoliciesInput) *GameliftDescribeScalingPoliciesResult
+       DescribeScalingPolicies(ctx workflow.Context, input *gamelift.DescribeScalingPoliciesInput) (*gamelift.DescribeScalingPoliciesOutput, error)
+       DescribeScalingPoliciesAsync(ctx workflow.Context, input *gamelift.DescribeScalingPoliciesInput) *GameliftDescribeScalingPoliciesResult
 
-    DescribeScript(ctx workflow.Context, input *gamelift.DescribeScriptInput) (*gamelift.DescribeScriptOutput, error)
-    DescribeScriptAsync(ctx workflow.Context, input *gamelift.DescribeScriptInput) *GameliftDescribeScriptResult
+       DescribeScript(ctx workflow.Context, input *gamelift.DescribeScriptInput) (*gamelift.DescribeScriptOutput, error)
+       DescribeScriptAsync(ctx workflow.Context, input *gamelift.DescribeScriptInput) *GameliftDescribeScriptResult
 
-    DescribeVpcPeeringAuthorizations(ctx workflow.Context, input *gamelift.DescribeVpcPeeringAuthorizationsInput) (*gamelift.DescribeVpcPeeringAuthorizationsOutput, error)
-    DescribeVpcPeeringAuthorizationsAsync(ctx workflow.Context, input *gamelift.DescribeVpcPeeringAuthorizationsInput) *GameliftDescribeVpcPeeringAuthorizationsResult
+       DescribeVpcPeeringAuthorizations(ctx workflow.Context, input *gamelift.DescribeVpcPeeringAuthorizationsInput) (*gamelift.DescribeVpcPeeringAuthorizationsOutput, error)
+       DescribeVpcPeeringAuthorizationsAsync(ctx workflow.Context, input *gamelift.DescribeVpcPeeringAuthorizationsInput) *GameliftDescribeVpcPeeringAuthorizationsResult
 
-    DescribeVpcPeeringConnections(ctx workflow.Context, input *gamelift.DescribeVpcPeeringConnectionsInput) (*gamelift.DescribeVpcPeeringConnectionsOutput, error)
-    DescribeVpcPeeringConnectionsAsync(ctx workflow.Context, input *gamelift.DescribeVpcPeeringConnectionsInput) *GameliftDescribeVpcPeeringConnectionsResult
+       DescribeVpcPeeringConnections(ctx workflow.Context, input *gamelift.DescribeVpcPeeringConnectionsInput) (*gamelift.DescribeVpcPeeringConnectionsOutput, error)
+       DescribeVpcPeeringConnectionsAsync(ctx workflow.Context, input *gamelift.DescribeVpcPeeringConnectionsInput) *GameliftDescribeVpcPeeringConnectionsResult
 
-    GetGameSessionLogUrl(ctx workflow.Context, input *gamelift.GetGameSessionLogUrlInput) (*gamelift.GetGameSessionLogUrlOutput, error)
-    GetGameSessionLogUrlAsync(ctx workflow.Context, input *gamelift.GetGameSessionLogUrlInput) *GameliftGetGameSessionLogUrlResult
+       GetGameSessionLogUrl(ctx workflow.Context, input *gamelift.GetGameSessionLogUrlInput) (*gamelift.GetGameSessionLogUrlOutput, error)
+       GetGameSessionLogUrlAsync(ctx workflow.Context, input *gamelift.GetGameSessionLogUrlInput) *GameliftGetGameSessionLogUrlResult
 
-    GetInstanceAccess(ctx workflow.Context, input *gamelift.GetInstanceAccessInput) (*gamelift.GetInstanceAccessOutput, error)
-    GetInstanceAccessAsync(ctx workflow.Context, input *gamelift.GetInstanceAccessInput) *GameliftGetInstanceAccessResult
+       GetInstanceAccess(ctx workflow.Context, input *gamelift.GetInstanceAccessInput) (*gamelift.GetInstanceAccessOutput, error)
+       GetInstanceAccessAsync(ctx workflow.Context, input *gamelift.GetInstanceAccessInput) *GameliftGetInstanceAccessResult
 
-    ListAliases(ctx workflow.Context, input *gamelift.ListAliasesInput) (*gamelift.ListAliasesOutput, error)
-    ListAliasesAsync(ctx workflow.Context, input *gamelift.ListAliasesInput) *GameliftListAliasesResult
+       ListAliases(ctx workflow.Context, input *gamelift.ListAliasesInput) (*gamelift.ListAliasesOutput, error)
+       ListAliasesAsync(ctx workflow.Context, input *gamelift.ListAliasesInput) *GameliftListAliasesResult
 
-    ListBuilds(ctx workflow.Context, input *gamelift.ListBuildsInput) (*gamelift.ListBuildsOutput, error)
-    ListBuildsAsync(ctx workflow.Context, input *gamelift.ListBuildsInput) *GameliftListBuildsResult
+       ListBuilds(ctx workflow.Context, input *gamelift.ListBuildsInput) (*gamelift.ListBuildsOutput, error)
+       ListBuildsAsync(ctx workflow.Context, input *gamelift.ListBuildsInput) *GameliftListBuildsResult
 
-    ListFleets(ctx workflow.Context, input *gamelift.ListFleetsInput) (*gamelift.ListFleetsOutput, error)
-    ListFleetsAsync(ctx workflow.Context, input *gamelift.ListFleetsInput) *GameliftListFleetsResult
+       ListFleets(ctx workflow.Context, input *gamelift.ListFleetsInput) (*gamelift.ListFleetsOutput, error)
+       ListFleetsAsync(ctx workflow.Context, input *gamelift.ListFleetsInput) *GameliftListFleetsResult
 
-    ListGameServerGroups(ctx workflow.Context, input *gamelift.ListGameServerGroupsInput) (*gamelift.ListGameServerGroupsOutput, error)
-    ListGameServerGroupsAsync(ctx workflow.Context, input *gamelift.ListGameServerGroupsInput) *GameliftListGameServerGroupsResult
+       ListGameServerGroups(ctx workflow.Context, input *gamelift.ListGameServerGroupsInput) (*gamelift.ListGameServerGroupsOutput, error)
+       ListGameServerGroupsAsync(ctx workflow.Context, input *gamelift.ListGameServerGroupsInput) *GameliftListGameServerGroupsResult
 
-    ListGameServers(ctx workflow.Context, input *gamelift.ListGameServersInput) (*gamelift.ListGameServersOutput, error)
-    ListGameServersAsync(ctx workflow.Context, input *gamelift.ListGameServersInput) *GameliftListGameServersResult
+       ListGameServers(ctx workflow.Context, input *gamelift.ListGameServersInput) (*gamelift.ListGameServersOutput, error)
+       ListGameServersAsync(ctx workflow.Context, input *gamelift.ListGameServersInput) *GameliftListGameServersResult
 
-    ListScripts(ctx workflow.Context, input *gamelift.ListScriptsInput) (*gamelift.ListScriptsOutput, error)
-    ListScriptsAsync(ctx workflow.Context, input *gamelift.ListScriptsInput) *GameliftListScriptsResult
+       ListScripts(ctx workflow.Context, input *gamelift.ListScriptsInput) (*gamelift.ListScriptsOutput, error)
+       ListScriptsAsync(ctx workflow.Context, input *gamelift.ListScriptsInput) *GameliftListScriptsResult
 
-    ListTagsForResource(ctx workflow.Context, input *gamelift.ListTagsForResourceInput) (*gamelift.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *gamelift.ListTagsForResourceInput) *GameliftListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *gamelift.ListTagsForResourceInput) (*gamelift.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *gamelift.ListTagsForResourceInput) *GameliftListTagsForResourceResult
 
-    PutScalingPolicy(ctx workflow.Context, input *gamelift.PutScalingPolicyInput) (*gamelift.PutScalingPolicyOutput, error)
-    PutScalingPolicyAsync(ctx workflow.Context, input *gamelift.PutScalingPolicyInput) *GameliftPutScalingPolicyResult
+       PutScalingPolicy(ctx workflow.Context, input *gamelift.PutScalingPolicyInput) (*gamelift.PutScalingPolicyOutput, error)
+       PutScalingPolicyAsync(ctx workflow.Context, input *gamelift.PutScalingPolicyInput) *GameliftPutScalingPolicyResult
 
-    RegisterGameServer(ctx workflow.Context, input *gamelift.RegisterGameServerInput) (*gamelift.RegisterGameServerOutput, error)
-    RegisterGameServerAsync(ctx workflow.Context, input *gamelift.RegisterGameServerInput) *GameliftRegisterGameServerResult
+       RegisterGameServer(ctx workflow.Context, input *gamelift.RegisterGameServerInput) (*gamelift.RegisterGameServerOutput, error)
+       RegisterGameServerAsync(ctx workflow.Context, input *gamelift.RegisterGameServerInput) *GameliftRegisterGameServerResult
 
-    RequestUploadCredentials(ctx workflow.Context, input *gamelift.RequestUploadCredentialsInput) (*gamelift.RequestUploadCredentialsOutput, error)
-    RequestUploadCredentialsAsync(ctx workflow.Context, input *gamelift.RequestUploadCredentialsInput) *GameliftRequestUploadCredentialsResult
+       RequestUploadCredentials(ctx workflow.Context, input *gamelift.RequestUploadCredentialsInput) (*gamelift.RequestUploadCredentialsOutput, error)
+       RequestUploadCredentialsAsync(ctx workflow.Context, input *gamelift.RequestUploadCredentialsInput) *GameliftRequestUploadCredentialsResult
 
-    ResolveAlias(ctx workflow.Context, input *gamelift.ResolveAliasInput) (*gamelift.ResolveAliasOutput, error)
-    ResolveAliasAsync(ctx workflow.Context, input *gamelift.ResolveAliasInput) *GameliftResolveAliasResult
+       ResolveAlias(ctx workflow.Context, input *gamelift.ResolveAliasInput) (*gamelift.ResolveAliasOutput, error)
+       ResolveAliasAsync(ctx workflow.Context, input *gamelift.ResolveAliasInput) *GameliftResolveAliasResult
 
-    ResumeGameServerGroup(ctx workflow.Context, input *gamelift.ResumeGameServerGroupInput) (*gamelift.ResumeGameServerGroupOutput, error)
-    ResumeGameServerGroupAsync(ctx workflow.Context, input *gamelift.ResumeGameServerGroupInput) *GameliftResumeGameServerGroupResult
+       ResumeGameServerGroup(ctx workflow.Context, input *gamelift.ResumeGameServerGroupInput) (*gamelift.ResumeGameServerGroupOutput, error)
+       ResumeGameServerGroupAsync(ctx workflow.Context, input *gamelift.ResumeGameServerGroupInput) *GameliftResumeGameServerGroupResult
 
-    SearchGameSessions(ctx workflow.Context, input *gamelift.SearchGameSessionsInput) (*gamelift.SearchGameSessionsOutput, error)
-    SearchGameSessionsAsync(ctx workflow.Context, input *gamelift.SearchGameSessionsInput) *GameliftSearchGameSessionsResult
+       SearchGameSessions(ctx workflow.Context, input *gamelift.SearchGameSessionsInput) (*gamelift.SearchGameSessionsOutput, error)
+       SearchGameSessionsAsync(ctx workflow.Context, input *gamelift.SearchGameSessionsInput) *GameliftSearchGameSessionsResult
 
-    StartFleetActions(ctx workflow.Context, input *gamelift.StartFleetActionsInput) (*gamelift.StartFleetActionsOutput, error)
-    StartFleetActionsAsync(ctx workflow.Context, input *gamelift.StartFleetActionsInput) *GameliftStartFleetActionsResult
+       StartFleetActions(ctx workflow.Context, input *gamelift.StartFleetActionsInput) (*gamelift.StartFleetActionsOutput, error)
+       StartFleetActionsAsync(ctx workflow.Context, input *gamelift.StartFleetActionsInput) *GameliftStartFleetActionsResult
 
-    StartGameSessionPlacement(ctx workflow.Context, input *gamelift.StartGameSessionPlacementInput) (*gamelift.StartGameSessionPlacementOutput, error)
-    StartGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.StartGameSessionPlacementInput) *GameliftStartGameSessionPlacementResult
+       StartGameSessionPlacement(ctx workflow.Context, input *gamelift.StartGameSessionPlacementInput) (*gamelift.StartGameSessionPlacementOutput, error)
+       StartGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.StartGameSessionPlacementInput) *GameliftStartGameSessionPlacementResult
 
-    StartMatchBackfill(ctx workflow.Context, input *gamelift.StartMatchBackfillInput) (*gamelift.StartMatchBackfillOutput, error)
-    StartMatchBackfillAsync(ctx workflow.Context, input *gamelift.StartMatchBackfillInput) *GameliftStartMatchBackfillResult
+       StartMatchBackfill(ctx workflow.Context, input *gamelift.StartMatchBackfillInput) (*gamelift.StartMatchBackfillOutput, error)
+       StartMatchBackfillAsync(ctx workflow.Context, input *gamelift.StartMatchBackfillInput) *GameliftStartMatchBackfillResult
 
-    StartMatchmaking(ctx workflow.Context, input *gamelift.StartMatchmakingInput) (*gamelift.StartMatchmakingOutput, error)
-    StartMatchmakingAsync(ctx workflow.Context, input *gamelift.StartMatchmakingInput) *GameliftStartMatchmakingResult
+       StartMatchmaking(ctx workflow.Context, input *gamelift.StartMatchmakingInput) (*gamelift.StartMatchmakingOutput, error)
+       StartMatchmakingAsync(ctx workflow.Context, input *gamelift.StartMatchmakingInput) *GameliftStartMatchmakingResult
 
-    StopFleetActions(ctx workflow.Context, input *gamelift.StopFleetActionsInput) (*gamelift.StopFleetActionsOutput, error)
-    StopFleetActionsAsync(ctx workflow.Context, input *gamelift.StopFleetActionsInput) *GameliftStopFleetActionsResult
+       StopFleetActions(ctx workflow.Context, input *gamelift.StopFleetActionsInput) (*gamelift.StopFleetActionsOutput, error)
+       StopFleetActionsAsync(ctx workflow.Context, input *gamelift.StopFleetActionsInput) *GameliftStopFleetActionsResult
 
-    StopGameSessionPlacement(ctx workflow.Context, input *gamelift.StopGameSessionPlacementInput) (*gamelift.StopGameSessionPlacementOutput, error)
-    StopGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.StopGameSessionPlacementInput) *GameliftStopGameSessionPlacementResult
+       StopGameSessionPlacement(ctx workflow.Context, input *gamelift.StopGameSessionPlacementInput) (*gamelift.StopGameSessionPlacementOutput, error)
+       StopGameSessionPlacementAsync(ctx workflow.Context, input *gamelift.StopGameSessionPlacementInput) *GameliftStopGameSessionPlacementResult
 
-    StopMatchmaking(ctx workflow.Context, input *gamelift.StopMatchmakingInput) (*gamelift.StopMatchmakingOutput, error)
-    StopMatchmakingAsync(ctx workflow.Context, input *gamelift.StopMatchmakingInput) *GameliftStopMatchmakingResult
+       StopMatchmaking(ctx workflow.Context, input *gamelift.StopMatchmakingInput) (*gamelift.StopMatchmakingOutput, error)
+       StopMatchmakingAsync(ctx workflow.Context, input *gamelift.StopMatchmakingInput) *GameliftStopMatchmakingResult
 
-    SuspendGameServerGroup(ctx workflow.Context, input *gamelift.SuspendGameServerGroupInput) (*gamelift.SuspendGameServerGroupOutput, error)
-    SuspendGameServerGroupAsync(ctx workflow.Context, input *gamelift.SuspendGameServerGroupInput) *GameliftSuspendGameServerGroupResult
+       SuspendGameServerGroup(ctx workflow.Context, input *gamelift.SuspendGameServerGroupInput) (*gamelift.SuspendGameServerGroupOutput, error)
+       SuspendGameServerGroupAsync(ctx workflow.Context, input *gamelift.SuspendGameServerGroupInput) *GameliftSuspendGameServerGroupResult
 
-    TagResource(ctx workflow.Context, input *gamelift.TagResourceInput) (*gamelift.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *gamelift.TagResourceInput) *GameliftTagResourceResult
+       TagResource(ctx workflow.Context, input *gamelift.TagResourceInput) (*gamelift.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *gamelift.TagResourceInput) *GameliftTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *gamelift.UntagResourceInput) (*gamelift.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *gamelift.UntagResourceInput) *GameliftUntagResourceResult
+       UntagResource(ctx workflow.Context, input *gamelift.UntagResourceInput) (*gamelift.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *gamelift.UntagResourceInput) *GameliftUntagResourceResult
 
-    UpdateAlias(ctx workflow.Context, input *gamelift.UpdateAliasInput) (*gamelift.UpdateAliasOutput, error)
-    UpdateAliasAsync(ctx workflow.Context, input *gamelift.UpdateAliasInput) *GameliftUpdateAliasResult
+       UpdateAlias(ctx workflow.Context, input *gamelift.UpdateAliasInput) (*gamelift.UpdateAliasOutput, error)
+       UpdateAliasAsync(ctx workflow.Context, input *gamelift.UpdateAliasInput) *GameliftUpdateAliasResult
 
-    UpdateBuild(ctx workflow.Context, input *gamelift.UpdateBuildInput) (*gamelift.UpdateBuildOutput, error)
-    UpdateBuildAsync(ctx workflow.Context, input *gamelift.UpdateBuildInput) *GameliftUpdateBuildResult
+       UpdateBuild(ctx workflow.Context, input *gamelift.UpdateBuildInput) (*gamelift.UpdateBuildOutput, error)
+       UpdateBuildAsync(ctx workflow.Context, input *gamelift.UpdateBuildInput) *GameliftUpdateBuildResult
 
-    UpdateFleetAttributes(ctx workflow.Context, input *gamelift.UpdateFleetAttributesInput) (*gamelift.UpdateFleetAttributesOutput, error)
-    UpdateFleetAttributesAsync(ctx workflow.Context, input *gamelift.UpdateFleetAttributesInput) *GameliftUpdateFleetAttributesResult
+       UpdateFleetAttributes(ctx workflow.Context, input *gamelift.UpdateFleetAttributesInput) (*gamelift.UpdateFleetAttributesOutput, error)
+       UpdateFleetAttributesAsync(ctx workflow.Context, input *gamelift.UpdateFleetAttributesInput) *GameliftUpdateFleetAttributesResult
 
-    UpdateFleetCapacity(ctx workflow.Context, input *gamelift.UpdateFleetCapacityInput) (*gamelift.UpdateFleetCapacityOutput, error)
-    UpdateFleetCapacityAsync(ctx workflow.Context, input *gamelift.UpdateFleetCapacityInput) *GameliftUpdateFleetCapacityResult
+       UpdateFleetCapacity(ctx workflow.Context, input *gamelift.UpdateFleetCapacityInput) (*gamelift.UpdateFleetCapacityOutput, error)
+       UpdateFleetCapacityAsync(ctx workflow.Context, input *gamelift.UpdateFleetCapacityInput) *GameliftUpdateFleetCapacityResult
 
-    UpdateFleetPortSettings(ctx workflow.Context, input *gamelift.UpdateFleetPortSettingsInput) (*gamelift.UpdateFleetPortSettingsOutput, error)
-    UpdateFleetPortSettingsAsync(ctx workflow.Context, input *gamelift.UpdateFleetPortSettingsInput) *GameliftUpdateFleetPortSettingsResult
+       UpdateFleetPortSettings(ctx workflow.Context, input *gamelift.UpdateFleetPortSettingsInput) (*gamelift.UpdateFleetPortSettingsOutput, error)
+       UpdateFleetPortSettingsAsync(ctx workflow.Context, input *gamelift.UpdateFleetPortSettingsInput) *GameliftUpdateFleetPortSettingsResult
 
-    UpdateGameServer(ctx workflow.Context, input *gamelift.UpdateGameServerInput) (*gamelift.UpdateGameServerOutput, error)
-    UpdateGameServerAsync(ctx workflow.Context, input *gamelift.UpdateGameServerInput) *GameliftUpdateGameServerResult
+       UpdateGameServer(ctx workflow.Context, input *gamelift.UpdateGameServerInput) (*gamelift.UpdateGameServerOutput, error)
+       UpdateGameServerAsync(ctx workflow.Context, input *gamelift.UpdateGameServerInput) *GameliftUpdateGameServerResult
 
-    UpdateGameServerGroup(ctx workflow.Context, input *gamelift.UpdateGameServerGroupInput) (*gamelift.UpdateGameServerGroupOutput, error)
-    UpdateGameServerGroupAsync(ctx workflow.Context, input *gamelift.UpdateGameServerGroupInput) *GameliftUpdateGameServerGroupResult
+       UpdateGameServerGroup(ctx workflow.Context, input *gamelift.UpdateGameServerGroupInput) (*gamelift.UpdateGameServerGroupOutput, error)
+       UpdateGameServerGroupAsync(ctx workflow.Context, input *gamelift.UpdateGameServerGroupInput) *GameliftUpdateGameServerGroupResult
 
-    UpdateGameSession(ctx workflow.Context, input *gamelift.UpdateGameSessionInput) (*gamelift.UpdateGameSessionOutput, error)
-    UpdateGameSessionAsync(ctx workflow.Context, input *gamelift.UpdateGameSessionInput) *GameliftUpdateGameSessionResult
+       UpdateGameSession(ctx workflow.Context, input *gamelift.UpdateGameSessionInput) (*gamelift.UpdateGameSessionOutput, error)
+       UpdateGameSessionAsync(ctx workflow.Context, input *gamelift.UpdateGameSessionInput) *GameliftUpdateGameSessionResult
 
-    UpdateGameSessionQueue(ctx workflow.Context, input *gamelift.UpdateGameSessionQueueInput) (*gamelift.UpdateGameSessionQueueOutput, error)
-    UpdateGameSessionQueueAsync(ctx workflow.Context, input *gamelift.UpdateGameSessionQueueInput) *GameliftUpdateGameSessionQueueResult
+       UpdateGameSessionQueue(ctx workflow.Context, input *gamelift.UpdateGameSessionQueueInput) (*gamelift.UpdateGameSessionQueueOutput, error)
+       UpdateGameSessionQueueAsync(ctx workflow.Context, input *gamelift.UpdateGameSessionQueueInput) *GameliftUpdateGameSessionQueueResult
 
-    UpdateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.UpdateMatchmakingConfigurationInput) (*gamelift.UpdateMatchmakingConfigurationOutput, error)
-    UpdateMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.UpdateMatchmakingConfigurationInput) *GameliftUpdateMatchmakingConfigurationResult
+       UpdateMatchmakingConfiguration(ctx workflow.Context, input *gamelift.UpdateMatchmakingConfigurationInput) (*gamelift.UpdateMatchmakingConfigurationOutput, error)
+       UpdateMatchmakingConfigurationAsync(ctx workflow.Context, input *gamelift.UpdateMatchmakingConfigurationInput) *GameliftUpdateMatchmakingConfigurationResult
 
-    UpdateRuntimeConfiguration(ctx workflow.Context, input *gamelift.UpdateRuntimeConfigurationInput) (*gamelift.UpdateRuntimeConfigurationOutput, error)
-    UpdateRuntimeConfigurationAsync(ctx workflow.Context, input *gamelift.UpdateRuntimeConfigurationInput) *GameliftUpdateRuntimeConfigurationResult
+       UpdateRuntimeConfiguration(ctx workflow.Context, input *gamelift.UpdateRuntimeConfigurationInput) (*gamelift.UpdateRuntimeConfigurationOutput, error)
+       UpdateRuntimeConfigurationAsync(ctx workflow.Context, input *gamelift.UpdateRuntimeConfigurationInput) *GameliftUpdateRuntimeConfigurationResult
 
-    UpdateScript(ctx workflow.Context, input *gamelift.UpdateScriptInput) (*gamelift.UpdateScriptOutput, error)
-    UpdateScriptAsync(ctx workflow.Context, input *gamelift.UpdateScriptInput) *GameliftUpdateScriptResult
+       UpdateScript(ctx workflow.Context, input *gamelift.UpdateScriptInput) (*gamelift.UpdateScriptOutput, error)
+       UpdateScriptAsync(ctx workflow.Context, input *gamelift.UpdateScriptInput) *GameliftUpdateScriptResult
 
-    ValidateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) (*gamelift.ValidateMatchmakingRuleSetOutput, error)
-    ValidateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) *GameliftValidateMatchmakingRuleSetResult
+       ValidateMatchmakingRuleSet(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) (*gamelift.ValidateMatchmakingRuleSetOutput, error)
+       ValidateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) *GameliftValidateMatchmakingRuleSetResult
 }
 
 type GameliftAcceptMatchResult struct {

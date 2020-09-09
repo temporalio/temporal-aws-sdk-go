@@ -7,8 +7,8 @@ import (
 )
 
 type EC2InstanceConnectClient interface {
-    SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error)
-    SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult
+       SendSSHPublicKey(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) (*ec2instanceconnect.SendSSHPublicKeyOutput, error)
+       SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult
 }
 
 type Ec2instanceconnectSendSSHPublicKeyResult struct {

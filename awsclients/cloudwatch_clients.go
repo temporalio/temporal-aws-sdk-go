@@ -7,98 +7,98 @@ import (
 )
 
 type CloudWatchClient interface {
-    DeleteAlarms(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error)
-    DeleteAlarmsAsync(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) *CloudwatchDeleteAlarmsResult
+       DeleteAlarms(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error)
+       DeleteAlarmsAsync(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) *CloudwatchDeleteAlarmsResult
 
-    DeleteAnomalyDetector(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) (*cloudwatch.DeleteAnomalyDetectorOutput, error)
-    DeleteAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) *CloudwatchDeleteAnomalyDetectorResult
+       DeleteAnomalyDetector(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) (*cloudwatch.DeleteAnomalyDetectorOutput, error)
+       DeleteAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) *CloudwatchDeleteAnomalyDetectorResult
 
-    DeleteDashboards(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) (*cloudwatch.DeleteDashboardsOutput, error)
-    DeleteDashboardsAsync(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) *CloudwatchDeleteDashboardsResult
+       DeleteDashboards(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) (*cloudwatch.DeleteDashboardsOutput, error)
+       DeleteDashboardsAsync(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) *CloudwatchDeleteDashboardsResult
 
-    DeleteInsightRules(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) (*cloudwatch.DeleteInsightRulesOutput, error)
-    DeleteInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) *CloudwatchDeleteInsightRulesResult
+       DeleteInsightRules(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) (*cloudwatch.DeleteInsightRulesOutput, error)
+       DeleteInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) *CloudwatchDeleteInsightRulesResult
 
-    DescribeAlarmHistory(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) (*cloudwatch.DescribeAlarmHistoryOutput, error)
-    DescribeAlarmHistoryAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) *CloudwatchDescribeAlarmHistoryResult
+       DescribeAlarmHistory(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) (*cloudwatch.DescribeAlarmHistoryOutput, error)
+       DescribeAlarmHistoryAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) *CloudwatchDescribeAlarmHistoryResult
 
-    DescribeAlarms(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) (*cloudwatch.DescribeAlarmsOutput, error)
-    DescribeAlarmsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *CloudwatchDescribeAlarmsResult
+       DescribeAlarms(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) (*cloudwatch.DescribeAlarmsOutput, error)
+       DescribeAlarmsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *CloudwatchDescribeAlarmsResult
 
-    DescribeAlarmsForMetric(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) (*cloudwatch.DescribeAlarmsForMetricOutput, error)
-    DescribeAlarmsForMetricAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) *CloudwatchDescribeAlarmsForMetricResult
+       DescribeAlarmsForMetric(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) (*cloudwatch.DescribeAlarmsForMetricOutput, error)
+       DescribeAlarmsForMetricAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) *CloudwatchDescribeAlarmsForMetricResult
 
-    DescribeAnomalyDetectors(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) (*cloudwatch.DescribeAnomalyDetectorsOutput, error)
-    DescribeAnomalyDetectorsAsync(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) *CloudwatchDescribeAnomalyDetectorsResult
+       DescribeAnomalyDetectors(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) (*cloudwatch.DescribeAnomalyDetectorsOutput, error)
+       DescribeAnomalyDetectorsAsync(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) *CloudwatchDescribeAnomalyDetectorsResult
 
-    DescribeInsightRules(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) (*cloudwatch.DescribeInsightRulesOutput, error)
-    DescribeInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) *CloudwatchDescribeInsightRulesResult
+       DescribeInsightRules(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) (*cloudwatch.DescribeInsightRulesOutput, error)
+       DescribeInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) *CloudwatchDescribeInsightRulesResult
 
-    DisableAlarmActions(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) (*cloudwatch.DisableAlarmActionsOutput, error)
-    DisableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) *CloudwatchDisableAlarmActionsResult
+       DisableAlarmActions(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) (*cloudwatch.DisableAlarmActionsOutput, error)
+       DisableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) *CloudwatchDisableAlarmActionsResult
 
-    DisableInsightRules(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) (*cloudwatch.DisableInsightRulesOutput, error)
-    DisableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) *CloudwatchDisableInsightRulesResult
+       DisableInsightRules(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) (*cloudwatch.DisableInsightRulesOutput, error)
+       DisableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) *CloudwatchDisableInsightRulesResult
 
-    EnableAlarmActions(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) (*cloudwatch.EnableAlarmActionsOutput, error)
-    EnableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) *CloudwatchEnableAlarmActionsResult
+       EnableAlarmActions(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) (*cloudwatch.EnableAlarmActionsOutput, error)
+       EnableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) *CloudwatchEnableAlarmActionsResult
 
-    EnableInsightRules(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) (*cloudwatch.EnableInsightRulesOutput, error)
-    EnableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) *CloudwatchEnableInsightRulesResult
+       EnableInsightRules(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) (*cloudwatch.EnableInsightRulesOutput, error)
+       EnableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) *CloudwatchEnableInsightRulesResult
 
-    GetDashboard(ctx workflow.Context, input *cloudwatch.GetDashboardInput) (*cloudwatch.GetDashboardOutput, error)
-    GetDashboardAsync(ctx workflow.Context, input *cloudwatch.GetDashboardInput) *CloudwatchGetDashboardResult
+       GetDashboard(ctx workflow.Context, input *cloudwatch.GetDashboardInput) (*cloudwatch.GetDashboardOutput, error)
+       GetDashboardAsync(ctx workflow.Context, input *cloudwatch.GetDashboardInput) *CloudwatchGetDashboardResult
 
-    GetInsightRuleReport(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) (*cloudwatch.GetInsightRuleReportOutput, error)
-    GetInsightRuleReportAsync(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) *CloudwatchGetInsightRuleReportResult
+       GetInsightRuleReport(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) (*cloudwatch.GetInsightRuleReportOutput, error)
+       GetInsightRuleReportAsync(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) *CloudwatchGetInsightRuleReportResult
 
-    GetMetricData(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) (*cloudwatch.GetMetricDataOutput, error)
-    GetMetricDataAsync(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) *CloudwatchGetMetricDataResult
+       GetMetricData(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) (*cloudwatch.GetMetricDataOutput, error)
+       GetMetricDataAsync(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) *CloudwatchGetMetricDataResult
 
-    GetMetricStatistics(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) (*cloudwatch.GetMetricStatisticsOutput, error)
-    GetMetricStatisticsAsync(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) *CloudwatchGetMetricStatisticsResult
+       GetMetricStatistics(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) (*cloudwatch.GetMetricStatisticsOutput, error)
+       GetMetricStatisticsAsync(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) *CloudwatchGetMetricStatisticsResult
 
-    GetMetricWidgetImage(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) (*cloudwatch.GetMetricWidgetImageOutput, error)
-    GetMetricWidgetImageAsync(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) *CloudwatchGetMetricWidgetImageResult
+       GetMetricWidgetImage(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) (*cloudwatch.GetMetricWidgetImageOutput, error)
+       GetMetricWidgetImageAsync(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) *CloudwatchGetMetricWidgetImageResult
 
-    ListDashboards(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) (*cloudwatch.ListDashboardsOutput, error)
-    ListDashboardsAsync(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) *CloudwatchListDashboardsResult
+       ListDashboards(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) (*cloudwatch.ListDashboardsOutput, error)
+       ListDashboardsAsync(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) *CloudwatchListDashboardsResult
 
-    ListMetrics(ctx workflow.Context, input *cloudwatch.ListMetricsInput) (*cloudwatch.ListMetricsOutput, error)
-    ListMetricsAsync(ctx workflow.Context, input *cloudwatch.ListMetricsInput) *CloudwatchListMetricsResult
+       ListMetrics(ctx workflow.Context, input *cloudwatch.ListMetricsInput) (*cloudwatch.ListMetricsOutput, error)
+       ListMetricsAsync(ctx workflow.Context, input *cloudwatch.ListMetricsInput) *CloudwatchListMetricsResult
 
-    ListTagsForResource(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) (*cloudwatch.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) *CloudwatchListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) (*cloudwatch.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) *CloudwatchListTagsForResourceResult
 
-    PutAnomalyDetector(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) (*cloudwatch.PutAnomalyDetectorOutput, error)
-    PutAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) *CloudwatchPutAnomalyDetectorResult
+       PutAnomalyDetector(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) (*cloudwatch.PutAnomalyDetectorOutput, error)
+       PutAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) *CloudwatchPutAnomalyDetectorResult
 
-    PutCompositeAlarm(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) (*cloudwatch.PutCompositeAlarmOutput, error)
-    PutCompositeAlarmAsync(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) *CloudwatchPutCompositeAlarmResult
+       PutCompositeAlarm(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) (*cloudwatch.PutCompositeAlarmOutput, error)
+       PutCompositeAlarmAsync(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) *CloudwatchPutCompositeAlarmResult
 
-    PutDashboard(ctx workflow.Context, input *cloudwatch.PutDashboardInput) (*cloudwatch.PutDashboardOutput, error)
-    PutDashboardAsync(ctx workflow.Context, input *cloudwatch.PutDashboardInput) *CloudwatchPutDashboardResult
+       PutDashboard(ctx workflow.Context, input *cloudwatch.PutDashboardInput) (*cloudwatch.PutDashboardOutput, error)
+       PutDashboardAsync(ctx workflow.Context, input *cloudwatch.PutDashboardInput) *CloudwatchPutDashboardResult
 
-    PutInsightRule(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) (*cloudwatch.PutInsightRuleOutput, error)
-    PutInsightRuleAsync(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) *CloudwatchPutInsightRuleResult
+       PutInsightRule(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) (*cloudwatch.PutInsightRuleOutput, error)
+       PutInsightRuleAsync(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) *CloudwatchPutInsightRuleResult
 
-    PutMetricAlarm(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) (*cloudwatch.PutMetricAlarmOutput, error)
-    PutMetricAlarmAsync(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) *CloudwatchPutMetricAlarmResult
+       PutMetricAlarm(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) (*cloudwatch.PutMetricAlarmOutput, error)
+       PutMetricAlarmAsync(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) *CloudwatchPutMetricAlarmResult
 
-    PutMetricData(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) (*cloudwatch.PutMetricDataOutput, error)
-    PutMetricDataAsync(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) *CloudwatchPutMetricDataResult
+       PutMetricData(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) (*cloudwatch.PutMetricDataOutput, error)
+       PutMetricDataAsync(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) *CloudwatchPutMetricDataResult
 
-    SetAlarmState(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) (*cloudwatch.SetAlarmStateOutput, error)
-    SetAlarmStateAsync(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) *CloudwatchSetAlarmStateResult
+       SetAlarmState(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) (*cloudwatch.SetAlarmStateOutput, error)
+       SetAlarmStateAsync(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) *CloudwatchSetAlarmStateResult
 
-    TagResource(ctx workflow.Context, input *cloudwatch.TagResourceInput) (*cloudwatch.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *cloudwatch.TagResourceInput) *CloudwatchTagResourceResult
+       TagResource(ctx workflow.Context, input *cloudwatch.TagResourceInput) (*cloudwatch.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *cloudwatch.TagResourceInput) *CloudwatchTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *cloudwatch.UntagResourceInput) (*cloudwatch.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult
+       UntagResource(ctx workflow.Context, input *cloudwatch.UntagResourceInput) (*cloudwatch.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult
 
-    WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-    WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error}
+       WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
+       WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error}
 
 type CloudwatchDeleteAlarmsResult struct {
 	Result workflow.Future

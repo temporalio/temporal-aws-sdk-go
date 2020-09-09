@@ -7,153 +7,153 @@ import (
 )
 
 type LambdaClient interface {
-    AddLayerVersionPermission(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error)
-    AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionResult
+       AddLayerVersionPermission(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error)
+       AddLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) *LambdaAddLayerVersionPermissionResult
 
-    AddPermission(ctx workflow.Context, input *lambda.AddPermissionInput) (*lambda.AddPermissionOutput, error)
-    AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionResult
+       AddPermission(ctx workflow.Context, input *lambda.AddPermissionInput) (*lambda.AddPermissionOutput, error)
+       AddPermissionAsync(ctx workflow.Context, input *lambda.AddPermissionInput) *LambdaAddPermissionResult
 
-    CreateAlias(ctx workflow.Context, input *lambda.CreateAliasInput) (*lambda.AliasConfiguration, error)
-    CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasResult
+       CreateAlias(ctx workflow.Context, input *lambda.CreateAliasInput) (*lambda.AliasConfiguration, error)
+       CreateAliasAsync(ctx workflow.Context, input *lambda.CreateAliasInput) *LambdaCreateAliasResult
 
-    CreateEventSourceMapping(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-    CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingResult
+       CreateEventSourceMapping(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
+       CreateEventSourceMappingAsync(ctx workflow.Context, input *lambda.CreateEventSourceMappingInput) *LambdaCreateEventSourceMappingResult
 
-    CreateFunction(ctx workflow.Context, input *lambda.CreateFunctionInput) (*lambda.FunctionConfiguration, error)
-    CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionResult
+       CreateFunction(ctx workflow.Context, input *lambda.CreateFunctionInput) (*lambda.FunctionConfiguration, error)
+       CreateFunctionAsync(ctx workflow.Context, input *lambda.CreateFunctionInput) *LambdaCreateFunctionResult
 
-    DeleteAlias(ctx workflow.Context, input *lambda.DeleteAliasInput) (*lambda.DeleteAliasOutput, error)
-    DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasResult
+       DeleteAlias(ctx workflow.Context, input *lambda.DeleteAliasInput) (*lambda.DeleteAliasOutput, error)
+       DeleteAliasAsync(ctx workflow.Context, input *lambda.DeleteAliasInput) *LambdaDeleteAliasResult
 
-    DeleteEventSourceMapping(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-    DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingResult
+       DeleteEventSourceMapping(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
+       DeleteEventSourceMappingAsync(ctx workflow.Context, input *lambda.DeleteEventSourceMappingInput) *LambdaDeleteEventSourceMappingResult
 
-    DeleteFunction(ctx workflow.Context, input *lambda.DeleteFunctionInput) (*lambda.DeleteFunctionOutput, error)
-    DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionResult
+       DeleteFunction(ctx workflow.Context, input *lambda.DeleteFunctionInput) (*lambda.DeleteFunctionOutput, error)
+       DeleteFunctionAsync(ctx workflow.Context, input *lambda.DeleteFunctionInput) *LambdaDeleteFunctionResult
 
-    DeleteFunctionConcurrency(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error)
-    DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyResult
+       DeleteFunctionConcurrency(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error)
+       DeleteFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.DeleteFunctionConcurrencyInput) *LambdaDeleteFunctionConcurrencyResult
 
-    DeleteFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) (*lambda.DeleteFunctionEventInvokeConfigOutput, error)
-    DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigResult
+       DeleteFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) (*lambda.DeleteFunctionEventInvokeConfigOutput, error)
+       DeleteFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) *LambdaDeleteFunctionEventInvokeConfigResult
 
-    DeleteLayerVersion(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) (*lambda.DeleteLayerVersionOutput, error)
-    DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionResult
+       DeleteLayerVersion(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) (*lambda.DeleteLayerVersionOutput, error)
+       DeleteLayerVersionAsync(ctx workflow.Context, input *lambda.DeleteLayerVersionInput) *LambdaDeleteLayerVersionResult
 
-    DeleteProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error)
-    DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigResult
+       DeleteProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error)
+       DeleteProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) *LambdaDeleteProvisionedConcurrencyConfigResult
 
-    GetAccountSettings(ctx workflow.Context, input *lambda.GetAccountSettingsInput) (*lambda.GetAccountSettingsOutput, error)
-    GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsResult
+       GetAccountSettings(ctx workflow.Context, input *lambda.GetAccountSettingsInput) (*lambda.GetAccountSettingsOutput, error)
+       GetAccountSettingsAsync(ctx workflow.Context, input *lambda.GetAccountSettingsInput) *LambdaGetAccountSettingsResult
 
-    GetAlias(ctx workflow.Context, input *lambda.GetAliasInput) (*lambda.AliasConfiguration, error)
-    GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasResult
+       GetAlias(ctx workflow.Context, input *lambda.GetAliasInput) (*lambda.AliasConfiguration, error)
+       GetAliasAsync(ctx workflow.Context, input *lambda.GetAliasInput) *LambdaGetAliasResult
 
-    GetEventSourceMapping(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-    GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingResult
+       GetEventSourceMapping(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
+       GetEventSourceMappingAsync(ctx workflow.Context, input *lambda.GetEventSourceMappingInput) *LambdaGetEventSourceMappingResult
 
-    GetFunction(ctx workflow.Context, input *lambda.GetFunctionInput) (*lambda.GetFunctionOutput, error)
-    GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionResult
+       GetFunction(ctx workflow.Context, input *lambda.GetFunctionInput) (*lambda.GetFunctionOutput, error)
+       GetFunctionAsync(ctx workflow.Context, input *lambda.GetFunctionInput) *LambdaGetFunctionResult
 
-    GetFunctionConcurrency(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) (*lambda.GetFunctionConcurrencyOutput, error)
-    GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyResult
+       GetFunctionConcurrency(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) (*lambda.GetFunctionConcurrencyOutput, error)
+       GetFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.GetFunctionConcurrencyInput) *LambdaGetFunctionConcurrencyResult
 
-    GetFunctionConfiguration(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
-    GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationResult
+       GetFunctionConfiguration(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
+       GetFunctionConfigurationAsync(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) *LambdaGetFunctionConfigurationResult
 
-    GetFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) (*lambda.GetFunctionEventInvokeConfigOutput, error)
-    GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigResult
+       GetFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) (*lambda.GetFunctionEventInvokeConfigOutput, error)
+       GetFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.GetFunctionEventInvokeConfigInput) *LambdaGetFunctionEventInvokeConfigResult
 
-    GetLayerVersion(ctx workflow.Context, input *lambda.GetLayerVersionInput) (*lambda.GetLayerVersionOutput, error)
-    GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionResult
+       GetLayerVersion(ctx workflow.Context, input *lambda.GetLayerVersionInput) (*lambda.GetLayerVersionOutput, error)
+       GetLayerVersionAsync(ctx workflow.Context, input *lambda.GetLayerVersionInput) *LambdaGetLayerVersionResult
 
-    GetLayerVersionByArn(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) (*lambda.GetLayerVersionByArnOutput, error)
-    GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnResult
+       GetLayerVersionByArn(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) (*lambda.GetLayerVersionByArnOutput, error)
+       GetLayerVersionByArnAsync(ctx workflow.Context, input *lambda.GetLayerVersionByArnInput) *LambdaGetLayerVersionByArnResult
 
-    GetLayerVersionPolicy(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) (*lambda.GetLayerVersionPolicyOutput, error)
-    GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyResult
+       GetLayerVersionPolicy(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) (*lambda.GetLayerVersionPolicyOutput, error)
+       GetLayerVersionPolicyAsync(ctx workflow.Context, input *lambda.GetLayerVersionPolicyInput) *LambdaGetLayerVersionPolicyResult
 
-    GetPolicy(ctx workflow.Context, input *lambda.GetPolicyInput) (*lambda.GetPolicyOutput, error)
-    GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyResult
+       GetPolicy(ctx workflow.Context, input *lambda.GetPolicyInput) (*lambda.GetPolicyOutput, error)
+       GetPolicyAsync(ctx workflow.Context, input *lambda.GetPolicyInput) *LambdaGetPolicyResult
 
-    GetProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) (*lambda.GetProvisionedConcurrencyConfigOutput, error)
-    GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigResult
+       GetProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) (*lambda.GetProvisionedConcurrencyConfigOutput, error)
+       GetProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.GetProvisionedConcurrencyConfigInput) *LambdaGetProvisionedConcurrencyConfigResult
 
-    Invoke(ctx workflow.Context, input *lambda.InvokeInput) (*lambda.InvokeOutput, error)
-    InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeResult
+       Invoke(ctx workflow.Context, input *lambda.InvokeInput) (*lambda.InvokeOutput, error)
+       InvokeAsync(ctx workflow.Context, input *lambda.InvokeInput) *LambdaInvokeResult
 
-    ListAliases(ctx workflow.Context, input *lambda.ListAliasesInput) (*lambda.ListAliasesOutput, error)
-    ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesResult
+       ListAliases(ctx workflow.Context, input *lambda.ListAliasesInput) (*lambda.ListAliasesOutput, error)
+       ListAliasesAsync(ctx workflow.Context, input *lambda.ListAliasesInput) *LambdaListAliasesResult
 
-    ListEventSourceMappings(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) (*lambda.ListEventSourceMappingsOutput, error)
-    ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsResult
+       ListEventSourceMappings(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) (*lambda.ListEventSourceMappingsOutput, error)
+       ListEventSourceMappingsAsync(ctx workflow.Context, input *lambda.ListEventSourceMappingsInput) *LambdaListEventSourceMappingsResult
 
-    ListFunctionEventInvokeConfigs(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) (*lambda.ListFunctionEventInvokeConfigsOutput, error)
-    ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsResult
+       ListFunctionEventInvokeConfigs(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) (*lambda.ListFunctionEventInvokeConfigsOutput, error)
+       ListFunctionEventInvokeConfigsAsync(ctx workflow.Context, input *lambda.ListFunctionEventInvokeConfigsInput) *LambdaListFunctionEventInvokeConfigsResult
 
-    ListFunctions(ctx workflow.Context, input *lambda.ListFunctionsInput) (*lambda.ListFunctionsOutput, error)
-    ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsResult
+       ListFunctions(ctx workflow.Context, input *lambda.ListFunctionsInput) (*lambda.ListFunctionsOutput, error)
+       ListFunctionsAsync(ctx workflow.Context, input *lambda.ListFunctionsInput) *LambdaListFunctionsResult
 
-    ListLayerVersions(ctx workflow.Context, input *lambda.ListLayerVersionsInput) (*lambda.ListLayerVersionsOutput, error)
-    ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsResult
+       ListLayerVersions(ctx workflow.Context, input *lambda.ListLayerVersionsInput) (*lambda.ListLayerVersionsOutput, error)
+       ListLayerVersionsAsync(ctx workflow.Context, input *lambda.ListLayerVersionsInput) *LambdaListLayerVersionsResult
 
-    ListLayers(ctx workflow.Context, input *lambda.ListLayersInput) (*lambda.ListLayersOutput, error)
-    ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersResult
+       ListLayers(ctx workflow.Context, input *lambda.ListLayersInput) (*lambda.ListLayersOutput, error)
+       ListLayersAsync(ctx workflow.Context, input *lambda.ListLayersInput) *LambdaListLayersResult
 
-    ListProvisionedConcurrencyConfigs(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) (*lambda.ListProvisionedConcurrencyConfigsOutput, error)
-    ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsResult
+       ListProvisionedConcurrencyConfigs(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) (*lambda.ListProvisionedConcurrencyConfigsOutput, error)
+       ListProvisionedConcurrencyConfigsAsync(ctx workflow.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) *LambdaListProvisionedConcurrencyConfigsResult
 
-    ListTags(ctx workflow.Context, input *lambda.ListTagsInput) (*lambda.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsResult
+       ListTags(ctx workflow.Context, input *lambda.ListTagsInput) (*lambda.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *lambda.ListTagsInput) *LambdaListTagsResult
 
-    ListVersionsByFunction(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) (*lambda.ListVersionsByFunctionOutput, error)
-    ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionResult
+       ListVersionsByFunction(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) (*lambda.ListVersionsByFunctionOutput, error)
+       ListVersionsByFunctionAsync(ctx workflow.Context, input *lambda.ListVersionsByFunctionInput) *LambdaListVersionsByFunctionResult
 
-    PublishLayerVersion(ctx workflow.Context, input *lambda.PublishLayerVersionInput) (*lambda.PublishLayerVersionOutput, error)
-    PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionResult
+       PublishLayerVersion(ctx workflow.Context, input *lambda.PublishLayerVersionInput) (*lambda.PublishLayerVersionOutput, error)
+       PublishLayerVersionAsync(ctx workflow.Context, input *lambda.PublishLayerVersionInput) *LambdaPublishLayerVersionResult
 
-    PublishVersion(ctx workflow.Context, input *lambda.PublishVersionInput) (*lambda.FunctionConfiguration, error)
-    PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionResult
+       PublishVersion(ctx workflow.Context, input *lambda.PublishVersionInput) (*lambda.FunctionConfiguration, error)
+       PublishVersionAsync(ctx workflow.Context, input *lambda.PublishVersionInput) *LambdaPublishVersionResult
 
-    PutFunctionConcurrency(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error)
-    PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyResult
+       PutFunctionConcurrency(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error)
+       PutFunctionConcurrencyAsync(ctx workflow.Context, input *lambda.PutFunctionConcurrencyInput) *LambdaPutFunctionConcurrencyResult
 
-    PutFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) (*lambda.PutFunctionEventInvokeConfigOutput, error)
-    PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigResult
+       PutFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) (*lambda.PutFunctionEventInvokeConfigOutput, error)
+       PutFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.PutFunctionEventInvokeConfigInput) *LambdaPutFunctionEventInvokeConfigResult
 
-    PutProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) (*lambda.PutProvisionedConcurrencyConfigOutput, error)
-    PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigResult
+       PutProvisionedConcurrencyConfig(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) (*lambda.PutProvisionedConcurrencyConfigOutput, error)
+       PutProvisionedConcurrencyConfigAsync(ctx workflow.Context, input *lambda.PutProvisionedConcurrencyConfigInput) *LambdaPutProvisionedConcurrencyConfigResult
 
-    RemoveLayerVersionPermission(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) (*lambda.RemoveLayerVersionPermissionOutput, error)
-    RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionResult
+       RemoveLayerVersionPermission(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) (*lambda.RemoveLayerVersionPermissionOutput, error)
+       RemoveLayerVersionPermissionAsync(ctx workflow.Context, input *lambda.RemoveLayerVersionPermissionInput) *LambdaRemoveLayerVersionPermissionResult
 
-    RemovePermission(ctx workflow.Context, input *lambda.RemovePermissionInput) (*lambda.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *lambda.RemovePermissionInput) (*lambda.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *lambda.RemovePermissionInput) *LambdaRemovePermissionResult
 
-    TagResource(ctx workflow.Context, input *lambda.TagResourceInput) (*lambda.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceResult
+       TagResource(ctx workflow.Context, input *lambda.TagResourceInput) (*lambda.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *lambda.TagResourceInput) *LambdaTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *lambda.UntagResourceInput) (*lambda.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceResult
+       UntagResource(ctx workflow.Context, input *lambda.UntagResourceInput) (*lambda.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *lambda.UntagResourceInput) *LambdaUntagResourceResult
 
-    UpdateAlias(ctx workflow.Context, input *lambda.UpdateAliasInput) (*lambda.AliasConfiguration, error)
-    UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasResult
+       UpdateAlias(ctx workflow.Context, input *lambda.UpdateAliasInput) (*lambda.AliasConfiguration, error)
+       UpdateAliasAsync(ctx workflow.Context, input *lambda.UpdateAliasInput) *LambdaUpdateAliasResult
 
-    UpdateEventSourceMapping(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
-    UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingResult
+       UpdateEventSourceMapping(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error)
+       UpdateEventSourceMappingAsync(ctx workflow.Context, input *lambda.UpdateEventSourceMappingInput) *LambdaUpdateEventSourceMappingResult
 
-    UpdateFunctionCode(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) (*lambda.FunctionConfiguration, error)
-    UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeResult
+       UpdateFunctionCode(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) (*lambda.FunctionConfiguration, error)
+       UpdateFunctionCodeAsync(ctx workflow.Context, input *lambda.UpdateFunctionCodeInput) *LambdaUpdateFunctionCodeResult
 
-    UpdateFunctionConfiguration(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
-    UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationResult
+       UpdateFunctionConfiguration(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) (*lambda.FunctionConfiguration, error)
+       UpdateFunctionConfigurationAsync(ctx workflow.Context, input *lambda.UpdateFunctionConfigurationInput) *LambdaUpdateFunctionConfigurationResult
 
-    UpdateFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) (*lambda.UpdateFunctionEventInvokeConfigOutput, error)
-    UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigResult
+       UpdateFunctionEventInvokeConfig(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) (*lambda.UpdateFunctionEventInvokeConfigOutput, error)
+       UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigResult
 
-    WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
-    WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
-    WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error}
+       WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
+       WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
+       WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error}
 
 type LambdaAddLayerVersionPermissionResult struct {
 	Result workflow.Future

@@ -7,11 +7,11 @@ import (
 )
 
 type HoneycodeClient interface {
-    GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
-    GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult
+       GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
+       GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult
 
-    InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
-    InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
+       InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
+       InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
 }
 
 type HoneycodeGetScreenDataResult struct {

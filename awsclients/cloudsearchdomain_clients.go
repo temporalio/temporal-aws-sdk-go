@@ -7,14 +7,14 @@ import (
 )
 
 type CloudSearchDomainClient interface {
-    Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error)
-    SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchResult
+       Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error)
+       SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudsearchdomainSearchResult
 
-    Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error)
-    SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestResult
+       Suggest(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error)
+       SuggestAsync(ctx workflow.Context, input *cloudsearchdomain.SuggestInput) *CloudsearchdomainSuggestResult
 
-    UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error)
-    UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult
+       UploadDocuments(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error)
+       UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult
 }
 
 type CloudsearchdomainSearchResult struct {

@@ -7,362 +7,362 @@ import (
 )
 
 type ChimeClient interface {
-    AssociatePhoneNumberWithUser(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) (*chime.AssociatePhoneNumberWithUserOutput, error)
-    AssociatePhoneNumberWithUserAsync(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) *ChimeAssociatePhoneNumberWithUserResult
+       AssociatePhoneNumberWithUser(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) (*chime.AssociatePhoneNumberWithUserOutput, error)
+       AssociatePhoneNumberWithUserAsync(ctx workflow.Context, input *chime.AssociatePhoneNumberWithUserInput) *ChimeAssociatePhoneNumberWithUserResult
 
-    AssociatePhoneNumbersWithVoiceConnector(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorOutput, error)
-    AssociatePhoneNumbersWithVoiceConnectorAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorResult
+       AssociatePhoneNumbersWithVoiceConnector(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorOutput, error)
+       AssociatePhoneNumbersWithVoiceConnectorAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorResult
 
-    AssociatePhoneNumbersWithVoiceConnectorGroup(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error)
-    AssociatePhoneNumbersWithVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorGroupResult
+       AssociatePhoneNumbersWithVoiceConnectorGroup(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) (*chime.AssociatePhoneNumbersWithVoiceConnectorGroupOutput, error)
+       AssociatePhoneNumbersWithVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.AssociatePhoneNumbersWithVoiceConnectorGroupInput) *ChimeAssociatePhoneNumbersWithVoiceConnectorGroupResult
 
-    AssociateSigninDelegateGroupsWithAccount(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) (*chime.AssociateSigninDelegateGroupsWithAccountOutput, error)
-    AssociateSigninDelegateGroupsWithAccountAsync(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) *ChimeAssociateSigninDelegateGroupsWithAccountResult
+       AssociateSigninDelegateGroupsWithAccount(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) (*chime.AssociateSigninDelegateGroupsWithAccountOutput, error)
+       AssociateSigninDelegateGroupsWithAccountAsync(ctx workflow.Context, input *chime.AssociateSigninDelegateGroupsWithAccountInput) *ChimeAssociateSigninDelegateGroupsWithAccountResult
 
-    BatchCreateAttendee(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) (*chime.BatchCreateAttendeeOutput, error)
-    BatchCreateAttendeeAsync(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) *ChimeBatchCreateAttendeeResult
+       BatchCreateAttendee(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) (*chime.BatchCreateAttendeeOutput, error)
+       BatchCreateAttendeeAsync(ctx workflow.Context, input *chime.BatchCreateAttendeeInput) *ChimeBatchCreateAttendeeResult
 
-    BatchCreateRoomMembership(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) (*chime.BatchCreateRoomMembershipOutput, error)
-    BatchCreateRoomMembershipAsync(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) *ChimeBatchCreateRoomMembershipResult
+       BatchCreateRoomMembership(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) (*chime.BatchCreateRoomMembershipOutput, error)
+       BatchCreateRoomMembershipAsync(ctx workflow.Context, input *chime.BatchCreateRoomMembershipInput) *ChimeBatchCreateRoomMembershipResult
 
-    BatchDeletePhoneNumber(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) (*chime.BatchDeletePhoneNumberOutput, error)
-    BatchDeletePhoneNumberAsync(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) *ChimeBatchDeletePhoneNumberResult
+       BatchDeletePhoneNumber(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) (*chime.BatchDeletePhoneNumberOutput, error)
+       BatchDeletePhoneNumberAsync(ctx workflow.Context, input *chime.BatchDeletePhoneNumberInput) *ChimeBatchDeletePhoneNumberResult
 
-    BatchSuspendUser(ctx workflow.Context, input *chime.BatchSuspendUserInput) (*chime.BatchSuspendUserOutput, error)
-    BatchSuspendUserAsync(ctx workflow.Context, input *chime.BatchSuspendUserInput) *ChimeBatchSuspendUserResult
+       BatchSuspendUser(ctx workflow.Context, input *chime.BatchSuspendUserInput) (*chime.BatchSuspendUserOutput, error)
+       BatchSuspendUserAsync(ctx workflow.Context, input *chime.BatchSuspendUserInput) *ChimeBatchSuspendUserResult
 
-    BatchUnsuspendUser(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) (*chime.BatchUnsuspendUserOutput, error)
-    BatchUnsuspendUserAsync(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) *ChimeBatchUnsuspendUserResult
+       BatchUnsuspendUser(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) (*chime.BatchUnsuspendUserOutput, error)
+       BatchUnsuspendUserAsync(ctx workflow.Context, input *chime.BatchUnsuspendUserInput) *ChimeBatchUnsuspendUserResult
 
-    BatchUpdatePhoneNumber(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) (*chime.BatchUpdatePhoneNumberOutput, error)
-    BatchUpdatePhoneNumberAsync(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) *ChimeBatchUpdatePhoneNumberResult
+       BatchUpdatePhoneNumber(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) (*chime.BatchUpdatePhoneNumberOutput, error)
+       BatchUpdatePhoneNumberAsync(ctx workflow.Context, input *chime.BatchUpdatePhoneNumberInput) *ChimeBatchUpdatePhoneNumberResult
 
-    BatchUpdateUser(ctx workflow.Context, input *chime.BatchUpdateUserInput) (*chime.BatchUpdateUserOutput, error)
-    BatchUpdateUserAsync(ctx workflow.Context, input *chime.BatchUpdateUserInput) *ChimeBatchUpdateUserResult
+       BatchUpdateUser(ctx workflow.Context, input *chime.BatchUpdateUserInput) (*chime.BatchUpdateUserOutput, error)
+       BatchUpdateUserAsync(ctx workflow.Context, input *chime.BatchUpdateUserInput) *ChimeBatchUpdateUserResult
 
-    CreateAccount(ctx workflow.Context, input *chime.CreateAccountInput) (*chime.CreateAccountOutput, error)
-    CreateAccountAsync(ctx workflow.Context, input *chime.CreateAccountInput) *ChimeCreateAccountResult
+       CreateAccount(ctx workflow.Context, input *chime.CreateAccountInput) (*chime.CreateAccountOutput, error)
+       CreateAccountAsync(ctx workflow.Context, input *chime.CreateAccountInput) *ChimeCreateAccountResult
 
-    CreateAttendee(ctx workflow.Context, input *chime.CreateAttendeeInput) (*chime.CreateAttendeeOutput, error)
-    CreateAttendeeAsync(ctx workflow.Context, input *chime.CreateAttendeeInput) *ChimeCreateAttendeeResult
+       CreateAttendee(ctx workflow.Context, input *chime.CreateAttendeeInput) (*chime.CreateAttendeeOutput, error)
+       CreateAttendeeAsync(ctx workflow.Context, input *chime.CreateAttendeeInput) *ChimeCreateAttendeeResult
 
-    CreateBot(ctx workflow.Context, input *chime.CreateBotInput) (*chime.CreateBotOutput, error)
-    CreateBotAsync(ctx workflow.Context, input *chime.CreateBotInput) *ChimeCreateBotResult
+       CreateBot(ctx workflow.Context, input *chime.CreateBotInput) (*chime.CreateBotOutput, error)
+       CreateBotAsync(ctx workflow.Context, input *chime.CreateBotInput) *ChimeCreateBotResult
 
-    CreateMeeting(ctx workflow.Context, input *chime.CreateMeetingInput) (*chime.CreateMeetingOutput, error)
-    CreateMeetingAsync(ctx workflow.Context, input *chime.CreateMeetingInput) *ChimeCreateMeetingResult
+       CreateMeeting(ctx workflow.Context, input *chime.CreateMeetingInput) (*chime.CreateMeetingOutput, error)
+       CreateMeetingAsync(ctx workflow.Context, input *chime.CreateMeetingInput) *ChimeCreateMeetingResult
 
-    CreateMeetingWithAttendees(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) (*chime.CreateMeetingWithAttendeesOutput, error)
-    CreateMeetingWithAttendeesAsync(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) *ChimeCreateMeetingWithAttendeesResult
+       CreateMeetingWithAttendees(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) (*chime.CreateMeetingWithAttendeesOutput, error)
+       CreateMeetingWithAttendeesAsync(ctx workflow.Context, input *chime.CreateMeetingWithAttendeesInput) *ChimeCreateMeetingWithAttendeesResult
 
-    CreatePhoneNumberOrder(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) (*chime.CreatePhoneNumberOrderOutput, error)
-    CreatePhoneNumberOrderAsync(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) *ChimeCreatePhoneNumberOrderResult
+       CreatePhoneNumberOrder(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) (*chime.CreatePhoneNumberOrderOutput, error)
+       CreatePhoneNumberOrderAsync(ctx workflow.Context, input *chime.CreatePhoneNumberOrderInput) *ChimeCreatePhoneNumberOrderResult
 
-    CreateProxySession(ctx workflow.Context, input *chime.CreateProxySessionInput) (*chime.CreateProxySessionOutput, error)
-    CreateProxySessionAsync(ctx workflow.Context, input *chime.CreateProxySessionInput) *ChimeCreateProxySessionResult
+       CreateProxySession(ctx workflow.Context, input *chime.CreateProxySessionInput) (*chime.CreateProxySessionOutput, error)
+       CreateProxySessionAsync(ctx workflow.Context, input *chime.CreateProxySessionInput) *ChimeCreateProxySessionResult
 
-    CreateRoom(ctx workflow.Context, input *chime.CreateRoomInput) (*chime.CreateRoomOutput, error)
-    CreateRoomAsync(ctx workflow.Context, input *chime.CreateRoomInput) *ChimeCreateRoomResult
+       CreateRoom(ctx workflow.Context, input *chime.CreateRoomInput) (*chime.CreateRoomOutput, error)
+       CreateRoomAsync(ctx workflow.Context, input *chime.CreateRoomInput) *ChimeCreateRoomResult
 
-    CreateRoomMembership(ctx workflow.Context, input *chime.CreateRoomMembershipInput) (*chime.CreateRoomMembershipOutput, error)
-    CreateRoomMembershipAsync(ctx workflow.Context, input *chime.CreateRoomMembershipInput) *ChimeCreateRoomMembershipResult
+       CreateRoomMembership(ctx workflow.Context, input *chime.CreateRoomMembershipInput) (*chime.CreateRoomMembershipOutput, error)
+       CreateRoomMembershipAsync(ctx workflow.Context, input *chime.CreateRoomMembershipInput) *ChimeCreateRoomMembershipResult
 
-    CreateUser(ctx workflow.Context, input *chime.CreateUserInput) (*chime.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *chime.CreateUserInput) *ChimeCreateUserResult
+       CreateUser(ctx workflow.Context, input *chime.CreateUserInput) (*chime.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *chime.CreateUserInput) *ChimeCreateUserResult
 
-    CreateVoiceConnector(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) (*chime.CreateVoiceConnectorOutput, error)
-    CreateVoiceConnectorAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) *ChimeCreateVoiceConnectorResult
+       CreateVoiceConnector(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) (*chime.CreateVoiceConnectorOutput, error)
+       CreateVoiceConnectorAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorInput) *ChimeCreateVoiceConnectorResult
 
-    CreateVoiceConnectorGroup(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) (*chime.CreateVoiceConnectorGroupOutput, error)
-    CreateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) *ChimeCreateVoiceConnectorGroupResult
+       CreateVoiceConnectorGroup(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) (*chime.CreateVoiceConnectorGroupOutput, error)
+       CreateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.CreateVoiceConnectorGroupInput) *ChimeCreateVoiceConnectorGroupResult
 
-    DeleteAccount(ctx workflow.Context, input *chime.DeleteAccountInput) (*chime.DeleteAccountOutput, error)
-    DeleteAccountAsync(ctx workflow.Context, input *chime.DeleteAccountInput) *ChimeDeleteAccountResult
+       DeleteAccount(ctx workflow.Context, input *chime.DeleteAccountInput) (*chime.DeleteAccountOutput, error)
+       DeleteAccountAsync(ctx workflow.Context, input *chime.DeleteAccountInput) *ChimeDeleteAccountResult
 
-    DeleteAttendee(ctx workflow.Context, input *chime.DeleteAttendeeInput) (*chime.DeleteAttendeeOutput, error)
-    DeleteAttendeeAsync(ctx workflow.Context, input *chime.DeleteAttendeeInput) *ChimeDeleteAttendeeResult
+       DeleteAttendee(ctx workflow.Context, input *chime.DeleteAttendeeInput) (*chime.DeleteAttendeeOutput, error)
+       DeleteAttendeeAsync(ctx workflow.Context, input *chime.DeleteAttendeeInput) *ChimeDeleteAttendeeResult
 
-    DeleteEventsConfiguration(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) (*chime.DeleteEventsConfigurationOutput, error)
-    DeleteEventsConfigurationAsync(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) *ChimeDeleteEventsConfigurationResult
+       DeleteEventsConfiguration(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) (*chime.DeleteEventsConfigurationOutput, error)
+       DeleteEventsConfigurationAsync(ctx workflow.Context, input *chime.DeleteEventsConfigurationInput) *ChimeDeleteEventsConfigurationResult
 
-    DeleteMeeting(ctx workflow.Context, input *chime.DeleteMeetingInput) (*chime.DeleteMeetingOutput, error)
-    DeleteMeetingAsync(ctx workflow.Context, input *chime.DeleteMeetingInput) *ChimeDeleteMeetingResult
+       DeleteMeeting(ctx workflow.Context, input *chime.DeleteMeetingInput) (*chime.DeleteMeetingOutput, error)
+       DeleteMeetingAsync(ctx workflow.Context, input *chime.DeleteMeetingInput) *ChimeDeleteMeetingResult
 
-    DeletePhoneNumber(ctx workflow.Context, input *chime.DeletePhoneNumberInput) (*chime.DeletePhoneNumberOutput, error)
-    DeletePhoneNumberAsync(ctx workflow.Context, input *chime.DeletePhoneNumberInput) *ChimeDeletePhoneNumberResult
+       DeletePhoneNumber(ctx workflow.Context, input *chime.DeletePhoneNumberInput) (*chime.DeletePhoneNumberOutput, error)
+       DeletePhoneNumberAsync(ctx workflow.Context, input *chime.DeletePhoneNumberInput) *ChimeDeletePhoneNumberResult
 
-    DeleteProxySession(ctx workflow.Context, input *chime.DeleteProxySessionInput) (*chime.DeleteProxySessionOutput, error)
-    DeleteProxySessionAsync(ctx workflow.Context, input *chime.DeleteProxySessionInput) *ChimeDeleteProxySessionResult
+       DeleteProxySession(ctx workflow.Context, input *chime.DeleteProxySessionInput) (*chime.DeleteProxySessionOutput, error)
+       DeleteProxySessionAsync(ctx workflow.Context, input *chime.DeleteProxySessionInput) *ChimeDeleteProxySessionResult
 
-    DeleteRoom(ctx workflow.Context, input *chime.DeleteRoomInput) (*chime.DeleteRoomOutput, error)
-    DeleteRoomAsync(ctx workflow.Context, input *chime.DeleteRoomInput) *ChimeDeleteRoomResult
+       DeleteRoom(ctx workflow.Context, input *chime.DeleteRoomInput) (*chime.DeleteRoomOutput, error)
+       DeleteRoomAsync(ctx workflow.Context, input *chime.DeleteRoomInput) *ChimeDeleteRoomResult
 
-    DeleteRoomMembership(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) (*chime.DeleteRoomMembershipOutput, error)
-    DeleteRoomMembershipAsync(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) *ChimeDeleteRoomMembershipResult
+       DeleteRoomMembership(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) (*chime.DeleteRoomMembershipOutput, error)
+       DeleteRoomMembershipAsync(ctx workflow.Context, input *chime.DeleteRoomMembershipInput) *ChimeDeleteRoomMembershipResult
 
-    DeleteVoiceConnector(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) (*chime.DeleteVoiceConnectorOutput, error)
-    DeleteVoiceConnectorAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) *ChimeDeleteVoiceConnectorResult
+       DeleteVoiceConnector(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) (*chime.DeleteVoiceConnectorOutput, error)
+       DeleteVoiceConnectorAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorInput) *ChimeDeleteVoiceConnectorResult
 
-    DeleteVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) (*chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput, error)
-    DeleteVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) *ChimeDeleteVoiceConnectorEmergencyCallingConfigurationResult
+       DeleteVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) (*chime.DeleteVoiceConnectorEmergencyCallingConfigurationOutput, error)
+       DeleteVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorEmergencyCallingConfigurationInput) *ChimeDeleteVoiceConnectorEmergencyCallingConfigurationResult
 
-    DeleteVoiceConnectorGroup(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) (*chime.DeleteVoiceConnectorGroupOutput, error)
-    DeleteVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) *ChimeDeleteVoiceConnectorGroupResult
+       DeleteVoiceConnectorGroup(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) (*chime.DeleteVoiceConnectorGroupOutput, error)
+       DeleteVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorGroupInput) *ChimeDeleteVoiceConnectorGroupResult
 
-    DeleteVoiceConnectorOrigination(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) (*chime.DeleteVoiceConnectorOriginationOutput, error)
-    DeleteVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) *ChimeDeleteVoiceConnectorOriginationResult
+       DeleteVoiceConnectorOrigination(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) (*chime.DeleteVoiceConnectorOriginationOutput, error)
+       DeleteVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorOriginationInput) *ChimeDeleteVoiceConnectorOriginationResult
 
-    DeleteVoiceConnectorProxy(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) (*chime.DeleteVoiceConnectorProxyOutput, error)
-    DeleteVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) *ChimeDeleteVoiceConnectorProxyResult
+       DeleteVoiceConnectorProxy(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) (*chime.DeleteVoiceConnectorProxyOutput, error)
+       DeleteVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorProxyInput) *ChimeDeleteVoiceConnectorProxyResult
 
-    DeleteVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) (*chime.DeleteVoiceConnectorStreamingConfigurationOutput, error)
-    DeleteVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) *ChimeDeleteVoiceConnectorStreamingConfigurationResult
+       DeleteVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) (*chime.DeleteVoiceConnectorStreamingConfigurationOutput, error)
+       DeleteVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorStreamingConfigurationInput) *ChimeDeleteVoiceConnectorStreamingConfigurationResult
 
-    DeleteVoiceConnectorTermination(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) (*chime.DeleteVoiceConnectorTerminationOutput, error)
-    DeleteVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) *ChimeDeleteVoiceConnectorTerminationResult
+       DeleteVoiceConnectorTermination(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) (*chime.DeleteVoiceConnectorTerminationOutput, error)
+       DeleteVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationInput) *ChimeDeleteVoiceConnectorTerminationResult
 
-    DeleteVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) (*chime.DeleteVoiceConnectorTerminationCredentialsOutput, error)
-    DeleteVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) *ChimeDeleteVoiceConnectorTerminationCredentialsResult
+       DeleteVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) (*chime.DeleteVoiceConnectorTerminationCredentialsOutput, error)
+       DeleteVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.DeleteVoiceConnectorTerminationCredentialsInput) *ChimeDeleteVoiceConnectorTerminationCredentialsResult
 
-    DisassociatePhoneNumberFromUser(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) (*chime.DisassociatePhoneNumberFromUserOutput, error)
-    DisassociatePhoneNumberFromUserAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) *ChimeDisassociatePhoneNumberFromUserResult
+       DisassociatePhoneNumberFromUser(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) (*chime.DisassociatePhoneNumberFromUserOutput, error)
+       DisassociatePhoneNumberFromUserAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumberFromUserInput) *ChimeDisassociatePhoneNumberFromUserResult
 
-    DisassociatePhoneNumbersFromVoiceConnector(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorOutput, error)
-    DisassociatePhoneNumbersFromVoiceConnectorAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorResult
+       DisassociatePhoneNumbersFromVoiceConnector(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorOutput, error)
+       DisassociatePhoneNumbersFromVoiceConnectorAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorResult
 
-    DisassociatePhoneNumbersFromVoiceConnectorGroup(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput, error)
-    DisassociatePhoneNumbersFromVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupResult
+       DisassociatePhoneNumbersFromVoiceConnectorGroup(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) (*chime.DisassociatePhoneNumbersFromVoiceConnectorGroupOutput, error)
+       DisassociatePhoneNumbersFromVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.DisassociatePhoneNumbersFromVoiceConnectorGroupInput) *ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupResult
 
-    DisassociateSigninDelegateGroupsFromAccount(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) (*chime.DisassociateSigninDelegateGroupsFromAccountOutput, error)
-    DisassociateSigninDelegateGroupsFromAccountAsync(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) *ChimeDisassociateSigninDelegateGroupsFromAccountResult
+       DisassociateSigninDelegateGroupsFromAccount(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) (*chime.DisassociateSigninDelegateGroupsFromAccountOutput, error)
+       DisassociateSigninDelegateGroupsFromAccountAsync(ctx workflow.Context, input *chime.DisassociateSigninDelegateGroupsFromAccountInput) *ChimeDisassociateSigninDelegateGroupsFromAccountResult
 
-    GetAccount(ctx workflow.Context, input *chime.GetAccountInput) (*chime.GetAccountOutput, error)
-    GetAccountAsync(ctx workflow.Context, input *chime.GetAccountInput) *ChimeGetAccountResult
+       GetAccount(ctx workflow.Context, input *chime.GetAccountInput) (*chime.GetAccountOutput, error)
+       GetAccountAsync(ctx workflow.Context, input *chime.GetAccountInput) *ChimeGetAccountResult
 
-    GetAccountSettings(ctx workflow.Context, input *chime.GetAccountSettingsInput) (*chime.GetAccountSettingsOutput, error)
-    GetAccountSettingsAsync(ctx workflow.Context, input *chime.GetAccountSettingsInput) *ChimeGetAccountSettingsResult
+       GetAccountSettings(ctx workflow.Context, input *chime.GetAccountSettingsInput) (*chime.GetAccountSettingsOutput, error)
+       GetAccountSettingsAsync(ctx workflow.Context, input *chime.GetAccountSettingsInput) *ChimeGetAccountSettingsResult
 
-    GetAttendee(ctx workflow.Context, input *chime.GetAttendeeInput) (*chime.GetAttendeeOutput, error)
-    GetAttendeeAsync(ctx workflow.Context, input *chime.GetAttendeeInput) *ChimeGetAttendeeResult
+       GetAttendee(ctx workflow.Context, input *chime.GetAttendeeInput) (*chime.GetAttendeeOutput, error)
+       GetAttendeeAsync(ctx workflow.Context, input *chime.GetAttendeeInput) *ChimeGetAttendeeResult
 
-    GetBot(ctx workflow.Context, input *chime.GetBotInput) (*chime.GetBotOutput, error)
-    GetBotAsync(ctx workflow.Context, input *chime.GetBotInput) *ChimeGetBotResult
+       GetBot(ctx workflow.Context, input *chime.GetBotInput) (*chime.GetBotOutput, error)
+       GetBotAsync(ctx workflow.Context, input *chime.GetBotInput) *ChimeGetBotResult
 
-    GetEventsConfiguration(ctx workflow.Context, input *chime.GetEventsConfigurationInput) (*chime.GetEventsConfigurationOutput, error)
-    GetEventsConfigurationAsync(ctx workflow.Context, input *chime.GetEventsConfigurationInput) *ChimeGetEventsConfigurationResult
+       GetEventsConfiguration(ctx workflow.Context, input *chime.GetEventsConfigurationInput) (*chime.GetEventsConfigurationOutput, error)
+       GetEventsConfigurationAsync(ctx workflow.Context, input *chime.GetEventsConfigurationInput) *ChimeGetEventsConfigurationResult
 
-    GetGlobalSettings(ctx workflow.Context, input *chime.GetGlobalSettingsInput) (*chime.GetGlobalSettingsOutput, error)
-    GetGlobalSettingsAsync(ctx workflow.Context, input *chime.GetGlobalSettingsInput) *ChimeGetGlobalSettingsResult
+       GetGlobalSettings(ctx workflow.Context, input *chime.GetGlobalSettingsInput) (*chime.GetGlobalSettingsOutput, error)
+       GetGlobalSettingsAsync(ctx workflow.Context, input *chime.GetGlobalSettingsInput) *ChimeGetGlobalSettingsResult
 
-    GetMeeting(ctx workflow.Context, input *chime.GetMeetingInput) (*chime.GetMeetingOutput, error)
-    GetMeetingAsync(ctx workflow.Context, input *chime.GetMeetingInput) *ChimeGetMeetingResult
+       GetMeeting(ctx workflow.Context, input *chime.GetMeetingInput) (*chime.GetMeetingOutput, error)
+       GetMeetingAsync(ctx workflow.Context, input *chime.GetMeetingInput) *ChimeGetMeetingResult
 
-    GetPhoneNumber(ctx workflow.Context, input *chime.GetPhoneNumberInput) (*chime.GetPhoneNumberOutput, error)
-    GetPhoneNumberAsync(ctx workflow.Context, input *chime.GetPhoneNumberInput) *ChimeGetPhoneNumberResult
+       GetPhoneNumber(ctx workflow.Context, input *chime.GetPhoneNumberInput) (*chime.GetPhoneNumberOutput, error)
+       GetPhoneNumberAsync(ctx workflow.Context, input *chime.GetPhoneNumberInput) *ChimeGetPhoneNumberResult
 
-    GetPhoneNumberOrder(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) (*chime.GetPhoneNumberOrderOutput, error)
-    GetPhoneNumberOrderAsync(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) *ChimeGetPhoneNumberOrderResult
+       GetPhoneNumberOrder(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) (*chime.GetPhoneNumberOrderOutput, error)
+       GetPhoneNumberOrderAsync(ctx workflow.Context, input *chime.GetPhoneNumberOrderInput) *ChimeGetPhoneNumberOrderResult
 
-    GetPhoneNumberSettings(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) (*chime.GetPhoneNumberSettingsOutput, error)
-    GetPhoneNumberSettingsAsync(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) *ChimeGetPhoneNumberSettingsResult
+       GetPhoneNumberSettings(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) (*chime.GetPhoneNumberSettingsOutput, error)
+       GetPhoneNumberSettingsAsync(ctx workflow.Context, input *chime.GetPhoneNumberSettingsInput) *ChimeGetPhoneNumberSettingsResult
 
-    GetProxySession(ctx workflow.Context, input *chime.GetProxySessionInput) (*chime.GetProxySessionOutput, error)
-    GetProxySessionAsync(ctx workflow.Context, input *chime.GetProxySessionInput) *ChimeGetProxySessionResult
+       GetProxySession(ctx workflow.Context, input *chime.GetProxySessionInput) (*chime.GetProxySessionOutput, error)
+       GetProxySessionAsync(ctx workflow.Context, input *chime.GetProxySessionInput) *ChimeGetProxySessionResult
 
-    GetRetentionSettings(ctx workflow.Context, input *chime.GetRetentionSettingsInput) (*chime.GetRetentionSettingsOutput, error)
-    GetRetentionSettingsAsync(ctx workflow.Context, input *chime.GetRetentionSettingsInput) *ChimeGetRetentionSettingsResult
+       GetRetentionSettings(ctx workflow.Context, input *chime.GetRetentionSettingsInput) (*chime.GetRetentionSettingsOutput, error)
+       GetRetentionSettingsAsync(ctx workflow.Context, input *chime.GetRetentionSettingsInput) *ChimeGetRetentionSettingsResult
 
-    GetRoom(ctx workflow.Context, input *chime.GetRoomInput) (*chime.GetRoomOutput, error)
-    GetRoomAsync(ctx workflow.Context, input *chime.GetRoomInput) *ChimeGetRoomResult
+       GetRoom(ctx workflow.Context, input *chime.GetRoomInput) (*chime.GetRoomOutput, error)
+       GetRoomAsync(ctx workflow.Context, input *chime.GetRoomInput) *ChimeGetRoomResult
 
-    GetUser(ctx workflow.Context, input *chime.GetUserInput) (*chime.GetUserOutput, error)
-    GetUserAsync(ctx workflow.Context, input *chime.GetUserInput) *ChimeGetUserResult
+       GetUser(ctx workflow.Context, input *chime.GetUserInput) (*chime.GetUserOutput, error)
+       GetUserAsync(ctx workflow.Context, input *chime.GetUserInput) *ChimeGetUserResult
 
-    GetUserSettings(ctx workflow.Context, input *chime.GetUserSettingsInput) (*chime.GetUserSettingsOutput, error)
-    GetUserSettingsAsync(ctx workflow.Context, input *chime.GetUserSettingsInput) *ChimeGetUserSettingsResult
+       GetUserSettings(ctx workflow.Context, input *chime.GetUserSettingsInput) (*chime.GetUserSettingsOutput, error)
+       GetUserSettingsAsync(ctx workflow.Context, input *chime.GetUserSettingsInput) *ChimeGetUserSettingsResult
 
-    GetVoiceConnector(ctx workflow.Context, input *chime.GetVoiceConnectorInput) (*chime.GetVoiceConnectorOutput, error)
-    GetVoiceConnectorAsync(ctx workflow.Context, input *chime.GetVoiceConnectorInput) *ChimeGetVoiceConnectorResult
+       GetVoiceConnector(ctx workflow.Context, input *chime.GetVoiceConnectorInput) (*chime.GetVoiceConnectorOutput, error)
+       GetVoiceConnectorAsync(ctx workflow.Context, input *chime.GetVoiceConnectorInput) *ChimeGetVoiceConnectorResult
 
-    GetVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) (*chime.GetVoiceConnectorEmergencyCallingConfigurationOutput, error)
-    GetVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) *ChimeGetVoiceConnectorEmergencyCallingConfigurationResult
+       GetVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) (*chime.GetVoiceConnectorEmergencyCallingConfigurationOutput, error)
+       GetVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorEmergencyCallingConfigurationInput) *ChimeGetVoiceConnectorEmergencyCallingConfigurationResult
 
-    GetVoiceConnectorGroup(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) (*chime.GetVoiceConnectorGroupOutput, error)
-    GetVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) *ChimeGetVoiceConnectorGroupResult
+       GetVoiceConnectorGroup(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) (*chime.GetVoiceConnectorGroupOutput, error)
+       GetVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.GetVoiceConnectorGroupInput) *ChimeGetVoiceConnectorGroupResult
 
-    GetVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) (*chime.GetVoiceConnectorLoggingConfigurationOutput, error)
-    GetVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) *ChimeGetVoiceConnectorLoggingConfigurationResult
+       GetVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) (*chime.GetVoiceConnectorLoggingConfigurationOutput, error)
+       GetVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorLoggingConfigurationInput) *ChimeGetVoiceConnectorLoggingConfigurationResult
 
-    GetVoiceConnectorOrigination(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) (*chime.GetVoiceConnectorOriginationOutput, error)
-    GetVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) *ChimeGetVoiceConnectorOriginationResult
+       GetVoiceConnectorOrigination(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) (*chime.GetVoiceConnectorOriginationOutput, error)
+       GetVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorOriginationInput) *ChimeGetVoiceConnectorOriginationResult
 
-    GetVoiceConnectorProxy(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) (*chime.GetVoiceConnectorProxyOutput, error)
-    GetVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) *ChimeGetVoiceConnectorProxyResult
+       GetVoiceConnectorProxy(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) (*chime.GetVoiceConnectorProxyOutput, error)
+       GetVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.GetVoiceConnectorProxyInput) *ChimeGetVoiceConnectorProxyResult
 
-    GetVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) (*chime.GetVoiceConnectorStreamingConfigurationOutput, error)
-    GetVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) *ChimeGetVoiceConnectorStreamingConfigurationResult
+       GetVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) (*chime.GetVoiceConnectorStreamingConfigurationOutput, error)
+       GetVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorStreamingConfigurationInput) *ChimeGetVoiceConnectorStreamingConfigurationResult
 
-    GetVoiceConnectorTermination(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) (*chime.GetVoiceConnectorTerminationOutput, error)
-    GetVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) *ChimeGetVoiceConnectorTerminationResult
+       GetVoiceConnectorTermination(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) (*chime.GetVoiceConnectorTerminationOutput, error)
+       GetVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationInput) *ChimeGetVoiceConnectorTerminationResult
 
-    GetVoiceConnectorTerminationHealth(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) (*chime.GetVoiceConnectorTerminationHealthOutput, error)
-    GetVoiceConnectorTerminationHealthAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) *ChimeGetVoiceConnectorTerminationHealthResult
+       GetVoiceConnectorTerminationHealth(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) (*chime.GetVoiceConnectorTerminationHealthOutput, error)
+       GetVoiceConnectorTerminationHealthAsync(ctx workflow.Context, input *chime.GetVoiceConnectorTerminationHealthInput) *ChimeGetVoiceConnectorTerminationHealthResult
 
-    InviteUsers(ctx workflow.Context, input *chime.InviteUsersInput) (*chime.InviteUsersOutput, error)
-    InviteUsersAsync(ctx workflow.Context, input *chime.InviteUsersInput) *ChimeInviteUsersResult
+       InviteUsers(ctx workflow.Context, input *chime.InviteUsersInput) (*chime.InviteUsersOutput, error)
+       InviteUsersAsync(ctx workflow.Context, input *chime.InviteUsersInput) *ChimeInviteUsersResult
 
-    ListAccounts(ctx workflow.Context, input *chime.ListAccountsInput) (*chime.ListAccountsOutput, error)
-    ListAccountsAsync(ctx workflow.Context, input *chime.ListAccountsInput) *ChimeListAccountsResult
+       ListAccounts(ctx workflow.Context, input *chime.ListAccountsInput) (*chime.ListAccountsOutput, error)
+       ListAccountsAsync(ctx workflow.Context, input *chime.ListAccountsInput) *ChimeListAccountsResult
 
-    ListAttendeeTags(ctx workflow.Context, input *chime.ListAttendeeTagsInput) (*chime.ListAttendeeTagsOutput, error)
-    ListAttendeeTagsAsync(ctx workflow.Context, input *chime.ListAttendeeTagsInput) *ChimeListAttendeeTagsResult
+       ListAttendeeTags(ctx workflow.Context, input *chime.ListAttendeeTagsInput) (*chime.ListAttendeeTagsOutput, error)
+       ListAttendeeTagsAsync(ctx workflow.Context, input *chime.ListAttendeeTagsInput) *ChimeListAttendeeTagsResult
 
-    ListAttendees(ctx workflow.Context, input *chime.ListAttendeesInput) (*chime.ListAttendeesOutput, error)
-    ListAttendeesAsync(ctx workflow.Context, input *chime.ListAttendeesInput) *ChimeListAttendeesResult
+       ListAttendees(ctx workflow.Context, input *chime.ListAttendeesInput) (*chime.ListAttendeesOutput, error)
+       ListAttendeesAsync(ctx workflow.Context, input *chime.ListAttendeesInput) *ChimeListAttendeesResult
 
-    ListBots(ctx workflow.Context, input *chime.ListBotsInput) (*chime.ListBotsOutput, error)
-    ListBotsAsync(ctx workflow.Context, input *chime.ListBotsInput) *ChimeListBotsResult
+       ListBots(ctx workflow.Context, input *chime.ListBotsInput) (*chime.ListBotsOutput, error)
+       ListBotsAsync(ctx workflow.Context, input *chime.ListBotsInput) *ChimeListBotsResult
 
-    ListMeetingTags(ctx workflow.Context, input *chime.ListMeetingTagsInput) (*chime.ListMeetingTagsOutput, error)
-    ListMeetingTagsAsync(ctx workflow.Context, input *chime.ListMeetingTagsInput) *ChimeListMeetingTagsResult
+       ListMeetingTags(ctx workflow.Context, input *chime.ListMeetingTagsInput) (*chime.ListMeetingTagsOutput, error)
+       ListMeetingTagsAsync(ctx workflow.Context, input *chime.ListMeetingTagsInput) *ChimeListMeetingTagsResult
 
-    ListMeetings(ctx workflow.Context, input *chime.ListMeetingsInput) (*chime.ListMeetingsOutput, error)
-    ListMeetingsAsync(ctx workflow.Context, input *chime.ListMeetingsInput) *ChimeListMeetingsResult
+       ListMeetings(ctx workflow.Context, input *chime.ListMeetingsInput) (*chime.ListMeetingsOutput, error)
+       ListMeetingsAsync(ctx workflow.Context, input *chime.ListMeetingsInput) *ChimeListMeetingsResult
 
-    ListPhoneNumberOrders(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) (*chime.ListPhoneNumberOrdersOutput, error)
-    ListPhoneNumberOrdersAsync(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) *ChimeListPhoneNumberOrdersResult
+       ListPhoneNumberOrders(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) (*chime.ListPhoneNumberOrdersOutput, error)
+       ListPhoneNumberOrdersAsync(ctx workflow.Context, input *chime.ListPhoneNumberOrdersInput) *ChimeListPhoneNumberOrdersResult
 
-    ListPhoneNumbers(ctx workflow.Context, input *chime.ListPhoneNumbersInput) (*chime.ListPhoneNumbersOutput, error)
-    ListPhoneNumbersAsync(ctx workflow.Context, input *chime.ListPhoneNumbersInput) *ChimeListPhoneNumbersResult
+       ListPhoneNumbers(ctx workflow.Context, input *chime.ListPhoneNumbersInput) (*chime.ListPhoneNumbersOutput, error)
+       ListPhoneNumbersAsync(ctx workflow.Context, input *chime.ListPhoneNumbersInput) *ChimeListPhoneNumbersResult
 
-    ListProxySessions(ctx workflow.Context, input *chime.ListProxySessionsInput) (*chime.ListProxySessionsOutput, error)
-    ListProxySessionsAsync(ctx workflow.Context, input *chime.ListProxySessionsInput) *ChimeListProxySessionsResult
+       ListProxySessions(ctx workflow.Context, input *chime.ListProxySessionsInput) (*chime.ListProxySessionsOutput, error)
+       ListProxySessionsAsync(ctx workflow.Context, input *chime.ListProxySessionsInput) *ChimeListProxySessionsResult
 
-    ListRoomMemberships(ctx workflow.Context, input *chime.ListRoomMembershipsInput) (*chime.ListRoomMembershipsOutput, error)
-    ListRoomMembershipsAsync(ctx workflow.Context, input *chime.ListRoomMembershipsInput) *ChimeListRoomMembershipsResult
+       ListRoomMemberships(ctx workflow.Context, input *chime.ListRoomMembershipsInput) (*chime.ListRoomMembershipsOutput, error)
+       ListRoomMembershipsAsync(ctx workflow.Context, input *chime.ListRoomMembershipsInput) *ChimeListRoomMembershipsResult
 
-    ListRooms(ctx workflow.Context, input *chime.ListRoomsInput) (*chime.ListRoomsOutput, error)
-    ListRoomsAsync(ctx workflow.Context, input *chime.ListRoomsInput) *ChimeListRoomsResult
+       ListRooms(ctx workflow.Context, input *chime.ListRoomsInput) (*chime.ListRoomsOutput, error)
+       ListRoomsAsync(ctx workflow.Context, input *chime.ListRoomsInput) *ChimeListRoomsResult
 
-    ListTagsForResource(ctx workflow.Context, input *chime.ListTagsForResourceInput) (*chime.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *chime.ListTagsForResourceInput) *ChimeListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *chime.ListTagsForResourceInput) (*chime.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *chime.ListTagsForResourceInput) *ChimeListTagsForResourceResult
 
-    ListUsers(ctx workflow.Context, input *chime.ListUsersInput) (*chime.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *chime.ListUsersInput) *ChimeListUsersResult
+       ListUsers(ctx workflow.Context, input *chime.ListUsersInput) (*chime.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *chime.ListUsersInput) *ChimeListUsersResult
 
-    ListVoiceConnectorGroups(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) (*chime.ListVoiceConnectorGroupsOutput, error)
-    ListVoiceConnectorGroupsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) *ChimeListVoiceConnectorGroupsResult
+       ListVoiceConnectorGroups(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) (*chime.ListVoiceConnectorGroupsOutput, error)
+       ListVoiceConnectorGroupsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorGroupsInput) *ChimeListVoiceConnectorGroupsResult
 
-    ListVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) (*chime.ListVoiceConnectorTerminationCredentialsOutput, error)
-    ListVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) *ChimeListVoiceConnectorTerminationCredentialsResult
+       ListVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) (*chime.ListVoiceConnectorTerminationCredentialsOutput, error)
+       ListVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorTerminationCredentialsInput) *ChimeListVoiceConnectorTerminationCredentialsResult
 
-    ListVoiceConnectors(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) (*chime.ListVoiceConnectorsOutput, error)
-    ListVoiceConnectorsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) *ChimeListVoiceConnectorsResult
+       ListVoiceConnectors(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) (*chime.ListVoiceConnectorsOutput, error)
+       ListVoiceConnectorsAsync(ctx workflow.Context, input *chime.ListVoiceConnectorsInput) *ChimeListVoiceConnectorsResult
 
-    LogoutUser(ctx workflow.Context, input *chime.LogoutUserInput) (*chime.LogoutUserOutput, error)
-    LogoutUserAsync(ctx workflow.Context, input *chime.LogoutUserInput) *ChimeLogoutUserResult
+       LogoutUser(ctx workflow.Context, input *chime.LogoutUserInput) (*chime.LogoutUserOutput, error)
+       LogoutUserAsync(ctx workflow.Context, input *chime.LogoutUserInput) *ChimeLogoutUserResult
 
-    PutEventsConfiguration(ctx workflow.Context, input *chime.PutEventsConfigurationInput) (*chime.PutEventsConfigurationOutput, error)
-    PutEventsConfigurationAsync(ctx workflow.Context, input *chime.PutEventsConfigurationInput) *ChimePutEventsConfigurationResult
+       PutEventsConfiguration(ctx workflow.Context, input *chime.PutEventsConfigurationInput) (*chime.PutEventsConfigurationOutput, error)
+       PutEventsConfigurationAsync(ctx workflow.Context, input *chime.PutEventsConfigurationInput) *ChimePutEventsConfigurationResult
 
-    PutRetentionSettings(ctx workflow.Context, input *chime.PutRetentionSettingsInput) (*chime.PutRetentionSettingsOutput, error)
-    PutRetentionSettingsAsync(ctx workflow.Context, input *chime.PutRetentionSettingsInput) *ChimePutRetentionSettingsResult
+       PutRetentionSettings(ctx workflow.Context, input *chime.PutRetentionSettingsInput) (*chime.PutRetentionSettingsOutput, error)
+       PutRetentionSettingsAsync(ctx workflow.Context, input *chime.PutRetentionSettingsInput) *ChimePutRetentionSettingsResult
 
-    PutVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) (*chime.PutVoiceConnectorEmergencyCallingConfigurationOutput, error)
-    PutVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) *ChimePutVoiceConnectorEmergencyCallingConfigurationResult
+       PutVoiceConnectorEmergencyCallingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) (*chime.PutVoiceConnectorEmergencyCallingConfigurationOutput, error)
+       PutVoiceConnectorEmergencyCallingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorEmergencyCallingConfigurationInput) *ChimePutVoiceConnectorEmergencyCallingConfigurationResult
 
-    PutVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) (*chime.PutVoiceConnectorLoggingConfigurationOutput, error)
-    PutVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) *ChimePutVoiceConnectorLoggingConfigurationResult
+       PutVoiceConnectorLoggingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) (*chime.PutVoiceConnectorLoggingConfigurationOutput, error)
+       PutVoiceConnectorLoggingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorLoggingConfigurationInput) *ChimePutVoiceConnectorLoggingConfigurationResult
 
-    PutVoiceConnectorOrigination(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) (*chime.PutVoiceConnectorOriginationOutput, error)
-    PutVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) *ChimePutVoiceConnectorOriginationResult
+       PutVoiceConnectorOrigination(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) (*chime.PutVoiceConnectorOriginationOutput, error)
+       PutVoiceConnectorOriginationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorOriginationInput) *ChimePutVoiceConnectorOriginationResult
 
-    PutVoiceConnectorProxy(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) (*chime.PutVoiceConnectorProxyOutput, error)
-    PutVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) *ChimePutVoiceConnectorProxyResult
+       PutVoiceConnectorProxy(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) (*chime.PutVoiceConnectorProxyOutput, error)
+       PutVoiceConnectorProxyAsync(ctx workflow.Context, input *chime.PutVoiceConnectorProxyInput) *ChimePutVoiceConnectorProxyResult
 
-    PutVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) (*chime.PutVoiceConnectorStreamingConfigurationOutput, error)
-    PutVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) *ChimePutVoiceConnectorStreamingConfigurationResult
+       PutVoiceConnectorStreamingConfiguration(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) (*chime.PutVoiceConnectorStreamingConfigurationOutput, error)
+       PutVoiceConnectorStreamingConfigurationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorStreamingConfigurationInput) *ChimePutVoiceConnectorStreamingConfigurationResult
 
-    PutVoiceConnectorTermination(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) (*chime.PutVoiceConnectorTerminationOutput, error)
-    PutVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) *ChimePutVoiceConnectorTerminationResult
+       PutVoiceConnectorTermination(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) (*chime.PutVoiceConnectorTerminationOutput, error)
+       PutVoiceConnectorTerminationAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationInput) *ChimePutVoiceConnectorTerminationResult
 
-    PutVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) (*chime.PutVoiceConnectorTerminationCredentialsOutput, error)
-    PutVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) *ChimePutVoiceConnectorTerminationCredentialsResult
+       PutVoiceConnectorTerminationCredentials(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) (*chime.PutVoiceConnectorTerminationCredentialsOutput, error)
+       PutVoiceConnectorTerminationCredentialsAsync(ctx workflow.Context, input *chime.PutVoiceConnectorTerminationCredentialsInput) *ChimePutVoiceConnectorTerminationCredentialsResult
 
-    RedactConversationMessage(ctx workflow.Context, input *chime.RedactConversationMessageInput) (*chime.RedactConversationMessageOutput, error)
-    RedactConversationMessageAsync(ctx workflow.Context, input *chime.RedactConversationMessageInput) *ChimeRedactConversationMessageResult
+       RedactConversationMessage(ctx workflow.Context, input *chime.RedactConversationMessageInput) (*chime.RedactConversationMessageOutput, error)
+       RedactConversationMessageAsync(ctx workflow.Context, input *chime.RedactConversationMessageInput) *ChimeRedactConversationMessageResult
 
-    RedactRoomMessage(ctx workflow.Context, input *chime.RedactRoomMessageInput) (*chime.RedactRoomMessageOutput, error)
-    RedactRoomMessageAsync(ctx workflow.Context, input *chime.RedactRoomMessageInput) *ChimeRedactRoomMessageResult
+       RedactRoomMessage(ctx workflow.Context, input *chime.RedactRoomMessageInput) (*chime.RedactRoomMessageOutput, error)
+       RedactRoomMessageAsync(ctx workflow.Context, input *chime.RedactRoomMessageInput) *ChimeRedactRoomMessageResult
 
-    RegenerateSecurityToken(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) (*chime.RegenerateSecurityTokenOutput, error)
-    RegenerateSecurityTokenAsync(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) *ChimeRegenerateSecurityTokenResult
+       RegenerateSecurityToken(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) (*chime.RegenerateSecurityTokenOutput, error)
+       RegenerateSecurityTokenAsync(ctx workflow.Context, input *chime.RegenerateSecurityTokenInput) *ChimeRegenerateSecurityTokenResult
 
-    ResetPersonalPIN(ctx workflow.Context, input *chime.ResetPersonalPINInput) (*chime.ResetPersonalPINOutput, error)
-    ResetPersonalPINAsync(ctx workflow.Context, input *chime.ResetPersonalPINInput) *ChimeResetPersonalPINResult
+       ResetPersonalPIN(ctx workflow.Context, input *chime.ResetPersonalPINInput) (*chime.ResetPersonalPINOutput, error)
+       ResetPersonalPINAsync(ctx workflow.Context, input *chime.ResetPersonalPINInput) *ChimeResetPersonalPINResult
 
-    RestorePhoneNumber(ctx workflow.Context, input *chime.RestorePhoneNumberInput) (*chime.RestorePhoneNumberOutput, error)
-    RestorePhoneNumberAsync(ctx workflow.Context, input *chime.RestorePhoneNumberInput) *ChimeRestorePhoneNumberResult
+       RestorePhoneNumber(ctx workflow.Context, input *chime.RestorePhoneNumberInput) (*chime.RestorePhoneNumberOutput, error)
+       RestorePhoneNumberAsync(ctx workflow.Context, input *chime.RestorePhoneNumberInput) *ChimeRestorePhoneNumberResult
 
-    SearchAvailablePhoneNumbers(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) (*chime.SearchAvailablePhoneNumbersOutput, error)
-    SearchAvailablePhoneNumbersAsync(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) *ChimeSearchAvailablePhoneNumbersResult
+       SearchAvailablePhoneNumbers(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) (*chime.SearchAvailablePhoneNumbersOutput, error)
+       SearchAvailablePhoneNumbersAsync(ctx workflow.Context, input *chime.SearchAvailablePhoneNumbersInput) *ChimeSearchAvailablePhoneNumbersResult
 
-    TagAttendee(ctx workflow.Context, input *chime.TagAttendeeInput) (*chime.TagAttendeeOutput, error)
-    TagAttendeeAsync(ctx workflow.Context, input *chime.TagAttendeeInput) *ChimeTagAttendeeResult
+       TagAttendee(ctx workflow.Context, input *chime.TagAttendeeInput) (*chime.TagAttendeeOutput, error)
+       TagAttendeeAsync(ctx workflow.Context, input *chime.TagAttendeeInput) *ChimeTagAttendeeResult
 
-    TagMeeting(ctx workflow.Context, input *chime.TagMeetingInput) (*chime.TagMeetingOutput, error)
-    TagMeetingAsync(ctx workflow.Context, input *chime.TagMeetingInput) *ChimeTagMeetingResult
+       TagMeeting(ctx workflow.Context, input *chime.TagMeetingInput) (*chime.TagMeetingOutput, error)
+       TagMeetingAsync(ctx workflow.Context, input *chime.TagMeetingInput) *ChimeTagMeetingResult
 
-    TagResource(ctx workflow.Context, input *chime.TagResourceInput) (*chime.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *chime.TagResourceInput) *ChimeTagResourceResult
+       TagResource(ctx workflow.Context, input *chime.TagResourceInput) (*chime.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *chime.TagResourceInput) *ChimeTagResourceResult
 
-    UntagAttendee(ctx workflow.Context, input *chime.UntagAttendeeInput) (*chime.UntagAttendeeOutput, error)
-    UntagAttendeeAsync(ctx workflow.Context, input *chime.UntagAttendeeInput) *ChimeUntagAttendeeResult
+       UntagAttendee(ctx workflow.Context, input *chime.UntagAttendeeInput) (*chime.UntagAttendeeOutput, error)
+       UntagAttendeeAsync(ctx workflow.Context, input *chime.UntagAttendeeInput) *ChimeUntagAttendeeResult
 
-    UntagMeeting(ctx workflow.Context, input *chime.UntagMeetingInput) (*chime.UntagMeetingOutput, error)
-    UntagMeetingAsync(ctx workflow.Context, input *chime.UntagMeetingInput) *ChimeUntagMeetingResult
+       UntagMeeting(ctx workflow.Context, input *chime.UntagMeetingInput) (*chime.UntagMeetingOutput, error)
+       UntagMeetingAsync(ctx workflow.Context, input *chime.UntagMeetingInput) *ChimeUntagMeetingResult
 
-    UntagResource(ctx workflow.Context, input *chime.UntagResourceInput) (*chime.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *chime.UntagResourceInput) *ChimeUntagResourceResult
+       UntagResource(ctx workflow.Context, input *chime.UntagResourceInput) (*chime.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *chime.UntagResourceInput) *ChimeUntagResourceResult
 
-    UpdateAccount(ctx workflow.Context, input *chime.UpdateAccountInput) (*chime.UpdateAccountOutput, error)
-    UpdateAccountAsync(ctx workflow.Context, input *chime.UpdateAccountInput) *ChimeUpdateAccountResult
+       UpdateAccount(ctx workflow.Context, input *chime.UpdateAccountInput) (*chime.UpdateAccountOutput, error)
+       UpdateAccountAsync(ctx workflow.Context, input *chime.UpdateAccountInput) *ChimeUpdateAccountResult
 
-    UpdateAccountSettings(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) (*chime.UpdateAccountSettingsOutput, error)
-    UpdateAccountSettingsAsync(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) *ChimeUpdateAccountSettingsResult
+       UpdateAccountSettings(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) (*chime.UpdateAccountSettingsOutput, error)
+       UpdateAccountSettingsAsync(ctx workflow.Context, input *chime.UpdateAccountSettingsInput) *ChimeUpdateAccountSettingsResult
 
-    UpdateBot(ctx workflow.Context, input *chime.UpdateBotInput) (*chime.UpdateBotOutput, error)
-    UpdateBotAsync(ctx workflow.Context, input *chime.UpdateBotInput) *ChimeUpdateBotResult
+       UpdateBot(ctx workflow.Context, input *chime.UpdateBotInput) (*chime.UpdateBotOutput, error)
+       UpdateBotAsync(ctx workflow.Context, input *chime.UpdateBotInput) *ChimeUpdateBotResult
 
-    UpdateGlobalSettings(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) (*chime.UpdateGlobalSettingsOutput, error)
-    UpdateGlobalSettingsAsync(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) *ChimeUpdateGlobalSettingsResult
+       UpdateGlobalSettings(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) (*chime.UpdateGlobalSettingsOutput, error)
+       UpdateGlobalSettingsAsync(ctx workflow.Context, input *chime.UpdateGlobalSettingsInput) *ChimeUpdateGlobalSettingsResult
 
-    UpdatePhoneNumber(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) (*chime.UpdatePhoneNumberOutput, error)
-    UpdatePhoneNumberAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) *ChimeUpdatePhoneNumberResult
+       UpdatePhoneNumber(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) (*chime.UpdatePhoneNumberOutput, error)
+       UpdatePhoneNumberAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberInput) *ChimeUpdatePhoneNumberResult
 
-    UpdatePhoneNumberSettings(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) (*chime.UpdatePhoneNumberSettingsOutput, error)
-    UpdatePhoneNumberSettingsAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) *ChimeUpdatePhoneNumberSettingsResult
+       UpdatePhoneNumberSettings(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) (*chime.UpdatePhoneNumberSettingsOutput, error)
+       UpdatePhoneNumberSettingsAsync(ctx workflow.Context, input *chime.UpdatePhoneNumberSettingsInput) *ChimeUpdatePhoneNumberSettingsResult
 
-    UpdateProxySession(ctx workflow.Context, input *chime.UpdateProxySessionInput) (*chime.UpdateProxySessionOutput, error)
-    UpdateProxySessionAsync(ctx workflow.Context, input *chime.UpdateProxySessionInput) *ChimeUpdateProxySessionResult
+       UpdateProxySession(ctx workflow.Context, input *chime.UpdateProxySessionInput) (*chime.UpdateProxySessionOutput, error)
+       UpdateProxySessionAsync(ctx workflow.Context, input *chime.UpdateProxySessionInput) *ChimeUpdateProxySessionResult
 
-    UpdateRoom(ctx workflow.Context, input *chime.UpdateRoomInput) (*chime.UpdateRoomOutput, error)
-    UpdateRoomAsync(ctx workflow.Context, input *chime.UpdateRoomInput) *ChimeUpdateRoomResult
+       UpdateRoom(ctx workflow.Context, input *chime.UpdateRoomInput) (*chime.UpdateRoomOutput, error)
+       UpdateRoomAsync(ctx workflow.Context, input *chime.UpdateRoomInput) *ChimeUpdateRoomResult
 
-    UpdateRoomMembership(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) (*chime.UpdateRoomMembershipOutput, error)
-    UpdateRoomMembershipAsync(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) *ChimeUpdateRoomMembershipResult
+       UpdateRoomMembership(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) (*chime.UpdateRoomMembershipOutput, error)
+       UpdateRoomMembershipAsync(ctx workflow.Context, input *chime.UpdateRoomMembershipInput) *ChimeUpdateRoomMembershipResult
 
-    UpdateUser(ctx workflow.Context, input *chime.UpdateUserInput) (*chime.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *chime.UpdateUserInput) *ChimeUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *chime.UpdateUserInput) (*chime.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *chime.UpdateUserInput) *ChimeUpdateUserResult
 
-    UpdateUserSettings(ctx workflow.Context, input *chime.UpdateUserSettingsInput) (*chime.UpdateUserSettingsOutput, error)
-    UpdateUserSettingsAsync(ctx workflow.Context, input *chime.UpdateUserSettingsInput) *ChimeUpdateUserSettingsResult
+       UpdateUserSettings(ctx workflow.Context, input *chime.UpdateUserSettingsInput) (*chime.UpdateUserSettingsOutput, error)
+       UpdateUserSettingsAsync(ctx workflow.Context, input *chime.UpdateUserSettingsInput) *ChimeUpdateUserSettingsResult
 
-    UpdateVoiceConnector(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) (*chime.UpdateVoiceConnectorOutput, error)
-    UpdateVoiceConnectorAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) *ChimeUpdateVoiceConnectorResult
+       UpdateVoiceConnector(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) (*chime.UpdateVoiceConnectorOutput, error)
+       UpdateVoiceConnectorAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorInput) *ChimeUpdateVoiceConnectorResult
 
-    UpdateVoiceConnectorGroup(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) (*chime.UpdateVoiceConnectorGroupOutput, error)
-    UpdateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) *ChimeUpdateVoiceConnectorGroupResult
+       UpdateVoiceConnectorGroup(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) (*chime.UpdateVoiceConnectorGroupOutput, error)
+       UpdateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) *ChimeUpdateVoiceConnectorGroupResult
 }
 
 type ChimeAssociatePhoneNumberWithUserResult struct {

@@ -7,46 +7,46 @@ import (
 )
 
 type ACMClient interface {
-    AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error)
-    AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *AcmAddTagsToCertificateResult
+       AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error)
+       AddTagsToCertificateAsync(ctx workflow.Context, input *acm.AddTagsToCertificateInput) *AcmAddTagsToCertificateResult
 
-    DeleteCertificate(ctx workflow.Context, input *acm.DeleteCertificateInput) (*acm.DeleteCertificateOutput, error)
-    DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *AcmDeleteCertificateResult
+       DeleteCertificate(ctx workflow.Context, input *acm.DeleteCertificateInput) (*acm.DeleteCertificateOutput, error)
+       DeleteCertificateAsync(ctx workflow.Context, input *acm.DeleteCertificateInput) *AcmDeleteCertificateResult
 
-    DescribeCertificate(ctx workflow.Context, input *acm.DescribeCertificateInput) (*acm.DescribeCertificateOutput, error)
-    DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *AcmDescribeCertificateResult
+       DescribeCertificate(ctx workflow.Context, input *acm.DescribeCertificateInput) (*acm.DescribeCertificateOutput, error)
+       DescribeCertificateAsync(ctx workflow.Context, input *acm.DescribeCertificateInput) *AcmDescribeCertificateResult
 
-    ExportCertificate(ctx workflow.Context, input *acm.ExportCertificateInput) (*acm.ExportCertificateOutput, error)
-    ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *AcmExportCertificateResult
+       ExportCertificate(ctx workflow.Context, input *acm.ExportCertificateInput) (*acm.ExportCertificateOutput, error)
+       ExportCertificateAsync(ctx workflow.Context, input *acm.ExportCertificateInput) *AcmExportCertificateResult
 
-    GetCertificate(ctx workflow.Context, input *acm.GetCertificateInput) (*acm.GetCertificateOutput, error)
-    GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *AcmGetCertificateResult
+       GetCertificate(ctx workflow.Context, input *acm.GetCertificateInput) (*acm.GetCertificateOutput, error)
+       GetCertificateAsync(ctx workflow.Context, input *acm.GetCertificateInput) *AcmGetCertificateResult
 
-    ImportCertificate(ctx workflow.Context, input *acm.ImportCertificateInput) (*acm.ImportCertificateOutput, error)
-    ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *AcmImportCertificateResult
+       ImportCertificate(ctx workflow.Context, input *acm.ImportCertificateInput) (*acm.ImportCertificateOutput, error)
+       ImportCertificateAsync(ctx workflow.Context, input *acm.ImportCertificateInput) *AcmImportCertificateResult
 
-    ListCertificates(ctx workflow.Context, input *acm.ListCertificatesInput) (*acm.ListCertificatesOutput, error)
-    ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *AcmListCertificatesResult
+       ListCertificates(ctx workflow.Context, input *acm.ListCertificatesInput) (*acm.ListCertificatesOutput, error)
+       ListCertificatesAsync(ctx workflow.Context, input *acm.ListCertificatesInput) *AcmListCertificatesResult
 
-    ListTagsForCertificate(ctx workflow.Context, input *acm.ListTagsForCertificateInput) (*acm.ListTagsForCertificateOutput, error)
-    ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *AcmListTagsForCertificateResult
+       ListTagsForCertificate(ctx workflow.Context, input *acm.ListTagsForCertificateInput) (*acm.ListTagsForCertificateOutput, error)
+       ListTagsForCertificateAsync(ctx workflow.Context, input *acm.ListTagsForCertificateInput) *AcmListTagsForCertificateResult
 
-    RemoveTagsFromCertificate(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) (*acm.RemoveTagsFromCertificateOutput, error)
-    RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *AcmRemoveTagsFromCertificateResult
+       RemoveTagsFromCertificate(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) (*acm.RemoveTagsFromCertificateOutput, error)
+       RemoveTagsFromCertificateAsync(ctx workflow.Context, input *acm.RemoveTagsFromCertificateInput) *AcmRemoveTagsFromCertificateResult
 
-    RenewCertificate(ctx workflow.Context, input *acm.RenewCertificateInput) (*acm.RenewCertificateOutput, error)
-    RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *AcmRenewCertificateResult
+       RenewCertificate(ctx workflow.Context, input *acm.RenewCertificateInput) (*acm.RenewCertificateOutput, error)
+       RenewCertificateAsync(ctx workflow.Context, input *acm.RenewCertificateInput) *AcmRenewCertificateResult
 
-    RequestCertificate(ctx workflow.Context, input *acm.RequestCertificateInput) (*acm.RequestCertificateOutput, error)
-    RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *AcmRequestCertificateResult
+       RequestCertificate(ctx workflow.Context, input *acm.RequestCertificateInput) (*acm.RequestCertificateOutput, error)
+       RequestCertificateAsync(ctx workflow.Context, input *acm.RequestCertificateInput) *AcmRequestCertificateResult
 
-    ResendValidationEmail(ctx workflow.Context, input *acm.ResendValidationEmailInput) (*acm.ResendValidationEmailOutput, error)
-    ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *AcmResendValidationEmailResult
+       ResendValidationEmail(ctx workflow.Context, input *acm.ResendValidationEmailInput) (*acm.ResendValidationEmailOutput, error)
+       ResendValidationEmailAsync(ctx workflow.Context, input *acm.ResendValidationEmailInput) *AcmResendValidationEmailResult
 
-    UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error)
-    UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult
+       UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error)
+       UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult
 
-    WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error}
+       WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error}
 
 type AcmAddTagsToCertificateResult struct {
 	Result workflow.Future

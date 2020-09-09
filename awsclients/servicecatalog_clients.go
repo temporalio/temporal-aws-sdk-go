@@ -7,254 +7,254 @@ import (
 )
 
 type ServiceCatalogClient interface {
-    AcceptPortfolioShare(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) (*servicecatalog.AcceptPortfolioShareOutput, error)
-    AcceptPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) *ServicecatalogAcceptPortfolioShareResult
+       AcceptPortfolioShare(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) (*servicecatalog.AcceptPortfolioShareOutput, error)
+       AcceptPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) *ServicecatalogAcceptPortfolioShareResult
 
-    AssociateBudgetWithResource(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) (*servicecatalog.AssociateBudgetWithResourceOutput, error)
-    AssociateBudgetWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) *ServicecatalogAssociateBudgetWithResourceResult
+       AssociateBudgetWithResource(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) (*servicecatalog.AssociateBudgetWithResourceOutput, error)
+       AssociateBudgetWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) *ServicecatalogAssociateBudgetWithResourceResult
 
-    AssociatePrincipalWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) (*servicecatalog.AssociatePrincipalWithPortfolioOutput, error)
-    AssociatePrincipalWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) *ServicecatalogAssociatePrincipalWithPortfolioResult
+       AssociatePrincipalWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) (*servicecatalog.AssociatePrincipalWithPortfolioOutput, error)
+       AssociatePrincipalWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) *ServicecatalogAssociatePrincipalWithPortfolioResult
 
-    AssociateProductWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) (*servicecatalog.AssociateProductWithPortfolioOutput, error)
-    AssociateProductWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) *ServicecatalogAssociateProductWithPortfolioResult
+       AssociateProductWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) (*servicecatalog.AssociateProductWithPortfolioOutput, error)
+       AssociateProductWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) *ServicecatalogAssociateProductWithPortfolioResult
 
-    AssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput, error)
-    AssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogAssociateServiceActionWithProvisioningArtifactResult
+       AssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput, error)
+       AssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogAssociateServiceActionWithProvisioningArtifactResult
 
-    AssociateTagOptionWithResource(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) (*servicecatalog.AssociateTagOptionWithResourceOutput, error)
-    AssociateTagOptionWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) *ServicecatalogAssociateTagOptionWithResourceResult
+       AssociateTagOptionWithResource(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) (*servicecatalog.AssociateTagOptionWithResourceOutput, error)
+       AssociateTagOptionWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) *ServicecatalogAssociateTagOptionWithResourceResult
 
-    BatchAssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput, error)
-    BatchAssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogBatchAssociateServiceActionWithProvisioningArtifactResult
+       BatchAssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput, error)
+       BatchAssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogBatchAssociateServiceActionWithProvisioningArtifactResult
 
-    BatchDisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput, error)
-    BatchDisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogBatchDisassociateServiceActionFromProvisioningArtifactResult
+       BatchDisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput, error)
+       BatchDisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogBatchDisassociateServiceActionFromProvisioningArtifactResult
 
-    CopyProduct(ctx workflow.Context, input *servicecatalog.CopyProductInput) (*servicecatalog.CopyProductOutput, error)
-    CopyProductAsync(ctx workflow.Context, input *servicecatalog.CopyProductInput) *ServicecatalogCopyProductResult
+       CopyProduct(ctx workflow.Context, input *servicecatalog.CopyProductInput) (*servicecatalog.CopyProductOutput, error)
+       CopyProductAsync(ctx workflow.Context, input *servicecatalog.CopyProductInput) *ServicecatalogCopyProductResult
 
-    CreateConstraint(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) (*servicecatalog.CreateConstraintOutput, error)
-    CreateConstraintAsync(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) *ServicecatalogCreateConstraintResult
+       CreateConstraint(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) (*servicecatalog.CreateConstraintOutput, error)
+       CreateConstraintAsync(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) *ServicecatalogCreateConstraintResult
 
-    CreatePortfolio(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) (*servicecatalog.CreatePortfolioOutput, error)
-    CreatePortfolioAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) *ServicecatalogCreatePortfolioResult
+       CreatePortfolio(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) (*servicecatalog.CreatePortfolioOutput, error)
+       CreatePortfolioAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) *ServicecatalogCreatePortfolioResult
 
-    CreatePortfolioShare(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) (*servicecatalog.CreatePortfolioShareOutput, error)
-    CreatePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) *ServicecatalogCreatePortfolioShareResult
+       CreatePortfolioShare(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) (*servicecatalog.CreatePortfolioShareOutput, error)
+       CreatePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) *ServicecatalogCreatePortfolioShareResult
 
-    CreateProduct(ctx workflow.Context, input *servicecatalog.CreateProductInput) (*servicecatalog.CreateProductOutput, error)
-    CreateProductAsync(ctx workflow.Context, input *servicecatalog.CreateProductInput) *ServicecatalogCreateProductResult
+       CreateProduct(ctx workflow.Context, input *servicecatalog.CreateProductInput) (*servicecatalog.CreateProductOutput, error)
+       CreateProductAsync(ctx workflow.Context, input *servicecatalog.CreateProductInput) *ServicecatalogCreateProductResult
 
-    CreateProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) (*servicecatalog.CreateProvisionedProductPlanOutput, error)
-    CreateProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) *ServicecatalogCreateProvisionedProductPlanResult
+       CreateProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) (*servicecatalog.CreateProvisionedProductPlanOutput, error)
+       CreateProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) *ServicecatalogCreateProvisionedProductPlanResult
 
-    CreateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) (*servicecatalog.CreateProvisioningArtifactOutput, error)
-    CreateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) *ServicecatalogCreateProvisioningArtifactResult
+       CreateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) (*servicecatalog.CreateProvisioningArtifactOutput, error)
+       CreateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) *ServicecatalogCreateProvisioningArtifactResult
 
-    CreateServiceAction(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) (*servicecatalog.CreateServiceActionOutput, error)
-    CreateServiceActionAsync(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) *ServicecatalogCreateServiceActionResult
+       CreateServiceAction(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) (*servicecatalog.CreateServiceActionOutput, error)
+       CreateServiceActionAsync(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) *ServicecatalogCreateServiceActionResult
 
-    CreateTagOption(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) (*servicecatalog.CreateTagOptionOutput, error)
-    CreateTagOptionAsync(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) *ServicecatalogCreateTagOptionResult
+       CreateTagOption(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) (*servicecatalog.CreateTagOptionOutput, error)
+       CreateTagOptionAsync(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) *ServicecatalogCreateTagOptionResult
 
-    DeleteConstraint(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) (*servicecatalog.DeleteConstraintOutput, error)
-    DeleteConstraintAsync(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) *ServicecatalogDeleteConstraintResult
+       DeleteConstraint(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) (*servicecatalog.DeleteConstraintOutput, error)
+       DeleteConstraintAsync(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) *ServicecatalogDeleteConstraintResult
 
-    DeletePortfolio(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) (*servicecatalog.DeletePortfolioOutput, error)
-    DeletePortfolioAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) *ServicecatalogDeletePortfolioResult
+       DeletePortfolio(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) (*servicecatalog.DeletePortfolioOutput, error)
+       DeletePortfolioAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) *ServicecatalogDeletePortfolioResult
 
-    DeletePortfolioShare(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) (*servicecatalog.DeletePortfolioShareOutput, error)
-    DeletePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) *ServicecatalogDeletePortfolioShareResult
+       DeletePortfolioShare(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) (*servicecatalog.DeletePortfolioShareOutput, error)
+       DeletePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) *ServicecatalogDeletePortfolioShareResult
 
-    DeleteProduct(ctx workflow.Context, input *servicecatalog.DeleteProductInput) (*servicecatalog.DeleteProductOutput, error)
-    DeleteProductAsync(ctx workflow.Context, input *servicecatalog.DeleteProductInput) *ServicecatalogDeleteProductResult
+       DeleteProduct(ctx workflow.Context, input *servicecatalog.DeleteProductInput) (*servicecatalog.DeleteProductOutput, error)
+       DeleteProductAsync(ctx workflow.Context, input *servicecatalog.DeleteProductInput) *ServicecatalogDeleteProductResult
 
-    DeleteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) (*servicecatalog.DeleteProvisionedProductPlanOutput, error)
-    DeleteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) *ServicecatalogDeleteProvisionedProductPlanResult
+       DeleteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) (*servicecatalog.DeleteProvisionedProductPlanOutput, error)
+       DeleteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) *ServicecatalogDeleteProvisionedProductPlanResult
 
-    DeleteProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) (*servicecatalog.DeleteProvisioningArtifactOutput, error)
-    DeleteProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) *ServicecatalogDeleteProvisioningArtifactResult
+       DeleteProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) (*servicecatalog.DeleteProvisioningArtifactOutput, error)
+       DeleteProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) *ServicecatalogDeleteProvisioningArtifactResult
 
-    DeleteServiceAction(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) (*servicecatalog.DeleteServiceActionOutput, error)
-    DeleteServiceActionAsync(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) *ServicecatalogDeleteServiceActionResult
+       DeleteServiceAction(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) (*servicecatalog.DeleteServiceActionOutput, error)
+       DeleteServiceActionAsync(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) *ServicecatalogDeleteServiceActionResult
 
-    DeleteTagOption(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) (*servicecatalog.DeleteTagOptionOutput, error)
-    DeleteTagOptionAsync(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) *ServicecatalogDeleteTagOptionResult
+       DeleteTagOption(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) (*servicecatalog.DeleteTagOptionOutput, error)
+       DeleteTagOptionAsync(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) *ServicecatalogDeleteTagOptionResult
 
-    DescribeConstraint(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) (*servicecatalog.DescribeConstraintOutput, error)
-    DescribeConstraintAsync(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) *ServicecatalogDescribeConstraintResult
+       DescribeConstraint(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) (*servicecatalog.DescribeConstraintOutput, error)
+       DescribeConstraintAsync(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) *ServicecatalogDescribeConstraintResult
 
-    DescribeCopyProductStatus(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) (*servicecatalog.DescribeCopyProductStatusOutput, error)
-    DescribeCopyProductStatusAsync(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) *ServicecatalogDescribeCopyProductStatusResult
+       DescribeCopyProductStatus(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) (*servicecatalog.DescribeCopyProductStatusOutput, error)
+       DescribeCopyProductStatusAsync(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) *ServicecatalogDescribeCopyProductStatusResult
 
-    DescribePortfolio(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) (*servicecatalog.DescribePortfolioOutput, error)
-    DescribePortfolioAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) *ServicecatalogDescribePortfolioResult
+       DescribePortfolio(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) (*servicecatalog.DescribePortfolioOutput, error)
+       DescribePortfolioAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) *ServicecatalogDescribePortfolioResult
 
-    DescribePortfolioShareStatus(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) (*servicecatalog.DescribePortfolioShareStatusOutput, error)
-    DescribePortfolioShareStatusAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) *ServicecatalogDescribePortfolioShareStatusResult
+       DescribePortfolioShareStatus(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) (*servicecatalog.DescribePortfolioShareStatusOutput, error)
+       DescribePortfolioShareStatusAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) *ServicecatalogDescribePortfolioShareStatusResult
 
-    DescribeProduct(ctx workflow.Context, input *servicecatalog.DescribeProductInput) (*servicecatalog.DescribeProductOutput, error)
-    DescribeProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProductInput) *ServicecatalogDescribeProductResult
+       DescribeProduct(ctx workflow.Context, input *servicecatalog.DescribeProductInput) (*servicecatalog.DescribeProductOutput, error)
+       DescribeProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProductInput) *ServicecatalogDescribeProductResult
 
-    DescribeProductAsAdmin(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) (*servicecatalog.DescribeProductAsAdminOutput, error)
-    DescribeProductAsAdminAsync(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) *ServicecatalogDescribeProductAsAdminResult
+       DescribeProductAsAdmin(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) (*servicecatalog.DescribeProductAsAdminOutput, error)
+       DescribeProductAsAdminAsync(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) *ServicecatalogDescribeProductAsAdminResult
 
-    DescribeProductView(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) (*servicecatalog.DescribeProductViewOutput, error)
-    DescribeProductViewAsync(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) *ServicecatalogDescribeProductViewResult
+       DescribeProductView(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) (*servicecatalog.DescribeProductViewOutput, error)
+       DescribeProductViewAsync(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) *ServicecatalogDescribeProductViewResult
 
-    DescribeProvisionedProduct(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) (*servicecatalog.DescribeProvisionedProductOutput, error)
-    DescribeProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) *ServicecatalogDescribeProvisionedProductResult
+       DescribeProvisionedProduct(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) (*servicecatalog.DescribeProvisionedProductOutput, error)
+       DescribeProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) *ServicecatalogDescribeProvisionedProductResult
 
-    DescribeProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) (*servicecatalog.DescribeProvisionedProductPlanOutput, error)
-    DescribeProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) *ServicecatalogDescribeProvisionedProductPlanResult
+       DescribeProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) (*servicecatalog.DescribeProvisionedProductPlanOutput, error)
+       DescribeProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) *ServicecatalogDescribeProvisionedProductPlanResult
 
-    DescribeProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) (*servicecatalog.DescribeProvisioningArtifactOutput, error)
-    DescribeProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) *ServicecatalogDescribeProvisioningArtifactResult
+       DescribeProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) (*servicecatalog.DescribeProvisioningArtifactOutput, error)
+       DescribeProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) *ServicecatalogDescribeProvisioningArtifactResult
 
-    DescribeProvisioningParameters(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) (*servicecatalog.DescribeProvisioningParametersOutput, error)
-    DescribeProvisioningParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) *ServicecatalogDescribeProvisioningParametersResult
+       DescribeProvisioningParameters(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) (*servicecatalog.DescribeProvisioningParametersOutput, error)
+       DescribeProvisioningParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) *ServicecatalogDescribeProvisioningParametersResult
 
-    DescribeRecord(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) (*servicecatalog.DescribeRecordOutput, error)
-    DescribeRecordAsync(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) *ServicecatalogDescribeRecordResult
+       DescribeRecord(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) (*servicecatalog.DescribeRecordOutput, error)
+       DescribeRecordAsync(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) *ServicecatalogDescribeRecordResult
 
-    DescribeServiceAction(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) (*servicecatalog.DescribeServiceActionOutput, error)
-    DescribeServiceActionAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) *ServicecatalogDescribeServiceActionResult
+       DescribeServiceAction(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) (*servicecatalog.DescribeServiceActionOutput, error)
+       DescribeServiceActionAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) *ServicecatalogDescribeServiceActionResult
 
-    DescribeServiceActionExecutionParameters(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) (*servicecatalog.DescribeServiceActionExecutionParametersOutput, error)
-    DescribeServiceActionExecutionParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) *ServicecatalogDescribeServiceActionExecutionParametersResult
+       DescribeServiceActionExecutionParameters(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) (*servicecatalog.DescribeServiceActionExecutionParametersOutput, error)
+       DescribeServiceActionExecutionParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) *ServicecatalogDescribeServiceActionExecutionParametersResult
 
-    DescribeTagOption(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) (*servicecatalog.DescribeTagOptionOutput, error)
-    DescribeTagOptionAsync(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) *ServicecatalogDescribeTagOptionResult
+       DescribeTagOption(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) (*servicecatalog.DescribeTagOptionOutput, error)
+       DescribeTagOptionAsync(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) *ServicecatalogDescribeTagOptionResult
 
-    DisableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) (*servicecatalog.DisableAWSOrganizationsAccessOutput, error)
-    DisableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) *ServicecatalogDisableAWSOrganizationsAccessResult
+       DisableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) (*servicecatalog.DisableAWSOrganizationsAccessOutput, error)
+       DisableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) *ServicecatalogDisableAWSOrganizationsAccessResult
 
-    DisassociateBudgetFromResource(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) (*servicecatalog.DisassociateBudgetFromResourceOutput, error)
-    DisassociateBudgetFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) *ServicecatalogDisassociateBudgetFromResourceResult
+       DisassociateBudgetFromResource(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) (*servicecatalog.DisassociateBudgetFromResourceOutput, error)
+       DisassociateBudgetFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) *ServicecatalogDisassociateBudgetFromResourceResult
 
-    DisassociatePrincipalFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) (*servicecatalog.DisassociatePrincipalFromPortfolioOutput, error)
-    DisassociatePrincipalFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) *ServicecatalogDisassociatePrincipalFromPortfolioResult
+       DisassociatePrincipalFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) (*servicecatalog.DisassociatePrincipalFromPortfolioOutput, error)
+       DisassociatePrincipalFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) *ServicecatalogDisassociatePrincipalFromPortfolioResult
 
-    DisassociateProductFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) (*servicecatalog.DisassociateProductFromPortfolioOutput, error)
-    DisassociateProductFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) *ServicecatalogDisassociateProductFromPortfolioResult
+       DisassociateProductFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) (*servicecatalog.DisassociateProductFromPortfolioOutput, error)
+       DisassociateProductFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) *ServicecatalogDisassociateProductFromPortfolioResult
 
-    DisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput, error)
-    DisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogDisassociateServiceActionFromProvisioningArtifactResult
+       DisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput, error)
+       DisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogDisassociateServiceActionFromProvisioningArtifactResult
 
-    DisassociateTagOptionFromResource(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) (*servicecatalog.DisassociateTagOptionFromResourceOutput, error)
-    DisassociateTagOptionFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) *ServicecatalogDisassociateTagOptionFromResourceResult
+       DisassociateTagOptionFromResource(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) (*servicecatalog.DisassociateTagOptionFromResourceOutput, error)
+       DisassociateTagOptionFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) *ServicecatalogDisassociateTagOptionFromResourceResult
 
-    EnableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) (*servicecatalog.EnableAWSOrganizationsAccessOutput, error)
-    EnableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) *ServicecatalogEnableAWSOrganizationsAccessResult
+       EnableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) (*servicecatalog.EnableAWSOrganizationsAccessOutput, error)
+       EnableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) *ServicecatalogEnableAWSOrganizationsAccessResult
 
-    ExecuteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error)
-    ExecuteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) *ServicecatalogExecuteProvisionedProductPlanResult
+       ExecuteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error)
+       ExecuteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) *ServicecatalogExecuteProvisionedProductPlanResult
 
-    ExecuteProvisionedProductServiceAction(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) (*servicecatalog.ExecuteProvisionedProductServiceActionOutput, error)
-    ExecuteProvisionedProductServiceActionAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) *ServicecatalogExecuteProvisionedProductServiceActionResult
+       ExecuteProvisionedProductServiceAction(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) (*servicecatalog.ExecuteProvisionedProductServiceActionOutput, error)
+       ExecuteProvisionedProductServiceActionAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) *ServicecatalogExecuteProvisionedProductServiceActionResult
 
-    GetAWSOrganizationsAccessStatus(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error)
-    GetAWSOrganizationsAccessStatusAsync(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) *ServicecatalogGetAWSOrganizationsAccessStatusResult
+       GetAWSOrganizationsAccessStatus(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error)
+       GetAWSOrganizationsAccessStatusAsync(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) *ServicecatalogGetAWSOrganizationsAccessStatusResult
 
-    ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error)
-    ListAcceptedPortfolioSharesAsync(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) *ServicecatalogListAcceptedPortfolioSharesResult
+       ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error)
+       ListAcceptedPortfolioSharesAsync(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) *ServicecatalogListAcceptedPortfolioSharesResult
 
-    ListBudgetsForResource(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) (*servicecatalog.ListBudgetsForResourceOutput, error)
-    ListBudgetsForResourceAsync(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) *ServicecatalogListBudgetsForResourceResult
+       ListBudgetsForResource(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) (*servicecatalog.ListBudgetsForResourceOutput, error)
+       ListBudgetsForResourceAsync(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) *ServicecatalogListBudgetsForResourceResult
 
-    ListConstraintsForPortfolio(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) (*servicecatalog.ListConstraintsForPortfolioOutput, error)
-    ListConstraintsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) *ServicecatalogListConstraintsForPortfolioResult
+       ListConstraintsForPortfolio(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) (*servicecatalog.ListConstraintsForPortfolioOutput, error)
+       ListConstraintsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) *ServicecatalogListConstraintsForPortfolioResult
 
-    ListLaunchPaths(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) (*servicecatalog.ListLaunchPathsOutput, error)
-    ListLaunchPathsAsync(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) *ServicecatalogListLaunchPathsResult
+       ListLaunchPaths(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) (*servicecatalog.ListLaunchPathsOutput, error)
+       ListLaunchPathsAsync(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) *ServicecatalogListLaunchPathsResult
 
-    ListOrganizationPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) (*servicecatalog.ListOrganizationPortfolioAccessOutput, error)
-    ListOrganizationPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) *ServicecatalogListOrganizationPortfolioAccessResult
+       ListOrganizationPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) (*servicecatalog.ListOrganizationPortfolioAccessOutput, error)
+       ListOrganizationPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) *ServicecatalogListOrganizationPortfolioAccessResult
 
-    ListPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) (*servicecatalog.ListPortfolioAccessOutput, error)
-    ListPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) *ServicecatalogListPortfolioAccessResult
+       ListPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) (*servicecatalog.ListPortfolioAccessOutput, error)
+       ListPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) *ServicecatalogListPortfolioAccessResult
 
-    ListPortfolios(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) (*servicecatalog.ListPortfoliosOutput, error)
-    ListPortfoliosAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) *ServicecatalogListPortfoliosResult
+       ListPortfolios(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) (*servicecatalog.ListPortfoliosOutput, error)
+       ListPortfoliosAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) *ServicecatalogListPortfoliosResult
 
-    ListPortfoliosForProduct(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) (*servicecatalog.ListPortfoliosForProductOutput, error)
-    ListPortfoliosForProductAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) *ServicecatalogListPortfoliosForProductResult
+       ListPortfoliosForProduct(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) (*servicecatalog.ListPortfoliosForProductOutput, error)
+       ListPortfoliosForProductAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) *ServicecatalogListPortfoliosForProductResult
 
-    ListPrincipalsForPortfolio(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) (*servicecatalog.ListPrincipalsForPortfolioOutput, error)
-    ListPrincipalsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) *ServicecatalogListPrincipalsForPortfolioResult
+       ListPrincipalsForPortfolio(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) (*servicecatalog.ListPrincipalsForPortfolioOutput, error)
+       ListPrincipalsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) *ServicecatalogListPrincipalsForPortfolioResult
 
-    ListProvisionedProductPlans(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) (*servicecatalog.ListProvisionedProductPlansOutput, error)
-    ListProvisionedProductPlansAsync(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) *ServicecatalogListProvisionedProductPlansResult
+       ListProvisionedProductPlans(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) (*servicecatalog.ListProvisionedProductPlansOutput, error)
+       ListProvisionedProductPlansAsync(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) *ServicecatalogListProvisionedProductPlansResult
 
-    ListProvisioningArtifacts(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) (*servicecatalog.ListProvisioningArtifactsOutput, error)
-    ListProvisioningArtifactsAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) *ServicecatalogListProvisioningArtifactsResult
+       ListProvisioningArtifacts(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) (*servicecatalog.ListProvisioningArtifactsOutput, error)
+       ListProvisioningArtifactsAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) *ServicecatalogListProvisioningArtifactsResult
 
-    ListProvisioningArtifactsForServiceAction(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) (*servicecatalog.ListProvisioningArtifactsForServiceActionOutput, error)
-    ListProvisioningArtifactsForServiceActionAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) *ServicecatalogListProvisioningArtifactsForServiceActionResult
+       ListProvisioningArtifactsForServiceAction(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) (*servicecatalog.ListProvisioningArtifactsForServiceActionOutput, error)
+       ListProvisioningArtifactsForServiceActionAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) *ServicecatalogListProvisioningArtifactsForServiceActionResult
 
-    ListRecordHistory(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) (*servicecatalog.ListRecordHistoryOutput, error)
-    ListRecordHistoryAsync(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) *ServicecatalogListRecordHistoryResult
+       ListRecordHistory(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) (*servicecatalog.ListRecordHistoryOutput, error)
+       ListRecordHistoryAsync(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) *ServicecatalogListRecordHistoryResult
 
-    ListResourcesForTagOption(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) (*servicecatalog.ListResourcesForTagOptionOutput, error)
-    ListResourcesForTagOptionAsync(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) *ServicecatalogListResourcesForTagOptionResult
+       ListResourcesForTagOption(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) (*servicecatalog.ListResourcesForTagOptionOutput, error)
+       ListResourcesForTagOptionAsync(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) *ServicecatalogListResourcesForTagOptionResult
 
-    ListServiceActions(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) (*servicecatalog.ListServiceActionsOutput, error)
-    ListServiceActionsAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) *ServicecatalogListServiceActionsResult
+       ListServiceActions(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) (*servicecatalog.ListServiceActionsOutput, error)
+       ListServiceActionsAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) *ServicecatalogListServiceActionsResult
 
-    ListServiceActionsForProvisioningArtifact(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) (*servicecatalog.ListServiceActionsForProvisioningArtifactOutput, error)
-    ListServiceActionsForProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) *ServicecatalogListServiceActionsForProvisioningArtifactResult
+       ListServiceActionsForProvisioningArtifact(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) (*servicecatalog.ListServiceActionsForProvisioningArtifactOutput, error)
+       ListServiceActionsForProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) *ServicecatalogListServiceActionsForProvisioningArtifactResult
 
-    ListStackInstancesForProvisionedProduct(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) (*servicecatalog.ListStackInstancesForProvisionedProductOutput, error)
-    ListStackInstancesForProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) *ServicecatalogListStackInstancesForProvisionedProductResult
+       ListStackInstancesForProvisionedProduct(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) (*servicecatalog.ListStackInstancesForProvisionedProductOutput, error)
+       ListStackInstancesForProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) *ServicecatalogListStackInstancesForProvisionedProductResult
 
-    ListTagOptions(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) (*servicecatalog.ListTagOptionsOutput, error)
-    ListTagOptionsAsync(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) *ServicecatalogListTagOptionsResult
+       ListTagOptions(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) (*servicecatalog.ListTagOptionsOutput, error)
+       ListTagOptionsAsync(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) *ServicecatalogListTagOptionsResult
 
-    ProvisionProduct(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) (*servicecatalog.ProvisionProductOutput, error)
-    ProvisionProductAsync(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) *ServicecatalogProvisionProductResult
+       ProvisionProduct(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) (*servicecatalog.ProvisionProductOutput, error)
+       ProvisionProductAsync(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) *ServicecatalogProvisionProductResult
 
-    RejectPortfolioShare(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) (*servicecatalog.RejectPortfolioShareOutput, error)
-    RejectPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) *ServicecatalogRejectPortfolioShareResult
+       RejectPortfolioShare(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) (*servicecatalog.RejectPortfolioShareOutput, error)
+       RejectPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) *ServicecatalogRejectPortfolioShareResult
 
-    ScanProvisionedProducts(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) (*servicecatalog.ScanProvisionedProductsOutput, error)
-    ScanProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) *ServicecatalogScanProvisionedProductsResult
+       ScanProvisionedProducts(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) (*servicecatalog.ScanProvisionedProductsOutput, error)
+       ScanProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) *ServicecatalogScanProvisionedProductsResult
 
-    SearchProducts(ctx workflow.Context, input *servicecatalog.SearchProductsInput) (*servicecatalog.SearchProductsOutput, error)
-    SearchProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProductsInput) *ServicecatalogSearchProductsResult
+       SearchProducts(ctx workflow.Context, input *servicecatalog.SearchProductsInput) (*servicecatalog.SearchProductsOutput, error)
+       SearchProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProductsInput) *ServicecatalogSearchProductsResult
 
-    SearchProductsAsAdmin(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) (*servicecatalog.SearchProductsAsAdminOutput, error)
-    SearchProductsAsAdminAsync(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) *ServicecatalogSearchProductsAsAdminResult
+       SearchProductsAsAdmin(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) (*servicecatalog.SearchProductsAsAdminOutput, error)
+       SearchProductsAsAdminAsync(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) *ServicecatalogSearchProductsAsAdminResult
 
-    SearchProvisionedProducts(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) (*servicecatalog.SearchProvisionedProductsOutput, error)
-    SearchProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) *ServicecatalogSearchProvisionedProductsResult
+       SearchProvisionedProducts(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) (*servicecatalog.SearchProvisionedProductsOutput, error)
+       SearchProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) *ServicecatalogSearchProvisionedProductsResult
 
-    TerminateProvisionedProduct(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) (*servicecatalog.TerminateProvisionedProductOutput, error)
-    TerminateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) *ServicecatalogTerminateProvisionedProductResult
+       TerminateProvisionedProduct(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) (*servicecatalog.TerminateProvisionedProductOutput, error)
+       TerminateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) *ServicecatalogTerminateProvisionedProductResult
 
-    UpdateConstraint(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) (*servicecatalog.UpdateConstraintOutput, error)
-    UpdateConstraintAsync(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) *ServicecatalogUpdateConstraintResult
+       UpdateConstraint(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) (*servicecatalog.UpdateConstraintOutput, error)
+       UpdateConstraintAsync(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) *ServicecatalogUpdateConstraintResult
 
-    UpdatePortfolio(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) (*servicecatalog.UpdatePortfolioOutput, error)
-    UpdatePortfolioAsync(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) *ServicecatalogUpdatePortfolioResult
+       UpdatePortfolio(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) (*servicecatalog.UpdatePortfolioOutput, error)
+       UpdatePortfolioAsync(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) *ServicecatalogUpdatePortfolioResult
 
-    UpdateProduct(ctx workflow.Context, input *servicecatalog.UpdateProductInput) (*servicecatalog.UpdateProductOutput, error)
-    UpdateProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProductInput) *ServicecatalogUpdateProductResult
+       UpdateProduct(ctx workflow.Context, input *servicecatalog.UpdateProductInput) (*servicecatalog.UpdateProductOutput, error)
+       UpdateProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProductInput) *ServicecatalogUpdateProductResult
 
-    UpdateProvisionedProduct(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) (*servicecatalog.UpdateProvisionedProductOutput, error)
-    UpdateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) *ServicecatalogUpdateProvisionedProductResult
+       UpdateProvisionedProduct(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) (*servicecatalog.UpdateProvisionedProductOutput, error)
+       UpdateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) *ServicecatalogUpdateProvisionedProductResult
 
-    UpdateProvisionedProductProperties(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) (*servicecatalog.UpdateProvisionedProductPropertiesOutput, error)
-    UpdateProvisionedProductPropertiesAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) *ServicecatalogUpdateProvisionedProductPropertiesResult
+       UpdateProvisionedProductProperties(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) (*servicecatalog.UpdateProvisionedProductPropertiesOutput, error)
+       UpdateProvisionedProductPropertiesAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) *ServicecatalogUpdateProvisionedProductPropertiesResult
 
-    UpdateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) (*servicecatalog.UpdateProvisioningArtifactOutput, error)
-    UpdateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) *ServicecatalogUpdateProvisioningArtifactResult
+       UpdateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) (*servicecatalog.UpdateProvisioningArtifactOutput, error)
+       UpdateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) *ServicecatalogUpdateProvisioningArtifactResult
 
-    UpdateServiceAction(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) (*servicecatalog.UpdateServiceActionOutput, error)
-    UpdateServiceActionAsync(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) *ServicecatalogUpdateServiceActionResult
+       UpdateServiceAction(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) (*servicecatalog.UpdateServiceActionOutput, error)
+       UpdateServiceActionAsync(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) *ServicecatalogUpdateServiceActionResult
 
-    UpdateTagOption(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) (*servicecatalog.UpdateTagOptionOutput, error)
-    UpdateTagOptionAsync(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) *ServicecatalogUpdateTagOptionResult
+       UpdateTagOption(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) (*servicecatalog.UpdateTagOptionOutput, error)
+       UpdateTagOptionAsync(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) *ServicecatalogUpdateTagOptionResult
 }
 
 type ServicecatalogAcceptPortfolioShareResult struct {

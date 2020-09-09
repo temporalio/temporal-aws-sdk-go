@@ -7,65 +7,65 @@ import (
 )
 
 type TransferClient interface {
-    CreateServer(ctx workflow.Context, input *transfer.CreateServerInput) (*transfer.CreateServerOutput, error)
-    CreateServerAsync(ctx workflow.Context, input *transfer.CreateServerInput) *TransferCreateServerResult
+       CreateServer(ctx workflow.Context, input *transfer.CreateServerInput) (*transfer.CreateServerOutput, error)
+       CreateServerAsync(ctx workflow.Context, input *transfer.CreateServerInput) *TransferCreateServerResult
 
-    CreateUser(ctx workflow.Context, input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *transfer.CreateUserInput) *TransferCreateUserResult
+       CreateUser(ctx workflow.Context, input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *transfer.CreateUserInput) *TransferCreateUserResult
 
-    DeleteServer(ctx workflow.Context, input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error)
-    DeleteServerAsync(ctx workflow.Context, input *transfer.DeleteServerInput) *TransferDeleteServerResult
+       DeleteServer(ctx workflow.Context, input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error)
+       DeleteServerAsync(ctx workflow.Context, input *transfer.DeleteServerInput) *TransferDeleteServerResult
 
-    DeleteSshPublicKey(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error)
-    DeleteSshPublicKeyAsync(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) *TransferDeleteSshPublicKeyResult
+       DeleteSshPublicKey(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error)
+       DeleteSshPublicKeyAsync(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) *TransferDeleteSshPublicKeyResult
 
-    DeleteUser(ctx workflow.Context, input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *transfer.DeleteUserInput) *TransferDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *transfer.DeleteUserInput) *TransferDeleteUserResult
 
-    DescribeSecurityPolicy(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error)
-    DescribeSecurityPolicyAsync(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) *TransferDescribeSecurityPolicyResult
+       DescribeSecurityPolicy(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error)
+       DescribeSecurityPolicyAsync(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) *TransferDescribeSecurityPolicyResult
 
-    DescribeServer(ctx workflow.Context, input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error)
-    DescribeServerAsync(ctx workflow.Context, input *transfer.DescribeServerInput) *TransferDescribeServerResult
+       DescribeServer(ctx workflow.Context, input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error)
+       DescribeServerAsync(ctx workflow.Context, input *transfer.DescribeServerInput) *TransferDescribeServerResult
 
-    DescribeUser(ctx workflow.Context, input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error)
-    DescribeUserAsync(ctx workflow.Context, input *transfer.DescribeUserInput) *TransferDescribeUserResult
+       DescribeUser(ctx workflow.Context, input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error)
+       DescribeUserAsync(ctx workflow.Context, input *transfer.DescribeUserInput) *TransferDescribeUserResult
 
-    ImportSshPublicKey(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error)
-    ImportSshPublicKeyAsync(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) *TransferImportSshPublicKeyResult
+       ImportSshPublicKey(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error)
+       ImportSshPublicKeyAsync(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) *TransferImportSshPublicKeyResult
 
-    ListSecurityPolicies(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error)
-    ListSecurityPoliciesAsync(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) *TransferListSecurityPoliciesResult
+       ListSecurityPolicies(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error)
+       ListSecurityPoliciesAsync(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) *TransferListSecurityPoliciesResult
 
-    ListServers(ctx workflow.Context, input *transfer.ListServersInput) (*transfer.ListServersOutput, error)
-    ListServersAsync(ctx workflow.Context, input *transfer.ListServersInput) *TransferListServersResult
+       ListServers(ctx workflow.Context, input *transfer.ListServersInput) (*transfer.ListServersOutput, error)
+       ListServersAsync(ctx workflow.Context, input *transfer.ListServersInput) *TransferListServersResult
 
-    ListTagsForResource(ctx workflow.Context, input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *transfer.ListTagsForResourceInput) *TransferListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *transfer.ListTagsForResourceInput) *TransferListTagsForResourceResult
 
-    ListUsers(ctx workflow.Context, input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *transfer.ListUsersInput) *TransferListUsersResult
+       ListUsers(ctx workflow.Context, input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *transfer.ListUsersInput) *TransferListUsersResult
 
-    StartServer(ctx workflow.Context, input *transfer.StartServerInput) (*transfer.StartServerOutput, error)
-    StartServerAsync(ctx workflow.Context, input *transfer.StartServerInput) *TransferStartServerResult
+       StartServer(ctx workflow.Context, input *transfer.StartServerInput) (*transfer.StartServerOutput, error)
+       StartServerAsync(ctx workflow.Context, input *transfer.StartServerInput) *TransferStartServerResult
 
-    StopServer(ctx workflow.Context, input *transfer.StopServerInput) (*transfer.StopServerOutput, error)
-    StopServerAsync(ctx workflow.Context, input *transfer.StopServerInput) *TransferStopServerResult
+       StopServer(ctx workflow.Context, input *transfer.StopServerInput) (*transfer.StopServerOutput, error)
+       StopServerAsync(ctx workflow.Context, input *transfer.StopServerInput) *TransferStopServerResult
 
-    TagResource(ctx workflow.Context, input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *transfer.TagResourceInput) *TransferTagResourceResult
+       TagResource(ctx workflow.Context, input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *transfer.TagResourceInput) *TransferTagResourceResult
 
-    TestIdentityProvider(ctx workflow.Context, input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error)
-    TestIdentityProviderAsync(ctx workflow.Context, input *transfer.TestIdentityProviderInput) *TransferTestIdentityProviderResult
+       TestIdentityProvider(ctx workflow.Context, input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error)
+       TestIdentityProviderAsync(ctx workflow.Context, input *transfer.TestIdentityProviderInput) *TransferTestIdentityProviderResult
 
-    UntagResource(ctx workflow.Context, input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *transfer.UntagResourceInput) *TransferUntagResourceResult
+       UntagResource(ctx workflow.Context, input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *transfer.UntagResourceInput) *TransferUntagResourceResult
 
-    UpdateServer(ctx workflow.Context, input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error)
-    UpdateServerAsync(ctx workflow.Context, input *transfer.UpdateServerInput) *TransferUpdateServerResult
+       UpdateServer(ctx workflow.Context, input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error)
+       UpdateServerAsync(ctx workflow.Context, input *transfer.UpdateServerInput) *TransferUpdateServerResult
 
-    UpdateUser(ctx workflow.Context, input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *TransferUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *TransferUpdateUserResult
 }
 
 type TransferCreateServerResult struct {

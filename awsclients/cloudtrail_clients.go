@@ -7,59 +7,59 @@ import (
 )
 
 type CloudTrailClient interface {
-    AddTags(ctx workflow.Context, input *cloudtrail.AddTagsInput) (*cloudtrail.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *cloudtrail.AddTagsInput) *CloudtrailAddTagsResult
+       AddTags(ctx workflow.Context, input *cloudtrail.AddTagsInput) (*cloudtrail.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *cloudtrail.AddTagsInput) *CloudtrailAddTagsResult
 
-    CreateTrail(ctx workflow.Context, input *cloudtrail.CreateTrailInput) (*cloudtrail.CreateTrailOutput, error)
-    CreateTrailAsync(ctx workflow.Context, input *cloudtrail.CreateTrailInput) *CloudtrailCreateTrailResult
+       CreateTrail(ctx workflow.Context, input *cloudtrail.CreateTrailInput) (*cloudtrail.CreateTrailOutput, error)
+       CreateTrailAsync(ctx workflow.Context, input *cloudtrail.CreateTrailInput) *CloudtrailCreateTrailResult
 
-    DeleteTrail(ctx workflow.Context, input *cloudtrail.DeleteTrailInput) (*cloudtrail.DeleteTrailOutput, error)
-    DeleteTrailAsync(ctx workflow.Context, input *cloudtrail.DeleteTrailInput) *CloudtrailDeleteTrailResult
+       DeleteTrail(ctx workflow.Context, input *cloudtrail.DeleteTrailInput) (*cloudtrail.DeleteTrailOutput, error)
+       DeleteTrailAsync(ctx workflow.Context, input *cloudtrail.DeleteTrailInput) *CloudtrailDeleteTrailResult
 
-    DescribeTrails(ctx workflow.Context, input *cloudtrail.DescribeTrailsInput) (*cloudtrail.DescribeTrailsOutput, error)
-    DescribeTrailsAsync(ctx workflow.Context, input *cloudtrail.DescribeTrailsInput) *CloudtrailDescribeTrailsResult
+       DescribeTrails(ctx workflow.Context, input *cloudtrail.DescribeTrailsInput) (*cloudtrail.DescribeTrailsOutput, error)
+       DescribeTrailsAsync(ctx workflow.Context, input *cloudtrail.DescribeTrailsInput) *CloudtrailDescribeTrailsResult
 
-    GetEventSelectors(ctx workflow.Context, input *cloudtrail.GetEventSelectorsInput) (*cloudtrail.GetEventSelectorsOutput, error)
-    GetEventSelectorsAsync(ctx workflow.Context, input *cloudtrail.GetEventSelectorsInput) *CloudtrailGetEventSelectorsResult
+       GetEventSelectors(ctx workflow.Context, input *cloudtrail.GetEventSelectorsInput) (*cloudtrail.GetEventSelectorsOutput, error)
+       GetEventSelectorsAsync(ctx workflow.Context, input *cloudtrail.GetEventSelectorsInput) *CloudtrailGetEventSelectorsResult
 
-    GetInsightSelectors(ctx workflow.Context, input *cloudtrail.GetInsightSelectorsInput) (*cloudtrail.GetInsightSelectorsOutput, error)
-    GetInsightSelectorsAsync(ctx workflow.Context, input *cloudtrail.GetInsightSelectorsInput) *CloudtrailGetInsightSelectorsResult
+       GetInsightSelectors(ctx workflow.Context, input *cloudtrail.GetInsightSelectorsInput) (*cloudtrail.GetInsightSelectorsOutput, error)
+       GetInsightSelectorsAsync(ctx workflow.Context, input *cloudtrail.GetInsightSelectorsInput) *CloudtrailGetInsightSelectorsResult
 
-    GetTrail(ctx workflow.Context, input *cloudtrail.GetTrailInput) (*cloudtrail.GetTrailOutput, error)
-    GetTrailAsync(ctx workflow.Context, input *cloudtrail.GetTrailInput) *CloudtrailGetTrailResult
+       GetTrail(ctx workflow.Context, input *cloudtrail.GetTrailInput) (*cloudtrail.GetTrailOutput, error)
+       GetTrailAsync(ctx workflow.Context, input *cloudtrail.GetTrailInput) *CloudtrailGetTrailResult
 
-    GetTrailStatus(ctx workflow.Context, input *cloudtrail.GetTrailStatusInput) (*cloudtrail.GetTrailStatusOutput, error)
-    GetTrailStatusAsync(ctx workflow.Context, input *cloudtrail.GetTrailStatusInput) *CloudtrailGetTrailStatusResult
+       GetTrailStatus(ctx workflow.Context, input *cloudtrail.GetTrailStatusInput) (*cloudtrail.GetTrailStatusOutput, error)
+       GetTrailStatusAsync(ctx workflow.Context, input *cloudtrail.GetTrailStatusInput) *CloudtrailGetTrailStatusResult
 
-    ListPublicKeys(ctx workflow.Context, input *cloudtrail.ListPublicKeysInput) (*cloudtrail.ListPublicKeysOutput, error)
-    ListPublicKeysAsync(ctx workflow.Context, input *cloudtrail.ListPublicKeysInput) *CloudtrailListPublicKeysResult
+       ListPublicKeys(ctx workflow.Context, input *cloudtrail.ListPublicKeysInput) (*cloudtrail.ListPublicKeysOutput, error)
+       ListPublicKeysAsync(ctx workflow.Context, input *cloudtrail.ListPublicKeysInput) *CloudtrailListPublicKeysResult
 
-    ListTags(ctx workflow.Context, input *cloudtrail.ListTagsInput) (*cloudtrail.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *cloudtrail.ListTagsInput) *CloudtrailListTagsResult
+       ListTags(ctx workflow.Context, input *cloudtrail.ListTagsInput) (*cloudtrail.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *cloudtrail.ListTagsInput) *CloudtrailListTagsResult
 
-    ListTrails(ctx workflow.Context, input *cloudtrail.ListTrailsInput) (*cloudtrail.ListTrailsOutput, error)
-    ListTrailsAsync(ctx workflow.Context, input *cloudtrail.ListTrailsInput) *CloudtrailListTrailsResult
+       ListTrails(ctx workflow.Context, input *cloudtrail.ListTrailsInput) (*cloudtrail.ListTrailsOutput, error)
+       ListTrailsAsync(ctx workflow.Context, input *cloudtrail.ListTrailsInput) *CloudtrailListTrailsResult
 
-    LookupEvents(ctx workflow.Context, input *cloudtrail.LookupEventsInput) (*cloudtrail.LookupEventsOutput, error)
-    LookupEventsAsync(ctx workflow.Context, input *cloudtrail.LookupEventsInput) *CloudtrailLookupEventsResult
+       LookupEvents(ctx workflow.Context, input *cloudtrail.LookupEventsInput) (*cloudtrail.LookupEventsOutput, error)
+       LookupEventsAsync(ctx workflow.Context, input *cloudtrail.LookupEventsInput) *CloudtrailLookupEventsResult
 
-    PutEventSelectors(ctx workflow.Context, input *cloudtrail.PutEventSelectorsInput) (*cloudtrail.PutEventSelectorsOutput, error)
-    PutEventSelectorsAsync(ctx workflow.Context, input *cloudtrail.PutEventSelectorsInput) *CloudtrailPutEventSelectorsResult
+       PutEventSelectors(ctx workflow.Context, input *cloudtrail.PutEventSelectorsInput) (*cloudtrail.PutEventSelectorsOutput, error)
+       PutEventSelectorsAsync(ctx workflow.Context, input *cloudtrail.PutEventSelectorsInput) *CloudtrailPutEventSelectorsResult
 
-    PutInsightSelectors(ctx workflow.Context, input *cloudtrail.PutInsightSelectorsInput) (*cloudtrail.PutInsightSelectorsOutput, error)
-    PutInsightSelectorsAsync(ctx workflow.Context, input *cloudtrail.PutInsightSelectorsInput) *CloudtrailPutInsightSelectorsResult
+       PutInsightSelectors(ctx workflow.Context, input *cloudtrail.PutInsightSelectorsInput) (*cloudtrail.PutInsightSelectorsOutput, error)
+       PutInsightSelectorsAsync(ctx workflow.Context, input *cloudtrail.PutInsightSelectorsInput) *CloudtrailPutInsightSelectorsResult
 
-    RemoveTags(ctx workflow.Context, input *cloudtrail.RemoveTagsInput) (*cloudtrail.RemoveTagsOutput, error)
-    RemoveTagsAsync(ctx workflow.Context, input *cloudtrail.RemoveTagsInput) *CloudtrailRemoveTagsResult
+       RemoveTags(ctx workflow.Context, input *cloudtrail.RemoveTagsInput) (*cloudtrail.RemoveTagsOutput, error)
+       RemoveTagsAsync(ctx workflow.Context, input *cloudtrail.RemoveTagsInput) *CloudtrailRemoveTagsResult
 
-    StartLogging(ctx workflow.Context, input *cloudtrail.StartLoggingInput) (*cloudtrail.StartLoggingOutput, error)
-    StartLoggingAsync(ctx workflow.Context, input *cloudtrail.StartLoggingInput) *CloudtrailStartLoggingResult
+       StartLogging(ctx workflow.Context, input *cloudtrail.StartLoggingInput) (*cloudtrail.StartLoggingOutput, error)
+       StartLoggingAsync(ctx workflow.Context, input *cloudtrail.StartLoggingInput) *CloudtrailStartLoggingResult
 
-    StopLogging(ctx workflow.Context, input *cloudtrail.StopLoggingInput) (*cloudtrail.StopLoggingOutput, error)
-    StopLoggingAsync(ctx workflow.Context, input *cloudtrail.StopLoggingInput) *CloudtrailStopLoggingResult
+       StopLogging(ctx workflow.Context, input *cloudtrail.StopLoggingInput) (*cloudtrail.StopLoggingOutput, error)
+       StopLoggingAsync(ctx workflow.Context, input *cloudtrail.StopLoggingInput) *CloudtrailStopLoggingResult
 
-    UpdateTrail(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) (*cloudtrail.UpdateTrailOutput, error)
-    UpdateTrailAsync(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) *CloudtrailUpdateTrailResult
+       UpdateTrail(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) (*cloudtrail.UpdateTrailOutput, error)
+       UpdateTrailAsync(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) *CloudtrailUpdateTrailResult
 }
 
 type CloudtrailAddTagsResult struct {

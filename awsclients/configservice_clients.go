@@ -7,239 +7,239 @@ import (
 )
 
 type ConfigServiceClient interface {
-    BatchGetAggregateResourceConfig(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) (*configservice.BatchGetAggregateResourceConfigOutput, error)
-    BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigserviceBatchGetAggregateResourceConfigResult
+       BatchGetAggregateResourceConfig(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) (*configservice.BatchGetAggregateResourceConfigOutput, error)
+       BatchGetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetAggregateResourceConfigInput) *ConfigserviceBatchGetAggregateResourceConfigResult
 
-    BatchGetResourceConfig(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) (*configservice.BatchGetResourceConfigOutput, error)
-    BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigserviceBatchGetResourceConfigResult
+       BatchGetResourceConfig(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) (*configservice.BatchGetResourceConfigOutput, error)
+       BatchGetResourceConfigAsync(ctx workflow.Context, input *configservice.BatchGetResourceConfigInput) *ConfigserviceBatchGetResourceConfigResult
 
-    DeleteAggregationAuthorization(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) (*configservice.DeleteAggregationAuthorizationOutput, error)
-    DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigserviceDeleteAggregationAuthorizationResult
+       DeleteAggregationAuthorization(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) (*configservice.DeleteAggregationAuthorizationOutput, error)
+       DeleteAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.DeleteAggregationAuthorizationInput) *ConfigserviceDeleteAggregationAuthorizationResult
 
-    DeleteConfigRule(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) (*configservice.DeleteConfigRuleOutput, error)
-    DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigserviceDeleteConfigRuleResult
+       DeleteConfigRule(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) (*configservice.DeleteConfigRuleOutput, error)
+       DeleteConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteConfigRuleInput) *ConfigserviceDeleteConfigRuleResult
 
-    DeleteConfigurationAggregator(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) (*configservice.DeleteConfigurationAggregatorOutput, error)
-    DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigserviceDeleteConfigurationAggregatorResult
+       DeleteConfigurationAggregator(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) (*configservice.DeleteConfigurationAggregatorOutput, error)
+       DeleteConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.DeleteConfigurationAggregatorInput) *ConfigserviceDeleteConfigurationAggregatorResult
 
-    DeleteConfigurationRecorder(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) (*configservice.DeleteConfigurationRecorderOutput, error)
-    DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigserviceDeleteConfigurationRecorderResult
+       DeleteConfigurationRecorder(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) (*configservice.DeleteConfigurationRecorderOutput, error)
+       DeleteConfigurationRecorderAsync(ctx workflow.Context, input *configservice.DeleteConfigurationRecorderInput) *ConfigserviceDeleteConfigurationRecorderResult
 
-    DeleteConformancePack(ctx workflow.Context, input *configservice.DeleteConformancePackInput) (*configservice.DeleteConformancePackOutput, error)
-    DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigserviceDeleteConformancePackResult
+       DeleteConformancePack(ctx workflow.Context, input *configservice.DeleteConformancePackInput) (*configservice.DeleteConformancePackOutput, error)
+       DeleteConformancePackAsync(ctx workflow.Context, input *configservice.DeleteConformancePackInput) *ConfigserviceDeleteConformancePackResult
 
-    DeleteDeliveryChannel(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) (*configservice.DeleteDeliveryChannelOutput, error)
-    DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigserviceDeleteDeliveryChannelResult
+       DeleteDeliveryChannel(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) (*configservice.DeleteDeliveryChannelOutput, error)
+       DeleteDeliveryChannelAsync(ctx workflow.Context, input *configservice.DeleteDeliveryChannelInput) *ConfigserviceDeleteDeliveryChannelResult
 
-    DeleteEvaluationResults(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) (*configservice.DeleteEvaluationResultsOutput, error)
-    DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigserviceDeleteEvaluationResultsResult
+       DeleteEvaluationResults(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) (*configservice.DeleteEvaluationResultsOutput, error)
+       DeleteEvaluationResultsAsync(ctx workflow.Context, input *configservice.DeleteEvaluationResultsInput) *ConfigserviceDeleteEvaluationResultsResult
 
-    DeleteOrganizationConfigRule(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) (*configservice.DeleteOrganizationConfigRuleOutput, error)
-    DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigserviceDeleteOrganizationConfigRuleResult
+       DeleteOrganizationConfigRule(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) (*configservice.DeleteOrganizationConfigRuleOutput, error)
+       DeleteOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConfigRuleInput) *ConfigserviceDeleteOrganizationConfigRuleResult
 
-    DeleteOrganizationConformancePack(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) (*configservice.DeleteOrganizationConformancePackOutput, error)
-    DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigserviceDeleteOrganizationConformancePackResult
+       DeleteOrganizationConformancePack(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) (*configservice.DeleteOrganizationConformancePackOutput, error)
+       DeleteOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.DeleteOrganizationConformancePackInput) *ConfigserviceDeleteOrganizationConformancePackResult
 
-    DeleteRemediationConfiguration(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) (*configservice.DeleteRemediationConfigurationOutput, error)
-    DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigserviceDeleteRemediationConfigurationResult
+       DeleteRemediationConfiguration(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) (*configservice.DeleteRemediationConfigurationOutput, error)
+       DeleteRemediationConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRemediationConfigurationInput) *ConfigserviceDeleteRemediationConfigurationResult
 
-    DeleteRemediationExceptions(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) (*configservice.DeleteRemediationExceptionsOutput, error)
-    DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigserviceDeleteRemediationExceptionsResult
+       DeleteRemediationExceptions(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) (*configservice.DeleteRemediationExceptionsOutput, error)
+       DeleteRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DeleteRemediationExceptionsInput) *ConfigserviceDeleteRemediationExceptionsResult
 
-    DeleteResourceConfig(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) (*configservice.DeleteResourceConfigOutput, error)
-    DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigserviceDeleteResourceConfigResult
+       DeleteResourceConfig(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) (*configservice.DeleteResourceConfigOutput, error)
+       DeleteResourceConfigAsync(ctx workflow.Context, input *configservice.DeleteResourceConfigInput) *ConfigserviceDeleteResourceConfigResult
 
-    DeleteRetentionConfiguration(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) (*configservice.DeleteRetentionConfigurationOutput, error)
-    DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigserviceDeleteRetentionConfigurationResult
+       DeleteRetentionConfiguration(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) (*configservice.DeleteRetentionConfigurationOutput, error)
+       DeleteRetentionConfigurationAsync(ctx workflow.Context, input *configservice.DeleteRetentionConfigurationInput) *ConfigserviceDeleteRetentionConfigurationResult
 
-    DeliverConfigSnapshot(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) (*configservice.DeliverConfigSnapshotOutput, error)
-    DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigserviceDeliverConfigSnapshotResult
+       DeliverConfigSnapshot(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) (*configservice.DeliverConfigSnapshotOutput, error)
+       DeliverConfigSnapshotAsync(ctx workflow.Context, input *configservice.DeliverConfigSnapshotInput) *ConfigserviceDeliverConfigSnapshotResult
 
-    DescribeAggregateComplianceByConfigRules(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error)
-    DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigserviceDescribeAggregateComplianceByConfigRulesResult
+       DescribeAggregateComplianceByConfigRules(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) (*configservice.DescribeAggregateComplianceByConfigRulesOutput, error)
+       DescribeAggregateComplianceByConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeAggregateComplianceByConfigRulesInput) *ConfigserviceDescribeAggregateComplianceByConfigRulesResult
 
-    DescribeAggregationAuthorizations(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) (*configservice.DescribeAggregationAuthorizationsOutput, error)
-    DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigserviceDescribeAggregationAuthorizationsResult
+       DescribeAggregationAuthorizations(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) (*configservice.DescribeAggregationAuthorizationsOutput, error)
+       DescribeAggregationAuthorizationsAsync(ctx workflow.Context, input *configservice.DescribeAggregationAuthorizationsInput) *ConfigserviceDescribeAggregationAuthorizationsResult
 
-    DescribeComplianceByConfigRule(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) (*configservice.DescribeComplianceByConfigRuleOutput, error)
-    DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigserviceDescribeComplianceByConfigRuleResult
+       DescribeComplianceByConfigRule(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) (*configservice.DescribeComplianceByConfigRuleOutput, error)
+       DescribeComplianceByConfigRuleAsync(ctx workflow.Context, input *configservice.DescribeComplianceByConfigRuleInput) *ConfigserviceDescribeComplianceByConfigRuleResult
 
-    DescribeComplianceByResource(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) (*configservice.DescribeComplianceByResourceOutput, error)
-    DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigserviceDescribeComplianceByResourceResult
+       DescribeComplianceByResource(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) (*configservice.DescribeComplianceByResourceOutput, error)
+       DescribeComplianceByResourceAsync(ctx workflow.Context, input *configservice.DescribeComplianceByResourceInput) *ConfigserviceDescribeComplianceByResourceResult
 
-    DescribeConfigRuleEvaluationStatus(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error)
-    DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigserviceDescribeConfigRuleEvaluationStatusResult
+       DescribeConfigRuleEvaluationStatus(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) (*configservice.DescribeConfigRuleEvaluationStatusOutput, error)
+       DescribeConfigRuleEvaluationStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigRuleEvaluationStatusInput) *ConfigserviceDescribeConfigRuleEvaluationStatusResult
 
-    DescribeConfigRules(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) (*configservice.DescribeConfigRulesOutput, error)
-    DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigserviceDescribeConfigRulesResult
+       DescribeConfigRules(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) (*configservice.DescribeConfigRulesOutput, error)
+       DescribeConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeConfigRulesInput) *ConfigserviceDescribeConfigRulesResult
 
-    DescribeConfigurationAggregatorSourcesStatus(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error)
-    DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigserviceDescribeConfigurationAggregatorSourcesStatusResult
+       DescribeConfigurationAggregatorSourcesStatus(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) (*configservice.DescribeConfigurationAggregatorSourcesStatusOutput, error)
+       DescribeConfigurationAggregatorSourcesStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorSourcesStatusInput) *ConfigserviceDescribeConfigurationAggregatorSourcesStatusResult
 
-    DescribeConfigurationAggregators(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) (*configservice.DescribeConfigurationAggregatorsOutput, error)
-    DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigserviceDescribeConfigurationAggregatorsResult
+       DescribeConfigurationAggregators(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) (*configservice.DescribeConfigurationAggregatorsOutput, error)
+       DescribeConfigurationAggregatorsAsync(ctx workflow.Context, input *configservice.DescribeConfigurationAggregatorsInput) *ConfigserviceDescribeConfigurationAggregatorsResult
 
-    DescribeConfigurationRecorderStatus(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) (*configservice.DescribeConfigurationRecorderStatusOutput, error)
-    DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigserviceDescribeConfigurationRecorderStatusResult
+       DescribeConfigurationRecorderStatus(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) (*configservice.DescribeConfigurationRecorderStatusOutput, error)
+       DescribeConfigurationRecorderStatusAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecorderStatusInput) *ConfigserviceDescribeConfigurationRecorderStatusResult
 
-    DescribeConfigurationRecorders(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) (*configservice.DescribeConfigurationRecordersOutput, error)
-    DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigserviceDescribeConfigurationRecordersResult
+       DescribeConfigurationRecorders(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) (*configservice.DescribeConfigurationRecordersOutput, error)
+       DescribeConfigurationRecordersAsync(ctx workflow.Context, input *configservice.DescribeConfigurationRecordersInput) *ConfigserviceDescribeConfigurationRecordersResult
 
-    DescribeConformancePackCompliance(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) (*configservice.DescribeConformancePackComplianceOutput, error)
-    DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigserviceDescribeConformancePackComplianceResult
+       DescribeConformancePackCompliance(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) (*configservice.DescribeConformancePackComplianceOutput, error)
+       DescribeConformancePackComplianceAsync(ctx workflow.Context, input *configservice.DescribeConformancePackComplianceInput) *ConfigserviceDescribeConformancePackComplianceResult
 
-    DescribeConformancePackStatus(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) (*configservice.DescribeConformancePackStatusOutput, error)
-    DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigserviceDescribeConformancePackStatusResult
+       DescribeConformancePackStatus(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) (*configservice.DescribeConformancePackStatusOutput, error)
+       DescribeConformancePackStatusAsync(ctx workflow.Context, input *configservice.DescribeConformancePackStatusInput) *ConfigserviceDescribeConformancePackStatusResult
 
-    DescribeConformancePacks(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) (*configservice.DescribeConformancePacksOutput, error)
-    DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigserviceDescribeConformancePacksResult
+       DescribeConformancePacks(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) (*configservice.DescribeConformancePacksOutput, error)
+       DescribeConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeConformancePacksInput) *ConfigserviceDescribeConformancePacksResult
 
-    DescribeDeliveryChannelStatus(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) (*configservice.DescribeDeliveryChannelStatusOutput, error)
-    DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigserviceDescribeDeliveryChannelStatusResult
+       DescribeDeliveryChannelStatus(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) (*configservice.DescribeDeliveryChannelStatusOutput, error)
+       DescribeDeliveryChannelStatusAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelStatusInput) *ConfigserviceDescribeDeliveryChannelStatusResult
 
-    DescribeDeliveryChannels(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) (*configservice.DescribeDeliveryChannelsOutput, error)
-    DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigserviceDescribeDeliveryChannelsResult
+       DescribeDeliveryChannels(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) (*configservice.DescribeDeliveryChannelsOutput, error)
+       DescribeDeliveryChannelsAsync(ctx workflow.Context, input *configservice.DescribeDeliveryChannelsInput) *ConfigserviceDescribeDeliveryChannelsResult
 
-    DescribeOrganizationConfigRuleStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error)
-    DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigserviceDescribeOrganizationConfigRuleStatusesResult
+       DescribeOrganizationConfigRuleStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) (*configservice.DescribeOrganizationConfigRuleStatusesOutput, error)
+       DescribeOrganizationConfigRuleStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRuleStatusesInput) *ConfigserviceDescribeOrganizationConfigRuleStatusesResult
 
-    DescribeOrganizationConfigRules(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) (*configservice.DescribeOrganizationConfigRulesOutput, error)
-    DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigserviceDescribeOrganizationConfigRulesResult
+       DescribeOrganizationConfigRules(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) (*configservice.DescribeOrganizationConfigRulesOutput, error)
+       DescribeOrganizationConfigRulesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConfigRulesInput) *ConfigserviceDescribeOrganizationConfigRulesResult
 
-    DescribeOrganizationConformancePackStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error)
-    DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigserviceDescribeOrganizationConformancePackStatusesResult
+       DescribeOrganizationConformancePackStatuses(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) (*configservice.DescribeOrganizationConformancePackStatusesOutput, error)
+       DescribeOrganizationConformancePackStatusesAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePackStatusesInput) *ConfigserviceDescribeOrganizationConformancePackStatusesResult
 
-    DescribeOrganizationConformancePacks(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) (*configservice.DescribeOrganizationConformancePacksOutput, error)
-    DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigserviceDescribeOrganizationConformancePacksResult
+       DescribeOrganizationConformancePacks(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) (*configservice.DescribeOrganizationConformancePacksOutput, error)
+       DescribeOrganizationConformancePacksAsync(ctx workflow.Context, input *configservice.DescribeOrganizationConformancePacksInput) *ConfigserviceDescribeOrganizationConformancePacksResult
 
-    DescribePendingAggregationRequests(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) (*configservice.DescribePendingAggregationRequestsOutput, error)
-    DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigserviceDescribePendingAggregationRequestsResult
+       DescribePendingAggregationRequests(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) (*configservice.DescribePendingAggregationRequestsOutput, error)
+       DescribePendingAggregationRequestsAsync(ctx workflow.Context, input *configservice.DescribePendingAggregationRequestsInput) *ConfigserviceDescribePendingAggregationRequestsResult
 
-    DescribeRemediationConfigurations(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) (*configservice.DescribeRemediationConfigurationsOutput, error)
-    DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigserviceDescribeRemediationConfigurationsResult
+       DescribeRemediationConfigurations(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) (*configservice.DescribeRemediationConfigurationsOutput, error)
+       DescribeRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRemediationConfigurationsInput) *ConfigserviceDescribeRemediationConfigurationsResult
 
-    DescribeRemediationExceptions(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) (*configservice.DescribeRemediationExceptionsOutput, error)
-    DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigserviceDescribeRemediationExceptionsResult
+       DescribeRemediationExceptions(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) (*configservice.DescribeRemediationExceptionsOutput, error)
+       DescribeRemediationExceptionsAsync(ctx workflow.Context, input *configservice.DescribeRemediationExceptionsInput) *ConfigserviceDescribeRemediationExceptionsResult
 
-    DescribeRemediationExecutionStatus(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) (*configservice.DescribeRemediationExecutionStatusOutput, error)
-    DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigserviceDescribeRemediationExecutionStatusResult
+       DescribeRemediationExecutionStatus(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) (*configservice.DescribeRemediationExecutionStatusOutput, error)
+       DescribeRemediationExecutionStatusAsync(ctx workflow.Context, input *configservice.DescribeRemediationExecutionStatusInput) *ConfigserviceDescribeRemediationExecutionStatusResult
 
-    DescribeRetentionConfigurations(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) (*configservice.DescribeRetentionConfigurationsOutput, error)
-    DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigserviceDescribeRetentionConfigurationsResult
+       DescribeRetentionConfigurations(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) (*configservice.DescribeRetentionConfigurationsOutput, error)
+       DescribeRetentionConfigurationsAsync(ctx workflow.Context, input *configservice.DescribeRetentionConfigurationsInput) *ConfigserviceDescribeRetentionConfigurationsResult
 
-    GetAggregateComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error)
-    GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigserviceGetAggregateComplianceDetailsByConfigRuleResult
+       GetAggregateComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) (*configservice.GetAggregateComplianceDetailsByConfigRuleOutput, error)
+       GetAggregateComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetAggregateComplianceDetailsByConfigRuleInput) *ConfigserviceGetAggregateComplianceDetailsByConfigRuleResult
 
-    GetAggregateConfigRuleComplianceSummary(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error)
-    GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigserviceGetAggregateConfigRuleComplianceSummaryResult
+       GetAggregateConfigRuleComplianceSummary(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) (*configservice.GetAggregateConfigRuleComplianceSummaryOutput, error)
+       GetAggregateConfigRuleComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetAggregateConfigRuleComplianceSummaryInput) *ConfigserviceGetAggregateConfigRuleComplianceSummaryResult
 
-    GetAggregateDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error)
-    GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigserviceGetAggregateDiscoveredResourceCountsResult
+       GetAggregateDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) (*configservice.GetAggregateDiscoveredResourceCountsOutput, error)
+       GetAggregateDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetAggregateDiscoveredResourceCountsInput) *ConfigserviceGetAggregateDiscoveredResourceCountsResult
 
-    GetAggregateResourceConfig(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) (*configservice.GetAggregateResourceConfigOutput, error)
-    GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigserviceGetAggregateResourceConfigResult
+       GetAggregateResourceConfig(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) (*configservice.GetAggregateResourceConfigOutput, error)
+       GetAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.GetAggregateResourceConfigInput) *ConfigserviceGetAggregateResourceConfigResult
 
-    GetComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) (*configservice.GetComplianceDetailsByConfigRuleOutput, error)
-    GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigserviceGetComplianceDetailsByConfigRuleResult
+       GetComplianceDetailsByConfigRule(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) (*configservice.GetComplianceDetailsByConfigRuleOutput, error)
+       GetComplianceDetailsByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByConfigRuleInput) *ConfigserviceGetComplianceDetailsByConfigRuleResult
 
-    GetComplianceDetailsByResource(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) (*configservice.GetComplianceDetailsByResourceOutput, error)
-    GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigserviceGetComplianceDetailsByResourceResult
+       GetComplianceDetailsByResource(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) (*configservice.GetComplianceDetailsByResourceOutput, error)
+       GetComplianceDetailsByResourceAsync(ctx workflow.Context, input *configservice.GetComplianceDetailsByResourceInput) *ConfigserviceGetComplianceDetailsByResourceResult
 
-    GetComplianceSummaryByConfigRule(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) (*configservice.GetComplianceSummaryByConfigRuleOutput, error)
-    GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigserviceGetComplianceSummaryByConfigRuleResult
+       GetComplianceSummaryByConfigRule(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) (*configservice.GetComplianceSummaryByConfigRuleOutput, error)
+       GetComplianceSummaryByConfigRuleAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByConfigRuleInput) *ConfigserviceGetComplianceSummaryByConfigRuleResult
 
-    GetComplianceSummaryByResourceType(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) (*configservice.GetComplianceSummaryByResourceTypeOutput, error)
-    GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigserviceGetComplianceSummaryByResourceTypeResult
+       GetComplianceSummaryByResourceType(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) (*configservice.GetComplianceSummaryByResourceTypeOutput, error)
+       GetComplianceSummaryByResourceTypeAsync(ctx workflow.Context, input *configservice.GetComplianceSummaryByResourceTypeInput) *ConfigserviceGetComplianceSummaryByResourceTypeResult
 
-    GetConformancePackComplianceDetails(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) (*configservice.GetConformancePackComplianceDetailsOutput, error)
-    GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigserviceGetConformancePackComplianceDetailsResult
+       GetConformancePackComplianceDetails(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) (*configservice.GetConformancePackComplianceDetailsOutput, error)
+       GetConformancePackComplianceDetailsAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceDetailsInput) *ConfigserviceGetConformancePackComplianceDetailsResult
 
-    GetConformancePackComplianceSummary(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) (*configservice.GetConformancePackComplianceSummaryOutput, error)
-    GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigserviceGetConformancePackComplianceSummaryResult
+       GetConformancePackComplianceSummary(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) (*configservice.GetConformancePackComplianceSummaryOutput, error)
+       GetConformancePackComplianceSummaryAsync(ctx workflow.Context, input *configservice.GetConformancePackComplianceSummaryInput) *ConfigserviceGetConformancePackComplianceSummaryResult
 
-    GetDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) (*configservice.GetDiscoveredResourceCountsOutput, error)
-    GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigserviceGetDiscoveredResourceCountsResult
+       GetDiscoveredResourceCounts(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) (*configservice.GetDiscoveredResourceCountsOutput, error)
+       GetDiscoveredResourceCountsAsync(ctx workflow.Context, input *configservice.GetDiscoveredResourceCountsInput) *ConfigserviceGetDiscoveredResourceCountsResult
 
-    GetOrganizationConfigRuleDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error)
-    GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigserviceGetOrganizationConfigRuleDetailedStatusResult
+       GetOrganizationConfigRuleDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) (*configservice.GetOrganizationConfigRuleDetailedStatusOutput, error)
+       GetOrganizationConfigRuleDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConfigRuleDetailedStatusInput) *ConfigserviceGetOrganizationConfigRuleDetailedStatusResult
 
-    GetOrganizationConformancePackDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error)
-    GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigserviceGetOrganizationConformancePackDetailedStatusResult
+       GetOrganizationConformancePackDetailedStatus(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) (*configservice.GetOrganizationConformancePackDetailedStatusOutput, error)
+       GetOrganizationConformancePackDetailedStatusAsync(ctx workflow.Context, input *configservice.GetOrganizationConformancePackDetailedStatusInput) *ConfigserviceGetOrganizationConformancePackDetailedStatusResult
 
-    GetResourceConfigHistory(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) (*configservice.GetResourceConfigHistoryOutput, error)
-    GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigserviceGetResourceConfigHistoryResult
+       GetResourceConfigHistory(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) (*configservice.GetResourceConfigHistoryOutput, error)
+       GetResourceConfigHistoryAsync(ctx workflow.Context, input *configservice.GetResourceConfigHistoryInput) *ConfigserviceGetResourceConfigHistoryResult
 
-    ListAggregateDiscoveredResources(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) (*configservice.ListAggregateDiscoveredResourcesOutput, error)
-    ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigserviceListAggregateDiscoveredResourcesResult
+       ListAggregateDiscoveredResources(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) (*configservice.ListAggregateDiscoveredResourcesOutput, error)
+       ListAggregateDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListAggregateDiscoveredResourcesInput) *ConfigserviceListAggregateDiscoveredResourcesResult
 
-    ListDiscoveredResources(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) (*configservice.ListDiscoveredResourcesOutput, error)
-    ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigserviceListDiscoveredResourcesResult
+       ListDiscoveredResources(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) (*configservice.ListDiscoveredResourcesOutput, error)
+       ListDiscoveredResourcesAsync(ctx workflow.Context, input *configservice.ListDiscoveredResourcesInput) *ConfigserviceListDiscoveredResourcesResult
 
-    ListTagsForResource(ctx workflow.Context, input *configservice.ListTagsForResourceInput) (*configservice.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigserviceListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *configservice.ListTagsForResourceInput) (*configservice.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *configservice.ListTagsForResourceInput) *ConfigserviceListTagsForResourceResult
 
-    PutAggregationAuthorization(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) (*configservice.PutAggregationAuthorizationOutput, error)
-    PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigservicePutAggregationAuthorizationResult
+       PutAggregationAuthorization(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) (*configservice.PutAggregationAuthorizationOutput, error)
+       PutAggregationAuthorizationAsync(ctx workflow.Context, input *configservice.PutAggregationAuthorizationInput) *ConfigservicePutAggregationAuthorizationResult
 
-    PutConfigRule(ctx workflow.Context, input *configservice.PutConfigRuleInput) (*configservice.PutConfigRuleOutput, error)
-    PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigservicePutConfigRuleResult
+       PutConfigRule(ctx workflow.Context, input *configservice.PutConfigRuleInput) (*configservice.PutConfigRuleOutput, error)
+       PutConfigRuleAsync(ctx workflow.Context, input *configservice.PutConfigRuleInput) *ConfigservicePutConfigRuleResult
 
-    PutConfigurationAggregator(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) (*configservice.PutConfigurationAggregatorOutput, error)
-    PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigservicePutConfigurationAggregatorResult
+       PutConfigurationAggregator(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) (*configservice.PutConfigurationAggregatorOutput, error)
+       PutConfigurationAggregatorAsync(ctx workflow.Context, input *configservice.PutConfigurationAggregatorInput) *ConfigservicePutConfigurationAggregatorResult
 
-    PutConfigurationRecorder(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) (*configservice.PutConfigurationRecorderOutput, error)
-    PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigservicePutConfigurationRecorderResult
+       PutConfigurationRecorder(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) (*configservice.PutConfigurationRecorderOutput, error)
+       PutConfigurationRecorderAsync(ctx workflow.Context, input *configservice.PutConfigurationRecorderInput) *ConfigservicePutConfigurationRecorderResult
 
-    PutConformancePack(ctx workflow.Context, input *configservice.PutConformancePackInput) (*configservice.PutConformancePackOutput, error)
-    PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigservicePutConformancePackResult
+       PutConformancePack(ctx workflow.Context, input *configservice.PutConformancePackInput) (*configservice.PutConformancePackOutput, error)
+       PutConformancePackAsync(ctx workflow.Context, input *configservice.PutConformancePackInput) *ConfigservicePutConformancePackResult
 
-    PutDeliveryChannel(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) (*configservice.PutDeliveryChannelOutput, error)
-    PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigservicePutDeliveryChannelResult
+       PutDeliveryChannel(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) (*configservice.PutDeliveryChannelOutput, error)
+       PutDeliveryChannelAsync(ctx workflow.Context, input *configservice.PutDeliveryChannelInput) *ConfigservicePutDeliveryChannelResult
 
-    PutEvaluations(ctx workflow.Context, input *configservice.PutEvaluationsInput) (*configservice.PutEvaluationsOutput, error)
-    PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigservicePutEvaluationsResult
+       PutEvaluations(ctx workflow.Context, input *configservice.PutEvaluationsInput) (*configservice.PutEvaluationsOutput, error)
+       PutEvaluationsAsync(ctx workflow.Context, input *configservice.PutEvaluationsInput) *ConfigservicePutEvaluationsResult
 
-    PutOrganizationConfigRule(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) (*configservice.PutOrganizationConfigRuleOutput, error)
-    PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigservicePutOrganizationConfigRuleResult
+       PutOrganizationConfigRule(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) (*configservice.PutOrganizationConfigRuleOutput, error)
+       PutOrganizationConfigRuleAsync(ctx workflow.Context, input *configservice.PutOrganizationConfigRuleInput) *ConfigservicePutOrganizationConfigRuleResult
 
-    PutOrganizationConformancePack(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) (*configservice.PutOrganizationConformancePackOutput, error)
-    PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigservicePutOrganizationConformancePackResult
+       PutOrganizationConformancePack(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) (*configservice.PutOrganizationConformancePackOutput, error)
+       PutOrganizationConformancePackAsync(ctx workflow.Context, input *configservice.PutOrganizationConformancePackInput) *ConfigservicePutOrganizationConformancePackResult
 
-    PutRemediationConfigurations(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) (*configservice.PutRemediationConfigurationsOutput, error)
-    PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigservicePutRemediationConfigurationsResult
+       PutRemediationConfigurations(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) (*configservice.PutRemediationConfigurationsOutput, error)
+       PutRemediationConfigurationsAsync(ctx workflow.Context, input *configservice.PutRemediationConfigurationsInput) *ConfigservicePutRemediationConfigurationsResult
 
-    PutRemediationExceptions(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) (*configservice.PutRemediationExceptionsOutput, error)
-    PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigservicePutRemediationExceptionsResult
+       PutRemediationExceptions(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) (*configservice.PutRemediationExceptionsOutput, error)
+       PutRemediationExceptionsAsync(ctx workflow.Context, input *configservice.PutRemediationExceptionsInput) *ConfigservicePutRemediationExceptionsResult
 
-    PutResourceConfig(ctx workflow.Context, input *configservice.PutResourceConfigInput) (*configservice.PutResourceConfigOutput, error)
-    PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigservicePutResourceConfigResult
+       PutResourceConfig(ctx workflow.Context, input *configservice.PutResourceConfigInput) (*configservice.PutResourceConfigOutput, error)
+       PutResourceConfigAsync(ctx workflow.Context, input *configservice.PutResourceConfigInput) *ConfigservicePutResourceConfigResult
 
-    PutRetentionConfiguration(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) (*configservice.PutRetentionConfigurationOutput, error)
-    PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigservicePutRetentionConfigurationResult
+       PutRetentionConfiguration(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) (*configservice.PutRetentionConfigurationOutput, error)
+       PutRetentionConfigurationAsync(ctx workflow.Context, input *configservice.PutRetentionConfigurationInput) *ConfigservicePutRetentionConfigurationResult
 
-    SelectAggregateResourceConfig(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) (*configservice.SelectAggregateResourceConfigOutput, error)
-    SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigserviceSelectAggregateResourceConfigResult
+       SelectAggregateResourceConfig(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) (*configservice.SelectAggregateResourceConfigOutput, error)
+       SelectAggregateResourceConfigAsync(ctx workflow.Context, input *configservice.SelectAggregateResourceConfigInput) *ConfigserviceSelectAggregateResourceConfigResult
 
-    SelectResourceConfig(ctx workflow.Context, input *configservice.SelectResourceConfigInput) (*configservice.SelectResourceConfigOutput, error)
-    SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigserviceSelectResourceConfigResult
+       SelectResourceConfig(ctx workflow.Context, input *configservice.SelectResourceConfigInput) (*configservice.SelectResourceConfigOutput, error)
+       SelectResourceConfigAsync(ctx workflow.Context, input *configservice.SelectResourceConfigInput) *ConfigserviceSelectResourceConfigResult
 
-    StartConfigRulesEvaluation(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) (*configservice.StartConfigRulesEvaluationOutput, error)
-    StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigserviceStartConfigRulesEvaluationResult
+       StartConfigRulesEvaluation(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) (*configservice.StartConfigRulesEvaluationOutput, error)
+       StartConfigRulesEvaluationAsync(ctx workflow.Context, input *configservice.StartConfigRulesEvaluationInput) *ConfigserviceStartConfigRulesEvaluationResult
 
-    StartConfigurationRecorder(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) (*configservice.StartConfigurationRecorderOutput, error)
-    StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigserviceStartConfigurationRecorderResult
+       StartConfigurationRecorder(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) (*configservice.StartConfigurationRecorderOutput, error)
+       StartConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StartConfigurationRecorderInput) *ConfigserviceStartConfigurationRecorderResult
 
-    StartRemediationExecution(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) (*configservice.StartRemediationExecutionOutput, error)
-    StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigserviceStartRemediationExecutionResult
+       StartRemediationExecution(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) (*configservice.StartRemediationExecutionOutput, error)
+       StartRemediationExecutionAsync(ctx workflow.Context, input *configservice.StartRemediationExecutionInput) *ConfigserviceStartRemediationExecutionResult
 
-    StopConfigurationRecorder(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) (*configservice.StopConfigurationRecorderOutput, error)
-    StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigserviceStopConfigurationRecorderResult
+       StopConfigurationRecorder(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) (*configservice.StopConfigurationRecorderOutput, error)
+       StopConfigurationRecorderAsync(ctx workflow.Context, input *configservice.StopConfigurationRecorderInput) *ConfigserviceStopConfigurationRecorderResult
 
-    TagResource(ctx workflow.Context, input *configservice.TagResourceInput) (*configservice.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigserviceTagResourceResult
+       TagResource(ctx workflow.Context, input *configservice.TagResourceInput) (*configservice.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *configservice.TagResourceInput) *ConfigserviceTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceResult
+       UntagResource(ctx workflow.Context, input *configservice.UntagResourceInput) (*configservice.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceResult
 }
 
 type ConfigserviceBatchGetAggregateResourceConfigResult struct {

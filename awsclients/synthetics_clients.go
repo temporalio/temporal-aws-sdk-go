@@ -7,44 +7,44 @@ import (
 )
 
 type SyntheticsClient interface {
-    CreateCanary(ctx workflow.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error)
-    CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *SyntheticsCreateCanaryResult
+       CreateCanary(ctx workflow.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error)
+       CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *SyntheticsCreateCanaryResult
 
-    DeleteCanary(ctx workflow.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error)
-    DeleteCanaryAsync(ctx workflow.Context, input *synthetics.DeleteCanaryInput) *SyntheticsDeleteCanaryResult
+       DeleteCanary(ctx workflow.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error)
+       DeleteCanaryAsync(ctx workflow.Context, input *synthetics.DeleteCanaryInput) *SyntheticsDeleteCanaryResult
 
-    DescribeCanaries(ctx workflow.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error)
-    DescribeCanariesAsync(ctx workflow.Context, input *synthetics.DescribeCanariesInput) *SyntheticsDescribeCanariesResult
+       DescribeCanaries(ctx workflow.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error)
+       DescribeCanariesAsync(ctx workflow.Context, input *synthetics.DescribeCanariesInput) *SyntheticsDescribeCanariesResult
 
-    DescribeCanariesLastRun(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error)
-    DescribeCanariesLastRunAsync(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) *SyntheticsDescribeCanariesLastRunResult
+       DescribeCanariesLastRun(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error)
+       DescribeCanariesLastRunAsync(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) *SyntheticsDescribeCanariesLastRunResult
 
-    DescribeRuntimeVersions(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error)
-    DescribeRuntimeVersionsAsync(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) *SyntheticsDescribeRuntimeVersionsResult
+       DescribeRuntimeVersions(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error)
+       DescribeRuntimeVersionsAsync(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) *SyntheticsDescribeRuntimeVersionsResult
 
-    GetCanary(ctx workflow.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error)
-    GetCanaryAsync(ctx workflow.Context, input *synthetics.GetCanaryInput) *SyntheticsGetCanaryResult
+       GetCanary(ctx workflow.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error)
+       GetCanaryAsync(ctx workflow.Context, input *synthetics.GetCanaryInput) *SyntheticsGetCanaryResult
 
-    GetCanaryRuns(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error)
-    GetCanaryRunsAsync(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) *SyntheticsGetCanaryRunsResult
+       GetCanaryRuns(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error)
+       GetCanaryRunsAsync(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) *SyntheticsGetCanaryRunsResult
 
-    ListTagsForResource(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) *SyntheticsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) *SyntheticsListTagsForResourceResult
 
-    StartCanary(ctx workflow.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error)
-    StartCanaryAsync(ctx workflow.Context, input *synthetics.StartCanaryInput) *SyntheticsStartCanaryResult
+       StartCanary(ctx workflow.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error)
+       StartCanaryAsync(ctx workflow.Context, input *synthetics.StartCanaryInput) *SyntheticsStartCanaryResult
 
-    StopCanary(ctx workflow.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error)
-    StopCanaryAsync(ctx workflow.Context, input *synthetics.StopCanaryInput) *SyntheticsStopCanaryResult
+       StopCanary(ctx workflow.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error)
+       StopCanaryAsync(ctx workflow.Context, input *synthetics.StopCanaryInput) *SyntheticsStopCanaryResult
 
-    TagResource(ctx workflow.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *synthetics.TagResourceInput) *SyntheticsTagResourceResult
+       TagResource(ctx workflow.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *synthetics.TagResourceInput) *SyntheticsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *synthetics.UntagResourceInput) *SyntheticsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *synthetics.UntagResourceInput) *SyntheticsUntagResourceResult
 
-    UpdateCanary(ctx workflow.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error)
-    UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *SyntheticsUpdateCanaryResult
+       UpdateCanary(ctx workflow.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error)
+       UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *SyntheticsUpdateCanaryResult
 }
 
 type SyntheticsCreateCanaryResult struct {

@@ -7,96 +7,96 @@ import (
 )
 
 type ELBClient interface {
-    AddTags(ctx workflow.Context, input *elb.AddTagsInput) (*elb.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *elb.AddTagsInput) *ElbAddTagsResult
+       AddTags(ctx workflow.Context, input *elb.AddTagsInput) (*elb.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *elb.AddTagsInput) *ElbAddTagsResult
 
-    ApplySecurityGroupsToLoadBalancer(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error)
-    ApplySecurityGroupsToLoadBalancerAsync(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) *ElbApplySecurityGroupsToLoadBalancerResult
+       ApplySecurityGroupsToLoadBalancer(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error)
+       ApplySecurityGroupsToLoadBalancerAsync(ctx workflow.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) *ElbApplySecurityGroupsToLoadBalancerResult
 
-    AttachLoadBalancerToSubnets(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) (*elb.AttachLoadBalancerToSubnetsOutput, error)
-    AttachLoadBalancerToSubnetsAsync(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) *ElbAttachLoadBalancerToSubnetsResult
+       AttachLoadBalancerToSubnets(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) (*elb.AttachLoadBalancerToSubnetsOutput, error)
+       AttachLoadBalancerToSubnetsAsync(ctx workflow.Context, input *elb.AttachLoadBalancerToSubnetsInput) *ElbAttachLoadBalancerToSubnetsResult
 
-    ConfigureHealthCheck(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) (*elb.ConfigureHealthCheckOutput, error)
-    ConfigureHealthCheckAsync(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) *ElbConfigureHealthCheckResult
+       ConfigureHealthCheck(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) (*elb.ConfigureHealthCheckOutput, error)
+       ConfigureHealthCheckAsync(ctx workflow.Context, input *elb.ConfigureHealthCheckInput) *ElbConfigureHealthCheckResult
 
-    CreateAppCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) (*elb.CreateAppCookieStickinessPolicyOutput, error)
-    CreateAppCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) *ElbCreateAppCookieStickinessPolicyResult
+       CreateAppCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) (*elb.CreateAppCookieStickinessPolicyOutput, error)
+       CreateAppCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateAppCookieStickinessPolicyInput) *ElbCreateAppCookieStickinessPolicyResult
 
-    CreateLBCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) (*elb.CreateLBCookieStickinessPolicyOutput, error)
-    CreateLBCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) *ElbCreateLBCookieStickinessPolicyResult
+       CreateLBCookieStickinessPolicy(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) (*elb.CreateLBCookieStickinessPolicyOutput, error)
+       CreateLBCookieStickinessPolicyAsync(ctx workflow.Context, input *elb.CreateLBCookieStickinessPolicyInput) *ElbCreateLBCookieStickinessPolicyResult
 
-    CreateLoadBalancer(ctx workflow.Context, input *elb.CreateLoadBalancerInput) (*elb.CreateLoadBalancerOutput, error)
-    CreateLoadBalancerAsync(ctx workflow.Context, input *elb.CreateLoadBalancerInput) *ElbCreateLoadBalancerResult
+       CreateLoadBalancer(ctx workflow.Context, input *elb.CreateLoadBalancerInput) (*elb.CreateLoadBalancerOutput, error)
+       CreateLoadBalancerAsync(ctx workflow.Context, input *elb.CreateLoadBalancerInput) *ElbCreateLoadBalancerResult
 
-    CreateLoadBalancerListeners(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) (*elb.CreateLoadBalancerListenersOutput, error)
-    CreateLoadBalancerListenersAsync(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) *ElbCreateLoadBalancerListenersResult
+       CreateLoadBalancerListeners(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) (*elb.CreateLoadBalancerListenersOutput, error)
+       CreateLoadBalancerListenersAsync(ctx workflow.Context, input *elb.CreateLoadBalancerListenersInput) *ElbCreateLoadBalancerListenersResult
 
-    CreateLoadBalancerPolicy(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) (*elb.CreateLoadBalancerPolicyOutput, error)
-    CreateLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) *ElbCreateLoadBalancerPolicyResult
+       CreateLoadBalancerPolicy(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) (*elb.CreateLoadBalancerPolicyOutput, error)
+       CreateLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.CreateLoadBalancerPolicyInput) *ElbCreateLoadBalancerPolicyResult
 
-    DeleteLoadBalancer(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) (*elb.DeleteLoadBalancerOutput, error)
-    DeleteLoadBalancerAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) *ElbDeleteLoadBalancerResult
+       DeleteLoadBalancer(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) (*elb.DeleteLoadBalancerOutput, error)
+       DeleteLoadBalancerAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerInput) *ElbDeleteLoadBalancerResult
 
-    DeleteLoadBalancerListeners(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) (*elb.DeleteLoadBalancerListenersOutput, error)
-    DeleteLoadBalancerListenersAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) *ElbDeleteLoadBalancerListenersResult
+       DeleteLoadBalancerListeners(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) (*elb.DeleteLoadBalancerListenersOutput, error)
+       DeleteLoadBalancerListenersAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerListenersInput) *ElbDeleteLoadBalancerListenersResult
 
-    DeleteLoadBalancerPolicy(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) (*elb.DeleteLoadBalancerPolicyOutput, error)
-    DeleteLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) *ElbDeleteLoadBalancerPolicyResult
+       DeleteLoadBalancerPolicy(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) (*elb.DeleteLoadBalancerPolicyOutput, error)
+       DeleteLoadBalancerPolicyAsync(ctx workflow.Context, input *elb.DeleteLoadBalancerPolicyInput) *ElbDeleteLoadBalancerPolicyResult
 
-    DeregisterInstancesFromLoadBalancer(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) (*elb.DeregisterInstancesFromLoadBalancerOutput, error)
-    DeregisterInstancesFromLoadBalancerAsync(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) *ElbDeregisterInstancesFromLoadBalancerResult
+       DeregisterInstancesFromLoadBalancer(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) (*elb.DeregisterInstancesFromLoadBalancerOutput, error)
+       DeregisterInstancesFromLoadBalancerAsync(ctx workflow.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) *ElbDeregisterInstancesFromLoadBalancerResult
 
-    DescribeAccountLimits(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) (*elb.DescribeAccountLimitsOutput, error)
-    DescribeAccountLimitsAsync(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) *ElbDescribeAccountLimitsResult
+       DescribeAccountLimits(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) (*elb.DescribeAccountLimitsOutput, error)
+       DescribeAccountLimitsAsync(ctx workflow.Context, input *elb.DescribeAccountLimitsInput) *ElbDescribeAccountLimitsResult
 
-    DescribeInstanceHealth(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) (*elb.DescribeInstanceHealthOutput, error)
-    DescribeInstanceHealthAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *ElbDescribeInstanceHealthResult
+       DescribeInstanceHealth(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) (*elb.DescribeInstanceHealthOutput, error)
+       DescribeInstanceHealthAsync(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) *ElbDescribeInstanceHealthResult
 
-    DescribeLoadBalancerAttributes(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) (*elb.DescribeLoadBalancerAttributesOutput, error)
-    DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) *ElbDescribeLoadBalancerAttributesResult
+       DescribeLoadBalancerAttributes(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) (*elb.DescribeLoadBalancerAttributesOutput, error)
+       DescribeLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerAttributesInput) *ElbDescribeLoadBalancerAttributesResult
 
-    DescribeLoadBalancerPolicies(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) (*elb.DescribeLoadBalancerPoliciesOutput, error)
-    DescribeLoadBalancerPoliciesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) *ElbDescribeLoadBalancerPoliciesResult
+       DescribeLoadBalancerPolicies(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) (*elb.DescribeLoadBalancerPoliciesOutput, error)
+       DescribeLoadBalancerPoliciesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPoliciesInput) *ElbDescribeLoadBalancerPoliciesResult
 
-    DescribeLoadBalancerPolicyTypes(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) (*elb.DescribeLoadBalancerPolicyTypesOutput, error)
-    DescribeLoadBalancerPolicyTypesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) *ElbDescribeLoadBalancerPolicyTypesResult
+       DescribeLoadBalancerPolicyTypes(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) (*elb.DescribeLoadBalancerPolicyTypesOutput, error)
+       DescribeLoadBalancerPolicyTypesAsync(ctx workflow.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) *ElbDescribeLoadBalancerPolicyTypesResult
 
-    DescribeLoadBalancers(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) (*elb.DescribeLoadBalancersOutput, error)
-    DescribeLoadBalancersAsync(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) *ElbDescribeLoadBalancersResult
+       DescribeLoadBalancers(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) (*elb.DescribeLoadBalancersOutput, error)
+       DescribeLoadBalancersAsync(ctx workflow.Context, input *elb.DescribeLoadBalancersInput) *ElbDescribeLoadBalancersResult
 
-    DescribeTags(ctx workflow.Context, input *elb.DescribeTagsInput) (*elb.DescribeTagsOutput, error)
-    DescribeTagsAsync(ctx workflow.Context, input *elb.DescribeTagsInput) *ElbDescribeTagsResult
+       DescribeTags(ctx workflow.Context, input *elb.DescribeTagsInput) (*elb.DescribeTagsOutput, error)
+       DescribeTagsAsync(ctx workflow.Context, input *elb.DescribeTagsInput) *ElbDescribeTagsResult
 
-    DetachLoadBalancerFromSubnets(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) (*elb.DetachLoadBalancerFromSubnetsOutput, error)
-    DetachLoadBalancerFromSubnetsAsync(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) *ElbDetachLoadBalancerFromSubnetsResult
+       DetachLoadBalancerFromSubnets(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) (*elb.DetachLoadBalancerFromSubnetsOutput, error)
+       DetachLoadBalancerFromSubnetsAsync(ctx workflow.Context, input *elb.DetachLoadBalancerFromSubnetsInput) *ElbDetachLoadBalancerFromSubnetsResult
 
-    DisableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error)
-    DisableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) *ElbDisableAvailabilityZonesForLoadBalancerResult
+       DisableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error)
+       DisableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) *ElbDisableAvailabilityZonesForLoadBalancerResult
 
-    EnableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error)
-    EnableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) *ElbEnableAvailabilityZonesForLoadBalancerResult
+       EnableAvailabilityZonesForLoadBalancer(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error)
+       EnableAvailabilityZonesForLoadBalancerAsync(ctx workflow.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) *ElbEnableAvailabilityZonesForLoadBalancerResult
 
-    ModifyLoadBalancerAttributes(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) (*elb.ModifyLoadBalancerAttributesOutput, error)
-    ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) *ElbModifyLoadBalancerAttributesResult
+       ModifyLoadBalancerAttributes(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) (*elb.ModifyLoadBalancerAttributesOutput, error)
+       ModifyLoadBalancerAttributesAsync(ctx workflow.Context, input *elb.ModifyLoadBalancerAttributesInput) *ElbModifyLoadBalancerAttributesResult
 
-    RegisterInstancesWithLoadBalancer(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) (*elb.RegisterInstancesWithLoadBalancerOutput, error)
-    RegisterInstancesWithLoadBalancerAsync(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) *ElbRegisterInstancesWithLoadBalancerResult
+       RegisterInstancesWithLoadBalancer(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) (*elb.RegisterInstancesWithLoadBalancerOutput, error)
+       RegisterInstancesWithLoadBalancerAsync(ctx workflow.Context, input *elb.RegisterInstancesWithLoadBalancerInput) *ElbRegisterInstancesWithLoadBalancerResult
 
-    RemoveTags(ctx workflow.Context, input *elb.RemoveTagsInput) (*elb.RemoveTagsOutput, error)
-    RemoveTagsAsync(ctx workflow.Context, input *elb.RemoveTagsInput) *ElbRemoveTagsResult
+       RemoveTags(ctx workflow.Context, input *elb.RemoveTagsInput) (*elb.RemoveTagsOutput, error)
+       RemoveTagsAsync(ctx workflow.Context, input *elb.RemoveTagsInput) *ElbRemoveTagsResult
 
-    SetLoadBalancerListenerSSLCertificate(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error)
-    SetLoadBalancerListenerSSLCertificateAsync(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) *ElbSetLoadBalancerListenerSSLCertificateResult
+       SetLoadBalancerListenerSSLCertificate(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error)
+       SetLoadBalancerListenerSSLCertificateAsync(ctx workflow.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) *ElbSetLoadBalancerListenerSSLCertificateResult
 
-    SetLoadBalancerPoliciesForBackendServer(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error)
-    SetLoadBalancerPoliciesForBackendServerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) *ElbSetLoadBalancerPoliciesForBackendServerResult
+       SetLoadBalancerPoliciesForBackendServer(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error)
+       SetLoadBalancerPoliciesForBackendServerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) *ElbSetLoadBalancerPoliciesForBackendServerResult
 
-    SetLoadBalancerPoliciesOfListener(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error)
-    SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *ElbSetLoadBalancerPoliciesOfListenerResult
+       SetLoadBalancerPoliciesOfListener(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error)
+       SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *ElbSetLoadBalancerPoliciesOfListenerResult
 
-    WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-    WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-    WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error}
+       WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
+       WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
+       WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error}
 
 type ElbAddTagsResult struct {
 	Result workflow.Future

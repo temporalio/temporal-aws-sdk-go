@@ -7,71 +7,71 @@ import (
 )
 
 type MediaConnectClient interface {
-    AddFlowOutputs(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error)
-    AddFlowOutputsAsync(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) *MediaconnectAddFlowOutputsResult
+       AddFlowOutputs(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error)
+       AddFlowOutputsAsync(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) *MediaconnectAddFlowOutputsResult
 
-    AddFlowSources(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) (*mediaconnect.AddFlowSourcesOutput, error)
-    AddFlowSourcesAsync(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) *MediaconnectAddFlowSourcesResult
+       AddFlowSources(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) (*mediaconnect.AddFlowSourcesOutput, error)
+       AddFlowSourcesAsync(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) *MediaconnectAddFlowSourcesResult
 
-    AddFlowVpcInterfaces(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) (*mediaconnect.AddFlowVpcInterfacesOutput, error)
-    AddFlowVpcInterfacesAsync(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) *MediaconnectAddFlowVpcInterfacesResult
+       AddFlowVpcInterfaces(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) (*mediaconnect.AddFlowVpcInterfacesOutput, error)
+       AddFlowVpcInterfacesAsync(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) *MediaconnectAddFlowVpcInterfacesResult
 
-    CreateFlow(ctx workflow.Context, input *mediaconnect.CreateFlowInput) (*mediaconnect.CreateFlowOutput, error)
-    CreateFlowAsync(ctx workflow.Context, input *mediaconnect.CreateFlowInput) *MediaconnectCreateFlowResult
+       CreateFlow(ctx workflow.Context, input *mediaconnect.CreateFlowInput) (*mediaconnect.CreateFlowOutput, error)
+       CreateFlowAsync(ctx workflow.Context, input *mediaconnect.CreateFlowInput) *MediaconnectCreateFlowResult
 
-    DeleteFlow(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) (*mediaconnect.DeleteFlowOutput, error)
-    DeleteFlowAsync(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) *MediaconnectDeleteFlowResult
+       DeleteFlow(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) (*mediaconnect.DeleteFlowOutput, error)
+       DeleteFlowAsync(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) *MediaconnectDeleteFlowResult
 
-    DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error)
-    DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult
+       DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error)
+       DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult
 
-    GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error)
-    GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult
+       GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error)
+       GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult
 
-    ListEntitlements(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) (*mediaconnect.ListEntitlementsOutput, error)
-    ListEntitlementsAsync(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) *MediaconnectListEntitlementsResult
+       ListEntitlements(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) (*mediaconnect.ListEntitlementsOutput, error)
+       ListEntitlementsAsync(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) *MediaconnectListEntitlementsResult
 
-    ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error)
-    ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult
+       ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error)
+       ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult
 
-    ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult
 
-    RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error)
-    RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult
+       RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error)
+       RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult
 
-    RemoveFlowSource(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) (*mediaconnect.RemoveFlowSourceOutput, error)
-    RemoveFlowSourceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) *MediaconnectRemoveFlowSourceResult
+       RemoveFlowSource(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) (*mediaconnect.RemoveFlowSourceOutput, error)
+       RemoveFlowSourceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) *MediaconnectRemoveFlowSourceResult
 
-    RemoveFlowVpcInterface(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error)
-    RemoveFlowVpcInterfaceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) *MediaconnectRemoveFlowVpcInterfaceResult
+       RemoveFlowVpcInterface(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error)
+       RemoveFlowVpcInterfaceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) *MediaconnectRemoveFlowVpcInterfaceResult
 
-    RevokeFlowEntitlement(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) (*mediaconnect.RevokeFlowEntitlementOutput, error)
-    RevokeFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) *MediaconnectRevokeFlowEntitlementResult
+       RevokeFlowEntitlement(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) (*mediaconnect.RevokeFlowEntitlementOutput, error)
+       RevokeFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) *MediaconnectRevokeFlowEntitlementResult
 
-    StartFlow(ctx workflow.Context, input *mediaconnect.StartFlowInput) (*mediaconnect.StartFlowOutput, error)
-    StartFlowAsync(ctx workflow.Context, input *mediaconnect.StartFlowInput) *MediaconnectStartFlowResult
+       StartFlow(ctx workflow.Context, input *mediaconnect.StartFlowInput) (*mediaconnect.StartFlowOutput, error)
+       StartFlowAsync(ctx workflow.Context, input *mediaconnect.StartFlowInput) *MediaconnectStartFlowResult
 
-    StopFlow(ctx workflow.Context, input *mediaconnect.StopFlowInput) (*mediaconnect.StopFlowOutput, error)
-    StopFlowAsync(ctx workflow.Context, input *mediaconnect.StopFlowInput) *MediaconnectStopFlowResult
+       StopFlow(ctx workflow.Context, input *mediaconnect.StopFlowInput) (*mediaconnect.StopFlowOutput, error)
+       StopFlowAsync(ctx workflow.Context, input *mediaconnect.StopFlowInput) *MediaconnectStopFlowResult
 
-    TagResource(ctx workflow.Context, input *mediaconnect.TagResourceInput) (*mediaconnect.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *mediaconnect.TagResourceInput) *MediaconnectTagResourceResult
+       TagResource(ctx workflow.Context, input *mediaconnect.TagResourceInput) (*mediaconnect.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *mediaconnect.TagResourceInput) *MediaconnectTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *mediaconnect.UntagResourceInput) (*mediaconnect.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *mediaconnect.UntagResourceInput) *MediaconnectUntagResourceResult
+       UntagResource(ctx workflow.Context, input *mediaconnect.UntagResourceInput) (*mediaconnect.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *mediaconnect.UntagResourceInput) *MediaconnectUntagResourceResult
 
-    UpdateFlow(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) (*mediaconnect.UpdateFlowOutput, error)
-    UpdateFlowAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) *MediaconnectUpdateFlowResult
+       UpdateFlow(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) (*mediaconnect.UpdateFlowOutput, error)
+       UpdateFlowAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) *MediaconnectUpdateFlowResult
 
-    UpdateFlowEntitlement(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) (*mediaconnect.UpdateFlowEntitlementOutput, error)
-    UpdateFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) *MediaconnectUpdateFlowEntitlementResult
+       UpdateFlowEntitlement(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) (*mediaconnect.UpdateFlowEntitlementOutput, error)
+       UpdateFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) *MediaconnectUpdateFlowEntitlementResult
 
-    UpdateFlowOutput(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) (*mediaconnect.UpdateFlowOutputOutput, error)
-    UpdateFlowOutputAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) *MediaconnectUpdateFlowOutputResult
+       UpdateFlowOutput(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) (*mediaconnect.UpdateFlowOutputOutput, error)
+       UpdateFlowOutputAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) *MediaconnectUpdateFlowOutputResult
 
-    UpdateFlowSource(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) (*mediaconnect.UpdateFlowSourceOutput, error)
-    UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult
+       UpdateFlowSource(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) (*mediaconnect.UpdateFlowSourceOutput, error)
+       UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult
 }
 
 type MediaconnectAddFlowOutputsResult struct {

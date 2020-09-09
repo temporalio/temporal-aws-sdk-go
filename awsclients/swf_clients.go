@@ -7,116 +7,116 @@ import (
 )
 
 type SWFClient interface {
-    CountClosedWorkflowExecutions(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
-    CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SwfCountClosedWorkflowExecutionsResult
+       CountClosedWorkflowExecutions(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
+       CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SwfCountClosedWorkflowExecutionsResult
 
-    CountOpenWorkflowExecutions(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
-    CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SwfCountOpenWorkflowExecutionsResult
+       CountOpenWorkflowExecutions(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
+       CountOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountOpenWorkflowExecutionsInput) *SwfCountOpenWorkflowExecutionsResult
 
-    CountPendingActivityTasks(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) (*swf.PendingTaskCount, error)
-    CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SwfCountPendingActivityTasksResult
+       CountPendingActivityTasks(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) (*swf.PendingTaskCount, error)
+       CountPendingActivityTasksAsync(ctx workflow.Context, input *swf.CountPendingActivityTasksInput) *SwfCountPendingActivityTasksResult
 
-    CountPendingDecisionTasks(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) (*swf.PendingTaskCount, error)
-    CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SwfCountPendingDecisionTasksResult
+       CountPendingDecisionTasks(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) (*swf.PendingTaskCount, error)
+       CountPendingDecisionTasksAsync(ctx workflow.Context, input *swf.CountPendingDecisionTasksInput) *SwfCountPendingDecisionTasksResult
 
-    DeprecateActivityType(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) (*swf.DeprecateActivityTypeOutput, error)
-    DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SwfDeprecateActivityTypeResult
+       DeprecateActivityType(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) (*swf.DeprecateActivityTypeOutput, error)
+       DeprecateActivityTypeAsync(ctx workflow.Context, input *swf.DeprecateActivityTypeInput) *SwfDeprecateActivityTypeResult
 
-    DeprecateDomain(ctx workflow.Context, input *swf.DeprecateDomainInput) (*swf.DeprecateDomainOutput, error)
-    DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SwfDeprecateDomainResult
+       DeprecateDomain(ctx workflow.Context, input *swf.DeprecateDomainInput) (*swf.DeprecateDomainOutput, error)
+       DeprecateDomainAsync(ctx workflow.Context, input *swf.DeprecateDomainInput) *SwfDeprecateDomainResult
 
-    DeprecateWorkflowType(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) (*swf.DeprecateWorkflowTypeOutput, error)
-    DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SwfDeprecateWorkflowTypeResult
+       DeprecateWorkflowType(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) (*swf.DeprecateWorkflowTypeOutput, error)
+       DeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.DeprecateWorkflowTypeInput) *SwfDeprecateWorkflowTypeResult
 
-    DescribeActivityType(ctx workflow.Context, input *swf.DescribeActivityTypeInput) (*swf.DescribeActivityTypeOutput, error)
-    DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SwfDescribeActivityTypeResult
+       DescribeActivityType(ctx workflow.Context, input *swf.DescribeActivityTypeInput) (*swf.DescribeActivityTypeOutput, error)
+       DescribeActivityTypeAsync(ctx workflow.Context, input *swf.DescribeActivityTypeInput) *SwfDescribeActivityTypeResult
 
-    DescribeDomain(ctx workflow.Context, input *swf.DescribeDomainInput) (*swf.DescribeDomainOutput, error)
-    DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SwfDescribeDomainResult
+       DescribeDomain(ctx workflow.Context, input *swf.DescribeDomainInput) (*swf.DescribeDomainOutput, error)
+       DescribeDomainAsync(ctx workflow.Context, input *swf.DescribeDomainInput) *SwfDescribeDomainResult
 
-    DescribeWorkflowExecution(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) (*swf.DescribeWorkflowExecutionOutput, error)
-    DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SwfDescribeWorkflowExecutionResult
+       DescribeWorkflowExecution(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) (*swf.DescribeWorkflowExecutionOutput, error)
+       DescribeWorkflowExecutionAsync(ctx workflow.Context, input *swf.DescribeWorkflowExecutionInput) *SwfDescribeWorkflowExecutionResult
 
-    DescribeWorkflowType(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) (*swf.DescribeWorkflowTypeOutput, error)
-    DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SwfDescribeWorkflowTypeResult
+       DescribeWorkflowType(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) (*swf.DescribeWorkflowTypeOutput, error)
+       DescribeWorkflowTypeAsync(ctx workflow.Context, input *swf.DescribeWorkflowTypeInput) *SwfDescribeWorkflowTypeResult
 
-    GetWorkflowExecutionHistory(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) (*swf.GetWorkflowExecutionHistoryOutput, error)
-    GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SwfGetWorkflowExecutionHistoryResult
+       GetWorkflowExecutionHistory(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) (*swf.GetWorkflowExecutionHistoryOutput, error)
+       GetWorkflowExecutionHistoryAsync(ctx workflow.Context, input *swf.GetWorkflowExecutionHistoryInput) *SwfGetWorkflowExecutionHistoryResult
 
-    ListActivityTypes(ctx workflow.Context, input *swf.ListActivityTypesInput) (*swf.ListActivityTypesOutput, error)
-    ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SwfListActivityTypesResult
+       ListActivityTypes(ctx workflow.Context, input *swf.ListActivityTypesInput) (*swf.ListActivityTypesOutput, error)
+       ListActivityTypesAsync(ctx workflow.Context, input *swf.ListActivityTypesInput) *SwfListActivityTypesResult
 
-    ListClosedWorkflowExecutions(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
-    ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SwfListClosedWorkflowExecutionsResult
+       ListClosedWorkflowExecutions(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
+       ListClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListClosedWorkflowExecutionsInput) *SwfListClosedWorkflowExecutionsResult
 
-    ListDomains(ctx workflow.Context, input *swf.ListDomainsInput) (*swf.ListDomainsOutput, error)
-    ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SwfListDomainsResult
+       ListDomains(ctx workflow.Context, input *swf.ListDomainsInput) (*swf.ListDomainsOutput, error)
+       ListDomainsAsync(ctx workflow.Context, input *swf.ListDomainsInput) *SwfListDomainsResult
 
-    ListOpenWorkflowExecutions(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
-    ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SwfListOpenWorkflowExecutionsResult
+       ListOpenWorkflowExecutions(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) (*swf.WorkflowExecutionInfos, error)
+       ListOpenWorkflowExecutionsAsync(ctx workflow.Context, input *swf.ListOpenWorkflowExecutionsInput) *SwfListOpenWorkflowExecutionsResult
 
-    ListTagsForResource(ctx workflow.Context, input *swf.ListTagsForResourceInput) (*swf.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SwfListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *swf.ListTagsForResourceInput) (*swf.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *swf.ListTagsForResourceInput) *SwfListTagsForResourceResult
 
-    ListWorkflowTypes(ctx workflow.Context, input *swf.ListWorkflowTypesInput) (*swf.ListWorkflowTypesOutput, error)
-    ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SwfListWorkflowTypesResult
+       ListWorkflowTypes(ctx workflow.Context, input *swf.ListWorkflowTypesInput) (*swf.ListWorkflowTypesOutput, error)
+       ListWorkflowTypesAsync(ctx workflow.Context, input *swf.ListWorkflowTypesInput) *SwfListWorkflowTypesResult
 
-    PollForActivityTask(ctx workflow.Context, input *swf.PollForActivityTaskInput) (*swf.PollForActivityTaskOutput, error)
-    PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SwfPollForActivityTaskResult
+       PollForActivityTask(ctx workflow.Context, input *swf.PollForActivityTaskInput) (*swf.PollForActivityTaskOutput, error)
+       PollForActivityTaskAsync(ctx workflow.Context, input *swf.PollForActivityTaskInput) *SwfPollForActivityTaskResult
 
-    PollForDecisionTask(ctx workflow.Context, input *swf.PollForDecisionTaskInput) (*swf.PollForDecisionTaskOutput, error)
-    PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SwfPollForDecisionTaskResult
+       PollForDecisionTask(ctx workflow.Context, input *swf.PollForDecisionTaskInput) (*swf.PollForDecisionTaskOutput, error)
+       PollForDecisionTaskAsync(ctx workflow.Context, input *swf.PollForDecisionTaskInput) *SwfPollForDecisionTaskResult
 
-    RecordActivityTaskHeartbeat(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) (*swf.RecordActivityTaskHeartbeatOutput, error)
-    RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SwfRecordActivityTaskHeartbeatResult
+       RecordActivityTaskHeartbeat(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) (*swf.RecordActivityTaskHeartbeatOutput, error)
+       RecordActivityTaskHeartbeatAsync(ctx workflow.Context, input *swf.RecordActivityTaskHeartbeatInput) *SwfRecordActivityTaskHeartbeatResult
 
-    RegisterActivityType(ctx workflow.Context, input *swf.RegisterActivityTypeInput) (*swf.RegisterActivityTypeOutput, error)
-    RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SwfRegisterActivityTypeResult
+       RegisterActivityType(ctx workflow.Context, input *swf.RegisterActivityTypeInput) (*swf.RegisterActivityTypeOutput, error)
+       RegisterActivityTypeAsync(ctx workflow.Context, input *swf.RegisterActivityTypeInput) *SwfRegisterActivityTypeResult
 
-    RegisterDomain(ctx workflow.Context, input *swf.RegisterDomainInput) (*swf.RegisterDomainOutput, error)
-    RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SwfRegisterDomainResult
+       RegisterDomain(ctx workflow.Context, input *swf.RegisterDomainInput) (*swf.RegisterDomainOutput, error)
+       RegisterDomainAsync(ctx workflow.Context, input *swf.RegisterDomainInput) *SwfRegisterDomainResult
 
-    RegisterWorkflowType(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) (*swf.RegisterWorkflowTypeOutput, error)
-    RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SwfRegisterWorkflowTypeResult
+       RegisterWorkflowType(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) (*swf.RegisterWorkflowTypeOutput, error)
+       RegisterWorkflowTypeAsync(ctx workflow.Context, input *swf.RegisterWorkflowTypeInput) *SwfRegisterWorkflowTypeResult
 
-    RequestCancelWorkflowExecution(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) (*swf.RequestCancelWorkflowExecutionOutput, error)
-    RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SwfRequestCancelWorkflowExecutionResult
+       RequestCancelWorkflowExecution(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) (*swf.RequestCancelWorkflowExecutionOutput, error)
+       RequestCancelWorkflowExecutionAsync(ctx workflow.Context, input *swf.RequestCancelWorkflowExecutionInput) *SwfRequestCancelWorkflowExecutionResult
 
-    RespondActivityTaskCanceled(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) (*swf.RespondActivityTaskCanceledOutput, error)
-    RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SwfRespondActivityTaskCanceledResult
+       RespondActivityTaskCanceled(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) (*swf.RespondActivityTaskCanceledOutput, error)
+       RespondActivityTaskCanceledAsync(ctx workflow.Context, input *swf.RespondActivityTaskCanceledInput) *SwfRespondActivityTaskCanceledResult
 
-    RespondActivityTaskCompleted(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) (*swf.RespondActivityTaskCompletedOutput, error)
-    RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SwfRespondActivityTaskCompletedResult
+       RespondActivityTaskCompleted(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) (*swf.RespondActivityTaskCompletedOutput, error)
+       RespondActivityTaskCompletedAsync(ctx workflow.Context, input *swf.RespondActivityTaskCompletedInput) *SwfRespondActivityTaskCompletedResult
 
-    RespondActivityTaskFailed(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) (*swf.RespondActivityTaskFailedOutput, error)
-    RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SwfRespondActivityTaskFailedResult
+       RespondActivityTaskFailed(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) (*swf.RespondActivityTaskFailedOutput, error)
+       RespondActivityTaskFailedAsync(ctx workflow.Context, input *swf.RespondActivityTaskFailedInput) *SwfRespondActivityTaskFailedResult
 
-    RespondDecisionTaskCompleted(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) (*swf.RespondDecisionTaskCompletedOutput, error)
-    RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SwfRespondDecisionTaskCompletedResult
+       RespondDecisionTaskCompleted(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) (*swf.RespondDecisionTaskCompletedOutput, error)
+       RespondDecisionTaskCompletedAsync(ctx workflow.Context, input *swf.RespondDecisionTaskCompletedInput) *SwfRespondDecisionTaskCompletedResult
 
-    SignalWorkflowExecution(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) (*swf.SignalWorkflowExecutionOutput, error)
-    SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SwfSignalWorkflowExecutionResult
+       SignalWorkflowExecution(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) (*swf.SignalWorkflowExecutionOutput, error)
+       SignalWorkflowExecutionAsync(ctx workflow.Context, input *swf.SignalWorkflowExecutionInput) *SwfSignalWorkflowExecutionResult
 
-    StartWorkflowExecution(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) (*swf.StartWorkflowExecutionOutput, error)
-    StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SwfStartWorkflowExecutionResult
+       StartWorkflowExecution(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) (*swf.StartWorkflowExecutionOutput, error)
+       StartWorkflowExecutionAsync(ctx workflow.Context, input *swf.StartWorkflowExecutionInput) *SwfStartWorkflowExecutionResult
 
-    TagResource(ctx workflow.Context, input *swf.TagResourceInput) (*swf.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SwfTagResourceResult
+       TagResource(ctx workflow.Context, input *swf.TagResourceInput) (*swf.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *swf.TagResourceInput) *SwfTagResourceResult
 
-    TerminateWorkflowExecution(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) (*swf.TerminateWorkflowExecutionOutput, error)
-    TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SwfTerminateWorkflowExecutionResult
+       TerminateWorkflowExecution(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) (*swf.TerminateWorkflowExecutionOutput, error)
+       TerminateWorkflowExecutionAsync(ctx workflow.Context, input *swf.TerminateWorkflowExecutionInput) *SwfTerminateWorkflowExecutionResult
 
-    UndeprecateActivityType(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) (*swf.UndeprecateActivityTypeOutput, error)
-    UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SwfUndeprecateActivityTypeResult
+       UndeprecateActivityType(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) (*swf.UndeprecateActivityTypeOutput, error)
+       UndeprecateActivityTypeAsync(ctx workflow.Context, input *swf.UndeprecateActivityTypeInput) *SwfUndeprecateActivityTypeResult
 
-    UndeprecateDomain(ctx workflow.Context, input *swf.UndeprecateDomainInput) (*swf.UndeprecateDomainOutput, error)
-    UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SwfUndeprecateDomainResult
+       UndeprecateDomain(ctx workflow.Context, input *swf.UndeprecateDomainInput) (*swf.UndeprecateDomainOutput, error)
+       UndeprecateDomainAsync(ctx workflow.Context, input *swf.UndeprecateDomainInput) *SwfUndeprecateDomainResult
 
-    UndeprecateWorkflowType(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) (*swf.UndeprecateWorkflowTypeOutput, error)
-    UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SwfUndeprecateWorkflowTypeResult
+       UndeprecateWorkflowType(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) (*swf.UndeprecateWorkflowTypeOutput, error)
+       UndeprecateWorkflowTypeAsync(ctx workflow.Context, input *swf.UndeprecateWorkflowTypeInput) *SwfUndeprecateWorkflowTypeResult
 
-    UntagResource(ctx workflow.Context, input *swf.UntagResourceInput) (*swf.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SwfUntagResourceResult
+       UntagResource(ctx workflow.Context, input *swf.UntagResourceInput) (*swf.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SwfUntagResourceResult
 }
 
 type SwfCountClosedWorkflowExecutionsResult struct {

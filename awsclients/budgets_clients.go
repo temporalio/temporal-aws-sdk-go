@@ -7,47 +7,47 @@ import (
 )
 
 type BudgetsClient interface {
-    CreateBudget(ctx workflow.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error)
-    CreateBudgetAsync(ctx workflow.Context, input *budgets.CreateBudgetInput) *BudgetsCreateBudgetResult
+       CreateBudget(ctx workflow.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error)
+       CreateBudgetAsync(ctx workflow.Context, input *budgets.CreateBudgetInput) *BudgetsCreateBudgetResult
 
-    CreateNotification(ctx workflow.Context, input *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error)
-    CreateNotificationAsync(ctx workflow.Context, input *budgets.CreateNotificationInput) *BudgetsCreateNotificationResult
+       CreateNotification(ctx workflow.Context, input *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error)
+       CreateNotificationAsync(ctx workflow.Context, input *budgets.CreateNotificationInput) *BudgetsCreateNotificationResult
 
-    CreateSubscriber(ctx workflow.Context, input *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error)
-    CreateSubscriberAsync(ctx workflow.Context, input *budgets.CreateSubscriberInput) *BudgetsCreateSubscriberResult
+       CreateSubscriber(ctx workflow.Context, input *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error)
+       CreateSubscriberAsync(ctx workflow.Context, input *budgets.CreateSubscriberInput) *BudgetsCreateSubscriberResult
 
-    DeleteBudget(ctx workflow.Context, input *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error)
-    DeleteBudgetAsync(ctx workflow.Context, input *budgets.DeleteBudgetInput) *BudgetsDeleteBudgetResult
+       DeleteBudget(ctx workflow.Context, input *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error)
+       DeleteBudgetAsync(ctx workflow.Context, input *budgets.DeleteBudgetInput) *BudgetsDeleteBudgetResult
 
-    DeleteNotification(ctx workflow.Context, input *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error)
-    DeleteNotificationAsync(ctx workflow.Context, input *budgets.DeleteNotificationInput) *BudgetsDeleteNotificationResult
+       DeleteNotification(ctx workflow.Context, input *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error)
+       DeleteNotificationAsync(ctx workflow.Context, input *budgets.DeleteNotificationInput) *BudgetsDeleteNotificationResult
 
-    DeleteSubscriber(ctx workflow.Context, input *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error)
-    DeleteSubscriberAsync(ctx workflow.Context, input *budgets.DeleteSubscriberInput) *BudgetsDeleteSubscriberResult
+       DeleteSubscriber(ctx workflow.Context, input *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error)
+       DeleteSubscriberAsync(ctx workflow.Context, input *budgets.DeleteSubscriberInput) *BudgetsDeleteSubscriberResult
 
-    DescribeBudget(ctx workflow.Context, input *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error)
-    DescribeBudgetAsync(ctx workflow.Context, input *budgets.DescribeBudgetInput) *BudgetsDescribeBudgetResult
+       DescribeBudget(ctx workflow.Context, input *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error)
+       DescribeBudgetAsync(ctx workflow.Context, input *budgets.DescribeBudgetInput) *BudgetsDescribeBudgetResult
 
-    DescribeBudgetPerformanceHistory(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error)
-    DescribeBudgetPerformanceHistoryAsync(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) *BudgetsDescribeBudgetPerformanceHistoryResult
+       DescribeBudgetPerformanceHistory(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error)
+       DescribeBudgetPerformanceHistoryAsync(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) *BudgetsDescribeBudgetPerformanceHistoryResult
 
-    DescribeBudgets(ctx workflow.Context, input *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error)
-    DescribeBudgetsAsync(ctx workflow.Context, input *budgets.DescribeBudgetsInput) *BudgetsDescribeBudgetsResult
+       DescribeBudgets(ctx workflow.Context, input *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error)
+       DescribeBudgetsAsync(ctx workflow.Context, input *budgets.DescribeBudgetsInput) *BudgetsDescribeBudgetsResult
 
-    DescribeNotificationsForBudget(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error)
-    DescribeNotificationsForBudgetAsync(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) *BudgetsDescribeNotificationsForBudgetResult
+       DescribeNotificationsForBudget(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error)
+       DescribeNotificationsForBudgetAsync(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) *BudgetsDescribeNotificationsForBudgetResult
 
-    DescribeSubscribersForNotification(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error)
-    DescribeSubscribersForNotificationAsync(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) *BudgetsDescribeSubscribersForNotificationResult
+       DescribeSubscribersForNotification(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error)
+       DescribeSubscribersForNotificationAsync(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) *BudgetsDescribeSubscribersForNotificationResult
 
-    UpdateBudget(ctx workflow.Context, input *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error)
-    UpdateBudgetAsync(ctx workflow.Context, input *budgets.UpdateBudgetInput) *BudgetsUpdateBudgetResult
+       UpdateBudget(ctx workflow.Context, input *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error)
+       UpdateBudgetAsync(ctx workflow.Context, input *budgets.UpdateBudgetInput) *BudgetsUpdateBudgetResult
 
-    UpdateNotification(ctx workflow.Context, input *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error)
-    UpdateNotificationAsync(ctx workflow.Context, input *budgets.UpdateNotificationInput) *BudgetsUpdateNotificationResult
+       UpdateNotification(ctx workflow.Context, input *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error)
+       UpdateNotificationAsync(ctx workflow.Context, input *budgets.UpdateNotificationInput) *BudgetsUpdateNotificationResult
 
-    UpdateSubscriber(ctx workflow.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error)
-    UpdateSubscriberAsync(ctx workflow.Context, input *budgets.UpdateSubscriberInput) *BudgetsUpdateSubscriberResult
+       UpdateSubscriber(ctx workflow.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error)
+       UpdateSubscriberAsync(ctx workflow.Context, input *budgets.UpdateSubscriberInput) *BudgetsUpdateSubscriberResult
 }
 
 type BudgetsCreateBudgetResult struct {

@@ -7,26 +7,26 @@ import (
 )
 
 type IoTSecureTunnelingClient interface {
-    CloseTunnel(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error)
-    CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IotsecuretunnelingCloseTunnelResult
+       CloseTunnel(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error)
+       CloseTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.CloseTunnelInput) *IotsecuretunnelingCloseTunnelResult
 
-    DescribeTunnel(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error)
-    DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IotsecuretunnelingDescribeTunnelResult
+       DescribeTunnel(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error)
+       DescribeTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.DescribeTunnelInput) *IotsecuretunnelingDescribeTunnelResult
 
-    ListTagsForResource(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IotsecuretunnelingListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *iotsecuretunneling.ListTagsForResourceInput) *IotsecuretunnelingListTagsForResourceResult
 
-    ListTunnels(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error)
-    ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IotsecuretunnelingListTunnelsResult
+       ListTunnels(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error)
+       ListTunnelsAsync(ctx workflow.Context, input *iotsecuretunneling.ListTunnelsInput) *IotsecuretunnelingListTunnelsResult
 
-    OpenTunnel(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error)
-    OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IotsecuretunnelingOpenTunnelResult
+       OpenTunnel(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error)
+       OpenTunnelAsync(ctx workflow.Context, input *iotsecuretunneling.OpenTunnelInput) *IotsecuretunnelingOpenTunnelResult
 
-    TagResource(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IotsecuretunnelingTagResourceResult
+       TagResource(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.TagResourceInput) *IotsecuretunnelingTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IotsecuretunnelingUntagResourceResult
+       UntagResource(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IotsecuretunnelingUntagResourceResult
 }
 
 type IotsecuretunnelingCloseTunnelResult struct {

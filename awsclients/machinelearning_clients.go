@@ -7,94 +7,94 @@ import (
 )
 
 type MachineLearningClient interface {
-    AddTags(ctx workflow.Context, input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *machinelearning.AddTagsInput) *MachinelearningAddTagsResult
+       AddTags(ctx workflow.Context, input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *machinelearning.AddTagsInput) *MachinelearningAddTagsResult
 
-    CreateBatchPrediction(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) (*machinelearning.CreateBatchPredictionOutput, error)
-    CreateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) *MachinelearningCreateBatchPredictionResult
+       CreateBatchPrediction(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) (*machinelearning.CreateBatchPredictionOutput, error)
+       CreateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.CreateBatchPredictionInput) *MachinelearningCreateBatchPredictionResult
 
-    CreateDataSourceFromRDS(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) (*machinelearning.CreateDataSourceFromRDSOutput, error)
-    CreateDataSourceFromRDSAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) *MachinelearningCreateDataSourceFromRDSResult
+       CreateDataSourceFromRDS(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) (*machinelearning.CreateDataSourceFromRDSOutput, error)
+       CreateDataSourceFromRDSAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRDSInput) *MachinelearningCreateDataSourceFromRDSResult
 
-    CreateDataSourceFromRedshift(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) (*machinelearning.CreateDataSourceFromRedshiftOutput, error)
-    CreateDataSourceFromRedshiftAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) *MachinelearningCreateDataSourceFromRedshiftResult
+       CreateDataSourceFromRedshift(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) (*machinelearning.CreateDataSourceFromRedshiftOutput, error)
+       CreateDataSourceFromRedshiftAsync(ctx workflow.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) *MachinelearningCreateDataSourceFromRedshiftResult
 
-    CreateDataSourceFromS3(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) (*machinelearning.CreateDataSourceFromS3Output, error)
-    CreateDataSourceFromS3Async(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) *MachinelearningCreateDataSourceFromS3Result
+       CreateDataSourceFromS3(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) (*machinelearning.CreateDataSourceFromS3Output, error)
+       CreateDataSourceFromS3Async(ctx workflow.Context, input *machinelearning.CreateDataSourceFromS3Input) *MachinelearningCreateDataSourceFromS3Result
 
-    CreateEvaluation(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) (*machinelearning.CreateEvaluationOutput, error)
-    CreateEvaluationAsync(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) *MachinelearningCreateEvaluationResult
+       CreateEvaluation(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) (*machinelearning.CreateEvaluationOutput, error)
+       CreateEvaluationAsync(ctx workflow.Context, input *machinelearning.CreateEvaluationInput) *MachinelearningCreateEvaluationResult
 
-    CreateMLModel(ctx workflow.Context, input *machinelearning.CreateMLModelInput) (*machinelearning.CreateMLModelOutput, error)
-    CreateMLModelAsync(ctx workflow.Context, input *machinelearning.CreateMLModelInput) *MachinelearningCreateMLModelResult
+       CreateMLModel(ctx workflow.Context, input *machinelearning.CreateMLModelInput) (*machinelearning.CreateMLModelOutput, error)
+       CreateMLModelAsync(ctx workflow.Context, input *machinelearning.CreateMLModelInput) *MachinelearningCreateMLModelResult
 
-    CreateRealtimeEndpoint(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) (*machinelearning.CreateRealtimeEndpointOutput, error)
-    CreateRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) *MachinelearningCreateRealtimeEndpointResult
+       CreateRealtimeEndpoint(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) (*machinelearning.CreateRealtimeEndpointOutput, error)
+       CreateRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.CreateRealtimeEndpointInput) *MachinelearningCreateRealtimeEndpointResult
 
-    DeleteBatchPrediction(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) (*machinelearning.DeleteBatchPredictionOutput, error)
-    DeleteBatchPredictionAsync(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) *MachinelearningDeleteBatchPredictionResult
+       DeleteBatchPrediction(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) (*machinelearning.DeleteBatchPredictionOutput, error)
+       DeleteBatchPredictionAsync(ctx workflow.Context, input *machinelearning.DeleteBatchPredictionInput) *MachinelearningDeleteBatchPredictionResult
 
-    DeleteDataSource(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) (*machinelearning.DeleteDataSourceOutput, error)
-    DeleteDataSourceAsync(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) *MachinelearningDeleteDataSourceResult
+       DeleteDataSource(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) (*machinelearning.DeleteDataSourceOutput, error)
+       DeleteDataSourceAsync(ctx workflow.Context, input *machinelearning.DeleteDataSourceInput) *MachinelearningDeleteDataSourceResult
 
-    DeleteEvaluation(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) (*machinelearning.DeleteEvaluationOutput, error)
-    DeleteEvaluationAsync(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) *MachinelearningDeleteEvaluationResult
+       DeleteEvaluation(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) (*machinelearning.DeleteEvaluationOutput, error)
+       DeleteEvaluationAsync(ctx workflow.Context, input *machinelearning.DeleteEvaluationInput) *MachinelearningDeleteEvaluationResult
 
-    DeleteMLModel(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) (*machinelearning.DeleteMLModelOutput, error)
-    DeleteMLModelAsync(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) *MachinelearningDeleteMLModelResult
+       DeleteMLModel(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) (*machinelearning.DeleteMLModelOutput, error)
+       DeleteMLModelAsync(ctx workflow.Context, input *machinelearning.DeleteMLModelInput) *MachinelearningDeleteMLModelResult
 
-    DeleteRealtimeEndpoint(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) (*machinelearning.DeleteRealtimeEndpointOutput, error)
-    DeleteRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) *MachinelearningDeleteRealtimeEndpointResult
+       DeleteRealtimeEndpoint(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) (*machinelearning.DeleteRealtimeEndpointOutput, error)
+       DeleteRealtimeEndpointAsync(ctx workflow.Context, input *machinelearning.DeleteRealtimeEndpointInput) *MachinelearningDeleteRealtimeEndpointResult
 
-    DeleteTags(ctx workflow.Context, input *machinelearning.DeleteTagsInput) (*machinelearning.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *machinelearning.DeleteTagsInput) *MachinelearningDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *machinelearning.DeleteTagsInput) (*machinelearning.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *machinelearning.DeleteTagsInput) *MachinelearningDeleteTagsResult
 
-    DescribeBatchPredictions(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) (*machinelearning.DescribeBatchPredictionsOutput, error)
-    DescribeBatchPredictionsAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *MachinelearningDescribeBatchPredictionsResult
+       DescribeBatchPredictions(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) (*machinelearning.DescribeBatchPredictionsOutput, error)
+       DescribeBatchPredictionsAsync(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) *MachinelearningDescribeBatchPredictionsResult
 
-    DescribeDataSources(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) (*machinelearning.DescribeDataSourcesOutput, error)
-    DescribeDataSourcesAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *MachinelearningDescribeDataSourcesResult
+       DescribeDataSources(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) (*machinelearning.DescribeDataSourcesOutput, error)
+       DescribeDataSourcesAsync(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) *MachinelearningDescribeDataSourcesResult
 
-    DescribeEvaluations(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) (*machinelearning.DescribeEvaluationsOutput, error)
-    DescribeEvaluationsAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *MachinelearningDescribeEvaluationsResult
+       DescribeEvaluations(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) (*machinelearning.DescribeEvaluationsOutput, error)
+       DescribeEvaluationsAsync(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) *MachinelearningDescribeEvaluationsResult
 
-    DescribeMLModels(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) (*machinelearning.DescribeMLModelsOutput, error)
-    DescribeMLModelsAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *MachinelearningDescribeMLModelsResult
+       DescribeMLModels(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) (*machinelearning.DescribeMLModelsOutput, error)
+       DescribeMLModelsAsync(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) *MachinelearningDescribeMLModelsResult
 
-    DescribeTags(ctx workflow.Context, input *machinelearning.DescribeTagsInput) (*machinelearning.DescribeTagsOutput, error)
-    DescribeTagsAsync(ctx workflow.Context, input *machinelearning.DescribeTagsInput) *MachinelearningDescribeTagsResult
+       DescribeTags(ctx workflow.Context, input *machinelearning.DescribeTagsInput) (*machinelearning.DescribeTagsOutput, error)
+       DescribeTagsAsync(ctx workflow.Context, input *machinelearning.DescribeTagsInput) *MachinelearningDescribeTagsResult
 
-    GetBatchPrediction(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) (*machinelearning.GetBatchPredictionOutput, error)
-    GetBatchPredictionAsync(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) *MachinelearningGetBatchPredictionResult
+       GetBatchPrediction(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) (*machinelearning.GetBatchPredictionOutput, error)
+       GetBatchPredictionAsync(ctx workflow.Context, input *machinelearning.GetBatchPredictionInput) *MachinelearningGetBatchPredictionResult
 
-    GetDataSource(ctx workflow.Context, input *machinelearning.GetDataSourceInput) (*machinelearning.GetDataSourceOutput, error)
-    GetDataSourceAsync(ctx workflow.Context, input *machinelearning.GetDataSourceInput) *MachinelearningGetDataSourceResult
+       GetDataSource(ctx workflow.Context, input *machinelearning.GetDataSourceInput) (*machinelearning.GetDataSourceOutput, error)
+       GetDataSourceAsync(ctx workflow.Context, input *machinelearning.GetDataSourceInput) *MachinelearningGetDataSourceResult
 
-    GetEvaluation(ctx workflow.Context, input *machinelearning.GetEvaluationInput) (*machinelearning.GetEvaluationOutput, error)
-    GetEvaluationAsync(ctx workflow.Context, input *machinelearning.GetEvaluationInput) *MachinelearningGetEvaluationResult
+       GetEvaluation(ctx workflow.Context, input *machinelearning.GetEvaluationInput) (*machinelearning.GetEvaluationOutput, error)
+       GetEvaluationAsync(ctx workflow.Context, input *machinelearning.GetEvaluationInput) *MachinelearningGetEvaluationResult
 
-    GetMLModel(ctx workflow.Context, input *machinelearning.GetMLModelInput) (*machinelearning.GetMLModelOutput, error)
-    GetMLModelAsync(ctx workflow.Context, input *machinelearning.GetMLModelInput) *MachinelearningGetMLModelResult
+       GetMLModel(ctx workflow.Context, input *machinelearning.GetMLModelInput) (*machinelearning.GetMLModelOutput, error)
+       GetMLModelAsync(ctx workflow.Context, input *machinelearning.GetMLModelInput) *MachinelearningGetMLModelResult
 
-    Predict(ctx workflow.Context, input *machinelearning.PredictInput) (*machinelearning.PredictOutput, error)
-    PredictAsync(ctx workflow.Context, input *machinelearning.PredictInput) *MachinelearningPredictResult
+       Predict(ctx workflow.Context, input *machinelearning.PredictInput) (*machinelearning.PredictOutput, error)
+       PredictAsync(ctx workflow.Context, input *machinelearning.PredictInput) *MachinelearningPredictResult
 
-    UpdateBatchPrediction(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) (*machinelearning.UpdateBatchPredictionOutput, error)
-    UpdateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) *MachinelearningUpdateBatchPredictionResult
+       UpdateBatchPrediction(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) (*machinelearning.UpdateBatchPredictionOutput, error)
+       UpdateBatchPredictionAsync(ctx workflow.Context, input *machinelearning.UpdateBatchPredictionInput) *MachinelearningUpdateBatchPredictionResult
 
-    UpdateDataSource(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) (*machinelearning.UpdateDataSourceOutput, error)
-    UpdateDataSourceAsync(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) *MachinelearningUpdateDataSourceResult
+       UpdateDataSource(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) (*machinelearning.UpdateDataSourceOutput, error)
+       UpdateDataSourceAsync(ctx workflow.Context, input *machinelearning.UpdateDataSourceInput) *MachinelearningUpdateDataSourceResult
 
-    UpdateEvaluation(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) (*machinelearning.UpdateEvaluationOutput, error)
-    UpdateEvaluationAsync(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) *MachinelearningUpdateEvaluationResult
+       UpdateEvaluation(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) (*machinelearning.UpdateEvaluationOutput, error)
+       UpdateEvaluationAsync(ctx workflow.Context, input *machinelearning.UpdateEvaluationInput) *MachinelearningUpdateEvaluationResult
 
-    UpdateMLModel(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) (*machinelearning.UpdateMLModelOutput, error)
-    UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *MachinelearningUpdateMLModelResult
+       UpdateMLModel(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) (*machinelearning.UpdateMLModelOutput, error)
+       UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *MachinelearningUpdateMLModelResult
 
-    WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error
-    WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error
-    WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error
-    WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error}
+       WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error
+       WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error
+       WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error
+       WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error}
 
 type MachinelearningAddTagsResult struct {
 	Result workflow.Future

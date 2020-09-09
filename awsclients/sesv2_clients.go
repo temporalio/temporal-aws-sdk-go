@@ -7,215 +7,215 @@ import (
 )
 
 type SESV2Client interface {
-    CreateConfigurationSet(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) (*sesv2.CreateConfigurationSetOutput, error)
-    CreateConfigurationSetAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) *Sesv2CreateConfigurationSetResult
+       CreateConfigurationSet(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) (*sesv2.CreateConfigurationSetOutput, error)
+       CreateConfigurationSetAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetInput) *Sesv2CreateConfigurationSetResult
 
-    CreateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) (*sesv2.CreateConfigurationSetEventDestinationOutput, error)
-    CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) *Sesv2CreateConfigurationSetEventDestinationResult
+       CreateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) (*sesv2.CreateConfigurationSetEventDestinationOutput, error)
+       CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.CreateConfigurationSetEventDestinationInput) *Sesv2CreateConfigurationSetEventDestinationResult
 
-    CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error)
-    CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) *Sesv2CreateCustomVerificationEmailTemplateResult
+       CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) (*sesv2.CreateCustomVerificationEmailTemplateOutput, error)
+       CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateCustomVerificationEmailTemplateInput) *Sesv2CreateCustomVerificationEmailTemplateResult
 
-    CreateDedicatedIpPool(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) (*sesv2.CreateDedicatedIpPoolOutput, error)
-    CreateDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) *Sesv2CreateDedicatedIpPoolResult
+       CreateDedicatedIpPool(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) (*sesv2.CreateDedicatedIpPoolOutput, error)
+       CreateDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.CreateDedicatedIpPoolInput) *Sesv2CreateDedicatedIpPoolResult
 
-    CreateDeliverabilityTestReport(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) (*sesv2.CreateDeliverabilityTestReportOutput, error)
-    CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) *Sesv2CreateDeliverabilityTestReportResult
+       CreateDeliverabilityTestReport(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) (*sesv2.CreateDeliverabilityTestReportOutput, error)
+       CreateDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.CreateDeliverabilityTestReportInput) *Sesv2CreateDeliverabilityTestReportResult
 
-    CreateEmailIdentity(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) (*sesv2.CreateEmailIdentityOutput, error)
-    CreateEmailIdentityAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) *Sesv2CreateEmailIdentityResult
+       CreateEmailIdentity(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) (*sesv2.CreateEmailIdentityOutput, error)
+       CreateEmailIdentityAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityInput) *Sesv2CreateEmailIdentityResult
 
-    CreateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) (*sesv2.CreateEmailIdentityPolicyOutput, error)
-    CreateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) *Sesv2CreateEmailIdentityPolicyResult
+       CreateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) (*sesv2.CreateEmailIdentityPolicyOutput, error)
+       CreateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.CreateEmailIdentityPolicyInput) *Sesv2CreateEmailIdentityPolicyResult
 
-    CreateEmailTemplate(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) (*sesv2.CreateEmailTemplateOutput, error)
-    CreateEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) *Sesv2CreateEmailTemplateResult
+       CreateEmailTemplate(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) (*sesv2.CreateEmailTemplateOutput, error)
+       CreateEmailTemplateAsync(ctx workflow.Context, input *sesv2.CreateEmailTemplateInput) *Sesv2CreateEmailTemplateResult
 
-    CreateImportJob(ctx workflow.Context, input *sesv2.CreateImportJobInput) (*sesv2.CreateImportJobOutput, error)
-    CreateImportJobAsync(ctx workflow.Context, input *sesv2.CreateImportJobInput) *Sesv2CreateImportJobResult
+       CreateImportJob(ctx workflow.Context, input *sesv2.CreateImportJobInput) (*sesv2.CreateImportJobOutput, error)
+       CreateImportJobAsync(ctx workflow.Context, input *sesv2.CreateImportJobInput) *Sesv2CreateImportJobResult
 
-    DeleteConfigurationSet(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) (*sesv2.DeleteConfigurationSetOutput, error)
-    DeleteConfigurationSetAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) *Sesv2DeleteConfigurationSetResult
+       DeleteConfigurationSet(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) (*sesv2.DeleteConfigurationSetOutput, error)
+       DeleteConfigurationSetAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetInput) *Sesv2DeleteConfigurationSetResult
 
-    DeleteConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error)
-    DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) *Sesv2DeleteConfigurationSetEventDestinationResult
+       DeleteConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) (*sesv2.DeleteConfigurationSetEventDestinationOutput, error)
+       DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.DeleteConfigurationSetEventDestinationInput) *Sesv2DeleteConfigurationSetEventDestinationResult
 
-    DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error)
-    DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) *Sesv2DeleteCustomVerificationEmailTemplateResult
+       DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) (*sesv2.DeleteCustomVerificationEmailTemplateOutput, error)
+       DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteCustomVerificationEmailTemplateInput) *Sesv2DeleteCustomVerificationEmailTemplateResult
 
-    DeleteDedicatedIpPool(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) (*sesv2.DeleteDedicatedIpPoolOutput, error)
-    DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) *Sesv2DeleteDedicatedIpPoolResult
+       DeleteDedicatedIpPool(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) (*sesv2.DeleteDedicatedIpPoolOutput, error)
+       DeleteDedicatedIpPoolAsync(ctx workflow.Context, input *sesv2.DeleteDedicatedIpPoolInput) *Sesv2DeleteDedicatedIpPoolResult
 
-    DeleteEmailIdentity(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) (*sesv2.DeleteEmailIdentityOutput, error)
-    DeleteEmailIdentityAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) *Sesv2DeleteEmailIdentityResult
+       DeleteEmailIdentity(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) (*sesv2.DeleteEmailIdentityOutput, error)
+       DeleteEmailIdentityAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityInput) *Sesv2DeleteEmailIdentityResult
 
-    DeleteEmailIdentityPolicy(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) (*sesv2.DeleteEmailIdentityPolicyOutput, error)
-    DeleteEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) *Sesv2DeleteEmailIdentityPolicyResult
+       DeleteEmailIdentityPolicy(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) (*sesv2.DeleteEmailIdentityPolicyOutput, error)
+       DeleteEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.DeleteEmailIdentityPolicyInput) *Sesv2DeleteEmailIdentityPolicyResult
 
-    DeleteEmailTemplate(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) (*sesv2.DeleteEmailTemplateOutput, error)
-    DeleteEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) *Sesv2DeleteEmailTemplateResult
+       DeleteEmailTemplate(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) (*sesv2.DeleteEmailTemplateOutput, error)
+       DeleteEmailTemplateAsync(ctx workflow.Context, input *sesv2.DeleteEmailTemplateInput) *Sesv2DeleteEmailTemplateResult
 
-    DeleteSuppressedDestination(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) (*sesv2.DeleteSuppressedDestinationOutput, error)
-    DeleteSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) *Sesv2DeleteSuppressedDestinationResult
+       DeleteSuppressedDestination(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) (*sesv2.DeleteSuppressedDestinationOutput, error)
+       DeleteSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.DeleteSuppressedDestinationInput) *Sesv2DeleteSuppressedDestinationResult
 
-    GetAccount(ctx workflow.Context, input *sesv2.GetAccountInput) (*sesv2.GetAccountOutput, error)
-    GetAccountAsync(ctx workflow.Context, input *sesv2.GetAccountInput) *Sesv2GetAccountResult
+       GetAccount(ctx workflow.Context, input *sesv2.GetAccountInput) (*sesv2.GetAccountOutput, error)
+       GetAccountAsync(ctx workflow.Context, input *sesv2.GetAccountInput) *Sesv2GetAccountResult
 
-    GetBlacklistReports(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) (*sesv2.GetBlacklistReportsOutput, error)
-    GetBlacklistReportsAsync(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) *Sesv2GetBlacklistReportsResult
+       GetBlacklistReports(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) (*sesv2.GetBlacklistReportsOutput, error)
+       GetBlacklistReportsAsync(ctx workflow.Context, input *sesv2.GetBlacklistReportsInput) *Sesv2GetBlacklistReportsResult
 
-    GetConfigurationSet(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) (*sesv2.GetConfigurationSetOutput, error)
-    GetConfigurationSetAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) *Sesv2GetConfigurationSetResult
+       GetConfigurationSet(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) (*sesv2.GetConfigurationSetOutput, error)
+       GetConfigurationSetAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetInput) *Sesv2GetConfigurationSetResult
 
-    GetConfigurationSetEventDestinations(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) (*sesv2.GetConfigurationSetEventDestinationsOutput, error)
-    GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) *Sesv2GetConfigurationSetEventDestinationsResult
+       GetConfigurationSetEventDestinations(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) (*sesv2.GetConfigurationSetEventDestinationsOutput, error)
+       GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *sesv2.GetConfigurationSetEventDestinationsInput) *Sesv2GetConfigurationSetEventDestinationsResult
 
-    GetCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) (*sesv2.GetCustomVerificationEmailTemplateOutput, error)
-    GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) *Sesv2GetCustomVerificationEmailTemplateResult
+       GetCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) (*sesv2.GetCustomVerificationEmailTemplateOutput, error)
+       GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetCustomVerificationEmailTemplateInput) *Sesv2GetCustomVerificationEmailTemplateResult
 
-    GetDedicatedIp(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) (*sesv2.GetDedicatedIpOutput, error)
-    GetDedicatedIpAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) *Sesv2GetDedicatedIpResult
+       GetDedicatedIp(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) (*sesv2.GetDedicatedIpOutput, error)
+       GetDedicatedIpAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpInput) *Sesv2GetDedicatedIpResult
 
-    GetDedicatedIps(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) (*sesv2.GetDedicatedIpsOutput, error)
-    GetDedicatedIpsAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) *Sesv2GetDedicatedIpsResult
+       GetDedicatedIps(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) (*sesv2.GetDedicatedIpsOutput, error)
+       GetDedicatedIpsAsync(ctx workflow.Context, input *sesv2.GetDedicatedIpsInput) *Sesv2GetDedicatedIpsResult
 
-    GetDeliverabilityDashboardOptions(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error)
-    GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) *Sesv2GetDeliverabilityDashboardOptionsResult
+       GetDeliverabilityDashboardOptions(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) (*sesv2.GetDeliverabilityDashboardOptionsOutput, error)
+       GetDeliverabilityDashboardOptionsAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityDashboardOptionsInput) *Sesv2GetDeliverabilityDashboardOptionsResult
 
-    GetDeliverabilityTestReport(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) (*sesv2.GetDeliverabilityTestReportOutput, error)
-    GetDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) *Sesv2GetDeliverabilityTestReportResult
+       GetDeliverabilityTestReport(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) (*sesv2.GetDeliverabilityTestReportOutput, error)
+       GetDeliverabilityTestReportAsync(ctx workflow.Context, input *sesv2.GetDeliverabilityTestReportInput) *Sesv2GetDeliverabilityTestReportResult
 
-    GetDomainDeliverabilityCampaign(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) (*sesv2.GetDomainDeliverabilityCampaignOutput, error)
-    GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) *Sesv2GetDomainDeliverabilityCampaignResult
+       GetDomainDeliverabilityCampaign(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) (*sesv2.GetDomainDeliverabilityCampaignOutput, error)
+       GetDomainDeliverabilityCampaignAsync(ctx workflow.Context, input *sesv2.GetDomainDeliverabilityCampaignInput) *Sesv2GetDomainDeliverabilityCampaignResult
 
-    GetDomainStatisticsReport(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) (*sesv2.GetDomainStatisticsReportOutput, error)
-    GetDomainStatisticsReportAsync(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) *Sesv2GetDomainStatisticsReportResult
+       GetDomainStatisticsReport(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) (*sesv2.GetDomainStatisticsReportOutput, error)
+       GetDomainStatisticsReportAsync(ctx workflow.Context, input *sesv2.GetDomainStatisticsReportInput) *Sesv2GetDomainStatisticsReportResult
 
-    GetEmailIdentity(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) (*sesv2.GetEmailIdentityOutput, error)
-    GetEmailIdentityAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) *Sesv2GetEmailIdentityResult
+       GetEmailIdentity(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) (*sesv2.GetEmailIdentityOutput, error)
+       GetEmailIdentityAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityInput) *Sesv2GetEmailIdentityResult
 
-    GetEmailIdentityPolicies(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) (*sesv2.GetEmailIdentityPoliciesOutput, error)
-    GetEmailIdentityPoliciesAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) *Sesv2GetEmailIdentityPoliciesResult
+       GetEmailIdentityPolicies(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) (*sesv2.GetEmailIdentityPoliciesOutput, error)
+       GetEmailIdentityPoliciesAsync(ctx workflow.Context, input *sesv2.GetEmailIdentityPoliciesInput) *Sesv2GetEmailIdentityPoliciesResult
 
-    GetEmailTemplate(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) (*sesv2.GetEmailTemplateOutput, error)
-    GetEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) *Sesv2GetEmailTemplateResult
+       GetEmailTemplate(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) (*sesv2.GetEmailTemplateOutput, error)
+       GetEmailTemplateAsync(ctx workflow.Context, input *sesv2.GetEmailTemplateInput) *Sesv2GetEmailTemplateResult
 
-    GetImportJob(ctx workflow.Context, input *sesv2.GetImportJobInput) (*sesv2.GetImportJobOutput, error)
-    GetImportJobAsync(ctx workflow.Context, input *sesv2.GetImportJobInput) *Sesv2GetImportJobResult
+       GetImportJob(ctx workflow.Context, input *sesv2.GetImportJobInput) (*sesv2.GetImportJobOutput, error)
+       GetImportJobAsync(ctx workflow.Context, input *sesv2.GetImportJobInput) *Sesv2GetImportJobResult
 
-    GetSuppressedDestination(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) (*sesv2.GetSuppressedDestinationOutput, error)
-    GetSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) *Sesv2GetSuppressedDestinationResult
+       GetSuppressedDestination(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) (*sesv2.GetSuppressedDestinationOutput, error)
+       GetSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.GetSuppressedDestinationInput) *Sesv2GetSuppressedDestinationResult
 
-    ListConfigurationSets(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) (*sesv2.ListConfigurationSetsOutput, error)
-    ListConfigurationSetsAsync(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) *Sesv2ListConfigurationSetsResult
+       ListConfigurationSets(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) (*sesv2.ListConfigurationSetsOutput, error)
+       ListConfigurationSetsAsync(ctx workflow.Context, input *sesv2.ListConfigurationSetsInput) *Sesv2ListConfigurationSetsResult
 
-    ListCustomVerificationEmailTemplates(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error)
-    ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) *Sesv2ListCustomVerificationEmailTemplatesResult
+       ListCustomVerificationEmailTemplates(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) (*sesv2.ListCustomVerificationEmailTemplatesOutput, error)
+       ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListCustomVerificationEmailTemplatesInput) *Sesv2ListCustomVerificationEmailTemplatesResult
 
-    ListDedicatedIpPools(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) (*sesv2.ListDedicatedIpPoolsOutput, error)
-    ListDedicatedIpPoolsAsync(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) *Sesv2ListDedicatedIpPoolsResult
+       ListDedicatedIpPools(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) (*sesv2.ListDedicatedIpPoolsOutput, error)
+       ListDedicatedIpPoolsAsync(ctx workflow.Context, input *sesv2.ListDedicatedIpPoolsInput) *Sesv2ListDedicatedIpPoolsResult
 
-    ListDeliverabilityTestReports(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) (*sesv2.ListDeliverabilityTestReportsOutput, error)
-    ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) *Sesv2ListDeliverabilityTestReportsResult
+       ListDeliverabilityTestReports(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) (*sesv2.ListDeliverabilityTestReportsOutput, error)
+       ListDeliverabilityTestReportsAsync(ctx workflow.Context, input *sesv2.ListDeliverabilityTestReportsInput) *Sesv2ListDeliverabilityTestReportsResult
 
-    ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error)
-    ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) *Sesv2ListDomainDeliverabilityCampaignsResult
+       ListDomainDeliverabilityCampaigns(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) (*sesv2.ListDomainDeliverabilityCampaignsOutput, error)
+       ListDomainDeliverabilityCampaignsAsync(ctx workflow.Context, input *sesv2.ListDomainDeliverabilityCampaignsInput) *Sesv2ListDomainDeliverabilityCampaignsResult
 
-    ListEmailIdentities(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) (*sesv2.ListEmailIdentitiesOutput, error)
-    ListEmailIdentitiesAsync(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) *Sesv2ListEmailIdentitiesResult
+       ListEmailIdentities(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) (*sesv2.ListEmailIdentitiesOutput, error)
+       ListEmailIdentitiesAsync(ctx workflow.Context, input *sesv2.ListEmailIdentitiesInput) *Sesv2ListEmailIdentitiesResult
 
-    ListEmailTemplates(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) (*sesv2.ListEmailTemplatesOutput, error)
-    ListEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) *Sesv2ListEmailTemplatesResult
+       ListEmailTemplates(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) (*sesv2.ListEmailTemplatesOutput, error)
+       ListEmailTemplatesAsync(ctx workflow.Context, input *sesv2.ListEmailTemplatesInput) *Sesv2ListEmailTemplatesResult
 
-    ListImportJobs(ctx workflow.Context, input *sesv2.ListImportJobsInput) (*sesv2.ListImportJobsOutput, error)
-    ListImportJobsAsync(ctx workflow.Context, input *sesv2.ListImportJobsInput) *Sesv2ListImportJobsResult
+       ListImportJobs(ctx workflow.Context, input *sesv2.ListImportJobsInput) (*sesv2.ListImportJobsOutput, error)
+       ListImportJobsAsync(ctx workflow.Context, input *sesv2.ListImportJobsInput) *Sesv2ListImportJobsResult
 
-    ListSuppressedDestinations(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) (*sesv2.ListSuppressedDestinationsOutput, error)
-    ListSuppressedDestinationsAsync(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) *Sesv2ListSuppressedDestinationsResult
+       ListSuppressedDestinations(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) (*sesv2.ListSuppressedDestinationsOutput, error)
+       ListSuppressedDestinationsAsync(ctx workflow.Context, input *sesv2.ListSuppressedDestinationsInput) *Sesv2ListSuppressedDestinationsResult
 
-    ListTagsForResource(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) (*sesv2.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) *Sesv2ListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) (*sesv2.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *sesv2.ListTagsForResourceInput) *Sesv2ListTagsForResourceResult
 
-    PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error)
-    PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) *Sesv2PutAccountDedicatedIpWarmupAttributesResult
+       PutAccountDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) (*sesv2.PutAccountDedicatedIpWarmupAttributesOutput, error)
+       PutAccountDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountDedicatedIpWarmupAttributesInput) *Sesv2PutAccountDedicatedIpWarmupAttributesResult
 
-    PutAccountDetails(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) (*sesv2.PutAccountDetailsOutput, error)
-    PutAccountDetailsAsync(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) *Sesv2PutAccountDetailsResult
+       PutAccountDetails(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) (*sesv2.PutAccountDetailsOutput, error)
+       PutAccountDetailsAsync(ctx workflow.Context, input *sesv2.PutAccountDetailsInput) *Sesv2PutAccountDetailsResult
 
-    PutAccountSendingAttributes(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) (*sesv2.PutAccountSendingAttributesOutput, error)
-    PutAccountSendingAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) *Sesv2PutAccountSendingAttributesResult
+       PutAccountSendingAttributes(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) (*sesv2.PutAccountSendingAttributesOutput, error)
+       PutAccountSendingAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSendingAttributesInput) *Sesv2PutAccountSendingAttributesResult
 
-    PutAccountSuppressionAttributes(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) (*sesv2.PutAccountSuppressionAttributesOutput, error)
-    PutAccountSuppressionAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) *Sesv2PutAccountSuppressionAttributesResult
+       PutAccountSuppressionAttributes(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) (*sesv2.PutAccountSuppressionAttributesOutput, error)
+       PutAccountSuppressionAttributesAsync(ctx workflow.Context, input *sesv2.PutAccountSuppressionAttributesInput) *Sesv2PutAccountSuppressionAttributesResult
 
-    PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error)
-    PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) *Sesv2PutConfigurationSetDeliveryOptionsResult
+       PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) (*sesv2.PutConfigurationSetDeliveryOptionsOutput, error)
+       PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetDeliveryOptionsInput) *Sesv2PutConfigurationSetDeliveryOptionsResult
 
-    PutConfigurationSetReputationOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) (*sesv2.PutConfigurationSetReputationOptionsOutput, error)
-    PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) *Sesv2PutConfigurationSetReputationOptionsResult
+       PutConfigurationSetReputationOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) (*sesv2.PutConfigurationSetReputationOptionsOutput, error)
+       PutConfigurationSetReputationOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetReputationOptionsInput) *Sesv2PutConfigurationSetReputationOptionsResult
 
-    PutConfigurationSetSendingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) (*sesv2.PutConfigurationSetSendingOptionsOutput, error)
-    PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) *Sesv2PutConfigurationSetSendingOptionsResult
+       PutConfigurationSetSendingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) (*sesv2.PutConfigurationSetSendingOptionsOutput, error)
+       PutConfigurationSetSendingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSendingOptionsInput) *Sesv2PutConfigurationSetSendingOptionsResult
 
-    PutConfigurationSetSuppressionOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error)
-    PutConfigurationSetSuppressionOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) *Sesv2PutConfigurationSetSuppressionOptionsResult
+       PutConfigurationSetSuppressionOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) (*sesv2.PutConfigurationSetSuppressionOptionsOutput, error)
+       PutConfigurationSetSuppressionOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetSuppressionOptionsInput) *Sesv2PutConfigurationSetSuppressionOptionsResult
 
-    PutConfigurationSetTrackingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error)
-    PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) *Sesv2PutConfigurationSetTrackingOptionsResult
+       PutConfigurationSetTrackingOptions(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) (*sesv2.PutConfigurationSetTrackingOptionsOutput, error)
+       PutConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *sesv2.PutConfigurationSetTrackingOptionsInput) *Sesv2PutConfigurationSetTrackingOptionsResult
 
-    PutDedicatedIpInPool(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) (*sesv2.PutDedicatedIpInPoolOutput, error)
-    PutDedicatedIpInPoolAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) *Sesv2PutDedicatedIpInPoolResult
+       PutDedicatedIpInPool(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) (*sesv2.PutDedicatedIpInPoolOutput, error)
+       PutDedicatedIpInPoolAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpInPoolInput) *Sesv2PutDedicatedIpInPoolResult
 
-    PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error)
-    PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) *Sesv2PutDedicatedIpWarmupAttributesResult
+       PutDedicatedIpWarmupAttributes(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) (*sesv2.PutDedicatedIpWarmupAttributesOutput, error)
+       PutDedicatedIpWarmupAttributesAsync(ctx workflow.Context, input *sesv2.PutDedicatedIpWarmupAttributesInput) *Sesv2PutDedicatedIpWarmupAttributesResult
 
-    PutDeliverabilityDashboardOption(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) (*sesv2.PutDeliverabilityDashboardOptionOutput, error)
-    PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) *Sesv2PutDeliverabilityDashboardOptionResult
+       PutDeliverabilityDashboardOption(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) (*sesv2.PutDeliverabilityDashboardOptionOutput, error)
+       PutDeliverabilityDashboardOptionAsync(ctx workflow.Context, input *sesv2.PutDeliverabilityDashboardOptionInput) *Sesv2PutDeliverabilityDashboardOptionResult
 
-    PutEmailIdentityDkimAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) (*sesv2.PutEmailIdentityDkimAttributesOutput, error)
-    PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) *Sesv2PutEmailIdentityDkimAttributesResult
+       PutEmailIdentityDkimAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) (*sesv2.PutEmailIdentityDkimAttributesOutput, error)
+       PutEmailIdentityDkimAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimAttributesInput) *Sesv2PutEmailIdentityDkimAttributesResult
 
-    PutEmailIdentityDkimSigningAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error)
-    PutEmailIdentityDkimSigningAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) *Sesv2PutEmailIdentityDkimSigningAttributesResult
+       PutEmailIdentityDkimSigningAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) (*sesv2.PutEmailIdentityDkimSigningAttributesOutput, error)
+       PutEmailIdentityDkimSigningAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityDkimSigningAttributesInput) *Sesv2PutEmailIdentityDkimSigningAttributesResult
 
-    PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error)
-    PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) *Sesv2PutEmailIdentityFeedbackAttributesResult
+       PutEmailIdentityFeedbackAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) (*sesv2.PutEmailIdentityFeedbackAttributesOutput, error)
+       PutEmailIdentityFeedbackAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityFeedbackAttributesInput) *Sesv2PutEmailIdentityFeedbackAttributesResult
 
-    PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error)
-    PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) *Sesv2PutEmailIdentityMailFromAttributesResult
+       PutEmailIdentityMailFromAttributes(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) (*sesv2.PutEmailIdentityMailFromAttributesOutput, error)
+       PutEmailIdentityMailFromAttributesAsync(ctx workflow.Context, input *sesv2.PutEmailIdentityMailFromAttributesInput) *Sesv2PutEmailIdentityMailFromAttributesResult
 
-    PutSuppressedDestination(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) (*sesv2.PutSuppressedDestinationOutput, error)
-    PutSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) *Sesv2PutSuppressedDestinationResult
+       PutSuppressedDestination(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) (*sesv2.PutSuppressedDestinationOutput, error)
+       PutSuppressedDestinationAsync(ctx workflow.Context, input *sesv2.PutSuppressedDestinationInput) *Sesv2PutSuppressedDestinationResult
 
-    SendBulkEmail(ctx workflow.Context, input *sesv2.SendBulkEmailInput) (*sesv2.SendBulkEmailOutput, error)
-    SendBulkEmailAsync(ctx workflow.Context, input *sesv2.SendBulkEmailInput) *Sesv2SendBulkEmailResult
+       SendBulkEmail(ctx workflow.Context, input *sesv2.SendBulkEmailInput) (*sesv2.SendBulkEmailOutput, error)
+       SendBulkEmailAsync(ctx workflow.Context, input *sesv2.SendBulkEmailInput) *Sesv2SendBulkEmailResult
 
-    SendCustomVerificationEmail(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) (*sesv2.SendCustomVerificationEmailOutput, error)
-    SendCustomVerificationEmailAsync(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) *Sesv2SendCustomVerificationEmailResult
+       SendCustomVerificationEmail(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) (*sesv2.SendCustomVerificationEmailOutput, error)
+       SendCustomVerificationEmailAsync(ctx workflow.Context, input *sesv2.SendCustomVerificationEmailInput) *Sesv2SendCustomVerificationEmailResult
 
-    SendEmail(ctx workflow.Context, input *sesv2.SendEmailInput) (*sesv2.SendEmailOutput, error)
-    SendEmailAsync(ctx workflow.Context, input *sesv2.SendEmailInput) *Sesv2SendEmailResult
+       SendEmail(ctx workflow.Context, input *sesv2.SendEmailInput) (*sesv2.SendEmailOutput, error)
+       SendEmailAsync(ctx workflow.Context, input *sesv2.SendEmailInput) *Sesv2SendEmailResult
 
-    TagResource(ctx workflow.Context, input *sesv2.TagResourceInput) (*sesv2.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *sesv2.TagResourceInput) *Sesv2TagResourceResult
+       TagResource(ctx workflow.Context, input *sesv2.TagResourceInput) (*sesv2.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *sesv2.TagResourceInput) *Sesv2TagResourceResult
 
-    TestRenderEmailTemplate(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) (*sesv2.TestRenderEmailTemplateOutput, error)
-    TestRenderEmailTemplateAsync(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) *Sesv2TestRenderEmailTemplateResult
+       TestRenderEmailTemplate(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) (*sesv2.TestRenderEmailTemplateOutput, error)
+       TestRenderEmailTemplateAsync(ctx workflow.Context, input *sesv2.TestRenderEmailTemplateInput) *Sesv2TestRenderEmailTemplateResult
 
-    UntagResource(ctx workflow.Context, input *sesv2.UntagResourceInput) (*sesv2.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *sesv2.UntagResourceInput) *Sesv2UntagResourceResult
+       UntagResource(ctx workflow.Context, input *sesv2.UntagResourceInput) (*sesv2.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *sesv2.UntagResourceInput) *Sesv2UntagResourceResult
 
-    UpdateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error)
-    UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) *Sesv2UpdateConfigurationSetEventDestinationResult
+       UpdateConfigurationSetEventDestination(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) (*sesv2.UpdateConfigurationSetEventDestinationOutput, error)
+       UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *sesv2.UpdateConfigurationSetEventDestinationInput) *Sesv2UpdateConfigurationSetEventDestinationResult
 
-    UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error)
-    UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) *Sesv2UpdateCustomVerificationEmailTemplateResult
+       UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) (*sesv2.UpdateCustomVerificationEmailTemplateOutput, error)
+       UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateCustomVerificationEmailTemplateInput) *Sesv2UpdateCustomVerificationEmailTemplateResult
 
-    UpdateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) (*sesv2.UpdateEmailIdentityPolicyOutput, error)
-    UpdateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) *Sesv2UpdateEmailIdentityPolicyResult
+       UpdateEmailIdentityPolicy(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) (*sesv2.UpdateEmailIdentityPolicyOutput, error)
+       UpdateEmailIdentityPolicyAsync(ctx workflow.Context, input *sesv2.UpdateEmailIdentityPolicyInput) *Sesv2UpdateEmailIdentityPolicyResult
 
-    UpdateEmailTemplate(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) (*sesv2.UpdateEmailTemplateOutput, error)
-    UpdateEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) *Sesv2UpdateEmailTemplateResult
+       UpdateEmailTemplate(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) (*sesv2.UpdateEmailTemplateOutput, error)
+       UpdateEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) *Sesv2UpdateEmailTemplateResult
 }
 
 type Sesv2CreateConfigurationSetResult struct {

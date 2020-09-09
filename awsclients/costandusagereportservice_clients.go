@@ -7,17 +7,17 @@ import (
 )
 
 type CostandUsageReportServiceClient interface {
-    DeleteReportDefinition(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) (*costandusagereportservice.DeleteReportDefinitionOutput, error)
-    DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionResult
+       DeleteReportDefinition(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) (*costandusagereportservice.DeleteReportDefinitionOutput, error)
+       DeleteReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.DeleteReportDefinitionInput) *CostandusagereportserviceDeleteReportDefinitionResult
 
-    DescribeReportDefinitions(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) (*costandusagereportservice.DescribeReportDefinitionsOutput, error)
-    DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsResult
+       DescribeReportDefinitions(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) (*costandusagereportservice.DescribeReportDefinitionsOutput, error)
+       DescribeReportDefinitionsAsync(ctx workflow.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) *CostandusagereportserviceDescribeReportDefinitionsResult
 
-    ModifyReportDefinition(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) (*costandusagereportservice.ModifyReportDefinitionOutput, error)
-    ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionResult
+       ModifyReportDefinition(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) (*costandusagereportservice.ModifyReportDefinitionOutput, error)
+       ModifyReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.ModifyReportDefinitionInput) *CostandusagereportserviceModifyReportDefinitionResult
 
-    PutReportDefinition(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) (*costandusagereportservice.PutReportDefinitionOutput, error)
-    PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionResult
+       PutReportDefinition(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) (*costandusagereportservice.PutReportDefinitionOutput, error)
+       PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionResult
 }
 
 type CostandusagereportserviceDeleteReportDefinitionResult struct {

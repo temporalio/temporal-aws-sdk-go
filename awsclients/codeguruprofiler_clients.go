@@ -7,74 +7,74 @@ import (
 )
 
 type CodeGuruProfilerClient interface {
-    AddNotificationChannels(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) (*codeguruprofiler.AddNotificationChannelsOutput, error)
-    AddNotificationChannelsAsync(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) *CodeguruprofilerAddNotificationChannelsResult
+       AddNotificationChannels(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) (*codeguruprofiler.AddNotificationChannelsOutput, error)
+       AddNotificationChannelsAsync(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) *CodeguruprofilerAddNotificationChannelsResult
 
-    BatchGetFrameMetricData(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error)
-    BatchGetFrameMetricDataAsync(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) *CodeguruprofilerBatchGetFrameMetricDataResult
+       BatchGetFrameMetricData(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error)
+       BatchGetFrameMetricDataAsync(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) *CodeguruprofilerBatchGetFrameMetricDataResult
 
-    ConfigureAgent(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) (*codeguruprofiler.ConfigureAgentOutput, error)
-    ConfigureAgentAsync(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) *CodeguruprofilerConfigureAgentResult
+       ConfigureAgent(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) (*codeguruprofiler.ConfigureAgentOutput, error)
+       ConfigureAgentAsync(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) *CodeguruprofilerConfigureAgentResult
 
-    CreateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) (*codeguruprofiler.CreateProfilingGroupOutput, error)
-    CreateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) *CodeguruprofilerCreateProfilingGroupResult
+       CreateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) (*codeguruprofiler.CreateProfilingGroupOutput, error)
+       CreateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) *CodeguruprofilerCreateProfilingGroupResult
 
-    DeleteProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) (*codeguruprofiler.DeleteProfilingGroupOutput, error)
-    DeleteProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) *CodeguruprofilerDeleteProfilingGroupResult
+       DeleteProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) (*codeguruprofiler.DeleteProfilingGroupOutput, error)
+       DeleteProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) *CodeguruprofilerDeleteProfilingGroupResult
 
-    DescribeProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) (*codeguruprofiler.DescribeProfilingGroupOutput, error)
-    DescribeProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) *CodeguruprofilerDescribeProfilingGroupResult
+       DescribeProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) (*codeguruprofiler.DescribeProfilingGroupOutput, error)
+       DescribeProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) *CodeguruprofilerDescribeProfilingGroupResult
 
-    GetFindingsReportAccountSummary(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error)
-    GetFindingsReportAccountSummaryAsync(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) *CodeguruprofilerGetFindingsReportAccountSummaryResult
+       GetFindingsReportAccountSummary(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error)
+       GetFindingsReportAccountSummaryAsync(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) *CodeguruprofilerGetFindingsReportAccountSummaryResult
 
-    GetNotificationConfiguration(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) (*codeguruprofiler.GetNotificationConfigurationOutput, error)
-    GetNotificationConfigurationAsync(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) *CodeguruprofilerGetNotificationConfigurationResult
+       GetNotificationConfiguration(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) (*codeguruprofiler.GetNotificationConfigurationOutput, error)
+       GetNotificationConfigurationAsync(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) *CodeguruprofilerGetNotificationConfigurationResult
 
-    GetPolicy(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) (*codeguruprofiler.GetPolicyOutput, error)
-    GetPolicyAsync(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) *CodeguruprofilerGetPolicyResult
+       GetPolicy(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) (*codeguruprofiler.GetPolicyOutput, error)
+       GetPolicyAsync(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) *CodeguruprofilerGetPolicyResult
 
-    GetProfile(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) (*codeguruprofiler.GetProfileOutput, error)
-    GetProfileAsync(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) *CodeguruprofilerGetProfileResult
+       GetProfile(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) (*codeguruprofiler.GetProfileOutput, error)
+       GetProfileAsync(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) *CodeguruprofilerGetProfileResult
 
-    GetRecommendations(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) (*codeguruprofiler.GetRecommendationsOutput, error)
-    GetRecommendationsAsync(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) *CodeguruprofilerGetRecommendationsResult
+       GetRecommendations(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) (*codeguruprofiler.GetRecommendationsOutput, error)
+       GetRecommendationsAsync(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) *CodeguruprofilerGetRecommendationsResult
 
-    ListFindingsReports(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) (*codeguruprofiler.ListFindingsReportsOutput, error)
-    ListFindingsReportsAsync(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) *CodeguruprofilerListFindingsReportsResult
+       ListFindingsReports(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) (*codeguruprofiler.ListFindingsReportsOutput, error)
+       ListFindingsReportsAsync(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) *CodeguruprofilerListFindingsReportsResult
 
-    ListProfileTimes(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) (*codeguruprofiler.ListProfileTimesOutput, error)
-    ListProfileTimesAsync(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) *CodeguruprofilerListProfileTimesResult
+       ListProfileTimes(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) (*codeguruprofiler.ListProfileTimesOutput, error)
+       ListProfileTimesAsync(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) *CodeguruprofilerListProfileTimesResult
 
-    ListProfilingGroups(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) (*codeguruprofiler.ListProfilingGroupsOutput, error)
-    ListProfilingGroupsAsync(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) *CodeguruprofilerListProfilingGroupsResult
+       ListProfilingGroups(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) (*codeguruprofiler.ListProfilingGroupsOutput, error)
+       ListProfilingGroupsAsync(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) *CodeguruprofilerListProfilingGroupsResult
 
-    ListTagsForResource(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) (*codeguruprofiler.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) *CodeguruprofilerListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) (*codeguruprofiler.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) *CodeguruprofilerListTagsForResourceResult
 
-    PostAgentProfile(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) (*codeguruprofiler.PostAgentProfileOutput, error)
-    PostAgentProfileAsync(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) *CodeguruprofilerPostAgentProfileResult
+       PostAgentProfile(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) (*codeguruprofiler.PostAgentProfileOutput, error)
+       PostAgentProfileAsync(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) *CodeguruprofilerPostAgentProfileResult
 
-    PutPermission(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) (*codeguruprofiler.PutPermissionOutput, error)
-    PutPermissionAsync(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) *CodeguruprofilerPutPermissionResult
+       PutPermission(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) (*codeguruprofiler.PutPermissionOutput, error)
+       PutPermissionAsync(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) *CodeguruprofilerPutPermissionResult
 
-    RemoveNotificationChannel(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) (*codeguruprofiler.RemoveNotificationChannelOutput, error)
-    RemoveNotificationChannelAsync(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) *CodeguruprofilerRemoveNotificationChannelResult
+       RemoveNotificationChannel(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) (*codeguruprofiler.RemoveNotificationChannelOutput, error)
+       RemoveNotificationChannelAsync(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) *CodeguruprofilerRemoveNotificationChannelResult
 
-    RemovePermission(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) (*codeguruprofiler.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) *CodeguruprofilerRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) (*codeguruprofiler.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) *CodeguruprofilerRemovePermissionResult
 
-    SubmitFeedback(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) (*codeguruprofiler.SubmitFeedbackOutput, error)
-    SubmitFeedbackAsync(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) *CodeguruprofilerSubmitFeedbackResult
+       SubmitFeedback(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) (*codeguruprofiler.SubmitFeedbackOutput, error)
+       SubmitFeedbackAsync(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) *CodeguruprofilerSubmitFeedbackResult
 
-    TagResource(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) (*codeguruprofiler.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) *CodeguruprofilerTagResourceResult
+       TagResource(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) (*codeguruprofiler.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) *CodeguruprofilerTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) (*codeguruprofiler.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) *CodeguruprofilerUntagResourceResult
+       UntagResource(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) (*codeguruprofiler.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) *CodeguruprofilerUntagResourceResult
 
-    UpdateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) (*codeguruprofiler.UpdateProfilingGroupOutput, error)
-    UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *CodeguruprofilerUpdateProfilingGroupResult
+       UpdateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) (*codeguruprofiler.UpdateProfilingGroupOutput, error)
+       UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *CodeguruprofilerUpdateProfilingGroupResult
 }
 
 type CodeguruprofilerAddNotificationChannelsResult struct {

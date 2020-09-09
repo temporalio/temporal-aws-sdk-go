@@ -7,53 +7,53 @@ import (
 )
 
 type ServiceQuotasClient interface {
-    AssociateServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) (*servicequotas.AssociateServiceQuotaTemplateOutput, error)
-    AssociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) *ServicequotasAssociateServiceQuotaTemplateResult
+       AssociateServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) (*servicequotas.AssociateServiceQuotaTemplateOutput, error)
+       AssociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) *ServicequotasAssociateServiceQuotaTemplateResult
 
-    DeleteServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error)
-    DeleteServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) *ServicequotasDeleteServiceQuotaIncreaseRequestFromTemplateResult
+       DeleteServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error)
+       DeleteServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) *ServicequotasDeleteServiceQuotaIncreaseRequestFromTemplateResult
 
-    DisassociateServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error)
-    DisassociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) *ServicequotasDisassociateServiceQuotaTemplateResult
+       DisassociateServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error)
+       DisassociateServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) *ServicequotasDisassociateServiceQuotaTemplateResult
 
-    GetAWSDefaultServiceQuota(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error)
-    GetAWSDefaultServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) *ServicequotasGetAWSDefaultServiceQuotaResult
+       GetAWSDefaultServiceQuota(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error)
+       GetAWSDefaultServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) *ServicequotasGetAWSDefaultServiceQuotaResult
 
-    GetAssociationForServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error)
-    GetAssociationForServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) *ServicequotasGetAssociationForServiceQuotaTemplateResult
+       GetAssociationForServiceQuotaTemplate(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error)
+       GetAssociationForServiceQuotaTemplateAsync(ctx workflow.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) *ServicequotasGetAssociationForServiceQuotaTemplateResult
 
-    GetRequestedServiceQuotaChange(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error)
-    GetRequestedServiceQuotaChangeAsync(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) *ServicequotasGetRequestedServiceQuotaChangeResult
+       GetRequestedServiceQuotaChange(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error)
+       GetRequestedServiceQuotaChangeAsync(ctx workflow.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) *ServicequotasGetRequestedServiceQuotaChangeResult
 
-    GetServiceQuota(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error)
-    GetServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) *ServicequotasGetServiceQuotaResult
+       GetServiceQuota(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error)
+       GetServiceQuotaAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaInput) *ServicequotasGetServiceQuotaResult
 
-    GetServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error)
-    GetServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) *ServicequotasGetServiceQuotaIncreaseRequestFromTemplateResult
+       GetServiceQuotaIncreaseRequestFromTemplate(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error)
+       GetServiceQuotaIncreaseRequestFromTemplateAsync(ctx workflow.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) *ServicequotasGetServiceQuotaIncreaseRequestFromTemplateResult
 
-    ListAWSDefaultServiceQuotas(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error)
-    ListAWSDefaultServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) *ServicequotasListAWSDefaultServiceQuotasResult
+       ListAWSDefaultServiceQuotas(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error)
+       ListAWSDefaultServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) *ServicequotasListAWSDefaultServiceQuotasResult
 
-    ListRequestedServiceQuotaChangeHistory(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error)
-    ListRequestedServiceQuotaChangeHistoryAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) *ServicequotasListRequestedServiceQuotaChangeHistoryResult
+       ListRequestedServiceQuotaChangeHistory(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error)
+       ListRequestedServiceQuotaChangeHistoryAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) *ServicequotasListRequestedServiceQuotaChangeHistoryResult
 
-    ListRequestedServiceQuotaChangeHistoryByQuota(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error)
-    ListRequestedServiceQuotaChangeHistoryByQuotaAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) *ServicequotasListRequestedServiceQuotaChangeHistoryByQuotaResult
+       ListRequestedServiceQuotaChangeHistoryByQuota(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error)
+       ListRequestedServiceQuotaChangeHistoryByQuotaAsync(ctx workflow.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) *ServicequotasListRequestedServiceQuotaChangeHistoryByQuotaResult
 
-    ListServiceQuotaIncreaseRequestsInTemplate(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error)
-    ListServiceQuotaIncreaseRequestsInTemplateAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) *ServicequotasListServiceQuotaIncreaseRequestsInTemplateResult
+       ListServiceQuotaIncreaseRequestsInTemplate(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error)
+       ListServiceQuotaIncreaseRequestsInTemplateAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) *ServicequotasListServiceQuotaIncreaseRequestsInTemplateResult
 
-    ListServiceQuotas(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error)
-    ListServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) *ServicequotasListServiceQuotasResult
+       ListServiceQuotas(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error)
+       ListServiceQuotasAsync(ctx workflow.Context, input *servicequotas.ListServiceQuotasInput) *ServicequotasListServiceQuotasResult
 
-    ListServices(ctx workflow.Context, input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error)
-    ListServicesAsync(ctx workflow.Context, input *servicequotas.ListServicesInput) *ServicequotasListServicesResult
+       ListServices(ctx workflow.Context, input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error)
+       ListServicesAsync(ctx workflow.Context, input *servicequotas.ListServicesInput) *ServicequotasListServicesResult
 
-    PutServiceQuotaIncreaseRequestIntoTemplate(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error)
-    PutServiceQuotaIncreaseRequestIntoTemplateAsync(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) *ServicequotasPutServiceQuotaIncreaseRequestIntoTemplateResult
+       PutServiceQuotaIncreaseRequestIntoTemplate(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error)
+       PutServiceQuotaIncreaseRequestIntoTemplateAsync(ctx workflow.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) *ServicequotasPutServiceQuotaIncreaseRequestIntoTemplateResult
 
-    RequestServiceQuotaIncrease(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error)
-    RequestServiceQuotaIncreaseAsync(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) *ServicequotasRequestServiceQuotaIncreaseResult
+       RequestServiceQuotaIncrease(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error)
+       RequestServiceQuotaIncreaseAsync(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) *ServicequotasRequestServiceQuotaIncreaseResult
 }
 
 type ServicequotasAssociateServiceQuotaTemplateResult struct {

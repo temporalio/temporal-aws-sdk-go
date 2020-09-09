@@ -7,8 +7,8 @@ import (
 )
 
 type QLDBSessionClient interface {
-    SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error)
-    SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult
+       SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error)
+       SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult
 }
 
 type QldbsessionSendCommandResult struct {

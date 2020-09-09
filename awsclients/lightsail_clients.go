@@ -7,386 +7,386 @@ import (
 )
 
 type LightsailClient interface {
-    AllocateStaticIp(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) (*lightsail.AllocateStaticIpOutput, error)
-    AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpResult
+       AllocateStaticIp(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) (*lightsail.AllocateStaticIpOutput, error)
+       AllocateStaticIpAsync(ctx workflow.Context, input *lightsail.AllocateStaticIpInput) *LightsailAllocateStaticIpResult
 
-    AttachCertificateToDistribution(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) (*lightsail.AttachCertificateToDistributionOutput, error)
-    AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionResult
+       AttachCertificateToDistribution(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) (*lightsail.AttachCertificateToDistributionOutput, error)
+       AttachCertificateToDistributionAsync(ctx workflow.Context, input *lightsail.AttachCertificateToDistributionInput) *LightsailAttachCertificateToDistributionResult
 
-    AttachDisk(ctx workflow.Context, input *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error)
-    AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskResult
+       AttachDisk(ctx workflow.Context, input *lightsail.AttachDiskInput) (*lightsail.AttachDiskOutput, error)
+       AttachDiskAsync(ctx workflow.Context, input *lightsail.AttachDiskInput) *LightsailAttachDiskResult
 
-    AttachInstancesToLoadBalancer(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error)
-    AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerResult
+       AttachInstancesToLoadBalancer(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) (*lightsail.AttachInstancesToLoadBalancerOutput, error)
+       AttachInstancesToLoadBalancerAsync(ctx workflow.Context, input *lightsail.AttachInstancesToLoadBalancerInput) *LightsailAttachInstancesToLoadBalancerResult
 
-    AttachLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error)
-    AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateResult
+       AttachLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) (*lightsail.AttachLoadBalancerTlsCertificateOutput, error)
+       AttachLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.AttachLoadBalancerTlsCertificateInput) *LightsailAttachLoadBalancerTlsCertificateResult
 
-    AttachStaticIp(ctx workflow.Context, input *lightsail.AttachStaticIpInput) (*lightsail.AttachStaticIpOutput, error)
-    AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpResult
+       AttachStaticIp(ctx workflow.Context, input *lightsail.AttachStaticIpInput) (*lightsail.AttachStaticIpOutput, error)
+       AttachStaticIpAsync(ctx workflow.Context, input *lightsail.AttachStaticIpInput) *LightsailAttachStaticIpResult
 
-    CloseInstancePublicPorts(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) (*lightsail.CloseInstancePublicPortsOutput, error)
-    CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsResult
+       CloseInstancePublicPorts(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) (*lightsail.CloseInstancePublicPortsOutput, error)
+       CloseInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.CloseInstancePublicPortsInput) *LightsailCloseInstancePublicPortsResult
 
-    CopySnapshot(ctx workflow.Context, input *lightsail.CopySnapshotInput) (*lightsail.CopySnapshotOutput, error)
-    CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotResult
+       CopySnapshot(ctx workflow.Context, input *lightsail.CopySnapshotInput) (*lightsail.CopySnapshotOutput, error)
+       CopySnapshotAsync(ctx workflow.Context, input *lightsail.CopySnapshotInput) *LightsailCopySnapshotResult
 
-    CreateCertificate(ctx workflow.Context, input *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error)
-    CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateResult
+       CreateCertificate(ctx workflow.Context, input *lightsail.CreateCertificateInput) (*lightsail.CreateCertificateOutput, error)
+       CreateCertificateAsync(ctx workflow.Context, input *lightsail.CreateCertificateInput) *LightsailCreateCertificateResult
 
-    CreateCloudFormationStack(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) (*lightsail.CreateCloudFormationStackOutput, error)
-    CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackResult
+       CreateCloudFormationStack(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) (*lightsail.CreateCloudFormationStackOutput, error)
+       CreateCloudFormationStackAsync(ctx workflow.Context, input *lightsail.CreateCloudFormationStackInput) *LightsailCreateCloudFormationStackResult
 
-    CreateContactMethod(ctx workflow.Context, input *lightsail.CreateContactMethodInput) (*lightsail.CreateContactMethodOutput, error)
-    CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodResult
+       CreateContactMethod(ctx workflow.Context, input *lightsail.CreateContactMethodInput) (*lightsail.CreateContactMethodOutput, error)
+       CreateContactMethodAsync(ctx workflow.Context, input *lightsail.CreateContactMethodInput) *LightsailCreateContactMethodResult
 
-    CreateDisk(ctx workflow.Context, input *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error)
-    CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskResult
+       CreateDisk(ctx workflow.Context, input *lightsail.CreateDiskInput) (*lightsail.CreateDiskOutput, error)
+       CreateDiskAsync(ctx workflow.Context, input *lightsail.CreateDiskInput) *LightsailCreateDiskResult
 
-    CreateDiskFromSnapshot(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error)
-    CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotResult
+       CreateDiskFromSnapshot(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) (*lightsail.CreateDiskFromSnapshotOutput, error)
+       CreateDiskFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskFromSnapshotInput) *LightsailCreateDiskFromSnapshotResult
 
-    CreateDiskSnapshot(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error)
-    CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotResult
+       CreateDiskSnapshot(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) (*lightsail.CreateDiskSnapshotOutput, error)
+       CreateDiskSnapshotAsync(ctx workflow.Context, input *lightsail.CreateDiskSnapshotInput) *LightsailCreateDiskSnapshotResult
 
-    CreateDistribution(ctx workflow.Context, input *lightsail.CreateDistributionInput) (*lightsail.CreateDistributionOutput, error)
-    CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionResult
+       CreateDistribution(ctx workflow.Context, input *lightsail.CreateDistributionInput) (*lightsail.CreateDistributionOutput, error)
+       CreateDistributionAsync(ctx workflow.Context, input *lightsail.CreateDistributionInput) *LightsailCreateDistributionResult
 
-    CreateDomain(ctx workflow.Context, input *lightsail.CreateDomainInput) (*lightsail.CreateDomainOutput, error)
-    CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainResult
+       CreateDomain(ctx workflow.Context, input *lightsail.CreateDomainInput) (*lightsail.CreateDomainOutput, error)
+       CreateDomainAsync(ctx workflow.Context, input *lightsail.CreateDomainInput) *LightsailCreateDomainResult
 
-    CreateDomainEntry(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) (*lightsail.CreateDomainEntryOutput, error)
-    CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryResult
+       CreateDomainEntry(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) (*lightsail.CreateDomainEntryOutput, error)
+       CreateDomainEntryAsync(ctx workflow.Context, input *lightsail.CreateDomainEntryInput) *LightsailCreateDomainEntryResult
 
-    CreateInstanceSnapshot(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) (*lightsail.CreateInstanceSnapshotOutput, error)
-    CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotResult
+       CreateInstanceSnapshot(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) (*lightsail.CreateInstanceSnapshotOutput, error)
+       CreateInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstanceSnapshotInput) *LightsailCreateInstanceSnapshotResult
 
-    CreateInstances(ctx workflow.Context, input *lightsail.CreateInstancesInput) (*lightsail.CreateInstancesOutput, error)
-    CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesResult
+       CreateInstances(ctx workflow.Context, input *lightsail.CreateInstancesInput) (*lightsail.CreateInstancesOutput, error)
+       CreateInstancesAsync(ctx workflow.Context, input *lightsail.CreateInstancesInput) *LightsailCreateInstancesResult
 
-    CreateInstancesFromSnapshot(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) (*lightsail.CreateInstancesFromSnapshotOutput, error)
-    CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotResult
+       CreateInstancesFromSnapshot(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) (*lightsail.CreateInstancesFromSnapshotOutput, error)
+       CreateInstancesFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateInstancesFromSnapshotInput) *LightsailCreateInstancesFromSnapshotResult
 
-    CreateKeyPair(ctx workflow.Context, input *lightsail.CreateKeyPairInput) (*lightsail.CreateKeyPairOutput, error)
-    CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairResult
+       CreateKeyPair(ctx workflow.Context, input *lightsail.CreateKeyPairInput) (*lightsail.CreateKeyPairOutput, error)
+       CreateKeyPairAsync(ctx workflow.Context, input *lightsail.CreateKeyPairInput) *LightsailCreateKeyPairResult
 
-    CreateLoadBalancer(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error)
-    CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerResult
+       CreateLoadBalancer(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) (*lightsail.CreateLoadBalancerOutput, error)
+       CreateLoadBalancerAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerInput) *LightsailCreateLoadBalancerResult
 
-    CreateLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error)
-    CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateResult
+       CreateLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) (*lightsail.CreateLoadBalancerTlsCertificateOutput, error)
+       CreateLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.CreateLoadBalancerTlsCertificateInput) *LightsailCreateLoadBalancerTlsCertificateResult
 
-    CreateRelationalDatabase(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) (*lightsail.CreateRelationalDatabaseOutput, error)
-    CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseResult
+       CreateRelationalDatabase(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) (*lightsail.CreateRelationalDatabaseOutput, error)
+       CreateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseInput) *LightsailCreateRelationalDatabaseResult
 
-    CreateRelationalDatabaseFromSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error)
-    CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotResult
+       CreateRelationalDatabaseFromSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) (*lightsail.CreateRelationalDatabaseFromSnapshotOutput, error)
+       CreateRelationalDatabaseFromSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseFromSnapshotInput) *LightsailCreateRelationalDatabaseFromSnapshotResult
 
-    CreateRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error)
-    CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotResult
+       CreateRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) (*lightsail.CreateRelationalDatabaseSnapshotOutput, error)
+       CreateRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.CreateRelationalDatabaseSnapshotInput) *LightsailCreateRelationalDatabaseSnapshotResult
 
-    DeleteAlarm(ctx workflow.Context, input *lightsail.DeleteAlarmInput) (*lightsail.DeleteAlarmOutput, error)
-    DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmResult
+       DeleteAlarm(ctx workflow.Context, input *lightsail.DeleteAlarmInput) (*lightsail.DeleteAlarmOutput, error)
+       DeleteAlarmAsync(ctx workflow.Context, input *lightsail.DeleteAlarmInput) *LightsailDeleteAlarmResult
 
-    DeleteAutoSnapshot(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) (*lightsail.DeleteAutoSnapshotOutput, error)
-    DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotResult
+       DeleteAutoSnapshot(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) (*lightsail.DeleteAutoSnapshotOutput, error)
+       DeleteAutoSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteAutoSnapshotInput) *LightsailDeleteAutoSnapshotResult
 
-    DeleteCertificate(ctx workflow.Context, input *lightsail.DeleteCertificateInput) (*lightsail.DeleteCertificateOutput, error)
-    DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateResult
+       DeleteCertificate(ctx workflow.Context, input *lightsail.DeleteCertificateInput) (*lightsail.DeleteCertificateOutput, error)
+       DeleteCertificateAsync(ctx workflow.Context, input *lightsail.DeleteCertificateInput) *LightsailDeleteCertificateResult
 
-    DeleteContactMethod(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) (*lightsail.DeleteContactMethodOutput, error)
-    DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodResult
+       DeleteContactMethod(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) (*lightsail.DeleteContactMethodOutput, error)
+       DeleteContactMethodAsync(ctx workflow.Context, input *lightsail.DeleteContactMethodInput) *LightsailDeleteContactMethodResult
 
-    DeleteDisk(ctx workflow.Context, input *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error)
-    DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskResult
+       DeleteDisk(ctx workflow.Context, input *lightsail.DeleteDiskInput) (*lightsail.DeleteDiskOutput, error)
+       DeleteDiskAsync(ctx workflow.Context, input *lightsail.DeleteDiskInput) *LightsailDeleteDiskResult
 
-    DeleteDiskSnapshot(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error)
-    DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotResult
+       DeleteDiskSnapshot(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) (*lightsail.DeleteDiskSnapshotOutput, error)
+       DeleteDiskSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteDiskSnapshotInput) *LightsailDeleteDiskSnapshotResult
 
-    DeleteDistribution(ctx workflow.Context, input *lightsail.DeleteDistributionInput) (*lightsail.DeleteDistributionOutput, error)
-    DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionResult
+       DeleteDistribution(ctx workflow.Context, input *lightsail.DeleteDistributionInput) (*lightsail.DeleteDistributionOutput, error)
+       DeleteDistributionAsync(ctx workflow.Context, input *lightsail.DeleteDistributionInput) *LightsailDeleteDistributionResult
 
-    DeleteDomain(ctx workflow.Context, input *lightsail.DeleteDomainInput) (*lightsail.DeleteDomainOutput, error)
-    DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainResult
+       DeleteDomain(ctx workflow.Context, input *lightsail.DeleteDomainInput) (*lightsail.DeleteDomainOutput, error)
+       DeleteDomainAsync(ctx workflow.Context, input *lightsail.DeleteDomainInput) *LightsailDeleteDomainResult
 
-    DeleteDomainEntry(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) (*lightsail.DeleteDomainEntryOutput, error)
-    DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryResult
+       DeleteDomainEntry(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) (*lightsail.DeleteDomainEntryOutput, error)
+       DeleteDomainEntryAsync(ctx workflow.Context, input *lightsail.DeleteDomainEntryInput) *LightsailDeleteDomainEntryResult
 
-    DeleteInstance(ctx workflow.Context, input *lightsail.DeleteInstanceInput) (*lightsail.DeleteInstanceOutput, error)
-    DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceResult
+       DeleteInstance(ctx workflow.Context, input *lightsail.DeleteInstanceInput) (*lightsail.DeleteInstanceOutput, error)
+       DeleteInstanceAsync(ctx workflow.Context, input *lightsail.DeleteInstanceInput) *LightsailDeleteInstanceResult
 
-    DeleteInstanceSnapshot(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) (*lightsail.DeleteInstanceSnapshotOutput, error)
-    DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotResult
+       DeleteInstanceSnapshot(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) (*lightsail.DeleteInstanceSnapshotOutput, error)
+       DeleteInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteInstanceSnapshotInput) *LightsailDeleteInstanceSnapshotResult
 
-    DeleteKeyPair(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) (*lightsail.DeleteKeyPairOutput, error)
-    DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairResult
+       DeleteKeyPair(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) (*lightsail.DeleteKeyPairOutput, error)
+       DeleteKeyPairAsync(ctx workflow.Context, input *lightsail.DeleteKeyPairInput) *LightsailDeleteKeyPairResult
 
-    DeleteKnownHostKeys(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) (*lightsail.DeleteKnownHostKeysOutput, error)
-    DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysResult
+       DeleteKnownHostKeys(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) (*lightsail.DeleteKnownHostKeysOutput, error)
+       DeleteKnownHostKeysAsync(ctx workflow.Context, input *lightsail.DeleteKnownHostKeysInput) *LightsailDeleteKnownHostKeysResult
 
-    DeleteLoadBalancer(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error)
-    DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerResult
+       DeleteLoadBalancer(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) (*lightsail.DeleteLoadBalancerOutput, error)
+       DeleteLoadBalancerAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerInput) *LightsailDeleteLoadBalancerResult
 
-    DeleteLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error)
-    DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateResult
+       DeleteLoadBalancerTlsCertificate(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) (*lightsail.DeleteLoadBalancerTlsCertificateOutput, error)
+       DeleteLoadBalancerTlsCertificateAsync(ctx workflow.Context, input *lightsail.DeleteLoadBalancerTlsCertificateInput) *LightsailDeleteLoadBalancerTlsCertificateResult
 
-    DeleteRelationalDatabase(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) (*lightsail.DeleteRelationalDatabaseOutput, error)
-    DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseResult
+       DeleteRelationalDatabase(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) (*lightsail.DeleteRelationalDatabaseOutput, error)
+       DeleteRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseInput) *LightsailDeleteRelationalDatabaseResult
 
-    DeleteRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error)
-    DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotResult
+       DeleteRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) (*lightsail.DeleteRelationalDatabaseSnapshotOutput, error)
+       DeleteRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.DeleteRelationalDatabaseSnapshotInput) *LightsailDeleteRelationalDatabaseSnapshotResult
 
-    DetachCertificateFromDistribution(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) (*lightsail.DetachCertificateFromDistributionOutput, error)
-    DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionResult
+       DetachCertificateFromDistribution(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) (*lightsail.DetachCertificateFromDistributionOutput, error)
+       DetachCertificateFromDistributionAsync(ctx workflow.Context, input *lightsail.DetachCertificateFromDistributionInput) *LightsailDetachCertificateFromDistributionResult
 
-    DetachDisk(ctx workflow.Context, input *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error)
-    DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskResult
+       DetachDisk(ctx workflow.Context, input *lightsail.DetachDiskInput) (*lightsail.DetachDiskOutput, error)
+       DetachDiskAsync(ctx workflow.Context, input *lightsail.DetachDiskInput) *LightsailDetachDiskResult
 
-    DetachInstancesFromLoadBalancer(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error)
-    DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerResult
+       DetachInstancesFromLoadBalancer(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) (*lightsail.DetachInstancesFromLoadBalancerOutput, error)
+       DetachInstancesFromLoadBalancerAsync(ctx workflow.Context, input *lightsail.DetachInstancesFromLoadBalancerInput) *LightsailDetachInstancesFromLoadBalancerResult
 
-    DetachStaticIp(ctx workflow.Context, input *lightsail.DetachStaticIpInput) (*lightsail.DetachStaticIpOutput, error)
-    DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpResult
+       DetachStaticIp(ctx workflow.Context, input *lightsail.DetachStaticIpInput) (*lightsail.DetachStaticIpOutput, error)
+       DetachStaticIpAsync(ctx workflow.Context, input *lightsail.DetachStaticIpInput) *LightsailDetachStaticIpResult
 
-    DisableAddOn(ctx workflow.Context, input *lightsail.DisableAddOnInput) (*lightsail.DisableAddOnOutput, error)
-    DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnResult
+       DisableAddOn(ctx workflow.Context, input *lightsail.DisableAddOnInput) (*lightsail.DisableAddOnOutput, error)
+       DisableAddOnAsync(ctx workflow.Context, input *lightsail.DisableAddOnInput) *LightsailDisableAddOnResult
 
-    DownloadDefaultKeyPair(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) (*lightsail.DownloadDefaultKeyPairOutput, error)
-    DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairResult
+       DownloadDefaultKeyPair(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) (*lightsail.DownloadDefaultKeyPairOutput, error)
+       DownloadDefaultKeyPairAsync(ctx workflow.Context, input *lightsail.DownloadDefaultKeyPairInput) *LightsailDownloadDefaultKeyPairResult
 
-    EnableAddOn(ctx workflow.Context, input *lightsail.EnableAddOnInput) (*lightsail.EnableAddOnOutput, error)
-    EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnResult
+       EnableAddOn(ctx workflow.Context, input *lightsail.EnableAddOnInput) (*lightsail.EnableAddOnOutput, error)
+       EnableAddOnAsync(ctx workflow.Context, input *lightsail.EnableAddOnInput) *LightsailEnableAddOnResult
 
-    ExportSnapshot(ctx workflow.Context, input *lightsail.ExportSnapshotInput) (*lightsail.ExportSnapshotOutput, error)
-    ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotResult
+       ExportSnapshot(ctx workflow.Context, input *lightsail.ExportSnapshotInput) (*lightsail.ExportSnapshotOutput, error)
+       ExportSnapshotAsync(ctx workflow.Context, input *lightsail.ExportSnapshotInput) *LightsailExportSnapshotResult
 
-    GetActiveNames(ctx workflow.Context, input *lightsail.GetActiveNamesInput) (*lightsail.GetActiveNamesOutput, error)
-    GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesResult
+       GetActiveNames(ctx workflow.Context, input *lightsail.GetActiveNamesInput) (*lightsail.GetActiveNamesOutput, error)
+       GetActiveNamesAsync(ctx workflow.Context, input *lightsail.GetActiveNamesInput) *LightsailGetActiveNamesResult
 
-    GetAlarms(ctx workflow.Context, input *lightsail.GetAlarmsInput) (*lightsail.GetAlarmsOutput, error)
-    GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsResult
+       GetAlarms(ctx workflow.Context, input *lightsail.GetAlarmsInput) (*lightsail.GetAlarmsOutput, error)
+       GetAlarmsAsync(ctx workflow.Context, input *lightsail.GetAlarmsInput) *LightsailGetAlarmsResult
 
-    GetAutoSnapshots(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) (*lightsail.GetAutoSnapshotsOutput, error)
-    GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsResult
+       GetAutoSnapshots(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) (*lightsail.GetAutoSnapshotsOutput, error)
+       GetAutoSnapshotsAsync(ctx workflow.Context, input *lightsail.GetAutoSnapshotsInput) *LightsailGetAutoSnapshotsResult
 
-    GetBlueprints(ctx workflow.Context, input *lightsail.GetBlueprintsInput) (*lightsail.GetBlueprintsOutput, error)
-    GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsResult
+       GetBlueprints(ctx workflow.Context, input *lightsail.GetBlueprintsInput) (*lightsail.GetBlueprintsOutput, error)
+       GetBlueprintsAsync(ctx workflow.Context, input *lightsail.GetBlueprintsInput) *LightsailGetBlueprintsResult
 
-    GetBundles(ctx workflow.Context, input *lightsail.GetBundlesInput) (*lightsail.GetBundlesOutput, error)
-    GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesResult
+       GetBundles(ctx workflow.Context, input *lightsail.GetBundlesInput) (*lightsail.GetBundlesOutput, error)
+       GetBundlesAsync(ctx workflow.Context, input *lightsail.GetBundlesInput) *LightsailGetBundlesResult
 
-    GetCertificates(ctx workflow.Context, input *lightsail.GetCertificatesInput) (*lightsail.GetCertificatesOutput, error)
-    GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesResult
+       GetCertificates(ctx workflow.Context, input *lightsail.GetCertificatesInput) (*lightsail.GetCertificatesOutput, error)
+       GetCertificatesAsync(ctx workflow.Context, input *lightsail.GetCertificatesInput) *LightsailGetCertificatesResult
 
-    GetCloudFormationStackRecords(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) (*lightsail.GetCloudFormationStackRecordsOutput, error)
-    GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsResult
+       GetCloudFormationStackRecords(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) (*lightsail.GetCloudFormationStackRecordsOutput, error)
+       GetCloudFormationStackRecordsAsync(ctx workflow.Context, input *lightsail.GetCloudFormationStackRecordsInput) *LightsailGetCloudFormationStackRecordsResult
 
-    GetContactMethods(ctx workflow.Context, input *lightsail.GetContactMethodsInput) (*lightsail.GetContactMethodsOutput, error)
-    GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsResult
+       GetContactMethods(ctx workflow.Context, input *lightsail.GetContactMethodsInput) (*lightsail.GetContactMethodsOutput, error)
+       GetContactMethodsAsync(ctx workflow.Context, input *lightsail.GetContactMethodsInput) *LightsailGetContactMethodsResult
 
-    GetDisk(ctx workflow.Context, input *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error)
-    GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskResult
+       GetDisk(ctx workflow.Context, input *lightsail.GetDiskInput) (*lightsail.GetDiskOutput, error)
+       GetDiskAsync(ctx workflow.Context, input *lightsail.GetDiskInput) *LightsailGetDiskResult
 
-    GetDiskSnapshot(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error)
-    GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotResult
+       GetDiskSnapshot(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) (*lightsail.GetDiskSnapshotOutput, error)
+       GetDiskSnapshotAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotInput) *LightsailGetDiskSnapshotResult
 
-    GetDiskSnapshots(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error)
-    GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsResult
+       GetDiskSnapshots(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) (*lightsail.GetDiskSnapshotsOutput, error)
+       GetDiskSnapshotsAsync(ctx workflow.Context, input *lightsail.GetDiskSnapshotsInput) *LightsailGetDiskSnapshotsResult
 
-    GetDisks(ctx workflow.Context, input *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error)
-    GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksResult
+       GetDisks(ctx workflow.Context, input *lightsail.GetDisksInput) (*lightsail.GetDisksOutput, error)
+       GetDisksAsync(ctx workflow.Context, input *lightsail.GetDisksInput) *LightsailGetDisksResult
 
-    GetDistributionBundles(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) (*lightsail.GetDistributionBundlesOutput, error)
-    GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesResult
+       GetDistributionBundles(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) (*lightsail.GetDistributionBundlesOutput, error)
+       GetDistributionBundlesAsync(ctx workflow.Context, input *lightsail.GetDistributionBundlesInput) *LightsailGetDistributionBundlesResult
 
-    GetDistributionLatestCacheReset(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) (*lightsail.GetDistributionLatestCacheResetOutput, error)
-    GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetResult
+       GetDistributionLatestCacheReset(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) (*lightsail.GetDistributionLatestCacheResetOutput, error)
+       GetDistributionLatestCacheResetAsync(ctx workflow.Context, input *lightsail.GetDistributionLatestCacheResetInput) *LightsailGetDistributionLatestCacheResetResult
 
-    GetDistributionMetricData(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) (*lightsail.GetDistributionMetricDataOutput, error)
-    GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataResult
+       GetDistributionMetricData(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) (*lightsail.GetDistributionMetricDataOutput, error)
+       GetDistributionMetricDataAsync(ctx workflow.Context, input *lightsail.GetDistributionMetricDataInput) *LightsailGetDistributionMetricDataResult
 
-    GetDistributions(ctx workflow.Context, input *lightsail.GetDistributionsInput) (*lightsail.GetDistributionsOutput, error)
-    GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsResult
+       GetDistributions(ctx workflow.Context, input *lightsail.GetDistributionsInput) (*lightsail.GetDistributionsOutput, error)
+       GetDistributionsAsync(ctx workflow.Context, input *lightsail.GetDistributionsInput) *LightsailGetDistributionsResult
 
-    GetDomain(ctx workflow.Context, input *lightsail.GetDomainInput) (*lightsail.GetDomainOutput, error)
-    GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainResult
+       GetDomain(ctx workflow.Context, input *lightsail.GetDomainInput) (*lightsail.GetDomainOutput, error)
+       GetDomainAsync(ctx workflow.Context, input *lightsail.GetDomainInput) *LightsailGetDomainResult
 
-    GetDomains(ctx workflow.Context, input *lightsail.GetDomainsInput) (*lightsail.GetDomainsOutput, error)
-    GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsResult
+       GetDomains(ctx workflow.Context, input *lightsail.GetDomainsInput) (*lightsail.GetDomainsOutput, error)
+       GetDomainsAsync(ctx workflow.Context, input *lightsail.GetDomainsInput) *LightsailGetDomainsResult
 
-    GetExportSnapshotRecords(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) (*lightsail.GetExportSnapshotRecordsOutput, error)
-    GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsResult
+       GetExportSnapshotRecords(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) (*lightsail.GetExportSnapshotRecordsOutput, error)
+       GetExportSnapshotRecordsAsync(ctx workflow.Context, input *lightsail.GetExportSnapshotRecordsInput) *LightsailGetExportSnapshotRecordsResult
 
-    GetInstance(ctx workflow.Context, input *lightsail.GetInstanceInput) (*lightsail.GetInstanceOutput, error)
-    GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceResult
+       GetInstance(ctx workflow.Context, input *lightsail.GetInstanceInput) (*lightsail.GetInstanceOutput, error)
+       GetInstanceAsync(ctx workflow.Context, input *lightsail.GetInstanceInput) *LightsailGetInstanceResult
 
-    GetInstanceAccessDetails(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) (*lightsail.GetInstanceAccessDetailsOutput, error)
-    GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsResult
+       GetInstanceAccessDetails(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) (*lightsail.GetInstanceAccessDetailsOutput, error)
+       GetInstanceAccessDetailsAsync(ctx workflow.Context, input *lightsail.GetInstanceAccessDetailsInput) *LightsailGetInstanceAccessDetailsResult
 
-    GetInstanceMetricData(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) (*lightsail.GetInstanceMetricDataOutput, error)
-    GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataResult
+       GetInstanceMetricData(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) (*lightsail.GetInstanceMetricDataOutput, error)
+       GetInstanceMetricDataAsync(ctx workflow.Context, input *lightsail.GetInstanceMetricDataInput) *LightsailGetInstanceMetricDataResult
 
-    GetInstancePortStates(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) (*lightsail.GetInstancePortStatesOutput, error)
-    GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesResult
+       GetInstancePortStates(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) (*lightsail.GetInstancePortStatesOutput, error)
+       GetInstancePortStatesAsync(ctx workflow.Context, input *lightsail.GetInstancePortStatesInput) *LightsailGetInstancePortStatesResult
 
-    GetInstanceSnapshot(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) (*lightsail.GetInstanceSnapshotOutput, error)
-    GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotResult
+       GetInstanceSnapshot(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) (*lightsail.GetInstanceSnapshotOutput, error)
+       GetInstanceSnapshotAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotInput) *LightsailGetInstanceSnapshotResult
 
-    GetInstanceSnapshots(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) (*lightsail.GetInstanceSnapshotsOutput, error)
-    GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsResult
+       GetInstanceSnapshots(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) (*lightsail.GetInstanceSnapshotsOutput, error)
+       GetInstanceSnapshotsAsync(ctx workflow.Context, input *lightsail.GetInstanceSnapshotsInput) *LightsailGetInstanceSnapshotsResult
 
-    GetInstanceState(ctx workflow.Context, input *lightsail.GetInstanceStateInput) (*lightsail.GetInstanceStateOutput, error)
-    GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateResult
+       GetInstanceState(ctx workflow.Context, input *lightsail.GetInstanceStateInput) (*lightsail.GetInstanceStateOutput, error)
+       GetInstanceStateAsync(ctx workflow.Context, input *lightsail.GetInstanceStateInput) *LightsailGetInstanceStateResult
 
-    GetInstances(ctx workflow.Context, input *lightsail.GetInstancesInput) (*lightsail.GetInstancesOutput, error)
-    GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesResult
+       GetInstances(ctx workflow.Context, input *lightsail.GetInstancesInput) (*lightsail.GetInstancesOutput, error)
+       GetInstancesAsync(ctx workflow.Context, input *lightsail.GetInstancesInput) *LightsailGetInstancesResult
 
-    GetKeyPair(ctx workflow.Context, input *lightsail.GetKeyPairInput) (*lightsail.GetKeyPairOutput, error)
-    GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairResult
+       GetKeyPair(ctx workflow.Context, input *lightsail.GetKeyPairInput) (*lightsail.GetKeyPairOutput, error)
+       GetKeyPairAsync(ctx workflow.Context, input *lightsail.GetKeyPairInput) *LightsailGetKeyPairResult
 
-    GetKeyPairs(ctx workflow.Context, input *lightsail.GetKeyPairsInput) (*lightsail.GetKeyPairsOutput, error)
-    GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsResult
+       GetKeyPairs(ctx workflow.Context, input *lightsail.GetKeyPairsInput) (*lightsail.GetKeyPairsOutput, error)
+       GetKeyPairsAsync(ctx workflow.Context, input *lightsail.GetKeyPairsInput) *LightsailGetKeyPairsResult
 
-    GetLoadBalancer(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error)
-    GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerResult
+       GetLoadBalancer(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) (*lightsail.GetLoadBalancerOutput, error)
+       GetLoadBalancerAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerInput) *LightsailGetLoadBalancerResult
 
-    GetLoadBalancerMetricData(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error)
-    GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataResult
+       GetLoadBalancerMetricData(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) (*lightsail.GetLoadBalancerMetricDataOutput, error)
+       GetLoadBalancerMetricDataAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerMetricDataInput) *LightsailGetLoadBalancerMetricDataResult
 
-    GetLoadBalancerTlsCertificates(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error)
-    GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesResult
+       GetLoadBalancerTlsCertificates(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) (*lightsail.GetLoadBalancerTlsCertificatesOutput, error)
+       GetLoadBalancerTlsCertificatesAsync(ctx workflow.Context, input *lightsail.GetLoadBalancerTlsCertificatesInput) *LightsailGetLoadBalancerTlsCertificatesResult
 
-    GetLoadBalancers(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error)
-    GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersResult
+       GetLoadBalancers(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) (*lightsail.GetLoadBalancersOutput, error)
+       GetLoadBalancersAsync(ctx workflow.Context, input *lightsail.GetLoadBalancersInput) *LightsailGetLoadBalancersResult
 
-    GetOperation(ctx workflow.Context, input *lightsail.GetOperationInput) (*lightsail.GetOperationOutput, error)
-    GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationResult
+       GetOperation(ctx workflow.Context, input *lightsail.GetOperationInput) (*lightsail.GetOperationOutput, error)
+       GetOperationAsync(ctx workflow.Context, input *lightsail.GetOperationInput) *LightsailGetOperationResult
 
-    GetOperations(ctx workflow.Context, input *lightsail.GetOperationsInput) (*lightsail.GetOperationsOutput, error)
-    GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsResult
+       GetOperations(ctx workflow.Context, input *lightsail.GetOperationsInput) (*lightsail.GetOperationsOutput, error)
+       GetOperationsAsync(ctx workflow.Context, input *lightsail.GetOperationsInput) *LightsailGetOperationsResult
 
-    GetOperationsForResource(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) (*lightsail.GetOperationsForResourceOutput, error)
-    GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceResult
+       GetOperationsForResource(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) (*lightsail.GetOperationsForResourceOutput, error)
+       GetOperationsForResourceAsync(ctx workflow.Context, input *lightsail.GetOperationsForResourceInput) *LightsailGetOperationsForResourceResult
 
-    GetRegions(ctx workflow.Context, input *lightsail.GetRegionsInput) (*lightsail.GetRegionsOutput, error)
-    GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsResult
+       GetRegions(ctx workflow.Context, input *lightsail.GetRegionsInput) (*lightsail.GetRegionsOutput, error)
+       GetRegionsAsync(ctx workflow.Context, input *lightsail.GetRegionsInput) *LightsailGetRegionsResult
 
-    GetRelationalDatabase(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) (*lightsail.GetRelationalDatabaseOutput, error)
-    GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseResult
+       GetRelationalDatabase(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) (*lightsail.GetRelationalDatabaseOutput, error)
+       GetRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseInput) *LightsailGetRelationalDatabaseResult
 
-    GetRelationalDatabaseBlueprints(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error)
-    GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsResult
+       GetRelationalDatabaseBlueprints(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) (*lightsail.GetRelationalDatabaseBlueprintsOutput, error)
+       GetRelationalDatabaseBlueprintsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBlueprintsInput) *LightsailGetRelationalDatabaseBlueprintsResult
 
-    GetRelationalDatabaseBundles(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) (*lightsail.GetRelationalDatabaseBundlesOutput, error)
-    GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesResult
+       GetRelationalDatabaseBundles(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) (*lightsail.GetRelationalDatabaseBundlesOutput, error)
+       GetRelationalDatabaseBundlesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseBundlesInput) *LightsailGetRelationalDatabaseBundlesResult
 
-    GetRelationalDatabaseEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) (*lightsail.GetRelationalDatabaseEventsOutput, error)
-    GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsResult
+       GetRelationalDatabaseEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) (*lightsail.GetRelationalDatabaseEventsOutput, error)
+       GetRelationalDatabaseEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseEventsInput) *LightsailGetRelationalDatabaseEventsResult
 
-    GetRelationalDatabaseLogEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) (*lightsail.GetRelationalDatabaseLogEventsOutput, error)
-    GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsResult
+       GetRelationalDatabaseLogEvents(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) (*lightsail.GetRelationalDatabaseLogEventsOutput, error)
+       GetRelationalDatabaseLogEventsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogEventsInput) *LightsailGetRelationalDatabaseLogEventsResult
 
-    GetRelationalDatabaseLogStreams(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error)
-    GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsResult
+       GetRelationalDatabaseLogStreams(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) (*lightsail.GetRelationalDatabaseLogStreamsOutput, error)
+       GetRelationalDatabaseLogStreamsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseLogStreamsInput) *LightsailGetRelationalDatabaseLogStreamsResult
 
-    GetRelationalDatabaseMasterUserPassword(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error)
-    GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordResult
+       GetRelationalDatabaseMasterUserPassword(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) (*lightsail.GetRelationalDatabaseMasterUserPasswordOutput, error)
+       GetRelationalDatabaseMasterUserPasswordAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMasterUserPasswordInput) *LightsailGetRelationalDatabaseMasterUserPasswordResult
 
-    GetRelationalDatabaseMetricData(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) (*lightsail.GetRelationalDatabaseMetricDataOutput, error)
-    GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataResult
+       GetRelationalDatabaseMetricData(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) (*lightsail.GetRelationalDatabaseMetricDataOutput, error)
+       GetRelationalDatabaseMetricDataAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseMetricDataInput) *LightsailGetRelationalDatabaseMetricDataResult
 
-    GetRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) (*lightsail.GetRelationalDatabaseParametersOutput, error)
-    GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersResult
+       GetRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) (*lightsail.GetRelationalDatabaseParametersOutput, error)
+       GetRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseParametersInput) *LightsailGetRelationalDatabaseParametersResult
 
-    GetRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) (*lightsail.GetRelationalDatabaseSnapshotOutput, error)
-    GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotResult
+       GetRelationalDatabaseSnapshot(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) (*lightsail.GetRelationalDatabaseSnapshotOutput, error)
+       GetRelationalDatabaseSnapshotAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotInput) *LightsailGetRelationalDatabaseSnapshotResult
 
-    GetRelationalDatabaseSnapshots(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error)
-    GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsResult
+       GetRelationalDatabaseSnapshots(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) (*lightsail.GetRelationalDatabaseSnapshotsOutput, error)
+       GetRelationalDatabaseSnapshotsAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabaseSnapshotsInput) *LightsailGetRelationalDatabaseSnapshotsResult
 
-    GetRelationalDatabases(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) (*lightsail.GetRelationalDatabasesOutput, error)
-    GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesResult
+       GetRelationalDatabases(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) (*lightsail.GetRelationalDatabasesOutput, error)
+       GetRelationalDatabasesAsync(ctx workflow.Context, input *lightsail.GetRelationalDatabasesInput) *LightsailGetRelationalDatabasesResult
 
-    GetStaticIp(ctx workflow.Context, input *lightsail.GetStaticIpInput) (*lightsail.GetStaticIpOutput, error)
-    GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpResult
+       GetStaticIp(ctx workflow.Context, input *lightsail.GetStaticIpInput) (*lightsail.GetStaticIpOutput, error)
+       GetStaticIpAsync(ctx workflow.Context, input *lightsail.GetStaticIpInput) *LightsailGetStaticIpResult
 
-    GetStaticIps(ctx workflow.Context, input *lightsail.GetStaticIpsInput) (*lightsail.GetStaticIpsOutput, error)
-    GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsResult
+       GetStaticIps(ctx workflow.Context, input *lightsail.GetStaticIpsInput) (*lightsail.GetStaticIpsOutput, error)
+       GetStaticIpsAsync(ctx workflow.Context, input *lightsail.GetStaticIpsInput) *LightsailGetStaticIpsResult
 
-    ImportKeyPair(ctx workflow.Context, input *lightsail.ImportKeyPairInput) (*lightsail.ImportKeyPairOutput, error)
-    ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairResult
+       ImportKeyPair(ctx workflow.Context, input *lightsail.ImportKeyPairInput) (*lightsail.ImportKeyPairOutput, error)
+       ImportKeyPairAsync(ctx workflow.Context, input *lightsail.ImportKeyPairInput) *LightsailImportKeyPairResult
 
-    IsVpcPeered(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) (*lightsail.IsVpcPeeredOutput, error)
-    IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredResult
+       IsVpcPeered(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) (*lightsail.IsVpcPeeredOutput, error)
+       IsVpcPeeredAsync(ctx workflow.Context, input *lightsail.IsVpcPeeredInput) *LightsailIsVpcPeeredResult
 
-    OpenInstancePublicPorts(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) (*lightsail.OpenInstancePublicPortsOutput, error)
-    OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsResult
+       OpenInstancePublicPorts(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) (*lightsail.OpenInstancePublicPortsOutput, error)
+       OpenInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.OpenInstancePublicPortsInput) *LightsailOpenInstancePublicPortsResult
 
-    PeerVpc(ctx workflow.Context, input *lightsail.PeerVpcInput) (*lightsail.PeerVpcOutput, error)
-    PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcResult
+       PeerVpc(ctx workflow.Context, input *lightsail.PeerVpcInput) (*lightsail.PeerVpcOutput, error)
+       PeerVpcAsync(ctx workflow.Context, input *lightsail.PeerVpcInput) *LightsailPeerVpcResult
 
-    PutAlarm(ctx workflow.Context, input *lightsail.PutAlarmInput) (*lightsail.PutAlarmOutput, error)
-    PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmResult
+       PutAlarm(ctx workflow.Context, input *lightsail.PutAlarmInput) (*lightsail.PutAlarmOutput, error)
+       PutAlarmAsync(ctx workflow.Context, input *lightsail.PutAlarmInput) *LightsailPutAlarmResult
 
-    PutInstancePublicPorts(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) (*lightsail.PutInstancePublicPortsOutput, error)
-    PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsResult
+       PutInstancePublicPorts(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) (*lightsail.PutInstancePublicPortsOutput, error)
+       PutInstancePublicPortsAsync(ctx workflow.Context, input *lightsail.PutInstancePublicPortsInput) *LightsailPutInstancePublicPortsResult
 
-    RebootInstance(ctx workflow.Context, input *lightsail.RebootInstanceInput) (*lightsail.RebootInstanceOutput, error)
-    RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceResult
+       RebootInstance(ctx workflow.Context, input *lightsail.RebootInstanceInput) (*lightsail.RebootInstanceOutput, error)
+       RebootInstanceAsync(ctx workflow.Context, input *lightsail.RebootInstanceInput) *LightsailRebootInstanceResult
 
-    RebootRelationalDatabase(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) (*lightsail.RebootRelationalDatabaseOutput, error)
-    RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseResult
+       RebootRelationalDatabase(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) (*lightsail.RebootRelationalDatabaseOutput, error)
+       RebootRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.RebootRelationalDatabaseInput) *LightsailRebootRelationalDatabaseResult
 
-    ReleaseStaticIp(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) (*lightsail.ReleaseStaticIpOutput, error)
-    ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpResult
+       ReleaseStaticIp(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) (*lightsail.ReleaseStaticIpOutput, error)
+       ReleaseStaticIpAsync(ctx workflow.Context, input *lightsail.ReleaseStaticIpInput) *LightsailReleaseStaticIpResult
 
-    ResetDistributionCache(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) (*lightsail.ResetDistributionCacheOutput, error)
-    ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheResult
+       ResetDistributionCache(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) (*lightsail.ResetDistributionCacheOutput, error)
+       ResetDistributionCacheAsync(ctx workflow.Context, input *lightsail.ResetDistributionCacheInput) *LightsailResetDistributionCacheResult
 
-    SendContactMethodVerification(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) (*lightsail.SendContactMethodVerificationOutput, error)
-    SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationResult
+       SendContactMethodVerification(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) (*lightsail.SendContactMethodVerificationOutput, error)
+       SendContactMethodVerificationAsync(ctx workflow.Context, input *lightsail.SendContactMethodVerificationInput) *LightsailSendContactMethodVerificationResult
 
-    StartInstance(ctx workflow.Context, input *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error)
-    StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceResult
+       StartInstance(ctx workflow.Context, input *lightsail.StartInstanceInput) (*lightsail.StartInstanceOutput, error)
+       StartInstanceAsync(ctx workflow.Context, input *lightsail.StartInstanceInput) *LightsailStartInstanceResult
 
-    StartRelationalDatabase(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) (*lightsail.StartRelationalDatabaseOutput, error)
-    StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseResult
+       StartRelationalDatabase(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) (*lightsail.StartRelationalDatabaseOutput, error)
+       StartRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StartRelationalDatabaseInput) *LightsailStartRelationalDatabaseResult
 
-    StopInstance(ctx workflow.Context, input *lightsail.StopInstanceInput) (*lightsail.StopInstanceOutput, error)
-    StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceResult
+       StopInstance(ctx workflow.Context, input *lightsail.StopInstanceInput) (*lightsail.StopInstanceOutput, error)
+       StopInstanceAsync(ctx workflow.Context, input *lightsail.StopInstanceInput) *LightsailStopInstanceResult
 
-    StopRelationalDatabase(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) (*lightsail.StopRelationalDatabaseOutput, error)
-    StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseResult
+       StopRelationalDatabase(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) (*lightsail.StopRelationalDatabaseOutput, error)
+       StopRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.StopRelationalDatabaseInput) *LightsailStopRelationalDatabaseResult
 
-    TagResource(ctx workflow.Context, input *lightsail.TagResourceInput) (*lightsail.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceResult
+       TagResource(ctx workflow.Context, input *lightsail.TagResourceInput) (*lightsail.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *lightsail.TagResourceInput) *LightsailTagResourceResult
 
-    TestAlarm(ctx workflow.Context, input *lightsail.TestAlarmInput) (*lightsail.TestAlarmOutput, error)
-    TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmResult
+       TestAlarm(ctx workflow.Context, input *lightsail.TestAlarmInput) (*lightsail.TestAlarmOutput, error)
+       TestAlarmAsync(ctx workflow.Context, input *lightsail.TestAlarmInput) *LightsailTestAlarmResult
 
-    UnpeerVpc(ctx workflow.Context, input *lightsail.UnpeerVpcInput) (*lightsail.UnpeerVpcOutput, error)
-    UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcResult
+       UnpeerVpc(ctx workflow.Context, input *lightsail.UnpeerVpcInput) (*lightsail.UnpeerVpcOutput, error)
+       UnpeerVpcAsync(ctx workflow.Context, input *lightsail.UnpeerVpcInput) *LightsailUnpeerVpcResult
 
-    UntagResource(ctx workflow.Context, input *lightsail.UntagResourceInput) (*lightsail.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceResult
+       UntagResource(ctx workflow.Context, input *lightsail.UntagResourceInput) (*lightsail.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *lightsail.UntagResourceInput) *LightsailUntagResourceResult
 
-    UpdateDistribution(ctx workflow.Context, input *lightsail.UpdateDistributionInput) (*lightsail.UpdateDistributionOutput, error)
-    UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionResult
+       UpdateDistribution(ctx workflow.Context, input *lightsail.UpdateDistributionInput) (*lightsail.UpdateDistributionOutput, error)
+       UpdateDistributionAsync(ctx workflow.Context, input *lightsail.UpdateDistributionInput) *LightsailUpdateDistributionResult
 
-    UpdateDistributionBundle(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) (*lightsail.UpdateDistributionBundleOutput, error)
-    UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleResult
+       UpdateDistributionBundle(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) (*lightsail.UpdateDistributionBundleOutput, error)
+       UpdateDistributionBundleAsync(ctx workflow.Context, input *lightsail.UpdateDistributionBundleInput) *LightsailUpdateDistributionBundleResult
 
-    UpdateDomainEntry(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) (*lightsail.UpdateDomainEntryOutput, error)
-    UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryResult
+       UpdateDomainEntry(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) (*lightsail.UpdateDomainEntryOutput, error)
+       UpdateDomainEntryAsync(ctx workflow.Context, input *lightsail.UpdateDomainEntryInput) *LightsailUpdateDomainEntryResult
 
-    UpdateLoadBalancerAttribute(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error)
-    UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeResult
+       UpdateLoadBalancerAttribute(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) (*lightsail.UpdateLoadBalancerAttributeOutput, error)
+       UpdateLoadBalancerAttributeAsync(ctx workflow.Context, input *lightsail.UpdateLoadBalancerAttributeInput) *LightsailUpdateLoadBalancerAttributeResult
 
-    UpdateRelationalDatabase(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) (*lightsail.UpdateRelationalDatabaseOutput, error)
-    UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseResult
+       UpdateRelationalDatabase(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) (*lightsail.UpdateRelationalDatabaseOutput, error)
+       UpdateRelationalDatabaseAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseInput) *LightsailUpdateRelationalDatabaseResult
 
-    UpdateRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) (*lightsail.UpdateRelationalDatabaseParametersOutput, error)
-    UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersResult
+       UpdateRelationalDatabaseParameters(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) (*lightsail.UpdateRelationalDatabaseParametersOutput, error)
+       UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersResult
 }
 
 type LightsailAllocateStaticIpResult struct {

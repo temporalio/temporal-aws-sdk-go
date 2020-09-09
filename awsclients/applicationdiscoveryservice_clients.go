@@ -7,80 +7,80 @@ import (
 )
 
 type ApplicationDiscoveryServiceClient interface {
-    AssociateConfigurationItemsToApplication(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) (*applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput, error)
-    AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationResult
+       AssociateConfigurationItemsToApplication(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) (*applicationdiscoveryservice.AssociateConfigurationItemsToApplicationOutput, error)
+       AssociateConfigurationItemsToApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.AssociateConfigurationItemsToApplicationInput) *ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationResult
 
-    BatchDeleteImportData(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error)
-    BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationdiscoveryserviceBatchDeleteImportDataResult
+       BatchDeleteImportData(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) (*applicationdiscoveryservice.BatchDeleteImportDataOutput, error)
+       BatchDeleteImportDataAsync(ctx workflow.Context, input *applicationdiscoveryservice.BatchDeleteImportDataInput) *ApplicationdiscoveryserviceBatchDeleteImportDataResult
 
-    CreateApplication(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) (*applicationdiscoveryservice.CreateApplicationOutput, error)
-    CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationdiscoveryserviceCreateApplicationResult
+       CreateApplication(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) (*applicationdiscoveryservice.CreateApplicationOutput, error)
+       CreateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateApplicationInput) *ApplicationdiscoveryserviceCreateApplicationResult
 
-    CreateTags(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) (*applicationdiscoveryservice.CreateTagsOutput, error)
-    CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationdiscoveryserviceCreateTagsResult
+       CreateTags(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) (*applicationdiscoveryservice.CreateTagsOutput, error)
+       CreateTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.CreateTagsInput) *ApplicationdiscoveryserviceCreateTagsResult
 
-    DeleteApplications(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) (*applicationdiscoveryservice.DeleteApplicationsOutput, error)
-    DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationdiscoveryserviceDeleteApplicationsResult
+       DeleteApplications(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) (*applicationdiscoveryservice.DeleteApplicationsOutput, error)
+       DeleteApplicationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteApplicationsInput) *ApplicationdiscoveryserviceDeleteApplicationsResult
 
-    DeleteTags(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) (*applicationdiscoveryservice.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationdiscoveryserviceDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) (*applicationdiscoveryservice.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DeleteTagsInput) *ApplicationdiscoveryserviceDeleteTagsResult
 
-    DescribeAgents(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) (*applicationdiscoveryservice.DescribeAgentsOutput, error)
-    DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationdiscoveryserviceDescribeAgentsResult
+       DescribeAgents(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) (*applicationdiscoveryservice.DescribeAgentsOutput, error)
+       DescribeAgentsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeAgentsInput) *ApplicationdiscoveryserviceDescribeAgentsResult
 
-    DescribeConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error)
-    DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationdiscoveryserviceDescribeConfigurationsResult
+       DescribeConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) (*applicationdiscoveryservice.DescribeConfigurationsOutput, error)
+       DescribeConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeConfigurationsInput) *ApplicationdiscoveryserviceDescribeConfigurationsResult
 
-    DescribeContinuousExports(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error)
-    DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationdiscoveryserviceDescribeContinuousExportsResult
+       DescribeContinuousExports(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) (*applicationdiscoveryservice.DescribeContinuousExportsOutput, error)
+       DescribeContinuousExportsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeContinuousExportsInput) *ApplicationdiscoveryserviceDescribeContinuousExportsResult
 
-    DescribeExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error)
-    DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationdiscoveryserviceDescribeExportConfigurationsResult
+       DescribeExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) (*applicationdiscoveryservice.DescribeExportConfigurationsOutput, error)
+       DescribeExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportConfigurationsInput) *ApplicationdiscoveryserviceDescribeExportConfigurationsResult
 
-    DescribeExportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) (*applicationdiscoveryservice.DescribeExportTasksOutput, error)
-    DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationdiscoveryserviceDescribeExportTasksResult
+       DescribeExportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) (*applicationdiscoveryservice.DescribeExportTasksOutput, error)
+       DescribeExportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeExportTasksInput) *ApplicationdiscoveryserviceDescribeExportTasksResult
 
-    DescribeImportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) (*applicationdiscoveryservice.DescribeImportTasksOutput, error)
-    DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationdiscoveryserviceDescribeImportTasksResult
+       DescribeImportTasks(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) (*applicationdiscoveryservice.DescribeImportTasksOutput, error)
+       DescribeImportTasksAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeImportTasksInput) *ApplicationdiscoveryserviceDescribeImportTasksResult
 
-    DescribeTags(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) (*applicationdiscoveryservice.DescribeTagsOutput, error)
-    DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationdiscoveryserviceDescribeTagsResult
+       DescribeTags(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) (*applicationdiscoveryservice.DescribeTagsOutput, error)
+       DescribeTagsAsync(ctx workflow.Context, input *applicationdiscoveryservice.DescribeTagsInput) *ApplicationdiscoveryserviceDescribeTagsResult
 
-    DisassociateConfigurationItemsFromApplication(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error)
-    DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationResult
+       DisassociateConfigurationItemsFromApplication(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) (*applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationOutput, error)
+       DisassociateConfigurationItemsFromApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.DisassociateConfigurationItemsFromApplicationInput) *ApplicationdiscoveryserviceDisassociateConfigurationItemsFromApplicationResult
 
-    ExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) (*applicationdiscoveryservice.ExportConfigurationsOutput, error)
-    ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationdiscoveryserviceExportConfigurationsResult
+       ExportConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) (*applicationdiscoveryservice.ExportConfigurationsOutput, error)
+       ExportConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ExportConfigurationsInput) *ApplicationdiscoveryserviceExportConfigurationsResult
 
-    GetDiscoverySummary(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error)
-    GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationdiscoveryserviceGetDiscoverySummaryResult
+       GetDiscoverySummary(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) (*applicationdiscoveryservice.GetDiscoverySummaryOutput, error)
+       GetDiscoverySummaryAsync(ctx workflow.Context, input *applicationdiscoveryservice.GetDiscoverySummaryInput) *ApplicationdiscoveryserviceGetDiscoverySummaryResult
 
-    ListConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) (*applicationdiscoveryservice.ListConfigurationsOutput, error)
-    ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationdiscoveryserviceListConfigurationsResult
+       ListConfigurations(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) (*applicationdiscoveryservice.ListConfigurationsOutput, error)
+       ListConfigurationsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListConfigurationsInput) *ApplicationdiscoveryserviceListConfigurationsResult
 
-    ListServerNeighbors(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) (*applicationdiscoveryservice.ListServerNeighborsOutput, error)
-    ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationdiscoveryserviceListServerNeighborsResult
+       ListServerNeighbors(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) (*applicationdiscoveryservice.ListServerNeighborsOutput, error)
+       ListServerNeighborsAsync(ctx workflow.Context, input *applicationdiscoveryservice.ListServerNeighborsInput) *ApplicationdiscoveryserviceListServerNeighborsResult
 
-    StartContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) (*applicationdiscoveryservice.StartContinuousExportOutput, error)
-    StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationdiscoveryserviceStartContinuousExportResult
+       StartContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) (*applicationdiscoveryservice.StartContinuousExportOutput, error)
+       StartContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartContinuousExportInput) *ApplicationdiscoveryserviceStartContinuousExportResult
 
-    StartDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error)
-    StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStartDataCollectionByAgentIdsResult
+       StartDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StartDataCollectionByAgentIdsOutput, error)
+       StartDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStartDataCollectionByAgentIdsResult
 
-    StartExportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) (*applicationdiscoveryservice.StartExportTaskOutput, error)
-    StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationdiscoveryserviceStartExportTaskResult
+       StartExportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) (*applicationdiscoveryservice.StartExportTaskOutput, error)
+       StartExportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartExportTaskInput) *ApplicationdiscoveryserviceStartExportTaskResult
 
-    StartImportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) (*applicationdiscoveryservice.StartImportTaskOutput, error)
-    StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationdiscoveryserviceStartImportTaskResult
+       StartImportTask(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) (*applicationdiscoveryservice.StartImportTaskOutput, error)
+       StartImportTaskAsync(ctx workflow.Context, input *applicationdiscoveryservice.StartImportTaskInput) *ApplicationdiscoveryserviceStartImportTaskResult
 
-    StopContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) (*applicationdiscoveryservice.StopContinuousExportOutput, error)
-    StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationdiscoveryserviceStopContinuousExportResult
+       StopContinuousExport(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) (*applicationdiscoveryservice.StopContinuousExportOutput, error)
+       StopContinuousExportAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopContinuousExportInput) *ApplicationdiscoveryserviceStopContinuousExportResult
 
-    StopDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error)
-    StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStopDataCollectionByAgentIdsResult
+       StopDataCollectionByAgentIds(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) (*applicationdiscoveryservice.StopDataCollectionByAgentIdsOutput, error)
+       StopDataCollectionByAgentIdsAsync(ctx workflow.Context, input *applicationdiscoveryservice.StopDataCollectionByAgentIdsInput) *ApplicationdiscoveryserviceStopDataCollectionByAgentIdsResult
 
-    UpdateApplication(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) (*applicationdiscoveryservice.UpdateApplicationOutput, error)
-    UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationdiscoveryserviceUpdateApplicationResult
+       UpdateApplication(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) (*applicationdiscoveryservice.UpdateApplicationOutput, error)
+       UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationdiscoveryserviceUpdateApplicationResult
 }
 
 type ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationResult struct {

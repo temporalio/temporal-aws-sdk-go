@@ -7,14 +7,14 @@ import (
 )
 
 type MigrationHubConfigClient interface {
-    CreateHomeRegionControl(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) (*migrationhubconfig.CreateHomeRegionControlOutput, error)
-    CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlResult
+       CreateHomeRegionControl(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) (*migrationhubconfig.CreateHomeRegionControlOutput, error)
+       CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlResult
 
-    DescribeHomeRegionControls(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error)
-    DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsResult
+       DescribeHomeRegionControls(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error)
+       DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsResult
 
-    GetHomeRegion(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error)
-    GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult
+       GetHomeRegion(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error)
+       GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult
 }
 
 type MigrationhubconfigCreateHomeRegionControlResult struct {

@@ -7,158 +7,158 @@ import (
 )
 
 type OrganizationsClient interface {
-    AcceptHandshake(ctx workflow.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error)
-    AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *OrganizationsAcceptHandshakeResult
+       AcceptHandshake(ctx workflow.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error)
+       AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *OrganizationsAcceptHandshakeResult
 
-    AttachPolicy(ctx workflow.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error)
-    AttachPolicyAsync(ctx workflow.Context, input *organizations.AttachPolicyInput) *OrganizationsAttachPolicyResult
+       AttachPolicy(ctx workflow.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error)
+       AttachPolicyAsync(ctx workflow.Context, input *organizations.AttachPolicyInput) *OrganizationsAttachPolicyResult
 
-    CancelHandshake(ctx workflow.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error)
-    CancelHandshakeAsync(ctx workflow.Context, input *organizations.CancelHandshakeInput) *OrganizationsCancelHandshakeResult
+       CancelHandshake(ctx workflow.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error)
+       CancelHandshakeAsync(ctx workflow.Context, input *organizations.CancelHandshakeInput) *OrganizationsCancelHandshakeResult
 
-    CreateAccount(ctx workflow.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error)
-    CreateAccountAsync(ctx workflow.Context, input *organizations.CreateAccountInput) *OrganizationsCreateAccountResult
+       CreateAccount(ctx workflow.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error)
+       CreateAccountAsync(ctx workflow.Context, input *organizations.CreateAccountInput) *OrganizationsCreateAccountResult
 
-    CreateGovCloudAccount(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error)
-    CreateGovCloudAccountAsync(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) *OrganizationsCreateGovCloudAccountResult
+       CreateGovCloudAccount(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error)
+       CreateGovCloudAccountAsync(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) *OrganizationsCreateGovCloudAccountResult
 
-    CreateOrganization(ctx workflow.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error)
-    CreateOrganizationAsync(ctx workflow.Context, input *organizations.CreateOrganizationInput) *OrganizationsCreateOrganizationResult
+       CreateOrganization(ctx workflow.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error)
+       CreateOrganizationAsync(ctx workflow.Context, input *organizations.CreateOrganizationInput) *OrganizationsCreateOrganizationResult
 
-    CreateOrganizationalUnit(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error)
-    CreateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) *OrganizationsCreateOrganizationalUnitResult
+       CreateOrganizationalUnit(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error)
+       CreateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) *OrganizationsCreateOrganizationalUnitResult
 
-    CreatePolicy(ctx workflow.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error)
-    CreatePolicyAsync(ctx workflow.Context, input *organizations.CreatePolicyInput) *OrganizationsCreatePolicyResult
+       CreatePolicy(ctx workflow.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error)
+       CreatePolicyAsync(ctx workflow.Context, input *organizations.CreatePolicyInput) *OrganizationsCreatePolicyResult
 
-    DeclineHandshake(ctx workflow.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error)
-    DeclineHandshakeAsync(ctx workflow.Context, input *organizations.DeclineHandshakeInput) *OrganizationsDeclineHandshakeResult
+       DeclineHandshake(ctx workflow.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error)
+       DeclineHandshakeAsync(ctx workflow.Context, input *organizations.DeclineHandshakeInput) *OrganizationsDeclineHandshakeResult
 
-    DeleteOrganization(ctx workflow.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error)
-    DeleteOrganizationAsync(ctx workflow.Context, input *organizations.DeleteOrganizationInput) *OrganizationsDeleteOrganizationResult
+       DeleteOrganization(ctx workflow.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error)
+       DeleteOrganizationAsync(ctx workflow.Context, input *organizations.DeleteOrganizationInput) *OrganizationsDeleteOrganizationResult
 
-    DeleteOrganizationalUnit(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error)
-    DeleteOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) *OrganizationsDeleteOrganizationalUnitResult
+       DeleteOrganizationalUnit(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error)
+       DeleteOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) *OrganizationsDeleteOrganizationalUnitResult
 
-    DeletePolicy(ctx workflow.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error)
-    DeletePolicyAsync(ctx workflow.Context, input *organizations.DeletePolicyInput) *OrganizationsDeletePolicyResult
+       DeletePolicy(ctx workflow.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error)
+       DeletePolicyAsync(ctx workflow.Context, input *organizations.DeletePolicyInput) *OrganizationsDeletePolicyResult
 
-    DeregisterDelegatedAdministrator(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error)
-    DeregisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) *OrganizationsDeregisterDelegatedAdministratorResult
+       DeregisterDelegatedAdministrator(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error)
+       DeregisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) *OrganizationsDeregisterDelegatedAdministratorResult
 
-    DescribeAccount(ctx workflow.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error)
-    DescribeAccountAsync(ctx workflow.Context, input *organizations.DescribeAccountInput) *OrganizationsDescribeAccountResult
+       DescribeAccount(ctx workflow.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error)
+       DescribeAccountAsync(ctx workflow.Context, input *organizations.DescribeAccountInput) *OrganizationsDescribeAccountResult
 
-    DescribeCreateAccountStatus(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error)
-    DescribeCreateAccountStatusAsync(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) *OrganizationsDescribeCreateAccountStatusResult
+       DescribeCreateAccountStatus(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error)
+       DescribeCreateAccountStatusAsync(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) *OrganizationsDescribeCreateAccountStatusResult
 
-    DescribeEffectivePolicy(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error)
-    DescribeEffectivePolicyAsync(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) *OrganizationsDescribeEffectivePolicyResult
+       DescribeEffectivePolicy(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error)
+       DescribeEffectivePolicyAsync(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) *OrganizationsDescribeEffectivePolicyResult
 
-    DescribeHandshake(ctx workflow.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error)
-    DescribeHandshakeAsync(ctx workflow.Context, input *organizations.DescribeHandshakeInput) *OrganizationsDescribeHandshakeResult
+       DescribeHandshake(ctx workflow.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error)
+       DescribeHandshakeAsync(ctx workflow.Context, input *organizations.DescribeHandshakeInput) *OrganizationsDescribeHandshakeResult
 
-    DescribeOrganization(ctx workflow.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error)
-    DescribeOrganizationAsync(ctx workflow.Context, input *organizations.DescribeOrganizationInput) *OrganizationsDescribeOrganizationResult
+       DescribeOrganization(ctx workflow.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error)
+       DescribeOrganizationAsync(ctx workflow.Context, input *organizations.DescribeOrganizationInput) *OrganizationsDescribeOrganizationResult
 
-    DescribeOrganizationalUnit(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error)
-    DescribeOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) *OrganizationsDescribeOrganizationalUnitResult
+       DescribeOrganizationalUnit(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error)
+       DescribeOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) *OrganizationsDescribeOrganizationalUnitResult
 
-    DescribePolicy(ctx workflow.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error)
-    DescribePolicyAsync(ctx workflow.Context, input *organizations.DescribePolicyInput) *OrganizationsDescribePolicyResult
+       DescribePolicy(ctx workflow.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error)
+       DescribePolicyAsync(ctx workflow.Context, input *organizations.DescribePolicyInput) *OrganizationsDescribePolicyResult
 
-    DetachPolicy(ctx workflow.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error)
-    DetachPolicyAsync(ctx workflow.Context, input *organizations.DetachPolicyInput) *OrganizationsDetachPolicyResult
+       DetachPolicy(ctx workflow.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error)
+       DetachPolicyAsync(ctx workflow.Context, input *organizations.DetachPolicyInput) *OrganizationsDetachPolicyResult
 
-    DisableAWSServiceAccess(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error)
-    DisableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) *OrganizationsDisableAWSServiceAccessResult
+       DisableAWSServiceAccess(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error)
+       DisableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) *OrganizationsDisableAWSServiceAccessResult
 
-    DisablePolicyType(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error)
-    DisablePolicyTypeAsync(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) *OrganizationsDisablePolicyTypeResult
+       DisablePolicyType(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error)
+       DisablePolicyTypeAsync(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) *OrganizationsDisablePolicyTypeResult
 
-    EnableAWSServiceAccess(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error)
-    EnableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) *OrganizationsEnableAWSServiceAccessResult
+       EnableAWSServiceAccess(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error)
+       EnableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) *OrganizationsEnableAWSServiceAccessResult
 
-    EnableAllFeatures(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error)
-    EnableAllFeaturesAsync(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) *OrganizationsEnableAllFeaturesResult
+       EnableAllFeatures(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error)
+       EnableAllFeaturesAsync(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) *OrganizationsEnableAllFeaturesResult
 
-    EnablePolicyType(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error)
-    EnablePolicyTypeAsync(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) *OrganizationsEnablePolicyTypeResult
+       EnablePolicyType(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error)
+       EnablePolicyTypeAsync(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) *OrganizationsEnablePolicyTypeResult
 
-    InviteAccountToOrganization(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error)
-    InviteAccountToOrganizationAsync(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) *OrganizationsInviteAccountToOrganizationResult
+       InviteAccountToOrganization(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error)
+       InviteAccountToOrganizationAsync(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) *OrganizationsInviteAccountToOrganizationResult
 
-    LeaveOrganization(ctx workflow.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error)
-    LeaveOrganizationAsync(ctx workflow.Context, input *organizations.LeaveOrganizationInput) *OrganizationsLeaveOrganizationResult
+       LeaveOrganization(ctx workflow.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error)
+       LeaveOrganizationAsync(ctx workflow.Context, input *organizations.LeaveOrganizationInput) *OrganizationsLeaveOrganizationResult
 
-    ListAWSServiceAccessForOrganization(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error)
-    ListAWSServiceAccessForOrganizationAsync(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) *OrganizationsListAWSServiceAccessForOrganizationResult
+       ListAWSServiceAccessForOrganization(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error)
+       ListAWSServiceAccessForOrganizationAsync(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) *OrganizationsListAWSServiceAccessForOrganizationResult
 
-    ListAccounts(ctx workflow.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error)
-    ListAccountsAsync(ctx workflow.Context, input *organizations.ListAccountsInput) *OrganizationsListAccountsResult
+       ListAccounts(ctx workflow.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error)
+       ListAccountsAsync(ctx workflow.Context, input *organizations.ListAccountsInput) *OrganizationsListAccountsResult
 
-    ListAccountsForParent(ctx workflow.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error)
-    ListAccountsForParentAsync(ctx workflow.Context, input *organizations.ListAccountsForParentInput) *OrganizationsListAccountsForParentResult
+       ListAccountsForParent(ctx workflow.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error)
+       ListAccountsForParentAsync(ctx workflow.Context, input *organizations.ListAccountsForParentInput) *OrganizationsListAccountsForParentResult
 
-    ListChildren(ctx workflow.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error)
-    ListChildrenAsync(ctx workflow.Context, input *organizations.ListChildrenInput) *OrganizationsListChildrenResult
+       ListChildren(ctx workflow.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error)
+       ListChildrenAsync(ctx workflow.Context, input *organizations.ListChildrenInput) *OrganizationsListChildrenResult
 
-    ListCreateAccountStatus(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error)
-    ListCreateAccountStatusAsync(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) *OrganizationsListCreateAccountStatusResult
+       ListCreateAccountStatus(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error)
+       ListCreateAccountStatusAsync(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) *OrganizationsListCreateAccountStatusResult
 
-    ListDelegatedAdministrators(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error)
-    ListDelegatedAdministratorsAsync(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) *OrganizationsListDelegatedAdministratorsResult
+       ListDelegatedAdministrators(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error)
+       ListDelegatedAdministratorsAsync(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) *OrganizationsListDelegatedAdministratorsResult
 
-    ListDelegatedServicesForAccount(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error)
-    ListDelegatedServicesForAccountAsync(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) *OrganizationsListDelegatedServicesForAccountResult
+       ListDelegatedServicesForAccount(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error)
+       ListDelegatedServicesForAccountAsync(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) *OrganizationsListDelegatedServicesForAccountResult
 
-    ListHandshakesForAccount(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error)
-    ListHandshakesForAccountAsync(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) *OrganizationsListHandshakesForAccountResult
+       ListHandshakesForAccount(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error)
+       ListHandshakesForAccountAsync(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) *OrganizationsListHandshakesForAccountResult
 
-    ListHandshakesForOrganization(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error)
-    ListHandshakesForOrganizationAsync(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) *OrganizationsListHandshakesForOrganizationResult
+       ListHandshakesForOrganization(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error)
+       ListHandshakesForOrganizationAsync(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) *OrganizationsListHandshakesForOrganizationResult
 
-    ListOrganizationalUnitsForParent(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error)
-    ListOrganizationalUnitsForParentAsync(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) *OrganizationsListOrganizationalUnitsForParentResult
+       ListOrganizationalUnitsForParent(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error)
+       ListOrganizationalUnitsForParentAsync(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) *OrganizationsListOrganizationalUnitsForParentResult
 
-    ListParents(ctx workflow.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error)
-    ListParentsAsync(ctx workflow.Context, input *organizations.ListParentsInput) *OrganizationsListParentsResult
+       ListParents(ctx workflow.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error)
+       ListParentsAsync(ctx workflow.Context, input *organizations.ListParentsInput) *OrganizationsListParentsResult
 
-    ListPolicies(ctx workflow.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error)
-    ListPoliciesAsync(ctx workflow.Context, input *organizations.ListPoliciesInput) *OrganizationsListPoliciesResult
+       ListPolicies(ctx workflow.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error)
+       ListPoliciesAsync(ctx workflow.Context, input *organizations.ListPoliciesInput) *OrganizationsListPoliciesResult
 
-    ListPoliciesForTarget(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error)
-    ListPoliciesForTargetAsync(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) *OrganizationsListPoliciesForTargetResult
+       ListPoliciesForTarget(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error)
+       ListPoliciesForTargetAsync(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) *OrganizationsListPoliciesForTargetResult
 
-    ListRoots(ctx workflow.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error)
-    ListRootsAsync(ctx workflow.Context, input *organizations.ListRootsInput) *OrganizationsListRootsResult
+       ListRoots(ctx workflow.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error)
+       ListRootsAsync(ctx workflow.Context, input *organizations.ListRootsInput) *OrganizationsListRootsResult
 
-    ListTagsForResource(ctx workflow.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *organizations.ListTagsForResourceInput) *OrganizationsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *organizations.ListTagsForResourceInput) *OrganizationsListTagsForResourceResult
 
-    ListTargetsForPolicy(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error)
-    ListTargetsForPolicyAsync(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) *OrganizationsListTargetsForPolicyResult
+       ListTargetsForPolicy(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error)
+       ListTargetsForPolicyAsync(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) *OrganizationsListTargetsForPolicyResult
 
-    MoveAccount(ctx workflow.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error)
-    MoveAccountAsync(ctx workflow.Context, input *organizations.MoveAccountInput) *OrganizationsMoveAccountResult
+       MoveAccount(ctx workflow.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error)
+       MoveAccountAsync(ctx workflow.Context, input *organizations.MoveAccountInput) *OrganizationsMoveAccountResult
 
-    RegisterDelegatedAdministrator(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error)
-    RegisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) *OrganizationsRegisterDelegatedAdministratorResult
+       RegisterDelegatedAdministrator(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error)
+       RegisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) *OrganizationsRegisterDelegatedAdministratorResult
 
-    RemoveAccountFromOrganization(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error)
-    RemoveAccountFromOrganizationAsync(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) *OrganizationsRemoveAccountFromOrganizationResult
+       RemoveAccountFromOrganization(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error)
+       RemoveAccountFromOrganizationAsync(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) *OrganizationsRemoveAccountFromOrganizationResult
 
-    TagResource(ctx workflow.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *organizations.TagResourceInput) *OrganizationsTagResourceResult
+       TagResource(ctx workflow.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *organizations.TagResourceInput) *OrganizationsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *organizations.UntagResourceInput) *OrganizationsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *organizations.UntagResourceInput) *OrganizationsUntagResourceResult
 
-    UpdateOrganizationalUnit(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error)
-    UpdateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) *OrganizationsUpdateOrganizationalUnitResult
+       UpdateOrganizationalUnit(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error)
+       UpdateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) *OrganizationsUpdateOrganizationalUnitResult
 
-    UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error)
-    UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyResult
+       UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error)
+       UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyResult
 }
 
 type OrganizationsAcceptHandshakeResult struct {

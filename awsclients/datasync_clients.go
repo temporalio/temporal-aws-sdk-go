@@ -7,98 +7,98 @@ import (
 )
 
 type DataSyncClient interface {
-    CancelTaskExecution(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) (*datasync.CancelTaskExecutionOutput, error)
-    CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DatasyncCancelTaskExecutionResult
+       CancelTaskExecution(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) (*datasync.CancelTaskExecutionOutput, error)
+       CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DatasyncCancelTaskExecutionResult
 
-    CreateAgent(ctx workflow.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error)
-    CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DatasyncCreateAgentResult
+       CreateAgent(ctx workflow.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error)
+       CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DatasyncCreateAgentResult
 
-    CreateLocationEfs(ctx workflow.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error)
-    CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DatasyncCreateLocationEfsResult
+       CreateLocationEfs(ctx workflow.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error)
+       CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DatasyncCreateLocationEfsResult
 
-    CreateLocationFsxWindows(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error)
-    CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DatasyncCreateLocationFsxWindowsResult
+       CreateLocationFsxWindows(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error)
+       CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DatasyncCreateLocationFsxWindowsResult
 
-    CreateLocationNfs(ctx workflow.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error)
-    CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DatasyncCreateLocationNfsResult
+       CreateLocationNfs(ctx workflow.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error)
+       CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DatasyncCreateLocationNfsResult
 
-    CreateLocationObjectStorage(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error)
-    CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DatasyncCreateLocationObjectStorageResult
+       CreateLocationObjectStorage(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error)
+       CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DatasyncCreateLocationObjectStorageResult
 
-    CreateLocationS3(ctx workflow.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error)
-    CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DatasyncCreateLocationS3Result
+       CreateLocationS3(ctx workflow.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error)
+       CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DatasyncCreateLocationS3Result
 
-    CreateLocationSmb(ctx workflow.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error)
-    CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DatasyncCreateLocationSmbResult
+       CreateLocationSmb(ctx workflow.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error)
+       CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DatasyncCreateLocationSmbResult
 
-    CreateTask(ctx workflow.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error)
-    CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DatasyncCreateTaskResult
+       CreateTask(ctx workflow.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error)
+       CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DatasyncCreateTaskResult
 
-    DeleteAgent(ctx workflow.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error)
-    DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DatasyncDeleteAgentResult
+       DeleteAgent(ctx workflow.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error)
+       DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DatasyncDeleteAgentResult
 
-    DeleteLocation(ctx workflow.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error)
-    DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DatasyncDeleteLocationResult
+       DeleteLocation(ctx workflow.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error)
+       DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DatasyncDeleteLocationResult
 
-    DeleteTask(ctx workflow.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error)
-    DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DatasyncDeleteTaskResult
+       DeleteTask(ctx workflow.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error)
+       DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DatasyncDeleteTaskResult
 
-    DescribeAgent(ctx workflow.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error)
-    DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DatasyncDescribeAgentResult
+       DescribeAgent(ctx workflow.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error)
+       DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DatasyncDescribeAgentResult
 
-    DescribeLocationEfs(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error)
-    DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DatasyncDescribeLocationEfsResult
+       DescribeLocationEfs(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error)
+       DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DatasyncDescribeLocationEfsResult
 
-    DescribeLocationFsxWindows(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error)
-    DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DatasyncDescribeLocationFsxWindowsResult
+       DescribeLocationFsxWindows(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error)
+       DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DatasyncDescribeLocationFsxWindowsResult
 
-    DescribeLocationNfs(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error)
-    DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DatasyncDescribeLocationNfsResult
+       DescribeLocationNfs(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error)
+       DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DatasyncDescribeLocationNfsResult
 
-    DescribeLocationObjectStorage(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error)
-    DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DatasyncDescribeLocationObjectStorageResult
+       DescribeLocationObjectStorage(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error)
+       DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DatasyncDescribeLocationObjectStorageResult
 
-    DescribeLocationS3(ctx workflow.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error)
-    DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DatasyncDescribeLocationS3Result
+       DescribeLocationS3(ctx workflow.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error)
+       DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DatasyncDescribeLocationS3Result
 
-    DescribeLocationSmb(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error)
-    DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DatasyncDescribeLocationSmbResult
+       DescribeLocationSmb(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error)
+       DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DatasyncDescribeLocationSmbResult
 
-    DescribeTask(ctx workflow.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error)
-    DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DatasyncDescribeTaskResult
+       DescribeTask(ctx workflow.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error)
+       DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DatasyncDescribeTaskResult
 
-    DescribeTaskExecution(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error)
-    DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DatasyncDescribeTaskExecutionResult
+       DescribeTaskExecution(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error)
+       DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DatasyncDescribeTaskExecutionResult
 
-    ListAgents(ctx workflow.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error)
-    ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DatasyncListAgentsResult
+       ListAgents(ctx workflow.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error)
+       ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DatasyncListAgentsResult
 
-    ListLocations(ctx workflow.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error)
-    ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DatasyncListLocationsResult
+       ListLocations(ctx workflow.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error)
+       ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DatasyncListLocationsResult
 
-    ListTagsForResource(ctx workflow.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DatasyncListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DatasyncListTagsForResourceResult
 
-    ListTaskExecutions(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error)
-    ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DatasyncListTaskExecutionsResult
+       ListTaskExecutions(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error)
+       ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DatasyncListTaskExecutionsResult
 
-    ListTasks(ctx workflow.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error)
-    ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DatasyncListTasksResult
+       ListTasks(ctx workflow.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error)
+       ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DatasyncListTasksResult
 
-    StartTaskExecution(ctx workflow.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error)
-    StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DatasyncStartTaskExecutionResult
+       StartTaskExecution(ctx workflow.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error)
+       StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DatasyncStartTaskExecutionResult
 
-    TagResource(ctx workflow.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DatasyncTagResourceResult
+       TagResource(ctx workflow.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DatasyncTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DatasyncUntagResourceResult
+       UntagResource(ctx workflow.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DatasyncUntagResourceResult
 
-    UpdateAgent(ctx workflow.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error)
-    UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DatasyncUpdateAgentResult
+       UpdateAgent(ctx workflow.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error)
+       UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DatasyncUpdateAgentResult
 
-    UpdateTask(ctx workflow.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error)
-    UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult
+       UpdateTask(ctx workflow.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error)
+       UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult
 }
 
 type DatasyncCancelTaskExecutionResult struct {

@@ -7,83 +7,83 @@ import (
 )
 
 type CloudSearchClient interface {
-    BuildSuggesters(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) (*cloudsearch.BuildSuggestersOutput, error)
-    BuildSuggestersAsync(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) *CloudsearchBuildSuggestersResult
+       BuildSuggesters(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) (*cloudsearch.BuildSuggestersOutput, error)
+       BuildSuggestersAsync(ctx workflow.Context, input *cloudsearch.BuildSuggestersInput) *CloudsearchBuildSuggestersResult
 
-    CreateDomain(ctx workflow.Context, input *cloudsearch.CreateDomainInput) (*cloudsearch.CreateDomainOutput, error)
-    CreateDomainAsync(ctx workflow.Context, input *cloudsearch.CreateDomainInput) *CloudsearchCreateDomainResult
+       CreateDomain(ctx workflow.Context, input *cloudsearch.CreateDomainInput) (*cloudsearch.CreateDomainOutput, error)
+       CreateDomainAsync(ctx workflow.Context, input *cloudsearch.CreateDomainInput) *CloudsearchCreateDomainResult
 
-    DefineAnalysisScheme(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) (*cloudsearch.DefineAnalysisSchemeOutput, error)
-    DefineAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) *CloudsearchDefineAnalysisSchemeResult
+       DefineAnalysisScheme(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) (*cloudsearch.DefineAnalysisSchemeOutput, error)
+       DefineAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DefineAnalysisSchemeInput) *CloudsearchDefineAnalysisSchemeResult
 
-    DefineExpression(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) (*cloudsearch.DefineExpressionOutput, error)
-    DefineExpressionAsync(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) *CloudsearchDefineExpressionResult
+       DefineExpression(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) (*cloudsearch.DefineExpressionOutput, error)
+       DefineExpressionAsync(ctx workflow.Context, input *cloudsearch.DefineExpressionInput) *CloudsearchDefineExpressionResult
 
-    DefineIndexField(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) (*cloudsearch.DefineIndexFieldOutput, error)
-    DefineIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) *CloudsearchDefineIndexFieldResult
+       DefineIndexField(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) (*cloudsearch.DefineIndexFieldOutput, error)
+       DefineIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DefineIndexFieldInput) *CloudsearchDefineIndexFieldResult
 
-    DefineSuggester(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) (*cloudsearch.DefineSuggesterOutput, error)
-    DefineSuggesterAsync(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) *CloudsearchDefineSuggesterResult
+       DefineSuggester(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) (*cloudsearch.DefineSuggesterOutput, error)
+       DefineSuggesterAsync(ctx workflow.Context, input *cloudsearch.DefineSuggesterInput) *CloudsearchDefineSuggesterResult
 
-    DeleteAnalysisScheme(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) (*cloudsearch.DeleteAnalysisSchemeOutput, error)
-    DeleteAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) *CloudsearchDeleteAnalysisSchemeResult
+       DeleteAnalysisScheme(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) (*cloudsearch.DeleteAnalysisSchemeOutput, error)
+       DeleteAnalysisSchemeAsync(ctx workflow.Context, input *cloudsearch.DeleteAnalysisSchemeInput) *CloudsearchDeleteAnalysisSchemeResult
 
-    DeleteDomain(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) (*cloudsearch.DeleteDomainOutput, error)
-    DeleteDomainAsync(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) *CloudsearchDeleteDomainResult
+       DeleteDomain(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) (*cloudsearch.DeleteDomainOutput, error)
+       DeleteDomainAsync(ctx workflow.Context, input *cloudsearch.DeleteDomainInput) *CloudsearchDeleteDomainResult
 
-    DeleteExpression(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) (*cloudsearch.DeleteExpressionOutput, error)
-    DeleteExpressionAsync(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) *CloudsearchDeleteExpressionResult
+       DeleteExpression(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) (*cloudsearch.DeleteExpressionOutput, error)
+       DeleteExpressionAsync(ctx workflow.Context, input *cloudsearch.DeleteExpressionInput) *CloudsearchDeleteExpressionResult
 
-    DeleteIndexField(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) (*cloudsearch.DeleteIndexFieldOutput, error)
-    DeleteIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) *CloudsearchDeleteIndexFieldResult
+       DeleteIndexField(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) (*cloudsearch.DeleteIndexFieldOutput, error)
+       DeleteIndexFieldAsync(ctx workflow.Context, input *cloudsearch.DeleteIndexFieldInput) *CloudsearchDeleteIndexFieldResult
 
-    DeleteSuggester(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) (*cloudsearch.DeleteSuggesterOutput, error)
-    DeleteSuggesterAsync(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) *CloudsearchDeleteSuggesterResult
+       DeleteSuggester(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) (*cloudsearch.DeleteSuggesterOutput, error)
+       DeleteSuggesterAsync(ctx workflow.Context, input *cloudsearch.DeleteSuggesterInput) *CloudsearchDeleteSuggesterResult
 
-    DescribeAnalysisSchemes(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) (*cloudsearch.DescribeAnalysisSchemesOutput, error)
-    DescribeAnalysisSchemesAsync(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) *CloudsearchDescribeAnalysisSchemesResult
+       DescribeAnalysisSchemes(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) (*cloudsearch.DescribeAnalysisSchemesOutput, error)
+       DescribeAnalysisSchemesAsync(ctx workflow.Context, input *cloudsearch.DescribeAnalysisSchemesInput) *CloudsearchDescribeAnalysisSchemesResult
 
-    DescribeAvailabilityOptions(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) (*cloudsearch.DescribeAvailabilityOptionsOutput, error)
-    DescribeAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) *CloudsearchDescribeAvailabilityOptionsResult
+       DescribeAvailabilityOptions(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) (*cloudsearch.DescribeAvailabilityOptionsOutput, error)
+       DescribeAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) *CloudsearchDescribeAvailabilityOptionsResult
 
-    DescribeDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error)
-    DescribeDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) *CloudsearchDescribeDomainEndpointOptionsResult
+       DescribeDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error)
+       DescribeDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) *CloudsearchDescribeDomainEndpointOptionsResult
 
-    DescribeDomains(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) (*cloudsearch.DescribeDomainsOutput, error)
-    DescribeDomainsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) *CloudsearchDescribeDomainsResult
+       DescribeDomains(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) (*cloudsearch.DescribeDomainsOutput, error)
+       DescribeDomainsAsync(ctx workflow.Context, input *cloudsearch.DescribeDomainsInput) *CloudsearchDescribeDomainsResult
 
-    DescribeExpressions(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) (*cloudsearch.DescribeExpressionsOutput, error)
-    DescribeExpressionsAsync(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) *CloudsearchDescribeExpressionsResult
+       DescribeExpressions(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) (*cloudsearch.DescribeExpressionsOutput, error)
+       DescribeExpressionsAsync(ctx workflow.Context, input *cloudsearch.DescribeExpressionsInput) *CloudsearchDescribeExpressionsResult
 
-    DescribeIndexFields(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) (*cloudsearch.DescribeIndexFieldsOutput, error)
-    DescribeIndexFieldsAsync(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) *CloudsearchDescribeIndexFieldsResult
+       DescribeIndexFields(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) (*cloudsearch.DescribeIndexFieldsOutput, error)
+       DescribeIndexFieldsAsync(ctx workflow.Context, input *cloudsearch.DescribeIndexFieldsInput) *CloudsearchDescribeIndexFieldsResult
 
-    DescribeScalingParameters(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) (*cloudsearch.DescribeScalingParametersOutput, error)
-    DescribeScalingParametersAsync(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) *CloudsearchDescribeScalingParametersResult
+       DescribeScalingParameters(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) (*cloudsearch.DescribeScalingParametersOutput, error)
+       DescribeScalingParametersAsync(ctx workflow.Context, input *cloudsearch.DescribeScalingParametersInput) *CloudsearchDescribeScalingParametersResult
 
-    DescribeServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error)
-    DescribeServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) *CloudsearchDescribeServiceAccessPoliciesResult
+       DescribeServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error)
+       DescribeServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) *CloudsearchDescribeServiceAccessPoliciesResult
 
-    DescribeSuggesters(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) (*cloudsearch.DescribeSuggestersOutput, error)
-    DescribeSuggestersAsync(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) *CloudsearchDescribeSuggestersResult
+       DescribeSuggesters(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) (*cloudsearch.DescribeSuggestersOutput, error)
+       DescribeSuggestersAsync(ctx workflow.Context, input *cloudsearch.DescribeSuggestersInput) *CloudsearchDescribeSuggestersResult
 
-    IndexDocuments(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) (*cloudsearch.IndexDocumentsOutput, error)
-    IndexDocumentsAsync(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) *CloudsearchIndexDocumentsResult
+       IndexDocuments(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) (*cloudsearch.IndexDocumentsOutput, error)
+       IndexDocumentsAsync(ctx workflow.Context, input *cloudsearch.IndexDocumentsInput) *CloudsearchIndexDocumentsResult
 
-    ListDomainNames(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) (*cloudsearch.ListDomainNamesOutput, error)
-    ListDomainNamesAsync(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) *CloudsearchListDomainNamesResult
+       ListDomainNames(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) (*cloudsearch.ListDomainNamesOutput, error)
+       ListDomainNamesAsync(ctx workflow.Context, input *cloudsearch.ListDomainNamesInput) *CloudsearchListDomainNamesResult
 
-    UpdateAvailabilityOptions(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) (*cloudsearch.UpdateAvailabilityOptionsOutput, error)
-    UpdateAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) *CloudsearchUpdateAvailabilityOptionsResult
+       UpdateAvailabilityOptions(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) (*cloudsearch.UpdateAvailabilityOptionsOutput, error)
+       UpdateAvailabilityOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) *CloudsearchUpdateAvailabilityOptionsResult
 
-    UpdateDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error)
-    UpdateDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) *CloudsearchUpdateDomainEndpointOptionsResult
+       UpdateDomainEndpointOptions(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error)
+       UpdateDomainEndpointOptionsAsync(ctx workflow.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) *CloudsearchUpdateDomainEndpointOptionsResult
 
-    UpdateScalingParameters(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) (*cloudsearch.UpdateScalingParametersOutput, error)
-    UpdateScalingParametersAsync(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) *CloudsearchUpdateScalingParametersResult
+       UpdateScalingParameters(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) (*cloudsearch.UpdateScalingParametersOutput, error)
+       UpdateScalingParametersAsync(ctx workflow.Context, input *cloudsearch.UpdateScalingParametersInput) *CloudsearchUpdateScalingParametersResult
 
-    UpdateServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error)
-    UpdateServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) *CloudsearchUpdateServiceAccessPoliciesResult
+       UpdateServiceAccessPolicies(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error)
+       UpdateServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) *CloudsearchUpdateServiceAccessPoliciesResult
 }
 
 type CloudsearchBuildSuggestersResult struct {

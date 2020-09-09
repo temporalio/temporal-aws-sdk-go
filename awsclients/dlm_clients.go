@@ -7,29 +7,29 @@ import (
 )
 
 type DLMClient interface {
-    CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error)
-    CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DlmCreateLifecyclePolicyResult
+       CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error)
+       CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DlmCreateLifecyclePolicyResult
 
-    DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error)
-    DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DlmDeleteLifecyclePolicyResult
+       DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error)
+       DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DlmDeleteLifecyclePolicyResult
 
-    GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error)
-    GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DlmGetLifecyclePoliciesResult
+       GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error)
+       GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DlmGetLifecyclePoliciesResult
 
-    GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error)
-    GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DlmGetLifecyclePolicyResult
+       GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error)
+       GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DlmGetLifecyclePolicyResult
 
-    ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DlmListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DlmListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DlmTagResourceResult
+       TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DlmTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DlmUntagResourceResult
+       UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DlmUntagResourceResult
 
-    UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error)
-    UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult
+       UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error)
+       UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult
 }
 
 type DlmCreateLifecyclePolicyResult struct {

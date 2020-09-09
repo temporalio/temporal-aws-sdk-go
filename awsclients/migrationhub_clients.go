@@ -7,56 +7,56 @@ import (
 )
 
 type MigrationHubClient interface {
-    AssociateCreatedArtifact(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) (*migrationhub.AssociateCreatedArtifactOutput, error)
-    AssociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) *MigrationhubAssociateCreatedArtifactResult
+       AssociateCreatedArtifact(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) (*migrationhub.AssociateCreatedArtifactOutput, error)
+       AssociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) *MigrationhubAssociateCreatedArtifactResult
 
-    AssociateDiscoveredResource(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error)
-    AssociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) *MigrationhubAssociateDiscoveredResourceResult
+       AssociateDiscoveredResource(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error)
+       AssociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) *MigrationhubAssociateDiscoveredResourceResult
 
-    CreateProgressUpdateStream(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error)
-    CreateProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) *MigrationhubCreateProgressUpdateStreamResult
+       CreateProgressUpdateStream(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error)
+       CreateProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) *MigrationhubCreateProgressUpdateStreamResult
 
-    DeleteProgressUpdateStream(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error)
-    DeleteProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) *MigrationhubDeleteProgressUpdateStreamResult
+       DeleteProgressUpdateStream(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error)
+       DeleteProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) *MigrationhubDeleteProgressUpdateStreamResult
 
-    DescribeApplicationState(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error)
-    DescribeApplicationStateAsync(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) *MigrationhubDescribeApplicationStateResult
+       DescribeApplicationState(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error)
+       DescribeApplicationStateAsync(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) *MigrationhubDescribeApplicationStateResult
 
-    DescribeMigrationTask(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error)
-    DescribeMigrationTaskAsync(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) *MigrationhubDescribeMigrationTaskResult
+       DescribeMigrationTask(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error)
+       DescribeMigrationTaskAsync(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) *MigrationhubDescribeMigrationTaskResult
 
-    DisassociateCreatedArtifact(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error)
-    DisassociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) *MigrationhubDisassociateCreatedArtifactResult
+       DisassociateCreatedArtifact(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error)
+       DisassociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) *MigrationhubDisassociateCreatedArtifactResult
 
-    DisassociateDiscoveredResource(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error)
-    DisassociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) *MigrationhubDisassociateDiscoveredResourceResult
+       DisassociateDiscoveredResource(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error)
+       DisassociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) *MigrationhubDisassociateDiscoveredResourceResult
 
-    ImportMigrationTask(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error)
-    ImportMigrationTaskAsync(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) *MigrationhubImportMigrationTaskResult
+       ImportMigrationTask(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error)
+       ImportMigrationTaskAsync(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) *MigrationhubImportMigrationTaskResult
 
-    ListApplicationStates(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error)
-    ListApplicationStatesAsync(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) *MigrationhubListApplicationStatesResult
+       ListApplicationStates(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error)
+       ListApplicationStatesAsync(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) *MigrationhubListApplicationStatesResult
 
-    ListCreatedArtifacts(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error)
-    ListCreatedArtifactsAsync(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) *MigrationhubListCreatedArtifactsResult
+       ListCreatedArtifacts(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error)
+       ListCreatedArtifactsAsync(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) *MigrationhubListCreatedArtifactsResult
 
-    ListDiscoveredResources(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error)
-    ListDiscoveredResourcesAsync(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) *MigrationhubListDiscoveredResourcesResult
+       ListDiscoveredResources(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error)
+       ListDiscoveredResourcesAsync(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) *MigrationhubListDiscoveredResourcesResult
 
-    ListMigrationTasks(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error)
-    ListMigrationTasksAsync(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) *MigrationhubListMigrationTasksResult
+       ListMigrationTasks(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error)
+       ListMigrationTasksAsync(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) *MigrationhubListMigrationTasksResult
 
-    ListProgressUpdateStreams(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error)
-    ListProgressUpdateStreamsAsync(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) *MigrationhubListProgressUpdateStreamsResult
+       ListProgressUpdateStreams(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error)
+       ListProgressUpdateStreamsAsync(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) *MigrationhubListProgressUpdateStreamsResult
 
-    NotifyApplicationState(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error)
-    NotifyApplicationStateAsync(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) *MigrationhubNotifyApplicationStateResult
+       NotifyApplicationState(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error)
+       NotifyApplicationStateAsync(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) *MigrationhubNotifyApplicationStateResult
 
-    NotifyMigrationTaskState(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error)
-    NotifyMigrationTaskStateAsync(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) *MigrationhubNotifyMigrationTaskStateResult
+       NotifyMigrationTaskState(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error)
+       NotifyMigrationTaskStateAsync(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) *MigrationhubNotifyMigrationTaskStateResult
 
-    PutResourceAttributes(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error)
-    PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *MigrationhubPutResourceAttributesResult
+       PutResourceAttributes(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error)
+       PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *MigrationhubPutResourceAttributesResult
 }
 
 type MigrationhubAssociateCreatedArtifactResult struct {

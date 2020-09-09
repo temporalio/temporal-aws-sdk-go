@@ -7,104 +7,104 @@ import (
 )
 
 type SNSClient interface {
-    AddPermission(ctx workflow.Context, input *sns.AddPermissionInput) (*sns.AddPermissionOutput, error)
-    AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SnsAddPermissionResult
+       AddPermission(ctx workflow.Context, input *sns.AddPermissionInput) (*sns.AddPermissionOutput, error)
+       AddPermissionAsync(ctx workflow.Context, input *sns.AddPermissionInput) *SnsAddPermissionResult
 
-    CheckIfPhoneNumberIsOptedOut(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error)
-    CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SnsCheckIfPhoneNumberIsOptedOutResult
+       CheckIfPhoneNumberIsOptedOut(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) (*sns.CheckIfPhoneNumberIsOptedOutOutput, error)
+       CheckIfPhoneNumberIsOptedOutAsync(ctx workflow.Context, input *sns.CheckIfPhoneNumberIsOptedOutInput) *SnsCheckIfPhoneNumberIsOptedOutResult
 
-    ConfirmSubscription(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) (*sns.ConfirmSubscriptionOutput, error)
-    ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SnsConfirmSubscriptionResult
+       ConfirmSubscription(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) (*sns.ConfirmSubscriptionOutput, error)
+       ConfirmSubscriptionAsync(ctx workflow.Context, input *sns.ConfirmSubscriptionInput) *SnsConfirmSubscriptionResult
 
-    CreatePlatformApplication(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) (*sns.CreatePlatformApplicationOutput, error)
-    CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SnsCreatePlatformApplicationResult
+       CreatePlatformApplication(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) (*sns.CreatePlatformApplicationOutput, error)
+       CreatePlatformApplicationAsync(ctx workflow.Context, input *sns.CreatePlatformApplicationInput) *SnsCreatePlatformApplicationResult
 
-    CreatePlatformEndpoint(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) (*sns.CreatePlatformEndpointOutput, error)
-    CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SnsCreatePlatformEndpointResult
+       CreatePlatformEndpoint(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) (*sns.CreatePlatformEndpointOutput, error)
+       CreatePlatformEndpointAsync(ctx workflow.Context, input *sns.CreatePlatformEndpointInput) *SnsCreatePlatformEndpointResult
 
-    CreateTopic(ctx workflow.Context, input *sns.CreateTopicInput) (*sns.CreateTopicOutput, error)
-    CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SnsCreateTopicResult
+       CreateTopic(ctx workflow.Context, input *sns.CreateTopicInput) (*sns.CreateTopicOutput, error)
+       CreateTopicAsync(ctx workflow.Context, input *sns.CreateTopicInput) *SnsCreateTopicResult
 
-    DeleteEndpoint(ctx workflow.Context, input *sns.DeleteEndpointInput) (*sns.DeleteEndpointOutput, error)
-    DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SnsDeleteEndpointResult
+       DeleteEndpoint(ctx workflow.Context, input *sns.DeleteEndpointInput) (*sns.DeleteEndpointOutput, error)
+       DeleteEndpointAsync(ctx workflow.Context, input *sns.DeleteEndpointInput) *SnsDeleteEndpointResult
 
-    DeletePlatformApplication(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) (*sns.DeletePlatformApplicationOutput, error)
-    DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SnsDeletePlatformApplicationResult
+       DeletePlatformApplication(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) (*sns.DeletePlatformApplicationOutput, error)
+       DeletePlatformApplicationAsync(ctx workflow.Context, input *sns.DeletePlatformApplicationInput) *SnsDeletePlatformApplicationResult
 
-    DeleteTopic(ctx workflow.Context, input *sns.DeleteTopicInput) (*sns.DeleteTopicOutput, error)
-    DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SnsDeleteTopicResult
+       DeleteTopic(ctx workflow.Context, input *sns.DeleteTopicInput) (*sns.DeleteTopicOutput, error)
+       DeleteTopicAsync(ctx workflow.Context, input *sns.DeleteTopicInput) *SnsDeleteTopicResult
 
-    GetEndpointAttributes(ctx workflow.Context, input *sns.GetEndpointAttributesInput) (*sns.GetEndpointAttributesOutput, error)
-    GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SnsGetEndpointAttributesResult
+       GetEndpointAttributes(ctx workflow.Context, input *sns.GetEndpointAttributesInput) (*sns.GetEndpointAttributesOutput, error)
+       GetEndpointAttributesAsync(ctx workflow.Context, input *sns.GetEndpointAttributesInput) *SnsGetEndpointAttributesResult
 
-    GetPlatformApplicationAttributes(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) (*sns.GetPlatformApplicationAttributesOutput, error)
-    GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SnsGetPlatformApplicationAttributesResult
+       GetPlatformApplicationAttributes(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) (*sns.GetPlatformApplicationAttributesOutput, error)
+       GetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.GetPlatformApplicationAttributesInput) *SnsGetPlatformApplicationAttributesResult
 
-    GetSMSAttributes(ctx workflow.Context, input *sns.GetSMSAttributesInput) (*sns.GetSMSAttributesOutput, error)
-    GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SnsGetSMSAttributesResult
+       GetSMSAttributes(ctx workflow.Context, input *sns.GetSMSAttributesInput) (*sns.GetSMSAttributesOutput, error)
+       GetSMSAttributesAsync(ctx workflow.Context, input *sns.GetSMSAttributesInput) *SnsGetSMSAttributesResult
 
-    GetSubscriptionAttributes(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) (*sns.GetSubscriptionAttributesOutput, error)
-    GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SnsGetSubscriptionAttributesResult
+       GetSubscriptionAttributes(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) (*sns.GetSubscriptionAttributesOutput, error)
+       GetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.GetSubscriptionAttributesInput) *SnsGetSubscriptionAttributesResult
 
-    GetTopicAttributes(ctx workflow.Context, input *sns.GetTopicAttributesInput) (*sns.GetTopicAttributesOutput, error)
-    GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SnsGetTopicAttributesResult
+       GetTopicAttributes(ctx workflow.Context, input *sns.GetTopicAttributesInput) (*sns.GetTopicAttributesOutput, error)
+       GetTopicAttributesAsync(ctx workflow.Context, input *sns.GetTopicAttributesInput) *SnsGetTopicAttributesResult
 
-    ListEndpointsByPlatformApplication(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) (*sns.ListEndpointsByPlatformApplicationOutput, error)
-    ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SnsListEndpointsByPlatformApplicationResult
+       ListEndpointsByPlatformApplication(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) (*sns.ListEndpointsByPlatformApplicationOutput, error)
+       ListEndpointsByPlatformApplicationAsync(ctx workflow.Context, input *sns.ListEndpointsByPlatformApplicationInput) *SnsListEndpointsByPlatformApplicationResult
 
-    ListPhoneNumbersOptedOut(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) (*sns.ListPhoneNumbersOptedOutOutput, error)
-    ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SnsListPhoneNumbersOptedOutResult
+       ListPhoneNumbersOptedOut(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) (*sns.ListPhoneNumbersOptedOutOutput, error)
+       ListPhoneNumbersOptedOutAsync(ctx workflow.Context, input *sns.ListPhoneNumbersOptedOutInput) *SnsListPhoneNumbersOptedOutResult
 
-    ListPlatformApplications(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) (*sns.ListPlatformApplicationsOutput, error)
-    ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SnsListPlatformApplicationsResult
+       ListPlatformApplications(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) (*sns.ListPlatformApplicationsOutput, error)
+       ListPlatformApplicationsAsync(ctx workflow.Context, input *sns.ListPlatformApplicationsInput) *SnsListPlatformApplicationsResult
 
-    ListSubscriptions(ctx workflow.Context, input *sns.ListSubscriptionsInput) (*sns.ListSubscriptionsOutput, error)
-    ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SnsListSubscriptionsResult
+       ListSubscriptions(ctx workflow.Context, input *sns.ListSubscriptionsInput) (*sns.ListSubscriptionsOutput, error)
+       ListSubscriptionsAsync(ctx workflow.Context, input *sns.ListSubscriptionsInput) *SnsListSubscriptionsResult
 
-    ListSubscriptionsByTopic(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) (*sns.ListSubscriptionsByTopicOutput, error)
-    ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SnsListSubscriptionsByTopicResult
+       ListSubscriptionsByTopic(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) (*sns.ListSubscriptionsByTopicOutput, error)
+       ListSubscriptionsByTopicAsync(ctx workflow.Context, input *sns.ListSubscriptionsByTopicInput) *SnsListSubscriptionsByTopicResult
 
-    ListTagsForResource(ctx workflow.Context, input *sns.ListTagsForResourceInput) (*sns.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SnsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *sns.ListTagsForResourceInput) (*sns.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *sns.ListTagsForResourceInput) *SnsListTagsForResourceResult
 
-    ListTopics(ctx workflow.Context, input *sns.ListTopicsInput) (*sns.ListTopicsOutput, error)
-    ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SnsListTopicsResult
+       ListTopics(ctx workflow.Context, input *sns.ListTopicsInput) (*sns.ListTopicsOutput, error)
+       ListTopicsAsync(ctx workflow.Context, input *sns.ListTopicsInput) *SnsListTopicsResult
 
-    OptInPhoneNumber(ctx workflow.Context, input *sns.OptInPhoneNumberInput) (*sns.OptInPhoneNumberOutput, error)
-    OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SnsOptInPhoneNumberResult
+       OptInPhoneNumber(ctx workflow.Context, input *sns.OptInPhoneNumberInput) (*sns.OptInPhoneNumberOutput, error)
+       OptInPhoneNumberAsync(ctx workflow.Context, input *sns.OptInPhoneNumberInput) *SnsOptInPhoneNumberResult
 
-    Publish(ctx workflow.Context, input *sns.PublishInput) (*sns.PublishOutput, error)
-    PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SnsPublishResult
+       Publish(ctx workflow.Context, input *sns.PublishInput) (*sns.PublishOutput, error)
+       PublishAsync(ctx workflow.Context, input *sns.PublishInput) *SnsPublishResult
 
-    RemovePermission(ctx workflow.Context, input *sns.RemovePermissionInput) (*sns.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SnsRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *sns.RemovePermissionInput) (*sns.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *sns.RemovePermissionInput) *SnsRemovePermissionResult
 
-    SetEndpointAttributes(ctx workflow.Context, input *sns.SetEndpointAttributesInput) (*sns.SetEndpointAttributesOutput, error)
-    SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SnsSetEndpointAttributesResult
+       SetEndpointAttributes(ctx workflow.Context, input *sns.SetEndpointAttributesInput) (*sns.SetEndpointAttributesOutput, error)
+       SetEndpointAttributesAsync(ctx workflow.Context, input *sns.SetEndpointAttributesInput) *SnsSetEndpointAttributesResult
 
-    SetPlatformApplicationAttributes(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) (*sns.SetPlatformApplicationAttributesOutput, error)
-    SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SnsSetPlatformApplicationAttributesResult
+       SetPlatformApplicationAttributes(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) (*sns.SetPlatformApplicationAttributesOutput, error)
+       SetPlatformApplicationAttributesAsync(ctx workflow.Context, input *sns.SetPlatformApplicationAttributesInput) *SnsSetPlatformApplicationAttributesResult
 
-    SetSMSAttributes(ctx workflow.Context, input *sns.SetSMSAttributesInput) (*sns.SetSMSAttributesOutput, error)
-    SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SnsSetSMSAttributesResult
+       SetSMSAttributes(ctx workflow.Context, input *sns.SetSMSAttributesInput) (*sns.SetSMSAttributesOutput, error)
+       SetSMSAttributesAsync(ctx workflow.Context, input *sns.SetSMSAttributesInput) *SnsSetSMSAttributesResult
 
-    SetSubscriptionAttributes(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) (*sns.SetSubscriptionAttributesOutput, error)
-    SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SnsSetSubscriptionAttributesResult
+       SetSubscriptionAttributes(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) (*sns.SetSubscriptionAttributesOutput, error)
+       SetSubscriptionAttributesAsync(ctx workflow.Context, input *sns.SetSubscriptionAttributesInput) *SnsSetSubscriptionAttributesResult
 
-    SetTopicAttributes(ctx workflow.Context, input *sns.SetTopicAttributesInput) (*sns.SetTopicAttributesOutput, error)
-    SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SnsSetTopicAttributesResult
+       SetTopicAttributes(ctx workflow.Context, input *sns.SetTopicAttributesInput) (*sns.SetTopicAttributesOutput, error)
+       SetTopicAttributesAsync(ctx workflow.Context, input *sns.SetTopicAttributesInput) *SnsSetTopicAttributesResult
 
-    Subscribe(ctx workflow.Context, input *sns.SubscribeInput) (*sns.SubscribeOutput, error)
-    SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SnsSubscribeResult
+       Subscribe(ctx workflow.Context, input *sns.SubscribeInput) (*sns.SubscribeOutput, error)
+       SubscribeAsync(ctx workflow.Context, input *sns.SubscribeInput) *SnsSubscribeResult
 
-    TagResource(ctx workflow.Context, input *sns.TagResourceInput) (*sns.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SnsTagResourceResult
+       TagResource(ctx workflow.Context, input *sns.TagResourceInput) (*sns.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *sns.TagResourceInput) *SnsTagResourceResult
 
-    Unsubscribe(ctx workflow.Context, input *sns.UnsubscribeInput) (*sns.UnsubscribeOutput, error)
-    UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SnsUnsubscribeResult
+       Unsubscribe(ctx workflow.Context, input *sns.UnsubscribeInput) (*sns.UnsubscribeOutput, error)
+       UnsubscribeAsync(ctx workflow.Context, input *sns.UnsubscribeInput) *SnsUnsubscribeResult
 
-    UntagResource(ctx workflow.Context, input *sns.UntagResourceInput) (*sns.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SnsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *sns.UntagResourceInput) (*sns.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SnsUntagResourceResult
 }
 
 type SnsAddPermissionResult struct {

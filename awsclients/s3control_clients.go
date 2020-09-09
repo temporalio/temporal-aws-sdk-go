@@ -7,62 +7,62 @@ import (
 )
 
 type S3ControlClient interface {
-    CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAccessPointInput) (*s3control.CreateAccessPointOutput, error)
-    CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *S3controlCreateAccessPointResult
+       CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAccessPointInput) (*s3control.CreateAccessPointOutput, error)
+       CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *S3controlCreateAccessPointResult
 
-    CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) (*s3control.CreateJobOutput, error)
-    CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *S3controlCreateJobResult
+       CreateJob(ctx workflow.Context, input *s3control.CreateJobInput) (*s3control.CreateJobOutput, error)
+       CreateJobAsync(ctx workflow.Context, input *s3control.CreateJobInput) *S3controlCreateJobResult
 
-    DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAccessPointInput) (*s3control.DeleteAccessPointOutput, error)
-    DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *S3controlDeleteAccessPointResult
+       DeleteAccessPoint(ctx workflow.Context, input *s3control.DeleteAccessPointInput) (*s3control.DeleteAccessPointOutput, error)
+       DeleteAccessPointAsync(ctx workflow.Context, input *s3control.DeleteAccessPointInput) *S3controlDeleteAccessPointResult
 
-    DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) (*s3control.DeleteAccessPointPolicyOutput, error)
-    DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *S3controlDeleteAccessPointPolicyResult
+       DeleteAccessPointPolicy(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) (*s3control.DeleteAccessPointPolicyOutput, error)
+       DeleteAccessPointPolicyAsync(ctx workflow.Context, input *s3control.DeleteAccessPointPolicyInput) *S3controlDeleteAccessPointPolicyResult
 
-    DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) (*s3control.DeleteJobTaggingOutput, error)
-    DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *S3controlDeleteJobTaggingResult
+       DeleteJobTagging(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) (*s3control.DeleteJobTaggingOutput, error)
+       DeleteJobTaggingAsync(ctx workflow.Context, input *s3control.DeleteJobTaggingInput) *S3controlDeleteJobTaggingResult
 
-    DeletePublicAccessBlock(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) (*s3control.DeletePublicAccessBlockOutput, error)
-    DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *S3controlDeletePublicAccessBlockResult
+       DeletePublicAccessBlock(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) (*s3control.DeletePublicAccessBlockOutput, error)
+       DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3control.DeletePublicAccessBlockInput) *S3controlDeletePublicAccessBlockResult
 
-    DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInput) (*s3control.DescribeJobOutput, error)
-    DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *S3controlDescribeJobResult
+       DescribeJob(ctx workflow.Context, input *s3control.DescribeJobInput) (*s3control.DescribeJobOutput, error)
+       DescribeJobAsync(ctx workflow.Context, input *s3control.DescribeJobInput) *S3controlDescribeJobResult
 
-    GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPointInput) (*s3control.GetAccessPointOutput, error)
-    GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *S3controlGetAccessPointResult
+       GetAccessPoint(ctx workflow.Context, input *s3control.GetAccessPointInput) (*s3control.GetAccessPointOutput, error)
+       GetAccessPointAsync(ctx workflow.Context, input *s3control.GetAccessPointInput) *S3controlGetAccessPointResult
 
-    GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) (*s3control.GetAccessPointPolicyOutput, error)
-    GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *S3controlGetAccessPointPolicyResult
+       GetAccessPointPolicy(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) (*s3control.GetAccessPointPolicyOutput, error)
+       GetAccessPointPolicyAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyInput) *S3controlGetAccessPointPolicyResult
 
-    GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) (*s3control.GetAccessPointPolicyStatusOutput, error)
-    GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *S3controlGetAccessPointPolicyStatusResult
+       GetAccessPointPolicyStatus(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) (*s3control.GetAccessPointPolicyStatusOutput, error)
+       GetAccessPointPolicyStatusAsync(ctx workflow.Context, input *s3control.GetAccessPointPolicyStatusInput) *S3controlGetAccessPointPolicyStatusResult
 
-    GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggingInput) (*s3control.GetJobTaggingOutput, error)
-    GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *S3controlGetJobTaggingResult
+       GetJobTagging(ctx workflow.Context, input *s3control.GetJobTaggingInput) (*s3control.GetJobTaggingOutput, error)
+       GetJobTaggingAsync(ctx workflow.Context, input *s3control.GetJobTaggingInput) *S3controlGetJobTaggingResult
 
-    GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) (*s3control.GetPublicAccessBlockOutput, error)
-    GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *S3controlGetPublicAccessBlockResult
+       GetPublicAccessBlock(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) (*s3control.GetPublicAccessBlockOutput, error)
+       GetPublicAccessBlockAsync(ctx workflow.Context, input *s3control.GetPublicAccessBlockInput) *S3controlGetPublicAccessBlockResult
 
-    ListAccessPoints(ctx workflow.Context, input *s3control.ListAccessPointsInput) (*s3control.ListAccessPointsOutput, error)
-    ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *S3controlListAccessPointsResult
+       ListAccessPoints(ctx workflow.Context, input *s3control.ListAccessPointsInput) (*s3control.ListAccessPointsOutput, error)
+       ListAccessPointsAsync(ctx workflow.Context, input *s3control.ListAccessPointsInput) *S3controlListAccessPointsResult
 
-    ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*s3control.ListJobsOutput, error)
-    ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *S3controlListJobsResult
+       ListJobs(ctx workflow.Context, input *s3control.ListJobsInput) (*s3control.ListJobsOutput, error)
+       ListJobsAsync(ctx workflow.Context, input *s3control.ListJobsInput) *S3controlListJobsResult
 
-    PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) (*s3control.PutAccessPointPolicyOutput, error)
-    PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *S3controlPutAccessPointPolicyResult
+       PutAccessPointPolicy(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) (*s3control.PutAccessPointPolicyOutput, error)
+       PutAccessPointPolicyAsync(ctx workflow.Context, input *s3control.PutAccessPointPolicyInput) *S3controlPutAccessPointPolicyResult
 
-    PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggingInput) (*s3control.PutJobTaggingOutput, error)
-    PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *S3controlPutJobTaggingResult
+       PutJobTagging(ctx workflow.Context, input *s3control.PutJobTaggingInput) (*s3control.PutJobTaggingOutput, error)
+       PutJobTaggingAsync(ctx workflow.Context, input *s3control.PutJobTaggingInput) *S3controlPutJobTaggingResult
 
-    PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) (*s3control.PutPublicAccessBlockOutput, error)
-    PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *S3controlPutPublicAccessBlockResult
+       PutPublicAccessBlock(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) (*s3control.PutPublicAccessBlockOutput, error)
+       PutPublicAccessBlockAsync(ctx workflow.Context, input *s3control.PutPublicAccessBlockInput) *S3controlPutPublicAccessBlockResult
 
-    UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) (*s3control.UpdateJobPriorityOutput, error)
-    UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *S3controlUpdateJobPriorityResult
+       UpdateJobPriority(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) (*s3control.UpdateJobPriorityOutput, error)
+       UpdateJobPriorityAsync(ctx workflow.Context, input *s3control.UpdateJobPriorityInput) *S3controlUpdateJobPriorityResult
 
-    UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error)
-    UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3controlUpdateJobStatusResult
+       UpdateJobStatus(ctx workflow.Context, input *s3control.UpdateJobStatusInput) (*s3control.UpdateJobStatusOutput, error)
+       UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3controlUpdateJobStatusResult
 }
 
 type S3controlCreateAccessPointResult struct {

@@ -7,17 +7,17 @@ import (
 )
 
 type IdentityStoreClient interface {
-    DescribeGroup(ctx workflow.Context, input *identitystore.DescribeGroupInput) (*identitystore.DescribeGroupOutput, error)
-    DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentitystoreDescribeGroupResult
+       DescribeGroup(ctx workflow.Context, input *identitystore.DescribeGroupInput) (*identitystore.DescribeGroupOutput, error)
+       DescribeGroupAsync(ctx workflow.Context, input *identitystore.DescribeGroupInput) *IdentitystoreDescribeGroupResult
 
-    DescribeUser(ctx workflow.Context, input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error)
-    DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentitystoreDescribeUserResult
+       DescribeUser(ctx workflow.Context, input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error)
+       DescribeUserAsync(ctx workflow.Context, input *identitystore.DescribeUserInput) *IdentitystoreDescribeUserResult
 
-    ListGroups(ctx workflow.Context, input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentitystoreListGroupsResult
+       ListGroups(ctx workflow.Context, input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *identitystore.ListGroupsInput) *IdentitystoreListGroupsResult
 
-    ListUsers(ctx workflow.Context, input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentitystoreListUsersResult
+       ListUsers(ctx workflow.Context, input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentitystoreListUsersResult
 }
 
 type IdentitystoreDescribeGroupResult struct {

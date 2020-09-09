@@ -7,8 +7,8 @@ import (
 )
 
 type TranscribeStreamingServiceClient interface {
-    StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error)
-    StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult
+       StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error)
+       StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult
 }
 
 type TranscribestreamingserviceStartStreamTranscriptionResult struct {

@@ -7,83 +7,83 @@ import (
 )
 
 type FMSClient interface {
-    AssociateAdminAccount(ctx workflow.Context, input *fms.AssociateAdminAccountInput) (*fms.AssociateAdminAccountOutput, error)
-    AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FmsAssociateAdminAccountResult
+       AssociateAdminAccount(ctx workflow.Context, input *fms.AssociateAdminAccountInput) (*fms.AssociateAdminAccountOutput, error)
+       AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FmsAssociateAdminAccountResult
 
-    DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error)
-    DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FmsDeleteAppsListResult
+       DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error)
+       DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FmsDeleteAppsListResult
 
-    DeleteNotificationChannel(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error)
-    DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FmsDeleteNotificationChannelResult
+       DeleteNotificationChannel(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error)
+       DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FmsDeleteNotificationChannelResult
 
-    DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error)
-    DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FmsDeletePolicyResult
+       DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error)
+       DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FmsDeletePolicyResult
 
-    DeleteProtocolsList(ctx workflow.Context, input *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error)
-    DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FmsDeleteProtocolsListResult
+       DeleteProtocolsList(ctx workflow.Context, input *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error)
+       DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FmsDeleteProtocolsListResult
 
-    DisassociateAdminAccount(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error)
-    DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FmsDisassociateAdminAccountResult
+       DisassociateAdminAccount(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error)
+       DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FmsDisassociateAdminAccountResult
 
-    GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error)
-    GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FmsGetAdminAccountResult
+       GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error)
+       GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FmsGetAdminAccountResult
 
-    GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput) (*fms.GetAppsListOutput, error)
-    GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FmsGetAppsListResult
+       GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput) (*fms.GetAppsListOutput, error)
+       GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FmsGetAppsListResult
 
-    GetComplianceDetail(ctx workflow.Context, input *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error)
-    GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FmsGetComplianceDetailResult
+       GetComplianceDetail(ctx workflow.Context, input *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error)
+       GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FmsGetComplianceDetailResult
 
-    GetNotificationChannel(ctx workflow.Context, input *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error)
-    GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FmsGetNotificationChannelResult
+       GetNotificationChannel(ctx workflow.Context, input *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error)
+       GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FmsGetNotificationChannelResult
 
-    GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*fms.GetPolicyOutput, error)
-    GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FmsGetPolicyResult
+       GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*fms.GetPolicyOutput, error)
+       GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FmsGetPolicyResult
 
-    GetProtectionStatus(ctx workflow.Context, input *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error)
-    GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FmsGetProtectionStatusResult
+       GetProtectionStatus(ctx workflow.Context, input *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error)
+       GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FmsGetProtectionStatusResult
 
-    GetProtocolsList(ctx workflow.Context, input *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error)
-    GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FmsGetProtocolsListResult
+       GetProtocolsList(ctx workflow.Context, input *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error)
+       GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FmsGetProtocolsListResult
 
-    GetViolationDetails(ctx workflow.Context, input *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error)
-    GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FmsGetViolationDetailsResult
+       GetViolationDetails(ctx workflow.Context, input *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error)
+       GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FmsGetViolationDetailsResult
 
-    ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error)
-    ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FmsListAppsListsResult
+       ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error)
+       ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FmsListAppsListsResult
 
-    ListComplianceStatus(ctx workflow.Context, input *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error)
-    ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FmsListComplianceStatusResult
+       ListComplianceStatus(ctx workflow.Context, input *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error)
+       ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FmsListComplianceStatusResult
 
-    ListMemberAccounts(ctx workflow.Context, input *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error)
-    ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FmsListMemberAccountsResult
+       ListMemberAccounts(ctx workflow.Context, input *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error)
+       ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FmsListMemberAccountsResult
 
-    ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error)
-    ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FmsListPoliciesResult
+       ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error)
+       ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FmsListPoliciesResult
 
-    ListProtocolsLists(ctx workflow.Context, input *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error)
-    ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FmsListProtocolsListsResult
+       ListProtocolsLists(ctx workflow.Context, input *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error)
+       ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FmsListProtocolsListsResult
 
-    ListTagsForResource(ctx workflow.Context, input *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FmsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FmsListTagsForResourceResult
 
-    PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput) (*fms.PutAppsListOutput, error)
-    PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FmsPutAppsListResult
+       PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput) (*fms.PutAppsListOutput, error)
+       PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FmsPutAppsListResult
 
-    PutNotificationChannel(ctx workflow.Context, input *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error)
-    PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FmsPutNotificationChannelResult
+       PutNotificationChannel(ctx workflow.Context, input *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error)
+       PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FmsPutNotificationChannelResult
 
-    PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*fms.PutPolicyOutput, error)
-    PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FmsPutPolicyResult
+       PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*fms.PutPolicyOutput, error)
+       PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FmsPutPolicyResult
 
-    PutProtocolsList(ctx workflow.Context, input *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error)
-    PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FmsPutProtocolsListResult
+       PutProtocolsList(ctx workflow.Context, input *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error)
+       PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FmsPutProtocolsListResult
 
-    TagResource(ctx workflow.Context, input *fms.TagResourceInput) (*fms.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FmsTagResourceResult
+       TagResource(ctx workflow.Context, input *fms.TagResourceInput) (*fms.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FmsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *fms.UntagResourceInput) (*fms.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *fms.UntagResourceInput) (*fms.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceResult
 }
 
 type FmsAssociateAdminAccountResult struct {

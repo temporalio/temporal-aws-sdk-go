@@ -7,134 +7,134 @@ import (
 )
 
 type SecurityHubClient interface {
-    AcceptInvitation(ctx workflow.Context, input *securityhub.AcceptInvitationInput) (*securityhub.AcceptInvitationOutput, error)
-    AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityhubAcceptInvitationResult
+       AcceptInvitation(ctx workflow.Context, input *securityhub.AcceptInvitationInput) (*securityhub.AcceptInvitationOutput, error)
+       AcceptInvitationAsync(ctx workflow.Context, input *securityhub.AcceptInvitationInput) *SecurityhubAcceptInvitationResult
 
-    BatchDisableStandards(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) (*securityhub.BatchDisableStandardsOutput, error)
-    BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityhubBatchDisableStandardsResult
+       BatchDisableStandards(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) (*securityhub.BatchDisableStandardsOutput, error)
+       BatchDisableStandardsAsync(ctx workflow.Context, input *securityhub.BatchDisableStandardsInput) *SecurityhubBatchDisableStandardsResult
 
-    BatchEnableStandards(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) (*securityhub.BatchEnableStandardsOutput, error)
-    BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityhubBatchEnableStandardsResult
+       BatchEnableStandards(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) (*securityhub.BatchEnableStandardsOutput, error)
+       BatchEnableStandardsAsync(ctx workflow.Context, input *securityhub.BatchEnableStandardsInput) *SecurityhubBatchEnableStandardsResult
 
-    BatchImportFindings(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) (*securityhub.BatchImportFindingsOutput, error)
-    BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityhubBatchImportFindingsResult
+       BatchImportFindings(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) (*securityhub.BatchImportFindingsOutput, error)
+       BatchImportFindingsAsync(ctx workflow.Context, input *securityhub.BatchImportFindingsInput) *SecurityhubBatchImportFindingsResult
 
-    BatchUpdateFindings(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) (*securityhub.BatchUpdateFindingsOutput, error)
-    BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityhubBatchUpdateFindingsResult
+       BatchUpdateFindings(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) (*securityhub.BatchUpdateFindingsOutput, error)
+       BatchUpdateFindingsAsync(ctx workflow.Context, input *securityhub.BatchUpdateFindingsInput) *SecurityhubBatchUpdateFindingsResult
 
-    CreateActionTarget(ctx workflow.Context, input *securityhub.CreateActionTargetInput) (*securityhub.CreateActionTargetOutput, error)
-    CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityhubCreateActionTargetResult
+       CreateActionTarget(ctx workflow.Context, input *securityhub.CreateActionTargetInput) (*securityhub.CreateActionTargetOutput, error)
+       CreateActionTargetAsync(ctx workflow.Context, input *securityhub.CreateActionTargetInput) *SecurityhubCreateActionTargetResult
 
-    CreateInsight(ctx workflow.Context, input *securityhub.CreateInsightInput) (*securityhub.CreateInsightOutput, error)
-    CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityhubCreateInsightResult
+       CreateInsight(ctx workflow.Context, input *securityhub.CreateInsightInput) (*securityhub.CreateInsightOutput, error)
+       CreateInsightAsync(ctx workflow.Context, input *securityhub.CreateInsightInput) *SecurityhubCreateInsightResult
 
-    CreateMembers(ctx workflow.Context, input *securityhub.CreateMembersInput) (*securityhub.CreateMembersOutput, error)
-    CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityhubCreateMembersResult
+       CreateMembers(ctx workflow.Context, input *securityhub.CreateMembersInput) (*securityhub.CreateMembersOutput, error)
+       CreateMembersAsync(ctx workflow.Context, input *securityhub.CreateMembersInput) *SecurityhubCreateMembersResult
 
-    DeclineInvitations(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) (*securityhub.DeclineInvitationsOutput, error)
-    DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityhubDeclineInvitationsResult
+       DeclineInvitations(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) (*securityhub.DeclineInvitationsOutput, error)
+       DeclineInvitationsAsync(ctx workflow.Context, input *securityhub.DeclineInvitationsInput) *SecurityhubDeclineInvitationsResult
 
-    DeleteActionTarget(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) (*securityhub.DeleteActionTargetOutput, error)
-    DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityhubDeleteActionTargetResult
+       DeleteActionTarget(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) (*securityhub.DeleteActionTargetOutput, error)
+       DeleteActionTargetAsync(ctx workflow.Context, input *securityhub.DeleteActionTargetInput) *SecurityhubDeleteActionTargetResult
 
-    DeleteInsight(ctx workflow.Context, input *securityhub.DeleteInsightInput) (*securityhub.DeleteInsightOutput, error)
-    DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityhubDeleteInsightResult
+       DeleteInsight(ctx workflow.Context, input *securityhub.DeleteInsightInput) (*securityhub.DeleteInsightOutput, error)
+       DeleteInsightAsync(ctx workflow.Context, input *securityhub.DeleteInsightInput) *SecurityhubDeleteInsightResult
 
-    DeleteInvitations(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) (*securityhub.DeleteInvitationsOutput, error)
-    DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityhubDeleteInvitationsResult
+       DeleteInvitations(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) (*securityhub.DeleteInvitationsOutput, error)
+       DeleteInvitationsAsync(ctx workflow.Context, input *securityhub.DeleteInvitationsInput) *SecurityhubDeleteInvitationsResult
 
-    DeleteMembers(ctx workflow.Context, input *securityhub.DeleteMembersInput) (*securityhub.DeleteMembersOutput, error)
-    DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityhubDeleteMembersResult
+       DeleteMembers(ctx workflow.Context, input *securityhub.DeleteMembersInput) (*securityhub.DeleteMembersOutput, error)
+       DeleteMembersAsync(ctx workflow.Context, input *securityhub.DeleteMembersInput) *SecurityhubDeleteMembersResult
 
-    DescribeActionTargets(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) (*securityhub.DescribeActionTargetsOutput, error)
-    DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityhubDescribeActionTargetsResult
+       DescribeActionTargets(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) (*securityhub.DescribeActionTargetsOutput, error)
+       DescribeActionTargetsAsync(ctx workflow.Context, input *securityhub.DescribeActionTargetsInput) *SecurityhubDescribeActionTargetsResult
 
-    DescribeHub(ctx workflow.Context, input *securityhub.DescribeHubInput) (*securityhub.DescribeHubOutput, error)
-    DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityhubDescribeHubResult
+       DescribeHub(ctx workflow.Context, input *securityhub.DescribeHubInput) (*securityhub.DescribeHubOutput, error)
+       DescribeHubAsync(ctx workflow.Context, input *securityhub.DescribeHubInput) *SecurityhubDescribeHubResult
 
-    DescribeProducts(ctx workflow.Context, input *securityhub.DescribeProductsInput) (*securityhub.DescribeProductsOutput, error)
-    DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityhubDescribeProductsResult
+       DescribeProducts(ctx workflow.Context, input *securityhub.DescribeProductsInput) (*securityhub.DescribeProductsOutput, error)
+       DescribeProductsAsync(ctx workflow.Context, input *securityhub.DescribeProductsInput) *SecurityhubDescribeProductsResult
 
-    DescribeStandards(ctx workflow.Context, input *securityhub.DescribeStandardsInput) (*securityhub.DescribeStandardsOutput, error)
-    DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityhubDescribeStandardsResult
+       DescribeStandards(ctx workflow.Context, input *securityhub.DescribeStandardsInput) (*securityhub.DescribeStandardsOutput, error)
+       DescribeStandardsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsInput) *SecurityhubDescribeStandardsResult
 
-    DescribeStandardsControls(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) (*securityhub.DescribeStandardsControlsOutput, error)
-    DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityhubDescribeStandardsControlsResult
+       DescribeStandardsControls(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) (*securityhub.DescribeStandardsControlsOutput, error)
+       DescribeStandardsControlsAsync(ctx workflow.Context, input *securityhub.DescribeStandardsControlsInput) *SecurityhubDescribeStandardsControlsResult
 
-    DisableImportFindingsForProduct(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) (*securityhub.DisableImportFindingsForProductOutput, error)
-    DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityhubDisableImportFindingsForProductResult
+       DisableImportFindingsForProduct(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) (*securityhub.DisableImportFindingsForProductOutput, error)
+       DisableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.DisableImportFindingsForProductInput) *SecurityhubDisableImportFindingsForProductResult
 
-    DisableSecurityHub(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) (*securityhub.DisableSecurityHubOutput, error)
-    DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityhubDisableSecurityHubResult
+       DisableSecurityHub(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) (*securityhub.DisableSecurityHubOutput, error)
+       DisableSecurityHubAsync(ctx workflow.Context, input *securityhub.DisableSecurityHubInput) *SecurityhubDisableSecurityHubResult
 
-    DisassociateFromMasterAccount(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) (*securityhub.DisassociateFromMasterAccountOutput, error)
-    DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityhubDisassociateFromMasterAccountResult
+       DisassociateFromMasterAccount(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) (*securityhub.DisassociateFromMasterAccountOutput, error)
+       DisassociateFromMasterAccountAsync(ctx workflow.Context, input *securityhub.DisassociateFromMasterAccountInput) *SecurityhubDisassociateFromMasterAccountResult
 
-    DisassociateMembers(ctx workflow.Context, input *securityhub.DisassociateMembersInput) (*securityhub.DisassociateMembersOutput, error)
-    DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityhubDisassociateMembersResult
+       DisassociateMembers(ctx workflow.Context, input *securityhub.DisassociateMembersInput) (*securityhub.DisassociateMembersOutput, error)
+       DisassociateMembersAsync(ctx workflow.Context, input *securityhub.DisassociateMembersInput) *SecurityhubDisassociateMembersResult
 
-    EnableImportFindingsForProduct(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) (*securityhub.EnableImportFindingsForProductOutput, error)
-    EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityhubEnableImportFindingsForProductResult
+       EnableImportFindingsForProduct(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) (*securityhub.EnableImportFindingsForProductOutput, error)
+       EnableImportFindingsForProductAsync(ctx workflow.Context, input *securityhub.EnableImportFindingsForProductInput) *SecurityhubEnableImportFindingsForProductResult
 
-    EnableSecurityHub(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) (*securityhub.EnableSecurityHubOutput, error)
-    EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityhubEnableSecurityHubResult
+       EnableSecurityHub(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) (*securityhub.EnableSecurityHubOutput, error)
+       EnableSecurityHubAsync(ctx workflow.Context, input *securityhub.EnableSecurityHubInput) *SecurityhubEnableSecurityHubResult
 
-    GetEnabledStandards(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) (*securityhub.GetEnabledStandardsOutput, error)
-    GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityhubGetEnabledStandardsResult
+       GetEnabledStandards(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) (*securityhub.GetEnabledStandardsOutput, error)
+       GetEnabledStandardsAsync(ctx workflow.Context, input *securityhub.GetEnabledStandardsInput) *SecurityhubGetEnabledStandardsResult
 
-    GetFindings(ctx workflow.Context, input *securityhub.GetFindingsInput) (*securityhub.GetFindingsOutput, error)
-    GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityhubGetFindingsResult
+       GetFindings(ctx workflow.Context, input *securityhub.GetFindingsInput) (*securityhub.GetFindingsOutput, error)
+       GetFindingsAsync(ctx workflow.Context, input *securityhub.GetFindingsInput) *SecurityhubGetFindingsResult
 
-    GetInsightResults(ctx workflow.Context, input *securityhub.GetInsightResultsInput) (*securityhub.GetInsightResultsOutput, error)
-    GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityhubGetInsightResultsResult
+       GetInsightResults(ctx workflow.Context, input *securityhub.GetInsightResultsInput) (*securityhub.GetInsightResultsOutput, error)
+       GetInsightResultsAsync(ctx workflow.Context, input *securityhub.GetInsightResultsInput) *SecurityhubGetInsightResultsResult
 
-    GetInsights(ctx workflow.Context, input *securityhub.GetInsightsInput) (*securityhub.GetInsightsOutput, error)
-    GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityhubGetInsightsResult
+       GetInsights(ctx workflow.Context, input *securityhub.GetInsightsInput) (*securityhub.GetInsightsOutput, error)
+       GetInsightsAsync(ctx workflow.Context, input *securityhub.GetInsightsInput) *SecurityhubGetInsightsResult
 
-    GetInvitationsCount(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) (*securityhub.GetInvitationsCountOutput, error)
-    GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityhubGetInvitationsCountResult
+       GetInvitationsCount(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) (*securityhub.GetInvitationsCountOutput, error)
+       GetInvitationsCountAsync(ctx workflow.Context, input *securityhub.GetInvitationsCountInput) *SecurityhubGetInvitationsCountResult
 
-    GetMasterAccount(ctx workflow.Context, input *securityhub.GetMasterAccountInput) (*securityhub.GetMasterAccountOutput, error)
-    GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityhubGetMasterAccountResult
+       GetMasterAccount(ctx workflow.Context, input *securityhub.GetMasterAccountInput) (*securityhub.GetMasterAccountOutput, error)
+       GetMasterAccountAsync(ctx workflow.Context, input *securityhub.GetMasterAccountInput) *SecurityhubGetMasterAccountResult
 
-    GetMembers(ctx workflow.Context, input *securityhub.GetMembersInput) (*securityhub.GetMembersOutput, error)
-    GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityhubGetMembersResult
+       GetMembers(ctx workflow.Context, input *securityhub.GetMembersInput) (*securityhub.GetMembersOutput, error)
+       GetMembersAsync(ctx workflow.Context, input *securityhub.GetMembersInput) *SecurityhubGetMembersResult
 
-    InviteMembers(ctx workflow.Context, input *securityhub.InviteMembersInput) (*securityhub.InviteMembersOutput, error)
-    InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityhubInviteMembersResult
+       InviteMembers(ctx workflow.Context, input *securityhub.InviteMembersInput) (*securityhub.InviteMembersOutput, error)
+       InviteMembersAsync(ctx workflow.Context, input *securityhub.InviteMembersInput) *SecurityhubInviteMembersResult
 
-    ListEnabledProductsForImport(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) (*securityhub.ListEnabledProductsForImportOutput, error)
-    ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityhubListEnabledProductsForImportResult
+       ListEnabledProductsForImport(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) (*securityhub.ListEnabledProductsForImportOutput, error)
+       ListEnabledProductsForImportAsync(ctx workflow.Context, input *securityhub.ListEnabledProductsForImportInput) *SecurityhubListEnabledProductsForImportResult
 
-    ListInvitations(ctx workflow.Context, input *securityhub.ListInvitationsInput) (*securityhub.ListInvitationsOutput, error)
-    ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityhubListInvitationsResult
+       ListInvitations(ctx workflow.Context, input *securityhub.ListInvitationsInput) (*securityhub.ListInvitationsOutput, error)
+       ListInvitationsAsync(ctx workflow.Context, input *securityhub.ListInvitationsInput) *SecurityhubListInvitationsResult
 
-    ListMembers(ctx workflow.Context, input *securityhub.ListMembersInput) (*securityhub.ListMembersOutput, error)
-    ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityhubListMembersResult
+       ListMembers(ctx workflow.Context, input *securityhub.ListMembersInput) (*securityhub.ListMembersOutput, error)
+       ListMembersAsync(ctx workflow.Context, input *securityhub.ListMembersInput) *SecurityhubListMembersResult
 
-    ListTagsForResource(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) (*securityhub.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityhubListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) (*securityhub.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *securityhub.ListTagsForResourceInput) *SecurityhubListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *securityhub.TagResourceInput) (*securityhub.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityhubTagResourceResult
+       TagResource(ctx workflow.Context, input *securityhub.TagResourceInput) (*securityhub.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *securityhub.TagResourceInput) *SecurityhubTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *securityhub.UntagResourceInput) (*securityhub.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityhubUntagResourceResult
+       UntagResource(ctx workflow.Context, input *securityhub.UntagResourceInput) (*securityhub.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *securityhub.UntagResourceInput) *SecurityhubUntagResourceResult
 
-    UpdateActionTarget(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) (*securityhub.UpdateActionTargetOutput, error)
-    UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityhubUpdateActionTargetResult
+       UpdateActionTarget(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) (*securityhub.UpdateActionTargetOutput, error)
+       UpdateActionTargetAsync(ctx workflow.Context, input *securityhub.UpdateActionTargetInput) *SecurityhubUpdateActionTargetResult
 
-    UpdateFindings(ctx workflow.Context, input *securityhub.UpdateFindingsInput) (*securityhub.UpdateFindingsOutput, error)
-    UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityhubUpdateFindingsResult
+       UpdateFindings(ctx workflow.Context, input *securityhub.UpdateFindingsInput) (*securityhub.UpdateFindingsOutput, error)
+       UpdateFindingsAsync(ctx workflow.Context, input *securityhub.UpdateFindingsInput) *SecurityhubUpdateFindingsResult
 
-    UpdateInsight(ctx workflow.Context, input *securityhub.UpdateInsightInput) (*securityhub.UpdateInsightOutput, error)
-    UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityhubUpdateInsightResult
+       UpdateInsight(ctx workflow.Context, input *securityhub.UpdateInsightInput) (*securityhub.UpdateInsightOutput, error)
+       UpdateInsightAsync(ctx workflow.Context, input *securityhub.UpdateInsightInput) *SecurityhubUpdateInsightResult
 
-    UpdateSecurityHubConfiguration(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) (*securityhub.UpdateSecurityHubConfigurationOutput, error)
-    UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityhubUpdateSecurityHubConfigurationResult
+       UpdateSecurityHubConfiguration(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) (*securityhub.UpdateSecurityHubConfigurationOutput, error)
+       UpdateSecurityHubConfigurationAsync(ctx workflow.Context, input *securityhub.UpdateSecurityHubConfigurationInput) *SecurityhubUpdateSecurityHubConfigurationResult
 
-    UpdateStandardsControl(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) (*securityhub.UpdateStandardsControlOutput, error)
-    UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityhubUpdateStandardsControlResult
+       UpdateStandardsControl(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) (*securityhub.UpdateStandardsControlOutput, error)
+       UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityhubUpdateStandardsControlResult
 }
 
 type SecurityhubAcceptInvitationResult struct {

@@ -7,180 +7,180 @@ import (
 )
 
 type AutoScalingClient interface {
-    AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error)
-    AttachInstancesAsync(ctx workflow.Context, input *autoscaling.AttachInstancesInput) *AutoscalingAttachInstancesResult
+       AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error)
+       AttachInstancesAsync(ctx workflow.Context, input *autoscaling.AttachInstancesInput) *AutoscalingAttachInstancesResult
 
-    AttachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error)
-    AttachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) *AutoscalingAttachLoadBalancerTargetGroupsResult
+       AttachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) (*autoscaling.AttachLoadBalancerTargetGroupsOutput, error)
+       AttachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancerTargetGroupsInput) *AutoscalingAttachLoadBalancerTargetGroupsResult
 
-    AttachLoadBalancers(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) (*autoscaling.AttachLoadBalancersOutput, error)
-    AttachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) *AutoscalingAttachLoadBalancersResult
+       AttachLoadBalancers(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) (*autoscaling.AttachLoadBalancersOutput, error)
+       AttachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.AttachLoadBalancersInput) *AutoscalingAttachLoadBalancersResult
 
-    BatchDeleteScheduledAction(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) (*autoscaling.BatchDeleteScheduledActionOutput, error)
-    BatchDeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) *AutoscalingBatchDeleteScheduledActionResult
+       BatchDeleteScheduledAction(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) (*autoscaling.BatchDeleteScheduledActionOutput, error)
+       BatchDeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.BatchDeleteScheduledActionInput) *AutoscalingBatchDeleteScheduledActionResult
 
-    BatchPutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error)
-    BatchPutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) *AutoscalingBatchPutScheduledUpdateGroupActionResult
+       BatchPutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) (*autoscaling.BatchPutScheduledUpdateGroupActionOutput, error)
+       BatchPutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.BatchPutScheduledUpdateGroupActionInput) *AutoscalingBatchPutScheduledUpdateGroupActionResult
 
-    CancelInstanceRefresh(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) (*autoscaling.CancelInstanceRefreshOutput, error)
-    CancelInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) *AutoscalingCancelInstanceRefreshResult
+       CancelInstanceRefresh(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) (*autoscaling.CancelInstanceRefreshOutput, error)
+       CancelInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.CancelInstanceRefreshInput) *AutoscalingCancelInstanceRefreshResult
 
-    CompleteLifecycleAction(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) (*autoscaling.CompleteLifecycleActionOutput, error)
-    CompleteLifecycleActionAsync(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) *AutoscalingCompleteLifecycleActionResult
+       CompleteLifecycleAction(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) (*autoscaling.CompleteLifecycleActionOutput, error)
+       CompleteLifecycleActionAsync(ctx workflow.Context, input *autoscaling.CompleteLifecycleActionInput) *AutoscalingCompleteLifecycleActionResult
 
-    CreateAutoScalingGroup(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) (*autoscaling.CreateAutoScalingGroupOutput, error)
-    CreateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) *AutoscalingCreateAutoScalingGroupResult
+       CreateAutoScalingGroup(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) (*autoscaling.CreateAutoScalingGroupOutput, error)
+       CreateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.CreateAutoScalingGroupInput) *AutoscalingCreateAutoScalingGroupResult
 
-    CreateLaunchConfiguration(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) (*autoscaling.CreateLaunchConfigurationOutput, error)
-    CreateLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) *AutoscalingCreateLaunchConfigurationResult
+       CreateLaunchConfiguration(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) (*autoscaling.CreateLaunchConfigurationOutput, error)
+       CreateLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.CreateLaunchConfigurationInput) *AutoscalingCreateLaunchConfigurationResult
 
-    CreateOrUpdateTags(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) (*autoscaling.CreateOrUpdateTagsOutput, error)
-    CreateOrUpdateTagsAsync(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) *AutoscalingCreateOrUpdateTagsResult
+       CreateOrUpdateTags(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) (*autoscaling.CreateOrUpdateTagsOutput, error)
+       CreateOrUpdateTagsAsync(ctx workflow.Context, input *autoscaling.CreateOrUpdateTagsInput) *AutoscalingCreateOrUpdateTagsResult
 
-    DeleteAutoScalingGroup(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) (*autoscaling.DeleteAutoScalingGroupOutput, error)
-    DeleteAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) *AutoscalingDeleteAutoScalingGroupResult
+       DeleteAutoScalingGroup(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) (*autoscaling.DeleteAutoScalingGroupOutput, error)
+       DeleteAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.DeleteAutoScalingGroupInput) *AutoscalingDeleteAutoScalingGroupResult
 
-    DeleteLaunchConfiguration(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) (*autoscaling.DeleteLaunchConfigurationOutput, error)
-    DeleteLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) *AutoscalingDeleteLaunchConfigurationResult
+       DeleteLaunchConfiguration(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) (*autoscaling.DeleteLaunchConfigurationOutput, error)
+       DeleteLaunchConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteLaunchConfigurationInput) *AutoscalingDeleteLaunchConfigurationResult
 
-    DeleteLifecycleHook(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) (*autoscaling.DeleteLifecycleHookOutput, error)
-    DeleteLifecycleHookAsync(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) *AutoscalingDeleteLifecycleHookResult
+       DeleteLifecycleHook(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) (*autoscaling.DeleteLifecycleHookOutput, error)
+       DeleteLifecycleHookAsync(ctx workflow.Context, input *autoscaling.DeleteLifecycleHookInput) *AutoscalingDeleteLifecycleHookResult
 
-    DeleteNotificationConfiguration(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) (*autoscaling.DeleteNotificationConfigurationOutput, error)
-    DeleteNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) *AutoscalingDeleteNotificationConfigurationResult
+       DeleteNotificationConfiguration(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) (*autoscaling.DeleteNotificationConfigurationOutput, error)
+       DeleteNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.DeleteNotificationConfigurationInput) *AutoscalingDeleteNotificationConfigurationResult
 
-    DeletePolicy(ctx workflow.Context, input *autoscaling.DeletePolicyInput) (*autoscaling.DeletePolicyOutput, error)
-    DeletePolicyAsync(ctx workflow.Context, input *autoscaling.DeletePolicyInput) *AutoscalingDeletePolicyResult
+       DeletePolicy(ctx workflow.Context, input *autoscaling.DeletePolicyInput) (*autoscaling.DeletePolicyOutput, error)
+       DeletePolicyAsync(ctx workflow.Context, input *autoscaling.DeletePolicyInput) *AutoscalingDeletePolicyResult
 
-    DeleteScheduledAction(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) (*autoscaling.DeleteScheduledActionOutput, error)
-    DeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) *AutoscalingDeleteScheduledActionResult
+       DeleteScheduledAction(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) (*autoscaling.DeleteScheduledActionOutput, error)
+       DeleteScheduledActionAsync(ctx workflow.Context, input *autoscaling.DeleteScheduledActionInput) *AutoscalingDeleteScheduledActionResult
 
-    DeleteTags(ctx workflow.Context, input *autoscaling.DeleteTagsInput) (*autoscaling.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *autoscaling.DeleteTagsInput) *AutoscalingDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *autoscaling.DeleteTagsInput) (*autoscaling.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *autoscaling.DeleteTagsInput) *AutoscalingDeleteTagsResult
 
-    DescribeAccountLimits(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) (*autoscaling.DescribeAccountLimitsOutput, error)
-    DescribeAccountLimitsAsync(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) *AutoscalingDescribeAccountLimitsResult
+       DescribeAccountLimits(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) (*autoscaling.DescribeAccountLimitsOutput, error)
+       DescribeAccountLimitsAsync(ctx workflow.Context, input *autoscaling.DescribeAccountLimitsInput) *AutoscalingDescribeAccountLimitsResult
 
-    DescribeAdjustmentTypes(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) (*autoscaling.DescribeAdjustmentTypesOutput, error)
-    DescribeAdjustmentTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) *AutoscalingDescribeAdjustmentTypesResult
+       DescribeAdjustmentTypes(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) (*autoscaling.DescribeAdjustmentTypesOutput, error)
+       DescribeAdjustmentTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAdjustmentTypesInput) *AutoscalingDescribeAdjustmentTypesResult
 
-    DescribeAutoScalingGroups(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) (*autoscaling.DescribeAutoScalingGroupsOutput, error)
-    DescribeAutoScalingGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *AutoscalingDescribeAutoScalingGroupsResult
+       DescribeAutoScalingGroups(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) (*autoscaling.DescribeAutoScalingGroupsOutput, error)
+       DescribeAutoScalingGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) *AutoscalingDescribeAutoScalingGroupsResult
 
-    DescribeAutoScalingInstances(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) (*autoscaling.DescribeAutoScalingInstancesOutput, error)
-    DescribeAutoScalingInstancesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) *AutoscalingDescribeAutoScalingInstancesResult
+       DescribeAutoScalingInstances(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) (*autoscaling.DescribeAutoScalingInstancesOutput, error)
+       DescribeAutoScalingInstancesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingInstancesInput) *AutoscalingDescribeAutoScalingInstancesResult
 
-    DescribeAutoScalingNotificationTypes(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error)
-    DescribeAutoScalingNotificationTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) *AutoscalingDescribeAutoScalingNotificationTypesResult
+       DescribeAutoScalingNotificationTypes(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) (*autoscaling.DescribeAutoScalingNotificationTypesOutput, error)
+       DescribeAutoScalingNotificationTypesAsync(ctx workflow.Context, input *autoscaling.DescribeAutoScalingNotificationTypesInput) *AutoscalingDescribeAutoScalingNotificationTypesResult
 
-    DescribeInstanceRefreshes(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) (*autoscaling.DescribeInstanceRefreshesOutput, error)
-    DescribeInstanceRefreshesAsync(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) *AutoscalingDescribeInstanceRefreshesResult
+       DescribeInstanceRefreshes(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) (*autoscaling.DescribeInstanceRefreshesOutput, error)
+       DescribeInstanceRefreshesAsync(ctx workflow.Context, input *autoscaling.DescribeInstanceRefreshesInput) *AutoscalingDescribeInstanceRefreshesResult
 
-    DescribeLaunchConfigurations(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) (*autoscaling.DescribeLaunchConfigurationsOutput, error)
-    DescribeLaunchConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) *AutoscalingDescribeLaunchConfigurationsResult
+       DescribeLaunchConfigurations(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) (*autoscaling.DescribeLaunchConfigurationsOutput, error)
+       DescribeLaunchConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeLaunchConfigurationsInput) *AutoscalingDescribeLaunchConfigurationsResult
 
-    DescribeLifecycleHookTypes(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) (*autoscaling.DescribeLifecycleHookTypesOutput, error)
-    DescribeLifecycleHookTypesAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) *AutoscalingDescribeLifecycleHookTypesResult
+       DescribeLifecycleHookTypes(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) (*autoscaling.DescribeLifecycleHookTypesOutput, error)
+       DescribeLifecycleHookTypesAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHookTypesInput) *AutoscalingDescribeLifecycleHookTypesResult
 
-    DescribeLifecycleHooks(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) (*autoscaling.DescribeLifecycleHooksOutput, error)
-    DescribeLifecycleHooksAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) *AutoscalingDescribeLifecycleHooksResult
+       DescribeLifecycleHooks(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) (*autoscaling.DescribeLifecycleHooksOutput, error)
+       DescribeLifecycleHooksAsync(ctx workflow.Context, input *autoscaling.DescribeLifecycleHooksInput) *AutoscalingDescribeLifecycleHooksResult
 
-    DescribeLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error)
-    DescribeLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) *AutoscalingDescribeLoadBalancerTargetGroupsResult
+       DescribeLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) (*autoscaling.DescribeLoadBalancerTargetGroupsOutput, error)
+       DescribeLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancerTargetGroupsInput) *AutoscalingDescribeLoadBalancerTargetGroupsResult
 
-    DescribeLoadBalancers(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) (*autoscaling.DescribeLoadBalancersOutput, error)
-    DescribeLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) *AutoscalingDescribeLoadBalancersResult
+       DescribeLoadBalancers(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) (*autoscaling.DescribeLoadBalancersOutput, error)
+       DescribeLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DescribeLoadBalancersInput) *AutoscalingDescribeLoadBalancersResult
 
-    DescribeMetricCollectionTypes(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) (*autoscaling.DescribeMetricCollectionTypesOutput, error)
-    DescribeMetricCollectionTypesAsync(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) *AutoscalingDescribeMetricCollectionTypesResult
+       DescribeMetricCollectionTypes(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) (*autoscaling.DescribeMetricCollectionTypesOutput, error)
+       DescribeMetricCollectionTypesAsync(ctx workflow.Context, input *autoscaling.DescribeMetricCollectionTypesInput) *AutoscalingDescribeMetricCollectionTypesResult
 
-    DescribeNotificationConfigurations(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) (*autoscaling.DescribeNotificationConfigurationsOutput, error)
-    DescribeNotificationConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) *AutoscalingDescribeNotificationConfigurationsResult
+       DescribeNotificationConfigurations(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) (*autoscaling.DescribeNotificationConfigurationsOutput, error)
+       DescribeNotificationConfigurationsAsync(ctx workflow.Context, input *autoscaling.DescribeNotificationConfigurationsInput) *AutoscalingDescribeNotificationConfigurationsResult
 
-    DescribePolicies(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) (*autoscaling.DescribePoliciesOutput, error)
-    DescribePoliciesAsync(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) *AutoscalingDescribePoliciesResult
+       DescribePolicies(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) (*autoscaling.DescribePoliciesOutput, error)
+       DescribePoliciesAsync(ctx workflow.Context, input *autoscaling.DescribePoliciesInput) *AutoscalingDescribePoliciesResult
 
-    DescribeScalingActivities(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) (*autoscaling.DescribeScalingActivitiesOutput, error)
-    DescribeScalingActivitiesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) *AutoscalingDescribeScalingActivitiesResult
+       DescribeScalingActivities(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) (*autoscaling.DescribeScalingActivitiesOutput, error)
+       DescribeScalingActivitiesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingActivitiesInput) *AutoscalingDescribeScalingActivitiesResult
 
-    DescribeScalingProcessTypes(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) (*autoscaling.DescribeScalingProcessTypesOutput, error)
-    DescribeScalingProcessTypesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) *AutoscalingDescribeScalingProcessTypesResult
+       DescribeScalingProcessTypes(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) (*autoscaling.DescribeScalingProcessTypesOutput, error)
+       DescribeScalingProcessTypesAsync(ctx workflow.Context, input *autoscaling.DescribeScalingProcessTypesInput) *AutoscalingDescribeScalingProcessTypesResult
 
-    DescribeScheduledActions(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) (*autoscaling.DescribeScheduledActionsOutput, error)
-    DescribeScheduledActionsAsync(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) *AutoscalingDescribeScheduledActionsResult
+       DescribeScheduledActions(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) (*autoscaling.DescribeScheduledActionsOutput, error)
+       DescribeScheduledActionsAsync(ctx workflow.Context, input *autoscaling.DescribeScheduledActionsInput) *AutoscalingDescribeScheduledActionsResult
 
-    DescribeTags(ctx workflow.Context, input *autoscaling.DescribeTagsInput) (*autoscaling.DescribeTagsOutput, error)
-    DescribeTagsAsync(ctx workflow.Context, input *autoscaling.DescribeTagsInput) *AutoscalingDescribeTagsResult
+       DescribeTags(ctx workflow.Context, input *autoscaling.DescribeTagsInput) (*autoscaling.DescribeTagsOutput, error)
+       DescribeTagsAsync(ctx workflow.Context, input *autoscaling.DescribeTagsInput) *AutoscalingDescribeTagsResult
 
-    DescribeTerminationPolicyTypes(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) (*autoscaling.DescribeTerminationPolicyTypesOutput, error)
-    DescribeTerminationPolicyTypesAsync(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) *AutoscalingDescribeTerminationPolicyTypesResult
+       DescribeTerminationPolicyTypes(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) (*autoscaling.DescribeTerminationPolicyTypesOutput, error)
+       DescribeTerminationPolicyTypesAsync(ctx workflow.Context, input *autoscaling.DescribeTerminationPolicyTypesInput) *AutoscalingDescribeTerminationPolicyTypesResult
 
-    DetachInstances(ctx workflow.Context, input *autoscaling.DetachInstancesInput) (*autoscaling.DetachInstancesOutput, error)
-    DetachInstancesAsync(ctx workflow.Context, input *autoscaling.DetachInstancesInput) *AutoscalingDetachInstancesResult
+       DetachInstances(ctx workflow.Context, input *autoscaling.DetachInstancesInput) (*autoscaling.DetachInstancesOutput, error)
+       DetachInstancesAsync(ctx workflow.Context, input *autoscaling.DetachInstancesInput) *AutoscalingDetachInstancesResult
 
-    DetachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error)
-    DetachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) *AutoscalingDetachLoadBalancerTargetGroupsResult
+       DetachLoadBalancerTargetGroups(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) (*autoscaling.DetachLoadBalancerTargetGroupsOutput, error)
+       DetachLoadBalancerTargetGroupsAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancerTargetGroupsInput) *AutoscalingDetachLoadBalancerTargetGroupsResult
 
-    DetachLoadBalancers(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) (*autoscaling.DetachLoadBalancersOutput, error)
-    DetachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) *AutoscalingDetachLoadBalancersResult
+       DetachLoadBalancers(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) (*autoscaling.DetachLoadBalancersOutput, error)
+       DetachLoadBalancersAsync(ctx workflow.Context, input *autoscaling.DetachLoadBalancersInput) *AutoscalingDetachLoadBalancersResult
 
-    DisableMetricsCollection(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) (*autoscaling.DisableMetricsCollectionOutput, error)
-    DisableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) *AutoscalingDisableMetricsCollectionResult
+       DisableMetricsCollection(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) (*autoscaling.DisableMetricsCollectionOutput, error)
+       DisableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.DisableMetricsCollectionInput) *AutoscalingDisableMetricsCollectionResult
 
-    EnableMetricsCollection(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) (*autoscaling.EnableMetricsCollectionOutput, error)
-    EnableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) *AutoscalingEnableMetricsCollectionResult
+       EnableMetricsCollection(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) (*autoscaling.EnableMetricsCollectionOutput, error)
+       EnableMetricsCollectionAsync(ctx workflow.Context, input *autoscaling.EnableMetricsCollectionInput) *AutoscalingEnableMetricsCollectionResult
 
-    EnterStandby(ctx workflow.Context, input *autoscaling.EnterStandbyInput) (*autoscaling.EnterStandbyOutput, error)
-    EnterStandbyAsync(ctx workflow.Context, input *autoscaling.EnterStandbyInput) *AutoscalingEnterStandbyResult
+       EnterStandby(ctx workflow.Context, input *autoscaling.EnterStandbyInput) (*autoscaling.EnterStandbyOutput, error)
+       EnterStandbyAsync(ctx workflow.Context, input *autoscaling.EnterStandbyInput) *AutoscalingEnterStandbyResult
 
-    ExecutePolicy(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) (*autoscaling.ExecutePolicyOutput, error)
-    ExecutePolicyAsync(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) *AutoscalingExecutePolicyResult
+       ExecutePolicy(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) (*autoscaling.ExecutePolicyOutput, error)
+       ExecutePolicyAsync(ctx workflow.Context, input *autoscaling.ExecutePolicyInput) *AutoscalingExecutePolicyResult
 
-    ExitStandby(ctx workflow.Context, input *autoscaling.ExitStandbyInput) (*autoscaling.ExitStandbyOutput, error)
-    ExitStandbyAsync(ctx workflow.Context, input *autoscaling.ExitStandbyInput) *AutoscalingExitStandbyResult
+       ExitStandby(ctx workflow.Context, input *autoscaling.ExitStandbyInput) (*autoscaling.ExitStandbyOutput, error)
+       ExitStandbyAsync(ctx workflow.Context, input *autoscaling.ExitStandbyInput) *AutoscalingExitStandbyResult
 
-    PutLifecycleHook(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) (*autoscaling.PutLifecycleHookOutput, error)
-    PutLifecycleHookAsync(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) *AutoscalingPutLifecycleHookResult
+       PutLifecycleHook(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) (*autoscaling.PutLifecycleHookOutput, error)
+       PutLifecycleHookAsync(ctx workflow.Context, input *autoscaling.PutLifecycleHookInput) *AutoscalingPutLifecycleHookResult
 
-    PutNotificationConfiguration(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) (*autoscaling.PutNotificationConfigurationOutput, error)
-    PutNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) *AutoscalingPutNotificationConfigurationResult
+       PutNotificationConfiguration(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) (*autoscaling.PutNotificationConfigurationOutput, error)
+       PutNotificationConfigurationAsync(ctx workflow.Context, input *autoscaling.PutNotificationConfigurationInput) *AutoscalingPutNotificationConfigurationResult
 
-    PutScalingPolicy(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) (*autoscaling.PutScalingPolicyOutput, error)
-    PutScalingPolicyAsync(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) *AutoscalingPutScalingPolicyResult
+       PutScalingPolicy(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) (*autoscaling.PutScalingPolicyOutput, error)
+       PutScalingPolicyAsync(ctx workflow.Context, input *autoscaling.PutScalingPolicyInput) *AutoscalingPutScalingPolicyResult
 
-    PutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) (*autoscaling.PutScheduledUpdateGroupActionOutput, error)
-    PutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) *AutoscalingPutScheduledUpdateGroupActionResult
+       PutScheduledUpdateGroupAction(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) (*autoscaling.PutScheduledUpdateGroupActionOutput, error)
+       PutScheduledUpdateGroupActionAsync(ctx workflow.Context, input *autoscaling.PutScheduledUpdateGroupActionInput) *AutoscalingPutScheduledUpdateGroupActionResult
 
-    RecordLifecycleActionHeartbeat(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error)
-    RecordLifecycleActionHeartbeatAsync(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) *AutoscalingRecordLifecycleActionHeartbeatResult
+       RecordLifecycleActionHeartbeat(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) (*autoscaling.RecordLifecycleActionHeartbeatOutput, error)
+       RecordLifecycleActionHeartbeatAsync(ctx workflow.Context, input *autoscaling.RecordLifecycleActionHeartbeatInput) *AutoscalingRecordLifecycleActionHeartbeatResult
 
-    ResumeProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.ResumeProcessesOutput, error)
-    ResumeProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoscalingResumeProcessesResult
+       ResumeProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.ResumeProcessesOutput, error)
+       ResumeProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoscalingResumeProcessesResult
 
-    SetDesiredCapacity(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) (*autoscaling.SetDesiredCapacityOutput, error)
-    SetDesiredCapacityAsync(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) *AutoscalingSetDesiredCapacityResult
+       SetDesiredCapacity(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) (*autoscaling.SetDesiredCapacityOutput, error)
+       SetDesiredCapacityAsync(ctx workflow.Context, input *autoscaling.SetDesiredCapacityInput) *AutoscalingSetDesiredCapacityResult
 
-    SetInstanceHealth(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) (*autoscaling.SetInstanceHealthOutput, error)
-    SetInstanceHealthAsync(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) *AutoscalingSetInstanceHealthResult
+       SetInstanceHealth(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) (*autoscaling.SetInstanceHealthOutput, error)
+       SetInstanceHealthAsync(ctx workflow.Context, input *autoscaling.SetInstanceHealthInput) *AutoscalingSetInstanceHealthResult
 
-    SetInstanceProtection(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) (*autoscaling.SetInstanceProtectionOutput, error)
-    SetInstanceProtectionAsync(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) *AutoscalingSetInstanceProtectionResult
+       SetInstanceProtection(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) (*autoscaling.SetInstanceProtectionOutput, error)
+       SetInstanceProtectionAsync(ctx workflow.Context, input *autoscaling.SetInstanceProtectionInput) *AutoscalingSetInstanceProtectionResult
 
-    StartInstanceRefresh(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) (*autoscaling.StartInstanceRefreshOutput, error)
-    StartInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) *AutoscalingStartInstanceRefreshResult
+       StartInstanceRefresh(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) (*autoscaling.StartInstanceRefreshOutput, error)
+       StartInstanceRefreshAsync(ctx workflow.Context, input *autoscaling.StartInstanceRefreshInput) *AutoscalingStartInstanceRefreshResult
 
-    SuspendProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.SuspendProcessesOutput, error)
-    SuspendProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoscalingSuspendProcessesResult
+       SuspendProcesses(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) (*autoscaling.SuspendProcessesOutput, error)
+       SuspendProcessesAsync(ctx workflow.Context, input *autoscaling.ScalingProcessQuery) *AutoscalingSuspendProcessesResult
 
-    TerminateInstanceInAutoScalingGroup(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error)
-    TerminateInstanceInAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) *AutoscalingTerminateInstanceInAutoScalingGroupResult
+       TerminateInstanceInAutoScalingGroup(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) (*autoscaling.TerminateInstanceInAutoScalingGroupOutput, error)
+       TerminateInstanceInAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.TerminateInstanceInAutoScalingGroupInput) *AutoscalingTerminateInstanceInAutoScalingGroupResult
 
-    UpdateAutoScalingGroup(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) (*autoscaling.UpdateAutoScalingGroupOutput, error)
-    UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *AutoscalingUpdateAutoScalingGroupResult
+       UpdateAutoScalingGroup(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) (*autoscaling.UpdateAutoScalingGroupOutput, error)
+       UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *AutoscalingUpdateAutoScalingGroupResult
 
-    WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-    WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-    WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error}
+       WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
+       WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
+       WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error}
 
 type AutoscalingAttachInstancesResult struct {
 	Result workflow.Future

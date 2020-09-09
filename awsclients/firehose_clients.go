@@ -7,41 +7,41 @@ import (
 )
 
 type FirehoseClient interface {
-    CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error)
-    CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamResult
+       CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error)
+       CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamResult
 
-    DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error)
-    DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *FirehoseDeleteDeliveryStreamResult
+       DeleteDeliveryStream(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error)
+       DeleteDeliveryStreamAsync(ctx workflow.Context, input *firehose.DeleteDeliveryStreamInput) *FirehoseDeleteDeliveryStreamResult
 
-    DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error)
-    DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *FirehoseDescribeDeliveryStreamResult
+       DescribeDeliveryStream(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error)
+       DescribeDeliveryStreamAsync(ctx workflow.Context, input *firehose.DescribeDeliveryStreamInput) *FirehoseDescribeDeliveryStreamResult
 
-    ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error)
-    ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *FirehoseListDeliveryStreamsResult
+       ListDeliveryStreams(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error)
+       ListDeliveryStreamsAsync(ctx workflow.Context, input *firehose.ListDeliveryStreamsInput) *FirehoseListDeliveryStreamsResult
 
-    ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error)
-    ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *FirehoseListTagsForDeliveryStreamResult
+       ListTagsForDeliveryStream(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error)
+       ListTagsForDeliveryStreamAsync(ctx workflow.Context, input *firehose.ListTagsForDeliveryStreamInput) *FirehoseListTagsForDeliveryStreamResult
 
-    PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error)
-    PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *FirehosePutRecordResult
+       PutRecord(ctx workflow.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error)
+       PutRecordAsync(ctx workflow.Context, input *firehose.PutRecordInput) *FirehosePutRecordResult
 
-    PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error)
-    PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *FirehosePutRecordBatchResult
+       PutRecordBatch(ctx workflow.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error)
+       PutRecordBatchAsync(ctx workflow.Context, input *firehose.PutRecordBatchInput) *FirehosePutRecordBatchResult
 
-    StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error)
-    StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *FirehoseStartDeliveryStreamEncryptionResult
+       StartDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error)
+       StartDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StartDeliveryStreamEncryptionInput) *FirehoseStartDeliveryStreamEncryptionResult
 
-    StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error)
-    StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *FirehoseStopDeliveryStreamEncryptionResult
+       StopDeliveryStreamEncryption(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error)
+       StopDeliveryStreamEncryptionAsync(ctx workflow.Context, input *firehose.StopDeliveryStreamEncryptionInput) *FirehoseStopDeliveryStreamEncryptionResult
 
-    TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error)
-    TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *FirehoseTagDeliveryStreamResult
+       TagDeliveryStream(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error)
+       TagDeliveryStreamAsync(ctx workflow.Context, input *firehose.TagDeliveryStreamInput) *FirehoseTagDeliveryStreamResult
 
-    UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error)
-    UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *FirehoseUntagDeliveryStreamResult
+       UntagDeliveryStream(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error)
+       UntagDeliveryStreamAsync(ctx workflow.Context, input *firehose.UntagDeliveryStreamInput) *FirehoseUntagDeliveryStreamResult
 
-    UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error)
-    UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationResult
+       UpdateDestination(ctx workflow.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error)
+       UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationResult
 }
 
 type FirehoseCreateDeliveryStreamResult struct {

@@ -7,23 +7,23 @@ import (
 )
 
 type EBSClient interface {
-    CompleteSnapshot(ctx workflow.Context, input *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error)
-    CompleteSnapshotAsync(ctx workflow.Context, input *ebs.CompleteSnapshotInput) *EbsCompleteSnapshotResult
+       CompleteSnapshot(ctx workflow.Context, input *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error)
+       CompleteSnapshotAsync(ctx workflow.Context, input *ebs.CompleteSnapshotInput) *EbsCompleteSnapshotResult
 
-    GetSnapshotBlock(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error)
-    GetSnapshotBlockAsync(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) *EbsGetSnapshotBlockResult
+       GetSnapshotBlock(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error)
+       GetSnapshotBlockAsync(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) *EbsGetSnapshotBlockResult
 
-    ListChangedBlocks(ctx workflow.Context, input *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error)
-    ListChangedBlocksAsync(ctx workflow.Context, input *ebs.ListChangedBlocksInput) *EbsListChangedBlocksResult
+       ListChangedBlocks(ctx workflow.Context, input *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error)
+       ListChangedBlocksAsync(ctx workflow.Context, input *ebs.ListChangedBlocksInput) *EbsListChangedBlocksResult
 
-    ListSnapshotBlocks(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error)
-    ListSnapshotBlocksAsync(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) *EbsListSnapshotBlocksResult
+       ListSnapshotBlocks(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error)
+       ListSnapshotBlocksAsync(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) *EbsListSnapshotBlocksResult
 
-    PutSnapshotBlock(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error)
-    PutSnapshotBlockAsync(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) *EbsPutSnapshotBlockResult
+       PutSnapshotBlock(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error)
+       PutSnapshotBlockAsync(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) *EbsPutSnapshotBlockResult
 
-    StartSnapshot(ctx workflow.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error)
-    StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EbsStartSnapshotResult
+       StartSnapshot(ctx workflow.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error)
+       StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EbsStartSnapshotResult
 }
 
 type EbsCompleteSnapshotResult struct {

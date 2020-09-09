@@ -7,157 +7,157 @@ import (
 )
 
 type ECSClient interface {
-    CreateCapacityProvider(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error)
-    CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *EcsCreateCapacityProviderResult
+       CreateCapacityProvider(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error)
+       CreateCapacityProviderAsync(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) *EcsCreateCapacityProviderResult
 
-    CreateCluster(ctx workflow.Context, input *ecs.CreateClusterInput) (*ecs.CreateClusterOutput, error)
-    CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *EcsCreateClusterResult
+       CreateCluster(ctx workflow.Context, input *ecs.CreateClusterInput) (*ecs.CreateClusterOutput, error)
+       CreateClusterAsync(ctx workflow.Context, input *ecs.CreateClusterInput) *EcsCreateClusterResult
 
-    CreateService(ctx workflow.Context, input *ecs.CreateServiceInput) (*ecs.CreateServiceOutput, error)
-    CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *EcsCreateServiceResult
+       CreateService(ctx workflow.Context, input *ecs.CreateServiceInput) (*ecs.CreateServiceOutput, error)
+       CreateServiceAsync(ctx workflow.Context, input *ecs.CreateServiceInput) *EcsCreateServiceResult
 
-    CreateTaskSet(ctx workflow.Context, input *ecs.CreateTaskSetInput) (*ecs.CreateTaskSetOutput, error)
-    CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *EcsCreateTaskSetResult
+       CreateTaskSet(ctx workflow.Context, input *ecs.CreateTaskSetInput) (*ecs.CreateTaskSetOutput, error)
+       CreateTaskSetAsync(ctx workflow.Context, input *ecs.CreateTaskSetInput) *EcsCreateTaskSetResult
 
-    DeleteAccountSetting(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) (*ecs.DeleteAccountSettingOutput, error)
-    DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *EcsDeleteAccountSettingResult
+       DeleteAccountSetting(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) (*ecs.DeleteAccountSettingOutput, error)
+       DeleteAccountSettingAsync(ctx workflow.Context, input *ecs.DeleteAccountSettingInput) *EcsDeleteAccountSettingResult
 
-    DeleteAttributes(ctx workflow.Context, input *ecs.DeleteAttributesInput) (*ecs.DeleteAttributesOutput, error)
-    DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *EcsDeleteAttributesResult
+       DeleteAttributes(ctx workflow.Context, input *ecs.DeleteAttributesInput) (*ecs.DeleteAttributesOutput, error)
+       DeleteAttributesAsync(ctx workflow.Context, input *ecs.DeleteAttributesInput) *EcsDeleteAttributesResult
 
-    DeleteCapacityProvider(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) (*ecs.DeleteCapacityProviderOutput, error)
-    DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *EcsDeleteCapacityProviderResult
+       DeleteCapacityProvider(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) (*ecs.DeleteCapacityProviderOutput, error)
+       DeleteCapacityProviderAsync(ctx workflow.Context, input *ecs.DeleteCapacityProviderInput) *EcsDeleteCapacityProviderResult
 
-    DeleteCluster(ctx workflow.Context, input *ecs.DeleteClusterInput) (*ecs.DeleteClusterOutput, error)
-    DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *EcsDeleteClusterResult
+       DeleteCluster(ctx workflow.Context, input *ecs.DeleteClusterInput) (*ecs.DeleteClusterOutput, error)
+       DeleteClusterAsync(ctx workflow.Context, input *ecs.DeleteClusterInput) *EcsDeleteClusterResult
 
-    DeleteService(ctx workflow.Context, input *ecs.DeleteServiceInput) (*ecs.DeleteServiceOutput, error)
-    DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *EcsDeleteServiceResult
+       DeleteService(ctx workflow.Context, input *ecs.DeleteServiceInput) (*ecs.DeleteServiceOutput, error)
+       DeleteServiceAsync(ctx workflow.Context, input *ecs.DeleteServiceInput) *EcsDeleteServiceResult
 
-    DeleteTaskSet(ctx workflow.Context, input *ecs.DeleteTaskSetInput) (*ecs.DeleteTaskSetOutput, error)
-    DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *EcsDeleteTaskSetResult
+       DeleteTaskSet(ctx workflow.Context, input *ecs.DeleteTaskSetInput) (*ecs.DeleteTaskSetOutput, error)
+       DeleteTaskSetAsync(ctx workflow.Context, input *ecs.DeleteTaskSetInput) *EcsDeleteTaskSetResult
 
-    DeregisterContainerInstance(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) (*ecs.DeregisterContainerInstanceOutput, error)
-    DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *EcsDeregisterContainerInstanceResult
+       DeregisterContainerInstance(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) (*ecs.DeregisterContainerInstanceOutput, error)
+       DeregisterContainerInstanceAsync(ctx workflow.Context, input *ecs.DeregisterContainerInstanceInput) *EcsDeregisterContainerInstanceResult
 
-    DeregisterTaskDefinition(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) (*ecs.DeregisterTaskDefinitionOutput, error)
-    DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *EcsDeregisterTaskDefinitionResult
+       DeregisterTaskDefinition(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) (*ecs.DeregisterTaskDefinitionOutput, error)
+       DeregisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.DeregisterTaskDefinitionInput) *EcsDeregisterTaskDefinitionResult
 
-    DescribeCapacityProviders(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) (*ecs.DescribeCapacityProvidersOutput, error)
-    DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *EcsDescribeCapacityProvidersResult
+       DescribeCapacityProviders(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) (*ecs.DescribeCapacityProvidersOutput, error)
+       DescribeCapacityProvidersAsync(ctx workflow.Context, input *ecs.DescribeCapacityProvidersInput) *EcsDescribeCapacityProvidersResult
 
-    DescribeClusters(ctx workflow.Context, input *ecs.DescribeClustersInput) (*ecs.DescribeClustersOutput, error)
-    DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *EcsDescribeClustersResult
+       DescribeClusters(ctx workflow.Context, input *ecs.DescribeClustersInput) (*ecs.DescribeClustersOutput, error)
+       DescribeClustersAsync(ctx workflow.Context, input *ecs.DescribeClustersInput) *EcsDescribeClustersResult
 
-    DescribeContainerInstances(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) (*ecs.DescribeContainerInstancesOutput, error)
-    DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *EcsDescribeContainerInstancesResult
+       DescribeContainerInstances(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) (*ecs.DescribeContainerInstancesOutput, error)
+       DescribeContainerInstancesAsync(ctx workflow.Context, input *ecs.DescribeContainerInstancesInput) *EcsDescribeContainerInstancesResult
 
-    DescribeServices(ctx workflow.Context, input *ecs.DescribeServicesInput) (*ecs.DescribeServicesOutput, error)
-    DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *EcsDescribeServicesResult
+       DescribeServices(ctx workflow.Context, input *ecs.DescribeServicesInput) (*ecs.DescribeServicesOutput, error)
+       DescribeServicesAsync(ctx workflow.Context, input *ecs.DescribeServicesInput) *EcsDescribeServicesResult
 
-    DescribeTaskDefinition(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) (*ecs.DescribeTaskDefinitionOutput, error)
-    DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *EcsDescribeTaskDefinitionResult
+       DescribeTaskDefinition(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) (*ecs.DescribeTaskDefinitionOutput, error)
+       DescribeTaskDefinitionAsync(ctx workflow.Context, input *ecs.DescribeTaskDefinitionInput) *EcsDescribeTaskDefinitionResult
 
-    DescribeTaskSets(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) (*ecs.DescribeTaskSetsOutput, error)
-    DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *EcsDescribeTaskSetsResult
+       DescribeTaskSets(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) (*ecs.DescribeTaskSetsOutput, error)
+       DescribeTaskSetsAsync(ctx workflow.Context, input *ecs.DescribeTaskSetsInput) *EcsDescribeTaskSetsResult
 
-    DescribeTasks(ctx workflow.Context, input *ecs.DescribeTasksInput) (*ecs.DescribeTasksOutput, error)
-    DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *EcsDescribeTasksResult
+       DescribeTasks(ctx workflow.Context, input *ecs.DescribeTasksInput) (*ecs.DescribeTasksOutput, error)
+       DescribeTasksAsync(ctx workflow.Context, input *ecs.DescribeTasksInput) *EcsDescribeTasksResult
 
-    DiscoverPollEndpoint(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) (*ecs.DiscoverPollEndpointOutput, error)
-    DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *EcsDiscoverPollEndpointResult
+       DiscoverPollEndpoint(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) (*ecs.DiscoverPollEndpointOutput, error)
+       DiscoverPollEndpointAsync(ctx workflow.Context, input *ecs.DiscoverPollEndpointInput) *EcsDiscoverPollEndpointResult
 
-    ListAccountSettings(ctx workflow.Context, input *ecs.ListAccountSettingsInput) (*ecs.ListAccountSettingsOutput, error)
-    ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *EcsListAccountSettingsResult
+       ListAccountSettings(ctx workflow.Context, input *ecs.ListAccountSettingsInput) (*ecs.ListAccountSettingsOutput, error)
+       ListAccountSettingsAsync(ctx workflow.Context, input *ecs.ListAccountSettingsInput) *EcsListAccountSettingsResult
 
-    ListAttributes(ctx workflow.Context, input *ecs.ListAttributesInput) (*ecs.ListAttributesOutput, error)
-    ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *EcsListAttributesResult
+       ListAttributes(ctx workflow.Context, input *ecs.ListAttributesInput) (*ecs.ListAttributesOutput, error)
+       ListAttributesAsync(ctx workflow.Context, input *ecs.ListAttributesInput) *EcsListAttributesResult
 
-    ListClusters(ctx workflow.Context, input *ecs.ListClustersInput) (*ecs.ListClustersOutput, error)
-    ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *EcsListClustersResult
+       ListClusters(ctx workflow.Context, input *ecs.ListClustersInput) (*ecs.ListClustersOutput, error)
+       ListClustersAsync(ctx workflow.Context, input *ecs.ListClustersInput) *EcsListClustersResult
 
-    ListContainerInstances(ctx workflow.Context, input *ecs.ListContainerInstancesInput) (*ecs.ListContainerInstancesOutput, error)
-    ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *EcsListContainerInstancesResult
+       ListContainerInstances(ctx workflow.Context, input *ecs.ListContainerInstancesInput) (*ecs.ListContainerInstancesOutput, error)
+       ListContainerInstancesAsync(ctx workflow.Context, input *ecs.ListContainerInstancesInput) *EcsListContainerInstancesResult
 
-    ListServices(ctx workflow.Context, input *ecs.ListServicesInput) (*ecs.ListServicesOutput, error)
-    ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *EcsListServicesResult
+       ListServices(ctx workflow.Context, input *ecs.ListServicesInput) (*ecs.ListServicesOutput, error)
+       ListServicesAsync(ctx workflow.Context, input *ecs.ListServicesInput) *EcsListServicesResult
 
-    ListTagsForResource(ctx workflow.Context, input *ecs.ListTagsForResourceInput) (*ecs.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *EcsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *ecs.ListTagsForResourceInput) (*ecs.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *ecs.ListTagsForResourceInput) *EcsListTagsForResourceResult
 
-    ListTaskDefinitionFamilies(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) (*ecs.ListTaskDefinitionFamiliesOutput, error)
-    ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *EcsListTaskDefinitionFamiliesResult
+       ListTaskDefinitionFamilies(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) (*ecs.ListTaskDefinitionFamiliesOutput, error)
+       ListTaskDefinitionFamiliesAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionFamiliesInput) *EcsListTaskDefinitionFamiliesResult
 
-    ListTaskDefinitions(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) (*ecs.ListTaskDefinitionsOutput, error)
-    ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *EcsListTaskDefinitionsResult
+       ListTaskDefinitions(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) (*ecs.ListTaskDefinitionsOutput, error)
+       ListTaskDefinitionsAsync(ctx workflow.Context, input *ecs.ListTaskDefinitionsInput) *EcsListTaskDefinitionsResult
 
-    ListTasks(ctx workflow.Context, input *ecs.ListTasksInput) (*ecs.ListTasksOutput, error)
-    ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *EcsListTasksResult
+       ListTasks(ctx workflow.Context, input *ecs.ListTasksInput) (*ecs.ListTasksOutput, error)
+       ListTasksAsync(ctx workflow.Context, input *ecs.ListTasksInput) *EcsListTasksResult
 
-    PutAccountSetting(ctx workflow.Context, input *ecs.PutAccountSettingInput) (*ecs.PutAccountSettingOutput, error)
-    PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *EcsPutAccountSettingResult
+       PutAccountSetting(ctx workflow.Context, input *ecs.PutAccountSettingInput) (*ecs.PutAccountSettingOutput, error)
+       PutAccountSettingAsync(ctx workflow.Context, input *ecs.PutAccountSettingInput) *EcsPutAccountSettingResult
 
-    PutAccountSettingDefault(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) (*ecs.PutAccountSettingDefaultOutput, error)
-    PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *EcsPutAccountSettingDefaultResult
+       PutAccountSettingDefault(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) (*ecs.PutAccountSettingDefaultOutput, error)
+       PutAccountSettingDefaultAsync(ctx workflow.Context, input *ecs.PutAccountSettingDefaultInput) *EcsPutAccountSettingDefaultResult
 
-    PutAttributes(ctx workflow.Context, input *ecs.PutAttributesInput) (*ecs.PutAttributesOutput, error)
-    PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *EcsPutAttributesResult
+       PutAttributes(ctx workflow.Context, input *ecs.PutAttributesInput) (*ecs.PutAttributesOutput, error)
+       PutAttributesAsync(ctx workflow.Context, input *ecs.PutAttributesInput) *EcsPutAttributesResult
 
-    PutClusterCapacityProviders(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) (*ecs.PutClusterCapacityProvidersOutput, error)
-    PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *EcsPutClusterCapacityProvidersResult
+       PutClusterCapacityProviders(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) (*ecs.PutClusterCapacityProvidersOutput, error)
+       PutClusterCapacityProvidersAsync(ctx workflow.Context, input *ecs.PutClusterCapacityProvidersInput) *EcsPutClusterCapacityProvidersResult
 
-    RegisterContainerInstance(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) (*ecs.RegisterContainerInstanceOutput, error)
-    RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *EcsRegisterContainerInstanceResult
+       RegisterContainerInstance(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) (*ecs.RegisterContainerInstanceOutput, error)
+       RegisterContainerInstanceAsync(ctx workflow.Context, input *ecs.RegisterContainerInstanceInput) *EcsRegisterContainerInstanceResult
 
-    RegisterTaskDefinition(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) (*ecs.RegisterTaskDefinitionOutput, error)
-    RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *EcsRegisterTaskDefinitionResult
+       RegisterTaskDefinition(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) (*ecs.RegisterTaskDefinitionOutput, error)
+       RegisterTaskDefinitionAsync(ctx workflow.Context, input *ecs.RegisterTaskDefinitionInput) *EcsRegisterTaskDefinitionResult
 
-    RunTask(ctx workflow.Context, input *ecs.RunTaskInput) (*ecs.RunTaskOutput, error)
-    RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *EcsRunTaskResult
+       RunTask(ctx workflow.Context, input *ecs.RunTaskInput) (*ecs.RunTaskOutput, error)
+       RunTaskAsync(ctx workflow.Context, input *ecs.RunTaskInput) *EcsRunTaskResult
 
-    StartTask(ctx workflow.Context, input *ecs.StartTaskInput) (*ecs.StartTaskOutput, error)
-    StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *EcsStartTaskResult
+       StartTask(ctx workflow.Context, input *ecs.StartTaskInput) (*ecs.StartTaskOutput, error)
+       StartTaskAsync(ctx workflow.Context, input *ecs.StartTaskInput) *EcsStartTaskResult
 
-    StopTask(ctx workflow.Context, input *ecs.StopTaskInput) (*ecs.StopTaskOutput, error)
-    StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *EcsStopTaskResult
+       StopTask(ctx workflow.Context, input *ecs.StopTaskInput) (*ecs.StopTaskOutput, error)
+       StopTaskAsync(ctx workflow.Context, input *ecs.StopTaskInput) *EcsStopTaskResult
 
-    SubmitAttachmentStateChanges(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) (*ecs.SubmitAttachmentStateChangesOutput, error)
-    SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *EcsSubmitAttachmentStateChangesResult
+       SubmitAttachmentStateChanges(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) (*ecs.SubmitAttachmentStateChangesOutput, error)
+       SubmitAttachmentStateChangesAsync(ctx workflow.Context, input *ecs.SubmitAttachmentStateChangesInput) *EcsSubmitAttachmentStateChangesResult
 
-    SubmitContainerStateChange(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) (*ecs.SubmitContainerStateChangeOutput, error)
-    SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *EcsSubmitContainerStateChangeResult
+       SubmitContainerStateChange(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) (*ecs.SubmitContainerStateChangeOutput, error)
+       SubmitContainerStateChangeAsync(ctx workflow.Context, input *ecs.SubmitContainerStateChangeInput) *EcsSubmitContainerStateChangeResult
 
-    SubmitTaskStateChange(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) (*ecs.SubmitTaskStateChangeOutput, error)
-    SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *EcsSubmitTaskStateChangeResult
+       SubmitTaskStateChange(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) (*ecs.SubmitTaskStateChangeOutput, error)
+       SubmitTaskStateChangeAsync(ctx workflow.Context, input *ecs.SubmitTaskStateChangeInput) *EcsSubmitTaskStateChangeResult
 
-    TagResource(ctx workflow.Context, input *ecs.TagResourceInput) (*ecs.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *EcsTagResourceResult
+       TagResource(ctx workflow.Context, input *ecs.TagResourceInput) (*ecs.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *ecs.TagResourceInput) *EcsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *ecs.UntagResourceInput) (*ecs.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *EcsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *ecs.UntagResourceInput) (*ecs.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *ecs.UntagResourceInput) *EcsUntagResourceResult
 
-    UpdateClusterSettings(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) (*ecs.UpdateClusterSettingsOutput, error)
-    UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *EcsUpdateClusterSettingsResult
+       UpdateClusterSettings(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) (*ecs.UpdateClusterSettingsOutput, error)
+       UpdateClusterSettingsAsync(ctx workflow.Context, input *ecs.UpdateClusterSettingsInput) *EcsUpdateClusterSettingsResult
 
-    UpdateContainerAgent(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) (*ecs.UpdateContainerAgentOutput, error)
-    UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *EcsUpdateContainerAgentResult
+       UpdateContainerAgent(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) (*ecs.UpdateContainerAgentOutput, error)
+       UpdateContainerAgentAsync(ctx workflow.Context, input *ecs.UpdateContainerAgentInput) *EcsUpdateContainerAgentResult
 
-    UpdateContainerInstancesState(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) (*ecs.UpdateContainerInstancesStateOutput, error)
-    UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *EcsUpdateContainerInstancesStateResult
+       UpdateContainerInstancesState(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) (*ecs.UpdateContainerInstancesStateOutput, error)
+       UpdateContainerInstancesStateAsync(ctx workflow.Context, input *ecs.UpdateContainerInstancesStateInput) *EcsUpdateContainerInstancesStateResult
 
-    UpdateService(ctx workflow.Context, input *ecs.UpdateServiceInput) (*ecs.UpdateServiceOutput, error)
-    UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *EcsUpdateServiceResult
+       UpdateService(ctx workflow.Context, input *ecs.UpdateServiceInput) (*ecs.UpdateServiceOutput, error)
+       UpdateServiceAsync(ctx workflow.Context, input *ecs.UpdateServiceInput) *EcsUpdateServiceResult
 
-    UpdateServicePrimaryTaskSet(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) (*ecs.UpdateServicePrimaryTaskSetOutput, error)
-    UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *EcsUpdateServicePrimaryTaskSetResult
+       UpdateServicePrimaryTaskSet(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) (*ecs.UpdateServicePrimaryTaskSetOutput, error)
+       UpdateServicePrimaryTaskSetAsync(ctx workflow.Context, input *ecs.UpdateServicePrimaryTaskSetInput) *EcsUpdateServicePrimaryTaskSetResult
 
-    UpdateTaskSet(ctx workflow.Context, input *ecs.UpdateTaskSetInput) (*ecs.UpdateTaskSetOutput, error)
-    UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetResult
+       UpdateTaskSet(ctx workflow.Context, input *ecs.UpdateTaskSetInput) (*ecs.UpdateTaskSetOutput, error)
+       UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetResult
 
-    WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
-    WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
-    WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-    WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error}
+       WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+       WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+       WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
+       WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error}
 
 type EcsCreateCapacityProviderResult struct {
 	Result workflow.Future

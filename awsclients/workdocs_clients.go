@@ -7,128 +7,128 @@ import (
 )
 
 type WorkDocsClient interface {
-    AbortDocumentVersionUpload(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error)
-    AbortDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) *WorkdocsAbortDocumentVersionUploadResult
+       AbortDocumentVersionUpload(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error)
+       AbortDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.AbortDocumentVersionUploadInput) *WorkdocsAbortDocumentVersionUploadResult
 
-    ActivateUser(ctx workflow.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error)
-    ActivateUserAsync(ctx workflow.Context, input *workdocs.ActivateUserInput) *WorkdocsActivateUserResult
+       ActivateUser(ctx workflow.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error)
+       ActivateUserAsync(ctx workflow.Context, input *workdocs.ActivateUserInput) *WorkdocsActivateUserResult
 
-    AddResourcePermissions(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error)
-    AddResourcePermissionsAsync(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) *WorkdocsAddResourcePermissionsResult
+       AddResourcePermissions(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error)
+       AddResourcePermissionsAsync(ctx workflow.Context, input *workdocs.AddResourcePermissionsInput) *WorkdocsAddResourcePermissionsResult
 
-    CreateComment(ctx workflow.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error)
-    CreateCommentAsync(ctx workflow.Context, input *workdocs.CreateCommentInput) *WorkdocsCreateCommentResult
+       CreateComment(ctx workflow.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error)
+       CreateCommentAsync(ctx workflow.Context, input *workdocs.CreateCommentInput) *WorkdocsCreateCommentResult
 
-    CreateCustomMetadata(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error)
-    CreateCustomMetadataAsync(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) *WorkdocsCreateCustomMetadataResult
+       CreateCustomMetadata(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error)
+       CreateCustomMetadataAsync(ctx workflow.Context, input *workdocs.CreateCustomMetadataInput) *WorkdocsCreateCustomMetadataResult
 
-    CreateFolder(ctx workflow.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error)
-    CreateFolderAsync(ctx workflow.Context, input *workdocs.CreateFolderInput) *WorkdocsCreateFolderResult
+       CreateFolder(ctx workflow.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error)
+       CreateFolderAsync(ctx workflow.Context, input *workdocs.CreateFolderInput) *WorkdocsCreateFolderResult
 
-    CreateLabels(ctx workflow.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error)
-    CreateLabelsAsync(ctx workflow.Context, input *workdocs.CreateLabelsInput) *WorkdocsCreateLabelsResult
+       CreateLabels(ctx workflow.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error)
+       CreateLabelsAsync(ctx workflow.Context, input *workdocs.CreateLabelsInput) *WorkdocsCreateLabelsResult
 
-    CreateNotificationSubscription(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error)
-    CreateNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) *WorkdocsCreateNotificationSubscriptionResult
+       CreateNotificationSubscription(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error)
+       CreateNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.CreateNotificationSubscriptionInput) *WorkdocsCreateNotificationSubscriptionResult
 
-    CreateUser(ctx workflow.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *workdocs.CreateUserInput) *WorkdocsCreateUserResult
+       CreateUser(ctx workflow.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *workdocs.CreateUserInput) *WorkdocsCreateUserResult
 
-    DeactivateUser(ctx workflow.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error)
-    DeactivateUserAsync(ctx workflow.Context, input *workdocs.DeactivateUserInput) *WorkdocsDeactivateUserResult
+       DeactivateUser(ctx workflow.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error)
+       DeactivateUserAsync(ctx workflow.Context, input *workdocs.DeactivateUserInput) *WorkdocsDeactivateUserResult
 
-    DeleteComment(ctx workflow.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error)
-    DeleteCommentAsync(ctx workflow.Context, input *workdocs.DeleteCommentInput) *WorkdocsDeleteCommentResult
+       DeleteComment(ctx workflow.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error)
+       DeleteCommentAsync(ctx workflow.Context, input *workdocs.DeleteCommentInput) *WorkdocsDeleteCommentResult
 
-    DeleteCustomMetadata(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error)
-    DeleteCustomMetadataAsync(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) *WorkdocsDeleteCustomMetadataResult
+       DeleteCustomMetadata(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error)
+       DeleteCustomMetadataAsync(ctx workflow.Context, input *workdocs.DeleteCustomMetadataInput) *WorkdocsDeleteCustomMetadataResult
 
-    DeleteDocument(ctx workflow.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error)
-    DeleteDocumentAsync(ctx workflow.Context, input *workdocs.DeleteDocumentInput) *WorkdocsDeleteDocumentResult
+       DeleteDocument(ctx workflow.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error)
+       DeleteDocumentAsync(ctx workflow.Context, input *workdocs.DeleteDocumentInput) *WorkdocsDeleteDocumentResult
 
-    DeleteFolder(ctx workflow.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error)
-    DeleteFolderAsync(ctx workflow.Context, input *workdocs.DeleteFolderInput) *WorkdocsDeleteFolderResult
+       DeleteFolder(ctx workflow.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error)
+       DeleteFolderAsync(ctx workflow.Context, input *workdocs.DeleteFolderInput) *WorkdocsDeleteFolderResult
 
-    DeleteFolderContents(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error)
-    DeleteFolderContentsAsync(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) *WorkdocsDeleteFolderContentsResult
+       DeleteFolderContents(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error)
+       DeleteFolderContentsAsync(ctx workflow.Context, input *workdocs.DeleteFolderContentsInput) *WorkdocsDeleteFolderContentsResult
 
-    DeleteLabels(ctx workflow.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error)
-    DeleteLabelsAsync(ctx workflow.Context, input *workdocs.DeleteLabelsInput) *WorkdocsDeleteLabelsResult
+       DeleteLabels(ctx workflow.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error)
+       DeleteLabelsAsync(ctx workflow.Context, input *workdocs.DeleteLabelsInput) *WorkdocsDeleteLabelsResult
 
-    DeleteNotificationSubscription(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error)
-    DeleteNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) *WorkdocsDeleteNotificationSubscriptionResult
+       DeleteNotificationSubscription(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error)
+       DeleteNotificationSubscriptionAsync(ctx workflow.Context, input *workdocs.DeleteNotificationSubscriptionInput) *WorkdocsDeleteNotificationSubscriptionResult
 
-    DeleteUser(ctx workflow.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *workdocs.DeleteUserInput) *WorkdocsDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *workdocs.DeleteUserInput) *WorkdocsDeleteUserResult
 
-    DescribeActivities(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error)
-    DescribeActivitiesAsync(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) *WorkdocsDescribeActivitiesResult
+       DescribeActivities(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error)
+       DescribeActivitiesAsync(ctx workflow.Context, input *workdocs.DescribeActivitiesInput) *WorkdocsDescribeActivitiesResult
 
-    DescribeComments(ctx workflow.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error)
-    DescribeCommentsAsync(ctx workflow.Context, input *workdocs.DescribeCommentsInput) *WorkdocsDescribeCommentsResult
+       DescribeComments(ctx workflow.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error)
+       DescribeCommentsAsync(ctx workflow.Context, input *workdocs.DescribeCommentsInput) *WorkdocsDescribeCommentsResult
 
-    DescribeDocumentVersions(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error)
-    DescribeDocumentVersionsAsync(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) *WorkdocsDescribeDocumentVersionsResult
+       DescribeDocumentVersions(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error)
+       DescribeDocumentVersionsAsync(ctx workflow.Context, input *workdocs.DescribeDocumentVersionsInput) *WorkdocsDescribeDocumentVersionsResult
 
-    DescribeFolderContents(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error)
-    DescribeFolderContentsAsync(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) *WorkdocsDescribeFolderContentsResult
+       DescribeFolderContents(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error)
+       DescribeFolderContentsAsync(ctx workflow.Context, input *workdocs.DescribeFolderContentsInput) *WorkdocsDescribeFolderContentsResult
 
-    DescribeGroups(ctx workflow.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error)
-    DescribeGroupsAsync(ctx workflow.Context, input *workdocs.DescribeGroupsInput) *WorkdocsDescribeGroupsResult
+       DescribeGroups(ctx workflow.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error)
+       DescribeGroupsAsync(ctx workflow.Context, input *workdocs.DescribeGroupsInput) *WorkdocsDescribeGroupsResult
 
-    DescribeNotificationSubscriptions(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error)
-    DescribeNotificationSubscriptionsAsync(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) *WorkdocsDescribeNotificationSubscriptionsResult
+       DescribeNotificationSubscriptions(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error)
+       DescribeNotificationSubscriptionsAsync(ctx workflow.Context, input *workdocs.DescribeNotificationSubscriptionsInput) *WorkdocsDescribeNotificationSubscriptionsResult
 
-    DescribeResourcePermissions(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error)
-    DescribeResourcePermissionsAsync(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) *WorkdocsDescribeResourcePermissionsResult
+       DescribeResourcePermissions(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error)
+       DescribeResourcePermissionsAsync(ctx workflow.Context, input *workdocs.DescribeResourcePermissionsInput) *WorkdocsDescribeResourcePermissionsResult
 
-    DescribeRootFolders(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error)
-    DescribeRootFoldersAsync(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) *WorkdocsDescribeRootFoldersResult
+       DescribeRootFolders(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error)
+       DescribeRootFoldersAsync(ctx workflow.Context, input *workdocs.DescribeRootFoldersInput) *WorkdocsDescribeRootFoldersResult
 
-    DescribeUsers(ctx workflow.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error)
-    DescribeUsersAsync(ctx workflow.Context, input *workdocs.DescribeUsersInput) *WorkdocsDescribeUsersResult
+       DescribeUsers(ctx workflow.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error)
+       DescribeUsersAsync(ctx workflow.Context, input *workdocs.DescribeUsersInput) *WorkdocsDescribeUsersResult
 
-    GetCurrentUser(ctx workflow.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error)
-    GetCurrentUserAsync(ctx workflow.Context, input *workdocs.GetCurrentUserInput) *WorkdocsGetCurrentUserResult
+       GetCurrentUser(ctx workflow.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error)
+       GetCurrentUserAsync(ctx workflow.Context, input *workdocs.GetCurrentUserInput) *WorkdocsGetCurrentUserResult
 
-    GetDocument(ctx workflow.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error)
-    GetDocumentAsync(ctx workflow.Context, input *workdocs.GetDocumentInput) *WorkdocsGetDocumentResult
+       GetDocument(ctx workflow.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error)
+       GetDocumentAsync(ctx workflow.Context, input *workdocs.GetDocumentInput) *WorkdocsGetDocumentResult
 
-    GetDocumentPath(ctx workflow.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error)
-    GetDocumentPathAsync(ctx workflow.Context, input *workdocs.GetDocumentPathInput) *WorkdocsGetDocumentPathResult
+       GetDocumentPath(ctx workflow.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error)
+       GetDocumentPathAsync(ctx workflow.Context, input *workdocs.GetDocumentPathInput) *WorkdocsGetDocumentPathResult
 
-    GetDocumentVersion(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error)
-    GetDocumentVersionAsync(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) *WorkdocsGetDocumentVersionResult
+       GetDocumentVersion(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error)
+       GetDocumentVersionAsync(ctx workflow.Context, input *workdocs.GetDocumentVersionInput) *WorkdocsGetDocumentVersionResult
 
-    GetFolder(ctx workflow.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error)
-    GetFolderAsync(ctx workflow.Context, input *workdocs.GetFolderInput) *WorkdocsGetFolderResult
+       GetFolder(ctx workflow.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error)
+       GetFolderAsync(ctx workflow.Context, input *workdocs.GetFolderInput) *WorkdocsGetFolderResult
 
-    GetFolderPath(ctx workflow.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error)
-    GetFolderPathAsync(ctx workflow.Context, input *workdocs.GetFolderPathInput) *WorkdocsGetFolderPathResult
+       GetFolderPath(ctx workflow.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error)
+       GetFolderPathAsync(ctx workflow.Context, input *workdocs.GetFolderPathInput) *WorkdocsGetFolderPathResult
 
-    GetResources(ctx workflow.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error)
-    GetResourcesAsync(ctx workflow.Context, input *workdocs.GetResourcesInput) *WorkdocsGetResourcesResult
+       GetResources(ctx workflow.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error)
+       GetResourcesAsync(ctx workflow.Context, input *workdocs.GetResourcesInput) *WorkdocsGetResourcesResult
 
-    InitiateDocumentVersionUpload(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error)
-    InitiateDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) *WorkdocsInitiateDocumentVersionUploadResult
+       InitiateDocumentVersionUpload(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error)
+       InitiateDocumentVersionUploadAsync(ctx workflow.Context, input *workdocs.InitiateDocumentVersionUploadInput) *WorkdocsInitiateDocumentVersionUploadResult
 
-    RemoveAllResourcePermissions(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error)
-    RemoveAllResourcePermissionsAsync(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) *WorkdocsRemoveAllResourcePermissionsResult
+       RemoveAllResourcePermissions(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error)
+       RemoveAllResourcePermissionsAsync(ctx workflow.Context, input *workdocs.RemoveAllResourcePermissionsInput) *WorkdocsRemoveAllResourcePermissionsResult
 
-    RemoveResourcePermission(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error)
-    RemoveResourcePermissionAsync(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) *WorkdocsRemoveResourcePermissionResult
+       RemoveResourcePermission(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error)
+       RemoveResourcePermissionAsync(ctx workflow.Context, input *workdocs.RemoveResourcePermissionInput) *WorkdocsRemoveResourcePermissionResult
 
-    UpdateDocument(ctx workflow.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error)
-    UpdateDocumentAsync(ctx workflow.Context, input *workdocs.UpdateDocumentInput) *WorkdocsUpdateDocumentResult
+       UpdateDocument(ctx workflow.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error)
+       UpdateDocumentAsync(ctx workflow.Context, input *workdocs.UpdateDocumentInput) *WorkdocsUpdateDocumentResult
 
-    UpdateDocumentVersion(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error)
-    UpdateDocumentVersionAsync(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) *WorkdocsUpdateDocumentVersionResult
+       UpdateDocumentVersion(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error)
+       UpdateDocumentVersionAsync(ctx workflow.Context, input *workdocs.UpdateDocumentVersionInput) *WorkdocsUpdateDocumentVersionResult
 
-    UpdateFolder(ctx workflow.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error)
-    UpdateFolderAsync(ctx workflow.Context, input *workdocs.UpdateFolderInput) *WorkdocsUpdateFolderResult
+       UpdateFolder(ctx workflow.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error)
+       UpdateFolderAsync(ctx workflow.Context, input *workdocs.UpdateFolderInput) *WorkdocsUpdateFolderResult
 
-    UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *WorkdocsUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *WorkdocsUpdateUserResult
 }
 
 type WorkdocsAbortDocumentVersionUploadResult struct {

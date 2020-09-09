@@ -7,158 +7,158 @@ import (
 )
 
 type ComprehendClient interface {
-    BatchDetectDominantLanguage(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) (*comprehend.BatchDetectDominantLanguageOutput, error)
-    BatchDetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) *ComprehendBatchDetectDominantLanguageResult
+       BatchDetectDominantLanguage(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) (*comprehend.BatchDetectDominantLanguageOutput, error)
+       BatchDetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) *ComprehendBatchDetectDominantLanguageResult
 
-    BatchDetectEntities(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) (*comprehend.BatchDetectEntitiesOutput, error)
-    BatchDetectEntitiesAsync(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) *ComprehendBatchDetectEntitiesResult
+       BatchDetectEntities(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) (*comprehend.BatchDetectEntitiesOutput, error)
+       BatchDetectEntitiesAsync(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) *ComprehendBatchDetectEntitiesResult
 
-    BatchDetectKeyPhrases(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) (*comprehend.BatchDetectKeyPhrasesOutput, error)
-    BatchDetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) *ComprehendBatchDetectKeyPhrasesResult
+       BatchDetectKeyPhrases(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) (*comprehend.BatchDetectKeyPhrasesOutput, error)
+       BatchDetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) *ComprehendBatchDetectKeyPhrasesResult
 
-    BatchDetectSentiment(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) (*comprehend.BatchDetectSentimentOutput, error)
-    BatchDetectSentimentAsync(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) *ComprehendBatchDetectSentimentResult
+       BatchDetectSentiment(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) (*comprehend.BatchDetectSentimentOutput, error)
+       BatchDetectSentimentAsync(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) *ComprehendBatchDetectSentimentResult
 
-    BatchDetectSyntax(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) (*comprehend.BatchDetectSyntaxOutput, error)
-    BatchDetectSyntaxAsync(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) *ComprehendBatchDetectSyntaxResult
+       BatchDetectSyntax(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) (*comprehend.BatchDetectSyntaxOutput, error)
+       BatchDetectSyntaxAsync(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) *ComprehendBatchDetectSyntaxResult
 
-    ClassifyDocument(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) (*comprehend.ClassifyDocumentOutput, error)
-    ClassifyDocumentAsync(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) *ComprehendClassifyDocumentResult
+       ClassifyDocument(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) (*comprehend.ClassifyDocumentOutput, error)
+       ClassifyDocumentAsync(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) *ComprehendClassifyDocumentResult
 
-    CreateDocumentClassifier(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) (*comprehend.CreateDocumentClassifierOutput, error)
-    CreateDocumentClassifierAsync(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) *ComprehendCreateDocumentClassifierResult
+       CreateDocumentClassifier(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) (*comprehend.CreateDocumentClassifierOutput, error)
+       CreateDocumentClassifierAsync(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) *ComprehendCreateDocumentClassifierResult
 
-    CreateEndpoint(ctx workflow.Context, input *comprehend.CreateEndpointInput) (*comprehend.CreateEndpointOutput, error)
-    CreateEndpointAsync(ctx workflow.Context, input *comprehend.CreateEndpointInput) *ComprehendCreateEndpointResult
+       CreateEndpoint(ctx workflow.Context, input *comprehend.CreateEndpointInput) (*comprehend.CreateEndpointOutput, error)
+       CreateEndpointAsync(ctx workflow.Context, input *comprehend.CreateEndpointInput) *ComprehendCreateEndpointResult
 
-    CreateEntityRecognizer(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) (*comprehend.CreateEntityRecognizerOutput, error)
-    CreateEntityRecognizerAsync(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) *ComprehendCreateEntityRecognizerResult
+       CreateEntityRecognizer(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) (*comprehend.CreateEntityRecognizerOutput, error)
+       CreateEntityRecognizerAsync(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) *ComprehendCreateEntityRecognizerResult
 
-    DeleteDocumentClassifier(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) (*comprehend.DeleteDocumentClassifierOutput, error)
-    DeleteDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) *ComprehendDeleteDocumentClassifierResult
+       DeleteDocumentClassifier(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) (*comprehend.DeleteDocumentClassifierOutput, error)
+       DeleteDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) *ComprehendDeleteDocumentClassifierResult
 
-    DeleteEndpoint(ctx workflow.Context, input *comprehend.DeleteEndpointInput) (*comprehend.DeleteEndpointOutput, error)
-    DeleteEndpointAsync(ctx workflow.Context, input *comprehend.DeleteEndpointInput) *ComprehendDeleteEndpointResult
+       DeleteEndpoint(ctx workflow.Context, input *comprehend.DeleteEndpointInput) (*comprehend.DeleteEndpointOutput, error)
+       DeleteEndpointAsync(ctx workflow.Context, input *comprehend.DeleteEndpointInput) *ComprehendDeleteEndpointResult
 
-    DeleteEntityRecognizer(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) (*comprehend.DeleteEntityRecognizerOutput, error)
-    DeleteEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) *ComprehendDeleteEntityRecognizerResult
+       DeleteEntityRecognizer(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) (*comprehend.DeleteEntityRecognizerOutput, error)
+       DeleteEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) *ComprehendDeleteEntityRecognizerResult
 
-    DescribeDocumentClassificationJob(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) (*comprehend.DescribeDocumentClassificationJobOutput, error)
-    DescribeDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) *ComprehendDescribeDocumentClassificationJobResult
+       DescribeDocumentClassificationJob(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) (*comprehend.DescribeDocumentClassificationJobOutput, error)
+       DescribeDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) *ComprehendDescribeDocumentClassificationJobResult
 
-    DescribeDocumentClassifier(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) (*comprehend.DescribeDocumentClassifierOutput, error)
-    DescribeDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) *ComprehendDescribeDocumentClassifierResult
+       DescribeDocumentClassifier(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) (*comprehend.DescribeDocumentClassifierOutput, error)
+       DescribeDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) *ComprehendDescribeDocumentClassifierResult
 
-    DescribeDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) (*comprehend.DescribeDominantLanguageDetectionJobOutput, error)
-    DescribeDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) *ComprehendDescribeDominantLanguageDetectionJobResult
+       DescribeDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) (*comprehend.DescribeDominantLanguageDetectionJobOutput, error)
+       DescribeDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) *ComprehendDescribeDominantLanguageDetectionJobResult
 
-    DescribeEndpoint(ctx workflow.Context, input *comprehend.DescribeEndpointInput) (*comprehend.DescribeEndpointOutput, error)
-    DescribeEndpointAsync(ctx workflow.Context, input *comprehend.DescribeEndpointInput) *ComprehendDescribeEndpointResult
+       DescribeEndpoint(ctx workflow.Context, input *comprehend.DescribeEndpointInput) (*comprehend.DescribeEndpointOutput, error)
+       DescribeEndpointAsync(ctx workflow.Context, input *comprehend.DescribeEndpointInput) *ComprehendDescribeEndpointResult
 
-    DescribeEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) (*comprehend.DescribeEntitiesDetectionJobOutput, error)
-    DescribeEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) *ComprehendDescribeEntitiesDetectionJobResult
+       DescribeEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) (*comprehend.DescribeEntitiesDetectionJobOutput, error)
+       DescribeEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) *ComprehendDescribeEntitiesDetectionJobResult
 
-    DescribeEntityRecognizer(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) (*comprehend.DescribeEntityRecognizerOutput, error)
-    DescribeEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) *ComprehendDescribeEntityRecognizerResult
+       DescribeEntityRecognizer(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) (*comprehend.DescribeEntityRecognizerOutput, error)
+       DescribeEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) *ComprehendDescribeEntityRecognizerResult
 
-    DescribeKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) (*comprehend.DescribeKeyPhrasesDetectionJobOutput, error)
-    DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) *ComprehendDescribeKeyPhrasesDetectionJobResult
+       DescribeKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) (*comprehend.DescribeKeyPhrasesDetectionJobOutput, error)
+       DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) *ComprehendDescribeKeyPhrasesDetectionJobResult
 
-    DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error)
-    DescribeSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) *ComprehendDescribeSentimentDetectionJobResult
+       DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error)
+       DescribeSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) *ComprehendDescribeSentimentDetectionJobResult
 
-    DescribeTopicsDetectionJob(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) (*comprehend.DescribeTopicsDetectionJobOutput, error)
-    DescribeTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) *ComprehendDescribeTopicsDetectionJobResult
+       DescribeTopicsDetectionJob(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) (*comprehend.DescribeTopicsDetectionJobOutput, error)
+       DescribeTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) *ComprehendDescribeTopicsDetectionJobResult
 
-    DetectDominantLanguage(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) (*comprehend.DetectDominantLanguageOutput, error)
-    DetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) *ComprehendDetectDominantLanguageResult
+       DetectDominantLanguage(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) (*comprehend.DetectDominantLanguageOutput, error)
+       DetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) *ComprehendDetectDominantLanguageResult
 
-    DetectEntities(ctx workflow.Context, input *comprehend.DetectEntitiesInput) (*comprehend.DetectEntitiesOutput, error)
-    DetectEntitiesAsync(ctx workflow.Context, input *comprehend.DetectEntitiesInput) *ComprehendDetectEntitiesResult
+       DetectEntities(ctx workflow.Context, input *comprehend.DetectEntitiesInput) (*comprehend.DetectEntitiesOutput, error)
+       DetectEntitiesAsync(ctx workflow.Context, input *comprehend.DetectEntitiesInput) *ComprehendDetectEntitiesResult
 
-    DetectKeyPhrases(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) (*comprehend.DetectKeyPhrasesOutput, error)
-    DetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) *ComprehendDetectKeyPhrasesResult
+       DetectKeyPhrases(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) (*comprehend.DetectKeyPhrasesOutput, error)
+       DetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) *ComprehendDetectKeyPhrasesResult
 
-    DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error)
-    DetectSentimentAsync(ctx workflow.Context, input *comprehend.DetectSentimentInput) *ComprehendDetectSentimentResult
+       DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error)
+       DetectSentimentAsync(ctx workflow.Context, input *comprehend.DetectSentimentInput) *ComprehendDetectSentimentResult
 
-    DetectSyntax(ctx workflow.Context, input *comprehend.DetectSyntaxInput) (*comprehend.DetectSyntaxOutput, error)
-    DetectSyntaxAsync(ctx workflow.Context, input *comprehend.DetectSyntaxInput) *ComprehendDetectSyntaxResult
+       DetectSyntax(ctx workflow.Context, input *comprehend.DetectSyntaxInput) (*comprehend.DetectSyntaxOutput, error)
+       DetectSyntaxAsync(ctx workflow.Context, input *comprehend.DetectSyntaxInput) *ComprehendDetectSyntaxResult
 
-    ListDocumentClassificationJobs(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) (*comprehend.ListDocumentClassificationJobsOutput, error)
-    ListDocumentClassificationJobsAsync(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) *ComprehendListDocumentClassificationJobsResult
+       ListDocumentClassificationJobs(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) (*comprehend.ListDocumentClassificationJobsOutput, error)
+       ListDocumentClassificationJobsAsync(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) *ComprehendListDocumentClassificationJobsResult
 
-    ListDocumentClassifiers(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) (*comprehend.ListDocumentClassifiersOutput, error)
-    ListDocumentClassifiersAsync(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) *ComprehendListDocumentClassifiersResult
+       ListDocumentClassifiers(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) (*comprehend.ListDocumentClassifiersOutput, error)
+       ListDocumentClassifiersAsync(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) *ComprehendListDocumentClassifiersResult
 
-    ListDominantLanguageDetectionJobs(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) (*comprehend.ListDominantLanguageDetectionJobsOutput, error)
-    ListDominantLanguageDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) *ComprehendListDominantLanguageDetectionJobsResult
+       ListDominantLanguageDetectionJobs(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) (*comprehend.ListDominantLanguageDetectionJobsOutput, error)
+       ListDominantLanguageDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) *ComprehendListDominantLanguageDetectionJobsResult
 
-    ListEndpoints(ctx workflow.Context, input *comprehend.ListEndpointsInput) (*comprehend.ListEndpointsOutput, error)
-    ListEndpointsAsync(ctx workflow.Context, input *comprehend.ListEndpointsInput) *ComprehendListEndpointsResult
+       ListEndpoints(ctx workflow.Context, input *comprehend.ListEndpointsInput) (*comprehend.ListEndpointsOutput, error)
+       ListEndpointsAsync(ctx workflow.Context, input *comprehend.ListEndpointsInput) *ComprehendListEndpointsResult
 
-    ListEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) (*comprehend.ListEntitiesDetectionJobsOutput, error)
-    ListEntitiesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) *ComprehendListEntitiesDetectionJobsResult
+       ListEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) (*comprehend.ListEntitiesDetectionJobsOutput, error)
+       ListEntitiesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) *ComprehendListEntitiesDetectionJobsResult
 
-    ListEntityRecognizers(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) (*comprehend.ListEntityRecognizersOutput, error)
-    ListEntityRecognizersAsync(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) *ComprehendListEntityRecognizersResult
+       ListEntityRecognizers(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) (*comprehend.ListEntityRecognizersOutput, error)
+       ListEntityRecognizersAsync(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) *ComprehendListEntityRecognizersResult
 
-    ListKeyPhrasesDetectionJobs(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) (*comprehend.ListKeyPhrasesDetectionJobsOutput, error)
-    ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) *ComprehendListKeyPhrasesDetectionJobsResult
+       ListKeyPhrasesDetectionJobs(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) (*comprehend.ListKeyPhrasesDetectionJobsOutput, error)
+       ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) *ComprehendListKeyPhrasesDetectionJobsResult
 
-    ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error)
-    ListSentimentDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) *ComprehendListSentimentDetectionJobsResult
+       ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error)
+       ListSentimentDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) *ComprehendListSentimentDetectionJobsResult
 
-    ListTagsForResource(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) (*comprehend.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) *ComprehendListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) (*comprehend.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) *ComprehendListTagsForResourceResult
 
-    ListTopicsDetectionJobs(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) (*comprehend.ListTopicsDetectionJobsOutput, error)
-    ListTopicsDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) *ComprehendListTopicsDetectionJobsResult
+       ListTopicsDetectionJobs(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) (*comprehend.ListTopicsDetectionJobsOutput, error)
+       ListTopicsDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) *ComprehendListTopicsDetectionJobsResult
 
-    StartDocumentClassificationJob(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) (*comprehend.StartDocumentClassificationJobOutput, error)
-    StartDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) *ComprehendStartDocumentClassificationJobResult
+       StartDocumentClassificationJob(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) (*comprehend.StartDocumentClassificationJobOutput, error)
+       StartDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) *ComprehendStartDocumentClassificationJobResult
 
-    StartDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) (*comprehend.StartDominantLanguageDetectionJobOutput, error)
-    StartDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) *ComprehendStartDominantLanguageDetectionJobResult
+       StartDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) (*comprehend.StartDominantLanguageDetectionJobOutput, error)
+       StartDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) *ComprehendStartDominantLanguageDetectionJobResult
 
-    StartEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) (*comprehend.StartEntitiesDetectionJobOutput, error)
-    StartEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) *ComprehendStartEntitiesDetectionJobResult
+       StartEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) (*comprehend.StartEntitiesDetectionJobOutput, error)
+       StartEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) *ComprehendStartEntitiesDetectionJobResult
 
-    StartKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) (*comprehend.StartKeyPhrasesDetectionJobOutput, error)
-    StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) *ComprehendStartKeyPhrasesDetectionJobResult
+       StartKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) (*comprehend.StartKeyPhrasesDetectionJobOutput, error)
+       StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) *ComprehendStartKeyPhrasesDetectionJobResult
 
-    StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error)
-    StartSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) *ComprehendStartSentimentDetectionJobResult
+       StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error)
+       StartSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) *ComprehendStartSentimentDetectionJobResult
 
-    StartTopicsDetectionJob(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) (*comprehend.StartTopicsDetectionJobOutput, error)
-    StartTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) *ComprehendStartTopicsDetectionJobResult
+       StartTopicsDetectionJob(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) (*comprehend.StartTopicsDetectionJobOutput, error)
+       StartTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) *ComprehendStartTopicsDetectionJobResult
 
-    StopDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) (*comprehend.StopDominantLanguageDetectionJobOutput, error)
-    StopDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) *ComprehendStopDominantLanguageDetectionJobResult
+       StopDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) (*comprehend.StopDominantLanguageDetectionJobOutput, error)
+       StopDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) *ComprehendStopDominantLanguageDetectionJobResult
 
-    StopEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) (*comprehend.StopEntitiesDetectionJobOutput, error)
-    StopEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) *ComprehendStopEntitiesDetectionJobResult
+       StopEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) (*comprehend.StopEntitiesDetectionJobOutput, error)
+       StopEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) *ComprehendStopEntitiesDetectionJobResult
 
-    StopKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) (*comprehend.StopKeyPhrasesDetectionJobOutput, error)
-    StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) *ComprehendStopKeyPhrasesDetectionJobResult
+       StopKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) (*comprehend.StopKeyPhrasesDetectionJobOutput, error)
+       StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) *ComprehendStopKeyPhrasesDetectionJobResult
 
-    StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error)
-    StopSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) *ComprehendStopSentimentDetectionJobResult
+       StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error)
+       StopSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) *ComprehendStopSentimentDetectionJobResult
 
-    StopTrainingDocumentClassifier(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) (*comprehend.StopTrainingDocumentClassifierOutput, error)
-    StopTrainingDocumentClassifierAsync(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) *ComprehendStopTrainingDocumentClassifierResult
+       StopTrainingDocumentClassifier(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) (*comprehend.StopTrainingDocumentClassifierOutput, error)
+       StopTrainingDocumentClassifierAsync(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) *ComprehendStopTrainingDocumentClassifierResult
 
-    StopTrainingEntityRecognizer(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) (*comprehend.StopTrainingEntityRecognizerOutput, error)
-    StopTrainingEntityRecognizerAsync(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) *ComprehendStopTrainingEntityRecognizerResult
+       StopTrainingEntityRecognizer(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) (*comprehend.StopTrainingEntityRecognizerOutput, error)
+       StopTrainingEntityRecognizerAsync(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) *ComprehendStopTrainingEntityRecognizerResult
 
-    TagResource(ctx workflow.Context, input *comprehend.TagResourceInput) (*comprehend.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *comprehend.TagResourceInput) *ComprehendTagResourceResult
+       TagResource(ctx workflow.Context, input *comprehend.TagResourceInput) (*comprehend.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *comprehend.TagResourceInput) *ComprehendTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *comprehend.UntagResourceInput) (*comprehend.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *comprehend.UntagResourceInput) *ComprehendUntagResourceResult
+       UntagResource(ctx workflow.Context, input *comprehend.UntagResourceInput) (*comprehend.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *comprehend.UntagResourceInput) *ComprehendUntagResourceResult
 
-    UpdateEndpoint(ctx workflow.Context, input *comprehend.UpdateEndpointInput) (*comprehend.UpdateEndpointOutput, error)
-    UpdateEndpointAsync(ctx workflow.Context, input *comprehend.UpdateEndpointInput) *ComprehendUpdateEndpointResult
+       UpdateEndpoint(ctx workflow.Context, input *comprehend.UpdateEndpointInput) (*comprehend.UpdateEndpointOutput, error)
+       UpdateEndpointAsync(ctx workflow.Context, input *comprehend.UpdateEndpointInput) *ComprehendUpdateEndpointResult
 }
 
 type ComprehendBatchDetectDominantLanguageResult struct {

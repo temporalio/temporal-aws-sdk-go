@@ -7,62 +7,62 @@ import (
 )
 
 type DataPipelineClient interface {
-    ActivatePipeline(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) (*datapipeline.ActivatePipelineOutput, error)
-    ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DatapipelineActivatePipelineResult
+       ActivatePipeline(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) (*datapipeline.ActivatePipelineOutput, error)
+       ActivatePipelineAsync(ctx workflow.Context, input *datapipeline.ActivatePipelineInput) *DatapipelineActivatePipelineResult
 
-    AddTags(ctx workflow.Context, input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DatapipelineAddTagsResult
+       AddTags(ctx workflow.Context, input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *datapipeline.AddTagsInput) *DatapipelineAddTagsResult
 
-    CreatePipeline(ctx workflow.Context, input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error)
-    CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DatapipelineCreatePipelineResult
+       CreatePipeline(ctx workflow.Context, input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error)
+       CreatePipelineAsync(ctx workflow.Context, input *datapipeline.CreatePipelineInput) *DatapipelineCreatePipelineResult
 
-    DeactivatePipeline(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error)
-    DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DatapipelineDeactivatePipelineResult
+       DeactivatePipeline(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error)
+       DeactivatePipelineAsync(ctx workflow.Context, input *datapipeline.DeactivatePipelineInput) *DatapipelineDeactivatePipelineResult
 
-    DeletePipeline(ctx workflow.Context, input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error)
-    DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DatapipelineDeletePipelineResult
+       DeletePipeline(ctx workflow.Context, input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error)
+       DeletePipelineAsync(ctx workflow.Context, input *datapipeline.DeletePipelineInput) *DatapipelineDeletePipelineResult
 
-    DescribeObjects(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error)
-    DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DatapipelineDescribeObjectsResult
+       DescribeObjects(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error)
+       DescribeObjectsAsync(ctx workflow.Context, input *datapipeline.DescribeObjectsInput) *DatapipelineDescribeObjectsResult
 
-    DescribePipelines(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error)
-    DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DatapipelineDescribePipelinesResult
+       DescribePipelines(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error)
+       DescribePipelinesAsync(ctx workflow.Context, input *datapipeline.DescribePipelinesInput) *DatapipelineDescribePipelinesResult
 
-    EvaluateExpression(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error)
-    EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DatapipelineEvaluateExpressionResult
+       EvaluateExpression(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error)
+       EvaluateExpressionAsync(ctx workflow.Context, input *datapipeline.EvaluateExpressionInput) *DatapipelineEvaluateExpressionResult
 
-    GetPipelineDefinition(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error)
-    GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DatapipelineGetPipelineDefinitionResult
+       GetPipelineDefinition(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error)
+       GetPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.GetPipelineDefinitionInput) *DatapipelineGetPipelineDefinitionResult
 
-    ListPipelines(ctx workflow.Context, input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error)
-    ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DatapipelineListPipelinesResult
+       ListPipelines(ctx workflow.Context, input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error)
+       ListPipelinesAsync(ctx workflow.Context, input *datapipeline.ListPipelinesInput) *DatapipelineListPipelinesResult
 
-    PollForTask(ctx workflow.Context, input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error)
-    PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DatapipelinePollForTaskResult
+       PollForTask(ctx workflow.Context, input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error)
+       PollForTaskAsync(ctx workflow.Context, input *datapipeline.PollForTaskInput) *DatapipelinePollForTaskResult
 
-    PutPipelineDefinition(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error)
-    PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DatapipelinePutPipelineDefinitionResult
+       PutPipelineDefinition(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error)
+       PutPipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.PutPipelineDefinitionInput) *DatapipelinePutPipelineDefinitionResult
 
-    QueryObjects(ctx workflow.Context, input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error)
-    QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DatapipelineQueryObjectsResult
+       QueryObjects(ctx workflow.Context, input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error)
+       QueryObjectsAsync(ctx workflow.Context, input *datapipeline.QueryObjectsInput) *DatapipelineQueryObjectsResult
 
-    RemoveTags(ctx workflow.Context, input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error)
-    RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DatapipelineRemoveTagsResult
+       RemoveTags(ctx workflow.Context, input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error)
+       RemoveTagsAsync(ctx workflow.Context, input *datapipeline.RemoveTagsInput) *DatapipelineRemoveTagsResult
 
-    ReportTaskProgress(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error)
-    ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DatapipelineReportTaskProgressResult
+       ReportTaskProgress(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error)
+       ReportTaskProgressAsync(ctx workflow.Context, input *datapipeline.ReportTaskProgressInput) *DatapipelineReportTaskProgressResult
 
-    ReportTaskRunnerHeartbeat(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error)
-    ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DatapipelineReportTaskRunnerHeartbeatResult
+       ReportTaskRunnerHeartbeat(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error)
+       ReportTaskRunnerHeartbeatAsync(ctx workflow.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) *DatapipelineReportTaskRunnerHeartbeatResult
 
-    SetStatus(ctx workflow.Context, input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error)
-    SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DatapipelineSetStatusResult
+       SetStatus(ctx workflow.Context, input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error)
+       SetStatusAsync(ctx workflow.Context, input *datapipeline.SetStatusInput) *DatapipelineSetStatusResult
 
-    SetTaskStatus(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error)
-    SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DatapipelineSetTaskStatusResult
+       SetTaskStatus(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error)
+       SetTaskStatusAsync(ctx workflow.Context, input *datapipeline.SetTaskStatusInput) *DatapipelineSetTaskStatusResult
 
-    ValidatePipelineDefinition(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error)
-    ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DatapipelineValidatePipelineDefinitionResult
+       ValidatePipelineDefinition(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error)
+       ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DatapipelineValidatePipelineDefinitionResult
 }
 
 type DatapipelineActivatePipelineResult struct {

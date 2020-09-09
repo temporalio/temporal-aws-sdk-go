@@ -7,38 +7,38 @@ import (
 )
 
 type CodeStarConnectionsClient interface {
-    CreateConnection(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error)
-    CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CodestarconnectionsCreateConnectionResult
+       CreateConnection(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error)
+       CreateConnectionAsync(ctx workflow.Context, input *codestarconnections.CreateConnectionInput) *CodestarconnectionsCreateConnectionResult
 
-    CreateHost(ctx workflow.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error)
-    CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CodestarconnectionsCreateHostResult
+       CreateHost(ctx workflow.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error)
+       CreateHostAsync(ctx workflow.Context, input *codestarconnections.CreateHostInput) *CodestarconnectionsCreateHostResult
 
-    DeleteConnection(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error)
-    DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *CodestarconnectionsDeleteConnectionResult
+       DeleteConnection(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error)
+       DeleteConnectionAsync(ctx workflow.Context, input *codestarconnections.DeleteConnectionInput) *CodestarconnectionsDeleteConnectionResult
 
-    DeleteHost(ctx workflow.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error)
-    DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *CodestarconnectionsDeleteHostResult
+       DeleteHost(ctx workflow.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error)
+       DeleteHostAsync(ctx workflow.Context, input *codestarconnections.DeleteHostInput) *CodestarconnectionsDeleteHostResult
 
-    GetConnection(ctx workflow.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error)
-    GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *CodestarconnectionsGetConnectionResult
+       GetConnection(ctx workflow.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error)
+       GetConnectionAsync(ctx workflow.Context, input *codestarconnections.GetConnectionInput) *CodestarconnectionsGetConnectionResult
 
-    GetHost(ctx workflow.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error)
-    GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *CodestarconnectionsGetHostResult
+       GetHost(ctx workflow.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error)
+       GetHostAsync(ctx workflow.Context, input *codestarconnections.GetHostInput) *CodestarconnectionsGetHostResult
 
-    ListConnections(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error)
-    ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *CodestarconnectionsListConnectionsResult
+       ListConnections(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error)
+       ListConnectionsAsync(ctx workflow.Context, input *codestarconnections.ListConnectionsInput) *CodestarconnectionsListConnectionsResult
 
-    ListHosts(ctx workflow.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error)
-    ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *CodestarconnectionsListHostsResult
+       ListHosts(ctx workflow.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error)
+       ListHostsAsync(ctx workflow.Context, input *codestarconnections.ListHostsInput) *CodestarconnectionsListHostsResult
 
-    ListTagsForResource(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *CodestarconnectionsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *codestarconnections.ListTagsForResourceInput) *CodestarconnectionsListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *CodestarconnectionsTagResourceResult
+       TagResource(ctx workflow.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *codestarconnections.TagResourceInput) *CodestarconnectionsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodestarconnectionsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodestarconnectionsUntagResourceResult
 }
 
 type CodestarconnectionsCreateConnectionResult struct {

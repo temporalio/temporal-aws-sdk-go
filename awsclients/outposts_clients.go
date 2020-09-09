@@ -7,26 +7,26 @@ import (
 )
 
 type OutpostsClient interface {
-    CreateOutpost(ctx workflow.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error)
-    CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostResult
+       CreateOutpost(ctx workflow.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error)
+       CreateOutpostAsync(ctx workflow.Context, input *outposts.CreateOutpostInput) *OutpostsCreateOutpostResult
 
-    DeleteOutpost(ctx workflow.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error)
-    DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostResult
+       DeleteOutpost(ctx workflow.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error)
+       DeleteOutpostAsync(ctx workflow.Context, input *outposts.DeleteOutpostInput) *OutpostsDeleteOutpostResult
 
-    DeleteSite(ctx workflow.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error)
-    DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteResult
+       DeleteSite(ctx workflow.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error)
+       DeleteSiteAsync(ctx workflow.Context, input *outposts.DeleteSiteInput) *OutpostsDeleteSiteResult
 
-    GetOutpost(ctx workflow.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error)
-    GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostResult
+       GetOutpost(ctx workflow.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error)
+       GetOutpostAsync(ctx workflow.Context, input *outposts.GetOutpostInput) *OutpostsGetOutpostResult
 
-    GetOutpostInstanceTypes(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error)
-    GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesResult
+       GetOutpostInstanceTypes(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error)
+       GetOutpostInstanceTypesAsync(ctx workflow.Context, input *outposts.GetOutpostInstanceTypesInput) *OutpostsGetOutpostInstanceTypesResult
 
-    ListOutposts(ctx workflow.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error)
-    ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsResult
+       ListOutposts(ctx workflow.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error)
+       ListOutpostsAsync(ctx workflow.Context, input *outposts.ListOutpostsInput) *OutpostsListOutpostsResult
 
-    ListSites(ctx workflow.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error)
-    ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesResult
+       ListSites(ctx workflow.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error)
+       ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesResult
 }
 
 type OutpostsCreateOutpostResult struct {

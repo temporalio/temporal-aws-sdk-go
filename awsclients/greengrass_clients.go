@@ -7,275 +7,275 @@ import (
 )
 
 type GreengrassClient interface {
-    AssociateRoleToGroup(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) (*greengrass.AssociateRoleToGroupOutput, error)
-    AssociateRoleToGroupAsync(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) *GreengrassAssociateRoleToGroupResult
+       AssociateRoleToGroup(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) (*greengrass.AssociateRoleToGroupOutput, error)
+       AssociateRoleToGroupAsync(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) *GreengrassAssociateRoleToGroupResult
 
-    AssociateServiceRoleToAccount(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) (*greengrass.AssociateServiceRoleToAccountOutput, error)
-    AssociateServiceRoleToAccountAsync(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) *GreengrassAssociateServiceRoleToAccountResult
+       AssociateServiceRoleToAccount(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) (*greengrass.AssociateServiceRoleToAccountOutput, error)
+       AssociateServiceRoleToAccountAsync(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) *GreengrassAssociateServiceRoleToAccountResult
 
-    CreateConnectorDefinition(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) (*greengrass.CreateConnectorDefinitionOutput, error)
-    CreateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) *GreengrassCreateConnectorDefinitionResult
+       CreateConnectorDefinition(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) (*greengrass.CreateConnectorDefinitionOutput, error)
+       CreateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) *GreengrassCreateConnectorDefinitionResult
 
-    CreateConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) (*greengrass.CreateConnectorDefinitionVersionOutput, error)
-    CreateConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) *GreengrassCreateConnectorDefinitionVersionResult
+       CreateConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) (*greengrass.CreateConnectorDefinitionVersionOutput, error)
+       CreateConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) *GreengrassCreateConnectorDefinitionVersionResult
 
-    CreateCoreDefinition(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) (*greengrass.CreateCoreDefinitionOutput, error)
-    CreateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) *GreengrassCreateCoreDefinitionResult
+       CreateCoreDefinition(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) (*greengrass.CreateCoreDefinitionOutput, error)
+       CreateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) *GreengrassCreateCoreDefinitionResult
 
-    CreateCoreDefinitionVersion(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) (*greengrass.CreateCoreDefinitionVersionOutput, error)
-    CreateCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) *GreengrassCreateCoreDefinitionVersionResult
+       CreateCoreDefinitionVersion(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) (*greengrass.CreateCoreDefinitionVersionOutput, error)
+       CreateCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) *GreengrassCreateCoreDefinitionVersionResult
 
-    CreateDeployment(ctx workflow.Context, input *greengrass.CreateDeploymentInput) (*greengrass.CreateDeploymentOutput, error)
-    CreateDeploymentAsync(ctx workflow.Context, input *greengrass.CreateDeploymentInput) *GreengrassCreateDeploymentResult
+       CreateDeployment(ctx workflow.Context, input *greengrass.CreateDeploymentInput) (*greengrass.CreateDeploymentOutput, error)
+       CreateDeploymentAsync(ctx workflow.Context, input *greengrass.CreateDeploymentInput) *GreengrassCreateDeploymentResult
 
-    CreateDeviceDefinition(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) (*greengrass.CreateDeviceDefinitionOutput, error)
-    CreateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) *GreengrassCreateDeviceDefinitionResult
+       CreateDeviceDefinition(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) (*greengrass.CreateDeviceDefinitionOutput, error)
+       CreateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) *GreengrassCreateDeviceDefinitionResult
 
-    CreateDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) (*greengrass.CreateDeviceDefinitionVersionOutput, error)
-    CreateDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) *GreengrassCreateDeviceDefinitionVersionResult
+       CreateDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) (*greengrass.CreateDeviceDefinitionVersionOutput, error)
+       CreateDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) *GreengrassCreateDeviceDefinitionVersionResult
 
-    CreateFunctionDefinition(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) (*greengrass.CreateFunctionDefinitionOutput, error)
-    CreateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) *GreengrassCreateFunctionDefinitionResult
+       CreateFunctionDefinition(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) (*greengrass.CreateFunctionDefinitionOutput, error)
+       CreateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) *GreengrassCreateFunctionDefinitionResult
 
-    CreateFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) (*greengrass.CreateFunctionDefinitionVersionOutput, error)
-    CreateFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) *GreengrassCreateFunctionDefinitionVersionResult
+       CreateFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) (*greengrass.CreateFunctionDefinitionVersionOutput, error)
+       CreateFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) *GreengrassCreateFunctionDefinitionVersionResult
 
-    CreateGroup(ctx workflow.Context, input *greengrass.CreateGroupInput) (*greengrass.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *greengrass.CreateGroupInput) *GreengrassCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *greengrass.CreateGroupInput) (*greengrass.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *greengrass.CreateGroupInput) *GreengrassCreateGroupResult
 
-    CreateGroupCertificateAuthority(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) (*greengrass.CreateGroupCertificateAuthorityOutput, error)
-    CreateGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) *GreengrassCreateGroupCertificateAuthorityResult
+       CreateGroupCertificateAuthority(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) (*greengrass.CreateGroupCertificateAuthorityOutput, error)
+       CreateGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) *GreengrassCreateGroupCertificateAuthorityResult
 
-    CreateGroupVersion(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) (*greengrass.CreateGroupVersionOutput, error)
-    CreateGroupVersionAsync(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) *GreengrassCreateGroupVersionResult
+       CreateGroupVersion(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) (*greengrass.CreateGroupVersionOutput, error)
+       CreateGroupVersionAsync(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) *GreengrassCreateGroupVersionResult
 
-    CreateLoggerDefinition(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) (*greengrass.CreateLoggerDefinitionOutput, error)
-    CreateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) *GreengrassCreateLoggerDefinitionResult
+       CreateLoggerDefinition(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) (*greengrass.CreateLoggerDefinitionOutput, error)
+       CreateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) *GreengrassCreateLoggerDefinitionResult
 
-    CreateLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) (*greengrass.CreateLoggerDefinitionVersionOutput, error)
-    CreateLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) *GreengrassCreateLoggerDefinitionVersionResult
+       CreateLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) (*greengrass.CreateLoggerDefinitionVersionOutput, error)
+       CreateLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) *GreengrassCreateLoggerDefinitionVersionResult
 
-    CreateResourceDefinition(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) (*greengrass.CreateResourceDefinitionOutput, error)
-    CreateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) *GreengrassCreateResourceDefinitionResult
+       CreateResourceDefinition(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) (*greengrass.CreateResourceDefinitionOutput, error)
+       CreateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) *GreengrassCreateResourceDefinitionResult
 
-    CreateResourceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) (*greengrass.CreateResourceDefinitionVersionOutput, error)
-    CreateResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) *GreengrassCreateResourceDefinitionVersionResult
+       CreateResourceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) (*greengrass.CreateResourceDefinitionVersionOutput, error)
+       CreateResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) *GreengrassCreateResourceDefinitionVersionResult
 
-    CreateSoftwareUpdateJob(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) (*greengrass.CreateSoftwareUpdateJobOutput, error)
-    CreateSoftwareUpdateJobAsync(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) *GreengrassCreateSoftwareUpdateJobResult
+       CreateSoftwareUpdateJob(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) (*greengrass.CreateSoftwareUpdateJobOutput, error)
+       CreateSoftwareUpdateJobAsync(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) *GreengrassCreateSoftwareUpdateJobResult
 
-    CreateSubscriptionDefinition(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) (*greengrass.CreateSubscriptionDefinitionOutput, error)
-    CreateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) *GreengrassCreateSubscriptionDefinitionResult
+       CreateSubscriptionDefinition(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) (*greengrass.CreateSubscriptionDefinitionOutput, error)
+       CreateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) *GreengrassCreateSubscriptionDefinitionResult
 
-    CreateSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) (*greengrass.CreateSubscriptionDefinitionVersionOutput, error)
-    CreateSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) *GreengrassCreateSubscriptionDefinitionVersionResult
+       CreateSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) (*greengrass.CreateSubscriptionDefinitionVersionOutput, error)
+       CreateSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) *GreengrassCreateSubscriptionDefinitionVersionResult
 
-    DeleteConnectorDefinition(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) (*greengrass.DeleteConnectorDefinitionOutput, error)
-    DeleteConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) *GreengrassDeleteConnectorDefinitionResult
+       DeleteConnectorDefinition(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) (*greengrass.DeleteConnectorDefinitionOutput, error)
+       DeleteConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) *GreengrassDeleteConnectorDefinitionResult
 
-    DeleteCoreDefinition(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) (*greengrass.DeleteCoreDefinitionOutput, error)
-    DeleteCoreDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) *GreengrassDeleteCoreDefinitionResult
+       DeleteCoreDefinition(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) (*greengrass.DeleteCoreDefinitionOutput, error)
+       DeleteCoreDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) *GreengrassDeleteCoreDefinitionResult
 
-    DeleteDeviceDefinition(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) (*greengrass.DeleteDeviceDefinitionOutput, error)
-    DeleteDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) *GreengrassDeleteDeviceDefinitionResult
+       DeleteDeviceDefinition(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) (*greengrass.DeleteDeviceDefinitionOutput, error)
+       DeleteDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) *GreengrassDeleteDeviceDefinitionResult
 
-    DeleteFunctionDefinition(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) (*greengrass.DeleteFunctionDefinitionOutput, error)
-    DeleteFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) *GreengrassDeleteFunctionDefinitionResult
+       DeleteFunctionDefinition(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) (*greengrass.DeleteFunctionDefinitionOutput, error)
+       DeleteFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) *GreengrassDeleteFunctionDefinitionResult
 
-    DeleteGroup(ctx workflow.Context, input *greengrass.DeleteGroupInput) (*greengrass.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *greengrass.DeleteGroupInput) *GreengrassDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *greengrass.DeleteGroupInput) (*greengrass.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *greengrass.DeleteGroupInput) *GreengrassDeleteGroupResult
 
-    DeleteLoggerDefinition(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) (*greengrass.DeleteLoggerDefinitionOutput, error)
-    DeleteLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) *GreengrassDeleteLoggerDefinitionResult
+       DeleteLoggerDefinition(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) (*greengrass.DeleteLoggerDefinitionOutput, error)
+       DeleteLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) *GreengrassDeleteLoggerDefinitionResult
 
-    DeleteResourceDefinition(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) (*greengrass.DeleteResourceDefinitionOutput, error)
-    DeleteResourceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) *GreengrassDeleteResourceDefinitionResult
+       DeleteResourceDefinition(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) (*greengrass.DeleteResourceDefinitionOutput, error)
+       DeleteResourceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) *GreengrassDeleteResourceDefinitionResult
 
-    DeleteSubscriptionDefinition(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) (*greengrass.DeleteSubscriptionDefinitionOutput, error)
-    DeleteSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) *GreengrassDeleteSubscriptionDefinitionResult
+       DeleteSubscriptionDefinition(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) (*greengrass.DeleteSubscriptionDefinitionOutput, error)
+       DeleteSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) *GreengrassDeleteSubscriptionDefinitionResult
 
-    DisassociateRoleFromGroup(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) (*greengrass.DisassociateRoleFromGroupOutput, error)
-    DisassociateRoleFromGroupAsync(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) *GreengrassDisassociateRoleFromGroupResult
+       DisassociateRoleFromGroup(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) (*greengrass.DisassociateRoleFromGroupOutput, error)
+       DisassociateRoleFromGroupAsync(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) *GreengrassDisassociateRoleFromGroupResult
 
-    DisassociateServiceRoleFromAccount(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) (*greengrass.DisassociateServiceRoleFromAccountOutput, error)
-    DisassociateServiceRoleFromAccountAsync(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) *GreengrassDisassociateServiceRoleFromAccountResult
+       DisassociateServiceRoleFromAccount(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) (*greengrass.DisassociateServiceRoleFromAccountOutput, error)
+       DisassociateServiceRoleFromAccountAsync(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) *GreengrassDisassociateServiceRoleFromAccountResult
 
-    GetAssociatedRole(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) (*greengrass.GetAssociatedRoleOutput, error)
-    GetAssociatedRoleAsync(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) *GreengrassGetAssociatedRoleResult
+       GetAssociatedRole(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) (*greengrass.GetAssociatedRoleOutput, error)
+       GetAssociatedRoleAsync(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) *GreengrassGetAssociatedRoleResult
 
-    GetBulkDeploymentStatus(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) (*greengrass.GetBulkDeploymentStatusOutput, error)
-    GetBulkDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) *GreengrassGetBulkDeploymentStatusResult
+       GetBulkDeploymentStatus(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) (*greengrass.GetBulkDeploymentStatusOutput, error)
+       GetBulkDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) *GreengrassGetBulkDeploymentStatusResult
 
-    GetConnectivityInfo(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) (*greengrass.GetConnectivityInfoOutput, error)
-    GetConnectivityInfoAsync(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) *GreengrassGetConnectivityInfoResult
+       GetConnectivityInfo(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) (*greengrass.GetConnectivityInfoOutput, error)
+       GetConnectivityInfoAsync(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) *GreengrassGetConnectivityInfoResult
 
-    GetConnectorDefinition(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) (*greengrass.GetConnectorDefinitionOutput, error)
-    GetConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) *GreengrassGetConnectorDefinitionResult
+       GetConnectorDefinition(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) (*greengrass.GetConnectorDefinitionOutput, error)
+       GetConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) *GreengrassGetConnectorDefinitionResult
 
-    GetConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) (*greengrass.GetConnectorDefinitionVersionOutput, error)
-    GetConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) *GreengrassGetConnectorDefinitionVersionResult
+       GetConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) (*greengrass.GetConnectorDefinitionVersionOutput, error)
+       GetConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) *GreengrassGetConnectorDefinitionVersionResult
 
-    GetCoreDefinition(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) (*greengrass.GetCoreDefinitionOutput, error)
-    GetCoreDefinitionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) *GreengrassGetCoreDefinitionResult
+       GetCoreDefinition(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) (*greengrass.GetCoreDefinitionOutput, error)
+       GetCoreDefinitionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) *GreengrassGetCoreDefinitionResult
 
-    GetCoreDefinitionVersion(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) (*greengrass.GetCoreDefinitionVersionOutput, error)
-    GetCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) *GreengrassGetCoreDefinitionVersionResult
+       GetCoreDefinitionVersion(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) (*greengrass.GetCoreDefinitionVersionOutput, error)
+       GetCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) *GreengrassGetCoreDefinitionVersionResult
 
-    GetDeploymentStatus(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) (*greengrass.GetDeploymentStatusOutput, error)
-    GetDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) *GreengrassGetDeploymentStatusResult
+       GetDeploymentStatus(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) (*greengrass.GetDeploymentStatusOutput, error)
+       GetDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) *GreengrassGetDeploymentStatusResult
 
-    GetDeviceDefinition(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) (*greengrass.GetDeviceDefinitionOutput, error)
-    GetDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) *GreengrassGetDeviceDefinitionResult
+       GetDeviceDefinition(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) (*greengrass.GetDeviceDefinitionOutput, error)
+       GetDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) *GreengrassGetDeviceDefinitionResult
 
-    GetDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) (*greengrass.GetDeviceDefinitionVersionOutput, error)
-    GetDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) *GreengrassGetDeviceDefinitionVersionResult
+       GetDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) (*greengrass.GetDeviceDefinitionVersionOutput, error)
+       GetDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) *GreengrassGetDeviceDefinitionVersionResult
 
-    GetFunctionDefinition(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) (*greengrass.GetFunctionDefinitionOutput, error)
-    GetFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) *GreengrassGetFunctionDefinitionResult
+       GetFunctionDefinition(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) (*greengrass.GetFunctionDefinitionOutput, error)
+       GetFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) *GreengrassGetFunctionDefinitionResult
 
-    GetFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) (*greengrass.GetFunctionDefinitionVersionOutput, error)
-    GetFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) *GreengrassGetFunctionDefinitionVersionResult
+       GetFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) (*greengrass.GetFunctionDefinitionVersionOutput, error)
+       GetFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) *GreengrassGetFunctionDefinitionVersionResult
 
-    GetGroup(ctx workflow.Context, input *greengrass.GetGroupInput) (*greengrass.GetGroupOutput, error)
-    GetGroupAsync(ctx workflow.Context, input *greengrass.GetGroupInput) *GreengrassGetGroupResult
+       GetGroup(ctx workflow.Context, input *greengrass.GetGroupInput) (*greengrass.GetGroupOutput, error)
+       GetGroupAsync(ctx workflow.Context, input *greengrass.GetGroupInput) *GreengrassGetGroupResult
 
-    GetGroupCertificateAuthority(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) (*greengrass.GetGroupCertificateAuthorityOutput, error)
-    GetGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) *GreengrassGetGroupCertificateAuthorityResult
+       GetGroupCertificateAuthority(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) (*greengrass.GetGroupCertificateAuthorityOutput, error)
+       GetGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) *GreengrassGetGroupCertificateAuthorityResult
 
-    GetGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) (*greengrass.GetGroupCertificateConfigurationOutput, error)
-    GetGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) *GreengrassGetGroupCertificateConfigurationResult
+       GetGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) (*greengrass.GetGroupCertificateConfigurationOutput, error)
+       GetGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) *GreengrassGetGroupCertificateConfigurationResult
 
-    GetGroupVersion(ctx workflow.Context, input *greengrass.GetGroupVersionInput) (*greengrass.GetGroupVersionOutput, error)
-    GetGroupVersionAsync(ctx workflow.Context, input *greengrass.GetGroupVersionInput) *GreengrassGetGroupVersionResult
+       GetGroupVersion(ctx workflow.Context, input *greengrass.GetGroupVersionInput) (*greengrass.GetGroupVersionOutput, error)
+       GetGroupVersionAsync(ctx workflow.Context, input *greengrass.GetGroupVersionInput) *GreengrassGetGroupVersionResult
 
-    GetLoggerDefinition(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) (*greengrass.GetLoggerDefinitionOutput, error)
-    GetLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) *GreengrassGetLoggerDefinitionResult
+       GetLoggerDefinition(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) (*greengrass.GetLoggerDefinitionOutput, error)
+       GetLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) *GreengrassGetLoggerDefinitionResult
 
-    GetLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) (*greengrass.GetLoggerDefinitionVersionOutput, error)
-    GetLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) *GreengrassGetLoggerDefinitionVersionResult
+       GetLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) (*greengrass.GetLoggerDefinitionVersionOutput, error)
+       GetLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) *GreengrassGetLoggerDefinitionVersionResult
 
-    GetResourceDefinition(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) (*greengrass.GetResourceDefinitionOutput, error)
-    GetResourceDefinitionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) *GreengrassGetResourceDefinitionResult
+       GetResourceDefinition(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) (*greengrass.GetResourceDefinitionOutput, error)
+       GetResourceDefinitionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) *GreengrassGetResourceDefinitionResult
 
-    GetResourceDefinitionVersion(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) (*greengrass.GetResourceDefinitionVersionOutput, error)
-    GetResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) *GreengrassGetResourceDefinitionVersionResult
+       GetResourceDefinitionVersion(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) (*greengrass.GetResourceDefinitionVersionOutput, error)
+       GetResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) *GreengrassGetResourceDefinitionVersionResult
 
-    GetServiceRoleForAccount(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) (*greengrass.GetServiceRoleForAccountOutput, error)
-    GetServiceRoleForAccountAsync(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) *GreengrassGetServiceRoleForAccountResult
+       GetServiceRoleForAccount(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) (*greengrass.GetServiceRoleForAccountOutput, error)
+       GetServiceRoleForAccountAsync(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) *GreengrassGetServiceRoleForAccountResult
 
-    GetSubscriptionDefinition(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) (*greengrass.GetSubscriptionDefinitionOutput, error)
-    GetSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) *GreengrassGetSubscriptionDefinitionResult
+       GetSubscriptionDefinition(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) (*greengrass.GetSubscriptionDefinitionOutput, error)
+       GetSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) *GreengrassGetSubscriptionDefinitionResult
 
-    GetSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) (*greengrass.GetSubscriptionDefinitionVersionOutput, error)
-    GetSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) *GreengrassGetSubscriptionDefinitionVersionResult
+       GetSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) (*greengrass.GetSubscriptionDefinitionVersionOutput, error)
+       GetSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) *GreengrassGetSubscriptionDefinitionVersionResult
 
-    ListBulkDeploymentDetailedReports(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error)
-    ListBulkDeploymentDetailedReportsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) *GreengrassListBulkDeploymentDetailedReportsResult
+       ListBulkDeploymentDetailedReports(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error)
+       ListBulkDeploymentDetailedReportsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) *GreengrassListBulkDeploymentDetailedReportsResult
 
-    ListBulkDeployments(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) (*greengrass.ListBulkDeploymentsOutput, error)
-    ListBulkDeploymentsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) *GreengrassListBulkDeploymentsResult
+       ListBulkDeployments(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) (*greengrass.ListBulkDeploymentsOutput, error)
+       ListBulkDeploymentsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) *GreengrassListBulkDeploymentsResult
 
-    ListConnectorDefinitionVersions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) (*greengrass.ListConnectorDefinitionVersionsOutput, error)
-    ListConnectorDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) *GreengrassListConnectorDefinitionVersionsResult
+       ListConnectorDefinitionVersions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) (*greengrass.ListConnectorDefinitionVersionsOutput, error)
+       ListConnectorDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) *GreengrassListConnectorDefinitionVersionsResult
 
-    ListConnectorDefinitions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) (*greengrass.ListConnectorDefinitionsOutput, error)
-    ListConnectorDefinitionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) *GreengrassListConnectorDefinitionsResult
+       ListConnectorDefinitions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) (*greengrass.ListConnectorDefinitionsOutput, error)
+       ListConnectorDefinitionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) *GreengrassListConnectorDefinitionsResult
 
-    ListCoreDefinitionVersions(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) (*greengrass.ListCoreDefinitionVersionsOutput, error)
-    ListCoreDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) *GreengrassListCoreDefinitionVersionsResult
+       ListCoreDefinitionVersions(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) (*greengrass.ListCoreDefinitionVersionsOutput, error)
+       ListCoreDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) *GreengrassListCoreDefinitionVersionsResult
 
-    ListCoreDefinitions(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) (*greengrass.ListCoreDefinitionsOutput, error)
-    ListCoreDefinitionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) *GreengrassListCoreDefinitionsResult
+       ListCoreDefinitions(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) (*greengrass.ListCoreDefinitionsOutput, error)
+       ListCoreDefinitionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) *GreengrassListCoreDefinitionsResult
 
-    ListDeployments(ctx workflow.Context, input *greengrass.ListDeploymentsInput) (*greengrass.ListDeploymentsOutput, error)
-    ListDeploymentsAsync(ctx workflow.Context, input *greengrass.ListDeploymentsInput) *GreengrassListDeploymentsResult
+       ListDeployments(ctx workflow.Context, input *greengrass.ListDeploymentsInput) (*greengrass.ListDeploymentsOutput, error)
+       ListDeploymentsAsync(ctx workflow.Context, input *greengrass.ListDeploymentsInput) *GreengrassListDeploymentsResult
 
-    ListDeviceDefinitionVersions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) (*greengrass.ListDeviceDefinitionVersionsOutput, error)
-    ListDeviceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) *GreengrassListDeviceDefinitionVersionsResult
+       ListDeviceDefinitionVersions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) (*greengrass.ListDeviceDefinitionVersionsOutput, error)
+       ListDeviceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) *GreengrassListDeviceDefinitionVersionsResult
 
-    ListDeviceDefinitions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) (*greengrass.ListDeviceDefinitionsOutput, error)
-    ListDeviceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) *GreengrassListDeviceDefinitionsResult
+       ListDeviceDefinitions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) (*greengrass.ListDeviceDefinitionsOutput, error)
+       ListDeviceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) *GreengrassListDeviceDefinitionsResult
 
-    ListFunctionDefinitionVersions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) (*greengrass.ListFunctionDefinitionVersionsOutput, error)
-    ListFunctionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) *GreengrassListFunctionDefinitionVersionsResult
+       ListFunctionDefinitionVersions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) (*greengrass.ListFunctionDefinitionVersionsOutput, error)
+       ListFunctionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) *GreengrassListFunctionDefinitionVersionsResult
 
-    ListFunctionDefinitions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) (*greengrass.ListFunctionDefinitionsOutput, error)
-    ListFunctionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) *GreengrassListFunctionDefinitionsResult
+       ListFunctionDefinitions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) (*greengrass.ListFunctionDefinitionsOutput, error)
+       ListFunctionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) *GreengrassListFunctionDefinitionsResult
 
-    ListGroupCertificateAuthorities(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) (*greengrass.ListGroupCertificateAuthoritiesOutput, error)
-    ListGroupCertificateAuthoritiesAsync(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) *GreengrassListGroupCertificateAuthoritiesResult
+       ListGroupCertificateAuthorities(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) (*greengrass.ListGroupCertificateAuthoritiesOutput, error)
+       ListGroupCertificateAuthoritiesAsync(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) *GreengrassListGroupCertificateAuthoritiesResult
 
-    ListGroupVersions(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) (*greengrass.ListGroupVersionsOutput, error)
-    ListGroupVersionsAsync(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) *GreengrassListGroupVersionsResult
+       ListGroupVersions(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) (*greengrass.ListGroupVersionsOutput, error)
+       ListGroupVersionsAsync(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) *GreengrassListGroupVersionsResult
 
-    ListGroups(ctx workflow.Context, input *greengrass.ListGroupsInput) (*greengrass.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *greengrass.ListGroupsInput) *GreengrassListGroupsResult
+       ListGroups(ctx workflow.Context, input *greengrass.ListGroupsInput) (*greengrass.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *greengrass.ListGroupsInput) *GreengrassListGroupsResult
 
-    ListLoggerDefinitionVersions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) (*greengrass.ListLoggerDefinitionVersionsOutput, error)
-    ListLoggerDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) *GreengrassListLoggerDefinitionVersionsResult
+       ListLoggerDefinitionVersions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) (*greengrass.ListLoggerDefinitionVersionsOutput, error)
+       ListLoggerDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) *GreengrassListLoggerDefinitionVersionsResult
 
-    ListLoggerDefinitions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) (*greengrass.ListLoggerDefinitionsOutput, error)
-    ListLoggerDefinitionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) *GreengrassListLoggerDefinitionsResult
+       ListLoggerDefinitions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) (*greengrass.ListLoggerDefinitionsOutput, error)
+       ListLoggerDefinitionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) *GreengrassListLoggerDefinitionsResult
 
-    ListResourceDefinitionVersions(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) (*greengrass.ListResourceDefinitionVersionsOutput, error)
-    ListResourceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) *GreengrassListResourceDefinitionVersionsResult
+       ListResourceDefinitionVersions(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) (*greengrass.ListResourceDefinitionVersionsOutput, error)
+       ListResourceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) *GreengrassListResourceDefinitionVersionsResult
 
-    ListResourceDefinitions(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) (*greengrass.ListResourceDefinitionsOutput, error)
-    ListResourceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) *GreengrassListResourceDefinitionsResult
+       ListResourceDefinitions(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) (*greengrass.ListResourceDefinitionsOutput, error)
+       ListResourceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) *GreengrassListResourceDefinitionsResult
 
-    ListSubscriptionDefinitionVersions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) (*greengrass.ListSubscriptionDefinitionVersionsOutput, error)
-    ListSubscriptionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) *GreengrassListSubscriptionDefinitionVersionsResult
+       ListSubscriptionDefinitionVersions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) (*greengrass.ListSubscriptionDefinitionVersionsOutput, error)
+       ListSubscriptionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) *GreengrassListSubscriptionDefinitionVersionsResult
 
-    ListSubscriptionDefinitions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) (*greengrass.ListSubscriptionDefinitionsOutput, error)
-    ListSubscriptionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) *GreengrassListSubscriptionDefinitionsResult
+       ListSubscriptionDefinitions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) (*greengrass.ListSubscriptionDefinitionsOutput, error)
+       ListSubscriptionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) *GreengrassListSubscriptionDefinitionsResult
 
-    ListTagsForResource(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) (*greengrass.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) *GreengrassListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) (*greengrass.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) *GreengrassListTagsForResourceResult
 
-    ResetDeployments(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) (*greengrass.ResetDeploymentsOutput, error)
-    ResetDeploymentsAsync(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) *GreengrassResetDeploymentsResult
+       ResetDeployments(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) (*greengrass.ResetDeploymentsOutput, error)
+       ResetDeploymentsAsync(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) *GreengrassResetDeploymentsResult
 
-    StartBulkDeployment(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) (*greengrass.StartBulkDeploymentOutput, error)
-    StartBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) *GreengrassStartBulkDeploymentResult
+       StartBulkDeployment(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) (*greengrass.StartBulkDeploymentOutput, error)
+       StartBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) *GreengrassStartBulkDeploymentResult
 
-    StopBulkDeployment(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) (*greengrass.StopBulkDeploymentOutput, error)
-    StopBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) *GreengrassStopBulkDeploymentResult
+       StopBulkDeployment(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) (*greengrass.StopBulkDeploymentOutput, error)
+       StopBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) *GreengrassStopBulkDeploymentResult
 
-    TagResource(ctx workflow.Context, input *greengrass.TagResourceInput) (*greengrass.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *greengrass.TagResourceInput) *GreengrassTagResourceResult
+       TagResource(ctx workflow.Context, input *greengrass.TagResourceInput) (*greengrass.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *greengrass.TagResourceInput) *GreengrassTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *greengrass.UntagResourceInput) (*greengrass.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *greengrass.UntagResourceInput) *GreengrassUntagResourceResult
+       UntagResource(ctx workflow.Context, input *greengrass.UntagResourceInput) (*greengrass.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *greengrass.UntagResourceInput) *GreengrassUntagResourceResult
 
-    UpdateConnectivityInfo(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) (*greengrass.UpdateConnectivityInfoOutput, error)
-    UpdateConnectivityInfoAsync(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) *GreengrassUpdateConnectivityInfoResult
+       UpdateConnectivityInfo(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) (*greengrass.UpdateConnectivityInfoOutput, error)
+       UpdateConnectivityInfoAsync(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) *GreengrassUpdateConnectivityInfoResult
 
-    UpdateConnectorDefinition(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) (*greengrass.UpdateConnectorDefinitionOutput, error)
-    UpdateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) *GreengrassUpdateConnectorDefinitionResult
+       UpdateConnectorDefinition(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) (*greengrass.UpdateConnectorDefinitionOutput, error)
+       UpdateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) *GreengrassUpdateConnectorDefinitionResult
 
-    UpdateCoreDefinition(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) (*greengrass.UpdateCoreDefinitionOutput, error)
-    UpdateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) *GreengrassUpdateCoreDefinitionResult
+       UpdateCoreDefinition(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) (*greengrass.UpdateCoreDefinitionOutput, error)
+       UpdateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) *GreengrassUpdateCoreDefinitionResult
 
-    UpdateDeviceDefinition(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) (*greengrass.UpdateDeviceDefinitionOutput, error)
-    UpdateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) *GreengrassUpdateDeviceDefinitionResult
+       UpdateDeviceDefinition(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) (*greengrass.UpdateDeviceDefinitionOutput, error)
+       UpdateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) *GreengrassUpdateDeviceDefinitionResult
 
-    UpdateFunctionDefinition(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) (*greengrass.UpdateFunctionDefinitionOutput, error)
-    UpdateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) *GreengrassUpdateFunctionDefinitionResult
+       UpdateFunctionDefinition(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) (*greengrass.UpdateFunctionDefinitionOutput, error)
+       UpdateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) *GreengrassUpdateFunctionDefinitionResult
 
-    UpdateGroup(ctx workflow.Context, input *greengrass.UpdateGroupInput) (*greengrass.UpdateGroupOutput, error)
-    UpdateGroupAsync(ctx workflow.Context, input *greengrass.UpdateGroupInput) *GreengrassUpdateGroupResult
+       UpdateGroup(ctx workflow.Context, input *greengrass.UpdateGroupInput) (*greengrass.UpdateGroupOutput, error)
+       UpdateGroupAsync(ctx workflow.Context, input *greengrass.UpdateGroupInput) *GreengrassUpdateGroupResult
 
-    UpdateGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) (*greengrass.UpdateGroupCertificateConfigurationOutput, error)
-    UpdateGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) *GreengrassUpdateGroupCertificateConfigurationResult
+       UpdateGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) (*greengrass.UpdateGroupCertificateConfigurationOutput, error)
+       UpdateGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) *GreengrassUpdateGroupCertificateConfigurationResult
 
-    UpdateLoggerDefinition(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) (*greengrass.UpdateLoggerDefinitionOutput, error)
-    UpdateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) *GreengrassUpdateLoggerDefinitionResult
+       UpdateLoggerDefinition(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) (*greengrass.UpdateLoggerDefinitionOutput, error)
+       UpdateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) *GreengrassUpdateLoggerDefinitionResult
 
-    UpdateResourceDefinition(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) (*greengrass.UpdateResourceDefinitionOutput, error)
-    UpdateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) *GreengrassUpdateResourceDefinitionResult
+       UpdateResourceDefinition(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) (*greengrass.UpdateResourceDefinitionOutput, error)
+       UpdateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) *GreengrassUpdateResourceDefinitionResult
 
-    UpdateSubscriptionDefinition(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) (*greengrass.UpdateSubscriptionDefinitionOutput, error)
-    UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult
+       UpdateSubscriptionDefinition(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) (*greengrass.UpdateSubscriptionDefinitionOutput, error)
+       UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult
 }
 
 type GreengrassAssociateRoleToGroupResult struct {

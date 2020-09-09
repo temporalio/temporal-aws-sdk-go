@@ -7,17 +7,17 @@ import (
 )
 
 type SSOClient interface {
-    GetRoleCredentials(ctx workflow.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error)
-    GetRoleCredentialsAsync(ctx workflow.Context, input *sso.GetRoleCredentialsInput) *SsoGetRoleCredentialsResult
+       GetRoleCredentials(ctx workflow.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error)
+       GetRoleCredentialsAsync(ctx workflow.Context, input *sso.GetRoleCredentialsInput) *SsoGetRoleCredentialsResult
 
-    ListAccountRoles(ctx workflow.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error)
-    ListAccountRolesAsync(ctx workflow.Context, input *sso.ListAccountRolesInput) *SsoListAccountRolesResult
+       ListAccountRoles(ctx workflow.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error)
+       ListAccountRolesAsync(ctx workflow.Context, input *sso.ListAccountRolesInput) *SsoListAccountRolesResult
 
-    ListAccounts(ctx workflow.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error)
-    ListAccountsAsync(ctx workflow.Context, input *sso.ListAccountsInput) *SsoListAccountsResult
+       ListAccounts(ctx workflow.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error)
+       ListAccountsAsync(ctx workflow.Context, input *sso.ListAccountsInput) *SsoListAccountsResult
 
-    Logout(ctx workflow.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error)
-    LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *SsoLogoutResult
+       Logout(ctx workflow.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error)
+       LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *SsoLogoutResult
 }
 
 type SsoGetRoleCredentialsResult struct {

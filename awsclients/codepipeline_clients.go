@@ -7,116 +7,116 @@ import (
 )
 
 type CodePipelineClient interface {
-    AcknowledgeJob(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error)
-    AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobResult
+       AcknowledgeJob(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error)
+       AcknowledgeJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeJobInput) *CodepipelineAcknowledgeJobResult
 
-    AcknowledgeThirdPartyJob(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error)
-    AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobResult
+       AcknowledgeThirdPartyJob(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error)
+       AcknowledgeThirdPartyJobAsync(ctx workflow.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) *CodepipelineAcknowledgeThirdPartyJobResult
 
-    CreateCustomActionType(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error)
-    CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeResult
+       CreateCustomActionType(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error)
+       CreateCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.CreateCustomActionTypeInput) *CodepipelineCreateCustomActionTypeResult
 
-    CreatePipeline(ctx workflow.Context, input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error)
-    CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineResult
+       CreatePipeline(ctx workflow.Context, input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error)
+       CreatePipelineAsync(ctx workflow.Context, input *codepipeline.CreatePipelineInput) *CodepipelineCreatePipelineResult
 
-    DeleteCustomActionType(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error)
-    DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeResult
+       DeleteCustomActionType(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error)
+       DeleteCustomActionTypeAsync(ctx workflow.Context, input *codepipeline.DeleteCustomActionTypeInput) *CodepipelineDeleteCustomActionTypeResult
 
-    DeletePipeline(ctx workflow.Context, input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error)
-    DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineResult
+       DeletePipeline(ctx workflow.Context, input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error)
+       DeletePipelineAsync(ctx workflow.Context, input *codepipeline.DeletePipelineInput) *CodepipelineDeletePipelineResult
 
-    DeleteWebhook(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error)
-    DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookResult
+       DeleteWebhook(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error)
+       DeleteWebhookAsync(ctx workflow.Context, input *codepipeline.DeleteWebhookInput) *CodepipelineDeleteWebhookResult
 
-    DeregisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error)
-    DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyResult
+       DeregisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error)
+       DeregisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) *CodepipelineDeregisterWebhookWithThirdPartyResult
 
-    DisableStageTransition(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error)
-    DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionResult
+       DisableStageTransition(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error)
+       DisableStageTransitionAsync(ctx workflow.Context, input *codepipeline.DisableStageTransitionInput) *CodepipelineDisableStageTransitionResult
 
-    EnableStageTransition(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error)
-    EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionResult
+       EnableStageTransition(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error)
+       EnableStageTransitionAsync(ctx workflow.Context, input *codepipeline.EnableStageTransitionInput) *CodepipelineEnableStageTransitionResult
 
-    GetJobDetails(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error)
-    GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsResult
+       GetJobDetails(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error)
+       GetJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetJobDetailsInput) *CodepipelineGetJobDetailsResult
 
-    GetPipeline(ctx workflow.Context, input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error)
-    GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineResult
+       GetPipeline(ctx workflow.Context, input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error)
+       GetPipelineAsync(ctx workflow.Context, input *codepipeline.GetPipelineInput) *CodepipelineGetPipelineResult
 
-    GetPipelineExecution(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error)
-    GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionResult
+       GetPipelineExecution(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error)
+       GetPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.GetPipelineExecutionInput) *CodepipelineGetPipelineExecutionResult
 
-    GetPipelineState(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error)
-    GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateResult
+       GetPipelineState(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error)
+       GetPipelineStateAsync(ctx workflow.Context, input *codepipeline.GetPipelineStateInput) *CodepipelineGetPipelineStateResult
 
-    GetThirdPartyJobDetails(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error)
-    GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsResult
+       GetThirdPartyJobDetails(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error)
+       GetThirdPartyJobDetailsAsync(ctx workflow.Context, input *codepipeline.GetThirdPartyJobDetailsInput) *CodepipelineGetThirdPartyJobDetailsResult
 
-    ListActionExecutions(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error)
-    ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsResult
+       ListActionExecutions(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error)
+       ListActionExecutionsAsync(ctx workflow.Context, input *codepipeline.ListActionExecutionsInput) *CodepipelineListActionExecutionsResult
 
-    ListActionTypes(ctx workflow.Context, input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error)
-    ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesResult
+       ListActionTypes(ctx workflow.Context, input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error)
+       ListActionTypesAsync(ctx workflow.Context, input *codepipeline.ListActionTypesInput) *CodepipelineListActionTypesResult
 
-    ListPipelineExecutions(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error)
-    ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsResult
+       ListPipelineExecutions(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error)
+       ListPipelineExecutionsAsync(ctx workflow.Context, input *codepipeline.ListPipelineExecutionsInput) *CodepipelineListPipelineExecutionsResult
 
-    ListPipelines(ctx workflow.Context, input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error)
-    ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesResult
+       ListPipelines(ctx workflow.Context, input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error)
+       ListPipelinesAsync(ctx workflow.Context, input *codepipeline.ListPipelinesInput) *CodepipelineListPipelinesResult
 
-    ListTagsForResource(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *codepipeline.ListTagsForResourceInput) *CodepipelineListTagsForResourceResult
 
-    ListWebhooks(ctx workflow.Context, input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error)
-    ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksResult
+       ListWebhooks(ctx workflow.Context, input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error)
+       ListWebhooksAsync(ctx workflow.Context, input *codepipeline.ListWebhooksInput) *CodepipelineListWebhooksResult
 
-    PollForJobs(ctx workflow.Context, input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error)
-    PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsResult
+       PollForJobs(ctx workflow.Context, input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error)
+       PollForJobsAsync(ctx workflow.Context, input *codepipeline.PollForJobsInput) *CodepipelinePollForJobsResult
 
-    PollForThirdPartyJobs(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error)
-    PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsResult
+       PollForThirdPartyJobs(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error)
+       PollForThirdPartyJobsAsync(ctx workflow.Context, input *codepipeline.PollForThirdPartyJobsInput) *CodepipelinePollForThirdPartyJobsResult
 
-    PutActionRevision(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error)
-    PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionResult
+       PutActionRevision(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error)
+       PutActionRevisionAsync(ctx workflow.Context, input *codepipeline.PutActionRevisionInput) *CodepipelinePutActionRevisionResult
 
-    PutApprovalResult(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error)
-    PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultResult
+       PutApprovalResult(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error)
+       PutApprovalResultAsync(ctx workflow.Context, input *codepipeline.PutApprovalResultInput) *CodepipelinePutApprovalResultResult
 
-    PutJobFailureResult(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error)
-    PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultResult
+       PutJobFailureResult(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error)
+       PutJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutJobFailureResultInput) *CodepipelinePutJobFailureResultResult
 
-    PutJobSuccessResult(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error)
-    PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultResult
+       PutJobSuccessResult(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error)
+       PutJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutJobSuccessResultInput) *CodepipelinePutJobSuccessResultResult
 
-    PutThirdPartyJobFailureResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error)
-    PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultResult
+       PutThirdPartyJobFailureResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error)
+       PutThirdPartyJobFailureResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) *CodepipelinePutThirdPartyJobFailureResultResult
 
-    PutThirdPartyJobSuccessResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error)
-    PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultResult
+       PutThirdPartyJobSuccessResult(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error)
+       PutThirdPartyJobSuccessResultAsync(ctx workflow.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) *CodepipelinePutThirdPartyJobSuccessResultResult
 
-    PutWebhook(ctx workflow.Context, input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error)
-    PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookResult
+       PutWebhook(ctx workflow.Context, input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error)
+       PutWebhookAsync(ctx workflow.Context, input *codepipeline.PutWebhookInput) *CodepipelinePutWebhookResult
 
-    RegisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error)
-    RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyResult
+       RegisterWebhookWithThirdParty(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error)
+       RegisterWebhookWithThirdPartyAsync(ctx workflow.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) *CodepipelineRegisterWebhookWithThirdPartyResult
 
-    RetryStageExecution(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error)
-    RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionResult
+       RetryStageExecution(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error)
+       RetryStageExecutionAsync(ctx workflow.Context, input *codepipeline.RetryStageExecutionInput) *CodepipelineRetryStageExecutionResult
 
-    StartPipelineExecution(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error)
-    StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionResult
+       StartPipelineExecution(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error)
+       StartPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StartPipelineExecutionInput) *CodepipelineStartPipelineExecutionResult
 
-    StopPipelineExecution(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error)
-    StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionResult
+       StopPipelineExecution(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error)
+       StopPipelineExecutionAsync(ctx workflow.Context, input *codepipeline.StopPipelineExecutionInput) *CodepipelineStopPipelineExecutionResult
 
-    TagResource(ctx workflow.Context, input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceResult
+       TagResource(ctx workflow.Context, input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *codepipeline.TagResourceInput) *CodepipelineTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceResult
+       UntagResource(ctx workflow.Context, input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *codepipeline.UntagResourceInput) *CodepipelineUntagResourceResult
 
-    UpdatePipeline(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error)
-    UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineResult
+       UpdatePipeline(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error)
+       UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineResult
 }
 
 type CodepipelineAcknowledgeJobResult struct {

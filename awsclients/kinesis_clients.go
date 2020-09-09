@@ -7,92 +7,92 @@ import (
 )
 
 type KinesisClient interface {
-    AddTagsToStream(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error)
-    AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamResult
+       AddTagsToStream(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error)
+       AddTagsToStreamAsync(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) *KinesisAddTagsToStreamResult
 
-    CreateStream(ctx workflow.Context, input *kinesis.CreateStreamInput) (*kinesis.CreateStreamOutput, error)
-    CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamResult
+       CreateStream(ctx workflow.Context, input *kinesis.CreateStreamInput) (*kinesis.CreateStreamOutput, error)
+       CreateStreamAsync(ctx workflow.Context, input *kinesis.CreateStreamInput) *KinesisCreateStreamResult
 
-    DecreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) (*kinesis.DecreaseStreamRetentionPeriodOutput, error)
-    DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodResult
+       DecreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) (*kinesis.DecreaseStreamRetentionPeriodOutput, error)
+       DecreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) *KinesisDecreaseStreamRetentionPeriodResult
 
-    DeleteStream(ctx workflow.Context, input *kinesis.DeleteStreamInput) (*kinesis.DeleteStreamOutput, error)
-    DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamResult
+       DeleteStream(ctx workflow.Context, input *kinesis.DeleteStreamInput) (*kinesis.DeleteStreamOutput, error)
+       DeleteStreamAsync(ctx workflow.Context, input *kinesis.DeleteStreamInput) *KinesisDeleteStreamResult
 
-    DeregisterStreamConsumer(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) (*kinesis.DeregisterStreamConsumerOutput, error)
-    DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerResult
+       DeregisterStreamConsumer(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) (*kinesis.DeregisterStreamConsumerOutput, error)
+       DeregisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.DeregisterStreamConsumerInput) *KinesisDeregisterStreamConsumerResult
 
-    DescribeLimits(ctx workflow.Context, input *kinesis.DescribeLimitsInput) (*kinesis.DescribeLimitsOutput, error)
-    DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsResult
+       DescribeLimits(ctx workflow.Context, input *kinesis.DescribeLimitsInput) (*kinesis.DescribeLimitsOutput, error)
+       DescribeLimitsAsync(ctx workflow.Context, input *kinesis.DescribeLimitsInput) *KinesisDescribeLimitsResult
 
-    DescribeStream(ctx workflow.Context, input *kinesis.DescribeStreamInput) (*kinesis.DescribeStreamOutput, error)
-    DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamResult
+       DescribeStream(ctx workflow.Context, input *kinesis.DescribeStreamInput) (*kinesis.DescribeStreamOutput, error)
+       DescribeStreamAsync(ctx workflow.Context, input *kinesis.DescribeStreamInput) *KinesisDescribeStreamResult
 
-    DescribeStreamConsumer(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) (*kinesis.DescribeStreamConsumerOutput, error)
-    DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerResult
+       DescribeStreamConsumer(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) (*kinesis.DescribeStreamConsumerOutput, error)
+       DescribeStreamConsumerAsync(ctx workflow.Context, input *kinesis.DescribeStreamConsumerInput) *KinesisDescribeStreamConsumerResult
 
-    DescribeStreamSummary(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error)
-    DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryResult
+       DescribeStreamSummary(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error)
+       DescribeStreamSummaryAsync(ctx workflow.Context, input *kinesis.DescribeStreamSummaryInput) *KinesisDescribeStreamSummaryResult
 
-    DisableEnhancedMonitoring(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
-    DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringResult
+       DisableEnhancedMonitoring(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
+       DisableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.DisableEnhancedMonitoringInput) *KinesisDisableEnhancedMonitoringResult
 
-    EnableEnhancedMonitoring(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
-    EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringResult
+       EnableEnhancedMonitoring(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error)
+       EnableEnhancedMonitoringAsync(ctx workflow.Context, input *kinesis.EnableEnhancedMonitoringInput) *KinesisEnableEnhancedMonitoringResult
 
-    GetRecords(ctx workflow.Context, input *kinesis.GetRecordsInput) (*kinesis.GetRecordsOutput, error)
-    GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsResult
+       GetRecords(ctx workflow.Context, input *kinesis.GetRecordsInput) (*kinesis.GetRecordsOutput, error)
+       GetRecordsAsync(ctx workflow.Context, input *kinesis.GetRecordsInput) *KinesisGetRecordsResult
 
-    GetShardIterator(ctx workflow.Context, input *kinesis.GetShardIteratorInput) (*kinesis.GetShardIteratorOutput, error)
-    GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorResult
+       GetShardIterator(ctx workflow.Context, input *kinesis.GetShardIteratorInput) (*kinesis.GetShardIteratorOutput, error)
+       GetShardIteratorAsync(ctx workflow.Context, input *kinesis.GetShardIteratorInput) *KinesisGetShardIteratorResult
 
-    IncreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) (*kinesis.IncreaseStreamRetentionPeriodOutput, error)
-    IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodResult
+       IncreaseStreamRetentionPeriod(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) (*kinesis.IncreaseStreamRetentionPeriodOutput, error)
+       IncreaseStreamRetentionPeriodAsync(ctx workflow.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) *KinesisIncreaseStreamRetentionPeriodResult
 
-    ListShards(ctx workflow.Context, input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error)
-    ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsResult
+       ListShards(ctx workflow.Context, input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error)
+       ListShardsAsync(ctx workflow.Context, input *kinesis.ListShardsInput) *KinesisListShardsResult
 
-    ListStreamConsumers(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) (*kinesis.ListStreamConsumersOutput, error)
-    ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersResult
+       ListStreamConsumers(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) (*kinesis.ListStreamConsumersOutput, error)
+       ListStreamConsumersAsync(ctx workflow.Context, input *kinesis.ListStreamConsumersInput) *KinesisListStreamConsumersResult
 
-    ListStreams(ctx workflow.Context, input *kinesis.ListStreamsInput) (*kinesis.ListStreamsOutput, error)
-    ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsResult
+       ListStreams(ctx workflow.Context, input *kinesis.ListStreamsInput) (*kinesis.ListStreamsOutput, error)
+       ListStreamsAsync(ctx workflow.Context, input *kinesis.ListStreamsInput) *KinesisListStreamsResult
 
-    ListTagsForStream(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) (*kinesis.ListTagsForStreamOutput, error)
-    ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamResult
+       ListTagsForStream(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) (*kinesis.ListTagsForStreamOutput, error)
+       ListTagsForStreamAsync(ctx workflow.Context, input *kinesis.ListTagsForStreamInput) *KinesisListTagsForStreamResult
 
-    MergeShards(ctx workflow.Context, input *kinesis.MergeShardsInput) (*kinesis.MergeShardsOutput, error)
-    MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsResult
+       MergeShards(ctx workflow.Context, input *kinesis.MergeShardsInput) (*kinesis.MergeShardsOutput, error)
+       MergeShardsAsync(ctx workflow.Context, input *kinesis.MergeShardsInput) *KinesisMergeShardsResult
 
-    PutRecord(ctx workflow.Context, input *kinesis.PutRecordInput) (*kinesis.PutRecordOutput, error)
-    PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordResult
+       PutRecord(ctx workflow.Context, input *kinesis.PutRecordInput) (*kinesis.PutRecordOutput, error)
+       PutRecordAsync(ctx workflow.Context, input *kinesis.PutRecordInput) *KinesisPutRecordResult
 
-    PutRecords(ctx workflow.Context, input *kinesis.PutRecordsInput) (*kinesis.PutRecordsOutput, error)
-    PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsResult
+       PutRecords(ctx workflow.Context, input *kinesis.PutRecordsInput) (*kinesis.PutRecordsOutput, error)
+       PutRecordsAsync(ctx workflow.Context, input *kinesis.PutRecordsInput) *KinesisPutRecordsResult
 
-    RegisterStreamConsumer(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) (*kinesis.RegisterStreamConsumerOutput, error)
-    RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerResult
+       RegisterStreamConsumer(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) (*kinesis.RegisterStreamConsumerOutput, error)
+       RegisterStreamConsumerAsync(ctx workflow.Context, input *kinesis.RegisterStreamConsumerInput) *KinesisRegisterStreamConsumerResult
 
-    RemoveTagsFromStream(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) (*kinesis.RemoveTagsFromStreamOutput, error)
-    RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamResult
+       RemoveTagsFromStream(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) (*kinesis.RemoveTagsFromStreamOutput, error)
+       RemoveTagsFromStreamAsync(ctx workflow.Context, input *kinesis.RemoveTagsFromStreamInput) *KinesisRemoveTagsFromStreamResult
 
-    SplitShard(ctx workflow.Context, input *kinesis.SplitShardInput) (*kinesis.SplitShardOutput, error)
-    SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardResult
+       SplitShard(ctx workflow.Context, input *kinesis.SplitShardInput) (*kinesis.SplitShardOutput, error)
+       SplitShardAsync(ctx workflow.Context, input *kinesis.SplitShardInput) *KinesisSplitShardResult
 
-    StartStreamEncryption(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) (*kinesis.StartStreamEncryptionOutput, error)
-    StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionResult
+       StartStreamEncryption(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) (*kinesis.StartStreamEncryptionOutput, error)
+       StartStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StartStreamEncryptionInput) *KinesisStartStreamEncryptionResult
 
-    StopStreamEncryption(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) (*kinesis.StopStreamEncryptionOutput, error)
-    StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionResult
+       StopStreamEncryption(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) (*kinesis.StopStreamEncryptionOutput, error)
+       StopStreamEncryptionAsync(ctx workflow.Context, input *kinesis.StopStreamEncryptionInput) *KinesisStopStreamEncryptionResult
 
-    SubscribeToShard(ctx workflow.Context, input *kinesis.SubscribeToShardInput) (*kinesis.SubscribeToShardOutput, error)
-    SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardResult
+       SubscribeToShard(ctx workflow.Context, input *kinesis.SubscribeToShardInput) (*kinesis.SubscribeToShardOutput, error)
+       SubscribeToShardAsync(ctx workflow.Context, input *kinesis.SubscribeToShardInput) *KinesisSubscribeToShardResult
 
-    UpdateShardCount(ctx workflow.Context, input *kinesis.UpdateShardCountInput) (*kinesis.UpdateShardCountOutput, error)
-    UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult
+       UpdateShardCount(ctx workflow.Context, input *kinesis.UpdateShardCountInput) (*kinesis.UpdateShardCountOutput, error)
+       UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult
 
-    WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-    WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error}
+       WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
+       WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error}
 
 type KinesisAddTagsToStreamResult struct {
 	Result workflow.Future

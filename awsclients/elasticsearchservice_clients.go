@@ -7,116 +7,116 @@ import (
 )
 
 type ElasticsearchServiceClient interface {
-    AcceptInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput, error)
-    AcceptInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult
+       AcceptInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput, error)
+       AcceptInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult
 
-    AddTags(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) (*elasticsearchservice.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) *ElasticsearchserviceAddTagsResult
+       AddTags(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) (*elasticsearchservice.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) *ElasticsearchserviceAddTagsResult
 
-    AssociatePackage(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) (*elasticsearchservice.AssociatePackageOutput, error)
-    AssociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) *ElasticsearchserviceAssociatePackageResult
+       AssociatePackage(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) (*elasticsearchservice.AssociatePackageOutput, error)
+       AssociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) *ElasticsearchserviceAssociatePackageResult
 
-    CancelElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error)
-    CancelElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceCancelElasticsearchServiceSoftwareUpdateResult
+       CancelElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error)
+       CancelElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceCancelElasticsearchServiceSoftwareUpdateResult
 
-    CreateElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) (*elasticsearchservice.CreateElasticsearchDomainOutput, error)
-    CreateElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) *ElasticsearchserviceCreateElasticsearchDomainResult
+       CreateElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) (*elasticsearchservice.CreateElasticsearchDomainOutput, error)
+       CreateElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) *ElasticsearchserviceCreateElasticsearchDomainResult
 
-    CreateOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error)
-    CreateOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceCreateOutboundCrossClusterSearchConnectionResult
+       CreateOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error)
+       CreateOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceCreateOutboundCrossClusterSearchConnectionResult
 
-    CreatePackage(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) (*elasticsearchservice.CreatePackageOutput, error)
-    CreatePackageAsync(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) *ElasticsearchserviceCreatePackageResult
+       CreatePackage(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) (*elasticsearchservice.CreatePackageOutput, error)
+       CreatePackageAsync(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) *ElasticsearchserviceCreatePackageResult
 
-    DeleteElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error)
-    DeleteElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) *ElasticsearchserviceDeleteElasticsearchDomainResult
+       DeleteElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error)
+       DeleteElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) *ElasticsearchserviceDeleteElasticsearchDomainResult
 
-    DeleteElasticsearchServiceRole(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error)
-    DeleteElasticsearchServiceRoleAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) *ElasticsearchserviceDeleteElasticsearchServiceRoleResult
+       DeleteElasticsearchServiceRole(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error)
+       DeleteElasticsearchServiceRoleAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) *ElasticsearchserviceDeleteElasticsearchServiceRoleResult
 
-    DeleteInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error)
-    DeleteInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteInboundCrossClusterSearchConnectionResult
+       DeleteInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error)
+       DeleteInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteInboundCrossClusterSearchConnectionResult
 
-    DeleteOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error)
-    DeleteOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteOutboundCrossClusterSearchConnectionResult
+       DeleteOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error)
+       DeleteOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteOutboundCrossClusterSearchConnectionResult
 
-    DeletePackage(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) (*elasticsearchservice.DeletePackageOutput, error)
-    DeletePackageAsync(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) *ElasticsearchserviceDeletePackageResult
+       DeletePackage(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) (*elasticsearchservice.DeletePackageOutput, error)
+       DeletePackageAsync(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) *ElasticsearchserviceDeletePackageResult
 
-    DescribeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error)
-    DescribeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) *ElasticsearchserviceDescribeElasticsearchDomainResult
+       DescribeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error)
+       DescribeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) *ElasticsearchserviceDescribeElasticsearchDomainResult
 
-    DescribeElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error)
-    DescribeElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) *ElasticsearchserviceDescribeElasticsearchDomainConfigResult
+       DescribeElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error)
+       DescribeElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) *ElasticsearchserviceDescribeElasticsearchDomainConfigResult
 
-    DescribeElasticsearchDomains(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error)
-    DescribeElasticsearchDomainsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) *ElasticsearchserviceDescribeElasticsearchDomainsResult
+       DescribeElasticsearchDomains(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error)
+       DescribeElasticsearchDomainsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) *ElasticsearchserviceDescribeElasticsearchDomainsResult
 
-    DescribeElasticsearchInstanceTypeLimits(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error)
-    DescribeElasticsearchInstanceTypeLimitsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) *ElasticsearchserviceDescribeElasticsearchInstanceTypeLimitsResult
+       DescribeElasticsearchInstanceTypeLimits(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error)
+       DescribeElasticsearchInstanceTypeLimitsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) *ElasticsearchserviceDescribeElasticsearchInstanceTypeLimitsResult
 
-    DescribeInboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error)
-    DescribeInboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeInboundCrossClusterSearchConnectionsResult
+       DescribeInboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error)
+       DescribeInboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeInboundCrossClusterSearchConnectionsResult
 
-    DescribeOutboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error)
-    DescribeOutboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeOutboundCrossClusterSearchConnectionsResult
+       DescribeOutboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error)
+       DescribeOutboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeOutboundCrossClusterSearchConnectionsResult
 
-    DescribePackages(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) (*elasticsearchservice.DescribePackagesOutput, error)
-    DescribePackagesAsync(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) *ElasticsearchserviceDescribePackagesResult
+       DescribePackages(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) (*elasticsearchservice.DescribePackagesOutput, error)
+       DescribePackagesAsync(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) *ElasticsearchserviceDescribePackagesResult
 
-    DescribeReservedElasticsearchInstanceOfferings(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error)
-    DescribeReservedElasticsearchInstanceOfferingsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) *ElasticsearchserviceDescribeReservedElasticsearchInstanceOfferingsResult
+       DescribeReservedElasticsearchInstanceOfferings(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error)
+       DescribeReservedElasticsearchInstanceOfferingsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) *ElasticsearchserviceDescribeReservedElasticsearchInstanceOfferingsResult
 
-    DescribeReservedElasticsearchInstances(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error)
-    DescribeReservedElasticsearchInstancesAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) *ElasticsearchserviceDescribeReservedElasticsearchInstancesResult
+       DescribeReservedElasticsearchInstances(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error)
+       DescribeReservedElasticsearchInstancesAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) *ElasticsearchserviceDescribeReservedElasticsearchInstancesResult
 
-    DissociatePackage(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) (*elasticsearchservice.DissociatePackageOutput, error)
-    DissociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) *ElasticsearchserviceDissociatePackageResult
+       DissociatePackage(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) (*elasticsearchservice.DissociatePackageOutput, error)
+       DissociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) *ElasticsearchserviceDissociatePackageResult
 
-    GetCompatibleElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error)
-    GetCompatibleElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) *ElasticsearchserviceGetCompatibleElasticsearchVersionsResult
+       GetCompatibleElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error)
+       GetCompatibleElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) *ElasticsearchserviceGetCompatibleElasticsearchVersionsResult
 
-    GetUpgradeHistory(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) (*elasticsearchservice.GetUpgradeHistoryOutput, error)
-    GetUpgradeHistoryAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) *ElasticsearchserviceGetUpgradeHistoryResult
+       GetUpgradeHistory(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) (*elasticsearchservice.GetUpgradeHistoryOutput, error)
+       GetUpgradeHistoryAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) *ElasticsearchserviceGetUpgradeHistoryResult
 
-    GetUpgradeStatus(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) (*elasticsearchservice.GetUpgradeStatusOutput, error)
-    GetUpgradeStatusAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) *ElasticsearchserviceGetUpgradeStatusResult
+       GetUpgradeStatus(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) (*elasticsearchservice.GetUpgradeStatusOutput, error)
+       GetUpgradeStatusAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) *ElasticsearchserviceGetUpgradeStatusResult
 
-    ListDomainNames(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) (*elasticsearchservice.ListDomainNamesOutput, error)
-    ListDomainNamesAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) *ElasticsearchserviceListDomainNamesResult
+       ListDomainNames(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) (*elasticsearchservice.ListDomainNamesOutput, error)
+       ListDomainNamesAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) *ElasticsearchserviceListDomainNamesResult
 
-    ListDomainsForPackage(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) (*elasticsearchservice.ListDomainsForPackageOutput, error)
-    ListDomainsForPackageAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) *ElasticsearchserviceListDomainsForPackageResult
+       ListDomainsForPackage(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) (*elasticsearchservice.ListDomainsForPackageOutput, error)
+       ListDomainsForPackageAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) *ElasticsearchserviceListDomainsForPackageResult
 
-    ListElasticsearchInstanceTypes(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error)
-    ListElasticsearchInstanceTypesAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) *ElasticsearchserviceListElasticsearchInstanceTypesResult
+       ListElasticsearchInstanceTypes(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error)
+       ListElasticsearchInstanceTypesAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) *ElasticsearchserviceListElasticsearchInstanceTypesResult
 
-    ListElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) (*elasticsearchservice.ListElasticsearchVersionsOutput, error)
-    ListElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) *ElasticsearchserviceListElasticsearchVersionsResult
+       ListElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) (*elasticsearchservice.ListElasticsearchVersionsOutput, error)
+       ListElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) *ElasticsearchserviceListElasticsearchVersionsResult
 
-    ListPackagesForDomain(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) (*elasticsearchservice.ListPackagesForDomainOutput, error)
-    ListPackagesForDomainAsync(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) *ElasticsearchserviceListPackagesForDomainResult
+       ListPackagesForDomain(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) (*elasticsearchservice.ListPackagesForDomainOutput, error)
+       ListPackagesForDomainAsync(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) *ElasticsearchserviceListPackagesForDomainResult
 
-    ListTags(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) (*elasticsearchservice.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) *ElasticsearchserviceListTagsResult
+       ListTags(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) (*elasticsearchservice.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) *ElasticsearchserviceListTagsResult
 
-    PurchaseReservedElasticsearchInstanceOffering(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error)
-    PurchaseReservedElasticsearchInstanceOfferingAsync(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) *ElasticsearchservicePurchaseReservedElasticsearchInstanceOfferingResult
+       PurchaseReservedElasticsearchInstanceOffering(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error)
+       PurchaseReservedElasticsearchInstanceOfferingAsync(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) *ElasticsearchservicePurchaseReservedElasticsearchInstanceOfferingResult
 
-    RejectInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error)
-    RejectInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceRejectInboundCrossClusterSearchConnectionResult
+       RejectInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error)
+       RejectInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceRejectInboundCrossClusterSearchConnectionResult
 
-    RemoveTags(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) (*elasticsearchservice.RemoveTagsOutput, error)
-    RemoveTagsAsync(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) *ElasticsearchserviceRemoveTagsResult
+       RemoveTags(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) (*elasticsearchservice.RemoveTagsOutput, error)
+       RemoveTagsAsync(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) *ElasticsearchserviceRemoveTagsResult
 
-    StartElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error)
-    StartElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceStartElasticsearchServiceSoftwareUpdateResult
+       StartElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error)
+       StartElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceStartElasticsearchServiceSoftwareUpdateResult
 
-    UpdateElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error)
-    UpdateElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) *ElasticsearchserviceUpdateElasticsearchDomainConfigResult
+       UpdateElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error)
+       UpdateElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) *ElasticsearchserviceUpdateElasticsearchDomainConfigResult
 
-    UpgradeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error)
-    UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *ElasticsearchserviceUpgradeElasticsearchDomainResult
+       UpgradeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error)
+       UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *ElasticsearchserviceUpgradeElasticsearchDomainResult
 }
 
 type ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult struct {

@@ -7,68 +7,68 @@ import (
 )
 
 type DAXClient interface {
-    CreateCluster(ctx workflow.Context, input *dax.CreateClusterInput) (*dax.CreateClusterOutput, error)
-    CreateClusterAsync(ctx workflow.Context, input *dax.CreateClusterInput) *DaxCreateClusterResult
+       CreateCluster(ctx workflow.Context, input *dax.CreateClusterInput) (*dax.CreateClusterOutput, error)
+       CreateClusterAsync(ctx workflow.Context, input *dax.CreateClusterInput) *DaxCreateClusterResult
 
-    CreateParameterGroup(ctx workflow.Context, input *dax.CreateParameterGroupInput) (*dax.CreateParameterGroupOutput, error)
-    CreateParameterGroupAsync(ctx workflow.Context, input *dax.CreateParameterGroupInput) *DaxCreateParameterGroupResult
+       CreateParameterGroup(ctx workflow.Context, input *dax.CreateParameterGroupInput) (*dax.CreateParameterGroupOutput, error)
+       CreateParameterGroupAsync(ctx workflow.Context, input *dax.CreateParameterGroupInput) *DaxCreateParameterGroupResult
 
-    CreateSubnetGroup(ctx workflow.Context, input *dax.CreateSubnetGroupInput) (*dax.CreateSubnetGroupOutput, error)
-    CreateSubnetGroupAsync(ctx workflow.Context, input *dax.CreateSubnetGroupInput) *DaxCreateSubnetGroupResult
+       CreateSubnetGroup(ctx workflow.Context, input *dax.CreateSubnetGroupInput) (*dax.CreateSubnetGroupOutput, error)
+       CreateSubnetGroupAsync(ctx workflow.Context, input *dax.CreateSubnetGroupInput) *DaxCreateSubnetGroupResult
 
-    DecreaseReplicationFactor(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) (*dax.DecreaseReplicationFactorOutput, error)
-    DecreaseReplicationFactorAsync(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) *DaxDecreaseReplicationFactorResult
+       DecreaseReplicationFactor(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) (*dax.DecreaseReplicationFactorOutput, error)
+       DecreaseReplicationFactorAsync(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) *DaxDecreaseReplicationFactorResult
 
-    DeleteCluster(ctx workflow.Context, input *dax.DeleteClusterInput) (*dax.DeleteClusterOutput, error)
-    DeleteClusterAsync(ctx workflow.Context, input *dax.DeleteClusterInput) *DaxDeleteClusterResult
+       DeleteCluster(ctx workflow.Context, input *dax.DeleteClusterInput) (*dax.DeleteClusterOutput, error)
+       DeleteClusterAsync(ctx workflow.Context, input *dax.DeleteClusterInput) *DaxDeleteClusterResult
 
-    DeleteParameterGroup(ctx workflow.Context, input *dax.DeleteParameterGroupInput) (*dax.DeleteParameterGroupOutput, error)
-    DeleteParameterGroupAsync(ctx workflow.Context, input *dax.DeleteParameterGroupInput) *DaxDeleteParameterGroupResult
+       DeleteParameterGroup(ctx workflow.Context, input *dax.DeleteParameterGroupInput) (*dax.DeleteParameterGroupOutput, error)
+       DeleteParameterGroupAsync(ctx workflow.Context, input *dax.DeleteParameterGroupInput) *DaxDeleteParameterGroupResult
 
-    DeleteSubnetGroup(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) (*dax.DeleteSubnetGroupOutput, error)
-    DeleteSubnetGroupAsync(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) *DaxDeleteSubnetGroupResult
+       DeleteSubnetGroup(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) (*dax.DeleteSubnetGroupOutput, error)
+       DeleteSubnetGroupAsync(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) *DaxDeleteSubnetGroupResult
 
-    DescribeClusters(ctx workflow.Context, input *dax.DescribeClustersInput) (*dax.DescribeClustersOutput, error)
-    DescribeClustersAsync(ctx workflow.Context, input *dax.DescribeClustersInput) *DaxDescribeClustersResult
+       DescribeClusters(ctx workflow.Context, input *dax.DescribeClustersInput) (*dax.DescribeClustersOutput, error)
+       DescribeClustersAsync(ctx workflow.Context, input *dax.DescribeClustersInput) *DaxDescribeClustersResult
 
-    DescribeDefaultParameters(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) (*dax.DescribeDefaultParametersOutput, error)
-    DescribeDefaultParametersAsync(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) *DaxDescribeDefaultParametersResult
+       DescribeDefaultParameters(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) (*dax.DescribeDefaultParametersOutput, error)
+       DescribeDefaultParametersAsync(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) *DaxDescribeDefaultParametersResult
 
-    DescribeEvents(ctx workflow.Context, input *dax.DescribeEventsInput) (*dax.DescribeEventsOutput, error)
-    DescribeEventsAsync(ctx workflow.Context, input *dax.DescribeEventsInput) *DaxDescribeEventsResult
+       DescribeEvents(ctx workflow.Context, input *dax.DescribeEventsInput) (*dax.DescribeEventsOutput, error)
+       DescribeEventsAsync(ctx workflow.Context, input *dax.DescribeEventsInput) *DaxDescribeEventsResult
 
-    DescribeParameterGroups(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) (*dax.DescribeParameterGroupsOutput, error)
-    DescribeParameterGroupsAsync(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) *DaxDescribeParameterGroupsResult
+       DescribeParameterGroups(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) (*dax.DescribeParameterGroupsOutput, error)
+       DescribeParameterGroupsAsync(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) *DaxDescribeParameterGroupsResult
 
-    DescribeParameters(ctx workflow.Context, input *dax.DescribeParametersInput) (*dax.DescribeParametersOutput, error)
-    DescribeParametersAsync(ctx workflow.Context, input *dax.DescribeParametersInput) *DaxDescribeParametersResult
+       DescribeParameters(ctx workflow.Context, input *dax.DescribeParametersInput) (*dax.DescribeParametersOutput, error)
+       DescribeParametersAsync(ctx workflow.Context, input *dax.DescribeParametersInput) *DaxDescribeParametersResult
 
-    DescribeSubnetGroups(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) (*dax.DescribeSubnetGroupsOutput, error)
-    DescribeSubnetGroupsAsync(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) *DaxDescribeSubnetGroupsResult
+       DescribeSubnetGroups(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) (*dax.DescribeSubnetGroupsOutput, error)
+       DescribeSubnetGroupsAsync(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) *DaxDescribeSubnetGroupsResult
 
-    IncreaseReplicationFactor(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) (*dax.IncreaseReplicationFactorOutput, error)
-    IncreaseReplicationFactorAsync(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) *DaxIncreaseReplicationFactorResult
+       IncreaseReplicationFactor(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) (*dax.IncreaseReplicationFactorOutput, error)
+       IncreaseReplicationFactorAsync(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) *DaxIncreaseReplicationFactorResult
 
-    ListTags(ctx workflow.Context, input *dax.ListTagsInput) (*dax.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *dax.ListTagsInput) *DaxListTagsResult
+       ListTags(ctx workflow.Context, input *dax.ListTagsInput) (*dax.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *dax.ListTagsInput) *DaxListTagsResult
 
-    RebootNode(ctx workflow.Context, input *dax.RebootNodeInput) (*dax.RebootNodeOutput, error)
-    RebootNodeAsync(ctx workflow.Context, input *dax.RebootNodeInput) *DaxRebootNodeResult
+       RebootNode(ctx workflow.Context, input *dax.RebootNodeInput) (*dax.RebootNodeOutput, error)
+       RebootNodeAsync(ctx workflow.Context, input *dax.RebootNodeInput) *DaxRebootNodeResult
 
-    TagResource(ctx workflow.Context, input *dax.TagResourceInput) (*dax.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *dax.TagResourceInput) *DaxTagResourceResult
+       TagResource(ctx workflow.Context, input *dax.TagResourceInput) (*dax.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *dax.TagResourceInput) *DaxTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *dax.UntagResourceInput) (*dax.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *dax.UntagResourceInput) *DaxUntagResourceResult
+       UntagResource(ctx workflow.Context, input *dax.UntagResourceInput) (*dax.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *dax.UntagResourceInput) *DaxUntagResourceResult
 
-    UpdateCluster(ctx workflow.Context, input *dax.UpdateClusterInput) (*dax.UpdateClusterOutput, error)
-    UpdateClusterAsync(ctx workflow.Context, input *dax.UpdateClusterInput) *DaxUpdateClusterResult
+       UpdateCluster(ctx workflow.Context, input *dax.UpdateClusterInput) (*dax.UpdateClusterOutput, error)
+       UpdateClusterAsync(ctx workflow.Context, input *dax.UpdateClusterInput) *DaxUpdateClusterResult
 
-    UpdateParameterGroup(ctx workflow.Context, input *dax.UpdateParameterGroupInput) (*dax.UpdateParameterGroupOutput, error)
-    UpdateParameterGroupAsync(ctx workflow.Context, input *dax.UpdateParameterGroupInput) *DaxUpdateParameterGroupResult
+       UpdateParameterGroup(ctx workflow.Context, input *dax.UpdateParameterGroupInput) (*dax.UpdateParameterGroupOutput, error)
+       UpdateParameterGroupAsync(ctx workflow.Context, input *dax.UpdateParameterGroupInput) *DaxUpdateParameterGroupResult
 
-    UpdateSubnetGroup(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) (*dax.UpdateSubnetGroupOutput, error)
-    UpdateSubnetGroupAsync(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) *DaxUpdateSubnetGroupResult
+       UpdateSubnetGroup(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) (*dax.UpdateSubnetGroupOutput, error)
+       UpdateSubnetGroupAsync(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) *DaxUpdateSubnetGroupResult
 }
 
 type DaxCreateClusterResult struct {

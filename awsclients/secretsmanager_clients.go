@@ -7,62 +7,62 @@ import (
 )
 
 type SecretsManagerClient interface {
-    CancelRotateSecret(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) (*secretsmanager.CancelRotateSecretOutput, error)
-    CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *SecretsmanagerCancelRotateSecretResult
+       CancelRotateSecret(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) (*secretsmanager.CancelRotateSecretOutput, error)
+       CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *SecretsmanagerCancelRotateSecretResult
 
-    CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSecretInput) (*secretsmanager.CreateSecretOutput, error)
-    CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *SecretsmanagerCreateSecretResult
+       CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSecretInput) (*secretsmanager.CreateSecretOutput, error)
+       CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *SecretsmanagerCreateSecretResult
 
-    DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) (*secretsmanager.DeleteResourcePolicyOutput, error)
-    DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *SecretsmanagerDeleteResourcePolicyResult
+       DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) (*secretsmanager.DeleteResourcePolicyOutput, error)
+       DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *SecretsmanagerDeleteResourcePolicyResult
 
-    DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) (*secretsmanager.DeleteSecretOutput, error)
-    DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *SecretsmanagerDeleteSecretResult
+       DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) (*secretsmanager.DeleteSecretOutput, error)
+       DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *SecretsmanagerDeleteSecretResult
 
-    DescribeSecret(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) (*secretsmanager.DescribeSecretOutput, error)
-    DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *SecretsmanagerDescribeSecretResult
+       DescribeSecret(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) (*secretsmanager.DescribeSecretOutput, error)
+       DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *SecretsmanagerDescribeSecretResult
 
-    GetRandomPassword(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) (*secretsmanager.GetRandomPasswordOutput, error)
-    GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *SecretsmanagerGetRandomPasswordResult
+       GetRandomPassword(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) (*secretsmanager.GetRandomPasswordOutput, error)
+       GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *SecretsmanagerGetRandomPasswordResult
 
-    GetResourcePolicy(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) (*secretsmanager.GetResourcePolicyOutput, error)
-    GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *SecretsmanagerGetResourcePolicyResult
+       GetResourcePolicy(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) (*secretsmanager.GetResourcePolicyOutput, error)
+       GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *SecretsmanagerGetResourcePolicyResult
 
-    GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) (*secretsmanager.GetSecretValueOutput, error)
-    GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *SecretsmanagerGetSecretValueResult
+       GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) (*secretsmanager.GetSecretValueOutput, error)
+       GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *SecretsmanagerGetSecretValueResult
 
-    ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) (*secretsmanager.ListSecretVersionIdsOutput, error)
-    ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *SecretsmanagerListSecretVersionIdsResult
+       ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) (*secretsmanager.ListSecretVersionIdsOutput, error)
+       ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *SecretsmanagerListSecretVersionIdsResult
 
-    ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecretsInput) (*secretsmanager.ListSecretsOutput, error)
-    ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *SecretsmanagerListSecretsResult
+       ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecretsInput) (*secretsmanager.ListSecretsOutput, error)
+       ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *SecretsmanagerListSecretsResult
 
-    PutResourcePolicy(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) (*secretsmanager.PutResourcePolicyOutput, error)
-    PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *SecretsmanagerPutResourcePolicyResult
+       PutResourcePolicy(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) (*secretsmanager.PutResourcePolicyOutput, error)
+       PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *SecretsmanagerPutResourcePolicyResult
 
-    PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) (*secretsmanager.PutSecretValueOutput, error)
-    PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *SecretsmanagerPutSecretValueResult
+       PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) (*secretsmanager.PutSecretValueOutput, error)
+       PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *SecretsmanagerPutSecretValueResult
 
-    RestoreSecret(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) (*secretsmanager.RestoreSecretOutput, error)
-    RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *SecretsmanagerRestoreSecretResult
+       RestoreSecret(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) (*secretsmanager.RestoreSecretOutput, error)
+       RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *SecretsmanagerRestoreSecretResult
 
-    RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSecretInput) (*secretsmanager.RotateSecretOutput, error)
-    RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *SecretsmanagerRotateSecretResult
+       RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSecretInput) (*secretsmanager.RotateSecretOutput, error)
+       RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *SecretsmanagerRotateSecretResult
 
-    TagResource(ctx workflow.Context, input *secretsmanager.TagResourceInput) (*secretsmanager.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *SecretsmanagerTagResourceResult
+       TagResource(ctx workflow.Context, input *secretsmanager.TagResourceInput) (*secretsmanager.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *SecretsmanagerTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *secretsmanager.UntagResourceInput) (*secretsmanager.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *SecretsmanagerUntagResourceResult
+       UntagResource(ctx workflow.Context, input *secretsmanager.UntagResourceInput) (*secretsmanager.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *SecretsmanagerUntagResourceResult
 
-    UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) (*secretsmanager.UpdateSecretOutput, error)
-    UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *SecretsmanagerUpdateSecretResult
+       UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) (*secretsmanager.UpdateSecretOutput, error)
+       UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *SecretsmanagerUpdateSecretResult
 
-    UpdateSecretVersionStage(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) (*secretsmanager.UpdateSecretVersionStageOutput, error)
-    UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *SecretsmanagerUpdateSecretVersionStageResult
+       UpdateSecretVersionStage(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) (*secretsmanager.UpdateSecretVersionStageOutput, error)
+       UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *SecretsmanagerUpdateSecretVersionStageResult
 
-    ValidateResourcePolicy(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) (*secretsmanager.ValidateResourcePolicyOutput, error)
-    ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsmanagerValidateResourcePolicyResult
+       ValidateResourcePolicy(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) (*secretsmanager.ValidateResourcePolicyOutput, error)
+       ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsmanagerValidateResourcePolicyResult
 }
 
 type SecretsmanagerCancelRotateSecretResult struct {

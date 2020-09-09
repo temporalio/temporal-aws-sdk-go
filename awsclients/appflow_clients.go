@@ -7,59 +7,59 @@ import (
 )
 
 type AppflowClient interface {
-    CreateConnectorProfile(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error)
-    CreateConnectorProfileAsync(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) *AppflowCreateConnectorProfileResult
+       CreateConnectorProfile(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error)
+       CreateConnectorProfileAsync(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) *AppflowCreateConnectorProfileResult
 
-    CreateFlow(ctx workflow.Context, input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error)
-    CreateFlowAsync(ctx workflow.Context, input *appflow.CreateFlowInput) *AppflowCreateFlowResult
+       CreateFlow(ctx workflow.Context, input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error)
+       CreateFlowAsync(ctx workflow.Context, input *appflow.CreateFlowInput) *AppflowCreateFlowResult
 
-    DeleteConnectorProfile(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error)
-    DeleteConnectorProfileAsync(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) *AppflowDeleteConnectorProfileResult
+       DeleteConnectorProfile(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error)
+       DeleteConnectorProfileAsync(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) *AppflowDeleteConnectorProfileResult
 
-    DeleteFlow(ctx workflow.Context, input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error)
-    DeleteFlowAsync(ctx workflow.Context, input *appflow.DeleteFlowInput) *AppflowDeleteFlowResult
+       DeleteFlow(ctx workflow.Context, input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error)
+       DeleteFlowAsync(ctx workflow.Context, input *appflow.DeleteFlowInput) *AppflowDeleteFlowResult
 
-    DescribeConnectorEntity(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error)
-    DescribeConnectorEntityAsync(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) *AppflowDescribeConnectorEntityResult
+       DescribeConnectorEntity(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error)
+       DescribeConnectorEntityAsync(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) *AppflowDescribeConnectorEntityResult
 
-    DescribeConnectorProfiles(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error)
-    DescribeConnectorProfilesAsync(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) *AppflowDescribeConnectorProfilesResult
+       DescribeConnectorProfiles(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error)
+       DescribeConnectorProfilesAsync(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) *AppflowDescribeConnectorProfilesResult
 
-    DescribeConnectors(ctx workflow.Context, input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error)
-    DescribeConnectorsAsync(ctx workflow.Context, input *appflow.DescribeConnectorsInput) *AppflowDescribeConnectorsResult
+       DescribeConnectors(ctx workflow.Context, input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error)
+       DescribeConnectorsAsync(ctx workflow.Context, input *appflow.DescribeConnectorsInput) *AppflowDescribeConnectorsResult
 
-    DescribeFlow(ctx workflow.Context, input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error)
-    DescribeFlowAsync(ctx workflow.Context, input *appflow.DescribeFlowInput) *AppflowDescribeFlowResult
+       DescribeFlow(ctx workflow.Context, input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error)
+       DescribeFlowAsync(ctx workflow.Context, input *appflow.DescribeFlowInput) *AppflowDescribeFlowResult
 
-    DescribeFlowExecutionRecords(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error)
-    DescribeFlowExecutionRecordsAsync(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) *AppflowDescribeFlowExecutionRecordsResult
+       DescribeFlowExecutionRecords(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error)
+       DescribeFlowExecutionRecordsAsync(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) *AppflowDescribeFlowExecutionRecordsResult
 
-    ListConnectorEntities(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error)
-    ListConnectorEntitiesAsync(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) *AppflowListConnectorEntitiesResult
+       ListConnectorEntities(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error)
+       ListConnectorEntitiesAsync(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) *AppflowListConnectorEntitiesResult
 
-    ListFlows(ctx workflow.Context, input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error)
-    ListFlowsAsync(ctx workflow.Context, input *appflow.ListFlowsInput) *AppflowListFlowsResult
+       ListFlows(ctx workflow.Context, input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error)
+       ListFlowsAsync(ctx workflow.Context, input *appflow.ListFlowsInput) *AppflowListFlowsResult
 
-    ListTagsForResource(ctx workflow.Context, input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *appflow.ListTagsForResourceInput) *AppflowListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *appflow.ListTagsForResourceInput) *AppflowListTagsForResourceResult
 
-    StartFlow(ctx workflow.Context, input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error)
-    StartFlowAsync(ctx workflow.Context, input *appflow.StartFlowInput) *AppflowStartFlowResult
+       StartFlow(ctx workflow.Context, input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error)
+       StartFlowAsync(ctx workflow.Context, input *appflow.StartFlowInput) *AppflowStartFlowResult
 
-    StopFlow(ctx workflow.Context, input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error)
-    StopFlowAsync(ctx workflow.Context, input *appflow.StopFlowInput) *AppflowStopFlowResult
+       StopFlow(ctx workflow.Context, input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error)
+       StopFlowAsync(ctx workflow.Context, input *appflow.StopFlowInput) *AppflowStopFlowResult
 
-    TagResource(ctx workflow.Context, input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *appflow.TagResourceInput) *AppflowTagResourceResult
+       TagResource(ctx workflow.Context, input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *appflow.TagResourceInput) *AppflowTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *appflow.UntagResourceInput) *AppflowUntagResourceResult
+       UntagResource(ctx workflow.Context, input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *appflow.UntagResourceInput) *AppflowUntagResourceResult
 
-    UpdateConnectorProfile(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error)
-    UpdateConnectorProfileAsync(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) *AppflowUpdateConnectorProfileResult
+       UpdateConnectorProfile(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error)
+       UpdateConnectorProfileAsync(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) *AppflowUpdateConnectorProfileResult
 
-    UpdateFlow(ctx workflow.Context, input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error)
-    UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowResult
+       UpdateFlow(ctx workflow.Context, input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error)
+       UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowResult
 }
 
 type AppflowCreateConnectorProfileResult struct {

@@ -7,71 +7,71 @@ import (
 )
 
 type IVSClient interface {
-    BatchGetChannel(ctx workflow.Context, input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error)
-    BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGetChannelInput) *IvsBatchGetChannelResult
+       BatchGetChannel(ctx workflow.Context, input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error)
+       BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGetChannelInput) *IvsBatchGetChannelResult
 
-    BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error)
-    BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) *IvsBatchGetStreamKeyResult
+       BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error)
+       BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) *IvsBatchGetStreamKeyResult
 
-    CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error)
-    CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChannelInput) *IvsCreateChannelResult
+       CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error)
+       CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChannelInput) *IvsCreateChannelResult
 
-    CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error)
-    CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateStreamKeyInput) *IvsCreateStreamKeyResult
+       CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error)
+       CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateStreamKeyInput) *IvsCreateStreamKeyResult
 
-    DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error)
-    DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChannelInput) *IvsDeleteChannelResult
+       DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error)
+       DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChannelInput) *IvsDeleteChannelResult
 
-    DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error)
-    DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) *IvsDeletePlaybackKeyPairResult
+       DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error)
+       DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) *IvsDeletePlaybackKeyPairResult
 
-    DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error)
-    DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) *IvsDeleteStreamKeyResult
+       DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error)
+       DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) *IvsDeleteStreamKeyResult
 
-    GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error)
-    GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInput) *IvsGetChannelResult
+       GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error)
+       GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInput) *IvsGetChannelResult
 
-    GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error)
-    GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) *IvsGetPlaybackKeyPairResult
+       GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error)
+       GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) *IvsGetPlaybackKeyPairResult
 
-    GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error)
-    GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput) *IvsGetStreamResult
+       GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error)
+       GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput) *IvsGetStreamResult
 
-    GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error)
-    GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKeyInput) *IvsGetStreamKeyResult
+       GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error)
+       GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKeyInput) *IvsGetStreamKeyResult
 
-    ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error)
-    ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) *IvsImportPlaybackKeyPairResult
+       ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error)
+       ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) *IvsImportPlaybackKeyPairResult
 
-    ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error)
-    ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannelsInput) *IvsListChannelsResult
+       ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error)
+       ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannelsInput) *IvsListChannelsResult
 
-    ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error)
-    ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) *IvsListPlaybackKeyPairsResult
+       ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error)
+       ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) *IvsListPlaybackKeyPairsResult
 
-    ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error)
-    ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStreamKeysInput) *IvsListStreamKeysResult
+       ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error)
+       ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStreamKeysInput) *IvsListStreamKeysResult
 
-    ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error)
-    ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsInput) *IvsListStreamsResult
+       ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error)
+       ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsInput) *IvsListStreamsResult
 
-    ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *ivs.ListTagsForResourceInput) *IvsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *ivs.ListTagsForResourceInput) *IvsListTagsForResourceResult
 
-    PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error)
-    PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataInput) *IvsPutMetadataResult
+       PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error)
+       PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataInput) *IvsPutMetadataResult
 
-    StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error)
-    StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInput) *IvsStopStreamResult
+       StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error)
+       StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInput) *IvsStopStreamResult
 
-    TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceInput) *IvsTagResourceResult
+       TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceInput) *IvsTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResourceInput) *IvsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResourceInput) *IvsUntagResourceResult
 
-    UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error)
-    UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IvsUpdateChannelResult
+       UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error)
+       UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IvsUpdateChannelResult
 }
 
 type IvsBatchGetChannelResult struct {

@@ -7,8 +7,8 @@ import (
 )
 
 type KinesisVideoMediaClient interface {
-    GetMedia(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error)
-    GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaResult
+       GetMedia(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error)
+       GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaResult
 }
 
 type KinesisvideomediaGetMediaResult struct {

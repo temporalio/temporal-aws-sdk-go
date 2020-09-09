@@ -7,8 +7,8 @@ import (
 )
 
 type PersonalizeEventsClient interface {
-    PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
-    PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
+       PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
+       PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
 }
 
 type PersonalizeeventsPutEventsResult struct {

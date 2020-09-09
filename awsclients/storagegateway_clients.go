@@ -7,248 +7,248 @@ import (
 )
 
 type StorageGatewayClient interface {
-    ActivateGateway(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) (*storagegateway.ActivateGatewayOutput, error)
-    ActivateGatewayAsync(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) *StoragegatewayActivateGatewayResult
+       ActivateGateway(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) (*storagegateway.ActivateGatewayOutput, error)
+       ActivateGatewayAsync(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) *StoragegatewayActivateGatewayResult
 
-    AddCache(ctx workflow.Context, input *storagegateway.AddCacheInput) (*storagegateway.AddCacheOutput, error)
-    AddCacheAsync(ctx workflow.Context, input *storagegateway.AddCacheInput) *StoragegatewayAddCacheResult
+       AddCache(ctx workflow.Context, input *storagegateway.AddCacheInput) (*storagegateway.AddCacheOutput, error)
+       AddCacheAsync(ctx workflow.Context, input *storagegateway.AddCacheInput) *StoragegatewayAddCacheResult
 
-    AddTagsToResource(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) (*storagegateway.AddTagsToResourceOutput, error)
-    AddTagsToResourceAsync(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) *StoragegatewayAddTagsToResourceResult
+       AddTagsToResource(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) (*storagegateway.AddTagsToResourceOutput, error)
+       AddTagsToResourceAsync(ctx workflow.Context, input *storagegateway.AddTagsToResourceInput) *StoragegatewayAddTagsToResourceResult
 
-    AddUploadBuffer(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) (*storagegateway.AddUploadBufferOutput, error)
-    AddUploadBufferAsync(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) *StoragegatewayAddUploadBufferResult
+       AddUploadBuffer(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) (*storagegateway.AddUploadBufferOutput, error)
+       AddUploadBufferAsync(ctx workflow.Context, input *storagegateway.AddUploadBufferInput) *StoragegatewayAddUploadBufferResult
 
-    AddWorkingStorage(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) (*storagegateway.AddWorkingStorageOutput, error)
-    AddWorkingStorageAsync(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) *StoragegatewayAddWorkingStorageResult
+       AddWorkingStorage(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) (*storagegateway.AddWorkingStorageOutput, error)
+       AddWorkingStorageAsync(ctx workflow.Context, input *storagegateway.AddWorkingStorageInput) *StoragegatewayAddWorkingStorageResult
 
-    AssignTapePool(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) (*storagegateway.AssignTapePoolOutput, error)
-    AssignTapePoolAsync(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) *StoragegatewayAssignTapePoolResult
+       AssignTapePool(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) (*storagegateway.AssignTapePoolOutput, error)
+       AssignTapePoolAsync(ctx workflow.Context, input *storagegateway.AssignTapePoolInput) *StoragegatewayAssignTapePoolResult
 
-    AttachVolume(ctx workflow.Context, input *storagegateway.AttachVolumeInput) (*storagegateway.AttachVolumeOutput, error)
-    AttachVolumeAsync(ctx workflow.Context, input *storagegateway.AttachVolumeInput) *StoragegatewayAttachVolumeResult
+       AttachVolume(ctx workflow.Context, input *storagegateway.AttachVolumeInput) (*storagegateway.AttachVolumeOutput, error)
+       AttachVolumeAsync(ctx workflow.Context, input *storagegateway.AttachVolumeInput) *StoragegatewayAttachVolumeResult
 
-    CancelArchival(ctx workflow.Context, input *storagegateway.CancelArchivalInput) (*storagegateway.CancelArchivalOutput, error)
-    CancelArchivalAsync(ctx workflow.Context, input *storagegateway.CancelArchivalInput) *StoragegatewayCancelArchivalResult
+       CancelArchival(ctx workflow.Context, input *storagegateway.CancelArchivalInput) (*storagegateway.CancelArchivalOutput, error)
+       CancelArchivalAsync(ctx workflow.Context, input *storagegateway.CancelArchivalInput) *StoragegatewayCancelArchivalResult
 
-    CancelRetrieval(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) (*storagegateway.CancelRetrievalOutput, error)
-    CancelRetrievalAsync(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) *StoragegatewayCancelRetrievalResult
+       CancelRetrieval(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) (*storagegateway.CancelRetrievalOutput, error)
+       CancelRetrievalAsync(ctx workflow.Context, input *storagegateway.CancelRetrievalInput) *StoragegatewayCancelRetrievalResult
 
-    CreateCachediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) (*storagegateway.CreateCachediSCSIVolumeOutput, error)
-    CreateCachediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) *StoragegatewayCreateCachediSCSIVolumeResult
+       CreateCachediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) (*storagegateway.CreateCachediSCSIVolumeOutput, error)
+       CreateCachediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateCachediSCSIVolumeInput) *StoragegatewayCreateCachediSCSIVolumeResult
 
-    CreateNFSFileShare(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) (*storagegateway.CreateNFSFileShareOutput, error)
-    CreateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) *StoragegatewayCreateNFSFileShareResult
+       CreateNFSFileShare(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) (*storagegateway.CreateNFSFileShareOutput, error)
+       CreateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.CreateNFSFileShareInput) *StoragegatewayCreateNFSFileShareResult
 
-    CreateSMBFileShare(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) (*storagegateway.CreateSMBFileShareOutput, error)
-    CreateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) *StoragegatewayCreateSMBFileShareResult
+       CreateSMBFileShare(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) (*storagegateway.CreateSMBFileShareOutput, error)
+       CreateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.CreateSMBFileShareInput) *StoragegatewayCreateSMBFileShareResult
 
-    CreateSnapshot(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) (*storagegateway.CreateSnapshotOutput, error)
-    CreateSnapshotAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) *StoragegatewayCreateSnapshotResult
+       CreateSnapshot(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) (*storagegateway.CreateSnapshotOutput, error)
+       CreateSnapshotAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotInput) *StoragegatewayCreateSnapshotResult
 
-    CreateSnapshotFromVolumeRecoveryPoint(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) (*storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput, error)
-    CreateSnapshotFromVolumeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) *StoragegatewayCreateSnapshotFromVolumeRecoveryPointResult
+       CreateSnapshotFromVolumeRecoveryPoint(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) (*storagegateway.CreateSnapshotFromVolumeRecoveryPointOutput, error)
+       CreateSnapshotFromVolumeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.CreateSnapshotFromVolumeRecoveryPointInput) *StoragegatewayCreateSnapshotFromVolumeRecoveryPointResult
 
-    CreateStorediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) (*storagegateway.CreateStorediSCSIVolumeOutput, error)
-    CreateStorediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) *StoragegatewayCreateStorediSCSIVolumeResult
+       CreateStorediSCSIVolume(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) (*storagegateway.CreateStorediSCSIVolumeOutput, error)
+       CreateStorediSCSIVolumeAsync(ctx workflow.Context, input *storagegateway.CreateStorediSCSIVolumeInput) *StoragegatewayCreateStorediSCSIVolumeResult
 
-    CreateTapePool(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) (*storagegateway.CreateTapePoolOutput, error)
-    CreateTapePoolAsync(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) *StoragegatewayCreateTapePoolResult
+       CreateTapePool(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) (*storagegateway.CreateTapePoolOutput, error)
+       CreateTapePoolAsync(ctx workflow.Context, input *storagegateway.CreateTapePoolInput) *StoragegatewayCreateTapePoolResult
 
-    CreateTapeWithBarcode(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) (*storagegateway.CreateTapeWithBarcodeOutput, error)
-    CreateTapeWithBarcodeAsync(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) *StoragegatewayCreateTapeWithBarcodeResult
+       CreateTapeWithBarcode(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) (*storagegateway.CreateTapeWithBarcodeOutput, error)
+       CreateTapeWithBarcodeAsync(ctx workflow.Context, input *storagegateway.CreateTapeWithBarcodeInput) *StoragegatewayCreateTapeWithBarcodeResult
 
-    CreateTapes(ctx workflow.Context, input *storagegateway.CreateTapesInput) (*storagegateway.CreateTapesOutput, error)
-    CreateTapesAsync(ctx workflow.Context, input *storagegateway.CreateTapesInput) *StoragegatewayCreateTapesResult
+       CreateTapes(ctx workflow.Context, input *storagegateway.CreateTapesInput) (*storagegateway.CreateTapesOutput, error)
+       CreateTapesAsync(ctx workflow.Context, input *storagegateway.CreateTapesInput) *StoragegatewayCreateTapesResult
 
-    DeleteAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) (*storagegateway.DeleteAutomaticTapeCreationPolicyOutput, error)
-    DeleteAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) *StoragegatewayDeleteAutomaticTapeCreationPolicyResult
+       DeleteAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) (*storagegateway.DeleteAutomaticTapeCreationPolicyOutput, error)
+       DeleteAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.DeleteAutomaticTapeCreationPolicyInput) *StoragegatewayDeleteAutomaticTapeCreationPolicyResult
 
-    DeleteBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) (*storagegateway.DeleteBandwidthRateLimitOutput, error)
-    DeleteBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) *StoragegatewayDeleteBandwidthRateLimitResult
+       DeleteBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) (*storagegateway.DeleteBandwidthRateLimitOutput, error)
+       DeleteBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DeleteBandwidthRateLimitInput) *StoragegatewayDeleteBandwidthRateLimitResult
 
-    DeleteChapCredentials(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) (*storagegateway.DeleteChapCredentialsOutput, error)
-    DeleteChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) *StoragegatewayDeleteChapCredentialsResult
+       DeleteChapCredentials(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) (*storagegateway.DeleteChapCredentialsOutput, error)
+       DeleteChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DeleteChapCredentialsInput) *StoragegatewayDeleteChapCredentialsResult
 
-    DeleteFileShare(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) (*storagegateway.DeleteFileShareOutput, error)
-    DeleteFileShareAsync(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) *StoragegatewayDeleteFileShareResult
+       DeleteFileShare(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) (*storagegateway.DeleteFileShareOutput, error)
+       DeleteFileShareAsync(ctx workflow.Context, input *storagegateway.DeleteFileShareInput) *StoragegatewayDeleteFileShareResult
 
-    DeleteGateway(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) (*storagegateway.DeleteGatewayOutput, error)
-    DeleteGatewayAsync(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) *StoragegatewayDeleteGatewayResult
+       DeleteGateway(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) (*storagegateway.DeleteGatewayOutput, error)
+       DeleteGatewayAsync(ctx workflow.Context, input *storagegateway.DeleteGatewayInput) *StoragegatewayDeleteGatewayResult
 
-    DeleteSnapshotSchedule(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) (*storagegateway.DeleteSnapshotScheduleOutput, error)
-    DeleteSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) *StoragegatewayDeleteSnapshotScheduleResult
+       DeleteSnapshotSchedule(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) (*storagegateway.DeleteSnapshotScheduleOutput, error)
+       DeleteSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DeleteSnapshotScheduleInput) *StoragegatewayDeleteSnapshotScheduleResult
 
-    DeleteTape(ctx workflow.Context, input *storagegateway.DeleteTapeInput) (*storagegateway.DeleteTapeOutput, error)
-    DeleteTapeAsync(ctx workflow.Context, input *storagegateway.DeleteTapeInput) *StoragegatewayDeleteTapeResult
+       DeleteTape(ctx workflow.Context, input *storagegateway.DeleteTapeInput) (*storagegateway.DeleteTapeOutput, error)
+       DeleteTapeAsync(ctx workflow.Context, input *storagegateway.DeleteTapeInput) *StoragegatewayDeleteTapeResult
 
-    DeleteTapeArchive(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) (*storagegateway.DeleteTapeArchiveOutput, error)
-    DeleteTapeArchiveAsync(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) *StoragegatewayDeleteTapeArchiveResult
+       DeleteTapeArchive(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) (*storagegateway.DeleteTapeArchiveOutput, error)
+       DeleteTapeArchiveAsync(ctx workflow.Context, input *storagegateway.DeleteTapeArchiveInput) *StoragegatewayDeleteTapeArchiveResult
 
-    DeleteTapePool(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) (*storagegateway.DeleteTapePoolOutput, error)
-    DeleteTapePoolAsync(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) *StoragegatewayDeleteTapePoolResult
+       DeleteTapePool(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) (*storagegateway.DeleteTapePoolOutput, error)
+       DeleteTapePoolAsync(ctx workflow.Context, input *storagegateway.DeleteTapePoolInput) *StoragegatewayDeleteTapePoolResult
 
-    DeleteVolume(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) (*storagegateway.DeleteVolumeOutput, error)
-    DeleteVolumeAsync(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) *StoragegatewayDeleteVolumeResult
+       DeleteVolume(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) (*storagegateway.DeleteVolumeOutput, error)
+       DeleteVolumeAsync(ctx workflow.Context, input *storagegateway.DeleteVolumeInput) *StoragegatewayDeleteVolumeResult
 
-    DescribeAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) (*storagegateway.DescribeAvailabilityMonitorTestOutput, error)
-    DescribeAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) *StoragegatewayDescribeAvailabilityMonitorTestResult
+       DescribeAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) (*storagegateway.DescribeAvailabilityMonitorTestOutput, error)
+       DescribeAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.DescribeAvailabilityMonitorTestInput) *StoragegatewayDescribeAvailabilityMonitorTestResult
 
-    DescribeBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) (*storagegateway.DescribeBandwidthRateLimitOutput, error)
-    DescribeBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) *StoragegatewayDescribeBandwidthRateLimitResult
+       DescribeBandwidthRateLimit(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) (*storagegateway.DescribeBandwidthRateLimitOutput, error)
+       DescribeBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.DescribeBandwidthRateLimitInput) *StoragegatewayDescribeBandwidthRateLimitResult
 
-    DescribeCache(ctx workflow.Context, input *storagegateway.DescribeCacheInput) (*storagegateway.DescribeCacheOutput, error)
-    DescribeCacheAsync(ctx workflow.Context, input *storagegateway.DescribeCacheInput) *StoragegatewayDescribeCacheResult
+       DescribeCache(ctx workflow.Context, input *storagegateway.DescribeCacheInput) (*storagegateway.DescribeCacheOutput, error)
+       DescribeCacheAsync(ctx workflow.Context, input *storagegateway.DescribeCacheInput) *StoragegatewayDescribeCacheResult
 
-    DescribeCachediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) (*storagegateway.DescribeCachediSCSIVolumesOutput, error)
-    DescribeCachediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) *StoragegatewayDescribeCachediSCSIVolumesResult
+       DescribeCachediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) (*storagegateway.DescribeCachediSCSIVolumesOutput, error)
+       DescribeCachediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeCachediSCSIVolumesInput) *StoragegatewayDescribeCachediSCSIVolumesResult
 
-    DescribeChapCredentials(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) (*storagegateway.DescribeChapCredentialsOutput, error)
-    DescribeChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) *StoragegatewayDescribeChapCredentialsResult
+       DescribeChapCredentials(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) (*storagegateway.DescribeChapCredentialsOutput, error)
+       DescribeChapCredentialsAsync(ctx workflow.Context, input *storagegateway.DescribeChapCredentialsInput) *StoragegatewayDescribeChapCredentialsResult
 
-    DescribeGatewayInformation(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) (*storagegateway.DescribeGatewayInformationOutput, error)
-    DescribeGatewayInformationAsync(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) *StoragegatewayDescribeGatewayInformationResult
+       DescribeGatewayInformation(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) (*storagegateway.DescribeGatewayInformationOutput, error)
+       DescribeGatewayInformationAsync(ctx workflow.Context, input *storagegateway.DescribeGatewayInformationInput) *StoragegatewayDescribeGatewayInformationResult
 
-    DescribeMaintenanceStartTime(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) (*storagegateway.DescribeMaintenanceStartTimeOutput, error)
-    DescribeMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) *StoragegatewayDescribeMaintenanceStartTimeResult
+       DescribeMaintenanceStartTime(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) (*storagegateway.DescribeMaintenanceStartTimeOutput, error)
+       DescribeMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.DescribeMaintenanceStartTimeInput) *StoragegatewayDescribeMaintenanceStartTimeResult
 
-    DescribeNFSFileShares(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) (*storagegateway.DescribeNFSFileSharesOutput, error)
-    DescribeNFSFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) *StoragegatewayDescribeNFSFileSharesResult
+       DescribeNFSFileShares(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) (*storagegateway.DescribeNFSFileSharesOutput, error)
+       DescribeNFSFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeNFSFileSharesInput) *StoragegatewayDescribeNFSFileSharesResult
 
-    DescribeSMBFileShares(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) (*storagegateway.DescribeSMBFileSharesOutput, error)
-    DescribeSMBFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) *StoragegatewayDescribeSMBFileSharesResult
+       DescribeSMBFileShares(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) (*storagegateway.DescribeSMBFileSharesOutput, error)
+       DescribeSMBFileSharesAsync(ctx workflow.Context, input *storagegateway.DescribeSMBFileSharesInput) *StoragegatewayDescribeSMBFileSharesResult
 
-    DescribeSMBSettings(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) (*storagegateway.DescribeSMBSettingsOutput, error)
-    DescribeSMBSettingsAsync(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) *StoragegatewayDescribeSMBSettingsResult
+       DescribeSMBSettings(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) (*storagegateway.DescribeSMBSettingsOutput, error)
+       DescribeSMBSettingsAsync(ctx workflow.Context, input *storagegateway.DescribeSMBSettingsInput) *StoragegatewayDescribeSMBSettingsResult
 
-    DescribeSnapshotSchedule(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) (*storagegateway.DescribeSnapshotScheduleOutput, error)
-    DescribeSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) *StoragegatewayDescribeSnapshotScheduleResult
+       DescribeSnapshotSchedule(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) (*storagegateway.DescribeSnapshotScheduleOutput, error)
+       DescribeSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.DescribeSnapshotScheduleInput) *StoragegatewayDescribeSnapshotScheduleResult
 
-    DescribeStorediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) (*storagegateway.DescribeStorediSCSIVolumesOutput, error)
-    DescribeStorediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) *StoragegatewayDescribeStorediSCSIVolumesResult
+       DescribeStorediSCSIVolumes(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) (*storagegateway.DescribeStorediSCSIVolumesOutput, error)
+       DescribeStorediSCSIVolumesAsync(ctx workflow.Context, input *storagegateway.DescribeStorediSCSIVolumesInput) *StoragegatewayDescribeStorediSCSIVolumesResult
 
-    DescribeTapeArchives(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) (*storagegateway.DescribeTapeArchivesOutput, error)
-    DescribeTapeArchivesAsync(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) *StoragegatewayDescribeTapeArchivesResult
+       DescribeTapeArchives(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) (*storagegateway.DescribeTapeArchivesOutput, error)
+       DescribeTapeArchivesAsync(ctx workflow.Context, input *storagegateway.DescribeTapeArchivesInput) *StoragegatewayDescribeTapeArchivesResult
 
-    DescribeTapeRecoveryPoints(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) (*storagegateway.DescribeTapeRecoveryPointsOutput, error)
-    DescribeTapeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) *StoragegatewayDescribeTapeRecoveryPointsResult
+       DescribeTapeRecoveryPoints(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) (*storagegateway.DescribeTapeRecoveryPointsOutput, error)
+       DescribeTapeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.DescribeTapeRecoveryPointsInput) *StoragegatewayDescribeTapeRecoveryPointsResult
 
-    DescribeTapes(ctx workflow.Context, input *storagegateway.DescribeTapesInput) (*storagegateway.DescribeTapesOutput, error)
-    DescribeTapesAsync(ctx workflow.Context, input *storagegateway.DescribeTapesInput) *StoragegatewayDescribeTapesResult
+       DescribeTapes(ctx workflow.Context, input *storagegateway.DescribeTapesInput) (*storagegateway.DescribeTapesOutput, error)
+       DescribeTapesAsync(ctx workflow.Context, input *storagegateway.DescribeTapesInput) *StoragegatewayDescribeTapesResult
 
-    DescribeUploadBuffer(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) (*storagegateway.DescribeUploadBufferOutput, error)
-    DescribeUploadBufferAsync(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) *StoragegatewayDescribeUploadBufferResult
+       DescribeUploadBuffer(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) (*storagegateway.DescribeUploadBufferOutput, error)
+       DescribeUploadBufferAsync(ctx workflow.Context, input *storagegateway.DescribeUploadBufferInput) *StoragegatewayDescribeUploadBufferResult
 
-    DescribeVTLDevices(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) (*storagegateway.DescribeVTLDevicesOutput, error)
-    DescribeVTLDevicesAsync(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) *StoragegatewayDescribeVTLDevicesResult
+       DescribeVTLDevices(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) (*storagegateway.DescribeVTLDevicesOutput, error)
+       DescribeVTLDevicesAsync(ctx workflow.Context, input *storagegateway.DescribeVTLDevicesInput) *StoragegatewayDescribeVTLDevicesResult
 
-    DescribeWorkingStorage(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) (*storagegateway.DescribeWorkingStorageOutput, error)
-    DescribeWorkingStorageAsync(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) *StoragegatewayDescribeWorkingStorageResult
+       DescribeWorkingStorage(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) (*storagegateway.DescribeWorkingStorageOutput, error)
+       DescribeWorkingStorageAsync(ctx workflow.Context, input *storagegateway.DescribeWorkingStorageInput) *StoragegatewayDescribeWorkingStorageResult
 
-    DetachVolume(ctx workflow.Context, input *storagegateway.DetachVolumeInput) (*storagegateway.DetachVolumeOutput, error)
-    DetachVolumeAsync(ctx workflow.Context, input *storagegateway.DetachVolumeInput) *StoragegatewayDetachVolumeResult
+       DetachVolume(ctx workflow.Context, input *storagegateway.DetachVolumeInput) (*storagegateway.DetachVolumeOutput, error)
+       DetachVolumeAsync(ctx workflow.Context, input *storagegateway.DetachVolumeInput) *StoragegatewayDetachVolumeResult
 
-    DisableGateway(ctx workflow.Context, input *storagegateway.DisableGatewayInput) (*storagegateway.DisableGatewayOutput, error)
-    DisableGatewayAsync(ctx workflow.Context, input *storagegateway.DisableGatewayInput) *StoragegatewayDisableGatewayResult
+       DisableGateway(ctx workflow.Context, input *storagegateway.DisableGatewayInput) (*storagegateway.DisableGatewayOutput, error)
+       DisableGatewayAsync(ctx workflow.Context, input *storagegateway.DisableGatewayInput) *StoragegatewayDisableGatewayResult
 
-    JoinDomain(ctx workflow.Context, input *storagegateway.JoinDomainInput) (*storagegateway.JoinDomainOutput, error)
-    JoinDomainAsync(ctx workflow.Context, input *storagegateway.JoinDomainInput) *StoragegatewayJoinDomainResult
+       JoinDomain(ctx workflow.Context, input *storagegateway.JoinDomainInput) (*storagegateway.JoinDomainOutput, error)
+       JoinDomainAsync(ctx workflow.Context, input *storagegateway.JoinDomainInput) *StoragegatewayJoinDomainResult
 
-    ListAutomaticTapeCreationPolicies(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) (*storagegateway.ListAutomaticTapeCreationPoliciesOutput, error)
-    ListAutomaticTapeCreationPoliciesAsync(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) *StoragegatewayListAutomaticTapeCreationPoliciesResult
+       ListAutomaticTapeCreationPolicies(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) (*storagegateway.ListAutomaticTapeCreationPoliciesOutput, error)
+       ListAutomaticTapeCreationPoliciesAsync(ctx workflow.Context, input *storagegateway.ListAutomaticTapeCreationPoliciesInput) *StoragegatewayListAutomaticTapeCreationPoliciesResult
 
-    ListFileShares(ctx workflow.Context, input *storagegateway.ListFileSharesInput) (*storagegateway.ListFileSharesOutput, error)
-    ListFileSharesAsync(ctx workflow.Context, input *storagegateway.ListFileSharesInput) *StoragegatewayListFileSharesResult
+       ListFileShares(ctx workflow.Context, input *storagegateway.ListFileSharesInput) (*storagegateway.ListFileSharesOutput, error)
+       ListFileSharesAsync(ctx workflow.Context, input *storagegateway.ListFileSharesInput) *StoragegatewayListFileSharesResult
 
-    ListGateways(ctx workflow.Context, input *storagegateway.ListGatewaysInput) (*storagegateway.ListGatewaysOutput, error)
-    ListGatewaysAsync(ctx workflow.Context, input *storagegateway.ListGatewaysInput) *StoragegatewayListGatewaysResult
+       ListGateways(ctx workflow.Context, input *storagegateway.ListGatewaysInput) (*storagegateway.ListGatewaysOutput, error)
+       ListGatewaysAsync(ctx workflow.Context, input *storagegateway.ListGatewaysInput) *StoragegatewayListGatewaysResult
 
-    ListLocalDisks(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) (*storagegateway.ListLocalDisksOutput, error)
-    ListLocalDisksAsync(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) *StoragegatewayListLocalDisksResult
+       ListLocalDisks(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) (*storagegateway.ListLocalDisksOutput, error)
+       ListLocalDisksAsync(ctx workflow.Context, input *storagegateway.ListLocalDisksInput) *StoragegatewayListLocalDisksResult
 
-    ListTagsForResource(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) (*storagegateway.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) *StoragegatewayListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) (*storagegateway.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *storagegateway.ListTagsForResourceInput) *StoragegatewayListTagsForResourceResult
 
-    ListTapePools(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) (*storagegateway.ListTapePoolsOutput, error)
-    ListTapePoolsAsync(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) *StoragegatewayListTapePoolsResult
+       ListTapePools(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) (*storagegateway.ListTapePoolsOutput, error)
+       ListTapePoolsAsync(ctx workflow.Context, input *storagegateway.ListTapePoolsInput) *StoragegatewayListTapePoolsResult
 
-    ListTapes(ctx workflow.Context, input *storagegateway.ListTapesInput) (*storagegateway.ListTapesOutput, error)
-    ListTapesAsync(ctx workflow.Context, input *storagegateway.ListTapesInput) *StoragegatewayListTapesResult
+       ListTapes(ctx workflow.Context, input *storagegateway.ListTapesInput) (*storagegateway.ListTapesOutput, error)
+       ListTapesAsync(ctx workflow.Context, input *storagegateway.ListTapesInput) *StoragegatewayListTapesResult
 
-    ListVolumeInitiators(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) (*storagegateway.ListVolumeInitiatorsOutput, error)
-    ListVolumeInitiatorsAsync(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) *StoragegatewayListVolumeInitiatorsResult
+       ListVolumeInitiators(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) (*storagegateway.ListVolumeInitiatorsOutput, error)
+       ListVolumeInitiatorsAsync(ctx workflow.Context, input *storagegateway.ListVolumeInitiatorsInput) *StoragegatewayListVolumeInitiatorsResult
 
-    ListVolumeRecoveryPoints(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) (*storagegateway.ListVolumeRecoveryPointsOutput, error)
-    ListVolumeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) *StoragegatewayListVolumeRecoveryPointsResult
+       ListVolumeRecoveryPoints(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) (*storagegateway.ListVolumeRecoveryPointsOutput, error)
+       ListVolumeRecoveryPointsAsync(ctx workflow.Context, input *storagegateway.ListVolumeRecoveryPointsInput) *StoragegatewayListVolumeRecoveryPointsResult
 
-    ListVolumes(ctx workflow.Context, input *storagegateway.ListVolumesInput) (*storagegateway.ListVolumesOutput, error)
-    ListVolumesAsync(ctx workflow.Context, input *storagegateway.ListVolumesInput) *StoragegatewayListVolumesResult
+       ListVolumes(ctx workflow.Context, input *storagegateway.ListVolumesInput) (*storagegateway.ListVolumesOutput, error)
+       ListVolumesAsync(ctx workflow.Context, input *storagegateway.ListVolumesInput) *StoragegatewayListVolumesResult
 
-    NotifyWhenUploaded(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) (*storagegateway.NotifyWhenUploadedOutput, error)
-    NotifyWhenUploadedAsync(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) *StoragegatewayNotifyWhenUploadedResult
+       NotifyWhenUploaded(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) (*storagegateway.NotifyWhenUploadedOutput, error)
+       NotifyWhenUploadedAsync(ctx workflow.Context, input *storagegateway.NotifyWhenUploadedInput) *StoragegatewayNotifyWhenUploadedResult
 
-    RefreshCache(ctx workflow.Context, input *storagegateway.RefreshCacheInput) (*storagegateway.RefreshCacheOutput, error)
-    RefreshCacheAsync(ctx workflow.Context, input *storagegateway.RefreshCacheInput) *StoragegatewayRefreshCacheResult
+       RefreshCache(ctx workflow.Context, input *storagegateway.RefreshCacheInput) (*storagegateway.RefreshCacheOutput, error)
+       RefreshCacheAsync(ctx workflow.Context, input *storagegateway.RefreshCacheInput) *StoragegatewayRefreshCacheResult
 
-    RemoveTagsFromResource(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) (*storagegateway.RemoveTagsFromResourceOutput, error)
-    RemoveTagsFromResourceAsync(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) *StoragegatewayRemoveTagsFromResourceResult
+       RemoveTagsFromResource(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) (*storagegateway.RemoveTagsFromResourceOutput, error)
+       RemoveTagsFromResourceAsync(ctx workflow.Context, input *storagegateway.RemoveTagsFromResourceInput) *StoragegatewayRemoveTagsFromResourceResult
 
-    ResetCache(ctx workflow.Context, input *storagegateway.ResetCacheInput) (*storagegateway.ResetCacheOutput, error)
-    ResetCacheAsync(ctx workflow.Context, input *storagegateway.ResetCacheInput) *StoragegatewayResetCacheResult
+       ResetCache(ctx workflow.Context, input *storagegateway.ResetCacheInput) (*storagegateway.ResetCacheOutput, error)
+       ResetCacheAsync(ctx workflow.Context, input *storagegateway.ResetCacheInput) *StoragegatewayResetCacheResult
 
-    RetrieveTapeArchive(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) (*storagegateway.RetrieveTapeArchiveOutput, error)
-    RetrieveTapeArchiveAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) *StoragegatewayRetrieveTapeArchiveResult
+       RetrieveTapeArchive(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) (*storagegateway.RetrieveTapeArchiveOutput, error)
+       RetrieveTapeArchiveAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeArchiveInput) *StoragegatewayRetrieveTapeArchiveResult
 
-    RetrieveTapeRecoveryPoint(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) (*storagegateway.RetrieveTapeRecoveryPointOutput, error)
-    RetrieveTapeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) *StoragegatewayRetrieveTapeRecoveryPointResult
+       RetrieveTapeRecoveryPoint(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) (*storagegateway.RetrieveTapeRecoveryPointOutput, error)
+       RetrieveTapeRecoveryPointAsync(ctx workflow.Context, input *storagegateway.RetrieveTapeRecoveryPointInput) *StoragegatewayRetrieveTapeRecoveryPointResult
 
-    SetLocalConsolePassword(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) (*storagegateway.SetLocalConsolePasswordOutput, error)
-    SetLocalConsolePasswordAsync(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) *StoragegatewaySetLocalConsolePasswordResult
+       SetLocalConsolePassword(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) (*storagegateway.SetLocalConsolePasswordOutput, error)
+       SetLocalConsolePasswordAsync(ctx workflow.Context, input *storagegateway.SetLocalConsolePasswordInput) *StoragegatewaySetLocalConsolePasswordResult
 
-    SetSMBGuestPassword(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) (*storagegateway.SetSMBGuestPasswordOutput, error)
-    SetSMBGuestPasswordAsync(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) *StoragegatewaySetSMBGuestPasswordResult
+       SetSMBGuestPassword(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) (*storagegateway.SetSMBGuestPasswordOutput, error)
+       SetSMBGuestPasswordAsync(ctx workflow.Context, input *storagegateway.SetSMBGuestPasswordInput) *StoragegatewaySetSMBGuestPasswordResult
 
-    ShutdownGateway(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) (*storagegateway.ShutdownGatewayOutput, error)
-    ShutdownGatewayAsync(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) *StoragegatewayShutdownGatewayResult
+       ShutdownGateway(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) (*storagegateway.ShutdownGatewayOutput, error)
+       ShutdownGatewayAsync(ctx workflow.Context, input *storagegateway.ShutdownGatewayInput) *StoragegatewayShutdownGatewayResult
 
-    StartAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) (*storagegateway.StartAvailabilityMonitorTestOutput, error)
-    StartAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) *StoragegatewayStartAvailabilityMonitorTestResult
+       StartAvailabilityMonitorTest(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) (*storagegateway.StartAvailabilityMonitorTestOutput, error)
+       StartAvailabilityMonitorTestAsync(ctx workflow.Context, input *storagegateway.StartAvailabilityMonitorTestInput) *StoragegatewayStartAvailabilityMonitorTestResult
 
-    StartGateway(ctx workflow.Context, input *storagegateway.StartGatewayInput) (*storagegateway.StartGatewayOutput, error)
-    StartGatewayAsync(ctx workflow.Context, input *storagegateway.StartGatewayInput) *StoragegatewayStartGatewayResult
+       StartGateway(ctx workflow.Context, input *storagegateway.StartGatewayInput) (*storagegateway.StartGatewayOutput, error)
+       StartGatewayAsync(ctx workflow.Context, input *storagegateway.StartGatewayInput) *StoragegatewayStartGatewayResult
 
-    UpdateAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) (*storagegateway.UpdateAutomaticTapeCreationPolicyOutput, error)
-    UpdateAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) *StoragegatewayUpdateAutomaticTapeCreationPolicyResult
+       UpdateAutomaticTapeCreationPolicy(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) (*storagegateway.UpdateAutomaticTapeCreationPolicyOutput, error)
+       UpdateAutomaticTapeCreationPolicyAsync(ctx workflow.Context, input *storagegateway.UpdateAutomaticTapeCreationPolicyInput) *StoragegatewayUpdateAutomaticTapeCreationPolicyResult
 
-    UpdateBandwidthRateLimit(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) (*storagegateway.UpdateBandwidthRateLimitOutput, error)
-    UpdateBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) *StoragegatewayUpdateBandwidthRateLimitResult
+       UpdateBandwidthRateLimit(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) (*storagegateway.UpdateBandwidthRateLimitOutput, error)
+       UpdateBandwidthRateLimitAsync(ctx workflow.Context, input *storagegateway.UpdateBandwidthRateLimitInput) *StoragegatewayUpdateBandwidthRateLimitResult
 
-    UpdateChapCredentials(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) (*storagegateway.UpdateChapCredentialsOutput, error)
-    UpdateChapCredentialsAsync(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) *StoragegatewayUpdateChapCredentialsResult
+       UpdateChapCredentials(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) (*storagegateway.UpdateChapCredentialsOutput, error)
+       UpdateChapCredentialsAsync(ctx workflow.Context, input *storagegateway.UpdateChapCredentialsInput) *StoragegatewayUpdateChapCredentialsResult
 
-    UpdateGatewayInformation(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) (*storagegateway.UpdateGatewayInformationOutput, error)
-    UpdateGatewayInformationAsync(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) *StoragegatewayUpdateGatewayInformationResult
+       UpdateGatewayInformation(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) (*storagegateway.UpdateGatewayInformationOutput, error)
+       UpdateGatewayInformationAsync(ctx workflow.Context, input *storagegateway.UpdateGatewayInformationInput) *StoragegatewayUpdateGatewayInformationResult
 
-    UpdateGatewaySoftwareNow(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) (*storagegateway.UpdateGatewaySoftwareNowOutput, error)
-    UpdateGatewaySoftwareNowAsync(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) *StoragegatewayUpdateGatewaySoftwareNowResult
+       UpdateGatewaySoftwareNow(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) (*storagegateway.UpdateGatewaySoftwareNowOutput, error)
+       UpdateGatewaySoftwareNowAsync(ctx workflow.Context, input *storagegateway.UpdateGatewaySoftwareNowInput) *StoragegatewayUpdateGatewaySoftwareNowResult
 
-    UpdateMaintenanceStartTime(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) (*storagegateway.UpdateMaintenanceStartTimeOutput, error)
-    UpdateMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) *StoragegatewayUpdateMaintenanceStartTimeResult
+       UpdateMaintenanceStartTime(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) (*storagegateway.UpdateMaintenanceStartTimeOutput, error)
+       UpdateMaintenanceStartTimeAsync(ctx workflow.Context, input *storagegateway.UpdateMaintenanceStartTimeInput) *StoragegatewayUpdateMaintenanceStartTimeResult
 
-    UpdateNFSFileShare(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) (*storagegateway.UpdateNFSFileShareOutput, error)
-    UpdateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) *StoragegatewayUpdateNFSFileShareResult
+       UpdateNFSFileShare(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) (*storagegateway.UpdateNFSFileShareOutput, error)
+       UpdateNFSFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateNFSFileShareInput) *StoragegatewayUpdateNFSFileShareResult
 
-    UpdateSMBFileShare(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) (*storagegateway.UpdateSMBFileShareOutput, error)
-    UpdateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) *StoragegatewayUpdateSMBFileShareResult
+       UpdateSMBFileShare(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) (*storagegateway.UpdateSMBFileShareOutput, error)
+       UpdateSMBFileShareAsync(ctx workflow.Context, input *storagegateway.UpdateSMBFileShareInput) *StoragegatewayUpdateSMBFileShareResult
 
-    UpdateSMBSecurityStrategy(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) (*storagegateway.UpdateSMBSecurityStrategyOutput, error)
-    UpdateSMBSecurityStrategyAsync(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) *StoragegatewayUpdateSMBSecurityStrategyResult
+       UpdateSMBSecurityStrategy(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) (*storagegateway.UpdateSMBSecurityStrategyOutput, error)
+       UpdateSMBSecurityStrategyAsync(ctx workflow.Context, input *storagegateway.UpdateSMBSecurityStrategyInput) *StoragegatewayUpdateSMBSecurityStrategyResult
 
-    UpdateSnapshotSchedule(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) (*storagegateway.UpdateSnapshotScheduleOutput, error)
-    UpdateSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) *StoragegatewayUpdateSnapshotScheduleResult
+       UpdateSnapshotSchedule(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) (*storagegateway.UpdateSnapshotScheduleOutput, error)
+       UpdateSnapshotScheduleAsync(ctx workflow.Context, input *storagegateway.UpdateSnapshotScheduleInput) *StoragegatewayUpdateSnapshotScheduleResult
 
-    UpdateVTLDeviceType(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) (*storagegateway.UpdateVTLDeviceTypeOutput, error)
-    UpdateVTLDeviceTypeAsync(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) *StoragegatewayUpdateVTLDeviceTypeResult
+       UpdateVTLDeviceType(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) (*storagegateway.UpdateVTLDeviceTypeOutput, error)
+       UpdateVTLDeviceTypeAsync(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) *StoragegatewayUpdateVTLDeviceTypeResult
 }
 
 type StoragegatewayActivateGatewayResult struct {

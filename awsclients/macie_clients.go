@@ -7,26 +7,26 @@ import (
 )
 
 type MacieClient interface {
-    AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error)
-    AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *MacieAssociateMemberAccountResult
+       AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error)
+       AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *MacieAssociateMemberAccountResult
 
-    AssociateS3Resources(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error)
-    AssociateS3ResourcesAsync(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) *MacieAssociateS3ResourcesResult
+       AssociateS3Resources(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error)
+       AssociateS3ResourcesAsync(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) *MacieAssociateS3ResourcesResult
 
-    DisassociateMemberAccount(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error)
-    DisassociateMemberAccountAsync(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) *MacieDisassociateMemberAccountResult
+       DisassociateMemberAccount(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error)
+       DisassociateMemberAccountAsync(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) *MacieDisassociateMemberAccountResult
 
-    DisassociateS3Resources(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error)
-    DisassociateS3ResourcesAsync(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) *MacieDisassociateS3ResourcesResult
+       DisassociateS3Resources(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error)
+       DisassociateS3ResourcesAsync(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) *MacieDisassociateS3ResourcesResult
 
-    ListMemberAccounts(ctx workflow.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error)
-    ListMemberAccountsAsync(ctx workflow.Context, input *macie.ListMemberAccountsInput) *MacieListMemberAccountsResult
+       ListMemberAccounts(ctx workflow.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error)
+       ListMemberAccountsAsync(ctx workflow.Context, input *macie.ListMemberAccountsInput) *MacieListMemberAccountsResult
 
-    ListS3Resources(ctx workflow.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error)
-    ListS3ResourcesAsync(ctx workflow.Context, input *macie.ListS3ResourcesInput) *MacieListS3ResourcesResult
+       ListS3Resources(ctx workflow.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error)
+       ListS3ResourcesAsync(ctx workflow.Context, input *macie.ListS3ResourcesInput) *MacieListS3ResourcesResult
 
-    UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error)
-    UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult
+       UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error)
+       UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult
 }
 
 type MacieAssociateMemberAccountResult struct {

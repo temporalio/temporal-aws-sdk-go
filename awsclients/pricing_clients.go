@@ -7,14 +7,14 @@ import (
 )
 
 type PricingClient interface {
-    DescribeServices(ctx workflow.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error)
-    DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *PricingDescribeServicesResult
+       DescribeServices(ctx workflow.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error)
+       DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *PricingDescribeServicesResult
 
-    GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error)
-    GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *PricingGetAttributeValuesResult
+       GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error)
+       GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *PricingGetAttributeValuesResult
 
-    GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error)
-    GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsResult
+       GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error)
+       GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsResult
 }
 
 type PricingDescribeServicesResult struct {

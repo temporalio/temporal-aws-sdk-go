@@ -7,26 +7,26 @@ import (
 )
 
 type MediaTailorClient interface {
-    DeletePlaybackConfiguration(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) (*mediatailor.DeletePlaybackConfigurationOutput, error)
-    DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediatailorDeletePlaybackConfigurationResult
+       DeletePlaybackConfiguration(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) (*mediatailor.DeletePlaybackConfigurationOutput, error)
+       DeletePlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.DeletePlaybackConfigurationInput) *MediatailorDeletePlaybackConfigurationResult
 
-    GetPlaybackConfiguration(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) (*mediatailor.GetPlaybackConfigurationOutput, error)
-    GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediatailorGetPlaybackConfigurationResult
+       GetPlaybackConfiguration(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) (*mediatailor.GetPlaybackConfigurationOutput, error)
+       GetPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.GetPlaybackConfigurationInput) *MediatailorGetPlaybackConfigurationResult
 
-    ListPlaybackConfigurations(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) (*mediatailor.ListPlaybackConfigurationsOutput, error)
-    ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediatailorListPlaybackConfigurationsResult
+       ListPlaybackConfigurations(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) (*mediatailor.ListPlaybackConfigurationsOutput, error)
+       ListPlaybackConfigurationsAsync(ctx workflow.Context, input *mediatailor.ListPlaybackConfigurationsInput) *MediatailorListPlaybackConfigurationsResult
 
-    ListTagsForResource(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) (*mediatailor.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediatailorListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) (*mediatailor.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *mediatailor.ListTagsForResourceInput) *MediatailorListTagsForResourceResult
 
-    PutPlaybackConfiguration(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) (*mediatailor.PutPlaybackConfigurationOutput, error)
-    PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediatailorPutPlaybackConfigurationResult
+       PutPlaybackConfiguration(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) (*mediatailor.PutPlaybackConfigurationOutput, error)
+       PutPlaybackConfigurationAsync(ctx workflow.Context, input *mediatailor.PutPlaybackConfigurationInput) *MediatailorPutPlaybackConfigurationResult
 
-    TagResource(ctx workflow.Context, input *mediatailor.TagResourceInput) (*mediatailor.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediatailorTagResourceResult
+       TagResource(ctx workflow.Context, input *mediatailor.TagResourceInput) (*mediatailor.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *mediatailor.TagResourceInput) *MediatailorTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *mediatailor.UntagResourceInput) (*mediatailor.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediatailorUntagResourceResult
+       UntagResource(ctx workflow.Context, input *mediatailor.UntagResourceInput) (*mediatailor.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediatailorUntagResourceResult
 }
 
 type MediatailorDeletePlaybackConfigurationResult struct {

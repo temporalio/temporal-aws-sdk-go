@@ -7,8 +7,8 @@ import (
 )
 
 type SageMakerRuntimeClient interface {
-    InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error)
-    InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
+       InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error)
+       InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
 }
 
 type SagemakerruntimeInvokeEndpointResult struct {

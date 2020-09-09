@@ -7,59 +7,59 @@ import (
 )
 
 type AccessAnalyzerClient interface {
-    CreateAnalyzer(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) (*accessanalyzer.CreateAnalyzerOutput, error)
-    CreateAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) *AccessanalyzerCreateAnalyzerResult
+       CreateAnalyzer(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) (*accessanalyzer.CreateAnalyzerOutput, error)
+       CreateAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.CreateAnalyzerInput) *AccessanalyzerCreateAnalyzerResult
 
-    CreateArchiveRule(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) (*accessanalyzer.CreateArchiveRuleOutput, error)
-    CreateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) *AccessanalyzerCreateArchiveRuleResult
+       CreateArchiveRule(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) (*accessanalyzer.CreateArchiveRuleOutput, error)
+       CreateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.CreateArchiveRuleInput) *AccessanalyzerCreateArchiveRuleResult
 
-    DeleteAnalyzer(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) (*accessanalyzer.DeleteAnalyzerOutput, error)
-    DeleteAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) *AccessanalyzerDeleteAnalyzerResult
+       DeleteAnalyzer(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) (*accessanalyzer.DeleteAnalyzerOutput, error)
+       DeleteAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.DeleteAnalyzerInput) *AccessanalyzerDeleteAnalyzerResult
 
-    DeleteArchiveRule(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) (*accessanalyzer.DeleteArchiveRuleOutput, error)
-    DeleteArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) *AccessanalyzerDeleteArchiveRuleResult
+       DeleteArchiveRule(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) (*accessanalyzer.DeleteArchiveRuleOutput, error)
+       DeleteArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.DeleteArchiveRuleInput) *AccessanalyzerDeleteArchiveRuleResult
 
-    GetAnalyzedResource(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) (*accessanalyzer.GetAnalyzedResourceOutput, error)
-    GetAnalyzedResourceAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) *AccessanalyzerGetAnalyzedResourceResult
+       GetAnalyzedResource(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) (*accessanalyzer.GetAnalyzedResourceOutput, error)
+       GetAnalyzedResourceAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzedResourceInput) *AccessanalyzerGetAnalyzedResourceResult
 
-    GetAnalyzer(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) (*accessanalyzer.GetAnalyzerOutput, error)
-    GetAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) *AccessanalyzerGetAnalyzerResult
+       GetAnalyzer(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) (*accessanalyzer.GetAnalyzerOutput, error)
+       GetAnalyzerAsync(ctx workflow.Context, input *accessanalyzer.GetAnalyzerInput) *AccessanalyzerGetAnalyzerResult
 
-    GetArchiveRule(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) (*accessanalyzer.GetArchiveRuleOutput, error)
-    GetArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) *AccessanalyzerGetArchiveRuleResult
+       GetArchiveRule(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) (*accessanalyzer.GetArchiveRuleOutput, error)
+       GetArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.GetArchiveRuleInput) *AccessanalyzerGetArchiveRuleResult
 
-    GetFinding(ctx workflow.Context, input *accessanalyzer.GetFindingInput) (*accessanalyzer.GetFindingOutput, error)
-    GetFindingAsync(ctx workflow.Context, input *accessanalyzer.GetFindingInput) *AccessanalyzerGetFindingResult
+       GetFinding(ctx workflow.Context, input *accessanalyzer.GetFindingInput) (*accessanalyzer.GetFindingOutput, error)
+       GetFindingAsync(ctx workflow.Context, input *accessanalyzer.GetFindingInput) *AccessanalyzerGetFindingResult
 
-    ListAnalyzedResources(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) (*accessanalyzer.ListAnalyzedResourcesOutput, error)
-    ListAnalyzedResourcesAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) *AccessanalyzerListAnalyzedResourcesResult
+       ListAnalyzedResources(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) (*accessanalyzer.ListAnalyzedResourcesOutput, error)
+       ListAnalyzedResourcesAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzedResourcesInput) *AccessanalyzerListAnalyzedResourcesResult
 
-    ListAnalyzers(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) (*accessanalyzer.ListAnalyzersOutput, error)
-    ListAnalyzersAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) *AccessanalyzerListAnalyzersResult
+       ListAnalyzers(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) (*accessanalyzer.ListAnalyzersOutput, error)
+       ListAnalyzersAsync(ctx workflow.Context, input *accessanalyzer.ListAnalyzersInput) *AccessanalyzerListAnalyzersResult
 
-    ListArchiveRules(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) (*accessanalyzer.ListArchiveRulesOutput, error)
-    ListArchiveRulesAsync(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) *AccessanalyzerListArchiveRulesResult
+       ListArchiveRules(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) (*accessanalyzer.ListArchiveRulesOutput, error)
+       ListArchiveRulesAsync(ctx workflow.Context, input *accessanalyzer.ListArchiveRulesInput) *AccessanalyzerListArchiveRulesResult
 
-    ListFindings(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) (*accessanalyzer.ListFindingsOutput, error)
-    ListFindingsAsync(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) *AccessanalyzerListFindingsResult
+       ListFindings(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) (*accessanalyzer.ListFindingsOutput, error)
+       ListFindingsAsync(ctx workflow.Context, input *accessanalyzer.ListFindingsInput) *AccessanalyzerListFindingsResult
 
-    ListTagsForResource(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) (*accessanalyzer.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) *AccessanalyzerListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) (*accessanalyzer.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *accessanalyzer.ListTagsForResourceInput) *AccessanalyzerListTagsForResourceResult
 
-    StartResourceScan(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) (*accessanalyzer.StartResourceScanOutput, error)
-    StartResourceScanAsync(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) *AccessanalyzerStartResourceScanResult
+       StartResourceScan(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) (*accessanalyzer.StartResourceScanOutput, error)
+       StartResourceScanAsync(ctx workflow.Context, input *accessanalyzer.StartResourceScanInput) *AccessanalyzerStartResourceScanResult
 
-    TagResource(ctx workflow.Context, input *accessanalyzer.TagResourceInput) (*accessanalyzer.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *accessanalyzer.TagResourceInput) *AccessanalyzerTagResourceResult
+       TagResource(ctx workflow.Context, input *accessanalyzer.TagResourceInput) (*accessanalyzer.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *accessanalyzer.TagResourceInput) *AccessanalyzerTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) (*accessanalyzer.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) *AccessanalyzerUntagResourceResult
+       UntagResource(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) (*accessanalyzer.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *accessanalyzer.UntagResourceInput) *AccessanalyzerUntagResourceResult
 
-    UpdateArchiveRule(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) (*accessanalyzer.UpdateArchiveRuleOutput, error)
-    UpdateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) *AccessanalyzerUpdateArchiveRuleResult
+       UpdateArchiveRule(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) (*accessanalyzer.UpdateArchiveRuleOutput, error)
+       UpdateArchiveRuleAsync(ctx workflow.Context, input *accessanalyzer.UpdateArchiveRuleInput) *AccessanalyzerUpdateArchiveRuleResult
 
-    UpdateFindings(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) (*accessanalyzer.UpdateFindingsOutput, error)
-    UpdateFindingsAsync(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) *AccessanalyzerUpdateFindingsResult
+       UpdateFindings(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) (*accessanalyzer.UpdateFindingsOutput, error)
+       UpdateFindingsAsync(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) *AccessanalyzerUpdateFindingsResult
 }
 
 type AccessanalyzerCreateAnalyzerResult struct {

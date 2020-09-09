@@ -7,365 +7,365 @@ import (
 )
 
 type APIGatewayClient interface {
-    CreateApiKey(ctx workflow.Context, input *apigateway.CreateApiKeyInput) (*apigateway.ApiKey, error)
-    CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *ApigatewayCreateApiKeyResult
+       CreateApiKey(ctx workflow.Context, input *apigateway.CreateApiKeyInput) (*apigateway.ApiKey, error)
+       CreateApiKeyAsync(ctx workflow.Context, input *apigateway.CreateApiKeyInput) *ApigatewayCreateApiKeyResult
 
-    CreateAuthorizer(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) (*apigateway.Authorizer, error)
-    CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *ApigatewayCreateAuthorizerResult
+       CreateAuthorizer(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) (*apigateway.Authorizer, error)
+       CreateAuthorizerAsync(ctx workflow.Context, input *apigateway.CreateAuthorizerInput) *ApigatewayCreateAuthorizerResult
 
-    CreateBasePathMapping(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) (*apigateway.BasePathMapping, error)
-    CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *ApigatewayCreateBasePathMappingResult
+       CreateBasePathMapping(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) (*apigateway.BasePathMapping, error)
+       CreateBasePathMappingAsync(ctx workflow.Context, input *apigateway.CreateBasePathMappingInput) *ApigatewayCreateBasePathMappingResult
 
-    CreateDeployment(ctx workflow.Context, input *apigateway.CreateDeploymentInput) (*apigateway.Deployment, error)
-    CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *ApigatewayCreateDeploymentResult
+       CreateDeployment(ctx workflow.Context, input *apigateway.CreateDeploymentInput) (*apigateway.Deployment, error)
+       CreateDeploymentAsync(ctx workflow.Context, input *apigateway.CreateDeploymentInput) *ApigatewayCreateDeploymentResult
 
-    CreateDocumentationPart(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) (*apigateway.DocumentationPart, error)
-    CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *ApigatewayCreateDocumentationPartResult
+       CreateDocumentationPart(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) (*apigateway.DocumentationPart, error)
+       CreateDocumentationPartAsync(ctx workflow.Context, input *apigateway.CreateDocumentationPartInput) *ApigatewayCreateDocumentationPartResult
 
-    CreateDocumentationVersion(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-    CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *ApigatewayCreateDocumentationVersionResult
+       CreateDocumentationVersion(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
+       CreateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.CreateDocumentationVersionInput) *ApigatewayCreateDocumentationVersionResult
 
-    CreateDomainName(ctx workflow.Context, input *apigateway.CreateDomainNameInput) (*apigateway.DomainName, error)
-    CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *ApigatewayCreateDomainNameResult
+       CreateDomainName(ctx workflow.Context, input *apigateway.CreateDomainNameInput) (*apigateway.DomainName, error)
+       CreateDomainNameAsync(ctx workflow.Context, input *apigateway.CreateDomainNameInput) *ApigatewayCreateDomainNameResult
 
-    CreateModel(ctx workflow.Context, input *apigateway.CreateModelInput) (*apigateway.Model, error)
-    CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *ApigatewayCreateModelResult
+       CreateModel(ctx workflow.Context, input *apigateway.CreateModelInput) (*apigateway.Model, error)
+       CreateModelAsync(ctx workflow.Context, input *apigateway.CreateModelInput) *ApigatewayCreateModelResult
 
-    CreateRequestValidator(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-    CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *ApigatewayCreateRequestValidatorResult
+       CreateRequestValidator(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
+       CreateRequestValidatorAsync(ctx workflow.Context, input *apigateway.CreateRequestValidatorInput) *ApigatewayCreateRequestValidatorResult
 
-    CreateResource(ctx workflow.Context, input *apigateway.CreateResourceInput) (*apigateway.Resource, error)
-    CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *ApigatewayCreateResourceResult
+       CreateResource(ctx workflow.Context, input *apigateway.CreateResourceInput) (*apigateway.Resource, error)
+       CreateResourceAsync(ctx workflow.Context, input *apigateway.CreateResourceInput) *ApigatewayCreateResourceResult
 
-    CreateRestApi(ctx workflow.Context, input *apigateway.CreateRestApiInput) (*apigateway.RestApi, error)
-    CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *ApigatewayCreateRestApiResult
+       CreateRestApi(ctx workflow.Context, input *apigateway.CreateRestApiInput) (*apigateway.RestApi, error)
+       CreateRestApiAsync(ctx workflow.Context, input *apigateway.CreateRestApiInput) *ApigatewayCreateRestApiResult
 
-    CreateStage(ctx workflow.Context, input *apigateway.CreateStageInput) (*apigateway.Stage, error)
-    CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *ApigatewayCreateStageResult
+       CreateStage(ctx workflow.Context, input *apigateway.CreateStageInput) (*apigateway.Stage, error)
+       CreateStageAsync(ctx workflow.Context, input *apigateway.CreateStageInput) *ApigatewayCreateStageResult
 
-    CreateUsagePlan(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) (*apigateway.UsagePlan, error)
-    CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *ApigatewayCreateUsagePlanResult
+       CreateUsagePlan(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) (*apigateway.UsagePlan, error)
+       CreateUsagePlanAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanInput) *ApigatewayCreateUsagePlanResult
 
-    CreateUsagePlanKey(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
-    CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *ApigatewayCreateUsagePlanKeyResult
+       CreateUsagePlanKey(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
+       CreateUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.CreateUsagePlanKeyInput) *ApigatewayCreateUsagePlanKeyResult
 
-    CreateVpcLink(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-    CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *ApigatewayCreateVpcLinkResult
+       CreateVpcLink(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
+       CreateVpcLinkAsync(ctx workflow.Context, input *apigateway.CreateVpcLinkInput) *ApigatewayCreateVpcLinkResult
 
-    DeleteApiKey(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) (*apigateway.DeleteApiKeyOutput, error)
-    DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *ApigatewayDeleteApiKeyResult
+       DeleteApiKey(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) (*apigateway.DeleteApiKeyOutput, error)
+       DeleteApiKeyAsync(ctx workflow.Context, input *apigateway.DeleteApiKeyInput) *ApigatewayDeleteApiKeyResult
 
-    DeleteAuthorizer(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) (*apigateway.DeleteAuthorizerOutput, error)
-    DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *ApigatewayDeleteAuthorizerResult
+       DeleteAuthorizer(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) (*apigateway.DeleteAuthorizerOutput, error)
+       DeleteAuthorizerAsync(ctx workflow.Context, input *apigateway.DeleteAuthorizerInput) *ApigatewayDeleteAuthorizerResult
 
-    DeleteBasePathMapping(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) (*apigateway.DeleteBasePathMappingOutput, error)
-    DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *ApigatewayDeleteBasePathMappingResult
+       DeleteBasePathMapping(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) (*apigateway.DeleteBasePathMappingOutput, error)
+       DeleteBasePathMappingAsync(ctx workflow.Context, input *apigateway.DeleteBasePathMappingInput) *ApigatewayDeleteBasePathMappingResult
 
-    DeleteClientCertificate(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) (*apigateway.DeleteClientCertificateOutput, error)
-    DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *ApigatewayDeleteClientCertificateResult
+       DeleteClientCertificate(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) (*apigateway.DeleteClientCertificateOutput, error)
+       DeleteClientCertificateAsync(ctx workflow.Context, input *apigateway.DeleteClientCertificateInput) *ApigatewayDeleteClientCertificateResult
 
-    DeleteDeployment(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) (*apigateway.DeleteDeploymentOutput, error)
-    DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *ApigatewayDeleteDeploymentResult
+       DeleteDeployment(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) (*apigateway.DeleteDeploymentOutput, error)
+       DeleteDeploymentAsync(ctx workflow.Context, input *apigateway.DeleteDeploymentInput) *ApigatewayDeleteDeploymentResult
 
-    DeleteDocumentationPart(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) (*apigateway.DeleteDocumentationPartOutput, error)
-    DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *ApigatewayDeleteDocumentationPartResult
+       DeleteDocumentationPart(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) (*apigateway.DeleteDocumentationPartOutput, error)
+       DeleteDocumentationPartAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationPartInput) *ApigatewayDeleteDocumentationPartResult
 
-    DeleteDocumentationVersion(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) (*apigateway.DeleteDocumentationVersionOutput, error)
-    DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *ApigatewayDeleteDocumentationVersionResult
+       DeleteDocumentationVersion(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) (*apigateway.DeleteDocumentationVersionOutput, error)
+       DeleteDocumentationVersionAsync(ctx workflow.Context, input *apigateway.DeleteDocumentationVersionInput) *ApigatewayDeleteDocumentationVersionResult
 
-    DeleteDomainName(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) (*apigateway.DeleteDomainNameOutput, error)
-    DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *ApigatewayDeleteDomainNameResult
+       DeleteDomainName(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) (*apigateway.DeleteDomainNameOutput, error)
+       DeleteDomainNameAsync(ctx workflow.Context, input *apigateway.DeleteDomainNameInput) *ApigatewayDeleteDomainNameResult
 
-    DeleteGatewayResponse(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) (*apigateway.DeleteGatewayResponseOutput, error)
-    DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *ApigatewayDeleteGatewayResponseResult
+       DeleteGatewayResponse(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) (*apigateway.DeleteGatewayResponseOutput, error)
+       DeleteGatewayResponseAsync(ctx workflow.Context, input *apigateway.DeleteGatewayResponseInput) *ApigatewayDeleteGatewayResponseResult
 
-    DeleteIntegration(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) (*apigateway.DeleteIntegrationOutput, error)
-    DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *ApigatewayDeleteIntegrationResult
+       DeleteIntegration(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) (*apigateway.DeleteIntegrationOutput, error)
+       DeleteIntegrationAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationInput) *ApigatewayDeleteIntegrationResult
 
-    DeleteIntegrationResponse(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) (*apigateway.DeleteIntegrationResponseOutput, error)
-    DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *ApigatewayDeleteIntegrationResponseResult
+       DeleteIntegrationResponse(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) (*apigateway.DeleteIntegrationResponseOutput, error)
+       DeleteIntegrationResponseAsync(ctx workflow.Context, input *apigateway.DeleteIntegrationResponseInput) *ApigatewayDeleteIntegrationResponseResult
 
-    DeleteMethod(ctx workflow.Context, input *apigateway.DeleteMethodInput) (*apigateway.DeleteMethodOutput, error)
-    DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *ApigatewayDeleteMethodResult
+       DeleteMethod(ctx workflow.Context, input *apigateway.DeleteMethodInput) (*apigateway.DeleteMethodOutput, error)
+       DeleteMethodAsync(ctx workflow.Context, input *apigateway.DeleteMethodInput) *ApigatewayDeleteMethodResult
 
-    DeleteMethodResponse(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) (*apigateway.DeleteMethodResponseOutput, error)
-    DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *ApigatewayDeleteMethodResponseResult
+       DeleteMethodResponse(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) (*apigateway.DeleteMethodResponseOutput, error)
+       DeleteMethodResponseAsync(ctx workflow.Context, input *apigateway.DeleteMethodResponseInput) *ApigatewayDeleteMethodResponseResult
 
-    DeleteModel(ctx workflow.Context, input *apigateway.DeleteModelInput) (*apigateway.DeleteModelOutput, error)
-    DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *ApigatewayDeleteModelResult
+       DeleteModel(ctx workflow.Context, input *apigateway.DeleteModelInput) (*apigateway.DeleteModelOutput, error)
+       DeleteModelAsync(ctx workflow.Context, input *apigateway.DeleteModelInput) *ApigatewayDeleteModelResult
 
-    DeleteRequestValidator(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) (*apigateway.DeleteRequestValidatorOutput, error)
-    DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *ApigatewayDeleteRequestValidatorResult
+       DeleteRequestValidator(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) (*apigateway.DeleteRequestValidatorOutput, error)
+       DeleteRequestValidatorAsync(ctx workflow.Context, input *apigateway.DeleteRequestValidatorInput) *ApigatewayDeleteRequestValidatorResult
 
-    DeleteResource(ctx workflow.Context, input *apigateway.DeleteResourceInput) (*apigateway.DeleteResourceOutput, error)
-    DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *ApigatewayDeleteResourceResult
+       DeleteResource(ctx workflow.Context, input *apigateway.DeleteResourceInput) (*apigateway.DeleteResourceOutput, error)
+       DeleteResourceAsync(ctx workflow.Context, input *apigateway.DeleteResourceInput) *ApigatewayDeleteResourceResult
 
-    DeleteRestApi(ctx workflow.Context, input *apigateway.DeleteRestApiInput) (*apigateway.DeleteRestApiOutput, error)
-    DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *ApigatewayDeleteRestApiResult
+       DeleteRestApi(ctx workflow.Context, input *apigateway.DeleteRestApiInput) (*apigateway.DeleteRestApiOutput, error)
+       DeleteRestApiAsync(ctx workflow.Context, input *apigateway.DeleteRestApiInput) *ApigatewayDeleteRestApiResult
 
-    DeleteStage(ctx workflow.Context, input *apigateway.DeleteStageInput) (*apigateway.DeleteStageOutput, error)
-    DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *ApigatewayDeleteStageResult
+       DeleteStage(ctx workflow.Context, input *apigateway.DeleteStageInput) (*apigateway.DeleteStageOutput, error)
+       DeleteStageAsync(ctx workflow.Context, input *apigateway.DeleteStageInput) *ApigatewayDeleteStageResult
 
-    DeleteUsagePlan(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) (*apigateway.DeleteUsagePlanOutput, error)
-    DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *ApigatewayDeleteUsagePlanResult
+       DeleteUsagePlan(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) (*apigateway.DeleteUsagePlanOutput, error)
+       DeleteUsagePlanAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanInput) *ApigatewayDeleteUsagePlanResult
 
-    DeleteUsagePlanKey(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) (*apigateway.DeleteUsagePlanKeyOutput, error)
-    DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *ApigatewayDeleteUsagePlanKeyResult
+       DeleteUsagePlanKey(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) (*apigateway.DeleteUsagePlanKeyOutput, error)
+       DeleteUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.DeleteUsagePlanKeyInput) *ApigatewayDeleteUsagePlanKeyResult
 
-    DeleteVpcLink(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error)
-    DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *ApigatewayDeleteVpcLinkResult
+       DeleteVpcLink(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) (*apigateway.DeleteVpcLinkOutput, error)
+       DeleteVpcLinkAsync(ctx workflow.Context, input *apigateway.DeleteVpcLinkInput) *ApigatewayDeleteVpcLinkResult
 
-    FlushStageAuthorizersCache(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) (*apigateway.FlushStageAuthorizersCacheOutput, error)
-    FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *ApigatewayFlushStageAuthorizersCacheResult
+       FlushStageAuthorizersCache(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) (*apigateway.FlushStageAuthorizersCacheOutput, error)
+       FlushStageAuthorizersCacheAsync(ctx workflow.Context, input *apigateway.FlushStageAuthorizersCacheInput) *ApigatewayFlushStageAuthorizersCacheResult
 
-    FlushStageCache(ctx workflow.Context, input *apigateway.FlushStageCacheInput) (*apigateway.FlushStageCacheOutput, error)
-    FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *ApigatewayFlushStageCacheResult
+       FlushStageCache(ctx workflow.Context, input *apigateway.FlushStageCacheInput) (*apigateway.FlushStageCacheOutput, error)
+       FlushStageCacheAsync(ctx workflow.Context, input *apigateway.FlushStageCacheInput) *ApigatewayFlushStageCacheResult
 
-    GenerateClientCertificate(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) (*apigateway.ClientCertificate, error)
-    GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *ApigatewayGenerateClientCertificateResult
+       GenerateClientCertificate(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) (*apigateway.ClientCertificate, error)
+       GenerateClientCertificateAsync(ctx workflow.Context, input *apigateway.GenerateClientCertificateInput) *ApigatewayGenerateClientCertificateResult
 
-    GetAccount(ctx workflow.Context, input *apigateway.GetAccountInput) (*apigateway.Account, error)
-    GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *ApigatewayGetAccountResult
+       GetAccount(ctx workflow.Context, input *apigateway.GetAccountInput) (*apigateway.Account, error)
+       GetAccountAsync(ctx workflow.Context, input *apigateway.GetAccountInput) *ApigatewayGetAccountResult
 
-    GetApiKey(ctx workflow.Context, input *apigateway.GetApiKeyInput) (*apigateway.ApiKey, error)
-    GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *ApigatewayGetApiKeyResult
+       GetApiKey(ctx workflow.Context, input *apigateway.GetApiKeyInput) (*apigateway.ApiKey, error)
+       GetApiKeyAsync(ctx workflow.Context, input *apigateway.GetApiKeyInput) *ApigatewayGetApiKeyResult
 
-    GetApiKeys(ctx workflow.Context, input *apigateway.GetApiKeysInput) (*apigateway.GetApiKeysOutput, error)
-    GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *ApigatewayGetApiKeysResult
+       GetApiKeys(ctx workflow.Context, input *apigateway.GetApiKeysInput) (*apigateway.GetApiKeysOutput, error)
+       GetApiKeysAsync(ctx workflow.Context, input *apigateway.GetApiKeysInput) *ApigatewayGetApiKeysResult
 
-    GetAuthorizer(ctx workflow.Context, input *apigateway.GetAuthorizerInput) (*apigateway.Authorizer, error)
-    GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *ApigatewayGetAuthorizerResult
+       GetAuthorizer(ctx workflow.Context, input *apigateway.GetAuthorizerInput) (*apigateway.Authorizer, error)
+       GetAuthorizerAsync(ctx workflow.Context, input *apigateway.GetAuthorizerInput) *ApigatewayGetAuthorizerResult
 
-    GetAuthorizers(ctx workflow.Context, input *apigateway.GetAuthorizersInput) (*apigateway.GetAuthorizersOutput, error)
-    GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *ApigatewayGetAuthorizersResult
+       GetAuthorizers(ctx workflow.Context, input *apigateway.GetAuthorizersInput) (*apigateway.GetAuthorizersOutput, error)
+       GetAuthorizersAsync(ctx workflow.Context, input *apigateway.GetAuthorizersInput) *ApigatewayGetAuthorizersResult
 
-    GetBasePathMapping(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) (*apigateway.BasePathMapping, error)
-    GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *ApigatewayGetBasePathMappingResult
+       GetBasePathMapping(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) (*apigateway.BasePathMapping, error)
+       GetBasePathMappingAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingInput) *ApigatewayGetBasePathMappingResult
 
-    GetBasePathMappings(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) (*apigateway.GetBasePathMappingsOutput, error)
-    GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *ApigatewayGetBasePathMappingsResult
+       GetBasePathMappings(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) (*apigateway.GetBasePathMappingsOutput, error)
+       GetBasePathMappingsAsync(ctx workflow.Context, input *apigateway.GetBasePathMappingsInput) *ApigatewayGetBasePathMappingsResult
 
-    GetClientCertificate(ctx workflow.Context, input *apigateway.GetClientCertificateInput) (*apigateway.ClientCertificate, error)
-    GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *ApigatewayGetClientCertificateResult
+       GetClientCertificate(ctx workflow.Context, input *apigateway.GetClientCertificateInput) (*apigateway.ClientCertificate, error)
+       GetClientCertificateAsync(ctx workflow.Context, input *apigateway.GetClientCertificateInput) *ApigatewayGetClientCertificateResult
 
-    GetClientCertificates(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) (*apigateway.GetClientCertificatesOutput, error)
-    GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *ApigatewayGetClientCertificatesResult
+       GetClientCertificates(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) (*apigateway.GetClientCertificatesOutput, error)
+       GetClientCertificatesAsync(ctx workflow.Context, input *apigateway.GetClientCertificatesInput) *ApigatewayGetClientCertificatesResult
 
-    GetDeployment(ctx workflow.Context, input *apigateway.GetDeploymentInput) (*apigateway.Deployment, error)
-    GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *ApigatewayGetDeploymentResult
+       GetDeployment(ctx workflow.Context, input *apigateway.GetDeploymentInput) (*apigateway.Deployment, error)
+       GetDeploymentAsync(ctx workflow.Context, input *apigateway.GetDeploymentInput) *ApigatewayGetDeploymentResult
 
-    GetDeployments(ctx workflow.Context, input *apigateway.GetDeploymentsInput) (*apigateway.GetDeploymentsOutput, error)
-    GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *ApigatewayGetDeploymentsResult
+       GetDeployments(ctx workflow.Context, input *apigateway.GetDeploymentsInput) (*apigateway.GetDeploymentsOutput, error)
+       GetDeploymentsAsync(ctx workflow.Context, input *apigateway.GetDeploymentsInput) *ApigatewayGetDeploymentsResult
 
-    GetDocumentationPart(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) (*apigateway.DocumentationPart, error)
-    GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *ApigatewayGetDocumentationPartResult
+       GetDocumentationPart(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) (*apigateway.DocumentationPart, error)
+       GetDocumentationPartAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartInput) *ApigatewayGetDocumentationPartResult
 
-    GetDocumentationParts(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) (*apigateway.GetDocumentationPartsOutput, error)
-    GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *ApigatewayGetDocumentationPartsResult
+       GetDocumentationParts(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) (*apigateway.GetDocumentationPartsOutput, error)
+       GetDocumentationPartsAsync(ctx workflow.Context, input *apigateway.GetDocumentationPartsInput) *ApigatewayGetDocumentationPartsResult
 
-    GetDocumentationVersion(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-    GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *ApigatewayGetDocumentationVersionResult
+       GetDocumentationVersion(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
+       GetDocumentationVersionAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionInput) *ApigatewayGetDocumentationVersionResult
 
-    GetDocumentationVersions(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) (*apigateway.GetDocumentationVersionsOutput, error)
-    GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *ApigatewayGetDocumentationVersionsResult
+       GetDocumentationVersions(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) (*apigateway.GetDocumentationVersionsOutput, error)
+       GetDocumentationVersionsAsync(ctx workflow.Context, input *apigateway.GetDocumentationVersionsInput) *ApigatewayGetDocumentationVersionsResult
 
-    GetDomainName(ctx workflow.Context, input *apigateway.GetDomainNameInput) (*apigateway.DomainName, error)
-    GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *ApigatewayGetDomainNameResult
+       GetDomainName(ctx workflow.Context, input *apigateway.GetDomainNameInput) (*apigateway.DomainName, error)
+       GetDomainNameAsync(ctx workflow.Context, input *apigateway.GetDomainNameInput) *ApigatewayGetDomainNameResult
 
-    GetDomainNames(ctx workflow.Context, input *apigateway.GetDomainNamesInput) (*apigateway.GetDomainNamesOutput, error)
-    GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *ApigatewayGetDomainNamesResult
+       GetDomainNames(ctx workflow.Context, input *apigateway.GetDomainNamesInput) (*apigateway.GetDomainNamesOutput, error)
+       GetDomainNamesAsync(ctx workflow.Context, input *apigateway.GetDomainNamesInput) *ApigatewayGetDomainNamesResult
 
-    GetExport(ctx workflow.Context, input *apigateway.GetExportInput) (*apigateway.GetExportOutput, error)
-    GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *ApigatewayGetExportResult
+       GetExport(ctx workflow.Context, input *apigateway.GetExportInput) (*apigateway.GetExportOutput, error)
+       GetExportAsync(ctx workflow.Context, input *apigateway.GetExportInput) *ApigatewayGetExportResult
 
-    GetGatewayResponse(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-    GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *ApigatewayGetGatewayResponseResult
+       GetGatewayResponse(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
+       GetGatewayResponseAsync(ctx workflow.Context, input *apigateway.GetGatewayResponseInput) *ApigatewayGetGatewayResponseResult
 
-    GetGatewayResponses(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) (*apigateway.GetGatewayResponsesOutput, error)
-    GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *ApigatewayGetGatewayResponsesResult
+       GetGatewayResponses(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) (*apigateway.GetGatewayResponsesOutput, error)
+       GetGatewayResponsesAsync(ctx workflow.Context, input *apigateway.GetGatewayResponsesInput) *ApigatewayGetGatewayResponsesResult
 
-    GetIntegration(ctx workflow.Context, input *apigateway.GetIntegrationInput) (*apigateway.Integration, error)
-    GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *ApigatewayGetIntegrationResult
+       GetIntegration(ctx workflow.Context, input *apigateway.GetIntegrationInput) (*apigateway.Integration, error)
+       GetIntegrationAsync(ctx workflow.Context, input *apigateway.GetIntegrationInput) *ApigatewayGetIntegrationResult
 
-    GetIntegrationResponse(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-    GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *ApigatewayGetIntegrationResponseResult
+       GetIntegrationResponse(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
+       GetIntegrationResponseAsync(ctx workflow.Context, input *apigateway.GetIntegrationResponseInput) *ApigatewayGetIntegrationResponseResult
 
-    GetMethod(ctx workflow.Context, input *apigateway.GetMethodInput) (*apigateway.Method, error)
-    GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *ApigatewayGetMethodResult
+       GetMethod(ctx workflow.Context, input *apigateway.GetMethodInput) (*apigateway.Method, error)
+       GetMethodAsync(ctx workflow.Context, input *apigateway.GetMethodInput) *ApigatewayGetMethodResult
 
-    GetMethodResponse(ctx workflow.Context, input *apigateway.GetMethodResponseInput) (*apigateway.MethodResponse, error)
-    GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *ApigatewayGetMethodResponseResult
+       GetMethodResponse(ctx workflow.Context, input *apigateway.GetMethodResponseInput) (*apigateway.MethodResponse, error)
+       GetMethodResponseAsync(ctx workflow.Context, input *apigateway.GetMethodResponseInput) *ApigatewayGetMethodResponseResult
 
-    GetModel(ctx workflow.Context, input *apigateway.GetModelInput) (*apigateway.Model, error)
-    GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *ApigatewayGetModelResult
+       GetModel(ctx workflow.Context, input *apigateway.GetModelInput) (*apigateway.Model, error)
+       GetModelAsync(ctx workflow.Context, input *apigateway.GetModelInput) *ApigatewayGetModelResult
 
-    GetModelTemplate(ctx workflow.Context, input *apigateway.GetModelTemplateInput) (*apigateway.GetModelTemplateOutput, error)
-    GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *ApigatewayGetModelTemplateResult
+       GetModelTemplate(ctx workflow.Context, input *apigateway.GetModelTemplateInput) (*apigateway.GetModelTemplateOutput, error)
+       GetModelTemplateAsync(ctx workflow.Context, input *apigateway.GetModelTemplateInput) *ApigatewayGetModelTemplateResult
 
-    GetModels(ctx workflow.Context, input *apigateway.GetModelsInput) (*apigateway.GetModelsOutput, error)
-    GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *ApigatewayGetModelsResult
+       GetModels(ctx workflow.Context, input *apigateway.GetModelsInput) (*apigateway.GetModelsOutput, error)
+       GetModelsAsync(ctx workflow.Context, input *apigateway.GetModelsInput) *ApigatewayGetModelsResult
 
-    GetRequestValidator(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-    GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *ApigatewayGetRequestValidatorResult
+       GetRequestValidator(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
+       GetRequestValidatorAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorInput) *ApigatewayGetRequestValidatorResult
 
-    GetRequestValidators(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) (*apigateway.GetRequestValidatorsOutput, error)
-    GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *ApigatewayGetRequestValidatorsResult
+       GetRequestValidators(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) (*apigateway.GetRequestValidatorsOutput, error)
+       GetRequestValidatorsAsync(ctx workflow.Context, input *apigateway.GetRequestValidatorsInput) *ApigatewayGetRequestValidatorsResult
 
-    GetResource(ctx workflow.Context, input *apigateway.GetResourceInput) (*apigateway.Resource, error)
-    GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *ApigatewayGetResourceResult
+       GetResource(ctx workflow.Context, input *apigateway.GetResourceInput) (*apigateway.Resource, error)
+       GetResourceAsync(ctx workflow.Context, input *apigateway.GetResourceInput) *ApigatewayGetResourceResult
 
-    GetResources(ctx workflow.Context, input *apigateway.GetResourcesInput) (*apigateway.GetResourcesOutput, error)
-    GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *ApigatewayGetResourcesResult
+       GetResources(ctx workflow.Context, input *apigateway.GetResourcesInput) (*apigateway.GetResourcesOutput, error)
+       GetResourcesAsync(ctx workflow.Context, input *apigateway.GetResourcesInput) *ApigatewayGetResourcesResult
 
-    GetRestApi(ctx workflow.Context, input *apigateway.GetRestApiInput) (*apigateway.RestApi, error)
-    GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *ApigatewayGetRestApiResult
+       GetRestApi(ctx workflow.Context, input *apigateway.GetRestApiInput) (*apigateway.RestApi, error)
+       GetRestApiAsync(ctx workflow.Context, input *apigateway.GetRestApiInput) *ApigatewayGetRestApiResult
 
-    GetRestApis(ctx workflow.Context, input *apigateway.GetRestApisInput) (*apigateway.GetRestApisOutput, error)
-    GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *ApigatewayGetRestApisResult
+       GetRestApis(ctx workflow.Context, input *apigateway.GetRestApisInput) (*apigateway.GetRestApisOutput, error)
+       GetRestApisAsync(ctx workflow.Context, input *apigateway.GetRestApisInput) *ApigatewayGetRestApisResult
 
-    GetSdk(ctx workflow.Context, input *apigateway.GetSdkInput) (*apigateway.GetSdkOutput, error)
-    GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *ApigatewayGetSdkResult
+       GetSdk(ctx workflow.Context, input *apigateway.GetSdkInput) (*apigateway.GetSdkOutput, error)
+       GetSdkAsync(ctx workflow.Context, input *apigateway.GetSdkInput) *ApigatewayGetSdkResult
 
-    GetSdkType(ctx workflow.Context, input *apigateway.GetSdkTypeInput) (*apigateway.SdkType, error)
-    GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *ApigatewayGetSdkTypeResult
+       GetSdkType(ctx workflow.Context, input *apigateway.GetSdkTypeInput) (*apigateway.SdkType, error)
+       GetSdkTypeAsync(ctx workflow.Context, input *apigateway.GetSdkTypeInput) *ApigatewayGetSdkTypeResult
 
-    GetSdkTypes(ctx workflow.Context, input *apigateway.GetSdkTypesInput) (*apigateway.GetSdkTypesOutput, error)
-    GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *ApigatewayGetSdkTypesResult
+       GetSdkTypes(ctx workflow.Context, input *apigateway.GetSdkTypesInput) (*apigateway.GetSdkTypesOutput, error)
+       GetSdkTypesAsync(ctx workflow.Context, input *apigateway.GetSdkTypesInput) *ApigatewayGetSdkTypesResult
 
-    GetStage(ctx workflow.Context, input *apigateway.GetStageInput) (*apigateway.Stage, error)
-    GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *ApigatewayGetStageResult
+       GetStage(ctx workflow.Context, input *apigateway.GetStageInput) (*apigateway.Stage, error)
+       GetStageAsync(ctx workflow.Context, input *apigateway.GetStageInput) *ApigatewayGetStageResult
 
-    GetStages(ctx workflow.Context, input *apigateway.GetStagesInput) (*apigateway.GetStagesOutput, error)
-    GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *ApigatewayGetStagesResult
+       GetStages(ctx workflow.Context, input *apigateway.GetStagesInput) (*apigateway.GetStagesOutput, error)
+       GetStagesAsync(ctx workflow.Context, input *apigateway.GetStagesInput) *ApigatewayGetStagesResult
 
-    GetTags(ctx workflow.Context, input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error)
-    GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *ApigatewayGetTagsResult
+       GetTags(ctx workflow.Context, input *apigateway.GetTagsInput) (*apigateway.GetTagsOutput, error)
+       GetTagsAsync(ctx workflow.Context, input *apigateway.GetTagsInput) *ApigatewayGetTagsResult
 
-    GetUsage(ctx workflow.Context, input *apigateway.GetUsageInput) (*apigateway.Usage, error)
-    GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *ApigatewayGetUsageResult
+       GetUsage(ctx workflow.Context, input *apigateway.GetUsageInput) (*apigateway.Usage, error)
+       GetUsageAsync(ctx workflow.Context, input *apigateway.GetUsageInput) *ApigatewayGetUsageResult
 
-    GetUsagePlan(ctx workflow.Context, input *apigateway.GetUsagePlanInput) (*apigateway.UsagePlan, error)
-    GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *ApigatewayGetUsagePlanResult
+       GetUsagePlan(ctx workflow.Context, input *apigateway.GetUsagePlanInput) (*apigateway.UsagePlan, error)
+       GetUsagePlanAsync(ctx workflow.Context, input *apigateway.GetUsagePlanInput) *ApigatewayGetUsagePlanResult
 
-    GetUsagePlanKey(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
-    GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *ApigatewayGetUsagePlanKeyResult
+       GetUsagePlanKey(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) (*apigateway.UsagePlanKey, error)
+       GetUsagePlanKeyAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeyInput) *ApigatewayGetUsagePlanKeyResult
 
-    GetUsagePlanKeys(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) (*apigateway.GetUsagePlanKeysOutput, error)
-    GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *ApigatewayGetUsagePlanKeysResult
+       GetUsagePlanKeys(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) (*apigateway.GetUsagePlanKeysOutput, error)
+       GetUsagePlanKeysAsync(ctx workflow.Context, input *apigateway.GetUsagePlanKeysInput) *ApigatewayGetUsagePlanKeysResult
 
-    GetUsagePlans(ctx workflow.Context, input *apigateway.GetUsagePlansInput) (*apigateway.GetUsagePlansOutput, error)
-    GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *ApigatewayGetUsagePlansResult
+       GetUsagePlans(ctx workflow.Context, input *apigateway.GetUsagePlansInput) (*apigateway.GetUsagePlansOutput, error)
+       GetUsagePlansAsync(ctx workflow.Context, input *apigateway.GetUsagePlansInput) *ApigatewayGetUsagePlansResult
 
-    GetVpcLink(ctx workflow.Context, input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-    GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *ApigatewayGetVpcLinkResult
+       GetVpcLink(ctx workflow.Context, input *apigateway.GetVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
+       GetVpcLinkAsync(ctx workflow.Context, input *apigateway.GetVpcLinkInput) *ApigatewayGetVpcLinkResult
 
-    GetVpcLinks(ctx workflow.Context, input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error)
-    GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *ApigatewayGetVpcLinksResult
+       GetVpcLinks(ctx workflow.Context, input *apigateway.GetVpcLinksInput) (*apigateway.GetVpcLinksOutput, error)
+       GetVpcLinksAsync(ctx workflow.Context, input *apigateway.GetVpcLinksInput) *ApigatewayGetVpcLinksResult
 
-    ImportApiKeys(ctx workflow.Context, input *apigateway.ImportApiKeysInput) (*apigateway.ImportApiKeysOutput, error)
-    ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *ApigatewayImportApiKeysResult
+       ImportApiKeys(ctx workflow.Context, input *apigateway.ImportApiKeysInput) (*apigateway.ImportApiKeysOutput, error)
+       ImportApiKeysAsync(ctx workflow.Context, input *apigateway.ImportApiKeysInput) *ApigatewayImportApiKeysResult
 
-    ImportDocumentationParts(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) (*apigateway.ImportDocumentationPartsOutput, error)
-    ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *ApigatewayImportDocumentationPartsResult
+       ImportDocumentationParts(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) (*apigateway.ImportDocumentationPartsOutput, error)
+       ImportDocumentationPartsAsync(ctx workflow.Context, input *apigateway.ImportDocumentationPartsInput) *ApigatewayImportDocumentationPartsResult
 
-    ImportRestApi(ctx workflow.Context, input *apigateway.ImportRestApiInput) (*apigateway.RestApi, error)
-    ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *ApigatewayImportRestApiResult
+       ImportRestApi(ctx workflow.Context, input *apigateway.ImportRestApiInput) (*apigateway.RestApi, error)
+       ImportRestApiAsync(ctx workflow.Context, input *apigateway.ImportRestApiInput) *ApigatewayImportRestApiResult
 
-    PutGatewayResponse(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-    PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *ApigatewayPutGatewayResponseResult
+       PutGatewayResponse(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
+       PutGatewayResponseAsync(ctx workflow.Context, input *apigateway.PutGatewayResponseInput) *ApigatewayPutGatewayResponseResult
 
-    PutIntegration(ctx workflow.Context, input *apigateway.PutIntegrationInput) (*apigateway.Integration, error)
-    PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *ApigatewayPutIntegrationResult
+       PutIntegration(ctx workflow.Context, input *apigateway.PutIntegrationInput) (*apigateway.Integration, error)
+       PutIntegrationAsync(ctx workflow.Context, input *apigateway.PutIntegrationInput) *ApigatewayPutIntegrationResult
 
-    PutIntegrationResponse(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-    PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *ApigatewayPutIntegrationResponseResult
+       PutIntegrationResponse(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
+       PutIntegrationResponseAsync(ctx workflow.Context, input *apigateway.PutIntegrationResponseInput) *ApigatewayPutIntegrationResponseResult
 
-    PutMethod(ctx workflow.Context, input *apigateway.PutMethodInput) (*apigateway.Method, error)
-    PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *ApigatewayPutMethodResult
+       PutMethod(ctx workflow.Context, input *apigateway.PutMethodInput) (*apigateway.Method, error)
+       PutMethodAsync(ctx workflow.Context, input *apigateway.PutMethodInput) *ApigatewayPutMethodResult
 
-    PutMethodResponse(ctx workflow.Context, input *apigateway.PutMethodResponseInput) (*apigateway.MethodResponse, error)
-    PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *ApigatewayPutMethodResponseResult
+       PutMethodResponse(ctx workflow.Context, input *apigateway.PutMethodResponseInput) (*apigateway.MethodResponse, error)
+       PutMethodResponseAsync(ctx workflow.Context, input *apigateway.PutMethodResponseInput) *ApigatewayPutMethodResponseResult
 
-    PutRestApi(ctx workflow.Context, input *apigateway.PutRestApiInput) (*apigateway.RestApi, error)
-    PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *ApigatewayPutRestApiResult
+       PutRestApi(ctx workflow.Context, input *apigateway.PutRestApiInput) (*apigateway.RestApi, error)
+       PutRestApiAsync(ctx workflow.Context, input *apigateway.PutRestApiInput) *ApigatewayPutRestApiResult
 
-    TagResource(ctx workflow.Context, input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *ApigatewayTagResourceResult
+       TagResource(ctx workflow.Context, input *apigateway.TagResourceInput) (*apigateway.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *apigateway.TagResourceInput) *ApigatewayTagResourceResult
 
-    TestInvokeAuthorizer(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) (*apigateway.TestInvokeAuthorizerOutput, error)
-    TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *ApigatewayTestInvokeAuthorizerResult
+       TestInvokeAuthorizer(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) (*apigateway.TestInvokeAuthorizerOutput, error)
+       TestInvokeAuthorizerAsync(ctx workflow.Context, input *apigateway.TestInvokeAuthorizerInput) *ApigatewayTestInvokeAuthorizerResult
 
-    TestInvokeMethod(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) (*apigateway.TestInvokeMethodOutput, error)
-    TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *ApigatewayTestInvokeMethodResult
+       TestInvokeMethod(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) (*apigateway.TestInvokeMethodOutput, error)
+       TestInvokeMethodAsync(ctx workflow.Context, input *apigateway.TestInvokeMethodInput) *ApigatewayTestInvokeMethodResult
 
-    UntagResource(ctx workflow.Context, input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *ApigatewayUntagResourceResult
+       UntagResource(ctx workflow.Context, input *apigateway.UntagResourceInput) (*apigateway.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *apigateway.UntagResourceInput) *ApigatewayUntagResourceResult
 
-    UpdateAccount(ctx workflow.Context, input *apigateway.UpdateAccountInput) (*apigateway.Account, error)
-    UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *ApigatewayUpdateAccountResult
+       UpdateAccount(ctx workflow.Context, input *apigateway.UpdateAccountInput) (*apigateway.Account, error)
+       UpdateAccountAsync(ctx workflow.Context, input *apigateway.UpdateAccountInput) *ApigatewayUpdateAccountResult
 
-    UpdateApiKey(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) (*apigateway.ApiKey, error)
-    UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *ApigatewayUpdateApiKeyResult
+       UpdateApiKey(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) (*apigateway.ApiKey, error)
+       UpdateApiKeyAsync(ctx workflow.Context, input *apigateway.UpdateApiKeyInput) *ApigatewayUpdateApiKeyResult
 
-    UpdateAuthorizer(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) (*apigateway.Authorizer, error)
-    UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *ApigatewayUpdateAuthorizerResult
+       UpdateAuthorizer(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) (*apigateway.Authorizer, error)
+       UpdateAuthorizerAsync(ctx workflow.Context, input *apigateway.UpdateAuthorizerInput) *ApigatewayUpdateAuthorizerResult
 
-    UpdateBasePathMapping(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) (*apigateway.BasePathMapping, error)
-    UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *ApigatewayUpdateBasePathMappingResult
+       UpdateBasePathMapping(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) (*apigateway.BasePathMapping, error)
+       UpdateBasePathMappingAsync(ctx workflow.Context, input *apigateway.UpdateBasePathMappingInput) *ApigatewayUpdateBasePathMappingResult
 
-    UpdateClientCertificate(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) (*apigateway.ClientCertificate, error)
-    UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *ApigatewayUpdateClientCertificateResult
+       UpdateClientCertificate(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) (*apigateway.ClientCertificate, error)
+       UpdateClientCertificateAsync(ctx workflow.Context, input *apigateway.UpdateClientCertificateInput) *ApigatewayUpdateClientCertificateResult
 
-    UpdateDeployment(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) (*apigateway.Deployment, error)
-    UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *ApigatewayUpdateDeploymentResult
+       UpdateDeployment(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) (*apigateway.Deployment, error)
+       UpdateDeploymentAsync(ctx workflow.Context, input *apigateway.UpdateDeploymentInput) *ApigatewayUpdateDeploymentResult
 
-    UpdateDocumentationPart(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) (*apigateway.DocumentationPart, error)
-    UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *ApigatewayUpdateDocumentationPartResult
+       UpdateDocumentationPart(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) (*apigateway.DocumentationPart, error)
+       UpdateDocumentationPartAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationPartInput) *ApigatewayUpdateDocumentationPartResult
 
-    UpdateDocumentationVersion(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
-    UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *ApigatewayUpdateDocumentationVersionResult
+       UpdateDocumentationVersion(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) (*apigateway.DocumentationVersion, error)
+       UpdateDocumentationVersionAsync(ctx workflow.Context, input *apigateway.UpdateDocumentationVersionInput) *ApigatewayUpdateDocumentationVersionResult
 
-    UpdateDomainName(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) (*apigateway.DomainName, error)
-    UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *ApigatewayUpdateDomainNameResult
+       UpdateDomainName(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) (*apigateway.DomainName, error)
+       UpdateDomainNameAsync(ctx workflow.Context, input *apigateway.UpdateDomainNameInput) *ApigatewayUpdateDomainNameResult
 
-    UpdateGatewayResponse(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
-    UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *ApigatewayUpdateGatewayResponseResult
+       UpdateGatewayResponse(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) (*apigateway.UpdateGatewayResponseOutput, error)
+       UpdateGatewayResponseAsync(ctx workflow.Context, input *apigateway.UpdateGatewayResponseInput) *ApigatewayUpdateGatewayResponseResult
 
-    UpdateIntegration(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) (*apigateway.Integration, error)
-    UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *ApigatewayUpdateIntegrationResult
+       UpdateIntegration(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) (*apigateway.Integration, error)
+       UpdateIntegrationAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationInput) *ApigatewayUpdateIntegrationResult
 
-    UpdateIntegrationResponse(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
-    UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *ApigatewayUpdateIntegrationResponseResult
+       UpdateIntegrationResponse(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) (*apigateway.IntegrationResponse, error)
+       UpdateIntegrationResponseAsync(ctx workflow.Context, input *apigateway.UpdateIntegrationResponseInput) *ApigatewayUpdateIntegrationResponseResult
 
-    UpdateMethod(ctx workflow.Context, input *apigateway.UpdateMethodInput) (*apigateway.Method, error)
-    UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *ApigatewayUpdateMethodResult
+       UpdateMethod(ctx workflow.Context, input *apigateway.UpdateMethodInput) (*apigateway.Method, error)
+       UpdateMethodAsync(ctx workflow.Context, input *apigateway.UpdateMethodInput) *ApigatewayUpdateMethodResult
 
-    UpdateMethodResponse(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) (*apigateway.MethodResponse, error)
-    UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *ApigatewayUpdateMethodResponseResult
+       UpdateMethodResponse(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) (*apigateway.MethodResponse, error)
+       UpdateMethodResponseAsync(ctx workflow.Context, input *apigateway.UpdateMethodResponseInput) *ApigatewayUpdateMethodResponseResult
 
-    UpdateModel(ctx workflow.Context, input *apigateway.UpdateModelInput) (*apigateway.Model, error)
-    UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *ApigatewayUpdateModelResult
+       UpdateModel(ctx workflow.Context, input *apigateway.UpdateModelInput) (*apigateway.Model, error)
+       UpdateModelAsync(ctx workflow.Context, input *apigateway.UpdateModelInput) *ApigatewayUpdateModelResult
 
-    UpdateRequestValidator(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
-    UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *ApigatewayUpdateRequestValidatorResult
+       UpdateRequestValidator(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) (*apigateway.UpdateRequestValidatorOutput, error)
+       UpdateRequestValidatorAsync(ctx workflow.Context, input *apigateway.UpdateRequestValidatorInput) *ApigatewayUpdateRequestValidatorResult
 
-    UpdateResource(ctx workflow.Context, input *apigateway.UpdateResourceInput) (*apigateway.Resource, error)
-    UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *ApigatewayUpdateResourceResult
+       UpdateResource(ctx workflow.Context, input *apigateway.UpdateResourceInput) (*apigateway.Resource, error)
+       UpdateResourceAsync(ctx workflow.Context, input *apigateway.UpdateResourceInput) *ApigatewayUpdateResourceResult
 
-    UpdateRestApi(ctx workflow.Context, input *apigateway.UpdateRestApiInput) (*apigateway.RestApi, error)
-    UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *ApigatewayUpdateRestApiResult
+       UpdateRestApi(ctx workflow.Context, input *apigateway.UpdateRestApiInput) (*apigateway.RestApi, error)
+       UpdateRestApiAsync(ctx workflow.Context, input *apigateway.UpdateRestApiInput) *ApigatewayUpdateRestApiResult
 
-    UpdateStage(ctx workflow.Context, input *apigateway.UpdateStageInput) (*apigateway.Stage, error)
-    UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *ApigatewayUpdateStageResult
+       UpdateStage(ctx workflow.Context, input *apigateway.UpdateStageInput) (*apigateway.Stage, error)
+       UpdateStageAsync(ctx workflow.Context, input *apigateway.UpdateStageInput) *ApigatewayUpdateStageResult
 
-    UpdateUsage(ctx workflow.Context, input *apigateway.UpdateUsageInput) (*apigateway.Usage, error)
-    UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *ApigatewayUpdateUsageResult
+       UpdateUsage(ctx workflow.Context, input *apigateway.UpdateUsageInput) (*apigateway.Usage, error)
+       UpdateUsageAsync(ctx workflow.Context, input *apigateway.UpdateUsageInput) *ApigatewayUpdateUsageResult
 
-    UpdateUsagePlan(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) (*apigateway.UsagePlan, error)
-    UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *ApigatewayUpdateUsagePlanResult
+       UpdateUsagePlan(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) (*apigateway.UsagePlan, error)
+       UpdateUsagePlanAsync(ctx workflow.Context, input *apigateway.UpdateUsagePlanInput) *ApigatewayUpdateUsagePlanResult
 
-    UpdateVpcLink(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
-    UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *ApigatewayUpdateVpcLinkResult
+       UpdateVpcLink(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) (*apigateway.UpdateVpcLinkOutput, error)
+       UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *ApigatewayUpdateVpcLinkResult
 }
 
 type ApigatewayCreateApiKeyResult struct {

@@ -7,8 +7,8 @@ import (
 )
 
 type WorkMailMessageFlowClient interface {
-    GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
-    GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult
+       GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error)
+       GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult
 }
 
 type WorkmailmessageflowGetRawMessageContentResult struct {

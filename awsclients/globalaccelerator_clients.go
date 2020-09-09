@@ -7,80 +7,80 @@ import (
 )
 
 type GlobalAcceleratorClient interface {
-    AdvertiseByoipCidr(ctx workflow.Context, input *globalaccelerator.AdvertiseByoipCidrInput) (*globalaccelerator.AdvertiseByoipCidrOutput, error)
-    AdvertiseByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.AdvertiseByoipCidrInput) *GlobalacceleratorAdvertiseByoipCidrResult
+       AdvertiseByoipCidr(ctx workflow.Context, input *globalaccelerator.AdvertiseByoipCidrInput) (*globalaccelerator.AdvertiseByoipCidrOutput, error)
+       AdvertiseByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.AdvertiseByoipCidrInput) *GlobalacceleratorAdvertiseByoipCidrResult
 
-    CreateAccelerator(ctx workflow.Context, input *globalaccelerator.CreateAcceleratorInput) (*globalaccelerator.CreateAcceleratorOutput, error)
-    CreateAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.CreateAcceleratorInput) *GlobalacceleratorCreateAcceleratorResult
+       CreateAccelerator(ctx workflow.Context, input *globalaccelerator.CreateAcceleratorInput) (*globalaccelerator.CreateAcceleratorOutput, error)
+       CreateAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.CreateAcceleratorInput) *GlobalacceleratorCreateAcceleratorResult
 
-    CreateEndpointGroup(ctx workflow.Context, input *globalaccelerator.CreateEndpointGroupInput) (*globalaccelerator.CreateEndpointGroupOutput, error)
-    CreateEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.CreateEndpointGroupInput) *GlobalacceleratorCreateEndpointGroupResult
+       CreateEndpointGroup(ctx workflow.Context, input *globalaccelerator.CreateEndpointGroupInput) (*globalaccelerator.CreateEndpointGroupOutput, error)
+       CreateEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.CreateEndpointGroupInput) *GlobalacceleratorCreateEndpointGroupResult
 
-    CreateListener(ctx workflow.Context, input *globalaccelerator.CreateListenerInput) (*globalaccelerator.CreateListenerOutput, error)
-    CreateListenerAsync(ctx workflow.Context, input *globalaccelerator.CreateListenerInput) *GlobalacceleratorCreateListenerResult
+       CreateListener(ctx workflow.Context, input *globalaccelerator.CreateListenerInput) (*globalaccelerator.CreateListenerOutput, error)
+       CreateListenerAsync(ctx workflow.Context, input *globalaccelerator.CreateListenerInput) *GlobalacceleratorCreateListenerResult
 
-    DeleteAccelerator(ctx workflow.Context, input *globalaccelerator.DeleteAcceleratorInput) (*globalaccelerator.DeleteAcceleratorOutput, error)
-    DeleteAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.DeleteAcceleratorInput) *GlobalacceleratorDeleteAcceleratorResult
+       DeleteAccelerator(ctx workflow.Context, input *globalaccelerator.DeleteAcceleratorInput) (*globalaccelerator.DeleteAcceleratorOutput, error)
+       DeleteAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.DeleteAcceleratorInput) *GlobalacceleratorDeleteAcceleratorResult
 
-    DeleteEndpointGroup(ctx workflow.Context, input *globalaccelerator.DeleteEndpointGroupInput) (*globalaccelerator.DeleteEndpointGroupOutput, error)
-    DeleteEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.DeleteEndpointGroupInput) *GlobalacceleratorDeleteEndpointGroupResult
+       DeleteEndpointGroup(ctx workflow.Context, input *globalaccelerator.DeleteEndpointGroupInput) (*globalaccelerator.DeleteEndpointGroupOutput, error)
+       DeleteEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.DeleteEndpointGroupInput) *GlobalacceleratorDeleteEndpointGroupResult
 
-    DeleteListener(ctx workflow.Context, input *globalaccelerator.DeleteListenerInput) (*globalaccelerator.DeleteListenerOutput, error)
-    DeleteListenerAsync(ctx workflow.Context, input *globalaccelerator.DeleteListenerInput) *GlobalacceleratorDeleteListenerResult
+       DeleteListener(ctx workflow.Context, input *globalaccelerator.DeleteListenerInput) (*globalaccelerator.DeleteListenerOutput, error)
+       DeleteListenerAsync(ctx workflow.Context, input *globalaccelerator.DeleteListenerInput) *GlobalacceleratorDeleteListenerResult
 
-    DeprovisionByoipCidr(ctx workflow.Context, input *globalaccelerator.DeprovisionByoipCidrInput) (*globalaccelerator.DeprovisionByoipCidrOutput, error)
-    DeprovisionByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.DeprovisionByoipCidrInput) *GlobalacceleratorDeprovisionByoipCidrResult
+       DeprovisionByoipCidr(ctx workflow.Context, input *globalaccelerator.DeprovisionByoipCidrInput) (*globalaccelerator.DeprovisionByoipCidrOutput, error)
+       DeprovisionByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.DeprovisionByoipCidrInput) *GlobalacceleratorDeprovisionByoipCidrResult
 
-    DescribeAccelerator(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorInput) (*globalaccelerator.DescribeAcceleratorOutput, error)
-    DescribeAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorInput) *GlobalacceleratorDescribeAcceleratorResult
+       DescribeAccelerator(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorInput) (*globalaccelerator.DescribeAcceleratorOutput, error)
+       DescribeAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorInput) *GlobalacceleratorDescribeAcceleratorResult
 
-    DescribeAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorAttributesInput) (*globalaccelerator.DescribeAcceleratorAttributesOutput, error)
-    DescribeAcceleratorAttributesAsync(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorAttributesInput) *GlobalacceleratorDescribeAcceleratorAttributesResult
+       DescribeAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorAttributesInput) (*globalaccelerator.DescribeAcceleratorAttributesOutput, error)
+       DescribeAcceleratorAttributesAsync(ctx workflow.Context, input *globalaccelerator.DescribeAcceleratorAttributesInput) *GlobalacceleratorDescribeAcceleratorAttributesResult
 
-    DescribeEndpointGroup(ctx workflow.Context, input *globalaccelerator.DescribeEndpointGroupInput) (*globalaccelerator.DescribeEndpointGroupOutput, error)
-    DescribeEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.DescribeEndpointGroupInput) *GlobalacceleratorDescribeEndpointGroupResult
+       DescribeEndpointGroup(ctx workflow.Context, input *globalaccelerator.DescribeEndpointGroupInput) (*globalaccelerator.DescribeEndpointGroupOutput, error)
+       DescribeEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.DescribeEndpointGroupInput) *GlobalacceleratorDescribeEndpointGroupResult
 
-    DescribeListener(ctx workflow.Context, input *globalaccelerator.DescribeListenerInput) (*globalaccelerator.DescribeListenerOutput, error)
-    DescribeListenerAsync(ctx workflow.Context, input *globalaccelerator.DescribeListenerInput) *GlobalacceleratorDescribeListenerResult
+       DescribeListener(ctx workflow.Context, input *globalaccelerator.DescribeListenerInput) (*globalaccelerator.DescribeListenerOutput, error)
+       DescribeListenerAsync(ctx workflow.Context, input *globalaccelerator.DescribeListenerInput) *GlobalacceleratorDescribeListenerResult
 
-    ListAccelerators(ctx workflow.Context, input *globalaccelerator.ListAcceleratorsInput) (*globalaccelerator.ListAcceleratorsOutput, error)
-    ListAcceleratorsAsync(ctx workflow.Context, input *globalaccelerator.ListAcceleratorsInput) *GlobalacceleratorListAcceleratorsResult
+       ListAccelerators(ctx workflow.Context, input *globalaccelerator.ListAcceleratorsInput) (*globalaccelerator.ListAcceleratorsOutput, error)
+       ListAcceleratorsAsync(ctx workflow.Context, input *globalaccelerator.ListAcceleratorsInput) *GlobalacceleratorListAcceleratorsResult
 
-    ListByoipCidrs(ctx workflow.Context, input *globalaccelerator.ListByoipCidrsInput) (*globalaccelerator.ListByoipCidrsOutput, error)
-    ListByoipCidrsAsync(ctx workflow.Context, input *globalaccelerator.ListByoipCidrsInput) *GlobalacceleratorListByoipCidrsResult
+       ListByoipCidrs(ctx workflow.Context, input *globalaccelerator.ListByoipCidrsInput) (*globalaccelerator.ListByoipCidrsOutput, error)
+       ListByoipCidrsAsync(ctx workflow.Context, input *globalaccelerator.ListByoipCidrsInput) *GlobalacceleratorListByoipCidrsResult
 
-    ListEndpointGroups(ctx workflow.Context, input *globalaccelerator.ListEndpointGroupsInput) (*globalaccelerator.ListEndpointGroupsOutput, error)
-    ListEndpointGroupsAsync(ctx workflow.Context, input *globalaccelerator.ListEndpointGroupsInput) *GlobalacceleratorListEndpointGroupsResult
+       ListEndpointGroups(ctx workflow.Context, input *globalaccelerator.ListEndpointGroupsInput) (*globalaccelerator.ListEndpointGroupsOutput, error)
+       ListEndpointGroupsAsync(ctx workflow.Context, input *globalaccelerator.ListEndpointGroupsInput) *GlobalacceleratorListEndpointGroupsResult
 
-    ListListeners(ctx workflow.Context, input *globalaccelerator.ListListenersInput) (*globalaccelerator.ListListenersOutput, error)
-    ListListenersAsync(ctx workflow.Context, input *globalaccelerator.ListListenersInput) *GlobalacceleratorListListenersResult
+       ListListeners(ctx workflow.Context, input *globalaccelerator.ListListenersInput) (*globalaccelerator.ListListenersOutput, error)
+       ListListenersAsync(ctx workflow.Context, input *globalaccelerator.ListListenersInput) *GlobalacceleratorListListenersResult
 
-    ListTagsForResource(ctx workflow.Context, input *globalaccelerator.ListTagsForResourceInput) (*globalaccelerator.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *globalaccelerator.ListTagsForResourceInput) *GlobalacceleratorListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *globalaccelerator.ListTagsForResourceInput) (*globalaccelerator.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *globalaccelerator.ListTagsForResourceInput) *GlobalacceleratorListTagsForResourceResult
 
-    ProvisionByoipCidr(ctx workflow.Context, input *globalaccelerator.ProvisionByoipCidrInput) (*globalaccelerator.ProvisionByoipCidrOutput, error)
-    ProvisionByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.ProvisionByoipCidrInput) *GlobalacceleratorProvisionByoipCidrResult
+       ProvisionByoipCidr(ctx workflow.Context, input *globalaccelerator.ProvisionByoipCidrInput) (*globalaccelerator.ProvisionByoipCidrOutput, error)
+       ProvisionByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.ProvisionByoipCidrInput) *GlobalacceleratorProvisionByoipCidrResult
 
-    TagResource(ctx workflow.Context, input *globalaccelerator.TagResourceInput) (*globalaccelerator.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *globalaccelerator.TagResourceInput) *GlobalacceleratorTagResourceResult
+       TagResource(ctx workflow.Context, input *globalaccelerator.TagResourceInput) (*globalaccelerator.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *globalaccelerator.TagResourceInput) *GlobalacceleratorTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *globalaccelerator.UntagResourceInput) (*globalaccelerator.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *globalaccelerator.UntagResourceInput) *GlobalacceleratorUntagResourceResult
+       UntagResource(ctx workflow.Context, input *globalaccelerator.UntagResourceInput) (*globalaccelerator.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *globalaccelerator.UntagResourceInput) *GlobalacceleratorUntagResourceResult
 
-    UpdateAccelerator(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorInput) (*globalaccelerator.UpdateAcceleratorOutput, error)
-    UpdateAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorInput) *GlobalacceleratorUpdateAcceleratorResult
+       UpdateAccelerator(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorInput) (*globalaccelerator.UpdateAcceleratorOutput, error)
+       UpdateAcceleratorAsync(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorInput) *GlobalacceleratorUpdateAcceleratorResult
 
-    UpdateAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorAttributesInput) (*globalaccelerator.UpdateAcceleratorAttributesOutput, error)
-    UpdateAcceleratorAttributesAsync(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorAttributesInput) *GlobalacceleratorUpdateAcceleratorAttributesResult
+       UpdateAcceleratorAttributes(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorAttributesInput) (*globalaccelerator.UpdateAcceleratorAttributesOutput, error)
+       UpdateAcceleratorAttributesAsync(ctx workflow.Context, input *globalaccelerator.UpdateAcceleratorAttributesInput) *GlobalacceleratorUpdateAcceleratorAttributesResult
 
-    UpdateEndpointGroup(ctx workflow.Context, input *globalaccelerator.UpdateEndpointGroupInput) (*globalaccelerator.UpdateEndpointGroupOutput, error)
-    UpdateEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.UpdateEndpointGroupInput) *GlobalacceleratorUpdateEndpointGroupResult
+       UpdateEndpointGroup(ctx workflow.Context, input *globalaccelerator.UpdateEndpointGroupInput) (*globalaccelerator.UpdateEndpointGroupOutput, error)
+       UpdateEndpointGroupAsync(ctx workflow.Context, input *globalaccelerator.UpdateEndpointGroupInput) *GlobalacceleratorUpdateEndpointGroupResult
 
-    UpdateListener(ctx workflow.Context, input *globalaccelerator.UpdateListenerInput) (*globalaccelerator.UpdateListenerOutput, error)
-    UpdateListenerAsync(ctx workflow.Context, input *globalaccelerator.UpdateListenerInput) *GlobalacceleratorUpdateListenerResult
+       UpdateListener(ctx workflow.Context, input *globalaccelerator.UpdateListenerInput) (*globalaccelerator.UpdateListenerOutput, error)
+       UpdateListenerAsync(ctx workflow.Context, input *globalaccelerator.UpdateListenerInput) *GlobalacceleratorUpdateListenerResult
 
-    WithdrawByoipCidr(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) (*globalaccelerator.WithdrawByoipCidrOutput, error)
-    WithdrawByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) *GlobalacceleratorWithdrawByoipCidrResult
+       WithdrawByoipCidr(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) (*globalaccelerator.WithdrawByoipCidrOutput, error)
+       WithdrawByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) *GlobalacceleratorWithdrawByoipCidrResult
 }
 
 type GlobalacceleratorAdvertiseByoipCidrResult struct {

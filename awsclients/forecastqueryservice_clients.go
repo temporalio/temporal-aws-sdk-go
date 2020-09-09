@@ -7,8 +7,8 @@ import (
 )
 
 type ForecastQueryServiceClient interface {
-    QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error)
-    QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult
+       QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error)
+       QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult
 }
 
 type ForecastqueryserviceQueryForecastResult struct {

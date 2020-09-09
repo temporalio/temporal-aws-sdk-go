@@ -7,131 +7,131 @@ import (
 )
 
 type ImagebuilderClient interface {
-    CancelImageCreation(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error)
-    CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *ImagebuilderCancelImageCreationResult
+       CancelImageCreation(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error)
+       CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *ImagebuilderCancelImageCreationResult
 
-    CreateComponent(ctx workflow.Context, input *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error)
-    CreateComponentAsync(ctx workflow.Context, input *imagebuilder.CreateComponentInput) *ImagebuilderCreateComponentResult
+       CreateComponent(ctx workflow.Context, input *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error)
+       CreateComponentAsync(ctx workflow.Context, input *imagebuilder.CreateComponentInput) *ImagebuilderCreateComponentResult
 
-    CreateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error)
-    CreateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) *ImagebuilderCreateDistributionConfigurationResult
+       CreateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error)
+       CreateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) *ImagebuilderCreateDistributionConfigurationResult
 
-    CreateImage(ctx workflow.Context, input *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error)
-    CreateImageAsync(ctx workflow.Context, input *imagebuilder.CreateImageInput) *ImagebuilderCreateImageResult
+       CreateImage(ctx workflow.Context, input *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error)
+       CreateImageAsync(ctx workflow.Context, input *imagebuilder.CreateImageInput) *ImagebuilderCreateImageResult
 
-    CreateImagePipeline(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error)
-    CreateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) *ImagebuilderCreateImagePipelineResult
+       CreateImagePipeline(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error)
+       CreateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) *ImagebuilderCreateImagePipelineResult
 
-    CreateImageRecipe(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error)
-    CreateImageRecipeAsync(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) *ImagebuilderCreateImageRecipeResult
+       CreateImageRecipe(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error)
+       CreateImageRecipeAsync(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) *ImagebuilderCreateImageRecipeResult
 
-    CreateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error)
-    CreateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) *ImagebuilderCreateInfrastructureConfigurationResult
+       CreateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error)
+       CreateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) *ImagebuilderCreateInfrastructureConfigurationResult
 
-    DeleteComponent(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) (*imagebuilder.DeleteComponentOutput, error)
-    DeleteComponentAsync(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) *ImagebuilderDeleteComponentResult
+       DeleteComponent(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) (*imagebuilder.DeleteComponentOutput, error)
+       DeleteComponentAsync(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) *ImagebuilderDeleteComponentResult
 
-    DeleteDistributionConfiguration(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) (*imagebuilder.DeleteDistributionConfigurationOutput, error)
-    DeleteDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) *ImagebuilderDeleteDistributionConfigurationResult
+       DeleteDistributionConfiguration(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) (*imagebuilder.DeleteDistributionConfigurationOutput, error)
+       DeleteDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) *ImagebuilderDeleteDistributionConfigurationResult
 
-    DeleteImage(ctx workflow.Context, input *imagebuilder.DeleteImageInput) (*imagebuilder.DeleteImageOutput, error)
-    DeleteImageAsync(ctx workflow.Context, input *imagebuilder.DeleteImageInput) *ImagebuilderDeleteImageResult
+       DeleteImage(ctx workflow.Context, input *imagebuilder.DeleteImageInput) (*imagebuilder.DeleteImageOutput, error)
+       DeleteImageAsync(ctx workflow.Context, input *imagebuilder.DeleteImageInput) *ImagebuilderDeleteImageResult
 
-    DeleteImagePipeline(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) (*imagebuilder.DeleteImagePipelineOutput, error)
-    DeleteImagePipelineAsync(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) *ImagebuilderDeleteImagePipelineResult
+       DeleteImagePipeline(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) (*imagebuilder.DeleteImagePipelineOutput, error)
+       DeleteImagePipelineAsync(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) *ImagebuilderDeleteImagePipelineResult
 
-    DeleteImageRecipe(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) (*imagebuilder.DeleteImageRecipeOutput, error)
-    DeleteImageRecipeAsync(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) *ImagebuilderDeleteImageRecipeResult
+       DeleteImageRecipe(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) (*imagebuilder.DeleteImageRecipeOutput, error)
+       DeleteImageRecipeAsync(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) *ImagebuilderDeleteImageRecipeResult
 
-    DeleteInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error)
-    DeleteInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) *ImagebuilderDeleteInfrastructureConfigurationResult
+       DeleteInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error)
+       DeleteInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) *ImagebuilderDeleteInfrastructureConfigurationResult
 
-    GetComponent(ctx workflow.Context, input *imagebuilder.GetComponentInput) (*imagebuilder.GetComponentOutput, error)
-    GetComponentAsync(ctx workflow.Context, input *imagebuilder.GetComponentInput) *ImagebuilderGetComponentResult
+       GetComponent(ctx workflow.Context, input *imagebuilder.GetComponentInput) (*imagebuilder.GetComponentOutput, error)
+       GetComponentAsync(ctx workflow.Context, input *imagebuilder.GetComponentInput) *ImagebuilderGetComponentResult
 
-    GetComponentPolicy(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) (*imagebuilder.GetComponentPolicyOutput, error)
-    GetComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) *ImagebuilderGetComponentPolicyResult
+       GetComponentPolicy(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) (*imagebuilder.GetComponentPolicyOutput, error)
+       GetComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) *ImagebuilderGetComponentPolicyResult
 
-    GetDistributionConfiguration(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) (*imagebuilder.GetDistributionConfigurationOutput, error)
-    GetDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) *ImagebuilderGetDistributionConfigurationResult
+       GetDistributionConfiguration(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) (*imagebuilder.GetDistributionConfigurationOutput, error)
+       GetDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) *ImagebuilderGetDistributionConfigurationResult
 
-    GetImage(ctx workflow.Context, input *imagebuilder.GetImageInput) (*imagebuilder.GetImageOutput, error)
-    GetImageAsync(ctx workflow.Context, input *imagebuilder.GetImageInput) *ImagebuilderGetImageResult
+       GetImage(ctx workflow.Context, input *imagebuilder.GetImageInput) (*imagebuilder.GetImageOutput, error)
+       GetImageAsync(ctx workflow.Context, input *imagebuilder.GetImageInput) *ImagebuilderGetImageResult
 
-    GetImagePipeline(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) (*imagebuilder.GetImagePipelineOutput, error)
-    GetImagePipelineAsync(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) *ImagebuilderGetImagePipelineResult
+       GetImagePipeline(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) (*imagebuilder.GetImagePipelineOutput, error)
+       GetImagePipelineAsync(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) *ImagebuilderGetImagePipelineResult
 
-    GetImagePolicy(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) (*imagebuilder.GetImagePolicyOutput, error)
-    GetImagePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) *ImagebuilderGetImagePolicyResult
+       GetImagePolicy(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) (*imagebuilder.GetImagePolicyOutput, error)
+       GetImagePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) *ImagebuilderGetImagePolicyResult
 
-    GetImageRecipe(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) (*imagebuilder.GetImageRecipeOutput, error)
-    GetImageRecipeAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) *ImagebuilderGetImageRecipeResult
+       GetImageRecipe(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) (*imagebuilder.GetImageRecipeOutput, error)
+       GetImageRecipeAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) *ImagebuilderGetImageRecipeResult
 
-    GetImageRecipePolicy(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) (*imagebuilder.GetImageRecipePolicyOutput, error)
-    GetImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) *ImagebuilderGetImageRecipePolicyResult
+       GetImageRecipePolicy(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) (*imagebuilder.GetImageRecipePolicyOutput, error)
+       GetImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) *ImagebuilderGetImageRecipePolicyResult
 
-    GetInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) (*imagebuilder.GetInfrastructureConfigurationOutput, error)
-    GetInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) *ImagebuilderGetInfrastructureConfigurationResult
+       GetInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) (*imagebuilder.GetInfrastructureConfigurationOutput, error)
+       GetInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) *ImagebuilderGetInfrastructureConfigurationResult
 
-    ImportComponent(ctx workflow.Context, input *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error)
-    ImportComponentAsync(ctx workflow.Context, input *imagebuilder.ImportComponentInput) *ImagebuilderImportComponentResult
+       ImportComponent(ctx workflow.Context, input *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error)
+       ImportComponentAsync(ctx workflow.Context, input *imagebuilder.ImportComponentInput) *ImagebuilderImportComponentResult
 
-    ListComponentBuildVersions(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) (*imagebuilder.ListComponentBuildVersionsOutput, error)
-    ListComponentBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) *ImagebuilderListComponentBuildVersionsResult
+       ListComponentBuildVersions(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) (*imagebuilder.ListComponentBuildVersionsOutput, error)
+       ListComponentBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) *ImagebuilderListComponentBuildVersionsResult
 
-    ListComponents(ctx workflow.Context, input *imagebuilder.ListComponentsInput) (*imagebuilder.ListComponentsOutput, error)
-    ListComponentsAsync(ctx workflow.Context, input *imagebuilder.ListComponentsInput) *ImagebuilderListComponentsResult
+       ListComponents(ctx workflow.Context, input *imagebuilder.ListComponentsInput) (*imagebuilder.ListComponentsOutput, error)
+       ListComponentsAsync(ctx workflow.Context, input *imagebuilder.ListComponentsInput) *ImagebuilderListComponentsResult
 
-    ListDistributionConfigurations(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) (*imagebuilder.ListDistributionConfigurationsOutput, error)
-    ListDistributionConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) *ImagebuilderListDistributionConfigurationsResult
+       ListDistributionConfigurations(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) (*imagebuilder.ListDistributionConfigurationsOutput, error)
+       ListDistributionConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) *ImagebuilderListDistributionConfigurationsResult
 
-    ListImageBuildVersions(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) (*imagebuilder.ListImageBuildVersionsOutput, error)
-    ListImageBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) *ImagebuilderListImageBuildVersionsResult
+       ListImageBuildVersions(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) (*imagebuilder.ListImageBuildVersionsOutput, error)
+       ListImageBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) *ImagebuilderListImageBuildVersionsResult
 
-    ListImagePipelineImages(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) (*imagebuilder.ListImagePipelineImagesOutput, error)
-    ListImagePipelineImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) *ImagebuilderListImagePipelineImagesResult
+       ListImagePipelineImages(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) (*imagebuilder.ListImagePipelineImagesOutput, error)
+       ListImagePipelineImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) *ImagebuilderListImagePipelineImagesResult
 
-    ListImagePipelines(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) (*imagebuilder.ListImagePipelinesOutput, error)
-    ListImagePipelinesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) *ImagebuilderListImagePipelinesResult
+       ListImagePipelines(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) (*imagebuilder.ListImagePipelinesOutput, error)
+       ListImagePipelinesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) *ImagebuilderListImagePipelinesResult
 
-    ListImageRecipes(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) (*imagebuilder.ListImageRecipesOutput, error)
-    ListImageRecipesAsync(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) *ImagebuilderListImageRecipesResult
+       ListImageRecipes(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) (*imagebuilder.ListImageRecipesOutput, error)
+       ListImageRecipesAsync(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) *ImagebuilderListImageRecipesResult
 
-    ListImages(ctx workflow.Context, input *imagebuilder.ListImagesInput) (*imagebuilder.ListImagesOutput, error)
-    ListImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagesInput) *ImagebuilderListImagesResult
+       ListImages(ctx workflow.Context, input *imagebuilder.ListImagesInput) (*imagebuilder.ListImagesOutput, error)
+       ListImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagesInput) *ImagebuilderListImagesResult
 
-    ListInfrastructureConfigurations(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) (*imagebuilder.ListInfrastructureConfigurationsOutput, error)
-    ListInfrastructureConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) *ImagebuilderListInfrastructureConfigurationsResult
+       ListInfrastructureConfigurations(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) (*imagebuilder.ListInfrastructureConfigurationsOutput, error)
+       ListInfrastructureConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) *ImagebuilderListInfrastructureConfigurationsResult
 
-    ListTagsForResource(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) (*imagebuilder.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) *ImagebuilderListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) (*imagebuilder.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) *ImagebuilderListTagsForResourceResult
 
-    PutComponentPolicy(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) (*imagebuilder.PutComponentPolicyOutput, error)
-    PutComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) *ImagebuilderPutComponentPolicyResult
+       PutComponentPolicy(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) (*imagebuilder.PutComponentPolicyOutput, error)
+       PutComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) *ImagebuilderPutComponentPolicyResult
 
-    PutImagePolicy(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) (*imagebuilder.PutImagePolicyOutput, error)
-    PutImagePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) *ImagebuilderPutImagePolicyResult
+       PutImagePolicy(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) (*imagebuilder.PutImagePolicyOutput, error)
+       PutImagePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) *ImagebuilderPutImagePolicyResult
 
-    PutImageRecipePolicy(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) (*imagebuilder.PutImageRecipePolicyOutput, error)
-    PutImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) *ImagebuilderPutImageRecipePolicyResult
+       PutImageRecipePolicy(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) (*imagebuilder.PutImageRecipePolicyOutput, error)
+       PutImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) *ImagebuilderPutImageRecipePolicyResult
 
-    StartImagePipelineExecution(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error)
-    StartImagePipelineExecutionAsync(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) *ImagebuilderStartImagePipelineExecutionResult
+       StartImagePipelineExecution(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error)
+       StartImagePipelineExecutionAsync(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) *ImagebuilderStartImagePipelineExecutionResult
 
-    TagResource(ctx workflow.Context, input *imagebuilder.TagResourceInput) (*imagebuilder.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *imagebuilder.TagResourceInput) *ImagebuilderTagResourceResult
+       TagResource(ctx workflow.Context, input *imagebuilder.TagResourceInput) (*imagebuilder.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *imagebuilder.TagResourceInput) *ImagebuilderTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *imagebuilder.UntagResourceInput) (*imagebuilder.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *imagebuilder.UntagResourceInput) *ImagebuilderUntagResourceResult
+       UntagResource(ctx workflow.Context, input *imagebuilder.UntagResourceInput) (*imagebuilder.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *imagebuilder.UntagResourceInput) *ImagebuilderUntagResourceResult
 
-    UpdateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error)
-    UpdateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) *ImagebuilderUpdateDistributionConfigurationResult
+       UpdateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error)
+       UpdateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) *ImagebuilderUpdateDistributionConfigurationResult
 
-    UpdateImagePipeline(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error)
-    UpdateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) *ImagebuilderUpdateImagePipelineResult
+       UpdateImagePipeline(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error)
+       UpdateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) *ImagebuilderUpdateImagePipelineResult
 
-    UpdateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error)
-    UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationResult
+       UpdateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error)
+       UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationResult
 }
 
 type ImagebuilderCancelImageCreationResult struct {

@@ -7,430 +7,430 @@ import (
 )
 
 type IAMClient interface {
-    AddClientIDToOpenIDConnectProvider(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) (*iam.AddClientIDToOpenIDConnectProviderOutput, error)
-    AddClientIDToOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) *IamAddClientIDToOpenIDConnectProviderResult
+       AddClientIDToOpenIDConnectProvider(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) (*iam.AddClientIDToOpenIDConnectProviderOutput, error)
+       AddClientIDToOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) *IamAddClientIDToOpenIDConnectProviderResult
 
-    AddRoleToInstanceProfile(ctx workflow.Context, input *iam.AddRoleToInstanceProfileInput) (*iam.AddRoleToInstanceProfileOutput, error)
-    AddRoleToInstanceProfileAsync(ctx workflow.Context, input *iam.AddRoleToInstanceProfileInput) *IamAddRoleToInstanceProfileResult
+       AddRoleToInstanceProfile(ctx workflow.Context, input *iam.AddRoleToInstanceProfileInput) (*iam.AddRoleToInstanceProfileOutput, error)
+       AddRoleToInstanceProfileAsync(ctx workflow.Context, input *iam.AddRoleToInstanceProfileInput) *IamAddRoleToInstanceProfileResult
 
-    AddUserToGroup(ctx workflow.Context, input *iam.AddUserToGroupInput) (*iam.AddUserToGroupOutput, error)
-    AddUserToGroupAsync(ctx workflow.Context, input *iam.AddUserToGroupInput) *IamAddUserToGroupResult
+       AddUserToGroup(ctx workflow.Context, input *iam.AddUserToGroupInput) (*iam.AddUserToGroupOutput, error)
+       AddUserToGroupAsync(ctx workflow.Context, input *iam.AddUserToGroupInput) *IamAddUserToGroupResult
 
-    AttachGroupPolicy(ctx workflow.Context, input *iam.AttachGroupPolicyInput) (*iam.AttachGroupPolicyOutput, error)
-    AttachGroupPolicyAsync(ctx workflow.Context, input *iam.AttachGroupPolicyInput) *IamAttachGroupPolicyResult
+       AttachGroupPolicy(ctx workflow.Context, input *iam.AttachGroupPolicyInput) (*iam.AttachGroupPolicyOutput, error)
+       AttachGroupPolicyAsync(ctx workflow.Context, input *iam.AttachGroupPolicyInput) *IamAttachGroupPolicyResult
 
-    AttachRolePolicy(ctx workflow.Context, input *iam.AttachRolePolicyInput) (*iam.AttachRolePolicyOutput, error)
-    AttachRolePolicyAsync(ctx workflow.Context, input *iam.AttachRolePolicyInput) *IamAttachRolePolicyResult
+       AttachRolePolicy(ctx workflow.Context, input *iam.AttachRolePolicyInput) (*iam.AttachRolePolicyOutput, error)
+       AttachRolePolicyAsync(ctx workflow.Context, input *iam.AttachRolePolicyInput) *IamAttachRolePolicyResult
 
-    AttachUserPolicy(ctx workflow.Context, input *iam.AttachUserPolicyInput) (*iam.AttachUserPolicyOutput, error)
-    AttachUserPolicyAsync(ctx workflow.Context, input *iam.AttachUserPolicyInput) *IamAttachUserPolicyResult
+       AttachUserPolicy(ctx workflow.Context, input *iam.AttachUserPolicyInput) (*iam.AttachUserPolicyOutput, error)
+       AttachUserPolicyAsync(ctx workflow.Context, input *iam.AttachUserPolicyInput) *IamAttachUserPolicyResult
 
-    ChangePassword(ctx workflow.Context, input *iam.ChangePasswordInput) (*iam.ChangePasswordOutput, error)
-    ChangePasswordAsync(ctx workflow.Context, input *iam.ChangePasswordInput) *IamChangePasswordResult
+       ChangePassword(ctx workflow.Context, input *iam.ChangePasswordInput) (*iam.ChangePasswordOutput, error)
+       ChangePasswordAsync(ctx workflow.Context, input *iam.ChangePasswordInput) *IamChangePasswordResult
 
-    CreateAccessKey(ctx workflow.Context, input *iam.CreateAccessKeyInput) (*iam.CreateAccessKeyOutput, error)
-    CreateAccessKeyAsync(ctx workflow.Context, input *iam.CreateAccessKeyInput) *IamCreateAccessKeyResult
+       CreateAccessKey(ctx workflow.Context, input *iam.CreateAccessKeyInput) (*iam.CreateAccessKeyOutput, error)
+       CreateAccessKeyAsync(ctx workflow.Context, input *iam.CreateAccessKeyInput) *IamCreateAccessKeyResult
 
-    CreateAccountAlias(ctx workflow.Context, input *iam.CreateAccountAliasInput) (*iam.CreateAccountAliasOutput, error)
-    CreateAccountAliasAsync(ctx workflow.Context, input *iam.CreateAccountAliasInput) *IamCreateAccountAliasResult
+       CreateAccountAlias(ctx workflow.Context, input *iam.CreateAccountAliasInput) (*iam.CreateAccountAliasOutput, error)
+       CreateAccountAliasAsync(ctx workflow.Context, input *iam.CreateAccountAliasInput) *IamCreateAccountAliasResult
 
-    CreateGroup(ctx workflow.Context, input *iam.CreateGroupInput) (*iam.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *iam.CreateGroupInput) *IamCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *iam.CreateGroupInput) (*iam.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *iam.CreateGroupInput) *IamCreateGroupResult
 
-    CreateInstanceProfile(ctx workflow.Context, input *iam.CreateInstanceProfileInput) (*iam.CreateInstanceProfileOutput, error)
-    CreateInstanceProfileAsync(ctx workflow.Context, input *iam.CreateInstanceProfileInput) *IamCreateInstanceProfileResult
+       CreateInstanceProfile(ctx workflow.Context, input *iam.CreateInstanceProfileInput) (*iam.CreateInstanceProfileOutput, error)
+       CreateInstanceProfileAsync(ctx workflow.Context, input *iam.CreateInstanceProfileInput) *IamCreateInstanceProfileResult
 
-    CreateLoginProfile(ctx workflow.Context, input *iam.CreateLoginProfileInput) (*iam.CreateLoginProfileOutput, error)
-    CreateLoginProfileAsync(ctx workflow.Context, input *iam.CreateLoginProfileInput) *IamCreateLoginProfileResult
+       CreateLoginProfile(ctx workflow.Context, input *iam.CreateLoginProfileInput) (*iam.CreateLoginProfileOutput, error)
+       CreateLoginProfileAsync(ctx workflow.Context, input *iam.CreateLoginProfileInput) *IamCreateLoginProfileResult
 
-    CreateOpenIDConnectProvider(ctx workflow.Context, input *iam.CreateOpenIDConnectProviderInput) (*iam.CreateOpenIDConnectProviderOutput, error)
-    CreateOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.CreateOpenIDConnectProviderInput) *IamCreateOpenIDConnectProviderResult
+       CreateOpenIDConnectProvider(ctx workflow.Context, input *iam.CreateOpenIDConnectProviderInput) (*iam.CreateOpenIDConnectProviderOutput, error)
+       CreateOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.CreateOpenIDConnectProviderInput) *IamCreateOpenIDConnectProviderResult
 
-    CreatePolicy(ctx workflow.Context, input *iam.CreatePolicyInput) (*iam.CreatePolicyOutput, error)
-    CreatePolicyAsync(ctx workflow.Context, input *iam.CreatePolicyInput) *IamCreatePolicyResult
+       CreatePolicy(ctx workflow.Context, input *iam.CreatePolicyInput) (*iam.CreatePolicyOutput, error)
+       CreatePolicyAsync(ctx workflow.Context, input *iam.CreatePolicyInput) *IamCreatePolicyResult
 
-    CreatePolicyVersion(ctx workflow.Context, input *iam.CreatePolicyVersionInput) (*iam.CreatePolicyVersionOutput, error)
-    CreatePolicyVersionAsync(ctx workflow.Context, input *iam.CreatePolicyVersionInput) *IamCreatePolicyVersionResult
+       CreatePolicyVersion(ctx workflow.Context, input *iam.CreatePolicyVersionInput) (*iam.CreatePolicyVersionOutput, error)
+       CreatePolicyVersionAsync(ctx workflow.Context, input *iam.CreatePolicyVersionInput) *IamCreatePolicyVersionResult
 
-    CreateRole(ctx workflow.Context, input *iam.CreateRoleInput) (*iam.CreateRoleOutput, error)
-    CreateRoleAsync(ctx workflow.Context, input *iam.CreateRoleInput) *IamCreateRoleResult
+       CreateRole(ctx workflow.Context, input *iam.CreateRoleInput) (*iam.CreateRoleOutput, error)
+       CreateRoleAsync(ctx workflow.Context, input *iam.CreateRoleInput) *IamCreateRoleResult
 
-    CreateSAMLProvider(ctx workflow.Context, input *iam.CreateSAMLProviderInput) (*iam.CreateSAMLProviderOutput, error)
-    CreateSAMLProviderAsync(ctx workflow.Context, input *iam.CreateSAMLProviderInput) *IamCreateSAMLProviderResult
+       CreateSAMLProvider(ctx workflow.Context, input *iam.CreateSAMLProviderInput) (*iam.CreateSAMLProviderOutput, error)
+       CreateSAMLProviderAsync(ctx workflow.Context, input *iam.CreateSAMLProviderInput) *IamCreateSAMLProviderResult
 
-    CreateServiceLinkedRole(ctx workflow.Context, input *iam.CreateServiceLinkedRoleInput) (*iam.CreateServiceLinkedRoleOutput, error)
-    CreateServiceLinkedRoleAsync(ctx workflow.Context, input *iam.CreateServiceLinkedRoleInput) *IamCreateServiceLinkedRoleResult
+       CreateServiceLinkedRole(ctx workflow.Context, input *iam.CreateServiceLinkedRoleInput) (*iam.CreateServiceLinkedRoleOutput, error)
+       CreateServiceLinkedRoleAsync(ctx workflow.Context, input *iam.CreateServiceLinkedRoleInput) *IamCreateServiceLinkedRoleResult
 
-    CreateServiceSpecificCredential(ctx workflow.Context, input *iam.CreateServiceSpecificCredentialInput) (*iam.CreateServiceSpecificCredentialOutput, error)
-    CreateServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.CreateServiceSpecificCredentialInput) *IamCreateServiceSpecificCredentialResult
+       CreateServiceSpecificCredential(ctx workflow.Context, input *iam.CreateServiceSpecificCredentialInput) (*iam.CreateServiceSpecificCredentialOutput, error)
+       CreateServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.CreateServiceSpecificCredentialInput) *IamCreateServiceSpecificCredentialResult
 
-    CreateUser(ctx workflow.Context, input *iam.CreateUserInput) (*iam.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *iam.CreateUserInput) *IamCreateUserResult
+       CreateUser(ctx workflow.Context, input *iam.CreateUserInput) (*iam.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *iam.CreateUserInput) *IamCreateUserResult
 
-    CreateVirtualMFADevice(ctx workflow.Context, input *iam.CreateVirtualMFADeviceInput) (*iam.CreateVirtualMFADeviceOutput, error)
-    CreateVirtualMFADeviceAsync(ctx workflow.Context, input *iam.CreateVirtualMFADeviceInput) *IamCreateVirtualMFADeviceResult
+       CreateVirtualMFADevice(ctx workflow.Context, input *iam.CreateVirtualMFADeviceInput) (*iam.CreateVirtualMFADeviceOutput, error)
+       CreateVirtualMFADeviceAsync(ctx workflow.Context, input *iam.CreateVirtualMFADeviceInput) *IamCreateVirtualMFADeviceResult
 
-    DeactivateMFADevice(ctx workflow.Context, input *iam.DeactivateMFADeviceInput) (*iam.DeactivateMFADeviceOutput, error)
-    DeactivateMFADeviceAsync(ctx workflow.Context, input *iam.DeactivateMFADeviceInput) *IamDeactivateMFADeviceResult
+       DeactivateMFADevice(ctx workflow.Context, input *iam.DeactivateMFADeviceInput) (*iam.DeactivateMFADeviceOutput, error)
+       DeactivateMFADeviceAsync(ctx workflow.Context, input *iam.DeactivateMFADeviceInput) *IamDeactivateMFADeviceResult
 
-    DeleteAccessKey(ctx workflow.Context, input *iam.DeleteAccessKeyInput) (*iam.DeleteAccessKeyOutput, error)
-    DeleteAccessKeyAsync(ctx workflow.Context, input *iam.DeleteAccessKeyInput) *IamDeleteAccessKeyResult
+       DeleteAccessKey(ctx workflow.Context, input *iam.DeleteAccessKeyInput) (*iam.DeleteAccessKeyOutput, error)
+       DeleteAccessKeyAsync(ctx workflow.Context, input *iam.DeleteAccessKeyInput) *IamDeleteAccessKeyResult
 
-    DeleteAccountAlias(ctx workflow.Context, input *iam.DeleteAccountAliasInput) (*iam.DeleteAccountAliasOutput, error)
-    DeleteAccountAliasAsync(ctx workflow.Context, input *iam.DeleteAccountAliasInput) *IamDeleteAccountAliasResult
+       DeleteAccountAlias(ctx workflow.Context, input *iam.DeleteAccountAliasInput) (*iam.DeleteAccountAliasOutput, error)
+       DeleteAccountAliasAsync(ctx workflow.Context, input *iam.DeleteAccountAliasInput) *IamDeleteAccountAliasResult
 
-    DeleteAccountPasswordPolicy(ctx workflow.Context, input *iam.DeleteAccountPasswordPolicyInput) (*iam.DeleteAccountPasswordPolicyOutput, error)
-    DeleteAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.DeleteAccountPasswordPolicyInput) *IamDeleteAccountPasswordPolicyResult
+       DeleteAccountPasswordPolicy(ctx workflow.Context, input *iam.DeleteAccountPasswordPolicyInput) (*iam.DeleteAccountPasswordPolicyOutput, error)
+       DeleteAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.DeleteAccountPasswordPolicyInput) *IamDeleteAccountPasswordPolicyResult
 
-    DeleteGroup(ctx workflow.Context, input *iam.DeleteGroupInput) (*iam.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *iam.DeleteGroupInput) *IamDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *iam.DeleteGroupInput) (*iam.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *iam.DeleteGroupInput) *IamDeleteGroupResult
 
-    DeleteGroupPolicy(ctx workflow.Context, input *iam.DeleteGroupPolicyInput) (*iam.DeleteGroupPolicyOutput, error)
-    DeleteGroupPolicyAsync(ctx workflow.Context, input *iam.DeleteGroupPolicyInput) *IamDeleteGroupPolicyResult
+       DeleteGroupPolicy(ctx workflow.Context, input *iam.DeleteGroupPolicyInput) (*iam.DeleteGroupPolicyOutput, error)
+       DeleteGroupPolicyAsync(ctx workflow.Context, input *iam.DeleteGroupPolicyInput) *IamDeleteGroupPolicyResult
 
-    DeleteInstanceProfile(ctx workflow.Context, input *iam.DeleteInstanceProfileInput) (*iam.DeleteInstanceProfileOutput, error)
-    DeleteInstanceProfileAsync(ctx workflow.Context, input *iam.DeleteInstanceProfileInput) *IamDeleteInstanceProfileResult
+       DeleteInstanceProfile(ctx workflow.Context, input *iam.DeleteInstanceProfileInput) (*iam.DeleteInstanceProfileOutput, error)
+       DeleteInstanceProfileAsync(ctx workflow.Context, input *iam.DeleteInstanceProfileInput) *IamDeleteInstanceProfileResult
 
-    DeleteLoginProfile(ctx workflow.Context, input *iam.DeleteLoginProfileInput) (*iam.DeleteLoginProfileOutput, error)
-    DeleteLoginProfileAsync(ctx workflow.Context, input *iam.DeleteLoginProfileInput) *IamDeleteLoginProfileResult
+       DeleteLoginProfile(ctx workflow.Context, input *iam.DeleteLoginProfileInput) (*iam.DeleteLoginProfileOutput, error)
+       DeleteLoginProfileAsync(ctx workflow.Context, input *iam.DeleteLoginProfileInput) *IamDeleteLoginProfileResult
 
-    DeleteOpenIDConnectProvider(ctx workflow.Context, input *iam.DeleteOpenIDConnectProviderInput) (*iam.DeleteOpenIDConnectProviderOutput, error)
-    DeleteOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.DeleteOpenIDConnectProviderInput) *IamDeleteOpenIDConnectProviderResult
+       DeleteOpenIDConnectProvider(ctx workflow.Context, input *iam.DeleteOpenIDConnectProviderInput) (*iam.DeleteOpenIDConnectProviderOutput, error)
+       DeleteOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.DeleteOpenIDConnectProviderInput) *IamDeleteOpenIDConnectProviderResult
 
-    DeletePolicy(ctx workflow.Context, input *iam.DeletePolicyInput) (*iam.DeletePolicyOutput, error)
-    DeletePolicyAsync(ctx workflow.Context, input *iam.DeletePolicyInput) *IamDeletePolicyResult
+       DeletePolicy(ctx workflow.Context, input *iam.DeletePolicyInput) (*iam.DeletePolicyOutput, error)
+       DeletePolicyAsync(ctx workflow.Context, input *iam.DeletePolicyInput) *IamDeletePolicyResult
 
-    DeletePolicyVersion(ctx workflow.Context, input *iam.DeletePolicyVersionInput) (*iam.DeletePolicyVersionOutput, error)
-    DeletePolicyVersionAsync(ctx workflow.Context, input *iam.DeletePolicyVersionInput) *IamDeletePolicyVersionResult
+       DeletePolicyVersion(ctx workflow.Context, input *iam.DeletePolicyVersionInput) (*iam.DeletePolicyVersionOutput, error)
+       DeletePolicyVersionAsync(ctx workflow.Context, input *iam.DeletePolicyVersionInput) *IamDeletePolicyVersionResult
 
-    DeleteRole(ctx workflow.Context, input *iam.DeleteRoleInput) (*iam.DeleteRoleOutput, error)
-    DeleteRoleAsync(ctx workflow.Context, input *iam.DeleteRoleInput) *IamDeleteRoleResult
+       DeleteRole(ctx workflow.Context, input *iam.DeleteRoleInput) (*iam.DeleteRoleOutput, error)
+       DeleteRoleAsync(ctx workflow.Context, input *iam.DeleteRoleInput) *IamDeleteRoleResult
 
-    DeleteRolePermissionsBoundary(ctx workflow.Context, input *iam.DeleteRolePermissionsBoundaryInput) (*iam.DeleteRolePermissionsBoundaryOutput, error)
-    DeleteRolePermissionsBoundaryAsync(ctx workflow.Context, input *iam.DeleteRolePermissionsBoundaryInput) *IamDeleteRolePermissionsBoundaryResult
+       DeleteRolePermissionsBoundary(ctx workflow.Context, input *iam.DeleteRolePermissionsBoundaryInput) (*iam.DeleteRolePermissionsBoundaryOutput, error)
+       DeleteRolePermissionsBoundaryAsync(ctx workflow.Context, input *iam.DeleteRolePermissionsBoundaryInput) *IamDeleteRolePermissionsBoundaryResult
 
-    DeleteRolePolicy(ctx workflow.Context, input *iam.DeleteRolePolicyInput) (*iam.DeleteRolePolicyOutput, error)
-    DeleteRolePolicyAsync(ctx workflow.Context, input *iam.DeleteRolePolicyInput) *IamDeleteRolePolicyResult
+       DeleteRolePolicy(ctx workflow.Context, input *iam.DeleteRolePolicyInput) (*iam.DeleteRolePolicyOutput, error)
+       DeleteRolePolicyAsync(ctx workflow.Context, input *iam.DeleteRolePolicyInput) *IamDeleteRolePolicyResult
 
-    DeleteSAMLProvider(ctx workflow.Context, input *iam.DeleteSAMLProviderInput) (*iam.DeleteSAMLProviderOutput, error)
-    DeleteSAMLProviderAsync(ctx workflow.Context, input *iam.DeleteSAMLProviderInput) *IamDeleteSAMLProviderResult
+       DeleteSAMLProvider(ctx workflow.Context, input *iam.DeleteSAMLProviderInput) (*iam.DeleteSAMLProviderOutput, error)
+       DeleteSAMLProviderAsync(ctx workflow.Context, input *iam.DeleteSAMLProviderInput) *IamDeleteSAMLProviderResult
 
-    DeleteSSHPublicKey(ctx workflow.Context, input *iam.DeleteSSHPublicKeyInput) (*iam.DeleteSSHPublicKeyOutput, error)
-    DeleteSSHPublicKeyAsync(ctx workflow.Context, input *iam.DeleteSSHPublicKeyInput) *IamDeleteSSHPublicKeyResult
+       DeleteSSHPublicKey(ctx workflow.Context, input *iam.DeleteSSHPublicKeyInput) (*iam.DeleteSSHPublicKeyOutput, error)
+       DeleteSSHPublicKeyAsync(ctx workflow.Context, input *iam.DeleteSSHPublicKeyInput) *IamDeleteSSHPublicKeyResult
 
-    DeleteServerCertificate(ctx workflow.Context, input *iam.DeleteServerCertificateInput) (*iam.DeleteServerCertificateOutput, error)
-    DeleteServerCertificateAsync(ctx workflow.Context, input *iam.DeleteServerCertificateInput) *IamDeleteServerCertificateResult
+       DeleteServerCertificate(ctx workflow.Context, input *iam.DeleteServerCertificateInput) (*iam.DeleteServerCertificateOutput, error)
+       DeleteServerCertificateAsync(ctx workflow.Context, input *iam.DeleteServerCertificateInput) *IamDeleteServerCertificateResult
 
-    DeleteServiceLinkedRole(ctx workflow.Context, input *iam.DeleteServiceLinkedRoleInput) (*iam.DeleteServiceLinkedRoleOutput, error)
-    DeleteServiceLinkedRoleAsync(ctx workflow.Context, input *iam.DeleteServiceLinkedRoleInput) *IamDeleteServiceLinkedRoleResult
+       DeleteServiceLinkedRole(ctx workflow.Context, input *iam.DeleteServiceLinkedRoleInput) (*iam.DeleteServiceLinkedRoleOutput, error)
+       DeleteServiceLinkedRoleAsync(ctx workflow.Context, input *iam.DeleteServiceLinkedRoleInput) *IamDeleteServiceLinkedRoleResult
 
-    DeleteServiceSpecificCredential(ctx workflow.Context, input *iam.DeleteServiceSpecificCredentialInput) (*iam.DeleteServiceSpecificCredentialOutput, error)
-    DeleteServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.DeleteServiceSpecificCredentialInput) *IamDeleteServiceSpecificCredentialResult
+       DeleteServiceSpecificCredential(ctx workflow.Context, input *iam.DeleteServiceSpecificCredentialInput) (*iam.DeleteServiceSpecificCredentialOutput, error)
+       DeleteServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.DeleteServiceSpecificCredentialInput) *IamDeleteServiceSpecificCredentialResult
 
-    DeleteSigningCertificate(ctx workflow.Context, input *iam.DeleteSigningCertificateInput) (*iam.DeleteSigningCertificateOutput, error)
-    DeleteSigningCertificateAsync(ctx workflow.Context, input *iam.DeleteSigningCertificateInput) *IamDeleteSigningCertificateResult
+       DeleteSigningCertificate(ctx workflow.Context, input *iam.DeleteSigningCertificateInput) (*iam.DeleteSigningCertificateOutput, error)
+       DeleteSigningCertificateAsync(ctx workflow.Context, input *iam.DeleteSigningCertificateInput) *IamDeleteSigningCertificateResult
 
-    DeleteUser(ctx workflow.Context, input *iam.DeleteUserInput) (*iam.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *iam.DeleteUserInput) *IamDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *iam.DeleteUserInput) (*iam.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *iam.DeleteUserInput) *IamDeleteUserResult
 
-    DeleteUserPermissionsBoundary(ctx workflow.Context, input *iam.DeleteUserPermissionsBoundaryInput) (*iam.DeleteUserPermissionsBoundaryOutput, error)
-    DeleteUserPermissionsBoundaryAsync(ctx workflow.Context, input *iam.DeleteUserPermissionsBoundaryInput) *IamDeleteUserPermissionsBoundaryResult
+       DeleteUserPermissionsBoundary(ctx workflow.Context, input *iam.DeleteUserPermissionsBoundaryInput) (*iam.DeleteUserPermissionsBoundaryOutput, error)
+       DeleteUserPermissionsBoundaryAsync(ctx workflow.Context, input *iam.DeleteUserPermissionsBoundaryInput) *IamDeleteUserPermissionsBoundaryResult
 
-    DeleteUserPolicy(ctx workflow.Context, input *iam.DeleteUserPolicyInput) (*iam.DeleteUserPolicyOutput, error)
-    DeleteUserPolicyAsync(ctx workflow.Context, input *iam.DeleteUserPolicyInput) *IamDeleteUserPolicyResult
+       DeleteUserPolicy(ctx workflow.Context, input *iam.DeleteUserPolicyInput) (*iam.DeleteUserPolicyOutput, error)
+       DeleteUserPolicyAsync(ctx workflow.Context, input *iam.DeleteUserPolicyInput) *IamDeleteUserPolicyResult
 
-    DeleteVirtualMFADevice(ctx workflow.Context, input *iam.DeleteVirtualMFADeviceInput) (*iam.DeleteVirtualMFADeviceOutput, error)
-    DeleteVirtualMFADeviceAsync(ctx workflow.Context, input *iam.DeleteVirtualMFADeviceInput) *IamDeleteVirtualMFADeviceResult
+       DeleteVirtualMFADevice(ctx workflow.Context, input *iam.DeleteVirtualMFADeviceInput) (*iam.DeleteVirtualMFADeviceOutput, error)
+       DeleteVirtualMFADeviceAsync(ctx workflow.Context, input *iam.DeleteVirtualMFADeviceInput) *IamDeleteVirtualMFADeviceResult
 
-    DetachGroupPolicy(ctx workflow.Context, input *iam.DetachGroupPolicyInput) (*iam.DetachGroupPolicyOutput, error)
-    DetachGroupPolicyAsync(ctx workflow.Context, input *iam.DetachGroupPolicyInput) *IamDetachGroupPolicyResult
+       DetachGroupPolicy(ctx workflow.Context, input *iam.DetachGroupPolicyInput) (*iam.DetachGroupPolicyOutput, error)
+       DetachGroupPolicyAsync(ctx workflow.Context, input *iam.DetachGroupPolicyInput) *IamDetachGroupPolicyResult
 
-    DetachRolePolicy(ctx workflow.Context, input *iam.DetachRolePolicyInput) (*iam.DetachRolePolicyOutput, error)
-    DetachRolePolicyAsync(ctx workflow.Context, input *iam.DetachRolePolicyInput) *IamDetachRolePolicyResult
+       DetachRolePolicy(ctx workflow.Context, input *iam.DetachRolePolicyInput) (*iam.DetachRolePolicyOutput, error)
+       DetachRolePolicyAsync(ctx workflow.Context, input *iam.DetachRolePolicyInput) *IamDetachRolePolicyResult
 
-    DetachUserPolicy(ctx workflow.Context, input *iam.DetachUserPolicyInput) (*iam.DetachUserPolicyOutput, error)
-    DetachUserPolicyAsync(ctx workflow.Context, input *iam.DetachUserPolicyInput) *IamDetachUserPolicyResult
+       DetachUserPolicy(ctx workflow.Context, input *iam.DetachUserPolicyInput) (*iam.DetachUserPolicyOutput, error)
+       DetachUserPolicyAsync(ctx workflow.Context, input *iam.DetachUserPolicyInput) *IamDetachUserPolicyResult
 
-    EnableMFADevice(ctx workflow.Context, input *iam.EnableMFADeviceInput) (*iam.EnableMFADeviceOutput, error)
-    EnableMFADeviceAsync(ctx workflow.Context, input *iam.EnableMFADeviceInput) *IamEnableMFADeviceResult
+       EnableMFADevice(ctx workflow.Context, input *iam.EnableMFADeviceInput) (*iam.EnableMFADeviceOutput, error)
+       EnableMFADeviceAsync(ctx workflow.Context, input *iam.EnableMFADeviceInput) *IamEnableMFADeviceResult
 
-    GenerateCredentialReport(ctx workflow.Context, input *iam.GenerateCredentialReportInput) (*iam.GenerateCredentialReportOutput, error)
-    GenerateCredentialReportAsync(ctx workflow.Context, input *iam.GenerateCredentialReportInput) *IamGenerateCredentialReportResult
+       GenerateCredentialReport(ctx workflow.Context, input *iam.GenerateCredentialReportInput) (*iam.GenerateCredentialReportOutput, error)
+       GenerateCredentialReportAsync(ctx workflow.Context, input *iam.GenerateCredentialReportInput) *IamGenerateCredentialReportResult
 
-    GenerateOrganizationsAccessReport(ctx workflow.Context, input *iam.GenerateOrganizationsAccessReportInput) (*iam.GenerateOrganizationsAccessReportOutput, error)
-    GenerateOrganizationsAccessReportAsync(ctx workflow.Context, input *iam.GenerateOrganizationsAccessReportInput) *IamGenerateOrganizationsAccessReportResult
+       GenerateOrganizationsAccessReport(ctx workflow.Context, input *iam.GenerateOrganizationsAccessReportInput) (*iam.GenerateOrganizationsAccessReportOutput, error)
+       GenerateOrganizationsAccessReportAsync(ctx workflow.Context, input *iam.GenerateOrganizationsAccessReportInput) *IamGenerateOrganizationsAccessReportResult
 
-    GenerateServiceLastAccessedDetails(ctx workflow.Context, input *iam.GenerateServiceLastAccessedDetailsInput) (*iam.GenerateServiceLastAccessedDetailsOutput, error)
-    GenerateServiceLastAccessedDetailsAsync(ctx workflow.Context, input *iam.GenerateServiceLastAccessedDetailsInput) *IamGenerateServiceLastAccessedDetailsResult
+       GenerateServiceLastAccessedDetails(ctx workflow.Context, input *iam.GenerateServiceLastAccessedDetailsInput) (*iam.GenerateServiceLastAccessedDetailsOutput, error)
+       GenerateServiceLastAccessedDetailsAsync(ctx workflow.Context, input *iam.GenerateServiceLastAccessedDetailsInput) *IamGenerateServiceLastAccessedDetailsResult
 
-    GetAccessKeyLastUsed(ctx workflow.Context, input *iam.GetAccessKeyLastUsedInput) (*iam.GetAccessKeyLastUsedOutput, error)
-    GetAccessKeyLastUsedAsync(ctx workflow.Context, input *iam.GetAccessKeyLastUsedInput) *IamGetAccessKeyLastUsedResult
+       GetAccessKeyLastUsed(ctx workflow.Context, input *iam.GetAccessKeyLastUsedInput) (*iam.GetAccessKeyLastUsedOutput, error)
+       GetAccessKeyLastUsedAsync(ctx workflow.Context, input *iam.GetAccessKeyLastUsedInput) *IamGetAccessKeyLastUsedResult
 
-    GetAccountAuthorizationDetails(ctx workflow.Context, input *iam.GetAccountAuthorizationDetailsInput) (*iam.GetAccountAuthorizationDetailsOutput, error)
-    GetAccountAuthorizationDetailsAsync(ctx workflow.Context, input *iam.GetAccountAuthorizationDetailsInput) *IamGetAccountAuthorizationDetailsResult
+       GetAccountAuthorizationDetails(ctx workflow.Context, input *iam.GetAccountAuthorizationDetailsInput) (*iam.GetAccountAuthorizationDetailsOutput, error)
+       GetAccountAuthorizationDetailsAsync(ctx workflow.Context, input *iam.GetAccountAuthorizationDetailsInput) *IamGetAccountAuthorizationDetailsResult
 
-    GetAccountPasswordPolicy(ctx workflow.Context, input *iam.GetAccountPasswordPolicyInput) (*iam.GetAccountPasswordPolicyOutput, error)
-    GetAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.GetAccountPasswordPolicyInput) *IamGetAccountPasswordPolicyResult
+       GetAccountPasswordPolicy(ctx workflow.Context, input *iam.GetAccountPasswordPolicyInput) (*iam.GetAccountPasswordPolicyOutput, error)
+       GetAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.GetAccountPasswordPolicyInput) *IamGetAccountPasswordPolicyResult
 
-    GetAccountSummary(ctx workflow.Context, input *iam.GetAccountSummaryInput) (*iam.GetAccountSummaryOutput, error)
-    GetAccountSummaryAsync(ctx workflow.Context, input *iam.GetAccountSummaryInput) *IamGetAccountSummaryResult
+       GetAccountSummary(ctx workflow.Context, input *iam.GetAccountSummaryInput) (*iam.GetAccountSummaryOutput, error)
+       GetAccountSummaryAsync(ctx workflow.Context, input *iam.GetAccountSummaryInput) *IamGetAccountSummaryResult
 
-    GetContextKeysForCustomPolicy(ctx workflow.Context, input *iam.GetContextKeysForCustomPolicyInput) (*iam.GetContextKeysForPolicyResponse, error)
-    GetContextKeysForCustomPolicyAsync(ctx workflow.Context, input *iam.GetContextKeysForCustomPolicyInput) *IamGetContextKeysForCustomPolicyResult
+       GetContextKeysForCustomPolicy(ctx workflow.Context, input *iam.GetContextKeysForCustomPolicyInput) (*iam.GetContextKeysForPolicyResponse, error)
+       GetContextKeysForCustomPolicyAsync(ctx workflow.Context, input *iam.GetContextKeysForCustomPolicyInput) *IamGetContextKeysForCustomPolicyResult
 
-    GetContextKeysForPrincipalPolicy(ctx workflow.Context, input *iam.GetContextKeysForPrincipalPolicyInput) (*iam.GetContextKeysForPolicyResponse, error)
-    GetContextKeysForPrincipalPolicyAsync(ctx workflow.Context, input *iam.GetContextKeysForPrincipalPolicyInput) *IamGetContextKeysForPrincipalPolicyResult
+       GetContextKeysForPrincipalPolicy(ctx workflow.Context, input *iam.GetContextKeysForPrincipalPolicyInput) (*iam.GetContextKeysForPolicyResponse, error)
+       GetContextKeysForPrincipalPolicyAsync(ctx workflow.Context, input *iam.GetContextKeysForPrincipalPolicyInput) *IamGetContextKeysForPrincipalPolicyResult
 
-    GetCredentialReport(ctx workflow.Context, input *iam.GetCredentialReportInput) (*iam.GetCredentialReportOutput, error)
-    GetCredentialReportAsync(ctx workflow.Context, input *iam.GetCredentialReportInput) *IamGetCredentialReportResult
+       GetCredentialReport(ctx workflow.Context, input *iam.GetCredentialReportInput) (*iam.GetCredentialReportOutput, error)
+       GetCredentialReportAsync(ctx workflow.Context, input *iam.GetCredentialReportInput) *IamGetCredentialReportResult
 
-    GetGroup(ctx workflow.Context, input *iam.GetGroupInput) (*iam.GetGroupOutput, error)
-    GetGroupAsync(ctx workflow.Context, input *iam.GetGroupInput) *IamGetGroupResult
+       GetGroup(ctx workflow.Context, input *iam.GetGroupInput) (*iam.GetGroupOutput, error)
+       GetGroupAsync(ctx workflow.Context, input *iam.GetGroupInput) *IamGetGroupResult
 
-    GetGroupPolicy(ctx workflow.Context, input *iam.GetGroupPolicyInput) (*iam.GetGroupPolicyOutput, error)
-    GetGroupPolicyAsync(ctx workflow.Context, input *iam.GetGroupPolicyInput) *IamGetGroupPolicyResult
+       GetGroupPolicy(ctx workflow.Context, input *iam.GetGroupPolicyInput) (*iam.GetGroupPolicyOutput, error)
+       GetGroupPolicyAsync(ctx workflow.Context, input *iam.GetGroupPolicyInput) *IamGetGroupPolicyResult
 
-    GetInstanceProfile(ctx workflow.Context, input *iam.GetInstanceProfileInput) (*iam.GetInstanceProfileOutput, error)
-    GetInstanceProfileAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) *IamGetInstanceProfileResult
+       GetInstanceProfile(ctx workflow.Context, input *iam.GetInstanceProfileInput) (*iam.GetInstanceProfileOutput, error)
+       GetInstanceProfileAsync(ctx workflow.Context, input *iam.GetInstanceProfileInput) *IamGetInstanceProfileResult
 
-    GetLoginProfile(ctx workflow.Context, input *iam.GetLoginProfileInput) (*iam.GetLoginProfileOutput, error)
-    GetLoginProfileAsync(ctx workflow.Context, input *iam.GetLoginProfileInput) *IamGetLoginProfileResult
+       GetLoginProfile(ctx workflow.Context, input *iam.GetLoginProfileInput) (*iam.GetLoginProfileOutput, error)
+       GetLoginProfileAsync(ctx workflow.Context, input *iam.GetLoginProfileInput) *IamGetLoginProfileResult
 
-    GetOpenIDConnectProvider(ctx workflow.Context, input *iam.GetOpenIDConnectProviderInput) (*iam.GetOpenIDConnectProviderOutput, error)
-    GetOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.GetOpenIDConnectProviderInput) *IamGetOpenIDConnectProviderResult
+       GetOpenIDConnectProvider(ctx workflow.Context, input *iam.GetOpenIDConnectProviderInput) (*iam.GetOpenIDConnectProviderOutput, error)
+       GetOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.GetOpenIDConnectProviderInput) *IamGetOpenIDConnectProviderResult
 
-    GetOrganizationsAccessReport(ctx workflow.Context, input *iam.GetOrganizationsAccessReportInput) (*iam.GetOrganizationsAccessReportOutput, error)
-    GetOrganizationsAccessReportAsync(ctx workflow.Context, input *iam.GetOrganizationsAccessReportInput) *IamGetOrganizationsAccessReportResult
+       GetOrganizationsAccessReport(ctx workflow.Context, input *iam.GetOrganizationsAccessReportInput) (*iam.GetOrganizationsAccessReportOutput, error)
+       GetOrganizationsAccessReportAsync(ctx workflow.Context, input *iam.GetOrganizationsAccessReportInput) *IamGetOrganizationsAccessReportResult
 
-    GetPolicy(ctx workflow.Context, input *iam.GetPolicyInput) (*iam.GetPolicyOutput, error)
-    GetPolicyAsync(ctx workflow.Context, input *iam.GetPolicyInput) *IamGetPolicyResult
+       GetPolicy(ctx workflow.Context, input *iam.GetPolicyInput) (*iam.GetPolicyOutput, error)
+       GetPolicyAsync(ctx workflow.Context, input *iam.GetPolicyInput) *IamGetPolicyResult
 
-    GetPolicyVersion(ctx workflow.Context, input *iam.GetPolicyVersionInput) (*iam.GetPolicyVersionOutput, error)
-    GetPolicyVersionAsync(ctx workflow.Context, input *iam.GetPolicyVersionInput) *IamGetPolicyVersionResult
+       GetPolicyVersion(ctx workflow.Context, input *iam.GetPolicyVersionInput) (*iam.GetPolicyVersionOutput, error)
+       GetPolicyVersionAsync(ctx workflow.Context, input *iam.GetPolicyVersionInput) *IamGetPolicyVersionResult
 
-    GetRole(ctx workflow.Context, input *iam.GetRoleInput) (*iam.GetRoleOutput, error)
-    GetRoleAsync(ctx workflow.Context, input *iam.GetRoleInput) *IamGetRoleResult
+       GetRole(ctx workflow.Context, input *iam.GetRoleInput) (*iam.GetRoleOutput, error)
+       GetRoleAsync(ctx workflow.Context, input *iam.GetRoleInput) *IamGetRoleResult
 
-    GetRolePolicy(ctx workflow.Context, input *iam.GetRolePolicyInput) (*iam.GetRolePolicyOutput, error)
-    GetRolePolicyAsync(ctx workflow.Context, input *iam.GetRolePolicyInput) *IamGetRolePolicyResult
+       GetRolePolicy(ctx workflow.Context, input *iam.GetRolePolicyInput) (*iam.GetRolePolicyOutput, error)
+       GetRolePolicyAsync(ctx workflow.Context, input *iam.GetRolePolicyInput) *IamGetRolePolicyResult
 
-    GetSAMLProvider(ctx workflow.Context, input *iam.GetSAMLProviderInput) (*iam.GetSAMLProviderOutput, error)
-    GetSAMLProviderAsync(ctx workflow.Context, input *iam.GetSAMLProviderInput) *IamGetSAMLProviderResult
+       GetSAMLProvider(ctx workflow.Context, input *iam.GetSAMLProviderInput) (*iam.GetSAMLProviderOutput, error)
+       GetSAMLProviderAsync(ctx workflow.Context, input *iam.GetSAMLProviderInput) *IamGetSAMLProviderResult
 
-    GetSSHPublicKey(ctx workflow.Context, input *iam.GetSSHPublicKeyInput) (*iam.GetSSHPublicKeyOutput, error)
-    GetSSHPublicKeyAsync(ctx workflow.Context, input *iam.GetSSHPublicKeyInput) *IamGetSSHPublicKeyResult
+       GetSSHPublicKey(ctx workflow.Context, input *iam.GetSSHPublicKeyInput) (*iam.GetSSHPublicKeyOutput, error)
+       GetSSHPublicKeyAsync(ctx workflow.Context, input *iam.GetSSHPublicKeyInput) *IamGetSSHPublicKeyResult
 
-    GetServerCertificate(ctx workflow.Context, input *iam.GetServerCertificateInput) (*iam.GetServerCertificateOutput, error)
-    GetServerCertificateAsync(ctx workflow.Context, input *iam.GetServerCertificateInput) *IamGetServerCertificateResult
+       GetServerCertificate(ctx workflow.Context, input *iam.GetServerCertificateInput) (*iam.GetServerCertificateOutput, error)
+       GetServerCertificateAsync(ctx workflow.Context, input *iam.GetServerCertificateInput) *IamGetServerCertificateResult
 
-    GetServiceLastAccessedDetails(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsInput) (*iam.GetServiceLastAccessedDetailsOutput, error)
-    GetServiceLastAccessedDetailsAsync(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsInput) *IamGetServiceLastAccessedDetailsResult
+       GetServiceLastAccessedDetails(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsInput) (*iam.GetServiceLastAccessedDetailsOutput, error)
+       GetServiceLastAccessedDetailsAsync(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsInput) *IamGetServiceLastAccessedDetailsResult
 
-    GetServiceLastAccessedDetailsWithEntities(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsWithEntitiesInput) (*iam.GetServiceLastAccessedDetailsWithEntitiesOutput, error)
-    GetServiceLastAccessedDetailsWithEntitiesAsync(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsWithEntitiesInput) *IamGetServiceLastAccessedDetailsWithEntitiesResult
+       GetServiceLastAccessedDetailsWithEntities(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsWithEntitiesInput) (*iam.GetServiceLastAccessedDetailsWithEntitiesOutput, error)
+       GetServiceLastAccessedDetailsWithEntitiesAsync(ctx workflow.Context, input *iam.GetServiceLastAccessedDetailsWithEntitiesInput) *IamGetServiceLastAccessedDetailsWithEntitiesResult
 
-    GetServiceLinkedRoleDeletionStatus(ctx workflow.Context, input *iam.GetServiceLinkedRoleDeletionStatusInput) (*iam.GetServiceLinkedRoleDeletionStatusOutput, error)
-    GetServiceLinkedRoleDeletionStatusAsync(ctx workflow.Context, input *iam.GetServiceLinkedRoleDeletionStatusInput) *IamGetServiceLinkedRoleDeletionStatusResult
+       GetServiceLinkedRoleDeletionStatus(ctx workflow.Context, input *iam.GetServiceLinkedRoleDeletionStatusInput) (*iam.GetServiceLinkedRoleDeletionStatusOutput, error)
+       GetServiceLinkedRoleDeletionStatusAsync(ctx workflow.Context, input *iam.GetServiceLinkedRoleDeletionStatusInput) *IamGetServiceLinkedRoleDeletionStatusResult
 
-    GetUser(ctx workflow.Context, input *iam.GetUserInput) (*iam.GetUserOutput, error)
-    GetUserAsync(ctx workflow.Context, input *iam.GetUserInput) *IamGetUserResult
+       GetUser(ctx workflow.Context, input *iam.GetUserInput) (*iam.GetUserOutput, error)
+       GetUserAsync(ctx workflow.Context, input *iam.GetUserInput) *IamGetUserResult
 
-    GetUserPolicy(ctx workflow.Context, input *iam.GetUserPolicyInput) (*iam.GetUserPolicyOutput, error)
-    GetUserPolicyAsync(ctx workflow.Context, input *iam.GetUserPolicyInput) *IamGetUserPolicyResult
+       GetUserPolicy(ctx workflow.Context, input *iam.GetUserPolicyInput) (*iam.GetUserPolicyOutput, error)
+       GetUserPolicyAsync(ctx workflow.Context, input *iam.GetUserPolicyInput) *IamGetUserPolicyResult
 
-    ListAccessKeys(ctx workflow.Context, input *iam.ListAccessKeysInput) (*iam.ListAccessKeysOutput, error)
-    ListAccessKeysAsync(ctx workflow.Context, input *iam.ListAccessKeysInput) *IamListAccessKeysResult
+       ListAccessKeys(ctx workflow.Context, input *iam.ListAccessKeysInput) (*iam.ListAccessKeysOutput, error)
+       ListAccessKeysAsync(ctx workflow.Context, input *iam.ListAccessKeysInput) *IamListAccessKeysResult
 
-    ListAccountAliases(ctx workflow.Context, input *iam.ListAccountAliasesInput) (*iam.ListAccountAliasesOutput, error)
-    ListAccountAliasesAsync(ctx workflow.Context, input *iam.ListAccountAliasesInput) *IamListAccountAliasesResult
+       ListAccountAliases(ctx workflow.Context, input *iam.ListAccountAliasesInput) (*iam.ListAccountAliasesOutput, error)
+       ListAccountAliasesAsync(ctx workflow.Context, input *iam.ListAccountAliasesInput) *IamListAccountAliasesResult
 
-    ListAttachedGroupPolicies(ctx workflow.Context, input *iam.ListAttachedGroupPoliciesInput) (*iam.ListAttachedGroupPoliciesOutput, error)
-    ListAttachedGroupPoliciesAsync(ctx workflow.Context, input *iam.ListAttachedGroupPoliciesInput) *IamListAttachedGroupPoliciesResult
+       ListAttachedGroupPolicies(ctx workflow.Context, input *iam.ListAttachedGroupPoliciesInput) (*iam.ListAttachedGroupPoliciesOutput, error)
+       ListAttachedGroupPoliciesAsync(ctx workflow.Context, input *iam.ListAttachedGroupPoliciesInput) *IamListAttachedGroupPoliciesResult
 
-    ListAttachedRolePolicies(ctx workflow.Context, input *iam.ListAttachedRolePoliciesInput) (*iam.ListAttachedRolePoliciesOutput, error)
-    ListAttachedRolePoliciesAsync(ctx workflow.Context, input *iam.ListAttachedRolePoliciesInput) *IamListAttachedRolePoliciesResult
+       ListAttachedRolePolicies(ctx workflow.Context, input *iam.ListAttachedRolePoliciesInput) (*iam.ListAttachedRolePoliciesOutput, error)
+       ListAttachedRolePoliciesAsync(ctx workflow.Context, input *iam.ListAttachedRolePoliciesInput) *IamListAttachedRolePoliciesResult
 
-    ListAttachedUserPolicies(ctx workflow.Context, input *iam.ListAttachedUserPoliciesInput) (*iam.ListAttachedUserPoliciesOutput, error)
-    ListAttachedUserPoliciesAsync(ctx workflow.Context, input *iam.ListAttachedUserPoliciesInput) *IamListAttachedUserPoliciesResult
+       ListAttachedUserPolicies(ctx workflow.Context, input *iam.ListAttachedUserPoliciesInput) (*iam.ListAttachedUserPoliciesOutput, error)
+       ListAttachedUserPoliciesAsync(ctx workflow.Context, input *iam.ListAttachedUserPoliciesInput) *IamListAttachedUserPoliciesResult
 
-    ListEntitiesForPolicy(ctx workflow.Context, input *iam.ListEntitiesForPolicyInput) (*iam.ListEntitiesForPolicyOutput, error)
-    ListEntitiesForPolicyAsync(ctx workflow.Context, input *iam.ListEntitiesForPolicyInput) *IamListEntitiesForPolicyResult
+       ListEntitiesForPolicy(ctx workflow.Context, input *iam.ListEntitiesForPolicyInput) (*iam.ListEntitiesForPolicyOutput, error)
+       ListEntitiesForPolicyAsync(ctx workflow.Context, input *iam.ListEntitiesForPolicyInput) *IamListEntitiesForPolicyResult
 
-    ListGroupPolicies(ctx workflow.Context, input *iam.ListGroupPoliciesInput) (*iam.ListGroupPoliciesOutput, error)
-    ListGroupPoliciesAsync(ctx workflow.Context, input *iam.ListGroupPoliciesInput) *IamListGroupPoliciesResult
+       ListGroupPolicies(ctx workflow.Context, input *iam.ListGroupPoliciesInput) (*iam.ListGroupPoliciesOutput, error)
+       ListGroupPoliciesAsync(ctx workflow.Context, input *iam.ListGroupPoliciesInput) *IamListGroupPoliciesResult
 
-    ListGroups(ctx workflow.Context, input *iam.ListGroupsInput) (*iam.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *iam.ListGroupsInput) *IamListGroupsResult
+       ListGroups(ctx workflow.Context, input *iam.ListGroupsInput) (*iam.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *iam.ListGroupsInput) *IamListGroupsResult
 
-    ListGroupsForUser(ctx workflow.Context, input *iam.ListGroupsForUserInput) (*iam.ListGroupsForUserOutput, error)
-    ListGroupsForUserAsync(ctx workflow.Context, input *iam.ListGroupsForUserInput) *IamListGroupsForUserResult
+       ListGroupsForUser(ctx workflow.Context, input *iam.ListGroupsForUserInput) (*iam.ListGroupsForUserOutput, error)
+       ListGroupsForUserAsync(ctx workflow.Context, input *iam.ListGroupsForUserInput) *IamListGroupsForUserResult
 
-    ListInstanceProfiles(ctx workflow.Context, input *iam.ListInstanceProfilesInput) (*iam.ListInstanceProfilesOutput, error)
-    ListInstanceProfilesAsync(ctx workflow.Context, input *iam.ListInstanceProfilesInput) *IamListInstanceProfilesResult
+       ListInstanceProfiles(ctx workflow.Context, input *iam.ListInstanceProfilesInput) (*iam.ListInstanceProfilesOutput, error)
+       ListInstanceProfilesAsync(ctx workflow.Context, input *iam.ListInstanceProfilesInput) *IamListInstanceProfilesResult
 
-    ListInstanceProfilesForRole(ctx workflow.Context, input *iam.ListInstanceProfilesForRoleInput) (*iam.ListInstanceProfilesForRoleOutput, error)
-    ListInstanceProfilesForRoleAsync(ctx workflow.Context, input *iam.ListInstanceProfilesForRoleInput) *IamListInstanceProfilesForRoleResult
+       ListInstanceProfilesForRole(ctx workflow.Context, input *iam.ListInstanceProfilesForRoleInput) (*iam.ListInstanceProfilesForRoleOutput, error)
+       ListInstanceProfilesForRoleAsync(ctx workflow.Context, input *iam.ListInstanceProfilesForRoleInput) *IamListInstanceProfilesForRoleResult
 
-    ListMFADevices(ctx workflow.Context, input *iam.ListMFADevicesInput) (*iam.ListMFADevicesOutput, error)
-    ListMFADevicesAsync(ctx workflow.Context, input *iam.ListMFADevicesInput) *IamListMFADevicesResult
+       ListMFADevices(ctx workflow.Context, input *iam.ListMFADevicesInput) (*iam.ListMFADevicesOutput, error)
+       ListMFADevicesAsync(ctx workflow.Context, input *iam.ListMFADevicesInput) *IamListMFADevicesResult
 
-    ListOpenIDConnectProviders(ctx workflow.Context, input *iam.ListOpenIDConnectProvidersInput) (*iam.ListOpenIDConnectProvidersOutput, error)
-    ListOpenIDConnectProvidersAsync(ctx workflow.Context, input *iam.ListOpenIDConnectProvidersInput) *IamListOpenIDConnectProvidersResult
+       ListOpenIDConnectProviders(ctx workflow.Context, input *iam.ListOpenIDConnectProvidersInput) (*iam.ListOpenIDConnectProvidersOutput, error)
+       ListOpenIDConnectProvidersAsync(ctx workflow.Context, input *iam.ListOpenIDConnectProvidersInput) *IamListOpenIDConnectProvidersResult
 
-    ListPolicies(ctx workflow.Context, input *iam.ListPoliciesInput) (*iam.ListPoliciesOutput, error)
-    ListPoliciesAsync(ctx workflow.Context, input *iam.ListPoliciesInput) *IamListPoliciesResult
+       ListPolicies(ctx workflow.Context, input *iam.ListPoliciesInput) (*iam.ListPoliciesOutput, error)
+       ListPoliciesAsync(ctx workflow.Context, input *iam.ListPoliciesInput) *IamListPoliciesResult
 
-    ListPoliciesGrantingServiceAccess(ctx workflow.Context, input *iam.ListPoliciesGrantingServiceAccessInput) (*iam.ListPoliciesGrantingServiceAccessOutput, error)
-    ListPoliciesGrantingServiceAccessAsync(ctx workflow.Context, input *iam.ListPoliciesGrantingServiceAccessInput) *IamListPoliciesGrantingServiceAccessResult
+       ListPoliciesGrantingServiceAccess(ctx workflow.Context, input *iam.ListPoliciesGrantingServiceAccessInput) (*iam.ListPoliciesGrantingServiceAccessOutput, error)
+       ListPoliciesGrantingServiceAccessAsync(ctx workflow.Context, input *iam.ListPoliciesGrantingServiceAccessInput) *IamListPoliciesGrantingServiceAccessResult
 
-    ListPolicyVersions(ctx workflow.Context, input *iam.ListPolicyVersionsInput) (*iam.ListPolicyVersionsOutput, error)
-    ListPolicyVersionsAsync(ctx workflow.Context, input *iam.ListPolicyVersionsInput) *IamListPolicyVersionsResult
+       ListPolicyVersions(ctx workflow.Context, input *iam.ListPolicyVersionsInput) (*iam.ListPolicyVersionsOutput, error)
+       ListPolicyVersionsAsync(ctx workflow.Context, input *iam.ListPolicyVersionsInput) *IamListPolicyVersionsResult
 
-    ListRolePolicies(ctx workflow.Context, input *iam.ListRolePoliciesInput) (*iam.ListRolePoliciesOutput, error)
-    ListRolePoliciesAsync(ctx workflow.Context, input *iam.ListRolePoliciesInput) *IamListRolePoliciesResult
+       ListRolePolicies(ctx workflow.Context, input *iam.ListRolePoliciesInput) (*iam.ListRolePoliciesOutput, error)
+       ListRolePoliciesAsync(ctx workflow.Context, input *iam.ListRolePoliciesInput) *IamListRolePoliciesResult
 
-    ListRoleTags(ctx workflow.Context, input *iam.ListRoleTagsInput) (*iam.ListRoleTagsOutput, error)
-    ListRoleTagsAsync(ctx workflow.Context, input *iam.ListRoleTagsInput) *IamListRoleTagsResult
+       ListRoleTags(ctx workflow.Context, input *iam.ListRoleTagsInput) (*iam.ListRoleTagsOutput, error)
+       ListRoleTagsAsync(ctx workflow.Context, input *iam.ListRoleTagsInput) *IamListRoleTagsResult
 
-    ListRoles(ctx workflow.Context, input *iam.ListRolesInput) (*iam.ListRolesOutput, error)
-    ListRolesAsync(ctx workflow.Context, input *iam.ListRolesInput) *IamListRolesResult
+       ListRoles(ctx workflow.Context, input *iam.ListRolesInput) (*iam.ListRolesOutput, error)
+       ListRolesAsync(ctx workflow.Context, input *iam.ListRolesInput) *IamListRolesResult
 
-    ListSAMLProviders(ctx workflow.Context, input *iam.ListSAMLProvidersInput) (*iam.ListSAMLProvidersOutput, error)
-    ListSAMLProvidersAsync(ctx workflow.Context, input *iam.ListSAMLProvidersInput) *IamListSAMLProvidersResult
+       ListSAMLProviders(ctx workflow.Context, input *iam.ListSAMLProvidersInput) (*iam.ListSAMLProvidersOutput, error)
+       ListSAMLProvidersAsync(ctx workflow.Context, input *iam.ListSAMLProvidersInput) *IamListSAMLProvidersResult
 
-    ListSSHPublicKeys(ctx workflow.Context, input *iam.ListSSHPublicKeysInput) (*iam.ListSSHPublicKeysOutput, error)
-    ListSSHPublicKeysAsync(ctx workflow.Context, input *iam.ListSSHPublicKeysInput) *IamListSSHPublicKeysResult
+       ListSSHPublicKeys(ctx workflow.Context, input *iam.ListSSHPublicKeysInput) (*iam.ListSSHPublicKeysOutput, error)
+       ListSSHPublicKeysAsync(ctx workflow.Context, input *iam.ListSSHPublicKeysInput) *IamListSSHPublicKeysResult
 
-    ListServerCertificates(ctx workflow.Context, input *iam.ListServerCertificatesInput) (*iam.ListServerCertificatesOutput, error)
-    ListServerCertificatesAsync(ctx workflow.Context, input *iam.ListServerCertificatesInput) *IamListServerCertificatesResult
+       ListServerCertificates(ctx workflow.Context, input *iam.ListServerCertificatesInput) (*iam.ListServerCertificatesOutput, error)
+       ListServerCertificatesAsync(ctx workflow.Context, input *iam.ListServerCertificatesInput) *IamListServerCertificatesResult
 
-    ListServiceSpecificCredentials(ctx workflow.Context, input *iam.ListServiceSpecificCredentialsInput) (*iam.ListServiceSpecificCredentialsOutput, error)
-    ListServiceSpecificCredentialsAsync(ctx workflow.Context, input *iam.ListServiceSpecificCredentialsInput) *IamListServiceSpecificCredentialsResult
+       ListServiceSpecificCredentials(ctx workflow.Context, input *iam.ListServiceSpecificCredentialsInput) (*iam.ListServiceSpecificCredentialsOutput, error)
+       ListServiceSpecificCredentialsAsync(ctx workflow.Context, input *iam.ListServiceSpecificCredentialsInput) *IamListServiceSpecificCredentialsResult
 
-    ListSigningCertificates(ctx workflow.Context, input *iam.ListSigningCertificatesInput) (*iam.ListSigningCertificatesOutput, error)
-    ListSigningCertificatesAsync(ctx workflow.Context, input *iam.ListSigningCertificatesInput) *IamListSigningCertificatesResult
+       ListSigningCertificates(ctx workflow.Context, input *iam.ListSigningCertificatesInput) (*iam.ListSigningCertificatesOutput, error)
+       ListSigningCertificatesAsync(ctx workflow.Context, input *iam.ListSigningCertificatesInput) *IamListSigningCertificatesResult
 
-    ListUserPolicies(ctx workflow.Context, input *iam.ListUserPoliciesInput) (*iam.ListUserPoliciesOutput, error)
-    ListUserPoliciesAsync(ctx workflow.Context, input *iam.ListUserPoliciesInput) *IamListUserPoliciesResult
+       ListUserPolicies(ctx workflow.Context, input *iam.ListUserPoliciesInput) (*iam.ListUserPoliciesOutput, error)
+       ListUserPoliciesAsync(ctx workflow.Context, input *iam.ListUserPoliciesInput) *IamListUserPoliciesResult
 
-    ListUserTags(ctx workflow.Context, input *iam.ListUserTagsInput) (*iam.ListUserTagsOutput, error)
-    ListUserTagsAsync(ctx workflow.Context, input *iam.ListUserTagsInput) *IamListUserTagsResult
+       ListUserTags(ctx workflow.Context, input *iam.ListUserTagsInput) (*iam.ListUserTagsOutput, error)
+       ListUserTagsAsync(ctx workflow.Context, input *iam.ListUserTagsInput) *IamListUserTagsResult
 
-    ListUsers(ctx workflow.Context, input *iam.ListUsersInput) (*iam.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *iam.ListUsersInput) *IamListUsersResult
+       ListUsers(ctx workflow.Context, input *iam.ListUsersInput) (*iam.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *iam.ListUsersInput) *IamListUsersResult
 
-    ListVirtualMFADevices(ctx workflow.Context, input *iam.ListVirtualMFADevicesInput) (*iam.ListVirtualMFADevicesOutput, error)
-    ListVirtualMFADevicesAsync(ctx workflow.Context, input *iam.ListVirtualMFADevicesInput) *IamListVirtualMFADevicesResult
+       ListVirtualMFADevices(ctx workflow.Context, input *iam.ListVirtualMFADevicesInput) (*iam.ListVirtualMFADevicesOutput, error)
+       ListVirtualMFADevicesAsync(ctx workflow.Context, input *iam.ListVirtualMFADevicesInput) *IamListVirtualMFADevicesResult
 
-    PutGroupPolicy(ctx workflow.Context, input *iam.PutGroupPolicyInput) (*iam.PutGroupPolicyOutput, error)
-    PutGroupPolicyAsync(ctx workflow.Context, input *iam.PutGroupPolicyInput) *IamPutGroupPolicyResult
+       PutGroupPolicy(ctx workflow.Context, input *iam.PutGroupPolicyInput) (*iam.PutGroupPolicyOutput, error)
+       PutGroupPolicyAsync(ctx workflow.Context, input *iam.PutGroupPolicyInput) *IamPutGroupPolicyResult
 
-    PutRolePermissionsBoundary(ctx workflow.Context, input *iam.PutRolePermissionsBoundaryInput) (*iam.PutRolePermissionsBoundaryOutput, error)
-    PutRolePermissionsBoundaryAsync(ctx workflow.Context, input *iam.PutRolePermissionsBoundaryInput) *IamPutRolePermissionsBoundaryResult
+       PutRolePermissionsBoundary(ctx workflow.Context, input *iam.PutRolePermissionsBoundaryInput) (*iam.PutRolePermissionsBoundaryOutput, error)
+       PutRolePermissionsBoundaryAsync(ctx workflow.Context, input *iam.PutRolePermissionsBoundaryInput) *IamPutRolePermissionsBoundaryResult
 
-    PutRolePolicy(ctx workflow.Context, input *iam.PutRolePolicyInput) (*iam.PutRolePolicyOutput, error)
-    PutRolePolicyAsync(ctx workflow.Context, input *iam.PutRolePolicyInput) *IamPutRolePolicyResult
+       PutRolePolicy(ctx workflow.Context, input *iam.PutRolePolicyInput) (*iam.PutRolePolicyOutput, error)
+       PutRolePolicyAsync(ctx workflow.Context, input *iam.PutRolePolicyInput) *IamPutRolePolicyResult
 
-    PutUserPermissionsBoundary(ctx workflow.Context, input *iam.PutUserPermissionsBoundaryInput) (*iam.PutUserPermissionsBoundaryOutput, error)
-    PutUserPermissionsBoundaryAsync(ctx workflow.Context, input *iam.PutUserPermissionsBoundaryInput) *IamPutUserPermissionsBoundaryResult
+       PutUserPermissionsBoundary(ctx workflow.Context, input *iam.PutUserPermissionsBoundaryInput) (*iam.PutUserPermissionsBoundaryOutput, error)
+       PutUserPermissionsBoundaryAsync(ctx workflow.Context, input *iam.PutUserPermissionsBoundaryInput) *IamPutUserPermissionsBoundaryResult
 
-    PutUserPolicy(ctx workflow.Context, input *iam.PutUserPolicyInput) (*iam.PutUserPolicyOutput, error)
-    PutUserPolicyAsync(ctx workflow.Context, input *iam.PutUserPolicyInput) *IamPutUserPolicyResult
+       PutUserPolicy(ctx workflow.Context, input *iam.PutUserPolicyInput) (*iam.PutUserPolicyOutput, error)
+       PutUserPolicyAsync(ctx workflow.Context, input *iam.PutUserPolicyInput) *IamPutUserPolicyResult
 
-    RemoveClientIDFromOpenIDConnectProvider(ctx workflow.Context, input *iam.RemoveClientIDFromOpenIDConnectProviderInput) (*iam.RemoveClientIDFromOpenIDConnectProviderOutput, error)
-    RemoveClientIDFromOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.RemoveClientIDFromOpenIDConnectProviderInput) *IamRemoveClientIDFromOpenIDConnectProviderResult
+       RemoveClientIDFromOpenIDConnectProvider(ctx workflow.Context, input *iam.RemoveClientIDFromOpenIDConnectProviderInput) (*iam.RemoveClientIDFromOpenIDConnectProviderOutput, error)
+       RemoveClientIDFromOpenIDConnectProviderAsync(ctx workflow.Context, input *iam.RemoveClientIDFromOpenIDConnectProviderInput) *IamRemoveClientIDFromOpenIDConnectProviderResult
 
-    RemoveRoleFromInstanceProfile(ctx workflow.Context, input *iam.RemoveRoleFromInstanceProfileInput) (*iam.RemoveRoleFromInstanceProfileOutput, error)
-    RemoveRoleFromInstanceProfileAsync(ctx workflow.Context, input *iam.RemoveRoleFromInstanceProfileInput) *IamRemoveRoleFromInstanceProfileResult
+       RemoveRoleFromInstanceProfile(ctx workflow.Context, input *iam.RemoveRoleFromInstanceProfileInput) (*iam.RemoveRoleFromInstanceProfileOutput, error)
+       RemoveRoleFromInstanceProfileAsync(ctx workflow.Context, input *iam.RemoveRoleFromInstanceProfileInput) *IamRemoveRoleFromInstanceProfileResult
 
-    RemoveUserFromGroup(ctx workflow.Context, input *iam.RemoveUserFromGroupInput) (*iam.RemoveUserFromGroupOutput, error)
-    RemoveUserFromGroupAsync(ctx workflow.Context, input *iam.RemoveUserFromGroupInput) *IamRemoveUserFromGroupResult
+       RemoveUserFromGroup(ctx workflow.Context, input *iam.RemoveUserFromGroupInput) (*iam.RemoveUserFromGroupOutput, error)
+       RemoveUserFromGroupAsync(ctx workflow.Context, input *iam.RemoveUserFromGroupInput) *IamRemoveUserFromGroupResult
 
-    ResetServiceSpecificCredential(ctx workflow.Context, input *iam.ResetServiceSpecificCredentialInput) (*iam.ResetServiceSpecificCredentialOutput, error)
-    ResetServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.ResetServiceSpecificCredentialInput) *IamResetServiceSpecificCredentialResult
+       ResetServiceSpecificCredential(ctx workflow.Context, input *iam.ResetServiceSpecificCredentialInput) (*iam.ResetServiceSpecificCredentialOutput, error)
+       ResetServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.ResetServiceSpecificCredentialInput) *IamResetServiceSpecificCredentialResult
 
-    ResyncMFADevice(ctx workflow.Context, input *iam.ResyncMFADeviceInput) (*iam.ResyncMFADeviceOutput, error)
-    ResyncMFADeviceAsync(ctx workflow.Context, input *iam.ResyncMFADeviceInput) *IamResyncMFADeviceResult
+       ResyncMFADevice(ctx workflow.Context, input *iam.ResyncMFADeviceInput) (*iam.ResyncMFADeviceOutput, error)
+       ResyncMFADeviceAsync(ctx workflow.Context, input *iam.ResyncMFADeviceInput) *IamResyncMFADeviceResult
 
-    SetDefaultPolicyVersion(ctx workflow.Context, input *iam.SetDefaultPolicyVersionInput) (*iam.SetDefaultPolicyVersionOutput, error)
-    SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iam.SetDefaultPolicyVersionInput) *IamSetDefaultPolicyVersionResult
+       SetDefaultPolicyVersion(ctx workflow.Context, input *iam.SetDefaultPolicyVersionInput) (*iam.SetDefaultPolicyVersionOutput, error)
+       SetDefaultPolicyVersionAsync(ctx workflow.Context, input *iam.SetDefaultPolicyVersionInput) *IamSetDefaultPolicyVersionResult
 
-    SetSecurityTokenServicePreferences(ctx workflow.Context, input *iam.SetSecurityTokenServicePreferencesInput) (*iam.SetSecurityTokenServicePreferencesOutput, error)
-    SetSecurityTokenServicePreferencesAsync(ctx workflow.Context, input *iam.SetSecurityTokenServicePreferencesInput) *IamSetSecurityTokenServicePreferencesResult
+       SetSecurityTokenServicePreferences(ctx workflow.Context, input *iam.SetSecurityTokenServicePreferencesInput) (*iam.SetSecurityTokenServicePreferencesOutput, error)
+       SetSecurityTokenServicePreferencesAsync(ctx workflow.Context, input *iam.SetSecurityTokenServicePreferencesInput) *IamSetSecurityTokenServicePreferencesResult
 
-    SimulateCustomPolicy(ctx workflow.Context, input *iam.SimulateCustomPolicyInput) (*iam.SimulatePolicyResponse, error)
-    SimulateCustomPolicyAsync(ctx workflow.Context, input *iam.SimulateCustomPolicyInput) *IamSimulateCustomPolicyResult
+       SimulateCustomPolicy(ctx workflow.Context, input *iam.SimulateCustomPolicyInput) (*iam.SimulatePolicyResponse, error)
+       SimulateCustomPolicyAsync(ctx workflow.Context, input *iam.SimulateCustomPolicyInput) *IamSimulateCustomPolicyResult
 
-    SimulatePrincipalPolicy(ctx workflow.Context, input *iam.SimulatePrincipalPolicyInput) (*iam.SimulatePolicyResponse, error)
-    SimulatePrincipalPolicyAsync(ctx workflow.Context, input *iam.SimulatePrincipalPolicyInput) *IamSimulatePrincipalPolicyResult
+       SimulatePrincipalPolicy(ctx workflow.Context, input *iam.SimulatePrincipalPolicyInput) (*iam.SimulatePolicyResponse, error)
+       SimulatePrincipalPolicyAsync(ctx workflow.Context, input *iam.SimulatePrincipalPolicyInput) *IamSimulatePrincipalPolicyResult
 
-    TagRole(ctx workflow.Context, input *iam.TagRoleInput) (*iam.TagRoleOutput, error)
-    TagRoleAsync(ctx workflow.Context, input *iam.TagRoleInput) *IamTagRoleResult
+       TagRole(ctx workflow.Context, input *iam.TagRoleInput) (*iam.TagRoleOutput, error)
+       TagRoleAsync(ctx workflow.Context, input *iam.TagRoleInput) *IamTagRoleResult
 
-    TagUser(ctx workflow.Context, input *iam.TagUserInput) (*iam.TagUserOutput, error)
-    TagUserAsync(ctx workflow.Context, input *iam.TagUserInput) *IamTagUserResult
+       TagUser(ctx workflow.Context, input *iam.TagUserInput) (*iam.TagUserOutput, error)
+       TagUserAsync(ctx workflow.Context, input *iam.TagUserInput) *IamTagUserResult
 
-    UntagRole(ctx workflow.Context, input *iam.UntagRoleInput) (*iam.UntagRoleOutput, error)
-    UntagRoleAsync(ctx workflow.Context, input *iam.UntagRoleInput) *IamUntagRoleResult
+       UntagRole(ctx workflow.Context, input *iam.UntagRoleInput) (*iam.UntagRoleOutput, error)
+       UntagRoleAsync(ctx workflow.Context, input *iam.UntagRoleInput) *IamUntagRoleResult
 
-    UntagUser(ctx workflow.Context, input *iam.UntagUserInput) (*iam.UntagUserOutput, error)
-    UntagUserAsync(ctx workflow.Context, input *iam.UntagUserInput) *IamUntagUserResult
+       UntagUser(ctx workflow.Context, input *iam.UntagUserInput) (*iam.UntagUserOutput, error)
+       UntagUserAsync(ctx workflow.Context, input *iam.UntagUserInput) *IamUntagUserResult
 
-    UpdateAccessKey(ctx workflow.Context, input *iam.UpdateAccessKeyInput) (*iam.UpdateAccessKeyOutput, error)
-    UpdateAccessKeyAsync(ctx workflow.Context, input *iam.UpdateAccessKeyInput) *IamUpdateAccessKeyResult
+       UpdateAccessKey(ctx workflow.Context, input *iam.UpdateAccessKeyInput) (*iam.UpdateAccessKeyOutput, error)
+       UpdateAccessKeyAsync(ctx workflow.Context, input *iam.UpdateAccessKeyInput) *IamUpdateAccessKeyResult
 
-    UpdateAccountPasswordPolicy(ctx workflow.Context, input *iam.UpdateAccountPasswordPolicyInput) (*iam.UpdateAccountPasswordPolicyOutput, error)
-    UpdateAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.UpdateAccountPasswordPolicyInput) *IamUpdateAccountPasswordPolicyResult
+       UpdateAccountPasswordPolicy(ctx workflow.Context, input *iam.UpdateAccountPasswordPolicyInput) (*iam.UpdateAccountPasswordPolicyOutput, error)
+       UpdateAccountPasswordPolicyAsync(ctx workflow.Context, input *iam.UpdateAccountPasswordPolicyInput) *IamUpdateAccountPasswordPolicyResult
 
-    UpdateAssumeRolePolicy(ctx workflow.Context, input *iam.UpdateAssumeRolePolicyInput) (*iam.UpdateAssumeRolePolicyOutput, error)
-    UpdateAssumeRolePolicyAsync(ctx workflow.Context, input *iam.UpdateAssumeRolePolicyInput) *IamUpdateAssumeRolePolicyResult
+       UpdateAssumeRolePolicy(ctx workflow.Context, input *iam.UpdateAssumeRolePolicyInput) (*iam.UpdateAssumeRolePolicyOutput, error)
+       UpdateAssumeRolePolicyAsync(ctx workflow.Context, input *iam.UpdateAssumeRolePolicyInput) *IamUpdateAssumeRolePolicyResult
 
-    UpdateGroup(ctx workflow.Context, input *iam.UpdateGroupInput) (*iam.UpdateGroupOutput, error)
-    UpdateGroupAsync(ctx workflow.Context, input *iam.UpdateGroupInput) *IamUpdateGroupResult
+       UpdateGroup(ctx workflow.Context, input *iam.UpdateGroupInput) (*iam.UpdateGroupOutput, error)
+       UpdateGroupAsync(ctx workflow.Context, input *iam.UpdateGroupInput) *IamUpdateGroupResult
 
-    UpdateLoginProfile(ctx workflow.Context, input *iam.UpdateLoginProfileInput) (*iam.UpdateLoginProfileOutput, error)
-    UpdateLoginProfileAsync(ctx workflow.Context, input *iam.UpdateLoginProfileInput) *IamUpdateLoginProfileResult
+       UpdateLoginProfile(ctx workflow.Context, input *iam.UpdateLoginProfileInput) (*iam.UpdateLoginProfileOutput, error)
+       UpdateLoginProfileAsync(ctx workflow.Context, input *iam.UpdateLoginProfileInput) *IamUpdateLoginProfileResult
 
-    UpdateOpenIDConnectProviderThumbprint(ctx workflow.Context, input *iam.UpdateOpenIDConnectProviderThumbprintInput) (*iam.UpdateOpenIDConnectProviderThumbprintOutput, error)
-    UpdateOpenIDConnectProviderThumbprintAsync(ctx workflow.Context, input *iam.UpdateOpenIDConnectProviderThumbprintInput) *IamUpdateOpenIDConnectProviderThumbprintResult
+       UpdateOpenIDConnectProviderThumbprint(ctx workflow.Context, input *iam.UpdateOpenIDConnectProviderThumbprintInput) (*iam.UpdateOpenIDConnectProviderThumbprintOutput, error)
+       UpdateOpenIDConnectProviderThumbprintAsync(ctx workflow.Context, input *iam.UpdateOpenIDConnectProviderThumbprintInput) *IamUpdateOpenIDConnectProviderThumbprintResult
 
-    UpdateRole(ctx workflow.Context, input *iam.UpdateRoleInput) (*iam.UpdateRoleOutput, error)
-    UpdateRoleAsync(ctx workflow.Context, input *iam.UpdateRoleInput) *IamUpdateRoleResult
+       UpdateRole(ctx workflow.Context, input *iam.UpdateRoleInput) (*iam.UpdateRoleOutput, error)
+       UpdateRoleAsync(ctx workflow.Context, input *iam.UpdateRoleInput) *IamUpdateRoleResult
 
-    UpdateRoleDescription(ctx workflow.Context, input *iam.UpdateRoleDescriptionInput) (*iam.UpdateRoleDescriptionOutput, error)
-    UpdateRoleDescriptionAsync(ctx workflow.Context, input *iam.UpdateRoleDescriptionInput) *IamUpdateRoleDescriptionResult
+       UpdateRoleDescription(ctx workflow.Context, input *iam.UpdateRoleDescriptionInput) (*iam.UpdateRoleDescriptionOutput, error)
+       UpdateRoleDescriptionAsync(ctx workflow.Context, input *iam.UpdateRoleDescriptionInput) *IamUpdateRoleDescriptionResult
 
-    UpdateSAMLProvider(ctx workflow.Context, input *iam.UpdateSAMLProviderInput) (*iam.UpdateSAMLProviderOutput, error)
-    UpdateSAMLProviderAsync(ctx workflow.Context, input *iam.UpdateSAMLProviderInput) *IamUpdateSAMLProviderResult
+       UpdateSAMLProvider(ctx workflow.Context, input *iam.UpdateSAMLProviderInput) (*iam.UpdateSAMLProviderOutput, error)
+       UpdateSAMLProviderAsync(ctx workflow.Context, input *iam.UpdateSAMLProviderInput) *IamUpdateSAMLProviderResult
 
-    UpdateSSHPublicKey(ctx workflow.Context, input *iam.UpdateSSHPublicKeyInput) (*iam.UpdateSSHPublicKeyOutput, error)
-    UpdateSSHPublicKeyAsync(ctx workflow.Context, input *iam.UpdateSSHPublicKeyInput) *IamUpdateSSHPublicKeyResult
+       UpdateSSHPublicKey(ctx workflow.Context, input *iam.UpdateSSHPublicKeyInput) (*iam.UpdateSSHPublicKeyOutput, error)
+       UpdateSSHPublicKeyAsync(ctx workflow.Context, input *iam.UpdateSSHPublicKeyInput) *IamUpdateSSHPublicKeyResult
 
-    UpdateServerCertificate(ctx workflow.Context, input *iam.UpdateServerCertificateInput) (*iam.UpdateServerCertificateOutput, error)
-    UpdateServerCertificateAsync(ctx workflow.Context, input *iam.UpdateServerCertificateInput) *IamUpdateServerCertificateResult
+       UpdateServerCertificate(ctx workflow.Context, input *iam.UpdateServerCertificateInput) (*iam.UpdateServerCertificateOutput, error)
+       UpdateServerCertificateAsync(ctx workflow.Context, input *iam.UpdateServerCertificateInput) *IamUpdateServerCertificateResult
 
-    UpdateServiceSpecificCredential(ctx workflow.Context, input *iam.UpdateServiceSpecificCredentialInput) (*iam.UpdateServiceSpecificCredentialOutput, error)
-    UpdateServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.UpdateServiceSpecificCredentialInput) *IamUpdateServiceSpecificCredentialResult
+       UpdateServiceSpecificCredential(ctx workflow.Context, input *iam.UpdateServiceSpecificCredentialInput) (*iam.UpdateServiceSpecificCredentialOutput, error)
+       UpdateServiceSpecificCredentialAsync(ctx workflow.Context, input *iam.UpdateServiceSpecificCredentialInput) *IamUpdateServiceSpecificCredentialResult
 
-    UpdateSigningCertificate(ctx workflow.Context, input *iam.UpdateSigningCertificateInput) (*iam.UpdateSigningCertificateOutput, error)
-    UpdateSigningCertificateAsync(ctx workflow.Context, input *iam.UpdateSigningCertificateInput) *IamUpdateSigningCertificateResult
+       UpdateSigningCertificate(ctx workflow.Context, input *iam.UpdateSigningCertificateInput) (*iam.UpdateSigningCertificateOutput, error)
+       UpdateSigningCertificateAsync(ctx workflow.Context, input *iam.UpdateSigningCertificateInput) *IamUpdateSigningCertificateResult
 
-    UpdateUser(ctx workflow.Context, input *iam.UpdateUserInput) (*iam.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *iam.UpdateUserInput) *IamUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *iam.UpdateUserInput) (*iam.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *iam.UpdateUserInput) *IamUpdateUserResult
 
-    UploadSSHPublicKey(ctx workflow.Context, input *iam.UploadSSHPublicKeyInput) (*iam.UploadSSHPublicKeyOutput, error)
-    UploadSSHPublicKeyAsync(ctx workflow.Context, input *iam.UploadSSHPublicKeyInput) *IamUploadSSHPublicKeyResult
+       UploadSSHPublicKey(ctx workflow.Context, input *iam.UploadSSHPublicKeyInput) (*iam.UploadSSHPublicKeyOutput, error)
+       UploadSSHPublicKeyAsync(ctx workflow.Context, input *iam.UploadSSHPublicKeyInput) *IamUploadSSHPublicKeyResult
 
-    UploadServerCertificate(ctx workflow.Context, input *iam.UploadServerCertificateInput) (*iam.UploadServerCertificateOutput, error)
-    UploadServerCertificateAsync(ctx workflow.Context, input *iam.UploadServerCertificateInput) *IamUploadServerCertificateResult
+       UploadServerCertificate(ctx workflow.Context, input *iam.UploadServerCertificateInput) (*iam.UploadServerCertificateOutput, error)
+       UploadServerCertificateAsync(ctx workflow.Context, input *iam.UploadServerCertificateInput) *IamUploadServerCertificateResult
 
-    UploadSigningCertificate(ctx workflow.Context, input *iam.UploadSigningCertificateInput) (*iam.UploadSigningCertificateOutput, error)
-    UploadSigningCertificateAsync(ctx workflow.Context, input *iam.UploadSigningCertificateInput) *IamUploadSigningCertificateResult
+       UploadSigningCertificate(ctx workflow.Context, input *iam.UploadSigningCertificateInput) (*iam.UploadSigningCertificateOutput, error)
+       UploadSigningCertificateAsync(ctx workflow.Context, input *iam.UploadSigningCertificateInput) *IamUploadSigningCertificateResult
 
-    WaitUntilInstanceProfileExists(ctx workflow.Context, input *iam.GetInstanceProfileInput) error
-    WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error
-    WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error
-    WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error}
+       WaitUntilInstanceProfileExists(ctx workflow.Context, input *iam.GetInstanceProfileInput) error
+       WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error
+       WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error
+       WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error}
 
 type IamAddClientIDToOpenIDConnectProviderResult struct {
 	Result workflow.Future

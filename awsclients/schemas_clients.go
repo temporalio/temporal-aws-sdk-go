@@ -7,97 +7,97 @@ import (
 )
 
 type SchemasClient interface {
-    CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error)
-    CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererResult
+       CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error)
+       CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererResult
 
-    CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error)
-    CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryResult
+       CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error)
+       CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryResult
 
-    CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error)
-    CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaResult
+       CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error)
+       CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaResult
 
-    DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error)
-    DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererResult
+       DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error)
+       DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererResult
 
-    DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error)
-    DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryResult
+       DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error)
+       DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryResult
 
-    DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error)
-    DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyResult
+       DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error)
+       DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyResult
 
-    DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error)
-    DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaResult
+       DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error)
+       DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaResult
 
-    DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error)
-    DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionResult
+       DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error)
+       DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionResult
 
-    DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error)
-    DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingResult
+       DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error)
+       DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingResult
 
-    DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error)
-    DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererResult
+       DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error)
+       DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererResult
 
-    DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error)
-    DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryResult
+       DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error)
+       DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryResult
 
-    DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error)
-    DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult
+       DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error)
+       DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult
 
-    GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error)
-    GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult
+       GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error)
+       GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult
 
-    GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error)
-    GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaResult
+       GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error)
+       GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaResult
 
-    GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error)
-    GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyResult
+       GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error)
+       GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyResult
 
-    ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error)
-    ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersResult
+       ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error)
+       ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersResult
 
-    ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error)
-    ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesResult
+       ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error)
+       ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesResult
 
-    ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error)
-    ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsResult
+       ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error)
+       ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsResult
 
-    ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error)
-    ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasResult
+       ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error)
+       ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasResult
 
-    ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceResult
 
-    PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error)
-    PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingResult
+       PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error)
+       PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingResult
 
-    PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error)
-    PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyResult
+       PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error)
+       PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyResult
 
-    SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error)
-    SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasResult
+       SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error)
+       SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasResult
 
-    StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error)
-    StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererResult
+       StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error)
+       StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererResult
 
-    StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error)
-    StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererResult
+       StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error)
+       StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererResult
 
-    TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceResult
+       TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceResult
+       UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceResult
 
-    UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error)
-    UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererResult
+       UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error)
+       UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererResult
 
-    UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error)
-    UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryResult
+       UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error)
+       UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryResult
 
-    UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error)
-    UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
+       UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error)
+       UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
 
-    WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error}
+       WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error}
 
 type SchemasCreateDiscovererResult struct {
 	Result workflow.Future

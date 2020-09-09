@@ -7,173 +7,173 @@ import (
 )
 
 type DatabaseMigrationServiceClient interface {
-    AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error)
-    AddTagsToResourceAsync(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) *DatabasemigrationserviceAddTagsToResourceResult
+       AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error)
+       AddTagsToResourceAsync(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) *DatabasemigrationserviceAddTagsToResourceResult
 
-    ApplyPendingMaintenanceAction(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) (*databasemigrationservice.ApplyPendingMaintenanceActionOutput, error)
-    ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) *DatabasemigrationserviceApplyPendingMaintenanceActionResult
+       ApplyPendingMaintenanceAction(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) (*databasemigrationservice.ApplyPendingMaintenanceActionOutput, error)
+       ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) *DatabasemigrationserviceApplyPendingMaintenanceActionResult
 
-    CancelReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) (*databasemigrationservice.CancelReplicationTaskAssessmentRunOutput, error)
-    CancelReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) *DatabasemigrationserviceCancelReplicationTaskAssessmentRunResult
+       CancelReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) (*databasemigrationservice.CancelReplicationTaskAssessmentRunOutput, error)
+       CancelReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) *DatabasemigrationserviceCancelReplicationTaskAssessmentRunResult
 
-    CreateEndpoint(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) (*databasemigrationservice.CreateEndpointOutput, error)
-    CreateEndpointAsync(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) *DatabasemigrationserviceCreateEndpointResult
+       CreateEndpoint(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) (*databasemigrationservice.CreateEndpointOutput, error)
+       CreateEndpointAsync(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) *DatabasemigrationserviceCreateEndpointResult
 
-    CreateEventSubscription(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) (*databasemigrationservice.CreateEventSubscriptionOutput, error)
-    CreateEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) *DatabasemigrationserviceCreateEventSubscriptionResult
+       CreateEventSubscription(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) (*databasemigrationservice.CreateEventSubscriptionOutput, error)
+       CreateEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) *DatabasemigrationserviceCreateEventSubscriptionResult
 
-    CreateReplicationInstance(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) (*databasemigrationservice.CreateReplicationInstanceOutput, error)
-    CreateReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) *DatabasemigrationserviceCreateReplicationInstanceResult
+       CreateReplicationInstance(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) (*databasemigrationservice.CreateReplicationInstanceOutput, error)
+       CreateReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) *DatabasemigrationserviceCreateReplicationInstanceResult
 
-    CreateReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) (*databasemigrationservice.CreateReplicationSubnetGroupOutput, error)
-    CreateReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) *DatabasemigrationserviceCreateReplicationSubnetGroupResult
+       CreateReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) (*databasemigrationservice.CreateReplicationSubnetGroupOutput, error)
+       CreateReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) *DatabasemigrationserviceCreateReplicationSubnetGroupResult
 
-    CreateReplicationTask(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) (*databasemigrationservice.CreateReplicationTaskOutput, error)
-    CreateReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) *DatabasemigrationserviceCreateReplicationTaskResult
+       CreateReplicationTask(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) (*databasemigrationservice.CreateReplicationTaskOutput, error)
+       CreateReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) *DatabasemigrationserviceCreateReplicationTaskResult
 
-    DeleteCertificate(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) (*databasemigrationservice.DeleteCertificateOutput, error)
-    DeleteCertificateAsync(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) *DatabasemigrationserviceDeleteCertificateResult
+       DeleteCertificate(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) (*databasemigrationservice.DeleteCertificateOutput, error)
+       DeleteCertificateAsync(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) *DatabasemigrationserviceDeleteCertificateResult
 
-    DeleteConnection(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) (*databasemigrationservice.DeleteConnectionOutput, error)
-    DeleteConnectionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) *DatabasemigrationserviceDeleteConnectionResult
+       DeleteConnection(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) (*databasemigrationservice.DeleteConnectionOutput, error)
+       DeleteConnectionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) *DatabasemigrationserviceDeleteConnectionResult
 
-    DeleteEndpoint(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) (*databasemigrationservice.DeleteEndpointOutput, error)
-    DeleteEndpointAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) *DatabasemigrationserviceDeleteEndpointResult
+       DeleteEndpoint(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) (*databasemigrationservice.DeleteEndpointOutput, error)
+       DeleteEndpointAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) *DatabasemigrationserviceDeleteEndpointResult
 
-    DeleteEventSubscription(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) (*databasemigrationservice.DeleteEventSubscriptionOutput, error)
-    DeleteEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) *DatabasemigrationserviceDeleteEventSubscriptionResult
+       DeleteEventSubscription(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) (*databasemigrationservice.DeleteEventSubscriptionOutput, error)
+       DeleteEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) *DatabasemigrationserviceDeleteEventSubscriptionResult
 
-    DeleteReplicationInstance(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) (*databasemigrationservice.DeleteReplicationInstanceOutput, error)
-    DeleteReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) *DatabasemigrationserviceDeleteReplicationInstanceResult
+       DeleteReplicationInstance(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) (*databasemigrationservice.DeleteReplicationInstanceOutput, error)
+       DeleteReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) *DatabasemigrationserviceDeleteReplicationInstanceResult
 
-    DeleteReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) (*databasemigrationservice.DeleteReplicationSubnetGroupOutput, error)
-    DeleteReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) *DatabasemigrationserviceDeleteReplicationSubnetGroupResult
+       DeleteReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) (*databasemigrationservice.DeleteReplicationSubnetGroupOutput, error)
+       DeleteReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) *DatabasemigrationserviceDeleteReplicationSubnetGroupResult
 
-    DeleteReplicationTask(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) (*databasemigrationservice.DeleteReplicationTaskOutput, error)
-    DeleteReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) *DatabasemigrationserviceDeleteReplicationTaskResult
+       DeleteReplicationTask(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) (*databasemigrationservice.DeleteReplicationTaskOutput, error)
+       DeleteReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) *DatabasemigrationserviceDeleteReplicationTaskResult
 
-    DeleteReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) (*databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput, error)
-    DeleteReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) *DatabasemigrationserviceDeleteReplicationTaskAssessmentRunResult
+       DeleteReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) (*databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput, error)
+       DeleteReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) *DatabasemigrationserviceDeleteReplicationTaskAssessmentRunResult
 
-    DescribeAccountAttributes(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) (*databasemigrationservice.DescribeAccountAttributesOutput, error)
-    DescribeAccountAttributesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) *DatabasemigrationserviceDescribeAccountAttributesResult
+       DescribeAccountAttributes(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) (*databasemigrationservice.DescribeAccountAttributesOutput, error)
+       DescribeAccountAttributesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) *DatabasemigrationserviceDescribeAccountAttributesResult
 
-    DescribeApplicableIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) (*databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput, error)
-    DescribeApplicableIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) *DatabasemigrationserviceDescribeApplicableIndividualAssessmentsResult
+       DescribeApplicableIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) (*databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput, error)
+       DescribeApplicableIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) *DatabasemigrationserviceDescribeApplicableIndividualAssessmentsResult
 
-    DescribeCertificates(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) (*databasemigrationservice.DescribeCertificatesOutput, error)
-    DescribeCertificatesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) *DatabasemigrationserviceDescribeCertificatesResult
+       DescribeCertificates(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) (*databasemigrationservice.DescribeCertificatesOutput, error)
+       DescribeCertificatesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) *DatabasemigrationserviceDescribeCertificatesResult
 
-    DescribeConnections(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) (*databasemigrationservice.DescribeConnectionsOutput, error)
-    DescribeConnectionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) *DatabasemigrationserviceDescribeConnectionsResult
+       DescribeConnections(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) (*databasemigrationservice.DescribeConnectionsOutput, error)
+       DescribeConnectionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) *DatabasemigrationserviceDescribeConnectionsResult
 
-    DescribeEndpointTypes(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) (*databasemigrationservice.DescribeEndpointTypesOutput, error)
-    DescribeEndpointTypesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) *DatabasemigrationserviceDescribeEndpointTypesResult
+       DescribeEndpointTypes(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) (*databasemigrationservice.DescribeEndpointTypesOutput, error)
+       DescribeEndpointTypesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) *DatabasemigrationserviceDescribeEndpointTypesResult
 
-    DescribeEndpoints(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) (*databasemigrationservice.DescribeEndpointsOutput, error)
-    DescribeEndpointsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) *DatabasemigrationserviceDescribeEndpointsResult
+       DescribeEndpoints(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) (*databasemigrationservice.DescribeEndpointsOutput, error)
+       DescribeEndpointsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) *DatabasemigrationserviceDescribeEndpointsResult
 
-    DescribeEventCategories(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) (*databasemigrationservice.DescribeEventCategoriesOutput, error)
-    DescribeEventCategoriesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) *DatabasemigrationserviceDescribeEventCategoriesResult
+       DescribeEventCategories(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) (*databasemigrationservice.DescribeEventCategoriesOutput, error)
+       DescribeEventCategoriesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) *DatabasemigrationserviceDescribeEventCategoriesResult
 
-    DescribeEventSubscriptions(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) (*databasemigrationservice.DescribeEventSubscriptionsOutput, error)
-    DescribeEventSubscriptionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) *DatabasemigrationserviceDescribeEventSubscriptionsResult
+       DescribeEventSubscriptions(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) (*databasemigrationservice.DescribeEventSubscriptionsOutput, error)
+       DescribeEventSubscriptionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) *DatabasemigrationserviceDescribeEventSubscriptionsResult
 
-    DescribeEvents(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) (*databasemigrationservice.DescribeEventsOutput, error)
-    DescribeEventsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) *DatabasemigrationserviceDescribeEventsResult
+       DescribeEvents(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) (*databasemigrationservice.DescribeEventsOutput, error)
+       DescribeEventsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) *DatabasemigrationserviceDescribeEventsResult
 
-    DescribeOrderableReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) (*databasemigrationservice.DescribeOrderableReplicationInstancesOutput, error)
-    DescribeOrderableReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) *DatabasemigrationserviceDescribeOrderableReplicationInstancesResult
+       DescribeOrderableReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) (*databasemigrationservice.DescribeOrderableReplicationInstancesOutput, error)
+       DescribeOrderableReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) *DatabasemigrationserviceDescribeOrderableReplicationInstancesResult
 
-    DescribePendingMaintenanceActions(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) (*databasemigrationservice.DescribePendingMaintenanceActionsOutput, error)
-    DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) *DatabasemigrationserviceDescribePendingMaintenanceActionsResult
+       DescribePendingMaintenanceActions(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) (*databasemigrationservice.DescribePendingMaintenanceActionsOutput, error)
+       DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) *DatabasemigrationserviceDescribePendingMaintenanceActionsResult
 
-    DescribeRefreshSchemasStatus(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) (*databasemigrationservice.DescribeRefreshSchemasStatusOutput, error)
-    DescribeRefreshSchemasStatusAsync(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) *DatabasemigrationserviceDescribeRefreshSchemasStatusResult
+       DescribeRefreshSchemasStatus(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) (*databasemigrationservice.DescribeRefreshSchemasStatusOutput, error)
+       DescribeRefreshSchemasStatusAsync(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) *DatabasemigrationserviceDescribeRefreshSchemasStatusResult
 
-    DescribeReplicationInstanceTaskLogs(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error)
-    DescribeReplicationInstanceTaskLogsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) *DatabasemigrationserviceDescribeReplicationInstanceTaskLogsResult
+       DescribeReplicationInstanceTaskLogs(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error)
+       DescribeReplicationInstanceTaskLogsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) *DatabasemigrationserviceDescribeReplicationInstanceTaskLogsResult
 
-    DescribeReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) (*databasemigrationservice.DescribeReplicationInstancesOutput, error)
-    DescribeReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *DatabasemigrationserviceDescribeReplicationInstancesResult
+       DescribeReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) (*databasemigrationservice.DescribeReplicationInstancesOutput, error)
+       DescribeReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *DatabasemigrationserviceDescribeReplicationInstancesResult
 
-    DescribeReplicationSubnetGroups(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) (*databasemigrationservice.DescribeReplicationSubnetGroupsOutput, error)
-    DescribeReplicationSubnetGroupsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) *DatabasemigrationserviceDescribeReplicationSubnetGroupsResult
+       DescribeReplicationSubnetGroups(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) (*databasemigrationservice.DescribeReplicationSubnetGroupsOutput, error)
+       DescribeReplicationSubnetGroupsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) *DatabasemigrationserviceDescribeReplicationSubnetGroupsResult
 
-    DescribeReplicationTaskAssessmentResults(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error)
-    DescribeReplicationTaskAssessmentResultsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentResultsResult
+       DescribeReplicationTaskAssessmentResults(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error)
+       DescribeReplicationTaskAssessmentResultsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentResultsResult
 
-    DescribeReplicationTaskAssessmentRuns(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput, error)
-    DescribeReplicationTaskAssessmentRunsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentRunsResult
+       DescribeReplicationTaskAssessmentRuns(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput, error)
+       DescribeReplicationTaskAssessmentRunsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentRunsResult
 
-    DescribeReplicationTaskIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) (*databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput, error)
-    DescribeReplicationTaskIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) *DatabasemigrationserviceDescribeReplicationTaskIndividualAssessmentsResult
+       DescribeReplicationTaskIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) (*databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput, error)
+       DescribeReplicationTaskIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) *DatabasemigrationserviceDescribeReplicationTaskIndividualAssessmentsResult
 
-    DescribeReplicationTasks(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) (*databasemigrationservice.DescribeReplicationTasksOutput, error)
-    DescribeReplicationTasksAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *DatabasemigrationserviceDescribeReplicationTasksResult
+       DescribeReplicationTasks(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) (*databasemigrationservice.DescribeReplicationTasksOutput, error)
+       DescribeReplicationTasksAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *DatabasemigrationserviceDescribeReplicationTasksResult
 
-    DescribeSchemas(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) (*databasemigrationservice.DescribeSchemasOutput, error)
-    DescribeSchemasAsync(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) *DatabasemigrationserviceDescribeSchemasResult
+       DescribeSchemas(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) (*databasemigrationservice.DescribeSchemasOutput, error)
+       DescribeSchemasAsync(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) *DatabasemigrationserviceDescribeSchemasResult
 
-    DescribeTableStatistics(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) (*databasemigrationservice.DescribeTableStatisticsOutput, error)
-    DescribeTableStatisticsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) *DatabasemigrationserviceDescribeTableStatisticsResult
+       DescribeTableStatistics(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) (*databasemigrationservice.DescribeTableStatisticsOutput, error)
+       DescribeTableStatisticsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) *DatabasemigrationserviceDescribeTableStatisticsResult
 
-    ImportCertificate(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) (*databasemigrationservice.ImportCertificateOutput, error)
-    ImportCertificateAsync(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) *DatabasemigrationserviceImportCertificateResult
+       ImportCertificate(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) (*databasemigrationservice.ImportCertificateOutput, error)
+       ImportCertificateAsync(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) *DatabasemigrationserviceImportCertificateResult
 
-    ListTagsForResource(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) (*databasemigrationservice.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) *DatabasemigrationserviceListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) (*databasemigrationservice.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) *DatabasemigrationserviceListTagsForResourceResult
 
-    ModifyEndpoint(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) (*databasemigrationservice.ModifyEndpointOutput, error)
-    ModifyEndpointAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) *DatabasemigrationserviceModifyEndpointResult
+       ModifyEndpoint(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) (*databasemigrationservice.ModifyEndpointOutput, error)
+       ModifyEndpointAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) *DatabasemigrationserviceModifyEndpointResult
 
-    ModifyEventSubscription(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) (*databasemigrationservice.ModifyEventSubscriptionOutput, error)
-    ModifyEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) *DatabasemigrationserviceModifyEventSubscriptionResult
+       ModifyEventSubscription(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) (*databasemigrationservice.ModifyEventSubscriptionOutput, error)
+       ModifyEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) *DatabasemigrationserviceModifyEventSubscriptionResult
 
-    ModifyReplicationInstance(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) (*databasemigrationservice.ModifyReplicationInstanceOutput, error)
-    ModifyReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) *DatabasemigrationserviceModifyReplicationInstanceResult
+       ModifyReplicationInstance(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) (*databasemigrationservice.ModifyReplicationInstanceOutput, error)
+       ModifyReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) *DatabasemigrationserviceModifyReplicationInstanceResult
 
-    ModifyReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) (*databasemigrationservice.ModifyReplicationSubnetGroupOutput, error)
-    ModifyReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) *DatabasemigrationserviceModifyReplicationSubnetGroupResult
+       ModifyReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) (*databasemigrationservice.ModifyReplicationSubnetGroupOutput, error)
+       ModifyReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) *DatabasemigrationserviceModifyReplicationSubnetGroupResult
 
-    ModifyReplicationTask(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) (*databasemigrationservice.ModifyReplicationTaskOutput, error)
-    ModifyReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) *DatabasemigrationserviceModifyReplicationTaskResult
+       ModifyReplicationTask(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) (*databasemigrationservice.ModifyReplicationTaskOutput, error)
+       ModifyReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) *DatabasemigrationserviceModifyReplicationTaskResult
 
-    RebootReplicationInstance(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) (*databasemigrationservice.RebootReplicationInstanceOutput, error)
-    RebootReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) *DatabasemigrationserviceRebootReplicationInstanceResult
+       RebootReplicationInstance(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) (*databasemigrationservice.RebootReplicationInstanceOutput, error)
+       RebootReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) *DatabasemigrationserviceRebootReplicationInstanceResult
 
-    RefreshSchemas(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) (*databasemigrationservice.RefreshSchemasOutput, error)
-    RefreshSchemasAsync(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) *DatabasemigrationserviceRefreshSchemasResult
+       RefreshSchemas(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) (*databasemigrationservice.RefreshSchemasOutput, error)
+       RefreshSchemasAsync(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) *DatabasemigrationserviceRefreshSchemasResult
 
-    ReloadTables(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) (*databasemigrationservice.ReloadTablesOutput, error)
-    ReloadTablesAsync(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) *DatabasemigrationserviceReloadTablesResult
+       ReloadTables(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) (*databasemigrationservice.ReloadTablesOutput, error)
+       ReloadTablesAsync(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) *DatabasemigrationserviceReloadTablesResult
 
-    RemoveTagsFromResource(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) (*databasemigrationservice.RemoveTagsFromResourceOutput, error)
-    RemoveTagsFromResourceAsync(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) *DatabasemigrationserviceRemoveTagsFromResourceResult
+       RemoveTagsFromResource(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) (*databasemigrationservice.RemoveTagsFromResourceOutput, error)
+       RemoveTagsFromResourceAsync(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) *DatabasemigrationserviceRemoveTagsFromResourceResult
 
-    StartReplicationTask(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) (*databasemigrationservice.StartReplicationTaskOutput, error)
-    StartReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) *DatabasemigrationserviceStartReplicationTaskResult
+       StartReplicationTask(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) (*databasemigrationservice.StartReplicationTaskOutput, error)
+       StartReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) *DatabasemigrationserviceStartReplicationTaskResult
 
-    StartReplicationTaskAssessment(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error)
-    StartReplicationTaskAssessmentAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) *DatabasemigrationserviceStartReplicationTaskAssessmentResult
+       StartReplicationTaskAssessment(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error)
+       StartReplicationTaskAssessmentAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) *DatabasemigrationserviceStartReplicationTaskAssessmentResult
 
-    StartReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) (*databasemigrationservice.StartReplicationTaskAssessmentRunOutput, error)
-    StartReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) *DatabasemigrationserviceStartReplicationTaskAssessmentRunResult
+       StartReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) (*databasemigrationservice.StartReplicationTaskAssessmentRunOutput, error)
+       StartReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) *DatabasemigrationserviceStartReplicationTaskAssessmentRunResult
 
-    StopReplicationTask(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) (*databasemigrationservice.StopReplicationTaskOutput, error)
-    StopReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) *DatabasemigrationserviceStopReplicationTaskResult
+       StopReplicationTask(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) (*databasemigrationservice.StopReplicationTaskOutput, error)
+       StopReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) *DatabasemigrationserviceStopReplicationTaskResult
 
-    TestConnection(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) (*databasemigrationservice.TestConnectionOutput, error)
-    TestConnectionAsync(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) *DatabasemigrationserviceTestConnectionResult
+       TestConnection(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) (*databasemigrationservice.TestConnectionOutput, error)
+       TestConnectionAsync(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) *DatabasemigrationserviceTestConnectionResult
 
-    WaitUntilEndpointDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) error
-    WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
-    WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
-    WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-    WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-    WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-    WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-    WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
+       WaitUntilEndpointDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) error
+       WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
+       WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
+       WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+       WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+       WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+       WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+       WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
 
 type DatabasemigrationserviceAddTagsToResourceResult struct {
 	Result workflow.Future

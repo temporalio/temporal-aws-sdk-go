@@ -7,11 +7,11 @@ import (
 )
 
 type PIClient interface {
-    DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error)
-    DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysResult
+       DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error)
+       DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysResult
 
-    GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error)
-    GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult
+       GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error)
+       GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult
 }
 
 type PiDescribeDimensionKeysResult struct {

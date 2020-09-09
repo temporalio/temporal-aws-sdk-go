@@ -7,14 +7,14 @@ import (
 )
 
 type SSOOIDCClient interface {
-    CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error)
-    CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenResult
+       CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error)
+       CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenResult
 
-    RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error)
-    RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientResult
+       RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error)
+       RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientResult
 
-    StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error)
-    StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult
+       StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error)
+       StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult
 }
 
 type SsooidcCreateTokenResult struct {

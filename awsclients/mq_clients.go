@@ -7,71 +7,71 @@ import (
 )
 
 type MQClient interface {
-    CreateBroker(ctx workflow.Context, input *mq.CreateBrokerRequest) (*mq.CreateBrokerResponse, error)
-    CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerResult
+       CreateBroker(ctx workflow.Context, input *mq.CreateBrokerRequest) (*mq.CreateBrokerResponse, error)
+       CreateBrokerAsync(ctx workflow.Context, input *mq.CreateBrokerRequest) *MqCreateBrokerResult
 
-    CreateConfiguration(ctx workflow.Context, input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error)
-    CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationResult
+       CreateConfiguration(ctx workflow.Context, input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error)
+       CreateConfigurationAsync(ctx workflow.Context, input *mq.CreateConfigurationRequest) *MqCreateConfigurationResult
 
-    CreateTags(ctx workflow.Context, input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error)
-    CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsResult
+       CreateTags(ctx workflow.Context, input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error)
+       CreateTagsAsync(ctx workflow.Context, input *mq.CreateTagsInput) *MqCreateTagsResult
 
-    CreateUser(ctx workflow.Context, input *mq.CreateUserRequest) (*mq.CreateUserOutput, error)
-    CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserResult
+       CreateUser(ctx workflow.Context, input *mq.CreateUserRequest) (*mq.CreateUserOutput, error)
+       CreateUserAsync(ctx workflow.Context, input *mq.CreateUserRequest) *MqCreateUserResult
 
-    DeleteBroker(ctx workflow.Context, input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error)
-    DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerResult
+       DeleteBroker(ctx workflow.Context, input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error)
+       DeleteBrokerAsync(ctx workflow.Context, input *mq.DeleteBrokerInput) *MqDeleteBrokerResult
 
-    DeleteTags(ctx workflow.Context, input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *mq.DeleteTagsInput) *MqDeleteTagsResult
 
-    DeleteUser(ctx workflow.Context, input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *mq.DeleteUserInput) *MqDeleteUserResult
 
-    DescribeBroker(ctx workflow.Context, input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error)
-    DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerResult
+       DescribeBroker(ctx workflow.Context, input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error)
+       DescribeBrokerAsync(ctx workflow.Context, input *mq.DescribeBrokerInput) *MqDescribeBrokerResult
 
-    DescribeBrokerEngineTypes(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error)
-    DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesResult
+       DescribeBrokerEngineTypes(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error)
+       DescribeBrokerEngineTypesAsync(ctx workflow.Context, input *mq.DescribeBrokerEngineTypesInput) *MqDescribeBrokerEngineTypesResult
 
-    DescribeBrokerInstanceOptions(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error)
-    DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsResult
+       DescribeBrokerInstanceOptions(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error)
+       DescribeBrokerInstanceOptionsAsync(ctx workflow.Context, input *mq.DescribeBrokerInstanceOptionsInput) *MqDescribeBrokerInstanceOptionsResult
 
-    DescribeConfiguration(ctx workflow.Context, input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error)
-    DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationResult
+       DescribeConfiguration(ctx workflow.Context, input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error)
+       DescribeConfigurationAsync(ctx workflow.Context, input *mq.DescribeConfigurationInput) *MqDescribeConfigurationResult
 
-    DescribeConfigurationRevision(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error)
-    DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionResult
+       DescribeConfigurationRevision(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error)
+       DescribeConfigurationRevisionAsync(ctx workflow.Context, input *mq.DescribeConfigurationRevisionInput) *MqDescribeConfigurationRevisionResult
 
-    DescribeUser(ctx workflow.Context, input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error)
-    DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserResult
+       DescribeUser(ctx workflow.Context, input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error)
+       DescribeUserAsync(ctx workflow.Context, input *mq.DescribeUserInput) *MqDescribeUserResult
 
-    ListBrokers(ctx workflow.Context, input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error)
-    ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersResult
+       ListBrokers(ctx workflow.Context, input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error)
+       ListBrokersAsync(ctx workflow.Context, input *mq.ListBrokersInput) *MqListBrokersResult
 
-    ListConfigurationRevisions(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error)
-    ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsResult
+       ListConfigurationRevisions(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error)
+       ListConfigurationRevisionsAsync(ctx workflow.Context, input *mq.ListConfigurationRevisionsInput) *MqListConfigurationRevisionsResult
 
-    ListConfigurations(ctx workflow.Context, input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error)
-    ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsResult
+       ListConfigurations(ctx workflow.Context, input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error)
+       ListConfigurationsAsync(ctx workflow.Context, input *mq.ListConfigurationsInput) *MqListConfigurationsResult
 
-    ListTags(ctx workflow.Context, input *mq.ListTagsInput) (*mq.ListTagsOutput, error)
-    ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsResult
+       ListTags(ctx workflow.Context, input *mq.ListTagsInput) (*mq.ListTagsOutput, error)
+       ListTagsAsync(ctx workflow.Context, input *mq.ListTagsInput) *MqListTagsResult
 
-    ListUsers(ctx workflow.Context, input *mq.ListUsersInput) (*mq.ListUsersResponse, error)
-    ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersResult
+       ListUsers(ctx workflow.Context, input *mq.ListUsersInput) (*mq.ListUsersResponse, error)
+       ListUsersAsync(ctx workflow.Context, input *mq.ListUsersInput) *MqListUsersResult
 
-    RebootBroker(ctx workflow.Context, input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error)
-    RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerResult
+       RebootBroker(ctx workflow.Context, input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error)
+       RebootBrokerAsync(ctx workflow.Context, input *mq.RebootBrokerInput) *MqRebootBrokerResult
 
-    UpdateBroker(ctx workflow.Context, input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error)
-    UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerResult
+       UpdateBroker(ctx workflow.Context, input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error)
+       UpdateBrokerAsync(ctx workflow.Context, input *mq.UpdateBrokerRequest) *MqUpdateBrokerResult
 
-    UpdateConfiguration(ctx workflow.Context, input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error)
-    UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationResult
+       UpdateConfiguration(ctx workflow.Context, input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error)
+       UpdateConfigurationAsync(ctx workflow.Context, input *mq.UpdateConfigurationRequest) *MqUpdateConfigurationResult
 
-    UpdateUser(ctx workflow.Context, input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserResult
 }
 
 type MqCreateBrokerResult struct {

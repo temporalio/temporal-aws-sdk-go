@@ -7,44 +7,44 @@ import (
 )
 
 type LakeFormationClient interface {
-    BatchGrantPermissions(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) (*lakeformation.BatchGrantPermissionsOutput, error)
-    BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeformationBatchGrantPermissionsResult
+       BatchGrantPermissions(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) (*lakeformation.BatchGrantPermissionsOutput, error)
+       BatchGrantPermissionsAsync(ctx workflow.Context, input *lakeformation.BatchGrantPermissionsInput) *LakeformationBatchGrantPermissionsResult
 
-    BatchRevokePermissions(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) (*lakeformation.BatchRevokePermissionsOutput, error)
-    BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeformationBatchRevokePermissionsResult
+       BatchRevokePermissions(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) (*lakeformation.BatchRevokePermissionsOutput, error)
+       BatchRevokePermissionsAsync(ctx workflow.Context, input *lakeformation.BatchRevokePermissionsInput) *LakeformationBatchRevokePermissionsResult
 
-    DeregisterResource(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) (*lakeformation.DeregisterResourceOutput, error)
-    DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeformationDeregisterResourceResult
+       DeregisterResource(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) (*lakeformation.DeregisterResourceOutput, error)
+       DeregisterResourceAsync(ctx workflow.Context, input *lakeformation.DeregisterResourceInput) *LakeformationDeregisterResourceResult
 
-    DescribeResource(ctx workflow.Context, input *lakeformation.DescribeResourceInput) (*lakeformation.DescribeResourceOutput, error)
-    DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeformationDescribeResourceResult
+       DescribeResource(ctx workflow.Context, input *lakeformation.DescribeResourceInput) (*lakeformation.DescribeResourceOutput, error)
+       DescribeResourceAsync(ctx workflow.Context, input *lakeformation.DescribeResourceInput) *LakeformationDescribeResourceResult
 
-    GetDataLakeSettings(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) (*lakeformation.GetDataLakeSettingsOutput, error)
-    GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeformationGetDataLakeSettingsResult
+       GetDataLakeSettings(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) (*lakeformation.GetDataLakeSettingsOutput, error)
+       GetDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.GetDataLakeSettingsInput) *LakeformationGetDataLakeSettingsResult
 
-    GetEffectivePermissionsForPath(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) (*lakeformation.GetEffectivePermissionsForPathOutput, error)
-    GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeformationGetEffectivePermissionsForPathResult
+       GetEffectivePermissionsForPath(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) (*lakeformation.GetEffectivePermissionsForPathOutput, error)
+       GetEffectivePermissionsForPathAsync(ctx workflow.Context, input *lakeformation.GetEffectivePermissionsForPathInput) *LakeformationGetEffectivePermissionsForPathResult
 
-    GrantPermissions(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error)
-    GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeformationGrantPermissionsResult
+       GrantPermissions(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) (*lakeformation.GrantPermissionsOutput, error)
+       GrantPermissionsAsync(ctx workflow.Context, input *lakeformation.GrantPermissionsInput) *LakeformationGrantPermissionsResult
 
-    ListPermissions(ctx workflow.Context, input *lakeformation.ListPermissionsInput) (*lakeformation.ListPermissionsOutput, error)
-    ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeformationListPermissionsResult
+       ListPermissions(ctx workflow.Context, input *lakeformation.ListPermissionsInput) (*lakeformation.ListPermissionsOutput, error)
+       ListPermissionsAsync(ctx workflow.Context, input *lakeformation.ListPermissionsInput) *LakeformationListPermissionsResult
 
-    ListResources(ctx workflow.Context, input *lakeformation.ListResourcesInput) (*lakeformation.ListResourcesOutput, error)
-    ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeformationListResourcesResult
+       ListResources(ctx workflow.Context, input *lakeformation.ListResourcesInput) (*lakeformation.ListResourcesOutput, error)
+       ListResourcesAsync(ctx workflow.Context, input *lakeformation.ListResourcesInput) *LakeformationListResourcesResult
 
-    PutDataLakeSettings(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) (*lakeformation.PutDataLakeSettingsOutput, error)
-    PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeformationPutDataLakeSettingsResult
+       PutDataLakeSettings(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) (*lakeformation.PutDataLakeSettingsOutput, error)
+       PutDataLakeSettingsAsync(ctx workflow.Context, input *lakeformation.PutDataLakeSettingsInput) *LakeformationPutDataLakeSettingsResult
 
-    RegisterResource(ctx workflow.Context, input *lakeformation.RegisterResourceInput) (*lakeformation.RegisterResourceOutput, error)
-    RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeformationRegisterResourceResult
+       RegisterResource(ctx workflow.Context, input *lakeformation.RegisterResourceInput) (*lakeformation.RegisterResourceOutput, error)
+       RegisterResourceAsync(ctx workflow.Context, input *lakeformation.RegisterResourceInput) *LakeformationRegisterResourceResult
 
-    RevokePermissions(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error)
-    RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeformationRevokePermissionsResult
+       RevokePermissions(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) (*lakeformation.RevokePermissionsOutput, error)
+       RevokePermissionsAsync(ctx workflow.Context, input *lakeformation.RevokePermissionsInput) *LakeformationRevokePermissionsResult
 
-    UpdateResource(ctx workflow.Context, input *lakeformation.UpdateResourceInput) (*lakeformation.UpdateResourceOutput, error)
-    UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeformationUpdateResourceResult
+       UpdateResource(ctx workflow.Context, input *lakeformation.UpdateResourceInput) (*lakeformation.UpdateResourceOutput, error)
+       UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeformationUpdateResourceResult
 }
 
 type LakeformationBatchGrantPermissionsResult struct {

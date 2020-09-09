@@ -7,20 +7,20 @@ import (
 )
 
 type MediaStoreDataClient interface {
-    DeleteObject(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error)
-    DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediastoredataDeleteObjectResult
+       DeleteObject(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error)
+       DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediastoredataDeleteObjectResult
 
-    DescribeObject(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error)
-    DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediastoredataDescribeObjectResult
+       DescribeObject(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error)
+       DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediastoredataDescribeObjectResult
 
-    GetObject(ctx workflow.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error)
-    GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediastoredataGetObjectResult
+       GetObject(ctx workflow.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error)
+       GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediastoredataGetObjectResult
 
-    ListItems(ctx workflow.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error)
-    ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediastoredataListItemsResult
+       ListItems(ctx workflow.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error)
+       ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediastoredataListItemsResult
 
-    PutObject(ctx workflow.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error)
-    PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectResult
+       PutObject(ctx workflow.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error)
+       PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectResult
 }
 
 type MediastoredataDeleteObjectResult struct {

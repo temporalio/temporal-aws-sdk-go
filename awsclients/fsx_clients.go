@@ -7,47 +7,47 @@ import (
 )
 
 type FSxClient interface {
-    CancelDataRepositoryTask(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) (*fsx.CancelDataRepositoryTaskOutput, error)
-    CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskResult
+       CancelDataRepositoryTask(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) (*fsx.CancelDataRepositoryTaskOutput, error)
+       CancelDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CancelDataRepositoryTaskInput) *FsxCancelDataRepositoryTaskResult
 
-    CreateBackup(ctx workflow.Context, input *fsx.CreateBackupInput) (*fsx.CreateBackupOutput, error)
-    CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupResult
+       CreateBackup(ctx workflow.Context, input *fsx.CreateBackupInput) (*fsx.CreateBackupOutput, error)
+       CreateBackupAsync(ctx workflow.Context, input *fsx.CreateBackupInput) *FsxCreateBackupResult
 
-    CreateDataRepositoryTask(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) (*fsx.CreateDataRepositoryTaskOutput, error)
-    CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskResult
+       CreateDataRepositoryTask(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) (*fsx.CreateDataRepositoryTaskOutput, error)
+       CreateDataRepositoryTaskAsync(ctx workflow.Context, input *fsx.CreateDataRepositoryTaskInput) *FsxCreateDataRepositoryTaskResult
 
-    CreateFileSystem(ctx workflow.Context, input *fsx.CreateFileSystemInput) (*fsx.CreateFileSystemOutput, error)
-    CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemResult
+       CreateFileSystem(ctx workflow.Context, input *fsx.CreateFileSystemInput) (*fsx.CreateFileSystemOutput, error)
+       CreateFileSystemAsync(ctx workflow.Context, input *fsx.CreateFileSystemInput) *FsxCreateFileSystemResult
 
-    CreateFileSystemFromBackup(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) (*fsx.CreateFileSystemFromBackupOutput, error)
-    CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupResult
+       CreateFileSystemFromBackup(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) (*fsx.CreateFileSystemFromBackupOutput, error)
+       CreateFileSystemFromBackupAsync(ctx workflow.Context, input *fsx.CreateFileSystemFromBackupInput) *FsxCreateFileSystemFromBackupResult
 
-    DeleteBackup(ctx workflow.Context, input *fsx.DeleteBackupInput) (*fsx.DeleteBackupOutput, error)
-    DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupResult
+       DeleteBackup(ctx workflow.Context, input *fsx.DeleteBackupInput) (*fsx.DeleteBackupOutput, error)
+       DeleteBackupAsync(ctx workflow.Context, input *fsx.DeleteBackupInput) *FsxDeleteBackupResult
 
-    DeleteFileSystem(ctx workflow.Context, input *fsx.DeleteFileSystemInput) (*fsx.DeleteFileSystemOutput, error)
-    DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemResult
+       DeleteFileSystem(ctx workflow.Context, input *fsx.DeleteFileSystemInput) (*fsx.DeleteFileSystemOutput, error)
+       DeleteFileSystemAsync(ctx workflow.Context, input *fsx.DeleteFileSystemInput) *FsxDeleteFileSystemResult
 
-    DescribeBackups(ctx workflow.Context, input *fsx.DescribeBackupsInput) (*fsx.DescribeBackupsOutput, error)
-    DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsResult
+       DescribeBackups(ctx workflow.Context, input *fsx.DescribeBackupsInput) (*fsx.DescribeBackupsOutput, error)
+       DescribeBackupsAsync(ctx workflow.Context, input *fsx.DescribeBackupsInput) *FsxDescribeBackupsResult
 
-    DescribeDataRepositoryTasks(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) (*fsx.DescribeDataRepositoryTasksOutput, error)
-    DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksResult
+       DescribeDataRepositoryTasks(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) (*fsx.DescribeDataRepositoryTasksOutput, error)
+       DescribeDataRepositoryTasksAsync(ctx workflow.Context, input *fsx.DescribeDataRepositoryTasksInput) *FsxDescribeDataRepositoryTasksResult
 
-    DescribeFileSystems(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) (*fsx.DescribeFileSystemsOutput, error)
-    DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsResult
+       DescribeFileSystems(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) (*fsx.DescribeFileSystemsOutput, error)
+       DescribeFileSystemsAsync(ctx workflow.Context, input *fsx.DescribeFileSystemsInput) *FsxDescribeFileSystemsResult
 
-    ListTagsForResource(ctx workflow.Context, input *fsx.ListTagsForResourceInput) (*fsx.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *fsx.ListTagsForResourceInput) (*fsx.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *fsx.ListTagsForResourceInput) *FsxListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *fsx.TagResourceInput) (*fsx.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceResult
+       TagResource(ctx workflow.Context, input *fsx.TagResourceInput) (*fsx.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *fsx.TagResourceInput) *FsxTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *fsx.UntagResourceInput) (*fsx.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceResult
+       UntagResource(ctx workflow.Context, input *fsx.UntagResourceInput) (*fsx.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *fsx.UntagResourceInput) *FsxUntagResourceResult
 
-    UpdateFileSystem(ctx workflow.Context, input *fsx.UpdateFileSystemInput) (*fsx.UpdateFileSystemOutput, error)
-    UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemResult
+       UpdateFileSystem(ctx workflow.Context, input *fsx.UpdateFileSystemInput) (*fsx.UpdateFileSystemOutput, error)
+       UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemResult
 }
 
 type FsxCancelDataRepositoryTaskResult struct {

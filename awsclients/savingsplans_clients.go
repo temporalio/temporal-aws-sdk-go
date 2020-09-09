@@ -7,29 +7,29 @@ import (
 )
 
 type SavingsPlansClient interface {
-    CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error)
-    CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanResult
+       CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error)
+       CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanResult
 
-    DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error)
-    DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesResult
+       DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error)
+       DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesResult
 
-    DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error)
-    DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsplansDescribeSavingsPlansResult
+       DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error)
+       DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsplansDescribeSavingsPlansResult
 
-    DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error)
-    DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsplansDescribeSavingsPlansOfferingRatesResult
+       DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error)
+       DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsplansDescribeSavingsPlansOfferingRatesResult
 
-    DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error)
-    DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsplansDescribeSavingsPlansOfferingsResult
+       DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error)
+       DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsplansDescribeSavingsPlansOfferingsResult
 
-    ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsplansListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsplansListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsplansTagResourceResult
+       TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsplansTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceResult
+       UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceResult
 }
 
 type SavingsplansCreateSavingsPlanResult struct {

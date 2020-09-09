@@ -7,404 +7,404 @@ import (
 )
 
 type GlueClient interface {
-    BatchCreatePartition(ctx workflow.Context, input *glue.BatchCreatePartitionInput) (*glue.BatchCreatePartitionOutput, error)
-    BatchCreatePartitionAsync(ctx workflow.Context, input *glue.BatchCreatePartitionInput) *GlueBatchCreatePartitionResult
+       BatchCreatePartition(ctx workflow.Context, input *glue.BatchCreatePartitionInput) (*glue.BatchCreatePartitionOutput, error)
+       BatchCreatePartitionAsync(ctx workflow.Context, input *glue.BatchCreatePartitionInput) *GlueBatchCreatePartitionResult
 
-    BatchDeleteConnection(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) (*glue.BatchDeleteConnectionOutput, error)
-    BatchDeleteConnectionAsync(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) *GlueBatchDeleteConnectionResult
+       BatchDeleteConnection(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) (*glue.BatchDeleteConnectionOutput, error)
+       BatchDeleteConnectionAsync(ctx workflow.Context, input *glue.BatchDeleteConnectionInput) *GlueBatchDeleteConnectionResult
 
-    BatchDeletePartition(ctx workflow.Context, input *glue.BatchDeletePartitionInput) (*glue.BatchDeletePartitionOutput, error)
-    BatchDeletePartitionAsync(ctx workflow.Context, input *glue.BatchDeletePartitionInput) *GlueBatchDeletePartitionResult
+       BatchDeletePartition(ctx workflow.Context, input *glue.BatchDeletePartitionInput) (*glue.BatchDeletePartitionOutput, error)
+       BatchDeletePartitionAsync(ctx workflow.Context, input *glue.BatchDeletePartitionInput) *GlueBatchDeletePartitionResult
 
-    BatchDeleteTable(ctx workflow.Context, input *glue.BatchDeleteTableInput) (*glue.BatchDeleteTableOutput, error)
-    BatchDeleteTableAsync(ctx workflow.Context, input *glue.BatchDeleteTableInput) *GlueBatchDeleteTableResult
+       BatchDeleteTable(ctx workflow.Context, input *glue.BatchDeleteTableInput) (*glue.BatchDeleteTableOutput, error)
+       BatchDeleteTableAsync(ctx workflow.Context, input *glue.BatchDeleteTableInput) *GlueBatchDeleteTableResult
 
-    BatchDeleteTableVersion(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) (*glue.BatchDeleteTableVersionOutput, error)
-    BatchDeleteTableVersionAsync(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) *GlueBatchDeleteTableVersionResult
+       BatchDeleteTableVersion(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) (*glue.BatchDeleteTableVersionOutput, error)
+       BatchDeleteTableVersionAsync(ctx workflow.Context, input *glue.BatchDeleteTableVersionInput) *GlueBatchDeleteTableVersionResult
 
-    BatchGetCrawlers(ctx workflow.Context, input *glue.BatchGetCrawlersInput) (*glue.BatchGetCrawlersOutput, error)
-    BatchGetCrawlersAsync(ctx workflow.Context, input *glue.BatchGetCrawlersInput) *GlueBatchGetCrawlersResult
+       BatchGetCrawlers(ctx workflow.Context, input *glue.BatchGetCrawlersInput) (*glue.BatchGetCrawlersOutput, error)
+       BatchGetCrawlersAsync(ctx workflow.Context, input *glue.BatchGetCrawlersInput) *GlueBatchGetCrawlersResult
 
-    BatchGetDevEndpoints(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) (*glue.BatchGetDevEndpointsOutput, error)
-    BatchGetDevEndpointsAsync(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) *GlueBatchGetDevEndpointsResult
+       BatchGetDevEndpoints(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) (*glue.BatchGetDevEndpointsOutput, error)
+       BatchGetDevEndpointsAsync(ctx workflow.Context, input *glue.BatchGetDevEndpointsInput) *GlueBatchGetDevEndpointsResult
 
-    BatchGetJobs(ctx workflow.Context, input *glue.BatchGetJobsInput) (*glue.BatchGetJobsOutput, error)
-    BatchGetJobsAsync(ctx workflow.Context, input *glue.BatchGetJobsInput) *GlueBatchGetJobsResult
+       BatchGetJobs(ctx workflow.Context, input *glue.BatchGetJobsInput) (*glue.BatchGetJobsOutput, error)
+       BatchGetJobsAsync(ctx workflow.Context, input *glue.BatchGetJobsInput) *GlueBatchGetJobsResult
 
-    BatchGetPartition(ctx workflow.Context, input *glue.BatchGetPartitionInput) (*glue.BatchGetPartitionOutput, error)
-    BatchGetPartitionAsync(ctx workflow.Context, input *glue.BatchGetPartitionInput) *GlueBatchGetPartitionResult
+       BatchGetPartition(ctx workflow.Context, input *glue.BatchGetPartitionInput) (*glue.BatchGetPartitionOutput, error)
+       BatchGetPartitionAsync(ctx workflow.Context, input *glue.BatchGetPartitionInput) *GlueBatchGetPartitionResult
 
-    BatchGetTriggers(ctx workflow.Context, input *glue.BatchGetTriggersInput) (*glue.BatchGetTriggersOutput, error)
-    BatchGetTriggersAsync(ctx workflow.Context, input *glue.BatchGetTriggersInput) *GlueBatchGetTriggersResult
+       BatchGetTriggers(ctx workflow.Context, input *glue.BatchGetTriggersInput) (*glue.BatchGetTriggersOutput, error)
+       BatchGetTriggersAsync(ctx workflow.Context, input *glue.BatchGetTriggersInput) *GlueBatchGetTriggersResult
 
-    BatchGetWorkflows(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) (*glue.BatchGetWorkflowsOutput, error)
-    BatchGetWorkflowsAsync(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) *GlueBatchGetWorkflowsResult
+       BatchGetWorkflows(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) (*glue.BatchGetWorkflowsOutput, error)
+       BatchGetWorkflowsAsync(ctx workflow.Context, input *glue.BatchGetWorkflowsInput) *GlueBatchGetWorkflowsResult
 
-    BatchStopJobRun(ctx workflow.Context, input *glue.BatchStopJobRunInput) (*glue.BatchStopJobRunOutput, error)
-    BatchStopJobRunAsync(ctx workflow.Context, input *glue.BatchStopJobRunInput) *GlueBatchStopJobRunResult
+       BatchStopJobRun(ctx workflow.Context, input *glue.BatchStopJobRunInput) (*glue.BatchStopJobRunOutput, error)
+       BatchStopJobRunAsync(ctx workflow.Context, input *glue.BatchStopJobRunInput) *GlueBatchStopJobRunResult
 
-    CancelMLTaskRun(ctx workflow.Context, input *glue.CancelMLTaskRunInput) (*glue.CancelMLTaskRunOutput, error)
-    CancelMLTaskRunAsync(ctx workflow.Context, input *glue.CancelMLTaskRunInput) *GlueCancelMLTaskRunResult
+       CancelMLTaskRun(ctx workflow.Context, input *glue.CancelMLTaskRunInput) (*glue.CancelMLTaskRunOutput, error)
+       CancelMLTaskRunAsync(ctx workflow.Context, input *glue.CancelMLTaskRunInput) *GlueCancelMLTaskRunResult
 
-    CreateClassifier(ctx workflow.Context, input *glue.CreateClassifierInput) (*glue.CreateClassifierOutput, error)
-    CreateClassifierAsync(ctx workflow.Context, input *glue.CreateClassifierInput) *GlueCreateClassifierResult
+       CreateClassifier(ctx workflow.Context, input *glue.CreateClassifierInput) (*glue.CreateClassifierOutput, error)
+       CreateClassifierAsync(ctx workflow.Context, input *glue.CreateClassifierInput) *GlueCreateClassifierResult
 
-    CreateConnection(ctx workflow.Context, input *glue.CreateConnectionInput) (*glue.CreateConnectionOutput, error)
-    CreateConnectionAsync(ctx workflow.Context, input *glue.CreateConnectionInput) *GlueCreateConnectionResult
+       CreateConnection(ctx workflow.Context, input *glue.CreateConnectionInput) (*glue.CreateConnectionOutput, error)
+       CreateConnectionAsync(ctx workflow.Context, input *glue.CreateConnectionInput) *GlueCreateConnectionResult
 
-    CreateCrawler(ctx workflow.Context, input *glue.CreateCrawlerInput) (*glue.CreateCrawlerOutput, error)
-    CreateCrawlerAsync(ctx workflow.Context, input *glue.CreateCrawlerInput) *GlueCreateCrawlerResult
+       CreateCrawler(ctx workflow.Context, input *glue.CreateCrawlerInput) (*glue.CreateCrawlerOutput, error)
+       CreateCrawlerAsync(ctx workflow.Context, input *glue.CreateCrawlerInput) *GlueCreateCrawlerResult
 
-    CreateDatabase(ctx workflow.Context, input *glue.CreateDatabaseInput) (*glue.CreateDatabaseOutput, error)
-    CreateDatabaseAsync(ctx workflow.Context, input *glue.CreateDatabaseInput) *GlueCreateDatabaseResult
+       CreateDatabase(ctx workflow.Context, input *glue.CreateDatabaseInput) (*glue.CreateDatabaseOutput, error)
+       CreateDatabaseAsync(ctx workflow.Context, input *glue.CreateDatabaseInput) *GlueCreateDatabaseResult
 
-    CreateDevEndpoint(ctx workflow.Context, input *glue.CreateDevEndpointInput) (*glue.CreateDevEndpointOutput, error)
-    CreateDevEndpointAsync(ctx workflow.Context, input *glue.CreateDevEndpointInput) *GlueCreateDevEndpointResult
+       CreateDevEndpoint(ctx workflow.Context, input *glue.CreateDevEndpointInput) (*glue.CreateDevEndpointOutput, error)
+       CreateDevEndpointAsync(ctx workflow.Context, input *glue.CreateDevEndpointInput) *GlueCreateDevEndpointResult
 
-    CreateJob(ctx workflow.Context, input *glue.CreateJobInput) (*glue.CreateJobOutput, error)
-    CreateJobAsync(ctx workflow.Context, input *glue.CreateJobInput) *GlueCreateJobResult
+       CreateJob(ctx workflow.Context, input *glue.CreateJobInput) (*glue.CreateJobOutput, error)
+       CreateJobAsync(ctx workflow.Context, input *glue.CreateJobInput) *GlueCreateJobResult
 
-    CreateMLTransform(ctx workflow.Context, input *glue.CreateMLTransformInput) (*glue.CreateMLTransformOutput, error)
-    CreateMLTransformAsync(ctx workflow.Context, input *glue.CreateMLTransformInput) *GlueCreateMLTransformResult
+       CreateMLTransform(ctx workflow.Context, input *glue.CreateMLTransformInput) (*glue.CreateMLTransformOutput, error)
+       CreateMLTransformAsync(ctx workflow.Context, input *glue.CreateMLTransformInput) *GlueCreateMLTransformResult
 
-    CreatePartition(ctx workflow.Context, input *glue.CreatePartitionInput) (*glue.CreatePartitionOutput, error)
-    CreatePartitionAsync(ctx workflow.Context, input *glue.CreatePartitionInput) *GlueCreatePartitionResult
+       CreatePartition(ctx workflow.Context, input *glue.CreatePartitionInput) (*glue.CreatePartitionOutput, error)
+       CreatePartitionAsync(ctx workflow.Context, input *glue.CreatePartitionInput) *GlueCreatePartitionResult
 
-    CreateScript(ctx workflow.Context, input *glue.CreateScriptInput) (*glue.CreateScriptOutput, error)
-    CreateScriptAsync(ctx workflow.Context, input *glue.CreateScriptInput) *GlueCreateScriptResult
+       CreateScript(ctx workflow.Context, input *glue.CreateScriptInput) (*glue.CreateScriptOutput, error)
+       CreateScriptAsync(ctx workflow.Context, input *glue.CreateScriptInput) *GlueCreateScriptResult
 
-    CreateSecurityConfiguration(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) (*glue.CreateSecurityConfigurationOutput, error)
-    CreateSecurityConfigurationAsync(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) *GlueCreateSecurityConfigurationResult
+       CreateSecurityConfiguration(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) (*glue.CreateSecurityConfigurationOutput, error)
+       CreateSecurityConfigurationAsync(ctx workflow.Context, input *glue.CreateSecurityConfigurationInput) *GlueCreateSecurityConfigurationResult
 
-    CreateTable(ctx workflow.Context, input *glue.CreateTableInput) (*glue.CreateTableOutput, error)
-    CreateTableAsync(ctx workflow.Context, input *glue.CreateTableInput) *GlueCreateTableResult
+       CreateTable(ctx workflow.Context, input *glue.CreateTableInput) (*glue.CreateTableOutput, error)
+       CreateTableAsync(ctx workflow.Context, input *glue.CreateTableInput) *GlueCreateTableResult
 
-    CreateTrigger(ctx workflow.Context, input *glue.CreateTriggerInput) (*glue.CreateTriggerOutput, error)
-    CreateTriggerAsync(ctx workflow.Context, input *glue.CreateTriggerInput) *GlueCreateTriggerResult
+       CreateTrigger(ctx workflow.Context, input *glue.CreateTriggerInput) (*glue.CreateTriggerOutput, error)
+       CreateTriggerAsync(ctx workflow.Context, input *glue.CreateTriggerInput) *GlueCreateTriggerResult
 
-    CreateUserDefinedFunction(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) (*glue.CreateUserDefinedFunctionOutput, error)
-    CreateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) *GlueCreateUserDefinedFunctionResult
+       CreateUserDefinedFunction(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) (*glue.CreateUserDefinedFunctionOutput, error)
+       CreateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.CreateUserDefinedFunctionInput) *GlueCreateUserDefinedFunctionResult
 
-    CreateWorkflow(ctx workflow.Context, input *glue.CreateWorkflowInput) (*glue.CreateWorkflowOutput, error)
-    CreateWorkflowAsync(ctx workflow.Context, input *glue.CreateWorkflowInput) *GlueCreateWorkflowResult
+       CreateWorkflow(ctx workflow.Context, input *glue.CreateWorkflowInput) (*glue.CreateWorkflowOutput, error)
+       CreateWorkflowAsync(ctx workflow.Context, input *glue.CreateWorkflowInput) *GlueCreateWorkflowResult
 
-    DeleteClassifier(ctx workflow.Context, input *glue.DeleteClassifierInput) (*glue.DeleteClassifierOutput, error)
-    DeleteClassifierAsync(ctx workflow.Context, input *glue.DeleteClassifierInput) *GlueDeleteClassifierResult
+       DeleteClassifier(ctx workflow.Context, input *glue.DeleteClassifierInput) (*glue.DeleteClassifierOutput, error)
+       DeleteClassifierAsync(ctx workflow.Context, input *glue.DeleteClassifierInput) *GlueDeleteClassifierResult
 
-    DeleteColumnStatisticsForPartition(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) (*glue.DeleteColumnStatisticsForPartitionOutput, error)
-    DeleteColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) *GlueDeleteColumnStatisticsForPartitionResult
+       DeleteColumnStatisticsForPartition(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) (*glue.DeleteColumnStatisticsForPartitionOutput, error)
+       DeleteColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForPartitionInput) *GlueDeleteColumnStatisticsForPartitionResult
 
-    DeleteColumnStatisticsForTable(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) (*glue.DeleteColumnStatisticsForTableOutput, error)
-    DeleteColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) *GlueDeleteColumnStatisticsForTableResult
+       DeleteColumnStatisticsForTable(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) (*glue.DeleteColumnStatisticsForTableOutput, error)
+       DeleteColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.DeleteColumnStatisticsForTableInput) *GlueDeleteColumnStatisticsForTableResult
 
-    DeleteConnection(ctx workflow.Context, input *glue.DeleteConnectionInput) (*glue.DeleteConnectionOutput, error)
-    DeleteConnectionAsync(ctx workflow.Context, input *glue.DeleteConnectionInput) *GlueDeleteConnectionResult
+       DeleteConnection(ctx workflow.Context, input *glue.DeleteConnectionInput) (*glue.DeleteConnectionOutput, error)
+       DeleteConnectionAsync(ctx workflow.Context, input *glue.DeleteConnectionInput) *GlueDeleteConnectionResult
 
-    DeleteCrawler(ctx workflow.Context, input *glue.DeleteCrawlerInput) (*glue.DeleteCrawlerOutput, error)
-    DeleteCrawlerAsync(ctx workflow.Context, input *glue.DeleteCrawlerInput) *GlueDeleteCrawlerResult
+       DeleteCrawler(ctx workflow.Context, input *glue.DeleteCrawlerInput) (*glue.DeleteCrawlerOutput, error)
+       DeleteCrawlerAsync(ctx workflow.Context, input *glue.DeleteCrawlerInput) *GlueDeleteCrawlerResult
 
-    DeleteDatabase(ctx workflow.Context, input *glue.DeleteDatabaseInput) (*glue.DeleteDatabaseOutput, error)
-    DeleteDatabaseAsync(ctx workflow.Context, input *glue.DeleteDatabaseInput) *GlueDeleteDatabaseResult
+       DeleteDatabase(ctx workflow.Context, input *glue.DeleteDatabaseInput) (*glue.DeleteDatabaseOutput, error)
+       DeleteDatabaseAsync(ctx workflow.Context, input *glue.DeleteDatabaseInput) *GlueDeleteDatabaseResult
 
-    DeleteDevEndpoint(ctx workflow.Context, input *glue.DeleteDevEndpointInput) (*glue.DeleteDevEndpointOutput, error)
-    DeleteDevEndpointAsync(ctx workflow.Context, input *glue.DeleteDevEndpointInput) *GlueDeleteDevEndpointResult
+       DeleteDevEndpoint(ctx workflow.Context, input *glue.DeleteDevEndpointInput) (*glue.DeleteDevEndpointOutput, error)
+       DeleteDevEndpointAsync(ctx workflow.Context, input *glue.DeleteDevEndpointInput) *GlueDeleteDevEndpointResult
 
-    DeleteJob(ctx workflow.Context, input *glue.DeleteJobInput) (*glue.DeleteJobOutput, error)
-    DeleteJobAsync(ctx workflow.Context, input *glue.DeleteJobInput) *GlueDeleteJobResult
+       DeleteJob(ctx workflow.Context, input *glue.DeleteJobInput) (*glue.DeleteJobOutput, error)
+       DeleteJobAsync(ctx workflow.Context, input *glue.DeleteJobInput) *GlueDeleteJobResult
 
-    DeleteMLTransform(ctx workflow.Context, input *glue.DeleteMLTransformInput) (*glue.DeleteMLTransformOutput, error)
-    DeleteMLTransformAsync(ctx workflow.Context, input *glue.DeleteMLTransformInput) *GlueDeleteMLTransformResult
+       DeleteMLTransform(ctx workflow.Context, input *glue.DeleteMLTransformInput) (*glue.DeleteMLTransformOutput, error)
+       DeleteMLTransformAsync(ctx workflow.Context, input *glue.DeleteMLTransformInput) *GlueDeleteMLTransformResult
 
-    DeletePartition(ctx workflow.Context, input *glue.DeletePartitionInput) (*glue.DeletePartitionOutput, error)
-    DeletePartitionAsync(ctx workflow.Context, input *glue.DeletePartitionInput) *GlueDeletePartitionResult
+       DeletePartition(ctx workflow.Context, input *glue.DeletePartitionInput) (*glue.DeletePartitionOutput, error)
+       DeletePartitionAsync(ctx workflow.Context, input *glue.DeletePartitionInput) *GlueDeletePartitionResult
 
-    DeleteResourcePolicy(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) (*glue.DeleteResourcePolicyOutput, error)
-    DeleteResourcePolicyAsync(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) *GlueDeleteResourcePolicyResult
+       DeleteResourcePolicy(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) (*glue.DeleteResourcePolicyOutput, error)
+       DeleteResourcePolicyAsync(ctx workflow.Context, input *glue.DeleteResourcePolicyInput) *GlueDeleteResourcePolicyResult
 
-    DeleteSecurityConfiguration(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) (*glue.DeleteSecurityConfigurationOutput, error)
-    DeleteSecurityConfigurationAsync(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) *GlueDeleteSecurityConfigurationResult
+       DeleteSecurityConfiguration(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) (*glue.DeleteSecurityConfigurationOutput, error)
+       DeleteSecurityConfigurationAsync(ctx workflow.Context, input *glue.DeleteSecurityConfigurationInput) *GlueDeleteSecurityConfigurationResult
 
-    DeleteTable(ctx workflow.Context, input *glue.DeleteTableInput) (*glue.DeleteTableOutput, error)
-    DeleteTableAsync(ctx workflow.Context, input *glue.DeleteTableInput) *GlueDeleteTableResult
+       DeleteTable(ctx workflow.Context, input *glue.DeleteTableInput) (*glue.DeleteTableOutput, error)
+       DeleteTableAsync(ctx workflow.Context, input *glue.DeleteTableInput) *GlueDeleteTableResult
 
-    DeleteTableVersion(ctx workflow.Context, input *glue.DeleteTableVersionInput) (*glue.DeleteTableVersionOutput, error)
-    DeleteTableVersionAsync(ctx workflow.Context, input *glue.DeleteTableVersionInput) *GlueDeleteTableVersionResult
+       DeleteTableVersion(ctx workflow.Context, input *glue.DeleteTableVersionInput) (*glue.DeleteTableVersionOutput, error)
+       DeleteTableVersionAsync(ctx workflow.Context, input *glue.DeleteTableVersionInput) *GlueDeleteTableVersionResult
 
-    DeleteTrigger(ctx workflow.Context, input *glue.DeleteTriggerInput) (*glue.DeleteTriggerOutput, error)
-    DeleteTriggerAsync(ctx workflow.Context, input *glue.DeleteTriggerInput) *GlueDeleteTriggerResult
+       DeleteTrigger(ctx workflow.Context, input *glue.DeleteTriggerInput) (*glue.DeleteTriggerOutput, error)
+       DeleteTriggerAsync(ctx workflow.Context, input *glue.DeleteTriggerInput) *GlueDeleteTriggerResult
 
-    DeleteUserDefinedFunction(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) (*glue.DeleteUserDefinedFunctionOutput, error)
-    DeleteUserDefinedFunctionAsync(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) *GlueDeleteUserDefinedFunctionResult
+       DeleteUserDefinedFunction(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) (*glue.DeleteUserDefinedFunctionOutput, error)
+       DeleteUserDefinedFunctionAsync(ctx workflow.Context, input *glue.DeleteUserDefinedFunctionInput) *GlueDeleteUserDefinedFunctionResult
 
-    DeleteWorkflow(ctx workflow.Context, input *glue.DeleteWorkflowInput) (*glue.DeleteWorkflowOutput, error)
-    DeleteWorkflowAsync(ctx workflow.Context, input *glue.DeleteWorkflowInput) *GlueDeleteWorkflowResult
+       DeleteWorkflow(ctx workflow.Context, input *glue.DeleteWorkflowInput) (*glue.DeleteWorkflowOutput, error)
+       DeleteWorkflowAsync(ctx workflow.Context, input *glue.DeleteWorkflowInput) *GlueDeleteWorkflowResult
 
-    GetCatalogImportStatus(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) (*glue.GetCatalogImportStatusOutput, error)
-    GetCatalogImportStatusAsync(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) *GlueGetCatalogImportStatusResult
+       GetCatalogImportStatus(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) (*glue.GetCatalogImportStatusOutput, error)
+       GetCatalogImportStatusAsync(ctx workflow.Context, input *glue.GetCatalogImportStatusInput) *GlueGetCatalogImportStatusResult
 
-    GetClassifier(ctx workflow.Context, input *glue.GetClassifierInput) (*glue.GetClassifierOutput, error)
-    GetClassifierAsync(ctx workflow.Context, input *glue.GetClassifierInput) *GlueGetClassifierResult
+       GetClassifier(ctx workflow.Context, input *glue.GetClassifierInput) (*glue.GetClassifierOutput, error)
+       GetClassifierAsync(ctx workflow.Context, input *glue.GetClassifierInput) *GlueGetClassifierResult
 
-    GetClassifiers(ctx workflow.Context, input *glue.GetClassifiersInput) (*glue.GetClassifiersOutput, error)
-    GetClassifiersAsync(ctx workflow.Context, input *glue.GetClassifiersInput) *GlueGetClassifiersResult
+       GetClassifiers(ctx workflow.Context, input *glue.GetClassifiersInput) (*glue.GetClassifiersOutput, error)
+       GetClassifiersAsync(ctx workflow.Context, input *glue.GetClassifiersInput) *GlueGetClassifiersResult
 
-    GetColumnStatisticsForPartition(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) (*glue.GetColumnStatisticsForPartitionOutput, error)
-    GetColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) *GlueGetColumnStatisticsForPartitionResult
+       GetColumnStatisticsForPartition(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) (*glue.GetColumnStatisticsForPartitionOutput, error)
+       GetColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForPartitionInput) *GlueGetColumnStatisticsForPartitionResult
 
-    GetColumnStatisticsForTable(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) (*glue.GetColumnStatisticsForTableOutput, error)
-    GetColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) *GlueGetColumnStatisticsForTableResult
+       GetColumnStatisticsForTable(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) (*glue.GetColumnStatisticsForTableOutput, error)
+       GetColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.GetColumnStatisticsForTableInput) *GlueGetColumnStatisticsForTableResult
 
-    GetConnection(ctx workflow.Context, input *glue.GetConnectionInput) (*glue.GetConnectionOutput, error)
-    GetConnectionAsync(ctx workflow.Context, input *glue.GetConnectionInput) *GlueGetConnectionResult
+       GetConnection(ctx workflow.Context, input *glue.GetConnectionInput) (*glue.GetConnectionOutput, error)
+       GetConnectionAsync(ctx workflow.Context, input *glue.GetConnectionInput) *GlueGetConnectionResult
 
-    GetConnections(ctx workflow.Context, input *glue.GetConnectionsInput) (*glue.GetConnectionsOutput, error)
-    GetConnectionsAsync(ctx workflow.Context, input *glue.GetConnectionsInput) *GlueGetConnectionsResult
+       GetConnections(ctx workflow.Context, input *glue.GetConnectionsInput) (*glue.GetConnectionsOutput, error)
+       GetConnectionsAsync(ctx workflow.Context, input *glue.GetConnectionsInput) *GlueGetConnectionsResult
 
-    GetCrawler(ctx workflow.Context, input *glue.GetCrawlerInput) (*glue.GetCrawlerOutput, error)
-    GetCrawlerAsync(ctx workflow.Context, input *glue.GetCrawlerInput) *GlueGetCrawlerResult
+       GetCrawler(ctx workflow.Context, input *glue.GetCrawlerInput) (*glue.GetCrawlerOutput, error)
+       GetCrawlerAsync(ctx workflow.Context, input *glue.GetCrawlerInput) *GlueGetCrawlerResult
 
-    GetCrawlerMetrics(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) (*glue.GetCrawlerMetricsOutput, error)
-    GetCrawlerMetricsAsync(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) *GlueGetCrawlerMetricsResult
+       GetCrawlerMetrics(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) (*glue.GetCrawlerMetricsOutput, error)
+       GetCrawlerMetricsAsync(ctx workflow.Context, input *glue.GetCrawlerMetricsInput) *GlueGetCrawlerMetricsResult
 
-    GetCrawlers(ctx workflow.Context, input *glue.GetCrawlersInput) (*glue.GetCrawlersOutput, error)
-    GetCrawlersAsync(ctx workflow.Context, input *glue.GetCrawlersInput) *GlueGetCrawlersResult
+       GetCrawlers(ctx workflow.Context, input *glue.GetCrawlersInput) (*glue.GetCrawlersOutput, error)
+       GetCrawlersAsync(ctx workflow.Context, input *glue.GetCrawlersInput) *GlueGetCrawlersResult
 
-    GetDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) (*glue.GetDataCatalogEncryptionSettingsOutput, error)
-    GetDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) *GlueGetDataCatalogEncryptionSettingsResult
+       GetDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) (*glue.GetDataCatalogEncryptionSettingsOutput, error)
+       GetDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.GetDataCatalogEncryptionSettingsInput) *GlueGetDataCatalogEncryptionSettingsResult
 
-    GetDatabase(ctx workflow.Context, input *glue.GetDatabaseInput) (*glue.GetDatabaseOutput, error)
-    GetDatabaseAsync(ctx workflow.Context, input *glue.GetDatabaseInput) *GlueGetDatabaseResult
+       GetDatabase(ctx workflow.Context, input *glue.GetDatabaseInput) (*glue.GetDatabaseOutput, error)
+       GetDatabaseAsync(ctx workflow.Context, input *glue.GetDatabaseInput) *GlueGetDatabaseResult
 
-    GetDatabases(ctx workflow.Context, input *glue.GetDatabasesInput) (*glue.GetDatabasesOutput, error)
-    GetDatabasesAsync(ctx workflow.Context, input *glue.GetDatabasesInput) *GlueGetDatabasesResult
+       GetDatabases(ctx workflow.Context, input *glue.GetDatabasesInput) (*glue.GetDatabasesOutput, error)
+       GetDatabasesAsync(ctx workflow.Context, input *glue.GetDatabasesInput) *GlueGetDatabasesResult
 
-    GetDataflowGraph(ctx workflow.Context, input *glue.GetDataflowGraphInput) (*glue.GetDataflowGraphOutput, error)
-    GetDataflowGraphAsync(ctx workflow.Context, input *glue.GetDataflowGraphInput) *GlueGetDataflowGraphResult
+       GetDataflowGraph(ctx workflow.Context, input *glue.GetDataflowGraphInput) (*glue.GetDataflowGraphOutput, error)
+       GetDataflowGraphAsync(ctx workflow.Context, input *glue.GetDataflowGraphInput) *GlueGetDataflowGraphResult
 
-    GetDevEndpoint(ctx workflow.Context, input *glue.GetDevEndpointInput) (*glue.GetDevEndpointOutput, error)
-    GetDevEndpointAsync(ctx workflow.Context, input *glue.GetDevEndpointInput) *GlueGetDevEndpointResult
+       GetDevEndpoint(ctx workflow.Context, input *glue.GetDevEndpointInput) (*glue.GetDevEndpointOutput, error)
+       GetDevEndpointAsync(ctx workflow.Context, input *glue.GetDevEndpointInput) *GlueGetDevEndpointResult
 
-    GetDevEndpoints(ctx workflow.Context, input *glue.GetDevEndpointsInput) (*glue.GetDevEndpointsOutput, error)
-    GetDevEndpointsAsync(ctx workflow.Context, input *glue.GetDevEndpointsInput) *GlueGetDevEndpointsResult
+       GetDevEndpoints(ctx workflow.Context, input *glue.GetDevEndpointsInput) (*glue.GetDevEndpointsOutput, error)
+       GetDevEndpointsAsync(ctx workflow.Context, input *glue.GetDevEndpointsInput) *GlueGetDevEndpointsResult
 
-    GetJob(ctx workflow.Context, input *glue.GetJobInput) (*glue.GetJobOutput, error)
-    GetJobAsync(ctx workflow.Context, input *glue.GetJobInput) *GlueGetJobResult
+       GetJob(ctx workflow.Context, input *glue.GetJobInput) (*glue.GetJobOutput, error)
+       GetJobAsync(ctx workflow.Context, input *glue.GetJobInput) *GlueGetJobResult
 
-    GetJobBookmark(ctx workflow.Context, input *glue.GetJobBookmarkInput) (*glue.GetJobBookmarkOutput, error)
-    GetJobBookmarkAsync(ctx workflow.Context, input *glue.GetJobBookmarkInput) *GlueGetJobBookmarkResult
+       GetJobBookmark(ctx workflow.Context, input *glue.GetJobBookmarkInput) (*glue.GetJobBookmarkOutput, error)
+       GetJobBookmarkAsync(ctx workflow.Context, input *glue.GetJobBookmarkInput) *GlueGetJobBookmarkResult
 
-    GetJobRun(ctx workflow.Context, input *glue.GetJobRunInput) (*glue.GetJobRunOutput, error)
-    GetJobRunAsync(ctx workflow.Context, input *glue.GetJobRunInput) *GlueGetJobRunResult
+       GetJobRun(ctx workflow.Context, input *glue.GetJobRunInput) (*glue.GetJobRunOutput, error)
+       GetJobRunAsync(ctx workflow.Context, input *glue.GetJobRunInput) *GlueGetJobRunResult
 
-    GetJobRuns(ctx workflow.Context, input *glue.GetJobRunsInput) (*glue.GetJobRunsOutput, error)
-    GetJobRunsAsync(ctx workflow.Context, input *glue.GetJobRunsInput) *GlueGetJobRunsResult
+       GetJobRuns(ctx workflow.Context, input *glue.GetJobRunsInput) (*glue.GetJobRunsOutput, error)
+       GetJobRunsAsync(ctx workflow.Context, input *glue.GetJobRunsInput) *GlueGetJobRunsResult
 
-    GetJobs(ctx workflow.Context, input *glue.GetJobsInput) (*glue.GetJobsOutput, error)
-    GetJobsAsync(ctx workflow.Context, input *glue.GetJobsInput) *GlueGetJobsResult
+       GetJobs(ctx workflow.Context, input *glue.GetJobsInput) (*glue.GetJobsOutput, error)
+       GetJobsAsync(ctx workflow.Context, input *glue.GetJobsInput) *GlueGetJobsResult
 
-    GetMLTaskRun(ctx workflow.Context, input *glue.GetMLTaskRunInput) (*glue.GetMLTaskRunOutput, error)
-    GetMLTaskRunAsync(ctx workflow.Context, input *glue.GetMLTaskRunInput) *GlueGetMLTaskRunResult
+       GetMLTaskRun(ctx workflow.Context, input *glue.GetMLTaskRunInput) (*glue.GetMLTaskRunOutput, error)
+       GetMLTaskRunAsync(ctx workflow.Context, input *glue.GetMLTaskRunInput) *GlueGetMLTaskRunResult
 
-    GetMLTaskRuns(ctx workflow.Context, input *glue.GetMLTaskRunsInput) (*glue.GetMLTaskRunsOutput, error)
-    GetMLTaskRunsAsync(ctx workflow.Context, input *glue.GetMLTaskRunsInput) *GlueGetMLTaskRunsResult
+       GetMLTaskRuns(ctx workflow.Context, input *glue.GetMLTaskRunsInput) (*glue.GetMLTaskRunsOutput, error)
+       GetMLTaskRunsAsync(ctx workflow.Context, input *glue.GetMLTaskRunsInput) *GlueGetMLTaskRunsResult
 
-    GetMLTransform(ctx workflow.Context, input *glue.GetMLTransformInput) (*glue.GetMLTransformOutput, error)
-    GetMLTransformAsync(ctx workflow.Context, input *glue.GetMLTransformInput) *GlueGetMLTransformResult
+       GetMLTransform(ctx workflow.Context, input *glue.GetMLTransformInput) (*glue.GetMLTransformOutput, error)
+       GetMLTransformAsync(ctx workflow.Context, input *glue.GetMLTransformInput) *GlueGetMLTransformResult
 
-    GetMLTransforms(ctx workflow.Context, input *glue.GetMLTransformsInput) (*glue.GetMLTransformsOutput, error)
-    GetMLTransformsAsync(ctx workflow.Context, input *glue.GetMLTransformsInput) *GlueGetMLTransformsResult
+       GetMLTransforms(ctx workflow.Context, input *glue.GetMLTransformsInput) (*glue.GetMLTransformsOutput, error)
+       GetMLTransformsAsync(ctx workflow.Context, input *glue.GetMLTransformsInput) *GlueGetMLTransformsResult
 
-    GetMapping(ctx workflow.Context, input *glue.GetMappingInput) (*glue.GetMappingOutput, error)
-    GetMappingAsync(ctx workflow.Context, input *glue.GetMappingInput) *GlueGetMappingResult
+       GetMapping(ctx workflow.Context, input *glue.GetMappingInput) (*glue.GetMappingOutput, error)
+       GetMappingAsync(ctx workflow.Context, input *glue.GetMappingInput) *GlueGetMappingResult
 
-    GetPartition(ctx workflow.Context, input *glue.GetPartitionInput) (*glue.GetPartitionOutput, error)
-    GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GlueGetPartitionResult
+       GetPartition(ctx workflow.Context, input *glue.GetPartitionInput) (*glue.GetPartitionOutput, error)
+       GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GlueGetPartitionResult
 
-    GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error)
-    GetPartitionsAsync(ctx workflow.Context, input *glue.GetPartitionsInput) *GlueGetPartitionsResult
+       GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error)
+       GetPartitionsAsync(ctx workflow.Context, input *glue.GetPartitionsInput) *GlueGetPartitionsResult
 
-    GetPlan(ctx workflow.Context, input *glue.GetPlanInput) (*glue.GetPlanOutput, error)
-    GetPlanAsync(ctx workflow.Context, input *glue.GetPlanInput) *GlueGetPlanResult
+       GetPlan(ctx workflow.Context, input *glue.GetPlanInput) (*glue.GetPlanOutput, error)
+       GetPlanAsync(ctx workflow.Context, input *glue.GetPlanInput) *GlueGetPlanResult
 
-    GetResourcePolicies(ctx workflow.Context, input *glue.GetResourcePoliciesInput) (*glue.GetResourcePoliciesOutput, error)
-    GetResourcePoliciesAsync(ctx workflow.Context, input *glue.GetResourcePoliciesInput) *GlueGetResourcePoliciesResult
+       GetResourcePolicies(ctx workflow.Context, input *glue.GetResourcePoliciesInput) (*glue.GetResourcePoliciesOutput, error)
+       GetResourcePoliciesAsync(ctx workflow.Context, input *glue.GetResourcePoliciesInput) *GlueGetResourcePoliciesResult
 
-    GetResourcePolicy(ctx workflow.Context, input *glue.GetResourcePolicyInput) (*glue.GetResourcePolicyOutput, error)
-    GetResourcePolicyAsync(ctx workflow.Context, input *glue.GetResourcePolicyInput) *GlueGetResourcePolicyResult
+       GetResourcePolicy(ctx workflow.Context, input *glue.GetResourcePolicyInput) (*glue.GetResourcePolicyOutput, error)
+       GetResourcePolicyAsync(ctx workflow.Context, input *glue.GetResourcePolicyInput) *GlueGetResourcePolicyResult
 
-    GetSecurityConfiguration(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) (*glue.GetSecurityConfigurationOutput, error)
-    GetSecurityConfigurationAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) *GlueGetSecurityConfigurationResult
+       GetSecurityConfiguration(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) (*glue.GetSecurityConfigurationOutput, error)
+       GetSecurityConfigurationAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationInput) *GlueGetSecurityConfigurationResult
 
-    GetSecurityConfigurations(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) (*glue.GetSecurityConfigurationsOutput, error)
-    GetSecurityConfigurationsAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) *GlueGetSecurityConfigurationsResult
+       GetSecurityConfigurations(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) (*glue.GetSecurityConfigurationsOutput, error)
+       GetSecurityConfigurationsAsync(ctx workflow.Context, input *glue.GetSecurityConfigurationsInput) *GlueGetSecurityConfigurationsResult
 
-    GetTable(ctx workflow.Context, input *glue.GetTableInput) (*glue.GetTableOutput, error)
-    GetTableAsync(ctx workflow.Context, input *glue.GetTableInput) *GlueGetTableResult
+       GetTable(ctx workflow.Context, input *glue.GetTableInput) (*glue.GetTableOutput, error)
+       GetTableAsync(ctx workflow.Context, input *glue.GetTableInput) *GlueGetTableResult
 
-    GetTableVersion(ctx workflow.Context, input *glue.GetTableVersionInput) (*glue.GetTableVersionOutput, error)
-    GetTableVersionAsync(ctx workflow.Context, input *glue.GetTableVersionInput) *GlueGetTableVersionResult
+       GetTableVersion(ctx workflow.Context, input *glue.GetTableVersionInput) (*glue.GetTableVersionOutput, error)
+       GetTableVersionAsync(ctx workflow.Context, input *glue.GetTableVersionInput) *GlueGetTableVersionResult
 
-    GetTableVersions(ctx workflow.Context, input *glue.GetTableVersionsInput) (*glue.GetTableVersionsOutput, error)
-    GetTableVersionsAsync(ctx workflow.Context, input *glue.GetTableVersionsInput) *GlueGetTableVersionsResult
+       GetTableVersions(ctx workflow.Context, input *glue.GetTableVersionsInput) (*glue.GetTableVersionsOutput, error)
+       GetTableVersionsAsync(ctx workflow.Context, input *glue.GetTableVersionsInput) *GlueGetTableVersionsResult
 
-    GetTables(ctx workflow.Context, input *glue.GetTablesInput) (*glue.GetTablesOutput, error)
-    GetTablesAsync(ctx workflow.Context, input *glue.GetTablesInput) *GlueGetTablesResult
+       GetTables(ctx workflow.Context, input *glue.GetTablesInput) (*glue.GetTablesOutput, error)
+       GetTablesAsync(ctx workflow.Context, input *glue.GetTablesInput) *GlueGetTablesResult
 
-    GetTags(ctx workflow.Context, input *glue.GetTagsInput) (*glue.GetTagsOutput, error)
-    GetTagsAsync(ctx workflow.Context, input *glue.GetTagsInput) *GlueGetTagsResult
+       GetTags(ctx workflow.Context, input *glue.GetTagsInput) (*glue.GetTagsOutput, error)
+       GetTagsAsync(ctx workflow.Context, input *glue.GetTagsInput) *GlueGetTagsResult
 
-    GetTrigger(ctx workflow.Context, input *glue.GetTriggerInput) (*glue.GetTriggerOutput, error)
-    GetTriggerAsync(ctx workflow.Context, input *glue.GetTriggerInput) *GlueGetTriggerResult
+       GetTrigger(ctx workflow.Context, input *glue.GetTriggerInput) (*glue.GetTriggerOutput, error)
+       GetTriggerAsync(ctx workflow.Context, input *glue.GetTriggerInput) *GlueGetTriggerResult
 
-    GetTriggers(ctx workflow.Context, input *glue.GetTriggersInput) (*glue.GetTriggersOutput, error)
-    GetTriggersAsync(ctx workflow.Context, input *glue.GetTriggersInput) *GlueGetTriggersResult
+       GetTriggers(ctx workflow.Context, input *glue.GetTriggersInput) (*glue.GetTriggersOutput, error)
+       GetTriggersAsync(ctx workflow.Context, input *glue.GetTriggersInput) *GlueGetTriggersResult
 
-    GetUserDefinedFunction(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) (*glue.GetUserDefinedFunctionOutput, error)
-    GetUserDefinedFunctionAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) *GlueGetUserDefinedFunctionResult
+       GetUserDefinedFunction(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) (*glue.GetUserDefinedFunctionOutput, error)
+       GetUserDefinedFunctionAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionInput) *GlueGetUserDefinedFunctionResult
 
-    GetUserDefinedFunctions(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) (*glue.GetUserDefinedFunctionsOutput, error)
-    GetUserDefinedFunctionsAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) *GlueGetUserDefinedFunctionsResult
+       GetUserDefinedFunctions(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) (*glue.GetUserDefinedFunctionsOutput, error)
+       GetUserDefinedFunctionsAsync(ctx workflow.Context, input *glue.GetUserDefinedFunctionsInput) *GlueGetUserDefinedFunctionsResult
 
-    GetWorkflow(ctx workflow.Context, input *glue.GetWorkflowInput) (*glue.GetWorkflowOutput, error)
-    GetWorkflowAsync(ctx workflow.Context, input *glue.GetWorkflowInput) *GlueGetWorkflowResult
+       GetWorkflow(ctx workflow.Context, input *glue.GetWorkflowInput) (*glue.GetWorkflowOutput, error)
+       GetWorkflowAsync(ctx workflow.Context, input *glue.GetWorkflowInput) *GlueGetWorkflowResult
 
-    GetWorkflowRun(ctx workflow.Context, input *glue.GetWorkflowRunInput) (*glue.GetWorkflowRunOutput, error)
-    GetWorkflowRunAsync(ctx workflow.Context, input *glue.GetWorkflowRunInput) *GlueGetWorkflowRunResult
+       GetWorkflowRun(ctx workflow.Context, input *glue.GetWorkflowRunInput) (*glue.GetWorkflowRunOutput, error)
+       GetWorkflowRunAsync(ctx workflow.Context, input *glue.GetWorkflowRunInput) *GlueGetWorkflowRunResult
 
-    GetWorkflowRunProperties(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) (*glue.GetWorkflowRunPropertiesOutput, error)
-    GetWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) *GlueGetWorkflowRunPropertiesResult
+       GetWorkflowRunProperties(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) (*glue.GetWorkflowRunPropertiesOutput, error)
+       GetWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.GetWorkflowRunPropertiesInput) *GlueGetWorkflowRunPropertiesResult
 
-    GetWorkflowRuns(ctx workflow.Context, input *glue.GetWorkflowRunsInput) (*glue.GetWorkflowRunsOutput, error)
-    GetWorkflowRunsAsync(ctx workflow.Context, input *glue.GetWorkflowRunsInput) *GlueGetWorkflowRunsResult
+       GetWorkflowRuns(ctx workflow.Context, input *glue.GetWorkflowRunsInput) (*glue.GetWorkflowRunsOutput, error)
+       GetWorkflowRunsAsync(ctx workflow.Context, input *glue.GetWorkflowRunsInput) *GlueGetWorkflowRunsResult
 
-    ImportCatalogToGlue(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) (*glue.ImportCatalogToGlueOutput, error)
-    ImportCatalogToGlueAsync(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) *GlueImportCatalogToGlueResult
+       ImportCatalogToGlue(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) (*glue.ImportCatalogToGlueOutput, error)
+       ImportCatalogToGlueAsync(ctx workflow.Context, input *glue.ImportCatalogToGlueInput) *GlueImportCatalogToGlueResult
 
-    ListCrawlers(ctx workflow.Context, input *glue.ListCrawlersInput) (*glue.ListCrawlersOutput, error)
-    ListCrawlersAsync(ctx workflow.Context, input *glue.ListCrawlersInput) *GlueListCrawlersResult
+       ListCrawlers(ctx workflow.Context, input *glue.ListCrawlersInput) (*glue.ListCrawlersOutput, error)
+       ListCrawlersAsync(ctx workflow.Context, input *glue.ListCrawlersInput) *GlueListCrawlersResult
 
-    ListDevEndpoints(ctx workflow.Context, input *glue.ListDevEndpointsInput) (*glue.ListDevEndpointsOutput, error)
-    ListDevEndpointsAsync(ctx workflow.Context, input *glue.ListDevEndpointsInput) *GlueListDevEndpointsResult
+       ListDevEndpoints(ctx workflow.Context, input *glue.ListDevEndpointsInput) (*glue.ListDevEndpointsOutput, error)
+       ListDevEndpointsAsync(ctx workflow.Context, input *glue.ListDevEndpointsInput) *GlueListDevEndpointsResult
 
-    ListJobs(ctx workflow.Context, input *glue.ListJobsInput) (*glue.ListJobsOutput, error)
-    ListJobsAsync(ctx workflow.Context, input *glue.ListJobsInput) *GlueListJobsResult
+       ListJobs(ctx workflow.Context, input *glue.ListJobsInput) (*glue.ListJobsOutput, error)
+       ListJobsAsync(ctx workflow.Context, input *glue.ListJobsInput) *GlueListJobsResult
 
-    ListMLTransforms(ctx workflow.Context, input *glue.ListMLTransformsInput) (*glue.ListMLTransformsOutput, error)
-    ListMLTransformsAsync(ctx workflow.Context, input *glue.ListMLTransformsInput) *GlueListMLTransformsResult
+       ListMLTransforms(ctx workflow.Context, input *glue.ListMLTransformsInput) (*glue.ListMLTransformsOutput, error)
+       ListMLTransformsAsync(ctx workflow.Context, input *glue.ListMLTransformsInput) *GlueListMLTransformsResult
 
-    ListTriggers(ctx workflow.Context, input *glue.ListTriggersInput) (*glue.ListTriggersOutput, error)
-    ListTriggersAsync(ctx workflow.Context, input *glue.ListTriggersInput) *GlueListTriggersResult
+       ListTriggers(ctx workflow.Context, input *glue.ListTriggersInput) (*glue.ListTriggersOutput, error)
+       ListTriggersAsync(ctx workflow.Context, input *glue.ListTriggersInput) *GlueListTriggersResult
 
-    ListWorkflows(ctx workflow.Context, input *glue.ListWorkflowsInput) (*glue.ListWorkflowsOutput, error)
-    ListWorkflowsAsync(ctx workflow.Context, input *glue.ListWorkflowsInput) *GlueListWorkflowsResult
+       ListWorkflows(ctx workflow.Context, input *glue.ListWorkflowsInput) (*glue.ListWorkflowsOutput, error)
+       ListWorkflowsAsync(ctx workflow.Context, input *glue.ListWorkflowsInput) *GlueListWorkflowsResult
 
-    PutDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) (*glue.PutDataCatalogEncryptionSettingsOutput, error)
-    PutDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) *GluePutDataCatalogEncryptionSettingsResult
+       PutDataCatalogEncryptionSettings(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) (*glue.PutDataCatalogEncryptionSettingsOutput, error)
+       PutDataCatalogEncryptionSettingsAsync(ctx workflow.Context, input *glue.PutDataCatalogEncryptionSettingsInput) *GluePutDataCatalogEncryptionSettingsResult
 
-    PutResourcePolicy(ctx workflow.Context, input *glue.PutResourcePolicyInput) (*glue.PutResourcePolicyOutput, error)
-    PutResourcePolicyAsync(ctx workflow.Context, input *glue.PutResourcePolicyInput) *GluePutResourcePolicyResult
+       PutResourcePolicy(ctx workflow.Context, input *glue.PutResourcePolicyInput) (*glue.PutResourcePolicyOutput, error)
+       PutResourcePolicyAsync(ctx workflow.Context, input *glue.PutResourcePolicyInput) *GluePutResourcePolicyResult
 
-    PutWorkflowRunProperties(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) (*glue.PutWorkflowRunPropertiesOutput, error)
-    PutWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) *GluePutWorkflowRunPropertiesResult
+       PutWorkflowRunProperties(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) (*glue.PutWorkflowRunPropertiesOutput, error)
+       PutWorkflowRunPropertiesAsync(ctx workflow.Context, input *glue.PutWorkflowRunPropertiesInput) *GluePutWorkflowRunPropertiesResult
 
-    ResetJobBookmark(ctx workflow.Context, input *glue.ResetJobBookmarkInput) (*glue.ResetJobBookmarkOutput, error)
-    ResetJobBookmarkAsync(ctx workflow.Context, input *glue.ResetJobBookmarkInput) *GlueResetJobBookmarkResult
+       ResetJobBookmark(ctx workflow.Context, input *glue.ResetJobBookmarkInput) (*glue.ResetJobBookmarkOutput, error)
+       ResetJobBookmarkAsync(ctx workflow.Context, input *glue.ResetJobBookmarkInput) *GlueResetJobBookmarkResult
 
-    ResumeWorkflowRun(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) (*glue.ResumeWorkflowRunOutput, error)
-    ResumeWorkflowRunAsync(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) *GlueResumeWorkflowRunResult
+       ResumeWorkflowRun(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) (*glue.ResumeWorkflowRunOutput, error)
+       ResumeWorkflowRunAsync(ctx workflow.Context, input *glue.ResumeWorkflowRunInput) *GlueResumeWorkflowRunResult
 
-    SearchTables(ctx workflow.Context, input *glue.SearchTablesInput) (*glue.SearchTablesOutput, error)
-    SearchTablesAsync(ctx workflow.Context, input *glue.SearchTablesInput) *GlueSearchTablesResult
+       SearchTables(ctx workflow.Context, input *glue.SearchTablesInput) (*glue.SearchTablesOutput, error)
+       SearchTablesAsync(ctx workflow.Context, input *glue.SearchTablesInput) *GlueSearchTablesResult
 
-    StartCrawler(ctx workflow.Context, input *glue.StartCrawlerInput) (*glue.StartCrawlerOutput, error)
-    StartCrawlerAsync(ctx workflow.Context, input *glue.StartCrawlerInput) *GlueStartCrawlerResult
+       StartCrawler(ctx workflow.Context, input *glue.StartCrawlerInput) (*glue.StartCrawlerOutput, error)
+       StartCrawlerAsync(ctx workflow.Context, input *glue.StartCrawlerInput) *GlueStartCrawlerResult
 
-    StartCrawlerSchedule(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) (*glue.StartCrawlerScheduleOutput, error)
-    StartCrawlerScheduleAsync(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) *GlueStartCrawlerScheduleResult
+       StartCrawlerSchedule(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) (*glue.StartCrawlerScheduleOutput, error)
+       StartCrawlerScheduleAsync(ctx workflow.Context, input *glue.StartCrawlerScheduleInput) *GlueStartCrawlerScheduleResult
 
-    StartExportLabelsTaskRun(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) (*glue.StartExportLabelsTaskRunOutput, error)
-    StartExportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) *GlueStartExportLabelsTaskRunResult
+       StartExportLabelsTaskRun(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) (*glue.StartExportLabelsTaskRunOutput, error)
+       StartExportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartExportLabelsTaskRunInput) *GlueStartExportLabelsTaskRunResult
 
-    StartImportLabelsTaskRun(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) (*glue.StartImportLabelsTaskRunOutput, error)
-    StartImportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) *GlueStartImportLabelsTaskRunResult
+       StartImportLabelsTaskRun(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) (*glue.StartImportLabelsTaskRunOutput, error)
+       StartImportLabelsTaskRunAsync(ctx workflow.Context, input *glue.StartImportLabelsTaskRunInput) *GlueStartImportLabelsTaskRunResult
 
-    StartJobRun(ctx workflow.Context, input *glue.StartJobRunInput) (*glue.StartJobRunOutput, error)
-    StartJobRunAsync(ctx workflow.Context, input *glue.StartJobRunInput) *GlueStartJobRunResult
+       StartJobRun(ctx workflow.Context, input *glue.StartJobRunInput) (*glue.StartJobRunOutput, error)
+       StartJobRunAsync(ctx workflow.Context, input *glue.StartJobRunInput) *GlueStartJobRunResult
 
-    StartMLEvaluationTaskRun(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) (*glue.StartMLEvaluationTaskRunOutput, error)
-    StartMLEvaluationTaskRunAsync(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) *GlueStartMLEvaluationTaskRunResult
+       StartMLEvaluationTaskRun(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) (*glue.StartMLEvaluationTaskRunOutput, error)
+       StartMLEvaluationTaskRunAsync(ctx workflow.Context, input *glue.StartMLEvaluationTaskRunInput) *GlueStartMLEvaluationTaskRunResult
 
-    StartMLLabelingSetGenerationTaskRun(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error)
-    StartMLLabelingSetGenerationTaskRunAsync(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) *GlueStartMLLabelingSetGenerationTaskRunResult
+       StartMLLabelingSetGenerationTaskRun(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) (*glue.StartMLLabelingSetGenerationTaskRunOutput, error)
+       StartMLLabelingSetGenerationTaskRunAsync(ctx workflow.Context, input *glue.StartMLLabelingSetGenerationTaskRunInput) *GlueStartMLLabelingSetGenerationTaskRunResult
 
-    StartTrigger(ctx workflow.Context, input *glue.StartTriggerInput) (*glue.StartTriggerOutput, error)
-    StartTriggerAsync(ctx workflow.Context, input *glue.StartTriggerInput) *GlueStartTriggerResult
+       StartTrigger(ctx workflow.Context, input *glue.StartTriggerInput) (*glue.StartTriggerOutput, error)
+       StartTriggerAsync(ctx workflow.Context, input *glue.StartTriggerInput) *GlueStartTriggerResult
 
-    StartWorkflowRun(ctx workflow.Context, input *glue.StartWorkflowRunInput) (*glue.StartWorkflowRunOutput, error)
-    StartWorkflowRunAsync(ctx workflow.Context, input *glue.StartWorkflowRunInput) *GlueStartWorkflowRunResult
+       StartWorkflowRun(ctx workflow.Context, input *glue.StartWorkflowRunInput) (*glue.StartWorkflowRunOutput, error)
+       StartWorkflowRunAsync(ctx workflow.Context, input *glue.StartWorkflowRunInput) *GlueStartWorkflowRunResult
 
-    StopCrawler(ctx workflow.Context, input *glue.StopCrawlerInput) (*glue.StopCrawlerOutput, error)
-    StopCrawlerAsync(ctx workflow.Context, input *glue.StopCrawlerInput) *GlueStopCrawlerResult
+       StopCrawler(ctx workflow.Context, input *glue.StopCrawlerInput) (*glue.StopCrawlerOutput, error)
+       StopCrawlerAsync(ctx workflow.Context, input *glue.StopCrawlerInput) *GlueStopCrawlerResult
 
-    StopCrawlerSchedule(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) (*glue.StopCrawlerScheduleOutput, error)
-    StopCrawlerScheduleAsync(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) *GlueStopCrawlerScheduleResult
+       StopCrawlerSchedule(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) (*glue.StopCrawlerScheduleOutput, error)
+       StopCrawlerScheduleAsync(ctx workflow.Context, input *glue.StopCrawlerScheduleInput) *GlueStopCrawlerScheduleResult
 
-    StopTrigger(ctx workflow.Context, input *glue.StopTriggerInput) (*glue.StopTriggerOutput, error)
-    StopTriggerAsync(ctx workflow.Context, input *glue.StopTriggerInput) *GlueStopTriggerResult
+       StopTrigger(ctx workflow.Context, input *glue.StopTriggerInput) (*glue.StopTriggerOutput, error)
+       StopTriggerAsync(ctx workflow.Context, input *glue.StopTriggerInput) *GlueStopTriggerResult
 
-    StopWorkflowRun(ctx workflow.Context, input *glue.StopWorkflowRunInput) (*glue.StopWorkflowRunOutput, error)
-    StopWorkflowRunAsync(ctx workflow.Context, input *glue.StopWorkflowRunInput) *GlueStopWorkflowRunResult
+       StopWorkflowRun(ctx workflow.Context, input *glue.StopWorkflowRunInput) (*glue.StopWorkflowRunOutput, error)
+       StopWorkflowRunAsync(ctx workflow.Context, input *glue.StopWorkflowRunInput) *GlueStopWorkflowRunResult
 
-    TagResource(ctx workflow.Context, input *glue.TagResourceInput) (*glue.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *glue.TagResourceInput) *GlueTagResourceResult
+       TagResource(ctx workflow.Context, input *glue.TagResourceInput) (*glue.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *glue.TagResourceInput) *GlueTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *glue.UntagResourceInput) (*glue.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *glue.UntagResourceInput) *GlueUntagResourceResult
+       UntagResource(ctx workflow.Context, input *glue.UntagResourceInput) (*glue.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *glue.UntagResourceInput) *GlueUntagResourceResult
 
-    UpdateClassifier(ctx workflow.Context, input *glue.UpdateClassifierInput) (*glue.UpdateClassifierOutput, error)
-    UpdateClassifierAsync(ctx workflow.Context, input *glue.UpdateClassifierInput) *GlueUpdateClassifierResult
+       UpdateClassifier(ctx workflow.Context, input *glue.UpdateClassifierInput) (*glue.UpdateClassifierOutput, error)
+       UpdateClassifierAsync(ctx workflow.Context, input *glue.UpdateClassifierInput) *GlueUpdateClassifierResult
 
-    UpdateColumnStatisticsForPartition(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) (*glue.UpdateColumnStatisticsForPartitionOutput, error)
-    UpdateColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) *GlueUpdateColumnStatisticsForPartitionResult
+       UpdateColumnStatisticsForPartition(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) (*glue.UpdateColumnStatisticsForPartitionOutput, error)
+       UpdateColumnStatisticsForPartitionAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForPartitionInput) *GlueUpdateColumnStatisticsForPartitionResult
 
-    UpdateColumnStatisticsForTable(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) (*glue.UpdateColumnStatisticsForTableOutput, error)
-    UpdateColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) *GlueUpdateColumnStatisticsForTableResult
+       UpdateColumnStatisticsForTable(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) (*glue.UpdateColumnStatisticsForTableOutput, error)
+       UpdateColumnStatisticsForTableAsync(ctx workflow.Context, input *glue.UpdateColumnStatisticsForTableInput) *GlueUpdateColumnStatisticsForTableResult
 
-    UpdateConnection(ctx workflow.Context, input *glue.UpdateConnectionInput) (*glue.UpdateConnectionOutput, error)
-    UpdateConnectionAsync(ctx workflow.Context, input *glue.UpdateConnectionInput) *GlueUpdateConnectionResult
+       UpdateConnection(ctx workflow.Context, input *glue.UpdateConnectionInput) (*glue.UpdateConnectionOutput, error)
+       UpdateConnectionAsync(ctx workflow.Context, input *glue.UpdateConnectionInput) *GlueUpdateConnectionResult
 
-    UpdateCrawler(ctx workflow.Context, input *glue.UpdateCrawlerInput) (*glue.UpdateCrawlerOutput, error)
-    UpdateCrawlerAsync(ctx workflow.Context, input *glue.UpdateCrawlerInput) *GlueUpdateCrawlerResult
+       UpdateCrawler(ctx workflow.Context, input *glue.UpdateCrawlerInput) (*glue.UpdateCrawlerOutput, error)
+       UpdateCrawlerAsync(ctx workflow.Context, input *glue.UpdateCrawlerInput) *GlueUpdateCrawlerResult
 
-    UpdateCrawlerSchedule(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) (*glue.UpdateCrawlerScheduleOutput, error)
-    UpdateCrawlerScheduleAsync(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) *GlueUpdateCrawlerScheduleResult
+       UpdateCrawlerSchedule(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) (*glue.UpdateCrawlerScheduleOutput, error)
+       UpdateCrawlerScheduleAsync(ctx workflow.Context, input *glue.UpdateCrawlerScheduleInput) *GlueUpdateCrawlerScheduleResult
 
-    UpdateDatabase(ctx workflow.Context, input *glue.UpdateDatabaseInput) (*glue.UpdateDatabaseOutput, error)
-    UpdateDatabaseAsync(ctx workflow.Context, input *glue.UpdateDatabaseInput) *GlueUpdateDatabaseResult
+       UpdateDatabase(ctx workflow.Context, input *glue.UpdateDatabaseInput) (*glue.UpdateDatabaseOutput, error)
+       UpdateDatabaseAsync(ctx workflow.Context, input *glue.UpdateDatabaseInput) *GlueUpdateDatabaseResult
 
-    UpdateDevEndpoint(ctx workflow.Context, input *glue.UpdateDevEndpointInput) (*glue.UpdateDevEndpointOutput, error)
-    UpdateDevEndpointAsync(ctx workflow.Context, input *glue.UpdateDevEndpointInput) *GlueUpdateDevEndpointResult
+       UpdateDevEndpoint(ctx workflow.Context, input *glue.UpdateDevEndpointInput) (*glue.UpdateDevEndpointOutput, error)
+       UpdateDevEndpointAsync(ctx workflow.Context, input *glue.UpdateDevEndpointInput) *GlueUpdateDevEndpointResult
 
-    UpdateJob(ctx workflow.Context, input *glue.UpdateJobInput) (*glue.UpdateJobOutput, error)
-    UpdateJobAsync(ctx workflow.Context, input *glue.UpdateJobInput) *GlueUpdateJobResult
+       UpdateJob(ctx workflow.Context, input *glue.UpdateJobInput) (*glue.UpdateJobOutput, error)
+       UpdateJobAsync(ctx workflow.Context, input *glue.UpdateJobInput) *GlueUpdateJobResult
 
-    UpdateMLTransform(ctx workflow.Context, input *glue.UpdateMLTransformInput) (*glue.UpdateMLTransformOutput, error)
-    UpdateMLTransformAsync(ctx workflow.Context, input *glue.UpdateMLTransformInput) *GlueUpdateMLTransformResult
+       UpdateMLTransform(ctx workflow.Context, input *glue.UpdateMLTransformInput) (*glue.UpdateMLTransformOutput, error)
+       UpdateMLTransformAsync(ctx workflow.Context, input *glue.UpdateMLTransformInput) *GlueUpdateMLTransformResult
 
-    UpdatePartition(ctx workflow.Context, input *glue.UpdatePartitionInput) (*glue.UpdatePartitionOutput, error)
-    UpdatePartitionAsync(ctx workflow.Context, input *glue.UpdatePartitionInput) *GlueUpdatePartitionResult
+       UpdatePartition(ctx workflow.Context, input *glue.UpdatePartitionInput) (*glue.UpdatePartitionOutput, error)
+       UpdatePartitionAsync(ctx workflow.Context, input *glue.UpdatePartitionInput) *GlueUpdatePartitionResult
 
-    UpdateTable(ctx workflow.Context, input *glue.UpdateTableInput) (*glue.UpdateTableOutput, error)
-    UpdateTableAsync(ctx workflow.Context, input *glue.UpdateTableInput) *GlueUpdateTableResult
+       UpdateTable(ctx workflow.Context, input *glue.UpdateTableInput) (*glue.UpdateTableOutput, error)
+       UpdateTableAsync(ctx workflow.Context, input *glue.UpdateTableInput) *GlueUpdateTableResult
 
-    UpdateTrigger(ctx workflow.Context, input *glue.UpdateTriggerInput) (*glue.UpdateTriggerOutput, error)
-    UpdateTriggerAsync(ctx workflow.Context, input *glue.UpdateTriggerInput) *GlueUpdateTriggerResult
+       UpdateTrigger(ctx workflow.Context, input *glue.UpdateTriggerInput) (*glue.UpdateTriggerOutput, error)
+       UpdateTriggerAsync(ctx workflow.Context, input *glue.UpdateTriggerInput) *GlueUpdateTriggerResult
 
-    UpdateUserDefinedFunction(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) (*glue.UpdateUserDefinedFunctionOutput, error)
-    UpdateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) *GlueUpdateUserDefinedFunctionResult
+       UpdateUserDefinedFunction(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) (*glue.UpdateUserDefinedFunctionOutput, error)
+       UpdateUserDefinedFunctionAsync(ctx workflow.Context, input *glue.UpdateUserDefinedFunctionInput) *GlueUpdateUserDefinedFunctionResult
 
-    UpdateWorkflow(ctx workflow.Context, input *glue.UpdateWorkflowInput) (*glue.UpdateWorkflowOutput, error)
-    UpdateWorkflowAsync(ctx workflow.Context, input *glue.UpdateWorkflowInput) *GlueUpdateWorkflowResult
+       UpdateWorkflow(ctx workflow.Context, input *glue.UpdateWorkflowInput) (*glue.UpdateWorkflowOutput, error)
+       UpdateWorkflowAsync(ctx workflow.Context, input *glue.UpdateWorkflowInput) *GlueUpdateWorkflowResult
 }
 
 type GlueBatchCreatePartitionResult struct {

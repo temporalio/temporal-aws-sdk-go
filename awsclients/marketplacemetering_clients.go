@@ -7,17 +7,17 @@ import (
 )
 
 type MarketplaceMeteringClient interface {
-    BatchMeterUsage(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error)
-    BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageResult
+       BatchMeterUsage(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error)
+       BatchMeterUsageAsync(ctx workflow.Context, input *marketplacemetering.BatchMeterUsageInput) *MarketplacemeteringBatchMeterUsageResult
 
-    MeterUsage(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error)
-    MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageResult
+       MeterUsage(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error)
+       MeterUsageAsync(ctx workflow.Context, input *marketplacemetering.MeterUsageInput) *MarketplacemeteringMeterUsageResult
 
-    RegisterUsage(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error)
-    RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageResult
+       RegisterUsage(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error)
+       RegisterUsageAsync(ctx workflow.Context, input *marketplacemetering.RegisterUsageInput) *MarketplacemeteringRegisterUsageResult
 
-    ResolveCustomer(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error)
-    ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerResult
+       ResolveCustomer(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error)
+       ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerResult
 }
 
 type MarketplacemeteringBatchMeterUsageResult struct {

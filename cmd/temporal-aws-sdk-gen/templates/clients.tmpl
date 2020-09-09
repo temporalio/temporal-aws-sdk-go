@@ -14,10 +14,10 @@ type {{ $name }}Client interface {
 {{- range $i, $method := .Methods }}
 {{- $prefix := ToPrefix $method.OutputPackage }}
 {{- if HasPrefix $method.Name "Wait" }}
-{{"    "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) error
+{{"       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) error
 {{- else }}
-{{ "    "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error)
-{{ "    "}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) *{{$prefix}}{{ $method.Name }}Result
+{{ "       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error)
+{{ "       "}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) *{{$prefix}}{{ $method.Name }}Result
 {{ end }}
 {{- end -}}
 }

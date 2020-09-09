@@ -7,89 +7,89 @@ import (
 )
 
 type AthenaClient interface {
-    BatchGetNamedQuery(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) (*athena.BatchGetNamedQueryOutput, error)
-    BatchGetNamedQueryAsync(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) *AthenaBatchGetNamedQueryResult
+       BatchGetNamedQuery(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) (*athena.BatchGetNamedQueryOutput, error)
+       BatchGetNamedQueryAsync(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) *AthenaBatchGetNamedQueryResult
 
-    BatchGetQueryExecution(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) (*athena.BatchGetQueryExecutionOutput, error)
-    BatchGetQueryExecutionAsync(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) *AthenaBatchGetQueryExecutionResult
+       BatchGetQueryExecution(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) (*athena.BatchGetQueryExecutionOutput, error)
+       BatchGetQueryExecutionAsync(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) *AthenaBatchGetQueryExecutionResult
 
-    CreateDataCatalog(ctx workflow.Context, input *athena.CreateDataCatalogInput) (*athena.CreateDataCatalogOutput, error)
-    CreateDataCatalogAsync(ctx workflow.Context, input *athena.CreateDataCatalogInput) *AthenaCreateDataCatalogResult
+       CreateDataCatalog(ctx workflow.Context, input *athena.CreateDataCatalogInput) (*athena.CreateDataCatalogOutput, error)
+       CreateDataCatalogAsync(ctx workflow.Context, input *athena.CreateDataCatalogInput) *AthenaCreateDataCatalogResult
 
-    CreateNamedQuery(ctx workflow.Context, input *athena.CreateNamedQueryInput) (*athena.CreateNamedQueryOutput, error)
-    CreateNamedQueryAsync(ctx workflow.Context, input *athena.CreateNamedQueryInput) *AthenaCreateNamedQueryResult
+       CreateNamedQuery(ctx workflow.Context, input *athena.CreateNamedQueryInput) (*athena.CreateNamedQueryOutput, error)
+       CreateNamedQueryAsync(ctx workflow.Context, input *athena.CreateNamedQueryInput) *AthenaCreateNamedQueryResult
 
-    CreateWorkGroup(ctx workflow.Context, input *athena.CreateWorkGroupInput) (*athena.CreateWorkGroupOutput, error)
-    CreateWorkGroupAsync(ctx workflow.Context, input *athena.CreateWorkGroupInput) *AthenaCreateWorkGroupResult
+       CreateWorkGroup(ctx workflow.Context, input *athena.CreateWorkGroupInput) (*athena.CreateWorkGroupOutput, error)
+       CreateWorkGroupAsync(ctx workflow.Context, input *athena.CreateWorkGroupInput) *AthenaCreateWorkGroupResult
 
-    DeleteDataCatalog(ctx workflow.Context, input *athena.DeleteDataCatalogInput) (*athena.DeleteDataCatalogOutput, error)
-    DeleteDataCatalogAsync(ctx workflow.Context, input *athena.DeleteDataCatalogInput) *AthenaDeleteDataCatalogResult
+       DeleteDataCatalog(ctx workflow.Context, input *athena.DeleteDataCatalogInput) (*athena.DeleteDataCatalogOutput, error)
+       DeleteDataCatalogAsync(ctx workflow.Context, input *athena.DeleteDataCatalogInput) *AthenaDeleteDataCatalogResult
 
-    DeleteNamedQuery(ctx workflow.Context, input *athena.DeleteNamedQueryInput) (*athena.DeleteNamedQueryOutput, error)
-    DeleteNamedQueryAsync(ctx workflow.Context, input *athena.DeleteNamedQueryInput) *AthenaDeleteNamedQueryResult
+       DeleteNamedQuery(ctx workflow.Context, input *athena.DeleteNamedQueryInput) (*athena.DeleteNamedQueryOutput, error)
+       DeleteNamedQueryAsync(ctx workflow.Context, input *athena.DeleteNamedQueryInput) *AthenaDeleteNamedQueryResult
 
-    DeleteWorkGroup(ctx workflow.Context, input *athena.DeleteWorkGroupInput) (*athena.DeleteWorkGroupOutput, error)
-    DeleteWorkGroupAsync(ctx workflow.Context, input *athena.DeleteWorkGroupInput) *AthenaDeleteWorkGroupResult
+       DeleteWorkGroup(ctx workflow.Context, input *athena.DeleteWorkGroupInput) (*athena.DeleteWorkGroupOutput, error)
+       DeleteWorkGroupAsync(ctx workflow.Context, input *athena.DeleteWorkGroupInput) *AthenaDeleteWorkGroupResult
 
-    GetDataCatalog(ctx workflow.Context, input *athena.GetDataCatalogInput) (*athena.GetDataCatalogOutput, error)
-    GetDataCatalogAsync(ctx workflow.Context, input *athena.GetDataCatalogInput) *AthenaGetDataCatalogResult
+       GetDataCatalog(ctx workflow.Context, input *athena.GetDataCatalogInput) (*athena.GetDataCatalogOutput, error)
+       GetDataCatalogAsync(ctx workflow.Context, input *athena.GetDataCatalogInput) *AthenaGetDataCatalogResult
 
-    GetDatabase(ctx workflow.Context, input *athena.GetDatabaseInput) (*athena.GetDatabaseOutput, error)
-    GetDatabaseAsync(ctx workflow.Context, input *athena.GetDatabaseInput) *AthenaGetDatabaseResult
+       GetDatabase(ctx workflow.Context, input *athena.GetDatabaseInput) (*athena.GetDatabaseOutput, error)
+       GetDatabaseAsync(ctx workflow.Context, input *athena.GetDatabaseInput) *AthenaGetDatabaseResult
 
-    GetNamedQuery(ctx workflow.Context, input *athena.GetNamedQueryInput) (*athena.GetNamedQueryOutput, error)
-    GetNamedQueryAsync(ctx workflow.Context, input *athena.GetNamedQueryInput) *AthenaGetNamedQueryResult
+       GetNamedQuery(ctx workflow.Context, input *athena.GetNamedQueryInput) (*athena.GetNamedQueryOutput, error)
+       GetNamedQueryAsync(ctx workflow.Context, input *athena.GetNamedQueryInput) *AthenaGetNamedQueryResult
 
-    GetQueryExecution(ctx workflow.Context, input *athena.GetQueryExecutionInput) (*athena.GetQueryExecutionOutput, error)
-    GetQueryExecutionAsync(ctx workflow.Context, input *athena.GetQueryExecutionInput) *AthenaGetQueryExecutionResult
+       GetQueryExecution(ctx workflow.Context, input *athena.GetQueryExecutionInput) (*athena.GetQueryExecutionOutput, error)
+       GetQueryExecutionAsync(ctx workflow.Context, input *athena.GetQueryExecutionInput) *AthenaGetQueryExecutionResult
 
-    GetQueryResults(ctx workflow.Context, input *athena.GetQueryResultsInput) (*athena.GetQueryResultsOutput, error)
-    GetQueryResultsAsync(ctx workflow.Context, input *athena.GetQueryResultsInput) *AthenaGetQueryResultsResult
+       GetQueryResults(ctx workflow.Context, input *athena.GetQueryResultsInput) (*athena.GetQueryResultsOutput, error)
+       GetQueryResultsAsync(ctx workflow.Context, input *athena.GetQueryResultsInput) *AthenaGetQueryResultsResult
 
-    GetTableMetadata(ctx workflow.Context, input *athena.GetTableMetadataInput) (*athena.GetTableMetadataOutput, error)
-    GetTableMetadataAsync(ctx workflow.Context, input *athena.GetTableMetadataInput) *AthenaGetTableMetadataResult
+       GetTableMetadata(ctx workflow.Context, input *athena.GetTableMetadataInput) (*athena.GetTableMetadataOutput, error)
+       GetTableMetadataAsync(ctx workflow.Context, input *athena.GetTableMetadataInput) *AthenaGetTableMetadataResult
 
-    GetWorkGroup(ctx workflow.Context, input *athena.GetWorkGroupInput) (*athena.GetWorkGroupOutput, error)
-    GetWorkGroupAsync(ctx workflow.Context, input *athena.GetWorkGroupInput) *AthenaGetWorkGroupResult
+       GetWorkGroup(ctx workflow.Context, input *athena.GetWorkGroupInput) (*athena.GetWorkGroupOutput, error)
+       GetWorkGroupAsync(ctx workflow.Context, input *athena.GetWorkGroupInput) *AthenaGetWorkGroupResult
 
-    ListDataCatalogs(ctx workflow.Context, input *athena.ListDataCatalogsInput) (*athena.ListDataCatalogsOutput, error)
-    ListDataCatalogsAsync(ctx workflow.Context, input *athena.ListDataCatalogsInput) *AthenaListDataCatalogsResult
+       ListDataCatalogs(ctx workflow.Context, input *athena.ListDataCatalogsInput) (*athena.ListDataCatalogsOutput, error)
+       ListDataCatalogsAsync(ctx workflow.Context, input *athena.ListDataCatalogsInput) *AthenaListDataCatalogsResult
 
-    ListDatabases(ctx workflow.Context, input *athena.ListDatabasesInput) (*athena.ListDatabasesOutput, error)
-    ListDatabasesAsync(ctx workflow.Context, input *athena.ListDatabasesInput) *AthenaListDatabasesResult
+       ListDatabases(ctx workflow.Context, input *athena.ListDatabasesInput) (*athena.ListDatabasesOutput, error)
+       ListDatabasesAsync(ctx workflow.Context, input *athena.ListDatabasesInput) *AthenaListDatabasesResult
 
-    ListNamedQueries(ctx workflow.Context, input *athena.ListNamedQueriesInput) (*athena.ListNamedQueriesOutput, error)
-    ListNamedQueriesAsync(ctx workflow.Context, input *athena.ListNamedQueriesInput) *AthenaListNamedQueriesResult
+       ListNamedQueries(ctx workflow.Context, input *athena.ListNamedQueriesInput) (*athena.ListNamedQueriesOutput, error)
+       ListNamedQueriesAsync(ctx workflow.Context, input *athena.ListNamedQueriesInput) *AthenaListNamedQueriesResult
 
-    ListQueryExecutions(ctx workflow.Context, input *athena.ListQueryExecutionsInput) (*athena.ListQueryExecutionsOutput, error)
-    ListQueryExecutionsAsync(ctx workflow.Context, input *athena.ListQueryExecutionsInput) *AthenaListQueryExecutionsResult
+       ListQueryExecutions(ctx workflow.Context, input *athena.ListQueryExecutionsInput) (*athena.ListQueryExecutionsOutput, error)
+       ListQueryExecutionsAsync(ctx workflow.Context, input *athena.ListQueryExecutionsInput) *AthenaListQueryExecutionsResult
 
-    ListTableMetadata(ctx workflow.Context, input *athena.ListTableMetadataInput) (*athena.ListTableMetadataOutput, error)
-    ListTableMetadataAsync(ctx workflow.Context, input *athena.ListTableMetadataInput) *AthenaListTableMetadataResult
+       ListTableMetadata(ctx workflow.Context, input *athena.ListTableMetadataInput) (*athena.ListTableMetadataOutput, error)
+       ListTableMetadataAsync(ctx workflow.Context, input *athena.ListTableMetadataInput) *AthenaListTableMetadataResult
 
-    ListTagsForResource(ctx workflow.Context, input *athena.ListTagsForResourceInput) (*athena.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *athena.ListTagsForResourceInput) *AthenaListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *athena.ListTagsForResourceInput) (*athena.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *athena.ListTagsForResourceInput) *AthenaListTagsForResourceResult
 
-    ListWorkGroups(ctx workflow.Context, input *athena.ListWorkGroupsInput) (*athena.ListWorkGroupsOutput, error)
-    ListWorkGroupsAsync(ctx workflow.Context, input *athena.ListWorkGroupsInput) *AthenaListWorkGroupsResult
+       ListWorkGroups(ctx workflow.Context, input *athena.ListWorkGroupsInput) (*athena.ListWorkGroupsOutput, error)
+       ListWorkGroupsAsync(ctx workflow.Context, input *athena.ListWorkGroupsInput) *AthenaListWorkGroupsResult
 
-    StartQueryExecution(ctx workflow.Context, input *athena.StartQueryExecutionInput) (*athena.StartQueryExecutionOutput, error)
-    StartQueryExecutionAsync(ctx workflow.Context, input *athena.StartQueryExecutionInput) *AthenaStartQueryExecutionResult
+       StartQueryExecution(ctx workflow.Context, input *athena.StartQueryExecutionInput) (*athena.StartQueryExecutionOutput, error)
+       StartQueryExecutionAsync(ctx workflow.Context, input *athena.StartQueryExecutionInput) *AthenaStartQueryExecutionResult
 
-    StopQueryExecution(ctx workflow.Context, input *athena.StopQueryExecutionInput) (*athena.StopQueryExecutionOutput, error)
-    StopQueryExecutionAsync(ctx workflow.Context, input *athena.StopQueryExecutionInput) *AthenaStopQueryExecutionResult
+       StopQueryExecution(ctx workflow.Context, input *athena.StopQueryExecutionInput) (*athena.StopQueryExecutionOutput, error)
+       StopQueryExecutionAsync(ctx workflow.Context, input *athena.StopQueryExecutionInput) *AthenaStopQueryExecutionResult
 
-    TagResource(ctx workflow.Context, input *athena.TagResourceInput) (*athena.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *athena.TagResourceInput) *AthenaTagResourceResult
+       TagResource(ctx workflow.Context, input *athena.TagResourceInput) (*athena.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *athena.TagResourceInput) *AthenaTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *athena.UntagResourceInput) (*athena.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *athena.UntagResourceInput) *AthenaUntagResourceResult
+       UntagResource(ctx workflow.Context, input *athena.UntagResourceInput) (*athena.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *athena.UntagResourceInput) *AthenaUntagResourceResult
 
-    UpdateDataCatalog(ctx workflow.Context, input *athena.UpdateDataCatalogInput) (*athena.UpdateDataCatalogOutput, error)
-    UpdateDataCatalogAsync(ctx workflow.Context, input *athena.UpdateDataCatalogInput) *AthenaUpdateDataCatalogResult
+       UpdateDataCatalog(ctx workflow.Context, input *athena.UpdateDataCatalogInput) (*athena.UpdateDataCatalogOutput, error)
+       UpdateDataCatalogAsync(ctx workflow.Context, input *athena.UpdateDataCatalogInput) *AthenaUpdateDataCatalogResult
 
-    UpdateWorkGroup(ctx workflow.Context, input *athena.UpdateWorkGroupInput) (*athena.UpdateWorkGroupOutput, error)
-    UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *AthenaUpdateWorkGroupResult
+       UpdateWorkGroup(ctx workflow.Context, input *athena.UpdateWorkGroupInput) (*athena.UpdateWorkGroupOutput, error)
+       UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *AthenaUpdateWorkGroupResult
 }
 
 type AthenaBatchGetNamedQueryResult struct {

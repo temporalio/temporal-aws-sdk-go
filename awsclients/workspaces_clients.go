@@ -7,134 +7,134 @@ import (
 )
 
 type WorkSpacesClient interface {
-    AssociateIpGroups(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) (*workspaces.AssociateIpGroupsOutput, error)
-    AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsResult
+       AssociateIpGroups(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) (*workspaces.AssociateIpGroupsOutput, error)
+       AssociateIpGroupsAsync(ctx workflow.Context, input *workspaces.AssociateIpGroupsInput) *WorkspacesAssociateIpGroupsResult
 
-    AuthorizeIpRules(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) (*workspaces.AuthorizeIpRulesOutput, error)
-    AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesResult
+       AuthorizeIpRules(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) (*workspaces.AuthorizeIpRulesOutput, error)
+       AuthorizeIpRulesAsync(ctx workflow.Context, input *workspaces.AuthorizeIpRulesInput) *WorkspacesAuthorizeIpRulesResult
 
-    CopyWorkspaceImage(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) (*workspaces.CopyWorkspaceImageOutput, error)
-    CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageResult
+       CopyWorkspaceImage(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) (*workspaces.CopyWorkspaceImageOutput, error)
+       CopyWorkspaceImageAsync(ctx workflow.Context, input *workspaces.CopyWorkspaceImageInput) *WorkspacesCopyWorkspaceImageResult
 
-    CreateIpGroup(ctx workflow.Context, input *workspaces.CreateIpGroupInput) (*workspaces.CreateIpGroupOutput, error)
-    CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupResult
+       CreateIpGroup(ctx workflow.Context, input *workspaces.CreateIpGroupInput) (*workspaces.CreateIpGroupOutput, error)
+       CreateIpGroupAsync(ctx workflow.Context, input *workspaces.CreateIpGroupInput) *WorkspacesCreateIpGroupResult
 
-    CreateTags(ctx workflow.Context, input *workspaces.CreateTagsInput) (*workspaces.CreateTagsOutput, error)
-    CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsResult
+       CreateTags(ctx workflow.Context, input *workspaces.CreateTagsInput) (*workspaces.CreateTagsOutput, error)
+       CreateTagsAsync(ctx workflow.Context, input *workspaces.CreateTagsInput) *WorkspacesCreateTagsResult
 
-    CreateWorkspaces(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) (*workspaces.CreateWorkspacesOutput, error)
-    CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesResult
+       CreateWorkspaces(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) (*workspaces.CreateWorkspacesOutput, error)
+       CreateWorkspacesAsync(ctx workflow.Context, input *workspaces.CreateWorkspacesInput) *WorkspacesCreateWorkspacesResult
 
-    DeleteIpGroup(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) (*workspaces.DeleteIpGroupOutput, error)
-    DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupResult
+       DeleteIpGroup(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) (*workspaces.DeleteIpGroupOutput, error)
+       DeleteIpGroupAsync(ctx workflow.Context, input *workspaces.DeleteIpGroupInput) *WorkspacesDeleteIpGroupResult
 
-    DeleteTags(ctx workflow.Context, input *workspaces.DeleteTagsInput) (*workspaces.DeleteTagsOutput, error)
-    DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsResult
+       DeleteTags(ctx workflow.Context, input *workspaces.DeleteTagsInput) (*workspaces.DeleteTagsOutput, error)
+       DeleteTagsAsync(ctx workflow.Context, input *workspaces.DeleteTagsInput) *WorkspacesDeleteTagsResult
 
-    DeleteWorkspaceImage(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) (*workspaces.DeleteWorkspaceImageOutput, error)
-    DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageResult
+       DeleteWorkspaceImage(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) (*workspaces.DeleteWorkspaceImageOutput, error)
+       DeleteWorkspaceImageAsync(ctx workflow.Context, input *workspaces.DeleteWorkspaceImageInput) *WorkspacesDeleteWorkspaceImageResult
 
-    DeregisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) (*workspaces.DeregisterWorkspaceDirectoryOutput, error)
-    DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryResult
+       DeregisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) (*workspaces.DeregisterWorkspaceDirectoryOutput, error)
+       DeregisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.DeregisterWorkspaceDirectoryInput) *WorkspacesDeregisterWorkspaceDirectoryResult
 
-    DescribeAccount(ctx workflow.Context, input *workspaces.DescribeAccountInput) (*workspaces.DescribeAccountOutput, error)
-    DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountResult
+       DescribeAccount(ctx workflow.Context, input *workspaces.DescribeAccountInput) (*workspaces.DescribeAccountOutput, error)
+       DescribeAccountAsync(ctx workflow.Context, input *workspaces.DescribeAccountInput) *WorkspacesDescribeAccountResult
 
-    DescribeAccountModifications(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) (*workspaces.DescribeAccountModificationsOutput, error)
-    DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsResult
+       DescribeAccountModifications(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) (*workspaces.DescribeAccountModificationsOutput, error)
+       DescribeAccountModificationsAsync(ctx workflow.Context, input *workspaces.DescribeAccountModificationsInput) *WorkspacesDescribeAccountModificationsResult
 
-    DescribeClientProperties(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) (*workspaces.DescribeClientPropertiesOutput, error)
-    DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesResult
+       DescribeClientProperties(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) (*workspaces.DescribeClientPropertiesOutput, error)
+       DescribeClientPropertiesAsync(ctx workflow.Context, input *workspaces.DescribeClientPropertiesInput) *WorkspacesDescribeClientPropertiesResult
 
-    DescribeIpGroups(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) (*workspaces.DescribeIpGroupsOutput, error)
-    DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsResult
+       DescribeIpGroups(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) (*workspaces.DescribeIpGroupsOutput, error)
+       DescribeIpGroupsAsync(ctx workflow.Context, input *workspaces.DescribeIpGroupsInput) *WorkspacesDescribeIpGroupsResult
 
-    DescribeTags(ctx workflow.Context, input *workspaces.DescribeTagsInput) (*workspaces.DescribeTagsOutput, error)
-    DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsResult
+       DescribeTags(ctx workflow.Context, input *workspaces.DescribeTagsInput) (*workspaces.DescribeTagsOutput, error)
+       DescribeTagsAsync(ctx workflow.Context, input *workspaces.DescribeTagsInput) *WorkspacesDescribeTagsResult
 
-    DescribeWorkspaceBundles(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) (*workspaces.DescribeWorkspaceBundlesOutput, error)
-    DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesResult
+       DescribeWorkspaceBundles(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) (*workspaces.DescribeWorkspaceBundlesOutput, error)
+       DescribeWorkspaceBundlesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceBundlesInput) *WorkspacesDescribeWorkspaceBundlesResult
 
-    DescribeWorkspaceDirectories(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) (*workspaces.DescribeWorkspaceDirectoriesOutput, error)
-    DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesResult
+       DescribeWorkspaceDirectories(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) (*workspaces.DescribeWorkspaceDirectoriesOutput, error)
+       DescribeWorkspaceDirectoriesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceDirectoriesInput) *WorkspacesDescribeWorkspaceDirectoriesResult
 
-    DescribeWorkspaceImagePermissions(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error)
-    DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsResult
+       DescribeWorkspaceImagePermissions(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) (*workspaces.DescribeWorkspaceImagePermissionsOutput, error)
+       DescribeWorkspaceImagePermissionsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagePermissionsInput) *WorkspacesDescribeWorkspaceImagePermissionsResult
 
-    DescribeWorkspaceImages(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) (*workspaces.DescribeWorkspaceImagesOutput, error)
-    DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesResult
+       DescribeWorkspaceImages(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) (*workspaces.DescribeWorkspaceImagesOutput, error)
+       DescribeWorkspaceImagesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceImagesInput) *WorkspacesDescribeWorkspaceImagesResult
 
-    DescribeWorkspaceSnapshots(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) (*workspaces.DescribeWorkspaceSnapshotsOutput, error)
-    DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsResult
+       DescribeWorkspaceSnapshots(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) (*workspaces.DescribeWorkspaceSnapshotsOutput, error)
+       DescribeWorkspaceSnapshotsAsync(ctx workflow.Context, input *workspaces.DescribeWorkspaceSnapshotsInput) *WorkspacesDescribeWorkspaceSnapshotsResult
 
-    DescribeWorkspaces(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) (*workspaces.DescribeWorkspacesOutput, error)
-    DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesResult
+       DescribeWorkspaces(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) (*workspaces.DescribeWorkspacesOutput, error)
+       DescribeWorkspacesAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesInput) *WorkspacesDescribeWorkspacesResult
 
-    DescribeWorkspacesConnectionStatus(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error)
-    DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusResult
+       DescribeWorkspacesConnectionStatus(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) (*workspaces.DescribeWorkspacesConnectionStatusOutput, error)
+       DescribeWorkspacesConnectionStatusAsync(ctx workflow.Context, input *workspaces.DescribeWorkspacesConnectionStatusInput) *WorkspacesDescribeWorkspacesConnectionStatusResult
 
-    DisassociateIpGroups(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) (*workspaces.DisassociateIpGroupsOutput, error)
-    DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsResult
+       DisassociateIpGroups(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) (*workspaces.DisassociateIpGroupsOutput, error)
+       DisassociateIpGroupsAsync(ctx workflow.Context, input *workspaces.DisassociateIpGroupsInput) *WorkspacesDisassociateIpGroupsResult
 
-    ImportWorkspaceImage(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) (*workspaces.ImportWorkspaceImageOutput, error)
-    ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageResult
+       ImportWorkspaceImage(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) (*workspaces.ImportWorkspaceImageOutput, error)
+       ImportWorkspaceImageAsync(ctx workflow.Context, input *workspaces.ImportWorkspaceImageInput) *WorkspacesImportWorkspaceImageResult
 
-    ListAvailableManagementCidrRanges(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) (*workspaces.ListAvailableManagementCidrRangesOutput, error)
-    ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesResult
+       ListAvailableManagementCidrRanges(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) (*workspaces.ListAvailableManagementCidrRangesOutput, error)
+       ListAvailableManagementCidrRangesAsync(ctx workflow.Context, input *workspaces.ListAvailableManagementCidrRangesInput) *WorkspacesListAvailableManagementCidrRangesResult
 
-    MigrateWorkspace(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) (*workspaces.MigrateWorkspaceOutput, error)
-    MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceResult
+       MigrateWorkspace(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) (*workspaces.MigrateWorkspaceOutput, error)
+       MigrateWorkspaceAsync(ctx workflow.Context, input *workspaces.MigrateWorkspaceInput) *WorkspacesMigrateWorkspaceResult
 
-    ModifyAccount(ctx workflow.Context, input *workspaces.ModifyAccountInput) (*workspaces.ModifyAccountOutput, error)
-    ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountResult
+       ModifyAccount(ctx workflow.Context, input *workspaces.ModifyAccountInput) (*workspaces.ModifyAccountOutput, error)
+       ModifyAccountAsync(ctx workflow.Context, input *workspaces.ModifyAccountInput) *WorkspacesModifyAccountResult
 
-    ModifyClientProperties(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) (*workspaces.ModifyClientPropertiesOutput, error)
-    ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesResult
+       ModifyClientProperties(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) (*workspaces.ModifyClientPropertiesOutput, error)
+       ModifyClientPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyClientPropertiesInput) *WorkspacesModifyClientPropertiesResult
 
-    ModifySelfservicePermissions(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) (*workspaces.ModifySelfservicePermissionsOutput, error)
-    ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsResult
+       ModifySelfservicePermissions(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) (*workspaces.ModifySelfservicePermissionsOutput, error)
+       ModifySelfservicePermissionsAsync(ctx workflow.Context, input *workspaces.ModifySelfservicePermissionsInput) *WorkspacesModifySelfservicePermissionsResult
 
-    ModifyWorkspaceAccessProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error)
-    ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesResult
+       ModifyWorkspaceAccessProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) (*workspaces.ModifyWorkspaceAccessPropertiesOutput, error)
+       ModifyWorkspaceAccessPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceAccessPropertiesInput) *WorkspacesModifyWorkspaceAccessPropertiesResult
 
-    ModifyWorkspaceCreationProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error)
-    ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesResult
+       ModifyWorkspaceCreationProperties(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) (*workspaces.ModifyWorkspaceCreationPropertiesOutput, error)
+       ModifyWorkspaceCreationPropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceCreationPropertiesInput) *WorkspacesModifyWorkspaceCreationPropertiesResult
 
-    ModifyWorkspaceProperties(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) (*workspaces.ModifyWorkspacePropertiesOutput, error)
-    ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesResult
+       ModifyWorkspaceProperties(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) (*workspaces.ModifyWorkspacePropertiesOutput, error)
+       ModifyWorkspacePropertiesAsync(ctx workflow.Context, input *workspaces.ModifyWorkspacePropertiesInput) *WorkspacesModifyWorkspacePropertiesResult
 
-    ModifyWorkspaceState(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) (*workspaces.ModifyWorkspaceStateOutput, error)
-    ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateResult
+       ModifyWorkspaceState(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) (*workspaces.ModifyWorkspaceStateOutput, error)
+       ModifyWorkspaceStateAsync(ctx workflow.Context, input *workspaces.ModifyWorkspaceStateInput) *WorkspacesModifyWorkspaceStateResult
 
-    RebootWorkspaces(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) (*workspaces.RebootWorkspacesOutput, error)
-    RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesResult
+       RebootWorkspaces(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) (*workspaces.RebootWorkspacesOutput, error)
+       RebootWorkspacesAsync(ctx workflow.Context, input *workspaces.RebootWorkspacesInput) *WorkspacesRebootWorkspacesResult
 
-    RebuildWorkspaces(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) (*workspaces.RebuildWorkspacesOutput, error)
-    RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesResult
+       RebuildWorkspaces(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) (*workspaces.RebuildWorkspacesOutput, error)
+       RebuildWorkspacesAsync(ctx workflow.Context, input *workspaces.RebuildWorkspacesInput) *WorkspacesRebuildWorkspacesResult
 
-    RegisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) (*workspaces.RegisterWorkspaceDirectoryOutput, error)
-    RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryResult
+       RegisterWorkspaceDirectory(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) (*workspaces.RegisterWorkspaceDirectoryOutput, error)
+       RegisterWorkspaceDirectoryAsync(ctx workflow.Context, input *workspaces.RegisterWorkspaceDirectoryInput) *WorkspacesRegisterWorkspaceDirectoryResult
 
-    RestoreWorkspace(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) (*workspaces.RestoreWorkspaceOutput, error)
-    RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceResult
+       RestoreWorkspace(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) (*workspaces.RestoreWorkspaceOutput, error)
+       RestoreWorkspaceAsync(ctx workflow.Context, input *workspaces.RestoreWorkspaceInput) *WorkspacesRestoreWorkspaceResult
 
-    RevokeIpRules(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) (*workspaces.RevokeIpRulesOutput, error)
-    RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesResult
+       RevokeIpRules(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) (*workspaces.RevokeIpRulesOutput, error)
+       RevokeIpRulesAsync(ctx workflow.Context, input *workspaces.RevokeIpRulesInput) *WorkspacesRevokeIpRulesResult
 
-    StartWorkspaces(ctx workflow.Context, input *workspaces.StartWorkspacesInput) (*workspaces.StartWorkspacesOutput, error)
-    StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesResult
+       StartWorkspaces(ctx workflow.Context, input *workspaces.StartWorkspacesInput) (*workspaces.StartWorkspacesOutput, error)
+       StartWorkspacesAsync(ctx workflow.Context, input *workspaces.StartWorkspacesInput) *WorkspacesStartWorkspacesResult
 
-    StopWorkspaces(ctx workflow.Context, input *workspaces.StopWorkspacesInput) (*workspaces.StopWorkspacesOutput, error)
-    StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesResult
+       StopWorkspaces(ctx workflow.Context, input *workspaces.StopWorkspacesInput) (*workspaces.StopWorkspacesOutput, error)
+       StopWorkspacesAsync(ctx workflow.Context, input *workspaces.StopWorkspacesInput) *WorkspacesStopWorkspacesResult
 
-    TerminateWorkspaces(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) (*workspaces.TerminateWorkspacesOutput, error)
-    TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesResult
+       TerminateWorkspaces(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) (*workspaces.TerminateWorkspacesOutput, error)
+       TerminateWorkspacesAsync(ctx workflow.Context, input *workspaces.TerminateWorkspacesInput) *WorkspacesTerminateWorkspacesResult
 
-    UpdateRulesOfIpGroup(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) (*workspaces.UpdateRulesOfIpGroupOutput, error)
-    UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupResult
+       UpdateRulesOfIpGroup(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) (*workspaces.UpdateRulesOfIpGroupOutput, error)
+       UpdateRulesOfIpGroupAsync(ctx workflow.Context, input *workspaces.UpdateRulesOfIpGroupInput) *WorkspacesUpdateRulesOfIpGroupResult
 
-    UpdateWorkspaceImagePermission(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) (*workspaces.UpdateWorkspaceImagePermissionOutput, error)
-    UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionResult
+       UpdateWorkspaceImagePermission(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) (*workspaces.UpdateWorkspaceImagePermissionOutput, error)
+       UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionResult
 }
 
 type WorkspacesAssociateIpGroupsResult struct {

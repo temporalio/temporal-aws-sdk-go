@@ -7,23 +7,23 @@ import (
 )
 
 type BraketClient interface {
-    CancelQuantumTask(ctx workflow.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error)
-    CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskResult
+       CancelQuantumTask(ctx workflow.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error)
+       CancelQuantumTaskAsync(ctx workflow.Context, input *braket.CancelQuantumTaskInput) *BraketCancelQuantumTaskResult
 
-    CreateQuantumTask(ctx workflow.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error)
-    CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskResult
+       CreateQuantumTask(ctx workflow.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error)
+       CreateQuantumTaskAsync(ctx workflow.Context, input *braket.CreateQuantumTaskInput) *BraketCreateQuantumTaskResult
 
-    GetDevice(ctx workflow.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error)
-    GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceResult
+       GetDevice(ctx workflow.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error)
+       GetDeviceAsync(ctx workflow.Context, input *braket.GetDeviceInput) *BraketGetDeviceResult
 
-    GetQuantumTask(ctx workflow.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error)
-    GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskResult
+       GetQuantumTask(ctx workflow.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error)
+       GetQuantumTaskAsync(ctx workflow.Context, input *braket.GetQuantumTaskInput) *BraketGetQuantumTaskResult
 
-    SearchDevices(ctx workflow.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error)
-    SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesResult
+       SearchDevices(ctx workflow.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error)
+       SearchDevicesAsync(ctx workflow.Context, input *braket.SearchDevicesInput) *BraketSearchDevicesResult
 
-    SearchQuantumTasks(ctx workflow.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error)
-    SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksResult
+       SearchQuantumTasks(ctx workflow.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error)
+       SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksResult
 }
 
 type BraketCancelQuantumTaskResult struct {

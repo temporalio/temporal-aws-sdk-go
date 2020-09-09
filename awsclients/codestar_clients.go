@@ -7,59 +7,59 @@ import (
 )
 
 type CodeStarClient interface {
-    AssociateTeamMember(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error)
-    AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberResult
+       AssociateTeamMember(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error)
+       AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodestarAssociateTeamMemberResult
 
-    CreateProject(ctx workflow.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error)
-    CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectResult
+       CreateProject(ctx workflow.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error)
+       CreateProjectAsync(ctx workflow.Context, input *codestar.CreateProjectInput) *CodestarCreateProjectResult
 
-    CreateUserProfile(ctx workflow.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error)
-    CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileResult
+       CreateUserProfile(ctx workflow.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error)
+       CreateUserProfileAsync(ctx workflow.Context, input *codestar.CreateUserProfileInput) *CodestarCreateUserProfileResult
 
-    DeleteProject(ctx workflow.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error)
-    DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectResult
+       DeleteProject(ctx workflow.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error)
+       DeleteProjectAsync(ctx workflow.Context, input *codestar.DeleteProjectInput) *CodestarDeleteProjectResult
 
-    DeleteUserProfile(ctx workflow.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error)
-    DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileResult
+       DeleteUserProfile(ctx workflow.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error)
+       DeleteUserProfileAsync(ctx workflow.Context, input *codestar.DeleteUserProfileInput) *CodestarDeleteUserProfileResult
 
-    DescribeProject(ctx workflow.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error)
-    DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectResult
+       DescribeProject(ctx workflow.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error)
+       DescribeProjectAsync(ctx workflow.Context, input *codestar.DescribeProjectInput) *CodestarDescribeProjectResult
 
-    DescribeUserProfile(ctx workflow.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error)
-    DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileResult
+       DescribeUserProfile(ctx workflow.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error)
+       DescribeUserProfileAsync(ctx workflow.Context, input *codestar.DescribeUserProfileInput) *CodestarDescribeUserProfileResult
 
-    DisassociateTeamMember(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error)
-    DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberResult
+       DisassociateTeamMember(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error)
+       DisassociateTeamMemberAsync(ctx workflow.Context, input *codestar.DisassociateTeamMemberInput) *CodestarDisassociateTeamMemberResult
 
-    ListProjects(ctx workflow.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error)
-    ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsResult
+       ListProjects(ctx workflow.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error)
+       ListProjectsAsync(ctx workflow.Context, input *codestar.ListProjectsInput) *CodestarListProjectsResult
 
-    ListResources(ctx workflow.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error)
-    ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesResult
+       ListResources(ctx workflow.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error)
+       ListResourcesAsync(ctx workflow.Context, input *codestar.ListResourcesInput) *CodestarListResourcesResult
 
-    ListTagsForProject(ctx workflow.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error)
-    ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectResult
+       ListTagsForProject(ctx workflow.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error)
+       ListTagsForProjectAsync(ctx workflow.Context, input *codestar.ListTagsForProjectInput) *CodestarListTagsForProjectResult
 
-    ListTeamMembers(ctx workflow.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error)
-    ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersResult
+       ListTeamMembers(ctx workflow.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error)
+       ListTeamMembersAsync(ctx workflow.Context, input *codestar.ListTeamMembersInput) *CodestarListTeamMembersResult
 
-    ListUserProfiles(ctx workflow.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error)
-    ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesResult
+       ListUserProfiles(ctx workflow.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error)
+       ListUserProfilesAsync(ctx workflow.Context, input *codestar.ListUserProfilesInput) *CodestarListUserProfilesResult
 
-    TagProject(ctx workflow.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error)
-    TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectResult
+       TagProject(ctx workflow.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error)
+       TagProjectAsync(ctx workflow.Context, input *codestar.TagProjectInput) *CodestarTagProjectResult
 
-    UntagProject(ctx workflow.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error)
-    UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectResult
+       UntagProject(ctx workflow.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error)
+       UntagProjectAsync(ctx workflow.Context, input *codestar.UntagProjectInput) *CodestarUntagProjectResult
 
-    UpdateProject(ctx workflow.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error)
-    UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectResult
+       UpdateProject(ctx workflow.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error)
+       UpdateProjectAsync(ctx workflow.Context, input *codestar.UpdateProjectInput) *CodestarUpdateProjectResult
 
-    UpdateTeamMember(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error)
-    UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberResult
+       UpdateTeamMember(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error)
+       UpdateTeamMemberAsync(ctx workflow.Context, input *codestar.UpdateTeamMemberInput) *CodestarUpdateTeamMemberResult
 
-    UpdateUserProfile(ctx workflow.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error)
-    UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileResult
+       UpdateUserProfile(ctx workflow.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error)
+       UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileResult
 }
 
 type CodestarAssociateTeamMemberResult struct {

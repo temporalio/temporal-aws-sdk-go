@@ -7,77 +7,77 @@ import (
 )
 
 type KendraClient interface {
-    BatchDeleteDocument(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error)
-    BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentResult
+       BatchDeleteDocument(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error)
+       BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentResult
 
-    BatchPutDocument(ctx workflow.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error)
-    BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentResult
+       BatchPutDocument(ctx workflow.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error)
+       BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentResult
 
-    CreateDataSource(ctx workflow.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error)
-    CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceResult
+       CreateDataSource(ctx workflow.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error)
+       CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceResult
 
-    CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error)
-    CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqResult
+       CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error)
+       CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqResult
 
-    CreateIndex(ctx workflow.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error)
-    CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexResult
+       CreateIndex(ctx workflow.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error)
+       CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexResult
 
-    DeleteDataSource(ctx workflow.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error)
-    DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceResult
+       DeleteDataSource(ctx workflow.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error)
+       DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceResult
 
-    DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error)
-    DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqResult
+       DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error)
+       DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqResult
 
-    DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error)
-    DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexResult
+       DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error)
+       DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexResult
 
-    DescribeDataSource(ctx workflow.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error)
-    DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceResult
+       DescribeDataSource(ctx workflow.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error)
+       DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceResult
 
-    DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error)
-    DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqResult
+       DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error)
+       DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqResult
 
-    DescribeIndex(ctx workflow.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error)
-    DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexResult
+       DescribeIndex(ctx workflow.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error)
+       DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexResult
 
-    ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error)
-    ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsResult
+       ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error)
+       ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsResult
 
-    ListDataSources(ctx workflow.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error)
-    ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesResult
+       ListDataSources(ctx workflow.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error)
+       ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesResult
 
-    ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error)
-    ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsResult
+       ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error)
+       ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsResult
 
-    ListIndices(ctx workflow.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error)
-    ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesResult
+       ListIndices(ctx workflow.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error)
+       ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesResult
 
-    ListTagsForResource(ctx workflow.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceResult
 
-    Query(ctx workflow.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error)
-    QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryResult
+       Query(ctx workflow.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error)
+       QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryResult
 
-    StartDataSourceSyncJob(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error)
-    StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobResult
+       StartDataSourceSyncJob(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error)
+       StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobResult
 
-    StopDataSourceSyncJob(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error)
-    StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobResult
+       StopDataSourceSyncJob(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error)
+       StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobResult
 
-    SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error)
-    SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackResult
+       SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error)
+       SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackResult
 
-    TagResource(ctx workflow.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceResult
+       TagResource(ctx workflow.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceResult
+       UntagResource(ctx workflow.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceResult
 
-    UpdateDataSource(ctx workflow.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error)
-    UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceResult
+       UpdateDataSource(ctx workflow.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error)
+       UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceResult
 
-    UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error)
-    UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult
+       UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error)
+       UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult
 }
 
 type KendraBatchDeleteDocumentResult struct {

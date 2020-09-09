@@ -7,116 +7,116 @@ import (
 )
 
 type AmplifyClient interface {
-    CreateApp(ctx workflow.Context, input *amplify.CreateAppInput) (*amplify.CreateAppOutput, error)
-    CreateAppAsync(ctx workflow.Context, input *amplify.CreateAppInput) *AmplifyCreateAppResult
+       CreateApp(ctx workflow.Context, input *amplify.CreateAppInput) (*amplify.CreateAppOutput, error)
+       CreateAppAsync(ctx workflow.Context, input *amplify.CreateAppInput) *AmplifyCreateAppResult
 
-    CreateBackendEnvironment(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error)
-    CreateBackendEnvironmentAsync(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) *AmplifyCreateBackendEnvironmentResult
+       CreateBackendEnvironment(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error)
+       CreateBackendEnvironmentAsync(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) *AmplifyCreateBackendEnvironmentResult
 
-    CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error)
-    CreateBranchAsync(ctx workflow.Context, input *amplify.CreateBranchInput) *AmplifyCreateBranchResult
+       CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error)
+       CreateBranchAsync(ctx workflow.Context, input *amplify.CreateBranchInput) *AmplifyCreateBranchResult
 
-    CreateDeployment(ctx workflow.Context, input *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error)
-    CreateDeploymentAsync(ctx workflow.Context, input *amplify.CreateDeploymentInput) *AmplifyCreateDeploymentResult
+       CreateDeployment(ctx workflow.Context, input *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error)
+       CreateDeploymentAsync(ctx workflow.Context, input *amplify.CreateDeploymentInput) *AmplifyCreateDeploymentResult
 
-    CreateDomainAssociation(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error)
-    CreateDomainAssociationAsync(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) *AmplifyCreateDomainAssociationResult
+       CreateDomainAssociation(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error)
+       CreateDomainAssociationAsync(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) *AmplifyCreateDomainAssociationResult
 
-    CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error)
-    CreateWebhookAsync(ctx workflow.Context, input *amplify.CreateWebhookInput) *AmplifyCreateWebhookResult
+       CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error)
+       CreateWebhookAsync(ctx workflow.Context, input *amplify.CreateWebhookInput) *AmplifyCreateWebhookResult
 
-    DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error)
-    DeleteAppAsync(ctx workflow.Context, input *amplify.DeleteAppInput) *AmplifyDeleteAppResult
+       DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error)
+       DeleteAppAsync(ctx workflow.Context, input *amplify.DeleteAppInput) *AmplifyDeleteAppResult
 
-    DeleteBackendEnvironment(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error)
-    DeleteBackendEnvironmentAsync(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) *AmplifyDeleteBackendEnvironmentResult
+       DeleteBackendEnvironment(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error)
+       DeleteBackendEnvironmentAsync(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) *AmplifyDeleteBackendEnvironmentResult
 
-    DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error)
-    DeleteBranchAsync(ctx workflow.Context, input *amplify.DeleteBranchInput) *AmplifyDeleteBranchResult
+       DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error)
+       DeleteBranchAsync(ctx workflow.Context, input *amplify.DeleteBranchInput) *AmplifyDeleteBranchResult
 
-    DeleteDomainAssociation(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error)
-    DeleteDomainAssociationAsync(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) *AmplifyDeleteDomainAssociationResult
+       DeleteDomainAssociation(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error)
+       DeleteDomainAssociationAsync(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) *AmplifyDeleteDomainAssociationResult
 
-    DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error)
-    DeleteJobAsync(ctx workflow.Context, input *amplify.DeleteJobInput) *AmplifyDeleteJobResult
+       DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error)
+       DeleteJobAsync(ctx workflow.Context, input *amplify.DeleteJobInput) *AmplifyDeleteJobResult
 
-    DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error)
-    DeleteWebhookAsync(ctx workflow.Context, input *amplify.DeleteWebhookInput) *AmplifyDeleteWebhookResult
+       DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error)
+       DeleteWebhookAsync(ctx workflow.Context, input *amplify.DeleteWebhookInput) *AmplifyDeleteWebhookResult
 
-    GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error)
-    GenerateAccessLogsAsync(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) *AmplifyGenerateAccessLogsResult
+       GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error)
+       GenerateAccessLogsAsync(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) *AmplifyGenerateAccessLogsResult
 
-    GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplify.GetAppOutput, error)
-    GetAppAsync(ctx workflow.Context, input *amplify.GetAppInput) *AmplifyGetAppResult
+       GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplify.GetAppOutput, error)
+       GetAppAsync(ctx workflow.Context, input *amplify.GetAppInput) *AmplifyGetAppResult
 
-    GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error)
-    GetArtifactUrlAsync(ctx workflow.Context, input *amplify.GetArtifactUrlInput) *AmplifyGetArtifactUrlResult
+       GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error)
+       GetArtifactUrlAsync(ctx workflow.Context, input *amplify.GetArtifactUrlInput) *AmplifyGetArtifactUrlResult
 
-    GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error)
-    GetBackendEnvironmentAsync(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) *AmplifyGetBackendEnvironmentResult
+       GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error)
+       GetBackendEnvironmentAsync(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) *AmplifyGetBackendEnvironmentResult
 
-    GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*amplify.GetBranchOutput, error)
-    GetBranchAsync(ctx workflow.Context, input *amplify.GetBranchInput) *AmplifyGetBranchResult
+       GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*amplify.GetBranchOutput, error)
+       GetBranchAsync(ctx workflow.Context, input *amplify.GetBranchInput) *AmplifyGetBranchResult
 
-    GetDomainAssociation(ctx workflow.Context, input *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error)
-    GetDomainAssociationAsync(ctx workflow.Context, input *amplify.GetDomainAssociationInput) *AmplifyGetDomainAssociationResult
+       GetDomainAssociation(ctx workflow.Context, input *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error)
+       GetDomainAssociationAsync(ctx workflow.Context, input *amplify.GetDomainAssociationInput) *AmplifyGetDomainAssociationResult
 
-    GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplify.GetJobOutput, error)
-    GetJobAsync(ctx workflow.Context, input *amplify.GetJobInput) *AmplifyGetJobResult
+       GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplify.GetJobOutput, error)
+       GetJobAsync(ctx workflow.Context, input *amplify.GetJobInput) *AmplifyGetJobResult
 
-    GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error)
-    GetWebhookAsync(ctx workflow.Context, input *amplify.GetWebhookInput) *AmplifyGetWebhookResult
+       GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error)
+       GetWebhookAsync(ctx workflow.Context, input *amplify.GetWebhookInput) *AmplifyGetWebhookResult
 
-    ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*amplify.ListAppsOutput, error)
-    ListAppsAsync(ctx workflow.Context, input *amplify.ListAppsInput) *AmplifyListAppsResult
+       ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*amplify.ListAppsOutput, error)
+       ListAppsAsync(ctx workflow.Context, input *amplify.ListAppsInput) *AmplifyListAppsResult
 
-    ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error)
-    ListArtifactsAsync(ctx workflow.Context, input *amplify.ListArtifactsInput) *AmplifyListArtifactsResult
+       ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error)
+       ListArtifactsAsync(ctx workflow.Context, input *amplify.ListArtifactsInput) *AmplifyListArtifactsResult
 
-    ListBackendEnvironments(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error)
-    ListBackendEnvironmentsAsync(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) *AmplifyListBackendEnvironmentsResult
+       ListBackendEnvironments(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error)
+       ListBackendEnvironmentsAsync(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) *AmplifyListBackendEnvironmentsResult
 
-    ListBranches(ctx workflow.Context, input *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error)
-    ListBranchesAsync(ctx workflow.Context, input *amplify.ListBranchesInput) *AmplifyListBranchesResult
+       ListBranches(ctx workflow.Context, input *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error)
+       ListBranchesAsync(ctx workflow.Context, input *amplify.ListBranchesInput) *AmplifyListBranchesResult
 
-    ListDomainAssociations(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error)
-    ListDomainAssociationsAsync(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) *AmplifyListDomainAssociationsResult
+       ListDomainAssociations(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error)
+       ListDomainAssociationsAsync(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) *AmplifyListDomainAssociationsResult
 
-    ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*amplify.ListJobsOutput, error)
-    ListJobsAsync(ctx workflow.Context, input *amplify.ListJobsInput) *AmplifyListJobsResult
+       ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*amplify.ListJobsOutput, error)
+       ListJobsAsync(ctx workflow.Context, input *amplify.ListJobsInput) *AmplifyListJobsResult
 
-    ListTagsForResource(ctx workflow.Context, input *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *amplify.ListTagsForResourceInput) *AmplifyListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *amplify.ListTagsForResourceInput) *AmplifyListTagsForResourceResult
 
-    ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error)
-    ListWebhooksAsync(ctx workflow.Context, input *amplify.ListWebhooksInput) *AmplifyListWebhooksResult
+       ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error)
+       ListWebhooksAsync(ctx workflow.Context, input *amplify.ListWebhooksInput) *AmplifyListWebhooksResult
 
-    StartDeployment(ctx workflow.Context, input *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error)
-    StartDeploymentAsync(ctx workflow.Context, input *amplify.StartDeploymentInput) *AmplifyStartDeploymentResult
+       StartDeployment(ctx workflow.Context, input *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error)
+       StartDeploymentAsync(ctx workflow.Context, input *amplify.StartDeploymentInput) *AmplifyStartDeploymentResult
 
-    StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*amplify.StartJobOutput, error)
-    StartJobAsync(ctx workflow.Context, input *amplify.StartJobInput) *AmplifyStartJobResult
+       StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*amplify.StartJobOutput, error)
+       StartJobAsync(ctx workflow.Context, input *amplify.StartJobInput) *AmplifyStartJobResult
 
-    StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*amplify.StopJobOutput, error)
-    StopJobAsync(ctx workflow.Context, input *amplify.StopJobInput) *AmplifyStopJobResult
+       StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*amplify.StopJobOutput, error)
+       StopJobAsync(ctx workflow.Context, input *amplify.StopJobInput) *AmplifyStopJobResult
 
-    TagResource(ctx workflow.Context, input *amplify.TagResourceInput) (*amplify.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *amplify.TagResourceInput) *AmplifyTagResourceResult
+       TagResource(ctx workflow.Context, input *amplify.TagResourceInput) (*amplify.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *amplify.TagResourceInput) *AmplifyTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *amplify.UntagResourceInput) *AmplifyUntagResourceResult
+       UntagResource(ctx workflow.Context, input *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *amplify.UntagResourceInput) *AmplifyUntagResourceResult
 
-    UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error)
-    UpdateAppAsync(ctx workflow.Context, input *amplify.UpdateAppInput) *AmplifyUpdateAppResult
+       UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error)
+       UpdateAppAsync(ctx workflow.Context, input *amplify.UpdateAppInput) *AmplifyUpdateAppResult
 
-    UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error)
-    UpdateBranchAsync(ctx workflow.Context, input *amplify.UpdateBranchInput) *AmplifyUpdateBranchResult
+       UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error)
+       UpdateBranchAsync(ctx workflow.Context, input *amplify.UpdateBranchInput) *AmplifyUpdateBranchResult
 
-    UpdateDomainAssociation(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error)
-    UpdateDomainAssociationAsync(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) *AmplifyUpdateDomainAssociationResult
+       UpdateDomainAssociation(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error)
+       UpdateDomainAssociationAsync(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) *AmplifyUpdateDomainAssociationResult
 
-    UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error)
-    UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookResult
+       UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error)
+       UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookResult
 }
 
 type AmplifyCreateAppResult struct {

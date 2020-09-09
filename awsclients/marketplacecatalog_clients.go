@@ -7,23 +7,23 @@ import (
 )
 
 type MarketplaceCatalogClient interface {
-    CancelChangeSet(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error)
-    CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplacecatalogCancelChangeSetResult
+       CancelChangeSet(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error)
+       CancelChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.CancelChangeSetInput) *MarketplacecatalogCancelChangeSetResult
 
-    DescribeChangeSet(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error)
-    DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplacecatalogDescribeChangeSetResult
+       DescribeChangeSet(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error)
+       DescribeChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.DescribeChangeSetInput) *MarketplacecatalogDescribeChangeSetResult
 
-    DescribeEntity(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error)
-    DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplacecatalogDescribeEntityResult
+       DescribeEntity(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error)
+       DescribeEntityAsync(ctx workflow.Context, input *marketplacecatalog.DescribeEntityInput) *MarketplacecatalogDescribeEntityResult
 
-    ListChangeSets(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error)
-    ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplacecatalogListChangeSetsResult
+       ListChangeSets(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error)
+       ListChangeSetsAsync(ctx workflow.Context, input *marketplacecatalog.ListChangeSetsInput) *MarketplacecatalogListChangeSetsResult
 
-    ListEntities(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error)
-    ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplacecatalogListEntitiesResult
+       ListEntities(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error)
+       ListEntitiesAsync(ctx workflow.Context, input *marketplacecatalog.ListEntitiesInput) *MarketplacecatalogListEntitiesResult
 
-    StartChangeSet(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error)
-    StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplacecatalogStartChangeSetResult
+       StartChangeSet(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error)
+       StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplacecatalogStartChangeSetResult
 }
 
 type MarketplacecatalogCancelChangeSetResult struct {

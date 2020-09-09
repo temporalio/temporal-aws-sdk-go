@@ -7,62 +7,62 @@ import (
 )
 
 type SnowballClient interface {
-    CancelCluster(ctx workflow.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error)
-    CancelClusterAsync(ctx workflow.Context, input *snowball.CancelClusterInput) *SnowballCancelClusterResult
+       CancelCluster(ctx workflow.Context, input *snowball.CancelClusterInput) (*snowball.CancelClusterOutput, error)
+       CancelClusterAsync(ctx workflow.Context, input *snowball.CancelClusterInput) *SnowballCancelClusterResult
 
-    CancelJob(ctx workflow.Context, input *snowball.CancelJobInput) (*snowball.CancelJobOutput, error)
-    CancelJobAsync(ctx workflow.Context, input *snowball.CancelJobInput) *SnowballCancelJobResult
+       CancelJob(ctx workflow.Context, input *snowball.CancelJobInput) (*snowball.CancelJobOutput, error)
+       CancelJobAsync(ctx workflow.Context, input *snowball.CancelJobInput) *SnowballCancelJobResult
 
-    CreateAddress(ctx workflow.Context, input *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error)
-    CreateAddressAsync(ctx workflow.Context, input *snowball.CreateAddressInput) *SnowballCreateAddressResult
+       CreateAddress(ctx workflow.Context, input *snowball.CreateAddressInput) (*snowball.CreateAddressOutput, error)
+       CreateAddressAsync(ctx workflow.Context, input *snowball.CreateAddressInput) *SnowballCreateAddressResult
 
-    CreateCluster(ctx workflow.Context, input *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error)
-    CreateClusterAsync(ctx workflow.Context, input *snowball.CreateClusterInput) *SnowballCreateClusterResult
+       CreateCluster(ctx workflow.Context, input *snowball.CreateClusterInput) (*snowball.CreateClusterOutput, error)
+       CreateClusterAsync(ctx workflow.Context, input *snowball.CreateClusterInput) *SnowballCreateClusterResult
 
-    CreateJob(ctx workflow.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error)
-    CreateJobAsync(ctx workflow.Context, input *snowball.CreateJobInput) *SnowballCreateJobResult
+       CreateJob(ctx workflow.Context, input *snowball.CreateJobInput) (*snowball.CreateJobOutput, error)
+       CreateJobAsync(ctx workflow.Context, input *snowball.CreateJobInput) *SnowballCreateJobResult
 
-    DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error)
-    DescribeAddressAsync(ctx workflow.Context, input *snowball.DescribeAddressInput) *SnowballDescribeAddressResult
+       DescribeAddress(ctx workflow.Context, input *snowball.DescribeAddressInput) (*snowball.DescribeAddressOutput, error)
+       DescribeAddressAsync(ctx workflow.Context, input *snowball.DescribeAddressInput) *SnowballDescribeAddressResult
 
-    DescribeAddresses(ctx workflow.Context, input *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error)
-    DescribeAddressesAsync(ctx workflow.Context, input *snowball.DescribeAddressesInput) *SnowballDescribeAddressesResult
+       DescribeAddresses(ctx workflow.Context, input *snowball.DescribeAddressesInput) (*snowball.DescribeAddressesOutput, error)
+       DescribeAddressesAsync(ctx workflow.Context, input *snowball.DescribeAddressesInput) *SnowballDescribeAddressesResult
 
-    DescribeCluster(ctx workflow.Context, input *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error)
-    DescribeClusterAsync(ctx workflow.Context, input *snowball.DescribeClusterInput) *SnowballDescribeClusterResult
+       DescribeCluster(ctx workflow.Context, input *snowball.DescribeClusterInput) (*snowball.DescribeClusterOutput, error)
+       DescribeClusterAsync(ctx workflow.Context, input *snowball.DescribeClusterInput) *SnowballDescribeClusterResult
 
-    DescribeJob(ctx workflow.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error)
-    DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *SnowballDescribeJobResult
+       DescribeJob(ctx workflow.Context, input *snowball.DescribeJobInput) (*snowball.DescribeJobOutput, error)
+       DescribeJobAsync(ctx workflow.Context, input *snowball.DescribeJobInput) *SnowballDescribeJobResult
 
-    GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error)
-    GetJobManifestAsync(ctx workflow.Context, input *snowball.GetJobManifestInput) *SnowballGetJobManifestResult
+       GetJobManifest(ctx workflow.Context, input *snowball.GetJobManifestInput) (*snowball.GetJobManifestOutput, error)
+       GetJobManifestAsync(ctx workflow.Context, input *snowball.GetJobManifestInput) *SnowballGetJobManifestResult
 
-    GetJobUnlockCode(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error)
-    GetJobUnlockCodeAsync(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) *SnowballGetJobUnlockCodeResult
+       GetJobUnlockCode(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) (*snowball.GetJobUnlockCodeOutput, error)
+       GetJobUnlockCodeAsync(ctx workflow.Context, input *snowball.GetJobUnlockCodeInput) *SnowballGetJobUnlockCodeResult
 
-    GetSnowballUsage(ctx workflow.Context, input *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error)
-    GetSnowballUsageAsync(ctx workflow.Context, input *snowball.GetSnowballUsageInput) *SnowballGetSnowballUsageResult
+       GetSnowballUsage(ctx workflow.Context, input *snowball.GetSnowballUsageInput) (*snowball.GetSnowballUsageOutput, error)
+       GetSnowballUsageAsync(ctx workflow.Context, input *snowball.GetSnowballUsageInput) *SnowballGetSnowballUsageResult
 
-    GetSoftwareUpdates(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error)
-    GetSoftwareUpdatesAsync(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) *SnowballGetSoftwareUpdatesResult
+       GetSoftwareUpdates(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) (*snowball.GetSoftwareUpdatesOutput, error)
+       GetSoftwareUpdatesAsync(ctx workflow.Context, input *snowball.GetSoftwareUpdatesInput) *SnowballGetSoftwareUpdatesResult
 
-    ListClusterJobs(ctx workflow.Context, input *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error)
-    ListClusterJobsAsync(ctx workflow.Context, input *snowball.ListClusterJobsInput) *SnowballListClusterJobsResult
+       ListClusterJobs(ctx workflow.Context, input *snowball.ListClusterJobsInput) (*snowball.ListClusterJobsOutput, error)
+       ListClusterJobsAsync(ctx workflow.Context, input *snowball.ListClusterJobsInput) *SnowballListClusterJobsResult
 
-    ListClusters(ctx workflow.Context, input *snowball.ListClustersInput) (*snowball.ListClustersOutput, error)
-    ListClustersAsync(ctx workflow.Context, input *snowball.ListClustersInput) *SnowballListClustersResult
+       ListClusters(ctx workflow.Context, input *snowball.ListClustersInput) (*snowball.ListClustersOutput, error)
+       ListClustersAsync(ctx workflow.Context, input *snowball.ListClustersInput) *SnowballListClustersResult
 
-    ListCompatibleImages(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error)
-    ListCompatibleImagesAsync(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) *SnowballListCompatibleImagesResult
+       ListCompatibleImages(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) (*snowball.ListCompatibleImagesOutput, error)
+       ListCompatibleImagesAsync(ctx workflow.Context, input *snowball.ListCompatibleImagesInput) *SnowballListCompatibleImagesResult
 
-    ListJobs(ctx workflow.Context, input *snowball.ListJobsInput) (*snowball.ListJobsOutput, error)
-    ListJobsAsync(ctx workflow.Context, input *snowball.ListJobsInput) *SnowballListJobsResult
+       ListJobs(ctx workflow.Context, input *snowball.ListJobsInput) (*snowball.ListJobsOutput, error)
+       ListJobsAsync(ctx workflow.Context, input *snowball.ListJobsInput) *SnowballListJobsResult
 
-    UpdateCluster(ctx workflow.Context, input *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error)
-    UpdateClusterAsync(ctx workflow.Context, input *snowball.UpdateClusterInput) *SnowballUpdateClusterResult
+       UpdateCluster(ctx workflow.Context, input *snowball.UpdateClusterInput) (*snowball.UpdateClusterOutput, error)
+       UpdateClusterAsync(ctx workflow.Context, input *snowball.UpdateClusterInput) *SnowballUpdateClusterResult
 
-    UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error)
-    UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult
+       UpdateJob(ctx workflow.Context, input *snowball.UpdateJobInput) (*snowball.UpdateJobOutput, error)
+       UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult
 }
 
 type SnowballCancelClusterResult struct {

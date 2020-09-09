@@ -7,305 +7,305 @@ import (
 )
 
 type CognitoIdentityProviderClient interface {
-    AddCustomAttributes(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) (*cognitoidentityprovider.AddCustomAttributesOutput, error)
-    AddCustomAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) *CognitoidentityproviderAddCustomAttributesResult
+       AddCustomAttributes(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) (*cognitoidentityprovider.AddCustomAttributesOutput, error)
+       AddCustomAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AddCustomAttributesInput) *CognitoidentityproviderAddCustomAttributesResult
 
-    AdminAddUserToGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error)
-    AdminAddUserToGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) *CognitoidentityproviderAdminAddUserToGroupResult
+       AdminAddUserToGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) (*cognitoidentityprovider.AdminAddUserToGroupOutput, error)
+       AdminAddUserToGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminAddUserToGroupInput) *CognitoidentityproviderAdminAddUserToGroupResult
 
-    AdminConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) (*cognitoidentityprovider.AdminConfirmSignUpOutput, error)
-    AdminConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) *CognitoidentityproviderAdminConfirmSignUpResult
+       AdminConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) (*cognitoidentityprovider.AdminConfirmSignUpOutput, error)
+       AdminConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminConfirmSignUpInput) *CognitoidentityproviderAdminConfirmSignUpResult
 
-    AdminCreateUser(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) (*cognitoidentityprovider.AdminCreateUserOutput, error)
-    AdminCreateUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) *CognitoidentityproviderAdminCreateUserResult
+       AdminCreateUser(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) (*cognitoidentityprovider.AdminCreateUserOutput, error)
+       AdminCreateUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminCreateUserInput) *CognitoidentityproviderAdminCreateUserResult
 
-    AdminDeleteUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) (*cognitoidentityprovider.AdminDeleteUserOutput, error)
-    AdminDeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) *CognitoidentityproviderAdminDeleteUserResult
+       AdminDeleteUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) (*cognitoidentityprovider.AdminDeleteUserOutput, error)
+       AdminDeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserInput) *CognitoidentityproviderAdminDeleteUserResult
 
-    AdminDeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) (*cognitoidentityprovider.AdminDeleteUserAttributesOutput, error)
-    AdminDeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) *CognitoidentityproviderAdminDeleteUserAttributesResult
+       AdminDeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) (*cognitoidentityprovider.AdminDeleteUserAttributesOutput, error)
+       AdminDeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDeleteUserAttributesInput) *CognitoidentityproviderAdminDeleteUserAttributesResult
 
-    AdminDisableProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) (*cognitoidentityprovider.AdminDisableProviderForUserOutput, error)
-    AdminDisableProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) *CognitoidentityproviderAdminDisableProviderForUserResult
+       AdminDisableProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) (*cognitoidentityprovider.AdminDisableProviderForUserOutput, error)
+       AdminDisableProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableProviderForUserInput) *CognitoidentityproviderAdminDisableProviderForUserResult
 
-    AdminDisableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) (*cognitoidentityprovider.AdminDisableUserOutput, error)
-    AdminDisableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) *CognitoidentityproviderAdminDisableUserResult
+       AdminDisableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) (*cognitoidentityprovider.AdminDisableUserOutput, error)
+       AdminDisableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminDisableUserInput) *CognitoidentityproviderAdminDisableUserResult
 
-    AdminEnableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) (*cognitoidentityprovider.AdminEnableUserOutput, error)
-    AdminEnableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) *CognitoidentityproviderAdminEnableUserResult
+       AdminEnableUser(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) (*cognitoidentityprovider.AdminEnableUserOutput, error)
+       AdminEnableUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminEnableUserInput) *CognitoidentityproviderAdminEnableUserResult
 
-    AdminForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) (*cognitoidentityprovider.AdminForgetDeviceOutput, error)
-    AdminForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) *CognitoidentityproviderAdminForgetDeviceResult
+       AdminForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) (*cognitoidentityprovider.AdminForgetDeviceOutput, error)
+       AdminForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminForgetDeviceInput) *CognitoidentityproviderAdminForgetDeviceResult
 
-    AdminGetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) (*cognitoidentityprovider.AdminGetDeviceOutput, error)
-    AdminGetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) *CognitoidentityproviderAdminGetDeviceResult
+       AdminGetDevice(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) (*cognitoidentityprovider.AdminGetDeviceOutput, error)
+       AdminGetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetDeviceInput) *CognitoidentityproviderAdminGetDeviceResult
 
-    AdminGetUser(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) (*cognitoidentityprovider.AdminGetUserOutput, error)
-    AdminGetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) *CognitoidentityproviderAdminGetUserResult
+       AdminGetUser(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) (*cognitoidentityprovider.AdminGetUserOutput, error)
+       AdminGetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminGetUserInput) *CognitoidentityproviderAdminGetUserResult
 
-    AdminInitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) (*cognitoidentityprovider.AdminInitiateAuthOutput, error)
-    AdminInitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) *CognitoidentityproviderAdminInitiateAuthResult
+       AdminInitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) (*cognitoidentityprovider.AdminInitiateAuthOutput, error)
+       AdminInitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminInitiateAuthInput) *CognitoidentityproviderAdminInitiateAuthResult
 
-    AdminLinkProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) (*cognitoidentityprovider.AdminLinkProviderForUserOutput, error)
-    AdminLinkProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) *CognitoidentityproviderAdminLinkProviderForUserResult
+       AdminLinkProviderForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) (*cognitoidentityprovider.AdminLinkProviderForUserOutput, error)
+       AdminLinkProviderForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminLinkProviderForUserInput) *CognitoidentityproviderAdminLinkProviderForUserResult
 
-    AdminListDevices(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) (*cognitoidentityprovider.AdminListDevicesOutput, error)
-    AdminListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) *CognitoidentityproviderAdminListDevicesResult
+       AdminListDevices(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) (*cognitoidentityprovider.AdminListDevicesOutput, error)
+       AdminListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListDevicesInput) *CognitoidentityproviderAdminListDevicesResult
 
-    AdminListGroupsForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) (*cognitoidentityprovider.AdminListGroupsForUserOutput, error)
-    AdminListGroupsForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) *CognitoidentityproviderAdminListGroupsForUserResult
+       AdminListGroupsForUser(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) (*cognitoidentityprovider.AdminListGroupsForUserOutput, error)
+       AdminListGroupsForUserAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListGroupsForUserInput) *CognitoidentityproviderAdminListGroupsForUserResult
 
-    AdminListUserAuthEvents(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error)
-    AdminListUserAuthEventsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) *CognitoidentityproviderAdminListUserAuthEventsResult
+       AdminListUserAuthEvents(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) (*cognitoidentityprovider.AdminListUserAuthEventsOutput, error)
+       AdminListUserAuthEventsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminListUserAuthEventsInput) *CognitoidentityproviderAdminListUserAuthEventsResult
 
-    AdminRemoveUserFromGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error)
-    AdminRemoveUserFromGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) *CognitoidentityproviderAdminRemoveUserFromGroupResult
+       AdminRemoveUserFromGroup(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) (*cognitoidentityprovider.AdminRemoveUserFromGroupOutput, error)
+       AdminRemoveUserFromGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRemoveUserFromGroupInput) *CognitoidentityproviderAdminRemoveUserFromGroupResult
 
-    AdminResetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) (*cognitoidentityprovider.AdminResetUserPasswordOutput, error)
-    AdminResetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) *CognitoidentityproviderAdminResetUserPasswordResult
+       AdminResetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) (*cognitoidentityprovider.AdminResetUserPasswordOutput, error)
+       AdminResetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminResetUserPasswordInput) *CognitoidentityproviderAdminResetUserPasswordResult
 
-    AdminRespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) (*cognitoidentityprovider.AdminRespondToAuthChallengeOutput, error)
-    AdminRespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) *CognitoidentityproviderAdminRespondToAuthChallengeResult
+       AdminRespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) (*cognitoidentityprovider.AdminRespondToAuthChallengeOutput, error)
+       AdminRespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminRespondToAuthChallengeInput) *CognitoidentityproviderAdminRespondToAuthChallengeResult
 
-    AdminSetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error)
-    AdminSetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) *CognitoidentityproviderAdminSetUserMFAPreferenceResult
+       AdminSetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) (*cognitoidentityprovider.AdminSetUserMFAPreferenceOutput, error)
+       AdminSetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserMFAPreferenceInput) *CognitoidentityproviderAdminSetUserMFAPreferenceResult
 
-    AdminSetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) (*cognitoidentityprovider.AdminSetUserPasswordOutput, error)
-    AdminSetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) *CognitoidentityproviderAdminSetUserPasswordResult
+       AdminSetUserPassword(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) (*cognitoidentityprovider.AdminSetUserPasswordOutput, error)
+       AdminSetUserPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserPasswordInput) *CognitoidentityproviderAdminSetUserPasswordResult
 
-    AdminSetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error)
-    AdminSetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) *CognitoidentityproviderAdminSetUserSettingsResult
+       AdminSetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) (*cognitoidentityprovider.AdminSetUserSettingsOutput, error)
+       AdminSetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminSetUserSettingsInput) *CognitoidentityproviderAdminSetUserSettingsResult
 
-    AdminUpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error)
-    AdminUpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) *CognitoidentityproviderAdminUpdateAuthEventFeedbackResult
+       AdminUpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) (*cognitoidentityprovider.AdminUpdateAuthEventFeedbackOutput, error)
+       AdminUpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateAuthEventFeedbackInput) *CognitoidentityproviderAdminUpdateAuthEventFeedbackResult
 
-    AdminUpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) (*cognitoidentityprovider.AdminUpdateDeviceStatusOutput, error)
-    AdminUpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) *CognitoidentityproviderAdminUpdateDeviceStatusResult
+       AdminUpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) (*cognitoidentityprovider.AdminUpdateDeviceStatusOutput, error)
+       AdminUpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateDeviceStatusInput) *CognitoidentityproviderAdminUpdateDeviceStatusResult
 
-    AdminUpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) (*cognitoidentityprovider.AdminUpdateUserAttributesOutput, error)
-    AdminUpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) *CognitoidentityproviderAdminUpdateUserAttributesResult
+       AdminUpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) (*cognitoidentityprovider.AdminUpdateUserAttributesOutput, error)
+       AdminUpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUpdateUserAttributesInput) *CognitoidentityproviderAdminUpdateUserAttributesResult
 
-    AdminUserGlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error)
-    AdminUserGlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) *CognitoidentityproviderAdminUserGlobalSignOutResult
+       AdminUserGlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) (*cognitoidentityprovider.AdminUserGlobalSignOutOutput, error)
+       AdminUserGlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.AdminUserGlobalSignOutInput) *CognitoidentityproviderAdminUserGlobalSignOutResult
 
-    AssociateSoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error)
-    AssociateSoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) *CognitoidentityproviderAssociateSoftwareTokenResult
+       AssociateSoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) (*cognitoidentityprovider.AssociateSoftwareTokenOutput, error)
+       AssociateSoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.AssociateSoftwareTokenInput) *CognitoidentityproviderAssociateSoftwareTokenResult
 
-    ChangePassword(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) (*cognitoidentityprovider.ChangePasswordOutput, error)
-    ChangePasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) *CognitoidentityproviderChangePasswordResult
+       ChangePassword(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) (*cognitoidentityprovider.ChangePasswordOutput, error)
+       ChangePasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ChangePasswordInput) *CognitoidentityproviderChangePasswordResult
 
-    ConfirmDevice(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) (*cognitoidentityprovider.ConfirmDeviceOutput, error)
-    ConfirmDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) *CognitoidentityproviderConfirmDeviceResult
+       ConfirmDevice(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) (*cognitoidentityprovider.ConfirmDeviceOutput, error)
+       ConfirmDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmDeviceInput) *CognitoidentityproviderConfirmDeviceResult
 
-    ConfirmForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) (*cognitoidentityprovider.ConfirmForgotPasswordOutput, error)
-    ConfirmForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) *CognitoidentityproviderConfirmForgotPasswordResult
+       ConfirmForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) (*cognitoidentityprovider.ConfirmForgotPasswordOutput, error)
+       ConfirmForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmForgotPasswordInput) *CognitoidentityproviderConfirmForgotPasswordResult
 
-    ConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) (*cognitoidentityprovider.ConfirmSignUpOutput, error)
-    ConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) *CognitoidentityproviderConfirmSignUpResult
+       ConfirmSignUp(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) (*cognitoidentityprovider.ConfirmSignUpOutput, error)
+       ConfirmSignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.ConfirmSignUpInput) *CognitoidentityproviderConfirmSignUpResult
 
-    CreateGroup(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) (*cognitoidentityprovider.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) *CognitoidentityproviderCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) (*cognitoidentityprovider.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateGroupInput) *CognitoidentityproviderCreateGroupResult
 
-    CreateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) (*cognitoidentityprovider.CreateIdentityProviderOutput, error)
-    CreateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) *CognitoidentityproviderCreateIdentityProviderResult
+       CreateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) (*cognitoidentityprovider.CreateIdentityProviderOutput, error)
+       CreateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateIdentityProviderInput) *CognitoidentityproviderCreateIdentityProviderResult
 
-    CreateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) (*cognitoidentityprovider.CreateResourceServerOutput, error)
-    CreateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) *CognitoidentityproviderCreateResourceServerResult
+       CreateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) (*cognitoidentityprovider.CreateResourceServerOutput, error)
+       CreateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateResourceServerInput) *CognitoidentityproviderCreateResourceServerResult
 
-    CreateUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) (*cognitoidentityprovider.CreateUserImportJobOutput, error)
-    CreateUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) *CognitoidentityproviderCreateUserImportJobResult
+       CreateUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) (*cognitoidentityprovider.CreateUserImportJobOutput, error)
+       CreateUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserImportJobInput) *CognitoidentityproviderCreateUserImportJobResult
 
-    CreateUserPool(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) (*cognitoidentityprovider.CreateUserPoolOutput, error)
-    CreateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) *CognitoidentityproviderCreateUserPoolResult
+       CreateUserPool(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) (*cognitoidentityprovider.CreateUserPoolOutput, error)
+       CreateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolInput) *CognitoidentityproviderCreateUserPoolResult
 
-    CreateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) (*cognitoidentityprovider.CreateUserPoolClientOutput, error)
-    CreateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) *CognitoidentityproviderCreateUserPoolClientResult
+       CreateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) (*cognitoidentityprovider.CreateUserPoolClientOutput, error)
+       CreateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolClientInput) *CognitoidentityproviderCreateUserPoolClientResult
 
-    CreateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) (*cognitoidentityprovider.CreateUserPoolDomainOutput, error)
-    CreateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) *CognitoidentityproviderCreateUserPoolDomainResult
+       CreateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) (*cognitoidentityprovider.CreateUserPoolDomainOutput, error)
+       CreateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.CreateUserPoolDomainInput) *CognitoidentityproviderCreateUserPoolDomainResult
 
-    DeleteGroup(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) (*cognitoidentityprovider.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) *CognitoidentityproviderDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) (*cognitoidentityprovider.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteGroupInput) *CognitoidentityproviderDeleteGroupResult
 
-    DeleteIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) (*cognitoidentityprovider.DeleteIdentityProviderOutput, error)
-    DeleteIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) *CognitoidentityproviderDeleteIdentityProviderResult
+       DeleteIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) (*cognitoidentityprovider.DeleteIdentityProviderOutput, error)
+       DeleteIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteIdentityProviderInput) *CognitoidentityproviderDeleteIdentityProviderResult
 
-    DeleteResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) (*cognitoidentityprovider.DeleteResourceServerOutput, error)
-    DeleteResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) *CognitoidentityproviderDeleteResourceServerResult
+       DeleteResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) (*cognitoidentityprovider.DeleteResourceServerOutput, error)
+       DeleteResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteResourceServerInput) *CognitoidentityproviderDeleteResourceServerResult
 
-    DeleteUser(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) (*cognitoidentityprovider.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) *CognitoidentityproviderDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) (*cognitoidentityprovider.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserInput) *CognitoidentityproviderDeleteUserResult
 
-    DeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) (*cognitoidentityprovider.DeleteUserAttributesOutput, error)
-    DeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) *CognitoidentityproviderDeleteUserAttributesResult
+       DeleteUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) (*cognitoidentityprovider.DeleteUserAttributesOutput, error)
+       DeleteUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserAttributesInput) *CognitoidentityproviderDeleteUserAttributesResult
 
-    DeleteUserPool(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) (*cognitoidentityprovider.DeleteUserPoolOutput, error)
-    DeleteUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) *CognitoidentityproviderDeleteUserPoolResult
+       DeleteUserPool(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) (*cognitoidentityprovider.DeleteUserPoolOutput, error)
+       DeleteUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolInput) *CognitoidentityproviderDeleteUserPoolResult
 
-    DeleteUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) (*cognitoidentityprovider.DeleteUserPoolClientOutput, error)
-    DeleteUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) *CognitoidentityproviderDeleteUserPoolClientResult
+       DeleteUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) (*cognitoidentityprovider.DeleteUserPoolClientOutput, error)
+       DeleteUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolClientInput) *CognitoidentityproviderDeleteUserPoolClientResult
 
-    DeleteUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error)
-    DeleteUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) *CognitoidentityproviderDeleteUserPoolDomainResult
+       DeleteUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) (*cognitoidentityprovider.DeleteUserPoolDomainOutput, error)
+       DeleteUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DeleteUserPoolDomainInput) *CognitoidentityproviderDeleteUserPoolDomainResult
 
-    DescribeIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error)
-    DescribeIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) *CognitoidentityproviderDescribeIdentityProviderResult
+       DescribeIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) (*cognitoidentityprovider.DescribeIdentityProviderOutput, error)
+       DescribeIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeIdentityProviderInput) *CognitoidentityproviderDescribeIdentityProviderResult
 
-    DescribeResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) (*cognitoidentityprovider.DescribeResourceServerOutput, error)
-    DescribeResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) *CognitoidentityproviderDescribeResourceServerResult
+       DescribeResourceServer(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) (*cognitoidentityprovider.DescribeResourceServerOutput, error)
+       DescribeResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeResourceServerInput) *CognitoidentityproviderDescribeResourceServerResult
 
-    DescribeRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error)
-    DescribeRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) *CognitoidentityproviderDescribeRiskConfigurationResult
+       DescribeRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) (*cognitoidentityprovider.DescribeRiskConfigurationOutput, error)
+       DescribeRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeRiskConfigurationInput) *CognitoidentityproviderDescribeRiskConfigurationResult
 
-    DescribeUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) (*cognitoidentityprovider.DescribeUserImportJobOutput, error)
-    DescribeUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) *CognitoidentityproviderDescribeUserImportJobResult
+       DescribeUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) (*cognitoidentityprovider.DescribeUserImportJobOutput, error)
+       DescribeUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserImportJobInput) *CognitoidentityproviderDescribeUserImportJobResult
 
-    DescribeUserPool(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) (*cognitoidentityprovider.DescribeUserPoolOutput, error)
-    DescribeUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) *CognitoidentityproviderDescribeUserPoolResult
+       DescribeUserPool(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) (*cognitoidentityprovider.DescribeUserPoolOutput, error)
+       DescribeUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolInput) *CognitoidentityproviderDescribeUserPoolResult
 
-    DescribeUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) (*cognitoidentityprovider.DescribeUserPoolClientOutput, error)
-    DescribeUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) *CognitoidentityproviderDescribeUserPoolClientResult
+       DescribeUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) (*cognitoidentityprovider.DescribeUserPoolClientOutput, error)
+       DescribeUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolClientInput) *CognitoidentityproviderDescribeUserPoolClientResult
 
-    DescribeUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) (*cognitoidentityprovider.DescribeUserPoolDomainOutput, error)
-    DescribeUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) *CognitoidentityproviderDescribeUserPoolDomainResult
+       DescribeUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) (*cognitoidentityprovider.DescribeUserPoolDomainOutput, error)
+       DescribeUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.DescribeUserPoolDomainInput) *CognitoidentityproviderDescribeUserPoolDomainResult
 
-    ForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) (*cognitoidentityprovider.ForgetDeviceOutput, error)
-    ForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) *CognitoidentityproviderForgetDeviceResult
+       ForgetDevice(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) (*cognitoidentityprovider.ForgetDeviceOutput, error)
+       ForgetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgetDeviceInput) *CognitoidentityproviderForgetDeviceResult
 
-    ForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) (*cognitoidentityprovider.ForgotPasswordOutput, error)
-    ForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) *CognitoidentityproviderForgotPasswordResult
+       ForgotPassword(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) (*cognitoidentityprovider.ForgotPasswordOutput, error)
+       ForgotPasswordAsync(ctx workflow.Context, input *cognitoidentityprovider.ForgotPasswordInput) *CognitoidentityproviderForgotPasswordResult
 
-    GetCSVHeader(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) (*cognitoidentityprovider.GetCSVHeaderOutput, error)
-    GetCSVHeaderAsync(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) *CognitoidentityproviderGetCSVHeaderResult
+       GetCSVHeader(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) (*cognitoidentityprovider.GetCSVHeaderOutput, error)
+       GetCSVHeaderAsync(ctx workflow.Context, input *cognitoidentityprovider.GetCSVHeaderInput) *CognitoidentityproviderGetCSVHeaderResult
 
-    GetDevice(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) (*cognitoidentityprovider.GetDeviceOutput, error)
-    GetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) *CognitoidentityproviderGetDeviceResult
+       GetDevice(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) (*cognitoidentityprovider.GetDeviceOutput, error)
+       GetDeviceAsync(ctx workflow.Context, input *cognitoidentityprovider.GetDeviceInput) *CognitoidentityproviderGetDeviceResult
 
-    GetGroup(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) (*cognitoidentityprovider.GetGroupOutput, error)
-    GetGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) *CognitoidentityproviderGetGroupResult
+       GetGroup(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) (*cognitoidentityprovider.GetGroupOutput, error)
+       GetGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.GetGroupInput) *CognitoidentityproviderGetGroupResult
 
-    GetIdentityProviderByIdentifier(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) (*cognitoidentityprovider.GetIdentityProviderByIdentifierOutput, error)
-    GetIdentityProviderByIdentifierAsync(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) *CognitoidentityproviderGetIdentityProviderByIdentifierResult
+       GetIdentityProviderByIdentifier(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) (*cognitoidentityprovider.GetIdentityProviderByIdentifierOutput, error)
+       GetIdentityProviderByIdentifierAsync(ctx workflow.Context, input *cognitoidentityprovider.GetIdentityProviderByIdentifierInput) *CognitoidentityproviderGetIdentityProviderByIdentifierResult
 
-    GetSigningCertificate(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) (*cognitoidentityprovider.GetSigningCertificateOutput, error)
-    GetSigningCertificateAsync(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) *CognitoidentityproviderGetSigningCertificateResult
+       GetSigningCertificate(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) (*cognitoidentityprovider.GetSigningCertificateOutput, error)
+       GetSigningCertificateAsync(ctx workflow.Context, input *cognitoidentityprovider.GetSigningCertificateInput) *CognitoidentityproviderGetSigningCertificateResult
 
-    GetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) (*cognitoidentityprovider.GetUICustomizationOutput, error)
-    GetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) *CognitoidentityproviderGetUICustomizationResult
+       GetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) (*cognitoidentityprovider.GetUICustomizationOutput, error)
+       GetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUICustomizationInput) *CognitoidentityproviderGetUICustomizationResult
 
-    GetUser(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) (*cognitoidentityprovider.GetUserOutput, error)
-    GetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) *CognitoidentityproviderGetUserResult
+       GetUser(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) (*cognitoidentityprovider.GetUserOutput, error)
+       GetUserAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserInput) *CognitoidentityproviderGetUserResult
 
-    GetUserAttributeVerificationCode(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error)
-    GetUserAttributeVerificationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) *CognitoidentityproviderGetUserAttributeVerificationCodeResult
+       GetUserAttributeVerificationCode(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) (*cognitoidentityprovider.GetUserAttributeVerificationCodeOutput, error)
+       GetUserAttributeVerificationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserAttributeVerificationCodeInput) *CognitoidentityproviderGetUserAttributeVerificationCodeResult
 
-    GetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error)
-    GetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) *CognitoidentityproviderGetUserPoolMfaConfigResult
+       GetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) (*cognitoidentityprovider.GetUserPoolMfaConfigOutput, error)
+       GetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.GetUserPoolMfaConfigInput) *CognitoidentityproviderGetUserPoolMfaConfigResult
 
-    GlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) (*cognitoidentityprovider.GlobalSignOutOutput, error)
-    GlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) *CognitoidentityproviderGlobalSignOutResult
+       GlobalSignOut(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) (*cognitoidentityprovider.GlobalSignOutOutput, error)
+       GlobalSignOutAsync(ctx workflow.Context, input *cognitoidentityprovider.GlobalSignOutInput) *CognitoidentityproviderGlobalSignOutResult
 
-    InitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) (*cognitoidentityprovider.InitiateAuthOutput, error)
-    InitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) *CognitoidentityproviderInitiateAuthResult
+       InitiateAuth(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) (*cognitoidentityprovider.InitiateAuthOutput, error)
+       InitiateAuthAsync(ctx workflow.Context, input *cognitoidentityprovider.InitiateAuthInput) *CognitoidentityproviderInitiateAuthResult
 
-    ListDevices(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) (*cognitoidentityprovider.ListDevicesOutput, error)
-    ListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) *CognitoidentityproviderListDevicesResult
+       ListDevices(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) (*cognitoidentityprovider.ListDevicesOutput, error)
+       ListDevicesAsync(ctx workflow.Context, input *cognitoidentityprovider.ListDevicesInput) *CognitoidentityproviderListDevicesResult
 
-    ListGroups(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) (*cognitoidentityprovider.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) *CognitoidentityproviderListGroupsResult
+       ListGroups(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) (*cognitoidentityprovider.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListGroupsInput) *CognitoidentityproviderListGroupsResult
 
-    ListIdentityProviders(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) (*cognitoidentityprovider.ListIdentityProvidersOutput, error)
-    ListIdentityProvidersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) *CognitoidentityproviderListIdentityProvidersResult
+       ListIdentityProviders(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) (*cognitoidentityprovider.ListIdentityProvidersOutput, error)
+       ListIdentityProvidersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListIdentityProvidersInput) *CognitoidentityproviderListIdentityProvidersResult
 
-    ListResourceServers(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) (*cognitoidentityprovider.ListResourceServersOutput, error)
-    ListResourceServersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) *CognitoidentityproviderListResourceServersResult
+       ListResourceServers(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) (*cognitoidentityprovider.ListResourceServersOutput, error)
+       ListResourceServersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListResourceServersInput) *CognitoidentityproviderListResourceServersResult
 
-    ListTagsForResource(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) (*cognitoidentityprovider.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) *CognitoidentityproviderListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) (*cognitoidentityprovider.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.ListTagsForResourceInput) *CognitoidentityproviderListTagsForResourceResult
 
-    ListUserImportJobs(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) (*cognitoidentityprovider.ListUserImportJobsOutput, error)
-    ListUserImportJobsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) *CognitoidentityproviderListUserImportJobsResult
+       ListUserImportJobs(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) (*cognitoidentityprovider.ListUserImportJobsOutput, error)
+       ListUserImportJobsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserImportJobsInput) *CognitoidentityproviderListUserImportJobsResult
 
-    ListUserPoolClients(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) (*cognitoidentityprovider.ListUserPoolClientsOutput, error)
-    ListUserPoolClientsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) *CognitoidentityproviderListUserPoolClientsResult
+       ListUserPoolClients(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) (*cognitoidentityprovider.ListUserPoolClientsOutput, error)
+       ListUserPoolClientsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolClientsInput) *CognitoidentityproviderListUserPoolClientsResult
 
-    ListUserPools(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) (*cognitoidentityprovider.ListUserPoolsOutput, error)
-    ListUserPoolsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) *CognitoidentityproviderListUserPoolsResult
+       ListUserPools(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) (*cognitoidentityprovider.ListUserPoolsOutput, error)
+       ListUserPoolsAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUserPoolsInput) *CognitoidentityproviderListUserPoolsResult
 
-    ListUsers(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) (*cognitoidentityprovider.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) *CognitoidentityproviderListUsersResult
+       ListUsers(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) (*cognitoidentityprovider.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInput) *CognitoidentityproviderListUsersResult
 
-    ListUsersInGroup(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) (*cognitoidentityprovider.ListUsersInGroupOutput, error)
-    ListUsersInGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) *CognitoidentityproviderListUsersInGroupResult
+       ListUsersInGroup(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) (*cognitoidentityprovider.ListUsersInGroupOutput, error)
+       ListUsersInGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.ListUsersInGroupInput) *CognitoidentityproviderListUsersInGroupResult
 
-    ResendConfirmationCode(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) (*cognitoidentityprovider.ResendConfirmationCodeOutput, error)
-    ResendConfirmationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) *CognitoidentityproviderResendConfirmationCodeResult
+       ResendConfirmationCode(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) (*cognitoidentityprovider.ResendConfirmationCodeOutput, error)
+       ResendConfirmationCodeAsync(ctx workflow.Context, input *cognitoidentityprovider.ResendConfirmationCodeInput) *CognitoidentityproviderResendConfirmationCodeResult
 
-    RespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) (*cognitoidentityprovider.RespondToAuthChallengeOutput, error)
-    RespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) *CognitoidentityproviderRespondToAuthChallengeResult
+       RespondToAuthChallenge(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) (*cognitoidentityprovider.RespondToAuthChallengeOutput, error)
+       RespondToAuthChallengeAsync(ctx workflow.Context, input *cognitoidentityprovider.RespondToAuthChallengeInput) *CognitoidentityproviderRespondToAuthChallengeResult
 
-    SetRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) (*cognitoidentityprovider.SetRiskConfigurationOutput, error)
-    SetRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) *CognitoidentityproviderSetRiskConfigurationResult
+       SetRiskConfiguration(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) (*cognitoidentityprovider.SetRiskConfigurationOutput, error)
+       SetRiskConfigurationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetRiskConfigurationInput) *CognitoidentityproviderSetRiskConfigurationResult
 
-    SetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) (*cognitoidentityprovider.SetUICustomizationOutput, error)
-    SetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) *CognitoidentityproviderSetUICustomizationResult
+       SetUICustomization(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) (*cognitoidentityprovider.SetUICustomizationOutput, error)
+       SetUICustomizationAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUICustomizationInput) *CognitoidentityproviderSetUICustomizationResult
 
-    SetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error)
-    SetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) *CognitoidentityproviderSetUserMFAPreferenceResult
+       SetUserMFAPreference(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) (*cognitoidentityprovider.SetUserMFAPreferenceOutput, error)
+       SetUserMFAPreferenceAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserMFAPreferenceInput) *CognitoidentityproviderSetUserMFAPreferenceResult
 
-    SetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error)
-    SetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) *CognitoidentityproviderSetUserPoolMfaConfigResult
+       SetUserPoolMfaConfig(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) (*cognitoidentityprovider.SetUserPoolMfaConfigOutput, error)
+       SetUserPoolMfaConfigAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserPoolMfaConfigInput) *CognitoidentityproviderSetUserPoolMfaConfigResult
 
-    SetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) (*cognitoidentityprovider.SetUserSettingsOutput, error)
-    SetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) *CognitoidentityproviderSetUserSettingsResult
+       SetUserSettings(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) (*cognitoidentityprovider.SetUserSettingsOutput, error)
+       SetUserSettingsAsync(ctx workflow.Context, input *cognitoidentityprovider.SetUserSettingsInput) *CognitoidentityproviderSetUserSettingsResult
 
-    SignUp(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) (*cognitoidentityprovider.SignUpOutput, error)
-    SignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) *CognitoidentityproviderSignUpResult
+       SignUp(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) (*cognitoidentityprovider.SignUpOutput, error)
+       SignUpAsync(ctx workflow.Context, input *cognitoidentityprovider.SignUpInput) *CognitoidentityproviderSignUpResult
 
-    StartUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) (*cognitoidentityprovider.StartUserImportJobOutput, error)
-    StartUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) *CognitoidentityproviderStartUserImportJobResult
+       StartUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) (*cognitoidentityprovider.StartUserImportJobOutput, error)
+       StartUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StartUserImportJobInput) *CognitoidentityproviderStartUserImportJobResult
 
-    StopUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) (*cognitoidentityprovider.StopUserImportJobOutput, error)
-    StopUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) *CognitoidentityproviderStopUserImportJobResult
+       StopUserImportJob(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) (*cognitoidentityprovider.StopUserImportJobOutput, error)
+       StopUserImportJobAsync(ctx workflow.Context, input *cognitoidentityprovider.StopUserImportJobInput) *CognitoidentityproviderStopUserImportJobResult
 
-    TagResource(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) (*cognitoidentityprovider.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) *CognitoidentityproviderTagResourceResult
+       TagResource(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) (*cognitoidentityprovider.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.TagResourceInput) *CognitoidentityproviderTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) (*cognitoidentityprovider.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) *CognitoidentityproviderUntagResourceResult
+       UntagResource(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) (*cognitoidentityprovider.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *cognitoidentityprovider.UntagResourceInput) *CognitoidentityproviderUntagResourceResult
 
-    UpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error)
-    UpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) *CognitoidentityproviderUpdateAuthEventFeedbackResult
+       UpdateAuthEventFeedback(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) (*cognitoidentityprovider.UpdateAuthEventFeedbackOutput, error)
+       UpdateAuthEventFeedbackAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateAuthEventFeedbackInput) *CognitoidentityproviderUpdateAuthEventFeedbackResult
 
-    UpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) (*cognitoidentityprovider.UpdateDeviceStatusOutput, error)
-    UpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) *CognitoidentityproviderUpdateDeviceStatusResult
+       UpdateDeviceStatus(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) (*cognitoidentityprovider.UpdateDeviceStatusOutput, error)
+       UpdateDeviceStatusAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateDeviceStatusInput) *CognitoidentityproviderUpdateDeviceStatusResult
 
-    UpdateGroup(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) (*cognitoidentityprovider.UpdateGroupOutput, error)
-    UpdateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) *CognitoidentityproviderUpdateGroupResult
+       UpdateGroup(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) (*cognitoidentityprovider.UpdateGroupOutput, error)
+       UpdateGroupAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateGroupInput) *CognitoidentityproviderUpdateGroupResult
 
-    UpdateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) (*cognitoidentityprovider.UpdateIdentityProviderOutput, error)
-    UpdateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) *CognitoidentityproviderUpdateIdentityProviderResult
+       UpdateIdentityProvider(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) (*cognitoidentityprovider.UpdateIdentityProviderOutput, error)
+       UpdateIdentityProviderAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateIdentityProviderInput) *CognitoidentityproviderUpdateIdentityProviderResult
 
-    UpdateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) (*cognitoidentityprovider.UpdateResourceServerOutput, error)
-    UpdateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) *CognitoidentityproviderUpdateResourceServerResult
+       UpdateResourceServer(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) (*cognitoidentityprovider.UpdateResourceServerOutput, error)
+       UpdateResourceServerAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateResourceServerInput) *CognitoidentityproviderUpdateResourceServerResult
 
-    UpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) (*cognitoidentityprovider.UpdateUserAttributesOutput, error)
-    UpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) *CognitoidentityproviderUpdateUserAttributesResult
+       UpdateUserAttributes(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) (*cognitoidentityprovider.UpdateUserAttributesOutput, error)
+       UpdateUserAttributesAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserAttributesInput) *CognitoidentityproviderUpdateUserAttributesResult
 
-    UpdateUserPool(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) (*cognitoidentityprovider.UpdateUserPoolOutput, error)
-    UpdateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) *CognitoidentityproviderUpdateUserPoolResult
+       UpdateUserPool(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) (*cognitoidentityprovider.UpdateUserPoolOutput, error)
+       UpdateUserPoolAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolInput) *CognitoidentityproviderUpdateUserPoolResult
 
-    UpdateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error)
-    UpdateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) *CognitoidentityproviderUpdateUserPoolClientResult
+       UpdateUserPoolClient(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) (*cognitoidentityprovider.UpdateUserPoolClientOutput, error)
+       UpdateUserPoolClientAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolClientInput) *CognitoidentityproviderUpdateUserPoolClientResult
 
-    UpdateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) (*cognitoidentityprovider.UpdateUserPoolDomainOutput, error)
-    UpdateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) *CognitoidentityproviderUpdateUserPoolDomainResult
+       UpdateUserPoolDomain(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) (*cognitoidentityprovider.UpdateUserPoolDomainOutput, error)
+       UpdateUserPoolDomainAsync(ctx workflow.Context, input *cognitoidentityprovider.UpdateUserPoolDomainInput) *CognitoidentityproviderUpdateUserPoolDomainResult
 
-    VerifySoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error)
-    VerifySoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) *CognitoidentityproviderVerifySoftwareTokenResult
+       VerifySoftwareToken(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) (*cognitoidentityprovider.VerifySoftwareTokenOutput, error)
+       VerifySoftwareTokenAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifySoftwareTokenInput) *CognitoidentityproviderVerifySoftwareTokenResult
 
-    VerifyUserAttribute(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) (*cognitoidentityprovider.VerifyUserAttributeOutput, error)
-    VerifyUserAttributeAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) *CognitoidentityproviderVerifyUserAttributeResult
+       VerifyUserAttribute(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) (*cognitoidentityprovider.VerifyUserAttributeOutput, error)
+       VerifyUserAttributeAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) *CognitoidentityproviderVerifyUserAttributeResult
 }
 
 type CognitoidentityproviderAddCustomAttributesResult struct {

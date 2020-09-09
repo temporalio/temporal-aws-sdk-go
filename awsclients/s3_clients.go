@@ -7,274 +7,274 @@ import (
 )
 
 type S3Client interface {
-    AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMultipartUploadInput) (*s3.AbortMultipartUploadOutput, error)
-    AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadResult
+       AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMultipartUploadInput) (*s3.AbortMultipartUploadOutput, error)
+       AbortMultipartUploadAsync(ctx workflow.Context, input *s3.AbortMultipartUploadInput) *S3AbortMultipartUploadResult
 
-    CompleteMultipartUpload(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) (*s3.CompleteMultipartUploadOutput, error)
-    CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadResult
+       CompleteMultipartUpload(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) (*s3.CompleteMultipartUploadOutput, error)
+       CompleteMultipartUploadAsync(ctx workflow.Context, input *s3.CompleteMultipartUploadInput) *S3CompleteMultipartUploadResult
 
-    CopyObject(ctx workflow.Context, input *s3.CopyObjectInput) (*s3.CopyObjectOutput, error)
-    CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectResult
+       CopyObject(ctx workflow.Context, input *s3.CopyObjectInput) (*s3.CopyObjectOutput, error)
+       CopyObjectAsync(ctx workflow.Context, input *s3.CopyObjectInput) *S3CopyObjectResult
 
-    CreateBucket(ctx workflow.Context, input *s3.CreateBucketInput) (*s3.CreateBucketOutput, error)
-    CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketResult
+       CreateBucket(ctx workflow.Context, input *s3.CreateBucketInput) (*s3.CreateBucketOutput, error)
+       CreateBucketAsync(ctx workflow.Context, input *s3.CreateBucketInput) *S3CreateBucketResult
 
-    CreateMultipartUpload(ctx workflow.Context, input *s3.CreateMultipartUploadInput) (*s3.CreateMultipartUploadOutput, error)
-    CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadResult
+       CreateMultipartUpload(ctx workflow.Context, input *s3.CreateMultipartUploadInput) (*s3.CreateMultipartUploadOutput, error)
+       CreateMultipartUploadAsync(ctx workflow.Context, input *s3.CreateMultipartUploadInput) *S3CreateMultipartUploadResult
 
-    DeleteBucket(ctx workflow.Context, input *s3.DeleteBucketInput) (*s3.DeleteBucketOutput, error)
-    DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketResult
+       DeleteBucket(ctx workflow.Context, input *s3.DeleteBucketInput) (*s3.DeleteBucketOutput, error)
+       DeleteBucketAsync(ctx workflow.Context, input *s3.DeleteBucketInput) *S3DeleteBucketResult
 
-    DeleteBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) (*s3.DeleteBucketAnalyticsConfigurationOutput, error)
-    DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationResult
+       DeleteBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) (*s3.DeleteBucketAnalyticsConfigurationOutput, error)
+       DeleteBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketAnalyticsConfigurationInput) *S3DeleteBucketAnalyticsConfigurationResult
 
-    DeleteBucketCors(ctx workflow.Context, input *s3.DeleteBucketCorsInput) (*s3.DeleteBucketCorsOutput, error)
-    DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsResult
+       DeleteBucketCors(ctx workflow.Context, input *s3.DeleteBucketCorsInput) (*s3.DeleteBucketCorsOutput, error)
+       DeleteBucketCorsAsync(ctx workflow.Context, input *s3.DeleteBucketCorsInput) *S3DeleteBucketCorsResult
 
-    DeleteBucketEncryption(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) (*s3.DeleteBucketEncryptionOutput, error)
-    DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionResult
+       DeleteBucketEncryption(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) (*s3.DeleteBucketEncryptionOutput, error)
+       DeleteBucketEncryptionAsync(ctx workflow.Context, input *s3.DeleteBucketEncryptionInput) *S3DeleteBucketEncryptionResult
 
-    DeleteBucketInventoryConfiguration(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) (*s3.DeleteBucketInventoryConfigurationOutput, error)
-    DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationResult
+       DeleteBucketInventoryConfiguration(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) (*s3.DeleteBucketInventoryConfigurationOutput, error)
+       DeleteBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketInventoryConfigurationInput) *S3DeleteBucketInventoryConfigurationResult
 
-    DeleteBucketLifecycle(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) (*s3.DeleteBucketLifecycleOutput, error)
-    DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleResult
+       DeleteBucketLifecycle(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) (*s3.DeleteBucketLifecycleOutput, error)
+       DeleteBucketLifecycleAsync(ctx workflow.Context, input *s3.DeleteBucketLifecycleInput) *S3DeleteBucketLifecycleResult
 
-    DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) (*s3.DeleteBucketMetricsConfigurationOutput, error)
-    DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationResult
+       DeleteBucketMetricsConfiguration(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) (*s3.DeleteBucketMetricsConfigurationOutput, error)
+       DeleteBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.DeleteBucketMetricsConfigurationInput) *S3DeleteBucketMetricsConfigurationResult
 
-    DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error)
-    DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyResult
+       DeleteBucketPolicy(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) (*s3.DeleteBucketPolicyOutput, error)
+       DeleteBucketPolicyAsync(ctx workflow.Context, input *s3.DeleteBucketPolicyInput) *S3DeleteBucketPolicyResult
 
-    DeleteBucketReplication(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) (*s3.DeleteBucketReplicationOutput, error)
-    DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationResult
+       DeleteBucketReplication(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) (*s3.DeleteBucketReplicationOutput, error)
+       DeleteBucketReplicationAsync(ctx workflow.Context, input *s3.DeleteBucketReplicationInput) *S3DeleteBucketReplicationResult
 
-    DeleteBucketTagging(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) (*s3.DeleteBucketTaggingOutput, error)
-    DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingResult
+       DeleteBucketTagging(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) (*s3.DeleteBucketTaggingOutput, error)
+       DeleteBucketTaggingAsync(ctx workflow.Context, input *s3.DeleteBucketTaggingInput) *S3DeleteBucketTaggingResult
 
-    DeleteBucketWebsite(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) (*s3.DeleteBucketWebsiteOutput, error)
-    DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteResult
+       DeleteBucketWebsite(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) (*s3.DeleteBucketWebsiteOutput, error)
+       DeleteBucketWebsiteAsync(ctx workflow.Context, input *s3.DeleteBucketWebsiteInput) *S3DeleteBucketWebsiteResult
 
-    DeleteObject(ctx workflow.Context, input *s3.DeleteObjectInput) (*s3.DeleteObjectOutput, error)
-    DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectResult
+       DeleteObject(ctx workflow.Context, input *s3.DeleteObjectInput) (*s3.DeleteObjectOutput, error)
+       DeleteObjectAsync(ctx workflow.Context, input *s3.DeleteObjectInput) *S3DeleteObjectResult
 
-    DeleteObjectTagging(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) (*s3.DeleteObjectTaggingOutput, error)
-    DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingResult
+       DeleteObjectTagging(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) (*s3.DeleteObjectTaggingOutput, error)
+       DeleteObjectTaggingAsync(ctx workflow.Context, input *s3.DeleteObjectTaggingInput) *S3DeleteObjectTaggingResult
 
-    DeleteObjects(ctx workflow.Context, input *s3.DeleteObjectsInput) (*s3.DeleteObjectsOutput, error)
-    DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsResult
+       DeleteObjects(ctx workflow.Context, input *s3.DeleteObjectsInput) (*s3.DeleteObjectsOutput, error)
+       DeleteObjectsAsync(ctx workflow.Context, input *s3.DeleteObjectsInput) *S3DeleteObjectsResult
 
-    DeletePublicAccessBlock(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) (*s3.DeletePublicAccessBlockOutput, error)
-    DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockResult
+       DeletePublicAccessBlock(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) (*s3.DeletePublicAccessBlockOutput, error)
+       DeletePublicAccessBlockAsync(ctx workflow.Context, input *s3.DeletePublicAccessBlockInput) *S3DeletePublicAccessBlockResult
 
-    GetBucketAccelerateConfiguration(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) (*s3.GetBucketAccelerateConfigurationOutput, error)
-    GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationResult
+       GetBucketAccelerateConfiguration(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) (*s3.GetBucketAccelerateConfigurationOutput, error)
+       GetBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAccelerateConfigurationInput) *S3GetBucketAccelerateConfigurationResult
 
-    GetBucketAcl(ctx workflow.Context, input *s3.GetBucketAclInput) (*s3.GetBucketAclOutput, error)
-    GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclResult
+       GetBucketAcl(ctx workflow.Context, input *s3.GetBucketAclInput) (*s3.GetBucketAclOutput, error)
+       GetBucketAclAsync(ctx workflow.Context, input *s3.GetBucketAclInput) *S3GetBucketAclResult
 
-    GetBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) (*s3.GetBucketAnalyticsConfigurationOutput, error)
-    GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationResult
+       GetBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) (*s3.GetBucketAnalyticsConfigurationOutput, error)
+       GetBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketAnalyticsConfigurationInput) *S3GetBucketAnalyticsConfigurationResult
 
-    GetBucketCors(ctx workflow.Context, input *s3.GetBucketCorsInput) (*s3.GetBucketCorsOutput, error)
-    GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsResult
+       GetBucketCors(ctx workflow.Context, input *s3.GetBucketCorsInput) (*s3.GetBucketCorsOutput, error)
+       GetBucketCorsAsync(ctx workflow.Context, input *s3.GetBucketCorsInput) *S3GetBucketCorsResult
 
-    GetBucketEncryption(ctx workflow.Context, input *s3.GetBucketEncryptionInput) (*s3.GetBucketEncryptionOutput, error)
-    GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionResult
+       GetBucketEncryption(ctx workflow.Context, input *s3.GetBucketEncryptionInput) (*s3.GetBucketEncryptionOutput, error)
+       GetBucketEncryptionAsync(ctx workflow.Context, input *s3.GetBucketEncryptionInput) *S3GetBucketEncryptionResult
 
-    GetBucketInventoryConfiguration(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) (*s3.GetBucketInventoryConfigurationOutput, error)
-    GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationResult
+       GetBucketInventoryConfiguration(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) (*s3.GetBucketInventoryConfigurationOutput, error)
+       GetBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.GetBucketInventoryConfigurationInput) *S3GetBucketInventoryConfigurationResult
 
-    GetBucketLifecycle(ctx workflow.Context, input *s3.GetBucketLifecycleInput) (*s3.GetBucketLifecycleOutput, error)
-    GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleResult
+       GetBucketLifecycle(ctx workflow.Context, input *s3.GetBucketLifecycleInput) (*s3.GetBucketLifecycleOutput, error)
+       GetBucketLifecycleAsync(ctx workflow.Context, input *s3.GetBucketLifecycleInput) *S3GetBucketLifecycleResult
 
-    GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) (*s3.GetBucketLifecycleConfigurationOutput, error)
-    GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationResult
+       GetBucketLifecycleConfiguration(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) (*s3.GetBucketLifecycleConfigurationOutput, error)
+       GetBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.GetBucketLifecycleConfigurationInput) *S3GetBucketLifecycleConfigurationResult
 
-    GetBucketLocation(ctx workflow.Context, input *s3.GetBucketLocationInput) (*s3.GetBucketLocationOutput, error)
-    GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationResult
+       GetBucketLocation(ctx workflow.Context, input *s3.GetBucketLocationInput) (*s3.GetBucketLocationOutput, error)
+       GetBucketLocationAsync(ctx workflow.Context, input *s3.GetBucketLocationInput) *S3GetBucketLocationResult
 
-    GetBucketLogging(ctx workflow.Context, input *s3.GetBucketLoggingInput) (*s3.GetBucketLoggingOutput, error)
-    GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingResult
+       GetBucketLogging(ctx workflow.Context, input *s3.GetBucketLoggingInput) (*s3.GetBucketLoggingOutput, error)
+       GetBucketLoggingAsync(ctx workflow.Context, input *s3.GetBucketLoggingInput) *S3GetBucketLoggingResult
 
-    GetBucketMetricsConfiguration(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) (*s3.GetBucketMetricsConfigurationOutput, error)
-    GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationResult
+       GetBucketMetricsConfiguration(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) (*s3.GetBucketMetricsConfigurationOutput, error)
+       GetBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.GetBucketMetricsConfigurationInput) *S3GetBucketMetricsConfigurationResult
 
-    GetBucketNotification(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfigurationDeprecated, error)
-    GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationResult
+       GetBucketNotification(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfigurationDeprecated, error)
+       GetBucketNotificationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationResult
 
-    GetBucketNotificationConfiguration(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfiguration, error)
-    GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult
+       GetBucketNotificationConfiguration(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) (*s3.NotificationConfiguration, error)
+       GetBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.GetBucketNotificationConfigurationRequest) *S3GetBucketNotificationConfigurationResult
 
-    GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error)
-    GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyResult
+       GetBucketPolicy(ctx workflow.Context, input *s3.GetBucketPolicyInput) (*s3.GetBucketPolicyOutput, error)
+       GetBucketPolicyAsync(ctx workflow.Context, input *s3.GetBucketPolicyInput) *S3GetBucketPolicyResult
 
-    GetBucketPolicyStatus(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) (*s3.GetBucketPolicyStatusOutput, error)
-    GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusResult
+       GetBucketPolicyStatus(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) (*s3.GetBucketPolicyStatusOutput, error)
+       GetBucketPolicyStatusAsync(ctx workflow.Context, input *s3.GetBucketPolicyStatusInput) *S3GetBucketPolicyStatusResult
 
-    GetBucketReplication(ctx workflow.Context, input *s3.GetBucketReplicationInput) (*s3.GetBucketReplicationOutput, error)
-    GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationResult
+       GetBucketReplication(ctx workflow.Context, input *s3.GetBucketReplicationInput) (*s3.GetBucketReplicationOutput, error)
+       GetBucketReplicationAsync(ctx workflow.Context, input *s3.GetBucketReplicationInput) *S3GetBucketReplicationResult
 
-    GetBucketRequestPayment(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) (*s3.GetBucketRequestPaymentOutput, error)
-    GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentResult
+       GetBucketRequestPayment(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) (*s3.GetBucketRequestPaymentOutput, error)
+       GetBucketRequestPaymentAsync(ctx workflow.Context, input *s3.GetBucketRequestPaymentInput) *S3GetBucketRequestPaymentResult
 
-    GetBucketTagging(ctx workflow.Context, input *s3.GetBucketTaggingInput) (*s3.GetBucketTaggingOutput, error)
-    GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingResult
+       GetBucketTagging(ctx workflow.Context, input *s3.GetBucketTaggingInput) (*s3.GetBucketTaggingOutput, error)
+       GetBucketTaggingAsync(ctx workflow.Context, input *s3.GetBucketTaggingInput) *S3GetBucketTaggingResult
 
-    GetBucketVersioning(ctx workflow.Context, input *s3.GetBucketVersioningInput) (*s3.GetBucketVersioningOutput, error)
-    GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningResult
+       GetBucketVersioning(ctx workflow.Context, input *s3.GetBucketVersioningInput) (*s3.GetBucketVersioningOutput, error)
+       GetBucketVersioningAsync(ctx workflow.Context, input *s3.GetBucketVersioningInput) *S3GetBucketVersioningResult
 
-    GetBucketWebsite(ctx workflow.Context, input *s3.GetBucketWebsiteInput) (*s3.GetBucketWebsiteOutput, error)
-    GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteResult
+       GetBucketWebsite(ctx workflow.Context, input *s3.GetBucketWebsiteInput) (*s3.GetBucketWebsiteOutput, error)
+       GetBucketWebsiteAsync(ctx workflow.Context, input *s3.GetBucketWebsiteInput) *S3GetBucketWebsiteResult
 
-    GetObject(ctx workflow.Context, input *s3.GetObjectInput) (*s3.GetObjectOutput, error)
-    GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectResult
+       GetObject(ctx workflow.Context, input *s3.GetObjectInput) (*s3.GetObjectOutput, error)
+       GetObjectAsync(ctx workflow.Context, input *s3.GetObjectInput) *S3GetObjectResult
 
-    GetObjectAcl(ctx workflow.Context, input *s3.GetObjectAclInput) (*s3.GetObjectAclOutput, error)
-    GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclResult
+       GetObjectAcl(ctx workflow.Context, input *s3.GetObjectAclInput) (*s3.GetObjectAclOutput, error)
+       GetObjectAclAsync(ctx workflow.Context, input *s3.GetObjectAclInput) *S3GetObjectAclResult
 
-    GetObjectLegalHold(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) (*s3.GetObjectLegalHoldOutput, error)
-    GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldResult
+       GetObjectLegalHold(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) (*s3.GetObjectLegalHoldOutput, error)
+       GetObjectLegalHoldAsync(ctx workflow.Context, input *s3.GetObjectLegalHoldInput) *S3GetObjectLegalHoldResult
 
-    GetObjectLockConfiguration(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) (*s3.GetObjectLockConfigurationOutput, error)
-    GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationResult
+       GetObjectLockConfiguration(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) (*s3.GetObjectLockConfigurationOutput, error)
+       GetObjectLockConfigurationAsync(ctx workflow.Context, input *s3.GetObjectLockConfigurationInput) *S3GetObjectLockConfigurationResult
 
-    GetObjectRetention(ctx workflow.Context, input *s3.GetObjectRetentionInput) (*s3.GetObjectRetentionOutput, error)
-    GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionResult
+       GetObjectRetention(ctx workflow.Context, input *s3.GetObjectRetentionInput) (*s3.GetObjectRetentionOutput, error)
+       GetObjectRetentionAsync(ctx workflow.Context, input *s3.GetObjectRetentionInput) *S3GetObjectRetentionResult
 
-    GetObjectTagging(ctx workflow.Context, input *s3.GetObjectTaggingInput) (*s3.GetObjectTaggingOutput, error)
-    GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingResult
+       GetObjectTagging(ctx workflow.Context, input *s3.GetObjectTaggingInput) (*s3.GetObjectTaggingOutput, error)
+       GetObjectTaggingAsync(ctx workflow.Context, input *s3.GetObjectTaggingInput) *S3GetObjectTaggingResult
 
-    GetObjectTorrent(ctx workflow.Context, input *s3.GetObjectTorrentInput) (*s3.GetObjectTorrentOutput, error)
-    GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentResult
+       GetObjectTorrent(ctx workflow.Context, input *s3.GetObjectTorrentInput) (*s3.GetObjectTorrentOutput, error)
+       GetObjectTorrentAsync(ctx workflow.Context, input *s3.GetObjectTorrentInput) *S3GetObjectTorrentResult
 
-    GetPublicAccessBlock(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) (*s3.GetPublicAccessBlockOutput, error)
-    GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockResult
+       GetPublicAccessBlock(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) (*s3.GetPublicAccessBlockOutput, error)
+       GetPublicAccessBlockAsync(ctx workflow.Context, input *s3.GetPublicAccessBlockInput) *S3GetPublicAccessBlockResult
 
-    HeadBucket(ctx workflow.Context, input *s3.HeadBucketInput) (*s3.HeadBucketOutput, error)
-    HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketResult
+       HeadBucket(ctx workflow.Context, input *s3.HeadBucketInput) (*s3.HeadBucketOutput, error)
+       HeadBucketAsync(ctx workflow.Context, input *s3.HeadBucketInput) *S3HeadBucketResult
 
-    HeadObject(ctx workflow.Context, input *s3.HeadObjectInput) (*s3.HeadObjectOutput, error)
-    HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectResult
+       HeadObject(ctx workflow.Context, input *s3.HeadObjectInput) (*s3.HeadObjectOutput, error)
+       HeadObjectAsync(ctx workflow.Context, input *s3.HeadObjectInput) *S3HeadObjectResult
 
-    ListBucketAnalyticsConfigurations(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) (*s3.ListBucketAnalyticsConfigurationsOutput, error)
-    ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsResult
+       ListBucketAnalyticsConfigurations(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) (*s3.ListBucketAnalyticsConfigurationsOutput, error)
+       ListBucketAnalyticsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketAnalyticsConfigurationsInput) *S3ListBucketAnalyticsConfigurationsResult
 
-    ListBucketInventoryConfigurations(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) (*s3.ListBucketInventoryConfigurationsOutput, error)
-    ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsResult
+       ListBucketInventoryConfigurations(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) (*s3.ListBucketInventoryConfigurationsOutput, error)
+       ListBucketInventoryConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketInventoryConfigurationsInput) *S3ListBucketInventoryConfigurationsResult
 
-    ListBucketMetricsConfigurations(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) (*s3.ListBucketMetricsConfigurationsOutput, error)
-    ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsResult
+       ListBucketMetricsConfigurations(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) (*s3.ListBucketMetricsConfigurationsOutput, error)
+       ListBucketMetricsConfigurationsAsync(ctx workflow.Context, input *s3.ListBucketMetricsConfigurationsInput) *S3ListBucketMetricsConfigurationsResult
 
-    ListBuckets(ctx workflow.Context, input *s3.ListBucketsInput) (*s3.ListBucketsOutput, error)
-    ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsResult
+       ListBuckets(ctx workflow.Context, input *s3.ListBucketsInput) (*s3.ListBucketsOutput, error)
+       ListBucketsAsync(ctx workflow.Context, input *s3.ListBucketsInput) *S3ListBucketsResult
 
-    ListMultipartUploads(ctx workflow.Context, input *s3.ListMultipartUploadsInput) (*s3.ListMultipartUploadsOutput, error)
-    ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsResult
+       ListMultipartUploads(ctx workflow.Context, input *s3.ListMultipartUploadsInput) (*s3.ListMultipartUploadsOutput, error)
+       ListMultipartUploadsAsync(ctx workflow.Context, input *s3.ListMultipartUploadsInput) *S3ListMultipartUploadsResult
 
-    ListObjectVersions(ctx workflow.Context, input *s3.ListObjectVersionsInput) (*s3.ListObjectVersionsOutput, error)
-    ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsResult
+       ListObjectVersions(ctx workflow.Context, input *s3.ListObjectVersionsInput) (*s3.ListObjectVersionsOutput, error)
+       ListObjectVersionsAsync(ctx workflow.Context, input *s3.ListObjectVersionsInput) *S3ListObjectVersionsResult
 
-    ListObjects(ctx workflow.Context, input *s3.ListObjectsInput) (*s3.ListObjectsOutput, error)
-    ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsResult
+       ListObjects(ctx workflow.Context, input *s3.ListObjectsInput) (*s3.ListObjectsOutput, error)
+       ListObjectsAsync(ctx workflow.Context, input *s3.ListObjectsInput) *S3ListObjectsResult
 
-    ListObjectsV2(ctx workflow.Context, input *s3.ListObjectsV2Input) (*s3.ListObjectsV2Output, error)
-    ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Result
+       ListObjectsV2(ctx workflow.Context, input *s3.ListObjectsV2Input) (*s3.ListObjectsV2Output, error)
+       ListObjectsV2Async(ctx workflow.Context, input *s3.ListObjectsV2Input) *S3ListObjectsV2Result
 
-    ListParts(ctx workflow.Context, input *s3.ListPartsInput) (*s3.ListPartsOutput, error)
-    ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsResult
+       ListParts(ctx workflow.Context, input *s3.ListPartsInput) (*s3.ListPartsOutput, error)
+       ListPartsAsync(ctx workflow.Context, input *s3.ListPartsInput) *S3ListPartsResult
 
-    PutBucketAccelerateConfiguration(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) (*s3.PutBucketAccelerateConfigurationOutput, error)
-    PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationResult
+       PutBucketAccelerateConfiguration(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) (*s3.PutBucketAccelerateConfigurationOutput, error)
+       PutBucketAccelerateConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAccelerateConfigurationInput) *S3PutBucketAccelerateConfigurationResult
 
-    PutBucketAcl(ctx workflow.Context, input *s3.PutBucketAclInput) (*s3.PutBucketAclOutput, error)
-    PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclResult
+       PutBucketAcl(ctx workflow.Context, input *s3.PutBucketAclInput) (*s3.PutBucketAclOutput, error)
+       PutBucketAclAsync(ctx workflow.Context, input *s3.PutBucketAclInput) *S3PutBucketAclResult
 
-    PutBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) (*s3.PutBucketAnalyticsConfigurationOutput, error)
-    PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationResult
+       PutBucketAnalyticsConfiguration(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) (*s3.PutBucketAnalyticsConfigurationOutput, error)
+       PutBucketAnalyticsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketAnalyticsConfigurationInput) *S3PutBucketAnalyticsConfigurationResult
 
-    PutBucketCors(ctx workflow.Context, input *s3.PutBucketCorsInput) (*s3.PutBucketCorsOutput, error)
-    PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsResult
+       PutBucketCors(ctx workflow.Context, input *s3.PutBucketCorsInput) (*s3.PutBucketCorsOutput, error)
+       PutBucketCorsAsync(ctx workflow.Context, input *s3.PutBucketCorsInput) *S3PutBucketCorsResult
 
-    PutBucketEncryption(ctx workflow.Context, input *s3.PutBucketEncryptionInput) (*s3.PutBucketEncryptionOutput, error)
-    PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionResult
+       PutBucketEncryption(ctx workflow.Context, input *s3.PutBucketEncryptionInput) (*s3.PutBucketEncryptionOutput, error)
+       PutBucketEncryptionAsync(ctx workflow.Context, input *s3.PutBucketEncryptionInput) *S3PutBucketEncryptionResult
 
-    PutBucketInventoryConfiguration(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) (*s3.PutBucketInventoryConfigurationOutput, error)
-    PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationResult
+       PutBucketInventoryConfiguration(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) (*s3.PutBucketInventoryConfigurationOutput, error)
+       PutBucketInventoryConfigurationAsync(ctx workflow.Context, input *s3.PutBucketInventoryConfigurationInput) *S3PutBucketInventoryConfigurationResult
 
-    PutBucketLifecycle(ctx workflow.Context, input *s3.PutBucketLifecycleInput) (*s3.PutBucketLifecycleOutput, error)
-    PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleResult
+       PutBucketLifecycle(ctx workflow.Context, input *s3.PutBucketLifecycleInput) (*s3.PutBucketLifecycleOutput, error)
+       PutBucketLifecycleAsync(ctx workflow.Context, input *s3.PutBucketLifecycleInput) *S3PutBucketLifecycleResult
 
-    PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) (*s3.PutBucketLifecycleConfigurationOutput, error)
-    PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationResult
+       PutBucketLifecycleConfiguration(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) (*s3.PutBucketLifecycleConfigurationOutput, error)
+       PutBucketLifecycleConfigurationAsync(ctx workflow.Context, input *s3.PutBucketLifecycleConfigurationInput) *S3PutBucketLifecycleConfigurationResult
 
-    PutBucketLogging(ctx workflow.Context, input *s3.PutBucketLoggingInput) (*s3.PutBucketLoggingOutput, error)
-    PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingResult
+       PutBucketLogging(ctx workflow.Context, input *s3.PutBucketLoggingInput) (*s3.PutBucketLoggingOutput, error)
+       PutBucketLoggingAsync(ctx workflow.Context, input *s3.PutBucketLoggingInput) *S3PutBucketLoggingResult
 
-    PutBucketMetricsConfiguration(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) (*s3.PutBucketMetricsConfigurationOutput, error)
-    PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationResult
+       PutBucketMetricsConfiguration(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) (*s3.PutBucketMetricsConfigurationOutput, error)
+       PutBucketMetricsConfigurationAsync(ctx workflow.Context, input *s3.PutBucketMetricsConfigurationInput) *S3PutBucketMetricsConfigurationResult
 
-    PutBucketNotification(ctx workflow.Context, input *s3.PutBucketNotificationInput) (*s3.PutBucketNotificationOutput, error)
-    PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationResult
+       PutBucketNotification(ctx workflow.Context, input *s3.PutBucketNotificationInput) (*s3.PutBucketNotificationOutput, error)
+       PutBucketNotificationAsync(ctx workflow.Context, input *s3.PutBucketNotificationInput) *S3PutBucketNotificationResult
 
-    PutBucketNotificationConfiguration(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) (*s3.PutBucketNotificationConfigurationOutput, error)
-    PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult
+       PutBucketNotificationConfiguration(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) (*s3.PutBucketNotificationConfigurationOutput, error)
+       PutBucketNotificationConfigurationAsync(ctx workflow.Context, input *s3.PutBucketNotificationConfigurationInput) *S3PutBucketNotificationConfigurationResult
 
-    PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error)
-    PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyResult
+       PutBucketPolicy(ctx workflow.Context, input *s3.PutBucketPolicyInput) (*s3.PutBucketPolicyOutput, error)
+       PutBucketPolicyAsync(ctx workflow.Context, input *s3.PutBucketPolicyInput) *S3PutBucketPolicyResult
 
-    PutBucketReplication(ctx workflow.Context, input *s3.PutBucketReplicationInput) (*s3.PutBucketReplicationOutput, error)
-    PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationResult
+       PutBucketReplication(ctx workflow.Context, input *s3.PutBucketReplicationInput) (*s3.PutBucketReplicationOutput, error)
+       PutBucketReplicationAsync(ctx workflow.Context, input *s3.PutBucketReplicationInput) *S3PutBucketReplicationResult
 
-    PutBucketRequestPayment(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) (*s3.PutBucketRequestPaymentOutput, error)
-    PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentResult
+       PutBucketRequestPayment(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) (*s3.PutBucketRequestPaymentOutput, error)
+       PutBucketRequestPaymentAsync(ctx workflow.Context, input *s3.PutBucketRequestPaymentInput) *S3PutBucketRequestPaymentResult
 
-    PutBucketTagging(ctx workflow.Context, input *s3.PutBucketTaggingInput) (*s3.PutBucketTaggingOutput, error)
-    PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingResult
+       PutBucketTagging(ctx workflow.Context, input *s3.PutBucketTaggingInput) (*s3.PutBucketTaggingOutput, error)
+       PutBucketTaggingAsync(ctx workflow.Context, input *s3.PutBucketTaggingInput) *S3PutBucketTaggingResult
 
-    PutBucketVersioning(ctx workflow.Context, input *s3.PutBucketVersioningInput) (*s3.PutBucketVersioningOutput, error)
-    PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningResult
+       PutBucketVersioning(ctx workflow.Context, input *s3.PutBucketVersioningInput) (*s3.PutBucketVersioningOutput, error)
+       PutBucketVersioningAsync(ctx workflow.Context, input *s3.PutBucketVersioningInput) *S3PutBucketVersioningResult
 
-    PutBucketWebsite(ctx workflow.Context, input *s3.PutBucketWebsiteInput) (*s3.PutBucketWebsiteOutput, error)
-    PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteResult
+       PutBucketWebsite(ctx workflow.Context, input *s3.PutBucketWebsiteInput) (*s3.PutBucketWebsiteOutput, error)
+       PutBucketWebsiteAsync(ctx workflow.Context, input *s3.PutBucketWebsiteInput) *S3PutBucketWebsiteResult
 
-    PutObject(ctx workflow.Context, input *s3.PutObjectInput) (*s3.PutObjectOutput, error)
-    PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectResult
+       PutObject(ctx workflow.Context, input *s3.PutObjectInput) (*s3.PutObjectOutput, error)
+       PutObjectAsync(ctx workflow.Context, input *s3.PutObjectInput) *S3PutObjectResult
 
-    PutObjectAcl(ctx workflow.Context, input *s3.PutObjectAclInput) (*s3.PutObjectAclOutput, error)
-    PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclResult
+       PutObjectAcl(ctx workflow.Context, input *s3.PutObjectAclInput) (*s3.PutObjectAclOutput, error)
+       PutObjectAclAsync(ctx workflow.Context, input *s3.PutObjectAclInput) *S3PutObjectAclResult
 
-    PutObjectLegalHold(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) (*s3.PutObjectLegalHoldOutput, error)
-    PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldResult
+       PutObjectLegalHold(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) (*s3.PutObjectLegalHoldOutput, error)
+       PutObjectLegalHoldAsync(ctx workflow.Context, input *s3.PutObjectLegalHoldInput) *S3PutObjectLegalHoldResult
 
-    PutObjectLockConfiguration(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) (*s3.PutObjectLockConfigurationOutput, error)
-    PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationResult
+       PutObjectLockConfiguration(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) (*s3.PutObjectLockConfigurationOutput, error)
+       PutObjectLockConfigurationAsync(ctx workflow.Context, input *s3.PutObjectLockConfigurationInput) *S3PutObjectLockConfigurationResult
 
-    PutObjectRetention(ctx workflow.Context, input *s3.PutObjectRetentionInput) (*s3.PutObjectRetentionOutput, error)
-    PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionResult
+       PutObjectRetention(ctx workflow.Context, input *s3.PutObjectRetentionInput) (*s3.PutObjectRetentionOutput, error)
+       PutObjectRetentionAsync(ctx workflow.Context, input *s3.PutObjectRetentionInput) *S3PutObjectRetentionResult
 
-    PutObjectTagging(ctx workflow.Context, input *s3.PutObjectTaggingInput) (*s3.PutObjectTaggingOutput, error)
-    PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingResult
+       PutObjectTagging(ctx workflow.Context, input *s3.PutObjectTaggingInput) (*s3.PutObjectTaggingOutput, error)
+       PutObjectTaggingAsync(ctx workflow.Context, input *s3.PutObjectTaggingInput) *S3PutObjectTaggingResult
 
-    PutPublicAccessBlock(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) (*s3.PutPublicAccessBlockOutput, error)
-    PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockResult
+       PutPublicAccessBlock(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) (*s3.PutPublicAccessBlockOutput, error)
+       PutPublicAccessBlockAsync(ctx workflow.Context, input *s3.PutPublicAccessBlockInput) *S3PutPublicAccessBlockResult
 
-    RestoreObject(ctx workflow.Context, input *s3.RestoreObjectInput) (*s3.RestoreObjectOutput, error)
-    RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectResult
+       RestoreObject(ctx workflow.Context, input *s3.RestoreObjectInput) (*s3.RestoreObjectOutput, error)
+       RestoreObjectAsync(ctx workflow.Context, input *s3.RestoreObjectInput) *S3RestoreObjectResult
 
-    SelectObjectContent(ctx workflow.Context, input *s3.SelectObjectContentInput) (*s3.SelectObjectContentOutput, error)
-    SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentResult
+       SelectObjectContent(ctx workflow.Context, input *s3.SelectObjectContentInput) (*s3.SelectObjectContentOutput, error)
+       SelectObjectContentAsync(ctx workflow.Context, input *s3.SelectObjectContentInput) *S3SelectObjectContentResult
 
-    UploadPart(ctx workflow.Context, input *s3.UploadPartInput) (*s3.UploadPartOutput, error)
-    UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartResult
+       UploadPart(ctx workflow.Context, input *s3.UploadPartInput) (*s3.UploadPartOutput, error)
+       UploadPartAsync(ctx workflow.Context, input *s3.UploadPartInput) *S3UploadPartResult
 
-    UploadPartCopy(ctx workflow.Context, input *s3.UploadPartCopyInput) (*s3.UploadPartCopyOutput, error)
-    UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyResult
+       UploadPartCopy(ctx workflow.Context, input *s3.UploadPartCopyInput) (*s3.UploadPartCopyOutput, error)
+       UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyResult
 
-    WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
-    WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
-    WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-    WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error}
+       WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+       WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+       WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
+       WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error}
 
 type S3AbortMultipartUploadResult struct {
 	Result workflow.Future

@@ -7,11 +7,11 @@ import (
 )
 
 type PersonalizeRuntimeClient interface {
-    GetPersonalizedRanking(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error)
-    GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *PersonalizeruntimeGetPersonalizedRankingResult
+       GetPersonalizedRanking(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error)
+       GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *PersonalizeruntimeGetPersonalizedRankingResult
 
-    GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error)
-    GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult
+       GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error)
+       GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult
 }
 
 type PersonalizeruntimeGetPersonalizedRankingResult struct {

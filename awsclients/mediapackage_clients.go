@@ -7,59 +7,59 @@ import (
 )
 
 type MediaPackageClient interface {
-    CreateChannel(ctx workflow.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error)
-    CreateChannelAsync(ctx workflow.Context, input *mediapackage.CreateChannelInput) *MediapackageCreateChannelResult
+       CreateChannel(ctx workflow.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error)
+       CreateChannelAsync(ctx workflow.Context, input *mediapackage.CreateChannelInput) *MediapackageCreateChannelResult
 
-    CreateHarvestJob(ctx workflow.Context, input *mediapackage.CreateHarvestJobInput) (*mediapackage.CreateHarvestJobOutput, error)
-    CreateHarvestJobAsync(ctx workflow.Context, input *mediapackage.CreateHarvestJobInput) *MediapackageCreateHarvestJobResult
+       CreateHarvestJob(ctx workflow.Context, input *mediapackage.CreateHarvestJobInput) (*mediapackage.CreateHarvestJobOutput, error)
+       CreateHarvestJobAsync(ctx workflow.Context, input *mediapackage.CreateHarvestJobInput) *MediapackageCreateHarvestJobResult
 
-    CreateOriginEndpoint(ctx workflow.Context, input *mediapackage.CreateOriginEndpointInput) (*mediapackage.CreateOriginEndpointOutput, error)
-    CreateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.CreateOriginEndpointInput) *MediapackageCreateOriginEndpointResult
+       CreateOriginEndpoint(ctx workflow.Context, input *mediapackage.CreateOriginEndpointInput) (*mediapackage.CreateOriginEndpointOutput, error)
+       CreateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.CreateOriginEndpointInput) *MediapackageCreateOriginEndpointResult
 
-    DeleteChannel(ctx workflow.Context, input *mediapackage.DeleteChannelInput) (*mediapackage.DeleteChannelOutput, error)
-    DeleteChannelAsync(ctx workflow.Context, input *mediapackage.DeleteChannelInput) *MediapackageDeleteChannelResult
+       DeleteChannel(ctx workflow.Context, input *mediapackage.DeleteChannelInput) (*mediapackage.DeleteChannelOutput, error)
+       DeleteChannelAsync(ctx workflow.Context, input *mediapackage.DeleteChannelInput) *MediapackageDeleteChannelResult
 
-    DeleteOriginEndpoint(ctx workflow.Context, input *mediapackage.DeleteOriginEndpointInput) (*mediapackage.DeleteOriginEndpointOutput, error)
-    DeleteOriginEndpointAsync(ctx workflow.Context, input *mediapackage.DeleteOriginEndpointInput) *MediapackageDeleteOriginEndpointResult
+       DeleteOriginEndpoint(ctx workflow.Context, input *mediapackage.DeleteOriginEndpointInput) (*mediapackage.DeleteOriginEndpointOutput, error)
+       DeleteOriginEndpointAsync(ctx workflow.Context, input *mediapackage.DeleteOriginEndpointInput) *MediapackageDeleteOriginEndpointResult
 
-    DescribeChannel(ctx workflow.Context, input *mediapackage.DescribeChannelInput) (*mediapackage.DescribeChannelOutput, error)
-    DescribeChannelAsync(ctx workflow.Context, input *mediapackage.DescribeChannelInput) *MediapackageDescribeChannelResult
+       DescribeChannel(ctx workflow.Context, input *mediapackage.DescribeChannelInput) (*mediapackage.DescribeChannelOutput, error)
+       DescribeChannelAsync(ctx workflow.Context, input *mediapackage.DescribeChannelInput) *MediapackageDescribeChannelResult
 
-    DescribeHarvestJob(ctx workflow.Context, input *mediapackage.DescribeHarvestJobInput) (*mediapackage.DescribeHarvestJobOutput, error)
-    DescribeHarvestJobAsync(ctx workflow.Context, input *mediapackage.DescribeHarvestJobInput) *MediapackageDescribeHarvestJobResult
+       DescribeHarvestJob(ctx workflow.Context, input *mediapackage.DescribeHarvestJobInput) (*mediapackage.DescribeHarvestJobOutput, error)
+       DescribeHarvestJobAsync(ctx workflow.Context, input *mediapackage.DescribeHarvestJobInput) *MediapackageDescribeHarvestJobResult
 
-    DescribeOriginEndpoint(ctx workflow.Context, input *mediapackage.DescribeOriginEndpointInput) (*mediapackage.DescribeOriginEndpointOutput, error)
-    DescribeOriginEndpointAsync(ctx workflow.Context, input *mediapackage.DescribeOriginEndpointInput) *MediapackageDescribeOriginEndpointResult
+       DescribeOriginEndpoint(ctx workflow.Context, input *mediapackage.DescribeOriginEndpointInput) (*mediapackage.DescribeOriginEndpointOutput, error)
+       DescribeOriginEndpointAsync(ctx workflow.Context, input *mediapackage.DescribeOriginEndpointInput) *MediapackageDescribeOriginEndpointResult
 
-    ListChannels(ctx workflow.Context, input *mediapackage.ListChannelsInput) (*mediapackage.ListChannelsOutput, error)
-    ListChannelsAsync(ctx workflow.Context, input *mediapackage.ListChannelsInput) *MediapackageListChannelsResult
+       ListChannels(ctx workflow.Context, input *mediapackage.ListChannelsInput) (*mediapackage.ListChannelsOutput, error)
+       ListChannelsAsync(ctx workflow.Context, input *mediapackage.ListChannelsInput) *MediapackageListChannelsResult
 
-    ListHarvestJobs(ctx workflow.Context, input *mediapackage.ListHarvestJobsInput) (*mediapackage.ListHarvestJobsOutput, error)
-    ListHarvestJobsAsync(ctx workflow.Context, input *mediapackage.ListHarvestJobsInput) *MediapackageListHarvestJobsResult
+       ListHarvestJobs(ctx workflow.Context, input *mediapackage.ListHarvestJobsInput) (*mediapackage.ListHarvestJobsOutput, error)
+       ListHarvestJobsAsync(ctx workflow.Context, input *mediapackage.ListHarvestJobsInput) *MediapackageListHarvestJobsResult
 
-    ListOriginEndpoints(ctx workflow.Context, input *mediapackage.ListOriginEndpointsInput) (*mediapackage.ListOriginEndpointsOutput, error)
-    ListOriginEndpointsAsync(ctx workflow.Context, input *mediapackage.ListOriginEndpointsInput) *MediapackageListOriginEndpointsResult
+       ListOriginEndpoints(ctx workflow.Context, input *mediapackage.ListOriginEndpointsInput) (*mediapackage.ListOriginEndpointsOutput, error)
+       ListOriginEndpointsAsync(ctx workflow.Context, input *mediapackage.ListOriginEndpointsInput) *MediapackageListOriginEndpointsResult
 
-    ListTagsForResource(ctx workflow.Context, input *mediapackage.ListTagsForResourceInput) (*mediapackage.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *mediapackage.ListTagsForResourceInput) *MediapackageListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *mediapackage.ListTagsForResourceInput) (*mediapackage.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *mediapackage.ListTagsForResourceInput) *MediapackageListTagsForResourceResult
 
-    RotateChannelCredentials(ctx workflow.Context, input *mediapackage.RotateChannelCredentialsInput) (*mediapackage.RotateChannelCredentialsOutput, error)
-    RotateChannelCredentialsAsync(ctx workflow.Context, input *mediapackage.RotateChannelCredentialsInput) *MediapackageRotateChannelCredentialsResult
+       RotateChannelCredentials(ctx workflow.Context, input *mediapackage.RotateChannelCredentialsInput) (*mediapackage.RotateChannelCredentialsOutput, error)
+       RotateChannelCredentialsAsync(ctx workflow.Context, input *mediapackage.RotateChannelCredentialsInput) *MediapackageRotateChannelCredentialsResult
 
-    RotateIngestEndpointCredentials(ctx workflow.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) (*mediapackage.RotateIngestEndpointCredentialsOutput, error)
-    RotateIngestEndpointCredentialsAsync(ctx workflow.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) *MediapackageRotateIngestEndpointCredentialsResult
+       RotateIngestEndpointCredentials(ctx workflow.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) (*mediapackage.RotateIngestEndpointCredentialsOutput, error)
+       RotateIngestEndpointCredentialsAsync(ctx workflow.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) *MediapackageRotateIngestEndpointCredentialsResult
 
-    TagResource(ctx workflow.Context, input *mediapackage.TagResourceInput) (*mediapackage.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *mediapackage.TagResourceInput) *MediapackageTagResourceResult
+       TagResource(ctx workflow.Context, input *mediapackage.TagResourceInput) (*mediapackage.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *mediapackage.TagResourceInput) *MediapackageTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *mediapackage.UntagResourceInput) (*mediapackage.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *mediapackage.UntagResourceInput) *MediapackageUntagResourceResult
+       UntagResource(ctx workflow.Context, input *mediapackage.UntagResourceInput) (*mediapackage.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *mediapackage.UntagResourceInput) *MediapackageUntagResourceResult
 
-    UpdateChannel(ctx workflow.Context, input *mediapackage.UpdateChannelInput) (*mediapackage.UpdateChannelOutput, error)
-    UpdateChannelAsync(ctx workflow.Context, input *mediapackage.UpdateChannelInput) *MediapackageUpdateChannelResult
+       UpdateChannel(ctx workflow.Context, input *mediapackage.UpdateChannelInput) (*mediapackage.UpdateChannelOutput, error)
+       UpdateChannelAsync(ctx workflow.Context, input *mediapackage.UpdateChannelInput) *MediapackageUpdateChannelResult
 
-    UpdateOriginEndpoint(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error)
-    UpdateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) *MediapackageUpdateOriginEndpointResult
+       UpdateOriginEndpoint(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error)
+       UpdateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) *MediapackageUpdateOriginEndpointResult
 }
 
 type MediapackageCreateChannelResult struct {

@@ -7,11 +7,11 @@ import (
 )
 
 type KinesisVideoSignalingChannelsClient interface {
-    GetIceServerConfig(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error)
-    GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigResult
+       GetIceServerConfig(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error)
+       GetIceServerConfigAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) *KinesisvideosignalingchannelsGetIceServerConfigResult
 
-    SendAlexaOfferToMaster(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error)
-    SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult
+       SendAlexaOfferToMaster(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error)
+       SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult
 }
 
 type KinesisvideosignalingchannelsGetIceServerConfigResult struct {

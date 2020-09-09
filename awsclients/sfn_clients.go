@@ -7,71 +7,71 @@ import (
 )
 
 type SFNClient interface {
-    CreateActivity(ctx workflow.Context, input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error)
-    CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *SfnCreateActivityResult
+       CreateActivity(ctx workflow.Context, input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error)
+       CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *SfnCreateActivityResult
 
-    CreateStateMachine(ctx workflow.Context, input *sfn.CreateStateMachineInput) (*sfn.CreateStateMachineOutput, error)
-    CreateStateMachineAsync(ctx workflow.Context, input *sfn.CreateStateMachineInput) *SfnCreateStateMachineResult
+       CreateStateMachine(ctx workflow.Context, input *sfn.CreateStateMachineInput) (*sfn.CreateStateMachineOutput, error)
+       CreateStateMachineAsync(ctx workflow.Context, input *sfn.CreateStateMachineInput) *SfnCreateStateMachineResult
 
-    DeleteActivity(ctx workflow.Context, input *sfn.DeleteActivityInput) (*sfn.DeleteActivityOutput, error)
-    DeleteActivityAsync(ctx workflow.Context, input *sfn.DeleteActivityInput) *SfnDeleteActivityResult
+       DeleteActivity(ctx workflow.Context, input *sfn.DeleteActivityInput) (*sfn.DeleteActivityOutput, error)
+       DeleteActivityAsync(ctx workflow.Context, input *sfn.DeleteActivityInput) *SfnDeleteActivityResult
 
-    DeleteStateMachine(ctx workflow.Context, input *sfn.DeleteStateMachineInput) (*sfn.DeleteStateMachineOutput, error)
-    DeleteStateMachineAsync(ctx workflow.Context, input *sfn.DeleteStateMachineInput) *SfnDeleteStateMachineResult
+       DeleteStateMachine(ctx workflow.Context, input *sfn.DeleteStateMachineInput) (*sfn.DeleteStateMachineOutput, error)
+       DeleteStateMachineAsync(ctx workflow.Context, input *sfn.DeleteStateMachineInput) *SfnDeleteStateMachineResult
 
-    DescribeActivity(ctx workflow.Context, input *sfn.DescribeActivityInput) (*sfn.DescribeActivityOutput, error)
-    DescribeActivityAsync(ctx workflow.Context, input *sfn.DescribeActivityInput) *SfnDescribeActivityResult
+       DescribeActivity(ctx workflow.Context, input *sfn.DescribeActivityInput) (*sfn.DescribeActivityOutput, error)
+       DescribeActivityAsync(ctx workflow.Context, input *sfn.DescribeActivityInput) *SfnDescribeActivityResult
 
-    DescribeExecution(ctx workflow.Context, input *sfn.DescribeExecutionInput) (*sfn.DescribeExecutionOutput, error)
-    DescribeExecutionAsync(ctx workflow.Context, input *sfn.DescribeExecutionInput) *SfnDescribeExecutionResult
+       DescribeExecution(ctx workflow.Context, input *sfn.DescribeExecutionInput) (*sfn.DescribeExecutionOutput, error)
+       DescribeExecutionAsync(ctx workflow.Context, input *sfn.DescribeExecutionInput) *SfnDescribeExecutionResult
 
-    DescribeStateMachine(ctx workflow.Context, input *sfn.DescribeStateMachineInput) (*sfn.DescribeStateMachineOutput, error)
-    DescribeStateMachineAsync(ctx workflow.Context, input *sfn.DescribeStateMachineInput) *SfnDescribeStateMachineResult
+       DescribeStateMachine(ctx workflow.Context, input *sfn.DescribeStateMachineInput) (*sfn.DescribeStateMachineOutput, error)
+       DescribeStateMachineAsync(ctx workflow.Context, input *sfn.DescribeStateMachineInput) *SfnDescribeStateMachineResult
 
-    DescribeStateMachineForExecution(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) (*sfn.DescribeStateMachineForExecutionOutput, error)
-    DescribeStateMachineForExecutionAsync(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) *SfnDescribeStateMachineForExecutionResult
+       DescribeStateMachineForExecution(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) (*sfn.DescribeStateMachineForExecutionOutput, error)
+       DescribeStateMachineForExecutionAsync(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) *SfnDescribeStateMachineForExecutionResult
 
-    GetActivityTask(ctx workflow.Context, input *sfn.GetActivityTaskInput) (*sfn.GetActivityTaskOutput, error)
-    GetActivityTaskAsync(ctx workflow.Context, input *sfn.GetActivityTaskInput) *SfnGetActivityTaskResult
+       GetActivityTask(ctx workflow.Context, input *sfn.GetActivityTaskInput) (*sfn.GetActivityTaskOutput, error)
+       GetActivityTaskAsync(ctx workflow.Context, input *sfn.GetActivityTaskInput) *SfnGetActivityTaskResult
 
-    GetExecutionHistory(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) (*sfn.GetExecutionHistoryOutput, error)
-    GetExecutionHistoryAsync(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) *SfnGetExecutionHistoryResult
+       GetExecutionHistory(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) (*sfn.GetExecutionHistoryOutput, error)
+       GetExecutionHistoryAsync(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) *SfnGetExecutionHistoryResult
 
-    ListActivities(ctx workflow.Context, input *sfn.ListActivitiesInput) (*sfn.ListActivitiesOutput, error)
-    ListActivitiesAsync(ctx workflow.Context, input *sfn.ListActivitiesInput) *SfnListActivitiesResult
+       ListActivities(ctx workflow.Context, input *sfn.ListActivitiesInput) (*sfn.ListActivitiesOutput, error)
+       ListActivitiesAsync(ctx workflow.Context, input *sfn.ListActivitiesInput) *SfnListActivitiesResult
 
-    ListExecutions(ctx workflow.Context, input *sfn.ListExecutionsInput) (*sfn.ListExecutionsOutput, error)
-    ListExecutionsAsync(ctx workflow.Context, input *sfn.ListExecutionsInput) *SfnListExecutionsResult
+       ListExecutions(ctx workflow.Context, input *sfn.ListExecutionsInput) (*sfn.ListExecutionsOutput, error)
+       ListExecutionsAsync(ctx workflow.Context, input *sfn.ListExecutionsInput) *SfnListExecutionsResult
 
-    ListStateMachines(ctx workflow.Context, input *sfn.ListStateMachinesInput) (*sfn.ListStateMachinesOutput, error)
-    ListStateMachinesAsync(ctx workflow.Context, input *sfn.ListStateMachinesInput) *SfnListStateMachinesResult
+       ListStateMachines(ctx workflow.Context, input *sfn.ListStateMachinesInput) (*sfn.ListStateMachinesOutput, error)
+       ListStateMachinesAsync(ctx workflow.Context, input *sfn.ListStateMachinesInput) *SfnListStateMachinesResult
 
-    ListTagsForResource(ctx workflow.Context, input *sfn.ListTagsForResourceInput) (*sfn.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *sfn.ListTagsForResourceInput) *SfnListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *sfn.ListTagsForResourceInput) (*sfn.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *sfn.ListTagsForResourceInput) *SfnListTagsForResourceResult
 
-    SendTaskFailure(ctx workflow.Context, input *sfn.SendTaskFailureInput) (*sfn.SendTaskFailureOutput, error)
-    SendTaskFailureAsync(ctx workflow.Context, input *sfn.SendTaskFailureInput) *SfnSendTaskFailureResult
+       SendTaskFailure(ctx workflow.Context, input *sfn.SendTaskFailureInput) (*sfn.SendTaskFailureOutput, error)
+       SendTaskFailureAsync(ctx workflow.Context, input *sfn.SendTaskFailureInput) *SfnSendTaskFailureResult
 
-    SendTaskHeartbeat(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) (*sfn.SendTaskHeartbeatOutput, error)
-    SendTaskHeartbeatAsync(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) *SfnSendTaskHeartbeatResult
+       SendTaskHeartbeat(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) (*sfn.SendTaskHeartbeatOutput, error)
+       SendTaskHeartbeatAsync(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) *SfnSendTaskHeartbeatResult
 
-    SendTaskSuccess(ctx workflow.Context, input *sfn.SendTaskSuccessInput) (*sfn.SendTaskSuccessOutput, error)
-    SendTaskSuccessAsync(ctx workflow.Context, input *sfn.SendTaskSuccessInput) *SfnSendTaskSuccessResult
+       SendTaskSuccess(ctx workflow.Context, input *sfn.SendTaskSuccessInput) (*sfn.SendTaskSuccessOutput, error)
+       SendTaskSuccessAsync(ctx workflow.Context, input *sfn.SendTaskSuccessInput) *SfnSendTaskSuccessResult
 
-    StartExecution(ctx workflow.Context, input *sfn.StartExecutionInput) (*sfn.StartExecutionOutput, error)
-    StartExecutionAsync(ctx workflow.Context, input *sfn.StartExecutionInput) *SfnStartExecutionResult
+       StartExecution(ctx workflow.Context, input *sfn.StartExecutionInput) (*sfn.StartExecutionOutput, error)
+       StartExecutionAsync(ctx workflow.Context, input *sfn.StartExecutionInput) *SfnStartExecutionResult
 
-    StopExecution(ctx workflow.Context, input *sfn.StopExecutionInput) (*sfn.StopExecutionOutput, error)
-    StopExecutionAsync(ctx workflow.Context, input *sfn.StopExecutionInput) *SfnStopExecutionResult
+       StopExecution(ctx workflow.Context, input *sfn.StopExecutionInput) (*sfn.StopExecutionOutput, error)
+       StopExecutionAsync(ctx workflow.Context, input *sfn.StopExecutionInput) *SfnStopExecutionResult
 
-    TagResource(ctx workflow.Context, input *sfn.TagResourceInput) (*sfn.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *sfn.TagResourceInput) *SfnTagResourceResult
+       TagResource(ctx workflow.Context, input *sfn.TagResourceInput) (*sfn.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *sfn.TagResourceInput) *SfnTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *sfn.UntagResourceInput) (*sfn.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *sfn.UntagResourceInput) *SfnUntagResourceResult
+       UntagResource(ctx workflow.Context, input *sfn.UntagResourceInput) (*sfn.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *sfn.UntagResourceInput) *SfnUntagResourceResult
 
-    UpdateStateMachine(ctx workflow.Context, input *sfn.UpdateStateMachineInput) (*sfn.UpdateStateMachineOutput, error)
-    UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SfnUpdateStateMachineResult
+       UpdateStateMachine(ctx workflow.Context, input *sfn.UpdateStateMachineInput) (*sfn.UpdateStateMachineOutput, error)
+       UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SfnUpdateStateMachineResult
 }
 
 type SfnCreateActivityResult struct {

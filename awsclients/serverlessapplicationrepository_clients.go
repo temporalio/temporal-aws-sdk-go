@@ -7,47 +7,47 @@ import (
 )
 
 type ServerlessApplicationRepositoryClient interface {
-    CreateApplication(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error)
-    CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessapplicationrepositoryCreateApplicationResult
+       CreateApplication(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error)
+       CreateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationRequest) *ServerlessapplicationrepositoryCreateApplicationResult
 
-    CreateApplicationVersion(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error)
-    CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessapplicationrepositoryCreateApplicationVersionResult
+       CreateApplicationVersion(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error)
+       CreateApplicationVersionAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) *ServerlessapplicationrepositoryCreateApplicationVersionResult
 
-    CreateCloudFormationChangeSet(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error)
-    CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessapplicationrepositoryCreateCloudFormationChangeSetResult
+       CreateCloudFormationChangeSet(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error)
+       CreateCloudFormationChangeSetAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) *ServerlessapplicationrepositoryCreateCloudFormationChangeSetResult
 
-    CreateCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error)
-    CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessapplicationrepositoryCreateCloudFormationTemplateResult
+       CreateCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error)
+       CreateCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) *ServerlessapplicationrepositoryCreateCloudFormationTemplateResult
 
-    DeleteApplication(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error)
-    DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessapplicationrepositoryDeleteApplicationResult
+       DeleteApplication(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error)
+       DeleteApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.DeleteApplicationInput) *ServerlessapplicationrepositoryDeleteApplicationResult
 
-    GetApplication(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error)
-    GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessapplicationrepositoryGetApplicationResult
+       GetApplication(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error)
+       GetApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationInput) *ServerlessapplicationrepositoryGetApplicationResult
 
-    GetApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error)
-    GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessapplicationrepositoryGetApplicationPolicyResult
+       GetApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error)
+       GetApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) *ServerlessapplicationrepositoryGetApplicationPolicyResult
 
-    GetCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error)
-    GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessapplicationrepositoryGetCloudFormationTemplateResult
+       GetCloudFormationTemplate(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error)
+       GetCloudFormationTemplateAsync(ctx workflow.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) *ServerlessapplicationrepositoryGetCloudFormationTemplateResult
 
-    ListApplicationDependencies(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error)
-    ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessapplicationrepositoryListApplicationDependenciesResult
+       ListApplicationDependencies(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error)
+       ListApplicationDependenciesAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) *ServerlessapplicationrepositoryListApplicationDependenciesResult
 
-    ListApplicationVersions(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error)
-    ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessapplicationrepositoryListApplicationVersionsResult
+       ListApplicationVersions(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error)
+       ListApplicationVersionsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) *ServerlessapplicationrepositoryListApplicationVersionsResult
 
-    ListApplications(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error)
-    ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessapplicationrepositoryListApplicationsResult
+       ListApplications(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error)
+       ListApplicationsAsync(ctx workflow.Context, input *serverlessapplicationrepository.ListApplicationsInput) *ServerlessapplicationrepositoryListApplicationsResult
 
-    PutApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error)
-    PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessapplicationrepositoryPutApplicationPolicyResult
+       PutApplicationPolicy(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error)
+       PutApplicationPolicyAsync(ctx workflow.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) *ServerlessapplicationrepositoryPutApplicationPolicyResult
 
-    UnshareApplication(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error)
-    UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessapplicationrepositoryUnshareApplicationResult
+       UnshareApplication(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error)
+       UnshareApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UnshareApplicationInput) *ServerlessapplicationrepositoryUnshareApplicationResult
 
-    UpdateApplication(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error)
-    UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessapplicationrepositoryUpdateApplicationResult
+       UpdateApplication(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error)
+       UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessapplicationrepositoryUpdateApplicationResult
 }
 
 type ServerlessapplicationrepositoryCreateApplicationResult struct {

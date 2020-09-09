@@ -7,74 +7,74 @@ import (
 )
 
 type ServiceDiscoveryClient interface {
-    CreateHttpNamespace(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) (*servicediscovery.CreateHttpNamespaceOutput, error)
-    CreateHttpNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) *ServicediscoveryCreateHttpNamespaceResult
+       CreateHttpNamespace(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) (*servicediscovery.CreateHttpNamespaceOutput, error)
+       CreateHttpNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) *ServicediscoveryCreateHttpNamespaceResult
 
-    CreatePrivateDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error)
-    CreatePrivateDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) *ServicediscoveryCreatePrivateDnsNamespaceResult
+       CreatePrivateDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error)
+       CreatePrivateDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) *ServicediscoveryCreatePrivateDnsNamespaceResult
 
-    CreatePublicDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) (*servicediscovery.CreatePublicDnsNamespaceOutput, error)
-    CreatePublicDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) *ServicediscoveryCreatePublicDnsNamespaceResult
+       CreatePublicDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) (*servicediscovery.CreatePublicDnsNamespaceOutput, error)
+       CreatePublicDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) *ServicediscoveryCreatePublicDnsNamespaceResult
 
-    CreateService(ctx workflow.Context, input *servicediscovery.CreateServiceInput) (*servicediscovery.CreateServiceOutput, error)
-    CreateServiceAsync(ctx workflow.Context, input *servicediscovery.CreateServiceInput) *ServicediscoveryCreateServiceResult
+       CreateService(ctx workflow.Context, input *servicediscovery.CreateServiceInput) (*servicediscovery.CreateServiceOutput, error)
+       CreateServiceAsync(ctx workflow.Context, input *servicediscovery.CreateServiceInput) *ServicediscoveryCreateServiceResult
 
-    DeleteNamespace(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) (*servicediscovery.DeleteNamespaceOutput, error)
-    DeleteNamespaceAsync(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) *ServicediscoveryDeleteNamespaceResult
+       DeleteNamespace(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) (*servicediscovery.DeleteNamespaceOutput, error)
+       DeleteNamespaceAsync(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) *ServicediscoveryDeleteNamespaceResult
 
-    DeleteService(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) (*servicediscovery.DeleteServiceOutput, error)
-    DeleteServiceAsync(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) *ServicediscoveryDeleteServiceResult
+       DeleteService(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) (*servicediscovery.DeleteServiceOutput, error)
+       DeleteServiceAsync(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) *ServicediscoveryDeleteServiceResult
 
-    DeregisterInstance(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) (*servicediscovery.DeregisterInstanceOutput, error)
-    DeregisterInstanceAsync(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) *ServicediscoveryDeregisterInstanceResult
+       DeregisterInstance(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) (*servicediscovery.DeregisterInstanceOutput, error)
+       DeregisterInstanceAsync(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) *ServicediscoveryDeregisterInstanceResult
 
-    DiscoverInstances(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) (*servicediscovery.DiscoverInstancesOutput, error)
-    DiscoverInstancesAsync(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) *ServicediscoveryDiscoverInstancesResult
+       DiscoverInstances(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) (*servicediscovery.DiscoverInstancesOutput, error)
+       DiscoverInstancesAsync(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) *ServicediscoveryDiscoverInstancesResult
 
-    GetInstance(ctx workflow.Context, input *servicediscovery.GetInstanceInput) (*servicediscovery.GetInstanceOutput, error)
-    GetInstanceAsync(ctx workflow.Context, input *servicediscovery.GetInstanceInput) *ServicediscoveryGetInstanceResult
+       GetInstance(ctx workflow.Context, input *servicediscovery.GetInstanceInput) (*servicediscovery.GetInstanceOutput, error)
+       GetInstanceAsync(ctx workflow.Context, input *servicediscovery.GetInstanceInput) *ServicediscoveryGetInstanceResult
 
-    GetInstancesHealthStatus(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) (*servicediscovery.GetInstancesHealthStatusOutput, error)
-    GetInstancesHealthStatusAsync(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) *ServicediscoveryGetInstancesHealthStatusResult
+       GetInstancesHealthStatus(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) (*servicediscovery.GetInstancesHealthStatusOutput, error)
+       GetInstancesHealthStatusAsync(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) *ServicediscoveryGetInstancesHealthStatusResult
 
-    GetNamespace(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) (*servicediscovery.GetNamespaceOutput, error)
-    GetNamespaceAsync(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) *ServicediscoveryGetNamespaceResult
+       GetNamespace(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) (*servicediscovery.GetNamespaceOutput, error)
+       GetNamespaceAsync(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) *ServicediscoveryGetNamespaceResult
 
-    GetOperation(ctx workflow.Context, input *servicediscovery.GetOperationInput) (*servicediscovery.GetOperationOutput, error)
-    GetOperationAsync(ctx workflow.Context, input *servicediscovery.GetOperationInput) *ServicediscoveryGetOperationResult
+       GetOperation(ctx workflow.Context, input *servicediscovery.GetOperationInput) (*servicediscovery.GetOperationOutput, error)
+       GetOperationAsync(ctx workflow.Context, input *servicediscovery.GetOperationInput) *ServicediscoveryGetOperationResult
 
-    GetService(ctx workflow.Context, input *servicediscovery.GetServiceInput) (*servicediscovery.GetServiceOutput, error)
-    GetServiceAsync(ctx workflow.Context, input *servicediscovery.GetServiceInput) *ServicediscoveryGetServiceResult
+       GetService(ctx workflow.Context, input *servicediscovery.GetServiceInput) (*servicediscovery.GetServiceOutput, error)
+       GetServiceAsync(ctx workflow.Context, input *servicediscovery.GetServiceInput) *ServicediscoveryGetServiceResult
 
-    ListInstances(ctx workflow.Context, input *servicediscovery.ListInstancesInput) (*servicediscovery.ListInstancesOutput, error)
-    ListInstancesAsync(ctx workflow.Context, input *servicediscovery.ListInstancesInput) *ServicediscoveryListInstancesResult
+       ListInstances(ctx workflow.Context, input *servicediscovery.ListInstancesInput) (*servicediscovery.ListInstancesOutput, error)
+       ListInstancesAsync(ctx workflow.Context, input *servicediscovery.ListInstancesInput) *ServicediscoveryListInstancesResult
 
-    ListNamespaces(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) (*servicediscovery.ListNamespacesOutput, error)
-    ListNamespacesAsync(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) *ServicediscoveryListNamespacesResult
+       ListNamespaces(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) (*servicediscovery.ListNamespacesOutput, error)
+       ListNamespacesAsync(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) *ServicediscoveryListNamespacesResult
 
-    ListOperations(ctx workflow.Context, input *servicediscovery.ListOperationsInput) (*servicediscovery.ListOperationsOutput, error)
-    ListOperationsAsync(ctx workflow.Context, input *servicediscovery.ListOperationsInput) *ServicediscoveryListOperationsResult
+       ListOperations(ctx workflow.Context, input *servicediscovery.ListOperationsInput) (*servicediscovery.ListOperationsOutput, error)
+       ListOperationsAsync(ctx workflow.Context, input *servicediscovery.ListOperationsInput) *ServicediscoveryListOperationsResult
 
-    ListServices(ctx workflow.Context, input *servicediscovery.ListServicesInput) (*servicediscovery.ListServicesOutput, error)
-    ListServicesAsync(ctx workflow.Context, input *servicediscovery.ListServicesInput) *ServicediscoveryListServicesResult
+       ListServices(ctx workflow.Context, input *servicediscovery.ListServicesInput) (*servicediscovery.ListServicesOutput, error)
+       ListServicesAsync(ctx workflow.Context, input *servicediscovery.ListServicesInput) *ServicediscoveryListServicesResult
 
-    ListTagsForResource(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) (*servicediscovery.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) *ServicediscoveryListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) (*servicediscovery.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) *ServicediscoveryListTagsForResourceResult
 
-    RegisterInstance(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) (*servicediscovery.RegisterInstanceOutput, error)
-    RegisterInstanceAsync(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) *ServicediscoveryRegisterInstanceResult
+       RegisterInstance(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) (*servicediscovery.RegisterInstanceOutput, error)
+       RegisterInstanceAsync(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) *ServicediscoveryRegisterInstanceResult
 
-    TagResource(ctx workflow.Context, input *servicediscovery.TagResourceInput) (*servicediscovery.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *servicediscovery.TagResourceInput) *ServicediscoveryTagResourceResult
+       TagResource(ctx workflow.Context, input *servicediscovery.TagResourceInput) (*servicediscovery.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *servicediscovery.TagResourceInput) *ServicediscoveryTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *servicediscovery.UntagResourceInput) (*servicediscovery.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *servicediscovery.UntagResourceInput) *ServicediscoveryUntagResourceResult
+       UntagResource(ctx workflow.Context, input *servicediscovery.UntagResourceInput) (*servicediscovery.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *servicediscovery.UntagResourceInput) *ServicediscoveryUntagResourceResult
 
-    UpdateInstanceCustomHealthStatus(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error)
-    UpdateInstanceCustomHealthStatusAsync(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) *ServicediscoveryUpdateInstanceCustomHealthStatusResult
+       UpdateInstanceCustomHealthStatus(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error)
+       UpdateInstanceCustomHealthStatusAsync(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) *ServicediscoveryUpdateInstanceCustomHealthStatusResult
 
-    UpdateService(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) (*servicediscovery.UpdateServiceOutput, error)
-    UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServicediscoveryUpdateServiceResult
+       UpdateService(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) (*servicediscovery.UpdateServiceOutput, error)
+       UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServicediscoveryUpdateServiceResult
 }
 
 type ServicediscoveryCreateHttpNamespaceResult struct {

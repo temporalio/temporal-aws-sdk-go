@@ -7,402 +7,402 @@ import (
 )
 
 type RDSClient interface {
-    AddRoleToDBCluster(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error)
-    AddRoleToDBClusterAsync(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) *RdsAddRoleToDBClusterResult
+       AddRoleToDBCluster(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error)
+       AddRoleToDBClusterAsync(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) *RdsAddRoleToDBClusterResult
 
-    AddRoleToDBInstance(ctx workflow.Context, input *rds.AddRoleToDBInstanceInput) (*rds.AddRoleToDBInstanceOutput, error)
-    AddRoleToDBInstanceAsync(ctx workflow.Context, input *rds.AddRoleToDBInstanceInput) *RdsAddRoleToDBInstanceResult
+       AddRoleToDBInstance(ctx workflow.Context, input *rds.AddRoleToDBInstanceInput) (*rds.AddRoleToDBInstanceOutput, error)
+       AddRoleToDBInstanceAsync(ctx workflow.Context, input *rds.AddRoleToDBInstanceInput) *RdsAddRoleToDBInstanceResult
 
-    AddSourceIdentifierToSubscription(ctx workflow.Context, input *rds.AddSourceIdentifierToSubscriptionInput) (*rds.AddSourceIdentifierToSubscriptionOutput, error)
-    AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *rds.AddSourceIdentifierToSubscriptionInput) *RdsAddSourceIdentifierToSubscriptionResult
+       AddSourceIdentifierToSubscription(ctx workflow.Context, input *rds.AddSourceIdentifierToSubscriptionInput) (*rds.AddSourceIdentifierToSubscriptionOutput, error)
+       AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *rds.AddSourceIdentifierToSubscriptionInput) *RdsAddSourceIdentifierToSubscriptionResult
 
-    AddTagsToResource(ctx workflow.Context, input *rds.AddTagsToResourceInput) (*rds.AddTagsToResourceOutput, error)
-    AddTagsToResourceAsync(ctx workflow.Context, input *rds.AddTagsToResourceInput) *RdsAddTagsToResourceResult
+       AddTagsToResource(ctx workflow.Context, input *rds.AddTagsToResourceInput) (*rds.AddTagsToResourceOutput, error)
+       AddTagsToResourceAsync(ctx workflow.Context, input *rds.AddTagsToResourceInput) *RdsAddTagsToResourceResult
 
-    ApplyPendingMaintenanceAction(ctx workflow.Context, input *rds.ApplyPendingMaintenanceActionInput) (*rds.ApplyPendingMaintenanceActionOutput, error)
-    ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *rds.ApplyPendingMaintenanceActionInput) *RdsApplyPendingMaintenanceActionResult
+       ApplyPendingMaintenanceAction(ctx workflow.Context, input *rds.ApplyPendingMaintenanceActionInput) (*rds.ApplyPendingMaintenanceActionOutput, error)
+       ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *rds.ApplyPendingMaintenanceActionInput) *RdsApplyPendingMaintenanceActionResult
 
-    AuthorizeDBSecurityGroupIngress(ctx workflow.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) (*rds.AuthorizeDBSecurityGroupIngressOutput, error)
-    AuthorizeDBSecurityGroupIngressAsync(ctx workflow.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) *RdsAuthorizeDBSecurityGroupIngressResult
+       AuthorizeDBSecurityGroupIngress(ctx workflow.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) (*rds.AuthorizeDBSecurityGroupIngressOutput, error)
+       AuthorizeDBSecurityGroupIngressAsync(ctx workflow.Context, input *rds.AuthorizeDBSecurityGroupIngressInput) *RdsAuthorizeDBSecurityGroupIngressResult
 
-    BacktrackDBCluster(ctx workflow.Context, input *rds.BacktrackDBClusterInput) (*rds.BacktrackDBClusterOutput, error)
-    BacktrackDBClusterAsync(ctx workflow.Context, input *rds.BacktrackDBClusterInput) *RdsBacktrackDBClusterResult
+       BacktrackDBCluster(ctx workflow.Context, input *rds.BacktrackDBClusterInput) (*rds.BacktrackDBClusterOutput, error)
+       BacktrackDBClusterAsync(ctx workflow.Context, input *rds.BacktrackDBClusterInput) *RdsBacktrackDBClusterResult
 
-    CancelExportTask(ctx workflow.Context, input *rds.CancelExportTaskInput) (*rds.CancelExportTaskOutput, error)
-    CancelExportTaskAsync(ctx workflow.Context, input *rds.CancelExportTaskInput) *RdsCancelExportTaskResult
+       CancelExportTask(ctx workflow.Context, input *rds.CancelExportTaskInput) (*rds.CancelExportTaskOutput, error)
+       CancelExportTaskAsync(ctx workflow.Context, input *rds.CancelExportTaskInput) *RdsCancelExportTaskResult
 
-    CopyDBClusterParameterGroup(ctx workflow.Context, input *rds.CopyDBClusterParameterGroupInput) (*rds.CopyDBClusterParameterGroupOutput, error)
-    CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.CopyDBClusterParameterGroupInput) *RdsCopyDBClusterParameterGroupResult
+       CopyDBClusterParameterGroup(ctx workflow.Context, input *rds.CopyDBClusterParameterGroupInput) (*rds.CopyDBClusterParameterGroupOutput, error)
+       CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.CopyDBClusterParameterGroupInput) *RdsCopyDBClusterParameterGroupResult
 
-    CopyDBClusterSnapshot(ctx workflow.Context, input *rds.CopyDBClusterSnapshotInput) (*rds.CopyDBClusterSnapshotOutput, error)
-    CopyDBClusterSnapshotAsync(ctx workflow.Context, input *rds.CopyDBClusterSnapshotInput) *RdsCopyDBClusterSnapshotResult
+       CopyDBClusterSnapshot(ctx workflow.Context, input *rds.CopyDBClusterSnapshotInput) (*rds.CopyDBClusterSnapshotOutput, error)
+       CopyDBClusterSnapshotAsync(ctx workflow.Context, input *rds.CopyDBClusterSnapshotInput) *RdsCopyDBClusterSnapshotResult
 
-    CopyDBParameterGroup(ctx workflow.Context, input *rds.CopyDBParameterGroupInput) (*rds.CopyDBParameterGroupOutput, error)
-    CopyDBParameterGroupAsync(ctx workflow.Context, input *rds.CopyDBParameterGroupInput) *RdsCopyDBParameterGroupResult
+       CopyDBParameterGroup(ctx workflow.Context, input *rds.CopyDBParameterGroupInput) (*rds.CopyDBParameterGroupOutput, error)
+       CopyDBParameterGroupAsync(ctx workflow.Context, input *rds.CopyDBParameterGroupInput) *RdsCopyDBParameterGroupResult
 
-    CopyDBSnapshot(ctx workflow.Context, input *rds.CopyDBSnapshotInput) (*rds.CopyDBSnapshotOutput, error)
-    CopyDBSnapshotAsync(ctx workflow.Context, input *rds.CopyDBSnapshotInput) *RdsCopyDBSnapshotResult
+       CopyDBSnapshot(ctx workflow.Context, input *rds.CopyDBSnapshotInput) (*rds.CopyDBSnapshotOutput, error)
+       CopyDBSnapshotAsync(ctx workflow.Context, input *rds.CopyDBSnapshotInput) *RdsCopyDBSnapshotResult
 
-    CopyOptionGroup(ctx workflow.Context, input *rds.CopyOptionGroupInput) (*rds.CopyOptionGroupOutput, error)
-    CopyOptionGroupAsync(ctx workflow.Context, input *rds.CopyOptionGroupInput) *RdsCopyOptionGroupResult
+       CopyOptionGroup(ctx workflow.Context, input *rds.CopyOptionGroupInput) (*rds.CopyOptionGroupOutput, error)
+       CopyOptionGroupAsync(ctx workflow.Context, input *rds.CopyOptionGroupInput) *RdsCopyOptionGroupResult
 
-    CreateCustomAvailabilityZone(ctx workflow.Context, input *rds.CreateCustomAvailabilityZoneInput) (*rds.CreateCustomAvailabilityZoneOutput, error)
-    CreateCustomAvailabilityZoneAsync(ctx workflow.Context, input *rds.CreateCustomAvailabilityZoneInput) *RdsCreateCustomAvailabilityZoneResult
+       CreateCustomAvailabilityZone(ctx workflow.Context, input *rds.CreateCustomAvailabilityZoneInput) (*rds.CreateCustomAvailabilityZoneOutput, error)
+       CreateCustomAvailabilityZoneAsync(ctx workflow.Context, input *rds.CreateCustomAvailabilityZoneInput) *RdsCreateCustomAvailabilityZoneResult
 
-    CreateDBCluster(ctx workflow.Context, input *rds.CreateDBClusterInput) (*rds.CreateDBClusterOutput, error)
-    CreateDBClusterAsync(ctx workflow.Context, input *rds.CreateDBClusterInput) *RdsCreateDBClusterResult
+       CreateDBCluster(ctx workflow.Context, input *rds.CreateDBClusterInput) (*rds.CreateDBClusterOutput, error)
+       CreateDBClusterAsync(ctx workflow.Context, input *rds.CreateDBClusterInput) *RdsCreateDBClusterResult
 
-    CreateDBClusterEndpoint(ctx workflow.Context, input *rds.CreateDBClusterEndpointInput) (*rds.CreateDBClusterEndpointOutput, error)
-    CreateDBClusterEndpointAsync(ctx workflow.Context, input *rds.CreateDBClusterEndpointInput) *RdsCreateDBClusterEndpointResult
+       CreateDBClusterEndpoint(ctx workflow.Context, input *rds.CreateDBClusterEndpointInput) (*rds.CreateDBClusterEndpointOutput, error)
+       CreateDBClusterEndpointAsync(ctx workflow.Context, input *rds.CreateDBClusterEndpointInput) *RdsCreateDBClusterEndpointResult
 
-    CreateDBClusterParameterGroup(ctx workflow.Context, input *rds.CreateDBClusterParameterGroupInput) (*rds.CreateDBClusterParameterGroupOutput, error)
-    CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.CreateDBClusterParameterGroupInput) *RdsCreateDBClusterParameterGroupResult
+       CreateDBClusterParameterGroup(ctx workflow.Context, input *rds.CreateDBClusterParameterGroupInput) (*rds.CreateDBClusterParameterGroupOutput, error)
+       CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.CreateDBClusterParameterGroupInput) *RdsCreateDBClusterParameterGroupResult
 
-    CreateDBClusterSnapshot(ctx workflow.Context, input *rds.CreateDBClusterSnapshotInput) (*rds.CreateDBClusterSnapshotOutput, error)
-    CreateDBClusterSnapshotAsync(ctx workflow.Context, input *rds.CreateDBClusterSnapshotInput) *RdsCreateDBClusterSnapshotResult
+       CreateDBClusterSnapshot(ctx workflow.Context, input *rds.CreateDBClusterSnapshotInput) (*rds.CreateDBClusterSnapshotOutput, error)
+       CreateDBClusterSnapshotAsync(ctx workflow.Context, input *rds.CreateDBClusterSnapshotInput) *RdsCreateDBClusterSnapshotResult
 
-    CreateDBInstance(ctx workflow.Context, input *rds.CreateDBInstanceInput) (*rds.CreateDBInstanceOutput, error)
-    CreateDBInstanceAsync(ctx workflow.Context, input *rds.CreateDBInstanceInput) *RdsCreateDBInstanceResult
+       CreateDBInstance(ctx workflow.Context, input *rds.CreateDBInstanceInput) (*rds.CreateDBInstanceOutput, error)
+       CreateDBInstanceAsync(ctx workflow.Context, input *rds.CreateDBInstanceInput) *RdsCreateDBInstanceResult
 
-    CreateDBInstanceReadReplica(ctx workflow.Context, input *rds.CreateDBInstanceReadReplicaInput) (*rds.CreateDBInstanceReadReplicaOutput, error)
-    CreateDBInstanceReadReplicaAsync(ctx workflow.Context, input *rds.CreateDBInstanceReadReplicaInput) *RdsCreateDBInstanceReadReplicaResult
+       CreateDBInstanceReadReplica(ctx workflow.Context, input *rds.CreateDBInstanceReadReplicaInput) (*rds.CreateDBInstanceReadReplicaOutput, error)
+       CreateDBInstanceReadReplicaAsync(ctx workflow.Context, input *rds.CreateDBInstanceReadReplicaInput) *RdsCreateDBInstanceReadReplicaResult
 
-    CreateDBParameterGroup(ctx workflow.Context, input *rds.CreateDBParameterGroupInput) (*rds.CreateDBParameterGroupOutput, error)
-    CreateDBParameterGroupAsync(ctx workflow.Context, input *rds.CreateDBParameterGroupInput) *RdsCreateDBParameterGroupResult
+       CreateDBParameterGroup(ctx workflow.Context, input *rds.CreateDBParameterGroupInput) (*rds.CreateDBParameterGroupOutput, error)
+       CreateDBParameterGroupAsync(ctx workflow.Context, input *rds.CreateDBParameterGroupInput) *RdsCreateDBParameterGroupResult
 
-    CreateDBProxy(ctx workflow.Context, input *rds.CreateDBProxyInput) (*rds.CreateDBProxyOutput, error)
-    CreateDBProxyAsync(ctx workflow.Context, input *rds.CreateDBProxyInput) *RdsCreateDBProxyResult
+       CreateDBProxy(ctx workflow.Context, input *rds.CreateDBProxyInput) (*rds.CreateDBProxyOutput, error)
+       CreateDBProxyAsync(ctx workflow.Context, input *rds.CreateDBProxyInput) *RdsCreateDBProxyResult
 
-    CreateDBSecurityGroup(ctx workflow.Context, input *rds.CreateDBSecurityGroupInput) (*rds.CreateDBSecurityGroupOutput, error)
-    CreateDBSecurityGroupAsync(ctx workflow.Context, input *rds.CreateDBSecurityGroupInput) *RdsCreateDBSecurityGroupResult
+       CreateDBSecurityGroup(ctx workflow.Context, input *rds.CreateDBSecurityGroupInput) (*rds.CreateDBSecurityGroupOutput, error)
+       CreateDBSecurityGroupAsync(ctx workflow.Context, input *rds.CreateDBSecurityGroupInput) *RdsCreateDBSecurityGroupResult
 
-    CreateDBSnapshot(ctx workflow.Context, input *rds.CreateDBSnapshotInput) (*rds.CreateDBSnapshotOutput, error)
-    CreateDBSnapshotAsync(ctx workflow.Context, input *rds.CreateDBSnapshotInput) *RdsCreateDBSnapshotResult
+       CreateDBSnapshot(ctx workflow.Context, input *rds.CreateDBSnapshotInput) (*rds.CreateDBSnapshotOutput, error)
+       CreateDBSnapshotAsync(ctx workflow.Context, input *rds.CreateDBSnapshotInput) *RdsCreateDBSnapshotResult
 
-    CreateDBSubnetGroup(ctx workflow.Context, input *rds.CreateDBSubnetGroupInput) (*rds.CreateDBSubnetGroupOutput, error)
-    CreateDBSubnetGroupAsync(ctx workflow.Context, input *rds.CreateDBSubnetGroupInput) *RdsCreateDBSubnetGroupResult
+       CreateDBSubnetGroup(ctx workflow.Context, input *rds.CreateDBSubnetGroupInput) (*rds.CreateDBSubnetGroupOutput, error)
+       CreateDBSubnetGroupAsync(ctx workflow.Context, input *rds.CreateDBSubnetGroupInput) *RdsCreateDBSubnetGroupResult
 
-    CreateEventSubscription(ctx workflow.Context, input *rds.CreateEventSubscriptionInput) (*rds.CreateEventSubscriptionOutput, error)
-    CreateEventSubscriptionAsync(ctx workflow.Context, input *rds.CreateEventSubscriptionInput) *RdsCreateEventSubscriptionResult
+       CreateEventSubscription(ctx workflow.Context, input *rds.CreateEventSubscriptionInput) (*rds.CreateEventSubscriptionOutput, error)
+       CreateEventSubscriptionAsync(ctx workflow.Context, input *rds.CreateEventSubscriptionInput) *RdsCreateEventSubscriptionResult
 
-    CreateGlobalCluster(ctx workflow.Context, input *rds.CreateGlobalClusterInput) (*rds.CreateGlobalClusterOutput, error)
-    CreateGlobalClusterAsync(ctx workflow.Context, input *rds.CreateGlobalClusterInput) *RdsCreateGlobalClusterResult
+       CreateGlobalCluster(ctx workflow.Context, input *rds.CreateGlobalClusterInput) (*rds.CreateGlobalClusterOutput, error)
+       CreateGlobalClusterAsync(ctx workflow.Context, input *rds.CreateGlobalClusterInput) *RdsCreateGlobalClusterResult
 
-    CreateOptionGroup(ctx workflow.Context, input *rds.CreateOptionGroupInput) (*rds.CreateOptionGroupOutput, error)
-    CreateOptionGroupAsync(ctx workflow.Context, input *rds.CreateOptionGroupInput) *RdsCreateOptionGroupResult
+       CreateOptionGroup(ctx workflow.Context, input *rds.CreateOptionGroupInput) (*rds.CreateOptionGroupOutput, error)
+       CreateOptionGroupAsync(ctx workflow.Context, input *rds.CreateOptionGroupInput) *RdsCreateOptionGroupResult
 
-    DeleteCustomAvailabilityZone(ctx workflow.Context, input *rds.DeleteCustomAvailabilityZoneInput) (*rds.DeleteCustomAvailabilityZoneOutput, error)
-    DeleteCustomAvailabilityZoneAsync(ctx workflow.Context, input *rds.DeleteCustomAvailabilityZoneInput) *RdsDeleteCustomAvailabilityZoneResult
+       DeleteCustomAvailabilityZone(ctx workflow.Context, input *rds.DeleteCustomAvailabilityZoneInput) (*rds.DeleteCustomAvailabilityZoneOutput, error)
+       DeleteCustomAvailabilityZoneAsync(ctx workflow.Context, input *rds.DeleteCustomAvailabilityZoneInput) *RdsDeleteCustomAvailabilityZoneResult
 
-    DeleteDBCluster(ctx workflow.Context, input *rds.DeleteDBClusterInput) (*rds.DeleteDBClusterOutput, error)
-    DeleteDBClusterAsync(ctx workflow.Context, input *rds.DeleteDBClusterInput) *RdsDeleteDBClusterResult
+       DeleteDBCluster(ctx workflow.Context, input *rds.DeleteDBClusterInput) (*rds.DeleteDBClusterOutput, error)
+       DeleteDBClusterAsync(ctx workflow.Context, input *rds.DeleteDBClusterInput) *RdsDeleteDBClusterResult
 
-    DeleteDBClusterEndpoint(ctx workflow.Context, input *rds.DeleteDBClusterEndpointInput) (*rds.DeleteDBClusterEndpointOutput, error)
-    DeleteDBClusterEndpointAsync(ctx workflow.Context, input *rds.DeleteDBClusterEndpointInput) *RdsDeleteDBClusterEndpointResult
+       DeleteDBClusterEndpoint(ctx workflow.Context, input *rds.DeleteDBClusterEndpointInput) (*rds.DeleteDBClusterEndpointOutput, error)
+       DeleteDBClusterEndpointAsync(ctx workflow.Context, input *rds.DeleteDBClusterEndpointInput) *RdsDeleteDBClusterEndpointResult
 
-    DeleteDBClusterParameterGroup(ctx workflow.Context, input *rds.DeleteDBClusterParameterGroupInput) (*rds.DeleteDBClusterParameterGroupOutput, error)
-    DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.DeleteDBClusterParameterGroupInput) *RdsDeleteDBClusterParameterGroupResult
+       DeleteDBClusterParameterGroup(ctx workflow.Context, input *rds.DeleteDBClusterParameterGroupInput) (*rds.DeleteDBClusterParameterGroupOutput, error)
+       DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.DeleteDBClusterParameterGroupInput) *RdsDeleteDBClusterParameterGroupResult
 
-    DeleteDBClusterSnapshot(ctx workflow.Context, input *rds.DeleteDBClusterSnapshotInput) (*rds.DeleteDBClusterSnapshotOutput, error)
-    DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *rds.DeleteDBClusterSnapshotInput) *RdsDeleteDBClusterSnapshotResult
+       DeleteDBClusterSnapshot(ctx workflow.Context, input *rds.DeleteDBClusterSnapshotInput) (*rds.DeleteDBClusterSnapshotOutput, error)
+       DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *rds.DeleteDBClusterSnapshotInput) *RdsDeleteDBClusterSnapshotResult
 
-    DeleteDBInstance(ctx workflow.Context, input *rds.DeleteDBInstanceInput) (*rds.DeleteDBInstanceOutput, error)
-    DeleteDBInstanceAsync(ctx workflow.Context, input *rds.DeleteDBInstanceInput) *RdsDeleteDBInstanceResult
+       DeleteDBInstance(ctx workflow.Context, input *rds.DeleteDBInstanceInput) (*rds.DeleteDBInstanceOutput, error)
+       DeleteDBInstanceAsync(ctx workflow.Context, input *rds.DeleteDBInstanceInput) *RdsDeleteDBInstanceResult
 
-    DeleteDBInstanceAutomatedBackup(ctx workflow.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) (*rds.DeleteDBInstanceAutomatedBackupOutput, error)
-    DeleteDBInstanceAutomatedBackupAsync(ctx workflow.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) *RdsDeleteDBInstanceAutomatedBackupResult
+       DeleteDBInstanceAutomatedBackup(ctx workflow.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) (*rds.DeleteDBInstanceAutomatedBackupOutput, error)
+       DeleteDBInstanceAutomatedBackupAsync(ctx workflow.Context, input *rds.DeleteDBInstanceAutomatedBackupInput) *RdsDeleteDBInstanceAutomatedBackupResult
 
-    DeleteDBParameterGroup(ctx workflow.Context, input *rds.DeleteDBParameterGroupInput) (*rds.DeleteDBParameterGroupOutput, error)
-    DeleteDBParameterGroupAsync(ctx workflow.Context, input *rds.DeleteDBParameterGroupInput) *RdsDeleteDBParameterGroupResult
+       DeleteDBParameterGroup(ctx workflow.Context, input *rds.DeleteDBParameterGroupInput) (*rds.DeleteDBParameterGroupOutput, error)
+       DeleteDBParameterGroupAsync(ctx workflow.Context, input *rds.DeleteDBParameterGroupInput) *RdsDeleteDBParameterGroupResult
 
-    DeleteDBProxy(ctx workflow.Context, input *rds.DeleteDBProxyInput) (*rds.DeleteDBProxyOutput, error)
-    DeleteDBProxyAsync(ctx workflow.Context, input *rds.DeleteDBProxyInput) *RdsDeleteDBProxyResult
+       DeleteDBProxy(ctx workflow.Context, input *rds.DeleteDBProxyInput) (*rds.DeleteDBProxyOutput, error)
+       DeleteDBProxyAsync(ctx workflow.Context, input *rds.DeleteDBProxyInput) *RdsDeleteDBProxyResult
 
-    DeleteDBSecurityGroup(ctx workflow.Context, input *rds.DeleteDBSecurityGroupInput) (*rds.DeleteDBSecurityGroupOutput, error)
-    DeleteDBSecurityGroupAsync(ctx workflow.Context, input *rds.DeleteDBSecurityGroupInput) *RdsDeleteDBSecurityGroupResult
+       DeleteDBSecurityGroup(ctx workflow.Context, input *rds.DeleteDBSecurityGroupInput) (*rds.DeleteDBSecurityGroupOutput, error)
+       DeleteDBSecurityGroupAsync(ctx workflow.Context, input *rds.DeleteDBSecurityGroupInput) *RdsDeleteDBSecurityGroupResult
 
-    DeleteDBSnapshot(ctx workflow.Context, input *rds.DeleteDBSnapshotInput) (*rds.DeleteDBSnapshotOutput, error)
-    DeleteDBSnapshotAsync(ctx workflow.Context, input *rds.DeleteDBSnapshotInput) *RdsDeleteDBSnapshotResult
+       DeleteDBSnapshot(ctx workflow.Context, input *rds.DeleteDBSnapshotInput) (*rds.DeleteDBSnapshotOutput, error)
+       DeleteDBSnapshotAsync(ctx workflow.Context, input *rds.DeleteDBSnapshotInput) *RdsDeleteDBSnapshotResult
 
-    DeleteDBSubnetGroup(ctx workflow.Context, input *rds.DeleteDBSubnetGroupInput) (*rds.DeleteDBSubnetGroupOutput, error)
-    DeleteDBSubnetGroupAsync(ctx workflow.Context, input *rds.DeleteDBSubnetGroupInput) *RdsDeleteDBSubnetGroupResult
+       DeleteDBSubnetGroup(ctx workflow.Context, input *rds.DeleteDBSubnetGroupInput) (*rds.DeleteDBSubnetGroupOutput, error)
+       DeleteDBSubnetGroupAsync(ctx workflow.Context, input *rds.DeleteDBSubnetGroupInput) *RdsDeleteDBSubnetGroupResult
 
-    DeleteEventSubscription(ctx workflow.Context, input *rds.DeleteEventSubscriptionInput) (*rds.DeleteEventSubscriptionOutput, error)
-    DeleteEventSubscriptionAsync(ctx workflow.Context, input *rds.DeleteEventSubscriptionInput) *RdsDeleteEventSubscriptionResult
+       DeleteEventSubscription(ctx workflow.Context, input *rds.DeleteEventSubscriptionInput) (*rds.DeleteEventSubscriptionOutput, error)
+       DeleteEventSubscriptionAsync(ctx workflow.Context, input *rds.DeleteEventSubscriptionInput) *RdsDeleteEventSubscriptionResult
 
-    DeleteGlobalCluster(ctx workflow.Context, input *rds.DeleteGlobalClusterInput) (*rds.DeleteGlobalClusterOutput, error)
-    DeleteGlobalClusterAsync(ctx workflow.Context, input *rds.DeleteGlobalClusterInput) *RdsDeleteGlobalClusterResult
+       DeleteGlobalCluster(ctx workflow.Context, input *rds.DeleteGlobalClusterInput) (*rds.DeleteGlobalClusterOutput, error)
+       DeleteGlobalClusterAsync(ctx workflow.Context, input *rds.DeleteGlobalClusterInput) *RdsDeleteGlobalClusterResult
 
-    DeleteInstallationMedia(ctx workflow.Context, input *rds.DeleteInstallationMediaInput) (*rds.DeleteInstallationMediaOutput, error)
-    DeleteInstallationMediaAsync(ctx workflow.Context, input *rds.DeleteInstallationMediaInput) *RdsDeleteInstallationMediaResult
+       DeleteInstallationMedia(ctx workflow.Context, input *rds.DeleteInstallationMediaInput) (*rds.DeleteInstallationMediaOutput, error)
+       DeleteInstallationMediaAsync(ctx workflow.Context, input *rds.DeleteInstallationMediaInput) *RdsDeleteInstallationMediaResult
 
-    DeleteOptionGroup(ctx workflow.Context, input *rds.DeleteOptionGroupInput) (*rds.DeleteOptionGroupOutput, error)
-    DeleteOptionGroupAsync(ctx workflow.Context, input *rds.DeleteOptionGroupInput) *RdsDeleteOptionGroupResult
+       DeleteOptionGroup(ctx workflow.Context, input *rds.DeleteOptionGroupInput) (*rds.DeleteOptionGroupOutput, error)
+       DeleteOptionGroupAsync(ctx workflow.Context, input *rds.DeleteOptionGroupInput) *RdsDeleteOptionGroupResult
 
-    DeregisterDBProxyTargets(ctx workflow.Context, input *rds.DeregisterDBProxyTargetsInput) (*rds.DeregisterDBProxyTargetsOutput, error)
-    DeregisterDBProxyTargetsAsync(ctx workflow.Context, input *rds.DeregisterDBProxyTargetsInput) *RdsDeregisterDBProxyTargetsResult
+       DeregisterDBProxyTargets(ctx workflow.Context, input *rds.DeregisterDBProxyTargetsInput) (*rds.DeregisterDBProxyTargetsOutput, error)
+       DeregisterDBProxyTargetsAsync(ctx workflow.Context, input *rds.DeregisterDBProxyTargetsInput) *RdsDeregisterDBProxyTargetsResult
 
-    DescribeAccountAttributes(ctx workflow.Context, input *rds.DescribeAccountAttributesInput) (*rds.DescribeAccountAttributesOutput, error)
-    DescribeAccountAttributesAsync(ctx workflow.Context, input *rds.DescribeAccountAttributesInput) *RdsDescribeAccountAttributesResult
+       DescribeAccountAttributes(ctx workflow.Context, input *rds.DescribeAccountAttributesInput) (*rds.DescribeAccountAttributesOutput, error)
+       DescribeAccountAttributesAsync(ctx workflow.Context, input *rds.DescribeAccountAttributesInput) *RdsDescribeAccountAttributesResult
 
-    DescribeCertificates(ctx workflow.Context, input *rds.DescribeCertificatesInput) (*rds.DescribeCertificatesOutput, error)
-    DescribeCertificatesAsync(ctx workflow.Context, input *rds.DescribeCertificatesInput) *RdsDescribeCertificatesResult
+       DescribeCertificates(ctx workflow.Context, input *rds.DescribeCertificatesInput) (*rds.DescribeCertificatesOutput, error)
+       DescribeCertificatesAsync(ctx workflow.Context, input *rds.DescribeCertificatesInput) *RdsDescribeCertificatesResult
 
-    DescribeCustomAvailabilityZones(ctx workflow.Context, input *rds.DescribeCustomAvailabilityZonesInput) (*rds.DescribeCustomAvailabilityZonesOutput, error)
-    DescribeCustomAvailabilityZonesAsync(ctx workflow.Context, input *rds.DescribeCustomAvailabilityZonesInput) *RdsDescribeCustomAvailabilityZonesResult
+       DescribeCustomAvailabilityZones(ctx workflow.Context, input *rds.DescribeCustomAvailabilityZonesInput) (*rds.DescribeCustomAvailabilityZonesOutput, error)
+       DescribeCustomAvailabilityZonesAsync(ctx workflow.Context, input *rds.DescribeCustomAvailabilityZonesInput) *RdsDescribeCustomAvailabilityZonesResult
 
-    DescribeDBClusterBacktracks(ctx workflow.Context, input *rds.DescribeDBClusterBacktracksInput) (*rds.DescribeDBClusterBacktracksOutput, error)
-    DescribeDBClusterBacktracksAsync(ctx workflow.Context, input *rds.DescribeDBClusterBacktracksInput) *RdsDescribeDBClusterBacktracksResult
+       DescribeDBClusterBacktracks(ctx workflow.Context, input *rds.DescribeDBClusterBacktracksInput) (*rds.DescribeDBClusterBacktracksOutput, error)
+       DescribeDBClusterBacktracksAsync(ctx workflow.Context, input *rds.DescribeDBClusterBacktracksInput) *RdsDescribeDBClusterBacktracksResult
 
-    DescribeDBClusterEndpoints(ctx workflow.Context, input *rds.DescribeDBClusterEndpointsInput) (*rds.DescribeDBClusterEndpointsOutput, error)
-    DescribeDBClusterEndpointsAsync(ctx workflow.Context, input *rds.DescribeDBClusterEndpointsInput) *RdsDescribeDBClusterEndpointsResult
+       DescribeDBClusterEndpoints(ctx workflow.Context, input *rds.DescribeDBClusterEndpointsInput) (*rds.DescribeDBClusterEndpointsOutput, error)
+       DescribeDBClusterEndpointsAsync(ctx workflow.Context, input *rds.DescribeDBClusterEndpointsInput) *RdsDescribeDBClusterEndpointsResult
 
-    DescribeDBClusterParameterGroups(ctx workflow.Context, input *rds.DescribeDBClusterParameterGroupsInput) (*rds.DescribeDBClusterParameterGroupsOutput, error)
-    DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *rds.DescribeDBClusterParameterGroupsInput) *RdsDescribeDBClusterParameterGroupsResult
+       DescribeDBClusterParameterGroups(ctx workflow.Context, input *rds.DescribeDBClusterParameterGroupsInput) (*rds.DescribeDBClusterParameterGroupsOutput, error)
+       DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *rds.DescribeDBClusterParameterGroupsInput) *RdsDescribeDBClusterParameterGroupsResult
 
-    DescribeDBClusterParameters(ctx workflow.Context, input *rds.DescribeDBClusterParametersInput) (*rds.DescribeDBClusterParametersOutput, error)
-    DescribeDBClusterParametersAsync(ctx workflow.Context, input *rds.DescribeDBClusterParametersInput) *RdsDescribeDBClusterParametersResult
+       DescribeDBClusterParameters(ctx workflow.Context, input *rds.DescribeDBClusterParametersInput) (*rds.DescribeDBClusterParametersOutput, error)
+       DescribeDBClusterParametersAsync(ctx workflow.Context, input *rds.DescribeDBClusterParametersInput) *RdsDescribeDBClusterParametersResult
 
-    DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) (*rds.DescribeDBClusterSnapshotAttributesOutput, error)
-    DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) *RdsDescribeDBClusterSnapshotAttributesResult
+       DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) (*rds.DescribeDBClusterSnapshotAttributesOutput, error)
+       DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotAttributesInput) *RdsDescribeDBClusterSnapshotAttributesResult
 
-    DescribeDBClusterSnapshots(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) (*rds.DescribeDBClusterSnapshotsOutput, error)
-    DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *RdsDescribeDBClusterSnapshotsResult
+       DescribeDBClusterSnapshots(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) (*rds.DescribeDBClusterSnapshotsOutput, error)
+       DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) *RdsDescribeDBClusterSnapshotsResult
 
-    DescribeDBClusters(ctx workflow.Context, input *rds.DescribeDBClustersInput) (*rds.DescribeDBClustersOutput, error)
-    DescribeDBClustersAsync(ctx workflow.Context, input *rds.DescribeDBClustersInput) *RdsDescribeDBClustersResult
+       DescribeDBClusters(ctx workflow.Context, input *rds.DescribeDBClustersInput) (*rds.DescribeDBClustersOutput, error)
+       DescribeDBClustersAsync(ctx workflow.Context, input *rds.DescribeDBClustersInput) *RdsDescribeDBClustersResult
 
-    DescribeDBEngineVersions(ctx workflow.Context, input *rds.DescribeDBEngineVersionsInput) (*rds.DescribeDBEngineVersionsOutput, error)
-    DescribeDBEngineVersionsAsync(ctx workflow.Context, input *rds.DescribeDBEngineVersionsInput) *RdsDescribeDBEngineVersionsResult
+       DescribeDBEngineVersions(ctx workflow.Context, input *rds.DescribeDBEngineVersionsInput) (*rds.DescribeDBEngineVersionsOutput, error)
+       DescribeDBEngineVersionsAsync(ctx workflow.Context, input *rds.DescribeDBEngineVersionsInput) *RdsDescribeDBEngineVersionsResult
 
-    DescribeDBInstanceAutomatedBackups(ctx workflow.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) (*rds.DescribeDBInstanceAutomatedBackupsOutput, error)
-    DescribeDBInstanceAutomatedBackupsAsync(ctx workflow.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) *RdsDescribeDBInstanceAutomatedBackupsResult
+       DescribeDBInstanceAutomatedBackups(ctx workflow.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) (*rds.DescribeDBInstanceAutomatedBackupsOutput, error)
+       DescribeDBInstanceAutomatedBackupsAsync(ctx workflow.Context, input *rds.DescribeDBInstanceAutomatedBackupsInput) *RdsDescribeDBInstanceAutomatedBackupsResult
 
-    DescribeDBInstances(ctx workflow.Context, input *rds.DescribeDBInstancesInput) (*rds.DescribeDBInstancesOutput, error)
-    DescribeDBInstancesAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *RdsDescribeDBInstancesResult
+       DescribeDBInstances(ctx workflow.Context, input *rds.DescribeDBInstancesInput) (*rds.DescribeDBInstancesOutput, error)
+       DescribeDBInstancesAsync(ctx workflow.Context, input *rds.DescribeDBInstancesInput) *RdsDescribeDBInstancesResult
 
-    DescribeDBLogFiles(ctx workflow.Context, input *rds.DescribeDBLogFilesInput) (*rds.DescribeDBLogFilesOutput, error)
-    DescribeDBLogFilesAsync(ctx workflow.Context, input *rds.DescribeDBLogFilesInput) *RdsDescribeDBLogFilesResult
+       DescribeDBLogFiles(ctx workflow.Context, input *rds.DescribeDBLogFilesInput) (*rds.DescribeDBLogFilesOutput, error)
+       DescribeDBLogFilesAsync(ctx workflow.Context, input *rds.DescribeDBLogFilesInput) *RdsDescribeDBLogFilesResult
 
-    DescribeDBParameterGroups(ctx workflow.Context, input *rds.DescribeDBParameterGroupsInput) (*rds.DescribeDBParameterGroupsOutput, error)
-    DescribeDBParameterGroupsAsync(ctx workflow.Context, input *rds.DescribeDBParameterGroupsInput) *RdsDescribeDBParameterGroupsResult
+       DescribeDBParameterGroups(ctx workflow.Context, input *rds.DescribeDBParameterGroupsInput) (*rds.DescribeDBParameterGroupsOutput, error)
+       DescribeDBParameterGroupsAsync(ctx workflow.Context, input *rds.DescribeDBParameterGroupsInput) *RdsDescribeDBParameterGroupsResult
 
-    DescribeDBParameters(ctx workflow.Context, input *rds.DescribeDBParametersInput) (*rds.DescribeDBParametersOutput, error)
-    DescribeDBParametersAsync(ctx workflow.Context, input *rds.DescribeDBParametersInput) *RdsDescribeDBParametersResult
+       DescribeDBParameters(ctx workflow.Context, input *rds.DescribeDBParametersInput) (*rds.DescribeDBParametersOutput, error)
+       DescribeDBParametersAsync(ctx workflow.Context, input *rds.DescribeDBParametersInput) *RdsDescribeDBParametersResult
 
-    DescribeDBProxies(ctx workflow.Context, input *rds.DescribeDBProxiesInput) (*rds.DescribeDBProxiesOutput, error)
-    DescribeDBProxiesAsync(ctx workflow.Context, input *rds.DescribeDBProxiesInput) *RdsDescribeDBProxiesResult
+       DescribeDBProxies(ctx workflow.Context, input *rds.DescribeDBProxiesInput) (*rds.DescribeDBProxiesOutput, error)
+       DescribeDBProxiesAsync(ctx workflow.Context, input *rds.DescribeDBProxiesInput) *RdsDescribeDBProxiesResult
 
-    DescribeDBProxyTargetGroups(ctx workflow.Context, input *rds.DescribeDBProxyTargetGroupsInput) (*rds.DescribeDBProxyTargetGroupsOutput, error)
-    DescribeDBProxyTargetGroupsAsync(ctx workflow.Context, input *rds.DescribeDBProxyTargetGroupsInput) *RdsDescribeDBProxyTargetGroupsResult
+       DescribeDBProxyTargetGroups(ctx workflow.Context, input *rds.DescribeDBProxyTargetGroupsInput) (*rds.DescribeDBProxyTargetGroupsOutput, error)
+       DescribeDBProxyTargetGroupsAsync(ctx workflow.Context, input *rds.DescribeDBProxyTargetGroupsInput) *RdsDescribeDBProxyTargetGroupsResult
 
-    DescribeDBProxyTargets(ctx workflow.Context, input *rds.DescribeDBProxyTargetsInput) (*rds.DescribeDBProxyTargetsOutput, error)
-    DescribeDBProxyTargetsAsync(ctx workflow.Context, input *rds.DescribeDBProxyTargetsInput) *RdsDescribeDBProxyTargetsResult
+       DescribeDBProxyTargets(ctx workflow.Context, input *rds.DescribeDBProxyTargetsInput) (*rds.DescribeDBProxyTargetsOutput, error)
+       DescribeDBProxyTargetsAsync(ctx workflow.Context, input *rds.DescribeDBProxyTargetsInput) *RdsDescribeDBProxyTargetsResult
 
-    DescribeDBSecurityGroups(ctx workflow.Context, input *rds.DescribeDBSecurityGroupsInput) (*rds.DescribeDBSecurityGroupsOutput, error)
-    DescribeDBSecurityGroupsAsync(ctx workflow.Context, input *rds.DescribeDBSecurityGroupsInput) *RdsDescribeDBSecurityGroupsResult
+       DescribeDBSecurityGroups(ctx workflow.Context, input *rds.DescribeDBSecurityGroupsInput) (*rds.DescribeDBSecurityGroupsOutput, error)
+       DescribeDBSecurityGroupsAsync(ctx workflow.Context, input *rds.DescribeDBSecurityGroupsInput) *RdsDescribeDBSecurityGroupsResult
 
-    DescribeDBSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBSnapshotAttributesInput) (*rds.DescribeDBSnapshotAttributesOutput, error)
-    DescribeDBSnapshotAttributesAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotAttributesInput) *RdsDescribeDBSnapshotAttributesResult
+       DescribeDBSnapshotAttributes(ctx workflow.Context, input *rds.DescribeDBSnapshotAttributesInput) (*rds.DescribeDBSnapshotAttributesOutput, error)
+       DescribeDBSnapshotAttributesAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotAttributesInput) *RdsDescribeDBSnapshotAttributesResult
 
-    DescribeDBSnapshots(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) (*rds.DescribeDBSnapshotsOutput, error)
-    DescribeDBSnapshotsAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *RdsDescribeDBSnapshotsResult
+       DescribeDBSnapshots(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) (*rds.DescribeDBSnapshotsOutput, error)
+       DescribeDBSnapshotsAsync(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) *RdsDescribeDBSnapshotsResult
 
-    DescribeDBSubnetGroups(ctx workflow.Context, input *rds.DescribeDBSubnetGroupsInput) (*rds.DescribeDBSubnetGroupsOutput, error)
-    DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *rds.DescribeDBSubnetGroupsInput) *RdsDescribeDBSubnetGroupsResult
+       DescribeDBSubnetGroups(ctx workflow.Context, input *rds.DescribeDBSubnetGroupsInput) (*rds.DescribeDBSubnetGroupsOutput, error)
+       DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *rds.DescribeDBSubnetGroupsInput) *RdsDescribeDBSubnetGroupsResult
 
-    DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultClusterParametersInput) (*rds.DescribeEngineDefaultClusterParametersOutput, error)
-    DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *rds.DescribeEngineDefaultClusterParametersInput) *RdsDescribeEngineDefaultClusterParametersResult
+       DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultClusterParametersInput) (*rds.DescribeEngineDefaultClusterParametersOutput, error)
+       DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *rds.DescribeEngineDefaultClusterParametersInput) *RdsDescribeEngineDefaultClusterParametersResult
 
-    DescribeEngineDefaultParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultParametersInput) (*rds.DescribeEngineDefaultParametersOutput, error)
-    DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *rds.DescribeEngineDefaultParametersInput) *RdsDescribeEngineDefaultParametersResult
+       DescribeEngineDefaultParameters(ctx workflow.Context, input *rds.DescribeEngineDefaultParametersInput) (*rds.DescribeEngineDefaultParametersOutput, error)
+       DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *rds.DescribeEngineDefaultParametersInput) *RdsDescribeEngineDefaultParametersResult
 
-    DescribeEventCategories(ctx workflow.Context, input *rds.DescribeEventCategoriesInput) (*rds.DescribeEventCategoriesOutput, error)
-    DescribeEventCategoriesAsync(ctx workflow.Context, input *rds.DescribeEventCategoriesInput) *RdsDescribeEventCategoriesResult
+       DescribeEventCategories(ctx workflow.Context, input *rds.DescribeEventCategoriesInput) (*rds.DescribeEventCategoriesOutput, error)
+       DescribeEventCategoriesAsync(ctx workflow.Context, input *rds.DescribeEventCategoriesInput) *RdsDescribeEventCategoriesResult
 
-    DescribeEventSubscriptions(ctx workflow.Context, input *rds.DescribeEventSubscriptionsInput) (*rds.DescribeEventSubscriptionsOutput, error)
-    DescribeEventSubscriptionsAsync(ctx workflow.Context, input *rds.DescribeEventSubscriptionsInput) *RdsDescribeEventSubscriptionsResult
+       DescribeEventSubscriptions(ctx workflow.Context, input *rds.DescribeEventSubscriptionsInput) (*rds.DescribeEventSubscriptionsOutput, error)
+       DescribeEventSubscriptionsAsync(ctx workflow.Context, input *rds.DescribeEventSubscriptionsInput) *RdsDescribeEventSubscriptionsResult
 
-    DescribeEvents(ctx workflow.Context, input *rds.DescribeEventsInput) (*rds.DescribeEventsOutput, error)
-    DescribeEventsAsync(ctx workflow.Context, input *rds.DescribeEventsInput) *RdsDescribeEventsResult
+       DescribeEvents(ctx workflow.Context, input *rds.DescribeEventsInput) (*rds.DescribeEventsOutput, error)
+       DescribeEventsAsync(ctx workflow.Context, input *rds.DescribeEventsInput) *RdsDescribeEventsResult
 
-    DescribeExportTasks(ctx workflow.Context, input *rds.DescribeExportTasksInput) (*rds.DescribeExportTasksOutput, error)
-    DescribeExportTasksAsync(ctx workflow.Context, input *rds.DescribeExportTasksInput) *RdsDescribeExportTasksResult
+       DescribeExportTasks(ctx workflow.Context, input *rds.DescribeExportTasksInput) (*rds.DescribeExportTasksOutput, error)
+       DescribeExportTasksAsync(ctx workflow.Context, input *rds.DescribeExportTasksInput) *RdsDescribeExportTasksResult
 
-    DescribeGlobalClusters(ctx workflow.Context, input *rds.DescribeGlobalClustersInput) (*rds.DescribeGlobalClustersOutput, error)
-    DescribeGlobalClustersAsync(ctx workflow.Context, input *rds.DescribeGlobalClustersInput) *RdsDescribeGlobalClustersResult
+       DescribeGlobalClusters(ctx workflow.Context, input *rds.DescribeGlobalClustersInput) (*rds.DescribeGlobalClustersOutput, error)
+       DescribeGlobalClustersAsync(ctx workflow.Context, input *rds.DescribeGlobalClustersInput) *RdsDescribeGlobalClustersResult
 
-    DescribeInstallationMedia(ctx workflow.Context, input *rds.DescribeInstallationMediaInput) (*rds.DescribeInstallationMediaOutput, error)
-    DescribeInstallationMediaAsync(ctx workflow.Context, input *rds.DescribeInstallationMediaInput) *RdsDescribeInstallationMediaResult
+       DescribeInstallationMedia(ctx workflow.Context, input *rds.DescribeInstallationMediaInput) (*rds.DescribeInstallationMediaOutput, error)
+       DescribeInstallationMediaAsync(ctx workflow.Context, input *rds.DescribeInstallationMediaInput) *RdsDescribeInstallationMediaResult
 
-    DescribeOptionGroupOptions(ctx workflow.Context, input *rds.DescribeOptionGroupOptionsInput) (*rds.DescribeOptionGroupOptionsOutput, error)
-    DescribeOptionGroupOptionsAsync(ctx workflow.Context, input *rds.DescribeOptionGroupOptionsInput) *RdsDescribeOptionGroupOptionsResult
+       DescribeOptionGroupOptions(ctx workflow.Context, input *rds.DescribeOptionGroupOptionsInput) (*rds.DescribeOptionGroupOptionsOutput, error)
+       DescribeOptionGroupOptionsAsync(ctx workflow.Context, input *rds.DescribeOptionGroupOptionsInput) *RdsDescribeOptionGroupOptionsResult
 
-    DescribeOptionGroups(ctx workflow.Context, input *rds.DescribeOptionGroupsInput) (*rds.DescribeOptionGroupsOutput, error)
-    DescribeOptionGroupsAsync(ctx workflow.Context, input *rds.DescribeOptionGroupsInput) *RdsDescribeOptionGroupsResult
+       DescribeOptionGroups(ctx workflow.Context, input *rds.DescribeOptionGroupsInput) (*rds.DescribeOptionGroupsOutput, error)
+       DescribeOptionGroupsAsync(ctx workflow.Context, input *rds.DescribeOptionGroupsInput) *RdsDescribeOptionGroupsResult
 
-    DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) (*rds.DescribeOrderableDBInstanceOptionsOutput, error)
-    DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) *RdsDescribeOrderableDBInstanceOptionsResult
+       DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) (*rds.DescribeOrderableDBInstanceOptionsOutput, error)
+       DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *rds.DescribeOrderableDBInstanceOptionsInput) *RdsDescribeOrderableDBInstanceOptionsResult
 
-    DescribePendingMaintenanceActions(ctx workflow.Context, input *rds.DescribePendingMaintenanceActionsInput) (*rds.DescribePendingMaintenanceActionsOutput, error)
-    DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *rds.DescribePendingMaintenanceActionsInput) *RdsDescribePendingMaintenanceActionsResult
+       DescribePendingMaintenanceActions(ctx workflow.Context, input *rds.DescribePendingMaintenanceActionsInput) (*rds.DescribePendingMaintenanceActionsOutput, error)
+       DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *rds.DescribePendingMaintenanceActionsInput) *RdsDescribePendingMaintenanceActionsResult
 
-    DescribeReservedDBInstances(ctx workflow.Context, input *rds.DescribeReservedDBInstancesInput) (*rds.DescribeReservedDBInstancesOutput, error)
-    DescribeReservedDBInstancesAsync(ctx workflow.Context, input *rds.DescribeReservedDBInstancesInput) *RdsDescribeReservedDBInstancesResult
+       DescribeReservedDBInstances(ctx workflow.Context, input *rds.DescribeReservedDBInstancesInput) (*rds.DescribeReservedDBInstancesOutput, error)
+       DescribeReservedDBInstancesAsync(ctx workflow.Context, input *rds.DescribeReservedDBInstancesInput) *RdsDescribeReservedDBInstancesResult
 
-    DescribeReservedDBInstancesOfferings(ctx workflow.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) (*rds.DescribeReservedDBInstancesOfferingsOutput, error)
-    DescribeReservedDBInstancesOfferingsAsync(ctx workflow.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) *RdsDescribeReservedDBInstancesOfferingsResult
+       DescribeReservedDBInstancesOfferings(ctx workflow.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) (*rds.DescribeReservedDBInstancesOfferingsOutput, error)
+       DescribeReservedDBInstancesOfferingsAsync(ctx workflow.Context, input *rds.DescribeReservedDBInstancesOfferingsInput) *RdsDescribeReservedDBInstancesOfferingsResult
 
-    DescribeSourceRegions(ctx workflow.Context, input *rds.DescribeSourceRegionsInput) (*rds.DescribeSourceRegionsOutput, error)
-    DescribeSourceRegionsAsync(ctx workflow.Context, input *rds.DescribeSourceRegionsInput) *RdsDescribeSourceRegionsResult
+       DescribeSourceRegions(ctx workflow.Context, input *rds.DescribeSourceRegionsInput) (*rds.DescribeSourceRegionsOutput, error)
+       DescribeSourceRegionsAsync(ctx workflow.Context, input *rds.DescribeSourceRegionsInput) *RdsDescribeSourceRegionsResult
 
-    DescribeValidDBInstanceModifications(ctx workflow.Context, input *rds.DescribeValidDBInstanceModificationsInput) (*rds.DescribeValidDBInstanceModificationsOutput, error)
-    DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *rds.DescribeValidDBInstanceModificationsInput) *RdsDescribeValidDBInstanceModificationsResult
+       DescribeValidDBInstanceModifications(ctx workflow.Context, input *rds.DescribeValidDBInstanceModificationsInput) (*rds.DescribeValidDBInstanceModificationsOutput, error)
+       DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *rds.DescribeValidDBInstanceModificationsInput) *RdsDescribeValidDBInstanceModificationsResult
 
-    DownloadDBLogFilePortion(ctx workflow.Context, input *rds.DownloadDBLogFilePortionInput) (*rds.DownloadDBLogFilePortionOutput, error)
-    DownloadDBLogFilePortionAsync(ctx workflow.Context, input *rds.DownloadDBLogFilePortionInput) *RdsDownloadDBLogFilePortionResult
+       DownloadDBLogFilePortion(ctx workflow.Context, input *rds.DownloadDBLogFilePortionInput) (*rds.DownloadDBLogFilePortionOutput, error)
+       DownloadDBLogFilePortionAsync(ctx workflow.Context, input *rds.DownloadDBLogFilePortionInput) *RdsDownloadDBLogFilePortionResult
 
-    FailoverDBCluster(ctx workflow.Context, input *rds.FailoverDBClusterInput) (*rds.FailoverDBClusterOutput, error)
-    FailoverDBClusterAsync(ctx workflow.Context, input *rds.FailoverDBClusterInput) *RdsFailoverDBClusterResult
+       FailoverDBCluster(ctx workflow.Context, input *rds.FailoverDBClusterInput) (*rds.FailoverDBClusterOutput, error)
+       FailoverDBClusterAsync(ctx workflow.Context, input *rds.FailoverDBClusterInput) *RdsFailoverDBClusterResult
 
-    ImportInstallationMedia(ctx workflow.Context, input *rds.ImportInstallationMediaInput) (*rds.ImportInstallationMediaOutput, error)
-    ImportInstallationMediaAsync(ctx workflow.Context, input *rds.ImportInstallationMediaInput) *RdsImportInstallationMediaResult
+       ImportInstallationMedia(ctx workflow.Context, input *rds.ImportInstallationMediaInput) (*rds.ImportInstallationMediaOutput, error)
+       ImportInstallationMediaAsync(ctx workflow.Context, input *rds.ImportInstallationMediaInput) *RdsImportInstallationMediaResult
 
-    ListTagsForResource(ctx workflow.Context, input *rds.ListTagsForResourceInput) (*rds.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *rds.ListTagsForResourceInput) *RdsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *rds.ListTagsForResourceInput) (*rds.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *rds.ListTagsForResourceInput) *RdsListTagsForResourceResult
 
-    ModifyCertificates(ctx workflow.Context, input *rds.ModifyCertificatesInput) (*rds.ModifyCertificatesOutput, error)
-    ModifyCertificatesAsync(ctx workflow.Context, input *rds.ModifyCertificatesInput) *RdsModifyCertificatesResult
+       ModifyCertificates(ctx workflow.Context, input *rds.ModifyCertificatesInput) (*rds.ModifyCertificatesOutput, error)
+       ModifyCertificatesAsync(ctx workflow.Context, input *rds.ModifyCertificatesInput) *RdsModifyCertificatesResult
 
-    ModifyCurrentDBClusterCapacity(ctx workflow.Context, input *rds.ModifyCurrentDBClusterCapacityInput) (*rds.ModifyCurrentDBClusterCapacityOutput, error)
-    ModifyCurrentDBClusterCapacityAsync(ctx workflow.Context, input *rds.ModifyCurrentDBClusterCapacityInput) *RdsModifyCurrentDBClusterCapacityResult
+       ModifyCurrentDBClusterCapacity(ctx workflow.Context, input *rds.ModifyCurrentDBClusterCapacityInput) (*rds.ModifyCurrentDBClusterCapacityOutput, error)
+       ModifyCurrentDBClusterCapacityAsync(ctx workflow.Context, input *rds.ModifyCurrentDBClusterCapacityInput) *RdsModifyCurrentDBClusterCapacityResult
 
-    ModifyDBCluster(ctx workflow.Context, input *rds.ModifyDBClusterInput) (*rds.ModifyDBClusterOutput, error)
-    ModifyDBClusterAsync(ctx workflow.Context, input *rds.ModifyDBClusterInput) *RdsModifyDBClusterResult
+       ModifyDBCluster(ctx workflow.Context, input *rds.ModifyDBClusterInput) (*rds.ModifyDBClusterOutput, error)
+       ModifyDBClusterAsync(ctx workflow.Context, input *rds.ModifyDBClusterInput) *RdsModifyDBClusterResult
 
-    ModifyDBClusterEndpoint(ctx workflow.Context, input *rds.ModifyDBClusterEndpointInput) (*rds.ModifyDBClusterEndpointOutput, error)
-    ModifyDBClusterEndpointAsync(ctx workflow.Context, input *rds.ModifyDBClusterEndpointInput) *RdsModifyDBClusterEndpointResult
+       ModifyDBClusterEndpoint(ctx workflow.Context, input *rds.ModifyDBClusterEndpointInput) (*rds.ModifyDBClusterEndpointOutput, error)
+       ModifyDBClusterEndpointAsync(ctx workflow.Context, input *rds.ModifyDBClusterEndpointInput) *RdsModifyDBClusterEndpointResult
 
-    ModifyDBClusterParameterGroup(ctx workflow.Context, input *rds.ModifyDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error)
-    ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.ModifyDBClusterParameterGroupInput) *RdsModifyDBClusterParameterGroupResult
+       ModifyDBClusterParameterGroup(ctx workflow.Context, input *rds.ModifyDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error)
+       ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.ModifyDBClusterParameterGroupInput) *RdsModifyDBClusterParameterGroupResult
 
-    ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) (*rds.ModifyDBClusterSnapshotAttributeOutput, error)
-    ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) *RdsModifyDBClusterSnapshotAttributeResult
+       ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) (*rds.ModifyDBClusterSnapshotAttributeOutput, error)
+       ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *rds.ModifyDBClusterSnapshotAttributeInput) *RdsModifyDBClusterSnapshotAttributeResult
 
-    ModifyDBInstance(ctx workflow.Context, input *rds.ModifyDBInstanceInput) (*rds.ModifyDBInstanceOutput, error)
-    ModifyDBInstanceAsync(ctx workflow.Context, input *rds.ModifyDBInstanceInput) *RdsModifyDBInstanceResult
+       ModifyDBInstance(ctx workflow.Context, input *rds.ModifyDBInstanceInput) (*rds.ModifyDBInstanceOutput, error)
+       ModifyDBInstanceAsync(ctx workflow.Context, input *rds.ModifyDBInstanceInput) *RdsModifyDBInstanceResult
 
-    ModifyDBParameterGroup(ctx workflow.Context, input *rds.ModifyDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error)
-    ModifyDBParameterGroupAsync(ctx workflow.Context, input *rds.ModifyDBParameterGroupInput) *RdsModifyDBParameterGroupResult
+       ModifyDBParameterGroup(ctx workflow.Context, input *rds.ModifyDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error)
+       ModifyDBParameterGroupAsync(ctx workflow.Context, input *rds.ModifyDBParameterGroupInput) *RdsModifyDBParameterGroupResult
 
-    ModifyDBProxy(ctx workflow.Context, input *rds.ModifyDBProxyInput) (*rds.ModifyDBProxyOutput, error)
-    ModifyDBProxyAsync(ctx workflow.Context, input *rds.ModifyDBProxyInput) *RdsModifyDBProxyResult
+       ModifyDBProxy(ctx workflow.Context, input *rds.ModifyDBProxyInput) (*rds.ModifyDBProxyOutput, error)
+       ModifyDBProxyAsync(ctx workflow.Context, input *rds.ModifyDBProxyInput) *RdsModifyDBProxyResult
 
-    ModifyDBProxyTargetGroup(ctx workflow.Context, input *rds.ModifyDBProxyTargetGroupInput) (*rds.ModifyDBProxyTargetGroupOutput, error)
-    ModifyDBProxyTargetGroupAsync(ctx workflow.Context, input *rds.ModifyDBProxyTargetGroupInput) *RdsModifyDBProxyTargetGroupResult
+       ModifyDBProxyTargetGroup(ctx workflow.Context, input *rds.ModifyDBProxyTargetGroupInput) (*rds.ModifyDBProxyTargetGroupOutput, error)
+       ModifyDBProxyTargetGroupAsync(ctx workflow.Context, input *rds.ModifyDBProxyTargetGroupInput) *RdsModifyDBProxyTargetGroupResult
 
-    ModifyDBSnapshot(ctx workflow.Context, input *rds.ModifyDBSnapshotInput) (*rds.ModifyDBSnapshotOutput, error)
-    ModifyDBSnapshotAsync(ctx workflow.Context, input *rds.ModifyDBSnapshotInput) *RdsModifyDBSnapshotResult
+       ModifyDBSnapshot(ctx workflow.Context, input *rds.ModifyDBSnapshotInput) (*rds.ModifyDBSnapshotOutput, error)
+       ModifyDBSnapshotAsync(ctx workflow.Context, input *rds.ModifyDBSnapshotInput) *RdsModifyDBSnapshotResult
 
-    ModifyDBSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBSnapshotAttributeInput) (*rds.ModifyDBSnapshotAttributeOutput, error)
-    ModifyDBSnapshotAttributeAsync(ctx workflow.Context, input *rds.ModifyDBSnapshotAttributeInput) *RdsModifyDBSnapshotAttributeResult
+       ModifyDBSnapshotAttribute(ctx workflow.Context, input *rds.ModifyDBSnapshotAttributeInput) (*rds.ModifyDBSnapshotAttributeOutput, error)
+       ModifyDBSnapshotAttributeAsync(ctx workflow.Context, input *rds.ModifyDBSnapshotAttributeInput) *RdsModifyDBSnapshotAttributeResult
 
-    ModifyDBSubnetGroup(ctx workflow.Context, input *rds.ModifyDBSubnetGroupInput) (*rds.ModifyDBSubnetGroupOutput, error)
-    ModifyDBSubnetGroupAsync(ctx workflow.Context, input *rds.ModifyDBSubnetGroupInput) *RdsModifyDBSubnetGroupResult
+       ModifyDBSubnetGroup(ctx workflow.Context, input *rds.ModifyDBSubnetGroupInput) (*rds.ModifyDBSubnetGroupOutput, error)
+       ModifyDBSubnetGroupAsync(ctx workflow.Context, input *rds.ModifyDBSubnetGroupInput) *RdsModifyDBSubnetGroupResult
 
-    ModifyEventSubscription(ctx workflow.Context, input *rds.ModifyEventSubscriptionInput) (*rds.ModifyEventSubscriptionOutput, error)
-    ModifyEventSubscriptionAsync(ctx workflow.Context, input *rds.ModifyEventSubscriptionInput) *RdsModifyEventSubscriptionResult
+       ModifyEventSubscription(ctx workflow.Context, input *rds.ModifyEventSubscriptionInput) (*rds.ModifyEventSubscriptionOutput, error)
+       ModifyEventSubscriptionAsync(ctx workflow.Context, input *rds.ModifyEventSubscriptionInput) *RdsModifyEventSubscriptionResult
 
-    ModifyGlobalCluster(ctx workflow.Context, input *rds.ModifyGlobalClusterInput) (*rds.ModifyGlobalClusterOutput, error)
-    ModifyGlobalClusterAsync(ctx workflow.Context, input *rds.ModifyGlobalClusterInput) *RdsModifyGlobalClusterResult
+       ModifyGlobalCluster(ctx workflow.Context, input *rds.ModifyGlobalClusterInput) (*rds.ModifyGlobalClusterOutput, error)
+       ModifyGlobalClusterAsync(ctx workflow.Context, input *rds.ModifyGlobalClusterInput) *RdsModifyGlobalClusterResult
 
-    ModifyOptionGroup(ctx workflow.Context, input *rds.ModifyOptionGroupInput) (*rds.ModifyOptionGroupOutput, error)
-    ModifyOptionGroupAsync(ctx workflow.Context, input *rds.ModifyOptionGroupInput) *RdsModifyOptionGroupResult
+       ModifyOptionGroup(ctx workflow.Context, input *rds.ModifyOptionGroupInput) (*rds.ModifyOptionGroupOutput, error)
+       ModifyOptionGroupAsync(ctx workflow.Context, input *rds.ModifyOptionGroupInput) *RdsModifyOptionGroupResult
 
-    PromoteReadReplica(ctx workflow.Context, input *rds.PromoteReadReplicaInput) (*rds.PromoteReadReplicaOutput, error)
-    PromoteReadReplicaAsync(ctx workflow.Context, input *rds.PromoteReadReplicaInput) *RdsPromoteReadReplicaResult
+       PromoteReadReplica(ctx workflow.Context, input *rds.PromoteReadReplicaInput) (*rds.PromoteReadReplicaOutput, error)
+       PromoteReadReplicaAsync(ctx workflow.Context, input *rds.PromoteReadReplicaInput) *RdsPromoteReadReplicaResult
 
-    PromoteReadReplicaDBCluster(ctx workflow.Context, input *rds.PromoteReadReplicaDBClusterInput) (*rds.PromoteReadReplicaDBClusterOutput, error)
-    PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *rds.PromoteReadReplicaDBClusterInput) *RdsPromoteReadReplicaDBClusterResult
+       PromoteReadReplicaDBCluster(ctx workflow.Context, input *rds.PromoteReadReplicaDBClusterInput) (*rds.PromoteReadReplicaDBClusterOutput, error)
+       PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *rds.PromoteReadReplicaDBClusterInput) *RdsPromoteReadReplicaDBClusterResult
 
-    PurchaseReservedDBInstancesOffering(ctx workflow.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) (*rds.PurchaseReservedDBInstancesOfferingOutput, error)
-    PurchaseReservedDBInstancesOfferingAsync(ctx workflow.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) *RdsPurchaseReservedDBInstancesOfferingResult
+       PurchaseReservedDBInstancesOffering(ctx workflow.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) (*rds.PurchaseReservedDBInstancesOfferingOutput, error)
+       PurchaseReservedDBInstancesOfferingAsync(ctx workflow.Context, input *rds.PurchaseReservedDBInstancesOfferingInput) *RdsPurchaseReservedDBInstancesOfferingResult
 
-    RebootDBInstance(ctx workflow.Context, input *rds.RebootDBInstanceInput) (*rds.RebootDBInstanceOutput, error)
-    RebootDBInstanceAsync(ctx workflow.Context, input *rds.RebootDBInstanceInput) *RdsRebootDBInstanceResult
+       RebootDBInstance(ctx workflow.Context, input *rds.RebootDBInstanceInput) (*rds.RebootDBInstanceOutput, error)
+       RebootDBInstanceAsync(ctx workflow.Context, input *rds.RebootDBInstanceInput) *RdsRebootDBInstanceResult
 
-    RegisterDBProxyTargets(ctx workflow.Context, input *rds.RegisterDBProxyTargetsInput) (*rds.RegisterDBProxyTargetsOutput, error)
-    RegisterDBProxyTargetsAsync(ctx workflow.Context, input *rds.RegisterDBProxyTargetsInput) *RdsRegisterDBProxyTargetsResult
+       RegisterDBProxyTargets(ctx workflow.Context, input *rds.RegisterDBProxyTargetsInput) (*rds.RegisterDBProxyTargetsOutput, error)
+       RegisterDBProxyTargetsAsync(ctx workflow.Context, input *rds.RegisterDBProxyTargetsInput) *RdsRegisterDBProxyTargetsResult
 
-    RemoveFromGlobalCluster(ctx workflow.Context, input *rds.RemoveFromGlobalClusterInput) (*rds.RemoveFromGlobalClusterOutput, error)
-    RemoveFromGlobalClusterAsync(ctx workflow.Context, input *rds.RemoveFromGlobalClusterInput) *RdsRemoveFromGlobalClusterResult
+       RemoveFromGlobalCluster(ctx workflow.Context, input *rds.RemoveFromGlobalClusterInput) (*rds.RemoveFromGlobalClusterOutput, error)
+       RemoveFromGlobalClusterAsync(ctx workflow.Context, input *rds.RemoveFromGlobalClusterInput) *RdsRemoveFromGlobalClusterResult
 
-    RemoveRoleFromDBCluster(ctx workflow.Context, input *rds.RemoveRoleFromDBClusterInput) (*rds.RemoveRoleFromDBClusterOutput, error)
-    RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *rds.RemoveRoleFromDBClusterInput) *RdsRemoveRoleFromDBClusterResult
+       RemoveRoleFromDBCluster(ctx workflow.Context, input *rds.RemoveRoleFromDBClusterInput) (*rds.RemoveRoleFromDBClusterOutput, error)
+       RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *rds.RemoveRoleFromDBClusterInput) *RdsRemoveRoleFromDBClusterResult
 
-    RemoveRoleFromDBInstance(ctx workflow.Context, input *rds.RemoveRoleFromDBInstanceInput) (*rds.RemoveRoleFromDBInstanceOutput, error)
-    RemoveRoleFromDBInstanceAsync(ctx workflow.Context, input *rds.RemoveRoleFromDBInstanceInput) *RdsRemoveRoleFromDBInstanceResult
+       RemoveRoleFromDBInstance(ctx workflow.Context, input *rds.RemoveRoleFromDBInstanceInput) (*rds.RemoveRoleFromDBInstanceOutput, error)
+       RemoveRoleFromDBInstanceAsync(ctx workflow.Context, input *rds.RemoveRoleFromDBInstanceInput) *RdsRemoveRoleFromDBInstanceResult
 
-    RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) (*rds.RemoveSourceIdentifierFromSubscriptionOutput, error)
-    RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) *RdsRemoveSourceIdentifierFromSubscriptionResult
+       RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) (*rds.RemoveSourceIdentifierFromSubscriptionOutput, error)
+       RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *rds.RemoveSourceIdentifierFromSubscriptionInput) *RdsRemoveSourceIdentifierFromSubscriptionResult
 
-    RemoveTagsFromResource(ctx workflow.Context, input *rds.RemoveTagsFromResourceInput) (*rds.RemoveTagsFromResourceOutput, error)
-    RemoveTagsFromResourceAsync(ctx workflow.Context, input *rds.RemoveTagsFromResourceInput) *RdsRemoveTagsFromResourceResult
+       RemoveTagsFromResource(ctx workflow.Context, input *rds.RemoveTagsFromResourceInput) (*rds.RemoveTagsFromResourceOutput, error)
+       RemoveTagsFromResourceAsync(ctx workflow.Context, input *rds.RemoveTagsFromResourceInput) *RdsRemoveTagsFromResourceResult
 
-    ResetDBClusterParameterGroup(ctx workflow.Context, input *rds.ResetDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error)
-    ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.ResetDBClusterParameterGroupInput) *RdsResetDBClusterParameterGroupResult
+       ResetDBClusterParameterGroup(ctx workflow.Context, input *rds.ResetDBClusterParameterGroupInput) (*rds.DBClusterParameterGroupNameMessage, error)
+       ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *rds.ResetDBClusterParameterGroupInput) *RdsResetDBClusterParameterGroupResult
 
-    ResetDBParameterGroup(ctx workflow.Context, input *rds.ResetDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error)
-    ResetDBParameterGroupAsync(ctx workflow.Context, input *rds.ResetDBParameterGroupInput) *RdsResetDBParameterGroupResult
+       ResetDBParameterGroup(ctx workflow.Context, input *rds.ResetDBParameterGroupInput) (*rds.DBParameterGroupNameMessage, error)
+       ResetDBParameterGroupAsync(ctx workflow.Context, input *rds.ResetDBParameterGroupInput) *RdsResetDBParameterGroupResult
 
-    RestoreDBClusterFromS3(ctx workflow.Context, input *rds.RestoreDBClusterFromS3Input) (*rds.RestoreDBClusterFromS3Output, error)
-    RestoreDBClusterFromS3Async(ctx workflow.Context, input *rds.RestoreDBClusterFromS3Input) *RdsRestoreDBClusterFromS3Result
+       RestoreDBClusterFromS3(ctx workflow.Context, input *rds.RestoreDBClusterFromS3Input) (*rds.RestoreDBClusterFromS3Output, error)
+       RestoreDBClusterFromS3Async(ctx workflow.Context, input *rds.RestoreDBClusterFromS3Input) *RdsRestoreDBClusterFromS3Result
 
-    RestoreDBClusterFromSnapshot(ctx workflow.Context, input *rds.RestoreDBClusterFromSnapshotInput) (*rds.RestoreDBClusterFromSnapshotOutput, error)
-    RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *rds.RestoreDBClusterFromSnapshotInput) *RdsRestoreDBClusterFromSnapshotResult
+       RestoreDBClusterFromSnapshot(ctx workflow.Context, input *rds.RestoreDBClusterFromSnapshotInput) (*rds.RestoreDBClusterFromSnapshotOutput, error)
+       RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *rds.RestoreDBClusterFromSnapshotInput) *RdsRestoreDBClusterFromSnapshotResult
 
-    RestoreDBClusterToPointInTime(ctx workflow.Context, input *rds.RestoreDBClusterToPointInTimeInput) (*rds.RestoreDBClusterToPointInTimeOutput, error)
-    RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *rds.RestoreDBClusterToPointInTimeInput) *RdsRestoreDBClusterToPointInTimeResult
+       RestoreDBClusterToPointInTime(ctx workflow.Context, input *rds.RestoreDBClusterToPointInTimeInput) (*rds.RestoreDBClusterToPointInTimeOutput, error)
+       RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *rds.RestoreDBClusterToPointInTimeInput) *RdsRestoreDBClusterToPointInTimeResult
 
-    RestoreDBInstanceFromDBSnapshot(ctx workflow.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) (*rds.RestoreDBInstanceFromDBSnapshotOutput, error)
-    RestoreDBInstanceFromDBSnapshotAsync(ctx workflow.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) *RdsRestoreDBInstanceFromDBSnapshotResult
+       RestoreDBInstanceFromDBSnapshot(ctx workflow.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) (*rds.RestoreDBInstanceFromDBSnapshotOutput, error)
+       RestoreDBInstanceFromDBSnapshotAsync(ctx workflow.Context, input *rds.RestoreDBInstanceFromDBSnapshotInput) *RdsRestoreDBInstanceFromDBSnapshotResult
 
-    RestoreDBInstanceFromS3(ctx workflow.Context, input *rds.RestoreDBInstanceFromS3Input) (*rds.RestoreDBInstanceFromS3Output, error)
-    RestoreDBInstanceFromS3Async(ctx workflow.Context, input *rds.RestoreDBInstanceFromS3Input) *RdsRestoreDBInstanceFromS3Result
+       RestoreDBInstanceFromS3(ctx workflow.Context, input *rds.RestoreDBInstanceFromS3Input) (*rds.RestoreDBInstanceFromS3Output, error)
+       RestoreDBInstanceFromS3Async(ctx workflow.Context, input *rds.RestoreDBInstanceFromS3Input) *RdsRestoreDBInstanceFromS3Result
 
-    RestoreDBInstanceToPointInTime(ctx workflow.Context, input *rds.RestoreDBInstanceToPointInTimeInput) (*rds.RestoreDBInstanceToPointInTimeOutput, error)
-    RestoreDBInstanceToPointInTimeAsync(ctx workflow.Context, input *rds.RestoreDBInstanceToPointInTimeInput) *RdsRestoreDBInstanceToPointInTimeResult
+       RestoreDBInstanceToPointInTime(ctx workflow.Context, input *rds.RestoreDBInstanceToPointInTimeInput) (*rds.RestoreDBInstanceToPointInTimeOutput, error)
+       RestoreDBInstanceToPointInTimeAsync(ctx workflow.Context, input *rds.RestoreDBInstanceToPointInTimeInput) *RdsRestoreDBInstanceToPointInTimeResult
 
-    RevokeDBSecurityGroupIngress(ctx workflow.Context, input *rds.RevokeDBSecurityGroupIngressInput) (*rds.RevokeDBSecurityGroupIngressOutput, error)
-    RevokeDBSecurityGroupIngressAsync(ctx workflow.Context, input *rds.RevokeDBSecurityGroupIngressInput) *RdsRevokeDBSecurityGroupIngressResult
+       RevokeDBSecurityGroupIngress(ctx workflow.Context, input *rds.RevokeDBSecurityGroupIngressInput) (*rds.RevokeDBSecurityGroupIngressOutput, error)
+       RevokeDBSecurityGroupIngressAsync(ctx workflow.Context, input *rds.RevokeDBSecurityGroupIngressInput) *RdsRevokeDBSecurityGroupIngressResult
 
-    StartActivityStream(ctx workflow.Context, input *rds.StartActivityStreamInput) (*rds.StartActivityStreamOutput, error)
-    StartActivityStreamAsync(ctx workflow.Context, input *rds.StartActivityStreamInput) *RdsStartActivityStreamResult
+       StartActivityStream(ctx workflow.Context, input *rds.StartActivityStreamInput) (*rds.StartActivityStreamOutput, error)
+       StartActivityStreamAsync(ctx workflow.Context, input *rds.StartActivityStreamInput) *RdsStartActivityStreamResult
 
-    StartDBCluster(ctx workflow.Context, input *rds.StartDBClusterInput) (*rds.StartDBClusterOutput, error)
-    StartDBClusterAsync(ctx workflow.Context, input *rds.StartDBClusterInput) *RdsStartDBClusterResult
+       StartDBCluster(ctx workflow.Context, input *rds.StartDBClusterInput) (*rds.StartDBClusterOutput, error)
+       StartDBClusterAsync(ctx workflow.Context, input *rds.StartDBClusterInput) *RdsStartDBClusterResult
 
-    StartDBInstance(ctx workflow.Context, input *rds.StartDBInstanceInput) (*rds.StartDBInstanceOutput, error)
-    StartDBInstanceAsync(ctx workflow.Context, input *rds.StartDBInstanceInput) *RdsStartDBInstanceResult
+       StartDBInstance(ctx workflow.Context, input *rds.StartDBInstanceInput) (*rds.StartDBInstanceOutput, error)
+       StartDBInstanceAsync(ctx workflow.Context, input *rds.StartDBInstanceInput) *RdsStartDBInstanceResult
 
-    StartExportTask(ctx workflow.Context, input *rds.StartExportTaskInput) (*rds.StartExportTaskOutput, error)
-    StartExportTaskAsync(ctx workflow.Context, input *rds.StartExportTaskInput) *RdsStartExportTaskResult
+       StartExportTask(ctx workflow.Context, input *rds.StartExportTaskInput) (*rds.StartExportTaskOutput, error)
+       StartExportTaskAsync(ctx workflow.Context, input *rds.StartExportTaskInput) *RdsStartExportTaskResult
 
-    StopActivityStream(ctx workflow.Context, input *rds.StopActivityStreamInput) (*rds.StopActivityStreamOutput, error)
-    StopActivityStreamAsync(ctx workflow.Context, input *rds.StopActivityStreamInput) *RdsStopActivityStreamResult
+       StopActivityStream(ctx workflow.Context, input *rds.StopActivityStreamInput) (*rds.StopActivityStreamOutput, error)
+       StopActivityStreamAsync(ctx workflow.Context, input *rds.StopActivityStreamInput) *RdsStopActivityStreamResult
 
-    StopDBCluster(ctx workflow.Context, input *rds.StopDBClusterInput) (*rds.StopDBClusterOutput, error)
-    StopDBClusterAsync(ctx workflow.Context, input *rds.StopDBClusterInput) *RdsStopDBClusterResult
+       StopDBCluster(ctx workflow.Context, input *rds.StopDBClusterInput) (*rds.StopDBClusterOutput, error)
+       StopDBClusterAsync(ctx workflow.Context, input *rds.StopDBClusterInput) *RdsStopDBClusterResult
 
-    StopDBInstance(ctx workflow.Context, input *rds.StopDBInstanceInput) (*rds.StopDBInstanceOutput, error)
-    StopDBInstanceAsync(ctx workflow.Context, input *rds.StopDBInstanceInput) *RdsStopDBInstanceResult
+       StopDBInstance(ctx workflow.Context, input *rds.StopDBInstanceInput) (*rds.StopDBInstanceOutput, error)
+       StopDBInstanceAsync(ctx workflow.Context, input *rds.StopDBInstanceInput) *RdsStopDBInstanceResult
 
-    WaitUntilDBClusterSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
-    WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
-    WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
-    WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
-    WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-    WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error}
+       WaitUntilDBClusterSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
+       WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
+       WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
+       WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
+       WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
+       WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error}
 
 type RdsAddRoleToDBClusterResult struct {
 	Result workflow.Future

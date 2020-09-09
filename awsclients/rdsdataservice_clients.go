@@ -7,23 +7,23 @@ import (
 )
 
 type RDSDataServiceClient interface {
-    BatchExecuteStatement(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error)
-    BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RdsdataserviceBatchExecuteStatementResult
+       BatchExecuteStatement(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error)
+       BatchExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.BatchExecuteStatementInput) *RdsdataserviceBatchExecuteStatementResult
 
-    BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error)
-    BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RdsdataserviceBeginTransactionResult
+       BeginTransaction(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error)
+       BeginTransactionAsync(ctx workflow.Context, input *rdsdataservice.BeginTransactionInput) *RdsdataserviceBeginTransactionResult
 
-    CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error)
-    CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RdsdataserviceCommitTransactionResult
+       CommitTransaction(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error)
+       CommitTransactionAsync(ctx workflow.Context, input *rdsdataservice.CommitTransactionInput) *RdsdataserviceCommitTransactionResult
 
-    ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error)
-    ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RdsdataserviceExecuteSqlResult
+       ExecuteSql(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error)
+       ExecuteSqlAsync(ctx workflow.Context, input *rdsdataservice.ExecuteSqlInput) *RdsdataserviceExecuteSqlResult
 
-    ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error)
-    ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RdsdataserviceExecuteStatementResult
+       ExecuteStatement(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error)
+       ExecuteStatementAsync(ctx workflow.Context, input *rdsdataservice.ExecuteStatementInput) *RdsdataserviceExecuteStatementResult
 
-    RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error)
-    RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RdsdataserviceRollbackTransactionResult
+       RollbackTransaction(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error)
+       RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RdsdataserviceRollbackTransactionResult
 }
 
 type RdsdataserviceBatchExecuteStatementResult struct {

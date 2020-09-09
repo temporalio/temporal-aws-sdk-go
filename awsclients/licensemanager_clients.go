@@ -7,53 +7,53 @@ import (
 )
 
 type LicenseManagerClient interface {
-    CreateLicenseConfiguration(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) (*licensemanager.CreateLicenseConfigurationOutput, error)
-    CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationResult
+       CreateLicenseConfiguration(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) (*licensemanager.CreateLicenseConfigurationOutput, error)
+       CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationResult
 
-    DeleteLicenseConfiguration(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error)
-    DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationResult
+       DeleteLicenseConfiguration(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error)
+       DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationResult
 
-    GetLicenseConfiguration(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error)
-    GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationResult
+       GetLicenseConfiguration(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error)
+       GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationResult
 
-    GetServiceSettings(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error)
-    GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsResult
+       GetServiceSettings(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error)
+       GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsResult
 
-    ListAssociationsForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error)
-    ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationResult
+       ListAssociationsForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error)
+       ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationResult
 
-    ListFailuresForLicenseConfigurationOperations(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error)
-    ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsResult
+       ListFailuresForLicenseConfigurationOperations(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error)
+       ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsResult
 
-    ListLicenseConfigurations(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error)
-    ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsResult
+       ListLicenseConfigurations(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error)
+       ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsResult
 
-    ListLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error)
-    ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceResult
+       ListLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error)
+       ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceResult
 
-    ListResourceInventory(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error)
-    ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryResult
+       ListResourceInventory(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error)
+       ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryResult
 
-    ListTagsForResource(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceResult
 
-    ListUsageForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error)
-    ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationResult
+       ListUsageForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error)
+       ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationResult
 
-    TagResource(ctx workflow.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceResult
+       TagResource(ctx workflow.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceResult
+       UntagResource(ctx workflow.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceResult
 
-    UpdateLicenseConfiguration(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error)
-    UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationResult
+       UpdateLicenseConfiguration(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error)
+       UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationResult
 
-    UpdateLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error)
-    UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceResult
+       UpdateLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error)
+       UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceResult
 
-    UpdateServiceSettings(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error)
-    UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult
+       UpdateServiceSettings(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error)
+       UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult
 }
 
 type LicensemanagerCreateLicenseConfigurationResult struct {

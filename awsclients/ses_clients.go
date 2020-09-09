@@ -7,220 +7,220 @@ import (
 )
 
 type SESClient interface {
-    CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error)
-    CloneReceiptRuleSetAsync(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) *SesCloneReceiptRuleSetResult
+       CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error)
+       CloneReceiptRuleSetAsync(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) *SesCloneReceiptRuleSetResult
 
-    CreateConfigurationSet(ctx workflow.Context, input *ses.CreateConfigurationSetInput) (*ses.CreateConfigurationSetOutput, error)
-    CreateConfigurationSetAsync(ctx workflow.Context, input *ses.CreateConfigurationSetInput) *SesCreateConfigurationSetResult
+       CreateConfigurationSet(ctx workflow.Context, input *ses.CreateConfigurationSetInput) (*ses.CreateConfigurationSetOutput, error)
+       CreateConfigurationSetAsync(ctx workflow.Context, input *ses.CreateConfigurationSetInput) *SesCreateConfigurationSetResult
 
-    CreateConfigurationSetEventDestination(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) (*ses.CreateConfigurationSetEventDestinationOutput, error)
-    CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) *SesCreateConfigurationSetEventDestinationResult
+       CreateConfigurationSetEventDestination(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) (*ses.CreateConfigurationSetEventDestinationOutput, error)
+       CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) *SesCreateConfigurationSetEventDestinationResult
 
-    CreateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) (*ses.CreateConfigurationSetTrackingOptionsOutput, error)
-    CreateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) *SesCreateConfigurationSetTrackingOptionsResult
+       CreateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) (*ses.CreateConfigurationSetTrackingOptionsOutput, error)
+       CreateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) *SesCreateConfigurationSetTrackingOptionsResult
 
-    CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error)
-    CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) *SesCreateCustomVerificationEmailTemplateResult
+       CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error)
+       CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) *SesCreateCustomVerificationEmailTemplateResult
 
-    CreateReceiptFilter(ctx workflow.Context, input *ses.CreateReceiptFilterInput) (*ses.CreateReceiptFilterOutput, error)
-    CreateReceiptFilterAsync(ctx workflow.Context, input *ses.CreateReceiptFilterInput) *SesCreateReceiptFilterResult
+       CreateReceiptFilter(ctx workflow.Context, input *ses.CreateReceiptFilterInput) (*ses.CreateReceiptFilterOutput, error)
+       CreateReceiptFilterAsync(ctx workflow.Context, input *ses.CreateReceiptFilterInput) *SesCreateReceiptFilterResult
 
-    CreateReceiptRule(ctx workflow.Context, input *ses.CreateReceiptRuleInput) (*ses.CreateReceiptRuleOutput, error)
-    CreateReceiptRuleAsync(ctx workflow.Context, input *ses.CreateReceiptRuleInput) *SesCreateReceiptRuleResult
+       CreateReceiptRule(ctx workflow.Context, input *ses.CreateReceiptRuleInput) (*ses.CreateReceiptRuleOutput, error)
+       CreateReceiptRuleAsync(ctx workflow.Context, input *ses.CreateReceiptRuleInput) *SesCreateReceiptRuleResult
 
-    CreateReceiptRuleSet(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) (*ses.CreateReceiptRuleSetOutput, error)
-    CreateReceiptRuleSetAsync(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) *SesCreateReceiptRuleSetResult
+       CreateReceiptRuleSet(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) (*ses.CreateReceiptRuleSetOutput, error)
+       CreateReceiptRuleSetAsync(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) *SesCreateReceiptRuleSetResult
 
-    CreateTemplate(ctx workflow.Context, input *ses.CreateTemplateInput) (*ses.CreateTemplateOutput, error)
-    CreateTemplateAsync(ctx workflow.Context, input *ses.CreateTemplateInput) *SesCreateTemplateResult
+       CreateTemplate(ctx workflow.Context, input *ses.CreateTemplateInput) (*ses.CreateTemplateOutput, error)
+       CreateTemplateAsync(ctx workflow.Context, input *ses.CreateTemplateInput) *SesCreateTemplateResult
 
-    DeleteConfigurationSet(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) (*ses.DeleteConfigurationSetOutput, error)
-    DeleteConfigurationSetAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) *SesDeleteConfigurationSetResult
+       DeleteConfigurationSet(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) (*ses.DeleteConfigurationSetOutput, error)
+       DeleteConfigurationSetAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) *SesDeleteConfigurationSetResult
 
-    DeleteConfigurationSetEventDestination(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) (*ses.DeleteConfigurationSetEventDestinationOutput, error)
-    DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) *SesDeleteConfigurationSetEventDestinationResult
+       DeleteConfigurationSetEventDestination(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) (*ses.DeleteConfigurationSetEventDestinationOutput, error)
+       DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) *SesDeleteConfigurationSetEventDestinationResult
 
-    DeleteConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error)
-    DeleteConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) *SesDeleteConfigurationSetTrackingOptionsResult
+       DeleteConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error)
+       DeleteConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) *SesDeleteConfigurationSetTrackingOptionsResult
 
-    DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error)
-    DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) *SesDeleteCustomVerificationEmailTemplateResult
+       DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error)
+       DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) *SesDeleteCustomVerificationEmailTemplateResult
 
-    DeleteIdentity(ctx workflow.Context, input *ses.DeleteIdentityInput) (*ses.DeleteIdentityOutput, error)
-    DeleteIdentityAsync(ctx workflow.Context, input *ses.DeleteIdentityInput) *SesDeleteIdentityResult
+       DeleteIdentity(ctx workflow.Context, input *ses.DeleteIdentityInput) (*ses.DeleteIdentityOutput, error)
+       DeleteIdentityAsync(ctx workflow.Context, input *ses.DeleteIdentityInput) *SesDeleteIdentityResult
 
-    DeleteIdentityPolicy(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) (*ses.DeleteIdentityPolicyOutput, error)
-    DeleteIdentityPolicyAsync(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) *SesDeleteIdentityPolicyResult
+       DeleteIdentityPolicy(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) (*ses.DeleteIdentityPolicyOutput, error)
+       DeleteIdentityPolicyAsync(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) *SesDeleteIdentityPolicyResult
 
-    DeleteReceiptFilter(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) (*ses.DeleteReceiptFilterOutput, error)
-    DeleteReceiptFilterAsync(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) *SesDeleteReceiptFilterResult
+       DeleteReceiptFilter(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) (*ses.DeleteReceiptFilterOutput, error)
+       DeleteReceiptFilterAsync(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) *SesDeleteReceiptFilterResult
 
-    DeleteReceiptRule(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) (*ses.DeleteReceiptRuleOutput, error)
-    DeleteReceiptRuleAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) *SesDeleteReceiptRuleResult
+       DeleteReceiptRule(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) (*ses.DeleteReceiptRuleOutput, error)
+       DeleteReceiptRuleAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) *SesDeleteReceiptRuleResult
 
-    DeleteReceiptRuleSet(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) (*ses.DeleteReceiptRuleSetOutput, error)
-    DeleteReceiptRuleSetAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) *SesDeleteReceiptRuleSetResult
+       DeleteReceiptRuleSet(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) (*ses.DeleteReceiptRuleSetOutput, error)
+       DeleteReceiptRuleSetAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) *SesDeleteReceiptRuleSetResult
 
-    DeleteTemplate(ctx workflow.Context, input *ses.DeleteTemplateInput) (*ses.DeleteTemplateOutput, error)
-    DeleteTemplateAsync(ctx workflow.Context, input *ses.DeleteTemplateInput) *SesDeleteTemplateResult
+       DeleteTemplate(ctx workflow.Context, input *ses.DeleteTemplateInput) (*ses.DeleteTemplateOutput, error)
+       DeleteTemplateAsync(ctx workflow.Context, input *ses.DeleteTemplateInput) *SesDeleteTemplateResult
 
-    DeleteVerifiedEmailAddress(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) (*ses.DeleteVerifiedEmailAddressOutput, error)
-    DeleteVerifiedEmailAddressAsync(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) *SesDeleteVerifiedEmailAddressResult
+       DeleteVerifiedEmailAddress(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) (*ses.DeleteVerifiedEmailAddressOutput, error)
+       DeleteVerifiedEmailAddressAsync(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) *SesDeleteVerifiedEmailAddressResult
 
-    DescribeActiveReceiptRuleSet(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) (*ses.DescribeActiveReceiptRuleSetOutput, error)
-    DescribeActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) *SesDescribeActiveReceiptRuleSetResult
+       DescribeActiveReceiptRuleSet(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) (*ses.DescribeActiveReceiptRuleSetOutput, error)
+       DescribeActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) *SesDescribeActiveReceiptRuleSetResult
 
-    DescribeConfigurationSet(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) (*ses.DescribeConfigurationSetOutput, error)
-    DescribeConfigurationSetAsync(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) *SesDescribeConfigurationSetResult
+       DescribeConfigurationSet(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) (*ses.DescribeConfigurationSetOutput, error)
+       DescribeConfigurationSetAsync(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) *SesDescribeConfigurationSetResult
 
-    DescribeReceiptRule(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) (*ses.DescribeReceiptRuleOutput, error)
-    DescribeReceiptRuleAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) *SesDescribeReceiptRuleResult
+       DescribeReceiptRule(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) (*ses.DescribeReceiptRuleOutput, error)
+       DescribeReceiptRuleAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) *SesDescribeReceiptRuleResult
 
-    DescribeReceiptRuleSet(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) (*ses.DescribeReceiptRuleSetOutput, error)
-    DescribeReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) *SesDescribeReceiptRuleSetResult
+       DescribeReceiptRuleSet(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) (*ses.DescribeReceiptRuleSetOutput, error)
+       DescribeReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) *SesDescribeReceiptRuleSetResult
 
-    GetAccountSendingEnabled(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error)
-    GetAccountSendingEnabledAsync(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) *SesGetAccountSendingEnabledResult
+       GetAccountSendingEnabled(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error)
+       GetAccountSendingEnabledAsync(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) *SesGetAccountSendingEnabledResult
 
-    GetCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error)
-    GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) *SesGetCustomVerificationEmailTemplateResult
+       GetCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error)
+       GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) *SesGetCustomVerificationEmailTemplateResult
 
-    GetIdentityDkimAttributes(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) (*ses.GetIdentityDkimAttributesOutput, error)
-    GetIdentityDkimAttributesAsync(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) *SesGetIdentityDkimAttributesResult
+       GetIdentityDkimAttributes(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) (*ses.GetIdentityDkimAttributesOutput, error)
+       GetIdentityDkimAttributesAsync(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) *SesGetIdentityDkimAttributesResult
 
-    GetIdentityMailFromDomainAttributes(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) (*ses.GetIdentityMailFromDomainAttributesOutput, error)
-    GetIdentityMailFromDomainAttributesAsync(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) *SesGetIdentityMailFromDomainAttributesResult
+       GetIdentityMailFromDomainAttributes(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) (*ses.GetIdentityMailFromDomainAttributesOutput, error)
+       GetIdentityMailFromDomainAttributesAsync(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) *SesGetIdentityMailFromDomainAttributesResult
 
-    GetIdentityNotificationAttributes(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) (*ses.GetIdentityNotificationAttributesOutput, error)
-    GetIdentityNotificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) *SesGetIdentityNotificationAttributesResult
+       GetIdentityNotificationAttributes(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) (*ses.GetIdentityNotificationAttributesOutput, error)
+       GetIdentityNotificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) *SesGetIdentityNotificationAttributesResult
 
-    GetIdentityPolicies(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) (*ses.GetIdentityPoliciesOutput, error)
-    GetIdentityPoliciesAsync(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) *SesGetIdentityPoliciesResult
+       GetIdentityPolicies(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) (*ses.GetIdentityPoliciesOutput, error)
+       GetIdentityPoliciesAsync(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) *SesGetIdentityPoliciesResult
 
-    GetIdentityVerificationAttributes(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) (*ses.GetIdentityVerificationAttributesOutput, error)
-    GetIdentityVerificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *SesGetIdentityVerificationAttributesResult
+       GetIdentityVerificationAttributes(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) (*ses.GetIdentityVerificationAttributesOutput, error)
+       GetIdentityVerificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *SesGetIdentityVerificationAttributesResult
 
-    GetSendQuota(ctx workflow.Context, input *ses.GetSendQuotaInput) (*ses.GetSendQuotaOutput, error)
-    GetSendQuotaAsync(ctx workflow.Context, input *ses.GetSendQuotaInput) *SesGetSendQuotaResult
+       GetSendQuota(ctx workflow.Context, input *ses.GetSendQuotaInput) (*ses.GetSendQuotaOutput, error)
+       GetSendQuotaAsync(ctx workflow.Context, input *ses.GetSendQuotaInput) *SesGetSendQuotaResult
 
-    GetSendStatistics(ctx workflow.Context, input *ses.GetSendStatisticsInput) (*ses.GetSendStatisticsOutput, error)
-    GetSendStatisticsAsync(ctx workflow.Context, input *ses.GetSendStatisticsInput) *SesGetSendStatisticsResult
+       GetSendStatistics(ctx workflow.Context, input *ses.GetSendStatisticsInput) (*ses.GetSendStatisticsOutput, error)
+       GetSendStatisticsAsync(ctx workflow.Context, input *ses.GetSendStatisticsInput) *SesGetSendStatisticsResult
 
-    GetTemplate(ctx workflow.Context, input *ses.GetTemplateInput) (*ses.GetTemplateOutput, error)
-    GetTemplateAsync(ctx workflow.Context, input *ses.GetTemplateInput) *SesGetTemplateResult
+       GetTemplate(ctx workflow.Context, input *ses.GetTemplateInput) (*ses.GetTemplateOutput, error)
+       GetTemplateAsync(ctx workflow.Context, input *ses.GetTemplateInput) *SesGetTemplateResult
 
-    ListConfigurationSets(ctx workflow.Context, input *ses.ListConfigurationSetsInput) (*ses.ListConfigurationSetsOutput, error)
-    ListConfigurationSetsAsync(ctx workflow.Context, input *ses.ListConfigurationSetsInput) *SesListConfigurationSetsResult
+       ListConfigurationSets(ctx workflow.Context, input *ses.ListConfigurationSetsInput) (*ses.ListConfigurationSetsOutput, error)
+       ListConfigurationSetsAsync(ctx workflow.Context, input *ses.ListConfigurationSetsInput) *SesListConfigurationSetsResult
 
-    ListCustomVerificationEmailTemplates(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error)
-    ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) *SesListCustomVerificationEmailTemplatesResult
+       ListCustomVerificationEmailTemplates(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error)
+       ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) *SesListCustomVerificationEmailTemplatesResult
 
-    ListIdentities(ctx workflow.Context, input *ses.ListIdentitiesInput) (*ses.ListIdentitiesOutput, error)
-    ListIdentitiesAsync(ctx workflow.Context, input *ses.ListIdentitiesInput) *SesListIdentitiesResult
+       ListIdentities(ctx workflow.Context, input *ses.ListIdentitiesInput) (*ses.ListIdentitiesOutput, error)
+       ListIdentitiesAsync(ctx workflow.Context, input *ses.ListIdentitiesInput) *SesListIdentitiesResult
 
-    ListIdentityPolicies(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) (*ses.ListIdentityPoliciesOutput, error)
-    ListIdentityPoliciesAsync(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) *SesListIdentityPoliciesResult
+       ListIdentityPolicies(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) (*ses.ListIdentityPoliciesOutput, error)
+       ListIdentityPoliciesAsync(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) *SesListIdentityPoliciesResult
 
-    ListReceiptFilters(ctx workflow.Context, input *ses.ListReceiptFiltersInput) (*ses.ListReceiptFiltersOutput, error)
-    ListReceiptFiltersAsync(ctx workflow.Context, input *ses.ListReceiptFiltersInput) *SesListReceiptFiltersResult
+       ListReceiptFilters(ctx workflow.Context, input *ses.ListReceiptFiltersInput) (*ses.ListReceiptFiltersOutput, error)
+       ListReceiptFiltersAsync(ctx workflow.Context, input *ses.ListReceiptFiltersInput) *SesListReceiptFiltersResult
 
-    ListReceiptRuleSets(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) (*ses.ListReceiptRuleSetsOutput, error)
-    ListReceiptRuleSetsAsync(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) *SesListReceiptRuleSetsResult
+       ListReceiptRuleSets(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) (*ses.ListReceiptRuleSetsOutput, error)
+       ListReceiptRuleSetsAsync(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) *SesListReceiptRuleSetsResult
 
-    ListTemplates(ctx workflow.Context, input *ses.ListTemplatesInput) (*ses.ListTemplatesOutput, error)
-    ListTemplatesAsync(ctx workflow.Context, input *ses.ListTemplatesInput) *SesListTemplatesResult
+       ListTemplates(ctx workflow.Context, input *ses.ListTemplatesInput) (*ses.ListTemplatesOutput, error)
+       ListTemplatesAsync(ctx workflow.Context, input *ses.ListTemplatesInput) *SesListTemplatesResult
 
-    ListVerifiedEmailAddresses(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) (*ses.ListVerifiedEmailAddressesOutput, error)
-    ListVerifiedEmailAddressesAsync(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) *SesListVerifiedEmailAddressesResult
+       ListVerifiedEmailAddresses(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) (*ses.ListVerifiedEmailAddressesOutput, error)
+       ListVerifiedEmailAddressesAsync(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) *SesListVerifiedEmailAddressesResult
 
-    PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) (*ses.PutConfigurationSetDeliveryOptionsOutput, error)
-    PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) *SesPutConfigurationSetDeliveryOptionsResult
+       PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) (*ses.PutConfigurationSetDeliveryOptionsOutput, error)
+       PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) *SesPutConfigurationSetDeliveryOptionsResult
 
-    PutIdentityPolicy(ctx workflow.Context, input *ses.PutIdentityPolicyInput) (*ses.PutIdentityPolicyOutput, error)
-    PutIdentityPolicyAsync(ctx workflow.Context, input *ses.PutIdentityPolicyInput) *SesPutIdentityPolicyResult
+       PutIdentityPolicy(ctx workflow.Context, input *ses.PutIdentityPolicyInput) (*ses.PutIdentityPolicyOutput, error)
+       PutIdentityPolicyAsync(ctx workflow.Context, input *ses.PutIdentityPolicyInput) *SesPutIdentityPolicyResult
 
-    ReorderReceiptRuleSet(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) (*ses.ReorderReceiptRuleSetOutput, error)
-    ReorderReceiptRuleSetAsync(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) *SesReorderReceiptRuleSetResult
+       ReorderReceiptRuleSet(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) (*ses.ReorderReceiptRuleSetOutput, error)
+       ReorderReceiptRuleSetAsync(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) *SesReorderReceiptRuleSetResult
 
-    SendBounce(ctx workflow.Context, input *ses.SendBounceInput) (*ses.SendBounceOutput, error)
-    SendBounceAsync(ctx workflow.Context, input *ses.SendBounceInput) *SesSendBounceResult
+       SendBounce(ctx workflow.Context, input *ses.SendBounceInput) (*ses.SendBounceOutput, error)
+       SendBounceAsync(ctx workflow.Context, input *ses.SendBounceInput) *SesSendBounceResult
 
-    SendBulkTemplatedEmail(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) (*ses.SendBulkTemplatedEmailOutput, error)
-    SendBulkTemplatedEmailAsync(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) *SesSendBulkTemplatedEmailResult
+       SendBulkTemplatedEmail(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) (*ses.SendBulkTemplatedEmailOutput, error)
+       SendBulkTemplatedEmailAsync(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) *SesSendBulkTemplatedEmailResult
 
-    SendCustomVerificationEmail(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error)
-    SendCustomVerificationEmailAsync(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) *SesSendCustomVerificationEmailResult
+       SendCustomVerificationEmail(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error)
+       SendCustomVerificationEmailAsync(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) *SesSendCustomVerificationEmailResult
 
-    SendEmail(ctx workflow.Context, input *ses.SendEmailInput) (*ses.SendEmailOutput, error)
-    SendEmailAsync(ctx workflow.Context, input *ses.SendEmailInput) *SesSendEmailResult
+       SendEmail(ctx workflow.Context, input *ses.SendEmailInput) (*ses.SendEmailOutput, error)
+       SendEmailAsync(ctx workflow.Context, input *ses.SendEmailInput) *SesSendEmailResult
 
-    SendRawEmail(ctx workflow.Context, input *ses.SendRawEmailInput) (*ses.SendRawEmailOutput, error)
-    SendRawEmailAsync(ctx workflow.Context, input *ses.SendRawEmailInput) *SesSendRawEmailResult
+       SendRawEmail(ctx workflow.Context, input *ses.SendRawEmailInput) (*ses.SendRawEmailOutput, error)
+       SendRawEmailAsync(ctx workflow.Context, input *ses.SendRawEmailInput) *SesSendRawEmailResult
 
-    SendTemplatedEmail(ctx workflow.Context, input *ses.SendTemplatedEmailInput) (*ses.SendTemplatedEmailOutput, error)
-    SendTemplatedEmailAsync(ctx workflow.Context, input *ses.SendTemplatedEmailInput) *SesSendTemplatedEmailResult
+       SendTemplatedEmail(ctx workflow.Context, input *ses.SendTemplatedEmailInput) (*ses.SendTemplatedEmailOutput, error)
+       SendTemplatedEmailAsync(ctx workflow.Context, input *ses.SendTemplatedEmailInput) *SesSendTemplatedEmailResult
 
-    SetActiveReceiptRuleSet(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) (*ses.SetActiveReceiptRuleSetOutput, error)
-    SetActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) *SesSetActiveReceiptRuleSetResult
+       SetActiveReceiptRuleSet(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) (*ses.SetActiveReceiptRuleSetOutput, error)
+       SetActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) *SesSetActiveReceiptRuleSetResult
 
-    SetIdentityDkimEnabled(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) (*ses.SetIdentityDkimEnabledOutput, error)
-    SetIdentityDkimEnabledAsync(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) *SesSetIdentityDkimEnabledResult
+       SetIdentityDkimEnabled(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) (*ses.SetIdentityDkimEnabledOutput, error)
+       SetIdentityDkimEnabledAsync(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) *SesSetIdentityDkimEnabledResult
 
-    SetIdentityFeedbackForwardingEnabled(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error)
-    SetIdentityFeedbackForwardingEnabledAsync(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) *SesSetIdentityFeedbackForwardingEnabledResult
+       SetIdentityFeedbackForwardingEnabled(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error)
+       SetIdentityFeedbackForwardingEnabledAsync(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) *SesSetIdentityFeedbackForwardingEnabledResult
 
-    SetIdentityHeadersInNotificationsEnabled(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error)
-    SetIdentityHeadersInNotificationsEnabledAsync(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) *SesSetIdentityHeadersInNotificationsEnabledResult
+       SetIdentityHeadersInNotificationsEnabled(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error)
+       SetIdentityHeadersInNotificationsEnabledAsync(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) *SesSetIdentityHeadersInNotificationsEnabledResult
 
-    SetIdentityMailFromDomain(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) (*ses.SetIdentityMailFromDomainOutput, error)
-    SetIdentityMailFromDomainAsync(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) *SesSetIdentityMailFromDomainResult
+       SetIdentityMailFromDomain(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) (*ses.SetIdentityMailFromDomainOutput, error)
+       SetIdentityMailFromDomainAsync(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) *SesSetIdentityMailFromDomainResult
 
-    SetIdentityNotificationTopic(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) (*ses.SetIdentityNotificationTopicOutput, error)
-    SetIdentityNotificationTopicAsync(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) *SesSetIdentityNotificationTopicResult
+       SetIdentityNotificationTopic(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) (*ses.SetIdentityNotificationTopicOutput, error)
+       SetIdentityNotificationTopicAsync(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) *SesSetIdentityNotificationTopicResult
 
-    SetReceiptRulePosition(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) (*ses.SetReceiptRulePositionOutput, error)
-    SetReceiptRulePositionAsync(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) *SesSetReceiptRulePositionResult
+       SetReceiptRulePosition(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) (*ses.SetReceiptRulePositionOutput, error)
+       SetReceiptRulePositionAsync(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) *SesSetReceiptRulePositionResult
 
-    TestRenderTemplate(ctx workflow.Context, input *ses.TestRenderTemplateInput) (*ses.TestRenderTemplateOutput, error)
-    TestRenderTemplateAsync(ctx workflow.Context, input *ses.TestRenderTemplateInput) *SesTestRenderTemplateResult
+       TestRenderTemplate(ctx workflow.Context, input *ses.TestRenderTemplateInput) (*ses.TestRenderTemplateOutput, error)
+       TestRenderTemplateAsync(ctx workflow.Context, input *ses.TestRenderTemplateInput) *SesTestRenderTemplateResult
 
-    UpdateAccountSendingEnabled(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error)
-    UpdateAccountSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) *SesUpdateAccountSendingEnabledResult
+       UpdateAccountSendingEnabled(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error)
+       UpdateAccountSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) *SesUpdateAccountSendingEnabledResult
 
-    UpdateConfigurationSetEventDestination(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) (*ses.UpdateConfigurationSetEventDestinationOutput, error)
-    UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) *SesUpdateConfigurationSetEventDestinationResult
+       UpdateConfigurationSetEventDestination(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) (*ses.UpdateConfigurationSetEventDestinationOutput, error)
+       UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) *SesUpdateConfigurationSetEventDestinationResult
 
-    UpdateConfigurationSetReputationMetricsEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error)
-    UpdateConfigurationSetReputationMetricsEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) *SesUpdateConfigurationSetReputationMetricsEnabledResult
+       UpdateConfigurationSetReputationMetricsEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error)
+       UpdateConfigurationSetReputationMetricsEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) *SesUpdateConfigurationSetReputationMetricsEnabledResult
 
-    UpdateConfigurationSetSendingEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error)
-    UpdateConfigurationSetSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) *SesUpdateConfigurationSetSendingEnabledResult
+       UpdateConfigurationSetSendingEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error)
+       UpdateConfigurationSetSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) *SesUpdateConfigurationSetSendingEnabledResult
 
-    UpdateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error)
-    UpdateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) *SesUpdateConfigurationSetTrackingOptionsResult
+       UpdateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error)
+       UpdateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) *SesUpdateConfigurationSetTrackingOptionsResult
 
-    UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error)
-    UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) *SesUpdateCustomVerificationEmailTemplateResult
+       UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error)
+       UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) *SesUpdateCustomVerificationEmailTemplateResult
 
-    UpdateReceiptRule(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) (*ses.UpdateReceiptRuleOutput, error)
-    UpdateReceiptRuleAsync(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) *SesUpdateReceiptRuleResult
+       UpdateReceiptRule(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) (*ses.UpdateReceiptRuleOutput, error)
+       UpdateReceiptRuleAsync(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) *SesUpdateReceiptRuleResult
 
-    UpdateTemplate(ctx workflow.Context, input *ses.UpdateTemplateInput) (*ses.UpdateTemplateOutput, error)
-    UpdateTemplateAsync(ctx workflow.Context, input *ses.UpdateTemplateInput) *SesUpdateTemplateResult
+       UpdateTemplate(ctx workflow.Context, input *ses.UpdateTemplateInput) (*ses.UpdateTemplateOutput, error)
+       UpdateTemplateAsync(ctx workflow.Context, input *ses.UpdateTemplateInput) *SesUpdateTemplateResult
 
-    VerifyDomainDkim(ctx workflow.Context, input *ses.VerifyDomainDkimInput) (*ses.VerifyDomainDkimOutput, error)
-    VerifyDomainDkimAsync(ctx workflow.Context, input *ses.VerifyDomainDkimInput) *SesVerifyDomainDkimResult
+       VerifyDomainDkim(ctx workflow.Context, input *ses.VerifyDomainDkimInput) (*ses.VerifyDomainDkimOutput, error)
+       VerifyDomainDkimAsync(ctx workflow.Context, input *ses.VerifyDomainDkimInput) *SesVerifyDomainDkimResult
 
-    VerifyDomainIdentity(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) (*ses.VerifyDomainIdentityOutput, error)
-    VerifyDomainIdentityAsync(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) *SesVerifyDomainIdentityResult
+       VerifyDomainIdentity(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) (*ses.VerifyDomainIdentityOutput, error)
+       VerifyDomainIdentityAsync(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) *SesVerifyDomainIdentityResult
 
-    VerifyEmailAddress(ctx workflow.Context, input *ses.VerifyEmailAddressInput) (*ses.VerifyEmailAddressOutput, error)
-    VerifyEmailAddressAsync(ctx workflow.Context, input *ses.VerifyEmailAddressInput) *SesVerifyEmailAddressResult
+       VerifyEmailAddress(ctx workflow.Context, input *ses.VerifyEmailAddressInput) (*ses.VerifyEmailAddressOutput, error)
+       VerifyEmailAddressAsync(ctx workflow.Context, input *ses.VerifyEmailAddressInput) *SesVerifyEmailAddressResult
 
-    VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
-    VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
+       VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
+       VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
 
-    WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error}
+       WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error}
 
 type SesCloneReceiptRuleSetResult struct {
 	Result workflow.Future

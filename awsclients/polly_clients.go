@@ -7,32 +7,32 @@ import (
 )
 
 type PollyClient interface {
-    DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error)
-    DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *PollyDeleteLexiconResult
+       DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error)
+       DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *PollyDeleteLexiconResult
 
-    DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error)
-    DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *PollyDescribeVoicesResult
+       DescribeVoices(ctx workflow.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error)
+       DescribeVoicesAsync(ctx workflow.Context, input *polly.DescribeVoicesInput) *PollyDescribeVoicesResult
 
-    GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error)
-    GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *PollyGetLexiconResult
+       GetLexicon(ctx workflow.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error)
+       GetLexiconAsync(ctx workflow.Context, input *polly.GetLexiconInput) *PollyGetLexiconResult
 
-    GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error)
-    GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *PollyGetSpeechSynthesisTaskResult
+       GetSpeechSynthesisTask(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error)
+       GetSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.GetSpeechSynthesisTaskInput) *PollyGetSpeechSynthesisTaskResult
 
-    ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error)
-    ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *PollyListLexiconsResult
+       ListLexicons(ctx workflow.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error)
+       ListLexiconsAsync(ctx workflow.Context, input *polly.ListLexiconsInput) *PollyListLexiconsResult
 
-    ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error)
-    ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *PollyListSpeechSynthesisTasksResult
+       ListSpeechSynthesisTasks(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error)
+       ListSpeechSynthesisTasksAsync(ctx workflow.Context, input *polly.ListSpeechSynthesisTasksInput) *PollyListSpeechSynthesisTasksResult
 
-    PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error)
-    PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PollyPutLexiconResult
+       PutLexicon(ctx workflow.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error)
+       PutLexiconAsync(ctx workflow.Context, input *polly.PutLexiconInput) *PollyPutLexiconResult
 
-    StartSpeechSynthesisTask(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error)
-    StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *PollyStartSpeechSynthesisTaskResult
+       StartSpeechSynthesisTask(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error)
+       StartSpeechSynthesisTaskAsync(ctx workflow.Context, input *polly.StartSpeechSynthesisTaskInput) *PollyStartSpeechSynthesisTaskResult
 
-    SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error)
-    SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechResult
+       SynthesizeSpeech(ctx workflow.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error)
+       SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechResult
 }
 
 type PollyDeleteLexiconResult struct {

@@ -7,20 +7,20 @@ import (
 )
 
 type LexRuntimeServiceClient interface {
-    DeleteSession(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error)
-    DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexruntimeserviceDeleteSessionResult
+       DeleteSession(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error)
+       DeleteSessionAsync(ctx workflow.Context, input *lexruntimeservice.DeleteSessionInput) *LexruntimeserviceDeleteSessionResult
 
-    GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error)
-    GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexruntimeserviceGetSessionResult
+       GetSession(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error)
+       GetSessionAsync(ctx workflow.Context, input *lexruntimeservice.GetSessionInput) *LexruntimeserviceGetSessionResult
 
-    PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error)
-    PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexruntimeservicePostContentResult
+       PostContent(ctx workflow.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error)
+       PostContentAsync(ctx workflow.Context, input *lexruntimeservice.PostContentInput) *LexruntimeservicePostContentResult
 
-    PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error)
-    PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexruntimeservicePostTextResult
+       PostText(ctx workflow.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error)
+       PostTextAsync(ctx workflow.Context, input *lexruntimeservice.PostTextInput) *LexruntimeservicePostTextResult
 
-    PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error)
-    PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionResult
+       PutSession(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error)
+       PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionResult
 }
 
 type LexruntimeserviceDeleteSessionResult struct {

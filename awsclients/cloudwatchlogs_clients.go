@@ -7,131 +7,131 @@ import (
 )
 
 type CloudWatchLogsClient interface {
-    AssociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.AssociateKmsKeyInput) (*cloudwatchlogs.AssociateKmsKeyOutput, error)
-    AssociateKmsKeyAsync(ctx workflow.Context, input *cloudwatchlogs.AssociateKmsKeyInput) *CloudwatchlogsAssociateKmsKeyResult
+       AssociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.AssociateKmsKeyInput) (*cloudwatchlogs.AssociateKmsKeyOutput, error)
+       AssociateKmsKeyAsync(ctx workflow.Context, input *cloudwatchlogs.AssociateKmsKeyInput) *CloudwatchlogsAssociateKmsKeyResult
 
-    CancelExportTask(ctx workflow.Context, input *cloudwatchlogs.CancelExportTaskInput) (*cloudwatchlogs.CancelExportTaskOutput, error)
-    CancelExportTaskAsync(ctx workflow.Context, input *cloudwatchlogs.CancelExportTaskInput) *CloudwatchlogsCancelExportTaskResult
+       CancelExportTask(ctx workflow.Context, input *cloudwatchlogs.CancelExportTaskInput) (*cloudwatchlogs.CancelExportTaskOutput, error)
+       CancelExportTaskAsync(ctx workflow.Context, input *cloudwatchlogs.CancelExportTaskInput) *CloudwatchlogsCancelExportTaskResult
 
-    CreateExportTask(ctx workflow.Context, input *cloudwatchlogs.CreateExportTaskInput) (*cloudwatchlogs.CreateExportTaskOutput, error)
-    CreateExportTaskAsync(ctx workflow.Context, input *cloudwatchlogs.CreateExportTaskInput) *CloudwatchlogsCreateExportTaskResult
+       CreateExportTask(ctx workflow.Context, input *cloudwatchlogs.CreateExportTaskInput) (*cloudwatchlogs.CreateExportTaskOutput, error)
+       CreateExportTaskAsync(ctx workflow.Context, input *cloudwatchlogs.CreateExportTaskInput) *CloudwatchlogsCreateExportTaskResult
 
-    CreateLogGroup(ctx workflow.Context, input *cloudwatchlogs.CreateLogGroupInput) (*cloudwatchlogs.CreateLogGroupOutput, error)
-    CreateLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.CreateLogGroupInput) *CloudwatchlogsCreateLogGroupResult
+       CreateLogGroup(ctx workflow.Context, input *cloudwatchlogs.CreateLogGroupInput) (*cloudwatchlogs.CreateLogGroupOutput, error)
+       CreateLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.CreateLogGroupInput) *CloudwatchlogsCreateLogGroupResult
 
-    CreateLogStream(ctx workflow.Context, input *cloudwatchlogs.CreateLogStreamInput) (*cloudwatchlogs.CreateLogStreamOutput, error)
-    CreateLogStreamAsync(ctx workflow.Context, input *cloudwatchlogs.CreateLogStreamInput) *CloudwatchlogsCreateLogStreamResult
+       CreateLogStream(ctx workflow.Context, input *cloudwatchlogs.CreateLogStreamInput) (*cloudwatchlogs.CreateLogStreamOutput, error)
+       CreateLogStreamAsync(ctx workflow.Context, input *cloudwatchlogs.CreateLogStreamInput) *CloudwatchlogsCreateLogStreamResult
 
-    DeleteDestination(ctx workflow.Context, input *cloudwatchlogs.DeleteDestinationInput) (*cloudwatchlogs.DeleteDestinationOutput, error)
-    DeleteDestinationAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteDestinationInput) *CloudwatchlogsDeleteDestinationResult
+       DeleteDestination(ctx workflow.Context, input *cloudwatchlogs.DeleteDestinationInput) (*cloudwatchlogs.DeleteDestinationOutput, error)
+       DeleteDestinationAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteDestinationInput) *CloudwatchlogsDeleteDestinationResult
 
-    DeleteLogGroup(ctx workflow.Context, input *cloudwatchlogs.DeleteLogGroupInput) (*cloudwatchlogs.DeleteLogGroupOutput, error)
-    DeleteLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteLogGroupInput) *CloudwatchlogsDeleteLogGroupResult
+       DeleteLogGroup(ctx workflow.Context, input *cloudwatchlogs.DeleteLogGroupInput) (*cloudwatchlogs.DeleteLogGroupOutput, error)
+       DeleteLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteLogGroupInput) *CloudwatchlogsDeleteLogGroupResult
 
-    DeleteLogStream(ctx workflow.Context, input *cloudwatchlogs.DeleteLogStreamInput) (*cloudwatchlogs.DeleteLogStreamOutput, error)
-    DeleteLogStreamAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteLogStreamInput) *CloudwatchlogsDeleteLogStreamResult
+       DeleteLogStream(ctx workflow.Context, input *cloudwatchlogs.DeleteLogStreamInput) (*cloudwatchlogs.DeleteLogStreamOutput, error)
+       DeleteLogStreamAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteLogStreamInput) *CloudwatchlogsDeleteLogStreamResult
 
-    DeleteMetricFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteMetricFilterInput) (*cloudwatchlogs.DeleteMetricFilterOutput, error)
-    DeleteMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteMetricFilterInput) *CloudwatchlogsDeleteMetricFilterResult
+       DeleteMetricFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteMetricFilterInput) (*cloudwatchlogs.DeleteMetricFilterOutput, error)
+       DeleteMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteMetricFilterInput) *CloudwatchlogsDeleteMetricFilterResult
 
-    DeleteQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) (*cloudwatchlogs.DeleteQueryDefinitionOutput, error)
-    DeleteQueryDefinitionAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) *CloudwatchlogsDeleteQueryDefinitionResult
+       DeleteQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) (*cloudwatchlogs.DeleteQueryDefinitionOutput, error)
+       DeleteQueryDefinitionAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) *CloudwatchlogsDeleteQueryDefinitionResult
 
-    DeleteResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) (*cloudwatchlogs.DeleteResourcePolicyOutput, error)
-    DeleteResourcePolicyAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) *CloudwatchlogsDeleteResourcePolicyResult
+       DeleteResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) (*cloudwatchlogs.DeleteResourcePolicyOutput, error)
+       DeleteResourcePolicyAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) *CloudwatchlogsDeleteResourcePolicyResult
 
-    DeleteRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) (*cloudwatchlogs.DeleteRetentionPolicyOutput, error)
-    DeleteRetentionPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) *CloudwatchlogsDeleteRetentionPolicyResult
+       DeleteRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) (*cloudwatchlogs.DeleteRetentionPolicyOutput, error)
+       DeleteRetentionPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) *CloudwatchlogsDeleteRetentionPolicyResult
 
-    DeleteSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) (*cloudwatchlogs.DeleteSubscriptionFilterOutput, error)
-    DeleteSubscriptionFilterAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) *CloudwatchlogsDeleteSubscriptionFilterResult
+       DeleteSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) (*cloudwatchlogs.DeleteSubscriptionFilterOutput, error)
+       DeleteSubscriptionFilterAsync(ctx workflow.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) *CloudwatchlogsDeleteSubscriptionFilterResult
 
-    DescribeDestinations(ctx workflow.Context, input *cloudwatchlogs.DescribeDestinationsInput) (*cloudwatchlogs.DescribeDestinationsOutput, error)
-    DescribeDestinationsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeDestinationsInput) *CloudwatchlogsDescribeDestinationsResult
+       DescribeDestinations(ctx workflow.Context, input *cloudwatchlogs.DescribeDestinationsInput) (*cloudwatchlogs.DescribeDestinationsOutput, error)
+       DescribeDestinationsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeDestinationsInput) *CloudwatchlogsDescribeDestinationsResult
 
-    DescribeExportTasks(ctx workflow.Context, input *cloudwatchlogs.DescribeExportTasksInput) (*cloudwatchlogs.DescribeExportTasksOutput, error)
-    DescribeExportTasksAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeExportTasksInput) *CloudwatchlogsDescribeExportTasksResult
+       DescribeExportTasks(ctx workflow.Context, input *cloudwatchlogs.DescribeExportTasksInput) (*cloudwatchlogs.DescribeExportTasksOutput, error)
+       DescribeExportTasksAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeExportTasksInput) *CloudwatchlogsDescribeExportTasksResult
 
-    DescribeLogGroups(ctx workflow.Context, input *cloudwatchlogs.DescribeLogGroupsInput) (*cloudwatchlogs.DescribeLogGroupsOutput, error)
-    DescribeLogGroupsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeLogGroupsInput) *CloudwatchlogsDescribeLogGroupsResult
+       DescribeLogGroups(ctx workflow.Context, input *cloudwatchlogs.DescribeLogGroupsInput) (*cloudwatchlogs.DescribeLogGroupsOutput, error)
+       DescribeLogGroupsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeLogGroupsInput) *CloudwatchlogsDescribeLogGroupsResult
 
-    DescribeLogStreams(ctx workflow.Context, input *cloudwatchlogs.DescribeLogStreamsInput) (*cloudwatchlogs.DescribeLogStreamsOutput, error)
-    DescribeLogStreamsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeLogStreamsInput) *CloudwatchlogsDescribeLogStreamsResult
+       DescribeLogStreams(ctx workflow.Context, input *cloudwatchlogs.DescribeLogStreamsInput) (*cloudwatchlogs.DescribeLogStreamsOutput, error)
+       DescribeLogStreamsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeLogStreamsInput) *CloudwatchlogsDescribeLogStreamsResult
 
-    DescribeMetricFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) (*cloudwatchlogs.DescribeMetricFiltersOutput, error)
-    DescribeMetricFiltersAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) *CloudwatchlogsDescribeMetricFiltersResult
+       DescribeMetricFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) (*cloudwatchlogs.DescribeMetricFiltersOutput, error)
+       DescribeMetricFiltersAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) *CloudwatchlogsDescribeMetricFiltersResult
 
-    DescribeQueries(ctx workflow.Context, input *cloudwatchlogs.DescribeQueriesInput) (*cloudwatchlogs.DescribeQueriesOutput, error)
-    DescribeQueriesAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeQueriesInput) *CloudwatchlogsDescribeQueriesResult
+       DescribeQueries(ctx workflow.Context, input *cloudwatchlogs.DescribeQueriesInput) (*cloudwatchlogs.DescribeQueriesOutput, error)
+       DescribeQueriesAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeQueriesInput) *CloudwatchlogsDescribeQueriesResult
 
-    DescribeQueryDefinitions(ctx workflow.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) (*cloudwatchlogs.DescribeQueryDefinitionsOutput, error)
-    DescribeQueryDefinitionsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) *CloudwatchlogsDescribeQueryDefinitionsResult
+       DescribeQueryDefinitions(ctx workflow.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) (*cloudwatchlogs.DescribeQueryDefinitionsOutput, error)
+       DescribeQueryDefinitionsAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) *CloudwatchlogsDescribeQueryDefinitionsResult
 
-    DescribeResourcePolicies(ctx workflow.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) (*cloudwatchlogs.DescribeResourcePoliciesOutput, error)
-    DescribeResourcePoliciesAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) *CloudwatchlogsDescribeResourcePoliciesResult
+       DescribeResourcePolicies(ctx workflow.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) (*cloudwatchlogs.DescribeResourcePoliciesOutput, error)
+       DescribeResourcePoliciesAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) *CloudwatchlogsDescribeResourcePoliciesResult
 
-    DescribeSubscriptionFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) (*cloudwatchlogs.DescribeSubscriptionFiltersOutput, error)
-    DescribeSubscriptionFiltersAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) *CloudwatchlogsDescribeSubscriptionFiltersResult
+       DescribeSubscriptionFilters(ctx workflow.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) (*cloudwatchlogs.DescribeSubscriptionFiltersOutput, error)
+       DescribeSubscriptionFiltersAsync(ctx workflow.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) *CloudwatchlogsDescribeSubscriptionFiltersResult
 
-    DisassociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) (*cloudwatchlogs.DisassociateKmsKeyOutput, error)
-    DisassociateKmsKeyAsync(ctx workflow.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) *CloudwatchlogsDisassociateKmsKeyResult
+       DisassociateKmsKey(ctx workflow.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) (*cloudwatchlogs.DisassociateKmsKeyOutput, error)
+       DisassociateKmsKeyAsync(ctx workflow.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) *CloudwatchlogsDisassociateKmsKeyResult
 
-    FilterLogEvents(ctx workflow.Context, input *cloudwatchlogs.FilterLogEventsInput) (*cloudwatchlogs.FilterLogEventsOutput, error)
-    FilterLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.FilterLogEventsInput) *CloudwatchlogsFilterLogEventsResult
+       FilterLogEvents(ctx workflow.Context, input *cloudwatchlogs.FilterLogEventsInput) (*cloudwatchlogs.FilterLogEventsOutput, error)
+       FilterLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.FilterLogEventsInput) *CloudwatchlogsFilterLogEventsResult
 
-    GetLogEvents(ctx workflow.Context, input *cloudwatchlogs.GetLogEventsInput) (*cloudwatchlogs.GetLogEventsOutput, error)
-    GetLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogEventsInput) *CloudwatchlogsGetLogEventsResult
+       GetLogEvents(ctx workflow.Context, input *cloudwatchlogs.GetLogEventsInput) (*cloudwatchlogs.GetLogEventsOutput, error)
+       GetLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogEventsInput) *CloudwatchlogsGetLogEventsResult
 
-    GetLogGroupFields(ctx workflow.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) (*cloudwatchlogs.GetLogGroupFieldsOutput, error)
-    GetLogGroupFieldsAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) *CloudwatchlogsGetLogGroupFieldsResult
+       GetLogGroupFields(ctx workflow.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) (*cloudwatchlogs.GetLogGroupFieldsOutput, error)
+       GetLogGroupFieldsAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) *CloudwatchlogsGetLogGroupFieldsResult
 
-    GetLogRecord(ctx workflow.Context, input *cloudwatchlogs.GetLogRecordInput) (*cloudwatchlogs.GetLogRecordOutput, error)
-    GetLogRecordAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogRecordInput) *CloudwatchlogsGetLogRecordResult
+       GetLogRecord(ctx workflow.Context, input *cloudwatchlogs.GetLogRecordInput) (*cloudwatchlogs.GetLogRecordOutput, error)
+       GetLogRecordAsync(ctx workflow.Context, input *cloudwatchlogs.GetLogRecordInput) *CloudwatchlogsGetLogRecordResult
 
-    GetQueryResults(ctx workflow.Context, input *cloudwatchlogs.GetQueryResultsInput) (*cloudwatchlogs.GetQueryResultsOutput, error)
-    GetQueryResultsAsync(ctx workflow.Context, input *cloudwatchlogs.GetQueryResultsInput) *CloudwatchlogsGetQueryResultsResult
+       GetQueryResults(ctx workflow.Context, input *cloudwatchlogs.GetQueryResultsInput) (*cloudwatchlogs.GetQueryResultsOutput, error)
+       GetQueryResultsAsync(ctx workflow.Context, input *cloudwatchlogs.GetQueryResultsInput) *CloudwatchlogsGetQueryResultsResult
 
-    ListTagsLogGroup(ctx workflow.Context, input *cloudwatchlogs.ListTagsLogGroupInput) (*cloudwatchlogs.ListTagsLogGroupOutput, error)
-    ListTagsLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.ListTagsLogGroupInput) *CloudwatchlogsListTagsLogGroupResult
+       ListTagsLogGroup(ctx workflow.Context, input *cloudwatchlogs.ListTagsLogGroupInput) (*cloudwatchlogs.ListTagsLogGroupOutput, error)
+       ListTagsLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.ListTagsLogGroupInput) *CloudwatchlogsListTagsLogGroupResult
 
-    PutDestination(ctx workflow.Context, input *cloudwatchlogs.PutDestinationInput) (*cloudwatchlogs.PutDestinationOutput, error)
-    PutDestinationAsync(ctx workflow.Context, input *cloudwatchlogs.PutDestinationInput) *CloudwatchlogsPutDestinationResult
+       PutDestination(ctx workflow.Context, input *cloudwatchlogs.PutDestinationInput) (*cloudwatchlogs.PutDestinationOutput, error)
+       PutDestinationAsync(ctx workflow.Context, input *cloudwatchlogs.PutDestinationInput) *CloudwatchlogsPutDestinationResult
 
-    PutDestinationPolicy(ctx workflow.Context, input *cloudwatchlogs.PutDestinationPolicyInput) (*cloudwatchlogs.PutDestinationPolicyOutput, error)
-    PutDestinationPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutDestinationPolicyInput) *CloudwatchlogsPutDestinationPolicyResult
+       PutDestinationPolicy(ctx workflow.Context, input *cloudwatchlogs.PutDestinationPolicyInput) (*cloudwatchlogs.PutDestinationPolicyOutput, error)
+       PutDestinationPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutDestinationPolicyInput) *CloudwatchlogsPutDestinationPolicyResult
 
-    PutLogEvents(ctx workflow.Context, input *cloudwatchlogs.PutLogEventsInput) (*cloudwatchlogs.PutLogEventsOutput, error)
-    PutLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.PutLogEventsInput) *CloudwatchlogsPutLogEventsResult
+       PutLogEvents(ctx workflow.Context, input *cloudwatchlogs.PutLogEventsInput) (*cloudwatchlogs.PutLogEventsOutput, error)
+       PutLogEventsAsync(ctx workflow.Context, input *cloudwatchlogs.PutLogEventsInput) *CloudwatchlogsPutLogEventsResult
 
-    PutMetricFilter(ctx workflow.Context, input *cloudwatchlogs.PutMetricFilterInput) (*cloudwatchlogs.PutMetricFilterOutput, error)
-    PutMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.PutMetricFilterInput) *CloudwatchlogsPutMetricFilterResult
+       PutMetricFilter(ctx workflow.Context, input *cloudwatchlogs.PutMetricFilterInput) (*cloudwatchlogs.PutMetricFilterOutput, error)
+       PutMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.PutMetricFilterInput) *CloudwatchlogsPutMetricFilterResult
 
-    PutQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.PutQueryDefinitionInput) (*cloudwatchlogs.PutQueryDefinitionOutput, error)
-    PutQueryDefinitionAsync(ctx workflow.Context, input *cloudwatchlogs.PutQueryDefinitionInput) *CloudwatchlogsPutQueryDefinitionResult
+       PutQueryDefinition(ctx workflow.Context, input *cloudwatchlogs.PutQueryDefinitionInput) (*cloudwatchlogs.PutQueryDefinitionOutput, error)
+       PutQueryDefinitionAsync(ctx workflow.Context, input *cloudwatchlogs.PutQueryDefinitionInput) *CloudwatchlogsPutQueryDefinitionResult
 
-    PutResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.PutResourcePolicyInput) (*cloudwatchlogs.PutResourcePolicyOutput, error)
-    PutResourcePolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutResourcePolicyInput) *CloudwatchlogsPutResourcePolicyResult
+       PutResourcePolicy(ctx workflow.Context, input *cloudwatchlogs.PutResourcePolicyInput) (*cloudwatchlogs.PutResourcePolicyOutput, error)
+       PutResourcePolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutResourcePolicyInput) *CloudwatchlogsPutResourcePolicyResult
 
-    PutRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.PutRetentionPolicyInput) (*cloudwatchlogs.PutRetentionPolicyOutput, error)
-    PutRetentionPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutRetentionPolicyInput) *CloudwatchlogsPutRetentionPolicyResult
+       PutRetentionPolicy(ctx workflow.Context, input *cloudwatchlogs.PutRetentionPolicyInput) (*cloudwatchlogs.PutRetentionPolicyOutput, error)
+       PutRetentionPolicyAsync(ctx workflow.Context, input *cloudwatchlogs.PutRetentionPolicyInput) *CloudwatchlogsPutRetentionPolicyResult
 
-    PutSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) (*cloudwatchlogs.PutSubscriptionFilterOutput, error)
-    PutSubscriptionFilterAsync(ctx workflow.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) *CloudwatchlogsPutSubscriptionFilterResult
+       PutSubscriptionFilter(ctx workflow.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) (*cloudwatchlogs.PutSubscriptionFilterOutput, error)
+       PutSubscriptionFilterAsync(ctx workflow.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) *CloudwatchlogsPutSubscriptionFilterResult
 
-    StartQuery(ctx workflow.Context, input *cloudwatchlogs.StartQueryInput) (*cloudwatchlogs.StartQueryOutput, error)
-    StartQueryAsync(ctx workflow.Context, input *cloudwatchlogs.StartQueryInput) *CloudwatchlogsStartQueryResult
+       StartQuery(ctx workflow.Context, input *cloudwatchlogs.StartQueryInput) (*cloudwatchlogs.StartQueryOutput, error)
+       StartQueryAsync(ctx workflow.Context, input *cloudwatchlogs.StartQueryInput) *CloudwatchlogsStartQueryResult
 
-    StopQuery(ctx workflow.Context, input *cloudwatchlogs.StopQueryInput) (*cloudwatchlogs.StopQueryOutput, error)
-    StopQueryAsync(ctx workflow.Context, input *cloudwatchlogs.StopQueryInput) *CloudwatchlogsStopQueryResult
+       StopQuery(ctx workflow.Context, input *cloudwatchlogs.StopQueryInput) (*cloudwatchlogs.StopQueryOutput, error)
+       StopQueryAsync(ctx workflow.Context, input *cloudwatchlogs.StopQueryInput) *CloudwatchlogsStopQueryResult
 
-    TagLogGroup(ctx workflow.Context, input *cloudwatchlogs.TagLogGroupInput) (*cloudwatchlogs.TagLogGroupOutput, error)
-    TagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.TagLogGroupInput) *CloudwatchlogsTagLogGroupResult
+       TagLogGroup(ctx workflow.Context, input *cloudwatchlogs.TagLogGroupInput) (*cloudwatchlogs.TagLogGroupOutput, error)
+       TagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.TagLogGroupInput) *CloudwatchlogsTagLogGroupResult
 
-    TestMetricFilter(ctx workflow.Context, input *cloudwatchlogs.TestMetricFilterInput) (*cloudwatchlogs.TestMetricFilterOutput, error)
-    TestMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.TestMetricFilterInput) *CloudwatchlogsTestMetricFilterResult
+       TestMetricFilter(ctx workflow.Context, input *cloudwatchlogs.TestMetricFilterInput) (*cloudwatchlogs.TestMetricFilterOutput, error)
+       TestMetricFilterAsync(ctx workflow.Context, input *cloudwatchlogs.TestMetricFilterInput) *CloudwatchlogsTestMetricFilterResult
 
-    UntagLogGroup(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) (*cloudwatchlogs.UntagLogGroupOutput, error)
-    UntagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) *CloudwatchlogsUntagLogGroupResult
+       UntagLogGroup(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) (*cloudwatchlogs.UntagLogGroupOutput, error)
+       UntagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) *CloudwatchlogsUntagLogGroupResult
 }
 
 type CloudwatchlogsAssociateKmsKeyResult struct {

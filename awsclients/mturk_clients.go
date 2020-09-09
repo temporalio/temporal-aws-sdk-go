@@ -7,116 +7,116 @@ import (
 )
 
 type MTurkClient interface {
-    ApproveAssignment(ctx workflow.Context, input *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error)
-    ApproveAssignmentAsync(ctx workflow.Context, input *mturk.ApproveAssignmentInput) *MturkApproveAssignmentResult
+       ApproveAssignment(ctx workflow.Context, input *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error)
+       ApproveAssignmentAsync(ctx workflow.Context, input *mturk.ApproveAssignmentInput) *MturkApproveAssignmentResult
 
-    AssociateQualificationWithWorker(ctx workflow.Context, input *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error)
-    AssociateQualificationWithWorkerAsync(ctx workflow.Context, input *mturk.AssociateQualificationWithWorkerInput) *MturkAssociateQualificationWithWorkerResult
+       AssociateQualificationWithWorker(ctx workflow.Context, input *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error)
+       AssociateQualificationWithWorkerAsync(ctx workflow.Context, input *mturk.AssociateQualificationWithWorkerInput) *MturkAssociateQualificationWithWorkerResult
 
-    CreateAdditionalAssignmentsForHIT(ctx workflow.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error)
-    CreateAdditionalAssignmentsForHITAsync(ctx workflow.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) *MturkCreateAdditionalAssignmentsForHITResult
+       CreateAdditionalAssignmentsForHIT(ctx workflow.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error)
+       CreateAdditionalAssignmentsForHITAsync(ctx workflow.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) *MturkCreateAdditionalAssignmentsForHITResult
 
-    CreateHIT(ctx workflow.Context, input *mturk.CreateHITInput) (*mturk.CreateHITOutput, error)
-    CreateHITAsync(ctx workflow.Context, input *mturk.CreateHITInput) *MturkCreateHITResult
+       CreateHIT(ctx workflow.Context, input *mturk.CreateHITInput) (*mturk.CreateHITOutput, error)
+       CreateHITAsync(ctx workflow.Context, input *mturk.CreateHITInput) *MturkCreateHITResult
 
-    CreateHITType(ctx workflow.Context, input *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error)
-    CreateHITTypeAsync(ctx workflow.Context, input *mturk.CreateHITTypeInput) *MturkCreateHITTypeResult
+       CreateHITType(ctx workflow.Context, input *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error)
+       CreateHITTypeAsync(ctx workflow.Context, input *mturk.CreateHITTypeInput) *MturkCreateHITTypeResult
 
-    CreateHITWithHITType(ctx workflow.Context, input *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error)
-    CreateHITWithHITTypeAsync(ctx workflow.Context, input *mturk.CreateHITWithHITTypeInput) *MturkCreateHITWithHITTypeResult
+       CreateHITWithHITType(ctx workflow.Context, input *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error)
+       CreateHITWithHITTypeAsync(ctx workflow.Context, input *mturk.CreateHITWithHITTypeInput) *MturkCreateHITWithHITTypeResult
 
-    CreateQualificationType(ctx workflow.Context, input *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error)
-    CreateQualificationTypeAsync(ctx workflow.Context, input *mturk.CreateQualificationTypeInput) *MturkCreateQualificationTypeResult
+       CreateQualificationType(ctx workflow.Context, input *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error)
+       CreateQualificationTypeAsync(ctx workflow.Context, input *mturk.CreateQualificationTypeInput) *MturkCreateQualificationTypeResult
 
-    CreateWorkerBlock(ctx workflow.Context, input *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error)
-    CreateWorkerBlockAsync(ctx workflow.Context, input *mturk.CreateWorkerBlockInput) *MturkCreateWorkerBlockResult
+       CreateWorkerBlock(ctx workflow.Context, input *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error)
+       CreateWorkerBlockAsync(ctx workflow.Context, input *mturk.CreateWorkerBlockInput) *MturkCreateWorkerBlockResult
 
-    DeleteHIT(ctx workflow.Context, input *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error)
-    DeleteHITAsync(ctx workflow.Context, input *mturk.DeleteHITInput) *MturkDeleteHITResult
+       DeleteHIT(ctx workflow.Context, input *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error)
+       DeleteHITAsync(ctx workflow.Context, input *mturk.DeleteHITInput) *MturkDeleteHITResult
 
-    DeleteQualificationType(ctx workflow.Context, input *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error)
-    DeleteQualificationTypeAsync(ctx workflow.Context, input *mturk.DeleteQualificationTypeInput) *MturkDeleteQualificationTypeResult
+       DeleteQualificationType(ctx workflow.Context, input *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error)
+       DeleteQualificationTypeAsync(ctx workflow.Context, input *mturk.DeleteQualificationTypeInput) *MturkDeleteQualificationTypeResult
 
-    DeleteWorkerBlock(ctx workflow.Context, input *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error)
-    DeleteWorkerBlockAsync(ctx workflow.Context, input *mturk.DeleteWorkerBlockInput) *MturkDeleteWorkerBlockResult
+       DeleteWorkerBlock(ctx workflow.Context, input *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error)
+       DeleteWorkerBlockAsync(ctx workflow.Context, input *mturk.DeleteWorkerBlockInput) *MturkDeleteWorkerBlockResult
 
-    DisassociateQualificationFromWorker(ctx workflow.Context, input *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error)
-    DisassociateQualificationFromWorkerAsync(ctx workflow.Context, input *mturk.DisassociateQualificationFromWorkerInput) *MturkDisassociateQualificationFromWorkerResult
+       DisassociateQualificationFromWorker(ctx workflow.Context, input *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error)
+       DisassociateQualificationFromWorkerAsync(ctx workflow.Context, input *mturk.DisassociateQualificationFromWorkerInput) *MturkDisassociateQualificationFromWorkerResult
 
-    GetAccountBalance(ctx workflow.Context, input *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error)
-    GetAccountBalanceAsync(ctx workflow.Context, input *mturk.GetAccountBalanceInput) *MturkGetAccountBalanceResult
+       GetAccountBalance(ctx workflow.Context, input *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error)
+       GetAccountBalanceAsync(ctx workflow.Context, input *mturk.GetAccountBalanceInput) *MturkGetAccountBalanceResult
 
-    GetAssignment(ctx workflow.Context, input *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error)
-    GetAssignmentAsync(ctx workflow.Context, input *mturk.GetAssignmentInput) *MturkGetAssignmentResult
+       GetAssignment(ctx workflow.Context, input *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error)
+       GetAssignmentAsync(ctx workflow.Context, input *mturk.GetAssignmentInput) *MturkGetAssignmentResult
 
-    GetFileUploadURL(ctx workflow.Context, input *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error)
-    GetFileUploadURLAsync(ctx workflow.Context, input *mturk.GetFileUploadURLInput) *MturkGetFileUploadURLResult
+       GetFileUploadURL(ctx workflow.Context, input *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error)
+       GetFileUploadURLAsync(ctx workflow.Context, input *mturk.GetFileUploadURLInput) *MturkGetFileUploadURLResult
 
-    GetHIT(ctx workflow.Context, input *mturk.GetHITInput) (*mturk.GetHITOutput, error)
-    GetHITAsync(ctx workflow.Context, input *mturk.GetHITInput) *MturkGetHITResult
+       GetHIT(ctx workflow.Context, input *mturk.GetHITInput) (*mturk.GetHITOutput, error)
+       GetHITAsync(ctx workflow.Context, input *mturk.GetHITInput) *MturkGetHITResult
 
-    GetQualificationScore(ctx workflow.Context, input *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error)
-    GetQualificationScoreAsync(ctx workflow.Context, input *mturk.GetQualificationScoreInput) *MturkGetQualificationScoreResult
+       GetQualificationScore(ctx workflow.Context, input *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error)
+       GetQualificationScoreAsync(ctx workflow.Context, input *mturk.GetQualificationScoreInput) *MturkGetQualificationScoreResult
 
-    GetQualificationType(ctx workflow.Context, input *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error)
-    GetQualificationTypeAsync(ctx workflow.Context, input *mturk.GetQualificationTypeInput) *MturkGetQualificationTypeResult
+       GetQualificationType(ctx workflow.Context, input *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error)
+       GetQualificationTypeAsync(ctx workflow.Context, input *mturk.GetQualificationTypeInput) *MturkGetQualificationTypeResult
 
-    ListAssignmentsForHIT(ctx workflow.Context, input *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error)
-    ListAssignmentsForHITAsync(ctx workflow.Context, input *mturk.ListAssignmentsForHITInput) *MturkListAssignmentsForHITResult
+       ListAssignmentsForHIT(ctx workflow.Context, input *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error)
+       ListAssignmentsForHITAsync(ctx workflow.Context, input *mturk.ListAssignmentsForHITInput) *MturkListAssignmentsForHITResult
 
-    ListBonusPayments(ctx workflow.Context, input *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error)
-    ListBonusPaymentsAsync(ctx workflow.Context, input *mturk.ListBonusPaymentsInput) *MturkListBonusPaymentsResult
+       ListBonusPayments(ctx workflow.Context, input *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error)
+       ListBonusPaymentsAsync(ctx workflow.Context, input *mturk.ListBonusPaymentsInput) *MturkListBonusPaymentsResult
 
-    ListHITs(ctx workflow.Context, input *mturk.ListHITsInput) (*mturk.ListHITsOutput, error)
-    ListHITsAsync(ctx workflow.Context, input *mturk.ListHITsInput) *MturkListHITsResult
+       ListHITs(ctx workflow.Context, input *mturk.ListHITsInput) (*mturk.ListHITsOutput, error)
+       ListHITsAsync(ctx workflow.Context, input *mturk.ListHITsInput) *MturkListHITsResult
 
-    ListHITsForQualificationType(ctx workflow.Context, input *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error)
-    ListHITsForQualificationTypeAsync(ctx workflow.Context, input *mturk.ListHITsForQualificationTypeInput) *MturkListHITsForQualificationTypeResult
+       ListHITsForQualificationType(ctx workflow.Context, input *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error)
+       ListHITsForQualificationTypeAsync(ctx workflow.Context, input *mturk.ListHITsForQualificationTypeInput) *MturkListHITsForQualificationTypeResult
 
-    ListQualificationRequests(ctx workflow.Context, input *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error)
-    ListQualificationRequestsAsync(ctx workflow.Context, input *mturk.ListQualificationRequestsInput) *MturkListQualificationRequestsResult
+       ListQualificationRequests(ctx workflow.Context, input *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error)
+       ListQualificationRequestsAsync(ctx workflow.Context, input *mturk.ListQualificationRequestsInput) *MturkListQualificationRequestsResult
 
-    ListQualificationTypes(ctx workflow.Context, input *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error)
-    ListQualificationTypesAsync(ctx workflow.Context, input *mturk.ListQualificationTypesInput) *MturkListQualificationTypesResult
+       ListQualificationTypes(ctx workflow.Context, input *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error)
+       ListQualificationTypesAsync(ctx workflow.Context, input *mturk.ListQualificationTypesInput) *MturkListQualificationTypesResult
 
-    ListReviewPolicyResultsForHIT(ctx workflow.Context, input *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error)
-    ListReviewPolicyResultsForHITAsync(ctx workflow.Context, input *mturk.ListReviewPolicyResultsForHITInput) *MturkListReviewPolicyResultsForHITResult
+       ListReviewPolicyResultsForHIT(ctx workflow.Context, input *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error)
+       ListReviewPolicyResultsForHITAsync(ctx workflow.Context, input *mturk.ListReviewPolicyResultsForHITInput) *MturkListReviewPolicyResultsForHITResult
 
-    ListReviewableHITs(ctx workflow.Context, input *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error)
-    ListReviewableHITsAsync(ctx workflow.Context, input *mturk.ListReviewableHITsInput) *MturkListReviewableHITsResult
+       ListReviewableHITs(ctx workflow.Context, input *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error)
+       ListReviewableHITsAsync(ctx workflow.Context, input *mturk.ListReviewableHITsInput) *MturkListReviewableHITsResult
 
-    ListWorkerBlocks(ctx workflow.Context, input *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error)
-    ListWorkerBlocksAsync(ctx workflow.Context, input *mturk.ListWorkerBlocksInput) *MturkListWorkerBlocksResult
+       ListWorkerBlocks(ctx workflow.Context, input *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error)
+       ListWorkerBlocksAsync(ctx workflow.Context, input *mturk.ListWorkerBlocksInput) *MturkListWorkerBlocksResult
 
-    ListWorkersWithQualificationType(ctx workflow.Context, input *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error)
-    ListWorkersWithQualificationTypeAsync(ctx workflow.Context, input *mturk.ListWorkersWithQualificationTypeInput) *MturkListWorkersWithQualificationTypeResult
+       ListWorkersWithQualificationType(ctx workflow.Context, input *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error)
+       ListWorkersWithQualificationTypeAsync(ctx workflow.Context, input *mturk.ListWorkersWithQualificationTypeInput) *MturkListWorkersWithQualificationTypeResult
 
-    NotifyWorkers(ctx workflow.Context, input *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error)
-    NotifyWorkersAsync(ctx workflow.Context, input *mturk.NotifyWorkersInput) *MturkNotifyWorkersResult
+       NotifyWorkers(ctx workflow.Context, input *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error)
+       NotifyWorkersAsync(ctx workflow.Context, input *mturk.NotifyWorkersInput) *MturkNotifyWorkersResult
 
-    RejectAssignment(ctx workflow.Context, input *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error)
-    RejectAssignmentAsync(ctx workflow.Context, input *mturk.RejectAssignmentInput) *MturkRejectAssignmentResult
+       RejectAssignment(ctx workflow.Context, input *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error)
+       RejectAssignmentAsync(ctx workflow.Context, input *mturk.RejectAssignmentInput) *MturkRejectAssignmentResult
 
-    SendBonus(ctx workflow.Context, input *mturk.SendBonusInput) (*mturk.SendBonusOutput, error)
-    SendBonusAsync(ctx workflow.Context, input *mturk.SendBonusInput) *MturkSendBonusResult
+       SendBonus(ctx workflow.Context, input *mturk.SendBonusInput) (*mturk.SendBonusOutput, error)
+       SendBonusAsync(ctx workflow.Context, input *mturk.SendBonusInput) *MturkSendBonusResult
 
-    SendTestEventNotification(ctx workflow.Context, input *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error)
-    SendTestEventNotificationAsync(ctx workflow.Context, input *mturk.SendTestEventNotificationInput) *MturkSendTestEventNotificationResult
+       SendTestEventNotification(ctx workflow.Context, input *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error)
+       SendTestEventNotificationAsync(ctx workflow.Context, input *mturk.SendTestEventNotificationInput) *MturkSendTestEventNotificationResult
 
-    UpdateExpirationForHIT(ctx workflow.Context, input *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error)
-    UpdateExpirationForHITAsync(ctx workflow.Context, input *mturk.UpdateExpirationForHITInput) *MturkUpdateExpirationForHITResult
+       UpdateExpirationForHIT(ctx workflow.Context, input *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error)
+       UpdateExpirationForHITAsync(ctx workflow.Context, input *mturk.UpdateExpirationForHITInput) *MturkUpdateExpirationForHITResult
 
-    UpdateHITReviewStatus(ctx workflow.Context, input *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error)
-    UpdateHITReviewStatusAsync(ctx workflow.Context, input *mturk.UpdateHITReviewStatusInput) *MturkUpdateHITReviewStatusResult
+       UpdateHITReviewStatus(ctx workflow.Context, input *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error)
+       UpdateHITReviewStatusAsync(ctx workflow.Context, input *mturk.UpdateHITReviewStatusInput) *MturkUpdateHITReviewStatusResult
 
-    UpdateHITTypeOfHIT(ctx workflow.Context, input *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error)
-    UpdateHITTypeOfHITAsync(ctx workflow.Context, input *mturk.UpdateHITTypeOfHITInput) *MturkUpdateHITTypeOfHITResult
+       UpdateHITTypeOfHIT(ctx workflow.Context, input *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error)
+       UpdateHITTypeOfHITAsync(ctx workflow.Context, input *mturk.UpdateHITTypeOfHITInput) *MturkUpdateHITTypeOfHITResult
 
-    UpdateNotificationSettings(ctx workflow.Context, input *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error)
-    UpdateNotificationSettingsAsync(ctx workflow.Context, input *mturk.UpdateNotificationSettingsInput) *MturkUpdateNotificationSettingsResult
+       UpdateNotificationSettings(ctx workflow.Context, input *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error)
+       UpdateNotificationSettingsAsync(ctx workflow.Context, input *mturk.UpdateNotificationSettingsInput) *MturkUpdateNotificationSettingsResult
 
-    UpdateQualificationType(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error)
-    UpdateQualificationTypeAsync(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) *MturkUpdateQualificationTypeResult
+       UpdateQualificationType(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error)
+       UpdateQualificationTypeAsync(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) *MturkUpdateQualificationTypeResult
 }
 
 type MturkApproveAssignmentResult struct {

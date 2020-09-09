@@ -7,32 +7,32 @@ import (
 )
 
 type MobileClient interface {
-    CreateProject(ctx workflow.Context, input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error)
-    CreateProjectAsync(ctx workflow.Context, input *mobile.CreateProjectInput) *MobileCreateProjectResult
+       CreateProject(ctx workflow.Context, input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error)
+       CreateProjectAsync(ctx workflow.Context, input *mobile.CreateProjectInput) *MobileCreateProjectResult
 
-    DeleteProject(ctx workflow.Context, input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error)
-    DeleteProjectAsync(ctx workflow.Context, input *mobile.DeleteProjectInput) *MobileDeleteProjectResult
+       DeleteProject(ctx workflow.Context, input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error)
+       DeleteProjectAsync(ctx workflow.Context, input *mobile.DeleteProjectInput) *MobileDeleteProjectResult
 
-    DescribeBundle(ctx workflow.Context, input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error)
-    DescribeBundleAsync(ctx workflow.Context, input *mobile.DescribeBundleInput) *MobileDescribeBundleResult
+       DescribeBundle(ctx workflow.Context, input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error)
+       DescribeBundleAsync(ctx workflow.Context, input *mobile.DescribeBundleInput) *MobileDescribeBundleResult
 
-    DescribeProject(ctx workflow.Context, input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error)
-    DescribeProjectAsync(ctx workflow.Context, input *mobile.DescribeProjectInput) *MobileDescribeProjectResult
+       DescribeProject(ctx workflow.Context, input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error)
+       DescribeProjectAsync(ctx workflow.Context, input *mobile.DescribeProjectInput) *MobileDescribeProjectResult
 
-    ExportBundle(ctx workflow.Context, input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error)
-    ExportBundleAsync(ctx workflow.Context, input *mobile.ExportBundleInput) *MobileExportBundleResult
+       ExportBundle(ctx workflow.Context, input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error)
+       ExportBundleAsync(ctx workflow.Context, input *mobile.ExportBundleInput) *MobileExportBundleResult
 
-    ExportProject(ctx workflow.Context, input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error)
-    ExportProjectAsync(ctx workflow.Context, input *mobile.ExportProjectInput) *MobileExportProjectResult
+       ExportProject(ctx workflow.Context, input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error)
+       ExportProjectAsync(ctx workflow.Context, input *mobile.ExportProjectInput) *MobileExportProjectResult
 
-    ListBundles(ctx workflow.Context, input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error)
-    ListBundlesAsync(ctx workflow.Context, input *mobile.ListBundlesInput) *MobileListBundlesResult
+       ListBundles(ctx workflow.Context, input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error)
+       ListBundlesAsync(ctx workflow.Context, input *mobile.ListBundlesInput) *MobileListBundlesResult
 
-    ListProjects(ctx workflow.Context, input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error)
-    ListProjectsAsync(ctx workflow.Context, input *mobile.ListProjectsInput) *MobileListProjectsResult
+       ListProjects(ctx workflow.Context, input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error)
+       ListProjectsAsync(ctx workflow.Context, input *mobile.ListProjectsInput) *MobileListProjectsResult
 
-    UpdateProject(ctx workflow.Context, input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error)
-    UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectResult
+       UpdateProject(ctx workflow.Context, input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error)
+       UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectResult
 }
 
 type MobileCreateProjectResult struct {

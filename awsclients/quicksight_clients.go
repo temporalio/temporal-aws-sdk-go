@@ -7,302 +7,302 @@ import (
 )
 
 type QuickSightClient interface {
-    CancelIngestion(ctx workflow.Context, input *quicksight.CancelIngestionInput) (*quicksight.CancelIngestionOutput, error)
-    CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuicksightCancelIngestionResult
+       CancelIngestion(ctx workflow.Context, input *quicksight.CancelIngestionInput) (*quicksight.CancelIngestionOutput, error)
+       CancelIngestionAsync(ctx workflow.Context, input *quicksight.CancelIngestionInput) *QuicksightCancelIngestionResult
 
-    CreateAccountCustomization(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) (*quicksight.CreateAccountCustomizationOutput, error)
-    CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuicksightCreateAccountCustomizationResult
+       CreateAccountCustomization(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) (*quicksight.CreateAccountCustomizationOutput, error)
+       CreateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.CreateAccountCustomizationInput) *QuicksightCreateAccountCustomizationResult
 
-    CreateAnalysis(ctx workflow.Context, input *quicksight.CreateAnalysisInput) (*quicksight.CreateAnalysisOutput, error)
-    CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuicksightCreateAnalysisResult
+       CreateAnalysis(ctx workflow.Context, input *quicksight.CreateAnalysisInput) (*quicksight.CreateAnalysisOutput, error)
+       CreateAnalysisAsync(ctx workflow.Context, input *quicksight.CreateAnalysisInput) *QuicksightCreateAnalysisResult
 
-    CreateDashboard(ctx workflow.Context, input *quicksight.CreateDashboardInput) (*quicksight.CreateDashboardOutput, error)
-    CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuicksightCreateDashboardResult
+       CreateDashboard(ctx workflow.Context, input *quicksight.CreateDashboardInput) (*quicksight.CreateDashboardOutput, error)
+       CreateDashboardAsync(ctx workflow.Context, input *quicksight.CreateDashboardInput) *QuicksightCreateDashboardResult
 
-    CreateDataSet(ctx workflow.Context, input *quicksight.CreateDataSetInput) (*quicksight.CreateDataSetOutput, error)
-    CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuicksightCreateDataSetResult
+       CreateDataSet(ctx workflow.Context, input *quicksight.CreateDataSetInput) (*quicksight.CreateDataSetOutput, error)
+       CreateDataSetAsync(ctx workflow.Context, input *quicksight.CreateDataSetInput) *QuicksightCreateDataSetResult
 
-    CreateDataSource(ctx workflow.Context, input *quicksight.CreateDataSourceInput) (*quicksight.CreateDataSourceOutput, error)
-    CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuicksightCreateDataSourceResult
+       CreateDataSource(ctx workflow.Context, input *quicksight.CreateDataSourceInput) (*quicksight.CreateDataSourceOutput, error)
+       CreateDataSourceAsync(ctx workflow.Context, input *quicksight.CreateDataSourceInput) *QuicksightCreateDataSourceResult
 
-    CreateGroup(ctx workflow.Context, input *quicksight.CreateGroupInput) (*quicksight.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuicksightCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *quicksight.CreateGroupInput) (*quicksight.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *quicksight.CreateGroupInput) *QuicksightCreateGroupResult
 
-    CreateGroupMembership(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) (*quicksight.CreateGroupMembershipOutput, error)
-    CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuicksightCreateGroupMembershipResult
+       CreateGroupMembership(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) (*quicksight.CreateGroupMembershipOutput, error)
+       CreateGroupMembershipAsync(ctx workflow.Context, input *quicksight.CreateGroupMembershipInput) *QuicksightCreateGroupMembershipResult
 
-    CreateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) (*quicksight.CreateIAMPolicyAssignmentOutput, error)
-    CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuicksightCreateIAMPolicyAssignmentResult
+       CreateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) (*quicksight.CreateIAMPolicyAssignmentOutput, error)
+       CreateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.CreateIAMPolicyAssignmentInput) *QuicksightCreateIAMPolicyAssignmentResult
 
-    CreateIngestion(ctx workflow.Context, input *quicksight.CreateIngestionInput) (*quicksight.CreateIngestionOutput, error)
-    CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuicksightCreateIngestionResult
+       CreateIngestion(ctx workflow.Context, input *quicksight.CreateIngestionInput) (*quicksight.CreateIngestionOutput, error)
+       CreateIngestionAsync(ctx workflow.Context, input *quicksight.CreateIngestionInput) *QuicksightCreateIngestionResult
 
-    CreateNamespace(ctx workflow.Context, input *quicksight.CreateNamespaceInput) (*quicksight.CreateNamespaceOutput, error)
-    CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuicksightCreateNamespaceResult
+       CreateNamespace(ctx workflow.Context, input *quicksight.CreateNamespaceInput) (*quicksight.CreateNamespaceOutput, error)
+       CreateNamespaceAsync(ctx workflow.Context, input *quicksight.CreateNamespaceInput) *QuicksightCreateNamespaceResult
 
-    CreateTemplate(ctx workflow.Context, input *quicksight.CreateTemplateInput) (*quicksight.CreateTemplateOutput, error)
-    CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuicksightCreateTemplateResult
+       CreateTemplate(ctx workflow.Context, input *quicksight.CreateTemplateInput) (*quicksight.CreateTemplateOutput, error)
+       CreateTemplateAsync(ctx workflow.Context, input *quicksight.CreateTemplateInput) *QuicksightCreateTemplateResult
 
-    CreateTemplateAlias(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) (*quicksight.CreateTemplateAliasOutput, error)
-    CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuicksightCreateTemplateAliasResult
+       CreateTemplateAlias(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) (*quicksight.CreateTemplateAliasOutput, error)
+       CreateTemplateAliasAsync(ctx workflow.Context, input *quicksight.CreateTemplateAliasInput) *QuicksightCreateTemplateAliasResult
 
-    CreateTheme(ctx workflow.Context, input *quicksight.CreateThemeInput) (*quicksight.CreateThemeOutput, error)
-    CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuicksightCreateThemeResult
+       CreateTheme(ctx workflow.Context, input *quicksight.CreateThemeInput) (*quicksight.CreateThemeOutput, error)
+       CreateThemeAsync(ctx workflow.Context, input *quicksight.CreateThemeInput) *QuicksightCreateThemeResult
 
-    CreateThemeAlias(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) (*quicksight.CreateThemeAliasOutput, error)
-    CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuicksightCreateThemeAliasResult
+       CreateThemeAlias(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) (*quicksight.CreateThemeAliasOutput, error)
+       CreateThemeAliasAsync(ctx workflow.Context, input *quicksight.CreateThemeAliasInput) *QuicksightCreateThemeAliasResult
 
-    DeleteAccountCustomization(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) (*quicksight.DeleteAccountCustomizationOutput, error)
-    DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuicksightDeleteAccountCustomizationResult
+       DeleteAccountCustomization(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) (*quicksight.DeleteAccountCustomizationOutput, error)
+       DeleteAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DeleteAccountCustomizationInput) *QuicksightDeleteAccountCustomizationResult
 
-    DeleteAnalysis(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) (*quicksight.DeleteAnalysisOutput, error)
-    DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuicksightDeleteAnalysisResult
+       DeleteAnalysis(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) (*quicksight.DeleteAnalysisOutput, error)
+       DeleteAnalysisAsync(ctx workflow.Context, input *quicksight.DeleteAnalysisInput) *QuicksightDeleteAnalysisResult
 
-    DeleteDashboard(ctx workflow.Context, input *quicksight.DeleteDashboardInput) (*quicksight.DeleteDashboardOutput, error)
-    DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuicksightDeleteDashboardResult
+       DeleteDashboard(ctx workflow.Context, input *quicksight.DeleteDashboardInput) (*quicksight.DeleteDashboardOutput, error)
+       DeleteDashboardAsync(ctx workflow.Context, input *quicksight.DeleteDashboardInput) *QuicksightDeleteDashboardResult
 
-    DeleteDataSet(ctx workflow.Context, input *quicksight.DeleteDataSetInput) (*quicksight.DeleteDataSetOutput, error)
-    DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuicksightDeleteDataSetResult
+       DeleteDataSet(ctx workflow.Context, input *quicksight.DeleteDataSetInput) (*quicksight.DeleteDataSetOutput, error)
+       DeleteDataSetAsync(ctx workflow.Context, input *quicksight.DeleteDataSetInput) *QuicksightDeleteDataSetResult
 
-    DeleteDataSource(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) (*quicksight.DeleteDataSourceOutput, error)
-    DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuicksightDeleteDataSourceResult
+       DeleteDataSource(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) (*quicksight.DeleteDataSourceOutput, error)
+       DeleteDataSourceAsync(ctx workflow.Context, input *quicksight.DeleteDataSourceInput) *QuicksightDeleteDataSourceResult
 
-    DeleteGroup(ctx workflow.Context, input *quicksight.DeleteGroupInput) (*quicksight.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuicksightDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *quicksight.DeleteGroupInput) (*quicksight.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *quicksight.DeleteGroupInput) *QuicksightDeleteGroupResult
 
-    DeleteGroupMembership(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) (*quicksight.DeleteGroupMembershipOutput, error)
-    DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuicksightDeleteGroupMembershipResult
+       DeleteGroupMembership(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) (*quicksight.DeleteGroupMembershipOutput, error)
+       DeleteGroupMembershipAsync(ctx workflow.Context, input *quicksight.DeleteGroupMembershipInput) *QuicksightDeleteGroupMembershipResult
 
-    DeleteIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) (*quicksight.DeleteIAMPolicyAssignmentOutput, error)
-    DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuicksightDeleteIAMPolicyAssignmentResult
+       DeleteIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) (*quicksight.DeleteIAMPolicyAssignmentOutput, error)
+       DeleteIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DeleteIAMPolicyAssignmentInput) *QuicksightDeleteIAMPolicyAssignmentResult
 
-    DeleteNamespace(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) (*quicksight.DeleteNamespaceOutput, error)
-    DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuicksightDeleteNamespaceResult
+       DeleteNamespace(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) (*quicksight.DeleteNamespaceOutput, error)
+       DeleteNamespaceAsync(ctx workflow.Context, input *quicksight.DeleteNamespaceInput) *QuicksightDeleteNamespaceResult
 
-    DeleteTemplate(ctx workflow.Context, input *quicksight.DeleteTemplateInput) (*quicksight.DeleteTemplateOutput, error)
-    DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuicksightDeleteTemplateResult
+       DeleteTemplate(ctx workflow.Context, input *quicksight.DeleteTemplateInput) (*quicksight.DeleteTemplateOutput, error)
+       DeleteTemplateAsync(ctx workflow.Context, input *quicksight.DeleteTemplateInput) *QuicksightDeleteTemplateResult
 
-    DeleteTemplateAlias(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) (*quicksight.DeleteTemplateAliasOutput, error)
-    DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuicksightDeleteTemplateAliasResult
+       DeleteTemplateAlias(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) (*quicksight.DeleteTemplateAliasOutput, error)
+       DeleteTemplateAliasAsync(ctx workflow.Context, input *quicksight.DeleteTemplateAliasInput) *QuicksightDeleteTemplateAliasResult
 
-    DeleteTheme(ctx workflow.Context, input *quicksight.DeleteThemeInput) (*quicksight.DeleteThemeOutput, error)
-    DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuicksightDeleteThemeResult
+       DeleteTheme(ctx workflow.Context, input *quicksight.DeleteThemeInput) (*quicksight.DeleteThemeOutput, error)
+       DeleteThemeAsync(ctx workflow.Context, input *quicksight.DeleteThemeInput) *QuicksightDeleteThemeResult
 
-    DeleteThemeAlias(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) (*quicksight.DeleteThemeAliasOutput, error)
-    DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuicksightDeleteThemeAliasResult
+       DeleteThemeAlias(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) (*quicksight.DeleteThemeAliasOutput, error)
+       DeleteThemeAliasAsync(ctx workflow.Context, input *quicksight.DeleteThemeAliasInput) *QuicksightDeleteThemeAliasResult
 
-    DeleteUser(ctx workflow.Context, input *quicksight.DeleteUserInput) (*quicksight.DeleteUserOutput, error)
-    DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuicksightDeleteUserResult
+       DeleteUser(ctx workflow.Context, input *quicksight.DeleteUserInput) (*quicksight.DeleteUserOutput, error)
+       DeleteUserAsync(ctx workflow.Context, input *quicksight.DeleteUserInput) *QuicksightDeleteUserResult
 
-    DeleteUserByPrincipalId(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) (*quicksight.DeleteUserByPrincipalIdOutput, error)
-    DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuicksightDeleteUserByPrincipalIdResult
+       DeleteUserByPrincipalId(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) (*quicksight.DeleteUserByPrincipalIdOutput, error)
+       DeleteUserByPrincipalIdAsync(ctx workflow.Context, input *quicksight.DeleteUserByPrincipalIdInput) *QuicksightDeleteUserByPrincipalIdResult
 
-    DescribeAccountCustomization(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) (*quicksight.DescribeAccountCustomizationOutput, error)
-    DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuicksightDescribeAccountCustomizationResult
+       DescribeAccountCustomization(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) (*quicksight.DescribeAccountCustomizationOutput, error)
+       DescribeAccountCustomizationAsync(ctx workflow.Context, input *quicksight.DescribeAccountCustomizationInput) *QuicksightDescribeAccountCustomizationResult
 
-    DescribeAccountSettings(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) (*quicksight.DescribeAccountSettingsOutput, error)
-    DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuicksightDescribeAccountSettingsResult
+       DescribeAccountSettings(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) (*quicksight.DescribeAccountSettingsOutput, error)
+       DescribeAccountSettingsAsync(ctx workflow.Context, input *quicksight.DescribeAccountSettingsInput) *QuicksightDescribeAccountSettingsResult
 
-    DescribeAnalysis(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) (*quicksight.DescribeAnalysisOutput, error)
-    DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuicksightDescribeAnalysisResult
+       DescribeAnalysis(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) (*quicksight.DescribeAnalysisOutput, error)
+       DescribeAnalysisAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisInput) *QuicksightDescribeAnalysisResult
 
-    DescribeAnalysisPermissions(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) (*quicksight.DescribeAnalysisPermissionsOutput, error)
-    DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuicksightDescribeAnalysisPermissionsResult
+       DescribeAnalysisPermissions(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) (*quicksight.DescribeAnalysisPermissionsOutput, error)
+       DescribeAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeAnalysisPermissionsInput) *QuicksightDescribeAnalysisPermissionsResult
 
-    DescribeDashboard(ctx workflow.Context, input *quicksight.DescribeDashboardInput) (*quicksight.DescribeDashboardOutput, error)
-    DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuicksightDescribeDashboardResult
+       DescribeDashboard(ctx workflow.Context, input *quicksight.DescribeDashboardInput) (*quicksight.DescribeDashboardOutput, error)
+       DescribeDashboardAsync(ctx workflow.Context, input *quicksight.DescribeDashboardInput) *QuicksightDescribeDashboardResult
 
-    DescribeDashboardPermissions(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) (*quicksight.DescribeDashboardPermissionsOutput, error)
-    DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuicksightDescribeDashboardPermissionsResult
+       DescribeDashboardPermissions(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) (*quicksight.DescribeDashboardPermissionsOutput, error)
+       DescribeDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDashboardPermissionsInput) *QuicksightDescribeDashboardPermissionsResult
 
-    DescribeDataSet(ctx workflow.Context, input *quicksight.DescribeDataSetInput) (*quicksight.DescribeDataSetOutput, error)
-    DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuicksightDescribeDataSetResult
+       DescribeDataSet(ctx workflow.Context, input *quicksight.DescribeDataSetInput) (*quicksight.DescribeDataSetOutput, error)
+       DescribeDataSetAsync(ctx workflow.Context, input *quicksight.DescribeDataSetInput) *QuicksightDescribeDataSetResult
 
-    DescribeDataSetPermissions(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) (*quicksight.DescribeDataSetPermissionsOutput, error)
-    DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuicksightDescribeDataSetPermissionsResult
+       DescribeDataSetPermissions(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) (*quicksight.DescribeDataSetPermissionsOutput, error)
+       DescribeDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSetPermissionsInput) *QuicksightDescribeDataSetPermissionsResult
 
-    DescribeDataSource(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) (*quicksight.DescribeDataSourceOutput, error)
-    DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuicksightDescribeDataSourceResult
+       DescribeDataSource(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) (*quicksight.DescribeDataSourceOutput, error)
+       DescribeDataSourceAsync(ctx workflow.Context, input *quicksight.DescribeDataSourceInput) *QuicksightDescribeDataSourceResult
 
-    DescribeDataSourcePermissions(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) (*quicksight.DescribeDataSourcePermissionsOutput, error)
-    DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuicksightDescribeDataSourcePermissionsResult
+       DescribeDataSourcePermissions(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) (*quicksight.DescribeDataSourcePermissionsOutput, error)
+       DescribeDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeDataSourcePermissionsInput) *QuicksightDescribeDataSourcePermissionsResult
 
-    DescribeGroup(ctx workflow.Context, input *quicksight.DescribeGroupInput) (*quicksight.DescribeGroupOutput, error)
-    DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuicksightDescribeGroupResult
+       DescribeGroup(ctx workflow.Context, input *quicksight.DescribeGroupInput) (*quicksight.DescribeGroupOutput, error)
+       DescribeGroupAsync(ctx workflow.Context, input *quicksight.DescribeGroupInput) *QuicksightDescribeGroupResult
 
-    DescribeIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) (*quicksight.DescribeIAMPolicyAssignmentOutput, error)
-    DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuicksightDescribeIAMPolicyAssignmentResult
+       DescribeIAMPolicyAssignment(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) (*quicksight.DescribeIAMPolicyAssignmentOutput, error)
+       DescribeIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.DescribeIAMPolicyAssignmentInput) *QuicksightDescribeIAMPolicyAssignmentResult
 
-    DescribeIngestion(ctx workflow.Context, input *quicksight.DescribeIngestionInput) (*quicksight.DescribeIngestionOutput, error)
-    DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuicksightDescribeIngestionResult
+       DescribeIngestion(ctx workflow.Context, input *quicksight.DescribeIngestionInput) (*quicksight.DescribeIngestionOutput, error)
+       DescribeIngestionAsync(ctx workflow.Context, input *quicksight.DescribeIngestionInput) *QuicksightDescribeIngestionResult
 
-    DescribeNamespace(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) (*quicksight.DescribeNamespaceOutput, error)
-    DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuicksightDescribeNamespaceResult
+       DescribeNamespace(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) (*quicksight.DescribeNamespaceOutput, error)
+       DescribeNamespaceAsync(ctx workflow.Context, input *quicksight.DescribeNamespaceInput) *QuicksightDescribeNamespaceResult
 
-    DescribeTemplate(ctx workflow.Context, input *quicksight.DescribeTemplateInput) (*quicksight.DescribeTemplateOutput, error)
-    DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuicksightDescribeTemplateResult
+       DescribeTemplate(ctx workflow.Context, input *quicksight.DescribeTemplateInput) (*quicksight.DescribeTemplateOutput, error)
+       DescribeTemplateAsync(ctx workflow.Context, input *quicksight.DescribeTemplateInput) *QuicksightDescribeTemplateResult
 
-    DescribeTemplateAlias(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) (*quicksight.DescribeTemplateAliasOutput, error)
-    DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuicksightDescribeTemplateAliasResult
+       DescribeTemplateAlias(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) (*quicksight.DescribeTemplateAliasOutput, error)
+       DescribeTemplateAliasAsync(ctx workflow.Context, input *quicksight.DescribeTemplateAliasInput) *QuicksightDescribeTemplateAliasResult
 
-    DescribeTemplatePermissions(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) (*quicksight.DescribeTemplatePermissionsOutput, error)
-    DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuicksightDescribeTemplatePermissionsResult
+       DescribeTemplatePermissions(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) (*quicksight.DescribeTemplatePermissionsOutput, error)
+       DescribeTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeTemplatePermissionsInput) *QuicksightDescribeTemplatePermissionsResult
 
-    DescribeTheme(ctx workflow.Context, input *quicksight.DescribeThemeInput) (*quicksight.DescribeThemeOutput, error)
-    DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuicksightDescribeThemeResult
+       DescribeTheme(ctx workflow.Context, input *quicksight.DescribeThemeInput) (*quicksight.DescribeThemeOutput, error)
+       DescribeThemeAsync(ctx workflow.Context, input *quicksight.DescribeThemeInput) *QuicksightDescribeThemeResult
 
-    DescribeThemeAlias(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) (*quicksight.DescribeThemeAliasOutput, error)
-    DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuicksightDescribeThemeAliasResult
+       DescribeThemeAlias(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) (*quicksight.DescribeThemeAliasOutput, error)
+       DescribeThemeAliasAsync(ctx workflow.Context, input *quicksight.DescribeThemeAliasInput) *QuicksightDescribeThemeAliasResult
 
-    DescribeThemePermissions(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) (*quicksight.DescribeThemePermissionsOutput, error)
-    DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuicksightDescribeThemePermissionsResult
+       DescribeThemePermissions(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) (*quicksight.DescribeThemePermissionsOutput, error)
+       DescribeThemePermissionsAsync(ctx workflow.Context, input *quicksight.DescribeThemePermissionsInput) *QuicksightDescribeThemePermissionsResult
 
-    DescribeUser(ctx workflow.Context, input *quicksight.DescribeUserInput) (*quicksight.DescribeUserOutput, error)
-    DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuicksightDescribeUserResult
+       DescribeUser(ctx workflow.Context, input *quicksight.DescribeUserInput) (*quicksight.DescribeUserOutput, error)
+       DescribeUserAsync(ctx workflow.Context, input *quicksight.DescribeUserInput) *QuicksightDescribeUserResult
 
-    GetDashboardEmbedUrl(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) (*quicksight.GetDashboardEmbedUrlOutput, error)
-    GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuicksightGetDashboardEmbedUrlResult
+       GetDashboardEmbedUrl(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) (*quicksight.GetDashboardEmbedUrlOutput, error)
+       GetDashboardEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetDashboardEmbedUrlInput) *QuicksightGetDashboardEmbedUrlResult
 
-    GetSessionEmbedUrl(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) (*quicksight.GetSessionEmbedUrlOutput, error)
-    GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuicksightGetSessionEmbedUrlResult
+       GetSessionEmbedUrl(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) (*quicksight.GetSessionEmbedUrlOutput, error)
+       GetSessionEmbedUrlAsync(ctx workflow.Context, input *quicksight.GetSessionEmbedUrlInput) *QuicksightGetSessionEmbedUrlResult
 
-    ListAnalyses(ctx workflow.Context, input *quicksight.ListAnalysesInput) (*quicksight.ListAnalysesOutput, error)
-    ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuicksightListAnalysesResult
+       ListAnalyses(ctx workflow.Context, input *quicksight.ListAnalysesInput) (*quicksight.ListAnalysesOutput, error)
+       ListAnalysesAsync(ctx workflow.Context, input *quicksight.ListAnalysesInput) *QuicksightListAnalysesResult
 
-    ListDashboardVersions(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) (*quicksight.ListDashboardVersionsOutput, error)
-    ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuicksightListDashboardVersionsResult
+       ListDashboardVersions(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) (*quicksight.ListDashboardVersionsOutput, error)
+       ListDashboardVersionsAsync(ctx workflow.Context, input *quicksight.ListDashboardVersionsInput) *QuicksightListDashboardVersionsResult
 
-    ListDashboards(ctx workflow.Context, input *quicksight.ListDashboardsInput) (*quicksight.ListDashboardsOutput, error)
-    ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuicksightListDashboardsResult
+       ListDashboards(ctx workflow.Context, input *quicksight.ListDashboardsInput) (*quicksight.ListDashboardsOutput, error)
+       ListDashboardsAsync(ctx workflow.Context, input *quicksight.ListDashboardsInput) *QuicksightListDashboardsResult
 
-    ListDataSets(ctx workflow.Context, input *quicksight.ListDataSetsInput) (*quicksight.ListDataSetsOutput, error)
-    ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuicksightListDataSetsResult
+       ListDataSets(ctx workflow.Context, input *quicksight.ListDataSetsInput) (*quicksight.ListDataSetsOutput, error)
+       ListDataSetsAsync(ctx workflow.Context, input *quicksight.ListDataSetsInput) *QuicksightListDataSetsResult
 
-    ListDataSources(ctx workflow.Context, input *quicksight.ListDataSourcesInput) (*quicksight.ListDataSourcesOutput, error)
-    ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuicksightListDataSourcesResult
+       ListDataSources(ctx workflow.Context, input *quicksight.ListDataSourcesInput) (*quicksight.ListDataSourcesOutput, error)
+       ListDataSourcesAsync(ctx workflow.Context, input *quicksight.ListDataSourcesInput) *QuicksightListDataSourcesResult
 
-    ListGroupMemberships(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) (*quicksight.ListGroupMembershipsOutput, error)
-    ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuicksightListGroupMembershipsResult
+       ListGroupMemberships(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) (*quicksight.ListGroupMembershipsOutput, error)
+       ListGroupMembershipsAsync(ctx workflow.Context, input *quicksight.ListGroupMembershipsInput) *QuicksightListGroupMembershipsResult
 
-    ListGroups(ctx workflow.Context, input *quicksight.ListGroupsInput) (*quicksight.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuicksightListGroupsResult
+       ListGroups(ctx workflow.Context, input *quicksight.ListGroupsInput) (*quicksight.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *quicksight.ListGroupsInput) *QuicksightListGroupsResult
 
-    ListIAMPolicyAssignments(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) (*quicksight.ListIAMPolicyAssignmentsOutput, error)
-    ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuicksightListIAMPolicyAssignmentsResult
+       ListIAMPolicyAssignments(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) (*quicksight.ListIAMPolicyAssignmentsOutput, error)
+       ListIAMPolicyAssignmentsAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsInput) *QuicksightListIAMPolicyAssignmentsResult
 
-    ListIAMPolicyAssignmentsForUser(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error)
-    ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuicksightListIAMPolicyAssignmentsForUserResult
+       ListIAMPolicyAssignmentsForUser(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) (*quicksight.ListIAMPolicyAssignmentsForUserOutput, error)
+       ListIAMPolicyAssignmentsForUserAsync(ctx workflow.Context, input *quicksight.ListIAMPolicyAssignmentsForUserInput) *QuicksightListIAMPolicyAssignmentsForUserResult
 
-    ListIngestions(ctx workflow.Context, input *quicksight.ListIngestionsInput) (*quicksight.ListIngestionsOutput, error)
-    ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuicksightListIngestionsResult
+       ListIngestions(ctx workflow.Context, input *quicksight.ListIngestionsInput) (*quicksight.ListIngestionsOutput, error)
+       ListIngestionsAsync(ctx workflow.Context, input *quicksight.ListIngestionsInput) *QuicksightListIngestionsResult
 
-    ListNamespaces(ctx workflow.Context, input *quicksight.ListNamespacesInput) (*quicksight.ListNamespacesOutput, error)
-    ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuicksightListNamespacesResult
+       ListNamespaces(ctx workflow.Context, input *quicksight.ListNamespacesInput) (*quicksight.ListNamespacesOutput, error)
+       ListNamespacesAsync(ctx workflow.Context, input *quicksight.ListNamespacesInput) *QuicksightListNamespacesResult
 
-    ListTagsForResource(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) (*quicksight.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuicksightListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) (*quicksight.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *quicksight.ListTagsForResourceInput) *QuicksightListTagsForResourceResult
 
-    ListTemplateAliases(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) (*quicksight.ListTemplateAliasesOutput, error)
-    ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuicksightListTemplateAliasesResult
+       ListTemplateAliases(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) (*quicksight.ListTemplateAliasesOutput, error)
+       ListTemplateAliasesAsync(ctx workflow.Context, input *quicksight.ListTemplateAliasesInput) *QuicksightListTemplateAliasesResult
 
-    ListTemplateVersions(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) (*quicksight.ListTemplateVersionsOutput, error)
-    ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuicksightListTemplateVersionsResult
+       ListTemplateVersions(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) (*quicksight.ListTemplateVersionsOutput, error)
+       ListTemplateVersionsAsync(ctx workflow.Context, input *quicksight.ListTemplateVersionsInput) *QuicksightListTemplateVersionsResult
 
-    ListTemplates(ctx workflow.Context, input *quicksight.ListTemplatesInput) (*quicksight.ListTemplatesOutput, error)
-    ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuicksightListTemplatesResult
+       ListTemplates(ctx workflow.Context, input *quicksight.ListTemplatesInput) (*quicksight.ListTemplatesOutput, error)
+       ListTemplatesAsync(ctx workflow.Context, input *quicksight.ListTemplatesInput) *QuicksightListTemplatesResult
 
-    ListThemeAliases(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) (*quicksight.ListThemeAliasesOutput, error)
-    ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuicksightListThemeAliasesResult
+       ListThemeAliases(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) (*quicksight.ListThemeAliasesOutput, error)
+       ListThemeAliasesAsync(ctx workflow.Context, input *quicksight.ListThemeAliasesInput) *QuicksightListThemeAliasesResult
 
-    ListThemeVersions(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) (*quicksight.ListThemeVersionsOutput, error)
-    ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuicksightListThemeVersionsResult
+       ListThemeVersions(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) (*quicksight.ListThemeVersionsOutput, error)
+       ListThemeVersionsAsync(ctx workflow.Context, input *quicksight.ListThemeVersionsInput) *QuicksightListThemeVersionsResult
 
-    ListThemes(ctx workflow.Context, input *quicksight.ListThemesInput) (*quicksight.ListThemesOutput, error)
-    ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuicksightListThemesResult
+       ListThemes(ctx workflow.Context, input *quicksight.ListThemesInput) (*quicksight.ListThemesOutput, error)
+       ListThemesAsync(ctx workflow.Context, input *quicksight.ListThemesInput) *QuicksightListThemesResult
 
-    ListUserGroups(ctx workflow.Context, input *quicksight.ListUserGroupsInput) (*quicksight.ListUserGroupsOutput, error)
-    ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuicksightListUserGroupsResult
+       ListUserGroups(ctx workflow.Context, input *quicksight.ListUserGroupsInput) (*quicksight.ListUserGroupsOutput, error)
+       ListUserGroupsAsync(ctx workflow.Context, input *quicksight.ListUserGroupsInput) *QuicksightListUserGroupsResult
 
-    ListUsers(ctx workflow.Context, input *quicksight.ListUsersInput) (*quicksight.ListUsersOutput, error)
-    ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuicksightListUsersResult
+       ListUsers(ctx workflow.Context, input *quicksight.ListUsersInput) (*quicksight.ListUsersOutput, error)
+       ListUsersAsync(ctx workflow.Context, input *quicksight.ListUsersInput) *QuicksightListUsersResult
 
-    RegisterUser(ctx workflow.Context, input *quicksight.RegisterUserInput) (*quicksight.RegisterUserOutput, error)
-    RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuicksightRegisterUserResult
+       RegisterUser(ctx workflow.Context, input *quicksight.RegisterUserInput) (*quicksight.RegisterUserOutput, error)
+       RegisterUserAsync(ctx workflow.Context, input *quicksight.RegisterUserInput) *QuicksightRegisterUserResult
 
-    RestoreAnalysis(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) (*quicksight.RestoreAnalysisOutput, error)
-    RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuicksightRestoreAnalysisResult
+       RestoreAnalysis(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) (*quicksight.RestoreAnalysisOutput, error)
+       RestoreAnalysisAsync(ctx workflow.Context, input *quicksight.RestoreAnalysisInput) *QuicksightRestoreAnalysisResult
 
-    SearchAnalyses(ctx workflow.Context, input *quicksight.SearchAnalysesInput) (*quicksight.SearchAnalysesOutput, error)
-    SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuicksightSearchAnalysesResult
+       SearchAnalyses(ctx workflow.Context, input *quicksight.SearchAnalysesInput) (*quicksight.SearchAnalysesOutput, error)
+       SearchAnalysesAsync(ctx workflow.Context, input *quicksight.SearchAnalysesInput) *QuicksightSearchAnalysesResult
 
-    SearchDashboards(ctx workflow.Context, input *quicksight.SearchDashboardsInput) (*quicksight.SearchDashboardsOutput, error)
-    SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuicksightSearchDashboardsResult
+       SearchDashboards(ctx workflow.Context, input *quicksight.SearchDashboardsInput) (*quicksight.SearchDashboardsOutput, error)
+       SearchDashboardsAsync(ctx workflow.Context, input *quicksight.SearchDashboardsInput) *QuicksightSearchDashboardsResult
 
-    TagResource(ctx workflow.Context, input *quicksight.TagResourceInput) (*quicksight.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuicksightTagResourceResult
+       TagResource(ctx workflow.Context, input *quicksight.TagResourceInput) (*quicksight.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *quicksight.TagResourceInput) *QuicksightTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *quicksight.UntagResourceInput) (*quicksight.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuicksightUntagResourceResult
+       UntagResource(ctx workflow.Context, input *quicksight.UntagResourceInput) (*quicksight.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *quicksight.UntagResourceInput) *QuicksightUntagResourceResult
 
-    UpdateAccountCustomization(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) (*quicksight.UpdateAccountCustomizationOutput, error)
-    UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuicksightUpdateAccountCustomizationResult
+       UpdateAccountCustomization(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) (*quicksight.UpdateAccountCustomizationOutput, error)
+       UpdateAccountCustomizationAsync(ctx workflow.Context, input *quicksight.UpdateAccountCustomizationInput) *QuicksightUpdateAccountCustomizationResult
 
-    UpdateAccountSettings(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) (*quicksight.UpdateAccountSettingsOutput, error)
-    UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuicksightUpdateAccountSettingsResult
+       UpdateAccountSettings(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) (*quicksight.UpdateAccountSettingsOutput, error)
+       UpdateAccountSettingsAsync(ctx workflow.Context, input *quicksight.UpdateAccountSettingsInput) *QuicksightUpdateAccountSettingsResult
 
-    UpdateAnalysis(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) (*quicksight.UpdateAnalysisOutput, error)
-    UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuicksightUpdateAnalysisResult
+       UpdateAnalysis(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) (*quicksight.UpdateAnalysisOutput, error)
+       UpdateAnalysisAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisInput) *QuicksightUpdateAnalysisResult
 
-    UpdateAnalysisPermissions(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) (*quicksight.UpdateAnalysisPermissionsOutput, error)
-    UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuicksightUpdateAnalysisPermissionsResult
+       UpdateAnalysisPermissions(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) (*quicksight.UpdateAnalysisPermissionsOutput, error)
+       UpdateAnalysisPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateAnalysisPermissionsInput) *QuicksightUpdateAnalysisPermissionsResult
 
-    UpdateDashboard(ctx workflow.Context, input *quicksight.UpdateDashboardInput) (*quicksight.UpdateDashboardOutput, error)
-    UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuicksightUpdateDashboardResult
+       UpdateDashboard(ctx workflow.Context, input *quicksight.UpdateDashboardInput) (*quicksight.UpdateDashboardOutput, error)
+       UpdateDashboardAsync(ctx workflow.Context, input *quicksight.UpdateDashboardInput) *QuicksightUpdateDashboardResult
 
-    UpdateDashboardPermissions(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) (*quicksight.UpdateDashboardPermissionsOutput, error)
-    UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuicksightUpdateDashboardPermissionsResult
+       UpdateDashboardPermissions(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) (*quicksight.UpdateDashboardPermissionsOutput, error)
+       UpdateDashboardPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPermissionsInput) *QuicksightUpdateDashboardPermissionsResult
 
-    UpdateDashboardPublishedVersion(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) (*quicksight.UpdateDashboardPublishedVersionOutput, error)
-    UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuicksightUpdateDashboardPublishedVersionResult
+       UpdateDashboardPublishedVersion(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) (*quicksight.UpdateDashboardPublishedVersionOutput, error)
+       UpdateDashboardPublishedVersionAsync(ctx workflow.Context, input *quicksight.UpdateDashboardPublishedVersionInput) *QuicksightUpdateDashboardPublishedVersionResult
 
-    UpdateDataSet(ctx workflow.Context, input *quicksight.UpdateDataSetInput) (*quicksight.UpdateDataSetOutput, error)
-    UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuicksightUpdateDataSetResult
+       UpdateDataSet(ctx workflow.Context, input *quicksight.UpdateDataSetInput) (*quicksight.UpdateDataSetOutput, error)
+       UpdateDataSetAsync(ctx workflow.Context, input *quicksight.UpdateDataSetInput) *QuicksightUpdateDataSetResult
 
-    UpdateDataSetPermissions(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) (*quicksight.UpdateDataSetPermissionsOutput, error)
-    UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuicksightUpdateDataSetPermissionsResult
+       UpdateDataSetPermissions(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) (*quicksight.UpdateDataSetPermissionsOutput, error)
+       UpdateDataSetPermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSetPermissionsInput) *QuicksightUpdateDataSetPermissionsResult
 
-    UpdateDataSource(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) (*quicksight.UpdateDataSourceOutput, error)
-    UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuicksightUpdateDataSourceResult
+       UpdateDataSource(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) (*quicksight.UpdateDataSourceOutput, error)
+       UpdateDataSourceAsync(ctx workflow.Context, input *quicksight.UpdateDataSourceInput) *QuicksightUpdateDataSourceResult
 
-    UpdateDataSourcePermissions(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) (*quicksight.UpdateDataSourcePermissionsOutput, error)
-    UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuicksightUpdateDataSourcePermissionsResult
+       UpdateDataSourcePermissions(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) (*quicksight.UpdateDataSourcePermissionsOutput, error)
+       UpdateDataSourcePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateDataSourcePermissionsInput) *QuicksightUpdateDataSourcePermissionsResult
 
-    UpdateGroup(ctx workflow.Context, input *quicksight.UpdateGroupInput) (*quicksight.UpdateGroupOutput, error)
-    UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuicksightUpdateGroupResult
+       UpdateGroup(ctx workflow.Context, input *quicksight.UpdateGroupInput) (*quicksight.UpdateGroupOutput, error)
+       UpdateGroupAsync(ctx workflow.Context, input *quicksight.UpdateGroupInput) *QuicksightUpdateGroupResult
 
-    UpdateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) (*quicksight.UpdateIAMPolicyAssignmentOutput, error)
-    UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuicksightUpdateIAMPolicyAssignmentResult
+       UpdateIAMPolicyAssignment(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) (*quicksight.UpdateIAMPolicyAssignmentOutput, error)
+       UpdateIAMPolicyAssignmentAsync(ctx workflow.Context, input *quicksight.UpdateIAMPolicyAssignmentInput) *QuicksightUpdateIAMPolicyAssignmentResult
 
-    UpdateTemplate(ctx workflow.Context, input *quicksight.UpdateTemplateInput) (*quicksight.UpdateTemplateOutput, error)
-    UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuicksightUpdateTemplateResult
+       UpdateTemplate(ctx workflow.Context, input *quicksight.UpdateTemplateInput) (*quicksight.UpdateTemplateOutput, error)
+       UpdateTemplateAsync(ctx workflow.Context, input *quicksight.UpdateTemplateInput) *QuicksightUpdateTemplateResult
 
-    UpdateTemplateAlias(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) (*quicksight.UpdateTemplateAliasOutput, error)
-    UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuicksightUpdateTemplateAliasResult
+       UpdateTemplateAlias(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) (*quicksight.UpdateTemplateAliasOutput, error)
+       UpdateTemplateAliasAsync(ctx workflow.Context, input *quicksight.UpdateTemplateAliasInput) *QuicksightUpdateTemplateAliasResult
 
-    UpdateTemplatePermissions(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) (*quicksight.UpdateTemplatePermissionsOutput, error)
-    UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuicksightUpdateTemplatePermissionsResult
+       UpdateTemplatePermissions(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) (*quicksight.UpdateTemplatePermissionsOutput, error)
+       UpdateTemplatePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateTemplatePermissionsInput) *QuicksightUpdateTemplatePermissionsResult
 
-    UpdateTheme(ctx workflow.Context, input *quicksight.UpdateThemeInput) (*quicksight.UpdateThemeOutput, error)
-    UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuicksightUpdateThemeResult
+       UpdateTheme(ctx workflow.Context, input *quicksight.UpdateThemeInput) (*quicksight.UpdateThemeOutput, error)
+       UpdateThemeAsync(ctx workflow.Context, input *quicksight.UpdateThemeInput) *QuicksightUpdateThemeResult
 
-    UpdateThemeAlias(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) (*quicksight.UpdateThemeAliasOutput, error)
-    UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuicksightUpdateThemeAliasResult
+       UpdateThemeAlias(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) (*quicksight.UpdateThemeAliasOutput, error)
+       UpdateThemeAliasAsync(ctx workflow.Context, input *quicksight.UpdateThemeAliasInput) *QuicksightUpdateThemeAliasResult
 
-    UpdateThemePermissions(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) (*quicksight.UpdateThemePermissionsOutput, error)
-    UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuicksightUpdateThemePermissionsResult
+       UpdateThemePermissions(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) (*quicksight.UpdateThemePermissionsOutput, error)
+       UpdateThemePermissionsAsync(ctx workflow.Context, input *quicksight.UpdateThemePermissionsInput) *QuicksightUpdateThemePermissionsResult
 
-    UpdateUser(ctx workflow.Context, input *quicksight.UpdateUserInput) (*quicksight.UpdateUserOutput, error)
-    UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuicksightUpdateUserResult
+       UpdateUser(ctx workflow.Context, input *quicksight.UpdateUserInput) (*quicksight.UpdateUserOutput, error)
+       UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuicksightUpdateUserResult
 }
 
 type QuicksightCancelIngestionResult struct {

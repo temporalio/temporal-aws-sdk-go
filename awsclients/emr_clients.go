@@ -7,120 +7,120 @@ import (
 )
 
 type EMRClient interface {
-    AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error)
-    AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EmrAddInstanceFleetResult
+       AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error)
+       AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EmrAddInstanceFleetResult
 
-    AddInstanceGroups(ctx workflow.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error)
-    AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EmrAddInstanceGroupsResult
+       AddInstanceGroups(ctx workflow.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error)
+       AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EmrAddInstanceGroupsResult
 
-    AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error)
-    AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EmrAddJobFlowStepsResult
+       AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error)
+       AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EmrAddJobFlowStepsResult
 
-    AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error)
-    AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EmrAddTagsResult
+       AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error)
+       AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EmrAddTagsResult
 
-    CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error)
-    CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EmrCancelStepsResult
+       CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error)
+       CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EmrCancelStepsResult
 
-    CreateSecurityConfiguration(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error)
-    CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EmrCreateSecurityConfigurationResult
+       CreateSecurityConfiguration(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error)
+       CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EmrCreateSecurityConfigurationResult
 
-    DeleteSecurityConfiguration(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error)
-    DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EmrDeleteSecurityConfigurationResult
+       DeleteSecurityConfiguration(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error)
+       DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EmrDeleteSecurityConfigurationResult
 
-    DescribeCluster(ctx workflow.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error)
-    DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EmrDescribeClusterResult
+       DescribeCluster(ctx workflow.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error)
+       DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EmrDescribeClusterResult
 
-    DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error)
-    DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EmrDescribeJobFlowsResult
+       DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error)
+       DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EmrDescribeJobFlowsResult
 
-    DescribeNotebookExecution(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error)
-    DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EmrDescribeNotebookExecutionResult
+       DescribeNotebookExecution(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error)
+       DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EmrDescribeNotebookExecutionResult
 
-    DescribeSecurityConfiguration(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error)
-    DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EmrDescribeSecurityConfigurationResult
+       DescribeSecurityConfiguration(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error)
+       DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EmrDescribeSecurityConfigurationResult
 
-    DescribeStep(ctx workflow.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error)
-    DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EmrDescribeStepResult
+       DescribeStep(ctx workflow.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error)
+       DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EmrDescribeStepResult
 
-    GetBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error)
-    GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EmrGetBlockPublicAccessConfigurationResult
+       GetBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error)
+       GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EmrGetBlockPublicAccessConfigurationResult
 
-    GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error)
-    GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EmrGetManagedScalingPolicyResult
+       GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error)
+       GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EmrGetManagedScalingPolicyResult
 
-    ListBootstrapActions(ctx workflow.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error)
-    ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EmrListBootstrapActionsResult
+       ListBootstrapActions(ctx workflow.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error)
+       ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EmrListBootstrapActionsResult
 
-    ListClusters(ctx workflow.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error)
-    ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EmrListClustersResult
+       ListClusters(ctx workflow.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error)
+       ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EmrListClustersResult
 
-    ListInstanceFleets(ctx workflow.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error)
-    ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EmrListInstanceFleetsResult
+       ListInstanceFleets(ctx workflow.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error)
+       ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EmrListInstanceFleetsResult
 
-    ListInstanceGroups(ctx workflow.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error)
-    ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EmrListInstanceGroupsResult
+       ListInstanceGroups(ctx workflow.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error)
+       ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EmrListInstanceGroupsResult
 
-    ListInstances(ctx workflow.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error)
-    ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EmrListInstancesResult
+       ListInstances(ctx workflow.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error)
+       ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EmrListInstancesResult
 
-    ListNotebookExecutions(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error)
-    ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EmrListNotebookExecutionsResult
+       ListNotebookExecutions(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error)
+       ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EmrListNotebookExecutionsResult
 
-    ListSecurityConfigurations(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error)
-    ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EmrListSecurityConfigurationsResult
+       ListSecurityConfigurations(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error)
+       ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EmrListSecurityConfigurationsResult
 
-    ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error)
-    ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EmrListStepsResult
+       ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error)
+       ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EmrListStepsResult
 
-    ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error)
-    ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EmrModifyClusterResult
+       ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error)
+       ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EmrModifyClusterResult
 
-    ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error)
-    ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EmrModifyInstanceFleetResult
+       ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error)
+       ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EmrModifyInstanceFleetResult
 
-    ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error)
-    ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EmrModifyInstanceGroupsResult
+       ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error)
+       ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EmrModifyInstanceGroupsResult
 
-    PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error)
-    PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EmrPutAutoScalingPolicyResult
+       PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error)
+       PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EmrPutAutoScalingPolicyResult
 
-    PutBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error)
-    PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EmrPutBlockPublicAccessConfigurationResult
+       PutBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error)
+       PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EmrPutBlockPublicAccessConfigurationResult
 
-    PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error)
-    PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EmrPutManagedScalingPolicyResult
+       PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error)
+       PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EmrPutManagedScalingPolicyResult
 
-    RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error)
-    RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EmrRemoveAutoScalingPolicyResult
+       RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error)
+       RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EmrRemoveAutoScalingPolicyResult
 
-    RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error)
-    RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EmrRemoveManagedScalingPolicyResult
+       RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error)
+       RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EmrRemoveManagedScalingPolicyResult
 
-    RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error)
-    RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EmrRemoveTagsResult
+       RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error)
+       RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EmrRemoveTagsResult
 
-    RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error)
-    RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EmrRunJobFlowResult
+       RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error)
+       RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EmrRunJobFlowResult
 
-    SetTerminationProtection(ctx workflow.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error)
-    SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EmrSetTerminationProtectionResult
+       SetTerminationProtection(ctx workflow.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error)
+       SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EmrSetTerminationProtectionResult
 
-    SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error)
-    SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EmrSetVisibleToAllUsersResult
+       SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error)
+       SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EmrSetVisibleToAllUsersResult
 
-    StartNotebookExecution(ctx workflow.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error)
-    StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EmrStartNotebookExecutionResult
+       StartNotebookExecution(ctx workflow.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error)
+       StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EmrStartNotebookExecutionResult
 
-    StopNotebookExecution(ctx workflow.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error)
-    StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EmrStopNotebookExecutionResult
+       StopNotebookExecution(ctx workflow.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error)
+       StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EmrStopNotebookExecutionResult
 
-    TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error)
-    TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult
+       TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error)
+       TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult
 
-    WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
-    WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
-    WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error}
+       WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
+       WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
+       WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error}
 
 type EmrAddInstanceFleetResult struct {
 	Result workflow.Future

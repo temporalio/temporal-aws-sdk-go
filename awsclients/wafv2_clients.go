@@ -7,125 +7,125 @@ import (
 )
 
 type WAFV2Client interface {
-    AssociateWebACL(ctx workflow.Context, input *wafv2.AssociateWebACLInput) (*wafv2.AssociateWebACLOutput, error)
-    AssociateWebACLAsync(ctx workflow.Context, input *wafv2.AssociateWebACLInput) *Wafv2AssociateWebACLResult
+       AssociateWebACL(ctx workflow.Context, input *wafv2.AssociateWebACLInput) (*wafv2.AssociateWebACLOutput, error)
+       AssociateWebACLAsync(ctx workflow.Context, input *wafv2.AssociateWebACLInput) *Wafv2AssociateWebACLResult
 
-    CheckCapacity(ctx workflow.Context, input *wafv2.CheckCapacityInput) (*wafv2.CheckCapacityOutput, error)
-    CheckCapacityAsync(ctx workflow.Context, input *wafv2.CheckCapacityInput) *Wafv2CheckCapacityResult
+       CheckCapacity(ctx workflow.Context, input *wafv2.CheckCapacityInput) (*wafv2.CheckCapacityOutput, error)
+       CheckCapacityAsync(ctx workflow.Context, input *wafv2.CheckCapacityInput) *Wafv2CheckCapacityResult
 
-    CreateIPSet(ctx workflow.Context, input *wafv2.CreateIPSetInput) (*wafv2.CreateIPSetOutput, error)
-    CreateIPSetAsync(ctx workflow.Context, input *wafv2.CreateIPSetInput) *Wafv2CreateIPSetResult
+       CreateIPSet(ctx workflow.Context, input *wafv2.CreateIPSetInput) (*wafv2.CreateIPSetOutput, error)
+       CreateIPSetAsync(ctx workflow.Context, input *wafv2.CreateIPSetInput) *Wafv2CreateIPSetResult
 
-    CreateRegexPatternSet(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) (*wafv2.CreateRegexPatternSetOutput, error)
-    CreateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) *Wafv2CreateRegexPatternSetResult
+       CreateRegexPatternSet(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) (*wafv2.CreateRegexPatternSetOutput, error)
+       CreateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) *Wafv2CreateRegexPatternSetResult
 
-    CreateRuleGroup(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) (*wafv2.CreateRuleGroupOutput, error)
-    CreateRuleGroupAsync(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) *Wafv2CreateRuleGroupResult
+       CreateRuleGroup(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) (*wafv2.CreateRuleGroupOutput, error)
+       CreateRuleGroupAsync(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) *Wafv2CreateRuleGroupResult
 
-    CreateWebACL(ctx workflow.Context, input *wafv2.CreateWebACLInput) (*wafv2.CreateWebACLOutput, error)
-    CreateWebACLAsync(ctx workflow.Context, input *wafv2.CreateWebACLInput) *Wafv2CreateWebACLResult
+       CreateWebACL(ctx workflow.Context, input *wafv2.CreateWebACLInput) (*wafv2.CreateWebACLOutput, error)
+       CreateWebACLAsync(ctx workflow.Context, input *wafv2.CreateWebACLInput) *Wafv2CreateWebACLResult
 
-    DeleteFirewallManagerRuleGroups(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) (*wafv2.DeleteFirewallManagerRuleGroupsOutput, error)
-    DeleteFirewallManagerRuleGroupsAsync(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) *Wafv2DeleteFirewallManagerRuleGroupsResult
+       DeleteFirewallManagerRuleGroups(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) (*wafv2.DeleteFirewallManagerRuleGroupsOutput, error)
+       DeleteFirewallManagerRuleGroupsAsync(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) *Wafv2DeleteFirewallManagerRuleGroupsResult
 
-    DeleteIPSet(ctx workflow.Context, input *wafv2.DeleteIPSetInput) (*wafv2.DeleteIPSetOutput, error)
-    DeleteIPSetAsync(ctx workflow.Context, input *wafv2.DeleteIPSetInput) *Wafv2DeleteIPSetResult
+       DeleteIPSet(ctx workflow.Context, input *wafv2.DeleteIPSetInput) (*wafv2.DeleteIPSetOutput, error)
+       DeleteIPSetAsync(ctx workflow.Context, input *wafv2.DeleteIPSetInput) *Wafv2DeleteIPSetResult
 
-    DeleteLoggingConfiguration(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) (*wafv2.DeleteLoggingConfigurationOutput, error)
-    DeleteLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) *Wafv2DeleteLoggingConfigurationResult
+       DeleteLoggingConfiguration(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) (*wafv2.DeleteLoggingConfigurationOutput, error)
+       DeleteLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) *Wafv2DeleteLoggingConfigurationResult
 
-    DeletePermissionPolicy(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) (*wafv2.DeletePermissionPolicyOutput, error)
-    DeletePermissionPolicyAsync(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) *Wafv2DeletePermissionPolicyResult
+       DeletePermissionPolicy(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) (*wafv2.DeletePermissionPolicyOutput, error)
+       DeletePermissionPolicyAsync(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) *Wafv2DeletePermissionPolicyResult
 
-    DeleteRegexPatternSet(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) (*wafv2.DeleteRegexPatternSetOutput, error)
-    DeleteRegexPatternSetAsync(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) *Wafv2DeleteRegexPatternSetResult
+       DeleteRegexPatternSet(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) (*wafv2.DeleteRegexPatternSetOutput, error)
+       DeleteRegexPatternSetAsync(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) *Wafv2DeleteRegexPatternSetResult
 
-    DeleteRuleGroup(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) (*wafv2.DeleteRuleGroupOutput, error)
-    DeleteRuleGroupAsync(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) *Wafv2DeleteRuleGroupResult
+       DeleteRuleGroup(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) (*wafv2.DeleteRuleGroupOutput, error)
+       DeleteRuleGroupAsync(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) *Wafv2DeleteRuleGroupResult
 
-    DeleteWebACL(ctx workflow.Context, input *wafv2.DeleteWebACLInput) (*wafv2.DeleteWebACLOutput, error)
-    DeleteWebACLAsync(ctx workflow.Context, input *wafv2.DeleteWebACLInput) *Wafv2DeleteWebACLResult
+       DeleteWebACL(ctx workflow.Context, input *wafv2.DeleteWebACLInput) (*wafv2.DeleteWebACLOutput, error)
+       DeleteWebACLAsync(ctx workflow.Context, input *wafv2.DeleteWebACLInput) *Wafv2DeleteWebACLResult
 
-    DescribeManagedRuleGroup(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) (*wafv2.DescribeManagedRuleGroupOutput, error)
-    DescribeManagedRuleGroupAsync(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) *Wafv2DescribeManagedRuleGroupResult
+       DescribeManagedRuleGroup(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) (*wafv2.DescribeManagedRuleGroupOutput, error)
+       DescribeManagedRuleGroupAsync(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) *Wafv2DescribeManagedRuleGroupResult
 
-    DisassociateWebACL(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) (*wafv2.DisassociateWebACLOutput, error)
-    DisassociateWebACLAsync(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) *Wafv2DisassociateWebACLResult
+       DisassociateWebACL(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) (*wafv2.DisassociateWebACLOutput, error)
+       DisassociateWebACLAsync(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) *Wafv2DisassociateWebACLResult
 
-    GetIPSet(ctx workflow.Context, input *wafv2.GetIPSetInput) (*wafv2.GetIPSetOutput, error)
-    GetIPSetAsync(ctx workflow.Context, input *wafv2.GetIPSetInput) *Wafv2GetIPSetResult
+       GetIPSet(ctx workflow.Context, input *wafv2.GetIPSetInput) (*wafv2.GetIPSetOutput, error)
+       GetIPSetAsync(ctx workflow.Context, input *wafv2.GetIPSetInput) *Wafv2GetIPSetResult
 
-    GetLoggingConfiguration(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) (*wafv2.GetLoggingConfigurationOutput, error)
-    GetLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) *Wafv2GetLoggingConfigurationResult
+       GetLoggingConfiguration(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) (*wafv2.GetLoggingConfigurationOutput, error)
+       GetLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) *Wafv2GetLoggingConfigurationResult
 
-    GetPermissionPolicy(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) (*wafv2.GetPermissionPolicyOutput, error)
-    GetPermissionPolicyAsync(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) *Wafv2GetPermissionPolicyResult
+       GetPermissionPolicy(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) (*wafv2.GetPermissionPolicyOutput, error)
+       GetPermissionPolicyAsync(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) *Wafv2GetPermissionPolicyResult
 
-    GetRateBasedStatementManagedKeys(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) (*wafv2.GetRateBasedStatementManagedKeysOutput, error)
-    GetRateBasedStatementManagedKeysAsync(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) *Wafv2GetRateBasedStatementManagedKeysResult
+       GetRateBasedStatementManagedKeys(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) (*wafv2.GetRateBasedStatementManagedKeysOutput, error)
+       GetRateBasedStatementManagedKeysAsync(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) *Wafv2GetRateBasedStatementManagedKeysResult
 
-    GetRegexPatternSet(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) (*wafv2.GetRegexPatternSetOutput, error)
-    GetRegexPatternSetAsync(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) *Wafv2GetRegexPatternSetResult
+       GetRegexPatternSet(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) (*wafv2.GetRegexPatternSetOutput, error)
+       GetRegexPatternSetAsync(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) *Wafv2GetRegexPatternSetResult
 
-    GetRuleGroup(ctx workflow.Context, input *wafv2.GetRuleGroupInput) (*wafv2.GetRuleGroupOutput, error)
-    GetRuleGroupAsync(ctx workflow.Context, input *wafv2.GetRuleGroupInput) *Wafv2GetRuleGroupResult
+       GetRuleGroup(ctx workflow.Context, input *wafv2.GetRuleGroupInput) (*wafv2.GetRuleGroupOutput, error)
+       GetRuleGroupAsync(ctx workflow.Context, input *wafv2.GetRuleGroupInput) *Wafv2GetRuleGroupResult
 
-    GetSampledRequests(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) (*wafv2.GetSampledRequestsOutput, error)
-    GetSampledRequestsAsync(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) *Wafv2GetSampledRequestsResult
+       GetSampledRequests(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) (*wafv2.GetSampledRequestsOutput, error)
+       GetSampledRequestsAsync(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) *Wafv2GetSampledRequestsResult
 
-    GetWebACL(ctx workflow.Context, input *wafv2.GetWebACLInput) (*wafv2.GetWebACLOutput, error)
-    GetWebACLAsync(ctx workflow.Context, input *wafv2.GetWebACLInput) *Wafv2GetWebACLResult
+       GetWebACL(ctx workflow.Context, input *wafv2.GetWebACLInput) (*wafv2.GetWebACLOutput, error)
+       GetWebACLAsync(ctx workflow.Context, input *wafv2.GetWebACLInput) *Wafv2GetWebACLResult
 
-    GetWebACLForResource(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) (*wafv2.GetWebACLForResourceOutput, error)
-    GetWebACLForResourceAsync(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) *Wafv2GetWebACLForResourceResult
+       GetWebACLForResource(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) (*wafv2.GetWebACLForResourceOutput, error)
+       GetWebACLForResourceAsync(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) *Wafv2GetWebACLForResourceResult
 
-    ListAvailableManagedRuleGroups(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) (*wafv2.ListAvailableManagedRuleGroupsOutput, error)
-    ListAvailableManagedRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) *Wafv2ListAvailableManagedRuleGroupsResult
+       ListAvailableManagedRuleGroups(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) (*wafv2.ListAvailableManagedRuleGroupsOutput, error)
+       ListAvailableManagedRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) *Wafv2ListAvailableManagedRuleGroupsResult
 
-    ListIPSets(ctx workflow.Context, input *wafv2.ListIPSetsInput) (*wafv2.ListIPSetsOutput, error)
-    ListIPSetsAsync(ctx workflow.Context, input *wafv2.ListIPSetsInput) *Wafv2ListIPSetsResult
+       ListIPSets(ctx workflow.Context, input *wafv2.ListIPSetsInput) (*wafv2.ListIPSetsOutput, error)
+       ListIPSetsAsync(ctx workflow.Context, input *wafv2.ListIPSetsInput) *Wafv2ListIPSetsResult
 
-    ListLoggingConfigurations(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) (*wafv2.ListLoggingConfigurationsOutput, error)
-    ListLoggingConfigurationsAsync(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) *Wafv2ListLoggingConfigurationsResult
+       ListLoggingConfigurations(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) (*wafv2.ListLoggingConfigurationsOutput, error)
+       ListLoggingConfigurationsAsync(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) *Wafv2ListLoggingConfigurationsResult
 
-    ListRegexPatternSets(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) (*wafv2.ListRegexPatternSetsOutput, error)
-    ListRegexPatternSetsAsync(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) *Wafv2ListRegexPatternSetsResult
+       ListRegexPatternSets(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) (*wafv2.ListRegexPatternSetsOutput, error)
+       ListRegexPatternSetsAsync(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) *Wafv2ListRegexPatternSetsResult
 
-    ListResourcesForWebACL(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) (*wafv2.ListResourcesForWebACLOutput, error)
-    ListResourcesForWebACLAsync(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) *Wafv2ListResourcesForWebACLResult
+       ListResourcesForWebACL(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) (*wafv2.ListResourcesForWebACLOutput, error)
+       ListResourcesForWebACLAsync(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) *Wafv2ListResourcesForWebACLResult
 
-    ListRuleGroups(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) (*wafv2.ListRuleGroupsOutput, error)
-    ListRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) *Wafv2ListRuleGroupsResult
+       ListRuleGroups(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) (*wafv2.ListRuleGroupsOutput, error)
+       ListRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) *Wafv2ListRuleGroupsResult
 
-    ListTagsForResource(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) (*wafv2.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) *Wafv2ListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) (*wafv2.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) *Wafv2ListTagsForResourceResult
 
-    ListWebACLs(ctx workflow.Context, input *wafv2.ListWebACLsInput) (*wafv2.ListWebACLsOutput, error)
-    ListWebACLsAsync(ctx workflow.Context, input *wafv2.ListWebACLsInput) *Wafv2ListWebACLsResult
+       ListWebACLs(ctx workflow.Context, input *wafv2.ListWebACLsInput) (*wafv2.ListWebACLsOutput, error)
+       ListWebACLsAsync(ctx workflow.Context, input *wafv2.ListWebACLsInput) *Wafv2ListWebACLsResult
 
-    PutLoggingConfiguration(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) (*wafv2.PutLoggingConfigurationOutput, error)
-    PutLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) *Wafv2PutLoggingConfigurationResult
+       PutLoggingConfiguration(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) (*wafv2.PutLoggingConfigurationOutput, error)
+       PutLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) *Wafv2PutLoggingConfigurationResult
 
-    PutPermissionPolicy(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) (*wafv2.PutPermissionPolicyOutput, error)
-    PutPermissionPolicyAsync(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) *Wafv2PutPermissionPolicyResult
+       PutPermissionPolicy(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) (*wafv2.PutPermissionPolicyOutput, error)
+       PutPermissionPolicyAsync(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) *Wafv2PutPermissionPolicyResult
 
-    TagResource(ctx workflow.Context, input *wafv2.TagResourceInput) (*wafv2.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *wafv2.TagResourceInput) *Wafv2TagResourceResult
+       TagResource(ctx workflow.Context, input *wafv2.TagResourceInput) (*wafv2.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *wafv2.TagResourceInput) *Wafv2TagResourceResult
 
-    UntagResource(ctx workflow.Context, input *wafv2.UntagResourceInput) (*wafv2.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *wafv2.UntagResourceInput) *Wafv2UntagResourceResult
+       UntagResource(ctx workflow.Context, input *wafv2.UntagResourceInput) (*wafv2.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *wafv2.UntagResourceInput) *Wafv2UntagResourceResult
 
-    UpdateIPSet(ctx workflow.Context, input *wafv2.UpdateIPSetInput) (*wafv2.UpdateIPSetOutput, error)
-    UpdateIPSetAsync(ctx workflow.Context, input *wafv2.UpdateIPSetInput) *Wafv2UpdateIPSetResult
+       UpdateIPSet(ctx workflow.Context, input *wafv2.UpdateIPSetInput) (*wafv2.UpdateIPSetOutput, error)
+       UpdateIPSetAsync(ctx workflow.Context, input *wafv2.UpdateIPSetInput) *Wafv2UpdateIPSetResult
 
-    UpdateRegexPatternSet(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) (*wafv2.UpdateRegexPatternSetOutput, error)
-    UpdateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) *Wafv2UpdateRegexPatternSetResult
+       UpdateRegexPatternSet(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) (*wafv2.UpdateRegexPatternSetOutput, error)
+       UpdateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) *Wafv2UpdateRegexPatternSetResult
 
-    UpdateRuleGroup(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) (*wafv2.UpdateRuleGroupOutput, error)
-    UpdateRuleGroupAsync(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) *Wafv2UpdateRuleGroupResult
+       UpdateRuleGroup(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) (*wafv2.UpdateRuleGroupOutput, error)
+       UpdateRuleGroupAsync(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) *Wafv2UpdateRuleGroupResult
 
-    UpdateWebACL(ctx workflow.Context, input *wafv2.UpdateWebACLInput) (*wafv2.UpdateWebACLOutput, error)
-    UpdateWebACLAsync(ctx workflow.Context, input *wafv2.UpdateWebACLInput) *Wafv2UpdateWebACLResult
+       UpdateWebACL(ctx workflow.Context, input *wafv2.UpdateWebACLInput) (*wafv2.UpdateWebACLOutput, error)
+       UpdateWebACLAsync(ctx workflow.Context, input *wafv2.UpdateWebACLInput) *Wafv2UpdateWebACLResult
 }
 
 type Wafv2AssociateWebACLResult struct {

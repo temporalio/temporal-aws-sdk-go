@@ -7,119 +7,119 @@ import (
 )
 
 type AppMeshClient interface {
-    CreateGatewayRoute(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) (*appmesh.CreateGatewayRouteOutput, error)
-    CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppmeshCreateGatewayRouteResult
+       CreateGatewayRoute(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) (*appmesh.CreateGatewayRouteOutput, error)
+       CreateGatewayRouteAsync(ctx workflow.Context, input *appmesh.CreateGatewayRouteInput) *AppmeshCreateGatewayRouteResult
 
-    CreateMesh(ctx workflow.Context, input *appmesh.CreateMeshInput) (*appmesh.CreateMeshOutput, error)
-    CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppmeshCreateMeshResult
+       CreateMesh(ctx workflow.Context, input *appmesh.CreateMeshInput) (*appmesh.CreateMeshOutput, error)
+       CreateMeshAsync(ctx workflow.Context, input *appmesh.CreateMeshInput) *AppmeshCreateMeshResult
 
-    CreateRoute(ctx workflow.Context, input *appmesh.CreateRouteInput) (*appmesh.CreateRouteOutput, error)
-    CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppmeshCreateRouteResult
+       CreateRoute(ctx workflow.Context, input *appmesh.CreateRouteInput) (*appmesh.CreateRouteOutput, error)
+       CreateRouteAsync(ctx workflow.Context, input *appmesh.CreateRouteInput) *AppmeshCreateRouteResult
 
-    CreateVirtualGateway(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) (*appmesh.CreateVirtualGatewayOutput, error)
-    CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppmeshCreateVirtualGatewayResult
+       CreateVirtualGateway(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) (*appmesh.CreateVirtualGatewayOutput, error)
+       CreateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.CreateVirtualGatewayInput) *AppmeshCreateVirtualGatewayResult
 
-    CreateVirtualNode(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) (*appmesh.CreateVirtualNodeOutput, error)
-    CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppmeshCreateVirtualNodeResult
+       CreateVirtualNode(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) (*appmesh.CreateVirtualNodeOutput, error)
+       CreateVirtualNodeAsync(ctx workflow.Context, input *appmesh.CreateVirtualNodeInput) *AppmeshCreateVirtualNodeResult
 
-    CreateVirtualRouter(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) (*appmesh.CreateVirtualRouterOutput, error)
-    CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppmeshCreateVirtualRouterResult
+       CreateVirtualRouter(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) (*appmesh.CreateVirtualRouterOutput, error)
+       CreateVirtualRouterAsync(ctx workflow.Context, input *appmesh.CreateVirtualRouterInput) *AppmeshCreateVirtualRouterResult
 
-    CreateVirtualService(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) (*appmesh.CreateVirtualServiceOutput, error)
-    CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppmeshCreateVirtualServiceResult
+       CreateVirtualService(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) (*appmesh.CreateVirtualServiceOutput, error)
+       CreateVirtualServiceAsync(ctx workflow.Context, input *appmesh.CreateVirtualServiceInput) *AppmeshCreateVirtualServiceResult
 
-    DeleteGatewayRoute(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) (*appmesh.DeleteGatewayRouteOutput, error)
-    DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppmeshDeleteGatewayRouteResult
+       DeleteGatewayRoute(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) (*appmesh.DeleteGatewayRouteOutput, error)
+       DeleteGatewayRouteAsync(ctx workflow.Context, input *appmesh.DeleteGatewayRouteInput) *AppmeshDeleteGatewayRouteResult
 
-    DeleteMesh(ctx workflow.Context, input *appmesh.DeleteMeshInput) (*appmesh.DeleteMeshOutput, error)
-    DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppmeshDeleteMeshResult
+       DeleteMesh(ctx workflow.Context, input *appmesh.DeleteMeshInput) (*appmesh.DeleteMeshOutput, error)
+       DeleteMeshAsync(ctx workflow.Context, input *appmesh.DeleteMeshInput) *AppmeshDeleteMeshResult
 
-    DeleteRoute(ctx workflow.Context, input *appmesh.DeleteRouteInput) (*appmesh.DeleteRouteOutput, error)
-    DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppmeshDeleteRouteResult
+       DeleteRoute(ctx workflow.Context, input *appmesh.DeleteRouteInput) (*appmesh.DeleteRouteOutput, error)
+       DeleteRouteAsync(ctx workflow.Context, input *appmesh.DeleteRouteInput) *AppmeshDeleteRouteResult
 
-    DeleteVirtualGateway(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) (*appmesh.DeleteVirtualGatewayOutput, error)
-    DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppmeshDeleteVirtualGatewayResult
+       DeleteVirtualGateway(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) (*appmesh.DeleteVirtualGatewayOutput, error)
+       DeleteVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DeleteVirtualGatewayInput) *AppmeshDeleteVirtualGatewayResult
 
-    DeleteVirtualNode(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) (*appmesh.DeleteVirtualNodeOutput, error)
-    DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppmeshDeleteVirtualNodeResult
+       DeleteVirtualNode(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) (*appmesh.DeleteVirtualNodeOutput, error)
+       DeleteVirtualNodeAsync(ctx workflow.Context, input *appmesh.DeleteVirtualNodeInput) *AppmeshDeleteVirtualNodeResult
 
-    DeleteVirtualRouter(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) (*appmesh.DeleteVirtualRouterOutput, error)
-    DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppmeshDeleteVirtualRouterResult
+       DeleteVirtualRouter(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) (*appmesh.DeleteVirtualRouterOutput, error)
+       DeleteVirtualRouterAsync(ctx workflow.Context, input *appmesh.DeleteVirtualRouterInput) *AppmeshDeleteVirtualRouterResult
 
-    DeleteVirtualService(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) (*appmesh.DeleteVirtualServiceOutput, error)
-    DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppmeshDeleteVirtualServiceResult
+       DeleteVirtualService(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) (*appmesh.DeleteVirtualServiceOutput, error)
+       DeleteVirtualServiceAsync(ctx workflow.Context, input *appmesh.DeleteVirtualServiceInput) *AppmeshDeleteVirtualServiceResult
 
-    DescribeGatewayRoute(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) (*appmesh.DescribeGatewayRouteOutput, error)
-    DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppmeshDescribeGatewayRouteResult
+       DescribeGatewayRoute(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) (*appmesh.DescribeGatewayRouteOutput, error)
+       DescribeGatewayRouteAsync(ctx workflow.Context, input *appmesh.DescribeGatewayRouteInput) *AppmeshDescribeGatewayRouteResult
 
-    DescribeMesh(ctx workflow.Context, input *appmesh.DescribeMeshInput) (*appmesh.DescribeMeshOutput, error)
-    DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppmeshDescribeMeshResult
+       DescribeMesh(ctx workflow.Context, input *appmesh.DescribeMeshInput) (*appmesh.DescribeMeshOutput, error)
+       DescribeMeshAsync(ctx workflow.Context, input *appmesh.DescribeMeshInput) *AppmeshDescribeMeshResult
 
-    DescribeRoute(ctx workflow.Context, input *appmesh.DescribeRouteInput) (*appmesh.DescribeRouteOutput, error)
-    DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppmeshDescribeRouteResult
+       DescribeRoute(ctx workflow.Context, input *appmesh.DescribeRouteInput) (*appmesh.DescribeRouteOutput, error)
+       DescribeRouteAsync(ctx workflow.Context, input *appmesh.DescribeRouteInput) *AppmeshDescribeRouteResult
 
-    DescribeVirtualGateway(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) (*appmesh.DescribeVirtualGatewayOutput, error)
-    DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppmeshDescribeVirtualGatewayResult
+       DescribeVirtualGateway(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) (*appmesh.DescribeVirtualGatewayOutput, error)
+       DescribeVirtualGatewayAsync(ctx workflow.Context, input *appmesh.DescribeVirtualGatewayInput) *AppmeshDescribeVirtualGatewayResult
 
-    DescribeVirtualNode(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) (*appmesh.DescribeVirtualNodeOutput, error)
-    DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppmeshDescribeVirtualNodeResult
+       DescribeVirtualNode(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) (*appmesh.DescribeVirtualNodeOutput, error)
+       DescribeVirtualNodeAsync(ctx workflow.Context, input *appmesh.DescribeVirtualNodeInput) *AppmeshDescribeVirtualNodeResult
 
-    DescribeVirtualRouter(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) (*appmesh.DescribeVirtualRouterOutput, error)
-    DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppmeshDescribeVirtualRouterResult
+       DescribeVirtualRouter(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) (*appmesh.DescribeVirtualRouterOutput, error)
+       DescribeVirtualRouterAsync(ctx workflow.Context, input *appmesh.DescribeVirtualRouterInput) *AppmeshDescribeVirtualRouterResult
 
-    DescribeVirtualService(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) (*appmesh.DescribeVirtualServiceOutput, error)
-    DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppmeshDescribeVirtualServiceResult
+       DescribeVirtualService(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) (*appmesh.DescribeVirtualServiceOutput, error)
+       DescribeVirtualServiceAsync(ctx workflow.Context, input *appmesh.DescribeVirtualServiceInput) *AppmeshDescribeVirtualServiceResult
 
-    ListGatewayRoutes(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) (*appmesh.ListGatewayRoutesOutput, error)
-    ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppmeshListGatewayRoutesResult
+       ListGatewayRoutes(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) (*appmesh.ListGatewayRoutesOutput, error)
+       ListGatewayRoutesAsync(ctx workflow.Context, input *appmesh.ListGatewayRoutesInput) *AppmeshListGatewayRoutesResult
 
-    ListMeshes(ctx workflow.Context, input *appmesh.ListMeshesInput) (*appmesh.ListMeshesOutput, error)
-    ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppmeshListMeshesResult
+       ListMeshes(ctx workflow.Context, input *appmesh.ListMeshesInput) (*appmesh.ListMeshesOutput, error)
+       ListMeshesAsync(ctx workflow.Context, input *appmesh.ListMeshesInput) *AppmeshListMeshesResult
 
-    ListRoutes(ctx workflow.Context, input *appmesh.ListRoutesInput) (*appmesh.ListRoutesOutput, error)
-    ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppmeshListRoutesResult
+       ListRoutes(ctx workflow.Context, input *appmesh.ListRoutesInput) (*appmesh.ListRoutesOutput, error)
+       ListRoutesAsync(ctx workflow.Context, input *appmesh.ListRoutesInput) *AppmeshListRoutesResult
 
-    ListTagsForResource(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) (*appmesh.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppmeshListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) (*appmesh.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *appmesh.ListTagsForResourceInput) *AppmeshListTagsForResourceResult
 
-    ListVirtualGateways(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) (*appmesh.ListVirtualGatewaysOutput, error)
-    ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppmeshListVirtualGatewaysResult
+       ListVirtualGateways(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) (*appmesh.ListVirtualGatewaysOutput, error)
+       ListVirtualGatewaysAsync(ctx workflow.Context, input *appmesh.ListVirtualGatewaysInput) *AppmeshListVirtualGatewaysResult
 
-    ListVirtualNodes(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) (*appmesh.ListVirtualNodesOutput, error)
-    ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppmeshListVirtualNodesResult
+       ListVirtualNodes(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) (*appmesh.ListVirtualNodesOutput, error)
+       ListVirtualNodesAsync(ctx workflow.Context, input *appmesh.ListVirtualNodesInput) *AppmeshListVirtualNodesResult
 
-    ListVirtualRouters(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) (*appmesh.ListVirtualRoutersOutput, error)
-    ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppmeshListVirtualRoutersResult
+       ListVirtualRouters(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) (*appmesh.ListVirtualRoutersOutput, error)
+       ListVirtualRoutersAsync(ctx workflow.Context, input *appmesh.ListVirtualRoutersInput) *AppmeshListVirtualRoutersResult
 
-    ListVirtualServices(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) (*appmesh.ListVirtualServicesOutput, error)
-    ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppmeshListVirtualServicesResult
+       ListVirtualServices(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) (*appmesh.ListVirtualServicesOutput, error)
+       ListVirtualServicesAsync(ctx workflow.Context, input *appmesh.ListVirtualServicesInput) *AppmeshListVirtualServicesResult
 
-    TagResource(ctx workflow.Context, input *appmesh.TagResourceInput) (*appmesh.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppmeshTagResourceResult
+       TagResource(ctx workflow.Context, input *appmesh.TagResourceInput) (*appmesh.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *appmesh.TagResourceInput) *AppmeshTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *appmesh.UntagResourceInput) (*appmesh.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppmeshUntagResourceResult
+       UntagResource(ctx workflow.Context, input *appmesh.UntagResourceInput) (*appmesh.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *appmesh.UntagResourceInput) *AppmeshUntagResourceResult
 
-    UpdateGatewayRoute(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) (*appmesh.UpdateGatewayRouteOutput, error)
-    UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppmeshUpdateGatewayRouteResult
+       UpdateGatewayRoute(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) (*appmesh.UpdateGatewayRouteOutput, error)
+       UpdateGatewayRouteAsync(ctx workflow.Context, input *appmesh.UpdateGatewayRouteInput) *AppmeshUpdateGatewayRouteResult
 
-    UpdateMesh(ctx workflow.Context, input *appmesh.UpdateMeshInput) (*appmesh.UpdateMeshOutput, error)
-    UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppmeshUpdateMeshResult
+       UpdateMesh(ctx workflow.Context, input *appmesh.UpdateMeshInput) (*appmesh.UpdateMeshOutput, error)
+       UpdateMeshAsync(ctx workflow.Context, input *appmesh.UpdateMeshInput) *AppmeshUpdateMeshResult
 
-    UpdateRoute(ctx workflow.Context, input *appmesh.UpdateRouteInput) (*appmesh.UpdateRouteOutput, error)
-    UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppmeshUpdateRouteResult
+       UpdateRoute(ctx workflow.Context, input *appmesh.UpdateRouteInput) (*appmesh.UpdateRouteOutput, error)
+       UpdateRouteAsync(ctx workflow.Context, input *appmesh.UpdateRouteInput) *AppmeshUpdateRouteResult
 
-    UpdateVirtualGateway(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) (*appmesh.UpdateVirtualGatewayOutput, error)
-    UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppmeshUpdateVirtualGatewayResult
+       UpdateVirtualGateway(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) (*appmesh.UpdateVirtualGatewayOutput, error)
+       UpdateVirtualGatewayAsync(ctx workflow.Context, input *appmesh.UpdateVirtualGatewayInput) *AppmeshUpdateVirtualGatewayResult
 
-    UpdateVirtualNode(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) (*appmesh.UpdateVirtualNodeOutput, error)
-    UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppmeshUpdateVirtualNodeResult
+       UpdateVirtualNode(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) (*appmesh.UpdateVirtualNodeOutput, error)
+       UpdateVirtualNodeAsync(ctx workflow.Context, input *appmesh.UpdateVirtualNodeInput) *AppmeshUpdateVirtualNodeResult
 
-    UpdateVirtualRouter(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) (*appmesh.UpdateVirtualRouterOutput, error)
-    UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppmeshUpdateVirtualRouterResult
+       UpdateVirtualRouter(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) (*appmesh.UpdateVirtualRouterOutput, error)
+       UpdateVirtualRouterAsync(ctx workflow.Context, input *appmesh.UpdateVirtualRouterInput) *AppmeshUpdateVirtualRouterResult
 
-    UpdateVirtualService(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) (*appmesh.UpdateVirtualServiceOutput, error)
-    UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppmeshUpdateVirtualServiceResult
+       UpdateVirtualService(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) (*appmesh.UpdateVirtualServiceOutput, error)
+       UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppmeshUpdateVirtualServiceResult
 }
 
 type AppmeshCreateGatewayRouteResult struct {

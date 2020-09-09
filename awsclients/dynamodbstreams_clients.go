@@ -7,17 +7,17 @@ import (
 )
 
 type DynamoDBStreamsClient interface {
-    DescribeStream(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error)
-    DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DynamodbstreamsDescribeStreamResult
+       DescribeStream(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error)
+       DescribeStreamAsync(ctx workflow.Context, input *dynamodbstreams.DescribeStreamInput) *DynamodbstreamsDescribeStreamResult
 
-    GetRecords(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error)
-    GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *DynamodbstreamsGetRecordsResult
+       GetRecords(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error)
+       GetRecordsAsync(ctx workflow.Context, input *dynamodbstreams.GetRecordsInput) *DynamodbstreamsGetRecordsResult
 
-    GetShardIterator(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error)
-    GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *DynamodbstreamsGetShardIteratorResult
+       GetShardIterator(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error)
+       GetShardIteratorAsync(ctx workflow.Context, input *dynamodbstreams.GetShardIteratorInput) *DynamodbstreamsGetShardIteratorResult
 
-    ListStreams(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error)
-    ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *DynamodbstreamsListStreamsResult
+       ListStreams(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error)
+       ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *DynamodbstreamsListStreamsResult
 }
 
 type DynamodbstreamsDescribeStreamResult struct {

@@ -7,68 +7,68 @@ import (
 )
 
 type MediaStoreClient interface {
-    CreateContainer(ctx workflow.Context, input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error)
-    CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediastoreCreateContainerResult
+       CreateContainer(ctx workflow.Context, input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error)
+       CreateContainerAsync(ctx workflow.Context, input *mediastore.CreateContainerInput) *MediastoreCreateContainerResult
 
-    DeleteContainer(ctx workflow.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error)
-    DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediastoreDeleteContainerResult
+       DeleteContainer(ctx workflow.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error)
+       DeleteContainerAsync(ctx workflow.Context, input *mediastore.DeleteContainerInput) *MediastoreDeleteContainerResult
 
-    DeleteContainerPolicy(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error)
-    DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediastoreDeleteContainerPolicyResult
+       DeleteContainerPolicy(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error)
+       DeleteContainerPolicyAsync(ctx workflow.Context, input *mediastore.DeleteContainerPolicyInput) *MediastoreDeleteContainerPolicyResult
 
-    DeleteCorsPolicy(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error)
-    DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediastoreDeleteCorsPolicyResult
+       DeleteCorsPolicy(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error)
+       DeleteCorsPolicyAsync(ctx workflow.Context, input *mediastore.DeleteCorsPolicyInput) *MediastoreDeleteCorsPolicyResult
 
-    DeleteLifecyclePolicy(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error)
-    DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediastoreDeleteLifecyclePolicyResult
+       DeleteLifecyclePolicy(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error)
+       DeleteLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.DeleteLifecyclePolicyInput) *MediastoreDeleteLifecyclePolicyResult
 
-    DeleteMetricPolicy(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error)
-    DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediastoreDeleteMetricPolicyResult
+       DeleteMetricPolicy(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error)
+       DeleteMetricPolicyAsync(ctx workflow.Context, input *mediastore.DeleteMetricPolicyInput) *MediastoreDeleteMetricPolicyResult
 
-    DescribeContainer(ctx workflow.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error)
-    DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediastoreDescribeContainerResult
+       DescribeContainer(ctx workflow.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error)
+       DescribeContainerAsync(ctx workflow.Context, input *mediastore.DescribeContainerInput) *MediastoreDescribeContainerResult
 
-    GetContainerPolicy(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error)
-    GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediastoreGetContainerPolicyResult
+       GetContainerPolicy(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error)
+       GetContainerPolicyAsync(ctx workflow.Context, input *mediastore.GetContainerPolicyInput) *MediastoreGetContainerPolicyResult
 
-    GetCorsPolicy(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error)
-    GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediastoreGetCorsPolicyResult
+       GetCorsPolicy(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error)
+       GetCorsPolicyAsync(ctx workflow.Context, input *mediastore.GetCorsPolicyInput) *MediastoreGetCorsPolicyResult
 
-    GetLifecyclePolicy(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error)
-    GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediastoreGetLifecyclePolicyResult
+       GetLifecyclePolicy(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error)
+       GetLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.GetLifecyclePolicyInput) *MediastoreGetLifecyclePolicyResult
 
-    GetMetricPolicy(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error)
-    GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediastoreGetMetricPolicyResult
+       GetMetricPolicy(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error)
+       GetMetricPolicyAsync(ctx workflow.Context, input *mediastore.GetMetricPolicyInput) *MediastoreGetMetricPolicyResult
 
-    ListContainers(ctx workflow.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error)
-    ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediastoreListContainersResult
+       ListContainers(ctx workflow.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error)
+       ListContainersAsync(ctx workflow.Context, input *mediastore.ListContainersInput) *MediastoreListContainersResult
 
-    ListTagsForResource(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediastoreListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *mediastore.ListTagsForResourceInput) *MediastoreListTagsForResourceResult
 
-    PutContainerPolicy(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error)
-    PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediastorePutContainerPolicyResult
+       PutContainerPolicy(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error)
+       PutContainerPolicyAsync(ctx workflow.Context, input *mediastore.PutContainerPolicyInput) *MediastorePutContainerPolicyResult
 
-    PutCorsPolicy(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error)
-    PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediastorePutCorsPolicyResult
+       PutCorsPolicy(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error)
+       PutCorsPolicyAsync(ctx workflow.Context, input *mediastore.PutCorsPolicyInput) *MediastorePutCorsPolicyResult
 
-    PutLifecyclePolicy(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error)
-    PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediastorePutLifecyclePolicyResult
+       PutLifecyclePolicy(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error)
+       PutLifecyclePolicyAsync(ctx workflow.Context, input *mediastore.PutLifecyclePolicyInput) *MediastorePutLifecyclePolicyResult
 
-    PutMetricPolicy(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error)
-    PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediastorePutMetricPolicyResult
+       PutMetricPolicy(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error)
+       PutMetricPolicyAsync(ctx workflow.Context, input *mediastore.PutMetricPolicyInput) *MediastorePutMetricPolicyResult
 
-    StartAccessLogging(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error)
-    StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediastoreStartAccessLoggingResult
+       StartAccessLogging(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error)
+       StartAccessLoggingAsync(ctx workflow.Context, input *mediastore.StartAccessLoggingInput) *MediastoreStartAccessLoggingResult
 
-    StopAccessLogging(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error)
-    StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediastoreStopAccessLoggingResult
+       StopAccessLogging(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error)
+       StopAccessLoggingAsync(ctx workflow.Context, input *mediastore.StopAccessLoggingInput) *MediastoreStopAccessLoggingResult
 
-    TagResource(ctx workflow.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediastoreTagResourceResult
+       TagResource(ctx workflow.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *mediastore.TagResourceInput) *MediastoreTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediastoreUntagResourceResult
+       UntagResource(ctx workflow.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediastoreUntagResourceResult
 }
 
 type MediastoreCreateContainerResult struct {

@@ -7,213 +7,213 @@ import (
 )
 
 type CloudFrontClient interface {
-    CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error)
-    CreateCachePolicyAsync(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) *CloudfrontCreateCachePolicyResult
+       CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error)
+       CreateCachePolicyAsync(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) *CloudfrontCreateCachePolicyResult
 
-    CreateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error)
-    CreateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) *CloudfrontCreateCloudFrontOriginAccessIdentityResult
+       CreateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error)
+       CreateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) *CloudfrontCreateCloudFrontOriginAccessIdentityResult
 
-    CreateDistribution(ctx workflow.Context, input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error)
-    CreateDistributionAsync(ctx workflow.Context, input *cloudfront.CreateDistributionInput) *CloudfrontCreateDistributionResult
+       CreateDistribution(ctx workflow.Context, input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error)
+       CreateDistributionAsync(ctx workflow.Context, input *cloudfront.CreateDistributionInput) *CloudfrontCreateDistributionResult
 
-    CreateDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error)
-    CreateDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) *CloudfrontCreateDistributionWithTagsResult
+       CreateDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error)
+       CreateDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateDistributionWithTagsInput) *CloudfrontCreateDistributionWithTagsResult
 
-    CreateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error)
-    CreateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) *CloudfrontCreateFieldLevelEncryptionConfigResult
+       CreateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error)
+       CreateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) *CloudfrontCreateFieldLevelEncryptionConfigResult
 
-    CreateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error)
-    CreateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) *CloudfrontCreateFieldLevelEncryptionProfileResult
+       CreateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error)
+       CreateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) *CloudfrontCreateFieldLevelEncryptionProfileResult
 
-    CreateInvalidation(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error)
-    CreateInvalidationAsync(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) *CloudfrontCreateInvalidationResult
+       CreateInvalidation(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error)
+       CreateInvalidationAsync(ctx workflow.Context, input *cloudfront.CreateInvalidationInput) *CloudfrontCreateInvalidationResult
 
-    CreateMonitoringSubscription(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error)
-    CreateMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) *CloudfrontCreateMonitoringSubscriptionResult
+       CreateMonitoringSubscription(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error)
+       CreateMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.CreateMonitoringSubscriptionInput) *CloudfrontCreateMonitoringSubscriptionResult
 
-    CreateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error)
-    CreateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) *CloudfrontCreateOriginRequestPolicyResult
+       CreateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error)
+       CreateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.CreateOriginRequestPolicyInput) *CloudfrontCreateOriginRequestPolicyResult
 
-    CreatePublicKey(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error)
-    CreatePublicKeyAsync(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) *CloudfrontCreatePublicKeyResult
+       CreatePublicKey(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error)
+       CreatePublicKeyAsync(ctx workflow.Context, input *cloudfront.CreatePublicKeyInput) *CloudfrontCreatePublicKeyResult
 
-    CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error)
-    CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CloudfrontCreateRealtimeLogConfigResult
+       CreateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error)
+       CreateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.CreateRealtimeLogConfigInput) *CloudfrontCreateRealtimeLogConfigResult
 
-    CreateStreamingDistribution(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error)
-    CreateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) *CloudfrontCreateStreamingDistributionResult
+       CreateStreamingDistribution(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error)
+       CreateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionInput) *CloudfrontCreateStreamingDistributionResult
 
-    CreateStreamingDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error)
-    CreateStreamingDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) *CloudfrontCreateStreamingDistributionWithTagsResult
+       CreateStreamingDistributionWithTags(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error)
+       CreateStreamingDistributionWithTagsAsync(ctx workflow.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) *CloudfrontCreateStreamingDistributionWithTagsResult
 
-    DeleteCachePolicy(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error)
-    DeleteCachePolicyAsync(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) *CloudfrontDeleteCachePolicyResult
+       DeleteCachePolicy(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error)
+       DeleteCachePolicyAsync(ctx workflow.Context, input *cloudfront.DeleteCachePolicyInput) *CloudfrontDeleteCachePolicyResult
 
-    DeleteCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error)
-    DeleteCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) *CloudfrontDeleteCloudFrontOriginAccessIdentityResult
+       DeleteCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error)
+       DeleteCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) *CloudfrontDeleteCloudFrontOriginAccessIdentityResult
 
-    DeleteDistribution(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error)
-    DeleteDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) *CloudfrontDeleteDistributionResult
+       DeleteDistribution(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error)
+       DeleteDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteDistributionInput) *CloudfrontDeleteDistributionResult
 
-    DeleteFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error)
-    DeleteFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) *CloudfrontDeleteFieldLevelEncryptionConfigResult
+       DeleteFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error)
+       DeleteFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) *CloudfrontDeleteFieldLevelEncryptionConfigResult
 
-    DeleteFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error)
-    DeleteFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) *CloudfrontDeleteFieldLevelEncryptionProfileResult
+       DeleteFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error)
+       DeleteFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) *CloudfrontDeleteFieldLevelEncryptionProfileResult
 
-    DeleteMonitoringSubscription(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error)
-    DeleteMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) *CloudfrontDeleteMonitoringSubscriptionResult
+       DeleteMonitoringSubscription(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error)
+       DeleteMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) *CloudfrontDeleteMonitoringSubscriptionResult
 
-    DeleteOriginRequestPolicy(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error)
-    DeleteOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) *CloudfrontDeleteOriginRequestPolicyResult
+       DeleteOriginRequestPolicy(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error)
+       DeleteOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.DeleteOriginRequestPolicyInput) *CloudfrontDeleteOriginRequestPolicyResult
 
-    DeletePublicKey(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error)
-    DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *CloudfrontDeletePublicKeyResult
+       DeletePublicKey(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error)
+       DeletePublicKeyAsync(ctx workflow.Context, input *cloudfront.DeletePublicKeyInput) *CloudfrontDeletePublicKeyResult
 
-    DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error)
-    DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *CloudfrontDeleteRealtimeLogConfigResult
+       DeleteRealtimeLogConfig(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error)
+       DeleteRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.DeleteRealtimeLogConfigInput) *CloudfrontDeleteRealtimeLogConfigResult
 
-    DeleteStreamingDistribution(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error)
-    DeleteStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) *CloudfrontDeleteStreamingDistributionResult
+       DeleteStreamingDistribution(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error)
+       DeleteStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.DeleteStreamingDistributionInput) *CloudfrontDeleteStreamingDistributionResult
 
-    GetCachePolicy(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error)
-    GetCachePolicyAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) *CloudfrontGetCachePolicyResult
+       GetCachePolicy(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error)
+       GetCachePolicyAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyInput) *CloudfrontGetCachePolicyResult
 
-    GetCachePolicyConfig(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error)
-    GetCachePolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) *CloudfrontGetCachePolicyConfigResult
+       GetCachePolicyConfig(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error)
+       GetCachePolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetCachePolicyConfigInput) *CloudfrontGetCachePolicyConfigResult
 
-    GetCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error)
-    GetCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) *CloudfrontGetCloudFrontOriginAccessIdentityResult
+       GetCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error)
+       GetCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) *CloudfrontGetCloudFrontOriginAccessIdentityResult
 
-    GetCloudFrontOriginAccessIdentityConfig(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error)
-    GetCloudFrontOriginAccessIdentityConfigAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) *CloudfrontGetCloudFrontOriginAccessIdentityConfigResult
+       GetCloudFrontOriginAccessIdentityConfig(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error)
+       GetCloudFrontOriginAccessIdentityConfigAsync(ctx workflow.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) *CloudfrontGetCloudFrontOriginAccessIdentityConfigResult
 
-    GetDistribution(ctx workflow.Context, input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error)
-    GetDistributionAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *CloudfrontGetDistributionResult
+       GetDistribution(ctx workflow.Context, input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error)
+       GetDistributionAsync(ctx workflow.Context, input *cloudfront.GetDistributionInput) *CloudfrontGetDistributionResult
 
-    GetDistributionConfig(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error)
-    GetDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) *CloudfrontGetDistributionConfigResult
+       GetDistributionConfig(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error)
+       GetDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetDistributionConfigInput) *CloudfrontGetDistributionConfigResult
 
-    GetFieldLevelEncryption(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error)
-    GetFieldLevelEncryptionAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) *CloudfrontGetFieldLevelEncryptionResult
+       GetFieldLevelEncryption(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error)
+       GetFieldLevelEncryptionAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionInput) *CloudfrontGetFieldLevelEncryptionResult
 
-    GetFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error)
-    GetFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) *CloudfrontGetFieldLevelEncryptionConfigResult
+       GetFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error)
+       GetFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) *CloudfrontGetFieldLevelEncryptionConfigResult
 
-    GetFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error)
-    GetFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) *CloudfrontGetFieldLevelEncryptionProfileResult
+       GetFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error)
+       GetFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) *CloudfrontGetFieldLevelEncryptionProfileResult
 
-    GetFieldLevelEncryptionProfileConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error)
-    GetFieldLevelEncryptionProfileConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) *CloudfrontGetFieldLevelEncryptionProfileConfigResult
+       GetFieldLevelEncryptionProfileConfig(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error)
+       GetFieldLevelEncryptionProfileConfigAsync(ctx workflow.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) *CloudfrontGetFieldLevelEncryptionProfileConfigResult
 
-    GetInvalidation(ctx workflow.Context, input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error)
-    GetInvalidationAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *CloudfrontGetInvalidationResult
+       GetInvalidation(ctx workflow.Context, input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error)
+       GetInvalidationAsync(ctx workflow.Context, input *cloudfront.GetInvalidationInput) *CloudfrontGetInvalidationResult
 
-    GetMonitoringSubscription(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error)
-    GetMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) *CloudfrontGetMonitoringSubscriptionResult
+       GetMonitoringSubscription(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error)
+       GetMonitoringSubscriptionAsync(ctx workflow.Context, input *cloudfront.GetMonitoringSubscriptionInput) *CloudfrontGetMonitoringSubscriptionResult
 
-    GetOriginRequestPolicy(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error)
-    GetOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) *CloudfrontGetOriginRequestPolicyResult
+       GetOriginRequestPolicy(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error)
+       GetOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyInput) *CloudfrontGetOriginRequestPolicyResult
 
-    GetOriginRequestPolicyConfig(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error)
-    GetOriginRequestPolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) *CloudfrontGetOriginRequestPolicyConfigResult
+       GetOriginRequestPolicyConfig(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error)
+       GetOriginRequestPolicyConfigAsync(ctx workflow.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) *CloudfrontGetOriginRequestPolicyConfigResult
 
-    GetPublicKey(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error)
-    GetPublicKeyAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) *CloudfrontGetPublicKeyResult
+       GetPublicKey(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error)
+       GetPublicKeyAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyInput) *CloudfrontGetPublicKeyResult
 
-    GetPublicKeyConfig(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error)
-    GetPublicKeyConfigAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) *CloudfrontGetPublicKeyConfigResult
+       GetPublicKeyConfig(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error)
+       GetPublicKeyConfigAsync(ctx workflow.Context, input *cloudfront.GetPublicKeyConfigInput) *CloudfrontGetPublicKeyConfigResult
 
-    GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error)
-    GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *CloudfrontGetRealtimeLogConfigResult
+       GetRealtimeLogConfig(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error)
+       GetRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.GetRealtimeLogConfigInput) *CloudfrontGetRealtimeLogConfigResult
 
-    GetStreamingDistribution(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error)
-    GetStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *CloudfrontGetStreamingDistributionResult
+       GetStreamingDistribution(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error)
+       GetStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) *CloudfrontGetStreamingDistributionResult
 
-    GetStreamingDistributionConfig(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error)
-    GetStreamingDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) *CloudfrontGetStreamingDistributionConfigResult
+       GetStreamingDistributionConfig(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error)
+       GetStreamingDistributionConfigAsync(ctx workflow.Context, input *cloudfront.GetStreamingDistributionConfigInput) *CloudfrontGetStreamingDistributionConfigResult
 
-    ListCachePolicies(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error)
-    ListCachePoliciesAsync(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) *CloudfrontListCachePoliciesResult
+       ListCachePolicies(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error)
+       ListCachePoliciesAsync(ctx workflow.Context, input *cloudfront.ListCachePoliciesInput) *CloudfrontListCachePoliciesResult
 
-    ListCloudFrontOriginAccessIdentities(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error)
-    ListCloudFrontOriginAccessIdentitiesAsync(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) *CloudfrontListCloudFrontOriginAccessIdentitiesResult
+       ListCloudFrontOriginAccessIdentities(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error)
+       ListCloudFrontOriginAccessIdentitiesAsync(ctx workflow.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) *CloudfrontListCloudFrontOriginAccessIdentitiesResult
 
-    ListDistributions(ctx workflow.Context, input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error)
-    ListDistributionsAsync(ctx workflow.Context, input *cloudfront.ListDistributionsInput) *CloudfrontListDistributionsResult
+       ListDistributions(ctx workflow.Context, input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error)
+       ListDistributionsAsync(ctx workflow.Context, input *cloudfront.ListDistributionsInput) *CloudfrontListDistributionsResult
 
-    ListDistributionsByCachePolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error)
-    ListDistributionsByCachePolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) *CloudfrontListDistributionsByCachePolicyIdResult
+       ListDistributionsByCachePolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error)
+       ListDistributionsByCachePolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) *CloudfrontListDistributionsByCachePolicyIdResult
 
-    ListDistributionsByOriginRequestPolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error)
-    ListDistributionsByOriginRequestPolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) *CloudfrontListDistributionsByOriginRequestPolicyIdResult
+       ListDistributionsByOriginRequestPolicyId(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error)
+       ListDistributionsByOriginRequestPolicyIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) *CloudfrontListDistributionsByOriginRequestPolicyIdResult
 
-    ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error)
-    ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *CloudfrontListDistributionsByRealtimeLogConfigResult
+       ListDistributionsByRealtimeLogConfig(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error)
+       ListDistributionsByRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) *CloudfrontListDistributionsByRealtimeLogConfigResult
 
-    ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error)
-    ListDistributionsByWebACLIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) *CloudfrontListDistributionsByWebACLIdResult
+       ListDistributionsByWebACLId(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error)
+       ListDistributionsByWebACLIdAsync(ctx workflow.Context, input *cloudfront.ListDistributionsByWebACLIdInput) *CloudfrontListDistributionsByWebACLIdResult
 
-    ListFieldLevelEncryptionConfigs(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error)
-    ListFieldLevelEncryptionConfigsAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) *CloudfrontListFieldLevelEncryptionConfigsResult
+       ListFieldLevelEncryptionConfigs(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error)
+       ListFieldLevelEncryptionConfigsAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) *CloudfrontListFieldLevelEncryptionConfigsResult
 
-    ListFieldLevelEncryptionProfiles(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error)
-    ListFieldLevelEncryptionProfilesAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) *CloudfrontListFieldLevelEncryptionProfilesResult
+       ListFieldLevelEncryptionProfiles(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error)
+       ListFieldLevelEncryptionProfilesAsync(ctx workflow.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) *CloudfrontListFieldLevelEncryptionProfilesResult
 
-    ListInvalidations(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error)
-    ListInvalidationsAsync(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) *CloudfrontListInvalidationsResult
+       ListInvalidations(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error)
+       ListInvalidationsAsync(ctx workflow.Context, input *cloudfront.ListInvalidationsInput) *CloudfrontListInvalidationsResult
 
-    ListOriginRequestPolicies(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error)
-    ListOriginRequestPoliciesAsync(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) *CloudfrontListOriginRequestPoliciesResult
+       ListOriginRequestPolicies(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error)
+       ListOriginRequestPoliciesAsync(ctx workflow.Context, input *cloudfront.ListOriginRequestPoliciesInput) *CloudfrontListOriginRequestPoliciesResult
 
-    ListPublicKeys(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error)
-    ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *CloudfrontListPublicKeysResult
+       ListPublicKeys(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error)
+       ListPublicKeysAsync(ctx workflow.Context, input *cloudfront.ListPublicKeysInput) *CloudfrontListPublicKeysResult
 
-    ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error)
-    ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *CloudfrontListRealtimeLogConfigsResult
+       ListRealtimeLogConfigs(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error)
+       ListRealtimeLogConfigsAsync(ctx workflow.Context, input *cloudfront.ListRealtimeLogConfigsInput) *CloudfrontListRealtimeLogConfigsResult
 
-    ListStreamingDistributions(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error)
-    ListStreamingDistributionsAsync(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) *CloudfrontListStreamingDistributionsResult
+       ListStreamingDistributions(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error)
+       ListStreamingDistributionsAsync(ctx workflow.Context, input *cloudfront.ListStreamingDistributionsInput) *CloudfrontListStreamingDistributionsResult
 
-    ListTagsForResource(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) *CloudfrontListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *cloudfront.ListTagsForResourceInput) *CloudfrontListTagsForResourceResult
 
-    TagResource(ctx workflow.Context, input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *cloudfront.TagResourceInput) *CloudfrontTagResourceResult
+       TagResource(ctx workflow.Context, input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *cloudfront.TagResourceInput) *CloudfrontTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *cloudfront.UntagResourceInput) *CloudfrontUntagResourceResult
+       UntagResource(ctx workflow.Context, input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *cloudfront.UntagResourceInput) *CloudfrontUntagResourceResult
 
-    UpdateCachePolicy(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error)
-    UpdateCachePolicyAsync(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) *CloudfrontUpdateCachePolicyResult
+       UpdateCachePolicy(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error)
+       UpdateCachePolicyAsync(ctx workflow.Context, input *cloudfront.UpdateCachePolicyInput) *CloudfrontUpdateCachePolicyResult
 
-    UpdateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error)
-    UpdateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) *CloudfrontUpdateCloudFrontOriginAccessIdentityResult
+       UpdateCloudFrontOriginAccessIdentity(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error)
+       UpdateCloudFrontOriginAccessIdentityAsync(ctx workflow.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) *CloudfrontUpdateCloudFrontOriginAccessIdentityResult
 
-    UpdateDistribution(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error)
-    UpdateDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) *CloudfrontUpdateDistributionResult
+       UpdateDistribution(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error)
+       UpdateDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateDistributionInput) *CloudfrontUpdateDistributionResult
 
-    UpdateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error)
-    UpdateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) *CloudfrontUpdateFieldLevelEncryptionConfigResult
+       UpdateFieldLevelEncryptionConfig(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error)
+       UpdateFieldLevelEncryptionConfigAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) *CloudfrontUpdateFieldLevelEncryptionConfigResult
 
-    UpdateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error)
-    UpdateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) *CloudfrontUpdateFieldLevelEncryptionProfileResult
+       UpdateFieldLevelEncryptionProfile(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error)
+       UpdateFieldLevelEncryptionProfileAsync(ctx workflow.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) *CloudfrontUpdateFieldLevelEncryptionProfileResult
 
-    UpdateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error)
-    UpdateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) *CloudfrontUpdateOriginRequestPolicyResult
+       UpdateOriginRequestPolicy(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error)
+       UpdateOriginRequestPolicyAsync(ctx workflow.Context, input *cloudfront.UpdateOriginRequestPolicyInput) *CloudfrontUpdateOriginRequestPolicyResult
 
-    UpdatePublicKey(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error)
-    UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *CloudfrontUpdatePublicKeyResult
+       UpdatePublicKey(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error)
+       UpdatePublicKeyAsync(ctx workflow.Context, input *cloudfront.UpdatePublicKeyInput) *CloudfrontUpdatePublicKeyResult
 
-    UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error)
-    UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *CloudfrontUpdateRealtimeLogConfigResult
+       UpdateRealtimeLogConfig(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error)
+       UpdateRealtimeLogConfigAsync(ctx workflow.Context, input *cloudfront.UpdateRealtimeLogConfigInput) *CloudfrontUpdateRealtimeLogConfigResult
 
-    UpdateStreamingDistribution(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error)
-    UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudfrontUpdateStreamingDistributionResult
+       UpdateStreamingDistribution(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error)
+       UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudfrontUpdateStreamingDistributionResult
 
-    WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error
-    WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error
-    WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error}
+       WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error
+       WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error
+       WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error}
 
 type CloudfrontCreateCachePolicyResult struct {
 	Result workflow.Future

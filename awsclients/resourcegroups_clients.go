@@ -7,50 +7,50 @@ import (
 )
 
 type ResourceGroupsClient interface {
-    CreateGroup(ctx workflow.Context, input *resourcegroups.CreateGroupInput) (*resourcegroups.CreateGroupOutput, error)
-    CreateGroupAsync(ctx workflow.Context, input *resourcegroups.CreateGroupInput) *ResourcegroupsCreateGroupResult
+       CreateGroup(ctx workflow.Context, input *resourcegroups.CreateGroupInput) (*resourcegroups.CreateGroupOutput, error)
+       CreateGroupAsync(ctx workflow.Context, input *resourcegroups.CreateGroupInput) *ResourcegroupsCreateGroupResult
 
-    DeleteGroup(ctx workflow.Context, input *resourcegroups.DeleteGroupInput) (*resourcegroups.DeleteGroupOutput, error)
-    DeleteGroupAsync(ctx workflow.Context, input *resourcegroups.DeleteGroupInput) *ResourcegroupsDeleteGroupResult
+       DeleteGroup(ctx workflow.Context, input *resourcegroups.DeleteGroupInput) (*resourcegroups.DeleteGroupOutput, error)
+       DeleteGroupAsync(ctx workflow.Context, input *resourcegroups.DeleteGroupInput) *ResourcegroupsDeleteGroupResult
 
-    GetGroup(ctx workflow.Context, input *resourcegroups.GetGroupInput) (*resourcegroups.GetGroupOutput, error)
-    GetGroupAsync(ctx workflow.Context, input *resourcegroups.GetGroupInput) *ResourcegroupsGetGroupResult
+       GetGroup(ctx workflow.Context, input *resourcegroups.GetGroupInput) (*resourcegroups.GetGroupOutput, error)
+       GetGroupAsync(ctx workflow.Context, input *resourcegroups.GetGroupInput) *ResourcegroupsGetGroupResult
 
-    GetGroupConfiguration(ctx workflow.Context, input *resourcegroups.GetGroupConfigurationInput) (*resourcegroups.GetGroupConfigurationOutput, error)
-    GetGroupConfigurationAsync(ctx workflow.Context, input *resourcegroups.GetGroupConfigurationInput) *ResourcegroupsGetGroupConfigurationResult
+       GetGroupConfiguration(ctx workflow.Context, input *resourcegroups.GetGroupConfigurationInput) (*resourcegroups.GetGroupConfigurationOutput, error)
+       GetGroupConfigurationAsync(ctx workflow.Context, input *resourcegroups.GetGroupConfigurationInput) *ResourcegroupsGetGroupConfigurationResult
 
-    GetGroupQuery(ctx workflow.Context, input *resourcegroups.GetGroupQueryInput) (*resourcegroups.GetGroupQueryOutput, error)
-    GetGroupQueryAsync(ctx workflow.Context, input *resourcegroups.GetGroupQueryInput) *ResourcegroupsGetGroupQueryResult
+       GetGroupQuery(ctx workflow.Context, input *resourcegroups.GetGroupQueryInput) (*resourcegroups.GetGroupQueryOutput, error)
+       GetGroupQueryAsync(ctx workflow.Context, input *resourcegroups.GetGroupQueryInput) *ResourcegroupsGetGroupQueryResult
 
-    GetTags(ctx workflow.Context, input *resourcegroups.GetTagsInput) (*resourcegroups.GetTagsOutput, error)
-    GetTagsAsync(ctx workflow.Context, input *resourcegroups.GetTagsInput) *ResourcegroupsGetTagsResult
+       GetTags(ctx workflow.Context, input *resourcegroups.GetTagsInput) (*resourcegroups.GetTagsOutput, error)
+       GetTagsAsync(ctx workflow.Context, input *resourcegroups.GetTagsInput) *ResourcegroupsGetTagsResult
 
-    GroupResources(ctx workflow.Context, input *resourcegroups.GroupResourcesInput) (*resourcegroups.GroupResourcesOutput, error)
-    GroupResourcesAsync(ctx workflow.Context, input *resourcegroups.GroupResourcesInput) *ResourcegroupsGroupResourcesResult
+       GroupResources(ctx workflow.Context, input *resourcegroups.GroupResourcesInput) (*resourcegroups.GroupResourcesOutput, error)
+       GroupResourcesAsync(ctx workflow.Context, input *resourcegroups.GroupResourcesInput) *ResourcegroupsGroupResourcesResult
 
-    ListGroupResources(ctx workflow.Context, input *resourcegroups.ListGroupResourcesInput) (*resourcegroups.ListGroupResourcesOutput, error)
-    ListGroupResourcesAsync(ctx workflow.Context, input *resourcegroups.ListGroupResourcesInput) *ResourcegroupsListGroupResourcesResult
+       ListGroupResources(ctx workflow.Context, input *resourcegroups.ListGroupResourcesInput) (*resourcegroups.ListGroupResourcesOutput, error)
+       ListGroupResourcesAsync(ctx workflow.Context, input *resourcegroups.ListGroupResourcesInput) *ResourcegroupsListGroupResourcesResult
 
-    ListGroups(ctx workflow.Context, input *resourcegroups.ListGroupsInput) (*resourcegroups.ListGroupsOutput, error)
-    ListGroupsAsync(ctx workflow.Context, input *resourcegroups.ListGroupsInput) *ResourcegroupsListGroupsResult
+       ListGroups(ctx workflow.Context, input *resourcegroups.ListGroupsInput) (*resourcegroups.ListGroupsOutput, error)
+       ListGroupsAsync(ctx workflow.Context, input *resourcegroups.ListGroupsInput) *ResourcegroupsListGroupsResult
 
-    SearchResources(ctx workflow.Context, input *resourcegroups.SearchResourcesInput) (*resourcegroups.SearchResourcesOutput, error)
-    SearchResourcesAsync(ctx workflow.Context, input *resourcegroups.SearchResourcesInput) *ResourcegroupsSearchResourcesResult
+       SearchResources(ctx workflow.Context, input *resourcegroups.SearchResourcesInput) (*resourcegroups.SearchResourcesOutput, error)
+       SearchResourcesAsync(ctx workflow.Context, input *resourcegroups.SearchResourcesInput) *ResourcegroupsSearchResourcesResult
 
-    Tag(ctx workflow.Context, input *resourcegroups.TagInput) (*resourcegroups.TagOutput, error)
-    TagAsync(ctx workflow.Context, input *resourcegroups.TagInput) *ResourcegroupsTagResult
+       Tag(ctx workflow.Context, input *resourcegroups.TagInput) (*resourcegroups.TagOutput, error)
+       TagAsync(ctx workflow.Context, input *resourcegroups.TagInput) *ResourcegroupsTagResult
 
-    UngroupResources(ctx workflow.Context, input *resourcegroups.UngroupResourcesInput) (*resourcegroups.UngroupResourcesOutput, error)
-    UngroupResourcesAsync(ctx workflow.Context, input *resourcegroups.UngroupResourcesInput) *ResourcegroupsUngroupResourcesResult
+       UngroupResources(ctx workflow.Context, input *resourcegroups.UngroupResourcesInput) (*resourcegroups.UngroupResourcesOutput, error)
+       UngroupResourcesAsync(ctx workflow.Context, input *resourcegroups.UngroupResourcesInput) *ResourcegroupsUngroupResourcesResult
 
-    Untag(ctx workflow.Context, input *resourcegroups.UntagInput) (*resourcegroups.UntagOutput, error)
-    UntagAsync(ctx workflow.Context, input *resourcegroups.UntagInput) *ResourcegroupsUntagResult
+       Untag(ctx workflow.Context, input *resourcegroups.UntagInput) (*resourcegroups.UntagOutput, error)
+       UntagAsync(ctx workflow.Context, input *resourcegroups.UntagInput) *ResourcegroupsUntagResult
 
-    UpdateGroup(ctx workflow.Context, input *resourcegroups.UpdateGroupInput) (*resourcegroups.UpdateGroupOutput, error)
-    UpdateGroupAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupInput) *ResourcegroupsUpdateGroupResult
+       UpdateGroup(ctx workflow.Context, input *resourcegroups.UpdateGroupInput) (*resourcegroups.UpdateGroupOutput, error)
+       UpdateGroupAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupInput) *ResourcegroupsUpdateGroupResult
 
-    UpdateGroupQuery(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) (*resourcegroups.UpdateGroupQueryOutput, error)
-    UpdateGroupQueryAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) *ResourcegroupsUpdateGroupQueryResult
+       UpdateGroupQuery(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) (*resourcegroups.UpdateGroupQueryOutput, error)
+       UpdateGroupQueryAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) *ResourcegroupsUpdateGroupQueryResult
 }
 
 type ResourcegroupsCreateGroupResult struct {

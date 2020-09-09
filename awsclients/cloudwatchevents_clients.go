@@ -7,98 +7,98 @@ import (
 )
 
 type CloudWatchEventsClient interface {
-    ActivateEventSource(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) (*cloudwatchevents.ActivateEventSourceOutput, error)
-    ActivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) *CloudwatcheventsActivateEventSourceResult
+       ActivateEventSource(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) (*cloudwatchevents.ActivateEventSourceOutput, error)
+       ActivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.ActivateEventSourceInput) *CloudwatcheventsActivateEventSourceResult
 
-    CreateEventBus(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) (*cloudwatchevents.CreateEventBusOutput, error)
-    CreateEventBusAsync(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) *CloudwatcheventsCreateEventBusResult
+       CreateEventBus(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) (*cloudwatchevents.CreateEventBusOutput, error)
+       CreateEventBusAsync(ctx workflow.Context, input *cloudwatchevents.CreateEventBusInput) *CloudwatcheventsCreateEventBusResult
 
-    CreatePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) (*cloudwatchevents.CreatePartnerEventSourceOutput, error)
-    CreatePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) *CloudwatcheventsCreatePartnerEventSourceResult
+       CreatePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) (*cloudwatchevents.CreatePartnerEventSourceOutput, error)
+       CreatePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.CreatePartnerEventSourceInput) *CloudwatcheventsCreatePartnerEventSourceResult
 
-    DeactivateEventSource(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) (*cloudwatchevents.DeactivateEventSourceOutput, error)
-    DeactivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) *CloudwatcheventsDeactivateEventSourceResult
+       DeactivateEventSource(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) (*cloudwatchevents.DeactivateEventSourceOutput, error)
+       DeactivateEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeactivateEventSourceInput) *CloudwatcheventsDeactivateEventSourceResult
 
-    DeleteEventBus(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) (*cloudwatchevents.DeleteEventBusOutput, error)
-    DeleteEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) *CloudwatcheventsDeleteEventBusResult
+       DeleteEventBus(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) (*cloudwatchevents.DeleteEventBusOutput, error)
+       DeleteEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DeleteEventBusInput) *CloudwatcheventsDeleteEventBusResult
 
-    DeletePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) (*cloudwatchevents.DeletePartnerEventSourceOutput, error)
-    DeletePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) *CloudwatcheventsDeletePartnerEventSourceResult
+       DeletePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) (*cloudwatchevents.DeletePartnerEventSourceOutput, error)
+       DeletePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DeletePartnerEventSourceInput) *CloudwatcheventsDeletePartnerEventSourceResult
 
-    DeleteRule(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) (*cloudwatchevents.DeleteRuleOutput, error)
-    DeleteRuleAsync(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) *CloudwatcheventsDeleteRuleResult
+       DeleteRule(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) (*cloudwatchevents.DeleteRuleOutput, error)
+       DeleteRuleAsync(ctx workflow.Context, input *cloudwatchevents.DeleteRuleInput) *CloudwatcheventsDeleteRuleResult
 
-    DescribeEventBus(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) (*cloudwatchevents.DescribeEventBusOutput, error)
-    DescribeEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) *CloudwatcheventsDescribeEventBusResult
+       DescribeEventBus(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) (*cloudwatchevents.DescribeEventBusOutput, error)
+       DescribeEventBusAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventBusInput) *CloudwatcheventsDescribeEventBusResult
 
-    DescribeEventSource(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) (*cloudwatchevents.DescribeEventSourceOutput, error)
-    DescribeEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) *CloudwatcheventsDescribeEventSourceResult
+       DescribeEventSource(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) (*cloudwatchevents.DescribeEventSourceOutput, error)
+       DescribeEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribeEventSourceInput) *CloudwatcheventsDescribeEventSourceResult
 
-    DescribePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) (*cloudwatchevents.DescribePartnerEventSourceOutput, error)
-    DescribePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) *CloudwatcheventsDescribePartnerEventSourceResult
+       DescribePartnerEventSource(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) (*cloudwatchevents.DescribePartnerEventSourceOutput, error)
+       DescribePartnerEventSourceAsync(ctx workflow.Context, input *cloudwatchevents.DescribePartnerEventSourceInput) *CloudwatcheventsDescribePartnerEventSourceResult
 
-    DescribeRule(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) (*cloudwatchevents.DescribeRuleOutput, error)
-    DescribeRuleAsync(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) *CloudwatcheventsDescribeRuleResult
+       DescribeRule(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) (*cloudwatchevents.DescribeRuleOutput, error)
+       DescribeRuleAsync(ctx workflow.Context, input *cloudwatchevents.DescribeRuleInput) *CloudwatcheventsDescribeRuleResult
 
-    DisableRule(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) (*cloudwatchevents.DisableRuleOutput, error)
-    DisableRuleAsync(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) *CloudwatcheventsDisableRuleResult
+       DisableRule(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) (*cloudwatchevents.DisableRuleOutput, error)
+       DisableRuleAsync(ctx workflow.Context, input *cloudwatchevents.DisableRuleInput) *CloudwatcheventsDisableRuleResult
 
-    EnableRule(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) (*cloudwatchevents.EnableRuleOutput, error)
-    EnableRuleAsync(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) *CloudwatcheventsEnableRuleResult
+       EnableRule(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) (*cloudwatchevents.EnableRuleOutput, error)
+       EnableRuleAsync(ctx workflow.Context, input *cloudwatchevents.EnableRuleInput) *CloudwatcheventsEnableRuleResult
 
-    ListEventBuses(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) (*cloudwatchevents.ListEventBusesOutput, error)
-    ListEventBusesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) *CloudwatcheventsListEventBusesResult
+       ListEventBuses(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) (*cloudwatchevents.ListEventBusesOutput, error)
+       ListEventBusesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventBusesInput) *CloudwatcheventsListEventBusesResult
 
-    ListEventSources(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) (*cloudwatchevents.ListEventSourcesOutput, error)
-    ListEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) *CloudwatcheventsListEventSourcesResult
+       ListEventSources(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) (*cloudwatchevents.ListEventSourcesOutput, error)
+       ListEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListEventSourcesInput) *CloudwatcheventsListEventSourcesResult
 
-    ListPartnerEventSourceAccounts(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) (*cloudwatchevents.ListPartnerEventSourceAccountsOutput, error)
-    ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) *CloudwatcheventsListPartnerEventSourceAccountsResult
+       ListPartnerEventSourceAccounts(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) (*cloudwatchevents.ListPartnerEventSourceAccountsOutput, error)
+       ListPartnerEventSourceAccountsAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourceAccountsInput) *CloudwatcheventsListPartnerEventSourceAccountsResult
 
-    ListPartnerEventSources(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) (*cloudwatchevents.ListPartnerEventSourcesOutput, error)
-    ListPartnerEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) *CloudwatcheventsListPartnerEventSourcesResult
+       ListPartnerEventSources(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) (*cloudwatchevents.ListPartnerEventSourcesOutput, error)
+       ListPartnerEventSourcesAsync(ctx workflow.Context, input *cloudwatchevents.ListPartnerEventSourcesInput) *CloudwatcheventsListPartnerEventSourcesResult
 
-    ListRuleNamesByTarget(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) (*cloudwatchevents.ListRuleNamesByTargetOutput, error)
-    ListRuleNamesByTargetAsync(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) *CloudwatcheventsListRuleNamesByTargetResult
+       ListRuleNamesByTarget(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) (*cloudwatchevents.ListRuleNamesByTargetOutput, error)
+       ListRuleNamesByTargetAsync(ctx workflow.Context, input *cloudwatchevents.ListRuleNamesByTargetInput) *CloudwatcheventsListRuleNamesByTargetResult
 
-    ListRules(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) (*cloudwatchevents.ListRulesOutput, error)
-    ListRulesAsync(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) *CloudwatcheventsListRulesResult
+       ListRules(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) (*cloudwatchevents.ListRulesOutput, error)
+       ListRulesAsync(ctx workflow.Context, input *cloudwatchevents.ListRulesInput) *CloudwatcheventsListRulesResult
 
-    ListTagsForResource(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) (*cloudwatchevents.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) *CloudwatcheventsListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) (*cloudwatchevents.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatchevents.ListTagsForResourceInput) *CloudwatcheventsListTagsForResourceResult
 
-    ListTargetsByRule(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) (*cloudwatchevents.ListTargetsByRuleOutput, error)
-    ListTargetsByRuleAsync(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) *CloudwatcheventsListTargetsByRuleResult
+       ListTargetsByRule(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) (*cloudwatchevents.ListTargetsByRuleOutput, error)
+       ListTargetsByRuleAsync(ctx workflow.Context, input *cloudwatchevents.ListTargetsByRuleInput) *CloudwatcheventsListTargetsByRuleResult
 
-    PutEvents(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) (*cloudwatchevents.PutEventsOutput, error)
-    PutEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) *CloudwatcheventsPutEventsResult
+       PutEvents(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) (*cloudwatchevents.PutEventsOutput, error)
+       PutEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutEventsInput) *CloudwatcheventsPutEventsResult
 
-    PutPartnerEvents(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) (*cloudwatchevents.PutPartnerEventsOutput, error)
-    PutPartnerEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) *CloudwatcheventsPutPartnerEventsResult
+       PutPartnerEvents(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) (*cloudwatchevents.PutPartnerEventsOutput, error)
+       PutPartnerEventsAsync(ctx workflow.Context, input *cloudwatchevents.PutPartnerEventsInput) *CloudwatcheventsPutPartnerEventsResult
 
-    PutPermission(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) (*cloudwatchevents.PutPermissionOutput, error)
-    PutPermissionAsync(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) *CloudwatcheventsPutPermissionResult
+       PutPermission(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) (*cloudwatchevents.PutPermissionOutput, error)
+       PutPermissionAsync(ctx workflow.Context, input *cloudwatchevents.PutPermissionInput) *CloudwatcheventsPutPermissionResult
 
-    PutRule(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) (*cloudwatchevents.PutRuleOutput, error)
-    PutRuleAsync(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) *CloudwatcheventsPutRuleResult
+       PutRule(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) (*cloudwatchevents.PutRuleOutput, error)
+       PutRuleAsync(ctx workflow.Context, input *cloudwatchevents.PutRuleInput) *CloudwatcheventsPutRuleResult
 
-    PutTargets(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) (*cloudwatchevents.PutTargetsOutput, error)
-    PutTargetsAsync(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) *CloudwatcheventsPutTargetsResult
+       PutTargets(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) (*cloudwatchevents.PutTargetsOutput, error)
+       PutTargetsAsync(ctx workflow.Context, input *cloudwatchevents.PutTargetsInput) *CloudwatcheventsPutTargetsResult
 
-    RemovePermission(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) (*cloudwatchevents.RemovePermissionOutput, error)
-    RemovePermissionAsync(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) *CloudwatcheventsRemovePermissionResult
+       RemovePermission(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) (*cloudwatchevents.RemovePermissionOutput, error)
+       RemovePermissionAsync(ctx workflow.Context, input *cloudwatchevents.RemovePermissionInput) *CloudwatcheventsRemovePermissionResult
 
-    RemoveTargets(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) (*cloudwatchevents.RemoveTargetsOutput, error)
-    RemoveTargetsAsync(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) *CloudwatcheventsRemoveTargetsResult
+       RemoveTargets(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) (*cloudwatchevents.RemoveTargetsOutput, error)
+       RemoveTargetsAsync(ctx workflow.Context, input *cloudwatchevents.RemoveTargetsInput) *CloudwatcheventsRemoveTargetsResult
 
-    TagResource(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) (*cloudwatchevents.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) *CloudwatcheventsTagResourceResult
+       TagResource(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) (*cloudwatchevents.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *cloudwatchevents.TagResourceInput) *CloudwatcheventsTagResourceResult
 
-    TestEventPattern(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) (*cloudwatchevents.TestEventPatternOutput, error)
-    TestEventPatternAsync(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) *CloudwatcheventsTestEventPatternResult
+       TestEventPattern(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) (*cloudwatchevents.TestEventPatternOutput, error)
+       TestEventPatternAsync(ctx workflow.Context, input *cloudwatchevents.TestEventPatternInput) *CloudwatcheventsTestEventPatternResult
 
-    UntagResource(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) (*cloudwatchevents.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) *CloudwatcheventsUntagResourceResult
+       UntagResource(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) (*cloudwatchevents.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) *CloudwatcheventsUntagResourceResult
 }
 
 type CloudwatcheventsActivateEventSourceResult struct {

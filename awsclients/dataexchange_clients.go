@@ -7,71 +7,71 @@ import (
 )
 
 type DataExchangeClient interface {
-    CancelJob(ctx workflow.Context, input *dataexchange.CancelJobInput) (*dataexchange.CancelJobOutput, error)
-    CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobResult
+       CancelJob(ctx workflow.Context, input *dataexchange.CancelJobInput) (*dataexchange.CancelJobOutput, error)
+       CancelJobAsync(ctx workflow.Context, input *dataexchange.CancelJobInput) *DataexchangeCancelJobResult
 
-    CreateDataSet(ctx workflow.Context, input *dataexchange.CreateDataSetInput) (*dataexchange.CreateDataSetOutput, error)
-    CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetResult
+       CreateDataSet(ctx workflow.Context, input *dataexchange.CreateDataSetInput) (*dataexchange.CreateDataSetOutput, error)
+       CreateDataSetAsync(ctx workflow.Context, input *dataexchange.CreateDataSetInput) *DataexchangeCreateDataSetResult
 
-    CreateJob(ctx workflow.Context, input *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error)
-    CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobResult
+       CreateJob(ctx workflow.Context, input *dataexchange.CreateJobInput) (*dataexchange.CreateJobOutput, error)
+       CreateJobAsync(ctx workflow.Context, input *dataexchange.CreateJobInput) *DataexchangeCreateJobResult
 
-    CreateRevision(ctx workflow.Context, input *dataexchange.CreateRevisionInput) (*dataexchange.CreateRevisionOutput, error)
-    CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionResult
+       CreateRevision(ctx workflow.Context, input *dataexchange.CreateRevisionInput) (*dataexchange.CreateRevisionOutput, error)
+       CreateRevisionAsync(ctx workflow.Context, input *dataexchange.CreateRevisionInput) *DataexchangeCreateRevisionResult
 
-    DeleteAsset(ctx workflow.Context, input *dataexchange.DeleteAssetInput) (*dataexchange.DeleteAssetOutput, error)
-    DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetResult
+       DeleteAsset(ctx workflow.Context, input *dataexchange.DeleteAssetInput) (*dataexchange.DeleteAssetOutput, error)
+       DeleteAssetAsync(ctx workflow.Context, input *dataexchange.DeleteAssetInput) *DataexchangeDeleteAssetResult
 
-    DeleteDataSet(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) (*dataexchange.DeleteDataSetOutput, error)
-    DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetResult
+       DeleteDataSet(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) (*dataexchange.DeleteDataSetOutput, error)
+       DeleteDataSetAsync(ctx workflow.Context, input *dataexchange.DeleteDataSetInput) *DataexchangeDeleteDataSetResult
 
-    DeleteRevision(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error)
-    DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionResult
+       DeleteRevision(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) (*dataexchange.DeleteRevisionOutput, error)
+       DeleteRevisionAsync(ctx workflow.Context, input *dataexchange.DeleteRevisionInput) *DataexchangeDeleteRevisionResult
 
-    GetAsset(ctx workflow.Context, input *dataexchange.GetAssetInput) (*dataexchange.GetAssetOutput, error)
-    GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetResult
+       GetAsset(ctx workflow.Context, input *dataexchange.GetAssetInput) (*dataexchange.GetAssetOutput, error)
+       GetAssetAsync(ctx workflow.Context, input *dataexchange.GetAssetInput) *DataexchangeGetAssetResult
 
-    GetDataSet(ctx workflow.Context, input *dataexchange.GetDataSetInput) (*dataexchange.GetDataSetOutput, error)
-    GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetResult
+       GetDataSet(ctx workflow.Context, input *dataexchange.GetDataSetInput) (*dataexchange.GetDataSetOutput, error)
+       GetDataSetAsync(ctx workflow.Context, input *dataexchange.GetDataSetInput) *DataexchangeGetDataSetResult
 
-    GetJob(ctx workflow.Context, input *dataexchange.GetJobInput) (*dataexchange.GetJobOutput, error)
-    GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobResult
+       GetJob(ctx workflow.Context, input *dataexchange.GetJobInput) (*dataexchange.GetJobOutput, error)
+       GetJobAsync(ctx workflow.Context, input *dataexchange.GetJobInput) *DataexchangeGetJobResult
 
-    GetRevision(ctx workflow.Context, input *dataexchange.GetRevisionInput) (*dataexchange.GetRevisionOutput, error)
-    GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionResult
+       GetRevision(ctx workflow.Context, input *dataexchange.GetRevisionInput) (*dataexchange.GetRevisionOutput, error)
+       GetRevisionAsync(ctx workflow.Context, input *dataexchange.GetRevisionInput) *DataexchangeGetRevisionResult
 
-    ListDataSetRevisions(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) (*dataexchange.ListDataSetRevisionsOutput, error)
-    ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsResult
+       ListDataSetRevisions(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) (*dataexchange.ListDataSetRevisionsOutput, error)
+       ListDataSetRevisionsAsync(ctx workflow.Context, input *dataexchange.ListDataSetRevisionsInput) *DataexchangeListDataSetRevisionsResult
 
-    ListDataSets(ctx workflow.Context, input *dataexchange.ListDataSetsInput) (*dataexchange.ListDataSetsOutput, error)
-    ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsResult
+       ListDataSets(ctx workflow.Context, input *dataexchange.ListDataSetsInput) (*dataexchange.ListDataSetsOutput, error)
+       ListDataSetsAsync(ctx workflow.Context, input *dataexchange.ListDataSetsInput) *DataexchangeListDataSetsResult
 
-    ListJobs(ctx workflow.Context, input *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error)
-    ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsResult
+       ListJobs(ctx workflow.Context, input *dataexchange.ListJobsInput) (*dataexchange.ListJobsOutput, error)
+       ListJobsAsync(ctx workflow.Context, input *dataexchange.ListJobsInput) *DataexchangeListJobsResult
 
-    ListRevisionAssets(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) (*dataexchange.ListRevisionAssetsOutput, error)
-    ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsResult
+       ListRevisionAssets(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) (*dataexchange.ListRevisionAssetsOutput, error)
+       ListRevisionAssetsAsync(ctx workflow.Context, input *dataexchange.ListRevisionAssetsInput) *DataexchangeListRevisionAssetsResult
 
-    ListTagsForResource(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) (*dataexchange.ListTagsForResourceOutput, error)
-    ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceResult
+       ListTagsForResource(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) (*dataexchange.ListTagsForResourceOutput, error)
+       ListTagsForResourceAsync(ctx workflow.Context, input *dataexchange.ListTagsForResourceInput) *DataexchangeListTagsForResourceResult
 
-    StartJob(ctx workflow.Context, input *dataexchange.StartJobInput) (*dataexchange.StartJobOutput, error)
-    StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobResult
+       StartJob(ctx workflow.Context, input *dataexchange.StartJobInput) (*dataexchange.StartJobOutput, error)
+       StartJobAsync(ctx workflow.Context, input *dataexchange.StartJobInput) *DataexchangeStartJobResult
 
-    TagResource(ctx workflow.Context, input *dataexchange.TagResourceInput) (*dataexchange.TagResourceOutput, error)
-    TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceResult
+       TagResource(ctx workflow.Context, input *dataexchange.TagResourceInput) (*dataexchange.TagResourceOutput, error)
+       TagResourceAsync(ctx workflow.Context, input *dataexchange.TagResourceInput) *DataexchangeTagResourceResult
 
-    UntagResource(ctx workflow.Context, input *dataexchange.UntagResourceInput) (*dataexchange.UntagResourceOutput, error)
-    UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceResult
+       UntagResource(ctx workflow.Context, input *dataexchange.UntagResourceInput) (*dataexchange.UntagResourceOutput, error)
+       UntagResourceAsync(ctx workflow.Context, input *dataexchange.UntagResourceInput) *DataexchangeUntagResourceResult
 
-    UpdateAsset(ctx workflow.Context, input *dataexchange.UpdateAssetInput) (*dataexchange.UpdateAssetOutput, error)
-    UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetResult
+       UpdateAsset(ctx workflow.Context, input *dataexchange.UpdateAssetInput) (*dataexchange.UpdateAssetOutput, error)
+       UpdateAssetAsync(ctx workflow.Context, input *dataexchange.UpdateAssetInput) *DataexchangeUpdateAssetResult
 
-    UpdateDataSet(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) (*dataexchange.UpdateDataSetOutput, error)
-    UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetResult
+       UpdateDataSet(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) (*dataexchange.UpdateDataSetOutput, error)
+       UpdateDataSetAsync(ctx workflow.Context, input *dataexchange.UpdateDataSetInput) *DataexchangeUpdateDataSetResult
 
-    UpdateRevision(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) (*dataexchange.UpdateRevisionOutput, error)
-    UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionResult
+       UpdateRevision(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) (*dataexchange.UpdateRevisionOutput, error)
+       UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionResult
 }
 
 type DataexchangeCancelJobResult struct {
