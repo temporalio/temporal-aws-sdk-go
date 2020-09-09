@@ -16,17 +16,24 @@ var blacklistedMethods = map[string]string{
 	"Lambda": "InvokeAsync",
 }
 
+type FieldDefinition struct {
+	Name string
+	Type string
+}
+
+type StructDefinition struct {
+	Package string
+	Name    string
+	Fields  []*FieldDefinition
+}
+
 type MethodDefinition struct {
 	// Method name
 	Name string
-	// Input package name
-	InputPackage string
-	// Input structure name
-	Input string
-	// Output package name
-	OutputPackage string
-	// Output structure name
-	Output string
+	// Input structure
+	Input *StructDefinition
+	// Output structure
+	Output *StructDefinition
 }
 type InterfaceDefinition struct {
 	// Service name
@@ -38,8 +45,10 @@ type InterfaceDefinition struct {
 func (i InterfaceDefinition) Imports() []string {
 	packages := make(map[string]bool)
 	for _, method := range i.Methods {
-		packages[method.InputPackage] = true
-		packages[method.OutputPackage] = true
+		packages[method.Input.Package] = true
+		if method.Output != nil {
+			packages[method.Output.Package] = true
+		}
 	}
 	delete(packages, "")
 	result := make([]string, 0, len(packages))
@@ -183,12 +192,10 @@ func (g *AWSInterfaceVisitor) String() string {
 func (g *AWSInterfaceVisitor) visitFuncType(n *ast.FuncType) {
 	//ast.Print(g.fileSet, n.Params.List[0].Type)
 	inputExpr := n.Params.List[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-	g.currentMethod.InputPackage = inputExpr.X.(*ast.Ident).Name
-	g.currentMethod.Input = inputExpr.Sel.Name
+	g.currentMethod.Input = &StructDefinition{Package: inputExpr.X.(*ast.Ident).Name, Name: inputExpr.Sel.Name}
 	results := n.Results.List
 	if len(results) == 2 {
 		resultExpr := results[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-		g.currentMethod.OutputPackage = resultExpr.X.(*ast.Ident).Name
-		g.currentMethod.Output = resultExpr.Sel.Name
+		g.currentMethod.Output = &StructDefinition{Package: resultExpr.X.(*ast.Ident).Name, Name: resultExpr.Sel.Name}
 	}
 }

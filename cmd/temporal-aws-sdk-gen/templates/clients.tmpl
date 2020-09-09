@@ -12,28 +12,28 @@ import (
 
 type {{ $name }}Client interface {
 {{- range $i, $method := .Methods }}
-{{- $prefix := ToPrefix $method.OutputPackage }}
 {{- if HasPrefix $method.Name "Wait" }}
-{{"       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) error
+{{"       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error
 {{- else }}
-{{ "       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error)
-{{ "       "}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) *{{$prefix}}{{ $method.Name }}Result
+{{- $prefix := ToPrefix $method.Output.Package }}
+{{ "       "}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error)
+{{ "       "}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Result
 {{ end }}
 {{- end -}}
 }
 {{range $i, $method := .Methods }}
-{{- $prefix := ToPrefix $method.OutputPackage }}
-{{- if and (not (HasPrefix $method.Name "Wait")) (not (IsDuplicatedOutput $method.OutputPackage $method.Output)) }}
+{{- if not (IsDuplicatedOutput $method.Output) }}
+{{- $prefix := ToPrefix $method.Output.Package }}
 type {{ $prefix }}{{ $method.Name }}Result struct {
 	Result workflow.Future
 }
 
-func (r *{{ $prefix }}{{ $method.Name }}Result) Get(ctx workflow.Context) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
-    var output {{ $method.OutputPackage }}.{{ $method.Output }}
+func (r *{{ $prefix }}{{ $method.Name }}Result) Get(ctx workflow.Context) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
+    var output {{ $method.Output.Package }}.{{ $method.Output.Name }}
     err := r.Result.Get(ctx, &output)
     return &output, err
 }
-{{ end }}
+{{- end }}
 {{- end }}
 type {{ $name }}Stub struct {
     activities awsactivities.{{ $name }}Activities
@@ -43,23 +43,23 @@ func New{{ $name }}Stub() {{ $name }}Client {
     return &{{ $name }}Stub{}
 }
 {{- range $i, $method := .Methods }}
-{{- $prefix := ToPrefix $method.OutputPackage }}
 {{ if HasPrefix $method.Name "Wait" }}
-func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) error {
+func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
     return workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input).Get(ctx, nil)
 }
 
-func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) workflow.Future {
+func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) workflow.Future {
     return workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input)
 }
 {{ else }}
-func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
-    var output {{ $method.OutputPackage }}.{{ $method.Output }}
+{{- $prefix := ToPrefix $method.Output.Package }}
+func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
+    var output {{ $method.Output.Package }}.{{ $method.Output.Name }}
     err := workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input).Get(ctx, &output)
     return &output, err
 }
 
-func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.InputPackage }}.{{ $method.Input }}) *{{$prefix}}{{ $method.Name }}Result {
+func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Result {
     future := workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input)
     return &{{$prefix}}{{ $method.Name }}Result{Result: future}
 }

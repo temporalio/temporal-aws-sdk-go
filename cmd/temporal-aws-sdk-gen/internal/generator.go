@@ -73,8 +73,11 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 		"ToLower":   strings.ToLower,
 		"HasPrefix": strings.HasPrefix,
 		"ToPrefix":  toPrefix,
-		"IsDuplicatedOutput": func(outputPackage, output string) bool {
-			_, ok := g.outputStructs[outputPackage+output]
+		"IsDuplicatedOutput": func(output *StructDefinition) bool {
+			if output == nil {
+				return true // skip generation on nil
+			}
+			_, ok := g.outputStructs[output.Package+output.Name]
 			return ok
 		},
 	}
@@ -100,7 +103,9 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 		return err
 	}
 	for _, method := range definition.Methods {
-		g.outputStructs[method.OutputPackage+method.Output] = true
+		if method.Output != nil {
+			g.outputStructs[method.Output.Package+method.Output.Name] = true
+		}
 	}
 	fmt.Println(outputFile)
 	return nil
@@ -112,10 +117,6 @@ func (g *TemporalAWSGenerator) generateGlobal(templateFile string, outputDir str
 		"ToLower":   strings.ToLower,
 		"HasPrefix": strings.HasPrefix,
 		"ToPrefix":  toPrefix,
-		"IsDuplicatedOutput": func(outputPackage, output string) bool {
-			_, ok := g.outputStructs[outputPackage+output]
-			return ok
-		},
 	}
 
 	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(g.TemplateDir + "/" + templateFile)

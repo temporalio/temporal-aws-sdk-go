@@ -24,11 +24,11 @@ func New{{ $name }}Activities(session *session.Session, config ...*aws.Config) *
 {{- range $i, $method := .Methods }}
 
 {{ if HasPrefix $method.Name "Wait" -}}
-func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) error {
+func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
     return a.client.{{ $method.Name }}(input)
 }
 {{- else -}}
-func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.InputPackage }}.{{ $method.Input }}) (*{{ $method.OutputPackage }}.{{ $method.Output }}, error) {
+func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
     return a.client.{{ $method.Name }}(input)
 }
 {{- end }}
