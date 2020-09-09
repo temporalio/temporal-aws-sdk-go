@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediatailor"
 	"github.com/aws/aws-sdk-go/service/mediatailor/mediatailoriface"
 )
@@ -10,7 +12,8 @@ type MediaTailorActivities struct {
 	client mediatailoriface.MediaTailorAPI
 }
 
-func NewMediaTailorActivities(client mediatailoriface.MediaTailorAPI) *MediaTailorActivities {
+func NewMediaTailorActivities(session *session.Session, config... *aws.Config) *MediaTailorActivities {
+    client := mediatailor.New(session, config...)
     return &MediaTailorActivities{client: client}
 }
 

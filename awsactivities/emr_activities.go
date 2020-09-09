@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/emr"
 	"github.com/aws/aws-sdk-go/service/emr/emriface"
 )
@@ -10,7 +12,8 @@ type EMRActivities struct {
 	client emriface.EMRAPI
 }
 
-func NewEMRActivities(client emriface.EMRAPI) *EMRActivities {
+func NewEMRActivities(session *session.Session, config... *aws.Config) *EMRActivities {
+    client := emr.New(session, config...)
     return &EMRActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudhsm"
 	"github.com/aws/aws-sdk-go/service/cloudhsm/cloudhsmiface"
 )
@@ -10,7 +12,8 @@ type CloudHSMActivities struct {
 	client cloudhsmiface.CloudHSMAPI
 }
 
-func NewCloudHSMActivities(client cloudhsmiface.CloudHSMAPI) *CloudHSMActivities {
+func NewCloudHSMActivities(session *session.Session, config... *aws.Config) *CloudHSMActivities {
+    client := cloudhsm.New(session, config...)
     return &CloudHSMActivities{client: client}
 }
 

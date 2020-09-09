@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pinpoint"
 	"github.com/aws/aws-sdk-go/service/pinpoint/pinpointiface"
 )
@@ -10,7 +12,8 @@ type PinpointActivities struct {
 	client pinpointiface.PinpointAPI
 }
 
-func NewPinpointActivities(client pinpointiface.PinpointAPI) *PinpointActivities {
+func NewPinpointActivities(session *session.Session, config... *aws.Config) *PinpointActivities {
+    client := pinpoint.New(session, config...)
     return &PinpointActivities{client: client}
 }
 

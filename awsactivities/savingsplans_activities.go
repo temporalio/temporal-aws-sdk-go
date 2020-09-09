@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/savingsplans"
 	"github.com/aws/aws-sdk-go/service/savingsplans/savingsplansiface"
 )
@@ -10,7 +12,8 @@ type SavingsPlansActivities struct {
 	client savingsplansiface.SavingsPlansAPI
 }
 
-func NewSavingsPlansActivities(client savingsplansiface.SavingsPlansAPI) *SavingsPlansActivities {
+func NewSavingsPlansActivities(session *session.Session, config... *aws.Config) *SavingsPlansActivities {
+    client := savingsplans.New(session, config...)
     return &SavingsPlansActivities{client: client}
 }
 

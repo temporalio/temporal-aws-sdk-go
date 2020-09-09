@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/marketplacecatalog"
 	"github.com/aws/aws-sdk-go/service/marketplacecatalog/marketplacecatalogiface"
 )
@@ -10,7 +12,8 @@ type MarketplaceCatalogActivities struct {
 	client marketplacecatalogiface.MarketplaceCatalogAPI
 }
 
-func NewMarketplaceCatalogActivities(client marketplacecatalogiface.MarketplaceCatalogAPI) *MarketplaceCatalogActivities {
+func NewMarketplaceCatalogActivities(session *session.Session, config... *aws.Config) *MarketplaceCatalogActivities {
+    client := marketplacecatalog.New(session, config...)
     return &MarketplaceCatalogActivities{client: client}
 }
 

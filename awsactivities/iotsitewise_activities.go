@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotsitewise"
 	"github.com/aws/aws-sdk-go/service/iotsitewise/iotsitewiseiface"
 )
@@ -10,7 +12,8 @@ type IoTSiteWiseActivities struct {
 	client iotsitewiseiface.IoTSiteWiseAPI
 }
 
-func NewIoTSiteWiseActivities(client iotsitewiseiface.IoTSiteWiseAPI) *IoTSiteWiseActivities {
+func NewIoTSiteWiseActivities(session *session.Session, config... *aws.Config) *IoTSiteWiseActivities {
+    client := iotsitewise.New(session, config...)
     return &IoTSiteWiseActivities{client: client}
 }
 

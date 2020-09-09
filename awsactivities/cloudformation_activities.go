@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 	"github.com/aws/aws-sdk-go/service/cloudformation/cloudformationiface"
 )
@@ -10,7 +12,8 @@ type CloudFormationActivities struct {
 	client cloudformationiface.CloudFormationAPI
 }
 
-func NewCloudFormationActivities(client cloudformationiface.CloudFormationAPI) *CloudFormationActivities {
+func NewCloudFormationActivities(session *session.Session, config... *aws.Config) *CloudFormationActivities {
+    client := cloudformation.New(session, config...)
     return &CloudFormationActivities{client: client}
 }
 

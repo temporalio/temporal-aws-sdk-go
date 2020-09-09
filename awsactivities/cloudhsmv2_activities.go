@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudhsmv2"
 	"github.com/aws/aws-sdk-go/service/cloudhsmv2/cloudhsmv2iface"
 )
@@ -10,7 +12,8 @@ type CloudHSMV2Activities struct {
 	client cloudhsmv2iface.CloudHSMV2API
 }
 
-func NewCloudHSMV2Activities(client cloudhsmv2iface.CloudHSMV2API) *CloudHSMV2Activities {
+func NewCloudHSMV2Activities(session *session.Session, config... *aws.Config) *CloudHSMV2Activities {
+    client := cloudhsmv2.New(session, config...)
     return &CloudHSMV2Activities{client: client}
 }
 

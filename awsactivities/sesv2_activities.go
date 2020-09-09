@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sesv2"
 	"github.com/aws/aws-sdk-go/service/sesv2/sesv2iface"
 )
@@ -10,7 +12,8 @@ type SESV2Activities struct {
 	client sesv2iface.SESV2API
 }
 
-func NewSESV2Activities(client sesv2iface.SESV2API) *SESV2Activities {
+func NewSESV2Activities(session *session.Session, config... *aws.Config) *SESV2Activities {
+    client := sesv2.New(session, config...)
     return &SESV2Activities{client: client}
 }
 

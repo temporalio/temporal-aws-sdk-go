@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/frauddetector"
 	"github.com/aws/aws-sdk-go/service/frauddetector/frauddetectoriface"
 )
@@ -10,7 +12,8 @@ type FraudDetectorActivities struct {
 	client frauddetectoriface.FraudDetectorAPI
 }
 
-func NewFraudDetectorActivities(client frauddetectoriface.FraudDetectorAPI) *FraudDetectorActivities {
+func NewFraudDetectorActivities(session *session.Session, config... *aws.Config) *FraudDetectorActivities {
+    client := frauddetector.New(session, config...)
     return &FraudDetectorActivities{client: client}
 }
 

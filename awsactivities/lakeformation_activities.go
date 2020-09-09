@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lakeformation"
 	"github.com/aws/aws-sdk-go/service/lakeformation/lakeformationiface"
 )
@@ -10,7 +12,8 @@ type LakeFormationActivities struct {
 	client lakeformationiface.LakeFormationAPI
 }
 
-func NewLakeFormationActivities(client lakeformationiface.LakeFormationAPI) *LakeFormationActivities {
+func NewLakeFormationActivities(session *session.Session, config... *aws.Config) *LakeFormationActivities {
+    client := lakeformation.New(session, config...)
     return &LakeFormationActivities{client: client}
 }
 

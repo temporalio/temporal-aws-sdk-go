@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/wafv2"
 	"github.com/aws/aws-sdk-go/service/wafv2/wafv2iface"
 )
@@ -10,7 +12,8 @@ type WAFV2Activities struct {
 	client wafv2iface.WAFV2API
 }
 
-func NewWAFV2Activities(client wafv2iface.WAFV2API) *WAFV2Activities {
+func NewWAFV2Activities(session *session.Session, config... *aws.Config) *WAFV2Activities {
+    client := wafv2.New(session, config...)
     return &WAFV2Activities{client: client}
 }
 

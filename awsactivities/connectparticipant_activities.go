@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/connectparticipant"
 	"github.com/aws/aws-sdk-go/service/connectparticipant/connectparticipantiface"
 )
@@ -10,7 +12,8 @@ type ConnectParticipantActivities struct {
 	client connectparticipantiface.ConnectParticipantAPI
 }
 
-func NewConnectParticipantActivities(client connectparticipantiface.ConnectParticipantAPI) *ConnectParticipantActivities {
+func NewConnectParticipantActivities(session *session.Session, config... *aws.Config) *ConnectParticipantActivities {
+    client := connectparticipant.New(session, config...)
     return &ConnectParticipantActivities{client: client}
 }
 

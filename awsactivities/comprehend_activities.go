@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/comprehend"
 	"github.com/aws/aws-sdk-go/service/comprehend/comprehendiface"
 )
@@ -10,7 +12,8 @@ type ComprehendActivities struct {
 	client comprehendiface.ComprehendAPI
 }
 
-func NewComprehendActivities(client comprehendiface.ComprehendAPI) *ComprehendActivities {
+func NewComprehendActivities(session *session.Session, config... *aws.Config) *ComprehendActivities {
+    client := comprehend.New(session, config...)
     return &ComprehendActivities{client: client}
 }
 

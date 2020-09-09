@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/rekognition"
 	"github.com/aws/aws-sdk-go/service/rekognition/rekognitioniface"
 )
@@ -10,7 +12,8 @@ type RekognitionActivities struct {
 	client rekognitioniface.RekognitionAPI
 }
 
-func NewRekognitionActivities(client rekognitioniface.RekognitionAPI) *RekognitionActivities {
+func NewRekognitionActivities(session *session.Session, config... *aws.Config) *RekognitionActivities {
+    client := rekognition.New(session, config...)
     return &RekognitionActivities{client: client}
 }
 

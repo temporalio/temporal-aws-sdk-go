@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/outposts"
 	"github.com/aws/aws-sdk-go/service/outposts/outpostsiface"
 )
@@ -10,7 +12,8 @@ type OutpostsActivities struct {
 	client outpostsiface.OutpostsAPI
 }
 
-func NewOutpostsActivities(client outpostsiface.OutpostsAPI) *OutpostsActivities {
+func NewOutpostsActivities(session *session.Session, config... *aws.Config) *OutpostsActivities {
+    client := outposts.New(session, config...)
     return &OutpostsActivities{client: client}
 }
 

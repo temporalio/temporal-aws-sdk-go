@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticsearchservice"
 	"github.com/aws/aws-sdk-go/service/elasticsearchservice/elasticsearchserviceiface"
 )
@@ -10,7 +12,8 @@ type ElasticsearchServiceActivities struct {
 	client elasticsearchserviceiface.ElasticsearchServiceAPI
 }
 
-func NewElasticsearchServiceActivities(client elasticsearchserviceiface.ElasticsearchServiceAPI) *ElasticsearchServiceActivities {
+func NewElasticsearchServiceActivities(session *session.Session, config... *aws.Config) *ElasticsearchServiceActivities {
+    client := elasticsearchservice.New(session, config...)
     return &ElasticsearchServiceActivities{client: client}
 }
 

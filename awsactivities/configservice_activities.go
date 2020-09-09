@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/configservice"
 	"github.com/aws/aws-sdk-go/service/configservice/configserviceiface"
 )
@@ -10,7 +12,8 @@ type ConfigServiceActivities struct {
 	client configserviceiface.ConfigServiceAPI
 }
 
-func NewConfigServiceActivities(client configserviceiface.ConfigServiceAPI) *ConfigServiceActivities {
+func NewConfigServiceActivities(session *session.Session, config... *aws.Config) *ConfigServiceActivities {
+    client := configservice.New(session, config...)
     return &ConfigServiceActivities{client: client}
 }
 

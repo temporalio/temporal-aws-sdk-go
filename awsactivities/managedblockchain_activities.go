@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/managedblockchain"
 	"github.com/aws/aws-sdk-go/service/managedblockchain/managedblockchainiface"
 )
@@ -10,7 +12,8 @@ type ManagedBlockchainActivities struct {
 	client managedblockchainiface.ManagedBlockchainAPI
 }
 
-func NewManagedBlockchainActivities(client managedblockchainiface.ManagedBlockchainAPI) *ManagedBlockchainActivities {
+func NewManagedBlockchainActivities(session *session.Session, config... *aws.Config) *ManagedBlockchainActivities {
+    client := managedblockchain.New(session, config...)
     return &ManagedBlockchainActivities{client: client}
 }
 

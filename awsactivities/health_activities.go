@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/health"
 	"github.com/aws/aws-sdk-go/service/health/healthiface"
 )
@@ -10,7 +12,8 @@ type HealthActivities struct {
 	client healthiface.HealthAPI
 }
 
-func NewHealthActivities(client healthiface.HealthAPI) *HealthActivities {
+func NewHealthActivities(session *session.Session, config... *aws.Config) *HealthActivities {
+    client := health.New(session, config...)
     return &HealthActivities{client: client}
 }
 

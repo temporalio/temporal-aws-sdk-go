@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
 	"github.com/aws/aws-sdk-go/service/sqs/sqsiface"
 )
@@ -10,7 +12,8 @@ type SQSActivities struct {
 	client sqsiface.SQSAPI
 }
 
-func NewSQSActivities(client sqsiface.SQSAPI) *SQSActivities {
+func NewSQSActivities(session *session.Session, config... *aws.Config) *SQSActivities {
+    client := sqs.New(session, config...)
     return &SQSActivities{client: client}
 }
 

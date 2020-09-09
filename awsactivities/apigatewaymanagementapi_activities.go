@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/apigatewaymanagementapi"
 	"github.com/aws/aws-sdk-go/service/apigatewaymanagementapi/apigatewaymanagementapiiface"
 )
@@ -10,7 +12,8 @@ type ApiGatewayManagementApiActivities struct {
 	client apigatewaymanagementapiiface.ApiGatewayManagementApiAPI
 }
 
-func NewApiGatewayManagementApiActivities(client apigatewaymanagementapiiface.ApiGatewayManagementApiAPI) *ApiGatewayManagementApiActivities {
+func NewApiGatewayManagementApiActivities(session *session.Session, config... *aws.Config) *ApiGatewayManagementApiActivities {
+    client := apigatewaymanagementapi.New(session, config...)
     return &ApiGatewayManagementApiActivities{client: client}
 }
 

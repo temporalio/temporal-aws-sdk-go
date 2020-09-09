@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ioteventsdata"
 	"github.com/aws/aws-sdk-go/service/ioteventsdata/ioteventsdataiface"
 )
@@ -10,7 +12,8 @@ type IoTEventsDataActivities struct {
 	client ioteventsdataiface.IoTEventsDataAPI
 }
 
-func NewIoTEventsDataActivities(client ioteventsdataiface.IoTEventsDataAPI) *IoTEventsDataActivities {
+func NewIoTEventsDataActivities(session *session.Session, config... *aws.Config) *IoTEventsDataActivities {
+    client := ioteventsdata.New(session, config...)
     return &IoTEventsDataActivities{client: client}
 }
 

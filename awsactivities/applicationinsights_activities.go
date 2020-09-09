@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/applicationinsights"
 	"github.com/aws/aws-sdk-go/service/applicationinsights/applicationinsightsiface"
 )
@@ -10,7 +12,8 @@ type ApplicationInsightsActivities struct {
 	client applicationinsightsiface.ApplicationInsightsAPI
 }
 
-func NewApplicationInsightsActivities(client applicationinsightsiface.ApplicationInsightsAPI) *ApplicationInsightsActivities {
+func NewApplicationInsightsActivities(session *session.Session, config... *aws.Config) *ApplicationInsightsActivities {
+    client := applicationinsights.New(session, config...)
     return &ApplicationInsightsActivities{client: client}
 }
 

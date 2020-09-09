@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/route53resolver"
 	"github.com/aws/aws-sdk-go/service/route53resolver/route53resolveriface"
 )
@@ -10,7 +12,8 @@ type Route53ResolverActivities struct {
 	client route53resolveriface.Route53ResolverAPI
 }
 
-func NewRoute53ResolverActivities(client route53resolveriface.Route53ResolverAPI) *Route53ResolverActivities {
+func NewRoute53ResolverActivities(session *session.Session, config... *aws.Config) *Route53ResolverActivities {
+    client := route53resolver.New(session, config...)
     return &Route53ResolverActivities{client: client}
 }
 

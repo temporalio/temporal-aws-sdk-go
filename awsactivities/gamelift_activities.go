@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/gamelift"
 	"github.com/aws/aws-sdk-go/service/gamelift/gameliftiface"
 )
@@ -10,7 +12,8 @@ type GameLiftActivities struct {
 	client gameliftiface.GameLiftAPI
 }
 
-func NewGameLiftActivities(client gameliftiface.GameLiftAPI) *GameLiftActivities {
+func NewGameLiftActivities(session *session.Session, config... *aws.Config) *GameLiftActivities {
+    client := gamelift.New(session, config...)
     return &GameLiftActivities{client: client}
 }
 

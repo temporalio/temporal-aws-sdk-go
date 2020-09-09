@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/apigatewayv2"
 	"github.com/aws/aws-sdk-go/service/apigatewayv2/apigatewayv2iface"
 )
@@ -10,7 +12,8 @@ type ApiGatewayV2Activities struct {
 	client apigatewayv2iface.ApiGatewayV2API
 }
 
-func NewApiGatewayV2Activities(client apigatewayv2iface.ApiGatewayV2API) *ApiGatewayV2Activities {
+func NewApiGatewayV2Activities(session *session.Session, config... *aws.Config) *ApiGatewayV2Activities {
+    client := apigatewayv2.New(session, config...)
     return &ApiGatewayV2Activities{client: client}
 }
 

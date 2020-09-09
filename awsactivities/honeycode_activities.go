@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/honeycode"
 	"github.com/aws/aws-sdk-go/service/honeycode/honeycodeiface"
 )
@@ -10,7 +12,8 @@ type HoneycodeActivities struct {
 	client honeycodeiface.HoneycodeAPI
 }
 
-func NewHoneycodeActivities(client honeycodeiface.HoneycodeAPI) *HoneycodeActivities {
+func NewHoneycodeActivities(session *session.Session, config... *aws.Config) *HoneycodeActivities {
+    client := honeycode.New(session, config...)
     return &HoneycodeActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appflow"
 	"github.com/aws/aws-sdk-go/service/appflow/appflowiface"
 )
@@ -10,7 +12,8 @@ type AppflowActivities struct {
 	client appflowiface.AppflowAPI
 }
 
-func NewAppflowActivities(client appflowiface.AppflowAPI) *AppflowActivities {
+func NewAppflowActivities(session *session.Session, config... *aws.Config) *AppflowActivities {
+    client := appflow.New(session, config...)
     return &AppflowActivities{client: client}
 }
 

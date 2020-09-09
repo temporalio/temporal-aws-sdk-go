@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudsearch"
 	"github.com/aws/aws-sdk-go/service/cloudsearch/cloudsearchiface"
 )
@@ -10,7 +12,8 @@ type CloudSearchActivities struct {
 	client cloudsearchiface.CloudSearchAPI
 }
 
-func NewCloudSearchActivities(client cloudsearchiface.CloudSearchAPI) *CloudSearchActivities {
+func NewCloudSearchActivities(session *session.Session, config... *aws.Config) *CloudSearchActivities {
+    client := cloudsearch.New(session, config...)
     return &CloudSearchActivities{client: client}
 }
 

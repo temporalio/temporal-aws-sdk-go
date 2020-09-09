@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iot"
 	"github.com/aws/aws-sdk-go/service/iot/iotiface"
 )
@@ -10,7 +12,8 @@ type IoTActivities struct {
 	client iotiface.IoTAPI
 }
 
-func NewIoTActivities(client iotiface.IoTAPI) *IoTActivities {
+func NewIoTActivities(session *session.Session, config... *aws.Config) *IoTActivities {
+    client := iot.New(session, config...)
     return &IoTActivities{client: client}
 }
 

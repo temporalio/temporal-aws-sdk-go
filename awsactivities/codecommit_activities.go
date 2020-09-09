@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codecommit"
 	"github.com/aws/aws-sdk-go/service/codecommit/codecommitiface"
 )
@@ -10,7 +12,8 @@ type CodeCommitActivities struct {
 	client codecommitiface.CodeCommitAPI
 }
 
-func NewCodeCommitActivities(client codecommitiface.CodeCommitAPI) *CodeCommitActivities {
+func NewCodeCommitActivities(session *session.Session, config... *aws.Config) *CodeCommitActivities {
+    client := codecommit.New(session, config...)
     return &CodeCommitActivities{client: client}
 }
 

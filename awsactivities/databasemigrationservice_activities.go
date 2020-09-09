@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/databasemigrationservice"
 	"github.com/aws/aws-sdk-go/service/databasemigrationservice/databasemigrationserviceiface"
 )
@@ -10,7 +12,8 @@ type DatabaseMigrationServiceActivities struct {
 	client databasemigrationserviceiface.DatabaseMigrationServiceAPI
 }
 
-func NewDatabaseMigrationServiceActivities(client databasemigrationserviceiface.DatabaseMigrationServiceAPI) *DatabaseMigrationServiceActivities {
+func NewDatabaseMigrationServiceActivities(session *session.Session, config... *aws.Config) *DatabaseMigrationServiceActivities {
+    client := databasemigrationservice.New(session, config...)
     return &DatabaseMigrationServiceActivities{client: client}
 }
 

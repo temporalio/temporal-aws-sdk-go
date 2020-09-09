@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iot1clickdevicesservice"
 	"github.com/aws/aws-sdk-go/service/iot1clickdevicesservice/iot1clickdevicesserviceiface"
 )
@@ -10,7 +12,8 @@ type IoT1ClickDevicesServiceActivities struct {
 	client iot1clickdevicesserviceiface.IoT1ClickDevicesServiceAPI
 }
 
-func NewIoT1ClickDevicesServiceActivities(client iot1clickdevicesserviceiface.IoT1ClickDevicesServiceAPI) *IoT1ClickDevicesServiceActivities {
+func NewIoT1ClickDevicesServiceActivities(session *session.Session, config... *aws.Config) *IoT1ClickDevicesServiceActivities {
+    client := iot1clickdevicesservice.New(session, config...)
     return &IoT1ClickDevicesServiceActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/servicediscovery"
 	"github.com/aws/aws-sdk-go/service/servicediscovery/servicediscoveryiface"
 )
@@ -10,7 +12,8 @@ type ServiceDiscoveryActivities struct {
 	client servicediscoveryiface.ServiceDiscoveryAPI
 }
 
-func NewServiceDiscoveryActivities(client servicediscoveryiface.ServiceDiscoveryAPI) *ServiceDiscoveryActivities {
+func NewServiceDiscoveryActivities(session *session.Session, config... *aws.Config) *ServiceDiscoveryActivities {
+    client := servicediscovery.New(session, config...)
     return &ServiceDiscoveryActivities{client: client}
 }
 

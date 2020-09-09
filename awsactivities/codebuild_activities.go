@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codebuild"
 	"github.com/aws/aws-sdk-go/service/codebuild/codebuildiface"
 )
@@ -10,7 +12,8 @@ type CodeBuildActivities struct {
 	client codebuildiface.CodeBuildAPI
 }
 
-func NewCodeBuildActivities(client codebuildiface.CodeBuildAPI) *CodeBuildActivities {
+func NewCodeBuildActivities(session *session.Session, config... *aws.Config) *CodeBuildActivities {
+    client := codebuild.New(session, config...)
     return &CodeBuildActivities{client: client}
 }
 

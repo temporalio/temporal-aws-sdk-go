@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/eventbridge"
 	"github.com/aws/aws-sdk-go/service/eventbridge/eventbridgeiface"
 )
@@ -10,7 +12,8 @@ type EventBridgeActivities struct {
 	client eventbridgeiface.EventBridgeAPI
 }
 
-func NewEventBridgeActivities(client eventbridgeiface.EventBridgeAPI) *EventBridgeActivities {
+func NewEventBridgeActivities(session *session.Session, config... *aws.Config) *EventBridgeActivities {
+    client := eventbridge.New(session, config...)
     return &EventBridgeActivities{client: client}
 }
 

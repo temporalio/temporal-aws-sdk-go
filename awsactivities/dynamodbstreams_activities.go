@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodbstreams"
 	"github.com/aws/aws-sdk-go/service/dynamodbstreams/dynamodbstreamsiface"
 )
@@ -10,7 +12,8 @@ type DynamoDBStreamsActivities struct {
 	client dynamodbstreamsiface.DynamoDBStreamsAPI
 }
 
-func NewDynamoDBStreamsActivities(client dynamodbstreamsiface.DynamoDBStreamsAPI) *DynamoDBStreamsActivities {
+func NewDynamoDBStreamsActivities(session *session.Session, config... *aws.Config) *DynamoDBStreamsActivities {
+    client := dynamodbstreams.New(session, config...)
     return &DynamoDBStreamsActivities{client: client}
 }
 

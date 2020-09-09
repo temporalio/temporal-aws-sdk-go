@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/marketplacemetering"
 	"github.com/aws/aws-sdk-go/service/marketplacemetering/marketplacemeteringiface"
 )
@@ -10,7 +12,8 @@ type MarketplaceMeteringActivities struct {
 	client marketplacemeteringiface.MarketplaceMeteringAPI
 }
 
-func NewMarketplaceMeteringActivities(client marketplacemeteringiface.MarketplaceMeteringAPI) *MarketplaceMeteringActivities {
+func NewMarketplaceMeteringActivities(session *session.Session, config... *aws.Config) *MarketplaceMeteringActivities {
+    client := marketplacemetering.New(session, config...)
     return &MarketplaceMeteringActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/polly"
 	"github.com/aws/aws-sdk-go/service/polly/pollyiface"
 )
@@ -10,7 +12,8 @@ type PollyActivities struct {
 	client pollyiface.PollyAPI
 }
 
-func NewPollyActivities(client pollyiface.PollyAPI) *PollyActivities {
+func NewPollyActivities(session *session.Session, config... *aws.Config) *PollyActivities {
+    client := polly.New(session, config...)
     return &PollyActivities{client: client}
 }
 

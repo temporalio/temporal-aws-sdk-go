@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/aws/aws-sdk-go/service/kms/kmsiface"
 )
@@ -10,7 +12,8 @@ type KMSActivities struct {
 	client kmsiface.KMSAPI
 }
 
-func NewKMSActivities(client kmsiface.KMSAPI) *KMSActivities {
+func NewKMSActivities(session *session.Session, config... *aws.Config) *KMSActivities {
+    client := kms.New(session, config...)
     return &KMSActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/translate"
 	"github.com/aws/aws-sdk-go/service/translate/translateiface"
 )
@@ -10,7 +12,8 @@ type TranslateActivities struct {
 	client translateiface.TranslateAPI
 }
 
-func NewTranslateActivities(client translateiface.TranslateAPI) *TranslateActivities {
+func NewTranslateActivities(session *session.Session, config... *aws.Config) *TranslateActivities {
+    client := translate.New(session, config...)
     return &TranslateActivities{client: client}
 }
 

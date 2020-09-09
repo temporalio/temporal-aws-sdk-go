@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/accessanalyzer"
 	"github.com/aws/aws-sdk-go/service/accessanalyzer/accessanalyzeriface"
 )
@@ -10,7 +12,8 @@ type AccessAnalyzerActivities struct {
 	client accessanalyzeriface.AccessAnalyzerAPI
 }
 
-func NewAccessAnalyzerActivities(client accessanalyzeriface.AccessAnalyzerAPI) *AccessAnalyzerActivities {
+func NewAccessAnalyzerActivities(session *session.Session, config... *aws.Config) *AccessAnalyzerActivities {
+    client := accessanalyzer.New(session, config...)
     return &AccessAnalyzerActivities{client: client}
 }
 

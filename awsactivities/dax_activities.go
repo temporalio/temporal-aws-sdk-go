@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dax"
 	"github.com/aws/aws-sdk-go/service/dax/daxiface"
 )
@@ -10,7 +12,8 @@ type DAXActivities struct {
 	client daxiface.DAXAPI
 }
 
-func NewDAXActivities(client daxiface.DAXAPI) *DAXActivities {
+func NewDAXActivities(session *session.Session, config... *aws.Config) *DAXActivities {
+    client := dax.New(session, config...)
     return &DAXActivities{client: client}
 }
 

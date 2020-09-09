@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/acm"
 	"github.com/aws/aws-sdk-go/service/acm/acmiface"
 )
@@ -10,7 +12,8 @@ type ACMActivities struct {
 	client acmiface.ACMAPI
 }
 
-func NewACMActivities(client acmiface.ACMAPI) *ACMActivities {
+func NewACMActivities(session *session.Session, config... *aws.Config) *ACMActivities {
+    client := acm.New(session, config...)
     return &ACMActivities{client: client}
 }
 

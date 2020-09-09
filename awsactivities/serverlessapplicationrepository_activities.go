@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/serverlessapplicationrepository"
 	"github.com/aws/aws-sdk-go/service/serverlessapplicationrepository/serverlessapplicationrepositoryiface"
 )
@@ -10,7 +12,8 @@ type ServerlessApplicationRepositoryActivities struct {
 	client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI
 }
 
-func NewServerlessApplicationRepositoryActivities(client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI) *ServerlessApplicationRepositoryActivities {
+func NewServerlessApplicationRepositoryActivities(session *session.Session, config... *aws.Config) *ServerlessApplicationRepositoryActivities {
+    client := serverlessapplicationrepository.New(session, config...)
     return &ServerlessApplicationRepositoryActivities{client: client}
 }
 

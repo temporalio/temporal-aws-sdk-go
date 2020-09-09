@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/machinelearning"
 	"github.com/aws/aws-sdk-go/service/machinelearning/machinelearningiface"
 )
@@ -10,7 +12,8 @@ type MachineLearningActivities struct {
 	client machinelearningiface.MachineLearningAPI
 }
 
-func NewMachineLearningActivities(client machinelearningiface.MachineLearningAPI) *MachineLearningActivities {
+func NewMachineLearningActivities(session *session.Session, config... *aws.Config) *MachineLearningActivities {
+    client := machinelearning.New(session, config...)
     return &MachineLearningActivities{client: client}
 }
 

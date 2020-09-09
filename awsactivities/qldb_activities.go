@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/qldb"
 	"github.com/aws/aws-sdk-go/service/qldb/qldbiface"
 )
@@ -10,7 +12,8 @@ type QLDBActivities struct {
 	client qldbiface.QLDBAPI
 }
 
-func NewQLDBActivities(client qldbiface.QLDBAPI) *QLDBActivities {
+func NewQLDBActivities(session *session.Session, config... *aws.Config) *QLDBActivities {
+    client := qldb.New(session, config...)
     return &QLDBActivities{client: client}
 }
 

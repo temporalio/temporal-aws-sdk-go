@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/medialive"
 	"github.com/aws/aws-sdk-go/service/medialive/medialiveiface"
 )
@@ -10,7 +12,8 @@ type MediaLiveActivities struct {
 	client medialiveiface.MediaLiveAPI
 }
 
-func NewMediaLiveActivities(client medialiveiface.MediaLiveAPI) *MediaLiveActivities {
+func NewMediaLiveActivities(session *session.Session, config... *aws.Config) *MediaLiveActivities {
+    client := medialive.New(session, config...)
     return &MediaLiveActivities{client: client}
 }
 

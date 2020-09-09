@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/synthetics"
 	"github.com/aws/aws-sdk-go/service/synthetics/syntheticsiface"
 )
@@ -10,7 +12,8 @@ type SyntheticsActivities struct {
 	client syntheticsiface.SyntheticsAPI
 }
 
-func NewSyntheticsActivities(client syntheticsiface.SyntheticsAPI) *SyntheticsActivities {
+func NewSyntheticsActivities(session *session.Session, config... *aws.Config) *SyntheticsActivities {
+    client := synthetics.New(session, config...)
     return &SyntheticsActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediastoredata"
 	"github.com/aws/aws-sdk-go/service/mediastoredata/mediastoredataiface"
 )
@@ -10,7 +12,8 @@ type MediaStoreDataActivities struct {
 	client mediastoredataiface.MediaStoreDataAPI
 }
 
-func NewMediaStoreDataActivities(client mediastoredataiface.MediaStoreDataAPI) *MediaStoreDataActivities {
+func NewMediaStoreDataActivities(session *session.Session, config... *aws.Config) *MediaStoreDataActivities {
+    client := mediastoredata.New(session, config...)
     return &MediaStoreDataActivities{client: client}
 }
 

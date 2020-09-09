@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3control"
 	"github.com/aws/aws-sdk-go/service/s3control/s3controliface"
 )
@@ -10,7 +12,8 @@ type S3ControlActivities struct {
 	client s3controliface.S3ControlAPI
 }
 
-func NewS3ControlActivities(client s3controliface.S3ControlAPI) *S3ControlActivities {
+func NewS3ControlActivities(session *session.Session, config... *aws.Config) *S3ControlActivities {
+    client := s3control.New(session, config...)
     return &S3ControlActivities{client: client}
 }
 

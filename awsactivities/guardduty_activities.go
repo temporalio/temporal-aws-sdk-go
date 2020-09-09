@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/guardduty"
 	"github.com/aws/aws-sdk-go/service/guardduty/guarddutyiface"
 )
@@ -10,7 +12,8 @@ type GuardDutyActivities struct {
 	client guarddutyiface.GuardDutyAPI
 }
 
-func NewGuardDutyActivities(client guarddutyiface.GuardDutyAPI) *GuardDutyActivities {
+func NewGuardDutyActivities(session *session.Session, config... *aws.Config) *GuardDutyActivities {
+    client := guardduty.New(session, config...)
     return &GuardDutyActivities{client: client}
 }
 

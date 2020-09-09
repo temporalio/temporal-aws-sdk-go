@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/waf"
 	"github.com/aws/aws-sdk-go/service/waf/wafiface"
 )
@@ -10,7 +12,8 @@ type WAFActivities struct {
 	client wafiface.WAFAPI
 }
 
-func NewWAFActivities(client wafiface.WAFAPI) *WAFActivities {
+func NewWAFActivities(session *session.Session, config... *aws.Config) *WAFActivities {
+    client := waf.New(session, config...)
     return &WAFActivities{client: client}
 }
 

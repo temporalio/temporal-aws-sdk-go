@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kendra"
 	"github.com/aws/aws-sdk-go/service/kendra/kendraiface"
 )
@@ -10,7 +12,8 @@ type KendraActivities struct {
 	client kendraiface.KendraAPI
 }
 
-func NewKendraActivities(client kendraiface.KendraAPI) *KendraActivities {
+func NewKendraActivities(session *session.Session, config... *aws.Config) *KendraActivities {
+    client := kendra.New(session, config...)
     return &KendraActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/groundstation"
 	"github.com/aws/aws-sdk-go/service/groundstation/groundstationiface"
 )
@@ -10,7 +12,8 @@ type GroundStationActivities struct {
 	client groundstationiface.GroundStationAPI
 }
 
-func NewGroundStationActivities(client groundstationiface.GroundStationAPI) *GroundStationActivities {
+func NewGroundStationActivities(session *session.Session, config... *aws.Config) *GroundStationActivities {
+    client := groundstation.New(session, config...)
     return &GroundStationActivities{client: client}
 }
 

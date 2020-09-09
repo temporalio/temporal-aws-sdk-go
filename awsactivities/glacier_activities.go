@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/glacier"
 	"github.com/aws/aws-sdk-go/service/glacier/glacieriface"
 )
@@ -10,7 +12,8 @@ type GlacierActivities struct {
 	client glacieriface.GlacierAPI
 }
 
-func NewGlacierActivities(client glacieriface.GlacierAPI) *GlacierActivities {
+func NewGlacierActivities(session *session.Session, config... *aws.Config) *GlacierActivities {
+    client := glacier.New(session, config...)
     return &GlacierActivities{client: client}
 }
 

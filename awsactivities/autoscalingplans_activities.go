@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/autoscalingplans"
 	"github.com/aws/aws-sdk-go/service/autoscalingplans/autoscalingplansiface"
 )
@@ -10,7 +12,8 @@ type AutoScalingPlansActivities struct {
 	client autoscalingplansiface.AutoScalingPlansAPI
 }
 
-func NewAutoScalingPlansActivities(client autoscalingplansiface.AutoScalingPlansAPI) *AutoScalingPlansActivities {
+func NewAutoScalingPlansActivities(session *session.Session, config... *aws.Config) *AutoScalingPlansActivities {
+    client := autoscalingplans.New(session, config...)
     return &AutoScalingPlansActivities{client: client}
 }
 

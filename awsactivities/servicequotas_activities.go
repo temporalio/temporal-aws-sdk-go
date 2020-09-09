@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/servicequotas"
 	"github.com/aws/aws-sdk-go/service/servicequotas/servicequotasiface"
 )
@@ -10,7 +12,8 @@ type ServiceQuotasActivities struct {
 	client servicequotasiface.ServiceQuotasAPI
 }
 
-func NewServiceQuotasActivities(client servicequotasiface.ServiceQuotasAPI) *ServiceQuotasActivities {
+func NewServiceQuotasActivities(session *session.Session, config... *aws.Config) *ServiceQuotasActivities {
+    client := servicequotas.New(session, config...)
     return &ServiceQuotasActivities{client: client}
 }
 

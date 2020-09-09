@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/costandusagereportservice"
 	"github.com/aws/aws-sdk-go/service/costandusagereportservice/costandusagereportserviceiface"
 )
@@ -10,7 +12,8 @@ type CostandUsageReportServiceActivities struct {
 	client costandusagereportserviceiface.CostandUsageReportServiceAPI
 }
 
-func NewCostandUsageReportServiceActivities(client costandusagereportserviceiface.CostandUsageReportServiceAPI) *CostandUsageReportServiceActivities {
+func NewCostandUsageReportServiceActivities(session *session.Session, config... *aws.Config) *CostandUsageReportServiceActivities {
+    client := costandusagereportservice.New(session, config...)
     return &CostandUsageReportServiceActivities{client: client}
 }
 

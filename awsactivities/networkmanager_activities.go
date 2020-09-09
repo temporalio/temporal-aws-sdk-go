@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/networkmanager"
 	"github.com/aws/aws-sdk-go/service/networkmanager/networkmanageriface"
 )
@@ -10,7 +12,8 @@ type NetworkManagerActivities struct {
 	client networkmanageriface.NetworkManagerAPI
 }
 
-func NewNetworkManagerActivities(client networkmanageriface.NetworkManagerAPI) *NetworkManagerActivities {
+func NewNetworkManagerActivities(session *session.Session, config... *aws.Config) *NetworkManagerActivities {
+    client := networkmanager.New(session, config...)
     return &NetworkManagerActivities{client: client}
 }
 

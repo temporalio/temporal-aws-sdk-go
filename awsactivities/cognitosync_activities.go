@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cognitosync"
 	"github.com/aws/aws-sdk-go/service/cognitosync/cognitosynciface"
 )
@@ -10,7 +12,8 @@ type CognitoSyncActivities struct {
 	client cognitosynciface.CognitoSyncAPI
 }
 
-func NewCognitoSyncActivities(client cognitosynciface.CognitoSyncAPI) *CognitoSyncActivities {
+func NewCognitoSyncActivities(session *session.Session, config... *aws.Config) *CognitoSyncActivities {
+    client := cognitosync.New(session, config...)
     return &CognitoSyncActivities{client: client}
 }
 

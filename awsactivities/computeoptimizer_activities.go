@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/computeoptimizer"
 	"github.com/aws/aws-sdk-go/service/computeoptimizer/computeoptimizeriface"
 )
@@ -10,7 +12,8 @@ type ComputeOptimizerActivities struct {
 	client computeoptimizeriface.ComputeOptimizerAPI
 }
 
-func NewComputeOptimizerActivities(client computeoptimizeriface.ComputeOptimizerAPI) *ComputeOptimizerActivities {
+func NewComputeOptimizerActivities(session *session.Session, config... *aws.Config) *ComputeOptimizerActivities {
+    client := computeoptimizer.New(session, config...)
     return &ComputeOptimizerActivities{client: client}
 }
 

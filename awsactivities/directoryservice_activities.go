@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/directoryservice"
 	"github.com/aws/aws-sdk-go/service/directoryservice/directoryserviceiface"
 )
@@ -10,7 +12,8 @@ type DirectoryServiceActivities struct {
 	client directoryserviceiface.DirectoryServiceAPI
 }
 
-func NewDirectoryServiceActivities(client directoryserviceiface.DirectoryServiceAPI) *DirectoryServiceActivities {
+func NewDirectoryServiceActivities(session *session.Session, config... *aws.Config) *DirectoryServiceActivities {
+    client := directoryservice.New(session, config...)
     return &DirectoryServiceActivities{client: client}
 }
 

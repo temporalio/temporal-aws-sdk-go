@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/migrationhubconfig"
 	"github.com/aws/aws-sdk-go/service/migrationhubconfig/migrationhubconfigiface"
 )
@@ -10,7 +12,8 @@ type MigrationHubConfigActivities struct {
 	client migrationhubconfigiface.MigrationHubConfigAPI
 }
 
-func NewMigrationHubConfigActivities(client migrationhubconfigiface.MigrationHubConfigAPI) *MigrationHubConfigActivities {
+func NewMigrationHubConfigActivities(session *session.Session, config... *aws.Config) *MigrationHubConfigActivities {
+    client := migrationhubconfig.New(session, config...)
     return &MigrationHubConfigActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/robomaker"
 	"github.com/aws/aws-sdk-go/service/robomaker/robomakeriface"
 )
@@ -10,7 +12,8 @@ type RoboMakerActivities struct {
 	client robomakeriface.RoboMakerAPI
 }
 
-func NewRoboMakerActivities(client robomakeriface.RoboMakerAPI) *RoboMakerActivities {
+func NewRoboMakerActivities(session *session.Session, config... *aws.Config) *RoboMakerActivities {
+    client := robomaker.New(session, config...)
     return &RoboMakerActivities{client: client}
 }
 

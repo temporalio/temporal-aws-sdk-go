@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/rds"
 	"github.com/aws/aws-sdk-go/service/rds/rdsiface"
 )
@@ -10,7 +12,8 @@ type RDSActivities struct {
 	client rdsiface.RDSAPI
 }
 
-func NewRDSActivities(client rdsiface.RDSAPI) *RDSActivities {
+func NewRDSActivities(session *session.Session, config... *aws.Config) *RDSActivities {
+    client := rds.New(session, config...)
     return &RDSActivities{client: client}
 }
 

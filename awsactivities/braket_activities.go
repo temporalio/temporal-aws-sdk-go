@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/braket"
 	"github.com/aws/aws-sdk-go/service/braket/braketiface"
 )
@@ -10,7 +12,8 @@ type BraketActivities struct {
 	client braketiface.BraketAPI
 }
 
-func NewBraketActivities(client braketiface.BraketAPI) *BraketActivities {
+func NewBraketActivities(session *session.Session, config... *aws.Config) *BraketActivities {
+    client := braket.New(session, config...)
     return &BraketActivities{client: client}
 }
 

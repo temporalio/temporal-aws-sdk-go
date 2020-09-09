@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ebs"
 	"github.com/aws/aws-sdk-go/service/ebs/ebsiface"
 )
@@ -10,7 +12,8 @@ type EBSActivities struct {
 	client ebsiface.EBSAPI
 }
 
-func NewEBSActivities(client ebsiface.EBSAPI) *EBSActivities {
+func NewEBSActivities(session *session.Session, config... *aws.Config) *EBSActivities {
+    client := ebs.New(session, config...)
     return &EBSActivities{client: client}
 }
 

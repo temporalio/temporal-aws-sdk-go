@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/devicefarm"
 	"github.com/aws/aws-sdk-go/service/devicefarm/devicefarmiface"
 )
@@ -10,7 +12,8 @@ type DeviceFarmActivities struct {
 	client devicefarmiface.DeviceFarmAPI
 }
 
-func NewDeviceFarmActivities(client devicefarmiface.DeviceFarmAPI) *DeviceFarmActivities {
+func NewDeviceFarmActivities(session *session.Session, config... *aws.Config) *DeviceFarmActivities {
+    client := devicefarm.New(session, config...)
     return &DeviceFarmActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotjobsdataplane"
 	"github.com/aws/aws-sdk-go/service/iotjobsdataplane/iotjobsdataplaneiface"
 )
@@ -10,7 +12,8 @@ type IoTJobsDataPlaneActivities struct {
 	client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
 }
 
-func NewIoTJobsDataPlaneActivities(client iotjobsdataplaneiface.IoTJobsDataPlaneAPI) *IoTJobsDataPlaneActivities {
+func NewIoTJobsDataPlaneActivities(session *session.Session, config... *aws.Config) *IoTJobsDataPlaneActivities {
+    client := iotjobsdataplane.New(session, config...)
     return &IoTJobsDataPlaneActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediaconvert"
 	"github.com/aws/aws-sdk-go/service/mediaconvert/mediaconvertiface"
 )
@@ -10,7 +12,8 @@ type MediaConvertActivities struct {
 	client mediaconvertiface.MediaConvertAPI
 }
 
-func NewMediaConvertActivities(client mediaconvertiface.MediaConvertAPI) *MediaConvertActivities {
+func NewMediaConvertActivities(session *session.Session, config... *aws.Config) *MediaConvertActivities {
+    client := mediaconvert.New(session, config...)
     return &MediaConvertActivities{client: client}
 }
 

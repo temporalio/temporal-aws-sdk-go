@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/waf"
 	"github.com/aws/aws-sdk-go/service/wafregional"
 	"github.com/aws/aws-sdk-go/service/wafregional/wafregionaliface"
@@ -11,7 +13,8 @@ type WAFRegionalActivities struct {
 	client wafregionaliface.WAFRegionalAPI
 }
 
-func NewWAFRegionalActivities(client wafregionaliface.WAFRegionalAPI) *WAFRegionalActivities {
+func NewWAFRegionalActivities(session *session.Session, config... *aws.Config) *WAFRegionalActivities {
+    client := wafregional.New(session, config...)
     return &WAFRegionalActivities{client: client}
 }
 

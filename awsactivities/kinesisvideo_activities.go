@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kinesisvideo"
 	"github.com/aws/aws-sdk-go/service/kinesisvideo/kinesisvideoiface"
 )
@@ -10,7 +12,8 @@ type KinesisVideoActivities struct {
 	client kinesisvideoiface.KinesisVideoAPI
 }
 
-func NewKinesisVideoActivities(client kinesisvideoiface.KinesisVideoAPI) *KinesisVideoActivities {
+func NewKinesisVideoActivities(session *session.Session, config... *aws.Config) *KinesisVideoActivities {
+    client := kinesisvideo.New(session, config...)
     return &KinesisVideoActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/datasync"
 	"github.com/aws/aws-sdk-go/service/datasync/datasynciface"
 )
@@ -10,7 +12,8 @@ type DataSyncActivities struct {
 	client datasynciface.DataSyncAPI
 }
 
-func NewDataSyncActivities(client datasynciface.DataSyncAPI) *DataSyncActivities {
+func NewDataSyncActivities(session *session.Session, config... *aws.Config) *DataSyncActivities {
+    client := datasync.New(session, config...)
     return &DataSyncActivities{client: client}
 }
 

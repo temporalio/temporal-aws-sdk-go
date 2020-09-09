@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/athena"
 	"github.com/aws/aws-sdk-go/service/athena/athenaiface"
 )
@@ -10,7 +12,8 @@ type AthenaActivities struct {
 	client athenaiface.AthenaAPI
 }
 
-func NewAthenaActivities(client athenaiface.AthenaAPI) *AthenaActivities {
+func NewAthenaActivities(session *session.Session, config... *aws.Config) *AthenaActivities {
+    client := athena.New(session, config...)
     return &AthenaActivities{client: client}
 }
 

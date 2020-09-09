@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/xray"
 	"github.com/aws/aws-sdk-go/service/xray/xrayiface"
 )
@@ -10,7 +12,8 @@ type XRayActivities struct {
 	client xrayiface.XRayAPI
 }
 
-func NewXRayActivities(client xrayiface.XRayAPI) *XRayActivities {
+func NewXRayActivities(session *session.Session, config... *aws.Config) *XRayActivities {
+    client := xray.New(session, config...)
     return &XRayActivities{client: client}
 }
 

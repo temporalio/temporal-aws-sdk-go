@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ses"
 	"github.com/aws/aws-sdk-go/service/ses/sesiface"
 )
@@ -10,7 +12,8 @@ type SESActivities struct {
 	client sesiface.SESAPI
 }
 
-func NewSESActivities(client sesiface.SESAPI) *SESActivities {
+func NewSESActivities(session *session.Session, config... *aws.Config) *SESActivities {
+    client := ses.New(session, config...)
     return &SESActivities{client: client}
 }
 

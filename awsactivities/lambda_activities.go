@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lambda"
 	"github.com/aws/aws-sdk-go/service/lambda/lambdaiface"
 )
@@ -10,7 +12,8 @@ type LambdaActivities struct {
 	client lambdaiface.LambdaAPI
 }
 
-func NewLambdaActivities(client lambdaiface.LambdaAPI) *LambdaActivities {
+func NewLambdaActivities(session *session.Session, config... *aws.Config) *LambdaActivities {
+    client := lambda.New(session, config...)
     return &LambdaActivities{client: client}
 }
 

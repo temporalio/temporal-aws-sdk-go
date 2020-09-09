@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
 )
@@ -10,7 +12,8 @@ type S3Activities struct {
 	client s3iface.S3API
 }
 
-func NewS3Activities(client s3iface.S3API) *S3Activities {
+func NewS3Activities(session *session.Session, config... *aws.Config) *S3Activities {
+    client := s3.New(session, config...)
     return &S3Activities{client: client}
 }
 

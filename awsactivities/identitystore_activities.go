@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/identitystore"
 	"github.com/aws/aws-sdk-go/service/identitystore/identitystoreiface"
 )
@@ -10,7 +12,8 @@ type IdentityStoreActivities struct {
 	client identitystoreiface.IdentityStoreAPI
 }
 
-func NewIdentityStoreActivities(client identitystoreiface.IdentityStoreAPI) *IdentityStoreActivities {
+func NewIdentityStoreActivities(session *session.Session, config... *aws.Config) *IdentityStoreActivities {
+    client := identitystore.New(session, config...)
     return &IdentityStoreActivities{client: client}
 }
 

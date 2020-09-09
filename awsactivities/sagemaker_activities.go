@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sagemaker"
 	"github.com/aws/aws-sdk-go/service/sagemaker/sagemakeriface"
 )
@@ -10,7 +12,8 @@ type SageMakerActivities struct {
 	client sagemakeriface.SageMakerAPI
 }
 
-func NewSageMakerActivities(client sagemakeriface.SageMakerAPI) *SageMakerActivities {
+func NewSageMakerActivities(session *session.Session, config... *aws.Config) *SageMakerActivities {
+    client := sagemaker.New(session, config...)
     return &SageMakerActivities{client: client}
 }
 

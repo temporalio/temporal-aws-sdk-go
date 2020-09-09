@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/securityhub"
 	"github.com/aws/aws-sdk-go/service/securityhub/securityhubiface"
 )
@@ -10,7 +12,8 @@ type SecurityHubActivities struct {
 	client securityhubiface.SecurityHubAPI
 }
 
-func NewSecurityHubActivities(client securityhubiface.SecurityHubAPI) *SecurityHubActivities {
+func NewSecurityHubActivities(session *session.Session, config... *aws.Config) *SecurityHubActivities {
+    client := securityhub.New(session, config...)
     return &SecurityHubActivities{client: client}
 }
 

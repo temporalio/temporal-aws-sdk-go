@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/worklink"
 	"github.com/aws/aws-sdk-go/service/worklink/worklinkiface"
 )
@@ -10,7 +12,8 @@ type WorkLinkActivities struct {
 	client worklinkiface.WorkLinkAPI
 }
 
-func NewWorkLinkActivities(client worklinkiface.WorkLinkAPI) *WorkLinkActivities {
+func NewWorkLinkActivities(session *session.Session, config... *aws.Config) *WorkLinkActivities {
+    client := worklink.New(session, config...)
     return &WorkLinkActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/swf"
 	"github.com/aws/aws-sdk-go/service/swf/swfiface"
 )
@@ -10,7 +12,8 @@ type SWFActivities struct {
 	client swfiface.SWFAPI
 }
 
-func NewSWFActivities(client swfiface.SWFAPI) *SWFActivities {
+func NewSWFActivities(session *session.Session, config... *aws.Config) *SWFActivities {
+    client := swf.New(session, config...)
     return &SWFActivities{client: client}
 }
 

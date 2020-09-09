@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codestarnotifications"
 	"github.com/aws/aws-sdk-go/service/codestarnotifications/codestarnotificationsiface"
 )
@@ -10,7 +12,8 @@ type CodeStarNotificationsActivities struct {
 	client codestarnotificationsiface.CodeStarNotificationsAPI
 }
 
-func NewCodeStarNotificationsActivities(client codestarnotificationsiface.CodeStarNotificationsAPI) *CodeStarNotificationsActivities {
+func NewCodeStarNotificationsActivities(session *session.Session, config... *aws.Config) *CodeStarNotificationsActivities {
+    client := codestarnotifications.New(session, config...)
     return &CodeStarNotificationsActivities{client: client}
 }
 

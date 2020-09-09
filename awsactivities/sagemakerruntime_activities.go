@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sagemakerruntime"
 	"github.com/aws/aws-sdk-go/service/sagemakerruntime/sagemakerruntimeiface"
 )
@@ -10,7 +12,8 @@ type SageMakerRuntimeActivities struct {
 	client sagemakerruntimeiface.SageMakerRuntimeAPI
 }
 
-func NewSageMakerRuntimeActivities(client sagemakerruntimeiface.SageMakerRuntimeAPI) *SageMakerRuntimeActivities {
+func NewSageMakerRuntimeActivities(session *session.Session, config... *aws.Config) *SageMakerRuntimeActivities {
+    client := sagemakerruntime.New(session, config...)
     return &SageMakerRuntimeActivities{client: client}
 }
 

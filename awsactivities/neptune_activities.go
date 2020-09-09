@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/neptune"
 	"github.com/aws/aws-sdk-go/service/neptune/neptuneiface"
 )
@@ -10,7 +12,8 @@ type NeptuneActivities struct {
 	client neptuneiface.NeptuneAPI
 }
 
-func NewNeptuneActivities(client neptuneiface.NeptuneAPI) *NeptuneActivities {
+func NewNeptuneActivities(session *session.Session, config... *aws.Config) *NeptuneActivities {
+    client := neptune.New(session, config...)
     return &NeptuneActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/apigateway"
 	"github.com/aws/aws-sdk-go/service/apigateway/apigatewayiface"
 )
@@ -10,7 +12,8 @@ type APIGatewayActivities struct {
 	client apigatewayiface.APIGatewayAPI
 }
 
-func NewAPIGatewayActivities(client apigatewayiface.APIGatewayAPI) *APIGatewayActivities {
+func NewAPIGatewayActivities(session *session.Session, config... *aws.Config) *APIGatewayActivities {
+    client := apigateway.New(session, config...)
     return &APIGatewayActivities{client: client}
 }
 

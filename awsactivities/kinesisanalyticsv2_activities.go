@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kinesisanalyticsv2"
 	"github.com/aws/aws-sdk-go/service/kinesisanalyticsv2/kinesisanalyticsv2iface"
 )
@@ -10,7 +12,8 @@ type KinesisAnalyticsV2Activities struct {
 	client kinesisanalyticsv2iface.KinesisAnalyticsV2API
 }
 
-func NewKinesisAnalyticsV2Activities(client kinesisanalyticsv2iface.KinesisAnalyticsV2API) *KinesisAnalyticsV2Activities {
+func NewKinesisAnalyticsV2Activities(session *session.Session, config... *aws.Config) *KinesisAnalyticsV2Activities {
+    client := kinesisanalyticsv2.New(session, config...)
     return &KinesisAnalyticsV2Activities{client: client}
 }
 

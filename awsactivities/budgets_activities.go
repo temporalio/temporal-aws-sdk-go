@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/budgets"
 	"github.com/aws/aws-sdk-go/service/budgets/budgetsiface"
 )
@@ -10,7 +12,8 @@ type BudgetsActivities struct {
 	client budgetsiface.BudgetsAPI
 }
 
-func NewBudgetsActivities(client budgetsiface.BudgetsAPI) *BudgetsActivities {
+func NewBudgetsActivities(session *session.Session, config... *aws.Config) *BudgetsActivities {
+    client := budgets.New(session, config...)
     return &BudgetsActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/firehose"
 	"github.com/aws/aws-sdk-go/service/firehose/firehoseiface"
 )
@@ -10,7 +12,8 @@ type FirehoseActivities struct {
 	client firehoseiface.FirehoseAPI
 }
 
-func NewFirehoseActivities(client firehoseiface.FirehoseAPI) *FirehoseActivities {
+func NewFirehoseActivities(session *session.Session, config... *aws.Config) *FirehoseActivities {
+    client := firehose.New(session, config...)
     return &FirehoseActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
 )
@@ -10,7 +12,8 @@ type DynamoDBActivities struct {
 	client dynamodbiface.DynamoDBAPI
 }
 
-func NewDynamoDBActivities(client dynamodbiface.DynamoDBAPI) *DynamoDBActivities {
+func NewDynamoDBActivities(session *session.Session, config... *aws.Config) *DynamoDBActivities {
+    client := dynamodb.New(session, config...)
     return &DynamoDBActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elastictranscoder"
 	"github.com/aws/aws-sdk-go/service/elastictranscoder/elastictranscoderiface"
 )
@@ -10,7 +12,8 @@ type ElasticTranscoderActivities struct {
 	client elastictranscoderiface.ElasticTranscoderAPI
 }
 
-func NewElasticTranscoderActivities(client elastictranscoderiface.ElasticTranscoderAPI) *ElasticTranscoderActivities {
+func NewElasticTranscoderActivities(session *session.Session, config... *aws.Config) *ElasticTranscoderActivities {
+    client := elastictranscoder.New(session, config...)
     return &ElasticTranscoderActivities{client: client}
 }
 

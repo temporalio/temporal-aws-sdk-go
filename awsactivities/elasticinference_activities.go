@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticinference"
 	"github.com/aws/aws-sdk-go/service/elasticinference/elasticinferenceiface"
 )
@@ -10,7 +12,8 @@ type ElasticInferenceActivities struct {
 	client elasticinferenceiface.ElasticInferenceAPI
 }
 
-func NewElasticInferenceActivities(client elasticinferenceiface.ElasticInferenceAPI) *ElasticInferenceActivities {
+func NewElasticInferenceActivities(session *session.Session, config... *aws.Config) *ElasticInferenceActivities {
+    client := elasticinference.New(session, config...)
     return &ElasticInferenceActivities{client: client}
 }
 

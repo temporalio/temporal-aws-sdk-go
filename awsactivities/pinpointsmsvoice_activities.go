@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pinpointsmsvoice"
 	"github.com/aws/aws-sdk-go/service/pinpointsmsvoice/pinpointsmsvoiceiface"
 )
@@ -10,7 +12,8 @@ type PinpointSMSVoiceActivities struct {
 	client pinpointsmsvoiceiface.PinpointSMSVoiceAPI
 }
 
-func NewPinpointSMSVoiceActivities(client pinpointsmsvoiceiface.PinpointSMSVoiceAPI) *PinpointSMSVoiceActivities {
+func NewPinpointSMSVoiceActivities(session *session.Session, config... *aws.Config) *PinpointSMSVoiceActivities {
+    client := pinpointsmsvoice.New(session, config...)
     return &PinpointSMSVoiceActivities{client: client}
 }
 

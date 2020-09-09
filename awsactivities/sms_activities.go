@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sms"
 	"github.com/aws/aws-sdk-go/service/sms/smsiface"
 )
@@ -10,7 +12,8 @@ type SMSActivities struct {
 	client smsiface.SMSAPI
 }
 
-func NewSMSActivities(client smsiface.SMSAPI) *SMSActivities {
+func NewSMSActivities(session *session.Session, config... *aws.Config) *SMSActivities {
+    client := sms.New(session, config...)
     return &SMSActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lexmodelbuildingservice"
 	"github.com/aws/aws-sdk-go/service/lexmodelbuildingservice/lexmodelbuildingserviceiface"
 )
@@ -10,7 +12,8 @@ type LexModelBuildingServiceActivities struct {
 	client lexmodelbuildingserviceiface.LexModelBuildingServiceAPI
 }
 
-func NewLexModelBuildingServiceActivities(client lexmodelbuildingserviceiface.LexModelBuildingServiceAPI) *LexModelBuildingServiceActivities {
+func NewLexModelBuildingServiceActivities(session *session.Session, config... *aws.Config) *LexModelBuildingServiceActivities {
+    client := lexmodelbuildingservice.New(session, config...)
     return &LexModelBuildingServiceActivities{client: client}
 }
 

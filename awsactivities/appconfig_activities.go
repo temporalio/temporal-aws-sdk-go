@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appconfig"
 	"github.com/aws/aws-sdk-go/service/appconfig/appconfigiface"
 )
@@ -10,7 +12,8 @@ type AppConfigActivities struct {
 	client appconfigiface.AppConfigAPI
 }
 
-func NewAppConfigActivities(client appconfigiface.AppConfigAPI) *AppConfigActivities {
+func NewAppConfigActivities(session *session.Session, config... *aws.Config) *AppConfigActivities {
+    client := appconfig.New(session, config...)
     return &AppConfigActivities{client: client}
 }
 

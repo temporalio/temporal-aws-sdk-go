@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/servicecatalog"
 	"github.com/aws/aws-sdk-go/service/servicecatalog/servicecatalogiface"
 )
@@ -10,7 +12,8 @@ type ServiceCatalogActivities struct {
 	client servicecatalogiface.ServiceCatalogAPI
 }
 
-func NewServiceCatalogActivities(client servicecatalogiface.ServiceCatalogAPI) *ServiceCatalogActivities {
+func NewServiceCatalogActivities(session *session.Session, config... *aws.Config) *ServiceCatalogActivities {
+    client := servicecatalog.New(session, config...)
     return &ServiceCatalogActivities{client: client}
 }
 

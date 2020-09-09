@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/transcribeservice"
 	"github.com/aws/aws-sdk-go/service/transcribeservice/transcribeserviceiface"
 )
@@ -10,7 +12,8 @@ type TranscribeServiceActivities struct {
 	client transcribeserviceiface.TranscribeServiceAPI
 }
 
-func NewTranscribeServiceActivities(client transcribeserviceiface.TranscribeServiceAPI) *TranscribeServiceActivities {
+func NewTranscribeServiceActivities(session *session.Session, config... *aws.Config) *TranscribeServiceActivities {
+    client := transcribeservice.New(session, config...)
     return &TranscribeServiceActivities{client: client}
 }
 

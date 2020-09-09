@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatchevents"
 	"github.com/aws/aws-sdk-go/service/cloudwatchevents/cloudwatcheventsiface"
 )
@@ -10,7 +12,8 @@ type CloudWatchEventsActivities struct {
 	client cloudwatcheventsiface.CloudWatchEventsAPI
 }
 
-func NewCloudWatchEventsActivities(client cloudwatcheventsiface.CloudWatchEventsAPI) *CloudWatchEventsActivities {
+func NewCloudWatchEventsActivities(session *session.Session, config... *aws.Config) *CloudWatchEventsActivities {
+    client := cloudwatchevents.New(session, config...)
     return &CloudWatchEventsActivities{client: client}
 }
 

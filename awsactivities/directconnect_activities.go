@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/directconnect"
 	"github.com/aws/aws-sdk-go/service/directconnect/directconnectiface"
 )
@@ -10,7 +12,8 @@ type DirectConnectActivities struct {
 	client directconnectiface.DirectConnectAPI
 }
 
-func NewDirectConnectActivities(client directconnectiface.DirectConnectAPI) *DirectConnectActivities {
+func NewDirectConnectActivities(session *session.Session, config... *aws.Config) *DirectConnectActivities {
+    client := directconnect.New(session, config...)
     return &DirectConnectActivities{client: client}
 }
 

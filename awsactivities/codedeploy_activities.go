@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codedeploy"
 	"github.com/aws/aws-sdk-go/service/codedeploy/codedeployiface"
 )
@@ -10,7 +12,8 @@ type CodeDeployActivities struct {
 	client codedeployiface.CodeDeployAPI
 }
 
-func NewCodeDeployActivities(client codedeployiface.CodeDeployAPI) *CodeDeployActivities {
+func NewCodeDeployActivities(session *session.Session, config... *aws.Config) *CodeDeployActivities {
+    client := codedeploy.New(session, config...)
     return &CodeDeployActivities{client: client}
 }
 

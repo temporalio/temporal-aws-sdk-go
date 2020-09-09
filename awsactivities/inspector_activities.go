@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/inspector"
 	"github.com/aws/aws-sdk-go/service/inspector/inspectoriface"
 )
@@ -10,7 +12,8 @@ type InspectorActivities struct {
 	client inspectoriface.InspectorAPI
 }
 
-func NewInspectorActivities(client inspectoriface.InspectorAPI) *InspectorActivities {
+func NewInspectorActivities(session *session.Session, config... *aws.Config) *InspectorActivities {
+    client := inspector.New(session, config...)
     return &InspectorActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kinesisvideoarchivedmedia"
 	"github.com/aws/aws-sdk-go/service/kinesisvideoarchivedmedia/kinesisvideoarchivedmediaiface"
 )
@@ -10,7 +12,8 @@ type KinesisVideoArchivedMediaActivities struct {
 	client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI
 }
 
-func NewKinesisVideoArchivedMediaActivities(client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI) *KinesisVideoArchivedMediaActivities {
+func NewKinesisVideoArchivedMediaActivities(session *session.Session, config... *aws.Config) *KinesisVideoArchivedMediaActivities {
+    client := kinesisvideoarchivedmedia.New(session, config...)
     return &KinesisVideoArchivedMediaActivities{client: client}
 }
 

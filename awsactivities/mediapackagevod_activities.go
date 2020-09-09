@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediapackagevod"
 	"github.com/aws/aws-sdk-go/service/mediapackagevod/mediapackagevodiface"
 )
@@ -10,7 +12,8 @@ type MediaPackageVodActivities struct {
 	client mediapackagevodiface.MediaPackageVodAPI
 }
 
-func NewMediaPackageVodActivities(client mediapackagevodiface.MediaPackageVodAPI) *MediaPackageVodActivities {
+func NewMediaPackageVodActivities(session *session.Session, config... *aws.Config) *MediaPackageVodActivities {
+    client := mediapackagevod.New(session, config...)
     return &MediaPackageVodActivities{client: client}
 }
 

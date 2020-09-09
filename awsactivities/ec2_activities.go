@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/ec2/ec2iface"
 )
@@ -10,7 +12,8 @@ type EC2Activities struct {
 	client ec2iface.EC2API
 }
 
-func NewEC2Activities(client ec2iface.EC2API) *EC2Activities {
+func NewEC2Activities(session *session.Session, config... *aws.Config) *EC2Activities {
+    client := ec2.New(session, config...)
     return &EC2Activities{client: client}
 }
 

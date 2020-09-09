@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dataexchange"
 	"github.com/aws/aws-sdk-go/service/dataexchange/dataexchangeiface"
 )
@@ -10,7 +12,8 @@ type DataExchangeActivities struct {
 	client dataexchangeiface.DataExchangeAPI
 }
 
-func NewDataExchangeActivities(client dataexchangeiface.DataExchangeAPI) *DataExchangeActivities {
+func NewDataExchangeActivities(session *session.Session, config... *aws.Config) *DataExchangeActivities {
+    client := dataexchange.New(session, config...)
     return &DataExchangeActivities{client: client}
 }
 

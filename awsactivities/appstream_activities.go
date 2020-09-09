@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appstream"
 	"github.com/aws/aws-sdk-go/service/appstream/appstreamiface"
 )
@@ -10,7 +12,8 @@ type AppStreamActivities struct {
 	client appstreamiface.AppStreamAPI
 }
 
-func NewAppStreamActivities(client appstreamiface.AppStreamAPI) *AppStreamActivities {
+func NewAppStreamActivities(session *session.Session, config... *aws.Config) *AppStreamActivities {
+    client := appstream.New(session, config...)
     return &AppStreamActivities{client: client}
 }
 

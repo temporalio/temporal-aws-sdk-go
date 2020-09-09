@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediaconnect"
 	"github.com/aws/aws-sdk-go/service/mediaconnect/mediaconnectiface"
 )
@@ -10,7 +12,8 @@ type MediaConnectActivities struct {
 	client mediaconnectiface.MediaConnectAPI
 }
 
-func NewMediaConnectActivities(client mediaconnectiface.MediaConnectAPI) *MediaConnectActivities {
+func NewMediaConnectActivities(session *session.Session, config... *aws.Config) *MediaConnectActivities {
+    client := mediaconnect.New(session, config...)
     return &MediaConnectActivities{client: client}
 }
 

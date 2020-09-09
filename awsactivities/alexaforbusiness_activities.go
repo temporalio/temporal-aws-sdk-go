@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/alexaforbusiness"
 	"github.com/aws/aws-sdk-go/service/alexaforbusiness/alexaforbusinessiface"
 )
@@ -10,7 +12,8 @@ type AlexaForBusinessActivities struct {
 	client alexaforbusinessiface.AlexaForBusinessAPI
 }
 
-func NewAlexaForBusinessActivities(client alexaforbusinessiface.AlexaForBusinessAPI) *AlexaForBusinessActivities {
+func NewAlexaForBusinessActivities(session *session.Session, config... *aws.Config) *AlexaForBusinessActivities {
+    client := alexaforbusiness.New(session, config...)
     return &AlexaForBusinessActivities{client: client}
 }
 

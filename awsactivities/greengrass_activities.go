@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/greengrass"
 	"github.com/aws/aws-sdk-go/service/greengrass/greengrassiface"
 )
@@ -10,7 +12,8 @@ type GreengrassActivities struct {
 	client greengrassiface.GreengrassAPI
 }
 
-func NewGreengrassActivities(client greengrassiface.GreengrassAPI) *GreengrassActivities {
+func NewGreengrassActivities(session *session.Session, config... *aws.Config) *GreengrassActivities {
+    client := greengrass.New(session, config...)
     return &GreengrassActivities{client: client}
 }
 

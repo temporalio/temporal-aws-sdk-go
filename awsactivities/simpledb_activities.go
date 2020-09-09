@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/simpledb"
 	"github.com/aws/aws-sdk-go/service/simpledb/simpledbiface"
 )
@@ -10,7 +12,8 @@ type SimpleDBActivities struct {
 	client simpledbiface.SimpleDBAPI
 }
 
-func NewSimpleDBActivities(client simpledbiface.SimpleDBAPI) *SimpleDBActivities {
+func NewSimpleDBActivities(session *session.Session, config... *aws.Config) *SimpleDBActivities {
+    client := simpledb.New(session, config...)
     return &SimpleDBActivities{client: client}
 }
 

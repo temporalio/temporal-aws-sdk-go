@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/chime"
 	"github.com/aws/aws-sdk-go/service/chime/chimeiface"
 )
@@ -10,7 +12,8 @@ type ChimeActivities struct {
 	client chimeiface.ChimeAPI
 }
 
-func NewChimeActivities(client chimeiface.ChimeAPI) *ChimeActivities {
+func NewChimeActivities(session *session.Session, config... *aws.Config) *ChimeActivities {
+    client := chime.New(session, config...)
     return &ChimeActivities{client: client}
 }
 

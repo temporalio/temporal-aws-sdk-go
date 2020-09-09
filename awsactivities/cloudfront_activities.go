@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudfront"
 	"github.com/aws/aws-sdk-go/service/cloudfront/cloudfrontiface"
 )
@@ -10,7 +12,8 @@ type CloudFrontActivities struct {
 	client cloudfrontiface.CloudFrontAPI
 }
 
-func NewCloudFrontActivities(client cloudfrontiface.CloudFrontAPI) *CloudFrontActivities {
+func NewCloudFrontActivities(session *session.Session, config... *aws.Config) *CloudFrontActivities {
+    client := cloudfront.New(session, config...)
     return &CloudFrontActivities{client: client}
 }
 

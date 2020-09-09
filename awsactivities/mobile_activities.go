@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mobile"
 	"github.com/aws/aws-sdk-go/service/mobile/mobileiface"
 )
@@ -10,7 +12,8 @@ type MobileActivities struct {
 	client mobileiface.MobileAPI
 }
 
-func NewMobileActivities(client mobileiface.MobileAPI) *MobileActivities {
+func NewMobileActivities(session *session.Session, config... *aws.Config) *MobileActivities {
+    client := mobile.New(session, config...)
     return &MobileActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/costexplorer"
 	"github.com/aws/aws-sdk-go/service/costexplorer/costexploreriface"
 )
@@ -10,7 +12,8 @@ type CostExplorerActivities struct {
 	client costexploreriface.CostExplorerAPI
 }
 
-func NewCostExplorerActivities(client costexploreriface.CostExplorerAPI) *CostExplorerActivities {
+func NewCostExplorerActivities(session *session.Session, config... *aws.Config) *CostExplorerActivities {
+    client := costexplorer.New(session, config...)
     return &CostExplorerActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lightsail"
 	"github.com/aws/aws-sdk-go/service/lightsail/lightsailiface"
 )
@@ -10,7 +12,8 @@ type LightsailActivities struct {
 	client lightsailiface.LightsailAPI
 }
 
-func NewLightsailActivities(client lightsailiface.LightsailAPI) *LightsailActivities {
+func NewLightsailActivities(session *session.Session, config... *aws.Config) *LightsailActivities {
+    client := lightsail.New(session, config...)
     return &LightsailActivities{client: client}
 }
 

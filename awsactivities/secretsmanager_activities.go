@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/secretsmanager"
 	"github.com/aws/aws-sdk-go/service/secretsmanager/secretsmanageriface"
 )
@@ -10,7 +12,8 @@ type SecretsManagerActivities struct {
 	client secretsmanageriface.SecretsManagerAPI
 }
 
-func NewSecretsManagerActivities(client secretsmanageriface.SecretsManagerAPI) *SecretsManagerActivities {
+func NewSecretsManagerActivities(session *session.Session, config... *aws.Config) *SecretsManagerActivities {
+    client := secretsmanager.New(session, config...)
     return &SecretsManagerActivities{client: client}
 }
 

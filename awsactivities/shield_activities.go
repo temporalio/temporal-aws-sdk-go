@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/shield"
 	"github.com/aws/aws-sdk-go/service/shield/shieldiface"
 )
@@ -10,7 +12,8 @@ type ShieldActivities struct {
 	client shieldiface.ShieldAPI
 }
 
-func NewShieldActivities(client shieldiface.ShieldAPI) *ShieldActivities {
+func NewShieldActivities(session *session.Session, config... *aws.Config) *ShieldActivities {
+    client := shield.New(session, config...)
     return &ShieldActivities{client: client}
 }
 

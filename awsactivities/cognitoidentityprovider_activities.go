@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cognitoidentityprovider"
 	"github.com/aws/aws-sdk-go/service/cognitoidentityprovider/cognitoidentityprovideriface"
 )
@@ -10,7 +12,8 @@ type CognitoIdentityProviderActivities struct {
 	client cognitoidentityprovideriface.CognitoIdentityProviderAPI
 }
 
-func NewCognitoIdentityProviderActivities(client cognitoidentityprovideriface.CognitoIdentityProviderAPI) *CognitoIdentityProviderActivities {
+func NewCognitoIdentityProviderActivities(session *session.Session, config... *aws.Config) *CognitoIdentityProviderActivities {
+    client := cognitoidentityprovider.New(session, config...)
     return &CognitoIdentityProviderActivities{client: client}
 }
 

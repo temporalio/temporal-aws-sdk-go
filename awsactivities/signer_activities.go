@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/signer"
 	"github.com/aws/aws-sdk-go/service/signer/signeriface"
 )
@@ -10,7 +12,8 @@ type SignerActivities struct {
 	client signeriface.SignerAPI
 }
 
-func NewSignerActivities(client signeriface.SignerAPI) *SignerActivities {
+func NewSignerActivities(session *session.Session, config... *aws.Config) *SignerActivities {
+    client := signer.New(session, config...)
     return &SignerActivities{client: client}
 }
 

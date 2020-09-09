@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudtrail"
 	"github.com/aws/aws-sdk-go/service/cloudtrail/cloudtrailiface"
 )
@@ -10,7 +12,8 @@ type CloudTrailActivities struct {
 	client cloudtrailiface.CloudTrailAPI
 }
 
-func NewCloudTrailActivities(client cloudtrailiface.CloudTrailAPI) *CloudTrailActivities {
+func NewCloudTrailActivities(session *session.Session, config... *aws.Config) *CloudTrailActivities {
+    client := cloudtrail.New(session, config...)
     return &CloudTrailActivities{client: client}
 }
 

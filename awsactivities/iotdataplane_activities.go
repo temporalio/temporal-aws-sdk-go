@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotdataplane"
 	"github.com/aws/aws-sdk-go/service/iotdataplane/iotdataplaneiface"
 )
@@ -10,7 +12,8 @@ type IoTDataPlaneActivities struct {
 	client iotdataplaneiface.IoTDataPlaneAPI
 }
 
-func NewIoTDataPlaneActivities(client iotdataplaneiface.IoTDataPlaneAPI) *IoTDataPlaneActivities {
+func NewIoTDataPlaneActivities(session *session.Session, config... *aws.Config) *IoTDataPlaneActivities {
+    client := iotdataplane.New(session, config...)
     return &IoTDataPlaneActivities{client: client}
 }
 

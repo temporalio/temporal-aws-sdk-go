@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/textract"
 	"github.com/aws/aws-sdk-go/service/textract/textractiface"
 )
@@ -10,7 +12,8 @@ type TextractActivities struct {
 	client textractiface.TextractAPI
 }
 
-func NewTextractActivities(client textractiface.TextractAPI) *TextractActivities {
+func NewTextractActivities(session *session.Session, config... *aws.Config) *TextractActivities {
+    client := textract.New(session, config...)
     return &TextractActivities{client: client}
 }
 

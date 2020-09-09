@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/redshift"
 	"github.com/aws/aws-sdk-go/service/redshift/redshiftiface"
 )
@@ -10,7 +12,8 @@ type RedshiftActivities struct {
 	client redshiftiface.RedshiftAPI
 }
 
-func NewRedshiftActivities(client redshiftiface.RedshiftAPI) *RedshiftActivities {
+func NewRedshiftActivities(session *session.Session, config... *aws.Config) *RedshiftActivities {
+    client := redshift.New(session, config...)
     return &RedshiftActivities{client: client}
 }
 

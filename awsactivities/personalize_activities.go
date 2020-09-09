@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/personalize"
 	"github.com/aws/aws-sdk-go/service/personalize/personalizeiface"
 )
@@ -10,7 +12,8 @@ type PersonalizeActivities struct {
 	client personalizeiface.PersonalizeAPI
 }
 
-func NewPersonalizeActivities(client personalizeiface.PersonalizeAPI) *PersonalizeActivities {
+func NewPersonalizeActivities(session *session.Session, config... *aws.Config) *PersonalizeActivities {
+    client := personalize.New(session, config...)
     return &PersonalizeActivities{client: client}
 }
 

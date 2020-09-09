@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/globalaccelerator"
 	"github.com/aws/aws-sdk-go/service/globalaccelerator/globalacceleratoriface"
 )
@@ -10,7 +12,8 @@ type GlobalAcceleratorActivities struct {
 	client globalacceleratoriface.GlobalAcceleratorAPI
 }
 
-func NewGlobalAcceleratorActivities(client globalacceleratoriface.GlobalAcceleratorAPI) *GlobalAcceleratorActivities {
+func NewGlobalAcceleratorActivities(session *session.Session, config... *aws.Config) *GlobalAcceleratorActivities {
+    client := globalaccelerator.New(session, config...)
     return &GlobalAcceleratorActivities{client: client}
 }
 

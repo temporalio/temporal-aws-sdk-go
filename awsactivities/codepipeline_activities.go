@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codepipeline"
 	"github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface"
 )
@@ -10,7 +12,8 @@ type CodePipelineActivities struct {
 	client codepipelineiface.CodePipelineAPI
 }
 
-func NewCodePipelineActivities(client codepipelineiface.CodePipelineAPI) *CodePipelineActivities {
+func NewCodePipelineActivities(session *session.Session, config... *aws.Config) *CodePipelineActivities {
+    client := codepipeline.New(session, config...)
     return &CodePipelineActivities{client: client}
 }
 

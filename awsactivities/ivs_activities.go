@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ivs"
 	"github.com/aws/aws-sdk-go/service/ivs/ivsiface"
 )
@@ -10,7 +12,8 @@ type IVSActivities struct {
 	client ivsiface.IVSAPI
 }
 
-func NewIVSActivities(client ivsiface.IVSAPI) *IVSActivities {
+func NewIVSActivities(session *session.Session, config... *aws.Config) *IVSActivities {
+    client := ivs.New(session, config...)
     return &IVSActivities{client: client}
 }
 

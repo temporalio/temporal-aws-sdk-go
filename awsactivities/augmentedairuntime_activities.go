@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/augmentedairuntime"
 	"github.com/aws/aws-sdk-go/service/augmentedairuntime/augmentedairuntimeiface"
 )
@@ -10,7 +12,8 @@ type AugmentedAIRuntimeActivities struct {
 	client augmentedairuntimeiface.AugmentedAIRuntimeAPI
 }
 
-func NewAugmentedAIRuntimeActivities(client augmentedairuntimeiface.AugmentedAIRuntimeAPI) *AugmentedAIRuntimeActivities {
+func NewAugmentedAIRuntimeActivities(session *session.Session, config... *aws.Config) *AugmentedAIRuntimeActivities {
+    client := augmentedairuntime.New(session, config...)
     return &AugmentedAIRuntimeActivities{client: client}
 }
 

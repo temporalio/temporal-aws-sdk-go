@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/storagegateway"
 	"github.com/aws/aws-sdk-go/service/storagegateway/storagegatewayiface"
 )
@@ -10,7 +12,8 @@ type StorageGatewayActivities struct {
 	client storagegatewayiface.StorageGatewayAPI
 }
 
-func NewStorageGatewayActivities(client storagegatewayiface.StorageGatewayAPI) *StorageGatewayActivities {
+func NewStorageGatewayActivities(session *session.Session, config... *aws.Config) *StorageGatewayActivities {
+    client := storagegateway.New(session, config...)
     return &StorageGatewayActivities{client: client}
 }
 

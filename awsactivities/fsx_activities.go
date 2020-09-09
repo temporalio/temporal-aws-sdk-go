@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/fsx"
 	"github.com/aws/aws-sdk-go/service/fsx/fsxiface"
 )
@@ -10,7 +12,8 @@ type FSxActivities struct {
 	client fsxiface.FSxAPI
 }
 
-func NewFSxActivities(client fsxiface.FSxAPI) *FSxActivities {
+func NewFSxActivities(session *session.Session, config... *aws.Config) *FSxActivities {
+    client := fsx.New(session, config...)
     return &FSxActivities{client: client}
 }
 

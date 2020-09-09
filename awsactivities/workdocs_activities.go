@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/workdocs"
 	"github.com/aws/aws-sdk-go/service/workdocs/workdocsiface"
 )
@@ -10,7 +12,8 @@ type WorkDocsActivities struct {
 	client workdocsiface.WorkDocsAPI
 }
 
-func NewWorkDocsActivities(client workdocsiface.WorkDocsAPI) *WorkDocsActivities {
+func NewWorkDocsActivities(session *session.Session, config... *aws.Config) *WorkDocsActivities {
+    client := workdocs.New(session, config...)
     return &WorkDocsActivities{client: client}
 }
 

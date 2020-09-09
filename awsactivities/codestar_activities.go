@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codestar"
 	"github.com/aws/aws-sdk-go/service/codestar/codestariface"
 )
@@ -10,7 +12,8 @@ type CodeStarActivities struct {
 	client codestariface.CodeStarAPI
 }
 
-func NewCodeStarActivities(client codestariface.CodeStarAPI) *CodeStarActivities {
+func NewCodeStarActivities(session *session.Session, config... *aws.Config) *CodeStarActivities {
+    client := codestar.New(session, config...)
     return &CodeStarActivities{client: client}
 }
 

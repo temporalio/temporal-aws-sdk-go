@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dlm"
 	"github.com/aws/aws-sdk-go/service/dlm/dlmiface"
 )
@@ -10,7 +12,8 @@ type DLMActivities struct {
 	client dlmiface.DLMAPI
 }
 
-func NewDLMActivities(client dlmiface.DLMAPI) *DLMActivities {
+func NewDLMActivities(session *session.Session, config... *aws.Config) *DLMActivities {
+    client := dlm.New(session, config...)
     return &DLMActivities{client: client}
 }
 

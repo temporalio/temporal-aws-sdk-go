@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sfn"
 	"github.com/aws/aws-sdk-go/service/sfn/sfniface"
 )
@@ -10,7 +12,8 @@ type SFNActivities struct {
 	client sfniface.SFNAPI
 }
 
-func NewSFNActivities(client sfniface.SFNAPI) *SFNActivities {
+func NewSFNActivities(session *session.Session, config... *aws.Config) *SFNActivities {
+    client := sfn.New(session, config...)
     return &SFNActivities{client: client}
 }
 

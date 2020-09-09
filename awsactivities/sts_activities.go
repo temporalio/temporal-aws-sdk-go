@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sts"
 	"github.com/aws/aws-sdk-go/service/sts/stsiface"
 )
@@ -10,7 +12,8 @@ type STSActivities struct {
 	client stsiface.STSAPI
 }
 
-func NewSTSActivities(client stsiface.STSAPI) *STSActivities {
+func NewSTSActivities(session *session.Session, config... *aws.Config) *STSActivities {
+    client := sts.New(session, config...)
     return &STSActivities{client: client}
 }
 

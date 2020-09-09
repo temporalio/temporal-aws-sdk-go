@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/imagebuilder"
 	"github.com/aws/aws-sdk-go/service/imagebuilder/imagebuilderiface"
 )
@@ -10,7 +12,8 @@ type ImagebuilderActivities struct {
 	client imagebuilderiface.ImagebuilderAPI
 }
 
-func NewImagebuilderActivities(client imagebuilderiface.ImagebuilderAPI) *ImagebuilderActivities {
+func NewImagebuilderActivities(session *session.Session, config... *aws.Config) *ImagebuilderActivities {
+    client := imagebuilder.New(session, config...)
     return &ImagebuilderActivities{client: client}
 }
 

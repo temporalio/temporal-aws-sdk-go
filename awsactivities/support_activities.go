@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/support"
 	"github.com/aws/aws-sdk-go/service/support/supportiface"
 )
@@ -10,7 +12,8 @@ type SupportActivities struct {
 	client supportiface.SupportAPI
 }
 
-func NewSupportActivities(client supportiface.SupportAPI) *SupportActivities {
+func NewSupportActivities(session *session.Session, config... *aws.Config) *SupportActivities {
+    client := support.New(session, config...)
     return &SupportActivities{client: client}
 }
 

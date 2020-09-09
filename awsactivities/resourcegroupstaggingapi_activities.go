@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/resourcegroupstaggingapi"
 	"github.com/aws/aws-sdk-go/service/resourcegroupstaggingapi/resourcegroupstaggingapiiface"
 )
@@ -10,7 +12,8 @@ type ResourceGroupsTaggingAPIActivities struct {
 	client resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI
 }
 
-func NewResourceGroupsTaggingAPIActivities(client resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI) *ResourceGroupsTaggingAPIActivities {
+func NewResourceGroupsTaggingAPIActivities(session *session.Session, config... *aws.Config) *ResourceGroupsTaggingAPIActivities {
+    client := resourcegroupstaggingapi.New(session, config...)
     return &ResourceGroupsTaggingAPIActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pricing"
 	"github.com/aws/aws-sdk-go/service/pricing/pricingiface"
 )
@@ -10,7 +12,8 @@ type PricingActivities struct {
 	client pricingiface.PricingAPI
 }
 
-func NewPricingActivities(client pricingiface.PricingAPI) *PricingActivities {
+func NewPricingActivities(session *session.Session, config... *aws.Config) *PricingActivities {
+    client := pricing.New(session, config...)
     return &PricingActivities{client: client}
 }
 

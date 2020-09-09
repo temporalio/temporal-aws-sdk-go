@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/schemas"
 	"github.com/aws/aws-sdk-go/service/schemas/schemasiface"
 )
@@ -10,7 +12,8 @@ type SchemasActivities struct {
 	client schemasiface.SchemasAPI
 }
 
-func NewSchemasActivities(client schemasiface.SchemasAPI) *SchemasActivities {
+func NewSchemasActivities(session *session.Session, config... *aws.Config) *SchemasActivities {
+    client := schemas.New(session, config...)
     return &SchemasActivities{client: client}
 }
 

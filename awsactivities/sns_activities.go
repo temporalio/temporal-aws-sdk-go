@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sns"
 	"github.com/aws/aws-sdk-go/service/sns/snsiface"
 )
@@ -10,7 +12,8 @@ type SNSActivities struct {
 	client snsiface.SNSAPI
 }
 
-func NewSNSActivities(client snsiface.SNSAPI) *SNSActivities {
+func NewSNSActivities(session *session.Session, config... *aws.Config) *SNSActivities {
+    client := sns.New(session, config...)
     return &SNSActivities{client: client}
 }
 

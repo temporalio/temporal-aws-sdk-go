@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/efs"
 	"github.com/aws/aws-sdk-go/service/efs/efsiface"
 )
@@ -10,7 +12,8 @@ type EFSActivities struct {
 	client efsiface.EFSAPI
 }
 
-func NewEFSActivities(client efsiface.EFSAPI) *EFSActivities {
+func NewEFSActivities(session *session.Session, config... *aws.Config) *EFSActivities {
+    client := efs.New(session, config...)
     return &EFSActivities{client: client}
 }
 

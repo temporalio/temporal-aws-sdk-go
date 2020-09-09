@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/workmail"
 	"github.com/aws/aws-sdk-go/service/workmail/workmailiface"
 )
@@ -10,7 +12,8 @@ type WorkMailActivities struct {
 	client workmailiface.WorkMailAPI
 }
 
-func NewWorkMailActivities(client workmailiface.WorkMailAPI) *WorkMailActivities {
+func NewWorkMailActivities(session *session.Session, config... *aws.Config) *WorkMailActivities {
+    client := workmail.New(session, config...)
     return &WorkMailActivities{client: client}
 }
 

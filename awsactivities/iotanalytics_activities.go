@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotanalytics"
 	"github.com/aws/aws-sdk-go/service/iotanalytics/iotanalyticsiface"
 )
@@ -10,7 +12,8 @@ type IoTAnalyticsActivities struct {
 	client iotanalyticsiface.IoTAnalyticsAPI
 }
 
-func NewIoTAnalyticsActivities(client iotanalyticsiface.IoTAnalyticsAPI) *IoTAnalyticsActivities {
+func NewIoTAnalyticsActivities(session *session.Session, config... *aws.Config) *IoTAnalyticsActivities {
+    client := iotanalytics.New(session, config...)
     return &IoTAnalyticsActivities{client: client}
 }
 

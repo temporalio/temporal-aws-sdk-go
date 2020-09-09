@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/aws/aws-sdk-go/service/ssm/ssmiface"
 )
@@ -10,7 +12,8 @@ type SSMActivities struct {
 	client ssmiface.SSMAPI
 }
 
-func NewSSMActivities(client ssmiface.SSMAPI) *SSMActivities {
+func NewSSMActivities(session *session.Session, config... *aws.Config) *SSMActivities {
+    client := ssm.New(session, config...)
     return &SSMActivities{client: client}
 }
 

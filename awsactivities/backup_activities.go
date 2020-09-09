@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/backup"
 	"github.com/aws/aws-sdk-go/service/backup/backupiface"
 )
@@ -10,7 +12,8 @@ type BackupActivities struct {
 	client backupiface.BackupAPI
 }
 
-func NewBackupActivities(client backupiface.BackupAPI) *BackupActivities {
+func NewBackupActivities(session *session.Session, config... *aws.Config) *BackupActivities {
+    client := backup.New(session, config...)
     return &BackupActivities{client: client}
 }
 

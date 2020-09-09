@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codeguruprofiler"
 	"github.com/aws/aws-sdk-go/service/codeguruprofiler/codeguruprofileriface"
 )
@@ -10,7 +12,8 @@ type CodeGuruProfilerActivities struct {
 	client codeguruprofileriface.CodeGuruProfilerAPI
 }
 
-func NewCodeGuruProfilerActivities(client codeguruprofileriface.CodeGuruProfilerAPI) *CodeGuruProfilerActivities {
+func NewCodeGuruProfilerActivities(session *session.Session, config... *aws.Config) *CodeGuruProfilerActivities {
+    client := codeguruprofiler.New(session, config...)
     return &CodeGuruProfilerActivities{client: client}
 }
 

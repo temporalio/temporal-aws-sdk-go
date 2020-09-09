@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/licensemanager"
 	"github.com/aws/aws-sdk-go/service/licensemanager/licensemanageriface"
 )
@@ -10,7 +12,8 @@ type LicenseManagerActivities struct {
 	client licensemanageriface.LicenseManagerAPI
 }
 
-func NewLicenseManagerActivities(client licensemanageriface.LicenseManagerAPI) *LicenseManagerActivities {
+func NewLicenseManagerActivities(session *session.Session, config... *aws.Config) *LicenseManagerActivities {
+    client := licensemanager.New(session, config...)
     return &LicenseManagerActivities{client: client}
 }
 

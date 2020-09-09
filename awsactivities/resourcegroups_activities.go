@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/resourcegroups"
 	"github.com/aws/aws-sdk-go/service/resourcegroups/resourcegroupsiface"
 )
@@ -10,7 +12,8 @@ type ResourceGroupsActivities struct {
 	client resourcegroupsiface.ResourceGroupsAPI
 }
 
-func NewResourceGroupsActivities(client resourcegroupsiface.ResourceGroupsAPI) *ResourceGroupsActivities {
+func NewResourceGroupsActivities(session *session.Session, config... *aws.Config) *ResourceGroupsActivities {
+    client := resourcegroups.New(session, config...)
     return &ResourceGroupsActivities{client: client}
 }
 

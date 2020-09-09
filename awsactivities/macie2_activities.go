@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/macie2"
 	"github.com/aws/aws-sdk-go/service/macie2/macie2iface"
 )
@@ -10,7 +12,8 @@ type Macie2Activities struct {
 	client macie2iface.Macie2API
 }
 
-func NewMacie2Activities(client macie2iface.Macie2API) *Macie2Activities {
+func NewMacie2Activities(session *session.Session, config... *aws.Config) *Macie2Activities {
+    client := macie2.New(session, config...)
     return &Macie2Activities{client: client}
 }
 

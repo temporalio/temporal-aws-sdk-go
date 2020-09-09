@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotsecuretunneling"
 	"github.com/aws/aws-sdk-go/service/iotsecuretunneling/iotsecuretunnelingiface"
 )
@@ -10,7 +12,8 @@ type IoTSecureTunnelingActivities struct {
 	client iotsecuretunnelingiface.IoTSecureTunnelingAPI
 }
 
-func NewIoTSecureTunnelingActivities(client iotsecuretunnelingiface.IoTSecureTunnelingAPI) *IoTSecureTunnelingActivities {
+func NewIoTSecureTunnelingActivities(session *session.Session, config... *aws.Config) *IoTSecureTunnelingActivities {
+    client := iotsecuretunneling.New(session, config...)
     return &IoTSecureTunnelingActivities{client: client}
 }
 

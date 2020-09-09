@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/fms"
 	"github.com/aws/aws-sdk-go/service/fms/fmsiface"
 )
@@ -10,7 +12,8 @@ type FMSActivities struct {
 	client fmsiface.FMSAPI
 }
 
-func NewFMSActivities(client fmsiface.FMSAPI) *FMSActivities {
+func NewFMSActivities(session *session.Session, config... *aws.Config) *FMSActivities {
+    client := fms.New(session, config...)
     return &FMSActivities{client: client}
 }
 

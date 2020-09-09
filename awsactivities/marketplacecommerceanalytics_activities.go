@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/marketplacecommerceanalytics"
 	"github.com/aws/aws-sdk-go/service/marketplacecommerceanalytics/marketplacecommerceanalyticsiface"
 )
@@ -10,7 +12,8 @@ type MarketplaceCommerceAnalyticsActivities struct {
 	client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI
 }
 
-func NewMarketplaceCommerceAnalyticsActivities(client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI) *MarketplaceCommerceAnalyticsActivities {
+func NewMarketplaceCommerceAnalyticsActivities(session *session.Session, config... *aws.Config) *MarketplaceCommerceAnalyticsActivities {
+    client := marketplacecommerceanalytics.New(session, config...)
     return &MarketplaceCommerceAnalyticsActivities{client: client}
 }
 

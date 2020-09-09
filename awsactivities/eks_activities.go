@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/eks"
 	"github.com/aws/aws-sdk-go/service/eks/eksiface"
 )
@@ -10,7 +12,8 @@ type EKSActivities struct {
 	client eksiface.EKSAPI
 }
 
-func NewEKSActivities(client eksiface.EKSAPI) *EKSActivities {
+func NewEKSActivities(session *session.Session, config... *aws.Config) *EKSActivities {
+    client := eks.New(session, config...)
     return &EKSActivities{client: client}
 }
 

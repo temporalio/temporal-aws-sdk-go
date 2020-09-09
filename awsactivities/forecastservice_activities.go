@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/forecastservice"
 	"github.com/aws/aws-sdk-go/service/forecastservice/forecastserviceiface"
 )
@@ -10,7 +12,8 @@ type ForecastServiceActivities struct {
 	client forecastserviceiface.ForecastServiceAPI
 }
 
-func NewForecastServiceActivities(client forecastserviceiface.ForecastServiceAPI) *ForecastServiceActivities {
+func NewForecastServiceActivities(session *session.Session, config... *aws.Config) *ForecastServiceActivities {
+    client := forecastservice.New(session, config...)
     return &ForecastServiceActivities{client: client}
 }
 

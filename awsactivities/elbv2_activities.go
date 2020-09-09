@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elbv2"
 	"github.com/aws/aws-sdk-go/service/elbv2/elbv2iface"
 )
@@ -10,7 +12,8 @@ type ELBV2Activities struct {
 	client elbv2iface.ELBV2API
 }
 
-func NewELBV2Activities(client elbv2iface.ELBV2API) *ELBV2Activities {
+func NewELBV2Activities(session *session.Session, config... *aws.Config) *ELBV2Activities {
+    client := elbv2.New(session, config...)
     return &ELBV2Activities{client: client}
 }
 

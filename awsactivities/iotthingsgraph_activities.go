@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotthingsgraph"
 	"github.com/aws/aws-sdk-go/service/iotthingsgraph/iotthingsgraphiface"
 )
@@ -10,7 +12,8 @@ type IoTThingsGraphActivities struct {
 	client iotthingsgraphiface.IoTThingsGraphAPI
 }
 
-func NewIoTThingsGraphActivities(client iotthingsgraphiface.IoTThingsGraphAPI) *IoTThingsGraphActivities {
+func NewIoTThingsGraphActivities(session *session.Session, config... *aws.Config) *IoTThingsGraphActivities {
+    client := iotthingsgraph.New(session, config...)
     return &IoTThingsGraphActivities{client: client}
 }
 

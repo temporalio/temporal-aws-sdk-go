@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudsearchdomain"
 	"github.com/aws/aws-sdk-go/service/cloudsearchdomain/cloudsearchdomainiface"
 )
@@ -10,7 +12,8 @@ type CloudSearchDomainActivities struct {
 	client cloudsearchdomainiface.CloudSearchDomainAPI
 }
 
-func NewCloudSearchDomainActivities(client cloudsearchdomainiface.CloudSearchDomainAPI) *CloudSearchDomainActivities {
+func NewCloudSearchDomainActivities(session *session.Session, config... *aws.Config) *CloudSearchDomainActivities {
+    client := cloudsearchdomain.New(session, config...)
     return &CloudSearchDomainActivities{client: client}
 }
 

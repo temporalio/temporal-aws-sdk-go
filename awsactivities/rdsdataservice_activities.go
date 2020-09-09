@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/rdsdataservice"
 	"github.com/aws/aws-sdk-go/service/rdsdataservice/rdsdataserviceiface"
 )
@@ -10,7 +12,8 @@ type RDSDataServiceActivities struct {
 	client rdsdataserviceiface.RDSDataServiceAPI
 }
 
-func NewRDSDataServiceActivities(client rdsdataserviceiface.RDSDataServiceAPI) *RDSDataServiceActivities {
+func NewRDSDataServiceActivities(session *session.Session, config... *aws.Config) *RDSDataServiceActivities {
+    client := rdsdataservice.New(session, config...)
     return &RDSDataServiceActivities{client: client}
 }
 

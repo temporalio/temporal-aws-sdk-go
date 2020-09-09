@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk"
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk/elasticbeanstalkiface"
 )
@@ -10,7 +12,8 @@ type ElasticBeanstalkActivities struct {
 	client elasticbeanstalkiface.ElasticBeanstalkAPI
 }
 
-func NewElasticBeanstalkActivities(client elasticbeanstalkiface.ElasticBeanstalkAPI) *ElasticBeanstalkActivities {
+func NewElasticBeanstalkActivities(session *session.Session, config... *aws.Config) *ElasticBeanstalkActivities {
+    client := elasticbeanstalk.New(session, config...)
     return &ElasticBeanstalkActivities{client: client}
 }
 

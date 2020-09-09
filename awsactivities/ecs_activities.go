@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ecs"
 	"github.com/aws/aws-sdk-go/service/ecs/ecsiface"
 )
@@ -10,7 +12,8 @@ type ECSActivities struct {
 	client ecsiface.ECSAPI
 }
 
-func NewECSActivities(client ecsiface.ECSAPI) *ECSActivities {
+func NewECSActivities(session *session.Session, config... *aws.Config) *ECSActivities {
+    client := ecs.New(session, config...)
     return &ECSActivities{client: client}
 }
 

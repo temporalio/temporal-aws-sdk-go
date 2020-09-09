@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codegurureviewer"
 	"github.com/aws/aws-sdk-go/service/codegurureviewer/codegururevieweriface"
 )
@@ -10,7 +12,8 @@ type CodeGuruReviewerActivities struct {
 	client codegururevieweriface.CodeGuruReviewerAPI
 }
 
-func NewCodeGuruReviewerActivities(client codegururevieweriface.CodeGuruReviewerAPI) *CodeGuruReviewerActivities {
+func NewCodeGuruReviewerActivities(session *session.Session, config... *aws.Config) *CodeGuruReviewerActivities {
+    client := codegurureviewer.New(session, config...)
     return &CodeGuruReviewerActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pinpointemail"
 	"github.com/aws/aws-sdk-go/service/pinpointemail/pinpointemailiface"
 )
@@ -10,7 +12,8 @@ type PinpointEmailActivities struct {
 	client pinpointemailiface.PinpointEmailAPI
 }
 
-func NewPinpointEmailActivities(client pinpointemailiface.PinpointEmailAPI) *PinpointEmailActivities {
+func NewPinpointEmailActivities(session *session.Session, config... *aws.Config) *PinpointEmailActivities {
+    client := pinpointemail.New(session, config...)
     return &PinpointEmailActivities{client: client}
 }
 

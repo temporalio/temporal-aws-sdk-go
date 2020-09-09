@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elb"
 	"github.com/aws/aws-sdk-go/service/elb/elbiface"
 )
@@ -10,7 +12,8 @@ type ELBActivities struct {
 	client elbiface.ELBAPI
 }
 
-func NewELBActivities(client elbiface.ELBAPI) *ELBActivities {
+func NewELBActivities(session *session.Session, config... *aws.Config) *ELBActivities {
+    client := elb.New(session, config...)
     return &ELBActivities{client: client}
 }
 

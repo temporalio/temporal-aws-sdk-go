@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iam"
 	"github.com/aws/aws-sdk-go/service/iam/iamiface"
 )
@@ -10,7 +12,8 @@ type IAMActivities struct {
 	client iamiface.IAMAPI
 }
 
-func NewIAMActivities(client iamiface.IAMAPI) *IAMActivities {
+func NewIAMActivities(session *session.Session, config... *aws.Config) *IAMActivities {
+    client := iam.New(session, config...)
     return &IAMActivities{client: client}
 }
 

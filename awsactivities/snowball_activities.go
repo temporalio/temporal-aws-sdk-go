@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/snowball"
 	"github.com/aws/aws-sdk-go/service/snowball/snowballiface"
 )
@@ -10,7 +12,8 @@ type SnowballActivities struct {
 	client snowballiface.SnowballAPI
 }
 
-func NewSnowballActivities(client snowballiface.SnowballAPI) *SnowballActivities {
+func NewSnowballActivities(session *session.Session, config... *aws.Config) *SnowballActivities {
+    client := snowball.New(session, config...)
     return &SnowballActivities{client: client}
 }
 

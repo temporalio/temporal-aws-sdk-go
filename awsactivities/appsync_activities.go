@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appsync"
 	"github.com/aws/aws-sdk-go/service/appsync/appsynciface"
 )
@@ -10,7 +12,8 @@ type AppSyncActivities struct {
 	client appsynciface.AppSyncAPI
 }
 
-func NewAppSyncActivities(client appsynciface.AppSyncAPI) *AppSyncActivities {
+func NewAppSyncActivities(session *session.Session, config... *aws.Config) *AppSyncActivities {
+    client := appsync.New(session, config...)
     return &AppSyncActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/comprehendmedical"
 	"github.com/aws/aws-sdk-go/service/comprehendmedical/comprehendmedicaliface"
 )
@@ -10,7 +12,8 @@ type ComprehendMedicalActivities struct {
 	client comprehendmedicaliface.ComprehendMedicalAPI
 }
 
-func NewComprehendMedicalActivities(client comprehendmedicaliface.ComprehendMedicalAPI) *ComprehendMedicalActivities {
+func NewComprehendMedicalActivities(session *session.Session, config... *aws.Config) *ComprehendMedicalActivities {
+    client := comprehendmedical.New(session, config...)
     return &ComprehendMedicalActivities{client: client}
 }
 

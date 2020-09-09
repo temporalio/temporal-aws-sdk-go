@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/route53"
 	"github.com/aws/aws-sdk-go/service/route53/route53iface"
 )
@@ -10,7 +12,8 @@ type Route53Activities struct {
 	client route53iface.Route53API
 }
 
-func NewRoute53Activities(client route53iface.Route53API) *Route53Activities {
+func NewRoute53Activities(session *session.Session, config... *aws.Config) *Route53Activities {
+    client := route53.New(session, config...)
     return &Route53Activities{client: client}
 }
 

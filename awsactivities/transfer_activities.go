@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/transfer"
 	"github.com/aws/aws-sdk-go/service/transfer/transferiface"
 )
@@ -10,7 +12,8 @@ type TransferActivities struct {
 	client transferiface.TransferAPI
 }
 
-func NewTransferActivities(client transferiface.TransferAPI) *TransferActivities {
+func NewTransferActivities(session *session.Session, config... *aws.Config) *TransferActivities {
+    client := transfer.New(session, config...)
     return &TransferActivities{client: client}
 }
 

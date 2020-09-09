@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appmesh"
 	"github.com/aws/aws-sdk-go/service/appmesh/appmeshiface"
 )
@@ -10,7 +12,8 @@ type AppMeshActivities struct {
 	client appmeshiface.AppMeshAPI
 }
 
-func NewAppMeshActivities(client appmeshiface.AppMeshAPI) *AppMeshActivities {
+func NewAppMeshActivities(session *session.Session, config... *aws.Config) *AppMeshActivities {
+    client := appmesh.New(session, config...)
     return &AppMeshActivities{client: client}
 }
 

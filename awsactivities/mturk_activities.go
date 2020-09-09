@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mturk"
 	"github.com/aws/aws-sdk-go/service/mturk/mturkiface"
 )
@@ -10,7 +12,8 @@ type MTurkActivities struct {
 	client mturkiface.MTurkAPI
 }
 
-func NewMTurkActivities(client mturkiface.MTurkAPI) *MTurkActivities {
+func NewMTurkActivities(session *session.Session, config... *aws.Config) *MTurkActivities {
+    client := mturk.New(session, config...)
     return &MTurkActivities{client: client}
 }
 

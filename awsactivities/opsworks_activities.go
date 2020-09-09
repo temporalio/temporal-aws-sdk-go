@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/opsworks"
 	"github.com/aws/aws-sdk-go/service/opsworks/opsworksiface"
 )
@@ -10,7 +12,8 @@ type OpsWorksActivities struct {
 	client opsworksiface.OpsWorksAPI
 }
 
-func NewOpsWorksActivities(client opsworksiface.OpsWorksAPI) *OpsWorksActivities {
+func NewOpsWorksActivities(session *session.Session, config... *aws.Config) *OpsWorksActivities {
+    client := opsworks.New(session, config...)
     return &OpsWorksActivities{client: client}
 }
 

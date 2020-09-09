@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mq"
 	"github.com/aws/aws-sdk-go/service/mq/mqiface"
 )
@@ -10,7 +12,8 @@ type MQActivities struct {
 	client mqiface.MQAPI
 }
 
-func NewMQActivities(client mqiface.MQAPI) *MQActivities {
+func NewMQActivities(session *session.Session, config... *aws.Config) *MQActivities {
+    client := mq.New(session, config...)
     return &MQActivities{client: client}
 }
 

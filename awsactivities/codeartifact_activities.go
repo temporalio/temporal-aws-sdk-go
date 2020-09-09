@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codeartifact"
 	"github.com/aws/aws-sdk-go/service/codeartifact/codeartifactiface"
 )
@@ -10,7 +12,8 @@ type CodeArtifactActivities struct {
 	client codeartifactiface.CodeArtifactAPI
 }
 
-func NewCodeArtifactActivities(client codeartifactiface.CodeArtifactAPI) *CodeArtifactActivities {
+func NewCodeArtifactActivities(session *session.Session, config... *aws.Config) *CodeArtifactActivities {
+    client := codeartifact.New(session, config...)
     return &CodeArtifactActivities{client: client}
 }
 

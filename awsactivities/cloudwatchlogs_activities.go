@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs"
 	"github.com/aws/aws-sdk-go/service/cloudwatchlogs/cloudwatchlogsiface"
 )
@@ -10,7 +12,8 @@ type CloudWatchLogsActivities struct {
 	client cloudwatchlogsiface.CloudWatchLogsAPI
 }
 
-func NewCloudWatchLogsActivities(client cloudwatchlogsiface.CloudWatchLogsAPI) *CloudWatchLogsActivities {
+func NewCloudWatchLogsActivities(session *session.Session, config... *aws.Config) *CloudWatchLogsActivities {
+    client := cloudwatchlogs.New(session, config...)
     return &CloudWatchLogsActivities{client: client}
 }
 

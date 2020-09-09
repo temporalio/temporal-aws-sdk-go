@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/amplify"
 	"github.com/aws/aws-sdk-go/service/amplify/amplifyiface"
 )
@@ -10,7 +12,8 @@ type AmplifyActivities struct {
 	client amplifyiface.AmplifyAPI
 }
 
-func NewAmplifyActivities(client amplifyiface.AmplifyAPI) *AmplifyActivities {
+func NewAmplifyActivities(session *session.Session, config... *aws.Config) *AmplifyActivities {
+    client := amplify.New(session, config...)
     return &AmplifyActivities{client: client}
 }
 

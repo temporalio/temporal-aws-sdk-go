@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lexruntimeservice"
 	"github.com/aws/aws-sdk-go/service/lexruntimeservice/lexruntimeserviceiface"
 )
@@ -10,7 +12,8 @@ type LexRuntimeServiceActivities struct {
 	client lexruntimeserviceiface.LexRuntimeServiceAPI
 }
 
-func NewLexRuntimeServiceActivities(client lexruntimeserviceiface.LexRuntimeServiceAPI) *LexRuntimeServiceActivities {
+func NewLexRuntimeServiceActivities(session *session.Session, config... *aws.Config) *LexRuntimeServiceActivities {
+    client := lexruntimeservice.New(session, config...)
     return &LexRuntimeServiceActivities{client: client}
 }
 

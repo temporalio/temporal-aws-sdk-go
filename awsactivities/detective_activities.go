@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/detective"
 	"github.com/aws/aws-sdk-go/service/detective/detectiveiface"
 )
@@ -10,7 +12,8 @@ type DetectiveActivities struct {
 	client detectiveiface.DetectiveAPI
 }
 
-func NewDetectiveActivities(client detectiveiface.DetectiveAPI) *DetectiveActivities {
+func NewDetectiveActivities(session *session.Session, config... *aws.Config) *DetectiveActivities {
+    client := detective.New(session, config...)
     return &DetectiveActivities{client: client}
 }
 

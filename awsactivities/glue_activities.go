@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/glue"
 	"github.com/aws/aws-sdk-go/service/glue/glueiface"
 )
@@ -10,7 +12,8 @@ type GlueActivities struct {
 	client glueiface.GlueAPI
 }
 
-func NewGlueActivities(client glueiface.GlueAPI) *GlueActivities {
+func NewGlueActivities(session *session.Session, config... *aws.Config) *GlueActivities {
+    client := glue.New(session, config...)
     return &GlueActivities{client: client}
 }
 

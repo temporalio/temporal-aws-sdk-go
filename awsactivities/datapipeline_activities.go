@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/datapipeline"
 	"github.com/aws/aws-sdk-go/service/datapipeline/datapipelineiface"
 )
@@ -10,7 +12,8 @@ type DataPipelineActivities struct {
 	client datapipelineiface.DataPipelineAPI
 }
 
-func NewDataPipelineActivities(client datapipelineiface.DataPipelineAPI) *DataPipelineActivities {
+func NewDataPipelineActivities(session *session.Session, config... *aws.Config) *DataPipelineActivities {
+    client := datapipeline.New(session, config...)
     return &DataPipelineActivities{client: client}
 }
 

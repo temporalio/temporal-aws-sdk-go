@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/workspaces"
 	"github.com/aws/aws-sdk-go/service/workspaces/workspacesiface"
 )
@@ -10,7 +12,8 @@ type WorkSpacesActivities struct {
 	client workspacesiface.WorkSpacesAPI
 }
 
-func NewWorkSpacesActivities(client workspacesiface.WorkSpacesAPI) *WorkSpacesActivities {
+func NewWorkSpacesActivities(session *session.Session, config... *aws.Config) *WorkSpacesActivities {
+    client := workspaces.New(session, config...)
     return &WorkSpacesActivities{client: client}
 }
 

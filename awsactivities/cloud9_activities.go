@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloud9"
 	"github.com/aws/aws-sdk-go/service/cloud9/cloud9iface"
 )
@@ -10,7 +12,8 @@ type Cloud9Activities struct {
 	client cloud9iface.Cloud9API
 }
 
-func NewCloud9Activities(client cloud9iface.Cloud9API) *Cloud9Activities {
+func NewCloud9Activities(session *session.Session, config... *aws.Config) *Cloud9Activities {
+    client := cloud9.New(session, config...)
     return &Cloud9Activities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/quicksight"
 	"github.com/aws/aws-sdk-go/service/quicksight/quicksightiface"
 )
@@ -10,7 +12,8 @@ type QuickSightActivities struct {
 	client quicksightiface.QuickSightAPI
 }
 
-func NewQuickSightActivities(client quicksightiface.QuickSightAPI) *QuickSightActivities {
+func NewQuickSightActivities(session *session.Session, config... *aws.Config) *QuickSightActivities {
+    client := quicksight.New(session, config...)
     return &QuickSightActivities{client: client}
 }
 

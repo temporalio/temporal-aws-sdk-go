@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kafka"
 	"github.com/aws/aws-sdk-go/service/kafka/kafkaiface"
 )
@@ -10,7 +12,8 @@ type KafkaActivities struct {
 	client kafkaiface.KafkaAPI
 }
 
-func NewKafkaActivities(client kafkaiface.KafkaAPI) *KafkaActivities {
+func NewKafkaActivities(session *session.Session, config... *aws.Config) *KafkaActivities {
+    client := kafka.New(session, config...)
     return &KafkaActivities{client: client}
 }
 

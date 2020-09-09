@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ecr"
 	"github.com/aws/aws-sdk-go/service/ecr/ecriface"
 )
@@ -10,7 +12,8 @@ type ECRActivities struct {
 	client ecriface.ECRAPI
 }
 
-func NewECRActivities(client ecriface.ECRAPI) *ECRActivities {
+func NewECRActivities(session *session.Session, config... *aws.Config) *ECRActivities {
+    client := ecr.New(session, config...)
     return &ECRActivities{client: client}
 }
 

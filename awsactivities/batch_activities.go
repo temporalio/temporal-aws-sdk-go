@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/batch"
 	"github.com/aws/aws-sdk-go/service/batch/batchiface"
 )
@@ -10,7 +12,8 @@ type BatchActivities struct {
 	client batchiface.BatchAPI
 }
 
-func NewBatchActivities(client batchiface.BatchAPI) *BatchActivities {
+func NewBatchActivities(session *session.Session, config... *aws.Config) *BatchActivities {
+    client := batch.New(session, config...)
     return &BatchActivities{client: client}
 }
 

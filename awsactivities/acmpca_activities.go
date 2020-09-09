@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/acmpca"
 	"github.com/aws/aws-sdk-go/service/acmpca/acmpcaiface"
 )
@@ -10,7 +12,8 @@ type ACMPCAActivities struct {
 	client acmpcaiface.ACMPCAAPI
 }
 
-func NewACMPCAActivities(client acmpcaiface.ACMPCAAPI) *ACMPCAActivities {
+func NewACMPCAActivities(session *session.Session, config... *aws.Config) *ACMPCAActivities {
+    client := acmpca.New(session, config...)
     return &ACMPCAActivities{client: client}
 }
 

@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ram"
 	"github.com/aws/aws-sdk-go/service/ram/ramiface"
 )
@@ -10,7 +12,8 @@ type RAMActivities struct {
 	client ramiface.RAMAPI
 }
 
-func NewRAMActivities(client ramiface.RAMAPI) *RAMActivities {
+func NewRAMActivities(session *session.Session, config... *aws.Config) *RAMActivities {
+    client := ram.New(session, config...)
     return &RAMActivities{client: client}
 }
 

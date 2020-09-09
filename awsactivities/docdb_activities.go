@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/docdb"
 	"github.com/aws/aws-sdk-go/service/docdb/docdbiface"
 )
@@ -10,7 +12,8 @@ type DocDBActivities struct {
 	client docdbiface.DocDBAPI
 }
 
-func NewDocDBActivities(client docdbiface.DocDBAPI) *DocDBActivities {
+func NewDocDBActivities(session *session.Session, config... *aws.Config) *DocDBActivities {
+    client := docdb.New(session, config...)
     return &DocDBActivities{client: client}
 }
 

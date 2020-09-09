@@ -2,6 +2,8 @@
 package awsactivities
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticache"
 	"github.com/aws/aws-sdk-go/service/elasticache/elasticacheiface"
 )
@@ -10,7 +12,8 @@ type ElastiCacheActivities struct {
 	client elasticacheiface.ElastiCacheAPI
 }
 
-func NewElastiCacheActivities(client elasticacheiface.ElastiCacheAPI) *ElastiCacheActivities {
+func NewElastiCacheActivities(session *session.Session, config... *aws.Config) *ElastiCacheActivities {
+    client := elasticache.New(session, config...)
     return &ElastiCacheActivities{client: client}
 }
 
