@@ -40,19 +40,26 @@ func main() {
 			Destination: &service,
 		},
 	}
-	app.Action = func(c *cli.Context) error {
+	app.Action = func(c *cli.Context) (err error) {
 		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
 		generator := internal.NewGenerator(templateDir)
 		s := strings.ToLower(service)
+		var definitions []internal.InterfaceDefinition
 		if s != "" {
-			return parser.ParseAwsService(s, func(service string, definition internal.InterfaceDefinition) error {
-				return generator.GenerateCode(outputDir, definition)
+			err = parser.ParseAwsService(s, func(service string, definition internal.InterfaceDefinition) error {
+				definitions = append(definitions, definition)
+				return nil
 			})
 		} else {
-			return parser.ParseAwsSdk(func(service string, definition internal.InterfaceDefinition) error {
-				return generator.GenerateCode(outputDir, definition)
+			err = parser.ParseAwsSdk(func(service string, definition internal.InterfaceDefinition) error {
+				definitions = append(definitions, definition)
+				return nil
 			})
 		}
+		if err != nil {
+			log.Fatal(err)
+		}
+		return generator.GenerateCode(outputDir, definitions)
 	}
 	err := app.Run(os.Args)
 	if err != nil {

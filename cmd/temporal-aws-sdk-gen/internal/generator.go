@@ -16,7 +16,9 @@ func toPrefix(packageName string) string {
 }
 
 type TemporalAWSGenerator struct {
-	TemplateDir   string
+	TemplateDir string
+	// Some of the output structures are duplicated.
+	// Used to to dedupe types definitions based on them.
 	outputStructs map[string]bool
 }
 
@@ -24,7 +26,7 @@ func NewGenerator(templateDir string) *TemporalAWSGenerator {
 	return &TemporalAWSGenerator{TemplateDir: templateDir, outputStructs: make(map[string]bool)}
 }
 
-func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definition InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definitions []InterfaceDefinition) error {
 	var templateFiles []string
 	files, err := ioutil.ReadDir(g.TemplateDir)
 	if err != nil {
@@ -39,7 +41,7 @@ func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definition Interfa
 		}
 	}
 	for _, templateFile := range templateFiles {
-		err := g.generateFromSingleTemplate(templateFile+".tmpl", outputDir+"/aws"+templateFile, definition)
+		err := g.generateFromSingleTemplate(templateFile+".tmpl", outputDir+"/aws"+templateFile, definitions)
 		if err != nil {
 			return err
 		}
@@ -47,7 +49,18 @@ func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definition Interfa
 	return nil
 }
 
-func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, outputDir string, definition InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, outputDir string, definitions []InterfaceDefinition) error {
+	g.outputStructs = make(map[string]bool)
+	for _, definition := range definitions {
+		err := g.generateOneService(templateFile, outputDir, definition)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
+}
+
+func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir string, definition InterfaceDefinition) error {
 	funcMap := template.FuncMap{
 		"ToUpper":   strings.ToUpper,
 		"ToLower":   strings.ToLower,
@@ -58,6 +71,7 @@ func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, o
 			return ok
 		},
 	}
+
 	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(g.TemplateDir + "/" + templateFile)
 	if err != nil {
 		return err
