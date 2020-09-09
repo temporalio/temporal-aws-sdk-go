@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,98 +8,98 @@ import (
 )
 
 type MQActivities struct {
-    client mqiface.MQAPI
+	client mqiface.MQAPI
 }
 
 func NewMQActivities(session *session.Session, config ...*aws.Config) *MQActivities {
-    client := mq.New(session, config...)
-    return &MQActivities{client: client}
+	client := mq.New(session, config...)
+	return &MQActivities{client: client}
 }
 
 func (a *MQActivities) CreateBroker(input *mq.CreateBrokerRequest) (*mq.CreateBrokerResponse, error) {
-    return a.client.CreateBroker(input)
+	return a.client.CreateBroker(input)
 }
 
 func (a *MQActivities) CreateConfiguration(input *mq.CreateConfigurationRequest) (*mq.CreateConfigurationResponse, error) {
-    return a.client.CreateConfiguration(input)
+	return a.client.CreateConfiguration(input)
 }
 
 func (a *MQActivities) CreateTags(input *mq.CreateTagsInput) (*mq.CreateTagsOutput, error) {
-    return a.client.CreateTags(input)
+	return a.client.CreateTags(input)
 }
 
 func (a *MQActivities) CreateUser(input *mq.CreateUserRequest) (*mq.CreateUserOutput, error) {
-    return a.client.CreateUser(input)
+	return a.client.CreateUser(input)
 }
 
 func (a *MQActivities) DeleteBroker(input *mq.DeleteBrokerInput) (*mq.DeleteBrokerResponse, error) {
-    return a.client.DeleteBroker(input)
+	return a.client.DeleteBroker(input)
 }
 
 func (a *MQActivities) DeleteTags(input *mq.DeleteTagsInput) (*mq.DeleteTagsOutput, error) {
-    return a.client.DeleteTags(input)
+	return a.client.DeleteTags(input)
 }
 
 func (a *MQActivities) DeleteUser(input *mq.DeleteUserInput) (*mq.DeleteUserOutput, error) {
-    return a.client.DeleteUser(input)
+	return a.client.DeleteUser(input)
 }
 
 func (a *MQActivities) DescribeBroker(input *mq.DescribeBrokerInput) (*mq.DescribeBrokerResponse, error) {
-    return a.client.DescribeBroker(input)
+	return a.client.DescribeBroker(input)
 }
 
 func (a *MQActivities) DescribeBrokerEngineTypes(input *mq.DescribeBrokerEngineTypesInput) (*mq.DescribeBrokerEngineTypesOutput, error) {
-    return a.client.DescribeBrokerEngineTypes(input)
+	return a.client.DescribeBrokerEngineTypes(input)
 }
 
 func (a *MQActivities) DescribeBrokerInstanceOptions(input *mq.DescribeBrokerInstanceOptionsInput) (*mq.DescribeBrokerInstanceOptionsOutput, error) {
-    return a.client.DescribeBrokerInstanceOptions(input)
+	return a.client.DescribeBrokerInstanceOptions(input)
 }
 
 func (a *MQActivities) DescribeConfiguration(input *mq.DescribeConfigurationInput) (*mq.DescribeConfigurationOutput, error) {
-    return a.client.DescribeConfiguration(input)
+	return a.client.DescribeConfiguration(input)
 }
 
 func (a *MQActivities) DescribeConfigurationRevision(input *mq.DescribeConfigurationRevisionInput) (*mq.DescribeConfigurationRevisionResponse, error) {
-    return a.client.DescribeConfigurationRevision(input)
+	return a.client.DescribeConfigurationRevision(input)
 }
 
 func (a *MQActivities) DescribeUser(input *mq.DescribeUserInput) (*mq.DescribeUserResponse, error) {
-    return a.client.DescribeUser(input)
+	return a.client.DescribeUser(input)
 }
 
 func (a *MQActivities) ListBrokers(input *mq.ListBrokersInput) (*mq.ListBrokersResponse, error) {
-    return a.client.ListBrokers(input)
+	return a.client.ListBrokers(input)
 }
 
 func (a *MQActivities) ListConfigurationRevisions(input *mq.ListConfigurationRevisionsInput) (*mq.ListConfigurationRevisionsResponse, error) {
-    return a.client.ListConfigurationRevisions(input)
+	return a.client.ListConfigurationRevisions(input)
 }
 
 func (a *MQActivities) ListConfigurations(input *mq.ListConfigurationsInput) (*mq.ListConfigurationsResponse, error) {
-    return a.client.ListConfigurations(input)
+	return a.client.ListConfigurations(input)
 }
 
 func (a *MQActivities) ListTags(input *mq.ListTagsInput) (*mq.ListTagsOutput, error) {
-    return a.client.ListTags(input)
+	return a.client.ListTags(input)
 }
 
 func (a *MQActivities) ListUsers(input *mq.ListUsersInput) (*mq.ListUsersResponse, error) {
-    return a.client.ListUsers(input)
+	return a.client.ListUsers(input)
 }
 
 func (a *MQActivities) RebootBroker(input *mq.RebootBrokerInput) (*mq.RebootBrokerOutput, error) {
-    return a.client.RebootBroker(input)
+	return a.client.RebootBroker(input)
 }
 
 func (a *MQActivities) UpdateBroker(input *mq.UpdateBrokerRequest) (*mq.UpdateBrokerResponse, error) {
-    return a.client.UpdateBroker(input)
+	return a.client.UpdateBroker(input)
 }
 
 func (a *MQActivities) UpdateConfiguration(input *mq.UpdateConfigurationRequest) (*mq.UpdateConfigurationResponse, error) {
-    return a.client.UpdateConfiguration(input)
+	return a.client.UpdateConfiguration(input)
 }
 
 func (a *MQActivities) UpdateUser(input *mq.UpdateUserRequest) (*mq.UpdateUserOutput, error) {
-    return a.client.UpdateUser(input)
+	return a.client.UpdateUser(input)
 }

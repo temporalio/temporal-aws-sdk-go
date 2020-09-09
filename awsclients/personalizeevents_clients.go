@@ -7,8 +7,8 @@ import (
 )
 
 type PersonalizeEventsClient interface {
-       PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
-       PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
+	PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error)
+	PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
 }
 
 type PersonalizeeventsPutEventsResult struct {
@@ -16,26 +16,26 @@ type PersonalizeeventsPutEventsResult struct {
 }
 
 func (r *PersonalizeeventsPutEventsResult) Get(ctx workflow.Context) (*personalizeevents.PutEventsOutput, error) {
-    var output personalizeevents.PutEventsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output personalizeevents.PutEventsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type PersonalizeEventsStub struct {
-    activities awsactivities.PersonalizeEventsActivities
+	activities awsactivities.PersonalizeEventsActivities
 }
 
 func NewPersonalizeEventsStub() PersonalizeEventsClient {
-    return &PersonalizeEventsStub{}
+	return &PersonalizeEventsStub{}
 }
 
 func (a *PersonalizeEventsStub) PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
-    var output personalizeevents.PutEventsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)
-    return &output, err
+	var output personalizeevents.PutEventsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *PersonalizeEventsStub) PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input)
-    return &PersonalizeeventsPutEventsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutEvents, input)
+	return &PersonalizeeventsPutEventsResult{Result: future}
 }

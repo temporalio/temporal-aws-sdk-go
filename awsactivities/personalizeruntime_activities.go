@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,18 +8,18 @@ import (
 )
 
 type PersonalizeRuntimeActivities struct {
-    client personalizeruntimeiface.PersonalizeRuntimeAPI
+	client personalizeruntimeiface.PersonalizeRuntimeAPI
 }
 
 func NewPersonalizeRuntimeActivities(session *session.Session, config ...*aws.Config) *PersonalizeRuntimeActivities {
-    client := personalizeruntime.New(session, config...)
-    return &PersonalizeRuntimeActivities{client: client}
+	client := personalizeruntime.New(session, config...)
+	return &PersonalizeRuntimeActivities{client: client}
 }
 
 func (a *PersonalizeRuntimeActivities) GetPersonalizedRanking(input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
-    return a.client.GetPersonalizedRanking(input)
+	return a.client.GetPersonalizedRanking(input)
 }
 
 func (a *PersonalizeRuntimeActivities) GetRecommendations(input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
-    return a.client.GetRecommendations(input)
+	return a.client.GetRecommendations(input)
 }

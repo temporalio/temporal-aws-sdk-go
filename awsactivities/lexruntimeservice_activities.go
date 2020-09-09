@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,30 +8,30 @@ import (
 )
 
 type LexRuntimeServiceActivities struct {
-    client lexruntimeserviceiface.LexRuntimeServiceAPI
+	client lexruntimeserviceiface.LexRuntimeServiceAPI
 }
 
 func NewLexRuntimeServiceActivities(session *session.Session, config ...*aws.Config) *LexRuntimeServiceActivities {
-    client := lexruntimeservice.New(session, config...)
-    return &LexRuntimeServiceActivities{client: client}
+	client := lexruntimeservice.New(session, config...)
+	return &LexRuntimeServiceActivities{client: client}
 }
 
 func (a *LexRuntimeServiceActivities) DeleteSession(input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error) {
-    return a.client.DeleteSession(input)
+	return a.client.DeleteSession(input)
 }
 
 func (a *LexRuntimeServiceActivities) GetSession(input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error) {
-    return a.client.GetSession(input)
+	return a.client.GetSession(input)
 }
 
 func (a *LexRuntimeServiceActivities) PostContent(input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error) {
-    return a.client.PostContent(input)
+	return a.client.PostContent(input)
 }
 
 func (a *LexRuntimeServiceActivities) PostText(input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error) {
-    return a.client.PostText(input)
+	return a.client.PostText(input)
 }
 
 func (a *LexRuntimeServiceActivities) PutSession(input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error) {
-    return a.client.PutSession(input)
+	return a.client.PutSession(input)
 }

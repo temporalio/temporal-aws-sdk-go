@@ -7,8 +7,8 @@ import (
 )
 
 type SageMakerRuntimeClient interface {
-       InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error)
-       InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
+	InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error)
+	InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
 }
 
 type SagemakerruntimeInvokeEndpointResult struct {
@@ -16,26 +16,26 @@ type SagemakerruntimeInvokeEndpointResult struct {
 }
 
 func (r *SagemakerruntimeInvokeEndpointResult) Get(ctx workflow.Context) (*sagemakerruntime.InvokeEndpointOutput, error) {
-    var output sagemakerruntime.InvokeEndpointOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output sagemakerruntime.InvokeEndpointOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SageMakerRuntimeStub struct {
-    activities awsactivities.SageMakerRuntimeActivities
+	activities awsactivities.SageMakerRuntimeActivities
 }
 
 func NewSageMakerRuntimeStub() SageMakerRuntimeClient {
-    return &SageMakerRuntimeStub{}
+	return &SageMakerRuntimeStub{}
 }
 
 func (a *SageMakerRuntimeStub) InvokeEndpoint(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
-    var output sagemakerruntime.InvokeEndpointOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.InvokeEndpoint, input).Get(ctx, &output)
-    return &output, err
+	var output sagemakerruntime.InvokeEndpointOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.InvokeEndpoint, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SageMakerRuntimeStub) InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.InvokeEndpoint, input)
-    return &SagemakerruntimeInvokeEndpointResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.InvokeEndpoint, input)
+	return &SagemakerruntimeInvokeEndpointResult{Result: future}
 }

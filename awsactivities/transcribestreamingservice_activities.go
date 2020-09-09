@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,14 +8,14 @@ import (
 )
 
 type TranscribeStreamingServiceActivities struct {
-    client transcribestreamingserviceiface.TranscribeStreamingServiceAPI
+	client transcribestreamingserviceiface.TranscribeStreamingServiceAPI
 }
 
 func NewTranscribeStreamingServiceActivities(session *session.Session, config ...*aws.Config) *TranscribeStreamingServiceActivities {
-    client := transcribestreamingservice.New(session, config...)
-    return &TranscribeStreamingServiceActivities{client: client}
+	client := transcribestreamingservice.New(session, config...)
+	return &TranscribeStreamingServiceActivities{client: client}
 }
 
 func (a *TranscribeStreamingServiceActivities) StartStreamTranscription(input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
-    return a.client.StartStreamTranscription(input)
+	return a.client.StartStreamTranscription(input)
 }

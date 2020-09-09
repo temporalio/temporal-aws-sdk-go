@@ -7,71 +7,71 @@ import (
 )
 
 type MediaConnectClient interface {
-       AddFlowOutputs(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error)
-       AddFlowOutputsAsync(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) *MediaconnectAddFlowOutputsResult
+	AddFlowOutputs(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error)
+	AddFlowOutputsAsync(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) *MediaconnectAddFlowOutputsResult
 
-       AddFlowSources(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) (*mediaconnect.AddFlowSourcesOutput, error)
-       AddFlowSourcesAsync(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) *MediaconnectAddFlowSourcesResult
+	AddFlowSources(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) (*mediaconnect.AddFlowSourcesOutput, error)
+	AddFlowSourcesAsync(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) *MediaconnectAddFlowSourcesResult
 
-       AddFlowVpcInterfaces(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) (*mediaconnect.AddFlowVpcInterfacesOutput, error)
-       AddFlowVpcInterfacesAsync(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) *MediaconnectAddFlowVpcInterfacesResult
+	AddFlowVpcInterfaces(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) (*mediaconnect.AddFlowVpcInterfacesOutput, error)
+	AddFlowVpcInterfacesAsync(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) *MediaconnectAddFlowVpcInterfacesResult
 
-       CreateFlow(ctx workflow.Context, input *mediaconnect.CreateFlowInput) (*mediaconnect.CreateFlowOutput, error)
-       CreateFlowAsync(ctx workflow.Context, input *mediaconnect.CreateFlowInput) *MediaconnectCreateFlowResult
+	CreateFlow(ctx workflow.Context, input *mediaconnect.CreateFlowInput) (*mediaconnect.CreateFlowOutput, error)
+	CreateFlowAsync(ctx workflow.Context, input *mediaconnect.CreateFlowInput) *MediaconnectCreateFlowResult
 
-       DeleteFlow(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) (*mediaconnect.DeleteFlowOutput, error)
-       DeleteFlowAsync(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) *MediaconnectDeleteFlowResult
+	DeleteFlow(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) (*mediaconnect.DeleteFlowOutput, error)
+	DeleteFlowAsync(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) *MediaconnectDeleteFlowResult
 
-       DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error)
-       DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult
+	DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error)
+	DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult
 
-       GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error)
-       GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult
+	GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error)
+	GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult
 
-       ListEntitlements(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) (*mediaconnect.ListEntitlementsOutput, error)
-       ListEntitlementsAsync(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) *MediaconnectListEntitlementsResult
+	ListEntitlements(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) (*mediaconnect.ListEntitlementsOutput, error)
+	ListEntitlementsAsync(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) *MediaconnectListEntitlementsResult
 
-       ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error)
-       ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult
+	ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error)
+	ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult
 
-       ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error)
-       ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult
+	ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error)
+	ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult
 
-       RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error)
-       RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult
+	RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error)
+	RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult
 
-       RemoveFlowSource(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) (*mediaconnect.RemoveFlowSourceOutput, error)
-       RemoveFlowSourceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) *MediaconnectRemoveFlowSourceResult
+	RemoveFlowSource(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) (*mediaconnect.RemoveFlowSourceOutput, error)
+	RemoveFlowSourceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) *MediaconnectRemoveFlowSourceResult
 
-       RemoveFlowVpcInterface(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error)
-       RemoveFlowVpcInterfaceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) *MediaconnectRemoveFlowVpcInterfaceResult
+	RemoveFlowVpcInterface(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error)
+	RemoveFlowVpcInterfaceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) *MediaconnectRemoveFlowVpcInterfaceResult
 
-       RevokeFlowEntitlement(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) (*mediaconnect.RevokeFlowEntitlementOutput, error)
-       RevokeFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) *MediaconnectRevokeFlowEntitlementResult
+	RevokeFlowEntitlement(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) (*mediaconnect.RevokeFlowEntitlementOutput, error)
+	RevokeFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) *MediaconnectRevokeFlowEntitlementResult
 
-       StartFlow(ctx workflow.Context, input *mediaconnect.StartFlowInput) (*mediaconnect.StartFlowOutput, error)
-       StartFlowAsync(ctx workflow.Context, input *mediaconnect.StartFlowInput) *MediaconnectStartFlowResult
+	StartFlow(ctx workflow.Context, input *mediaconnect.StartFlowInput) (*mediaconnect.StartFlowOutput, error)
+	StartFlowAsync(ctx workflow.Context, input *mediaconnect.StartFlowInput) *MediaconnectStartFlowResult
 
-       StopFlow(ctx workflow.Context, input *mediaconnect.StopFlowInput) (*mediaconnect.StopFlowOutput, error)
-       StopFlowAsync(ctx workflow.Context, input *mediaconnect.StopFlowInput) *MediaconnectStopFlowResult
+	StopFlow(ctx workflow.Context, input *mediaconnect.StopFlowInput) (*mediaconnect.StopFlowOutput, error)
+	StopFlowAsync(ctx workflow.Context, input *mediaconnect.StopFlowInput) *MediaconnectStopFlowResult
 
-       TagResource(ctx workflow.Context, input *mediaconnect.TagResourceInput) (*mediaconnect.TagResourceOutput, error)
-       TagResourceAsync(ctx workflow.Context, input *mediaconnect.TagResourceInput) *MediaconnectTagResourceResult
+	TagResource(ctx workflow.Context, input *mediaconnect.TagResourceInput) (*mediaconnect.TagResourceOutput, error)
+	TagResourceAsync(ctx workflow.Context, input *mediaconnect.TagResourceInput) *MediaconnectTagResourceResult
 
-       UntagResource(ctx workflow.Context, input *mediaconnect.UntagResourceInput) (*mediaconnect.UntagResourceOutput, error)
-       UntagResourceAsync(ctx workflow.Context, input *mediaconnect.UntagResourceInput) *MediaconnectUntagResourceResult
+	UntagResource(ctx workflow.Context, input *mediaconnect.UntagResourceInput) (*mediaconnect.UntagResourceOutput, error)
+	UntagResourceAsync(ctx workflow.Context, input *mediaconnect.UntagResourceInput) *MediaconnectUntagResourceResult
 
-       UpdateFlow(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) (*mediaconnect.UpdateFlowOutput, error)
-       UpdateFlowAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) *MediaconnectUpdateFlowResult
+	UpdateFlow(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) (*mediaconnect.UpdateFlowOutput, error)
+	UpdateFlowAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) *MediaconnectUpdateFlowResult
 
-       UpdateFlowEntitlement(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) (*mediaconnect.UpdateFlowEntitlementOutput, error)
-       UpdateFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) *MediaconnectUpdateFlowEntitlementResult
+	UpdateFlowEntitlement(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) (*mediaconnect.UpdateFlowEntitlementOutput, error)
+	UpdateFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) *MediaconnectUpdateFlowEntitlementResult
 
-       UpdateFlowOutput(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) (*mediaconnect.UpdateFlowOutputOutput, error)
-       UpdateFlowOutputAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) *MediaconnectUpdateFlowOutputResult
+	UpdateFlowOutput(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) (*mediaconnect.UpdateFlowOutputOutput, error)
+	UpdateFlowOutputAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) *MediaconnectUpdateFlowOutputResult
 
-       UpdateFlowSource(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) (*mediaconnect.UpdateFlowSourceOutput, error)
-       UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult
+	UpdateFlowSource(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) (*mediaconnect.UpdateFlowSourceOutput, error)
+	UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult
 }
 
 type MediaconnectAddFlowOutputsResult struct {
@@ -79,9 +79,9 @@ type MediaconnectAddFlowOutputsResult struct {
 }
 
 func (r *MediaconnectAddFlowOutputsResult) Get(ctx workflow.Context) (*mediaconnect.AddFlowOutputsOutput, error) {
-    var output mediaconnect.AddFlowOutputsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowOutputsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectAddFlowSourcesResult struct {
@@ -89,9 +89,9 @@ type MediaconnectAddFlowSourcesResult struct {
 }
 
 func (r *MediaconnectAddFlowSourcesResult) Get(ctx workflow.Context) (*mediaconnect.AddFlowSourcesOutput, error) {
-    var output mediaconnect.AddFlowSourcesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowSourcesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectAddFlowVpcInterfacesResult struct {
@@ -99,9 +99,9 @@ type MediaconnectAddFlowVpcInterfacesResult struct {
 }
 
 func (r *MediaconnectAddFlowVpcInterfacesResult) Get(ctx workflow.Context) (*mediaconnect.AddFlowVpcInterfacesOutput, error) {
-    var output mediaconnect.AddFlowVpcInterfacesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowVpcInterfacesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectCreateFlowResult struct {
@@ -109,9 +109,9 @@ type MediaconnectCreateFlowResult struct {
 }
 
 func (r *MediaconnectCreateFlowResult) Get(ctx workflow.Context) (*mediaconnect.CreateFlowOutput, error) {
-    var output mediaconnect.CreateFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.CreateFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectDeleteFlowResult struct {
@@ -119,9 +119,9 @@ type MediaconnectDeleteFlowResult struct {
 }
 
 func (r *MediaconnectDeleteFlowResult) Get(ctx workflow.Context) (*mediaconnect.DeleteFlowOutput, error) {
-    var output mediaconnect.DeleteFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.DeleteFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectDescribeFlowResult struct {
@@ -129,9 +129,9 @@ type MediaconnectDescribeFlowResult struct {
 }
 
 func (r *MediaconnectDescribeFlowResult) Get(ctx workflow.Context) (*mediaconnect.DescribeFlowOutput, error) {
-    var output mediaconnect.DescribeFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.DescribeFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectGrantFlowEntitlementsResult struct {
@@ -139,9 +139,9 @@ type MediaconnectGrantFlowEntitlementsResult struct {
 }
 
 func (r *MediaconnectGrantFlowEntitlementsResult) Get(ctx workflow.Context) (*mediaconnect.GrantFlowEntitlementsOutput, error) {
-    var output mediaconnect.GrantFlowEntitlementsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.GrantFlowEntitlementsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectListEntitlementsResult struct {
@@ -149,9 +149,9 @@ type MediaconnectListEntitlementsResult struct {
 }
 
 func (r *MediaconnectListEntitlementsResult) Get(ctx workflow.Context) (*mediaconnect.ListEntitlementsOutput, error) {
-    var output mediaconnect.ListEntitlementsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListEntitlementsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectListFlowsResult struct {
@@ -159,9 +159,9 @@ type MediaconnectListFlowsResult struct {
 }
 
 func (r *MediaconnectListFlowsResult) Get(ctx workflow.Context) (*mediaconnect.ListFlowsOutput, error) {
-    var output mediaconnect.ListFlowsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListFlowsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectListTagsForResourceResult struct {
@@ -169,9 +169,9 @@ type MediaconnectListTagsForResourceResult struct {
 }
 
 func (r *MediaconnectListTagsForResourceResult) Get(ctx workflow.Context) (*mediaconnect.ListTagsForResourceOutput, error) {
-    var output mediaconnect.ListTagsForResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListTagsForResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectRemoveFlowOutputResult struct {
@@ -179,9 +179,9 @@ type MediaconnectRemoveFlowOutputResult struct {
 }
 
 func (r *MediaconnectRemoveFlowOutputResult) Get(ctx workflow.Context) (*mediaconnect.RemoveFlowOutputOutput, error) {
-    var output mediaconnect.RemoveFlowOutputOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowOutputOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectRemoveFlowSourceResult struct {
@@ -189,9 +189,9 @@ type MediaconnectRemoveFlowSourceResult struct {
 }
 
 func (r *MediaconnectRemoveFlowSourceResult) Get(ctx workflow.Context) (*mediaconnect.RemoveFlowSourceOutput, error) {
-    var output mediaconnect.RemoveFlowSourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowSourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectRemoveFlowVpcInterfaceResult struct {
@@ -199,9 +199,9 @@ type MediaconnectRemoveFlowVpcInterfaceResult struct {
 }
 
 func (r *MediaconnectRemoveFlowVpcInterfaceResult) Get(ctx workflow.Context) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error) {
-    var output mediaconnect.RemoveFlowVpcInterfaceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowVpcInterfaceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectRevokeFlowEntitlementResult struct {
@@ -209,9 +209,9 @@ type MediaconnectRevokeFlowEntitlementResult struct {
 }
 
 func (r *MediaconnectRevokeFlowEntitlementResult) Get(ctx workflow.Context) (*mediaconnect.RevokeFlowEntitlementOutput, error) {
-    var output mediaconnect.RevokeFlowEntitlementOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RevokeFlowEntitlementOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectStartFlowResult struct {
@@ -219,9 +219,9 @@ type MediaconnectStartFlowResult struct {
 }
 
 func (r *MediaconnectStartFlowResult) Get(ctx workflow.Context) (*mediaconnect.StartFlowOutput, error) {
-    var output mediaconnect.StartFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.StartFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectStopFlowResult struct {
@@ -229,9 +229,9 @@ type MediaconnectStopFlowResult struct {
 }
 
 func (r *MediaconnectStopFlowResult) Get(ctx workflow.Context) (*mediaconnect.StopFlowOutput, error) {
-    var output mediaconnect.StopFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.StopFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectTagResourceResult struct {
@@ -239,9 +239,9 @@ type MediaconnectTagResourceResult struct {
 }
 
 func (r *MediaconnectTagResourceResult) Get(ctx workflow.Context) (*mediaconnect.TagResourceOutput, error) {
-    var output mediaconnect.TagResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.TagResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectUntagResourceResult struct {
@@ -249,9 +249,9 @@ type MediaconnectUntagResourceResult struct {
 }
 
 func (r *MediaconnectUntagResourceResult) Get(ctx workflow.Context) (*mediaconnect.UntagResourceOutput, error) {
-    var output mediaconnect.UntagResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UntagResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectUpdateFlowResult struct {
@@ -259,9 +259,9 @@ type MediaconnectUpdateFlowResult struct {
 }
 
 func (r *MediaconnectUpdateFlowResult) Get(ctx workflow.Context) (*mediaconnect.UpdateFlowOutput, error) {
-    var output mediaconnect.UpdateFlowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectUpdateFlowEntitlementResult struct {
@@ -269,9 +269,9 @@ type MediaconnectUpdateFlowEntitlementResult struct {
 }
 
 func (r *MediaconnectUpdateFlowEntitlementResult) Get(ctx workflow.Context) (*mediaconnect.UpdateFlowEntitlementOutput, error) {
-    var output mediaconnect.UpdateFlowEntitlementOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowEntitlementOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectUpdateFlowOutputResult struct {
@@ -279,9 +279,9 @@ type MediaconnectUpdateFlowOutputResult struct {
 }
 
 func (r *MediaconnectUpdateFlowOutputResult) Get(ctx workflow.Context) (*mediaconnect.UpdateFlowOutputOutput, error) {
-    var output mediaconnect.UpdateFlowOutputOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowOutputOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaconnectUpdateFlowSourceResult struct {
@@ -289,257 +289,257 @@ type MediaconnectUpdateFlowSourceResult struct {
 }
 
 func (r *MediaconnectUpdateFlowSourceResult) Get(ctx workflow.Context) (*mediaconnect.UpdateFlowSourceOutput, error) {
-    var output mediaconnect.UpdateFlowSourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowSourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type MediaConnectStub struct {
-    activities awsactivities.MediaConnectActivities
+	activities awsactivities.MediaConnectActivities
 }
 
 func NewMediaConnectStub() MediaConnectClient {
-    return &MediaConnectStub{}
+	return &MediaConnectStub{}
 }
 
 func (a *MediaConnectStub) AddFlowOutputs(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) (*mediaconnect.AddFlowOutputsOutput, error) {
-    var output mediaconnect.AddFlowOutputsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.AddFlowOutputs, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowOutputsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.AddFlowOutputs, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) AddFlowOutputsAsync(ctx workflow.Context, input *mediaconnect.AddFlowOutputsInput) *MediaconnectAddFlowOutputsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.AddFlowOutputs, input)
-    return &MediaconnectAddFlowOutputsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.AddFlowOutputs, input)
+	return &MediaconnectAddFlowOutputsResult{Result: future}
 }
 
 func (a *MediaConnectStub) AddFlowSources(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) (*mediaconnect.AddFlowSourcesOutput, error) {
-    var output mediaconnect.AddFlowSourcesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.AddFlowSources, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowSourcesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.AddFlowSources, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) AddFlowSourcesAsync(ctx workflow.Context, input *mediaconnect.AddFlowSourcesInput) *MediaconnectAddFlowSourcesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.AddFlowSources, input)
-    return &MediaconnectAddFlowSourcesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.AddFlowSources, input)
+	return &MediaconnectAddFlowSourcesResult{Result: future}
 }
 
 func (a *MediaConnectStub) AddFlowVpcInterfaces(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) (*mediaconnect.AddFlowVpcInterfacesOutput, error) {
-    var output mediaconnect.AddFlowVpcInterfacesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.AddFlowVpcInterfaces, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.AddFlowVpcInterfacesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.AddFlowVpcInterfaces, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) AddFlowVpcInterfacesAsync(ctx workflow.Context, input *mediaconnect.AddFlowVpcInterfacesInput) *MediaconnectAddFlowVpcInterfacesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.AddFlowVpcInterfaces, input)
-    return &MediaconnectAddFlowVpcInterfacesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.AddFlowVpcInterfaces, input)
+	return &MediaconnectAddFlowVpcInterfacesResult{Result: future}
 }
 
 func (a *MediaConnectStub) CreateFlow(ctx workflow.Context, input *mediaconnect.CreateFlowInput) (*mediaconnect.CreateFlowOutput, error) {
-    var output mediaconnect.CreateFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.CreateFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) CreateFlowAsync(ctx workflow.Context, input *mediaconnect.CreateFlowInput) *MediaconnectCreateFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateFlow, input)
-    return &MediaconnectCreateFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateFlow, input)
+	return &MediaconnectCreateFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) DeleteFlow(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) (*mediaconnect.DeleteFlowOutput, error) {
-    var output mediaconnect.DeleteFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.DeleteFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) DeleteFlowAsync(ctx workflow.Context, input *mediaconnect.DeleteFlowInput) *MediaconnectDeleteFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteFlow, input)
-    return &MediaconnectDeleteFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteFlow, input)
+	return &MediaconnectDeleteFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) DescribeFlow(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) (*mediaconnect.DescribeFlowOutput, error) {
-    var output mediaconnect.DescribeFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.DescribeFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) DescribeFlowAsync(ctx workflow.Context, input *mediaconnect.DescribeFlowInput) *MediaconnectDescribeFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeFlow, input)
-    return &MediaconnectDescribeFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeFlow, input)
+	return &MediaconnectDescribeFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) GrantFlowEntitlements(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) (*mediaconnect.GrantFlowEntitlementsOutput, error) {
-    var output mediaconnect.GrantFlowEntitlementsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GrantFlowEntitlements, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.GrantFlowEntitlementsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GrantFlowEntitlements, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) GrantFlowEntitlementsAsync(ctx workflow.Context, input *mediaconnect.GrantFlowEntitlementsInput) *MediaconnectGrantFlowEntitlementsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GrantFlowEntitlements, input)
-    return &MediaconnectGrantFlowEntitlementsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GrantFlowEntitlements, input)
+	return &MediaconnectGrantFlowEntitlementsResult{Result: future}
 }
 
 func (a *MediaConnectStub) ListEntitlements(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) (*mediaconnect.ListEntitlementsOutput, error) {
-    var output mediaconnect.ListEntitlementsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListEntitlements, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListEntitlementsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListEntitlements, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) ListEntitlementsAsync(ctx workflow.Context, input *mediaconnect.ListEntitlementsInput) *MediaconnectListEntitlementsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListEntitlements, input)
-    return &MediaconnectListEntitlementsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListEntitlements, input)
+	return &MediaconnectListEntitlementsResult{Result: future}
 }
 
 func (a *MediaConnectStub) ListFlows(ctx workflow.Context, input *mediaconnect.ListFlowsInput) (*mediaconnect.ListFlowsOutput, error) {
-    var output mediaconnect.ListFlowsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListFlows, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListFlowsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListFlows, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) ListFlowsAsync(ctx workflow.Context, input *mediaconnect.ListFlowsInput) *MediaconnectListFlowsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListFlows, input)
-    return &MediaconnectListFlowsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListFlows, input)
+	return &MediaconnectListFlowsResult{Result: future}
 }
 
 func (a *MediaConnectStub) ListTagsForResource(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) (*mediaconnect.ListTagsForResourceOutput, error) {
-    var output mediaconnect.ListTagsForResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.ListTagsForResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) ListTagsForResourceAsync(ctx workflow.Context, input *mediaconnect.ListTagsForResourceInput) *MediaconnectListTagsForResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
-    return &MediaconnectListTagsForResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
+	return &MediaconnectListTagsForResourceResult{Result: future}
 }
 
 func (a *MediaConnectStub) RemoveFlowOutput(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) (*mediaconnect.RemoveFlowOutputOutput, error) {
-    var output mediaconnect.RemoveFlowOutputOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowOutput, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowOutputOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowOutput, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) RemoveFlowOutputAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowOutputInput) *MediaconnectRemoveFlowOutputResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowOutput, input)
-    return &MediaconnectRemoveFlowOutputResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowOutput, input)
+	return &MediaconnectRemoveFlowOutputResult{Result: future}
 }
 
 func (a *MediaConnectStub) RemoveFlowSource(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) (*mediaconnect.RemoveFlowSourceOutput, error) {
-    var output mediaconnect.RemoveFlowSourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowSource, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowSourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowSource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) RemoveFlowSourceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowSourceInput) *MediaconnectRemoveFlowSourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowSource, input)
-    return &MediaconnectRemoveFlowSourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowSource, input)
+	return &MediaconnectRemoveFlowSourceResult{Result: future}
 }
 
 func (a *MediaConnectStub) RemoveFlowVpcInterface(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) (*mediaconnect.RemoveFlowVpcInterfaceOutput, error) {
-    var output mediaconnect.RemoveFlowVpcInterfaceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowVpcInterface, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RemoveFlowVpcInterfaceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowVpcInterface, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) RemoveFlowVpcInterfaceAsync(ctx workflow.Context, input *mediaconnect.RemoveFlowVpcInterfaceInput) *MediaconnectRemoveFlowVpcInterfaceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowVpcInterface, input)
-    return &MediaconnectRemoveFlowVpcInterfaceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RemoveFlowVpcInterface, input)
+	return &MediaconnectRemoveFlowVpcInterfaceResult{Result: future}
 }
 
 func (a *MediaConnectStub) RevokeFlowEntitlement(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) (*mediaconnect.RevokeFlowEntitlementOutput, error) {
-    var output mediaconnect.RevokeFlowEntitlementOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RevokeFlowEntitlement, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.RevokeFlowEntitlementOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RevokeFlowEntitlement, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) RevokeFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.RevokeFlowEntitlementInput) *MediaconnectRevokeFlowEntitlementResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RevokeFlowEntitlement, input)
-    return &MediaconnectRevokeFlowEntitlementResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RevokeFlowEntitlement, input)
+	return &MediaconnectRevokeFlowEntitlementResult{Result: future}
 }
 
 func (a *MediaConnectStub) StartFlow(ctx workflow.Context, input *mediaconnect.StartFlowInput) (*mediaconnect.StartFlowOutput, error) {
-    var output mediaconnect.StartFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StartFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.StartFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StartFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) StartFlowAsync(ctx workflow.Context, input *mediaconnect.StartFlowInput) *MediaconnectStartFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StartFlow, input)
-    return &MediaconnectStartFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StartFlow, input)
+	return &MediaconnectStartFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) StopFlow(ctx workflow.Context, input *mediaconnect.StopFlowInput) (*mediaconnect.StopFlowOutput, error) {
-    var output mediaconnect.StopFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StopFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.StopFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StopFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) StopFlowAsync(ctx workflow.Context, input *mediaconnect.StopFlowInput) *MediaconnectStopFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StopFlow, input)
-    return &MediaconnectStopFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StopFlow, input)
+	return &MediaconnectStopFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) TagResource(ctx workflow.Context, input *mediaconnect.TagResourceInput) (*mediaconnect.TagResourceOutput, error) {
-    var output mediaconnect.TagResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.TagResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.TagResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) TagResourceAsync(ctx workflow.Context, input *mediaconnect.TagResourceInput) *MediaconnectTagResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
-    return &MediaconnectTagResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.TagResource, input)
+	return &MediaconnectTagResourceResult{Result: future}
 }
 
 func (a *MediaConnectStub) UntagResource(ctx workflow.Context, input *mediaconnect.UntagResourceInput) (*mediaconnect.UntagResourceOutput, error) {
-    var output mediaconnect.UntagResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UntagResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) UntagResourceAsync(ctx workflow.Context, input *mediaconnect.UntagResourceInput) *MediaconnectUntagResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
-    return &MediaconnectUntagResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UntagResource, input)
+	return &MediaconnectUntagResourceResult{Result: future}
 }
 
 func (a *MediaConnectStub) UpdateFlow(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) (*mediaconnect.UpdateFlowOutput, error) {
-    var output mediaconnect.UpdateFlowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlow, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) UpdateFlowAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowInput) *MediaconnectUpdateFlowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlow, input)
-    return &MediaconnectUpdateFlowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlow, input)
+	return &MediaconnectUpdateFlowResult{Result: future}
 }
 
 func (a *MediaConnectStub) UpdateFlowEntitlement(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) (*mediaconnect.UpdateFlowEntitlementOutput, error) {
-    var output mediaconnect.UpdateFlowEntitlementOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowEntitlement, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowEntitlementOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowEntitlement, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) UpdateFlowEntitlementAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowEntitlementInput) *MediaconnectUpdateFlowEntitlementResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowEntitlement, input)
-    return &MediaconnectUpdateFlowEntitlementResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowEntitlement, input)
+	return &MediaconnectUpdateFlowEntitlementResult{Result: future}
 }
 
 func (a *MediaConnectStub) UpdateFlowOutput(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) (*mediaconnect.UpdateFlowOutputOutput, error) {
-    var output mediaconnect.UpdateFlowOutputOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowOutput, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowOutputOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowOutput, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) UpdateFlowOutputAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowOutputInput) *MediaconnectUpdateFlowOutputResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowOutput, input)
-    return &MediaconnectUpdateFlowOutputResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowOutput, input)
+	return &MediaconnectUpdateFlowOutputResult{Result: future}
 }
 
 func (a *MediaConnectStub) UpdateFlowSource(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) (*mediaconnect.UpdateFlowSourceOutput, error) {
-    var output mediaconnect.UpdateFlowSourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowSource, input).Get(ctx, &output)
-    return &output, err
+	var output mediaconnect.UpdateFlowSourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowSource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *MediaConnectStub) UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowSource, input)
-    return &MediaconnectUpdateFlowSourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateFlowSource, input)
+	return &MediaconnectUpdateFlowSourceResult{Result: future}
 }

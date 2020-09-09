@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,42 +8,42 @@ import (
 )
 
 type SavingsPlansActivities struct {
-    client savingsplansiface.SavingsPlansAPI
+	client savingsplansiface.SavingsPlansAPI
 }
 
 func NewSavingsPlansActivities(session *session.Session, config ...*aws.Config) *SavingsPlansActivities {
-    client := savingsplans.New(session, config...)
-    return &SavingsPlansActivities{client: client}
+	client := savingsplans.New(session, config...)
+	return &SavingsPlansActivities{client: client}
 }
 
 func (a *SavingsPlansActivities) CreateSavingsPlan(input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error) {
-    return a.client.CreateSavingsPlan(input)
+	return a.client.CreateSavingsPlan(input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlanRates(input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
-    return a.client.DescribeSavingsPlanRates(input)
+	return a.client.DescribeSavingsPlanRates(input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlans(input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error) {
-    return a.client.DescribeSavingsPlans(input)
+	return a.client.DescribeSavingsPlans(input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlansOfferingRates(input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
-    return a.client.DescribeSavingsPlansOfferingRates(input)
+	return a.client.DescribeSavingsPlansOfferingRates(input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlansOfferings(input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
-    return a.client.DescribeSavingsPlansOfferings(input)
+	return a.client.DescribeSavingsPlansOfferings(input)
 }
 
 func (a *SavingsPlansActivities) ListTagsForResource(input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error) {
-    return a.client.ListTagsForResource(input)
+	return a.client.ListTagsForResource(input)
 }
 
 func (a *SavingsPlansActivities) TagResource(input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error) {
-    return a.client.TagResource(input)
+	return a.client.TagResource(input)
 }
 
 func (a *SavingsPlansActivities) UntagResource(input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error) {
-    return a.client.UntagResource(input)
+	return a.client.UntagResource(input)
 }

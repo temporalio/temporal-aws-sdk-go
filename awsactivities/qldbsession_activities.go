@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,14 +8,14 @@ import (
 )
 
 type QLDBSessionActivities struct {
-    client qldbsessioniface.QLDBSessionAPI
+	client qldbsessioniface.QLDBSessionAPI
 }
 
 func NewQLDBSessionActivities(session *session.Session, config ...*aws.Config) *QLDBSessionActivities {
-    client := qldbsession.New(session, config...)
-    return &QLDBSessionActivities{client: client}
+	client := qldbsession.New(session, config...)
+	return &QLDBSessionActivities{client: client}
 }
 
 func (a *QLDBSessionActivities) SendCommand(input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
-    return a.client.SendCommand(input)
+	return a.client.SendCommand(input)
 }

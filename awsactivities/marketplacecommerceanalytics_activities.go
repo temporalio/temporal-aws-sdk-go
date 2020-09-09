@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,18 +8,18 @@ import (
 )
 
 type MarketplaceCommerceAnalyticsActivities struct {
-    client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI
+	client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI
 }
 
 func NewMarketplaceCommerceAnalyticsActivities(session *session.Session, config ...*aws.Config) *MarketplaceCommerceAnalyticsActivities {
-    client := marketplacecommerceanalytics.New(session, config...)
-    return &MarketplaceCommerceAnalyticsActivities{client: client}
+	client := marketplacecommerceanalytics.New(session, config...)
+	return &MarketplaceCommerceAnalyticsActivities{client: client}
 }
 
 func (a *MarketplaceCommerceAnalyticsActivities) GenerateDataSet(input *marketplacecommerceanalytics.GenerateDataSetInput) (*marketplacecommerceanalytics.GenerateDataSetOutput, error) {
-    return a.client.GenerateDataSet(input)
+	return a.client.GenerateDataSet(input)
 }
 
 func (a *MarketplaceCommerceAnalyticsActivities) StartSupportDataExport(input *marketplacecommerceanalytics.StartSupportDataExportInput) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
-    return a.client.StartSupportDataExport(input)
+	return a.client.StartSupportDataExport(input)
 }

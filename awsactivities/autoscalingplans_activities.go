@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,34 +8,34 @@ import (
 )
 
 type AutoScalingPlansActivities struct {
-    client autoscalingplansiface.AutoScalingPlansAPI
+	client autoscalingplansiface.AutoScalingPlansAPI
 }
 
 func NewAutoScalingPlansActivities(session *session.Session, config ...*aws.Config) *AutoScalingPlansActivities {
-    client := autoscalingplans.New(session, config...)
-    return &AutoScalingPlansActivities{client: client}
+	client := autoscalingplans.New(session, config...)
+	return &AutoScalingPlansActivities{client: client}
 }
 
 func (a *AutoScalingPlansActivities) CreateScalingPlan(input *autoscalingplans.CreateScalingPlanInput) (*autoscalingplans.CreateScalingPlanOutput, error) {
-    return a.client.CreateScalingPlan(input)
+	return a.client.CreateScalingPlan(input)
 }
 
 func (a *AutoScalingPlansActivities) DeleteScalingPlan(input *autoscalingplans.DeleteScalingPlanInput) (*autoscalingplans.DeleteScalingPlanOutput, error) {
-    return a.client.DeleteScalingPlan(input)
+	return a.client.DeleteScalingPlan(input)
 }
 
 func (a *AutoScalingPlansActivities) DescribeScalingPlanResources(input *autoscalingplans.DescribeScalingPlanResourcesInput) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error) {
-    return a.client.DescribeScalingPlanResources(input)
+	return a.client.DescribeScalingPlanResources(input)
 }
 
 func (a *AutoScalingPlansActivities) DescribeScalingPlans(input *autoscalingplans.DescribeScalingPlansInput) (*autoscalingplans.DescribeScalingPlansOutput, error) {
-    return a.client.DescribeScalingPlans(input)
+	return a.client.DescribeScalingPlans(input)
 }
 
 func (a *AutoScalingPlansActivities) GetScalingPlanResourceForecastData(input *autoscalingplans.GetScalingPlanResourceForecastDataInput) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error) {
-    return a.client.GetScalingPlanResourceForecastData(input)
+	return a.client.GetScalingPlanResourceForecastData(input)
 }
 
 func (a *AutoScalingPlansActivities) UpdateScalingPlan(input *autoscalingplans.UpdateScalingPlanInput) (*autoscalingplans.UpdateScalingPlanOutput, error) {
-    return a.client.UpdateScalingPlan(input)
+	return a.client.UpdateScalingPlan(input)
 }

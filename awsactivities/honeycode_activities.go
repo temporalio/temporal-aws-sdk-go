@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,18 +8,18 @@ import (
 )
 
 type HoneycodeActivities struct {
-    client honeycodeiface.HoneycodeAPI
+	client honeycodeiface.HoneycodeAPI
 }
 
 func NewHoneycodeActivities(session *session.Session, config ...*aws.Config) *HoneycodeActivities {
-    client := honeycode.New(session, config...)
-    return &HoneycodeActivities{client: client}
+	client := honeycode.New(session, config...)
+	return &HoneycodeActivities{client: client}
 }
 
 func (a *HoneycodeActivities) GetScreenData(input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error) {
-    return a.client.GetScreenData(input)
+	return a.client.GetScreenData(input)
 }
 
 func (a *HoneycodeActivities) InvokeScreenAutomation(input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
-    return a.client.InvokeScreenAutomation(input)
+	return a.client.InvokeScreenAutomation(input)
 }

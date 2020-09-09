@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,26 +8,26 @@ import (
 )
 
 type IoTEventsDataActivities struct {
-    client ioteventsdataiface.IoTEventsDataAPI
+	client ioteventsdataiface.IoTEventsDataAPI
 }
 
 func NewIoTEventsDataActivities(session *session.Session, config ...*aws.Config) *IoTEventsDataActivities {
-    client := ioteventsdata.New(session, config...)
-    return &IoTEventsDataActivities{client: client}
+	client := ioteventsdata.New(session, config...)
+	return &IoTEventsDataActivities{client: client}
 }
 
 func (a *IoTEventsDataActivities) BatchPutMessage(input *ioteventsdata.BatchPutMessageInput) (*ioteventsdata.BatchPutMessageOutput, error) {
-    return a.client.BatchPutMessage(input)
+	return a.client.BatchPutMessage(input)
 }
 
 func (a *IoTEventsDataActivities) BatchUpdateDetector(input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error) {
-    return a.client.BatchUpdateDetector(input)
+	return a.client.BatchUpdateDetector(input)
 }
 
 func (a *IoTEventsDataActivities) DescribeDetector(input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error) {
-    return a.client.DescribeDetector(input)
+	return a.client.DescribeDetector(input)
 }
 
 func (a *IoTEventsDataActivities) ListDetectors(input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error) {
-    return a.client.ListDetectors(input)
+	return a.client.ListDetectors(input)
 }

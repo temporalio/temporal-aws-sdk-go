@@ -7,382 +7,383 @@ import (
 )
 
 type SSMClient interface {
-       AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error)
-       AddTagsToResourceAsync(ctx workflow.Context, input *ssm.AddTagsToResourceInput) *SsmAddTagsToResourceResult
+	AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error)
+	AddTagsToResourceAsync(ctx workflow.Context, input *ssm.AddTagsToResourceInput) *SsmAddTagsToResourceResult
 
-       CancelCommand(ctx workflow.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error)
-       CancelCommandAsync(ctx workflow.Context, input *ssm.CancelCommandInput) *SsmCancelCommandResult
+	CancelCommand(ctx workflow.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error)
+	CancelCommandAsync(ctx workflow.Context, input *ssm.CancelCommandInput) *SsmCancelCommandResult
 
-       CancelMaintenanceWindowExecution(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error)
-       CancelMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) *SsmCancelMaintenanceWindowExecutionResult
+	CancelMaintenanceWindowExecution(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error)
+	CancelMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) *SsmCancelMaintenanceWindowExecutionResult
 
-       CreateActivation(ctx workflow.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error)
-       CreateActivationAsync(ctx workflow.Context, input *ssm.CreateActivationInput) *SsmCreateActivationResult
+	CreateActivation(ctx workflow.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error)
+	CreateActivationAsync(ctx workflow.Context, input *ssm.CreateActivationInput) *SsmCreateActivationResult
 
-       CreateAssociation(ctx workflow.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error)
-       CreateAssociationAsync(ctx workflow.Context, input *ssm.CreateAssociationInput) *SsmCreateAssociationResult
+	CreateAssociation(ctx workflow.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error)
+	CreateAssociationAsync(ctx workflow.Context, input *ssm.CreateAssociationInput) *SsmCreateAssociationResult
 
-       CreateAssociationBatch(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error)
-       CreateAssociationBatchAsync(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) *SsmCreateAssociationBatchResult
+	CreateAssociationBatch(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error)
+	CreateAssociationBatchAsync(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) *SsmCreateAssociationBatchResult
 
-       CreateDocument(ctx workflow.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error)
-       CreateDocumentAsync(ctx workflow.Context, input *ssm.CreateDocumentInput) *SsmCreateDocumentResult
+	CreateDocument(ctx workflow.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error)
+	CreateDocumentAsync(ctx workflow.Context, input *ssm.CreateDocumentInput) *SsmCreateDocumentResult
 
-       CreateMaintenanceWindow(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error)
-       CreateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) *SsmCreateMaintenanceWindowResult
+	CreateMaintenanceWindow(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error)
+	CreateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) *SsmCreateMaintenanceWindowResult
 
-       CreateOpsItem(ctx workflow.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error)
-       CreateOpsItemAsync(ctx workflow.Context, input *ssm.CreateOpsItemInput) *SsmCreateOpsItemResult
+	CreateOpsItem(ctx workflow.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error)
+	CreateOpsItemAsync(ctx workflow.Context, input *ssm.CreateOpsItemInput) *SsmCreateOpsItemResult
 
-       CreatePatchBaseline(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error)
-       CreatePatchBaselineAsync(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) *SsmCreatePatchBaselineResult
+	CreatePatchBaseline(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error)
+	CreatePatchBaselineAsync(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) *SsmCreatePatchBaselineResult
 
-       CreateResourceDataSync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error)
-       CreateResourceDataSyncAsync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) *SsmCreateResourceDataSyncResult
+	CreateResourceDataSync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error)
+	CreateResourceDataSyncAsync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) *SsmCreateResourceDataSyncResult
 
-       DeleteActivation(ctx workflow.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error)
-       DeleteActivationAsync(ctx workflow.Context, input *ssm.DeleteActivationInput) *SsmDeleteActivationResult
+	DeleteActivation(ctx workflow.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error)
+	DeleteActivationAsync(ctx workflow.Context, input *ssm.DeleteActivationInput) *SsmDeleteActivationResult
 
-       DeleteAssociation(ctx workflow.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error)
-       DeleteAssociationAsync(ctx workflow.Context, input *ssm.DeleteAssociationInput) *SsmDeleteAssociationResult
+	DeleteAssociation(ctx workflow.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error)
+	DeleteAssociationAsync(ctx workflow.Context, input *ssm.DeleteAssociationInput) *SsmDeleteAssociationResult
 
-       DeleteDocument(ctx workflow.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error)
-       DeleteDocumentAsync(ctx workflow.Context, input *ssm.DeleteDocumentInput) *SsmDeleteDocumentResult
+	DeleteDocument(ctx workflow.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error)
+	DeleteDocumentAsync(ctx workflow.Context, input *ssm.DeleteDocumentInput) *SsmDeleteDocumentResult
 
-       DeleteInventory(ctx workflow.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error)
-       DeleteInventoryAsync(ctx workflow.Context, input *ssm.DeleteInventoryInput) *SsmDeleteInventoryResult
+	DeleteInventory(ctx workflow.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error)
+	DeleteInventoryAsync(ctx workflow.Context, input *ssm.DeleteInventoryInput) *SsmDeleteInventoryResult
 
-       DeleteMaintenanceWindow(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error)
-       DeleteMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) *SsmDeleteMaintenanceWindowResult
+	DeleteMaintenanceWindow(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error)
+	DeleteMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) *SsmDeleteMaintenanceWindowResult
 
-       DeleteParameter(ctx workflow.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error)
-       DeleteParameterAsync(ctx workflow.Context, input *ssm.DeleteParameterInput) *SsmDeleteParameterResult
+	DeleteParameter(ctx workflow.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error)
+	DeleteParameterAsync(ctx workflow.Context, input *ssm.DeleteParameterInput) *SsmDeleteParameterResult
 
-       DeleteParameters(ctx workflow.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error)
-       DeleteParametersAsync(ctx workflow.Context, input *ssm.DeleteParametersInput) *SsmDeleteParametersResult
+	DeleteParameters(ctx workflow.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error)
+	DeleteParametersAsync(ctx workflow.Context, input *ssm.DeleteParametersInput) *SsmDeleteParametersResult
 
-       DeletePatchBaseline(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error)
-       DeletePatchBaselineAsync(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) *SsmDeletePatchBaselineResult
+	DeletePatchBaseline(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error)
+	DeletePatchBaselineAsync(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) *SsmDeletePatchBaselineResult
 
-       DeleteResourceDataSync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error)
-       DeleteResourceDataSyncAsync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) *SsmDeleteResourceDataSyncResult
+	DeleteResourceDataSync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error)
+	DeleteResourceDataSyncAsync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) *SsmDeleteResourceDataSyncResult
 
-       DeregisterManagedInstance(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error)
-       DeregisterManagedInstanceAsync(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) *SsmDeregisterManagedInstanceResult
+	DeregisterManagedInstance(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error)
+	DeregisterManagedInstanceAsync(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) *SsmDeregisterManagedInstanceResult
 
-       DeregisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error)
-       DeregisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) *SsmDeregisterPatchBaselineForPatchGroupResult
+	DeregisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error)
+	DeregisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) *SsmDeregisterPatchBaselineForPatchGroupResult
 
-       DeregisterTargetFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error)
-       DeregisterTargetFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) *SsmDeregisterTargetFromMaintenanceWindowResult
+	DeregisterTargetFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error)
+	DeregisterTargetFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) *SsmDeregisterTargetFromMaintenanceWindowResult
 
-       DeregisterTaskFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error)
-       DeregisterTaskFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) *SsmDeregisterTaskFromMaintenanceWindowResult
+	DeregisterTaskFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error)
+	DeregisterTaskFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) *SsmDeregisterTaskFromMaintenanceWindowResult
 
-       DescribeActivations(ctx workflow.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error)
-       DescribeActivationsAsync(ctx workflow.Context, input *ssm.DescribeActivationsInput) *SsmDescribeActivationsResult
+	DescribeActivations(ctx workflow.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error)
+	DescribeActivationsAsync(ctx workflow.Context, input *ssm.DescribeActivationsInput) *SsmDescribeActivationsResult
 
-       DescribeAssociation(ctx workflow.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error)
-       DescribeAssociationAsync(ctx workflow.Context, input *ssm.DescribeAssociationInput) *SsmDescribeAssociationResult
+	DescribeAssociation(ctx workflow.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error)
+	DescribeAssociationAsync(ctx workflow.Context, input *ssm.DescribeAssociationInput) *SsmDescribeAssociationResult
 
-       DescribeAssociationExecutionTargets(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error)
-       DescribeAssociationExecutionTargetsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) *SsmDescribeAssociationExecutionTargetsResult
+	DescribeAssociationExecutionTargets(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error)
+	DescribeAssociationExecutionTargetsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) *SsmDescribeAssociationExecutionTargetsResult
 
-       DescribeAssociationExecutions(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error)
-       DescribeAssociationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) *SsmDescribeAssociationExecutionsResult
+	DescribeAssociationExecutions(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error)
+	DescribeAssociationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) *SsmDescribeAssociationExecutionsResult
 
-       DescribeAutomationExecutions(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error)
-       DescribeAutomationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) *SsmDescribeAutomationExecutionsResult
+	DescribeAutomationExecutions(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error)
+	DescribeAutomationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) *SsmDescribeAutomationExecutionsResult
 
-       DescribeAutomationStepExecutions(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error)
-       DescribeAutomationStepExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) *SsmDescribeAutomationStepExecutionsResult
+	DescribeAutomationStepExecutions(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error)
+	DescribeAutomationStepExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) *SsmDescribeAutomationStepExecutionsResult
 
-       DescribeAvailablePatches(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error)
-       DescribeAvailablePatchesAsync(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) *SsmDescribeAvailablePatchesResult
+	DescribeAvailablePatches(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error)
+	DescribeAvailablePatchesAsync(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) *SsmDescribeAvailablePatchesResult
 
-       DescribeDocument(ctx workflow.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error)
-       DescribeDocumentAsync(ctx workflow.Context, input *ssm.DescribeDocumentInput) *SsmDescribeDocumentResult
+	DescribeDocument(ctx workflow.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error)
+	DescribeDocumentAsync(ctx workflow.Context, input *ssm.DescribeDocumentInput) *SsmDescribeDocumentResult
 
-       DescribeDocumentPermission(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error)
-       DescribeDocumentPermissionAsync(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) *SsmDescribeDocumentPermissionResult
+	DescribeDocumentPermission(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error)
+	DescribeDocumentPermissionAsync(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) *SsmDescribeDocumentPermissionResult
 
-       DescribeEffectiveInstanceAssociations(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error)
-       DescribeEffectiveInstanceAssociationsAsync(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) *SsmDescribeEffectiveInstanceAssociationsResult
+	DescribeEffectiveInstanceAssociations(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error)
+	DescribeEffectiveInstanceAssociationsAsync(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) *SsmDescribeEffectiveInstanceAssociationsResult
 
-       DescribeEffectivePatchesForPatchBaseline(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error)
-       DescribeEffectivePatchesForPatchBaselineAsync(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) *SsmDescribeEffectivePatchesForPatchBaselineResult
+	DescribeEffectivePatchesForPatchBaseline(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error)
+	DescribeEffectivePatchesForPatchBaselineAsync(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) *SsmDescribeEffectivePatchesForPatchBaselineResult
 
-       DescribeInstanceAssociationsStatus(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error)
-       DescribeInstanceAssociationsStatusAsync(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) *SsmDescribeInstanceAssociationsStatusResult
+	DescribeInstanceAssociationsStatus(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error)
+	DescribeInstanceAssociationsStatusAsync(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) *SsmDescribeInstanceAssociationsStatusResult
 
-       DescribeInstanceInformation(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error)
-       DescribeInstanceInformationAsync(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) *SsmDescribeInstanceInformationResult
+	DescribeInstanceInformation(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error)
+	DescribeInstanceInformationAsync(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) *SsmDescribeInstanceInformationResult
 
-       DescribeInstancePatchStates(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error)
-       DescribeInstancePatchStatesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) *SsmDescribeInstancePatchStatesResult
+	DescribeInstancePatchStates(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error)
+	DescribeInstancePatchStatesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) *SsmDescribeInstancePatchStatesResult
 
-       DescribeInstancePatchStatesForPatchGroup(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error)
-       DescribeInstancePatchStatesForPatchGroupAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) *SsmDescribeInstancePatchStatesForPatchGroupResult
+	DescribeInstancePatchStatesForPatchGroup(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error)
+	DescribeInstancePatchStatesForPatchGroupAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) *SsmDescribeInstancePatchStatesForPatchGroupResult
 
-       DescribeInstancePatches(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error)
-       DescribeInstancePatchesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) *SsmDescribeInstancePatchesResult
+	DescribeInstancePatches(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error)
+	DescribeInstancePatchesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) *SsmDescribeInstancePatchesResult
 
-       DescribeInventoryDeletions(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error)
-       DescribeInventoryDeletionsAsync(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) *SsmDescribeInventoryDeletionsResult
+	DescribeInventoryDeletions(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error)
+	DescribeInventoryDeletionsAsync(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) *SsmDescribeInventoryDeletionsResult
 
-       DescribeMaintenanceWindowExecutionTaskInvocations(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error)
-       DescribeMaintenanceWindowExecutionTaskInvocationsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult
+	DescribeMaintenanceWindowExecutionTaskInvocations(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error)
+	DescribeMaintenanceWindowExecutionTaskInvocationsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult
 
-       DescribeMaintenanceWindowExecutionTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error)
-       DescribeMaintenanceWindowExecutionTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) *SsmDescribeMaintenanceWindowExecutionTasksResult
+	DescribeMaintenanceWindowExecutionTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error)
+	DescribeMaintenanceWindowExecutionTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) *SsmDescribeMaintenanceWindowExecutionTasksResult
 
-       DescribeMaintenanceWindowExecutions(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error)
-       DescribeMaintenanceWindowExecutionsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) *SsmDescribeMaintenanceWindowExecutionsResult
+	DescribeMaintenanceWindowExecutions(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error)
+	DescribeMaintenanceWindowExecutionsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) *SsmDescribeMaintenanceWindowExecutionsResult
 
-       DescribeMaintenanceWindowSchedule(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error)
-       DescribeMaintenanceWindowScheduleAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) *SsmDescribeMaintenanceWindowScheduleResult
+	DescribeMaintenanceWindowSchedule(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error)
+	DescribeMaintenanceWindowScheduleAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) *SsmDescribeMaintenanceWindowScheduleResult
 
-       DescribeMaintenanceWindowTargets(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error)
-       DescribeMaintenanceWindowTargetsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) *SsmDescribeMaintenanceWindowTargetsResult
+	DescribeMaintenanceWindowTargets(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error)
+	DescribeMaintenanceWindowTargetsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) *SsmDescribeMaintenanceWindowTargetsResult
 
-       DescribeMaintenanceWindowTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error)
-       DescribeMaintenanceWindowTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) *SsmDescribeMaintenanceWindowTasksResult
+	DescribeMaintenanceWindowTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error)
+	DescribeMaintenanceWindowTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) *SsmDescribeMaintenanceWindowTasksResult
 
-       DescribeMaintenanceWindows(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error)
-       DescribeMaintenanceWindowsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) *SsmDescribeMaintenanceWindowsResult
+	DescribeMaintenanceWindows(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error)
+	DescribeMaintenanceWindowsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) *SsmDescribeMaintenanceWindowsResult
 
-       DescribeMaintenanceWindowsForTarget(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error)
-       DescribeMaintenanceWindowsForTargetAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) *SsmDescribeMaintenanceWindowsForTargetResult
+	DescribeMaintenanceWindowsForTarget(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error)
+	DescribeMaintenanceWindowsForTargetAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) *SsmDescribeMaintenanceWindowsForTargetResult
 
-       DescribeOpsItems(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error)
-       DescribeOpsItemsAsync(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) *SsmDescribeOpsItemsResult
+	DescribeOpsItems(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error)
+	DescribeOpsItemsAsync(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) *SsmDescribeOpsItemsResult
 
-       DescribeParameters(ctx workflow.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error)
-       DescribeParametersAsync(ctx workflow.Context, input *ssm.DescribeParametersInput) *SsmDescribeParametersResult
+	DescribeParameters(ctx workflow.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error)
+	DescribeParametersAsync(ctx workflow.Context, input *ssm.DescribeParametersInput) *SsmDescribeParametersResult
 
-       DescribePatchBaselines(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error)
-       DescribePatchBaselinesAsync(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) *SsmDescribePatchBaselinesResult
+	DescribePatchBaselines(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error)
+	DescribePatchBaselinesAsync(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) *SsmDescribePatchBaselinesResult
 
-       DescribePatchGroupState(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error)
-       DescribePatchGroupStateAsync(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) *SsmDescribePatchGroupStateResult
+	DescribePatchGroupState(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error)
+	DescribePatchGroupStateAsync(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) *SsmDescribePatchGroupStateResult
 
-       DescribePatchGroups(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error)
-       DescribePatchGroupsAsync(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) *SsmDescribePatchGroupsResult
+	DescribePatchGroups(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error)
+	DescribePatchGroupsAsync(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) *SsmDescribePatchGroupsResult
 
-       DescribePatchProperties(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error)
-       DescribePatchPropertiesAsync(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) *SsmDescribePatchPropertiesResult
+	DescribePatchProperties(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error)
+	DescribePatchPropertiesAsync(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) *SsmDescribePatchPropertiesResult
 
-       DescribeSessions(ctx workflow.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error)
-       DescribeSessionsAsync(ctx workflow.Context, input *ssm.DescribeSessionsInput) *SsmDescribeSessionsResult
+	DescribeSessions(ctx workflow.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error)
+	DescribeSessionsAsync(ctx workflow.Context, input *ssm.DescribeSessionsInput) *SsmDescribeSessionsResult
 
-       GetAutomationExecution(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error)
-       GetAutomationExecutionAsync(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) *SsmGetAutomationExecutionResult
+	GetAutomationExecution(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error)
+	GetAutomationExecutionAsync(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) *SsmGetAutomationExecutionResult
 
-       GetCalendarState(ctx workflow.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error)
-       GetCalendarStateAsync(ctx workflow.Context, input *ssm.GetCalendarStateInput) *SsmGetCalendarStateResult
+	GetCalendarState(ctx workflow.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error)
+	GetCalendarStateAsync(ctx workflow.Context, input *ssm.GetCalendarStateInput) *SsmGetCalendarStateResult
 
-       GetCommandInvocation(ctx workflow.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error)
-       GetCommandInvocationAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *SsmGetCommandInvocationResult
+	GetCommandInvocation(ctx workflow.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error)
+	GetCommandInvocationAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *SsmGetCommandInvocationResult
 
-       GetConnectionStatus(ctx workflow.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error)
-       GetConnectionStatusAsync(ctx workflow.Context, input *ssm.GetConnectionStatusInput) *SsmGetConnectionStatusResult
+	GetConnectionStatus(ctx workflow.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error)
+	GetConnectionStatusAsync(ctx workflow.Context, input *ssm.GetConnectionStatusInput) *SsmGetConnectionStatusResult
 
-       GetDefaultPatchBaseline(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error)
-       GetDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) *SsmGetDefaultPatchBaselineResult
+	GetDefaultPatchBaseline(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error)
+	GetDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) *SsmGetDefaultPatchBaselineResult
 
-       GetDeployablePatchSnapshotForInstance(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error)
-       GetDeployablePatchSnapshotForInstanceAsync(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) *SsmGetDeployablePatchSnapshotForInstanceResult
+	GetDeployablePatchSnapshotForInstance(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error)
+	GetDeployablePatchSnapshotForInstanceAsync(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) *SsmGetDeployablePatchSnapshotForInstanceResult
 
-       GetDocument(ctx workflow.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error)
-       GetDocumentAsync(ctx workflow.Context, input *ssm.GetDocumentInput) *SsmGetDocumentResult
+	GetDocument(ctx workflow.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error)
+	GetDocumentAsync(ctx workflow.Context, input *ssm.GetDocumentInput) *SsmGetDocumentResult
 
-       GetInventory(ctx workflow.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error)
-       GetInventoryAsync(ctx workflow.Context, input *ssm.GetInventoryInput) *SsmGetInventoryResult
+	GetInventory(ctx workflow.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error)
+	GetInventoryAsync(ctx workflow.Context, input *ssm.GetInventoryInput) *SsmGetInventoryResult
 
-       GetInventorySchema(ctx workflow.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error)
-       GetInventorySchemaAsync(ctx workflow.Context, input *ssm.GetInventorySchemaInput) *SsmGetInventorySchemaResult
+	GetInventorySchema(ctx workflow.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error)
+	GetInventorySchemaAsync(ctx workflow.Context, input *ssm.GetInventorySchemaInput) *SsmGetInventorySchemaResult
 
-       GetMaintenanceWindow(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error)
-       GetMaintenanceWindowAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) *SsmGetMaintenanceWindowResult
+	GetMaintenanceWindow(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error)
+	GetMaintenanceWindowAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) *SsmGetMaintenanceWindowResult
 
-       GetMaintenanceWindowExecution(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error)
-       GetMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) *SsmGetMaintenanceWindowExecutionResult
+	GetMaintenanceWindowExecution(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error)
+	GetMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) *SsmGetMaintenanceWindowExecutionResult
 
-       GetMaintenanceWindowExecutionTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error)
-       GetMaintenanceWindowExecutionTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) *SsmGetMaintenanceWindowExecutionTaskResult
+	GetMaintenanceWindowExecutionTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error)
+	GetMaintenanceWindowExecutionTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) *SsmGetMaintenanceWindowExecutionTaskResult
 
-       GetMaintenanceWindowExecutionTaskInvocation(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error)
-       GetMaintenanceWindowExecutionTaskInvocationAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) *SsmGetMaintenanceWindowExecutionTaskInvocationResult
+	GetMaintenanceWindowExecutionTaskInvocation(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error)
+	GetMaintenanceWindowExecutionTaskInvocationAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) *SsmGetMaintenanceWindowExecutionTaskInvocationResult
 
-       GetMaintenanceWindowTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error)
-       GetMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) *SsmGetMaintenanceWindowTaskResult
+	GetMaintenanceWindowTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error)
+	GetMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) *SsmGetMaintenanceWindowTaskResult
 
-       GetOpsItem(ctx workflow.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error)
-       GetOpsItemAsync(ctx workflow.Context, input *ssm.GetOpsItemInput) *SsmGetOpsItemResult
+	GetOpsItem(ctx workflow.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error)
+	GetOpsItemAsync(ctx workflow.Context, input *ssm.GetOpsItemInput) *SsmGetOpsItemResult
 
-       GetOpsSummary(ctx workflow.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error)
-       GetOpsSummaryAsync(ctx workflow.Context, input *ssm.GetOpsSummaryInput) *SsmGetOpsSummaryResult
+	GetOpsSummary(ctx workflow.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error)
+	GetOpsSummaryAsync(ctx workflow.Context, input *ssm.GetOpsSummaryInput) *SsmGetOpsSummaryResult
 
-       GetParameter(ctx workflow.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error)
-       GetParameterAsync(ctx workflow.Context, input *ssm.GetParameterInput) *SsmGetParameterResult
+	GetParameter(ctx workflow.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error)
+	GetParameterAsync(ctx workflow.Context, input *ssm.GetParameterInput) *SsmGetParameterResult
 
-       GetParameterHistory(ctx workflow.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error)
-       GetParameterHistoryAsync(ctx workflow.Context, input *ssm.GetParameterHistoryInput) *SsmGetParameterHistoryResult
+	GetParameterHistory(ctx workflow.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error)
+	GetParameterHistoryAsync(ctx workflow.Context, input *ssm.GetParameterHistoryInput) *SsmGetParameterHistoryResult
 
-       GetParameters(ctx workflow.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error)
-       GetParametersAsync(ctx workflow.Context, input *ssm.GetParametersInput) *SsmGetParametersResult
+	GetParameters(ctx workflow.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error)
+	GetParametersAsync(ctx workflow.Context, input *ssm.GetParametersInput) *SsmGetParametersResult
 
-       GetParametersByPath(ctx workflow.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error)
-       GetParametersByPathAsync(ctx workflow.Context, input *ssm.GetParametersByPathInput) *SsmGetParametersByPathResult
+	GetParametersByPath(ctx workflow.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error)
+	GetParametersByPathAsync(ctx workflow.Context, input *ssm.GetParametersByPathInput) *SsmGetParametersByPathResult
 
-       GetPatchBaseline(ctx workflow.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error)
-       GetPatchBaselineAsync(ctx workflow.Context, input *ssm.GetPatchBaselineInput) *SsmGetPatchBaselineResult
+	GetPatchBaseline(ctx workflow.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error)
+	GetPatchBaselineAsync(ctx workflow.Context, input *ssm.GetPatchBaselineInput) *SsmGetPatchBaselineResult
 
-       GetPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error)
-       GetPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) *SsmGetPatchBaselineForPatchGroupResult
+	GetPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error)
+	GetPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) *SsmGetPatchBaselineForPatchGroupResult
 
-       GetServiceSetting(ctx workflow.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error)
-       GetServiceSettingAsync(ctx workflow.Context, input *ssm.GetServiceSettingInput) *SsmGetServiceSettingResult
+	GetServiceSetting(ctx workflow.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error)
+	GetServiceSettingAsync(ctx workflow.Context, input *ssm.GetServiceSettingInput) *SsmGetServiceSettingResult
 
-       LabelParameterVersion(ctx workflow.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error)
-       LabelParameterVersionAsync(ctx workflow.Context, input *ssm.LabelParameterVersionInput) *SsmLabelParameterVersionResult
+	LabelParameterVersion(ctx workflow.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error)
+	LabelParameterVersionAsync(ctx workflow.Context, input *ssm.LabelParameterVersionInput) *SsmLabelParameterVersionResult
 
-       ListAssociationVersions(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error)
-       ListAssociationVersionsAsync(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) *SsmListAssociationVersionsResult
+	ListAssociationVersions(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error)
+	ListAssociationVersionsAsync(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) *SsmListAssociationVersionsResult
 
-       ListAssociations(ctx workflow.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error)
-       ListAssociationsAsync(ctx workflow.Context, input *ssm.ListAssociationsInput) *SsmListAssociationsResult
+	ListAssociations(ctx workflow.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error)
+	ListAssociationsAsync(ctx workflow.Context, input *ssm.ListAssociationsInput) *SsmListAssociationsResult
 
-       ListCommandInvocations(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error)
-       ListCommandInvocationsAsync(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) *SsmListCommandInvocationsResult
+	ListCommandInvocations(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error)
+	ListCommandInvocationsAsync(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) *SsmListCommandInvocationsResult
 
-       ListCommands(ctx workflow.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error)
-       ListCommandsAsync(ctx workflow.Context, input *ssm.ListCommandsInput) *SsmListCommandsResult
+	ListCommands(ctx workflow.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error)
+	ListCommandsAsync(ctx workflow.Context, input *ssm.ListCommandsInput) *SsmListCommandsResult
 
-       ListComplianceItems(ctx workflow.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error)
-       ListComplianceItemsAsync(ctx workflow.Context, input *ssm.ListComplianceItemsInput) *SsmListComplianceItemsResult
+	ListComplianceItems(ctx workflow.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error)
+	ListComplianceItemsAsync(ctx workflow.Context, input *ssm.ListComplianceItemsInput) *SsmListComplianceItemsResult
 
-       ListComplianceSummaries(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error)
-       ListComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) *SsmListComplianceSummariesResult
+	ListComplianceSummaries(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error)
+	ListComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) *SsmListComplianceSummariesResult
 
-       ListDocumentVersions(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error)
-       ListDocumentVersionsAsync(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) *SsmListDocumentVersionsResult
+	ListDocumentVersions(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error)
+	ListDocumentVersionsAsync(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) *SsmListDocumentVersionsResult
 
-       ListDocuments(ctx workflow.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error)
-       ListDocumentsAsync(ctx workflow.Context, input *ssm.ListDocumentsInput) *SsmListDocumentsResult
+	ListDocuments(ctx workflow.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error)
+	ListDocumentsAsync(ctx workflow.Context, input *ssm.ListDocumentsInput) *SsmListDocumentsResult
 
-       ListInventoryEntries(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error)
-       ListInventoryEntriesAsync(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) *SsmListInventoryEntriesResult
+	ListInventoryEntries(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error)
+	ListInventoryEntriesAsync(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) *SsmListInventoryEntriesResult
 
-       ListResourceComplianceSummaries(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error)
-       ListResourceComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) *SsmListResourceComplianceSummariesResult
+	ListResourceComplianceSummaries(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error)
+	ListResourceComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) *SsmListResourceComplianceSummariesResult
 
-       ListResourceDataSync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error)
-       ListResourceDataSyncAsync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) *SsmListResourceDataSyncResult
+	ListResourceDataSync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error)
+	ListResourceDataSyncAsync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) *SsmListResourceDataSyncResult
 
-       ListTagsForResource(ctx workflow.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error)
-       ListTagsForResourceAsync(ctx workflow.Context, input *ssm.ListTagsForResourceInput) *SsmListTagsForResourceResult
+	ListTagsForResource(ctx workflow.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error)
+	ListTagsForResourceAsync(ctx workflow.Context, input *ssm.ListTagsForResourceInput) *SsmListTagsForResourceResult
 
-       ModifyDocumentPermission(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error)
-       ModifyDocumentPermissionAsync(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) *SsmModifyDocumentPermissionResult
+	ModifyDocumentPermission(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error)
+	ModifyDocumentPermissionAsync(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) *SsmModifyDocumentPermissionResult
 
-       PutComplianceItems(ctx workflow.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error)
-       PutComplianceItemsAsync(ctx workflow.Context, input *ssm.PutComplianceItemsInput) *SsmPutComplianceItemsResult
+	PutComplianceItems(ctx workflow.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error)
+	PutComplianceItemsAsync(ctx workflow.Context, input *ssm.PutComplianceItemsInput) *SsmPutComplianceItemsResult
 
-       PutInventory(ctx workflow.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error)
-       PutInventoryAsync(ctx workflow.Context, input *ssm.PutInventoryInput) *SsmPutInventoryResult
+	PutInventory(ctx workflow.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error)
+	PutInventoryAsync(ctx workflow.Context, input *ssm.PutInventoryInput) *SsmPutInventoryResult
 
-       PutParameter(ctx workflow.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error)
-       PutParameterAsync(ctx workflow.Context, input *ssm.PutParameterInput) *SsmPutParameterResult
+	PutParameter(ctx workflow.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error)
+	PutParameterAsync(ctx workflow.Context, input *ssm.PutParameterInput) *SsmPutParameterResult
 
-       RegisterDefaultPatchBaseline(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error)
-       RegisterDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) *SsmRegisterDefaultPatchBaselineResult
+	RegisterDefaultPatchBaseline(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error)
+	RegisterDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) *SsmRegisterDefaultPatchBaselineResult
 
-       RegisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error)
-       RegisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) *SsmRegisterPatchBaselineForPatchGroupResult
+	RegisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error)
+	RegisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) *SsmRegisterPatchBaselineForPatchGroupResult
 
-       RegisterTargetWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error)
-       RegisterTargetWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) *SsmRegisterTargetWithMaintenanceWindowResult
+	RegisterTargetWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error)
+	RegisterTargetWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) *SsmRegisterTargetWithMaintenanceWindowResult
 
-       RegisterTaskWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error)
-       RegisterTaskWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) *SsmRegisterTaskWithMaintenanceWindowResult
+	RegisterTaskWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error)
+	RegisterTaskWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) *SsmRegisterTaskWithMaintenanceWindowResult
 
-       RemoveTagsFromResource(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error)
-       RemoveTagsFromResourceAsync(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) *SsmRemoveTagsFromResourceResult
+	RemoveTagsFromResource(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error)
+	RemoveTagsFromResourceAsync(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) *SsmRemoveTagsFromResourceResult
 
-       ResetServiceSetting(ctx workflow.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error)
-       ResetServiceSettingAsync(ctx workflow.Context, input *ssm.ResetServiceSettingInput) *SsmResetServiceSettingResult
+	ResetServiceSetting(ctx workflow.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error)
+	ResetServiceSettingAsync(ctx workflow.Context, input *ssm.ResetServiceSettingInput) *SsmResetServiceSettingResult
 
-       ResumeSession(ctx workflow.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error)
-       ResumeSessionAsync(ctx workflow.Context, input *ssm.ResumeSessionInput) *SsmResumeSessionResult
+	ResumeSession(ctx workflow.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error)
+	ResumeSessionAsync(ctx workflow.Context, input *ssm.ResumeSessionInput) *SsmResumeSessionResult
 
-       SendAutomationSignal(ctx workflow.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error)
-       SendAutomationSignalAsync(ctx workflow.Context, input *ssm.SendAutomationSignalInput) *SsmSendAutomationSignalResult
+	SendAutomationSignal(ctx workflow.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error)
+	SendAutomationSignalAsync(ctx workflow.Context, input *ssm.SendAutomationSignalInput) *SsmSendAutomationSignalResult
 
-       SendCommand(ctx workflow.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error)
-       SendCommandAsync(ctx workflow.Context, input *ssm.SendCommandInput) *SsmSendCommandResult
+	SendCommand(ctx workflow.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error)
+	SendCommandAsync(ctx workflow.Context, input *ssm.SendCommandInput) *SsmSendCommandResult
 
-       StartAssociationsOnce(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error)
-       StartAssociationsOnceAsync(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) *SsmStartAssociationsOnceResult
+	StartAssociationsOnce(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error)
+	StartAssociationsOnceAsync(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) *SsmStartAssociationsOnceResult
 
-       StartAutomationExecution(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error)
-       StartAutomationExecutionAsync(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) *SsmStartAutomationExecutionResult
+	StartAutomationExecution(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error)
+	StartAutomationExecutionAsync(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) *SsmStartAutomationExecutionResult
 
-       StartSession(ctx workflow.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error)
-       StartSessionAsync(ctx workflow.Context, input *ssm.StartSessionInput) *SsmStartSessionResult
+	StartSession(ctx workflow.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error)
+	StartSessionAsync(ctx workflow.Context, input *ssm.StartSessionInput) *SsmStartSessionResult
 
-       StopAutomationExecution(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error)
-       StopAutomationExecutionAsync(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) *SsmStopAutomationExecutionResult
+	StopAutomationExecution(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error)
+	StopAutomationExecutionAsync(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) *SsmStopAutomationExecutionResult
 
-       TerminateSession(ctx workflow.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error)
-       TerminateSessionAsync(ctx workflow.Context, input *ssm.TerminateSessionInput) *SsmTerminateSessionResult
+	TerminateSession(ctx workflow.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error)
+	TerminateSessionAsync(ctx workflow.Context, input *ssm.TerminateSessionInput) *SsmTerminateSessionResult
 
-       UpdateAssociation(ctx workflow.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error)
-       UpdateAssociationAsync(ctx workflow.Context, input *ssm.UpdateAssociationInput) *SsmUpdateAssociationResult
+	UpdateAssociation(ctx workflow.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error)
+	UpdateAssociationAsync(ctx workflow.Context, input *ssm.UpdateAssociationInput) *SsmUpdateAssociationResult
 
-       UpdateAssociationStatus(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error)
-       UpdateAssociationStatusAsync(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) *SsmUpdateAssociationStatusResult
+	UpdateAssociationStatus(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error)
+	UpdateAssociationStatusAsync(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) *SsmUpdateAssociationStatusResult
 
-       UpdateDocument(ctx workflow.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error)
-       UpdateDocumentAsync(ctx workflow.Context, input *ssm.UpdateDocumentInput) *SsmUpdateDocumentResult
+	UpdateDocument(ctx workflow.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error)
+	UpdateDocumentAsync(ctx workflow.Context, input *ssm.UpdateDocumentInput) *SsmUpdateDocumentResult
 
-       UpdateDocumentDefaultVersion(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error)
-       UpdateDocumentDefaultVersionAsync(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) *SsmUpdateDocumentDefaultVersionResult
+	UpdateDocumentDefaultVersion(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error)
+	UpdateDocumentDefaultVersionAsync(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) *SsmUpdateDocumentDefaultVersionResult
 
-       UpdateMaintenanceWindow(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error)
-       UpdateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) *SsmUpdateMaintenanceWindowResult
+	UpdateMaintenanceWindow(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error)
+	UpdateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) *SsmUpdateMaintenanceWindowResult
 
-       UpdateMaintenanceWindowTarget(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error)
-       UpdateMaintenanceWindowTargetAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) *SsmUpdateMaintenanceWindowTargetResult
+	UpdateMaintenanceWindowTarget(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error)
+	UpdateMaintenanceWindowTargetAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) *SsmUpdateMaintenanceWindowTargetResult
 
-       UpdateMaintenanceWindowTask(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error)
-       UpdateMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) *SsmUpdateMaintenanceWindowTaskResult
+	UpdateMaintenanceWindowTask(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error)
+	UpdateMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) *SsmUpdateMaintenanceWindowTaskResult
 
-       UpdateManagedInstanceRole(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error)
-       UpdateManagedInstanceRoleAsync(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) *SsmUpdateManagedInstanceRoleResult
+	UpdateManagedInstanceRole(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error)
+	UpdateManagedInstanceRoleAsync(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) *SsmUpdateManagedInstanceRoleResult
 
-       UpdateOpsItem(ctx workflow.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error)
-       UpdateOpsItemAsync(ctx workflow.Context, input *ssm.UpdateOpsItemInput) *SsmUpdateOpsItemResult
+	UpdateOpsItem(ctx workflow.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error)
+	UpdateOpsItemAsync(ctx workflow.Context, input *ssm.UpdateOpsItemInput) *SsmUpdateOpsItemResult
 
-       UpdatePatchBaseline(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error)
-       UpdatePatchBaselineAsync(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) *SsmUpdatePatchBaselineResult
+	UpdatePatchBaseline(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error)
+	UpdatePatchBaselineAsync(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) *SsmUpdatePatchBaselineResult
 
-       UpdateResourceDataSync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error)
-       UpdateResourceDataSyncAsync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) *SsmUpdateResourceDataSyncResult
+	UpdateResourceDataSync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error)
+	UpdateResourceDataSyncAsync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) *SsmUpdateResourceDataSyncResult
 
-       UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
-       UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
+	UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
+	UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
 
-       WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error}
+	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error
+}
 
 type SsmAddTagsToResourceResult struct {
 	Result workflow.Future
 }
 
 func (r *SsmAddTagsToResourceResult) Get(ctx workflow.Context) (*ssm.AddTagsToResourceOutput, error) {
-    var output ssm.AddTagsToResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.AddTagsToResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCancelCommandResult struct {
@@ -390,9 +391,9 @@ type SsmCancelCommandResult struct {
 }
 
 func (r *SsmCancelCommandResult) Get(ctx workflow.Context) (*ssm.CancelCommandOutput, error) {
-    var output ssm.CancelCommandOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CancelCommandOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCancelMaintenanceWindowExecutionResult struct {
@@ -400,9 +401,9 @@ type SsmCancelMaintenanceWindowExecutionResult struct {
 }
 
 func (r *SsmCancelMaintenanceWindowExecutionResult) Get(ctx workflow.Context) (*ssm.CancelMaintenanceWindowExecutionOutput, error) {
-    var output ssm.CancelMaintenanceWindowExecutionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CancelMaintenanceWindowExecutionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateActivationResult struct {
@@ -410,9 +411,9 @@ type SsmCreateActivationResult struct {
 }
 
 func (r *SsmCreateActivationResult) Get(ctx workflow.Context) (*ssm.CreateActivationOutput, error) {
-    var output ssm.CreateActivationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateActivationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateAssociationResult struct {
@@ -420,9 +421,9 @@ type SsmCreateAssociationResult struct {
 }
 
 func (r *SsmCreateAssociationResult) Get(ctx workflow.Context) (*ssm.CreateAssociationOutput, error) {
-    var output ssm.CreateAssociationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateAssociationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateAssociationBatchResult struct {
@@ -430,9 +431,9 @@ type SsmCreateAssociationBatchResult struct {
 }
 
 func (r *SsmCreateAssociationBatchResult) Get(ctx workflow.Context) (*ssm.CreateAssociationBatchOutput, error) {
-    var output ssm.CreateAssociationBatchOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateAssociationBatchOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateDocumentResult struct {
@@ -440,9 +441,9 @@ type SsmCreateDocumentResult struct {
 }
 
 func (r *SsmCreateDocumentResult) Get(ctx workflow.Context) (*ssm.CreateDocumentOutput, error) {
-    var output ssm.CreateDocumentOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateDocumentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateMaintenanceWindowResult struct {
@@ -450,9 +451,9 @@ type SsmCreateMaintenanceWindowResult struct {
 }
 
 func (r *SsmCreateMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.CreateMaintenanceWindowOutput, error) {
-    var output ssm.CreateMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateOpsItemResult struct {
@@ -460,9 +461,9 @@ type SsmCreateOpsItemResult struct {
 }
 
 func (r *SsmCreateOpsItemResult) Get(ctx workflow.Context) (*ssm.CreateOpsItemOutput, error) {
-    var output ssm.CreateOpsItemOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateOpsItemOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreatePatchBaselineResult struct {
@@ -470,9 +471,9 @@ type SsmCreatePatchBaselineResult struct {
 }
 
 func (r *SsmCreatePatchBaselineResult) Get(ctx workflow.Context) (*ssm.CreatePatchBaselineOutput, error) {
-    var output ssm.CreatePatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreatePatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmCreateResourceDataSyncResult struct {
@@ -480,9 +481,9 @@ type SsmCreateResourceDataSyncResult struct {
 }
 
 func (r *SsmCreateResourceDataSyncResult) Get(ctx workflow.Context) (*ssm.CreateResourceDataSyncOutput, error) {
-    var output ssm.CreateResourceDataSyncOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateResourceDataSyncOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteActivationResult struct {
@@ -490,9 +491,9 @@ type SsmDeleteActivationResult struct {
 }
 
 func (r *SsmDeleteActivationResult) Get(ctx workflow.Context) (*ssm.DeleteActivationOutput, error) {
-    var output ssm.DeleteActivationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteActivationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteAssociationResult struct {
@@ -500,9 +501,9 @@ type SsmDeleteAssociationResult struct {
 }
 
 func (r *SsmDeleteAssociationResult) Get(ctx workflow.Context) (*ssm.DeleteAssociationOutput, error) {
-    var output ssm.DeleteAssociationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteAssociationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteDocumentResult struct {
@@ -510,9 +511,9 @@ type SsmDeleteDocumentResult struct {
 }
 
 func (r *SsmDeleteDocumentResult) Get(ctx workflow.Context) (*ssm.DeleteDocumentOutput, error) {
-    var output ssm.DeleteDocumentOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteDocumentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteInventoryResult struct {
@@ -520,9 +521,9 @@ type SsmDeleteInventoryResult struct {
 }
 
 func (r *SsmDeleteInventoryResult) Get(ctx workflow.Context) (*ssm.DeleteInventoryOutput, error) {
-    var output ssm.DeleteInventoryOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteInventoryOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteMaintenanceWindowResult struct {
@@ -530,9 +531,9 @@ type SsmDeleteMaintenanceWindowResult struct {
 }
 
 func (r *SsmDeleteMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.DeleteMaintenanceWindowOutput, error) {
-    var output ssm.DeleteMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteParameterResult struct {
@@ -540,9 +541,9 @@ type SsmDeleteParameterResult struct {
 }
 
 func (r *SsmDeleteParameterResult) Get(ctx workflow.Context) (*ssm.DeleteParameterOutput, error) {
-    var output ssm.DeleteParameterOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteParameterOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteParametersResult struct {
@@ -550,9 +551,9 @@ type SsmDeleteParametersResult struct {
 }
 
 func (r *SsmDeleteParametersResult) Get(ctx workflow.Context) (*ssm.DeleteParametersOutput, error) {
-    var output ssm.DeleteParametersOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteParametersOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeletePatchBaselineResult struct {
@@ -560,9 +561,9 @@ type SsmDeletePatchBaselineResult struct {
 }
 
 func (r *SsmDeletePatchBaselineResult) Get(ctx workflow.Context) (*ssm.DeletePatchBaselineOutput, error) {
-    var output ssm.DeletePatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeletePatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeleteResourceDataSyncResult struct {
@@ -570,9 +571,9 @@ type SsmDeleteResourceDataSyncResult struct {
 }
 
 func (r *SsmDeleteResourceDataSyncResult) Get(ctx workflow.Context) (*ssm.DeleteResourceDataSyncOutput, error) {
-    var output ssm.DeleteResourceDataSyncOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteResourceDataSyncOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeregisterManagedInstanceResult struct {
@@ -580,9 +581,9 @@ type SsmDeregisterManagedInstanceResult struct {
 }
 
 func (r *SsmDeregisterManagedInstanceResult) Get(ctx workflow.Context) (*ssm.DeregisterManagedInstanceOutput, error) {
-    var output ssm.DeregisterManagedInstanceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterManagedInstanceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeregisterPatchBaselineForPatchGroupResult struct {
@@ -590,9 +591,9 @@ type SsmDeregisterPatchBaselineForPatchGroupResult struct {
 }
 
 func (r *SsmDeregisterPatchBaselineForPatchGroupResult) Get(ctx workflow.Context) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.DeregisterPatchBaselineForPatchGroupOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterPatchBaselineForPatchGroupOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeregisterTargetFromMaintenanceWindowResult struct {
@@ -600,9 +601,9 @@ type SsmDeregisterTargetFromMaintenanceWindowResult struct {
 }
 
 func (r *SsmDeregisterTargetFromMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error) {
-    var output ssm.DeregisterTargetFromMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterTargetFromMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDeregisterTaskFromMaintenanceWindowResult struct {
@@ -610,9 +611,9 @@ type SsmDeregisterTaskFromMaintenanceWindowResult struct {
 }
 
 func (r *SsmDeregisterTaskFromMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error) {
-    var output ssm.DeregisterTaskFromMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterTaskFromMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeActivationsResult struct {
@@ -620,9 +621,9 @@ type SsmDescribeActivationsResult struct {
 }
 
 func (r *SsmDescribeActivationsResult) Get(ctx workflow.Context) (*ssm.DescribeActivationsOutput, error) {
-    var output ssm.DescribeActivationsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeActivationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAssociationResult struct {
@@ -630,9 +631,9 @@ type SsmDescribeAssociationResult struct {
 }
 
 func (r *SsmDescribeAssociationResult) Get(ctx workflow.Context) (*ssm.DescribeAssociationOutput, error) {
-    var output ssm.DescribeAssociationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAssociationExecutionTargetsResult struct {
@@ -640,9 +641,9 @@ type SsmDescribeAssociationExecutionTargetsResult struct {
 }
 
 func (r *SsmDescribeAssociationExecutionTargetsResult) Get(ctx workflow.Context) (*ssm.DescribeAssociationExecutionTargetsOutput, error) {
-    var output ssm.DescribeAssociationExecutionTargetsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationExecutionTargetsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAssociationExecutionsResult struct {
@@ -650,9 +651,9 @@ type SsmDescribeAssociationExecutionsResult struct {
 }
 
 func (r *SsmDescribeAssociationExecutionsResult) Get(ctx workflow.Context) (*ssm.DescribeAssociationExecutionsOutput, error) {
-    var output ssm.DescribeAssociationExecutionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationExecutionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAutomationExecutionsResult struct {
@@ -660,9 +661,9 @@ type SsmDescribeAutomationExecutionsResult struct {
 }
 
 func (r *SsmDescribeAutomationExecutionsResult) Get(ctx workflow.Context) (*ssm.DescribeAutomationExecutionsOutput, error) {
-    var output ssm.DescribeAutomationExecutionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAutomationExecutionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAutomationStepExecutionsResult struct {
@@ -670,9 +671,9 @@ type SsmDescribeAutomationStepExecutionsResult struct {
 }
 
 func (r *SsmDescribeAutomationStepExecutionsResult) Get(ctx workflow.Context) (*ssm.DescribeAutomationStepExecutionsOutput, error) {
-    var output ssm.DescribeAutomationStepExecutionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAutomationStepExecutionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeAvailablePatchesResult struct {
@@ -680,9 +681,9 @@ type SsmDescribeAvailablePatchesResult struct {
 }
 
 func (r *SsmDescribeAvailablePatchesResult) Get(ctx workflow.Context) (*ssm.DescribeAvailablePatchesOutput, error) {
-    var output ssm.DescribeAvailablePatchesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAvailablePatchesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeDocumentResult struct {
@@ -690,9 +691,9 @@ type SsmDescribeDocumentResult struct {
 }
 
 func (r *SsmDescribeDocumentResult) Get(ctx workflow.Context) (*ssm.DescribeDocumentOutput, error) {
-    var output ssm.DescribeDocumentOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeDocumentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeDocumentPermissionResult struct {
@@ -700,9 +701,9 @@ type SsmDescribeDocumentPermissionResult struct {
 }
 
 func (r *SsmDescribeDocumentPermissionResult) Get(ctx workflow.Context) (*ssm.DescribeDocumentPermissionOutput, error) {
-    var output ssm.DescribeDocumentPermissionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeDocumentPermissionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeEffectiveInstanceAssociationsResult struct {
@@ -710,9 +711,9 @@ type SsmDescribeEffectiveInstanceAssociationsResult struct {
 }
 
 func (r *SsmDescribeEffectiveInstanceAssociationsResult) Get(ctx workflow.Context) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error) {
-    var output ssm.DescribeEffectiveInstanceAssociationsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeEffectiveInstanceAssociationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeEffectivePatchesForPatchBaselineResult struct {
@@ -720,9 +721,9 @@ type SsmDescribeEffectivePatchesForPatchBaselineResult struct {
 }
 
 func (r *SsmDescribeEffectivePatchesForPatchBaselineResult) Get(ctx workflow.Context) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error) {
-    var output ssm.DescribeEffectivePatchesForPatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeEffectivePatchesForPatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInstanceAssociationsStatusResult struct {
@@ -730,9 +731,9 @@ type SsmDescribeInstanceAssociationsStatusResult struct {
 }
 
 func (r *SsmDescribeInstanceAssociationsStatusResult) Get(ctx workflow.Context) (*ssm.DescribeInstanceAssociationsStatusOutput, error) {
-    var output ssm.DescribeInstanceAssociationsStatusOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstanceAssociationsStatusOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInstanceInformationResult struct {
@@ -740,9 +741,9 @@ type SsmDescribeInstanceInformationResult struct {
 }
 
 func (r *SsmDescribeInstanceInformationResult) Get(ctx workflow.Context) (*ssm.DescribeInstanceInformationOutput, error) {
-    var output ssm.DescribeInstanceInformationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstanceInformationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInstancePatchStatesResult struct {
@@ -750,9 +751,9 @@ type SsmDescribeInstancePatchStatesResult struct {
 }
 
 func (r *SsmDescribeInstancePatchStatesResult) Get(ctx workflow.Context) (*ssm.DescribeInstancePatchStatesOutput, error) {
-    var output ssm.DescribeInstancePatchStatesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchStatesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInstancePatchStatesForPatchGroupResult struct {
@@ -760,9 +761,9 @@ type SsmDescribeInstancePatchStatesForPatchGroupResult struct {
 }
 
 func (r *SsmDescribeInstancePatchStatesForPatchGroupResult) Get(ctx workflow.Context) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error) {
-    var output ssm.DescribeInstancePatchStatesForPatchGroupOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchStatesForPatchGroupOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInstancePatchesResult struct {
@@ -770,9 +771,9 @@ type SsmDescribeInstancePatchesResult struct {
 }
 
 func (r *SsmDescribeInstancePatchesResult) Get(ctx workflow.Context) (*ssm.DescribeInstancePatchesOutput, error) {
-    var output ssm.DescribeInstancePatchesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeInventoryDeletionsResult struct {
@@ -780,9 +781,9 @@ type SsmDescribeInventoryDeletionsResult struct {
 }
 
 func (r *SsmDescribeInventoryDeletionsResult) Get(ctx workflow.Context) (*ssm.DescribeInventoryDeletionsOutput, error) {
-    var output ssm.DescribeInventoryDeletionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInventoryDeletionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult struct {
@@ -790,9 +791,9 @@ type SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowExecutionTasksResult struct {
@@ -800,9 +801,9 @@ type SsmDescribeMaintenanceWindowExecutionTasksResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowExecutionTasksResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionTasksOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionTasksOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowExecutionsResult struct {
@@ -810,9 +811,9 @@ type SsmDescribeMaintenanceWindowExecutionsResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowExecutionsResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowScheduleResult struct {
@@ -820,9 +821,9 @@ type SsmDescribeMaintenanceWindowScheduleResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowScheduleResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowScheduleOutput, error) {
-    var output ssm.DescribeMaintenanceWindowScheduleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowScheduleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowTargetsResult struct {
@@ -830,9 +831,9 @@ type SsmDescribeMaintenanceWindowTargetsResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowTargetsResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowTargetsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowTargetsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowTargetsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowTasksResult struct {
@@ -840,9 +841,9 @@ type SsmDescribeMaintenanceWindowTasksResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowTasksResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowTasksOutput, error) {
-    var output ssm.DescribeMaintenanceWindowTasksOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowTasksOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowsResult struct {
@@ -850,9 +851,9 @@ type SsmDescribeMaintenanceWindowsResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowsResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeMaintenanceWindowsForTargetResult struct {
@@ -860,9 +861,9 @@ type SsmDescribeMaintenanceWindowsForTargetResult struct {
 }
 
 func (r *SsmDescribeMaintenanceWindowsForTargetResult) Get(ctx workflow.Context) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error) {
-    var output ssm.DescribeMaintenanceWindowsForTargetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowsForTargetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeOpsItemsResult struct {
@@ -870,9 +871,9 @@ type SsmDescribeOpsItemsResult struct {
 }
 
 func (r *SsmDescribeOpsItemsResult) Get(ctx workflow.Context) (*ssm.DescribeOpsItemsOutput, error) {
-    var output ssm.DescribeOpsItemsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeOpsItemsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeParametersResult struct {
@@ -880,9 +881,9 @@ type SsmDescribeParametersResult struct {
 }
 
 func (r *SsmDescribeParametersResult) Get(ctx workflow.Context) (*ssm.DescribeParametersOutput, error) {
-    var output ssm.DescribeParametersOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeParametersOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribePatchBaselinesResult struct {
@@ -890,9 +891,9 @@ type SsmDescribePatchBaselinesResult struct {
 }
 
 func (r *SsmDescribePatchBaselinesResult) Get(ctx workflow.Context) (*ssm.DescribePatchBaselinesOutput, error) {
-    var output ssm.DescribePatchBaselinesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchBaselinesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribePatchGroupStateResult struct {
@@ -900,9 +901,9 @@ type SsmDescribePatchGroupStateResult struct {
 }
 
 func (r *SsmDescribePatchGroupStateResult) Get(ctx workflow.Context) (*ssm.DescribePatchGroupStateOutput, error) {
-    var output ssm.DescribePatchGroupStateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchGroupStateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribePatchGroupsResult struct {
@@ -910,9 +911,9 @@ type SsmDescribePatchGroupsResult struct {
 }
 
 func (r *SsmDescribePatchGroupsResult) Get(ctx workflow.Context) (*ssm.DescribePatchGroupsOutput, error) {
-    var output ssm.DescribePatchGroupsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchGroupsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribePatchPropertiesResult struct {
@@ -920,9 +921,9 @@ type SsmDescribePatchPropertiesResult struct {
 }
 
 func (r *SsmDescribePatchPropertiesResult) Get(ctx workflow.Context) (*ssm.DescribePatchPropertiesOutput, error) {
-    var output ssm.DescribePatchPropertiesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchPropertiesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmDescribeSessionsResult struct {
@@ -930,9 +931,9 @@ type SsmDescribeSessionsResult struct {
 }
 
 func (r *SsmDescribeSessionsResult) Get(ctx workflow.Context) (*ssm.DescribeSessionsOutput, error) {
-    var output ssm.DescribeSessionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeSessionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetAutomationExecutionResult struct {
@@ -940,9 +941,9 @@ type SsmGetAutomationExecutionResult struct {
 }
 
 func (r *SsmGetAutomationExecutionResult) Get(ctx workflow.Context) (*ssm.GetAutomationExecutionOutput, error) {
-    var output ssm.GetAutomationExecutionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetAutomationExecutionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetCalendarStateResult struct {
@@ -950,9 +951,9 @@ type SsmGetCalendarStateResult struct {
 }
 
 func (r *SsmGetCalendarStateResult) Get(ctx workflow.Context) (*ssm.GetCalendarStateOutput, error) {
-    var output ssm.GetCalendarStateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetCalendarStateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetCommandInvocationResult struct {
@@ -960,9 +961,9 @@ type SsmGetCommandInvocationResult struct {
 }
 
 func (r *SsmGetCommandInvocationResult) Get(ctx workflow.Context) (*ssm.GetCommandInvocationOutput, error) {
-    var output ssm.GetCommandInvocationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetCommandInvocationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetConnectionStatusResult struct {
@@ -970,9 +971,9 @@ type SsmGetConnectionStatusResult struct {
 }
 
 func (r *SsmGetConnectionStatusResult) Get(ctx workflow.Context) (*ssm.GetConnectionStatusOutput, error) {
-    var output ssm.GetConnectionStatusOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetConnectionStatusOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetDefaultPatchBaselineResult struct {
@@ -980,9 +981,9 @@ type SsmGetDefaultPatchBaselineResult struct {
 }
 
 func (r *SsmGetDefaultPatchBaselineResult) Get(ctx workflow.Context) (*ssm.GetDefaultPatchBaselineOutput, error) {
-    var output ssm.GetDefaultPatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDefaultPatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetDeployablePatchSnapshotForInstanceResult struct {
@@ -990,9 +991,9 @@ type SsmGetDeployablePatchSnapshotForInstanceResult struct {
 }
 
 func (r *SsmGetDeployablePatchSnapshotForInstanceResult) Get(ctx workflow.Context) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error) {
-    var output ssm.GetDeployablePatchSnapshotForInstanceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDeployablePatchSnapshotForInstanceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetDocumentResult struct {
@@ -1000,9 +1001,9 @@ type SsmGetDocumentResult struct {
 }
 
 func (r *SsmGetDocumentResult) Get(ctx workflow.Context) (*ssm.GetDocumentOutput, error) {
-    var output ssm.GetDocumentOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDocumentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetInventoryResult struct {
@@ -1010,9 +1011,9 @@ type SsmGetInventoryResult struct {
 }
 
 func (r *SsmGetInventoryResult) Get(ctx workflow.Context) (*ssm.GetInventoryOutput, error) {
-    var output ssm.GetInventoryOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetInventoryOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetInventorySchemaResult struct {
@@ -1020,9 +1021,9 @@ type SsmGetInventorySchemaResult struct {
 }
 
 func (r *SsmGetInventorySchemaResult) Get(ctx workflow.Context) (*ssm.GetInventorySchemaOutput, error) {
-    var output ssm.GetInventorySchemaOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetInventorySchemaOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetMaintenanceWindowResult struct {
@@ -1030,9 +1031,9 @@ type SsmGetMaintenanceWindowResult struct {
 }
 
 func (r *SsmGetMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.GetMaintenanceWindowOutput, error) {
-    var output ssm.GetMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetMaintenanceWindowExecutionResult struct {
@@ -1040,9 +1041,9 @@ type SsmGetMaintenanceWindowExecutionResult struct {
 }
 
 func (r *SsmGetMaintenanceWindowExecutionResult) Get(ctx workflow.Context) (*ssm.GetMaintenanceWindowExecutionOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetMaintenanceWindowExecutionTaskResult struct {
@@ -1050,9 +1051,9 @@ type SsmGetMaintenanceWindowExecutionTaskResult struct {
 }
 
 func (r *SsmGetMaintenanceWindowExecutionTaskResult) Get(ctx workflow.Context) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionTaskOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionTaskOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetMaintenanceWindowExecutionTaskInvocationResult struct {
@@ -1060,9 +1061,9 @@ type SsmGetMaintenanceWindowExecutionTaskInvocationResult struct {
 }
 
 func (r *SsmGetMaintenanceWindowExecutionTaskInvocationResult) Get(ctx workflow.Context) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionTaskInvocationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionTaskInvocationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetMaintenanceWindowTaskResult struct {
@@ -1070,9 +1071,9 @@ type SsmGetMaintenanceWindowTaskResult struct {
 }
 
 func (r *SsmGetMaintenanceWindowTaskResult) Get(ctx workflow.Context) (*ssm.GetMaintenanceWindowTaskOutput, error) {
-    var output ssm.GetMaintenanceWindowTaskOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowTaskOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetOpsItemResult struct {
@@ -1080,9 +1081,9 @@ type SsmGetOpsItemResult struct {
 }
 
 func (r *SsmGetOpsItemResult) Get(ctx workflow.Context) (*ssm.GetOpsItemOutput, error) {
-    var output ssm.GetOpsItemOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetOpsItemOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetOpsSummaryResult struct {
@@ -1090,9 +1091,9 @@ type SsmGetOpsSummaryResult struct {
 }
 
 func (r *SsmGetOpsSummaryResult) Get(ctx workflow.Context) (*ssm.GetOpsSummaryOutput, error) {
-    var output ssm.GetOpsSummaryOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetOpsSummaryOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetParameterResult struct {
@@ -1100,9 +1101,9 @@ type SsmGetParameterResult struct {
 }
 
 func (r *SsmGetParameterResult) Get(ctx workflow.Context) (*ssm.GetParameterOutput, error) {
-    var output ssm.GetParameterOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParameterOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetParameterHistoryResult struct {
@@ -1110,9 +1111,9 @@ type SsmGetParameterHistoryResult struct {
 }
 
 func (r *SsmGetParameterHistoryResult) Get(ctx workflow.Context) (*ssm.GetParameterHistoryOutput, error) {
-    var output ssm.GetParameterHistoryOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParameterHistoryOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetParametersResult struct {
@@ -1120,9 +1121,9 @@ type SsmGetParametersResult struct {
 }
 
 func (r *SsmGetParametersResult) Get(ctx workflow.Context) (*ssm.GetParametersOutput, error) {
-    var output ssm.GetParametersOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParametersOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetParametersByPathResult struct {
@@ -1130,9 +1131,9 @@ type SsmGetParametersByPathResult struct {
 }
 
 func (r *SsmGetParametersByPathResult) Get(ctx workflow.Context) (*ssm.GetParametersByPathOutput, error) {
-    var output ssm.GetParametersByPathOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParametersByPathOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetPatchBaselineResult struct {
@@ -1140,9 +1141,9 @@ type SsmGetPatchBaselineResult struct {
 }
 
 func (r *SsmGetPatchBaselineResult) Get(ctx workflow.Context) (*ssm.GetPatchBaselineOutput, error) {
-    var output ssm.GetPatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetPatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetPatchBaselineForPatchGroupResult struct {
@@ -1150,9 +1151,9 @@ type SsmGetPatchBaselineForPatchGroupResult struct {
 }
 
 func (r *SsmGetPatchBaselineForPatchGroupResult) Get(ctx workflow.Context) (*ssm.GetPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.GetPatchBaselineForPatchGroupOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetPatchBaselineForPatchGroupOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmGetServiceSettingResult struct {
@@ -1160,9 +1161,9 @@ type SsmGetServiceSettingResult struct {
 }
 
 func (r *SsmGetServiceSettingResult) Get(ctx workflow.Context) (*ssm.GetServiceSettingOutput, error) {
-    var output ssm.GetServiceSettingOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.GetServiceSettingOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmLabelParameterVersionResult struct {
@@ -1170,9 +1171,9 @@ type SsmLabelParameterVersionResult struct {
 }
 
 func (r *SsmLabelParameterVersionResult) Get(ctx workflow.Context) (*ssm.LabelParameterVersionOutput, error) {
-    var output ssm.LabelParameterVersionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.LabelParameterVersionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListAssociationVersionsResult struct {
@@ -1180,9 +1181,9 @@ type SsmListAssociationVersionsResult struct {
 }
 
 func (r *SsmListAssociationVersionsResult) Get(ctx workflow.Context) (*ssm.ListAssociationVersionsOutput, error) {
-    var output ssm.ListAssociationVersionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListAssociationVersionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListAssociationsResult struct {
@@ -1190,9 +1191,9 @@ type SsmListAssociationsResult struct {
 }
 
 func (r *SsmListAssociationsResult) Get(ctx workflow.Context) (*ssm.ListAssociationsOutput, error) {
-    var output ssm.ListAssociationsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListAssociationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListCommandInvocationsResult struct {
@@ -1200,9 +1201,9 @@ type SsmListCommandInvocationsResult struct {
 }
 
 func (r *SsmListCommandInvocationsResult) Get(ctx workflow.Context) (*ssm.ListCommandInvocationsOutput, error) {
-    var output ssm.ListCommandInvocationsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListCommandInvocationsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListCommandsResult struct {
@@ -1210,9 +1211,9 @@ type SsmListCommandsResult struct {
 }
 
 func (r *SsmListCommandsResult) Get(ctx workflow.Context) (*ssm.ListCommandsOutput, error) {
-    var output ssm.ListCommandsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListCommandsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListComplianceItemsResult struct {
@@ -1220,9 +1221,9 @@ type SsmListComplianceItemsResult struct {
 }
 
 func (r *SsmListComplianceItemsResult) Get(ctx workflow.Context) (*ssm.ListComplianceItemsOutput, error) {
-    var output ssm.ListComplianceItemsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListComplianceItemsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListComplianceSummariesResult struct {
@@ -1230,9 +1231,9 @@ type SsmListComplianceSummariesResult struct {
 }
 
 func (r *SsmListComplianceSummariesResult) Get(ctx workflow.Context) (*ssm.ListComplianceSummariesOutput, error) {
-    var output ssm.ListComplianceSummariesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListComplianceSummariesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListDocumentVersionsResult struct {
@@ -1240,9 +1241,9 @@ type SsmListDocumentVersionsResult struct {
 }
 
 func (r *SsmListDocumentVersionsResult) Get(ctx workflow.Context) (*ssm.ListDocumentVersionsOutput, error) {
-    var output ssm.ListDocumentVersionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListDocumentVersionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListDocumentsResult struct {
@@ -1250,9 +1251,9 @@ type SsmListDocumentsResult struct {
 }
 
 func (r *SsmListDocumentsResult) Get(ctx workflow.Context) (*ssm.ListDocumentsOutput, error) {
-    var output ssm.ListDocumentsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListDocumentsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListInventoryEntriesResult struct {
@@ -1260,9 +1261,9 @@ type SsmListInventoryEntriesResult struct {
 }
 
 func (r *SsmListInventoryEntriesResult) Get(ctx workflow.Context) (*ssm.ListInventoryEntriesOutput, error) {
-    var output ssm.ListInventoryEntriesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListInventoryEntriesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListResourceComplianceSummariesResult struct {
@@ -1270,9 +1271,9 @@ type SsmListResourceComplianceSummariesResult struct {
 }
 
 func (r *SsmListResourceComplianceSummariesResult) Get(ctx workflow.Context) (*ssm.ListResourceComplianceSummariesOutput, error) {
-    var output ssm.ListResourceComplianceSummariesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListResourceComplianceSummariesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListResourceDataSyncResult struct {
@@ -1280,9 +1281,9 @@ type SsmListResourceDataSyncResult struct {
 }
 
 func (r *SsmListResourceDataSyncResult) Get(ctx workflow.Context) (*ssm.ListResourceDataSyncOutput, error) {
-    var output ssm.ListResourceDataSyncOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListResourceDataSyncOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmListTagsForResourceResult struct {
@@ -1290,9 +1291,9 @@ type SsmListTagsForResourceResult struct {
 }
 
 func (r *SsmListTagsForResourceResult) Get(ctx workflow.Context) (*ssm.ListTagsForResourceOutput, error) {
-    var output ssm.ListTagsForResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ListTagsForResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmModifyDocumentPermissionResult struct {
@@ -1300,9 +1301,9 @@ type SsmModifyDocumentPermissionResult struct {
 }
 
 func (r *SsmModifyDocumentPermissionResult) Get(ctx workflow.Context) (*ssm.ModifyDocumentPermissionOutput, error) {
-    var output ssm.ModifyDocumentPermissionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ModifyDocumentPermissionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmPutComplianceItemsResult struct {
@@ -1310,9 +1311,9 @@ type SsmPutComplianceItemsResult struct {
 }
 
 func (r *SsmPutComplianceItemsResult) Get(ctx workflow.Context) (*ssm.PutComplianceItemsOutput, error) {
-    var output ssm.PutComplianceItemsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.PutComplianceItemsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmPutInventoryResult struct {
@@ -1320,9 +1321,9 @@ type SsmPutInventoryResult struct {
 }
 
 func (r *SsmPutInventoryResult) Get(ctx workflow.Context) (*ssm.PutInventoryOutput, error) {
-    var output ssm.PutInventoryOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.PutInventoryOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmPutParameterResult struct {
@@ -1330,9 +1331,9 @@ type SsmPutParameterResult struct {
 }
 
 func (r *SsmPutParameterResult) Get(ctx workflow.Context) (*ssm.PutParameterOutput, error) {
-    var output ssm.PutParameterOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.PutParameterOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmRegisterDefaultPatchBaselineResult struct {
@@ -1340,9 +1341,9 @@ type SsmRegisterDefaultPatchBaselineResult struct {
 }
 
 func (r *SsmRegisterDefaultPatchBaselineResult) Get(ctx workflow.Context) (*ssm.RegisterDefaultPatchBaselineOutput, error) {
-    var output ssm.RegisterDefaultPatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterDefaultPatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmRegisterPatchBaselineForPatchGroupResult struct {
@@ -1350,9 +1351,9 @@ type SsmRegisterPatchBaselineForPatchGroupResult struct {
 }
 
 func (r *SsmRegisterPatchBaselineForPatchGroupResult) Get(ctx workflow.Context) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.RegisterPatchBaselineForPatchGroupOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterPatchBaselineForPatchGroupOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmRegisterTargetWithMaintenanceWindowResult struct {
@@ -1360,9 +1361,9 @@ type SsmRegisterTargetWithMaintenanceWindowResult struct {
 }
 
 func (r *SsmRegisterTargetWithMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error) {
-    var output ssm.RegisterTargetWithMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterTargetWithMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmRegisterTaskWithMaintenanceWindowResult struct {
@@ -1370,9 +1371,9 @@ type SsmRegisterTaskWithMaintenanceWindowResult struct {
 }
 
 func (r *SsmRegisterTaskWithMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error) {
-    var output ssm.RegisterTaskWithMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterTaskWithMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmRemoveTagsFromResourceResult struct {
@@ -1380,9 +1381,9 @@ type SsmRemoveTagsFromResourceResult struct {
 }
 
 func (r *SsmRemoveTagsFromResourceResult) Get(ctx workflow.Context) (*ssm.RemoveTagsFromResourceOutput, error) {
-    var output ssm.RemoveTagsFromResourceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.RemoveTagsFromResourceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmResetServiceSettingResult struct {
@@ -1390,9 +1391,9 @@ type SsmResetServiceSettingResult struct {
 }
 
 func (r *SsmResetServiceSettingResult) Get(ctx workflow.Context) (*ssm.ResetServiceSettingOutput, error) {
-    var output ssm.ResetServiceSettingOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ResetServiceSettingOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmResumeSessionResult struct {
@@ -1400,9 +1401,9 @@ type SsmResumeSessionResult struct {
 }
 
 func (r *SsmResumeSessionResult) Get(ctx workflow.Context) (*ssm.ResumeSessionOutput, error) {
-    var output ssm.ResumeSessionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.ResumeSessionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmSendAutomationSignalResult struct {
@@ -1410,9 +1411,9 @@ type SsmSendAutomationSignalResult struct {
 }
 
 func (r *SsmSendAutomationSignalResult) Get(ctx workflow.Context) (*ssm.SendAutomationSignalOutput, error) {
-    var output ssm.SendAutomationSignalOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.SendAutomationSignalOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmSendCommandResult struct {
@@ -1420,9 +1421,9 @@ type SsmSendCommandResult struct {
 }
 
 func (r *SsmSendCommandResult) Get(ctx workflow.Context) (*ssm.SendCommandOutput, error) {
-    var output ssm.SendCommandOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.SendCommandOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmStartAssociationsOnceResult struct {
@@ -1430,9 +1431,9 @@ type SsmStartAssociationsOnceResult struct {
 }
 
 func (r *SsmStartAssociationsOnceResult) Get(ctx workflow.Context) (*ssm.StartAssociationsOnceOutput, error) {
-    var output ssm.StartAssociationsOnceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.StartAssociationsOnceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmStartAutomationExecutionResult struct {
@@ -1440,9 +1441,9 @@ type SsmStartAutomationExecutionResult struct {
 }
 
 func (r *SsmStartAutomationExecutionResult) Get(ctx workflow.Context) (*ssm.StartAutomationExecutionOutput, error) {
-    var output ssm.StartAutomationExecutionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.StartAutomationExecutionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmStartSessionResult struct {
@@ -1450,9 +1451,9 @@ type SsmStartSessionResult struct {
 }
 
 func (r *SsmStartSessionResult) Get(ctx workflow.Context) (*ssm.StartSessionOutput, error) {
-    var output ssm.StartSessionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.StartSessionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmStopAutomationExecutionResult struct {
@@ -1460,9 +1461,9 @@ type SsmStopAutomationExecutionResult struct {
 }
 
 func (r *SsmStopAutomationExecutionResult) Get(ctx workflow.Context) (*ssm.StopAutomationExecutionOutput, error) {
-    var output ssm.StopAutomationExecutionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.StopAutomationExecutionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmTerminateSessionResult struct {
@@ -1470,9 +1471,9 @@ type SsmTerminateSessionResult struct {
 }
 
 func (r *SsmTerminateSessionResult) Get(ctx workflow.Context) (*ssm.TerminateSessionOutput, error) {
-    var output ssm.TerminateSessionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.TerminateSessionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateAssociationResult struct {
@@ -1480,9 +1481,9 @@ type SsmUpdateAssociationResult struct {
 }
 
 func (r *SsmUpdateAssociationResult) Get(ctx workflow.Context) (*ssm.UpdateAssociationOutput, error) {
-    var output ssm.UpdateAssociationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateAssociationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateAssociationStatusResult struct {
@@ -1490,9 +1491,9 @@ type SsmUpdateAssociationStatusResult struct {
 }
 
 func (r *SsmUpdateAssociationStatusResult) Get(ctx workflow.Context) (*ssm.UpdateAssociationStatusOutput, error) {
-    var output ssm.UpdateAssociationStatusOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateAssociationStatusOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateDocumentResult struct {
@@ -1500,9 +1501,9 @@ type SsmUpdateDocumentResult struct {
 }
 
 func (r *SsmUpdateDocumentResult) Get(ctx workflow.Context) (*ssm.UpdateDocumentOutput, error) {
-    var output ssm.UpdateDocumentOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateDocumentOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateDocumentDefaultVersionResult struct {
@@ -1510,9 +1511,9 @@ type SsmUpdateDocumentDefaultVersionResult struct {
 }
 
 func (r *SsmUpdateDocumentDefaultVersionResult) Get(ctx workflow.Context) (*ssm.UpdateDocumentDefaultVersionOutput, error) {
-    var output ssm.UpdateDocumentDefaultVersionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateDocumentDefaultVersionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateMaintenanceWindowResult struct {
@@ -1520,9 +1521,9 @@ type SsmUpdateMaintenanceWindowResult struct {
 }
 
 func (r *SsmUpdateMaintenanceWindowResult) Get(ctx workflow.Context) (*ssm.UpdateMaintenanceWindowOutput, error) {
-    var output ssm.UpdateMaintenanceWindowOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateMaintenanceWindowTargetResult struct {
@@ -1530,9 +1531,9 @@ type SsmUpdateMaintenanceWindowTargetResult struct {
 }
 
 func (r *SsmUpdateMaintenanceWindowTargetResult) Get(ctx workflow.Context) (*ssm.UpdateMaintenanceWindowTargetOutput, error) {
-    var output ssm.UpdateMaintenanceWindowTargetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowTargetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateMaintenanceWindowTaskResult struct {
@@ -1540,9 +1541,9 @@ type SsmUpdateMaintenanceWindowTaskResult struct {
 }
 
 func (r *SsmUpdateMaintenanceWindowTaskResult) Get(ctx workflow.Context) (*ssm.UpdateMaintenanceWindowTaskOutput, error) {
-    var output ssm.UpdateMaintenanceWindowTaskOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowTaskOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateManagedInstanceRoleResult struct {
@@ -1550,9 +1551,9 @@ type SsmUpdateManagedInstanceRoleResult struct {
 }
 
 func (r *SsmUpdateManagedInstanceRoleResult) Get(ctx workflow.Context) (*ssm.UpdateManagedInstanceRoleOutput, error) {
-    var output ssm.UpdateManagedInstanceRoleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateManagedInstanceRoleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateOpsItemResult struct {
@@ -1560,9 +1561,9 @@ type SsmUpdateOpsItemResult struct {
 }
 
 func (r *SsmUpdateOpsItemResult) Get(ctx workflow.Context) (*ssm.UpdateOpsItemOutput, error) {
-    var output ssm.UpdateOpsItemOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateOpsItemOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdatePatchBaselineResult struct {
@@ -1570,9 +1571,9 @@ type SsmUpdatePatchBaselineResult struct {
 }
 
 func (r *SsmUpdatePatchBaselineResult) Get(ctx workflow.Context) (*ssm.UpdatePatchBaselineOutput, error) {
-    var output ssm.UpdatePatchBaselineOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdatePatchBaselineOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateResourceDataSyncResult struct {
@@ -1580,9 +1581,9 @@ type SsmUpdateResourceDataSyncResult struct {
 }
 
 func (r *SsmUpdateResourceDataSyncResult) Get(ctx workflow.Context) (*ssm.UpdateResourceDataSyncOutput, error) {
-    var output ssm.UpdateResourceDataSyncOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateResourceDataSyncOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SsmUpdateServiceSettingResult struct {
@@ -1590,1366 +1591,1365 @@ type SsmUpdateServiceSettingResult struct {
 }
 
 func (r *SsmUpdateServiceSettingResult) Get(ctx workflow.Context) (*ssm.UpdateServiceSettingOutput, error) {
-    var output ssm.UpdateServiceSettingOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateServiceSettingOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SSMStub struct {
-    activities awsactivities.SSMActivities
+	activities awsactivities.SSMActivities
 }
 
 func NewSSMStub() SSMClient {
-    return &SSMStub{}
+	return &SSMStub{}
 }
 
 func (a *SSMStub) AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error) {
-    var output ssm.AddTagsToResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.AddTagsToResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) AddTagsToResourceAsync(ctx workflow.Context, input *ssm.AddTagsToResourceInput) *SsmAddTagsToResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input)
-    return &SsmAddTagsToResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.AddTagsToResource, input)
+	return &SsmAddTagsToResourceResult{Result: future}
 }
 
 func (a *SSMStub) CancelCommand(ctx workflow.Context, input *ssm.CancelCommandInput) (*ssm.CancelCommandOutput, error) {
-    var output ssm.CancelCommandOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CancelCommand, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CancelCommandOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CancelCommand, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CancelCommandAsync(ctx workflow.Context, input *ssm.CancelCommandInput) *SsmCancelCommandResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CancelCommand, input)
-    return &SsmCancelCommandResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CancelCommand, input)
+	return &SsmCancelCommandResult{Result: future}
 }
 
 func (a *SSMStub) CancelMaintenanceWindowExecution(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) (*ssm.CancelMaintenanceWindowExecutionOutput, error) {
-    var output ssm.CancelMaintenanceWindowExecutionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CancelMaintenanceWindowExecution, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CancelMaintenanceWindowExecutionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CancelMaintenanceWindowExecution, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CancelMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.CancelMaintenanceWindowExecutionInput) *SsmCancelMaintenanceWindowExecutionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CancelMaintenanceWindowExecution, input)
-    return &SsmCancelMaintenanceWindowExecutionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CancelMaintenanceWindowExecution, input)
+	return &SsmCancelMaintenanceWindowExecutionResult{Result: future}
 }
 
 func (a *SSMStub) CreateActivation(ctx workflow.Context, input *ssm.CreateActivationInput) (*ssm.CreateActivationOutput, error) {
-    var output ssm.CreateActivationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateActivation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateActivationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateActivation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateActivationAsync(ctx workflow.Context, input *ssm.CreateActivationInput) *SsmCreateActivationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateActivation, input)
-    return &SsmCreateActivationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateActivation, input)
+	return &SsmCreateActivationResult{Result: future}
 }
 
 func (a *SSMStub) CreateAssociation(ctx workflow.Context, input *ssm.CreateAssociationInput) (*ssm.CreateAssociationOutput, error) {
-    var output ssm.CreateAssociationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateAssociation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateAssociationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateAssociation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateAssociationAsync(ctx workflow.Context, input *ssm.CreateAssociationInput) *SsmCreateAssociationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateAssociation, input)
-    return &SsmCreateAssociationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateAssociation, input)
+	return &SsmCreateAssociationResult{Result: future}
 }
 
 func (a *SSMStub) CreateAssociationBatch(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) (*ssm.CreateAssociationBatchOutput, error) {
-    var output ssm.CreateAssociationBatchOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateAssociationBatch, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateAssociationBatchOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateAssociationBatch, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateAssociationBatchAsync(ctx workflow.Context, input *ssm.CreateAssociationBatchInput) *SsmCreateAssociationBatchResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateAssociationBatch, input)
-    return &SsmCreateAssociationBatchResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateAssociationBatch, input)
+	return &SsmCreateAssociationBatchResult{Result: future}
 }
 
 func (a *SSMStub) CreateDocument(ctx workflow.Context, input *ssm.CreateDocumentInput) (*ssm.CreateDocumentOutput, error) {
-    var output ssm.CreateDocumentOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateDocument, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateDocumentOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateDocument, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateDocumentAsync(ctx workflow.Context, input *ssm.CreateDocumentInput) *SsmCreateDocumentResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateDocument, input)
-    return &SsmCreateDocumentResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateDocument, input)
+	return &SsmCreateDocumentResult{Result: future}
 }
 
 func (a *SSMStub) CreateMaintenanceWindow(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error) {
-    var output ssm.CreateMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.CreateMaintenanceWindowInput) *SsmCreateMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateMaintenanceWindow, input)
-    return &SsmCreateMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateMaintenanceWindow, input)
+	return &SsmCreateMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) CreateOpsItem(ctx workflow.Context, input *ssm.CreateOpsItemInput) (*ssm.CreateOpsItemOutput, error) {
-    var output ssm.CreateOpsItemOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateOpsItem, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateOpsItemOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateOpsItem, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateOpsItemAsync(ctx workflow.Context, input *ssm.CreateOpsItemInput) *SsmCreateOpsItemResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateOpsItem, input)
-    return &SsmCreateOpsItemResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateOpsItem, input)
+	return &SsmCreateOpsItemResult{Result: future}
 }
 
 func (a *SSMStub) CreatePatchBaseline(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error) {
-    var output ssm.CreatePatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreatePatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreatePatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreatePatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreatePatchBaselineAsync(ctx workflow.Context, input *ssm.CreatePatchBaselineInput) *SsmCreatePatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreatePatchBaseline, input)
-    return &SsmCreatePatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreatePatchBaseline, input)
+	return &SsmCreatePatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) CreateResourceDataSync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) (*ssm.CreateResourceDataSyncOutput, error) {
-    var output ssm.CreateResourceDataSyncOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateResourceDataSync, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.CreateResourceDataSyncOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateResourceDataSync, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) CreateResourceDataSyncAsync(ctx workflow.Context, input *ssm.CreateResourceDataSyncInput) *SsmCreateResourceDataSyncResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateResourceDataSync, input)
-    return &SsmCreateResourceDataSyncResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateResourceDataSync, input)
+	return &SsmCreateResourceDataSyncResult{Result: future}
 }
 
 func (a *SSMStub) DeleteActivation(ctx workflow.Context, input *ssm.DeleteActivationInput) (*ssm.DeleteActivationOutput, error) {
-    var output ssm.DeleteActivationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteActivation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteActivationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteActivation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteActivationAsync(ctx workflow.Context, input *ssm.DeleteActivationInput) *SsmDeleteActivationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteActivation, input)
-    return &SsmDeleteActivationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteActivation, input)
+	return &SsmDeleteActivationResult{Result: future}
 }
 
 func (a *SSMStub) DeleteAssociation(ctx workflow.Context, input *ssm.DeleteAssociationInput) (*ssm.DeleteAssociationOutput, error) {
-    var output ssm.DeleteAssociationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteAssociation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteAssociationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteAssociation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteAssociationAsync(ctx workflow.Context, input *ssm.DeleteAssociationInput) *SsmDeleteAssociationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteAssociation, input)
-    return &SsmDeleteAssociationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteAssociation, input)
+	return &SsmDeleteAssociationResult{Result: future}
 }
 
 func (a *SSMStub) DeleteDocument(ctx workflow.Context, input *ssm.DeleteDocumentInput) (*ssm.DeleteDocumentOutput, error) {
-    var output ssm.DeleteDocumentOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteDocumentOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteDocumentAsync(ctx workflow.Context, input *ssm.DeleteDocumentInput) *SsmDeleteDocumentResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input)
-    return &SsmDeleteDocumentResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteDocument, input)
+	return &SsmDeleteDocumentResult{Result: future}
 }
 
 func (a *SSMStub) DeleteInventory(ctx workflow.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error) {
-    var output ssm.DeleteInventoryOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteInventory, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteInventoryOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteInventory, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteInventoryAsync(ctx workflow.Context, input *ssm.DeleteInventoryInput) *SsmDeleteInventoryResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteInventory, input)
-    return &SsmDeleteInventoryResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteInventory, input)
+	return &SsmDeleteInventoryResult{Result: future}
 }
 
 func (a *SSMStub) DeleteMaintenanceWindow(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) (*ssm.DeleteMaintenanceWindowOutput, error) {
-    var output ssm.DeleteMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeleteMaintenanceWindowInput) *SsmDeleteMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteMaintenanceWindow, input)
-    return &SsmDeleteMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteMaintenanceWindow, input)
+	return &SsmDeleteMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) DeleteParameter(ctx workflow.Context, input *ssm.DeleteParameterInput) (*ssm.DeleteParameterOutput, error) {
-    var output ssm.DeleteParameterOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteParameter, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteParameterOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteParameter, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteParameterAsync(ctx workflow.Context, input *ssm.DeleteParameterInput) *SsmDeleteParameterResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteParameter, input)
-    return &SsmDeleteParameterResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteParameter, input)
+	return &SsmDeleteParameterResult{Result: future}
 }
 
 func (a *SSMStub) DeleteParameters(ctx workflow.Context, input *ssm.DeleteParametersInput) (*ssm.DeleteParametersOutput, error) {
-    var output ssm.DeleteParametersOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteParameters, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteParametersOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteParameters, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteParametersAsync(ctx workflow.Context, input *ssm.DeleteParametersInput) *SsmDeleteParametersResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteParameters, input)
-    return &SsmDeleteParametersResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteParameters, input)
+	return &SsmDeleteParametersResult{Result: future}
 }
 
 func (a *SSMStub) DeletePatchBaseline(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) (*ssm.DeletePatchBaselineOutput, error) {
-    var output ssm.DeletePatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeletePatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeletePatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeletePatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeletePatchBaselineAsync(ctx workflow.Context, input *ssm.DeletePatchBaselineInput) *SsmDeletePatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeletePatchBaseline, input)
-    return &SsmDeletePatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeletePatchBaseline, input)
+	return &SsmDeletePatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) DeleteResourceDataSync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) (*ssm.DeleteResourceDataSyncOutput, error) {
-    var output ssm.DeleteResourceDataSyncOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceDataSync, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeleteResourceDataSyncOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceDataSync, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeleteResourceDataSyncAsync(ctx workflow.Context, input *ssm.DeleteResourceDataSyncInput) *SsmDeleteResourceDataSyncResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceDataSync, input)
-    return &SsmDeleteResourceDataSyncResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteResourceDataSync, input)
+	return &SsmDeleteResourceDataSyncResult{Result: future}
 }
 
 func (a *SSMStub) DeregisterManagedInstance(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) (*ssm.DeregisterManagedInstanceOutput, error) {
-    var output ssm.DeregisterManagedInstanceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeregisterManagedInstance, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterManagedInstanceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeregisterManagedInstance, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeregisterManagedInstanceAsync(ctx workflow.Context, input *ssm.DeregisterManagedInstanceInput) *SsmDeregisterManagedInstanceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeregisterManagedInstance, input)
-    return &SsmDeregisterManagedInstanceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeregisterManagedInstance, input)
+	return &SsmDeregisterManagedInstanceResult{Result: future}
 }
 
 func (a *SSMStub) DeregisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) (*ssm.DeregisterPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.DeregisterPatchBaselineForPatchGroupOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeregisterPatchBaselineForPatchGroup, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterPatchBaselineForPatchGroupOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeregisterPatchBaselineForPatchGroup, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeregisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.DeregisterPatchBaselineForPatchGroupInput) *SsmDeregisterPatchBaselineForPatchGroupResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeregisterPatchBaselineForPatchGroup, input)
-    return &SsmDeregisterPatchBaselineForPatchGroupResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeregisterPatchBaselineForPatchGroup, input)
+	return &SsmDeregisterPatchBaselineForPatchGroupResult{Result: future}
 }
 
 func (a *SSMStub) DeregisterTargetFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) (*ssm.DeregisterTargetFromMaintenanceWindowOutput, error) {
-    var output ssm.DeregisterTargetFromMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeregisterTargetFromMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterTargetFromMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeregisterTargetFromMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeregisterTargetFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTargetFromMaintenanceWindowInput) *SsmDeregisterTargetFromMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeregisterTargetFromMaintenanceWindow, input)
-    return &SsmDeregisterTargetFromMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeregisterTargetFromMaintenanceWindow, input)
+	return &SsmDeregisterTargetFromMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) DeregisterTaskFromMaintenanceWindow(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) (*ssm.DeregisterTaskFromMaintenanceWindowOutput, error) {
-    var output ssm.DeregisterTaskFromMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeregisterTaskFromMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DeregisterTaskFromMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeregisterTaskFromMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DeregisterTaskFromMaintenanceWindowAsync(ctx workflow.Context, input *ssm.DeregisterTaskFromMaintenanceWindowInput) *SsmDeregisterTaskFromMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeregisterTaskFromMaintenanceWindow, input)
-    return &SsmDeregisterTaskFromMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeregisterTaskFromMaintenanceWindow, input)
+	return &SsmDeregisterTaskFromMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) DescribeActivations(ctx workflow.Context, input *ssm.DescribeActivationsInput) (*ssm.DescribeActivationsOutput, error) {
-    var output ssm.DescribeActivationsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeActivations, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeActivationsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeActivations, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeActivationsAsync(ctx workflow.Context, input *ssm.DescribeActivationsInput) *SsmDescribeActivationsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeActivations, input)
-    return &SsmDescribeActivationsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeActivations, input)
+	return &SsmDescribeActivationsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAssociation(ctx workflow.Context, input *ssm.DescribeAssociationInput) (*ssm.DescribeAssociationOutput, error) {
-    var output ssm.DescribeAssociationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAssociationAsync(ctx workflow.Context, input *ssm.DescribeAssociationInput) *SsmDescribeAssociationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociation, input)
-    return &SsmDescribeAssociationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociation, input)
+	return &SsmDescribeAssociationResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAssociationExecutionTargets(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) (*ssm.DescribeAssociationExecutionTargetsOutput, error) {
-    var output ssm.DescribeAssociationExecutionTargetsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutionTargets, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationExecutionTargetsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutionTargets, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAssociationExecutionTargetsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionTargetsInput) *SsmDescribeAssociationExecutionTargetsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutionTargets, input)
-    return &SsmDescribeAssociationExecutionTargetsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutionTargets, input)
+	return &SsmDescribeAssociationExecutionTargetsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAssociationExecutions(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) (*ssm.DescribeAssociationExecutionsOutput, error) {
-    var output ssm.DescribeAssociationExecutionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAssociationExecutionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAssociationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAssociationExecutionsInput) *SsmDescribeAssociationExecutionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutions, input)
-    return &SsmDescribeAssociationExecutionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAssociationExecutions, input)
+	return &SsmDescribeAssociationExecutionsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAutomationExecutions(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) (*ssm.DescribeAutomationExecutionsOutput, error) {
-    var output ssm.DescribeAutomationExecutionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationExecutions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAutomationExecutionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationExecutions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAutomationExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationExecutionsInput) *SsmDescribeAutomationExecutionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationExecutions, input)
-    return &SsmDescribeAutomationExecutionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationExecutions, input)
+	return &SsmDescribeAutomationExecutionsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAutomationStepExecutions(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) (*ssm.DescribeAutomationStepExecutionsOutput, error) {
-    var output ssm.DescribeAutomationStepExecutionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationStepExecutions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAutomationStepExecutionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationStepExecutions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAutomationStepExecutionsAsync(ctx workflow.Context, input *ssm.DescribeAutomationStepExecutionsInput) *SsmDescribeAutomationStepExecutionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationStepExecutions, input)
-    return &SsmDescribeAutomationStepExecutionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAutomationStepExecutions, input)
+	return &SsmDescribeAutomationStepExecutionsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeAvailablePatches(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) (*ssm.DescribeAvailablePatchesOutput, error) {
-    var output ssm.DescribeAvailablePatchesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeAvailablePatches, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeAvailablePatchesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeAvailablePatches, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeAvailablePatchesAsync(ctx workflow.Context, input *ssm.DescribeAvailablePatchesInput) *SsmDescribeAvailablePatchesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeAvailablePatches, input)
-    return &SsmDescribeAvailablePatchesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeAvailablePatches, input)
+	return &SsmDescribeAvailablePatchesResult{Result: future}
 }
 
 func (a *SSMStub) DescribeDocument(ctx workflow.Context, input *ssm.DescribeDocumentInput) (*ssm.DescribeDocumentOutput, error) {
-    var output ssm.DescribeDocumentOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocument, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeDocumentOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocument, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeDocumentAsync(ctx workflow.Context, input *ssm.DescribeDocumentInput) *SsmDescribeDocumentResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocument, input)
-    return &SsmDescribeDocumentResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocument, input)
+	return &SsmDescribeDocumentResult{Result: future}
 }
 
 func (a *SSMStub) DescribeDocumentPermission(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) (*ssm.DescribeDocumentPermissionOutput, error) {
-    var output ssm.DescribeDocumentPermissionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentPermission, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeDocumentPermissionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentPermission, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeDocumentPermissionAsync(ctx workflow.Context, input *ssm.DescribeDocumentPermissionInput) *SsmDescribeDocumentPermissionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentPermission, input)
-    return &SsmDescribeDocumentPermissionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeDocumentPermission, input)
+	return &SsmDescribeDocumentPermissionResult{Result: future}
 }
 
 func (a *SSMStub) DescribeEffectiveInstanceAssociations(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) (*ssm.DescribeEffectiveInstanceAssociationsOutput, error) {
-    var output ssm.DescribeEffectiveInstanceAssociationsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectiveInstanceAssociations, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeEffectiveInstanceAssociationsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectiveInstanceAssociations, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeEffectiveInstanceAssociationsAsync(ctx workflow.Context, input *ssm.DescribeEffectiveInstanceAssociationsInput) *SsmDescribeEffectiveInstanceAssociationsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectiveInstanceAssociations, input)
-    return &SsmDescribeEffectiveInstanceAssociationsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectiveInstanceAssociations, input)
+	return &SsmDescribeEffectiveInstanceAssociationsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeEffectivePatchesForPatchBaseline(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) (*ssm.DescribeEffectivePatchesForPatchBaselineOutput, error) {
-    var output ssm.DescribeEffectivePatchesForPatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePatchesForPatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeEffectivePatchesForPatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePatchesForPatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeEffectivePatchesForPatchBaselineAsync(ctx workflow.Context, input *ssm.DescribeEffectivePatchesForPatchBaselineInput) *SsmDescribeEffectivePatchesForPatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePatchesForPatchBaseline, input)
-    return &SsmDescribeEffectivePatchesForPatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeEffectivePatchesForPatchBaseline, input)
+	return &SsmDescribeEffectivePatchesForPatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInstanceAssociationsStatus(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) (*ssm.DescribeInstanceAssociationsStatusOutput, error) {
-    var output ssm.DescribeInstanceAssociationsStatusOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceAssociationsStatus, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstanceAssociationsStatusOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceAssociationsStatus, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInstanceAssociationsStatusAsync(ctx workflow.Context, input *ssm.DescribeInstanceAssociationsStatusInput) *SsmDescribeInstanceAssociationsStatusResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceAssociationsStatus, input)
-    return &SsmDescribeInstanceAssociationsStatusResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceAssociationsStatus, input)
+	return &SsmDescribeInstanceAssociationsStatusResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInstanceInformation(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) (*ssm.DescribeInstanceInformationOutput, error) {
-    var output ssm.DescribeInstanceInformationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceInformation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstanceInformationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceInformation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInstanceInformationAsync(ctx workflow.Context, input *ssm.DescribeInstanceInformationInput) *SsmDescribeInstanceInformationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceInformation, input)
-    return &SsmDescribeInstanceInformationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstanceInformation, input)
+	return &SsmDescribeInstanceInformationResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInstancePatchStates(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) (*ssm.DescribeInstancePatchStatesOutput, error) {
-    var output ssm.DescribeInstancePatchStatesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStates, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchStatesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStates, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInstancePatchStatesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesInput) *SsmDescribeInstancePatchStatesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStates, input)
-    return &SsmDescribeInstancePatchStatesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStates, input)
+	return &SsmDescribeInstancePatchStatesResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInstancePatchStatesForPatchGroup(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) (*ssm.DescribeInstancePatchStatesForPatchGroupOutput, error) {
-    var output ssm.DescribeInstancePatchStatesForPatchGroupOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStatesForPatchGroup, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchStatesForPatchGroupOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStatesForPatchGroup, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInstancePatchStatesForPatchGroupAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchStatesForPatchGroupInput) *SsmDescribeInstancePatchStatesForPatchGroupResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStatesForPatchGroup, input)
-    return &SsmDescribeInstancePatchStatesForPatchGroupResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatchStatesForPatchGroup, input)
+	return &SsmDescribeInstancePatchStatesForPatchGroupResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInstancePatches(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) (*ssm.DescribeInstancePatchesOutput, error) {
-    var output ssm.DescribeInstancePatchesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatches, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInstancePatchesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatches, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInstancePatchesAsync(ctx workflow.Context, input *ssm.DescribeInstancePatchesInput) *SsmDescribeInstancePatchesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatches, input)
-    return &SsmDescribeInstancePatchesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInstancePatches, input)
+	return &SsmDescribeInstancePatchesResult{Result: future}
 }
 
 func (a *SSMStub) DescribeInventoryDeletions(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) (*ssm.DescribeInventoryDeletionsOutput, error) {
-    var output ssm.DescribeInventoryDeletionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeInventoryDeletions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeInventoryDeletionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeInventoryDeletions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeInventoryDeletionsAsync(ctx workflow.Context, input *ssm.DescribeInventoryDeletionsInput) *SsmDescribeInventoryDeletionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeInventoryDeletions, input)
-    return &SsmDescribeInventoryDeletionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeInventoryDeletions, input)
+	return &SsmDescribeInventoryDeletionsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutionTaskInvocations(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) (*ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTaskInvocations, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionTaskInvocationsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTaskInvocations, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutionTaskInvocationsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTaskInvocationsInput) *SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTaskInvocations, input)
-    return &SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTaskInvocations, input)
+	return &SsmDescribeMaintenanceWindowExecutionTaskInvocationsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutionTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) (*ssm.DescribeMaintenanceWindowExecutionTasksOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionTasksOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTasks, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionTasksOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTasks, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutionTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionTasksInput) *SsmDescribeMaintenanceWindowExecutionTasksResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTasks, input)
-    return &SsmDescribeMaintenanceWindowExecutionTasksResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutionTasks, input)
+	return &SsmDescribeMaintenanceWindowExecutionTasksResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutions(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) (*ssm.DescribeMaintenanceWindowExecutionsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowExecutionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowExecutionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowExecutionsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowExecutionsInput) *SsmDescribeMaintenanceWindowExecutionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutions, input)
-    return &SsmDescribeMaintenanceWindowExecutionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowExecutions, input)
+	return &SsmDescribeMaintenanceWindowExecutionsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowSchedule(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) (*ssm.DescribeMaintenanceWindowScheduleOutput, error) {
-    var output ssm.DescribeMaintenanceWindowScheduleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowSchedule, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowScheduleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowSchedule, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowScheduleAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowScheduleInput) *SsmDescribeMaintenanceWindowScheduleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowSchedule, input)
-    return &SsmDescribeMaintenanceWindowScheduleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowSchedule, input)
+	return &SsmDescribeMaintenanceWindowScheduleResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowTargets(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) (*ssm.DescribeMaintenanceWindowTargetsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowTargetsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTargets, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowTargetsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTargets, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowTargetsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTargetsInput) *SsmDescribeMaintenanceWindowTargetsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTargets, input)
-    return &SsmDescribeMaintenanceWindowTargetsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTargets, input)
+	return &SsmDescribeMaintenanceWindowTargetsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowTasks(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) (*ssm.DescribeMaintenanceWindowTasksOutput, error) {
-    var output ssm.DescribeMaintenanceWindowTasksOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTasks, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowTasksOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTasks, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowTasksAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowTasksInput) *SsmDescribeMaintenanceWindowTasksResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTasks, input)
-    return &SsmDescribeMaintenanceWindowTasksResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowTasks, input)
+	return &SsmDescribeMaintenanceWindowTasksResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindows(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) (*ssm.DescribeMaintenanceWindowsOutput, error) {
-    var output ssm.DescribeMaintenanceWindowsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindows, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindows, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowsAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsInput) *SsmDescribeMaintenanceWindowsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindows, input)
-    return &SsmDescribeMaintenanceWindowsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindows, input)
+	return &SsmDescribeMaintenanceWindowsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowsForTarget(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) (*ssm.DescribeMaintenanceWindowsForTargetOutput, error) {
-    var output ssm.DescribeMaintenanceWindowsForTargetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowsForTarget, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeMaintenanceWindowsForTargetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowsForTarget, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeMaintenanceWindowsForTargetAsync(ctx workflow.Context, input *ssm.DescribeMaintenanceWindowsForTargetInput) *SsmDescribeMaintenanceWindowsForTargetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowsForTarget, input)
-    return &SsmDescribeMaintenanceWindowsForTargetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeMaintenanceWindowsForTarget, input)
+	return &SsmDescribeMaintenanceWindowsForTargetResult{Result: future}
 }
 
 func (a *SSMStub) DescribeOpsItems(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) (*ssm.DescribeOpsItemsOutput, error) {
-    var output ssm.DescribeOpsItemsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeOpsItems, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeOpsItemsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeOpsItems, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeOpsItemsAsync(ctx workflow.Context, input *ssm.DescribeOpsItemsInput) *SsmDescribeOpsItemsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeOpsItems, input)
-    return &SsmDescribeOpsItemsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeOpsItems, input)
+	return &SsmDescribeOpsItemsResult{Result: future}
 }
 
 func (a *SSMStub) DescribeParameters(ctx workflow.Context, input *ssm.DescribeParametersInput) (*ssm.DescribeParametersOutput, error) {
-    var output ssm.DescribeParametersOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeParameters, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeParametersOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeParameters, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeParametersAsync(ctx workflow.Context, input *ssm.DescribeParametersInput) *SsmDescribeParametersResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeParameters, input)
-    return &SsmDescribeParametersResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeParameters, input)
+	return &SsmDescribeParametersResult{Result: future}
 }
 
 func (a *SSMStub) DescribePatchBaselines(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) (*ssm.DescribePatchBaselinesOutput, error) {
-    var output ssm.DescribePatchBaselinesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchBaselines, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchBaselinesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchBaselines, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribePatchBaselinesAsync(ctx workflow.Context, input *ssm.DescribePatchBaselinesInput) *SsmDescribePatchBaselinesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchBaselines, input)
-    return &SsmDescribePatchBaselinesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchBaselines, input)
+	return &SsmDescribePatchBaselinesResult{Result: future}
 }
 
 func (a *SSMStub) DescribePatchGroupState(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) (*ssm.DescribePatchGroupStateOutput, error) {
-    var output ssm.DescribePatchGroupStateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroupState, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchGroupStateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroupState, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribePatchGroupStateAsync(ctx workflow.Context, input *ssm.DescribePatchGroupStateInput) *SsmDescribePatchGroupStateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroupState, input)
-    return &SsmDescribePatchGroupStateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroupState, input)
+	return &SsmDescribePatchGroupStateResult{Result: future}
 }
 
 func (a *SSMStub) DescribePatchGroups(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) (*ssm.DescribePatchGroupsOutput, error) {
-    var output ssm.DescribePatchGroupsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroups, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchGroupsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroups, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribePatchGroupsAsync(ctx workflow.Context, input *ssm.DescribePatchGroupsInput) *SsmDescribePatchGroupsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroups, input)
-    return &SsmDescribePatchGroupsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchGroups, input)
+	return &SsmDescribePatchGroupsResult{Result: future}
 }
 
 func (a *SSMStub) DescribePatchProperties(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) (*ssm.DescribePatchPropertiesOutput, error) {
-    var output ssm.DescribePatchPropertiesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchProperties, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribePatchPropertiesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribePatchProperties, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribePatchPropertiesAsync(ctx workflow.Context, input *ssm.DescribePatchPropertiesInput) *SsmDescribePatchPropertiesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchProperties, input)
-    return &SsmDescribePatchPropertiesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribePatchProperties, input)
+	return &SsmDescribePatchPropertiesResult{Result: future}
 }
 
 func (a *SSMStub) DescribeSessions(ctx workflow.Context, input *ssm.DescribeSessionsInput) (*ssm.DescribeSessionsOutput, error) {
-    var output ssm.DescribeSessionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.DescribeSessionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) DescribeSessionsAsync(ctx workflow.Context, input *ssm.DescribeSessionsInput) *SsmDescribeSessionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input)
-    return &SsmDescribeSessionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeSessions, input)
+	return &SsmDescribeSessionsResult{Result: future}
 }
 
 func (a *SSMStub) GetAutomationExecution(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) (*ssm.GetAutomationExecutionOutput, error) {
-    var output ssm.GetAutomationExecutionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetAutomationExecution, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetAutomationExecutionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetAutomationExecution, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetAutomationExecutionAsync(ctx workflow.Context, input *ssm.GetAutomationExecutionInput) *SsmGetAutomationExecutionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetAutomationExecution, input)
-    return &SsmGetAutomationExecutionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetAutomationExecution, input)
+	return &SsmGetAutomationExecutionResult{Result: future}
 }
 
 func (a *SSMStub) GetCalendarState(ctx workflow.Context, input *ssm.GetCalendarStateInput) (*ssm.GetCalendarStateOutput, error) {
-    var output ssm.GetCalendarStateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetCalendarState, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetCalendarStateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetCalendarState, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetCalendarStateAsync(ctx workflow.Context, input *ssm.GetCalendarStateInput) *SsmGetCalendarStateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetCalendarState, input)
-    return &SsmGetCalendarStateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetCalendarState, input)
+	return &SsmGetCalendarStateResult{Result: future}
 }
 
 func (a *SSMStub) GetCommandInvocation(ctx workflow.Context, input *ssm.GetCommandInvocationInput) (*ssm.GetCommandInvocationOutput, error) {
-    var output ssm.GetCommandInvocationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetCommandInvocation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetCommandInvocationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetCommandInvocation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetCommandInvocationAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) *SsmGetCommandInvocationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetCommandInvocation, input)
-    return &SsmGetCommandInvocationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetCommandInvocation, input)
+	return &SsmGetCommandInvocationResult{Result: future}
 }
 
 func (a *SSMStub) GetConnectionStatus(ctx workflow.Context, input *ssm.GetConnectionStatusInput) (*ssm.GetConnectionStatusOutput, error) {
-    var output ssm.GetConnectionStatusOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetConnectionStatus, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetConnectionStatusOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetConnectionStatus, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetConnectionStatusAsync(ctx workflow.Context, input *ssm.GetConnectionStatusInput) *SsmGetConnectionStatusResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetConnectionStatus, input)
-    return &SsmGetConnectionStatusResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetConnectionStatus, input)
+	return &SsmGetConnectionStatusResult{Result: future}
 }
 
 func (a *SSMStub) GetDefaultPatchBaseline(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) (*ssm.GetDefaultPatchBaselineOutput, error) {
-    var output ssm.GetDefaultPatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetDefaultPatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDefaultPatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetDefaultPatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.GetDefaultPatchBaselineInput) *SsmGetDefaultPatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetDefaultPatchBaseline, input)
-    return &SsmGetDefaultPatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetDefaultPatchBaseline, input)
+	return &SsmGetDefaultPatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) GetDeployablePatchSnapshotForInstance(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) (*ssm.GetDeployablePatchSnapshotForInstanceOutput, error) {
-    var output ssm.GetDeployablePatchSnapshotForInstanceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetDeployablePatchSnapshotForInstance, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDeployablePatchSnapshotForInstanceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetDeployablePatchSnapshotForInstance, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetDeployablePatchSnapshotForInstanceAsync(ctx workflow.Context, input *ssm.GetDeployablePatchSnapshotForInstanceInput) *SsmGetDeployablePatchSnapshotForInstanceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetDeployablePatchSnapshotForInstance, input)
-    return &SsmGetDeployablePatchSnapshotForInstanceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetDeployablePatchSnapshotForInstance, input)
+	return &SsmGetDeployablePatchSnapshotForInstanceResult{Result: future}
 }
 
 func (a *SSMStub) GetDocument(ctx workflow.Context, input *ssm.GetDocumentInput) (*ssm.GetDocumentOutput, error) {
-    var output ssm.GetDocumentOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetDocumentOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetDocumentAsync(ctx workflow.Context, input *ssm.GetDocumentInput) *SsmGetDocumentResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input)
-    return &SsmGetDocumentResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetDocument, input)
+	return &SsmGetDocumentResult{Result: future}
 }
 
 func (a *SSMStub) GetInventory(ctx workflow.Context, input *ssm.GetInventoryInput) (*ssm.GetInventoryOutput, error) {
-    var output ssm.GetInventoryOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetInventory, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetInventoryOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetInventory, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetInventoryAsync(ctx workflow.Context, input *ssm.GetInventoryInput) *SsmGetInventoryResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetInventory, input)
-    return &SsmGetInventoryResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetInventory, input)
+	return &SsmGetInventoryResult{Result: future}
 }
 
 func (a *SSMStub) GetInventorySchema(ctx workflow.Context, input *ssm.GetInventorySchemaInput) (*ssm.GetInventorySchemaOutput, error) {
-    var output ssm.GetInventorySchemaOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetInventorySchema, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetInventorySchemaOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetInventorySchema, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetInventorySchemaAsync(ctx workflow.Context, input *ssm.GetInventorySchemaInput) *SsmGetInventorySchemaResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetInventorySchema, input)
-    return &SsmGetInventorySchemaResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetInventorySchema, input)
+	return &SsmGetInventorySchemaResult{Result: future}
 }
 
 func (a *SSMStub) GetMaintenanceWindow(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) (*ssm.GetMaintenanceWindowOutput, error) {
-    var output ssm.GetMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetMaintenanceWindowAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowInput) *SsmGetMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindow, input)
-    return &SsmGetMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindow, input)
+	return &SsmGetMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecution(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) (*ssm.GetMaintenanceWindowExecutionOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecution, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecution, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecutionAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionInput) *SsmGetMaintenanceWindowExecutionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecution, input)
-    return &SsmGetMaintenanceWindowExecutionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecution, input)
+	return &SsmGetMaintenanceWindowExecutionResult{Result: future}
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecutionTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) (*ssm.GetMaintenanceWindowExecutionTaskOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionTaskOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTask, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionTaskOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTask, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecutionTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInput) *SsmGetMaintenanceWindowExecutionTaskResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTask, input)
-    return &SsmGetMaintenanceWindowExecutionTaskResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTask, input)
+	return &SsmGetMaintenanceWindowExecutionTaskResult{Result: future}
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecutionTaskInvocation(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) (*ssm.GetMaintenanceWindowExecutionTaskInvocationOutput, error) {
-    var output ssm.GetMaintenanceWindowExecutionTaskInvocationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTaskInvocation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowExecutionTaskInvocationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTaskInvocation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetMaintenanceWindowExecutionTaskInvocationAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowExecutionTaskInvocationInput) *SsmGetMaintenanceWindowExecutionTaskInvocationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTaskInvocation, input)
-    return &SsmGetMaintenanceWindowExecutionTaskInvocationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowExecutionTaskInvocation, input)
+	return &SsmGetMaintenanceWindowExecutionTaskInvocationResult{Result: future}
 }
 
 func (a *SSMStub) GetMaintenanceWindowTask(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) (*ssm.GetMaintenanceWindowTaskOutput, error) {
-    var output ssm.GetMaintenanceWindowTaskOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowTask, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetMaintenanceWindowTaskOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowTask, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.GetMaintenanceWindowTaskInput) *SsmGetMaintenanceWindowTaskResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowTask, input)
-    return &SsmGetMaintenanceWindowTaskResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetMaintenanceWindowTask, input)
+	return &SsmGetMaintenanceWindowTaskResult{Result: future}
 }
 
 func (a *SSMStub) GetOpsItem(ctx workflow.Context, input *ssm.GetOpsItemInput) (*ssm.GetOpsItemOutput, error) {
-    var output ssm.GetOpsItemOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetOpsItem, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetOpsItemOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetOpsItem, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetOpsItemAsync(ctx workflow.Context, input *ssm.GetOpsItemInput) *SsmGetOpsItemResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetOpsItem, input)
-    return &SsmGetOpsItemResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetOpsItem, input)
+	return &SsmGetOpsItemResult{Result: future}
 }
 
 func (a *SSMStub) GetOpsSummary(ctx workflow.Context, input *ssm.GetOpsSummaryInput) (*ssm.GetOpsSummaryOutput, error) {
-    var output ssm.GetOpsSummaryOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetOpsSummary, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetOpsSummaryOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetOpsSummary, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetOpsSummaryAsync(ctx workflow.Context, input *ssm.GetOpsSummaryInput) *SsmGetOpsSummaryResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetOpsSummary, input)
-    return &SsmGetOpsSummaryResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetOpsSummary, input)
+	return &SsmGetOpsSummaryResult{Result: future}
 }
 
 func (a *SSMStub) GetParameter(ctx workflow.Context, input *ssm.GetParameterInput) (*ssm.GetParameterOutput, error) {
-    var output ssm.GetParameterOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetParameter, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParameterOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetParameter, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetParameterAsync(ctx workflow.Context, input *ssm.GetParameterInput) *SsmGetParameterResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetParameter, input)
-    return &SsmGetParameterResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetParameter, input)
+	return &SsmGetParameterResult{Result: future}
 }
 
 func (a *SSMStub) GetParameterHistory(ctx workflow.Context, input *ssm.GetParameterHistoryInput) (*ssm.GetParameterHistoryOutput, error) {
-    var output ssm.GetParameterHistoryOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetParameterHistory, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParameterHistoryOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetParameterHistory, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetParameterHistoryAsync(ctx workflow.Context, input *ssm.GetParameterHistoryInput) *SsmGetParameterHistoryResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetParameterHistory, input)
-    return &SsmGetParameterHistoryResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetParameterHistory, input)
+	return &SsmGetParameterHistoryResult{Result: future}
 }
 
 func (a *SSMStub) GetParameters(ctx workflow.Context, input *ssm.GetParametersInput) (*ssm.GetParametersOutput, error) {
-    var output ssm.GetParametersOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetParameters, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParametersOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetParameters, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetParametersAsync(ctx workflow.Context, input *ssm.GetParametersInput) *SsmGetParametersResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetParameters, input)
-    return &SsmGetParametersResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetParameters, input)
+	return &SsmGetParametersResult{Result: future}
 }
 
 func (a *SSMStub) GetParametersByPath(ctx workflow.Context, input *ssm.GetParametersByPathInput) (*ssm.GetParametersByPathOutput, error) {
-    var output ssm.GetParametersByPathOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetParametersByPath, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetParametersByPathOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetParametersByPath, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetParametersByPathAsync(ctx workflow.Context, input *ssm.GetParametersByPathInput) *SsmGetParametersByPathResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetParametersByPath, input)
-    return &SsmGetParametersByPathResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetParametersByPath, input)
+	return &SsmGetParametersByPathResult{Result: future}
 }
 
 func (a *SSMStub) GetPatchBaseline(ctx workflow.Context, input *ssm.GetPatchBaselineInput) (*ssm.GetPatchBaselineOutput, error) {
-    var output ssm.GetPatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetPatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetPatchBaselineAsync(ctx workflow.Context, input *ssm.GetPatchBaselineInput) *SsmGetPatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaseline, input)
-    return &SsmGetPatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaseline, input)
+	return &SsmGetPatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) GetPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) (*ssm.GetPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.GetPatchBaselineForPatchGroupOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaselineForPatchGroup, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetPatchBaselineForPatchGroupOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaselineForPatchGroup, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.GetPatchBaselineForPatchGroupInput) *SsmGetPatchBaselineForPatchGroupResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaselineForPatchGroup, input)
-    return &SsmGetPatchBaselineForPatchGroupResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetPatchBaselineForPatchGroup, input)
+	return &SsmGetPatchBaselineForPatchGroupResult{Result: future}
 }
 
 func (a *SSMStub) GetServiceSetting(ctx workflow.Context, input *ssm.GetServiceSettingInput) (*ssm.GetServiceSettingOutput, error) {
-    var output ssm.GetServiceSettingOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetServiceSetting, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.GetServiceSettingOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetServiceSetting, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) GetServiceSettingAsync(ctx workflow.Context, input *ssm.GetServiceSettingInput) *SsmGetServiceSettingResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetServiceSetting, input)
-    return &SsmGetServiceSettingResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetServiceSetting, input)
+	return &SsmGetServiceSettingResult{Result: future}
 }
 
 func (a *SSMStub) LabelParameterVersion(ctx workflow.Context, input *ssm.LabelParameterVersionInput) (*ssm.LabelParameterVersionOutput, error) {
-    var output ssm.LabelParameterVersionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.LabelParameterVersion, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.LabelParameterVersionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.LabelParameterVersion, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) LabelParameterVersionAsync(ctx workflow.Context, input *ssm.LabelParameterVersionInput) *SsmLabelParameterVersionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.LabelParameterVersion, input)
-    return &SsmLabelParameterVersionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.LabelParameterVersion, input)
+	return &SsmLabelParameterVersionResult{Result: future}
 }
 
 func (a *SSMStub) ListAssociationVersions(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) (*ssm.ListAssociationVersionsOutput, error) {
-    var output ssm.ListAssociationVersionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListAssociationVersions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListAssociationVersionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListAssociationVersions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListAssociationVersionsAsync(ctx workflow.Context, input *ssm.ListAssociationVersionsInput) *SsmListAssociationVersionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListAssociationVersions, input)
-    return &SsmListAssociationVersionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListAssociationVersions, input)
+	return &SsmListAssociationVersionsResult{Result: future}
 }
 
 func (a *SSMStub) ListAssociations(ctx workflow.Context, input *ssm.ListAssociationsInput) (*ssm.ListAssociationsOutput, error) {
-    var output ssm.ListAssociationsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListAssociations, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListAssociationsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListAssociations, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListAssociationsAsync(ctx workflow.Context, input *ssm.ListAssociationsInput) *SsmListAssociationsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListAssociations, input)
-    return &SsmListAssociationsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListAssociations, input)
+	return &SsmListAssociationsResult{Result: future}
 }
 
 func (a *SSMStub) ListCommandInvocations(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) (*ssm.ListCommandInvocationsOutput, error) {
-    var output ssm.ListCommandInvocationsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListCommandInvocations, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListCommandInvocationsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListCommandInvocations, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListCommandInvocationsAsync(ctx workflow.Context, input *ssm.ListCommandInvocationsInput) *SsmListCommandInvocationsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListCommandInvocations, input)
-    return &SsmListCommandInvocationsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListCommandInvocations, input)
+	return &SsmListCommandInvocationsResult{Result: future}
 }
 
 func (a *SSMStub) ListCommands(ctx workflow.Context, input *ssm.ListCommandsInput) (*ssm.ListCommandsOutput, error) {
-    var output ssm.ListCommandsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListCommands, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListCommandsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListCommands, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListCommandsAsync(ctx workflow.Context, input *ssm.ListCommandsInput) *SsmListCommandsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListCommands, input)
-    return &SsmListCommandsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListCommands, input)
+	return &SsmListCommandsResult{Result: future}
 }
 
 func (a *SSMStub) ListComplianceItems(ctx workflow.Context, input *ssm.ListComplianceItemsInput) (*ssm.ListComplianceItemsOutput, error) {
-    var output ssm.ListComplianceItemsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListComplianceItems, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListComplianceItemsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListComplianceItems, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListComplianceItemsAsync(ctx workflow.Context, input *ssm.ListComplianceItemsInput) *SsmListComplianceItemsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListComplianceItems, input)
-    return &SsmListComplianceItemsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListComplianceItems, input)
+	return &SsmListComplianceItemsResult{Result: future}
 }
 
 func (a *SSMStub) ListComplianceSummaries(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) (*ssm.ListComplianceSummariesOutput, error) {
-    var output ssm.ListComplianceSummariesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListComplianceSummaries, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListComplianceSummariesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListComplianceSummaries, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListComplianceSummariesInput) *SsmListComplianceSummariesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListComplianceSummaries, input)
-    return &SsmListComplianceSummariesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListComplianceSummaries, input)
+	return &SsmListComplianceSummariesResult{Result: future}
 }
 
 func (a *SSMStub) ListDocumentVersions(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) (*ssm.ListDocumentVersionsOutput, error) {
-    var output ssm.ListDocumentVersionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListDocumentVersions, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListDocumentVersionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListDocumentVersions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListDocumentVersionsAsync(ctx workflow.Context, input *ssm.ListDocumentVersionsInput) *SsmListDocumentVersionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListDocumentVersions, input)
-    return &SsmListDocumentVersionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListDocumentVersions, input)
+	return &SsmListDocumentVersionsResult{Result: future}
 }
 
 func (a *SSMStub) ListDocuments(ctx workflow.Context, input *ssm.ListDocumentsInput) (*ssm.ListDocumentsOutput, error) {
-    var output ssm.ListDocumentsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListDocuments, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListDocumentsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListDocuments, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListDocumentsAsync(ctx workflow.Context, input *ssm.ListDocumentsInput) *SsmListDocumentsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListDocuments, input)
-    return &SsmListDocumentsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListDocuments, input)
+	return &SsmListDocumentsResult{Result: future}
 }
 
 func (a *SSMStub) ListInventoryEntries(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) (*ssm.ListInventoryEntriesOutput, error) {
-    var output ssm.ListInventoryEntriesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListInventoryEntries, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListInventoryEntriesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListInventoryEntries, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListInventoryEntriesAsync(ctx workflow.Context, input *ssm.ListInventoryEntriesInput) *SsmListInventoryEntriesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListInventoryEntries, input)
-    return &SsmListInventoryEntriesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListInventoryEntries, input)
+	return &SsmListInventoryEntriesResult{Result: future}
 }
 
 func (a *SSMStub) ListResourceComplianceSummaries(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) (*ssm.ListResourceComplianceSummariesOutput, error) {
-    var output ssm.ListResourceComplianceSummariesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListResourceComplianceSummaries, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListResourceComplianceSummariesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListResourceComplianceSummaries, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListResourceComplianceSummariesAsync(ctx workflow.Context, input *ssm.ListResourceComplianceSummariesInput) *SsmListResourceComplianceSummariesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListResourceComplianceSummaries, input)
-    return &SsmListResourceComplianceSummariesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListResourceComplianceSummaries, input)
+	return &SsmListResourceComplianceSummariesResult{Result: future}
 }
 
 func (a *SSMStub) ListResourceDataSync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) (*ssm.ListResourceDataSyncOutput, error) {
-    var output ssm.ListResourceDataSyncOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListResourceDataSync, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListResourceDataSyncOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListResourceDataSync, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListResourceDataSyncAsync(ctx workflow.Context, input *ssm.ListResourceDataSyncInput) *SsmListResourceDataSyncResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListResourceDataSync, input)
-    return &SsmListResourceDataSyncResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListResourceDataSync, input)
+	return &SsmListResourceDataSyncResult{Result: future}
 }
 
 func (a *SSMStub) ListTagsForResource(ctx workflow.Context, input *ssm.ListTagsForResourceInput) (*ssm.ListTagsForResourceOutput, error) {
-    var output ssm.ListTagsForResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ListTagsForResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ListTagsForResourceAsync(ctx workflow.Context, input *ssm.ListTagsForResourceInput) *SsmListTagsForResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
-    return &SsmListTagsForResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListTagsForResource, input)
+	return &SsmListTagsForResourceResult{Result: future}
 }
 
 func (a *SSMStub) ModifyDocumentPermission(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) (*ssm.ModifyDocumentPermissionOutput, error) {
-    var output ssm.ModifyDocumentPermissionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ModifyDocumentPermission, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ModifyDocumentPermissionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ModifyDocumentPermission, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ModifyDocumentPermissionAsync(ctx workflow.Context, input *ssm.ModifyDocumentPermissionInput) *SsmModifyDocumentPermissionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ModifyDocumentPermission, input)
-    return &SsmModifyDocumentPermissionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ModifyDocumentPermission, input)
+	return &SsmModifyDocumentPermissionResult{Result: future}
 }
 
 func (a *SSMStub) PutComplianceItems(ctx workflow.Context, input *ssm.PutComplianceItemsInput) (*ssm.PutComplianceItemsOutput, error) {
-    var output ssm.PutComplianceItemsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutComplianceItems, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.PutComplianceItemsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutComplianceItems, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) PutComplianceItemsAsync(ctx workflow.Context, input *ssm.PutComplianceItemsInput) *SsmPutComplianceItemsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutComplianceItems, input)
-    return &SsmPutComplianceItemsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutComplianceItems, input)
+	return &SsmPutComplianceItemsResult{Result: future}
 }
 
 func (a *SSMStub) PutInventory(ctx workflow.Context, input *ssm.PutInventoryInput) (*ssm.PutInventoryOutput, error) {
-    var output ssm.PutInventoryOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutInventory, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.PutInventoryOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutInventory, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) PutInventoryAsync(ctx workflow.Context, input *ssm.PutInventoryInput) *SsmPutInventoryResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutInventory, input)
-    return &SsmPutInventoryResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutInventory, input)
+	return &SsmPutInventoryResult{Result: future}
 }
 
 func (a *SSMStub) PutParameter(ctx workflow.Context, input *ssm.PutParameterInput) (*ssm.PutParameterOutput, error) {
-    var output ssm.PutParameterOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutParameter, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.PutParameterOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutParameter, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) PutParameterAsync(ctx workflow.Context, input *ssm.PutParameterInput) *SsmPutParameterResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutParameter, input)
-    return &SsmPutParameterResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutParameter, input)
+	return &SsmPutParameterResult{Result: future}
 }
 
 func (a *SSMStub) RegisterDefaultPatchBaseline(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) (*ssm.RegisterDefaultPatchBaselineOutput, error) {
-    var output ssm.RegisterDefaultPatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RegisterDefaultPatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterDefaultPatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RegisterDefaultPatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) RegisterDefaultPatchBaselineAsync(ctx workflow.Context, input *ssm.RegisterDefaultPatchBaselineInput) *SsmRegisterDefaultPatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RegisterDefaultPatchBaseline, input)
-    return &SsmRegisterDefaultPatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RegisterDefaultPatchBaseline, input)
+	return &SsmRegisterDefaultPatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) RegisterPatchBaselineForPatchGroup(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) (*ssm.RegisterPatchBaselineForPatchGroupOutput, error) {
-    var output ssm.RegisterPatchBaselineForPatchGroupOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RegisterPatchBaselineForPatchGroup, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterPatchBaselineForPatchGroupOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RegisterPatchBaselineForPatchGroup, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) RegisterPatchBaselineForPatchGroupAsync(ctx workflow.Context, input *ssm.RegisterPatchBaselineForPatchGroupInput) *SsmRegisterPatchBaselineForPatchGroupResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RegisterPatchBaselineForPatchGroup, input)
-    return &SsmRegisterPatchBaselineForPatchGroupResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RegisterPatchBaselineForPatchGroup, input)
+	return &SsmRegisterPatchBaselineForPatchGroupResult{Result: future}
 }
 
 func (a *SSMStub) RegisterTargetWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error) {
-    var output ssm.RegisterTargetWithMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RegisterTargetWithMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterTargetWithMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RegisterTargetWithMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) RegisterTargetWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) *SsmRegisterTargetWithMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RegisterTargetWithMaintenanceWindow, input)
-    return &SsmRegisterTargetWithMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RegisterTargetWithMaintenanceWindow, input)
+	return &SsmRegisterTargetWithMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) RegisterTaskWithMaintenanceWindow(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error) {
-    var output ssm.RegisterTaskWithMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RegisterTaskWithMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.RegisterTaskWithMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RegisterTaskWithMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) RegisterTaskWithMaintenanceWindowAsync(ctx workflow.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) *SsmRegisterTaskWithMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RegisterTaskWithMaintenanceWindow, input)
-    return &SsmRegisterTaskWithMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RegisterTaskWithMaintenanceWindow, input)
+	return &SsmRegisterTaskWithMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) RemoveTagsFromResource(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) (*ssm.RemoveTagsFromResourceOutput, error) {
-    var output ssm.RemoveTagsFromResourceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.RemoveTagsFromResourceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *ssm.RemoveTagsFromResourceInput) *SsmRemoveTagsFromResourceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input)
-    return &SsmRemoveTagsFromResourceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.RemoveTagsFromResource, input)
+	return &SsmRemoveTagsFromResourceResult{Result: future}
 }
 
 func (a *SSMStub) ResetServiceSetting(ctx workflow.Context, input *ssm.ResetServiceSettingInput) (*ssm.ResetServiceSettingOutput, error) {
-    var output ssm.ResetServiceSettingOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSetting, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ResetServiceSettingOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSetting, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ResetServiceSettingAsync(ctx workflow.Context, input *ssm.ResetServiceSettingInput) *SsmResetServiceSettingResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSetting, input)
-    return &SsmResetServiceSettingResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ResetServiceSetting, input)
+	return &SsmResetServiceSettingResult{Result: future}
 }
 
 func (a *SSMStub) ResumeSession(ctx workflow.Context, input *ssm.ResumeSessionInput) (*ssm.ResumeSessionOutput, error) {
-    var output ssm.ResumeSessionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ResumeSession, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.ResumeSessionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ResumeSession, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) ResumeSessionAsync(ctx workflow.Context, input *ssm.ResumeSessionInput) *SsmResumeSessionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ResumeSession, input)
-    return &SsmResumeSessionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ResumeSession, input)
+	return &SsmResumeSessionResult{Result: future}
 }
 
 func (a *SSMStub) SendAutomationSignal(ctx workflow.Context, input *ssm.SendAutomationSignalInput) (*ssm.SendAutomationSignalOutput, error) {
-    var output ssm.SendAutomationSignalOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendAutomationSignal, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.SendAutomationSignalOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendAutomationSignal, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) SendAutomationSignalAsync(ctx workflow.Context, input *ssm.SendAutomationSignalInput) *SsmSendAutomationSignalResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendAutomationSignal, input)
-    return &SsmSendAutomationSignalResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendAutomationSignal, input)
+	return &SsmSendAutomationSignalResult{Result: future}
 }
 
 func (a *SSMStub) SendCommand(ctx workflow.Context, input *ssm.SendCommandInput) (*ssm.SendCommandOutput, error) {
-    var output ssm.SendCommandOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendCommand, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.SendCommandOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendCommand, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) SendCommandAsync(ctx workflow.Context, input *ssm.SendCommandInput) *SsmSendCommandResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendCommand, input)
-    return &SsmSendCommandResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendCommand, input)
+	return &SsmSendCommandResult{Result: future}
 }
 
 func (a *SSMStub) StartAssociationsOnce(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) (*ssm.StartAssociationsOnceOutput, error) {
-    var output ssm.StartAssociationsOnceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StartAssociationsOnce, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.StartAssociationsOnceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StartAssociationsOnce, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) StartAssociationsOnceAsync(ctx workflow.Context, input *ssm.StartAssociationsOnceInput) *SsmStartAssociationsOnceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StartAssociationsOnce, input)
-    return &SsmStartAssociationsOnceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StartAssociationsOnce, input)
+	return &SsmStartAssociationsOnceResult{Result: future}
 }
 
 func (a *SSMStub) StartAutomationExecution(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error) {
-    var output ssm.StartAutomationExecutionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StartAutomationExecution, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.StartAutomationExecutionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StartAutomationExecution, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) StartAutomationExecutionAsync(ctx workflow.Context, input *ssm.StartAutomationExecutionInput) *SsmStartAutomationExecutionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StartAutomationExecution, input)
-    return &SsmStartAutomationExecutionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StartAutomationExecution, input)
+	return &SsmStartAutomationExecutionResult{Result: future}
 }
 
 func (a *SSMStub) StartSession(ctx workflow.Context, input *ssm.StartSessionInput) (*ssm.StartSessionOutput, error) {
-    var output ssm.StartSessionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StartSession, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.StartSessionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StartSession, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) StartSessionAsync(ctx workflow.Context, input *ssm.StartSessionInput) *SsmStartSessionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StartSession, input)
-    return &SsmStartSessionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StartSession, input)
+	return &SsmStartSessionResult{Result: future}
 }
 
 func (a *SSMStub) StopAutomationExecution(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) (*ssm.StopAutomationExecutionOutput, error) {
-    var output ssm.StopAutomationExecutionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.StopAutomationExecution, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.StopAutomationExecutionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.StopAutomationExecution, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) StopAutomationExecutionAsync(ctx workflow.Context, input *ssm.StopAutomationExecutionInput) *SsmStopAutomationExecutionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.StopAutomationExecution, input)
-    return &SsmStopAutomationExecutionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.StopAutomationExecution, input)
+	return &SsmStopAutomationExecutionResult{Result: future}
 }
 
 func (a *SSMStub) TerminateSession(ctx workflow.Context, input *ssm.TerminateSessionInput) (*ssm.TerminateSessionOutput, error) {
-    var output ssm.TerminateSessionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.TerminateSession, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.TerminateSessionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.TerminateSession, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) TerminateSessionAsync(ctx workflow.Context, input *ssm.TerminateSessionInput) *SsmTerminateSessionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.TerminateSession, input)
-    return &SsmTerminateSessionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.TerminateSession, input)
+	return &SsmTerminateSessionResult{Result: future}
 }
 
 func (a *SSMStub) UpdateAssociation(ctx workflow.Context, input *ssm.UpdateAssociationInput) (*ssm.UpdateAssociationOutput, error) {
-    var output ssm.UpdateAssociationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociation, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateAssociationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateAssociationAsync(ctx workflow.Context, input *ssm.UpdateAssociationInput) *SsmUpdateAssociationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociation, input)
-    return &SsmUpdateAssociationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociation, input)
+	return &SsmUpdateAssociationResult{Result: future}
 }
 
 func (a *SSMStub) UpdateAssociationStatus(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) (*ssm.UpdateAssociationStatusOutput, error) {
-    var output ssm.UpdateAssociationStatusOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociationStatus, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateAssociationStatusOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociationStatus, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateAssociationStatusAsync(ctx workflow.Context, input *ssm.UpdateAssociationStatusInput) *SsmUpdateAssociationStatusResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociationStatus, input)
-    return &SsmUpdateAssociationStatusResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateAssociationStatus, input)
+	return &SsmUpdateAssociationStatusResult{Result: future}
 }
 
 func (a *SSMStub) UpdateDocument(ctx workflow.Context, input *ssm.UpdateDocumentInput) (*ssm.UpdateDocumentOutput, error) {
-    var output ssm.UpdateDocumentOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateDocumentOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateDocumentAsync(ctx workflow.Context, input *ssm.UpdateDocumentInput) *SsmUpdateDocumentResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input)
-    return &SsmUpdateDocumentResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocument, input)
+	return &SsmUpdateDocumentResult{Result: future}
 }
 
 func (a *SSMStub) UpdateDocumentDefaultVersion(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) (*ssm.UpdateDocumentDefaultVersionOutput, error) {
-    var output ssm.UpdateDocumentDefaultVersionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentDefaultVersion, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateDocumentDefaultVersionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentDefaultVersion, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateDocumentDefaultVersionAsync(ctx workflow.Context, input *ssm.UpdateDocumentDefaultVersionInput) *SsmUpdateDocumentDefaultVersionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentDefaultVersion, input)
-    return &SsmUpdateDocumentDefaultVersionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateDocumentDefaultVersion, input)
+	return &SsmUpdateDocumentDefaultVersionResult{Result: future}
 }
 
 func (a *SSMStub) UpdateMaintenanceWindow(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) (*ssm.UpdateMaintenanceWindowOutput, error) {
-    var output ssm.UpdateMaintenanceWindowOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindow, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindow, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateMaintenanceWindowAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowInput) *SsmUpdateMaintenanceWindowResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindow, input)
-    return &SsmUpdateMaintenanceWindowResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindow, input)
+	return &SsmUpdateMaintenanceWindowResult{Result: future}
 }
 
 func (a *SSMStub) UpdateMaintenanceWindowTarget(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) (*ssm.UpdateMaintenanceWindowTargetOutput, error) {
-    var output ssm.UpdateMaintenanceWindowTargetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTarget, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowTargetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTarget, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateMaintenanceWindowTargetAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTargetInput) *SsmUpdateMaintenanceWindowTargetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTarget, input)
-    return &SsmUpdateMaintenanceWindowTargetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTarget, input)
+	return &SsmUpdateMaintenanceWindowTargetResult{Result: future}
 }
 
 func (a *SSMStub) UpdateMaintenanceWindowTask(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) (*ssm.UpdateMaintenanceWindowTaskOutput, error) {
-    var output ssm.UpdateMaintenanceWindowTaskOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTask, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateMaintenanceWindowTaskOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTask, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateMaintenanceWindowTaskAsync(ctx workflow.Context, input *ssm.UpdateMaintenanceWindowTaskInput) *SsmUpdateMaintenanceWindowTaskResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTask, input)
-    return &SsmUpdateMaintenanceWindowTaskResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateMaintenanceWindowTask, input)
+	return &SsmUpdateMaintenanceWindowTaskResult{Result: future}
 }
 
 func (a *SSMStub) UpdateManagedInstanceRole(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) (*ssm.UpdateManagedInstanceRoleOutput, error) {
-    var output ssm.UpdateManagedInstanceRoleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateManagedInstanceRole, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateManagedInstanceRoleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateManagedInstanceRole, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateManagedInstanceRoleAsync(ctx workflow.Context, input *ssm.UpdateManagedInstanceRoleInput) *SsmUpdateManagedInstanceRoleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateManagedInstanceRole, input)
-    return &SsmUpdateManagedInstanceRoleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateManagedInstanceRole, input)
+	return &SsmUpdateManagedInstanceRoleResult{Result: future}
 }
 
 func (a *SSMStub) UpdateOpsItem(ctx workflow.Context, input *ssm.UpdateOpsItemInput) (*ssm.UpdateOpsItemOutput, error) {
-    var output ssm.UpdateOpsItemOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateOpsItem, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateOpsItemOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateOpsItem, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateOpsItemAsync(ctx workflow.Context, input *ssm.UpdateOpsItemInput) *SsmUpdateOpsItemResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateOpsItem, input)
-    return &SsmUpdateOpsItemResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateOpsItem, input)
+	return &SsmUpdateOpsItemResult{Result: future}
 }
 
 func (a *SSMStub) UpdatePatchBaseline(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) (*ssm.UpdatePatchBaselineOutput, error) {
-    var output ssm.UpdatePatchBaselineOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdatePatchBaseline, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdatePatchBaselineOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdatePatchBaseline, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdatePatchBaselineAsync(ctx workflow.Context, input *ssm.UpdatePatchBaselineInput) *SsmUpdatePatchBaselineResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdatePatchBaseline, input)
-    return &SsmUpdatePatchBaselineResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdatePatchBaseline, input)
+	return &SsmUpdatePatchBaselineResult{Result: future}
 }
 
 func (a *SSMStub) UpdateResourceDataSync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) (*ssm.UpdateResourceDataSyncOutput, error) {
-    var output ssm.UpdateResourceDataSyncOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateResourceDataSync, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateResourceDataSyncOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateResourceDataSync, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateResourceDataSyncAsync(ctx workflow.Context, input *ssm.UpdateResourceDataSyncInput) *SsmUpdateResourceDataSyncResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateResourceDataSync, input)
-    return &SsmUpdateResourceDataSyncResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateResourceDataSync, input)
+	return &SsmUpdateResourceDataSyncResult{Result: future}
 }
 
 func (a *SSMStub) UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error) {
-    var output ssm.UpdateServiceSettingOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSetting, input).Get(ctx, &output)
-    return &output, err
+	var output ssm.UpdateServiceSettingOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSetting, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SSMStub) UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSetting, input)
-    return &SsmUpdateServiceSettingResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateServiceSetting, input)
+	return &SsmUpdateServiceSettingResult{Result: future}
 }
 
 func (a *SSMStub) WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error {
-    return workflow.ExecuteActivity(ctx, a.activities.WaitUntilCommandExecuted, input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, a.activities.WaitUntilCommandExecuted, input).Get(ctx, nil)
 }
 
 func (a *SSMStub) WaitUntilCommandExecutedAsync(ctx workflow.Context, input *ssm.GetCommandInvocationInput) workflow.Future {
-    return workflow.ExecuteActivity(ctx, a.activities.WaitUntilCommandExecuted, input)
+	return workflow.ExecuteActivity(ctx, a.activities.WaitUntilCommandExecuted, input)
 }
-

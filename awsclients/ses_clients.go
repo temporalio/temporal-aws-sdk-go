@@ -7,229 +7,230 @@ import (
 )
 
 type SESClient interface {
-       CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error)
-       CloneReceiptRuleSetAsync(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) *SesCloneReceiptRuleSetResult
+	CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error)
+	CloneReceiptRuleSetAsync(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) *SesCloneReceiptRuleSetResult
 
-       CreateConfigurationSet(ctx workflow.Context, input *ses.CreateConfigurationSetInput) (*ses.CreateConfigurationSetOutput, error)
-       CreateConfigurationSetAsync(ctx workflow.Context, input *ses.CreateConfigurationSetInput) *SesCreateConfigurationSetResult
+	CreateConfigurationSet(ctx workflow.Context, input *ses.CreateConfigurationSetInput) (*ses.CreateConfigurationSetOutput, error)
+	CreateConfigurationSetAsync(ctx workflow.Context, input *ses.CreateConfigurationSetInput) *SesCreateConfigurationSetResult
 
-       CreateConfigurationSetEventDestination(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) (*ses.CreateConfigurationSetEventDestinationOutput, error)
-       CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) *SesCreateConfigurationSetEventDestinationResult
+	CreateConfigurationSetEventDestination(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) (*ses.CreateConfigurationSetEventDestinationOutput, error)
+	CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) *SesCreateConfigurationSetEventDestinationResult
 
-       CreateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) (*ses.CreateConfigurationSetTrackingOptionsOutput, error)
-       CreateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) *SesCreateConfigurationSetTrackingOptionsResult
+	CreateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) (*ses.CreateConfigurationSetTrackingOptionsOutput, error)
+	CreateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) *SesCreateConfigurationSetTrackingOptionsResult
 
-       CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error)
-       CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) *SesCreateCustomVerificationEmailTemplateResult
+	CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error)
+	CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) *SesCreateCustomVerificationEmailTemplateResult
 
-       CreateReceiptFilter(ctx workflow.Context, input *ses.CreateReceiptFilterInput) (*ses.CreateReceiptFilterOutput, error)
-       CreateReceiptFilterAsync(ctx workflow.Context, input *ses.CreateReceiptFilterInput) *SesCreateReceiptFilterResult
+	CreateReceiptFilter(ctx workflow.Context, input *ses.CreateReceiptFilterInput) (*ses.CreateReceiptFilterOutput, error)
+	CreateReceiptFilterAsync(ctx workflow.Context, input *ses.CreateReceiptFilterInput) *SesCreateReceiptFilterResult
 
-       CreateReceiptRule(ctx workflow.Context, input *ses.CreateReceiptRuleInput) (*ses.CreateReceiptRuleOutput, error)
-       CreateReceiptRuleAsync(ctx workflow.Context, input *ses.CreateReceiptRuleInput) *SesCreateReceiptRuleResult
+	CreateReceiptRule(ctx workflow.Context, input *ses.CreateReceiptRuleInput) (*ses.CreateReceiptRuleOutput, error)
+	CreateReceiptRuleAsync(ctx workflow.Context, input *ses.CreateReceiptRuleInput) *SesCreateReceiptRuleResult
 
-       CreateReceiptRuleSet(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) (*ses.CreateReceiptRuleSetOutput, error)
-       CreateReceiptRuleSetAsync(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) *SesCreateReceiptRuleSetResult
+	CreateReceiptRuleSet(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) (*ses.CreateReceiptRuleSetOutput, error)
+	CreateReceiptRuleSetAsync(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) *SesCreateReceiptRuleSetResult
 
-       CreateTemplate(ctx workflow.Context, input *ses.CreateTemplateInput) (*ses.CreateTemplateOutput, error)
-       CreateTemplateAsync(ctx workflow.Context, input *ses.CreateTemplateInput) *SesCreateTemplateResult
+	CreateTemplate(ctx workflow.Context, input *ses.CreateTemplateInput) (*ses.CreateTemplateOutput, error)
+	CreateTemplateAsync(ctx workflow.Context, input *ses.CreateTemplateInput) *SesCreateTemplateResult
 
-       DeleteConfigurationSet(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) (*ses.DeleteConfigurationSetOutput, error)
-       DeleteConfigurationSetAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) *SesDeleteConfigurationSetResult
+	DeleteConfigurationSet(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) (*ses.DeleteConfigurationSetOutput, error)
+	DeleteConfigurationSetAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) *SesDeleteConfigurationSetResult
 
-       DeleteConfigurationSetEventDestination(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) (*ses.DeleteConfigurationSetEventDestinationOutput, error)
-       DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) *SesDeleteConfigurationSetEventDestinationResult
+	DeleteConfigurationSetEventDestination(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) (*ses.DeleteConfigurationSetEventDestinationOutput, error)
+	DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) *SesDeleteConfigurationSetEventDestinationResult
 
-       DeleteConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error)
-       DeleteConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) *SesDeleteConfigurationSetTrackingOptionsResult
+	DeleteConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error)
+	DeleteConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) *SesDeleteConfigurationSetTrackingOptionsResult
 
-       DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error)
-       DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) *SesDeleteCustomVerificationEmailTemplateResult
+	DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error)
+	DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) *SesDeleteCustomVerificationEmailTemplateResult
 
-       DeleteIdentity(ctx workflow.Context, input *ses.DeleteIdentityInput) (*ses.DeleteIdentityOutput, error)
-       DeleteIdentityAsync(ctx workflow.Context, input *ses.DeleteIdentityInput) *SesDeleteIdentityResult
+	DeleteIdentity(ctx workflow.Context, input *ses.DeleteIdentityInput) (*ses.DeleteIdentityOutput, error)
+	DeleteIdentityAsync(ctx workflow.Context, input *ses.DeleteIdentityInput) *SesDeleteIdentityResult
 
-       DeleteIdentityPolicy(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) (*ses.DeleteIdentityPolicyOutput, error)
-       DeleteIdentityPolicyAsync(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) *SesDeleteIdentityPolicyResult
+	DeleteIdentityPolicy(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) (*ses.DeleteIdentityPolicyOutput, error)
+	DeleteIdentityPolicyAsync(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) *SesDeleteIdentityPolicyResult
 
-       DeleteReceiptFilter(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) (*ses.DeleteReceiptFilterOutput, error)
-       DeleteReceiptFilterAsync(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) *SesDeleteReceiptFilterResult
+	DeleteReceiptFilter(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) (*ses.DeleteReceiptFilterOutput, error)
+	DeleteReceiptFilterAsync(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) *SesDeleteReceiptFilterResult
 
-       DeleteReceiptRule(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) (*ses.DeleteReceiptRuleOutput, error)
-       DeleteReceiptRuleAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) *SesDeleteReceiptRuleResult
+	DeleteReceiptRule(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) (*ses.DeleteReceiptRuleOutput, error)
+	DeleteReceiptRuleAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) *SesDeleteReceiptRuleResult
 
-       DeleteReceiptRuleSet(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) (*ses.DeleteReceiptRuleSetOutput, error)
-       DeleteReceiptRuleSetAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) *SesDeleteReceiptRuleSetResult
+	DeleteReceiptRuleSet(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) (*ses.DeleteReceiptRuleSetOutput, error)
+	DeleteReceiptRuleSetAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) *SesDeleteReceiptRuleSetResult
 
-       DeleteTemplate(ctx workflow.Context, input *ses.DeleteTemplateInput) (*ses.DeleteTemplateOutput, error)
-       DeleteTemplateAsync(ctx workflow.Context, input *ses.DeleteTemplateInput) *SesDeleteTemplateResult
+	DeleteTemplate(ctx workflow.Context, input *ses.DeleteTemplateInput) (*ses.DeleteTemplateOutput, error)
+	DeleteTemplateAsync(ctx workflow.Context, input *ses.DeleteTemplateInput) *SesDeleteTemplateResult
 
-       DeleteVerifiedEmailAddress(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) (*ses.DeleteVerifiedEmailAddressOutput, error)
-       DeleteVerifiedEmailAddressAsync(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) *SesDeleteVerifiedEmailAddressResult
+	DeleteVerifiedEmailAddress(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) (*ses.DeleteVerifiedEmailAddressOutput, error)
+	DeleteVerifiedEmailAddressAsync(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) *SesDeleteVerifiedEmailAddressResult
 
-       DescribeActiveReceiptRuleSet(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) (*ses.DescribeActiveReceiptRuleSetOutput, error)
-       DescribeActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) *SesDescribeActiveReceiptRuleSetResult
+	DescribeActiveReceiptRuleSet(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) (*ses.DescribeActiveReceiptRuleSetOutput, error)
+	DescribeActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) *SesDescribeActiveReceiptRuleSetResult
 
-       DescribeConfigurationSet(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) (*ses.DescribeConfigurationSetOutput, error)
-       DescribeConfigurationSetAsync(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) *SesDescribeConfigurationSetResult
+	DescribeConfigurationSet(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) (*ses.DescribeConfigurationSetOutput, error)
+	DescribeConfigurationSetAsync(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) *SesDescribeConfigurationSetResult
 
-       DescribeReceiptRule(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) (*ses.DescribeReceiptRuleOutput, error)
-       DescribeReceiptRuleAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) *SesDescribeReceiptRuleResult
+	DescribeReceiptRule(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) (*ses.DescribeReceiptRuleOutput, error)
+	DescribeReceiptRuleAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) *SesDescribeReceiptRuleResult
 
-       DescribeReceiptRuleSet(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) (*ses.DescribeReceiptRuleSetOutput, error)
-       DescribeReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) *SesDescribeReceiptRuleSetResult
+	DescribeReceiptRuleSet(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) (*ses.DescribeReceiptRuleSetOutput, error)
+	DescribeReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) *SesDescribeReceiptRuleSetResult
 
-       GetAccountSendingEnabled(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error)
-       GetAccountSendingEnabledAsync(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) *SesGetAccountSendingEnabledResult
+	GetAccountSendingEnabled(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error)
+	GetAccountSendingEnabledAsync(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) *SesGetAccountSendingEnabledResult
 
-       GetCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error)
-       GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) *SesGetCustomVerificationEmailTemplateResult
+	GetCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error)
+	GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) *SesGetCustomVerificationEmailTemplateResult
 
-       GetIdentityDkimAttributes(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) (*ses.GetIdentityDkimAttributesOutput, error)
-       GetIdentityDkimAttributesAsync(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) *SesGetIdentityDkimAttributesResult
+	GetIdentityDkimAttributes(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) (*ses.GetIdentityDkimAttributesOutput, error)
+	GetIdentityDkimAttributesAsync(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) *SesGetIdentityDkimAttributesResult
 
-       GetIdentityMailFromDomainAttributes(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) (*ses.GetIdentityMailFromDomainAttributesOutput, error)
-       GetIdentityMailFromDomainAttributesAsync(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) *SesGetIdentityMailFromDomainAttributesResult
+	GetIdentityMailFromDomainAttributes(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) (*ses.GetIdentityMailFromDomainAttributesOutput, error)
+	GetIdentityMailFromDomainAttributesAsync(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) *SesGetIdentityMailFromDomainAttributesResult
 
-       GetIdentityNotificationAttributes(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) (*ses.GetIdentityNotificationAttributesOutput, error)
-       GetIdentityNotificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) *SesGetIdentityNotificationAttributesResult
+	GetIdentityNotificationAttributes(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) (*ses.GetIdentityNotificationAttributesOutput, error)
+	GetIdentityNotificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) *SesGetIdentityNotificationAttributesResult
 
-       GetIdentityPolicies(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) (*ses.GetIdentityPoliciesOutput, error)
-       GetIdentityPoliciesAsync(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) *SesGetIdentityPoliciesResult
+	GetIdentityPolicies(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) (*ses.GetIdentityPoliciesOutput, error)
+	GetIdentityPoliciesAsync(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) *SesGetIdentityPoliciesResult
 
-       GetIdentityVerificationAttributes(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) (*ses.GetIdentityVerificationAttributesOutput, error)
-       GetIdentityVerificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *SesGetIdentityVerificationAttributesResult
+	GetIdentityVerificationAttributes(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) (*ses.GetIdentityVerificationAttributesOutput, error)
+	GetIdentityVerificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *SesGetIdentityVerificationAttributesResult
 
-       GetSendQuota(ctx workflow.Context, input *ses.GetSendQuotaInput) (*ses.GetSendQuotaOutput, error)
-       GetSendQuotaAsync(ctx workflow.Context, input *ses.GetSendQuotaInput) *SesGetSendQuotaResult
+	GetSendQuota(ctx workflow.Context, input *ses.GetSendQuotaInput) (*ses.GetSendQuotaOutput, error)
+	GetSendQuotaAsync(ctx workflow.Context, input *ses.GetSendQuotaInput) *SesGetSendQuotaResult
 
-       GetSendStatistics(ctx workflow.Context, input *ses.GetSendStatisticsInput) (*ses.GetSendStatisticsOutput, error)
-       GetSendStatisticsAsync(ctx workflow.Context, input *ses.GetSendStatisticsInput) *SesGetSendStatisticsResult
+	GetSendStatistics(ctx workflow.Context, input *ses.GetSendStatisticsInput) (*ses.GetSendStatisticsOutput, error)
+	GetSendStatisticsAsync(ctx workflow.Context, input *ses.GetSendStatisticsInput) *SesGetSendStatisticsResult
 
-       GetTemplate(ctx workflow.Context, input *ses.GetTemplateInput) (*ses.GetTemplateOutput, error)
-       GetTemplateAsync(ctx workflow.Context, input *ses.GetTemplateInput) *SesGetTemplateResult
+	GetTemplate(ctx workflow.Context, input *ses.GetTemplateInput) (*ses.GetTemplateOutput, error)
+	GetTemplateAsync(ctx workflow.Context, input *ses.GetTemplateInput) *SesGetTemplateResult
 
-       ListConfigurationSets(ctx workflow.Context, input *ses.ListConfigurationSetsInput) (*ses.ListConfigurationSetsOutput, error)
-       ListConfigurationSetsAsync(ctx workflow.Context, input *ses.ListConfigurationSetsInput) *SesListConfigurationSetsResult
+	ListConfigurationSets(ctx workflow.Context, input *ses.ListConfigurationSetsInput) (*ses.ListConfigurationSetsOutput, error)
+	ListConfigurationSetsAsync(ctx workflow.Context, input *ses.ListConfigurationSetsInput) *SesListConfigurationSetsResult
 
-       ListCustomVerificationEmailTemplates(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error)
-       ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) *SesListCustomVerificationEmailTemplatesResult
+	ListCustomVerificationEmailTemplates(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error)
+	ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) *SesListCustomVerificationEmailTemplatesResult
 
-       ListIdentities(ctx workflow.Context, input *ses.ListIdentitiesInput) (*ses.ListIdentitiesOutput, error)
-       ListIdentitiesAsync(ctx workflow.Context, input *ses.ListIdentitiesInput) *SesListIdentitiesResult
+	ListIdentities(ctx workflow.Context, input *ses.ListIdentitiesInput) (*ses.ListIdentitiesOutput, error)
+	ListIdentitiesAsync(ctx workflow.Context, input *ses.ListIdentitiesInput) *SesListIdentitiesResult
 
-       ListIdentityPolicies(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) (*ses.ListIdentityPoliciesOutput, error)
-       ListIdentityPoliciesAsync(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) *SesListIdentityPoliciesResult
+	ListIdentityPolicies(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) (*ses.ListIdentityPoliciesOutput, error)
+	ListIdentityPoliciesAsync(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) *SesListIdentityPoliciesResult
 
-       ListReceiptFilters(ctx workflow.Context, input *ses.ListReceiptFiltersInput) (*ses.ListReceiptFiltersOutput, error)
-       ListReceiptFiltersAsync(ctx workflow.Context, input *ses.ListReceiptFiltersInput) *SesListReceiptFiltersResult
+	ListReceiptFilters(ctx workflow.Context, input *ses.ListReceiptFiltersInput) (*ses.ListReceiptFiltersOutput, error)
+	ListReceiptFiltersAsync(ctx workflow.Context, input *ses.ListReceiptFiltersInput) *SesListReceiptFiltersResult
 
-       ListReceiptRuleSets(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) (*ses.ListReceiptRuleSetsOutput, error)
-       ListReceiptRuleSetsAsync(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) *SesListReceiptRuleSetsResult
+	ListReceiptRuleSets(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) (*ses.ListReceiptRuleSetsOutput, error)
+	ListReceiptRuleSetsAsync(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) *SesListReceiptRuleSetsResult
 
-       ListTemplates(ctx workflow.Context, input *ses.ListTemplatesInput) (*ses.ListTemplatesOutput, error)
-       ListTemplatesAsync(ctx workflow.Context, input *ses.ListTemplatesInput) *SesListTemplatesResult
+	ListTemplates(ctx workflow.Context, input *ses.ListTemplatesInput) (*ses.ListTemplatesOutput, error)
+	ListTemplatesAsync(ctx workflow.Context, input *ses.ListTemplatesInput) *SesListTemplatesResult
 
-       ListVerifiedEmailAddresses(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) (*ses.ListVerifiedEmailAddressesOutput, error)
-       ListVerifiedEmailAddressesAsync(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) *SesListVerifiedEmailAddressesResult
+	ListVerifiedEmailAddresses(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) (*ses.ListVerifiedEmailAddressesOutput, error)
+	ListVerifiedEmailAddressesAsync(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) *SesListVerifiedEmailAddressesResult
 
-       PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) (*ses.PutConfigurationSetDeliveryOptionsOutput, error)
-       PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) *SesPutConfigurationSetDeliveryOptionsResult
+	PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) (*ses.PutConfigurationSetDeliveryOptionsOutput, error)
+	PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) *SesPutConfigurationSetDeliveryOptionsResult
 
-       PutIdentityPolicy(ctx workflow.Context, input *ses.PutIdentityPolicyInput) (*ses.PutIdentityPolicyOutput, error)
-       PutIdentityPolicyAsync(ctx workflow.Context, input *ses.PutIdentityPolicyInput) *SesPutIdentityPolicyResult
+	PutIdentityPolicy(ctx workflow.Context, input *ses.PutIdentityPolicyInput) (*ses.PutIdentityPolicyOutput, error)
+	PutIdentityPolicyAsync(ctx workflow.Context, input *ses.PutIdentityPolicyInput) *SesPutIdentityPolicyResult
 
-       ReorderReceiptRuleSet(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) (*ses.ReorderReceiptRuleSetOutput, error)
-       ReorderReceiptRuleSetAsync(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) *SesReorderReceiptRuleSetResult
+	ReorderReceiptRuleSet(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) (*ses.ReorderReceiptRuleSetOutput, error)
+	ReorderReceiptRuleSetAsync(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) *SesReorderReceiptRuleSetResult
 
-       SendBounce(ctx workflow.Context, input *ses.SendBounceInput) (*ses.SendBounceOutput, error)
-       SendBounceAsync(ctx workflow.Context, input *ses.SendBounceInput) *SesSendBounceResult
+	SendBounce(ctx workflow.Context, input *ses.SendBounceInput) (*ses.SendBounceOutput, error)
+	SendBounceAsync(ctx workflow.Context, input *ses.SendBounceInput) *SesSendBounceResult
 
-       SendBulkTemplatedEmail(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) (*ses.SendBulkTemplatedEmailOutput, error)
-       SendBulkTemplatedEmailAsync(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) *SesSendBulkTemplatedEmailResult
+	SendBulkTemplatedEmail(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) (*ses.SendBulkTemplatedEmailOutput, error)
+	SendBulkTemplatedEmailAsync(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) *SesSendBulkTemplatedEmailResult
 
-       SendCustomVerificationEmail(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error)
-       SendCustomVerificationEmailAsync(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) *SesSendCustomVerificationEmailResult
+	SendCustomVerificationEmail(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error)
+	SendCustomVerificationEmailAsync(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) *SesSendCustomVerificationEmailResult
 
-       SendEmail(ctx workflow.Context, input *ses.SendEmailInput) (*ses.SendEmailOutput, error)
-       SendEmailAsync(ctx workflow.Context, input *ses.SendEmailInput) *SesSendEmailResult
+	SendEmail(ctx workflow.Context, input *ses.SendEmailInput) (*ses.SendEmailOutput, error)
+	SendEmailAsync(ctx workflow.Context, input *ses.SendEmailInput) *SesSendEmailResult
 
-       SendRawEmail(ctx workflow.Context, input *ses.SendRawEmailInput) (*ses.SendRawEmailOutput, error)
-       SendRawEmailAsync(ctx workflow.Context, input *ses.SendRawEmailInput) *SesSendRawEmailResult
+	SendRawEmail(ctx workflow.Context, input *ses.SendRawEmailInput) (*ses.SendRawEmailOutput, error)
+	SendRawEmailAsync(ctx workflow.Context, input *ses.SendRawEmailInput) *SesSendRawEmailResult
 
-       SendTemplatedEmail(ctx workflow.Context, input *ses.SendTemplatedEmailInput) (*ses.SendTemplatedEmailOutput, error)
-       SendTemplatedEmailAsync(ctx workflow.Context, input *ses.SendTemplatedEmailInput) *SesSendTemplatedEmailResult
+	SendTemplatedEmail(ctx workflow.Context, input *ses.SendTemplatedEmailInput) (*ses.SendTemplatedEmailOutput, error)
+	SendTemplatedEmailAsync(ctx workflow.Context, input *ses.SendTemplatedEmailInput) *SesSendTemplatedEmailResult
 
-       SetActiveReceiptRuleSet(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) (*ses.SetActiveReceiptRuleSetOutput, error)
-       SetActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) *SesSetActiveReceiptRuleSetResult
+	SetActiveReceiptRuleSet(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) (*ses.SetActiveReceiptRuleSetOutput, error)
+	SetActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) *SesSetActiveReceiptRuleSetResult
 
-       SetIdentityDkimEnabled(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) (*ses.SetIdentityDkimEnabledOutput, error)
-       SetIdentityDkimEnabledAsync(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) *SesSetIdentityDkimEnabledResult
+	SetIdentityDkimEnabled(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) (*ses.SetIdentityDkimEnabledOutput, error)
+	SetIdentityDkimEnabledAsync(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) *SesSetIdentityDkimEnabledResult
 
-       SetIdentityFeedbackForwardingEnabled(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error)
-       SetIdentityFeedbackForwardingEnabledAsync(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) *SesSetIdentityFeedbackForwardingEnabledResult
+	SetIdentityFeedbackForwardingEnabled(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error)
+	SetIdentityFeedbackForwardingEnabledAsync(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) *SesSetIdentityFeedbackForwardingEnabledResult
 
-       SetIdentityHeadersInNotificationsEnabled(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error)
-       SetIdentityHeadersInNotificationsEnabledAsync(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) *SesSetIdentityHeadersInNotificationsEnabledResult
+	SetIdentityHeadersInNotificationsEnabled(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error)
+	SetIdentityHeadersInNotificationsEnabledAsync(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) *SesSetIdentityHeadersInNotificationsEnabledResult
 
-       SetIdentityMailFromDomain(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) (*ses.SetIdentityMailFromDomainOutput, error)
-       SetIdentityMailFromDomainAsync(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) *SesSetIdentityMailFromDomainResult
+	SetIdentityMailFromDomain(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) (*ses.SetIdentityMailFromDomainOutput, error)
+	SetIdentityMailFromDomainAsync(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) *SesSetIdentityMailFromDomainResult
 
-       SetIdentityNotificationTopic(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) (*ses.SetIdentityNotificationTopicOutput, error)
-       SetIdentityNotificationTopicAsync(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) *SesSetIdentityNotificationTopicResult
+	SetIdentityNotificationTopic(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) (*ses.SetIdentityNotificationTopicOutput, error)
+	SetIdentityNotificationTopicAsync(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) *SesSetIdentityNotificationTopicResult
 
-       SetReceiptRulePosition(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) (*ses.SetReceiptRulePositionOutput, error)
-       SetReceiptRulePositionAsync(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) *SesSetReceiptRulePositionResult
+	SetReceiptRulePosition(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) (*ses.SetReceiptRulePositionOutput, error)
+	SetReceiptRulePositionAsync(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) *SesSetReceiptRulePositionResult
 
-       TestRenderTemplate(ctx workflow.Context, input *ses.TestRenderTemplateInput) (*ses.TestRenderTemplateOutput, error)
-       TestRenderTemplateAsync(ctx workflow.Context, input *ses.TestRenderTemplateInput) *SesTestRenderTemplateResult
+	TestRenderTemplate(ctx workflow.Context, input *ses.TestRenderTemplateInput) (*ses.TestRenderTemplateOutput, error)
+	TestRenderTemplateAsync(ctx workflow.Context, input *ses.TestRenderTemplateInput) *SesTestRenderTemplateResult
 
-       UpdateAccountSendingEnabled(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error)
-       UpdateAccountSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) *SesUpdateAccountSendingEnabledResult
+	UpdateAccountSendingEnabled(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error)
+	UpdateAccountSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) *SesUpdateAccountSendingEnabledResult
 
-       UpdateConfigurationSetEventDestination(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) (*ses.UpdateConfigurationSetEventDestinationOutput, error)
-       UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) *SesUpdateConfigurationSetEventDestinationResult
+	UpdateConfigurationSetEventDestination(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) (*ses.UpdateConfigurationSetEventDestinationOutput, error)
+	UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) *SesUpdateConfigurationSetEventDestinationResult
 
-       UpdateConfigurationSetReputationMetricsEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error)
-       UpdateConfigurationSetReputationMetricsEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) *SesUpdateConfigurationSetReputationMetricsEnabledResult
+	UpdateConfigurationSetReputationMetricsEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error)
+	UpdateConfigurationSetReputationMetricsEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) *SesUpdateConfigurationSetReputationMetricsEnabledResult
 
-       UpdateConfigurationSetSendingEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error)
-       UpdateConfigurationSetSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) *SesUpdateConfigurationSetSendingEnabledResult
+	UpdateConfigurationSetSendingEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error)
+	UpdateConfigurationSetSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) *SesUpdateConfigurationSetSendingEnabledResult
 
-       UpdateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error)
-       UpdateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) *SesUpdateConfigurationSetTrackingOptionsResult
+	UpdateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error)
+	UpdateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) *SesUpdateConfigurationSetTrackingOptionsResult
 
-       UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error)
-       UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) *SesUpdateCustomVerificationEmailTemplateResult
+	UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error)
+	UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) *SesUpdateCustomVerificationEmailTemplateResult
 
-       UpdateReceiptRule(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) (*ses.UpdateReceiptRuleOutput, error)
-       UpdateReceiptRuleAsync(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) *SesUpdateReceiptRuleResult
+	UpdateReceiptRule(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) (*ses.UpdateReceiptRuleOutput, error)
+	UpdateReceiptRuleAsync(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) *SesUpdateReceiptRuleResult
 
-       UpdateTemplate(ctx workflow.Context, input *ses.UpdateTemplateInput) (*ses.UpdateTemplateOutput, error)
-       UpdateTemplateAsync(ctx workflow.Context, input *ses.UpdateTemplateInput) *SesUpdateTemplateResult
+	UpdateTemplate(ctx workflow.Context, input *ses.UpdateTemplateInput) (*ses.UpdateTemplateOutput, error)
+	UpdateTemplateAsync(ctx workflow.Context, input *ses.UpdateTemplateInput) *SesUpdateTemplateResult
 
-       VerifyDomainDkim(ctx workflow.Context, input *ses.VerifyDomainDkimInput) (*ses.VerifyDomainDkimOutput, error)
-       VerifyDomainDkimAsync(ctx workflow.Context, input *ses.VerifyDomainDkimInput) *SesVerifyDomainDkimResult
+	VerifyDomainDkim(ctx workflow.Context, input *ses.VerifyDomainDkimInput) (*ses.VerifyDomainDkimOutput, error)
+	VerifyDomainDkimAsync(ctx workflow.Context, input *ses.VerifyDomainDkimInput) *SesVerifyDomainDkimResult
 
-       VerifyDomainIdentity(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) (*ses.VerifyDomainIdentityOutput, error)
-       VerifyDomainIdentityAsync(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) *SesVerifyDomainIdentityResult
+	VerifyDomainIdentity(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) (*ses.VerifyDomainIdentityOutput, error)
+	VerifyDomainIdentityAsync(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) *SesVerifyDomainIdentityResult
 
-       VerifyEmailAddress(ctx workflow.Context, input *ses.VerifyEmailAddressInput) (*ses.VerifyEmailAddressOutput, error)
-       VerifyEmailAddressAsync(ctx workflow.Context, input *ses.VerifyEmailAddressInput) *SesVerifyEmailAddressResult
+	VerifyEmailAddress(ctx workflow.Context, input *ses.VerifyEmailAddressInput) (*ses.VerifyEmailAddressOutput, error)
+	VerifyEmailAddressAsync(ctx workflow.Context, input *ses.VerifyEmailAddressInput) *SesVerifyEmailAddressResult
 
-       VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
-       VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
+	VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
+	VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
 
-       WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error}
+	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error
+}
 
 type SesCloneReceiptRuleSetResult struct {
 	Result workflow.Future
 }
 
 func (r *SesCloneReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.CloneReceiptRuleSetOutput, error) {
-    var output ses.CloneReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CloneReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateConfigurationSetResult struct {
@@ -237,9 +238,9 @@ type SesCreateConfigurationSetResult struct {
 }
 
 func (r *SesCreateConfigurationSetResult) Get(ctx workflow.Context) (*ses.CreateConfigurationSetOutput, error) {
-    var output ses.CreateConfigurationSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateConfigurationSetEventDestinationResult struct {
@@ -247,9 +248,9 @@ type SesCreateConfigurationSetEventDestinationResult struct {
 }
 
 func (r *SesCreateConfigurationSetEventDestinationResult) Get(ctx workflow.Context) (*ses.CreateConfigurationSetEventDestinationOutput, error) {
-    var output ses.CreateConfigurationSetEventDestinationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetEventDestinationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateConfigurationSetTrackingOptionsResult struct {
@@ -257,9 +258,9 @@ type SesCreateConfigurationSetTrackingOptionsResult struct {
 }
 
 func (r *SesCreateConfigurationSetTrackingOptionsResult) Get(ctx workflow.Context) (*ses.CreateConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.CreateConfigurationSetTrackingOptionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetTrackingOptionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateCustomVerificationEmailTemplateResult struct {
@@ -267,9 +268,9 @@ type SesCreateCustomVerificationEmailTemplateResult struct {
 }
 
 func (r *SesCreateCustomVerificationEmailTemplateResult) Get(ctx workflow.Context) (*ses.CreateCustomVerificationEmailTemplateOutput, error) {
-    var output ses.CreateCustomVerificationEmailTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateCustomVerificationEmailTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateReceiptFilterResult struct {
@@ -277,9 +278,9 @@ type SesCreateReceiptFilterResult struct {
 }
 
 func (r *SesCreateReceiptFilterResult) Get(ctx workflow.Context) (*ses.CreateReceiptFilterOutput, error) {
-    var output ses.CreateReceiptFilterOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptFilterOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateReceiptRuleResult struct {
@@ -287,9 +288,9 @@ type SesCreateReceiptRuleResult struct {
 }
 
 func (r *SesCreateReceiptRuleResult) Get(ctx workflow.Context) (*ses.CreateReceiptRuleOutput, error) {
-    var output ses.CreateReceiptRuleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptRuleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateReceiptRuleSetResult struct {
@@ -297,9 +298,9 @@ type SesCreateReceiptRuleSetResult struct {
 }
 
 func (r *SesCreateReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.CreateReceiptRuleSetOutput, error) {
-    var output ses.CreateReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesCreateTemplateResult struct {
@@ -307,9 +308,9 @@ type SesCreateTemplateResult struct {
 }
 
 func (r *SesCreateTemplateResult) Get(ctx workflow.Context) (*ses.CreateTemplateOutput, error) {
-    var output ses.CreateTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.CreateTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteConfigurationSetResult struct {
@@ -317,9 +318,9 @@ type SesDeleteConfigurationSetResult struct {
 }
 
 func (r *SesDeleteConfigurationSetResult) Get(ctx workflow.Context) (*ses.DeleteConfigurationSetOutput, error) {
-    var output ses.DeleteConfigurationSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteConfigurationSetEventDestinationResult struct {
@@ -327,9 +328,9 @@ type SesDeleteConfigurationSetEventDestinationResult struct {
 }
 
 func (r *SesDeleteConfigurationSetEventDestinationResult) Get(ctx workflow.Context) (*ses.DeleteConfigurationSetEventDestinationOutput, error) {
-    var output ses.DeleteConfigurationSetEventDestinationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetEventDestinationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteConfigurationSetTrackingOptionsResult struct {
@@ -337,9 +338,9 @@ type SesDeleteConfigurationSetTrackingOptionsResult struct {
 }
 
 func (r *SesDeleteConfigurationSetTrackingOptionsResult) Get(ctx workflow.Context) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.DeleteConfigurationSetTrackingOptionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetTrackingOptionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteCustomVerificationEmailTemplateResult struct {
@@ -347,9 +348,9 @@ type SesDeleteCustomVerificationEmailTemplateResult struct {
 }
 
 func (r *SesDeleteCustomVerificationEmailTemplateResult) Get(ctx workflow.Context) (*ses.DeleteCustomVerificationEmailTemplateOutput, error) {
-    var output ses.DeleteCustomVerificationEmailTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteCustomVerificationEmailTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteIdentityResult struct {
@@ -357,9 +358,9 @@ type SesDeleteIdentityResult struct {
 }
 
 func (r *SesDeleteIdentityResult) Get(ctx workflow.Context) (*ses.DeleteIdentityOutput, error) {
-    var output ses.DeleteIdentityOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteIdentityOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteIdentityPolicyResult struct {
@@ -367,9 +368,9 @@ type SesDeleteIdentityPolicyResult struct {
 }
 
 func (r *SesDeleteIdentityPolicyResult) Get(ctx workflow.Context) (*ses.DeleteIdentityPolicyOutput, error) {
-    var output ses.DeleteIdentityPolicyOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteIdentityPolicyOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteReceiptFilterResult struct {
@@ -377,9 +378,9 @@ type SesDeleteReceiptFilterResult struct {
 }
 
 func (r *SesDeleteReceiptFilterResult) Get(ctx workflow.Context) (*ses.DeleteReceiptFilterOutput, error) {
-    var output ses.DeleteReceiptFilterOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptFilterOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteReceiptRuleResult struct {
@@ -387,9 +388,9 @@ type SesDeleteReceiptRuleResult struct {
 }
 
 func (r *SesDeleteReceiptRuleResult) Get(ctx workflow.Context) (*ses.DeleteReceiptRuleOutput, error) {
-    var output ses.DeleteReceiptRuleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptRuleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteReceiptRuleSetResult struct {
@@ -397,9 +398,9 @@ type SesDeleteReceiptRuleSetResult struct {
 }
 
 func (r *SesDeleteReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.DeleteReceiptRuleSetOutput, error) {
-    var output ses.DeleteReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteTemplateResult struct {
@@ -407,9 +408,9 @@ type SesDeleteTemplateResult struct {
 }
 
 func (r *SesDeleteTemplateResult) Get(ctx workflow.Context) (*ses.DeleteTemplateOutput, error) {
-    var output ses.DeleteTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDeleteVerifiedEmailAddressResult struct {
@@ -417,9 +418,9 @@ type SesDeleteVerifiedEmailAddressResult struct {
 }
 
 func (r *SesDeleteVerifiedEmailAddressResult) Get(ctx workflow.Context) (*ses.DeleteVerifiedEmailAddressOutput, error) {
-    var output ses.DeleteVerifiedEmailAddressOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteVerifiedEmailAddressOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDescribeActiveReceiptRuleSetResult struct {
@@ -427,9 +428,9 @@ type SesDescribeActiveReceiptRuleSetResult struct {
 }
 
 func (r *SesDescribeActiveReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.DescribeActiveReceiptRuleSetOutput, error) {
-    var output ses.DescribeActiveReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeActiveReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDescribeConfigurationSetResult struct {
@@ -437,9 +438,9 @@ type SesDescribeConfigurationSetResult struct {
 }
 
 func (r *SesDescribeConfigurationSetResult) Get(ctx workflow.Context) (*ses.DescribeConfigurationSetOutput, error) {
-    var output ses.DescribeConfigurationSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeConfigurationSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDescribeReceiptRuleResult struct {
@@ -447,9 +448,9 @@ type SesDescribeReceiptRuleResult struct {
 }
 
 func (r *SesDescribeReceiptRuleResult) Get(ctx workflow.Context) (*ses.DescribeReceiptRuleOutput, error) {
-    var output ses.DescribeReceiptRuleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeReceiptRuleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesDescribeReceiptRuleSetResult struct {
@@ -457,9 +458,9 @@ type SesDescribeReceiptRuleSetResult struct {
 }
 
 func (r *SesDescribeReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.DescribeReceiptRuleSetOutput, error) {
-    var output ses.DescribeReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetAccountSendingEnabledResult struct {
@@ -467,9 +468,9 @@ type SesGetAccountSendingEnabledResult struct {
 }
 
 func (r *SesGetAccountSendingEnabledResult) Get(ctx workflow.Context) (*ses.GetAccountSendingEnabledOutput, error) {
-    var output ses.GetAccountSendingEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetAccountSendingEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetCustomVerificationEmailTemplateResult struct {
@@ -477,9 +478,9 @@ type SesGetCustomVerificationEmailTemplateResult struct {
 }
 
 func (r *SesGetCustomVerificationEmailTemplateResult) Get(ctx workflow.Context) (*ses.GetCustomVerificationEmailTemplateOutput, error) {
-    var output ses.GetCustomVerificationEmailTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetCustomVerificationEmailTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetIdentityDkimAttributesResult struct {
@@ -487,9 +488,9 @@ type SesGetIdentityDkimAttributesResult struct {
 }
 
 func (r *SesGetIdentityDkimAttributesResult) Get(ctx workflow.Context) (*ses.GetIdentityDkimAttributesOutput, error) {
-    var output ses.GetIdentityDkimAttributesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityDkimAttributesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetIdentityMailFromDomainAttributesResult struct {
@@ -497,9 +498,9 @@ type SesGetIdentityMailFromDomainAttributesResult struct {
 }
 
 func (r *SesGetIdentityMailFromDomainAttributesResult) Get(ctx workflow.Context) (*ses.GetIdentityMailFromDomainAttributesOutput, error) {
-    var output ses.GetIdentityMailFromDomainAttributesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityMailFromDomainAttributesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetIdentityNotificationAttributesResult struct {
@@ -507,9 +508,9 @@ type SesGetIdentityNotificationAttributesResult struct {
 }
 
 func (r *SesGetIdentityNotificationAttributesResult) Get(ctx workflow.Context) (*ses.GetIdentityNotificationAttributesOutput, error) {
-    var output ses.GetIdentityNotificationAttributesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityNotificationAttributesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetIdentityPoliciesResult struct {
@@ -517,9 +518,9 @@ type SesGetIdentityPoliciesResult struct {
 }
 
 func (r *SesGetIdentityPoliciesResult) Get(ctx workflow.Context) (*ses.GetIdentityPoliciesOutput, error) {
-    var output ses.GetIdentityPoliciesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityPoliciesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetIdentityVerificationAttributesResult struct {
@@ -527,9 +528,9 @@ type SesGetIdentityVerificationAttributesResult struct {
 }
 
 func (r *SesGetIdentityVerificationAttributesResult) Get(ctx workflow.Context) (*ses.GetIdentityVerificationAttributesOutput, error) {
-    var output ses.GetIdentityVerificationAttributesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityVerificationAttributesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetSendQuotaResult struct {
@@ -537,9 +538,9 @@ type SesGetSendQuotaResult struct {
 }
 
 func (r *SesGetSendQuotaResult) Get(ctx workflow.Context) (*ses.GetSendQuotaOutput, error) {
-    var output ses.GetSendQuotaOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetSendQuotaOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetSendStatisticsResult struct {
@@ -547,9 +548,9 @@ type SesGetSendStatisticsResult struct {
 }
 
 func (r *SesGetSendStatisticsResult) Get(ctx workflow.Context) (*ses.GetSendStatisticsOutput, error) {
-    var output ses.GetSendStatisticsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetSendStatisticsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesGetTemplateResult struct {
@@ -557,9 +558,9 @@ type SesGetTemplateResult struct {
 }
 
 func (r *SesGetTemplateResult) Get(ctx workflow.Context) (*ses.GetTemplateOutput, error) {
-    var output ses.GetTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.GetTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListConfigurationSetsResult struct {
@@ -567,9 +568,9 @@ type SesListConfigurationSetsResult struct {
 }
 
 func (r *SesListConfigurationSetsResult) Get(ctx workflow.Context) (*ses.ListConfigurationSetsOutput, error) {
-    var output ses.ListConfigurationSetsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListConfigurationSetsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListCustomVerificationEmailTemplatesResult struct {
@@ -577,9 +578,9 @@ type SesListCustomVerificationEmailTemplatesResult struct {
 }
 
 func (r *SesListCustomVerificationEmailTemplatesResult) Get(ctx workflow.Context) (*ses.ListCustomVerificationEmailTemplatesOutput, error) {
-    var output ses.ListCustomVerificationEmailTemplatesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListCustomVerificationEmailTemplatesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListIdentitiesResult struct {
@@ -587,9 +588,9 @@ type SesListIdentitiesResult struct {
 }
 
 func (r *SesListIdentitiesResult) Get(ctx workflow.Context) (*ses.ListIdentitiesOutput, error) {
-    var output ses.ListIdentitiesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListIdentitiesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListIdentityPoliciesResult struct {
@@ -597,9 +598,9 @@ type SesListIdentityPoliciesResult struct {
 }
 
 func (r *SesListIdentityPoliciesResult) Get(ctx workflow.Context) (*ses.ListIdentityPoliciesOutput, error) {
-    var output ses.ListIdentityPoliciesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListIdentityPoliciesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListReceiptFiltersResult struct {
@@ -607,9 +608,9 @@ type SesListReceiptFiltersResult struct {
 }
 
 func (r *SesListReceiptFiltersResult) Get(ctx workflow.Context) (*ses.ListReceiptFiltersOutput, error) {
-    var output ses.ListReceiptFiltersOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListReceiptFiltersOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListReceiptRuleSetsResult struct {
@@ -617,9 +618,9 @@ type SesListReceiptRuleSetsResult struct {
 }
 
 func (r *SesListReceiptRuleSetsResult) Get(ctx workflow.Context) (*ses.ListReceiptRuleSetsOutput, error) {
-    var output ses.ListReceiptRuleSetsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListReceiptRuleSetsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListTemplatesResult struct {
@@ -627,9 +628,9 @@ type SesListTemplatesResult struct {
 }
 
 func (r *SesListTemplatesResult) Get(ctx workflow.Context) (*ses.ListTemplatesOutput, error) {
-    var output ses.ListTemplatesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListTemplatesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesListVerifiedEmailAddressesResult struct {
@@ -637,9 +638,9 @@ type SesListVerifiedEmailAddressesResult struct {
 }
 
 func (r *SesListVerifiedEmailAddressesResult) Get(ctx workflow.Context) (*ses.ListVerifiedEmailAddressesOutput, error) {
-    var output ses.ListVerifiedEmailAddressesOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ListVerifiedEmailAddressesOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesPutConfigurationSetDeliveryOptionsResult struct {
@@ -647,9 +648,9 @@ type SesPutConfigurationSetDeliveryOptionsResult struct {
 }
 
 func (r *SesPutConfigurationSetDeliveryOptionsResult) Get(ctx workflow.Context) (*ses.PutConfigurationSetDeliveryOptionsOutput, error) {
-    var output ses.PutConfigurationSetDeliveryOptionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.PutConfigurationSetDeliveryOptionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesPutIdentityPolicyResult struct {
@@ -657,9 +658,9 @@ type SesPutIdentityPolicyResult struct {
 }
 
 func (r *SesPutIdentityPolicyResult) Get(ctx workflow.Context) (*ses.PutIdentityPolicyOutput, error) {
-    var output ses.PutIdentityPolicyOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.PutIdentityPolicyOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesReorderReceiptRuleSetResult struct {
@@ -667,9 +668,9 @@ type SesReorderReceiptRuleSetResult struct {
 }
 
 func (r *SesReorderReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.ReorderReceiptRuleSetOutput, error) {
-    var output ses.ReorderReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.ReorderReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendBounceResult struct {
@@ -677,9 +678,9 @@ type SesSendBounceResult struct {
 }
 
 func (r *SesSendBounceResult) Get(ctx workflow.Context) (*ses.SendBounceOutput, error) {
-    var output ses.SendBounceOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendBounceOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendBulkTemplatedEmailResult struct {
@@ -687,9 +688,9 @@ type SesSendBulkTemplatedEmailResult struct {
 }
 
 func (r *SesSendBulkTemplatedEmailResult) Get(ctx workflow.Context) (*ses.SendBulkTemplatedEmailOutput, error) {
-    var output ses.SendBulkTemplatedEmailOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendBulkTemplatedEmailOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendCustomVerificationEmailResult struct {
@@ -697,9 +698,9 @@ type SesSendCustomVerificationEmailResult struct {
 }
 
 func (r *SesSendCustomVerificationEmailResult) Get(ctx workflow.Context) (*ses.SendCustomVerificationEmailOutput, error) {
-    var output ses.SendCustomVerificationEmailOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendCustomVerificationEmailOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendEmailResult struct {
@@ -707,9 +708,9 @@ type SesSendEmailResult struct {
 }
 
 func (r *SesSendEmailResult) Get(ctx workflow.Context) (*ses.SendEmailOutput, error) {
-    var output ses.SendEmailOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendEmailOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendRawEmailResult struct {
@@ -717,9 +718,9 @@ type SesSendRawEmailResult struct {
 }
 
 func (r *SesSendRawEmailResult) Get(ctx workflow.Context) (*ses.SendRawEmailOutput, error) {
-    var output ses.SendRawEmailOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendRawEmailOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSendTemplatedEmailResult struct {
@@ -727,9 +728,9 @@ type SesSendTemplatedEmailResult struct {
 }
 
 func (r *SesSendTemplatedEmailResult) Get(ctx workflow.Context) (*ses.SendTemplatedEmailOutput, error) {
-    var output ses.SendTemplatedEmailOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SendTemplatedEmailOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetActiveReceiptRuleSetResult struct {
@@ -737,9 +738,9 @@ type SesSetActiveReceiptRuleSetResult struct {
 }
 
 func (r *SesSetActiveReceiptRuleSetResult) Get(ctx workflow.Context) (*ses.SetActiveReceiptRuleSetOutput, error) {
-    var output ses.SetActiveReceiptRuleSetOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetActiveReceiptRuleSetOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetIdentityDkimEnabledResult struct {
@@ -747,9 +748,9 @@ type SesSetIdentityDkimEnabledResult struct {
 }
 
 func (r *SesSetIdentityDkimEnabledResult) Get(ctx workflow.Context) (*ses.SetIdentityDkimEnabledOutput, error) {
-    var output ses.SetIdentityDkimEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityDkimEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetIdentityFeedbackForwardingEnabledResult struct {
@@ -757,9 +758,9 @@ type SesSetIdentityFeedbackForwardingEnabledResult struct {
 }
 
 func (r *SesSetIdentityFeedbackForwardingEnabledResult) Get(ctx workflow.Context) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error) {
-    var output ses.SetIdentityFeedbackForwardingEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityFeedbackForwardingEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetIdentityHeadersInNotificationsEnabledResult struct {
@@ -767,9 +768,9 @@ type SesSetIdentityHeadersInNotificationsEnabledResult struct {
 }
 
 func (r *SesSetIdentityHeadersInNotificationsEnabledResult) Get(ctx workflow.Context) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error) {
-    var output ses.SetIdentityHeadersInNotificationsEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityHeadersInNotificationsEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetIdentityMailFromDomainResult struct {
@@ -777,9 +778,9 @@ type SesSetIdentityMailFromDomainResult struct {
 }
 
 func (r *SesSetIdentityMailFromDomainResult) Get(ctx workflow.Context) (*ses.SetIdentityMailFromDomainOutput, error) {
-    var output ses.SetIdentityMailFromDomainOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityMailFromDomainOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetIdentityNotificationTopicResult struct {
@@ -787,9 +788,9 @@ type SesSetIdentityNotificationTopicResult struct {
 }
 
 func (r *SesSetIdentityNotificationTopicResult) Get(ctx workflow.Context) (*ses.SetIdentityNotificationTopicOutput, error) {
-    var output ses.SetIdentityNotificationTopicOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityNotificationTopicOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesSetReceiptRulePositionResult struct {
@@ -797,9 +798,9 @@ type SesSetReceiptRulePositionResult struct {
 }
 
 func (r *SesSetReceiptRulePositionResult) Get(ctx workflow.Context) (*ses.SetReceiptRulePositionOutput, error) {
-    var output ses.SetReceiptRulePositionOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.SetReceiptRulePositionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesTestRenderTemplateResult struct {
@@ -807,9 +808,9 @@ type SesTestRenderTemplateResult struct {
 }
 
 func (r *SesTestRenderTemplateResult) Get(ctx workflow.Context) (*ses.TestRenderTemplateOutput, error) {
-    var output ses.TestRenderTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.TestRenderTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateAccountSendingEnabledResult struct {
@@ -817,9 +818,9 @@ type SesUpdateAccountSendingEnabledResult struct {
 }
 
 func (r *SesUpdateAccountSendingEnabledResult) Get(ctx workflow.Context) (*ses.UpdateAccountSendingEnabledOutput, error) {
-    var output ses.UpdateAccountSendingEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateAccountSendingEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateConfigurationSetEventDestinationResult struct {
@@ -827,9 +828,9 @@ type SesUpdateConfigurationSetEventDestinationResult struct {
 }
 
 func (r *SesUpdateConfigurationSetEventDestinationResult) Get(ctx workflow.Context) (*ses.UpdateConfigurationSetEventDestinationOutput, error) {
-    var output ses.UpdateConfigurationSetEventDestinationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetEventDestinationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateConfigurationSetReputationMetricsEnabledResult struct {
@@ -837,9 +838,9 @@ type SesUpdateConfigurationSetReputationMetricsEnabledResult struct {
 }
 
 func (r *SesUpdateConfigurationSetReputationMetricsEnabledResult) Get(ctx workflow.Context) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error) {
-    var output ses.UpdateConfigurationSetReputationMetricsEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetReputationMetricsEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateConfigurationSetSendingEnabledResult struct {
@@ -847,9 +848,9 @@ type SesUpdateConfigurationSetSendingEnabledResult struct {
 }
 
 func (r *SesUpdateConfigurationSetSendingEnabledResult) Get(ctx workflow.Context) (*ses.UpdateConfigurationSetSendingEnabledOutput, error) {
-    var output ses.UpdateConfigurationSetSendingEnabledOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetSendingEnabledOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateConfigurationSetTrackingOptionsResult struct {
@@ -857,9 +858,9 @@ type SesUpdateConfigurationSetTrackingOptionsResult struct {
 }
 
 func (r *SesUpdateConfigurationSetTrackingOptionsResult) Get(ctx workflow.Context) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.UpdateConfigurationSetTrackingOptionsOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetTrackingOptionsOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateCustomVerificationEmailTemplateResult struct {
@@ -867,9 +868,9 @@ type SesUpdateCustomVerificationEmailTemplateResult struct {
 }
 
 func (r *SesUpdateCustomVerificationEmailTemplateResult) Get(ctx workflow.Context) (*ses.UpdateCustomVerificationEmailTemplateOutput, error) {
-    var output ses.UpdateCustomVerificationEmailTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateCustomVerificationEmailTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateReceiptRuleResult struct {
@@ -877,9 +878,9 @@ type SesUpdateReceiptRuleResult struct {
 }
 
 func (r *SesUpdateReceiptRuleResult) Get(ctx workflow.Context) (*ses.UpdateReceiptRuleOutput, error) {
-    var output ses.UpdateReceiptRuleOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateReceiptRuleOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesUpdateTemplateResult struct {
@@ -887,9 +888,9 @@ type SesUpdateTemplateResult struct {
 }
 
 func (r *SesUpdateTemplateResult) Get(ctx workflow.Context) (*ses.UpdateTemplateOutput, error) {
-    var output ses.UpdateTemplateOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateTemplateOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesVerifyDomainDkimResult struct {
@@ -897,9 +898,9 @@ type SesVerifyDomainDkimResult struct {
 }
 
 func (r *SesVerifyDomainDkimResult) Get(ctx workflow.Context) (*ses.VerifyDomainDkimOutput, error) {
-    var output ses.VerifyDomainDkimOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyDomainDkimOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesVerifyDomainIdentityResult struct {
@@ -907,9 +908,9 @@ type SesVerifyDomainIdentityResult struct {
 }
 
 func (r *SesVerifyDomainIdentityResult) Get(ctx workflow.Context) (*ses.VerifyDomainIdentityOutput, error) {
-    var output ses.VerifyDomainIdentityOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyDomainIdentityOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesVerifyEmailAddressResult struct {
@@ -917,9 +918,9 @@ type SesVerifyEmailAddressResult struct {
 }
 
 func (r *SesVerifyEmailAddressResult) Get(ctx workflow.Context) (*ses.VerifyEmailAddressOutput, error) {
-    var output ses.VerifyEmailAddressOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyEmailAddressOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SesVerifyEmailIdentityResult struct {
@@ -927,805 +928,804 @@ type SesVerifyEmailIdentityResult struct {
 }
 
 func (r *SesVerifyEmailIdentityResult) Get(ctx workflow.Context) (*ses.VerifyEmailIdentityOutput, error) {
-    var output ses.VerifyEmailIdentityOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyEmailIdentityOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type SESStub struct {
-    activities awsactivities.SESActivities
+	activities awsactivities.SESActivities
 }
 
 func NewSESStub() SESClient {
-    return &SESStub{}
+	return &SESStub{}
 }
 
 func (a *SESStub) CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error) {
-    var output ses.CloneReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CloneReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CloneReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CloneReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CloneReceiptRuleSetAsync(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) *SesCloneReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CloneReceiptRuleSet, input)
-    return &SesCloneReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CloneReceiptRuleSet, input)
+	return &SesCloneReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) CreateConfigurationSet(ctx workflow.Context, input *ses.CreateConfigurationSetInput) (*ses.CreateConfigurationSetOutput, error) {
-    var output ses.CreateConfigurationSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateConfigurationSetAsync(ctx workflow.Context, input *ses.CreateConfigurationSetInput) *SesCreateConfigurationSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSet, input)
-    return &SesCreateConfigurationSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSet, input)
+	return &SesCreateConfigurationSetResult{Result: future}
 }
 
 func (a *SESStub) CreateConfigurationSetEventDestination(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) (*ses.CreateConfigurationSetEventDestinationOutput, error) {
-    var output ses.CreateConfigurationSetEventDestinationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetEventDestination, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetEventDestinationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetEventDestination, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.CreateConfigurationSetEventDestinationInput) *SesCreateConfigurationSetEventDestinationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetEventDestination, input)
-    return &SesCreateConfigurationSetEventDestinationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetEventDestination, input)
+	return &SesCreateConfigurationSetEventDestinationResult{Result: future}
 }
 
 func (a *SESStub) CreateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) (*ses.CreateConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.CreateConfigurationSetTrackingOptionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetTrackingOptions, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateConfigurationSetTrackingOptionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetTrackingOptions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.CreateConfigurationSetTrackingOptionsInput) *SesCreateConfigurationSetTrackingOptionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetTrackingOptions, input)
-    return &SesCreateConfigurationSetTrackingOptionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateConfigurationSetTrackingOptions, input)
+	return &SesCreateConfigurationSetTrackingOptionsResult{Result: future}
 }
 
 func (a *SESStub) CreateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) (*ses.CreateCustomVerificationEmailTemplateOutput, error) {
-    var output ses.CreateCustomVerificationEmailTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateCustomVerificationEmailTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateCustomVerificationEmailTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateCustomVerificationEmailTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.CreateCustomVerificationEmailTemplateInput) *SesCreateCustomVerificationEmailTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateCustomVerificationEmailTemplate, input)
-    return &SesCreateCustomVerificationEmailTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateCustomVerificationEmailTemplate, input)
+	return &SesCreateCustomVerificationEmailTemplateResult{Result: future}
 }
 
 func (a *SESStub) CreateReceiptFilter(ctx workflow.Context, input *ses.CreateReceiptFilterInput) (*ses.CreateReceiptFilterOutput, error) {
-    var output ses.CreateReceiptFilterOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptFilter, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptFilterOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptFilter, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateReceiptFilterAsync(ctx workflow.Context, input *ses.CreateReceiptFilterInput) *SesCreateReceiptFilterResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptFilter, input)
-    return &SesCreateReceiptFilterResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptFilter, input)
+	return &SesCreateReceiptFilterResult{Result: future}
 }
 
 func (a *SESStub) CreateReceiptRule(ctx workflow.Context, input *ses.CreateReceiptRuleInput) (*ses.CreateReceiptRuleOutput, error) {
-    var output ses.CreateReceiptRuleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRule, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptRuleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRule, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateReceiptRuleAsync(ctx workflow.Context, input *ses.CreateReceiptRuleInput) *SesCreateReceiptRuleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRule, input)
-    return &SesCreateReceiptRuleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRule, input)
+	return &SesCreateReceiptRuleResult{Result: future}
 }
 
 func (a *SESStub) CreateReceiptRuleSet(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) (*ses.CreateReceiptRuleSetOutput, error) {
-    var output ses.CreateReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateReceiptRuleSetAsync(ctx workflow.Context, input *ses.CreateReceiptRuleSetInput) *SesCreateReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRuleSet, input)
-    return &SesCreateReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateReceiptRuleSet, input)
+	return &SesCreateReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) CreateTemplate(ctx workflow.Context, input *ses.CreateTemplateInput) (*ses.CreateTemplateOutput, error) {
-    var output ses.CreateTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.CreateTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.CreateTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.CreateTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) CreateTemplateAsync(ctx workflow.Context, input *ses.CreateTemplateInput) *SesCreateTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.CreateTemplate, input)
-    return &SesCreateTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.CreateTemplate, input)
+	return &SesCreateTemplateResult{Result: future}
 }
 
 func (a *SESStub) DeleteConfigurationSet(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) (*ses.DeleteConfigurationSetOutput, error) {
-    var output ses.DeleteConfigurationSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteConfigurationSetAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetInput) *SesDeleteConfigurationSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSet, input)
-    return &SesDeleteConfigurationSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSet, input)
+	return &SesDeleteConfigurationSetResult{Result: future}
 }
 
 func (a *SESStub) DeleteConfigurationSetEventDestination(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) (*ses.DeleteConfigurationSetEventDestinationOutput, error) {
-    var output ses.DeleteConfigurationSetEventDestinationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetEventDestination, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetEventDestinationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetEventDestination, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetEventDestinationInput) *SesDeleteConfigurationSetEventDestinationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetEventDestination, input)
-    return &SesDeleteConfigurationSetEventDestinationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetEventDestination, input)
+	return &SesDeleteConfigurationSetEventDestinationResult{Result: future}
 }
 
 func (a *SESStub) DeleteConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) (*ses.DeleteConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.DeleteConfigurationSetTrackingOptionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetTrackingOptions, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteConfigurationSetTrackingOptionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetTrackingOptions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.DeleteConfigurationSetTrackingOptionsInput) *SesDeleteConfigurationSetTrackingOptionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetTrackingOptions, input)
-    return &SesDeleteConfigurationSetTrackingOptionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteConfigurationSetTrackingOptions, input)
+	return &SesDeleteConfigurationSetTrackingOptionsResult{Result: future}
 }
 
 func (a *SESStub) DeleteCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) (*ses.DeleteCustomVerificationEmailTemplateOutput, error) {
-    var output ses.DeleteCustomVerificationEmailTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomVerificationEmailTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteCustomVerificationEmailTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomVerificationEmailTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.DeleteCustomVerificationEmailTemplateInput) *SesDeleteCustomVerificationEmailTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomVerificationEmailTemplate, input)
-    return &SesDeleteCustomVerificationEmailTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteCustomVerificationEmailTemplate, input)
+	return &SesDeleteCustomVerificationEmailTemplateResult{Result: future}
 }
 
 func (a *SESStub) DeleteIdentity(ctx workflow.Context, input *ses.DeleteIdentityInput) (*ses.DeleteIdentityOutput, error) {
-    var output ses.DeleteIdentityOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentity, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteIdentityOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentity, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteIdentityAsync(ctx workflow.Context, input *ses.DeleteIdentityInput) *SesDeleteIdentityResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentity, input)
-    return &SesDeleteIdentityResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentity, input)
+	return &SesDeleteIdentityResult{Result: future}
 }
 
 func (a *SESStub) DeleteIdentityPolicy(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) (*ses.DeleteIdentityPolicyOutput, error) {
-    var output ses.DeleteIdentityPolicyOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentityPolicy, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteIdentityPolicyOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentityPolicy, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteIdentityPolicyAsync(ctx workflow.Context, input *ses.DeleteIdentityPolicyInput) *SesDeleteIdentityPolicyResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentityPolicy, input)
-    return &SesDeleteIdentityPolicyResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteIdentityPolicy, input)
+	return &SesDeleteIdentityPolicyResult{Result: future}
 }
 
 func (a *SESStub) DeleteReceiptFilter(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) (*ses.DeleteReceiptFilterOutput, error) {
-    var output ses.DeleteReceiptFilterOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptFilter, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptFilterOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptFilter, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteReceiptFilterAsync(ctx workflow.Context, input *ses.DeleteReceiptFilterInput) *SesDeleteReceiptFilterResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptFilter, input)
-    return &SesDeleteReceiptFilterResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptFilter, input)
+	return &SesDeleteReceiptFilterResult{Result: future}
 }
 
 func (a *SESStub) DeleteReceiptRule(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) (*ses.DeleteReceiptRuleOutput, error) {
-    var output ses.DeleteReceiptRuleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRule, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptRuleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRule, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteReceiptRuleAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleInput) *SesDeleteReceiptRuleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRule, input)
-    return &SesDeleteReceiptRuleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRule, input)
+	return &SesDeleteReceiptRuleResult{Result: future}
 }
 
 func (a *SESStub) DeleteReceiptRuleSet(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) (*ses.DeleteReceiptRuleSetOutput, error) {
-    var output ses.DeleteReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteReceiptRuleSetAsync(ctx workflow.Context, input *ses.DeleteReceiptRuleSetInput) *SesDeleteReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRuleSet, input)
-    return &SesDeleteReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteReceiptRuleSet, input)
+	return &SesDeleteReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) DeleteTemplate(ctx workflow.Context, input *ses.DeleteTemplateInput) (*ses.DeleteTemplateOutput, error) {
-    var output ses.DeleteTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteTemplateAsync(ctx workflow.Context, input *ses.DeleteTemplateInput) *SesDeleteTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteTemplate, input)
-    return &SesDeleteTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteTemplate, input)
+	return &SesDeleteTemplateResult{Result: future}
 }
 
 func (a *SESStub) DeleteVerifiedEmailAddress(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) (*ses.DeleteVerifiedEmailAddressOutput, error) {
-    var output ses.DeleteVerifiedEmailAddressOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DeleteVerifiedEmailAddress, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DeleteVerifiedEmailAddressOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DeleteVerifiedEmailAddress, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DeleteVerifiedEmailAddressAsync(ctx workflow.Context, input *ses.DeleteVerifiedEmailAddressInput) *SesDeleteVerifiedEmailAddressResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DeleteVerifiedEmailAddress, input)
-    return &SesDeleteVerifiedEmailAddressResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DeleteVerifiedEmailAddress, input)
+	return &SesDeleteVerifiedEmailAddressResult{Result: future}
 }
 
 func (a *SESStub) DescribeActiveReceiptRuleSet(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) (*ses.DescribeActiveReceiptRuleSetOutput, error) {
-    var output ses.DescribeActiveReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeActiveReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeActiveReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeActiveReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DescribeActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeActiveReceiptRuleSetInput) *SesDescribeActiveReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeActiveReceiptRuleSet, input)
-    return &SesDescribeActiveReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeActiveReceiptRuleSet, input)
+	return &SesDescribeActiveReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) DescribeConfigurationSet(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) (*ses.DescribeConfigurationSetOutput, error) {
-    var output ses.DescribeConfigurationSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeConfigurationSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DescribeConfigurationSetAsync(ctx workflow.Context, input *ses.DescribeConfigurationSetInput) *SesDescribeConfigurationSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationSet, input)
-    return &SesDescribeConfigurationSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeConfigurationSet, input)
+	return &SesDescribeConfigurationSetResult{Result: future}
 }
 
 func (a *SESStub) DescribeReceiptRule(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) (*ses.DescribeReceiptRuleOutput, error) {
-    var output ses.DescribeReceiptRuleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRule, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeReceiptRuleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRule, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DescribeReceiptRuleAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleInput) *SesDescribeReceiptRuleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRule, input)
-    return &SesDescribeReceiptRuleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRule, input)
+	return &SesDescribeReceiptRuleResult{Result: future}
 }
 
 func (a *SESStub) DescribeReceiptRuleSet(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) (*ses.DescribeReceiptRuleSetOutput, error) {
-    var output ses.DescribeReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.DescribeReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) DescribeReceiptRuleSetAsync(ctx workflow.Context, input *ses.DescribeReceiptRuleSetInput) *SesDescribeReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRuleSet, input)
-    return &SesDescribeReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.DescribeReceiptRuleSet, input)
+	return &SesDescribeReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) GetAccountSendingEnabled(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) (*ses.GetAccountSendingEnabledOutput, error) {
-    var output ses.GetAccountSendingEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetAccountSendingEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetAccountSendingEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetAccountSendingEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetAccountSendingEnabledAsync(ctx workflow.Context, input *ses.GetAccountSendingEnabledInput) *SesGetAccountSendingEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetAccountSendingEnabled, input)
-    return &SesGetAccountSendingEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetAccountSendingEnabled, input)
+	return &SesGetAccountSendingEnabledResult{Result: future}
 }
 
 func (a *SESStub) GetCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) (*ses.GetCustomVerificationEmailTemplateOutput, error) {
-    var output ses.GetCustomVerificationEmailTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetCustomVerificationEmailTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetCustomVerificationEmailTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetCustomVerificationEmailTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.GetCustomVerificationEmailTemplateInput) *SesGetCustomVerificationEmailTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetCustomVerificationEmailTemplate, input)
-    return &SesGetCustomVerificationEmailTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetCustomVerificationEmailTemplate, input)
+	return &SesGetCustomVerificationEmailTemplateResult{Result: future}
 }
 
 func (a *SESStub) GetIdentityDkimAttributes(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) (*ses.GetIdentityDkimAttributesOutput, error) {
-    var output ses.GetIdentityDkimAttributesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityDkimAttributes, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityDkimAttributesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityDkimAttributes, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetIdentityDkimAttributesAsync(ctx workflow.Context, input *ses.GetIdentityDkimAttributesInput) *SesGetIdentityDkimAttributesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityDkimAttributes, input)
-    return &SesGetIdentityDkimAttributesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityDkimAttributes, input)
+	return &SesGetIdentityDkimAttributesResult{Result: future}
 }
 
 func (a *SESStub) GetIdentityMailFromDomainAttributes(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) (*ses.GetIdentityMailFromDomainAttributesOutput, error) {
-    var output ses.GetIdentityMailFromDomainAttributesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityMailFromDomainAttributes, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityMailFromDomainAttributesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityMailFromDomainAttributes, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetIdentityMailFromDomainAttributesAsync(ctx workflow.Context, input *ses.GetIdentityMailFromDomainAttributesInput) *SesGetIdentityMailFromDomainAttributesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityMailFromDomainAttributes, input)
-    return &SesGetIdentityMailFromDomainAttributesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityMailFromDomainAttributes, input)
+	return &SesGetIdentityMailFromDomainAttributesResult{Result: future}
 }
 
 func (a *SESStub) GetIdentityNotificationAttributes(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) (*ses.GetIdentityNotificationAttributesOutput, error) {
-    var output ses.GetIdentityNotificationAttributesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityNotificationAttributes, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityNotificationAttributesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityNotificationAttributes, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetIdentityNotificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityNotificationAttributesInput) *SesGetIdentityNotificationAttributesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityNotificationAttributes, input)
-    return &SesGetIdentityNotificationAttributesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityNotificationAttributes, input)
+	return &SesGetIdentityNotificationAttributesResult{Result: future}
 }
 
 func (a *SESStub) GetIdentityPolicies(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) (*ses.GetIdentityPoliciesOutput, error) {
-    var output ses.GetIdentityPoliciesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityPolicies, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityPoliciesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityPolicies, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetIdentityPoliciesAsync(ctx workflow.Context, input *ses.GetIdentityPoliciesInput) *SesGetIdentityPoliciesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityPolicies, input)
-    return &SesGetIdentityPoliciesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityPolicies, input)
+	return &SesGetIdentityPoliciesResult{Result: future}
 }
 
 func (a *SESStub) GetIdentityVerificationAttributes(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) (*ses.GetIdentityVerificationAttributesOutput, error) {
-    var output ses.GetIdentityVerificationAttributesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityVerificationAttributes, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetIdentityVerificationAttributesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetIdentityVerificationAttributes, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetIdentityVerificationAttributesAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) *SesGetIdentityVerificationAttributesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityVerificationAttributes, input)
-    return &SesGetIdentityVerificationAttributesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetIdentityVerificationAttributes, input)
+	return &SesGetIdentityVerificationAttributesResult{Result: future}
 }
 
 func (a *SESStub) GetSendQuota(ctx workflow.Context, input *ses.GetSendQuotaInput) (*ses.GetSendQuotaOutput, error) {
-    var output ses.GetSendQuotaOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetSendQuota, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetSendQuotaOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetSendQuota, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetSendQuotaAsync(ctx workflow.Context, input *ses.GetSendQuotaInput) *SesGetSendQuotaResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetSendQuota, input)
-    return &SesGetSendQuotaResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetSendQuota, input)
+	return &SesGetSendQuotaResult{Result: future}
 }
 
 func (a *SESStub) GetSendStatistics(ctx workflow.Context, input *ses.GetSendStatisticsInput) (*ses.GetSendStatisticsOutput, error) {
-    var output ses.GetSendStatisticsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetSendStatistics, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetSendStatisticsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetSendStatistics, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetSendStatisticsAsync(ctx workflow.Context, input *ses.GetSendStatisticsInput) *SesGetSendStatisticsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetSendStatistics, input)
-    return &SesGetSendStatisticsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetSendStatistics, input)
+	return &SesGetSendStatisticsResult{Result: future}
 }
 
 func (a *SESStub) GetTemplate(ctx workflow.Context, input *ses.GetTemplateInput) (*ses.GetTemplateOutput, error) {
-    var output ses.GetTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.GetTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) GetTemplateAsync(ctx workflow.Context, input *ses.GetTemplateInput) *SesGetTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input)
-    return &SesGetTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetTemplate, input)
+	return &SesGetTemplateResult{Result: future}
 }
 
 func (a *SESStub) ListConfigurationSets(ctx workflow.Context, input *ses.ListConfigurationSetsInput) (*ses.ListConfigurationSetsOutput, error) {
-    var output ses.ListConfigurationSetsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationSets, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListConfigurationSetsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationSets, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListConfigurationSetsAsync(ctx workflow.Context, input *ses.ListConfigurationSetsInput) *SesListConfigurationSetsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationSets, input)
-    return &SesListConfigurationSetsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListConfigurationSets, input)
+	return &SesListConfigurationSetsResult{Result: future}
 }
 
 func (a *SESStub) ListCustomVerificationEmailTemplates(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) (*ses.ListCustomVerificationEmailTemplatesOutput, error) {
-    var output ses.ListCustomVerificationEmailTemplatesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListCustomVerificationEmailTemplates, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListCustomVerificationEmailTemplatesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListCustomVerificationEmailTemplates, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListCustomVerificationEmailTemplatesAsync(ctx workflow.Context, input *ses.ListCustomVerificationEmailTemplatesInput) *SesListCustomVerificationEmailTemplatesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListCustomVerificationEmailTemplates, input)
-    return &SesListCustomVerificationEmailTemplatesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListCustomVerificationEmailTemplates, input)
+	return &SesListCustomVerificationEmailTemplatesResult{Result: future}
 }
 
 func (a *SESStub) ListIdentities(ctx workflow.Context, input *ses.ListIdentitiesInput) (*ses.ListIdentitiesOutput, error) {
-    var output ses.ListIdentitiesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListIdentities, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListIdentitiesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListIdentities, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListIdentitiesAsync(ctx workflow.Context, input *ses.ListIdentitiesInput) *SesListIdentitiesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListIdentities, input)
-    return &SesListIdentitiesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListIdentities, input)
+	return &SesListIdentitiesResult{Result: future}
 }
 
 func (a *SESStub) ListIdentityPolicies(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) (*ses.ListIdentityPoliciesOutput, error) {
-    var output ses.ListIdentityPoliciesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListIdentityPolicies, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListIdentityPoliciesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListIdentityPolicies, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListIdentityPoliciesAsync(ctx workflow.Context, input *ses.ListIdentityPoliciesInput) *SesListIdentityPoliciesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListIdentityPolicies, input)
-    return &SesListIdentityPoliciesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListIdentityPolicies, input)
+	return &SesListIdentityPoliciesResult{Result: future}
 }
 
 func (a *SESStub) ListReceiptFilters(ctx workflow.Context, input *ses.ListReceiptFiltersInput) (*ses.ListReceiptFiltersOutput, error) {
-    var output ses.ListReceiptFiltersOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListReceiptFilters, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListReceiptFiltersOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListReceiptFilters, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListReceiptFiltersAsync(ctx workflow.Context, input *ses.ListReceiptFiltersInput) *SesListReceiptFiltersResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListReceiptFilters, input)
-    return &SesListReceiptFiltersResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListReceiptFilters, input)
+	return &SesListReceiptFiltersResult{Result: future}
 }
 
 func (a *SESStub) ListReceiptRuleSets(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) (*ses.ListReceiptRuleSetsOutput, error) {
-    var output ses.ListReceiptRuleSetsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListReceiptRuleSets, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListReceiptRuleSetsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListReceiptRuleSets, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListReceiptRuleSetsAsync(ctx workflow.Context, input *ses.ListReceiptRuleSetsInput) *SesListReceiptRuleSetsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListReceiptRuleSets, input)
-    return &SesListReceiptRuleSetsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListReceiptRuleSets, input)
+	return &SesListReceiptRuleSetsResult{Result: future}
 }
 
 func (a *SESStub) ListTemplates(ctx workflow.Context, input *ses.ListTemplatesInput) (*ses.ListTemplatesOutput, error) {
-    var output ses.ListTemplatesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListTemplatesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListTemplatesAsync(ctx workflow.Context, input *ses.ListTemplatesInput) *SesListTemplatesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input)
-    return &SesListTemplatesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListTemplates, input)
+	return &SesListTemplatesResult{Result: future}
 }
 
 func (a *SESStub) ListVerifiedEmailAddresses(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) (*ses.ListVerifiedEmailAddressesOutput, error) {
-    var output ses.ListVerifiedEmailAddressesOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ListVerifiedEmailAddresses, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ListVerifiedEmailAddressesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ListVerifiedEmailAddresses, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ListVerifiedEmailAddressesAsync(ctx workflow.Context, input *ses.ListVerifiedEmailAddressesInput) *SesListVerifiedEmailAddressesResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ListVerifiedEmailAddresses, input)
-    return &SesListVerifiedEmailAddressesResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ListVerifiedEmailAddresses, input)
+	return &SesListVerifiedEmailAddressesResult{Result: future}
 }
 
 func (a *SESStub) PutConfigurationSetDeliveryOptions(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) (*ses.PutConfigurationSetDeliveryOptionsOutput, error) {
-    var output ses.PutConfigurationSetDeliveryOptionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationSetDeliveryOptions, input).Get(ctx, &output)
-    return &output, err
+	var output ses.PutConfigurationSetDeliveryOptionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationSetDeliveryOptions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) PutConfigurationSetDeliveryOptionsAsync(ctx workflow.Context, input *ses.PutConfigurationSetDeliveryOptionsInput) *SesPutConfigurationSetDeliveryOptionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationSetDeliveryOptions, input)
-    return &SesPutConfigurationSetDeliveryOptionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutConfigurationSetDeliveryOptions, input)
+	return &SesPutConfigurationSetDeliveryOptionsResult{Result: future}
 }
 
 func (a *SESStub) PutIdentityPolicy(ctx workflow.Context, input *ses.PutIdentityPolicyInput) (*ses.PutIdentityPolicyOutput, error) {
-    var output ses.PutIdentityPolicyOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.PutIdentityPolicy, input).Get(ctx, &output)
-    return &output, err
+	var output ses.PutIdentityPolicyOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.PutIdentityPolicy, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) PutIdentityPolicyAsync(ctx workflow.Context, input *ses.PutIdentityPolicyInput) *SesPutIdentityPolicyResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.PutIdentityPolicy, input)
-    return &SesPutIdentityPolicyResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.PutIdentityPolicy, input)
+	return &SesPutIdentityPolicyResult{Result: future}
 }
 
 func (a *SESStub) ReorderReceiptRuleSet(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) (*ses.ReorderReceiptRuleSetOutput, error) {
-    var output ses.ReorderReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.ReorderReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.ReorderReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ReorderReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) ReorderReceiptRuleSetAsync(ctx workflow.Context, input *ses.ReorderReceiptRuleSetInput) *SesReorderReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.ReorderReceiptRuleSet, input)
-    return &SesReorderReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.ReorderReceiptRuleSet, input)
+	return &SesReorderReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) SendBounce(ctx workflow.Context, input *ses.SendBounceInput) (*ses.SendBounceOutput, error) {
-    var output ses.SendBounceOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendBounce, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendBounceOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendBounce, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendBounceAsync(ctx workflow.Context, input *ses.SendBounceInput) *SesSendBounceResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendBounce, input)
-    return &SesSendBounceResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendBounce, input)
+	return &SesSendBounceResult{Result: future}
 }
 
 func (a *SESStub) SendBulkTemplatedEmail(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) (*ses.SendBulkTemplatedEmailOutput, error) {
-    var output ses.SendBulkTemplatedEmailOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendBulkTemplatedEmail, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendBulkTemplatedEmailOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendBulkTemplatedEmail, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendBulkTemplatedEmailAsync(ctx workflow.Context, input *ses.SendBulkTemplatedEmailInput) *SesSendBulkTemplatedEmailResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendBulkTemplatedEmail, input)
-    return &SesSendBulkTemplatedEmailResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendBulkTemplatedEmail, input)
+	return &SesSendBulkTemplatedEmailResult{Result: future}
 }
 
 func (a *SESStub) SendCustomVerificationEmail(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) (*ses.SendCustomVerificationEmailOutput, error) {
-    var output ses.SendCustomVerificationEmailOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendCustomVerificationEmail, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendCustomVerificationEmailOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendCustomVerificationEmail, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendCustomVerificationEmailAsync(ctx workflow.Context, input *ses.SendCustomVerificationEmailInput) *SesSendCustomVerificationEmailResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendCustomVerificationEmail, input)
-    return &SesSendCustomVerificationEmailResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendCustomVerificationEmail, input)
+	return &SesSendCustomVerificationEmailResult{Result: future}
 }
 
 func (a *SESStub) SendEmail(ctx workflow.Context, input *ses.SendEmailInput) (*ses.SendEmailOutput, error) {
-    var output ses.SendEmailOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendEmail, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendEmailOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendEmail, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendEmailAsync(ctx workflow.Context, input *ses.SendEmailInput) *SesSendEmailResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendEmail, input)
-    return &SesSendEmailResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendEmail, input)
+	return &SesSendEmailResult{Result: future}
 }
 
 func (a *SESStub) SendRawEmail(ctx workflow.Context, input *ses.SendRawEmailInput) (*ses.SendRawEmailOutput, error) {
-    var output ses.SendRawEmailOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendRawEmail, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendRawEmailOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendRawEmail, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendRawEmailAsync(ctx workflow.Context, input *ses.SendRawEmailInput) *SesSendRawEmailResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendRawEmail, input)
-    return &SesSendRawEmailResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendRawEmail, input)
+	return &SesSendRawEmailResult{Result: future}
 }
 
 func (a *SESStub) SendTemplatedEmail(ctx workflow.Context, input *ses.SendTemplatedEmailInput) (*ses.SendTemplatedEmailOutput, error) {
-    var output ses.SendTemplatedEmailOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SendTemplatedEmail, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SendTemplatedEmailOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SendTemplatedEmail, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SendTemplatedEmailAsync(ctx workflow.Context, input *ses.SendTemplatedEmailInput) *SesSendTemplatedEmailResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SendTemplatedEmail, input)
-    return &SesSendTemplatedEmailResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SendTemplatedEmail, input)
+	return &SesSendTemplatedEmailResult{Result: future}
 }
 
 func (a *SESStub) SetActiveReceiptRuleSet(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) (*ses.SetActiveReceiptRuleSetOutput, error) {
-    var output ses.SetActiveReceiptRuleSetOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetActiveReceiptRuleSet, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetActiveReceiptRuleSetOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetActiveReceiptRuleSet, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetActiveReceiptRuleSetAsync(ctx workflow.Context, input *ses.SetActiveReceiptRuleSetInput) *SesSetActiveReceiptRuleSetResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetActiveReceiptRuleSet, input)
-    return &SesSetActiveReceiptRuleSetResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetActiveReceiptRuleSet, input)
+	return &SesSetActiveReceiptRuleSetResult{Result: future}
 }
 
 func (a *SESStub) SetIdentityDkimEnabled(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) (*ses.SetIdentityDkimEnabledOutput, error) {
-    var output ses.SetIdentityDkimEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityDkimEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityDkimEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityDkimEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetIdentityDkimEnabledAsync(ctx workflow.Context, input *ses.SetIdentityDkimEnabledInput) *SesSetIdentityDkimEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityDkimEnabled, input)
-    return &SesSetIdentityDkimEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityDkimEnabled, input)
+	return &SesSetIdentityDkimEnabledResult{Result: future}
 }
 
 func (a *SESStub) SetIdentityFeedbackForwardingEnabled(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) (*ses.SetIdentityFeedbackForwardingEnabledOutput, error) {
-    var output ses.SetIdentityFeedbackForwardingEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityFeedbackForwardingEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityFeedbackForwardingEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityFeedbackForwardingEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetIdentityFeedbackForwardingEnabledAsync(ctx workflow.Context, input *ses.SetIdentityFeedbackForwardingEnabledInput) *SesSetIdentityFeedbackForwardingEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityFeedbackForwardingEnabled, input)
-    return &SesSetIdentityFeedbackForwardingEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityFeedbackForwardingEnabled, input)
+	return &SesSetIdentityFeedbackForwardingEnabledResult{Result: future}
 }
 
 func (a *SESStub) SetIdentityHeadersInNotificationsEnabled(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) (*ses.SetIdentityHeadersInNotificationsEnabledOutput, error) {
-    var output ses.SetIdentityHeadersInNotificationsEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityHeadersInNotificationsEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityHeadersInNotificationsEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityHeadersInNotificationsEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetIdentityHeadersInNotificationsEnabledAsync(ctx workflow.Context, input *ses.SetIdentityHeadersInNotificationsEnabledInput) *SesSetIdentityHeadersInNotificationsEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityHeadersInNotificationsEnabled, input)
-    return &SesSetIdentityHeadersInNotificationsEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityHeadersInNotificationsEnabled, input)
+	return &SesSetIdentityHeadersInNotificationsEnabledResult{Result: future}
 }
 
 func (a *SESStub) SetIdentityMailFromDomain(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) (*ses.SetIdentityMailFromDomainOutput, error) {
-    var output ses.SetIdentityMailFromDomainOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityMailFromDomain, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityMailFromDomainOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityMailFromDomain, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetIdentityMailFromDomainAsync(ctx workflow.Context, input *ses.SetIdentityMailFromDomainInput) *SesSetIdentityMailFromDomainResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityMailFromDomain, input)
-    return &SesSetIdentityMailFromDomainResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityMailFromDomain, input)
+	return &SesSetIdentityMailFromDomainResult{Result: future}
 }
 
 func (a *SESStub) SetIdentityNotificationTopic(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) (*ses.SetIdentityNotificationTopicOutput, error) {
-    var output ses.SetIdentityNotificationTopicOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityNotificationTopic, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetIdentityNotificationTopicOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetIdentityNotificationTopic, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetIdentityNotificationTopicAsync(ctx workflow.Context, input *ses.SetIdentityNotificationTopicInput) *SesSetIdentityNotificationTopicResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityNotificationTopic, input)
-    return &SesSetIdentityNotificationTopicResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetIdentityNotificationTopic, input)
+	return &SesSetIdentityNotificationTopicResult{Result: future}
 }
 
 func (a *SESStub) SetReceiptRulePosition(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) (*ses.SetReceiptRulePositionOutput, error) {
-    var output ses.SetReceiptRulePositionOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.SetReceiptRulePosition, input).Get(ctx, &output)
-    return &output, err
+	var output ses.SetReceiptRulePositionOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.SetReceiptRulePosition, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) SetReceiptRulePositionAsync(ctx workflow.Context, input *ses.SetReceiptRulePositionInput) *SesSetReceiptRulePositionResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.SetReceiptRulePosition, input)
-    return &SesSetReceiptRulePositionResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.SetReceiptRulePosition, input)
+	return &SesSetReceiptRulePositionResult{Result: future}
 }
 
 func (a *SESStub) TestRenderTemplate(ctx workflow.Context, input *ses.TestRenderTemplateInput) (*ses.TestRenderTemplateOutput, error) {
-    var output ses.TestRenderTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.TestRenderTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.TestRenderTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.TestRenderTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) TestRenderTemplateAsync(ctx workflow.Context, input *ses.TestRenderTemplateInput) *SesTestRenderTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.TestRenderTemplate, input)
-    return &SesTestRenderTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.TestRenderTemplate, input)
+	return &SesTestRenderTemplateResult{Result: future}
 }
 
 func (a *SESStub) UpdateAccountSendingEnabled(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) (*ses.UpdateAccountSendingEnabledOutput, error) {
-    var output ses.UpdateAccountSendingEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountSendingEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateAccountSendingEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountSendingEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateAccountSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateAccountSendingEnabledInput) *SesUpdateAccountSendingEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountSendingEnabled, input)
-    return &SesUpdateAccountSendingEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateAccountSendingEnabled, input)
+	return &SesUpdateAccountSendingEnabledResult{Result: future}
 }
 
 func (a *SESStub) UpdateConfigurationSetEventDestination(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) (*ses.UpdateConfigurationSetEventDestinationOutput, error) {
-    var output ses.UpdateConfigurationSetEventDestinationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetEventDestination, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetEventDestinationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetEventDestination, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetEventDestinationInput) *SesUpdateConfigurationSetEventDestinationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetEventDestination, input)
-    return &SesUpdateConfigurationSetEventDestinationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetEventDestination, input)
+	return &SesUpdateConfigurationSetEventDestinationResult{Result: future}
 }
 
 func (a *SESStub) UpdateConfigurationSetReputationMetricsEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) (*ses.UpdateConfigurationSetReputationMetricsEnabledOutput, error) {
-    var output ses.UpdateConfigurationSetReputationMetricsEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetReputationMetricsEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetReputationMetricsEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetReputationMetricsEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateConfigurationSetReputationMetricsEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetReputationMetricsEnabledInput) *SesUpdateConfigurationSetReputationMetricsEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetReputationMetricsEnabled, input)
-    return &SesUpdateConfigurationSetReputationMetricsEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetReputationMetricsEnabled, input)
+	return &SesUpdateConfigurationSetReputationMetricsEnabledResult{Result: future}
 }
 
 func (a *SESStub) UpdateConfigurationSetSendingEnabled(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) (*ses.UpdateConfigurationSetSendingEnabledOutput, error) {
-    var output ses.UpdateConfigurationSetSendingEnabledOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetSendingEnabled, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetSendingEnabledOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetSendingEnabled, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateConfigurationSetSendingEnabledAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetSendingEnabledInput) *SesUpdateConfigurationSetSendingEnabledResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetSendingEnabled, input)
-    return &SesUpdateConfigurationSetSendingEnabledResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetSendingEnabled, input)
+	return &SesUpdateConfigurationSetSendingEnabledResult{Result: future}
 }
 
 func (a *SESStub) UpdateConfigurationSetTrackingOptions(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) (*ses.UpdateConfigurationSetTrackingOptionsOutput, error) {
-    var output ses.UpdateConfigurationSetTrackingOptionsOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetTrackingOptions, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateConfigurationSetTrackingOptionsOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetTrackingOptions, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateConfigurationSetTrackingOptionsAsync(ctx workflow.Context, input *ses.UpdateConfigurationSetTrackingOptionsInput) *SesUpdateConfigurationSetTrackingOptionsResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetTrackingOptions, input)
-    return &SesUpdateConfigurationSetTrackingOptionsResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateConfigurationSetTrackingOptions, input)
+	return &SesUpdateConfigurationSetTrackingOptionsResult{Result: future}
 }
 
 func (a *SESStub) UpdateCustomVerificationEmailTemplate(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) (*ses.UpdateCustomVerificationEmailTemplateOutput, error) {
-    var output ses.UpdateCustomVerificationEmailTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomVerificationEmailTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateCustomVerificationEmailTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomVerificationEmailTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateCustomVerificationEmailTemplateAsync(ctx workflow.Context, input *ses.UpdateCustomVerificationEmailTemplateInput) *SesUpdateCustomVerificationEmailTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomVerificationEmailTemplate, input)
-    return &SesUpdateCustomVerificationEmailTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateCustomVerificationEmailTemplate, input)
+	return &SesUpdateCustomVerificationEmailTemplateResult{Result: future}
 }
 
 func (a *SESStub) UpdateReceiptRule(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) (*ses.UpdateReceiptRuleOutput, error) {
-    var output ses.UpdateReceiptRuleOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateReceiptRule, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateReceiptRuleOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateReceiptRule, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateReceiptRuleAsync(ctx workflow.Context, input *ses.UpdateReceiptRuleInput) *SesUpdateReceiptRuleResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateReceiptRule, input)
-    return &SesUpdateReceiptRuleResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateReceiptRule, input)
+	return &SesUpdateReceiptRuleResult{Result: future}
 }
 
 func (a *SESStub) UpdateTemplate(ctx workflow.Context, input *ses.UpdateTemplateInput) (*ses.UpdateTemplateOutput, error) {
-    var output ses.UpdateTemplateOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplate, input).Get(ctx, &output)
-    return &output, err
+	var output ses.UpdateTemplateOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplate, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) UpdateTemplateAsync(ctx workflow.Context, input *ses.UpdateTemplateInput) *SesUpdateTemplateResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplate, input)
-    return &SesUpdateTemplateResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.UpdateTemplate, input)
+	return &SesUpdateTemplateResult{Result: future}
 }
 
 func (a *SESStub) VerifyDomainDkim(ctx workflow.Context, input *ses.VerifyDomainDkimInput) (*ses.VerifyDomainDkimOutput, error) {
-    var output ses.VerifyDomainDkimOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainDkim, input).Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyDomainDkimOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainDkim, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) VerifyDomainDkimAsync(ctx workflow.Context, input *ses.VerifyDomainDkimInput) *SesVerifyDomainDkimResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainDkim, input)
-    return &SesVerifyDomainDkimResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainDkim, input)
+	return &SesVerifyDomainDkimResult{Result: future}
 }
 
 func (a *SESStub) VerifyDomainIdentity(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) (*ses.VerifyDomainIdentityOutput, error) {
-    var output ses.VerifyDomainIdentityOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainIdentity, input).Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyDomainIdentityOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainIdentity, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) VerifyDomainIdentityAsync(ctx workflow.Context, input *ses.VerifyDomainIdentityInput) *SesVerifyDomainIdentityResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainIdentity, input)
-    return &SesVerifyDomainIdentityResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.VerifyDomainIdentity, input)
+	return &SesVerifyDomainIdentityResult{Result: future}
 }
 
 func (a *SESStub) VerifyEmailAddress(ctx workflow.Context, input *ses.VerifyEmailAddressInput) (*ses.VerifyEmailAddressOutput, error) {
-    var output ses.VerifyEmailAddressOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailAddress, input).Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyEmailAddressOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailAddress, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) VerifyEmailAddressAsync(ctx workflow.Context, input *ses.VerifyEmailAddressInput) *SesVerifyEmailAddressResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailAddress, input)
-    return &SesVerifyEmailAddressResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailAddress, input)
+	return &SesVerifyEmailAddressResult{Result: future}
 }
 
 func (a *SESStub) VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error) {
-    var output ses.VerifyEmailIdentityOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailIdentity, input).Get(ctx, &output)
-    return &output, err
+	var output ses.VerifyEmailIdentityOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailIdentity, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *SESStub) VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailIdentity, input)
-    return &SesVerifyEmailIdentityResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.VerifyEmailIdentity, input)
+	return &SesVerifyEmailIdentityResult{Result: future}
 }
 
 func (a *SESStub) WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error {
-    return workflow.ExecuteActivity(ctx, a.activities.WaitUntilIdentityExists, input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, a.activities.WaitUntilIdentityExists, input).Get(ctx, nil)
 }
 
 func (a *SESStub) WaitUntilIdentityExistsAsync(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) workflow.Future {
-    return workflow.ExecuteActivity(ctx, a.activities.WaitUntilIdentityExists, input)
+	return workflow.ExecuteActivity(ctx, a.activities.WaitUntilIdentityExists, input)
 }
-

@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,54 +8,54 @@ import (
 )
 
 type CodeGuruReviewerActivities struct {
-    client codegururevieweriface.CodeGuruReviewerAPI
+	client codegururevieweriface.CodeGuruReviewerAPI
 }
 
 func NewCodeGuruReviewerActivities(session *session.Session, config ...*aws.Config) *CodeGuruReviewerActivities {
-    client := codegurureviewer.New(session, config...)
-    return &CodeGuruReviewerActivities{client: client}
+	client := codegurureviewer.New(session, config...)
+	return &CodeGuruReviewerActivities{client: client}
 }
 
 func (a *CodeGuruReviewerActivities) AssociateRepository(input *codegurureviewer.AssociateRepositoryInput) (*codegurureviewer.AssociateRepositoryOutput, error) {
-    return a.client.AssociateRepository(input)
+	return a.client.AssociateRepository(input)
 }
 
 func (a *CodeGuruReviewerActivities) CreateCodeReview(input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
-    return a.client.CreateCodeReview(input)
+	return a.client.CreateCodeReview(input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeCodeReview(input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
-    return a.client.DescribeCodeReview(input)
+	return a.client.DescribeCodeReview(input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeRecommendationFeedback(input *codegurureviewer.DescribeRecommendationFeedbackInput) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
-    return a.client.DescribeRecommendationFeedback(input)
+	return a.client.DescribeRecommendationFeedback(input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeRepositoryAssociation(input *codegurureviewer.DescribeRepositoryAssociationInput) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
-    return a.client.DescribeRepositoryAssociation(input)
+	return a.client.DescribeRepositoryAssociation(input)
 }
 
 func (a *CodeGuruReviewerActivities) DisassociateRepository(input *codegurureviewer.DisassociateRepositoryInput) (*codegurureviewer.DisassociateRepositoryOutput, error) {
-    return a.client.DisassociateRepository(input)
+	return a.client.DisassociateRepository(input)
 }
 
 func (a *CodeGuruReviewerActivities) ListCodeReviews(input *codegurureviewer.ListCodeReviewsInput) (*codegurureviewer.ListCodeReviewsOutput, error) {
-    return a.client.ListCodeReviews(input)
+	return a.client.ListCodeReviews(input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRecommendationFeedback(input *codegurureviewer.ListRecommendationFeedbackInput) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
-    return a.client.ListRecommendationFeedback(input)
+	return a.client.ListRecommendationFeedback(input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRecommendations(input *codegurureviewer.ListRecommendationsInput) (*codegurureviewer.ListRecommendationsOutput, error) {
-    return a.client.ListRecommendations(input)
+	return a.client.ListRecommendations(input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRepositoryAssociations(input *codegurureviewer.ListRepositoryAssociationsInput) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
-    return a.client.ListRepositoryAssociations(input)
+	return a.client.ListRepositoryAssociations(input)
 }
 
 func (a *CodeGuruReviewerActivities) PutRecommendationFeedback(input *codegurureviewer.PutRecommendationFeedbackInput) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
-    return a.client.PutRecommendationFeedback(input)
+	return a.client.PutRecommendationFeedback(input)
 }

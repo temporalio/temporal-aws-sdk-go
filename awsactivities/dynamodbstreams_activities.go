@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,26 +8,26 @@ import (
 )
 
 type DynamoDBStreamsActivities struct {
-    client dynamodbstreamsiface.DynamoDBStreamsAPI
+	client dynamodbstreamsiface.DynamoDBStreamsAPI
 }
 
 func NewDynamoDBStreamsActivities(session *session.Session, config ...*aws.Config) *DynamoDBStreamsActivities {
-    client := dynamodbstreams.New(session, config...)
-    return &DynamoDBStreamsActivities{client: client}
+	client := dynamodbstreams.New(session, config...)
+	return &DynamoDBStreamsActivities{client: client}
 }
 
 func (a *DynamoDBStreamsActivities) DescribeStream(input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error) {
-    return a.client.DescribeStream(input)
+	return a.client.DescribeStream(input)
 }
 
 func (a *DynamoDBStreamsActivities) GetRecords(input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error) {
-    return a.client.GetRecords(input)
+	return a.client.GetRecords(input)
 }
 
 func (a *DynamoDBStreamsActivities) GetShardIterator(input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error) {
-    return a.client.GetShardIterator(input)
+	return a.client.GetShardIterator(input)
 }
 
 func (a *DynamoDBStreamsActivities) ListStreams(input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error) {
-    return a.client.ListStreams(input)
+	return a.client.ListStreams(input)
 }

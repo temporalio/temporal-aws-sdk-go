@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,14 +8,14 @@ import (
 )
 
 type PersonalizeEventsActivities struct {
-    client personalizeeventsiface.PersonalizeEventsAPI
+	client personalizeeventsiface.PersonalizeEventsAPI
 }
 
 func NewPersonalizeEventsActivities(session *session.Session, config ...*aws.Config) *PersonalizeEventsActivities {
-    client := personalizeevents.New(session, config...)
-    return &PersonalizeEventsActivities{client: client}
+	client := personalizeevents.New(session, config...)
+	return &PersonalizeEventsActivities{client: client}
 }
 
 func (a *PersonalizeEventsActivities) PutEvents(input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
-    return a.client.PutEvents(input)
+	return a.client.PutEvents(input)
 }

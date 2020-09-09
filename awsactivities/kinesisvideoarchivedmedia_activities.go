@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,30 +8,30 @@ import (
 )
 
 type KinesisVideoArchivedMediaActivities struct {
-    client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI
+	client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI
 }
 
 func NewKinesisVideoArchivedMediaActivities(session *session.Session, config ...*aws.Config) *KinesisVideoArchivedMediaActivities {
-    client := kinesisvideoarchivedmedia.New(session, config...)
-    return &KinesisVideoArchivedMediaActivities{client: client}
+	client := kinesisvideoarchivedmedia.New(session, config...)
+	return &KinesisVideoArchivedMediaActivities{client: client}
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetClip(input *kinesisvideoarchivedmedia.GetClipInput) (*kinesisvideoarchivedmedia.GetClipOutput, error) {
-    return a.client.GetClip(input)
+	return a.client.GetClip(input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetDASHStreamingSessionURL(input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error) {
-    return a.client.GetDASHStreamingSessionURL(input)
+	return a.client.GetDASHStreamingSessionURL(input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetHLSStreamingSessionURL(input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error) {
-    return a.client.GetHLSStreamingSessionURL(input)
+	return a.client.GetHLSStreamingSessionURL(input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetMediaForFragmentList(input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error) {
-    return a.client.GetMediaForFragmentList(input)
+	return a.client.GetMediaForFragmentList(input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) ListFragments(input *kinesisvideoarchivedmedia.ListFragmentsInput) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error) {
-    return a.client.ListFragments(input)
+	return a.client.ListFragments(input)
 }

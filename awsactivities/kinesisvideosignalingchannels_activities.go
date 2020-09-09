@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,18 +8,18 @@ import (
 )
 
 type KinesisVideoSignalingChannelsActivities struct {
-    client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
+	client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
 }
 
 func NewKinesisVideoSignalingChannelsActivities(session *session.Session, config ...*aws.Config) *KinesisVideoSignalingChannelsActivities {
-    client := kinesisvideosignalingchannels.New(session, config...)
-    return &KinesisVideoSignalingChannelsActivities{client: client}
+	client := kinesisvideosignalingchannels.New(session, config...)
+	return &KinesisVideoSignalingChannelsActivities{client: client}
 }
 
 func (a *KinesisVideoSignalingChannelsActivities) GetIceServerConfig(input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
-    return a.client.GetIceServerConfig(input)
+	return a.client.GetIceServerConfig(input)
 }
 
 func (a *KinesisVideoSignalingChannelsActivities) SendAlexaOfferToMaster(input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
-    return a.client.SendAlexaOfferToMaster(input)
+	return a.client.SendAlexaOfferToMaster(input)
 }

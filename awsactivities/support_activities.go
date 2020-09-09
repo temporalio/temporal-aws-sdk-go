@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,66 +8,66 @@ import (
 )
 
 type SupportActivities struct {
-    client supportiface.SupportAPI
+	client supportiface.SupportAPI
 }
 
 func NewSupportActivities(session *session.Session, config ...*aws.Config) *SupportActivities {
-    client := support.New(session, config...)
-    return &SupportActivities{client: client}
+	client := support.New(session, config...)
+	return &SupportActivities{client: client}
 }
 
 func (a *SupportActivities) AddAttachmentsToSet(input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error) {
-    return a.client.AddAttachmentsToSet(input)
+	return a.client.AddAttachmentsToSet(input)
 }
 
 func (a *SupportActivities) AddCommunicationToCase(input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error) {
-    return a.client.AddCommunicationToCase(input)
+	return a.client.AddCommunicationToCase(input)
 }
 
 func (a *SupportActivities) CreateCase(input *support.CreateCaseInput) (*support.CreateCaseOutput, error) {
-    return a.client.CreateCase(input)
+	return a.client.CreateCase(input)
 }
 
 func (a *SupportActivities) DescribeAttachment(input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error) {
-    return a.client.DescribeAttachment(input)
+	return a.client.DescribeAttachment(input)
 }
 
 func (a *SupportActivities) DescribeCases(input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error) {
-    return a.client.DescribeCases(input)
+	return a.client.DescribeCases(input)
 }
 
 func (a *SupportActivities) DescribeCommunications(input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error) {
-    return a.client.DescribeCommunications(input)
+	return a.client.DescribeCommunications(input)
 }
 
 func (a *SupportActivities) DescribeServices(input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error) {
-    return a.client.DescribeServices(input)
+	return a.client.DescribeServices(input)
 }
 
 func (a *SupportActivities) DescribeSeverityLevels(input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error) {
-    return a.client.DescribeSeverityLevels(input)
+	return a.client.DescribeSeverityLevels(input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckRefreshStatuses(input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error) {
-    return a.client.DescribeTrustedAdvisorCheckRefreshStatuses(input)
+	return a.client.DescribeTrustedAdvisorCheckRefreshStatuses(input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckResult(input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error) {
-    return a.client.DescribeTrustedAdvisorCheckResult(input)
+	return a.client.DescribeTrustedAdvisorCheckResult(input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckSummaries(input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error) {
-    return a.client.DescribeTrustedAdvisorCheckSummaries(input)
+	return a.client.DescribeTrustedAdvisorCheckSummaries(input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorChecks(input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error) {
-    return a.client.DescribeTrustedAdvisorChecks(input)
+	return a.client.DescribeTrustedAdvisorChecks(input)
 }
 
 func (a *SupportActivities) RefreshTrustedAdvisorCheck(input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error) {
-    return a.client.RefreshTrustedAdvisorCheck(input)
+	return a.client.RefreshTrustedAdvisorCheck(input)
 }
 
 func (a *SupportActivities) ResolveCase(input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error) {
-    return a.client.ResolveCase(input)
+	return a.client.ResolveCase(input)
 }

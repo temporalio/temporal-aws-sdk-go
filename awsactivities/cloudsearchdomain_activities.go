@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,22 +8,22 @@ import (
 )
 
 type CloudSearchDomainActivities struct {
-    client cloudsearchdomainiface.CloudSearchDomainAPI
+	client cloudsearchdomainiface.CloudSearchDomainAPI
 }
 
 func NewCloudSearchDomainActivities(session *session.Session, config ...*aws.Config) *CloudSearchDomainActivities {
-    client := cloudsearchdomain.New(session, config...)
-    return &CloudSearchDomainActivities{client: client}
+	client := cloudsearchdomain.New(session, config...)
+	return &CloudSearchDomainActivities{client: client}
 }
 
 func (a *CloudSearchDomainActivities) Search(input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error) {
-    return a.client.Search(input)
+	return a.client.Search(input)
 }
 
 func (a *CloudSearchDomainActivities) Suggest(input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
-    return a.client.Suggest(input)
+	return a.client.Suggest(input)
 }
 
 func (a *CloudSearchDomainActivities) UploadDocuments(input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
-    return a.client.UploadDocuments(input)
+	return a.client.UploadDocuments(input)
 }

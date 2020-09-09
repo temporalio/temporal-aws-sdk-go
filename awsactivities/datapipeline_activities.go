@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,86 +8,86 @@ import (
 )
 
 type DataPipelineActivities struct {
-    client datapipelineiface.DataPipelineAPI
+	client datapipelineiface.DataPipelineAPI
 }
 
 func NewDataPipelineActivities(session *session.Session, config ...*aws.Config) *DataPipelineActivities {
-    client := datapipeline.New(session, config...)
-    return &DataPipelineActivities{client: client}
+	client := datapipeline.New(session, config...)
+	return &DataPipelineActivities{client: client}
 }
 
 func (a *DataPipelineActivities) ActivatePipeline(input *datapipeline.ActivatePipelineInput) (*datapipeline.ActivatePipelineOutput, error) {
-    return a.client.ActivatePipeline(input)
+	return a.client.ActivatePipeline(input)
 }
 
 func (a *DataPipelineActivities) AddTags(input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error) {
-    return a.client.AddTags(input)
+	return a.client.AddTags(input)
 }
 
 func (a *DataPipelineActivities) CreatePipeline(input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error) {
-    return a.client.CreatePipeline(input)
+	return a.client.CreatePipeline(input)
 }
 
 func (a *DataPipelineActivities) DeactivatePipeline(input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error) {
-    return a.client.DeactivatePipeline(input)
+	return a.client.DeactivatePipeline(input)
 }
 
 func (a *DataPipelineActivities) DeletePipeline(input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error) {
-    return a.client.DeletePipeline(input)
+	return a.client.DeletePipeline(input)
 }
 
 func (a *DataPipelineActivities) DescribeObjects(input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error) {
-    return a.client.DescribeObjects(input)
+	return a.client.DescribeObjects(input)
 }
 
 func (a *DataPipelineActivities) DescribePipelines(input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error) {
-    return a.client.DescribePipelines(input)
+	return a.client.DescribePipelines(input)
 }
 
 func (a *DataPipelineActivities) EvaluateExpression(input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error) {
-    return a.client.EvaluateExpression(input)
+	return a.client.EvaluateExpression(input)
 }
 
 func (a *DataPipelineActivities) GetPipelineDefinition(input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error) {
-    return a.client.GetPipelineDefinition(input)
+	return a.client.GetPipelineDefinition(input)
 }
 
 func (a *DataPipelineActivities) ListPipelines(input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error) {
-    return a.client.ListPipelines(input)
+	return a.client.ListPipelines(input)
 }
 
 func (a *DataPipelineActivities) PollForTask(input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error) {
-    return a.client.PollForTask(input)
+	return a.client.PollForTask(input)
 }
 
 func (a *DataPipelineActivities) PutPipelineDefinition(input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error) {
-    return a.client.PutPipelineDefinition(input)
+	return a.client.PutPipelineDefinition(input)
 }
 
 func (a *DataPipelineActivities) QueryObjects(input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error) {
-    return a.client.QueryObjects(input)
+	return a.client.QueryObjects(input)
 }
 
 func (a *DataPipelineActivities) RemoveTags(input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error) {
-    return a.client.RemoveTags(input)
+	return a.client.RemoveTags(input)
 }
 
 func (a *DataPipelineActivities) ReportTaskProgress(input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error) {
-    return a.client.ReportTaskProgress(input)
+	return a.client.ReportTaskProgress(input)
 }
 
 func (a *DataPipelineActivities) ReportTaskRunnerHeartbeat(input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error) {
-    return a.client.ReportTaskRunnerHeartbeat(input)
+	return a.client.ReportTaskRunnerHeartbeat(input)
 }
 
 func (a *DataPipelineActivities) SetStatus(input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error) {
-    return a.client.SetStatus(input)
+	return a.client.SetStatus(input)
 }
 
 func (a *DataPipelineActivities) SetTaskStatus(input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error) {
-    return a.client.SetTaskStatus(input)
+	return a.client.SetTaskStatus(input)
 }
 
 func (a *DataPipelineActivities) ValidatePipelineDefinition(input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error) {
-    return a.client.ValidatePipelineDefinition(input)
+	return a.client.ValidatePipelineDefinition(input)
 }

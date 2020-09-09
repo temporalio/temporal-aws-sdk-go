@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,26 +8,26 @@ import (
 )
 
 type IoTJobsDataPlaneActivities struct {
-    client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
+	client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
 }
 
 func NewIoTJobsDataPlaneActivities(session *session.Session, config ...*aws.Config) *IoTJobsDataPlaneActivities {
-    client := iotjobsdataplane.New(session, config...)
-    return &IoTJobsDataPlaneActivities{client: client}
+	client := iotjobsdataplane.New(session, config...)
+	return &IoTJobsDataPlaneActivities{client: client}
 }
 
 func (a *IoTJobsDataPlaneActivities) DescribeJobExecution(input *iotjobsdataplane.DescribeJobExecutionInput) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
-    return a.client.DescribeJobExecution(input)
+	return a.client.DescribeJobExecution(input)
 }
 
 func (a *IoTJobsDataPlaneActivities) GetPendingJobExecutions(input *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
-    return a.client.GetPendingJobExecutions(input)
+	return a.client.GetPendingJobExecutions(input)
 }
 
 func (a *IoTJobsDataPlaneActivities) StartNextPendingJobExecution(input *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
-    return a.client.StartNextPendingJobExecution(input)
+	return a.client.StartNextPendingJobExecution(input)
 }
 
 func (a *IoTJobsDataPlaneActivities) UpdateJobExecution(input *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
-    return a.client.UpdateJobExecution(input)
+	return a.client.UpdateJobExecution(input)
 }

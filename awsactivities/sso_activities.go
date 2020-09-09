@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,26 +8,26 @@ import (
 )
 
 type SSOActivities struct {
-    client ssoiface.SSOAPI
+	client ssoiface.SSOAPI
 }
 
 func NewSSOActivities(session *session.Session, config ...*aws.Config) *SSOActivities {
-    client := sso.New(session, config...)
-    return &SSOActivities{client: client}
+	client := sso.New(session, config...)
+	return &SSOActivities{client: client}
 }
 
 func (a *SSOActivities) GetRoleCredentials(input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
-    return a.client.GetRoleCredentials(input)
+	return a.client.GetRoleCredentials(input)
 }
 
 func (a *SSOActivities) ListAccountRoles(input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
-    return a.client.ListAccountRoles(input)
+	return a.client.ListAccountRoles(input)
 }
 
 func (a *SSOActivities) ListAccounts(input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
-    return a.client.ListAccounts(input)
+	return a.client.ListAccounts(input)
 }
 
 func (a *SSOActivities) Logout(input *sso.LogoutInput) (*sso.LogoutOutput, error) {
-    return a.client.Logout(input)
+	return a.client.Logout(input)
 }

@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,46 +8,46 @@ import (
 )
 
 type MobileActivities struct {
-    client mobileiface.MobileAPI
+	client mobileiface.MobileAPI
 }
 
 func NewMobileActivities(session *session.Session, config ...*aws.Config) *MobileActivities {
-    client := mobile.New(session, config...)
-    return &MobileActivities{client: client}
+	client := mobile.New(session, config...)
+	return &MobileActivities{client: client}
 }
 
 func (a *MobileActivities) CreateProject(input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error) {
-    return a.client.CreateProject(input)
+	return a.client.CreateProject(input)
 }
 
 func (a *MobileActivities) DeleteProject(input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error) {
-    return a.client.DeleteProject(input)
+	return a.client.DeleteProject(input)
 }
 
 func (a *MobileActivities) DescribeBundle(input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error) {
-    return a.client.DescribeBundle(input)
+	return a.client.DescribeBundle(input)
 }
 
 func (a *MobileActivities) DescribeProject(input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error) {
-    return a.client.DescribeProject(input)
+	return a.client.DescribeProject(input)
 }
 
 func (a *MobileActivities) ExportBundle(input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error) {
-    return a.client.ExportBundle(input)
+	return a.client.ExportBundle(input)
 }
 
 func (a *MobileActivities) ExportProject(input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error) {
-    return a.client.ExportProject(input)
+	return a.client.ExportProject(input)
 }
 
 func (a *MobileActivities) ListBundles(input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error) {
-    return a.client.ListBundles(input)
+	return a.client.ListBundles(input)
 }
 
 func (a *MobileActivities) ListProjects(input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error) {
-    return a.client.ListProjects(input)
+	return a.client.ListProjects(input)
 }
 
 func (a *MobileActivities) UpdateProject(input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error) {
-    return a.client.UpdateProject(input)
+	return a.client.UpdateProject(input)
 }

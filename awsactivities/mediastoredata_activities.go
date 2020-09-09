@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,30 +8,30 @@ import (
 )
 
 type MediaStoreDataActivities struct {
-    client mediastoredataiface.MediaStoreDataAPI
+	client mediastoredataiface.MediaStoreDataAPI
 }
 
 func NewMediaStoreDataActivities(session *session.Session, config ...*aws.Config) *MediaStoreDataActivities {
-    client := mediastoredata.New(session, config...)
-    return &MediaStoreDataActivities{client: client}
+	client := mediastoredata.New(session, config...)
+	return &MediaStoreDataActivities{client: client}
 }
 
 func (a *MediaStoreDataActivities) DeleteObject(input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error) {
-    return a.client.DeleteObject(input)
+	return a.client.DeleteObject(input)
 }
 
 func (a *MediaStoreDataActivities) DescribeObject(input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error) {
-    return a.client.DescribeObject(input)
+	return a.client.DescribeObject(input)
 }
 
 func (a *MediaStoreDataActivities) GetObject(input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error) {
-    return a.client.GetObject(input)
+	return a.client.GetObject(input)
 }
 
 func (a *MediaStoreDataActivities) ListItems(input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error) {
-    return a.client.ListItems(input)
+	return a.client.ListItems(input)
 }
 
 func (a *MediaStoreDataActivities) PutObject(input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error) {
-    return a.client.PutObject(input)
+	return a.client.PutObject(input)
 }

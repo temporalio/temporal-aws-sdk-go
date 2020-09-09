@@ -7,11 +7,11 @@ import (
 )
 
 type HoneycodeClient interface {
-       GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
-       GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult
+	GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error)
+	GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult
 
-       InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
-       InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
+	InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error)
+	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
 }
 
 type HoneycodeGetScreenDataResult struct {
@@ -19,9 +19,9 @@ type HoneycodeGetScreenDataResult struct {
 }
 
 func (r *HoneycodeGetScreenDataResult) Get(ctx workflow.Context) (*honeycode.GetScreenDataOutput, error) {
-    var output honeycode.GetScreenDataOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output honeycode.GetScreenDataOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type HoneycodeInvokeScreenAutomationResult struct {
@@ -29,37 +29,37 @@ type HoneycodeInvokeScreenAutomationResult struct {
 }
 
 func (r *HoneycodeInvokeScreenAutomationResult) Get(ctx workflow.Context) (*honeycode.InvokeScreenAutomationOutput, error) {
-    var output honeycode.InvokeScreenAutomationOutput
-    err := r.Result.Get(ctx, &output)
-    return &output, err
+	var output honeycode.InvokeScreenAutomationOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
 }
 
 type HoneycodeStub struct {
-    activities awsactivities.HoneycodeActivities
+	activities awsactivities.HoneycodeActivities
 }
 
 func NewHoneycodeStub() HoneycodeClient {
-    return &HoneycodeStub{}
+	return &HoneycodeStub{}
 }
 
 func (a *HoneycodeStub) GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error) {
-    var output honeycode.GetScreenDataOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.GetScreenData, input).Get(ctx, &output)
-    return &output, err
+	var output honeycode.GetScreenDataOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetScreenData, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *HoneycodeStub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.GetScreenData, input)
-    return &HoneycodeGetScreenDataResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.GetScreenData, input)
+	return &HoneycodeGetScreenDataResult{Result: future}
 }
 
 func (a *HoneycodeStub) InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
-    var output honeycode.InvokeScreenAutomationOutput
-    err := workflow.ExecuteActivity(ctx, a.activities.InvokeScreenAutomation, input).Get(ctx, &output)
-    return &output, err
+	var output honeycode.InvokeScreenAutomationOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.InvokeScreenAutomation, input).Get(ctx, &output)
+	return &output, err
 }
 
 func (a *HoneycodeStub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult {
-    future := workflow.ExecuteActivity(ctx, a.activities.InvokeScreenAutomation, input)
-    return &HoneycodeInvokeScreenAutomationResult{Result: future}
+	future := workflow.ExecuteActivity(ctx, a.activities.InvokeScreenAutomation, input)
+	return &HoneycodeInvokeScreenAutomationResult{Result: future}
 }

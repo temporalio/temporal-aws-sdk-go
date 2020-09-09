@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,38 +8,38 @@ import (
 )
 
 type OutpostsActivities struct {
-    client outpostsiface.OutpostsAPI
+	client outpostsiface.OutpostsAPI
 }
 
 func NewOutpostsActivities(session *session.Session, config ...*aws.Config) *OutpostsActivities {
-    client := outposts.New(session, config...)
-    return &OutpostsActivities{client: client}
+	client := outposts.New(session, config...)
+	return &OutpostsActivities{client: client}
 }
 
 func (a *OutpostsActivities) CreateOutpost(input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error) {
-    return a.client.CreateOutpost(input)
+	return a.client.CreateOutpost(input)
 }
 
 func (a *OutpostsActivities) DeleteOutpost(input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error) {
-    return a.client.DeleteOutpost(input)
+	return a.client.DeleteOutpost(input)
 }
 
 func (a *OutpostsActivities) DeleteSite(input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error) {
-    return a.client.DeleteSite(input)
+	return a.client.DeleteSite(input)
 }
 
 func (a *OutpostsActivities) GetOutpost(input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error) {
-    return a.client.GetOutpost(input)
+	return a.client.GetOutpost(input)
 }
 
 func (a *OutpostsActivities) GetOutpostInstanceTypes(input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error) {
-    return a.client.GetOutpostInstanceTypes(input)
+	return a.client.GetOutpostInstanceTypes(input)
 }
 
 func (a *OutpostsActivities) ListOutposts(input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error) {
-    return a.client.ListOutposts(input)
+	return a.client.ListOutposts(input)
 }
 
 func (a *OutpostsActivities) ListSites(input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error) {
-    return a.client.ListSites(input)
+	return a.client.ListSites(input)
 }

@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,42 +8,42 @@ import (
 )
 
 type DLMActivities struct {
-    client dlmiface.DLMAPI
+	client dlmiface.DLMAPI
 }
 
 func NewDLMActivities(session *session.Session, config ...*aws.Config) *DLMActivities {
-    client := dlm.New(session, config...)
-    return &DLMActivities{client: client}
+	client := dlm.New(session, config...)
+	return &DLMActivities{client: client}
 }
 
 func (a *DLMActivities) CreateLifecyclePolicy(input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error) {
-    return a.client.CreateLifecyclePolicy(input)
+	return a.client.CreateLifecyclePolicy(input)
 }
 
 func (a *DLMActivities) DeleteLifecyclePolicy(input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error) {
-    return a.client.DeleteLifecyclePolicy(input)
+	return a.client.DeleteLifecyclePolicy(input)
 }
 
 func (a *DLMActivities) GetLifecyclePolicies(input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error) {
-    return a.client.GetLifecyclePolicies(input)
+	return a.client.GetLifecyclePolicies(input)
 }
 
 func (a *DLMActivities) GetLifecyclePolicy(input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error) {
-    return a.client.GetLifecyclePolicy(input)
+	return a.client.GetLifecyclePolicy(input)
 }
 
 func (a *DLMActivities) ListTagsForResource(input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error) {
-    return a.client.ListTagsForResource(input)
+	return a.client.ListTagsForResource(input)
 }
 
 func (a *DLMActivities) TagResource(input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error) {
-    return a.client.TagResource(input)
+	return a.client.TagResource(input)
 }
 
 func (a *DLMActivities) UntagResource(input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error) {
-    return a.client.UntagResource(input)
+	return a.client.UntagResource(input)
 }
 
 func (a *DLMActivities) UpdateLifecyclePolicy(input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error) {
-    return a.client.UpdateLifecyclePolicy(input)
+	return a.client.UpdateLifecyclePolicy(input)
 }

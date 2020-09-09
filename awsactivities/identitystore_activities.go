@@ -1,4 +1,3 @@
-
 package awsactivities
 
 import (
@@ -9,26 +8,26 @@ import (
 )
 
 type IdentityStoreActivities struct {
-    client identitystoreiface.IdentityStoreAPI
+	client identitystoreiface.IdentityStoreAPI
 }
 
 func NewIdentityStoreActivities(session *session.Session, config ...*aws.Config) *IdentityStoreActivities {
-    client := identitystore.New(session, config...)
-    return &IdentityStoreActivities{client: client}
+	client := identitystore.New(session, config...)
+	return &IdentityStoreActivities{client: client}
 }
 
 func (a *IdentityStoreActivities) DescribeGroup(input *identitystore.DescribeGroupInput) (*identitystore.DescribeGroupOutput, error) {
-    return a.client.DescribeGroup(input)
+	return a.client.DescribeGroup(input)
 }
 
 func (a *IdentityStoreActivities) DescribeUser(input *identitystore.DescribeUserInput) (*identitystore.DescribeUserOutput, error) {
-    return a.client.DescribeUser(input)
+	return a.client.DescribeUser(input)
 }
 
 func (a *IdentityStoreActivities) ListGroups(input *identitystore.ListGroupsInput) (*identitystore.ListGroupsOutput, error) {
-    return a.client.ListGroups(input)
+	return a.client.ListGroups(input)
 }
 
 func (a *IdentityStoreActivities) ListUsers(input *identitystore.ListUsersInput) (*identitystore.ListUsersOutput, error) {
-    return a.client.ListUsers(input)
+	return a.client.ListUsers(input)
 }
