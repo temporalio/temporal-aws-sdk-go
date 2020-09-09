@@ -30,7 +30,7 @@ func NewGenerator(templateDir string) *TemporalAWSGenerator {
 	return &TemporalAWSGenerator{TemplateDir: templateDir, outputStructs: make(map[string]bool)}
 }
 
-func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definitions []InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definitions []*InterfaceDefinition) error {
 	var templateFiles []string
 	files, err := ioutil.ReadDir(g.TemplateDir)
 	if err != nil {
@@ -53,7 +53,7 @@ func (g *TemporalAWSGenerator) GenerateCode(outputDir string, definitions []Inte
 	return nil
 }
 
-func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, outputDir string, definitions []InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, outputDir string, definitions []*InterfaceDefinition) error {
 	if strings.HasSuffix(templateFile, TEMPLATE_GLOBAL_SUFFIX) {
 		return g.generateGlobal(templateFile, strings.TrimSuffix(outputDir, GLOBAL_SUFFIX), definitions)
 	}
@@ -67,7 +67,7 @@ func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, o
 	return nil
 }
 
-func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir string, definition InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir string, definition *InterfaceDefinition) error {
 	funcMap := template.FuncMap{
 		"ToUpper":   strings.ToUpper,
 		"ToLower":   strings.ToLower,
@@ -111,7 +111,7 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 	return nil
 }
 
-func (g *TemporalAWSGenerator) generateGlobal(templateFile string, outputDir string, definitions []InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) generateGlobal(templateFile string, outputDir string, definitions []*InterfaceDefinition) error {
 	funcMap := template.FuncMap{
 		"ToUpper":   strings.ToUpper,
 		"ToLower":   strings.ToLower,
