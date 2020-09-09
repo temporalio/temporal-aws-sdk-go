@@ -9,10 +9,10 @@ import (
 )
 
 type AppMeshActivities struct {
-	client appmeshiface.AppMeshAPI
+    client appmeshiface.AppMeshAPI
 }
 
-func NewAppMeshActivities(session *session.Session, config... *aws.Config) *AppMeshActivities {
+func NewAppMeshActivities(session *session.Session, config ...*aws.Config) *AppMeshActivities {
     client := appmesh.New(session, config...)
     return &AppMeshActivities{client: client}
 }

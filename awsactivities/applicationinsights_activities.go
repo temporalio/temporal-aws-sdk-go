@@ -9,10 +9,10 @@ import (
 )
 
 type ApplicationInsightsActivities struct {
-	client applicationinsightsiface.ApplicationInsightsAPI
+    client applicationinsightsiface.ApplicationInsightsAPI
 }
 
-func NewApplicationInsightsActivities(session *session.Session, config... *aws.Config) *ApplicationInsightsActivities {
+func NewApplicationInsightsActivities(session *session.Session, config ...*aws.Config) *ApplicationInsightsActivities {
     client := applicationinsights.New(session, config...)
     return &ApplicationInsightsActivities{client: client}
 }

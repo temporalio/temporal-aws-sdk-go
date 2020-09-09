@@ -9,10 +9,10 @@ import (
 )
 
 type ShieldActivities struct {
-	client shieldiface.ShieldAPI
+    client shieldiface.ShieldAPI
 }
 
-func NewShieldActivities(session *session.Session, config... *aws.Config) *ShieldActivities {
+func NewShieldActivities(session *session.Session, config ...*aws.Config) *ShieldActivities {
     client := shield.New(session, config...)
     return &ShieldActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type MarketplaceEntitlementServiceActivities struct {
-	client marketplaceentitlementserviceiface.MarketplaceEntitlementServiceAPI
+    client marketplaceentitlementserviceiface.MarketplaceEntitlementServiceAPI
 }
 
-func NewMarketplaceEntitlementServiceActivities(session *session.Session, config... *aws.Config) *MarketplaceEntitlementServiceActivities {
+func NewMarketplaceEntitlementServiceActivities(session *session.Session, config ...*aws.Config) *MarketplaceEntitlementServiceActivities {
     client := marketplaceentitlementservice.New(session, config...)
     return &MarketplaceEntitlementServiceActivities{client: client}
 }

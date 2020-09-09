@@ -9,10 +9,10 @@ import (
 )
 
 type RDSDataServiceActivities struct {
-	client rdsdataserviceiface.RDSDataServiceAPI
+    client rdsdataserviceiface.RDSDataServiceAPI
 }
 
-func NewRDSDataServiceActivities(session *session.Session, config... *aws.Config) *RDSDataServiceActivities {
+func NewRDSDataServiceActivities(session *session.Session, config ...*aws.Config) *RDSDataServiceActivities {
     client := rdsdataservice.New(session, config...)
     return &RDSDataServiceActivities{client: client}
 }

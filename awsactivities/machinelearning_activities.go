@@ -9,10 +9,10 @@ import (
 )
 
 type MachineLearningActivities struct {
-	client machinelearningiface.MachineLearningAPI
+    client machinelearningiface.MachineLearningAPI
 }
 
-func NewMachineLearningActivities(session *session.Session, config... *aws.Config) *MachineLearningActivities {
+func NewMachineLearningActivities(session *session.Session, config ...*aws.Config) *MachineLearningActivities {
     client := machinelearning.New(session, config...)
     return &MachineLearningActivities{client: client}
 }

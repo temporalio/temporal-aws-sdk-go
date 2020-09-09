@@ -10,10 +10,10 @@ import (
 )
 
 type WAFRegionalActivities struct {
-	client wafregionaliface.WAFRegionalAPI
+    client wafregionaliface.WAFRegionalAPI
 }
 
-func NewWAFRegionalActivities(session *session.Session, config... *aws.Config) *WAFRegionalActivities {
+func NewWAFRegionalActivities(session *session.Session, config ...*aws.Config) *WAFRegionalActivities {
     client := wafregional.New(session, config...)
     return &WAFRegionalActivities{client: client}
 }

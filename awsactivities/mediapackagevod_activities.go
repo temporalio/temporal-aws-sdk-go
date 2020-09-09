@@ -9,10 +9,10 @@ import (
 )
 
 type MediaPackageVodActivities struct {
-	client mediapackagevodiface.MediaPackageVodAPI
+    client mediapackagevodiface.MediaPackageVodAPI
 }
 
-func NewMediaPackageVodActivities(session *session.Session, config... *aws.Config) *MediaPackageVodActivities {
+func NewMediaPackageVodActivities(session *session.Session, config ...*aws.Config) *MediaPackageVodActivities {
     client := mediapackagevod.New(session, config...)
     return &MediaPackageVodActivities{client: client}
 }

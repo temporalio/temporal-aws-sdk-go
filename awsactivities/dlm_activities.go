@@ -9,10 +9,10 @@ import (
 )
 
 type DLMActivities struct {
-	client dlmiface.DLMAPI
+    client dlmiface.DLMAPI
 }
 
-func NewDLMActivities(session *session.Session, config... *aws.Config) *DLMActivities {
+func NewDLMActivities(session *session.Session, config ...*aws.Config) *DLMActivities {
     client := dlm.New(session, config...)
     return &DLMActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type FraudDetectorActivities struct {
-	client frauddetectoriface.FraudDetectorAPI
+    client frauddetectoriface.FraudDetectorAPI
 }
 
-func NewFraudDetectorActivities(session *session.Session, config... *aws.Config) *FraudDetectorActivities {
+func NewFraudDetectorActivities(session *session.Session, config ...*aws.Config) *FraudDetectorActivities {
     client := frauddetector.New(session, config...)
     return &FraudDetectorActivities{client: client}
 }

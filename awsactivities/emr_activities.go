@@ -9,10 +9,10 @@ import (
 )
 
 type EMRActivities struct {
-	client emriface.EMRAPI
+    client emriface.EMRAPI
 }
 
-func NewEMRActivities(session *session.Session, config... *aws.Config) *EMRActivities {
+func NewEMRActivities(session *session.Session, config ...*aws.Config) *EMRActivities {
     client := emr.New(session, config...)
     return &EMRActivities{client: client}
 }

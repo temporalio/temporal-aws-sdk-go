@@ -9,10 +9,10 @@ import (
 )
 
 type ServiceQuotasActivities struct {
-	client servicequotasiface.ServiceQuotasAPI
+    client servicequotasiface.ServiceQuotasAPI
 }
 
-func NewServiceQuotasActivities(session *session.Session, config... *aws.Config) *ServiceQuotasActivities {
+func NewServiceQuotasActivities(session *session.Session, config ...*aws.Config) *ServiceQuotasActivities {
     client := servicequotas.New(session, config...)
     return &ServiceQuotasActivities{client: client}
 }

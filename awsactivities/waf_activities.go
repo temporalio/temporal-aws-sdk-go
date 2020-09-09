@@ -9,10 +9,10 @@ import (
 )
 
 type WAFActivities struct {
-	client wafiface.WAFAPI
+    client wafiface.WAFAPI
 }
 
-func NewWAFActivities(session *session.Session, config... *aws.Config) *WAFActivities {
+func NewWAFActivities(session *session.Session, config ...*aws.Config) *WAFActivities {
     client := waf.New(session, config...)
     return &WAFActivities{client: client}
 }

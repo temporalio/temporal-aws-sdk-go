@@ -9,10 +9,10 @@ import (
 )
 
 type ApiGatewayManagementApiActivities struct {
-	client apigatewaymanagementapiiface.ApiGatewayManagementApiAPI
+    client apigatewaymanagementapiiface.ApiGatewayManagementApiAPI
 }
 
-func NewApiGatewayManagementApiActivities(session *session.Session, config... *aws.Config) *ApiGatewayManagementApiActivities {
+func NewApiGatewayManagementApiActivities(session *session.Session, config ...*aws.Config) *ApiGatewayManagementApiActivities {
     client := apigatewaymanagementapi.New(session, config...)
     return &ApiGatewayManagementApiActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type BudgetsActivities struct {
-	client budgetsiface.BudgetsAPI
+    client budgetsiface.BudgetsAPI
 }
 
-func NewBudgetsActivities(session *session.Session, config... *aws.Config) *BudgetsActivities {
+func NewBudgetsActivities(session *session.Session, config ...*aws.Config) *BudgetsActivities {
     client := budgets.New(session, config...)
     return &BudgetsActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type ACMActivities struct {
-	client acmiface.ACMAPI
+    client acmiface.ACMAPI
 }
 
-func NewACMActivities(session *session.Session, config... *aws.Config) *ACMActivities {
+func NewACMActivities(session *session.Session, config ...*aws.Config) *ACMActivities {
     client := acm.New(session, config...)
     return &ACMActivities{client: client}
 }

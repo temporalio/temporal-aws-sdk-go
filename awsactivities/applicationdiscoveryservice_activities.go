@@ -9,10 +9,10 @@ import (
 )
 
 type ApplicationDiscoveryServiceActivities struct {
-	client applicationdiscoveryserviceiface.ApplicationDiscoveryServiceAPI
+    client applicationdiscoveryserviceiface.ApplicationDiscoveryServiceAPI
 }
 
-func NewApplicationDiscoveryServiceActivities(session *session.Session, config... *aws.Config) *ApplicationDiscoveryServiceActivities {
+func NewApplicationDiscoveryServiceActivities(session *session.Session, config ...*aws.Config) *ApplicationDiscoveryServiceActivities {
     client := applicationdiscoveryservice.New(session, config...)
     return &ApplicationDiscoveryServiceActivities{client: client}
 }

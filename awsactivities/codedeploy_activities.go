@@ -9,10 +9,10 @@ import (
 )
 
 type CodeDeployActivities struct {
-	client codedeployiface.CodeDeployAPI
+    client codedeployiface.CodeDeployAPI
 }
 
-func NewCodeDeployActivities(session *session.Session, config... *aws.Config) *CodeDeployActivities {
+func NewCodeDeployActivities(session *session.Session, config ...*aws.Config) *CodeDeployActivities {
     client := codedeploy.New(session, config...)
     return &CodeDeployActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type CodePipelineActivities struct {
-	client codepipelineiface.CodePipelineAPI
+    client codepipelineiface.CodePipelineAPI
 }
 
-func NewCodePipelineActivities(session *session.Session, config... *aws.Config) *CodePipelineActivities {
+func NewCodePipelineActivities(session *session.Session, config ...*aws.Config) *CodePipelineActivities {
     client := codepipeline.New(session, config...)
     return &CodePipelineActivities{client: client}
 }

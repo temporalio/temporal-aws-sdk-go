@@ -9,10 +9,10 @@ import (
 )
 
 type PersonalizeActivities struct {
-	client personalizeiface.PersonalizeAPI
+    client personalizeiface.PersonalizeAPI
 }
 
-func NewPersonalizeActivities(session *session.Session, config... *aws.Config) *PersonalizeActivities {
+func NewPersonalizeActivities(session *session.Session, config ...*aws.Config) *PersonalizeActivities {
     client := personalize.New(session, config...)
     return &PersonalizeActivities{client: client}
 }

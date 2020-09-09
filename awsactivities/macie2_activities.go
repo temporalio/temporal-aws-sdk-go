@@ -9,10 +9,10 @@ import (
 )
 
 type Macie2Activities struct {
-	client macie2iface.Macie2API
+    client macie2iface.Macie2API
 }
 
-func NewMacie2Activities(session *session.Session, config... *aws.Config) *Macie2Activities {
+func NewMacie2Activities(session *session.Session, config ...*aws.Config) *Macie2Activities {
     client := macie2.New(session, config...)
     return &Macie2Activities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type AthenaActivities struct {
-	client athenaiface.AthenaAPI
+    client athenaiface.AthenaAPI
 }
 
-func NewAthenaActivities(session *session.Session, config... *aws.Config) *AthenaActivities {
+func NewAthenaActivities(session *session.Session, config ...*aws.Config) *AthenaActivities {
     client := athena.New(session, config...)
     return &AthenaActivities{client: client}
 }

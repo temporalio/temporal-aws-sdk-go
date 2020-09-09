@@ -9,10 +9,10 @@ import (
 )
 
 type InspectorActivities struct {
-	client inspectoriface.InspectorAPI
+    client inspectoriface.InspectorAPI
 }
 
-func NewInspectorActivities(session *session.Session, config... *aws.Config) *InspectorActivities {
+func NewInspectorActivities(session *session.Session, config ...*aws.Config) *InspectorActivities {
     client := inspector.New(session, config...)
     return &InspectorActivities{client: client}
 }

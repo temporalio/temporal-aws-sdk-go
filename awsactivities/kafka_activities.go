@@ -9,10 +9,10 @@ import (
 )
 
 type KafkaActivities struct {
-	client kafkaiface.KafkaAPI
+    client kafkaiface.KafkaAPI
 }
 
-func NewKafkaActivities(session *session.Session, config... *aws.Config) *KafkaActivities {
+func NewKafkaActivities(session *session.Session, config ...*aws.Config) *KafkaActivities {
     client := kafka.New(session, config...)
     return &KafkaActivities{client: client}
 }

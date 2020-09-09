@@ -9,10 +9,10 @@ import (
 )
 
 type CloudHSMV2Activities struct {
-	client cloudhsmv2iface.CloudHSMV2API
+    client cloudhsmv2iface.CloudHSMV2API
 }
 
-func NewCloudHSMV2Activities(session *session.Session, config... *aws.Config) *CloudHSMV2Activities {
+func NewCloudHSMV2Activities(session *session.Session, config ...*aws.Config) *CloudHSMV2Activities {
     client := cloudhsmv2.New(session, config...)
     return &CloudHSMV2Activities{client: client}
 }

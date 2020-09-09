@@ -9,10 +9,10 @@ import (
 )
 
 type RoboMakerActivities struct {
-	client robomakeriface.RoboMakerAPI
+    client robomakeriface.RoboMakerAPI
 }
 
-func NewRoboMakerActivities(session *session.Session, config... *aws.Config) *RoboMakerActivities {
+func NewRoboMakerActivities(session *session.Session, config ...*aws.Config) *RoboMakerActivities {
     client := robomaker.New(session, config...)
     return &RoboMakerActivities{client: client}
 }

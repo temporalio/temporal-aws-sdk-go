@@ -9,10 +9,10 @@ import (
 )
 
 type MobileActivities struct {
-	client mobileiface.MobileAPI
+    client mobileiface.MobileAPI
 }
 
-func NewMobileActivities(session *session.Session, config... *aws.Config) *MobileActivities {
+func NewMobileActivities(session *session.Session, config ...*aws.Config) *MobileActivities {
     client := mobile.New(session, config...)
     return &MobileActivities{client: client}
 }

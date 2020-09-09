@@ -9,10 +9,10 @@ import (
 )
 
 type ConnectActivities struct {
-	client connectiface.ConnectAPI
+    client connectiface.ConnectAPI
 }
 
-func NewConnectActivities(session *session.Session, config... *aws.Config) *ConnectActivities {
+func NewConnectActivities(session *session.Session, config ...*aws.Config) *ConnectActivities {
     client := connect.New(session, config...)
     return &ConnectActivities{client: client}
 }

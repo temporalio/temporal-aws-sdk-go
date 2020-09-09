@@ -9,10 +9,10 @@ import (
 )
 
 type EC2Activities struct {
-	client ec2iface.EC2API
+    client ec2iface.EC2API
 }
 
-func NewEC2Activities(session *session.Session, config... *aws.Config) *EC2Activities {
+func NewEC2Activities(session *session.Session, config ...*aws.Config) *EC2Activities {
     client := ec2.New(session, config...)
     return &EC2Activities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type TranscribeServiceActivities struct {
-	client transcribeserviceiface.TranscribeServiceAPI
+    client transcribeserviceiface.TranscribeServiceAPI
 }
 
-func NewTranscribeServiceActivities(session *session.Session, config... *aws.Config) *TranscribeServiceActivities {
+func NewTranscribeServiceActivities(session *session.Session, config ...*aws.Config) *TranscribeServiceActivities {
     client := transcribeservice.New(session, config...)
     return &TranscribeServiceActivities{client: client}
 }

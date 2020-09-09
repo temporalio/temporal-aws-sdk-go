@@ -9,10 +9,10 @@ import (
 )
 
 type IoTSecureTunnelingActivities struct {
-	client iotsecuretunnelingiface.IoTSecureTunnelingAPI
+    client iotsecuretunnelingiface.IoTSecureTunnelingAPI
 }
 
-func NewIoTSecureTunnelingActivities(session *session.Session, config... *aws.Config) *IoTSecureTunnelingActivities {
+func NewIoTSecureTunnelingActivities(session *session.Session, config ...*aws.Config) *IoTSecureTunnelingActivities {
     client := iotsecuretunneling.New(session, config...)
     return &IoTSecureTunnelingActivities{client: client}
 }

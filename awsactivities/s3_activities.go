@@ -9,10 +9,10 @@ import (
 )
 
 type S3Activities struct {
-	client s3iface.S3API
+    client s3iface.S3API
 }
 
-func NewS3Activities(session *session.Session, config... *aws.Config) *S3Activities {
+func NewS3Activities(session *session.Session, config ...*aws.Config) *S3Activities {
     client := s3.New(session, config...)
     return &S3Activities{client: client}
 }

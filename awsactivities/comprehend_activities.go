@@ -9,10 +9,10 @@ import (
 )
 
 type ComprehendActivities struct {
-	client comprehendiface.ComprehendAPI
+    client comprehendiface.ComprehendAPI
 }
 
-func NewComprehendActivities(session *session.Session, config... *aws.Config) *ComprehendActivities {
+func NewComprehendActivities(session *session.Session, config ...*aws.Config) *ComprehendActivities {
     client := comprehend.New(session, config...)
     return &ComprehendActivities{client: client}
 }

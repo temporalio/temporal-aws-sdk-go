@@ -9,10 +9,10 @@ import (
 )
 
 type CognitoIdentityActivities struct {
-	client cognitoidentityiface.CognitoIdentityAPI
+    client cognitoidentityiface.CognitoIdentityAPI
 }
 
-func NewCognitoIdentityActivities(session *session.Session, config... *aws.Config) *CognitoIdentityActivities {
+func NewCognitoIdentityActivities(session *session.Session, config ...*aws.Config) *CognitoIdentityActivities {
     client := cognitoidentity.New(session, config...)
     return &CognitoIdentityActivities{client: client}
 }

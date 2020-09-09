@@ -9,10 +9,10 @@ import (
 )
 
 type ResourceGroupsActivities struct {
-	client resourcegroupsiface.ResourceGroupsAPI
+    client resourcegroupsiface.ResourceGroupsAPI
 }
 
-func NewResourceGroupsActivities(session *session.Session, config... *aws.Config) *ResourceGroupsActivities {
+func NewResourceGroupsActivities(session *session.Session, config ...*aws.Config) *ResourceGroupsActivities {
     client := resourcegroups.New(session, config...)
     return &ResourceGroupsActivities{client: client}
 }

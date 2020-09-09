@@ -9,10 +9,10 @@ import (
 )
 
 type MTurkActivities struct {
-	client mturkiface.MTurkAPI
+    client mturkiface.MTurkAPI
 }
 
-func NewMTurkActivities(session *session.Session, config... *aws.Config) *MTurkActivities {
+func NewMTurkActivities(session *session.Session, config ...*aws.Config) *MTurkActivities {
     client := mturk.New(session, config...)
     return &MTurkActivities{client: client}
 }

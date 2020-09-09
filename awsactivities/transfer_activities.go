@@ -9,10 +9,10 @@ import (
 )
 
 type TransferActivities struct {
-	client transferiface.TransferAPI
+    client transferiface.TransferAPI
 }
 
-func NewTransferActivities(session *session.Session, config... *aws.Config) *TransferActivities {
+func NewTransferActivities(session *session.Session, config ...*aws.Config) *TransferActivities {
     client := transfer.New(session, config...)
     return &TransferActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type CloudHSMActivities struct {
-	client cloudhsmiface.CloudHSMAPI
+    client cloudhsmiface.CloudHSMAPI
 }
 
-func NewCloudHSMActivities(session *session.Session, config... *aws.Config) *CloudHSMActivities {
+func NewCloudHSMActivities(session *session.Session, config ...*aws.Config) *CloudHSMActivities {
     client := cloudhsm.New(session, config...)
     return &CloudHSMActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type SyntheticsActivities struct {
-	client syntheticsiface.SyntheticsAPI
+    client syntheticsiface.SyntheticsAPI
 }
 
-func NewSyntheticsActivities(session *session.Session, config... *aws.Config) *SyntheticsActivities {
+func NewSyntheticsActivities(session *session.Session, config ...*aws.Config) *SyntheticsActivities {
     client := synthetics.New(session, config...)
     return &SyntheticsActivities{client: client}
 }

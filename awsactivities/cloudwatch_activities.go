@@ -9,10 +9,10 @@ import (
 )
 
 type CloudWatchActivities struct {
-	client cloudwatchiface.CloudWatchAPI
+    client cloudwatchiface.CloudWatchAPI
 }
 
-func NewCloudWatchActivities(session *session.Session, config... *aws.Config) *CloudWatchActivities {
+func NewCloudWatchActivities(session *session.Session, config ...*aws.Config) *CloudWatchActivities {
     client := cloudwatch.New(session, config...)
     return &CloudWatchActivities{client: client}
 }

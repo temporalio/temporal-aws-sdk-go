@@ -9,10 +9,10 @@ import (
 )
 
 type ElasticInferenceActivities struct {
-	client elasticinferenceiface.ElasticInferenceAPI
+    client elasticinferenceiface.ElasticInferenceAPI
 }
 
-func NewElasticInferenceActivities(session *session.Session, config... *aws.Config) *ElasticInferenceActivities {
+func NewElasticInferenceActivities(session *session.Session, config ...*aws.Config) *ElasticInferenceActivities {
     client := elasticinference.New(session, config...)
     return &ElasticInferenceActivities{client: client}
 }

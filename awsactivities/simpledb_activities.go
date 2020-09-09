@@ -9,10 +9,10 @@ import (
 )
 
 type SimpleDBActivities struct {
-	client simpledbiface.SimpleDBAPI
+    client simpledbiface.SimpleDBAPI
 }
 
-func NewSimpleDBActivities(session *session.Session, config... *aws.Config) *SimpleDBActivities {
+func NewSimpleDBActivities(session *session.Session, config ...*aws.Config) *SimpleDBActivities {
     client := simpledb.New(session, config...)
     return &SimpleDBActivities{client: client}
 }

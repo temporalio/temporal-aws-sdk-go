@@ -9,10 +9,10 @@ import (
 )
 
 type PersonalizeRuntimeActivities struct {
-	client personalizeruntimeiface.PersonalizeRuntimeAPI
+    client personalizeruntimeiface.PersonalizeRuntimeAPI
 }
 
-func NewPersonalizeRuntimeActivities(session *session.Session, config... *aws.Config) *PersonalizeRuntimeActivities {
+func NewPersonalizeRuntimeActivities(session *session.Session, config ...*aws.Config) *PersonalizeRuntimeActivities {
     client := personalizeruntime.New(session, config...)
     return &PersonalizeRuntimeActivities{client: client}
 }

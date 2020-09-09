@@ -9,10 +9,10 @@ import (
 )
 
 type AppConfigActivities struct {
-	client appconfigiface.AppConfigAPI
+    client appconfigiface.AppConfigAPI
 }
 
-func NewAppConfigActivities(session *session.Session, config... *aws.Config) *AppConfigActivities {
+func NewAppConfigActivities(session *session.Session, config ...*aws.Config) *AppConfigActivities {
     client := appconfig.New(session, config...)
     return &AppConfigActivities{client: client}
 }

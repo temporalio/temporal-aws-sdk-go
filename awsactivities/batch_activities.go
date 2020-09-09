@@ -9,10 +9,10 @@ import (
 )
 
 type BatchActivities struct {
-	client batchiface.BatchAPI
+    client batchiface.BatchAPI
 }
 
-func NewBatchActivities(session *session.Session, config... *aws.Config) *BatchActivities {
+func NewBatchActivities(session *session.Session, config ...*aws.Config) *BatchActivities {
     client := batch.New(session, config...)
     return &BatchActivities{client: client}
 }

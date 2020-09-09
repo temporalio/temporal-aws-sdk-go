@@ -9,10 +9,10 @@ import (
 )
 
 type IdentityStoreActivities struct {
-	client identitystoreiface.IdentityStoreAPI
+    client identitystoreiface.IdentityStoreAPI
 }
 
-func NewIdentityStoreActivities(session *session.Session, config... *aws.Config) *IdentityStoreActivities {
+func NewIdentityStoreActivities(session *session.Session, config ...*aws.Config) *IdentityStoreActivities {
     client := identitystore.New(session, config...)
     return &IdentityStoreActivities{client: client}
 }

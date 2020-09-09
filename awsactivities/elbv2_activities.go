@@ -9,10 +9,10 @@ import (
 )
 
 type ELBV2Activities struct {
-	client elbv2iface.ELBV2API
+    client elbv2iface.ELBV2API
 }
 
-func NewELBV2Activities(session *session.Session, config... *aws.Config) *ELBV2Activities {
+func NewELBV2Activities(session *session.Session, config ...*aws.Config) *ELBV2Activities {
     client := elbv2.New(session, config...)
     return &ELBV2Activities{client: client}
 }

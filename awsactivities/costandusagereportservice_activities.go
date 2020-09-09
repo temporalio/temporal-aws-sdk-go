@@ -9,10 +9,10 @@ import (
 )
 
 type CostandUsageReportServiceActivities struct {
-	client costandusagereportserviceiface.CostandUsageReportServiceAPI
+    client costandusagereportserviceiface.CostandUsageReportServiceAPI
 }
 
-func NewCostandUsageReportServiceActivities(session *session.Session, config... *aws.Config) *CostandUsageReportServiceActivities {
+func NewCostandUsageReportServiceActivities(session *session.Session, config ...*aws.Config) *CostandUsageReportServiceActivities {
     client := costandusagereportservice.New(session, config...)
     return &CostandUsageReportServiceActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type GameLiftActivities struct {
-	client gameliftiface.GameLiftAPI
+    client gameliftiface.GameLiftAPI
 }
 
-func NewGameLiftActivities(session *session.Session, config... *aws.Config) *GameLiftActivities {
+func NewGameLiftActivities(session *session.Session, config ...*aws.Config) *GameLiftActivities {
     client := gamelift.New(session, config...)
     return &GameLiftActivities{client: client}
 }

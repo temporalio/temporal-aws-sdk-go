@@ -9,10 +9,10 @@ import (
 )
 
 type WorkSpacesActivities struct {
-	client workspacesiface.WorkSpacesAPI
+    client workspacesiface.WorkSpacesAPI
 }
 
-func NewWorkSpacesActivities(session *session.Session, config... *aws.Config) *WorkSpacesActivities {
+func NewWorkSpacesActivities(session *session.Session, config ...*aws.Config) *WorkSpacesActivities {
     client := workspaces.New(session, config...)
     return &WorkSpacesActivities{client: client}
 }

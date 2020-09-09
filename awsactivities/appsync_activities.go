@@ -9,10 +9,10 @@ import (
 )
 
 type AppSyncActivities struct {
-	client appsynciface.AppSyncAPI
+    client appsynciface.AppSyncAPI
 }
 
-func NewAppSyncActivities(session *session.Session, config... *aws.Config) *AppSyncActivities {
+func NewAppSyncActivities(session *session.Session, config ...*aws.Config) *AppSyncActivities {
     client := appsync.New(session, config...)
     return &AppSyncActivities{client: client}
 }

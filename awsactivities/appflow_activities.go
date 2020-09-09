@@ -9,10 +9,10 @@ import (
 )
 
 type AppflowActivities struct {
-	client appflowiface.AppflowAPI
+    client appflowiface.AppflowAPI
 }
 
-func NewAppflowActivities(session *session.Session, config... *aws.Config) *AppflowActivities {
+func NewAppflowActivities(session *session.Session, config ...*aws.Config) *AppflowActivities {
     client := appflow.New(session, config...)
     return &AppflowActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type GreengrassActivities struct {
-	client greengrassiface.GreengrassAPI
+    client greengrassiface.GreengrassAPI
 }
 
-func NewGreengrassActivities(session *session.Session, config... *aws.Config) *GreengrassActivities {
+func NewGreengrassActivities(session *session.Session, config ...*aws.Config) *GreengrassActivities {
     client := greengrass.New(session, config...)
     return &GreengrassActivities{client: client}
 }

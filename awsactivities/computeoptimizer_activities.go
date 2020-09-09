@@ -9,10 +9,10 @@ import (
 )
 
 type ComputeOptimizerActivities struct {
-	client computeoptimizeriface.ComputeOptimizerAPI
+    client computeoptimizeriface.ComputeOptimizerAPI
 }
 
-func NewComputeOptimizerActivities(session *session.Session, config... *aws.Config) *ComputeOptimizerActivities {
+func NewComputeOptimizerActivities(session *session.Session, config ...*aws.Config) *ComputeOptimizerActivities {
     client := computeoptimizer.New(session, config...)
     return &ComputeOptimizerActivities{client: client}
 }

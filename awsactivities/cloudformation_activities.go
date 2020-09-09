@@ -9,10 +9,10 @@ import (
 )
 
 type CloudFormationActivities struct {
-	client cloudformationiface.CloudFormationAPI
+    client cloudformationiface.CloudFormationAPI
 }
 
-func NewCloudFormationActivities(session *session.Session, config... *aws.Config) *CloudFormationActivities {
+func NewCloudFormationActivities(session *session.Session, config ...*aws.Config) *CloudFormationActivities {
     client := cloudformation.New(session, config...)
     return &CloudFormationActivities{client: client}
 }

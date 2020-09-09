@@ -9,10 +9,10 @@ import (
 )
 
 type SQSActivities struct {
-	client sqsiface.SQSAPI
+    client sqsiface.SQSAPI
 }
 
-func NewSQSActivities(session *session.Session, config... *aws.Config) *SQSActivities {
+func NewSQSActivities(session *session.Session, config ...*aws.Config) *SQSActivities {
     client := sqs.New(session, config...)
     return &SQSActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type PricingActivities struct {
-	client pricingiface.PricingAPI
+    client pricingiface.PricingAPI
 }
 
-func NewPricingActivities(session *session.Session, config... *aws.Config) *PricingActivities {
+func NewPricingActivities(session *session.Session, config ...*aws.Config) *PricingActivities {
     client := pricing.New(session, config...)
     return &PricingActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type DatabaseMigrationServiceActivities struct {
-	client databasemigrationserviceiface.DatabaseMigrationServiceAPI
+    client databasemigrationserviceiface.DatabaseMigrationServiceAPI
 }
 
-func NewDatabaseMigrationServiceActivities(session *session.Session, config... *aws.Config) *DatabaseMigrationServiceActivities {
+func NewDatabaseMigrationServiceActivities(session *session.Session, config ...*aws.Config) *DatabaseMigrationServiceActivities {
     client := databasemigrationservice.New(session, config...)
     return &DatabaseMigrationServiceActivities{client: client}
 }

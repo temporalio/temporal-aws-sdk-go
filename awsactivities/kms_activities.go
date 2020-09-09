@@ -9,10 +9,10 @@ import (
 )
 
 type KMSActivities struct {
-	client kmsiface.KMSAPI
+    client kmsiface.KMSAPI
 }
 
-func NewKMSActivities(session *session.Session, config... *aws.Config) *KMSActivities {
+func NewKMSActivities(session *session.Session, config ...*aws.Config) *KMSActivities {
     client := kms.New(session, config...)
     return &KMSActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type SSMActivities struct {
-	client ssmiface.SSMAPI
+    client ssmiface.SSMAPI
 }
 
-func NewSSMActivities(session *session.Session, config... *aws.Config) *SSMActivities {
+func NewSSMActivities(session *session.Session, config ...*aws.Config) *SSMActivities {
     client := ssm.New(session, config...)
     return &SSMActivities{client: client}
 }

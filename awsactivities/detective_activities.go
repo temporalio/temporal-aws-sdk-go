@@ -9,10 +9,10 @@ import (
 )
 
 type DetectiveActivities struct {
-	client detectiveiface.DetectiveAPI
+    client detectiveiface.DetectiveAPI
 }
 
-func NewDetectiveActivities(session *session.Session, config... *aws.Config) *DetectiveActivities {
+func NewDetectiveActivities(session *session.Session, config ...*aws.Config) *DetectiveActivities {
     client := detective.New(session, config...)
     return &DetectiveActivities{client: client}
 }

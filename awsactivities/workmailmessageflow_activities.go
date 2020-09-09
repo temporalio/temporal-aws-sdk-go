@@ -9,10 +9,10 @@ import (
 )
 
 type WorkMailMessageFlowActivities struct {
-	client workmailmessageflowiface.WorkMailMessageFlowAPI
+    client workmailmessageflowiface.WorkMailMessageFlowAPI
 }
 
-func NewWorkMailMessageFlowActivities(session *session.Session, config... *aws.Config) *WorkMailMessageFlowActivities {
+func NewWorkMailMessageFlowActivities(session *session.Session, config ...*aws.Config) *WorkMailMessageFlowActivities {
     client := workmailmessageflow.New(session, config...)
     return &WorkMailMessageFlowActivities{client: client}
 }

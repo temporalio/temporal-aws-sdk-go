@@ -9,10 +9,10 @@ import (
 )
 
 type PIActivities struct {
-	client piiface.PIAPI
+    client piiface.PIAPI
 }
 
-func NewPIActivities(session *session.Session, config... *aws.Config) *PIActivities {
+func NewPIActivities(session *session.Session, config ...*aws.Config) *PIActivities {
     client := pi.New(session, config...)
     return &PIActivities{client: client}
 }

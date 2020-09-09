@@ -9,10 +9,10 @@ import (
 )
 
 type TextractActivities struct {
-	client textractiface.TextractAPI
+    client textractiface.TextractAPI
 }
 
-func NewTextractActivities(session *session.Session, config... *aws.Config) *TextractActivities {
+func NewTextractActivities(session *session.Session, config ...*aws.Config) *TextractActivities {
     client := textract.New(session, config...)
     return &TextractActivities{client: client}
 }

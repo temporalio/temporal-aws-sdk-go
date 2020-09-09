@@ -9,10 +9,10 @@ import (
 )
 
 type KendraActivities struct {
-	client kendraiface.KendraAPI
+    client kendraiface.KendraAPI
 }
 
-func NewKendraActivities(session *session.Session, config... *aws.Config) *KendraActivities {
+func NewKendraActivities(session *session.Session, config ...*aws.Config) *KendraActivities {
     client := kendra.New(session, config...)
     return &KendraActivities{client: client}
 }

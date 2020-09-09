@@ -9,10 +9,10 @@ import (
 )
 
 type CloudFrontActivities struct {
-	client cloudfrontiface.CloudFrontAPI
+    client cloudfrontiface.CloudFrontAPI
 }
 
-func NewCloudFrontActivities(session *session.Session, config... *aws.Config) *CloudFrontActivities {
+func NewCloudFrontActivities(session *session.Session, config ...*aws.Config) *CloudFrontActivities {
     client := cloudfront.New(session, config...)
     return &CloudFrontActivities{client: client}
 }

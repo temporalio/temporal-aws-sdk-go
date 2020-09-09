@@ -9,10 +9,10 @@ import (
 )
 
 type TranslateActivities struct {
-	client translateiface.TranslateAPI
+    client translateiface.TranslateAPI
 }
 
-func NewTranslateActivities(session *session.Session, config... *aws.Config) *TranslateActivities {
+func NewTranslateActivities(session *session.Session, config ...*aws.Config) *TranslateActivities {
     client := translate.New(session, config...)
     return &TranslateActivities{client: client}
 }

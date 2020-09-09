@@ -9,10 +9,10 @@ import (
 )
 
 type DynamoDBActivities struct {
-	client dynamodbiface.DynamoDBAPI
+    client dynamodbiface.DynamoDBAPI
 }
 
-func NewDynamoDBActivities(session *session.Session, config... *aws.Config) *DynamoDBActivities {
+func NewDynamoDBActivities(session *session.Session, config ...*aws.Config) *DynamoDBActivities {
     client := dynamodb.New(session, config...)
     return &DynamoDBActivities{client: client}
 }

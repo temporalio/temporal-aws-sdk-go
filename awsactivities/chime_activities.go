@@ -9,10 +9,10 @@ import (
 )
 
 type ChimeActivities struct {
-	client chimeiface.ChimeAPI
+    client chimeiface.ChimeAPI
 }
 
-func NewChimeActivities(session *session.Session, config... *aws.Config) *ChimeActivities {
+func NewChimeActivities(session *session.Session, config ...*aws.Config) *ChimeActivities {
     client := chime.New(session, config...)
     return &ChimeActivities{client: client}
 }

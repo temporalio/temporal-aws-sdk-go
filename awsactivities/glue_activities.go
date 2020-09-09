@@ -9,10 +9,10 @@ import (
 )
 
 type GlueActivities struct {
-	client glueiface.GlueAPI
+    client glueiface.GlueAPI
 }
 
-func NewGlueActivities(session *session.Session, config... *aws.Config) *GlueActivities {
+func NewGlueActivities(session *session.Session, config ...*aws.Config) *GlueActivities {
     client := glue.New(session, config...)
     return &GlueActivities{client: client}
 }

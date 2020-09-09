@@ -9,10 +9,10 @@ import (
 )
 
 type SavingsPlansActivities struct {
-	client savingsplansiface.SavingsPlansAPI
+    client savingsplansiface.SavingsPlansAPI
 }
 
-func NewSavingsPlansActivities(session *session.Session, config... *aws.Config) *SavingsPlansActivities {
+func NewSavingsPlansActivities(session *session.Session, config ...*aws.Config) *SavingsPlansActivities {
     client := savingsplans.New(session, config...)
     return &SavingsPlansActivities{client: client}
 }

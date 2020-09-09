@@ -9,10 +9,10 @@ import (
 )
 
 type Cloud9Activities struct {
-	client cloud9iface.Cloud9API
+    client cloud9iface.Cloud9API
 }
 
-func NewCloud9Activities(session *session.Session, config... *aws.Config) *Cloud9Activities {
+func NewCloud9Activities(session *session.Session, config ...*aws.Config) *Cloud9Activities {
     client := cloud9.New(session, config...)
     return &Cloud9Activities{client: client}
 }

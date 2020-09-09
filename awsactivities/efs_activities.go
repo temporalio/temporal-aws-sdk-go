@@ -9,10 +9,10 @@ import (
 )
 
 type EFSActivities struct {
-	client efsiface.EFSAPI
+    client efsiface.EFSAPI
 }
 
-func NewEFSActivities(session *session.Session, config... *aws.Config) *EFSActivities {
+func NewEFSActivities(session *session.Session, config ...*aws.Config) *EFSActivities {
     client := efs.New(session, config...)
     return &EFSActivities{client: client}
 }

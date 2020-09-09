@@ -9,10 +9,10 @@ import (
 )
 
 type Route53ResolverActivities struct {
-	client route53resolveriface.Route53ResolverAPI
+    client route53resolveriface.Route53ResolverAPI
 }
 
-func NewRoute53ResolverActivities(session *session.Session, config... *aws.Config) *Route53ResolverActivities {
+func NewRoute53ResolverActivities(session *session.Session, config ...*aws.Config) *Route53ResolverActivities {
     client := route53resolver.New(session, config...)
     return &Route53ResolverActivities{client: client}
 }

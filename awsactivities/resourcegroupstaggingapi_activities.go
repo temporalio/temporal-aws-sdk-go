@@ -9,10 +9,10 @@ import (
 )
 
 type ResourceGroupsTaggingAPIActivities struct {
-	client resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI
+    client resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI
 }
 
-func NewResourceGroupsTaggingAPIActivities(session *session.Session, config... *aws.Config) *ResourceGroupsTaggingAPIActivities {
+func NewResourceGroupsTaggingAPIActivities(session *session.Session, config ...*aws.Config) *ResourceGroupsTaggingAPIActivities {
     client := resourcegroupstaggingapi.New(session, config...)
     return &ResourceGroupsTaggingAPIActivities{client: client}
 }

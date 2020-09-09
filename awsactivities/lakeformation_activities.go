@@ -9,10 +9,10 @@ import (
 )
 
 type LakeFormationActivities struct {
-	client lakeformationiface.LakeFormationAPI
+    client lakeformationiface.LakeFormationAPI
 }
 
-func NewLakeFormationActivities(session *session.Session, config... *aws.Config) *LakeFormationActivities {
+func NewLakeFormationActivities(session *session.Session, config ...*aws.Config) *LakeFormationActivities {
     client := lakeformation.New(session, config...)
     return &LakeFormationActivities{client: client}
 }

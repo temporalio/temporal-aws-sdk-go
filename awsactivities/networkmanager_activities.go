@@ -9,10 +9,10 @@ import (
 )
 
 type NetworkManagerActivities struct {
-	client networkmanageriface.NetworkManagerAPI
+    client networkmanageriface.NetworkManagerAPI
 }
 
-func NewNetworkManagerActivities(session *session.Session, config... *aws.Config) *NetworkManagerActivities {
+func NewNetworkManagerActivities(session *session.Session, config ...*aws.Config) *NetworkManagerActivities {
     client := networkmanager.New(session, config...)
     return &NetworkManagerActivities{client: client}
 }

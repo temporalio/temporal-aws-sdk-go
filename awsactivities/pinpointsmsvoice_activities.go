@@ -9,10 +9,10 @@ import (
 )
 
 type PinpointSMSVoiceActivities struct {
-	client pinpointsmsvoiceiface.PinpointSMSVoiceAPI
+    client pinpointsmsvoiceiface.PinpointSMSVoiceAPI
 }
 
-func NewPinpointSMSVoiceActivities(session *session.Session, config... *aws.Config) *PinpointSMSVoiceActivities {
+func NewPinpointSMSVoiceActivities(session *session.Session, config ...*aws.Config) *PinpointSMSVoiceActivities {
     client := pinpointsmsvoice.New(session, config...)
     return &PinpointSMSVoiceActivities{client: client}
 }

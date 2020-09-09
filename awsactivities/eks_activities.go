@@ -9,10 +9,10 @@ import (
 )
 
 type EKSActivities struct {
-	client eksiface.EKSAPI
+    client eksiface.EKSAPI
 }
 
-func NewEKSActivities(session *session.Session, config... *aws.Config) *EKSActivities {
+func NewEKSActivities(session *session.Session, config ...*aws.Config) *EKSActivities {
     client := eks.New(session, config...)
     return &EKSActivities{client: client}
 }

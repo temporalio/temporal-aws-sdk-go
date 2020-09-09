@@ -9,10 +9,10 @@ import (
 )
 
 type XRayActivities struct {
-	client xrayiface.XRayAPI
+    client xrayiface.XRayAPI
 }
 
-func NewXRayActivities(session *session.Session, config... *aws.Config) *XRayActivities {
+func NewXRayActivities(session *session.Session, config ...*aws.Config) *XRayActivities {
     client := xray.New(session, config...)
     return &XRayActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type WorkMailActivities struct {
-	client workmailiface.WorkMailAPI
+    client workmailiface.WorkMailAPI
 }
 
-func NewWorkMailActivities(session *session.Session, config... *aws.Config) *WorkMailActivities {
+func NewWorkMailActivities(session *session.Session, config ...*aws.Config) *WorkMailActivities {
     client := workmail.New(session, config...)
     return &WorkMailActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type CodeStarConnectionsActivities struct {
-	client codestarconnectionsiface.CodeStarConnectionsAPI
+    client codestarconnectionsiface.CodeStarConnectionsAPI
 }
 
-func NewCodeStarConnectionsActivities(session *session.Session, config... *aws.Config) *CodeStarConnectionsActivities {
+func NewCodeStarConnectionsActivities(session *session.Session, config ...*aws.Config) *CodeStarConnectionsActivities {
     client := codestarconnections.New(session, config...)
     return &CodeStarConnectionsActivities{client: client}
 }

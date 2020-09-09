@@ -9,10 +9,10 @@ import (
 )
 
 type DirectConnectActivities struct {
-	client directconnectiface.DirectConnectAPI
+    client directconnectiface.DirectConnectAPI
 }
 
-func NewDirectConnectActivities(session *session.Session, config... *aws.Config) *DirectConnectActivities {
+func NewDirectConnectActivities(session *session.Session, config ...*aws.Config) *DirectConnectActivities {
     client := directconnect.New(session, config...)
     return &DirectConnectActivities{client: client}
 }

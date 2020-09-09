@@ -9,10 +9,10 @@ import (
 )
 
 type ForecastQueryServiceActivities struct {
-	client forecastqueryserviceiface.ForecastQueryServiceAPI
+    client forecastqueryserviceiface.ForecastQueryServiceAPI
 }
 
-func NewForecastQueryServiceActivities(session *session.Session, config... *aws.Config) *ForecastQueryServiceActivities {
+func NewForecastQueryServiceActivities(session *session.Session, config ...*aws.Config) *ForecastQueryServiceActivities {
     client := forecastqueryservice.New(session, config...)
     return &ForecastQueryServiceActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type QuickSightActivities struct {
-	client quicksightiface.QuickSightAPI
+    client quicksightiface.QuickSightAPI
 }
 
-func NewQuickSightActivities(session *session.Session, config... *aws.Config) *QuickSightActivities {
+func NewQuickSightActivities(session *session.Session, config ...*aws.Config) *QuickSightActivities {
     client := quicksight.New(session, config...)
     return &QuickSightActivities{client: client}
 }

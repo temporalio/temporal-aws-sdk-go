@@ -9,10 +9,10 @@ import (
 )
 
 type KinesisActivities struct {
-	client kinesisiface.KinesisAPI
+    client kinesisiface.KinesisAPI
 }
 
-func NewKinesisActivities(session *session.Session, config... *aws.Config) *KinesisActivities {
+func NewKinesisActivities(session *session.Session, config ...*aws.Config) *KinesisActivities {
     client := kinesis.New(session, config...)
     return &KinesisActivities{client: client}
 }

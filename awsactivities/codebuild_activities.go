@@ -9,10 +9,10 @@ import (
 )
 
 type CodeBuildActivities struct {
-	client codebuildiface.CodeBuildAPI
+    client codebuildiface.CodeBuildAPI
 }
 
-func NewCodeBuildActivities(session *session.Session, config... *aws.Config) *CodeBuildActivities {
+func NewCodeBuildActivities(session *session.Session, config ...*aws.Config) *CodeBuildActivities {
     client := codebuild.New(session, config...)
     return &CodeBuildActivities{client: client}
 }

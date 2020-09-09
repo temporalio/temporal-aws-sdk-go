@@ -9,10 +9,10 @@ import (
 )
 
 type LexRuntimeServiceActivities struct {
-	client lexruntimeserviceiface.LexRuntimeServiceAPI
+    client lexruntimeserviceiface.LexRuntimeServiceAPI
 }
 
-func NewLexRuntimeServiceActivities(session *session.Session, config... *aws.Config) *LexRuntimeServiceActivities {
+func NewLexRuntimeServiceActivities(session *session.Session, config ...*aws.Config) *LexRuntimeServiceActivities {
     client := lexruntimeservice.New(session, config...)
     return &LexRuntimeServiceActivities{client: client}
 }

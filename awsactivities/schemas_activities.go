@@ -9,10 +9,10 @@ import (
 )
 
 type SchemasActivities struct {
-	client schemasiface.SchemasAPI
+    client schemasiface.SchemasAPI
 }
 
-func NewSchemasActivities(session *session.Session, config... *aws.Config) *SchemasActivities {
+func NewSchemasActivities(session *session.Session, config ...*aws.Config) *SchemasActivities {
     client := schemas.New(session, config...)
     return &SchemasActivities{client: client}
 }

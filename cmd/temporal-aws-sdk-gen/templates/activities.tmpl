@@ -13,10 +13,10 @@ import (
 )
 
 type {{ $name }}Activities struct {
-	client {{ $lowerName }}iface.{{ $name }}API
+    client {{ $lowerName }}iface.{{ $name }}API
 }
 
-func New{{ $name }}Activities(session *session.Session, config... *aws.Config) *{{ $name }}Activities {
+func New{{ $name }}Activities(session *session.Session, config ...*aws.Config) *{{ $name }}Activities {
     client := {{ $lowerName }}.New(session, config...)
     return &{{ $name }}Activities{client: client}
 }

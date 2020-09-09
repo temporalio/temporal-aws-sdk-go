@@ -9,10 +9,10 @@ import (
 )
 
 type SecretsManagerActivities struct {
-	client secretsmanageriface.SecretsManagerAPI
+    client secretsmanageriface.SecretsManagerAPI
 }
 
-func NewSecretsManagerActivities(session *session.Session, config... *aws.Config) *SecretsManagerActivities {
+func NewSecretsManagerActivities(session *session.Session, config ...*aws.Config) *SecretsManagerActivities {
     client := secretsmanager.New(session, config...)
     return &SecretsManagerActivities{client: client}
 }

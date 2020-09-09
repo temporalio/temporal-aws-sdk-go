@@ -9,10 +9,10 @@ import (
 )
 
 type DAXActivities struct {
-	client daxiface.DAXAPI
+    client daxiface.DAXAPI
 }
 
-func NewDAXActivities(session *session.Session, config... *aws.Config) *DAXActivities {
+func NewDAXActivities(session *session.Session, config ...*aws.Config) *DAXActivities {
     client := dax.New(session, config...)
     return &DAXActivities{client: client}
 }

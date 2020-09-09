@@ -9,10 +9,10 @@ import (
 )
 
 type OutpostsActivities struct {
-	client outpostsiface.OutpostsAPI
+    client outpostsiface.OutpostsAPI
 }
 
-func NewOutpostsActivities(session *session.Session, config... *aws.Config) *OutpostsActivities {
+func NewOutpostsActivities(session *session.Session, config ...*aws.Config) *OutpostsActivities {
     client := outposts.New(session, config...)
     return &OutpostsActivities{client: client}
 }

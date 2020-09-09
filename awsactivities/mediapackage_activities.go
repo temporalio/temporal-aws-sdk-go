@@ -9,10 +9,10 @@ import (
 )
 
 type MediaPackageActivities struct {
-	client mediapackageiface.MediaPackageAPI
+    client mediapackageiface.MediaPackageAPI
 }
 
-func NewMediaPackageActivities(session *session.Session, config... *aws.Config) *MediaPackageActivities {
+func NewMediaPackageActivities(session *session.Session, config ...*aws.Config) *MediaPackageActivities {
     client := mediapackage.New(session, config...)
     return &MediaPackageActivities{client: client}
 }

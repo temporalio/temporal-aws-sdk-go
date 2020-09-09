@@ -9,10 +9,10 @@ import (
 )
 
 type EventBridgeActivities struct {
-	client eventbridgeiface.EventBridgeAPI
+    client eventbridgeiface.EventBridgeAPI
 }
 
-func NewEventBridgeActivities(session *session.Session, config... *aws.Config) *EventBridgeActivities {
+func NewEventBridgeActivities(session *session.Session, config ...*aws.Config) *EventBridgeActivities {
     client := eventbridge.New(session, config...)
     return &EventBridgeActivities{client: client}
 }

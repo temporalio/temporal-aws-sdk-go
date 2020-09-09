@@ -9,10 +9,10 @@ import (
 )
 
 type StorageGatewayActivities struct {
-	client storagegatewayiface.StorageGatewayAPI
+    client storagegatewayiface.StorageGatewayAPI
 }
 
-func NewStorageGatewayActivities(session *session.Session, config... *aws.Config) *StorageGatewayActivities {
+func NewStorageGatewayActivities(session *session.Session, config ...*aws.Config) *StorageGatewayActivities {
     client := storagegateway.New(session, config...)
     return &StorageGatewayActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type LexModelBuildingServiceActivities struct {
-	client lexmodelbuildingserviceiface.LexModelBuildingServiceAPI
+    client lexmodelbuildingserviceiface.LexModelBuildingServiceAPI
 }
 
-func NewLexModelBuildingServiceActivities(session *session.Session, config... *aws.Config) *LexModelBuildingServiceActivities {
+func NewLexModelBuildingServiceActivities(session *session.Session, config ...*aws.Config) *LexModelBuildingServiceActivities {
     client := lexmodelbuildingservice.New(session, config...)
     return &LexModelBuildingServiceActivities{client: client}
 }

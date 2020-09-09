@@ -9,10 +9,10 @@ import (
 )
 
 type ECRActivities struct {
-	client ecriface.ECRAPI
+    client ecriface.ECRAPI
 }
 
-func NewECRActivities(session *session.Session, config... *aws.Config) *ECRActivities {
+func NewECRActivities(session *session.Session, config ...*aws.Config) *ECRActivities {
     client := ecr.New(session, config...)
     return &ECRActivities{client: client}
 }

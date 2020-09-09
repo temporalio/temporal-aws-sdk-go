@@ -9,10 +9,10 @@ import (
 )
 
 type CodeStarNotificationsActivities struct {
-	client codestarnotificationsiface.CodeStarNotificationsAPI
+    client codestarnotificationsiface.CodeStarNotificationsAPI
 }
 
-func NewCodeStarNotificationsActivities(session *session.Session, config... *aws.Config) *CodeStarNotificationsActivities {
+func NewCodeStarNotificationsActivities(session *session.Session, config ...*aws.Config) *CodeStarNotificationsActivities {
     client := codestarnotifications.New(session, config...)
     return &CodeStarNotificationsActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type CodeGuruReviewerActivities struct {
-	client codegururevieweriface.CodeGuruReviewerAPI
+    client codegururevieweriface.CodeGuruReviewerAPI
 }
 
-func NewCodeGuruReviewerActivities(session *session.Session, config... *aws.Config) *CodeGuruReviewerActivities {
+func NewCodeGuruReviewerActivities(session *session.Session, config ...*aws.Config) *CodeGuruReviewerActivities {
     client := codegurureviewer.New(session, config...)
     return &CodeGuruReviewerActivities{client: client}
 }

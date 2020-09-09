@@ -9,10 +9,10 @@ import (
 )
 
 type SNSActivities struct {
-	client snsiface.SNSAPI
+    client snsiface.SNSAPI
 }
 
-func NewSNSActivities(session *session.Session, config... *aws.Config) *SNSActivities {
+func NewSNSActivities(session *session.Session, config ...*aws.Config) *SNSActivities {
     client := sns.New(session, config...)
     return &SNSActivities{client: client}
 }

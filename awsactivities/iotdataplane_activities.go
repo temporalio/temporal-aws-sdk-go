@@ -9,10 +9,10 @@ import (
 )
 
 type IoTDataPlaneActivities struct {
-	client iotdataplaneiface.IoTDataPlaneAPI
+    client iotdataplaneiface.IoTDataPlaneAPI
 }
 
-func NewIoTDataPlaneActivities(session *session.Session, config... *aws.Config) *IoTDataPlaneActivities {
+func NewIoTDataPlaneActivities(session *session.Session, config ...*aws.Config) *IoTDataPlaneActivities {
     client := iotdataplane.New(session, config...)
     return &IoTDataPlaneActivities{client: client}
 }

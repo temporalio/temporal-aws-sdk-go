@@ -9,10 +9,10 @@ import (
 )
 
 type CognitoSyncActivities struct {
-	client cognitosynciface.CognitoSyncAPI
+    client cognitosynciface.CognitoSyncAPI
 }
 
-func NewCognitoSyncActivities(session *session.Session, config... *aws.Config) *CognitoSyncActivities {
+func NewCognitoSyncActivities(session *session.Session, config ...*aws.Config) *CognitoSyncActivities {
     client := cognitosync.New(session, config...)
     return &CognitoSyncActivities{client: client}
 }

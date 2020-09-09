@@ -9,10 +9,10 @@ import (
 )
 
 type MarketplaceCommerceAnalyticsActivities struct {
-	client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI
+    client marketplacecommerceanalyticsiface.MarketplaceCommerceAnalyticsAPI
 }
 
-func NewMarketplaceCommerceAnalyticsActivities(session *session.Session, config... *aws.Config) *MarketplaceCommerceAnalyticsActivities {
+func NewMarketplaceCommerceAnalyticsActivities(session *session.Session, config ...*aws.Config) *MarketplaceCommerceAnalyticsActivities {
     client := marketplacecommerceanalytics.New(session, config...)
     return &MarketplaceCommerceAnalyticsActivities{client: client}
 }

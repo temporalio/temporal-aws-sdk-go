@@ -9,10 +9,10 @@ import (
 )
 
 type SESActivities struct {
-	client sesiface.SESAPI
+    client sesiface.SESAPI
 }
 
-func NewSESActivities(session *session.Session, config... *aws.Config) *SESActivities {
+func NewSESActivities(session *session.Session, config ...*aws.Config) *SESActivities {
     client := ses.New(session, config...)
     return &SESActivities{client: client}
 }

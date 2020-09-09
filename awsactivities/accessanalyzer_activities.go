@@ -9,10 +9,10 @@ import (
 )
 
 type AccessAnalyzerActivities struct {
-	client accessanalyzeriface.AccessAnalyzerAPI
+    client accessanalyzeriface.AccessAnalyzerAPI
 }
 
-func NewAccessAnalyzerActivities(session *session.Session, config... *aws.Config) *AccessAnalyzerActivities {
+func NewAccessAnalyzerActivities(session *session.Session, config ...*aws.Config) *AccessAnalyzerActivities {
     client := accessanalyzer.New(session, config...)
     return &AccessAnalyzerActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type CloudDirectoryActivities struct {
-	client clouddirectoryiface.CloudDirectoryAPI
+    client clouddirectoryiface.CloudDirectoryAPI
 }
 
-func NewCloudDirectoryActivities(session *session.Session, config... *aws.Config) *CloudDirectoryActivities {
+func NewCloudDirectoryActivities(session *session.Session, config ...*aws.Config) *CloudDirectoryActivities {
     client := clouddirectory.New(session, config...)
     return &CloudDirectoryActivities{client: client}
 }

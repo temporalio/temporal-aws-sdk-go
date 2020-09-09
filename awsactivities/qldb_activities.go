@@ -9,10 +9,10 @@ import (
 )
 
 type QLDBActivities struct {
-	client qldbiface.QLDBAPI
+    client qldbiface.QLDBAPI
 }
 
-func NewQLDBActivities(session *session.Session, config... *aws.Config) *QLDBActivities {
+func NewQLDBActivities(session *session.Session, config ...*aws.Config) *QLDBActivities {
     client := qldb.New(session, config...)
     return &QLDBActivities{client: client}
 }

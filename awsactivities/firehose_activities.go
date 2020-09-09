@@ -9,10 +9,10 @@ import (
 )
 
 type FirehoseActivities struct {
-	client firehoseiface.FirehoseAPI
+    client firehoseiface.FirehoseAPI
 }
 
-func NewFirehoseActivities(session *session.Session, config... *aws.Config) *FirehoseActivities {
+func NewFirehoseActivities(session *session.Session, config ...*aws.Config) *FirehoseActivities {
     client := firehose.New(session, config...)
     return &FirehoseActivities{client: client}
 }

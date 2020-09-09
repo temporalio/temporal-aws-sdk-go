@@ -9,10 +9,10 @@ import (
 )
 
 type HealthActivities struct {
-	client healthiface.HealthAPI
+    client healthiface.HealthAPI
 }
 
-func NewHealthActivities(session *session.Session, config... *aws.Config) *HealthActivities {
+func NewHealthActivities(session *session.Session, config ...*aws.Config) *HealthActivities {
     client := health.New(session, config...)
     return &HealthActivities{client: client}
 }

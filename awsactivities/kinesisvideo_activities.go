@@ -9,10 +9,10 @@ import (
 )
 
 type KinesisVideoActivities struct {
-	client kinesisvideoiface.KinesisVideoAPI
+    client kinesisvideoiface.KinesisVideoAPI
 }
 
-func NewKinesisVideoActivities(session *session.Session, config... *aws.Config) *KinesisVideoActivities {
+func NewKinesisVideoActivities(session *session.Session, config ...*aws.Config) *KinesisVideoActivities {
     client := kinesisvideo.New(session, config...)
     return &KinesisVideoActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type ELBActivities struct {
-	client elbiface.ELBAPI
+    client elbiface.ELBAPI
 }
 
-func NewELBActivities(session *session.Session, config... *aws.Config) *ELBActivities {
+func NewELBActivities(session *session.Session, config ...*aws.Config) *ELBActivities {
     client := elb.New(session, config...)
     return &ELBActivities{client: client}
 }

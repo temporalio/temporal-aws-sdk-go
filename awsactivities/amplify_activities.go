@@ -9,10 +9,10 @@ import (
 )
 
 type AmplifyActivities struct {
-	client amplifyiface.AmplifyAPI
+    client amplifyiface.AmplifyAPI
 }
 
-func NewAmplifyActivities(session *session.Session, config... *aws.Config) *AmplifyActivities {
+func NewAmplifyActivities(session *session.Session, config ...*aws.Config) *AmplifyActivities {
     client := amplify.New(session, config...)
     return &AmplifyActivities{client: client}
 }

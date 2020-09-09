@@ -9,10 +9,10 @@ import (
 )
 
 type Route53Activities struct {
-	client route53iface.Route53API
+    client route53iface.Route53API
 }
 
-func NewRoute53Activities(session *session.Session, config... *aws.Config) *Route53Activities {
+func NewRoute53Activities(session *session.Session, config ...*aws.Config) *Route53Activities {
     client := route53.New(session, config...)
     return &Route53Activities{client: client}
 }

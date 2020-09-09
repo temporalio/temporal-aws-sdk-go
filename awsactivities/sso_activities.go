@@ -9,10 +9,10 @@ import (
 )
 
 type SSOActivities struct {
-	client ssoiface.SSOAPI
+    client ssoiface.SSOAPI
 }
 
-func NewSSOActivities(session *session.Session, config... *aws.Config) *SSOActivities {
+func NewSSOActivities(session *session.Session, config ...*aws.Config) *SSOActivities {
     client := sso.New(session, config...)
     return &SSOActivities{client: client}
 }

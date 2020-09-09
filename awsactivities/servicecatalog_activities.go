@@ -9,10 +9,10 @@ import (
 )
 
 type ServiceCatalogActivities struct {
-	client servicecatalogiface.ServiceCatalogAPI
+    client servicecatalogiface.ServiceCatalogAPI
 }
 
-func NewServiceCatalogActivities(session *session.Session, config... *aws.Config) *ServiceCatalogActivities {
+func NewServiceCatalogActivities(session *session.Session, config ...*aws.Config) *ServiceCatalogActivities {
     client := servicecatalog.New(session, config...)
     return &ServiceCatalogActivities{client: client}
 }

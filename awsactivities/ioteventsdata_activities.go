@@ -9,10 +9,10 @@ import (
 )
 
 type IoTEventsDataActivities struct {
-	client ioteventsdataiface.IoTEventsDataAPI
+    client ioteventsdataiface.IoTEventsDataAPI
 }
 
-func NewIoTEventsDataActivities(session *session.Session, config... *aws.Config) *IoTEventsDataActivities {
+func NewIoTEventsDataActivities(session *session.Session, config ...*aws.Config) *IoTEventsDataActivities {
     client := ioteventsdata.New(session, config...)
     return &IoTEventsDataActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type HoneycodeActivities struct {
-	client honeycodeiface.HoneycodeAPI
+    client honeycodeiface.HoneycodeAPI
 }
 
-func NewHoneycodeActivities(session *session.Session, config... *aws.Config) *HoneycodeActivities {
+func NewHoneycodeActivities(session *session.Session, config ...*aws.Config) *HoneycodeActivities {
     client := honeycode.New(session, config...)
     return &HoneycodeActivities{client: client}
 }

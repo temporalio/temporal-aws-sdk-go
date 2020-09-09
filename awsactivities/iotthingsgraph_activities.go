@@ -9,10 +9,10 @@ import (
 )
 
 type IoTThingsGraphActivities struct {
-	client iotthingsgraphiface.IoTThingsGraphAPI
+    client iotthingsgraphiface.IoTThingsGraphAPI
 }
 
-func NewIoTThingsGraphActivities(session *session.Session, config... *aws.Config) *IoTThingsGraphActivities {
+func NewIoTThingsGraphActivities(session *session.Session, config ...*aws.Config) *IoTThingsGraphActivities {
     client := iotthingsgraph.New(session, config...)
     return &IoTThingsGraphActivities{client: client}
 }

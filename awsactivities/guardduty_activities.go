@@ -9,10 +9,10 @@ import (
 )
 
 type GuardDutyActivities struct {
-	client guarddutyiface.GuardDutyAPI
+    client guarddutyiface.GuardDutyAPI
 }
 
-func NewGuardDutyActivities(session *session.Session, config... *aws.Config) *GuardDutyActivities {
+func NewGuardDutyActivities(session *session.Session, config ...*aws.Config) *GuardDutyActivities {
     client := guardduty.New(session, config...)
     return &GuardDutyActivities{client: client}
 }

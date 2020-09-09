@@ -9,10 +9,10 @@ import (
 )
 
 type KinesisVideoSignalingChannelsActivities struct {
-	client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
+    client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
 }
 
-func NewKinesisVideoSignalingChannelsActivities(session *session.Session, config... *aws.Config) *KinesisVideoSignalingChannelsActivities {
+func NewKinesisVideoSignalingChannelsActivities(session *session.Session, config ...*aws.Config) *KinesisVideoSignalingChannelsActivities {
     client := kinesisvideosignalingchannels.New(session, config...)
     return &KinesisVideoSignalingChannelsActivities{client: client}
 }

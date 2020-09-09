@@ -9,10 +9,10 @@ import (
 )
 
 type EBSActivities struct {
-	client ebsiface.EBSAPI
+    client ebsiface.EBSAPI
 }
 
-func NewEBSActivities(session *session.Session, config... *aws.Config) *EBSActivities {
+func NewEBSActivities(session *session.Session, config ...*aws.Config) *EBSActivities {
     client := ebs.New(session, config...)
     return &EBSActivities{client: client}
 }

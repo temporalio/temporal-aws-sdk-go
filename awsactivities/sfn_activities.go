@@ -9,10 +9,10 @@ import (
 )
 
 type SFNActivities struct {
-	client sfniface.SFNAPI
+    client sfniface.SFNAPI
 }
 
-func NewSFNActivities(session *session.Session, config... *aws.Config) *SFNActivities {
+func NewSFNActivities(session *session.Session, config ...*aws.Config) *SFNActivities {
     client := sfn.New(session, config...)
     return &SFNActivities{client: client}
 }

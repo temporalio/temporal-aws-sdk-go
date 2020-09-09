@@ -9,10 +9,10 @@ import (
 )
 
 type ImagebuilderActivities struct {
-	client imagebuilderiface.ImagebuilderAPI
+    client imagebuilderiface.ImagebuilderAPI
 }
 
-func NewImagebuilderActivities(session *session.Session, config... *aws.Config) *ImagebuilderActivities {
+func NewImagebuilderActivities(session *session.Session, config ...*aws.Config) *ImagebuilderActivities {
     client := imagebuilder.New(session, config...)
     return &ImagebuilderActivities{client: client}
 }

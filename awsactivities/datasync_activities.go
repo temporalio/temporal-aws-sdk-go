@@ -9,10 +9,10 @@ import (
 )
 
 type DataSyncActivities struct {
-	client datasynciface.DataSyncAPI
+    client datasynciface.DataSyncAPI
 }
 
-func NewDataSyncActivities(session *session.Session, config... *aws.Config) *DataSyncActivities {
+func NewDataSyncActivities(session *session.Session, config ...*aws.Config) *DataSyncActivities {
     client := datasync.New(session, config...)
     return &DataSyncActivities{client: client}
 }

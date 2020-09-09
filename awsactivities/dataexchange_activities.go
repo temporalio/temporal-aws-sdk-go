@@ -9,10 +9,10 @@ import (
 )
 
 type DataExchangeActivities struct {
-	client dataexchangeiface.DataExchangeAPI
+    client dataexchangeiface.DataExchangeAPI
 }
 
-func NewDataExchangeActivities(session *session.Session, config... *aws.Config) *DataExchangeActivities {
+func NewDataExchangeActivities(session *session.Session, config ...*aws.Config) *DataExchangeActivities {
     client := dataexchange.New(session, config...)
     return &DataExchangeActivities{client: client}
 }

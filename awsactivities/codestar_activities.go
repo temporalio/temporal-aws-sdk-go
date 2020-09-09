@@ -9,10 +9,10 @@ import (
 )
 
 type CodeStarActivities struct {
-	client codestariface.CodeStarAPI
+    client codestariface.CodeStarAPI
 }
 
-func NewCodeStarActivities(session *session.Session, config... *aws.Config) *CodeStarActivities {
+func NewCodeStarActivities(session *session.Session, config ...*aws.Config) *CodeStarActivities {
     client := codestar.New(session, config...)
     return &CodeStarActivities{client: client}
 }

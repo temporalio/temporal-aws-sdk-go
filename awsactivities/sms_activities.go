@@ -9,10 +9,10 @@ import (
 )
 
 type SMSActivities struct {
-	client smsiface.SMSAPI
+    client smsiface.SMSAPI
 }
 
-func NewSMSActivities(session *session.Session, config... *aws.Config) *SMSActivities {
+func NewSMSActivities(session *session.Session, config ...*aws.Config) *SMSActivities {
     client := sms.New(session, config...)
     return &SMSActivities{client: client}
 }

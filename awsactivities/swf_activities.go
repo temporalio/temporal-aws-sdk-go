@@ -9,10 +9,10 @@ import (
 )
 
 type SWFActivities struct {
-	client swfiface.SWFAPI
+    client swfiface.SWFAPI
 }
 
-func NewSWFActivities(session *session.Session, config... *aws.Config) *SWFActivities {
+func NewSWFActivities(session *session.Session, config ...*aws.Config) *SWFActivities {
     client := swf.New(session, config...)
     return &SWFActivities{client: client}
 }

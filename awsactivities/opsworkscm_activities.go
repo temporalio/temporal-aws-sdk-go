@@ -9,10 +9,10 @@ import (
 )
 
 type OpsWorksCMActivities struct {
-	client opsworkscmiface.OpsWorksCMAPI
+    client opsworkscmiface.OpsWorksCMAPI
 }
 
-func NewOpsWorksCMActivities(session *session.Session, config... *aws.Config) *OpsWorksCMActivities {
+func NewOpsWorksCMActivities(session *session.Session, config ...*aws.Config) *OpsWorksCMActivities {
     client := opsworkscm.New(session, config...)
     return &OpsWorksCMActivities{client: client}
 }

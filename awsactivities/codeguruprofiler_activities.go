@@ -9,10 +9,10 @@ import (
 )
 
 type CodeGuruProfilerActivities struct {
-	client codeguruprofileriface.CodeGuruProfilerAPI
+    client codeguruprofileriface.CodeGuruProfilerAPI
 }
 
-func NewCodeGuruProfilerActivities(session *session.Session, config... *aws.Config) *CodeGuruProfilerActivities {
+func NewCodeGuruProfilerActivities(session *session.Session, config ...*aws.Config) *CodeGuruProfilerActivities {
     client := codeguruprofiler.New(session, config...)
     return &CodeGuruProfilerActivities{client: client}
 }

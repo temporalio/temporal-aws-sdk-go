@@ -9,10 +9,10 @@ import (
 )
 
 type LightsailActivities struct {
-	client lightsailiface.LightsailAPI
+    client lightsailiface.LightsailAPI
 }
 
-func NewLightsailActivities(session *session.Session, config... *aws.Config) *LightsailActivities {
+func NewLightsailActivities(session *session.Session, config ...*aws.Config) *LightsailActivities {
     client := lightsail.New(session, config...)
     return &LightsailActivities{client: client}
 }

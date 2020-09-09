@@ -9,10 +9,10 @@ import (
 )
 
 type ACMPCAActivities struct {
-	client acmpcaiface.ACMPCAAPI
+    client acmpcaiface.ACMPCAAPI
 }
 
-func NewACMPCAActivities(session *session.Session, config... *aws.Config) *ACMPCAActivities {
+func NewACMPCAActivities(session *session.Session, config ...*aws.Config) *ACMPCAActivities {
     client := acmpca.New(session, config...)
     return &ACMPCAActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type SecurityHubActivities struct {
-	client securityhubiface.SecurityHubAPI
+    client securityhubiface.SecurityHubAPI
 }
 
-func NewSecurityHubActivities(session *session.Session, config... *aws.Config) *SecurityHubActivities {
+func NewSecurityHubActivities(session *session.Session, config ...*aws.Config) *SecurityHubActivities {
     client := securityhub.New(session, config...)
     return &SecurityHubActivities{client: client}
 }

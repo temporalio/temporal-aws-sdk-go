@@ -9,10 +9,10 @@ import (
 )
 
 type PollyActivities struct {
-	client pollyiface.PollyAPI
+    client pollyiface.PollyAPI
 }
 
-func NewPollyActivities(session *session.Session, config... *aws.Config) *PollyActivities {
+func NewPollyActivities(session *session.Session, config ...*aws.Config) *PollyActivities {
     client := polly.New(session, config...)
     return &PollyActivities{client: client}
 }

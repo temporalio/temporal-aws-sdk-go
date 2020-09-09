@@ -9,10 +9,10 @@ import (
 )
 
 type DeviceFarmActivities struct {
-	client devicefarmiface.DeviceFarmAPI
+    client devicefarmiface.DeviceFarmAPI
 }
 
-func NewDeviceFarmActivities(session *session.Session, config... *aws.Config) *DeviceFarmActivities {
+func NewDeviceFarmActivities(session *session.Session, config ...*aws.Config) *DeviceFarmActivities {
     client := devicefarm.New(session, config...)
     return &DeviceFarmActivities{client: client}
 }

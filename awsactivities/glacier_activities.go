@@ -9,10 +9,10 @@ import (
 )
 
 type GlacierActivities struct {
-	client glacieriface.GlacierAPI
+    client glacieriface.GlacierAPI
 }
 
-func NewGlacierActivities(session *session.Session, config... *aws.Config) *GlacierActivities {
+func NewGlacierActivities(session *session.Session, config ...*aws.Config) *GlacierActivities {
     client := glacier.New(session, config...)
     return &GlacierActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type IAMActivities struct {
-	client iamiface.IAMAPI
+    client iamiface.IAMAPI
 }
 
-func NewIAMActivities(session *session.Session, config... *aws.Config) *IAMActivities {
+func NewIAMActivities(session *session.Session, config ...*aws.Config) *IAMActivities {
     client := iam.New(session, config...)
     return &IAMActivities{client: client}
 }

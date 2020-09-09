@@ -9,10 +9,10 @@ import (
 )
 
 type WorkLinkActivities struct {
-	client worklinkiface.WorkLinkAPI
+    client worklinkiface.WorkLinkAPI
 }
 
-func NewWorkLinkActivities(session *session.Session, config... *aws.Config) *WorkLinkActivities {
+func NewWorkLinkActivities(session *session.Session, config ...*aws.Config) *WorkLinkActivities {
     client := worklink.New(session, config...)
     return &WorkLinkActivities{client: client}
 }

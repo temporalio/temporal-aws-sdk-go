@@ -9,10 +9,10 @@ import (
 )
 
 type LambdaActivities struct {
-	client lambdaiface.LambdaAPI
+    client lambdaiface.LambdaAPI
 }
 
-func NewLambdaActivities(session *session.Session, config... *aws.Config) *LambdaActivities {
+func NewLambdaActivities(session *session.Session, config ...*aws.Config) *LambdaActivities {
     client := lambda.New(session, config...)
     return &LambdaActivities{client: client}
 }

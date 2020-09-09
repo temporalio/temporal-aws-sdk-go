@@ -9,10 +9,10 @@ import (
 )
 
 type DirectoryServiceActivities struct {
-	client directoryserviceiface.DirectoryServiceAPI
+    client directoryserviceiface.DirectoryServiceAPI
 }
 
-func NewDirectoryServiceActivities(session *session.Session, config... *aws.Config) *DirectoryServiceActivities {
+func NewDirectoryServiceActivities(session *session.Session, config ...*aws.Config) *DirectoryServiceActivities {
     client := directoryservice.New(session, config...)
     return &DirectoryServiceActivities{client: client}
 }

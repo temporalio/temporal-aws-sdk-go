@@ -9,10 +9,10 @@ import (
 )
 
 type CloudTrailActivities struct {
-	client cloudtrailiface.CloudTrailAPI
+    client cloudtrailiface.CloudTrailAPI
 }
 
-func NewCloudTrailActivities(session *session.Session, config... *aws.Config) *CloudTrailActivities {
+func NewCloudTrailActivities(session *session.Session, config ...*aws.Config) *CloudTrailActivities {
     client := cloudtrail.New(session, config...)
     return &CloudTrailActivities{client: client}
 }

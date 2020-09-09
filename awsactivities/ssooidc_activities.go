@@ -9,10 +9,10 @@ import (
 )
 
 type SSOOIDCActivities struct {
-	client ssooidciface.SSOOIDCAPI
+    client ssooidciface.SSOOIDCAPI
 }
 
-func NewSSOOIDCActivities(session *session.Session, config... *aws.Config) *SSOOIDCActivities {
+func NewSSOOIDCActivities(session *session.Session, config ...*aws.Config) *SSOOIDCActivities {
     client := ssooidc.New(session, config...)
     return &SSOOIDCActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type RedshiftActivities struct {
-	client redshiftiface.RedshiftAPI
+    client redshiftiface.RedshiftAPI
 }
 
-func NewRedshiftActivities(session *session.Session, config... *aws.Config) *RedshiftActivities {
+func NewRedshiftActivities(session *session.Session, config ...*aws.Config) *RedshiftActivities {
     client := redshift.New(session, config...)
     return &RedshiftActivities{client: client}
 }

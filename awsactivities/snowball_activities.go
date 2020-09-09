@@ -9,10 +9,10 @@ import (
 )
 
 type SnowballActivities struct {
-	client snowballiface.SnowballAPI
+    client snowballiface.SnowballAPI
 }
 
-func NewSnowballActivities(session *session.Session, config... *aws.Config) *SnowballActivities {
+func NewSnowballActivities(session *session.Session, config ...*aws.Config) *SnowballActivities {
     client := snowball.New(session, config...)
     return &SnowballActivities{client: client}
 }

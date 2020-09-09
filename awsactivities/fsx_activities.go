@@ -9,10 +9,10 @@ import (
 )
 
 type FSxActivities struct {
-	client fsxiface.FSxAPI
+    client fsxiface.FSxAPI
 }
 
-func NewFSxActivities(session *session.Session, config... *aws.Config) *FSxActivities {
+func NewFSxActivities(session *session.Session, config ...*aws.Config) *FSxActivities {
     client := fsx.New(session, config...)
     return &FSxActivities{client: client}
 }

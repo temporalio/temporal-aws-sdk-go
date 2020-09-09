@@ -9,10 +9,10 @@ import (
 )
 
 type CodeCommitActivities struct {
-	client codecommitiface.CodeCommitAPI
+    client codecommitiface.CodeCommitAPI
 }
 
-func NewCodeCommitActivities(session *session.Session, config... *aws.Config) *CodeCommitActivities {
+func NewCodeCommitActivities(session *session.Session, config ...*aws.Config) *CodeCommitActivities {
     client := codecommit.New(session, config...)
     return &CodeCommitActivities{client: client}
 }

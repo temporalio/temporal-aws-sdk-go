@@ -9,10 +9,10 @@ import (
 )
 
 type ElastiCacheActivities struct {
-	client elasticacheiface.ElastiCacheAPI
+    client elasticacheiface.ElastiCacheAPI
 }
 
-func NewElastiCacheActivities(session *session.Session, config... *aws.Config) *ElastiCacheActivities {
+func NewElastiCacheActivities(session *session.Session, config ...*aws.Config) *ElastiCacheActivities {
     client := elasticache.New(session, config...)
     return &ElastiCacheActivities{client: client}
 }

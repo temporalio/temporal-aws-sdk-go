@@ -9,10 +9,10 @@ import (
 )
 
 type ServerlessApplicationRepositoryActivities struct {
-	client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI
+    client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI
 }
 
-func NewServerlessApplicationRepositoryActivities(session *session.Session, config... *aws.Config) *ServerlessApplicationRepositoryActivities {
+func NewServerlessApplicationRepositoryActivities(session *session.Session, config ...*aws.Config) *ServerlessApplicationRepositoryActivities {
     client := serverlessapplicationrepository.New(session, config...)
     return &ServerlessApplicationRepositoryActivities{client: client}
 }

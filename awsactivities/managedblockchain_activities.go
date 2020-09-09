@@ -9,10 +9,10 @@ import (
 )
 
 type ManagedBlockchainActivities struct {
-	client managedblockchainiface.ManagedBlockchainAPI
+    client managedblockchainiface.ManagedBlockchainAPI
 }
 
-func NewManagedBlockchainActivities(session *session.Session, config... *aws.Config) *ManagedBlockchainActivities {
+func NewManagedBlockchainActivities(session *session.Session, config ...*aws.Config) *ManagedBlockchainActivities {
     client := managedblockchain.New(session, config...)
     return &ManagedBlockchainActivities{client: client}
 }

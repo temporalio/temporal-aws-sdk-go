@@ -9,10 +9,10 @@ import (
 )
 
 type ComprehendMedicalActivities struct {
-	client comprehendmedicaliface.ComprehendMedicalAPI
+    client comprehendmedicaliface.ComprehendMedicalAPI
 }
 
-func NewComprehendMedicalActivities(session *session.Session, config... *aws.Config) *ComprehendMedicalActivities {
+func NewComprehendMedicalActivities(session *session.Session, config ...*aws.Config) *ComprehendMedicalActivities {
     client := comprehendmedical.New(session, config...)
     return &ComprehendMedicalActivities{client: client}
 }

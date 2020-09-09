@@ -9,10 +9,10 @@ import (
 )
 
 type SignerActivities struct {
-	client signeriface.SignerAPI
+    client signeriface.SignerAPI
 }
 
-func NewSignerActivities(session *session.Session, config... *aws.Config) *SignerActivities {
+func NewSignerActivities(session *session.Session, config ...*aws.Config) *SignerActivities {
     client := signer.New(session, config...)
     return &SignerActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type SESV2Activities struct {
-	client sesv2iface.SESV2API
+    client sesv2iface.SESV2API
 }
 
-func NewSESV2Activities(session *session.Session, config... *aws.Config) *SESV2Activities {
+func NewSESV2Activities(session *session.Session, config ...*aws.Config) *SESV2Activities {
     client := sesv2.New(session, config...)
     return &SESV2Activities{client: client}
 }

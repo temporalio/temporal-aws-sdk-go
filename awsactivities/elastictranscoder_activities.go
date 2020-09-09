@@ -9,10 +9,10 @@ import (
 )
 
 type ElasticTranscoderActivities struct {
-	client elastictranscoderiface.ElasticTranscoderAPI
+    client elastictranscoderiface.ElasticTranscoderAPI
 }
 
-func NewElasticTranscoderActivities(session *session.Session, config... *aws.Config) *ElasticTranscoderActivities {
+func NewElasticTranscoderActivities(session *session.Session, config ...*aws.Config) *ElasticTranscoderActivities {
     client := elastictranscoder.New(session, config...)
     return &ElasticTranscoderActivities{client: client}
 }

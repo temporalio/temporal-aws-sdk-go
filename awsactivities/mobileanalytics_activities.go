@@ -9,10 +9,10 @@ import (
 )
 
 type MobileAnalyticsActivities struct {
-	client mobileanalyticsiface.MobileAnalyticsAPI
+    client mobileanalyticsiface.MobileAnalyticsAPI
 }
 
-func NewMobileAnalyticsActivities(session *session.Session, config... *aws.Config) *MobileAnalyticsActivities {
+func NewMobileAnalyticsActivities(session *session.Session, config ...*aws.Config) *MobileAnalyticsActivities {
     client := mobileanalytics.New(session, config...)
     return &MobileAnalyticsActivities{client: client}
 }

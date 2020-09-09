@@ -9,10 +9,10 @@ import (
 )
 
 type MediaLiveActivities struct {
-	client medialiveiface.MediaLiveAPI
+    client medialiveiface.MediaLiveAPI
 }
 
-func NewMediaLiveActivities(session *session.Session, config... *aws.Config) *MediaLiveActivities {
+func NewMediaLiveActivities(session *session.Session, config ...*aws.Config) *MediaLiveActivities {
     client := medialive.New(session, config...)
     return &MediaLiveActivities{client: client}
 }

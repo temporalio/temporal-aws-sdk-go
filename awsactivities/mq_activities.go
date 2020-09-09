@@ -9,10 +9,10 @@ import (
 )
 
 type MQActivities struct {
-	client mqiface.MQAPI
+    client mqiface.MQAPI
 }
 
-func NewMQActivities(session *session.Session, config... *aws.Config) *MQActivities {
+func NewMQActivities(session *session.Session, config ...*aws.Config) *MQActivities {
     client := mq.New(session, config...)
     return &MQActivities{client: client}
 }

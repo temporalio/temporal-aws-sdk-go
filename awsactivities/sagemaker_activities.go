@@ -9,10 +9,10 @@ import (
 )
 
 type SageMakerActivities struct {
-	client sagemakeriface.SageMakerAPI
+    client sagemakeriface.SageMakerAPI
 }
 
-func NewSageMakerActivities(session *session.Session, config... *aws.Config) *SageMakerActivities {
+func NewSageMakerActivities(session *session.Session, config ...*aws.Config) *SageMakerActivities {
     client := sagemaker.New(session, config...)
     return &SageMakerActivities{client: client}
 }

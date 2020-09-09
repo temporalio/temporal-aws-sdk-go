@@ -9,10 +9,10 @@ import (
 )
 
 type AugmentedAIRuntimeActivities struct {
-	client augmentedairuntimeiface.AugmentedAIRuntimeAPI
+    client augmentedairuntimeiface.AugmentedAIRuntimeAPI
 }
 
-func NewAugmentedAIRuntimeActivities(session *session.Session, config... *aws.Config) *AugmentedAIRuntimeActivities {
+func NewAugmentedAIRuntimeActivities(session *session.Session, config ...*aws.Config) *AugmentedAIRuntimeActivities {
     client := augmentedairuntime.New(session, config...)
     return &AugmentedAIRuntimeActivities{client: client}
 }

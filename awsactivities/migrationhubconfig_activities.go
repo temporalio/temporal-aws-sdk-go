@@ -9,10 +9,10 @@ import (
 )
 
 type MigrationHubConfigActivities struct {
-	client migrationhubconfigiface.MigrationHubConfigAPI
+    client migrationhubconfigiface.MigrationHubConfigAPI
 }
 
-func NewMigrationHubConfigActivities(session *session.Session, config... *aws.Config) *MigrationHubConfigActivities {
+func NewMigrationHubConfigActivities(session *session.Session, config ...*aws.Config) *MigrationHubConfigActivities {
     client := migrationhubconfig.New(session, config...)
     return &MigrationHubConfigActivities{client: client}
 }

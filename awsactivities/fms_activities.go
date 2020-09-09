@@ -9,10 +9,10 @@ import (
 )
 
 type FMSActivities struct {
-	client fmsiface.FMSAPI
+    client fmsiface.FMSAPI
 }
 
-func NewFMSActivities(session *session.Session, config... *aws.Config) *FMSActivities {
+func NewFMSActivities(session *session.Session, config ...*aws.Config) *FMSActivities {
     client := fms.New(session, config...)
     return &FMSActivities{client: client}
 }

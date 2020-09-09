@@ -9,10 +9,10 @@ import (
 )
 
 type IVSActivities struct {
-	client ivsiface.IVSAPI
+    client ivsiface.IVSAPI
 }
 
-func NewIVSActivities(session *session.Session, config... *aws.Config) *IVSActivities {
+func NewIVSActivities(session *session.Session, config ...*aws.Config) *IVSActivities {
     client := ivs.New(session, config...)
     return &IVSActivities{client: client}
 }

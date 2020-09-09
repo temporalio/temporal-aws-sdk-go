@@ -9,10 +9,10 @@ import (
 )
 
 type GlobalAcceleratorActivities struct {
-	client globalacceleratoriface.GlobalAcceleratorAPI
+    client globalacceleratoriface.GlobalAcceleratorAPI
 }
 
-func NewGlobalAcceleratorActivities(session *session.Session, config... *aws.Config) *GlobalAcceleratorActivities {
+func NewGlobalAcceleratorActivities(session *session.Session, config ...*aws.Config) *GlobalAcceleratorActivities {
     client := globalaccelerator.New(session, config...)
     return &GlobalAcceleratorActivities{client: client}
 }

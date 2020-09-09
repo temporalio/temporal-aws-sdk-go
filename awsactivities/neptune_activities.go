@@ -9,10 +9,10 @@ import (
 )
 
 type NeptuneActivities struct {
-	client neptuneiface.NeptuneAPI
+    client neptuneiface.NeptuneAPI
 }
 
-func NewNeptuneActivities(session *session.Session, config... *aws.Config) *NeptuneActivities {
+func NewNeptuneActivities(session *session.Session, config ...*aws.Config) *NeptuneActivities {
     client := neptune.New(session, config...)
     return &NeptuneActivities{client: client}
 }

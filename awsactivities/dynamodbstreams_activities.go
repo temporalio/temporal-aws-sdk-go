@@ -9,10 +9,10 @@ import (
 )
 
 type DynamoDBStreamsActivities struct {
-	client dynamodbstreamsiface.DynamoDBStreamsAPI
+    client dynamodbstreamsiface.DynamoDBStreamsAPI
 }
 
-func NewDynamoDBStreamsActivities(session *session.Session, config... *aws.Config) *DynamoDBStreamsActivities {
+func NewDynamoDBStreamsActivities(session *session.Session, config ...*aws.Config) *DynamoDBStreamsActivities {
     client := dynamodbstreams.New(session, config...)
     return &DynamoDBStreamsActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type SageMakerRuntimeActivities struct {
-	client sagemakerruntimeiface.SageMakerRuntimeAPI
+    client sagemakerruntimeiface.SageMakerRuntimeAPI
 }
 
-func NewSageMakerRuntimeActivities(session *session.Session, config... *aws.Config) *SageMakerRuntimeActivities {
+func NewSageMakerRuntimeActivities(session *session.Session, config ...*aws.Config) *SageMakerRuntimeActivities {
     client := sagemakerruntime.New(session, config...)
     return &SageMakerRuntimeActivities{client: client}
 }

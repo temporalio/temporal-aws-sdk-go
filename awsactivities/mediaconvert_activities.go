@@ -9,10 +9,10 @@ import (
 )
 
 type MediaConvertActivities struct {
-	client mediaconvertiface.MediaConvertAPI
+    client mediaconvertiface.MediaConvertAPI
 }
 
-func NewMediaConvertActivities(session *session.Session, config... *aws.Config) *MediaConvertActivities {
+func NewMediaConvertActivities(session *session.Session, config ...*aws.Config) *MediaConvertActivities {
     client := mediaconvert.New(session, config...)
     return &MediaConvertActivities{client: client}
 }

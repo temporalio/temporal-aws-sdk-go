@@ -9,10 +9,10 @@ import (
 )
 
 type PinpointActivities struct {
-	client pinpointiface.PinpointAPI
+    client pinpointiface.PinpointAPI
 }
 
-func NewPinpointActivities(session *session.Session, config... *aws.Config) *PinpointActivities {
+func NewPinpointActivities(session *session.Session, config ...*aws.Config) *PinpointActivities {
     client := pinpoint.New(session, config...)
     return &PinpointActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type EC2InstanceConnectActivities struct {
-	client ec2instanceconnectiface.EC2InstanceConnectAPI
+    client ec2instanceconnectiface.EC2InstanceConnectAPI
 }
 
-func NewEC2InstanceConnectActivities(session *session.Session, config... *aws.Config) *EC2InstanceConnectActivities {
+func NewEC2InstanceConnectActivities(session *session.Session, config ...*aws.Config) *EC2InstanceConnectActivities {
     client := ec2instanceconnect.New(session, config...)
     return &EC2InstanceConnectActivities{client: client}
 }

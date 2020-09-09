@@ -9,10 +9,10 @@ import (
 )
 
 type AlexaForBusinessActivities struct {
-	client alexaforbusinessiface.AlexaForBusinessAPI
+    client alexaforbusinessiface.AlexaForBusinessAPI
 }
 
-func NewAlexaForBusinessActivities(session *session.Session, config... *aws.Config) *AlexaForBusinessActivities {
+func NewAlexaForBusinessActivities(session *session.Session, config ...*aws.Config) *AlexaForBusinessActivities {
     client := alexaforbusiness.New(session, config...)
     return &AlexaForBusinessActivities{client: client}
 }

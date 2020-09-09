@@ -9,10 +9,10 @@ import (
 )
 
 type ElasticBeanstalkActivities struct {
-	client elasticbeanstalkiface.ElasticBeanstalkAPI
+    client elasticbeanstalkiface.ElasticBeanstalkAPI
 }
 
-func NewElasticBeanstalkActivities(session *session.Session, config... *aws.Config) *ElasticBeanstalkActivities {
+func NewElasticBeanstalkActivities(session *session.Session, config ...*aws.Config) *ElasticBeanstalkActivities {
     client := elasticbeanstalk.New(session, config...)
     return &ElasticBeanstalkActivities{client: client}
 }

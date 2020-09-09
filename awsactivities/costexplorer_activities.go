@@ -9,10 +9,10 @@ import (
 )
 
 type CostExplorerActivities struct {
-	client costexploreriface.CostExplorerAPI
+    client costexploreriface.CostExplorerAPI
 }
 
-func NewCostExplorerActivities(session *session.Session, config... *aws.Config) *CostExplorerActivities {
+func NewCostExplorerActivities(session *session.Session, config ...*aws.Config) *CostExplorerActivities {
     client := costexplorer.New(session, config...)
     return &CostExplorerActivities{client: client}
 }

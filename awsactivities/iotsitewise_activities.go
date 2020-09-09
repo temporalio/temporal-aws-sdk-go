@@ -9,10 +9,10 @@ import (
 )
 
 type IoTSiteWiseActivities struct {
-	client iotsitewiseiface.IoTSiteWiseAPI
+    client iotsitewiseiface.IoTSiteWiseAPI
 }
 
-func NewIoTSiteWiseActivities(session *session.Session, config... *aws.Config) *IoTSiteWiseActivities {
+func NewIoTSiteWiseActivities(session *session.Session, config ...*aws.Config) *IoTSiteWiseActivities {
     client := iotsitewise.New(session, config...)
     return &IoTSiteWiseActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type BraketActivities struct {
-	client braketiface.BraketAPI
+    client braketiface.BraketAPI
 }
 
-func NewBraketActivities(session *session.Session, config... *aws.Config) *BraketActivities {
+func NewBraketActivities(session *session.Session, config ...*aws.Config) *BraketActivities {
     client := braket.New(session, config...)
     return &BraketActivities{client: client}
 }

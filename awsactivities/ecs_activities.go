@@ -9,10 +9,10 @@ import (
 )
 
 type ECSActivities struct {
-	client ecsiface.ECSAPI
+    client ecsiface.ECSAPI
 }
 
-func NewECSActivities(session *session.Session, config... *aws.Config) *ECSActivities {
+func NewECSActivities(session *session.Session, config ...*aws.Config) *ECSActivities {
     client := ecs.New(session, config...)
     return &ECSActivities{client: client}
 }

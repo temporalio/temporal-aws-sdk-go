@@ -9,10 +9,10 @@ import (
 )
 
 type STSActivities struct {
-	client stsiface.STSAPI
+    client stsiface.STSAPI
 }
 
-func NewSTSActivities(session *session.Session, config... *aws.Config) *STSActivities {
+func NewSTSActivities(session *session.Session, config ...*aws.Config) *STSActivities {
     client := sts.New(session, config...)
     return &STSActivities{client: client}
 }

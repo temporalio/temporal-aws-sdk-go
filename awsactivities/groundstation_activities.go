@@ -9,10 +9,10 @@ import (
 )
 
 type GroundStationActivities struct {
-	client groundstationiface.GroundStationAPI
+    client groundstationiface.GroundStationAPI
 }
 
-func NewGroundStationActivities(session *session.Session, config... *aws.Config) *GroundStationActivities {
+func NewGroundStationActivities(session *session.Session, config ...*aws.Config) *GroundStationActivities {
     client := groundstation.New(session, config...)
     return &GroundStationActivities{client: client}
 }

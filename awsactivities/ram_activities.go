@@ -9,10 +9,10 @@ import (
 )
 
 type RAMActivities struct {
-	client ramiface.RAMAPI
+    client ramiface.RAMAPI
 }
 
-func NewRAMActivities(session *session.Session, config... *aws.Config) *RAMActivities {
+func NewRAMActivities(session *session.Session, config ...*aws.Config) *RAMActivities {
     client := ram.New(session, config...)
     return &RAMActivities{client: client}
 }

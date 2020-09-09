@@ -9,10 +9,10 @@ import (
 )
 
 type PersonalizeEventsActivities struct {
-	client personalizeeventsiface.PersonalizeEventsAPI
+    client personalizeeventsiface.PersonalizeEventsAPI
 }
 
-func NewPersonalizeEventsActivities(session *session.Session, config... *aws.Config) *PersonalizeEventsActivities {
+func NewPersonalizeEventsActivities(session *session.Session, config ...*aws.Config) *PersonalizeEventsActivities {
     client := personalizeevents.New(session, config...)
     return &PersonalizeEventsActivities{client: client}
 }

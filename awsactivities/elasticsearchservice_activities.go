@@ -9,10 +9,10 @@ import (
 )
 
 type ElasticsearchServiceActivities struct {
-	client elasticsearchserviceiface.ElasticsearchServiceAPI
+    client elasticsearchserviceiface.ElasticsearchServiceAPI
 }
 
-func NewElasticsearchServiceActivities(session *session.Session, config... *aws.Config) *ElasticsearchServiceActivities {
+func NewElasticsearchServiceActivities(session *session.Session, config ...*aws.Config) *ElasticsearchServiceActivities {
     client := elasticsearchservice.New(session, config...)
     return &ElasticsearchServiceActivities{client: client}
 }

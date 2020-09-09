@@ -9,10 +9,10 @@ import (
 )
 
 type DataPipelineActivities struct {
-	client datapipelineiface.DataPipelineAPI
+    client datapipelineiface.DataPipelineAPI
 }
 
-func NewDataPipelineActivities(session *session.Session, config... *aws.Config) *DataPipelineActivities {
+func NewDataPipelineActivities(session *session.Session, config ...*aws.Config) *DataPipelineActivities {
     client := datapipeline.New(session, config...)
     return &DataPipelineActivities{client: client}
 }

@@ -9,10 +9,10 @@ import (
 )
 
 type BackupActivities struct {
-	client backupiface.BackupAPI
+    client backupiface.BackupAPI
 }
 
-func NewBackupActivities(session *session.Session, config... *aws.Config) *BackupActivities {
+func NewBackupActivities(session *session.Session, config ...*aws.Config) *BackupActivities {
     client := backup.New(session, config...)
     return &BackupActivities{client: client}
 }

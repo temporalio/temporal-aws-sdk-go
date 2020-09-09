@@ -9,10 +9,10 @@ import (
 )
 
 type CloudSearchActivities struct {
-	client cloudsearchiface.CloudSearchAPI
+    client cloudsearchiface.CloudSearchAPI
 }
 
-func NewCloudSearchActivities(session *session.Session, config... *aws.Config) *CloudSearchActivities {
+func NewCloudSearchActivities(session *session.Session, config ...*aws.Config) *CloudSearchActivities {
     client := cloudsearch.New(session, config...)
     return &CloudSearchActivities{client: client}
 }

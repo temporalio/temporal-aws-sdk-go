@@ -9,10 +9,10 @@ import (
 )
 
 type SupportActivities struct {
-	client supportiface.SupportAPI
+    client supportiface.SupportAPI
 }
 
-func NewSupportActivities(session *session.Session, config... *aws.Config) *SupportActivities {
+func NewSupportActivities(session *session.Session, config ...*aws.Config) *SupportActivities {
     client := support.New(session, config...)
     return &SupportActivities{client: client}
 }

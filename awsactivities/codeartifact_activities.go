@@ -9,10 +9,10 @@ import (
 )
 
 type CodeArtifactActivities struct {
-	client codeartifactiface.CodeArtifactAPI
+    client codeartifactiface.CodeArtifactAPI
 }
 
-func NewCodeArtifactActivities(session *session.Session, config... *aws.Config) *CodeArtifactActivities {
+func NewCodeArtifactActivities(session *session.Session, config ...*aws.Config) *CodeArtifactActivities {
     client := codeartifact.New(session, config...)
     return &CodeArtifactActivities{client: client}
 }

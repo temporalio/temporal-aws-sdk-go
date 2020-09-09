@@ -9,10 +9,10 @@ import (
 )
 
 type AutoScalingPlansActivities struct {
-	client autoscalingplansiface.AutoScalingPlansAPI
+    client autoscalingplansiface.AutoScalingPlansAPI
 }
 
-func NewAutoScalingPlansActivities(session *session.Session, config... *aws.Config) *AutoScalingPlansActivities {
+func NewAutoScalingPlansActivities(session *session.Session, config ...*aws.Config) *AutoScalingPlansActivities {
     client := autoscalingplans.New(session, config...)
     return &AutoScalingPlansActivities{client: client}
 }

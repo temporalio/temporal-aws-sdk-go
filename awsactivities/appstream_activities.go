@@ -9,10 +9,10 @@ import (
 )
 
 type AppStreamActivities struct {
-	client appstreamiface.AppStreamAPI
+    client appstreamiface.AppStreamAPI
 }
 
-func NewAppStreamActivities(session *session.Session, config... *aws.Config) *AppStreamActivities {
+func NewAppStreamActivities(session *session.Session, config ...*aws.Config) *AppStreamActivities {
     client := appstream.New(session, config...)
     return &AppStreamActivities{client: client}
 }

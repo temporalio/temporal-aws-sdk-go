@@ -9,10 +9,10 @@ import (
 )
 
 type DocDBActivities struct {
-	client docdbiface.DocDBAPI
+    client docdbiface.DocDBAPI
 }
 
-func NewDocDBActivities(session *session.Session, config... *aws.Config) *DocDBActivities {
+func NewDocDBActivities(session *session.Session, config ...*aws.Config) *DocDBActivities {
     client := docdb.New(session, config...)
     return &DocDBActivities{client: client}
 }

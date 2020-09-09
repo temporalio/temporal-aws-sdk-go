@@ -9,10 +9,10 @@ import (
 )
 
 type IoTJobsDataPlaneActivities struct {
-	client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
+    client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
 }
 
-func NewIoTJobsDataPlaneActivities(session *session.Session, config... *aws.Config) *IoTJobsDataPlaneActivities {
+func NewIoTJobsDataPlaneActivities(session *session.Session, config ...*aws.Config) *IoTJobsDataPlaneActivities {
     client := iotjobsdataplane.New(session, config...)
     return &IoTJobsDataPlaneActivities{client: client}
 }

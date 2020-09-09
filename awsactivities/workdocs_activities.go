@@ -9,10 +9,10 @@ import (
 )
 
 type WorkDocsActivities struct {
-	client workdocsiface.WorkDocsAPI
+    client workdocsiface.WorkDocsAPI
 }
 
-func NewWorkDocsActivities(session *session.Session, config... *aws.Config) *WorkDocsActivities {
+func NewWorkDocsActivities(session *session.Session, config ...*aws.Config) *WorkDocsActivities {
     client := workdocs.New(session, config...)
     return &WorkDocsActivities{client: client}
 }

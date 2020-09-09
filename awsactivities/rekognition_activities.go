@@ -9,10 +9,10 @@ import (
 )
 
 type RekognitionActivities struct {
-	client rekognitioniface.RekognitionAPI
+    client rekognitioniface.RekognitionAPI
 }
 
-func NewRekognitionActivities(session *session.Session, config... *aws.Config) *RekognitionActivities {
+func NewRekognitionActivities(session *session.Session, config ...*aws.Config) *RekognitionActivities {
     client := rekognition.New(session, config...)
     return &RekognitionActivities{client: client}
 }

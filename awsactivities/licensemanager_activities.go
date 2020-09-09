@@ -9,10 +9,10 @@ import (
 )
 
 type LicenseManagerActivities struct {
-	client licensemanageriface.LicenseManagerAPI
+    client licensemanageriface.LicenseManagerAPI
 }
 
-func NewLicenseManagerActivities(session *session.Session, config... *aws.Config) *LicenseManagerActivities {
+func NewLicenseManagerActivities(session *session.Session, config ...*aws.Config) *LicenseManagerActivities {
     client := licensemanager.New(session, config...)
     return &LicenseManagerActivities{client: client}
 }

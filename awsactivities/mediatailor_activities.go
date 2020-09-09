@@ -9,10 +9,10 @@ import (
 )
 
 type MediaTailorActivities struct {
-	client mediatailoriface.MediaTailorAPI
+    client mediatailoriface.MediaTailorAPI
 }
 
-func NewMediaTailorActivities(session *session.Session, config... *aws.Config) *MediaTailorActivities {
+func NewMediaTailorActivities(session *session.Session, config ...*aws.Config) *MediaTailorActivities {
     client := mediatailor.New(session, config...)
     return &MediaTailorActivities{client: client}
 }
