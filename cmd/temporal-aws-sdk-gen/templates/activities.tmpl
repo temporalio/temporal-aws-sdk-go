@@ -23,7 +23,7 @@ func New{{ $name }}Activities(session *session.Session, config ...*aws.Config) *
 
 {{- range $i, $method := .Methods }}
 
-{{ if HasPrefix $method.Name "Wait" -}}
+{{ if IsNil $method.Output -}}
 func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
     return a.client.{{ $method.Name }}(input)
 }

@@ -9,7 +9,7 @@ import (
 
 type AWSInterfaceVisitor struct {
 	fileSet       *token.FileSet
-	definition    *InterfaceDefinition
+	definition    InterfaceDefinition
 	currentMethod *MethodDefinition
 }
 
@@ -39,12 +39,12 @@ func (g *AWSInterfaceVisitor) Visit(node ast.Node) ast.Visitor {
 }
 
 func (g *AWSInterfaceVisitor) visitTypeSpec(n *ast.TypeSpec) {
-	if g.definition != nil {
+	if g.definition.Name != "" {
 		panic("Multiple interfaces in the interface definition file")
 	}
 	name := n.Name.Name
 	// Remove trailing API
-	g.definition = &InterfaceDefinition{Name: name[:len(name)-3]}
+	g.definition = InterfaceDefinition{Name: name[:len(name)-3]}
 }
 
 func (g *AWSInterfaceVisitor) visitField(n *ast.Field) *AWSInterfaceVisitor {
@@ -72,10 +72,10 @@ func (g *AWSInterfaceVisitor) String() string {
 func (g *AWSInterfaceVisitor) visitFuncType(n *ast.FuncType) {
 	//ast.Print(g.fileSet, n.Params.List[0].Type)
 	inputExpr := n.Params.List[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-	g.currentMethod.Input = &StructDefinition{Package: inputExpr.X.(*ast.Ident).Name, Name: inputExpr.Sel.Name}
+	g.currentMethod.Input = NewStructDefinition(inputExpr.X.(*ast.Ident).Name, inputExpr.Sel.Name)
 	results := n.Results.List
 	if len(results) == 2 {
 		resultExpr := results[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-		g.currentMethod.Output = &StructDefinition{Package: resultExpr.X.(*ast.Ident).Name, Name: resultExpr.Sel.Name}
+		g.currentMethod.Output = NewStructDefinition(resultExpr.X.(*ast.Ident).Name, resultExpr.Sel.Name)
 	}
 }

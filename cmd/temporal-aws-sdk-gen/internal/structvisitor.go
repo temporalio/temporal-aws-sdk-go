@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"go/ast"
 	"go/token"
-	"strings"
 )
 
 type AWSStructVisitor struct {
-	fileSet       *token.FileSet
-	definition    InterfaceDefinition
-	currentMethod *MethodDefinition
+	packageName string
+	fileSet     *token.FileSet
+	Structs     []*StructDefinition
+	Current     *StructDefinition
 }
 
-func NewAWSStructVisitor(fileSet *token.FileSet) *AWSStructVisitor {
-	return &AWSStructVisitor{fileSet: fileSet}
+func NewAWSStructVisitor(fileSet *token.FileSet, packageName string) *AWSStructVisitor {
+	return &AWSStructVisitor{fileSet: fileSet, packageName: packageName}
 }
 
 func (g *AWSStructVisitor) Visit(node ast.Node) ast.Visitor {
@@ -23,8 +23,7 @@ func (g *AWSStructVisitor) Visit(node ast.Node) ast.Visitor {
 	}
 	switch n := node.(type) {
 	case *ast.TypeSpec:
-		g.visitTypeSpec(n)
-		return g
+		return g.visitTypeSpec(n)
 
 	case *ast.FuncType:
 		g.visitFuncType(n)
@@ -38,44 +37,71 @@ func (g *AWSStructVisitor) Visit(node ast.Node) ast.Visitor {
 	}
 }
 
-func (g *AWSStructVisitor) visitTypeSpec(n *ast.TypeSpec) {
-	if g.definition.Name != "" {
-		panic("Multiple interfaces in the interface definition file")
+func (g *AWSStructVisitor) visitTypeSpec(n *ast.TypeSpec) *AWSStructVisitor {
+	if _, ok := n.Type.(*ast.StructType); !ok {
+		return nil
 	}
 	name := n.Name.Name
-	// Remove trailing API
-	g.definition.Name = name[:len(name)-3]
+	//if !strings.HasSuffix(name, "Input") && !strings.HasSuffix(name, "Output") {
+	//	return nil
+	//}
+	g.Current = NewStructDefinition(g.packageName, name)
+	g.Structs = append(g.Structs, g.Current)
+	return g
 }
 
 func (g *AWSStructVisitor) visitField(n *ast.Field) *AWSStructVisitor {
+	defer func() {
+		if r := recover(); r != nil {
+			ast.Print(g.fileSet, n)
+			panic(r)
+		}
+	}()
 	if len(n.Names) > 0 {
 		name := n.Names[0].Name
-		for _, postfix := range methodSuffixesToSkip {
-			if strings.HasSuffix(name, postfix) {
-				return nil
-			}
-		}
-		if blacklistedMethods[g.definition.Name] == name {
+		if len(name) <= 1 || g.Current == nil {
 			return nil
 		}
-		g.currentMethod = &MethodDefinition{Name: name}
-		g.definition.Methods = append(g.definition.Methods, g.currentMethod)
-		//ast.Print(g.fileSet, n)
+		typeName := GetTypeName(n.Type)
+		//fmt.Printf("    %v: %v\n", name, typeName)
+		g.Current.Fields[name] = &FieldDefinition{Name: name, Type: typeName}
 	}
 	return g
 }
 
+func GetTypeName(n ast.Node) string {
+	switch t := n.(type) {
+	case *ast.StarExpr:
+		return GetTypeName(t.X)
+	case *ast.ArrayType:
+		return "[]" + GetTypeName(t.Elt)
+	case *ast.MapType:
+		return "map[" + GetTypeName(t.Key) + "]" + GetTypeName(t.Value)
+	case *ast.SelectorExpr:
+		return t.X.(*ast.Ident).Name + "." + t.Sel.Name
+	case *ast.Ident:
+		return t.Name
+	case *ast.Ellipsis:
+		return "[]" + GetTypeName(t.Elt)
+	case *ast.FuncType:
+		return "func"
+	case *ast.ChanType:
+		return "channel"
+	}
+	panic(fmt.Sprintf("unexpected type: %v", n))
+}
+
 func (g *AWSStructVisitor) String() string {
-	return fmt.Sprintf("%v", g.definition)
+	return fmt.Sprintf("%v", g.Structs)
 }
 
 func (g *AWSStructVisitor) visitFuncType(n *ast.FuncType) {
 	//ast.Print(g.fileSet, n.Params.List[0].Type)
-	inputExpr := n.Params.List[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-	g.currentMethod.Input = &StructDefinition{Package: inputExpr.X.(*ast.Ident).Name, Name: inputExpr.Sel.Name}
-	results := n.Results.List
-	if len(results) == 2 {
-		resultExpr := results[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
-		g.currentMethod.Output = &StructDefinition{Package: resultExpr.X.(*ast.Ident).Name, Name: resultExpr.Sel.Name}
-	}
+	//inputExpr := n.Params.List[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
+	//g.currentMethod.Input = &StructDefinition{Package: inputExpr.X.(*ast.Ident).Name, Name: inputExpr.Sel.Name}
+	//results := n.Results.List
+	//if len(results) == 2 {
+	//	resultExpr := results[0].Type.(*ast.StarExpr).X.(*ast.SelectorExpr)
+	//	g.currentMethod.Output = &StructDefinition{Package: resultExpr.X.(*ast.Ident).Name, Name: resultExpr.Sel.Name}
+	//}
 }

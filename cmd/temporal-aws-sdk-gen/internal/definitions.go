@@ -13,7 +13,11 @@ type FieldDefinition struct {
 type StructDefinition struct {
 	Package string
 	Name    string
-	Fields  []*FieldDefinition
+	Fields  map[string]*FieldDefinition
+}
+
+func NewStructDefinition(pkg, name string) *StructDefinition {
+	return &StructDefinition{Package: pkg, Name: name, Fields: make(map[string]*FieldDefinition)}
 }
 
 type MethodDefinition struct {
@@ -24,6 +28,11 @@ type MethodDefinition struct {
 	// Output structure
 	Output *StructDefinition
 }
+
+func (m *MethodDefinition) String() string {
+	return fmt.Sprintf("%v(%v) %v", m.Name, m.Input, m.Output)
+}
+
 type InterfaceDefinition struct {
 	// Service name
 	Name string

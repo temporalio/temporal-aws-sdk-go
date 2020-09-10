@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"reflect"
 	"strings"
 	"text/template"
 )
@@ -59,7 +60,7 @@ func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, o
 	}
 	g.outputStructs = make(map[string]bool)
 	for _, definition := range definitions {
-		err := g.generateOneService(templateFile, outputDir, definition)
+		err := g.generateOneService(templateFile, outputDir, *definition)
 		if err != nil {
 			return err
 		}
@@ -67,7 +68,7 @@ func (g *TemporalAWSGenerator) generateFromSingleTemplate(templateFile string, o
 	return nil
 }
 
-func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir string, definition *InterfaceDefinition) error {
+func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir string, definition InterfaceDefinition) error {
 	funcMap := template.FuncMap{
 		"ToUpper":   strings.ToUpper,
 		"ToLower":   strings.ToLower,
@@ -79,6 +80,9 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 			}
 			_, ok := g.outputStructs[output.Package+output.Name]
 			return ok
+		},
+		"IsNil": func(value interface{}) bool {
+			return value == nil || (reflect.ValueOf(value).Kind() == reflect.Ptr && reflect.ValueOf(value).IsNil())
 		},
 	}
 
@@ -117,6 +121,9 @@ func (g *TemporalAWSGenerator) generateGlobal(templateFile string, outputDir str
 		"ToLower":   strings.ToLower,
 		"HasPrefix": strings.HasPrefix,
 		"ToPrefix":  toPrefix,
+		"IsNil": func(value interface{}) bool {
+			return value == nil || (reflect.ValueOf(value).Kind() == reflect.Ptr && reflect.ValueOf(value).IsNil())
+		},
 	}
 
 	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(g.TemplateDir + "/" + templateFile)

@@ -44,18 +44,7 @@ func main() {
 		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
 		generator := internal.NewGenerator(templateDir)
 		s := strings.ToLower(service)
-		var definitions []*internal.InterfaceDefinition
-		if s != "" {
-			err = parser.ParseAwsService(s, func(service string, definition *internal.InterfaceDefinition, sDefinition *internal.StructDefinition) error {
-				definitions = append(definitions, definition)
-				return nil
-			})
-		} else {
-			err = parser.ParseAwsSdk(func(service string, definition *internal.InterfaceDefinition, sDefinition *internal.StructDefinition) error {
-				definitions = append(definitions, definition)
-				return nil
-			})
-		}
+		definitions, err := parser.ParseAwsSdk(s)
 		if err != nil {
 			log.Fatal(err)
 		}
