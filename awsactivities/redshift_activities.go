@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/redshift"
 	"github.com/aws/aws-sdk-go/service/redshift/redshiftiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type RedshiftActivities struct {
 	client redshiftiface.RedshiftAPI
@@ -16,386 +21,390 @@ func NewRedshiftActivities(session *session.Session, config ...*aws.Config) *Red
 	return &RedshiftActivities{client: client}
 }
 
-func (a *RedshiftActivities) AcceptReservedNodeExchange(input *redshift.AcceptReservedNodeExchangeInput) (*redshift.AcceptReservedNodeExchangeOutput, error) {
-	return a.client.AcceptReservedNodeExchange(input)
+func (a *RedshiftActivities) AcceptReservedNodeExchange(ctx context.Context, input *redshift.AcceptReservedNodeExchangeInput) (*redshift.AcceptReservedNodeExchangeOutput, error) {
+	return a.client.AcceptReservedNodeExchangeWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) AuthorizeClusterSecurityGroupIngress(input *redshift.AuthorizeClusterSecurityGroupIngressInput) (*redshift.AuthorizeClusterSecurityGroupIngressOutput, error) {
-	return a.client.AuthorizeClusterSecurityGroupIngress(input)
+func (a *RedshiftActivities) AuthorizeClusterSecurityGroupIngress(ctx context.Context, input *redshift.AuthorizeClusterSecurityGroupIngressInput) (*redshift.AuthorizeClusterSecurityGroupIngressOutput, error) {
+	return a.client.AuthorizeClusterSecurityGroupIngressWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) AuthorizeSnapshotAccess(input *redshift.AuthorizeSnapshotAccessInput) (*redshift.AuthorizeSnapshotAccessOutput, error) {
-	return a.client.AuthorizeSnapshotAccess(input)
+func (a *RedshiftActivities) AuthorizeSnapshotAccess(ctx context.Context, input *redshift.AuthorizeSnapshotAccessInput) (*redshift.AuthorizeSnapshotAccessOutput, error) {
+	return a.client.AuthorizeSnapshotAccessWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) BatchDeleteClusterSnapshots(input *redshift.BatchDeleteClusterSnapshotsInput) (*redshift.BatchDeleteClusterSnapshotsOutput, error) {
-	return a.client.BatchDeleteClusterSnapshots(input)
+func (a *RedshiftActivities) BatchDeleteClusterSnapshots(ctx context.Context, input *redshift.BatchDeleteClusterSnapshotsInput) (*redshift.BatchDeleteClusterSnapshotsOutput, error) {
+	return a.client.BatchDeleteClusterSnapshotsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) BatchModifyClusterSnapshots(input *redshift.BatchModifyClusterSnapshotsInput) (*redshift.BatchModifyClusterSnapshotsOutput, error) {
-	return a.client.BatchModifyClusterSnapshots(input)
+func (a *RedshiftActivities) BatchModifyClusterSnapshots(ctx context.Context, input *redshift.BatchModifyClusterSnapshotsInput) (*redshift.BatchModifyClusterSnapshotsOutput, error) {
+	return a.client.BatchModifyClusterSnapshotsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CancelResize(input *redshift.CancelResizeInput) (*redshift.CancelResizeOutput, error) {
-	return a.client.CancelResize(input)
+func (a *RedshiftActivities) CancelResize(ctx context.Context, input *redshift.CancelResizeInput) (*redshift.CancelResizeOutput, error) {
+	return a.client.CancelResizeWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CopyClusterSnapshot(input *redshift.CopyClusterSnapshotInput) (*redshift.CopyClusterSnapshotOutput, error) {
-	return a.client.CopyClusterSnapshot(input)
+func (a *RedshiftActivities) CopyClusterSnapshot(ctx context.Context, input *redshift.CopyClusterSnapshotInput) (*redshift.CopyClusterSnapshotOutput, error) {
+	return a.client.CopyClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateCluster(input *redshift.CreateClusterInput) (*redshift.CreateClusterOutput, error) {
-	return a.client.CreateCluster(input)
+func (a *RedshiftActivities) CreateCluster(ctx context.Context, input *redshift.CreateClusterInput) (*redshift.CreateClusterOutput, error) {
+	return a.client.CreateClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateClusterParameterGroup(input *redshift.CreateClusterParameterGroupInput) (*redshift.CreateClusterParameterGroupOutput, error) {
-	return a.client.CreateClusterParameterGroup(input)
+func (a *RedshiftActivities) CreateClusterParameterGroup(ctx context.Context, input *redshift.CreateClusterParameterGroupInput) (*redshift.CreateClusterParameterGroupOutput, error) {
+	return a.client.CreateClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateClusterSecurityGroup(input *redshift.CreateClusterSecurityGroupInput) (*redshift.CreateClusterSecurityGroupOutput, error) {
-	return a.client.CreateClusterSecurityGroup(input)
+func (a *RedshiftActivities) CreateClusterSecurityGroup(ctx context.Context, input *redshift.CreateClusterSecurityGroupInput) (*redshift.CreateClusterSecurityGroupOutput, error) {
+	return a.client.CreateClusterSecurityGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateClusterSnapshot(input *redshift.CreateClusterSnapshotInput) (*redshift.CreateClusterSnapshotOutput, error) {
-	return a.client.CreateClusterSnapshot(input)
+func (a *RedshiftActivities) CreateClusterSnapshot(ctx context.Context, input *redshift.CreateClusterSnapshotInput) (*redshift.CreateClusterSnapshotOutput, error) {
+	return a.client.CreateClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateClusterSubnetGroup(input *redshift.CreateClusterSubnetGroupInput) (*redshift.CreateClusterSubnetGroupOutput, error) {
-	return a.client.CreateClusterSubnetGroup(input)
+func (a *RedshiftActivities) CreateClusterSubnetGroup(ctx context.Context, input *redshift.CreateClusterSubnetGroupInput) (*redshift.CreateClusterSubnetGroupOutput, error) {
+	return a.client.CreateClusterSubnetGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateEventSubscription(input *redshift.CreateEventSubscriptionInput) (*redshift.CreateEventSubscriptionOutput, error) {
-	return a.client.CreateEventSubscription(input)
+func (a *RedshiftActivities) CreateEventSubscription(ctx context.Context, input *redshift.CreateEventSubscriptionInput) (*redshift.CreateEventSubscriptionOutput, error) {
+	return a.client.CreateEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateHsmClientCertificate(input *redshift.CreateHsmClientCertificateInput) (*redshift.CreateHsmClientCertificateOutput, error) {
-	return a.client.CreateHsmClientCertificate(input)
+func (a *RedshiftActivities) CreateHsmClientCertificate(ctx context.Context, input *redshift.CreateHsmClientCertificateInput) (*redshift.CreateHsmClientCertificateOutput, error) {
+	return a.client.CreateHsmClientCertificateWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateHsmConfiguration(input *redshift.CreateHsmConfigurationInput) (*redshift.CreateHsmConfigurationOutput, error) {
-	return a.client.CreateHsmConfiguration(input)
+func (a *RedshiftActivities) CreateHsmConfiguration(ctx context.Context, input *redshift.CreateHsmConfigurationInput) (*redshift.CreateHsmConfigurationOutput, error) {
+	return a.client.CreateHsmConfigurationWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateScheduledAction(input *redshift.CreateScheduledActionInput) (*redshift.CreateScheduledActionOutput, error) {
-	return a.client.CreateScheduledAction(input)
+func (a *RedshiftActivities) CreateScheduledAction(ctx context.Context, input *redshift.CreateScheduledActionInput) (*redshift.CreateScheduledActionOutput, error) {
+	return a.client.CreateScheduledActionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateSnapshotCopyGrant(input *redshift.CreateSnapshotCopyGrantInput) (*redshift.CreateSnapshotCopyGrantOutput, error) {
-	return a.client.CreateSnapshotCopyGrant(input)
+func (a *RedshiftActivities) CreateSnapshotCopyGrant(ctx context.Context, input *redshift.CreateSnapshotCopyGrantInput) (*redshift.CreateSnapshotCopyGrantOutput, error) {
+	return a.client.CreateSnapshotCopyGrantWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateSnapshotSchedule(input *redshift.CreateSnapshotScheduleInput) (*redshift.CreateSnapshotScheduleOutput, error) {
-	return a.client.CreateSnapshotSchedule(input)
+func (a *RedshiftActivities) CreateSnapshotSchedule(ctx context.Context, input *redshift.CreateSnapshotScheduleInput) (*redshift.CreateSnapshotScheduleOutput, error) {
+	return a.client.CreateSnapshotScheduleWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateTags(input *redshift.CreateTagsInput) (*redshift.CreateTagsOutput, error) {
-	return a.client.CreateTags(input)
+func (a *RedshiftActivities) CreateTags(ctx context.Context, input *redshift.CreateTagsInput) (*redshift.CreateTagsOutput, error) {
+	return a.client.CreateTagsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) CreateUsageLimit(input *redshift.CreateUsageLimitInput) (*redshift.CreateUsageLimitOutput, error) {
-	return a.client.CreateUsageLimit(input)
+func (a *RedshiftActivities) CreateUsageLimit(ctx context.Context, input *redshift.CreateUsageLimitInput) (*redshift.CreateUsageLimitOutput, error) {
+	return a.client.CreateUsageLimitWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteCluster(input *redshift.DeleteClusterInput) (*redshift.DeleteClusterOutput, error) {
-	return a.client.DeleteCluster(input)
+func (a *RedshiftActivities) DeleteCluster(ctx context.Context, input *redshift.DeleteClusterInput) (*redshift.DeleteClusterOutput, error) {
+	return a.client.DeleteClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteClusterParameterGroup(input *redshift.DeleteClusterParameterGroupInput) (*redshift.DeleteClusterParameterGroupOutput, error) {
-	return a.client.DeleteClusterParameterGroup(input)
+func (a *RedshiftActivities) DeleteClusterParameterGroup(ctx context.Context, input *redshift.DeleteClusterParameterGroupInput) (*redshift.DeleteClusterParameterGroupOutput, error) {
+	return a.client.DeleteClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteClusterSecurityGroup(input *redshift.DeleteClusterSecurityGroupInput) (*redshift.DeleteClusterSecurityGroupOutput, error) {
-	return a.client.DeleteClusterSecurityGroup(input)
+func (a *RedshiftActivities) DeleteClusterSecurityGroup(ctx context.Context, input *redshift.DeleteClusterSecurityGroupInput) (*redshift.DeleteClusterSecurityGroupOutput, error) {
+	return a.client.DeleteClusterSecurityGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteClusterSnapshot(input *redshift.DeleteClusterSnapshotInput) (*redshift.DeleteClusterSnapshotOutput, error) {
-	return a.client.DeleteClusterSnapshot(input)
+func (a *RedshiftActivities) DeleteClusterSnapshot(ctx context.Context, input *redshift.DeleteClusterSnapshotInput) (*redshift.DeleteClusterSnapshotOutput, error) {
+	return a.client.DeleteClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteClusterSubnetGroup(input *redshift.DeleteClusterSubnetGroupInput) (*redshift.DeleteClusterSubnetGroupOutput, error) {
-	return a.client.DeleteClusterSubnetGroup(input)
+func (a *RedshiftActivities) DeleteClusterSubnetGroup(ctx context.Context, input *redshift.DeleteClusterSubnetGroupInput) (*redshift.DeleteClusterSubnetGroupOutput, error) {
+	return a.client.DeleteClusterSubnetGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteEventSubscription(input *redshift.DeleteEventSubscriptionInput) (*redshift.DeleteEventSubscriptionOutput, error) {
-	return a.client.DeleteEventSubscription(input)
+func (a *RedshiftActivities) DeleteEventSubscription(ctx context.Context, input *redshift.DeleteEventSubscriptionInput) (*redshift.DeleteEventSubscriptionOutput, error) {
+	return a.client.DeleteEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteHsmClientCertificate(input *redshift.DeleteHsmClientCertificateInput) (*redshift.DeleteHsmClientCertificateOutput, error) {
-	return a.client.DeleteHsmClientCertificate(input)
+func (a *RedshiftActivities) DeleteHsmClientCertificate(ctx context.Context, input *redshift.DeleteHsmClientCertificateInput) (*redshift.DeleteHsmClientCertificateOutput, error) {
+	return a.client.DeleteHsmClientCertificateWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteHsmConfiguration(input *redshift.DeleteHsmConfigurationInput) (*redshift.DeleteHsmConfigurationOutput, error) {
-	return a.client.DeleteHsmConfiguration(input)
+func (a *RedshiftActivities) DeleteHsmConfiguration(ctx context.Context, input *redshift.DeleteHsmConfigurationInput) (*redshift.DeleteHsmConfigurationOutput, error) {
+	return a.client.DeleteHsmConfigurationWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteScheduledAction(input *redshift.DeleteScheduledActionInput) (*redshift.DeleteScheduledActionOutput, error) {
-	return a.client.DeleteScheduledAction(input)
+func (a *RedshiftActivities) DeleteScheduledAction(ctx context.Context, input *redshift.DeleteScheduledActionInput) (*redshift.DeleteScheduledActionOutput, error) {
+	return a.client.DeleteScheduledActionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteSnapshotCopyGrant(input *redshift.DeleteSnapshotCopyGrantInput) (*redshift.DeleteSnapshotCopyGrantOutput, error) {
-	return a.client.DeleteSnapshotCopyGrant(input)
+func (a *RedshiftActivities) DeleteSnapshotCopyGrant(ctx context.Context, input *redshift.DeleteSnapshotCopyGrantInput) (*redshift.DeleteSnapshotCopyGrantOutput, error) {
+	return a.client.DeleteSnapshotCopyGrantWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteSnapshotSchedule(input *redshift.DeleteSnapshotScheduleInput) (*redshift.DeleteSnapshotScheduleOutput, error) {
-	return a.client.DeleteSnapshotSchedule(input)
+func (a *RedshiftActivities) DeleteSnapshotSchedule(ctx context.Context, input *redshift.DeleteSnapshotScheduleInput) (*redshift.DeleteSnapshotScheduleOutput, error) {
+	return a.client.DeleteSnapshotScheduleWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteTags(input *redshift.DeleteTagsInput) (*redshift.DeleteTagsOutput, error) {
-	return a.client.DeleteTags(input)
+func (a *RedshiftActivities) DeleteTags(ctx context.Context, input *redshift.DeleteTagsInput) (*redshift.DeleteTagsOutput, error) {
+	return a.client.DeleteTagsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DeleteUsageLimit(input *redshift.DeleteUsageLimitInput) (*redshift.DeleteUsageLimitOutput, error) {
-	return a.client.DeleteUsageLimit(input)
+func (a *RedshiftActivities) DeleteUsageLimit(ctx context.Context, input *redshift.DeleteUsageLimitInput) (*redshift.DeleteUsageLimitOutput, error) {
+	return a.client.DeleteUsageLimitWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeAccountAttributes(input *redshift.DescribeAccountAttributesInput) (*redshift.DescribeAccountAttributesOutput, error) {
-	return a.client.DescribeAccountAttributes(input)
+func (a *RedshiftActivities) DescribeAccountAttributes(ctx context.Context, input *redshift.DescribeAccountAttributesInput) (*redshift.DescribeAccountAttributesOutput, error) {
+	return a.client.DescribeAccountAttributesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterDbRevisions(input *redshift.DescribeClusterDbRevisionsInput) (*redshift.DescribeClusterDbRevisionsOutput, error) {
-	return a.client.DescribeClusterDbRevisions(input)
+func (a *RedshiftActivities) DescribeClusterDbRevisions(ctx context.Context, input *redshift.DescribeClusterDbRevisionsInput) (*redshift.DescribeClusterDbRevisionsOutput, error) {
+	return a.client.DescribeClusterDbRevisionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterParameterGroups(input *redshift.DescribeClusterParameterGroupsInput) (*redshift.DescribeClusterParameterGroupsOutput, error) {
-	return a.client.DescribeClusterParameterGroups(input)
+func (a *RedshiftActivities) DescribeClusterParameterGroups(ctx context.Context, input *redshift.DescribeClusterParameterGroupsInput) (*redshift.DescribeClusterParameterGroupsOutput, error) {
+	return a.client.DescribeClusterParameterGroupsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterParameters(input *redshift.DescribeClusterParametersInput) (*redshift.DescribeClusterParametersOutput, error) {
-	return a.client.DescribeClusterParameters(input)
+func (a *RedshiftActivities) DescribeClusterParameters(ctx context.Context, input *redshift.DescribeClusterParametersInput) (*redshift.DescribeClusterParametersOutput, error) {
+	return a.client.DescribeClusterParametersWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterSecurityGroups(input *redshift.DescribeClusterSecurityGroupsInput) (*redshift.DescribeClusterSecurityGroupsOutput, error) {
-	return a.client.DescribeClusterSecurityGroups(input)
+func (a *RedshiftActivities) DescribeClusterSecurityGroups(ctx context.Context, input *redshift.DescribeClusterSecurityGroupsInput) (*redshift.DescribeClusterSecurityGroupsOutput, error) {
+	return a.client.DescribeClusterSecurityGroupsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterSnapshots(input *redshift.DescribeClusterSnapshotsInput) (*redshift.DescribeClusterSnapshotsOutput, error) {
-	return a.client.DescribeClusterSnapshots(input)
+func (a *RedshiftActivities) DescribeClusterSnapshots(ctx context.Context, input *redshift.DescribeClusterSnapshotsInput) (*redshift.DescribeClusterSnapshotsOutput, error) {
+	return a.client.DescribeClusterSnapshotsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterSubnetGroups(input *redshift.DescribeClusterSubnetGroupsInput) (*redshift.DescribeClusterSubnetGroupsOutput, error) {
-	return a.client.DescribeClusterSubnetGroups(input)
+func (a *RedshiftActivities) DescribeClusterSubnetGroups(ctx context.Context, input *redshift.DescribeClusterSubnetGroupsInput) (*redshift.DescribeClusterSubnetGroupsOutput, error) {
+	return a.client.DescribeClusterSubnetGroupsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterTracks(input *redshift.DescribeClusterTracksInput) (*redshift.DescribeClusterTracksOutput, error) {
-	return a.client.DescribeClusterTracks(input)
+func (a *RedshiftActivities) DescribeClusterTracks(ctx context.Context, input *redshift.DescribeClusterTracksInput) (*redshift.DescribeClusterTracksOutput, error) {
+	return a.client.DescribeClusterTracksWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusterVersions(input *redshift.DescribeClusterVersionsInput) (*redshift.DescribeClusterVersionsOutput, error) {
-	return a.client.DescribeClusterVersions(input)
+func (a *RedshiftActivities) DescribeClusterVersions(ctx context.Context, input *redshift.DescribeClusterVersionsInput) (*redshift.DescribeClusterVersionsOutput, error) {
+	return a.client.DescribeClusterVersionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeClusters(input *redshift.DescribeClustersInput) (*redshift.DescribeClustersOutput, error) {
-	return a.client.DescribeClusters(input)
+func (a *RedshiftActivities) DescribeClusters(ctx context.Context, input *redshift.DescribeClustersInput) (*redshift.DescribeClustersOutput, error) {
+	return a.client.DescribeClustersWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeDefaultClusterParameters(input *redshift.DescribeDefaultClusterParametersInput) (*redshift.DescribeDefaultClusterParametersOutput, error) {
-	return a.client.DescribeDefaultClusterParameters(input)
+func (a *RedshiftActivities) DescribeDefaultClusterParameters(ctx context.Context, input *redshift.DescribeDefaultClusterParametersInput) (*redshift.DescribeDefaultClusterParametersOutput, error) {
+	return a.client.DescribeDefaultClusterParametersWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeEventCategories(input *redshift.DescribeEventCategoriesInput) (*redshift.DescribeEventCategoriesOutput, error) {
-	return a.client.DescribeEventCategories(input)
+func (a *RedshiftActivities) DescribeEventCategories(ctx context.Context, input *redshift.DescribeEventCategoriesInput) (*redshift.DescribeEventCategoriesOutput, error) {
+	return a.client.DescribeEventCategoriesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeEventSubscriptions(input *redshift.DescribeEventSubscriptionsInput) (*redshift.DescribeEventSubscriptionsOutput, error) {
-	return a.client.DescribeEventSubscriptions(input)
+func (a *RedshiftActivities) DescribeEventSubscriptions(ctx context.Context, input *redshift.DescribeEventSubscriptionsInput) (*redshift.DescribeEventSubscriptionsOutput, error) {
+	return a.client.DescribeEventSubscriptionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeEvents(input *redshift.DescribeEventsInput) (*redshift.DescribeEventsOutput, error) {
-	return a.client.DescribeEvents(input)
+func (a *RedshiftActivities) DescribeEvents(ctx context.Context, input *redshift.DescribeEventsInput) (*redshift.DescribeEventsOutput, error) {
+	return a.client.DescribeEventsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeHsmClientCertificates(input *redshift.DescribeHsmClientCertificatesInput) (*redshift.DescribeHsmClientCertificatesOutput, error) {
-	return a.client.DescribeHsmClientCertificates(input)
+func (a *RedshiftActivities) DescribeHsmClientCertificates(ctx context.Context, input *redshift.DescribeHsmClientCertificatesInput) (*redshift.DescribeHsmClientCertificatesOutput, error) {
+	return a.client.DescribeHsmClientCertificatesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeHsmConfigurations(input *redshift.DescribeHsmConfigurationsInput) (*redshift.DescribeHsmConfigurationsOutput, error) {
-	return a.client.DescribeHsmConfigurations(input)
+func (a *RedshiftActivities) DescribeHsmConfigurations(ctx context.Context, input *redshift.DescribeHsmConfigurationsInput) (*redshift.DescribeHsmConfigurationsOutput, error) {
+	return a.client.DescribeHsmConfigurationsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeLoggingStatus(input *redshift.DescribeLoggingStatusInput) (*redshift.LoggingStatus, error) {
-	return a.client.DescribeLoggingStatus(input)
+func (a *RedshiftActivities) DescribeLoggingStatus(ctx context.Context, input *redshift.DescribeLoggingStatusInput) (*redshift.LoggingStatus, error) {
+	return a.client.DescribeLoggingStatusWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeNodeConfigurationOptions(input *redshift.DescribeNodeConfigurationOptionsInput) (*redshift.DescribeNodeConfigurationOptionsOutput, error) {
-	return a.client.DescribeNodeConfigurationOptions(input)
+func (a *RedshiftActivities) DescribeNodeConfigurationOptions(ctx context.Context, input *redshift.DescribeNodeConfigurationOptionsInput) (*redshift.DescribeNodeConfigurationOptionsOutput, error) {
+	return a.client.DescribeNodeConfigurationOptionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeOrderableClusterOptions(input *redshift.DescribeOrderableClusterOptionsInput) (*redshift.DescribeOrderableClusterOptionsOutput, error) {
-	return a.client.DescribeOrderableClusterOptions(input)
+func (a *RedshiftActivities) DescribeOrderableClusterOptions(ctx context.Context, input *redshift.DescribeOrderableClusterOptionsInput) (*redshift.DescribeOrderableClusterOptionsOutput, error) {
+	return a.client.DescribeOrderableClusterOptionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeReservedNodeOfferings(input *redshift.DescribeReservedNodeOfferingsInput) (*redshift.DescribeReservedNodeOfferingsOutput, error) {
-	return a.client.DescribeReservedNodeOfferings(input)
+func (a *RedshiftActivities) DescribeReservedNodeOfferings(ctx context.Context, input *redshift.DescribeReservedNodeOfferingsInput) (*redshift.DescribeReservedNodeOfferingsOutput, error) {
+	return a.client.DescribeReservedNodeOfferingsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeReservedNodes(input *redshift.DescribeReservedNodesInput) (*redshift.DescribeReservedNodesOutput, error) {
-	return a.client.DescribeReservedNodes(input)
+func (a *RedshiftActivities) DescribeReservedNodes(ctx context.Context, input *redshift.DescribeReservedNodesInput) (*redshift.DescribeReservedNodesOutput, error) {
+	return a.client.DescribeReservedNodesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeResize(input *redshift.DescribeResizeInput) (*redshift.DescribeResizeOutput, error) {
-	return a.client.DescribeResize(input)
+func (a *RedshiftActivities) DescribeResize(ctx context.Context, input *redshift.DescribeResizeInput) (*redshift.DescribeResizeOutput, error) {
+	return a.client.DescribeResizeWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeScheduledActions(input *redshift.DescribeScheduledActionsInput) (*redshift.DescribeScheduledActionsOutput, error) {
-	return a.client.DescribeScheduledActions(input)
+func (a *RedshiftActivities) DescribeScheduledActions(ctx context.Context, input *redshift.DescribeScheduledActionsInput) (*redshift.DescribeScheduledActionsOutput, error) {
+	return a.client.DescribeScheduledActionsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeSnapshotCopyGrants(input *redshift.DescribeSnapshotCopyGrantsInput) (*redshift.DescribeSnapshotCopyGrantsOutput, error) {
-	return a.client.DescribeSnapshotCopyGrants(input)
+func (a *RedshiftActivities) DescribeSnapshotCopyGrants(ctx context.Context, input *redshift.DescribeSnapshotCopyGrantsInput) (*redshift.DescribeSnapshotCopyGrantsOutput, error) {
+	return a.client.DescribeSnapshotCopyGrantsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeSnapshotSchedules(input *redshift.DescribeSnapshotSchedulesInput) (*redshift.DescribeSnapshotSchedulesOutput, error) {
-	return a.client.DescribeSnapshotSchedules(input)
+func (a *RedshiftActivities) DescribeSnapshotSchedules(ctx context.Context, input *redshift.DescribeSnapshotSchedulesInput) (*redshift.DescribeSnapshotSchedulesOutput, error) {
+	return a.client.DescribeSnapshotSchedulesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeStorage(input *redshift.DescribeStorageInput) (*redshift.DescribeStorageOutput, error) {
-	return a.client.DescribeStorage(input)
+func (a *RedshiftActivities) DescribeStorage(ctx context.Context, input *redshift.DescribeStorageInput) (*redshift.DescribeStorageOutput, error) {
+	return a.client.DescribeStorageWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeTableRestoreStatus(input *redshift.DescribeTableRestoreStatusInput) (*redshift.DescribeTableRestoreStatusOutput, error) {
-	return a.client.DescribeTableRestoreStatus(input)
+func (a *RedshiftActivities) DescribeTableRestoreStatus(ctx context.Context, input *redshift.DescribeTableRestoreStatusInput) (*redshift.DescribeTableRestoreStatusOutput, error) {
+	return a.client.DescribeTableRestoreStatusWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeTags(input *redshift.DescribeTagsInput) (*redshift.DescribeTagsOutput, error) {
-	return a.client.DescribeTags(input)
+func (a *RedshiftActivities) DescribeTags(ctx context.Context, input *redshift.DescribeTagsInput) (*redshift.DescribeTagsOutput, error) {
+	return a.client.DescribeTagsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DescribeUsageLimits(input *redshift.DescribeUsageLimitsInput) (*redshift.DescribeUsageLimitsOutput, error) {
-	return a.client.DescribeUsageLimits(input)
+func (a *RedshiftActivities) DescribeUsageLimits(ctx context.Context, input *redshift.DescribeUsageLimitsInput) (*redshift.DescribeUsageLimitsOutput, error) {
+	return a.client.DescribeUsageLimitsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DisableLogging(input *redshift.DisableLoggingInput) (*redshift.LoggingStatus, error) {
-	return a.client.DisableLogging(input)
+func (a *RedshiftActivities) DisableLogging(ctx context.Context, input *redshift.DisableLoggingInput) (*redshift.LoggingStatus, error) {
+	return a.client.DisableLoggingWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) DisableSnapshotCopy(input *redshift.DisableSnapshotCopyInput) (*redshift.DisableSnapshotCopyOutput, error) {
-	return a.client.DisableSnapshotCopy(input)
+func (a *RedshiftActivities) DisableSnapshotCopy(ctx context.Context, input *redshift.DisableSnapshotCopyInput) (*redshift.DisableSnapshotCopyOutput, error) {
+	return a.client.DisableSnapshotCopyWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) EnableLogging(input *redshift.EnableLoggingInput) (*redshift.LoggingStatus, error) {
-	return a.client.EnableLogging(input)
+func (a *RedshiftActivities) EnableLogging(ctx context.Context, input *redshift.EnableLoggingInput) (*redshift.LoggingStatus, error) {
+	return a.client.EnableLoggingWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) EnableSnapshotCopy(input *redshift.EnableSnapshotCopyInput) (*redshift.EnableSnapshotCopyOutput, error) {
-	return a.client.EnableSnapshotCopy(input)
+func (a *RedshiftActivities) EnableSnapshotCopy(ctx context.Context, input *redshift.EnableSnapshotCopyInput) (*redshift.EnableSnapshotCopyOutput, error) {
+	return a.client.EnableSnapshotCopyWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) GetClusterCredentials(input *redshift.GetClusterCredentialsInput) (*redshift.GetClusterCredentialsOutput, error) {
-	return a.client.GetClusterCredentials(input)
+func (a *RedshiftActivities) GetClusterCredentials(ctx context.Context, input *redshift.GetClusterCredentialsInput) (*redshift.GetClusterCredentialsOutput, error) {
+	return a.client.GetClusterCredentialsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) GetReservedNodeExchangeOfferings(input *redshift.GetReservedNodeExchangeOfferingsInput) (*redshift.GetReservedNodeExchangeOfferingsOutput, error) {
-	return a.client.GetReservedNodeExchangeOfferings(input)
+func (a *RedshiftActivities) GetReservedNodeExchangeOfferings(ctx context.Context, input *redshift.GetReservedNodeExchangeOfferingsInput) (*redshift.GetReservedNodeExchangeOfferingsOutput, error) {
+	return a.client.GetReservedNodeExchangeOfferingsWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyCluster(input *redshift.ModifyClusterInput) (*redshift.ModifyClusterOutput, error) {
-	return a.client.ModifyCluster(input)
+func (a *RedshiftActivities) ModifyCluster(ctx context.Context, input *redshift.ModifyClusterInput) (*redshift.ModifyClusterOutput, error) {
+	return a.client.ModifyClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterDbRevision(input *redshift.ModifyClusterDbRevisionInput) (*redshift.ModifyClusterDbRevisionOutput, error) {
-	return a.client.ModifyClusterDbRevision(input)
+func (a *RedshiftActivities) ModifyClusterDbRevision(ctx context.Context, input *redshift.ModifyClusterDbRevisionInput) (*redshift.ModifyClusterDbRevisionOutput, error) {
+	return a.client.ModifyClusterDbRevisionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterIamRoles(input *redshift.ModifyClusterIamRolesInput) (*redshift.ModifyClusterIamRolesOutput, error) {
-	return a.client.ModifyClusterIamRoles(input)
+func (a *RedshiftActivities) ModifyClusterIamRoles(ctx context.Context, input *redshift.ModifyClusterIamRolesInput) (*redshift.ModifyClusterIamRolesOutput, error) {
+	return a.client.ModifyClusterIamRolesWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterMaintenance(input *redshift.ModifyClusterMaintenanceInput) (*redshift.ModifyClusterMaintenanceOutput, error) {
-	return a.client.ModifyClusterMaintenance(input)
+func (a *RedshiftActivities) ModifyClusterMaintenance(ctx context.Context, input *redshift.ModifyClusterMaintenanceInput) (*redshift.ModifyClusterMaintenanceOutput, error) {
+	return a.client.ModifyClusterMaintenanceWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterParameterGroup(input *redshift.ModifyClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
-	return a.client.ModifyClusterParameterGroup(input)
+func (a *RedshiftActivities) ModifyClusterParameterGroup(ctx context.Context, input *redshift.ModifyClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
+	return a.client.ModifyClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterSnapshot(input *redshift.ModifyClusterSnapshotInput) (*redshift.ModifyClusterSnapshotOutput, error) {
-	return a.client.ModifyClusterSnapshot(input)
+func (a *RedshiftActivities) ModifyClusterSnapshot(ctx context.Context, input *redshift.ModifyClusterSnapshotInput) (*redshift.ModifyClusterSnapshotOutput, error) {
+	return a.client.ModifyClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterSnapshotSchedule(input *redshift.ModifyClusterSnapshotScheduleInput) (*redshift.ModifyClusterSnapshotScheduleOutput, error) {
-	return a.client.ModifyClusterSnapshotSchedule(input)
+func (a *RedshiftActivities) ModifyClusterSnapshotSchedule(ctx context.Context, input *redshift.ModifyClusterSnapshotScheduleInput) (*redshift.ModifyClusterSnapshotScheduleOutput, error) {
+	return a.client.ModifyClusterSnapshotScheduleWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyClusterSubnetGroup(input *redshift.ModifyClusterSubnetGroupInput) (*redshift.ModifyClusterSubnetGroupOutput, error) {
-	return a.client.ModifyClusterSubnetGroup(input)
+func (a *RedshiftActivities) ModifyClusterSubnetGroup(ctx context.Context, input *redshift.ModifyClusterSubnetGroupInput) (*redshift.ModifyClusterSubnetGroupOutput, error) {
+	return a.client.ModifyClusterSubnetGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyEventSubscription(input *redshift.ModifyEventSubscriptionInput) (*redshift.ModifyEventSubscriptionOutput, error) {
-	return a.client.ModifyEventSubscription(input)
+func (a *RedshiftActivities) ModifyEventSubscription(ctx context.Context, input *redshift.ModifyEventSubscriptionInput) (*redshift.ModifyEventSubscriptionOutput, error) {
+	return a.client.ModifyEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyScheduledAction(input *redshift.ModifyScheduledActionInput) (*redshift.ModifyScheduledActionOutput, error) {
-	return a.client.ModifyScheduledAction(input)
+func (a *RedshiftActivities) ModifyScheduledAction(ctx context.Context, input *redshift.ModifyScheduledActionInput) (*redshift.ModifyScheduledActionOutput, error) {
+	return a.client.ModifyScheduledActionWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifySnapshotCopyRetentionPeriod(input *redshift.ModifySnapshotCopyRetentionPeriodInput) (*redshift.ModifySnapshotCopyRetentionPeriodOutput, error) {
-	return a.client.ModifySnapshotCopyRetentionPeriod(input)
+func (a *RedshiftActivities) ModifySnapshotCopyRetentionPeriod(ctx context.Context, input *redshift.ModifySnapshotCopyRetentionPeriodInput) (*redshift.ModifySnapshotCopyRetentionPeriodOutput, error) {
+	return a.client.ModifySnapshotCopyRetentionPeriodWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifySnapshotSchedule(input *redshift.ModifySnapshotScheduleInput) (*redshift.ModifySnapshotScheduleOutput, error) {
-	return a.client.ModifySnapshotSchedule(input)
+func (a *RedshiftActivities) ModifySnapshotSchedule(ctx context.Context, input *redshift.ModifySnapshotScheduleInput) (*redshift.ModifySnapshotScheduleOutput, error) {
+	return a.client.ModifySnapshotScheduleWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ModifyUsageLimit(input *redshift.ModifyUsageLimitInput) (*redshift.ModifyUsageLimitOutput, error) {
-	return a.client.ModifyUsageLimit(input)
+func (a *RedshiftActivities) ModifyUsageLimit(ctx context.Context, input *redshift.ModifyUsageLimitInput) (*redshift.ModifyUsageLimitOutput, error) {
+	return a.client.ModifyUsageLimitWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) PauseCluster(input *redshift.PauseClusterInput) (*redshift.PauseClusterOutput, error) {
-	return a.client.PauseCluster(input)
+func (a *RedshiftActivities) PauseCluster(ctx context.Context, input *redshift.PauseClusterInput) (*redshift.PauseClusterOutput, error) {
+	return a.client.PauseClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) PurchaseReservedNodeOffering(input *redshift.PurchaseReservedNodeOfferingInput) (*redshift.PurchaseReservedNodeOfferingOutput, error) {
-	return a.client.PurchaseReservedNodeOffering(input)
+func (a *RedshiftActivities) PurchaseReservedNodeOffering(ctx context.Context, input *redshift.PurchaseReservedNodeOfferingInput) (*redshift.PurchaseReservedNodeOfferingOutput, error) {
+	return a.client.PurchaseReservedNodeOfferingWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RebootCluster(input *redshift.RebootClusterInput) (*redshift.RebootClusterOutput, error) {
-	return a.client.RebootCluster(input)
+func (a *RedshiftActivities) RebootCluster(ctx context.Context, input *redshift.RebootClusterInput) (*redshift.RebootClusterOutput, error) {
+	return a.client.RebootClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ResetClusterParameterGroup(input *redshift.ResetClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
-	return a.client.ResetClusterParameterGroup(input)
+func (a *RedshiftActivities) ResetClusterParameterGroup(ctx context.Context, input *redshift.ResetClusterParameterGroupInput) (*redshift.ClusterParameterGroupNameMessage, error) {
+	return a.client.ResetClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ResizeCluster(input *redshift.ResizeClusterInput) (*redshift.ResizeClusterOutput, error) {
-	return a.client.ResizeCluster(input)
+func (a *RedshiftActivities) ResizeCluster(ctx context.Context, input *redshift.ResizeClusterInput) (*redshift.ResizeClusterOutput, error) {
+	return a.client.ResizeClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RestoreFromClusterSnapshot(input *redshift.RestoreFromClusterSnapshotInput) (*redshift.RestoreFromClusterSnapshotOutput, error) {
-	return a.client.RestoreFromClusterSnapshot(input)
+func (a *RedshiftActivities) RestoreFromClusterSnapshot(ctx context.Context, input *redshift.RestoreFromClusterSnapshotInput) (*redshift.RestoreFromClusterSnapshotOutput, error) {
+	return a.client.RestoreFromClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RestoreTableFromClusterSnapshot(input *redshift.RestoreTableFromClusterSnapshotInput) (*redshift.RestoreTableFromClusterSnapshotOutput, error) {
-	return a.client.RestoreTableFromClusterSnapshot(input)
+func (a *RedshiftActivities) RestoreTableFromClusterSnapshot(ctx context.Context, input *redshift.RestoreTableFromClusterSnapshotInput) (*redshift.RestoreTableFromClusterSnapshotOutput, error) {
+	return a.client.RestoreTableFromClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) ResumeCluster(input *redshift.ResumeClusterInput) (*redshift.ResumeClusterOutput, error) {
-	return a.client.ResumeCluster(input)
+func (a *RedshiftActivities) ResumeCluster(ctx context.Context, input *redshift.ResumeClusterInput) (*redshift.ResumeClusterOutput, error) {
+	return a.client.ResumeClusterWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RevokeClusterSecurityGroupIngress(input *redshift.RevokeClusterSecurityGroupIngressInput) (*redshift.RevokeClusterSecurityGroupIngressOutput, error) {
-	return a.client.RevokeClusterSecurityGroupIngress(input)
+func (a *RedshiftActivities) RevokeClusterSecurityGroupIngress(ctx context.Context, input *redshift.RevokeClusterSecurityGroupIngressInput) (*redshift.RevokeClusterSecurityGroupIngressOutput, error) {
+	return a.client.RevokeClusterSecurityGroupIngressWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RevokeSnapshotAccess(input *redshift.RevokeSnapshotAccessInput) (*redshift.RevokeSnapshotAccessOutput, error) {
-	return a.client.RevokeSnapshotAccess(input)
+func (a *RedshiftActivities) RevokeSnapshotAccess(ctx context.Context, input *redshift.RevokeSnapshotAccessInput) (*redshift.RevokeSnapshotAccessOutput, error) {
+	return a.client.RevokeSnapshotAccessWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) RotateEncryptionKey(input *redshift.RotateEncryptionKeyInput) (*redshift.RotateEncryptionKeyOutput, error) {
-	return a.client.RotateEncryptionKey(input)
+func (a *RedshiftActivities) RotateEncryptionKey(ctx context.Context, input *redshift.RotateEncryptionKeyInput) (*redshift.RotateEncryptionKeyOutput, error) {
+	return a.client.RotateEncryptionKeyWithContext(ctx, input)
 }
 
-func (a *RedshiftActivities) WaitUntilClusterAvailable(input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterAvailable(input)
+func (a *RedshiftActivities) WaitUntilClusterAvailable(ctx context.Context, input *redshift.DescribeClustersInput) error {
+	return a.client.WaitUntilClusterAvailableWithContext(ctx, input)
+
 }
+
+func (a *RedshiftActivities) WaitUntilClusterDeleted(ctx context.Context, input *redshift.DescribeClustersInput) error {
+	return a.client.WaitUntilClusterDeletedWithContext(ctx, input)
 
-func (a *RedshiftActivities) WaitUntilClusterDeleted(input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterDeleted(input)
 }
 
-func (a *RedshiftActivities) WaitUntilClusterRestored(input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterRestored(input)
+func (a *RedshiftActivities) WaitUntilClusterRestored(ctx context.Context, input *redshift.DescribeClustersInput) error {
+	return a.client.WaitUntilClusterRestoredWithContext(ctx, input)
+
 }
+
+func (a *RedshiftActivities) WaitUntilSnapshotAvailable(ctx context.Context, input *redshift.DescribeClusterSnapshotsInput) error {
+	return a.client.WaitUntilSnapshotAvailableWithContext(ctx, input)
 
-func (a *RedshiftActivities) WaitUntilSnapshotAvailable(input *redshift.DescribeClusterSnapshotsInput) error {
-	return a.client.WaitUntilSnapshotAvailable(input)
 }

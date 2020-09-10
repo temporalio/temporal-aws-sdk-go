@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mturk"
 	"github.com/aws/aws-sdk-go/service/mturk/mturkiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type MTurkActivities struct {
 	client mturkiface.MTurkAPI
@@ -16,150 +21,150 @@ func NewMTurkActivities(session *session.Session, config ...*aws.Config) *MTurkA
 	return &MTurkActivities{client: client}
 }
 
-func (a *MTurkActivities) ApproveAssignment(input *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error) {
-	return a.client.ApproveAssignment(input)
+func (a *MTurkActivities) ApproveAssignment(ctx context.Context, input *mturk.ApproveAssignmentInput) (*mturk.ApproveAssignmentOutput, error) {
+	return a.client.ApproveAssignmentWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) AssociateQualificationWithWorker(input *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error) {
-	return a.client.AssociateQualificationWithWorker(input)
+func (a *MTurkActivities) AssociateQualificationWithWorker(ctx context.Context, input *mturk.AssociateQualificationWithWorkerInput) (*mturk.AssociateQualificationWithWorkerOutput, error) {
+	return a.client.AssociateQualificationWithWorkerWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateAdditionalAssignmentsForHIT(input *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error) {
-	return a.client.CreateAdditionalAssignmentsForHIT(input)
+func (a *MTurkActivities) CreateAdditionalAssignmentsForHIT(ctx context.Context, input *mturk.CreateAdditionalAssignmentsForHITInput) (*mturk.CreateAdditionalAssignmentsForHITOutput, error) {
+	return a.client.CreateAdditionalAssignmentsForHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateHIT(input *mturk.CreateHITInput) (*mturk.CreateHITOutput, error) {
-	return a.client.CreateHIT(input)
+func (a *MTurkActivities) CreateHIT(ctx context.Context, input *mturk.CreateHITInput) (*mturk.CreateHITOutput, error) {
+	return a.client.CreateHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateHITType(input *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error) {
-	return a.client.CreateHITType(input)
+func (a *MTurkActivities) CreateHITType(ctx context.Context, input *mturk.CreateHITTypeInput) (*mturk.CreateHITTypeOutput, error) {
+	return a.client.CreateHITTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateHITWithHITType(input *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error) {
-	return a.client.CreateHITWithHITType(input)
+func (a *MTurkActivities) CreateHITWithHITType(ctx context.Context, input *mturk.CreateHITWithHITTypeInput) (*mturk.CreateHITWithHITTypeOutput, error) {
+	return a.client.CreateHITWithHITTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateQualificationType(input *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error) {
-	return a.client.CreateQualificationType(input)
+func (a *MTurkActivities) CreateQualificationType(ctx context.Context, input *mturk.CreateQualificationTypeInput) (*mturk.CreateQualificationTypeOutput, error) {
+	return a.client.CreateQualificationTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) CreateWorkerBlock(input *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error) {
-	return a.client.CreateWorkerBlock(input)
+func (a *MTurkActivities) CreateWorkerBlock(ctx context.Context, input *mturk.CreateWorkerBlockInput) (*mturk.CreateWorkerBlockOutput, error) {
+	return a.client.CreateWorkerBlockWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) DeleteHIT(input *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error) {
-	return a.client.DeleteHIT(input)
+func (a *MTurkActivities) DeleteHIT(ctx context.Context, input *mturk.DeleteHITInput) (*mturk.DeleteHITOutput, error) {
+	return a.client.DeleteHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) DeleteQualificationType(input *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error) {
-	return a.client.DeleteQualificationType(input)
+func (a *MTurkActivities) DeleteQualificationType(ctx context.Context, input *mturk.DeleteQualificationTypeInput) (*mturk.DeleteQualificationTypeOutput, error) {
+	return a.client.DeleteQualificationTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) DeleteWorkerBlock(input *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error) {
-	return a.client.DeleteWorkerBlock(input)
+func (a *MTurkActivities) DeleteWorkerBlock(ctx context.Context, input *mturk.DeleteWorkerBlockInput) (*mturk.DeleteWorkerBlockOutput, error) {
+	return a.client.DeleteWorkerBlockWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) DisassociateQualificationFromWorker(input *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error) {
-	return a.client.DisassociateQualificationFromWorker(input)
+func (a *MTurkActivities) DisassociateQualificationFromWorker(ctx context.Context, input *mturk.DisassociateQualificationFromWorkerInput) (*mturk.DisassociateQualificationFromWorkerOutput, error) {
+	return a.client.DisassociateQualificationFromWorkerWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetAccountBalance(input *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error) {
-	return a.client.GetAccountBalance(input)
+func (a *MTurkActivities) GetAccountBalance(ctx context.Context, input *mturk.GetAccountBalanceInput) (*mturk.GetAccountBalanceOutput, error) {
+	return a.client.GetAccountBalanceWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetAssignment(input *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error) {
-	return a.client.GetAssignment(input)
+func (a *MTurkActivities) GetAssignment(ctx context.Context, input *mturk.GetAssignmentInput) (*mturk.GetAssignmentOutput, error) {
+	return a.client.GetAssignmentWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetFileUploadURL(input *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error) {
-	return a.client.GetFileUploadURL(input)
+func (a *MTurkActivities) GetFileUploadURL(ctx context.Context, input *mturk.GetFileUploadURLInput) (*mturk.GetFileUploadURLOutput, error) {
+	return a.client.GetFileUploadURLWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetHIT(input *mturk.GetHITInput) (*mturk.GetHITOutput, error) {
-	return a.client.GetHIT(input)
+func (a *MTurkActivities) GetHIT(ctx context.Context, input *mturk.GetHITInput) (*mturk.GetHITOutput, error) {
+	return a.client.GetHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetQualificationScore(input *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error) {
-	return a.client.GetQualificationScore(input)
+func (a *MTurkActivities) GetQualificationScore(ctx context.Context, input *mturk.GetQualificationScoreInput) (*mturk.GetQualificationScoreOutput, error) {
+	return a.client.GetQualificationScoreWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) GetQualificationType(input *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error) {
-	return a.client.GetQualificationType(input)
+func (a *MTurkActivities) GetQualificationType(ctx context.Context, input *mturk.GetQualificationTypeInput) (*mturk.GetQualificationTypeOutput, error) {
+	return a.client.GetQualificationTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListAssignmentsForHIT(input *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error) {
-	return a.client.ListAssignmentsForHIT(input)
+func (a *MTurkActivities) ListAssignmentsForHIT(ctx context.Context, input *mturk.ListAssignmentsForHITInput) (*mturk.ListAssignmentsForHITOutput, error) {
+	return a.client.ListAssignmentsForHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListBonusPayments(input *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error) {
-	return a.client.ListBonusPayments(input)
+func (a *MTurkActivities) ListBonusPayments(ctx context.Context, input *mturk.ListBonusPaymentsInput) (*mturk.ListBonusPaymentsOutput, error) {
+	return a.client.ListBonusPaymentsWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListHITs(input *mturk.ListHITsInput) (*mturk.ListHITsOutput, error) {
-	return a.client.ListHITs(input)
+func (a *MTurkActivities) ListHITs(ctx context.Context, input *mturk.ListHITsInput) (*mturk.ListHITsOutput, error) {
+	return a.client.ListHITsWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListHITsForQualificationType(input *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error) {
-	return a.client.ListHITsForQualificationType(input)
+func (a *MTurkActivities) ListHITsForQualificationType(ctx context.Context, input *mturk.ListHITsForQualificationTypeInput) (*mturk.ListHITsForQualificationTypeOutput, error) {
+	return a.client.ListHITsForQualificationTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListQualificationRequests(input *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error) {
-	return a.client.ListQualificationRequests(input)
+func (a *MTurkActivities) ListQualificationRequests(ctx context.Context, input *mturk.ListQualificationRequestsInput) (*mturk.ListQualificationRequestsOutput, error) {
+	return a.client.ListQualificationRequestsWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListQualificationTypes(input *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error) {
-	return a.client.ListQualificationTypes(input)
+func (a *MTurkActivities) ListQualificationTypes(ctx context.Context, input *mturk.ListQualificationTypesInput) (*mturk.ListQualificationTypesOutput, error) {
+	return a.client.ListQualificationTypesWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListReviewPolicyResultsForHIT(input *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error) {
-	return a.client.ListReviewPolicyResultsForHIT(input)
+func (a *MTurkActivities) ListReviewPolicyResultsForHIT(ctx context.Context, input *mturk.ListReviewPolicyResultsForHITInput) (*mturk.ListReviewPolicyResultsForHITOutput, error) {
+	return a.client.ListReviewPolicyResultsForHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListReviewableHITs(input *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error) {
-	return a.client.ListReviewableHITs(input)
+func (a *MTurkActivities) ListReviewableHITs(ctx context.Context, input *mturk.ListReviewableHITsInput) (*mturk.ListReviewableHITsOutput, error) {
+	return a.client.ListReviewableHITsWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListWorkerBlocks(input *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error) {
-	return a.client.ListWorkerBlocks(input)
+func (a *MTurkActivities) ListWorkerBlocks(ctx context.Context, input *mturk.ListWorkerBlocksInput) (*mturk.ListWorkerBlocksOutput, error) {
+	return a.client.ListWorkerBlocksWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) ListWorkersWithQualificationType(input *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error) {
-	return a.client.ListWorkersWithQualificationType(input)
+func (a *MTurkActivities) ListWorkersWithQualificationType(ctx context.Context, input *mturk.ListWorkersWithQualificationTypeInput) (*mturk.ListWorkersWithQualificationTypeOutput, error) {
+	return a.client.ListWorkersWithQualificationTypeWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) NotifyWorkers(input *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error) {
-	return a.client.NotifyWorkers(input)
+func (a *MTurkActivities) NotifyWorkers(ctx context.Context, input *mturk.NotifyWorkersInput) (*mturk.NotifyWorkersOutput, error) {
+	return a.client.NotifyWorkersWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) RejectAssignment(input *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error) {
-	return a.client.RejectAssignment(input)
+func (a *MTurkActivities) RejectAssignment(ctx context.Context, input *mturk.RejectAssignmentInput) (*mturk.RejectAssignmentOutput, error) {
+	return a.client.RejectAssignmentWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) SendBonus(input *mturk.SendBonusInput) (*mturk.SendBonusOutput, error) {
-	return a.client.SendBonus(input)
+func (a *MTurkActivities) SendBonus(ctx context.Context, input *mturk.SendBonusInput) (*mturk.SendBonusOutput, error) {
+	return a.client.SendBonusWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) SendTestEventNotification(input *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error) {
-	return a.client.SendTestEventNotification(input)
+func (a *MTurkActivities) SendTestEventNotification(ctx context.Context, input *mturk.SendTestEventNotificationInput) (*mturk.SendTestEventNotificationOutput, error) {
+	return a.client.SendTestEventNotificationWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) UpdateExpirationForHIT(input *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error) {
-	return a.client.UpdateExpirationForHIT(input)
+func (a *MTurkActivities) UpdateExpirationForHIT(ctx context.Context, input *mturk.UpdateExpirationForHITInput) (*mturk.UpdateExpirationForHITOutput, error) {
+	return a.client.UpdateExpirationForHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) UpdateHITReviewStatus(input *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error) {
-	return a.client.UpdateHITReviewStatus(input)
+func (a *MTurkActivities) UpdateHITReviewStatus(ctx context.Context, input *mturk.UpdateHITReviewStatusInput) (*mturk.UpdateHITReviewStatusOutput, error) {
+	return a.client.UpdateHITReviewStatusWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) UpdateHITTypeOfHIT(input *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error) {
-	return a.client.UpdateHITTypeOfHIT(input)
+func (a *MTurkActivities) UpdateHITTypeOfHIT(ctx context.Context, input *mturk.UpdateHITTypeOfHITInput) (*mturk.UpdateHITTypeOfHITOutput, error) {
+	return a.client.UpdateHITTypeOfHITWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) UpdateNotificationSettings(input *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error) {
-	return a.client.UpdateNotificationSettings(input)
+func (a *MTurkActivities) UpdateNotificationSettings(ctx context.Context, input *mturk.UpdateNotificationSettingsInput) (*mturk.UpdateNotificationSettingsOutput, error) {
+	return a.client.UpdateNotificationSettingsWithContext(ctx, input)
 }
 
-func (a *MTurkActivities) UpdateQualificationType(input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error) {
-	return a.client.UpdateQualificationType(input)
+func (a *MTurkActivities) UpdateQualificationType(ctx context.Context, input *mturk.UpdateQualificationTypeInput) (*mturk.UpdateQualificationTypeOutput, error) {
+	return a.client.UpdateQualificationTypeWithContext(ctx, input)
 }

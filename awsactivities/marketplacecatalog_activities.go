@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/marketplacecatalog"
 	"github.com/aws/aws-sdk-go/service/marketplacecatalog/marketplacecatalogiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type MarketplaceCatalogActivities struct {
 	client marketplacecatalogiface.MarketplaceCatalogAPI
@@ -16,26 +21,26 @@ func NewMarketplaceCatalogActivities(session *session.Session, config ...*aws.Co
 	return &MarketplaceCatalogActivities{client: client}
 }
 
-func (a *MarketplaceCatalogActivities) CancelChangeSet(input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error) {
-	return a.client.CancelChangeSet(input)
+func (a *MarketplaceCatalogActivities) CancelChangeSet(ctx context.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error) {
+	return a.client.CancelChangeSetWithContext(ctx, input)
 }
 
-func (a *MarketplaceCatalogActivities) DescribeChangeSet(input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error) {
-	return a.client.DescribeChangeSet(input)
+func (a *MarketplaceCatalogActivities) DescribeChangeSet(ctx context.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error) {
+	return a.client.DescribeChangeSetWithContext(ctx, input)
 }
 
-func (a *MarketplaceCatalogActivities) DescribeEntity(input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error) {
-	return a.client.DescribeEntity(input)
+func (a *MarketplaceCatalogActivities) DescribeEntity(ctx context.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error) {
+	return a.client.DescribeEntityWithContext(ctx, input)
 }
 
-func (a *MarketplaceCatalogActivities) ListChangeSets(input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error) {
-	return a.client.ListChangeSets(input)
+func (a *MarketplaceCatalogActivities) ListChangeSets(ctx context.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error) {
+	return a.client.ListChangeSetsWithContext(ctx, input)
 }
 
-func (a *MarketplaceCatalogActivities) ListEntities(input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error) {
-	return a.client.ListEntities(input)
+func (a *MarketplaceCatalogActivities) ListEntities(ctx context.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error) {
+	return a.client.ListEntitiesWithContext(ctx, input)
 }
 
-func (a *MarketplaceCatalogActivities) StartChangeSet(input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error) {
-	return a.client.StartChangeSet(input)
+func (a *MarketplaceCatalogActivities) StartChangeSet(ctx context.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error) {
+	return a.client.StartChangeSetWithContext(ctx, input)
 }

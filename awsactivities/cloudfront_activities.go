@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudfront"
 	"github.com/aws/aws-sdk-go/service/cloudfront/cloudfrontiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CloudFrontActivities struct {
 	client cloudfrontiface.CloudFrontAPI
@@ -16,286 +21,289 @@ func NewCloudFrontActivities(session *session.Session, config ...*aws.Config) *C
 	return &CloudFrontActivities{client: client}
 }
 
-func (a *CloudFrontActivities) CreateCachePolicy(input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
-	return a.client.CreateCachePolicy(input)
+func (a *CloudFrontActivities) CreateCachePolicy(ctx context.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
+	return a.client.CreateCachePolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateCloudFrontOriginAccessIdentity(input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
-	return a.client.CreateCloudFrontOriginAccessIdentity(input)
+func (a *CloudFrontActivities) CreateCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.CreateCloudFrontOriginAccessIdentityInput) (*cloudfront.CreateCloudFrontOriginAccessIdentityOutput, error) {
+	return a.client.CreateCloudFrontOriginAccessIdentityWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateDistribution(input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error) {
-	return a.client.CreateDistribution(input)
+func (a *CloudFrontActivities) CreateDistribution(ctx context.Context, input *cloudfront.CreateDistributionInput) (*cloudfront.CreateDistributionOutput, error) {
+	return a.client.CreateDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateDistributionWithTags(input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error) {
-	return a.client.CreateDistributionWithTags(input)
+func (a *CloudFrontActivities) CreateDistributionWithTags(ctx context.Context, input *cloudfront.CreateDistributionWithTagsInput) (*cloudfront.CreateDistributionWithTagsOutput, error) {
+	return a.client.CreateDistributionWithTagsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateFieldLevelEncryptionConfig(input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
-	return a.client.CreateFieldLevelEncryptionConfig(input)
+func (a *CloudFrontActivities) CreateFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.CreateFieldLevelEncryptionConfigInput) (*cloudfront.CreateFieldLevelEncryptionConfigOutput, error) {
+	return a.client.CreateFieldLevelEncryptionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateFieldLevelEncryptionProfile(input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
-	return a.client.CreateFieldLevelEncryptionProfile(input)
+func (a *CloudFrontActivities) CreateFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.CreateFieldLevelEncryptionProfileInput) (*cloudfront.CreateFieldLevelEncryptionProfileOutput, error) {
+	return a.client.CreateFieldLevelEncryptionProfileWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateInvalidation(input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error) {
-	return a.client.CreateInvalidation(input)
+func (a *CloudFrontActivities) CreateInvalidation(ctx context.Context, input *cloudfront.CreateInvalidationInput) (*cloudfront.CreateInvalidationOutput, error) {
+	return a.client.CreateInvalidationWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateMonitoringSubscription(input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
-	return a.client.CreateMonitoringSubscription(input)
+func (a *CloudFrontActivities) CreateMonitoringSubscription(ctx context.Context, input *cloudfront.CreateMonitoringSubscriptionInput) (*cloudfront.CreateMonitoringSubscriptionOutput, error) {
+	return a.client.CreateMonitoringSubscriptionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateOriginRequestPolicy(input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
-	return a.client.CreateOriginRequestPolicy(input)
+func (a *CloudFrontActivities) CreateOriginRequestPolicy(ctx context.Context, input *cloudfront.CreateOriginRequestPolicyInput) (*cloudfront.CreateOriginRequestPolicyOutput, error) {
+	return a.client.CreateOriginRequestPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreatePublicKey(input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error) {
-	return a.client.CreatePublicKey(input)
+func (a *CloudFrontActivities) CreatePublicKey(ctx context.Context, input *cloudfront.CreatePublicKeyInput) (*cloudfront.CreatePublicKeyOutput, error) {
+	return a.client.CreatePublicKeyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateRealtimeLogConfig(input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
-	return a.client.CreateRealtimeLogConfig(input)
+func (a *CloudFrontActivities) CreateRealtimeLogConfig(ctx context.Context, input *cloudfront.CreateRealtimeLogConfigInput) (*cloudfront.CreateRealtimeLogConfigOutput, error) {
+	return a.client.CreateRealtimeLogConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateStreamingDistribution(input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
-	return a.client.CreateStreamingDistribution(input)
+func (a *CloudFrontActivities) CreateStreamingDistribution(ctx context.Context, input *cloudfront.CreateStreamingDistributionInput) (*cloudfront.CreateStreamingDistributionOutput, error) {
+	return a.client.CreateStreamingDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) CreateStreamingDistributionWithTags(input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
-	return a.client.CreateStreamingDistributionWithTags(input)
+func (a *CloudFrontActivities) CreateStreamingDistributionWithTags(ctx context.Context, input *cloudfront.CreateStreamingDistributionWithTagsInput) (*cloudfront.CreateStreamingDistributionWithTagsOutput, error) {
+	return a.client.CreateStreamingDistributionWithTagsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteCachePolicy(input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error) {
-	return a.client.DeleteCachePolicy(input)
+func (a *CloudFrontActivities) DeleteCachePolicy(ctx context.Context, input *cloudfront.DeleteCachePolicyInput) (*cloudfront.DeleteCachePolicyOutput, error) {
+	return a.client.DeleteCachePolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteCloudFrontOriginAccessIdentity(input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
-	return a.client.DeleteCloudFrontOriginAccessIdentity(input)
+func (a *CloudFrontActivities) DeleteCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.DeleteCloudFrontOriginAccessIdentityInput) (*cloudfront.DeleteCloudFrontOriginAccessIdentityOutput, error) {
+	return a.client.DeleteCloudFrontOriginAccessIdentityWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteDistribution(input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error) {
-	return a.client.DeleteDistribution(input)
+func (a *CloudFrontActivities) DeleteDistribution(ctx context.Context, input *cloudfront.DeleteDistributionInput) (*cloudfront.DeleteDistributionOutput, error) {
+	return a.client.DeleteDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteFieldLevelEncryptionConfig(input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
-	return a.client.DeleteFieldLevelEncryptionConfig(input)
+func (a *CloudFrontActivities) DeleteFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.DeleteFieldLevelEncryptionConfigInput) (*cloudfront.DeleteFieldLevelEncryptionConfigOutput, error) {
+	return a.client.DeleteFieldLevelEncryptionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteFieldLevelEncryptionProfile(input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
-	return a.client.DeleteFieldLevelEncryptionProfile(input)
+func (a *CloudFrontActivities) DeleteFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.DeleteFieldLevelEncryptionProfileInput) (*cloudfront.DeleteFieldLevelEncryptionProfileOutput, error) {
+	return a.client.DeleteFieldLevelEncryptionProfileWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteMonitoringSubscription(input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
-	return a.client.DeleteMonitoringSubscription(input)
+func (a *CloudFrontActivities) DeleteMonitoringSubscription(ctx context.Context, input *cloudfront.DeleteMonitoringSubscriptionInput) (*cloudfront.DeleteMonitoringSubscriptionOutput, error) {
+	return a.client.DeleteMonitoringSubscriptionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteOriginRequestPolicy(input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
-	return a.client.DeleteOriginRequestPolicy(input)
+func (a *CloudFrontActivities) DeleteOriginRequestPolicy(ctx context.Context, input *cloudfront.DeleteOriginRequestPolicyInput) (*cloudfront.DeleteOriginRequestPolicyOutput, error) {
+	return a.client.DeleteOriginRequestPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeletePublicKey(input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error) {
-	return a.client.DeletePublicKey(input)
+func (a *CloudFrontActivities) DeletePublicKey(ctx context.Context, input *cloudfront.DeletePublicKeyInput) (*cloudfront.DeletePublicKeyOutput, error) {
+	return a.client.DeletePublicKeyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteRealtimeLogConfig(input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
-	return a.client.DeleteRealtimeLogConfig(input)
+func (a *CloudFrontActivities) DeleteRealtimeLogConfig(ctx context.Context, input *cloudfront.DeleteRealtimeLogConfigInput) (*cloudfront.DeleteRealtimeLogConfigOutput, error) {
+	return a.client.DeleteRealtimeLogConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) DeleteStreamingDistribution(input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
-	return a.client.DeleteStreamingDistribution(input)
+func (a *CloudFrontActivities) DeleteStreamingDistribution(ctx context.Context, input *cloudfront.DeleteStreamingDistributionInput) (*cloudfront.DeleteStreamingDistributionOutput, error) {
+	return a.client.DeleteStreamingDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetCachePolicy(input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error) {
-	return a.client.GetCachePolicy(input)
+func (a *CloudFrontActivities) GetCachePolicy(ctx context.Context, input *cloudfront.GetCachePolicyInput) (*cloudfront.GetCachePolicyOutput, error) {
+	return a.client.GetCachePolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetCachePolicyConfig(input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error) {
-	return a.client.GetCachePolicyConfig(input)
+func (a *CloudFrontActivities) GetCachePolicyConfig(ctx context.Context, input *cloudfront.GetCachePolicyConfigInput) (*cloudfront.GetCachePolicyConfigOutput, error) {
+	return a.client.GetCachePolicyConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetCloudFrontOriginAccessIdentity(input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
-	return a.client.GetCloudFrontOriginAccessIdentity(input)
+func (a *CloudFrontActivities) GetCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityInput) (*cloudfront.GetCloudFrontOriginAccessIdentityOutput, error) {
+	return a.client.GetCloudFrontOriginAccessIdentityWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetCloudFrontOriginAccessIdentityConfig(input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
-	return a.client.GetCloudFrontOriginAccessIdentityConfig(input)
+func (a *CloudFrontActivities) GetCloudFrontOriginAccessIdentityConfig(ctx context.Context, input *cloudfront.GetCloudFrontOriginAccessIdentityConfigInput) (*cloudfront.GetCloudFrontOriginAccessIdentityConfigOutput, error) {
+	return a.client.GetCloudFrontOriginAccessIdentityConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetDistribution(input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error) {
-	return a.client.GetDistribution(input)
+func (a *CloudFrontActivities) GetDistribution(ctx context.Context, input *cloudfront.GetDistributionInput) (*cloudfront.GetDistributionOutput, error) {
+	return a.client.GetDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetDistributionConfig(input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error) {
-	return a.client.GetDistributionConfig(input)
+func (a *CloudFrontActivities) GetDistributionConfig(ctx context.Context, input *cloudfront.GetDistributionConfigInput) (*cloudfront.GetDistributionConfigOutput, error) {
+	return a.client.GetDistributionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetFieldLevelEncryption(input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
-	return a.client.GetFieldLevelEncryption(input)
+func (a *CloudFrontActivities) GetFieldLevelEncryption(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionInput) (*cloudfront.GetFieldLevelEncryptionOutput, error) {
+	return a.client.GetFieldLevelEncryptionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetFieldLevelEncryptionConfig(input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
-	return a.client.GetFieldLevelEncryptionConfig(input)
+func (a *CloudFrontActivities) GetFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionConfigInput) (*cloudfront.GetFieldLevelEncryptionConfigOutput, error) {
+	return a.client.GetFieldLevelEncryptionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetFieldLevelEncryptionProfile(input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
-	return a.client.GetFieldLevelEncryptionProfile(input)
+func (a *CloudFrontActivities) GetFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionProfileInput) (*cloudfront.GetFieldLevelEncryptionProfileOutput, error) {
+	return a.client.GetFieldLevelEncryptionProfileWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetFieldLevelEncryptionProfileConfig(input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
-	return a.client.GetFieldLevelEncryptionProfileConfig(input)
+func (a *CloudFrontActivities) GetFieldLevelEncryptionProfileConfig(ctx context.Context, input *cloudfront.GetFieldLevelEncryptionProfileConfigInput) (*cloudfront.GetFieldLevelEncryptionProfileConfigOutput, error) {
+	return a.client.GetFieldLevelEncryptionProfileConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetInvalidation(input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error) {
-	return a.client.GetInvalidation(input)
+func (a *CloudFrontActivities) GetInvalidation(ctx context.Context, input *cloudfront.GetInvalidationInput) (*cloudfront.GetInvalidationOutput, error) {
+	return a.client.GetInvalidationWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetMonitoringSubscription(input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
-	return a.client.GetMonitoringSubscription(input)
+func (a *CloudFrontActivities) GetMonitoringSubscription(ctx context.Context, input *cloudfront.GetMonitoringSubscriptionInput) (*cloudfront.GetMonitoringSubscriptionOutput, error) {
+	return a.client.GetMonitoringSubscriptionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetOriginRequestPolicy(input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error) {
-	return a.client.GetOriginRequestPolicy(input)
+func (a *CloudFrontActivities) GetOriginRequestPolicy(ctx context.Context, input *cloudfront.GetOriginRequestPolicyInput) (*cloudfront.GetOriginRequestPolicyOutput, error) {
+	return a.client.GetOriginRequestPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetOriginRequestPolicyConfig(input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
-	return a.client.GetOriginRequestPolicyConfig(input)
+func (a *CloudFrontActivities) GetOriginRequestPolicyConfig(ctx context.Context, input *cloudfront.GetOriginRequestPolicyConfigInput) (*cloudfront.GetOriginRequestPolicyConfigOutput, error) {
+	return a.client.GetOriginRequestPolicyConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetPublicKey(input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error) {
-	return a.client.GetPublicKey(input)
+func (a *CloudFrontActivities) GetPublicKey(ctx context.Context, input *cloudfront.GetPublicKeyInput) (*cloudfront.GetPublicKeyOutput, error) {
+	return a.client.GetPublicKeyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetPublicKeyConfig(input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error) {
-	return a.client.GetPublicKeyConfig(input)
+func (a *CloudFrontActivities) GetPublicKeyConfig(ctx context.Context, input *cloudfront.GetPublicKeyConfigInput) (*cloudfront.GetPublicKeyConfigOutput, error) {
+	return a.client.GetPublicKeyConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetRealtimeLogConfig(input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
-	return a.client.GetRealtimeLogConfig(input)
+func (a *CloudFrontActivities) GetRealtimeLogConfig(ctx context.Context, input *cloudfront.GetRealtimeLogConfigInput) (*cloudfront.GetRealtimeLogConfigOutput, error) {
+	return a.client.GetRealtimeLogConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetStreamingDistribution(input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
-	return a.client.GetStreamingDistribution(input)
+func (a *CloudFrontActivities) GetStreamingDistribution(ctx context.Context, input *cloudfront.GetStreamingDistributionInput) (*cloudfront.GetStreamingDistributionOutput, error) {
+	return a.client.GetStreamingDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) GetStreamingDistributionConfig(input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
-	return a.client.GetStreamingDistributionConfig(input)
+func (a *CloudFrontActivities) GetStreamingDistributionConfig(ctx context.Context, input *cloudfront.GetStreamingDistributionConfigInput) (*cloudfront.GetStreamingDistributionConfigOutput, error) {
+	return a.client.GetStreamingDistributionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListCachePolicies(input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error) {
-	return a.client.ListCachePolicies(input)
+func (a *CloudFrontActivities) ListCachePolicies(ctx context.Context, input *cloudfront.ListCachePoliciesInput) (*cloudfront.ListCachePoliciesOutput, error) {
+	return a.client.ListCachePoliciesWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListCloudFrontOriginAccessIdentities(input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
-	return a.client.ListCloudFrontOriginAccessIdentities(input)
+func (a *CloudFrontActivities) ListCloudFrontOriginAccessIdentities(ctx context.Context, input *cloudfront.ListCloudFrontOriginAccessIdentitiesInput) (*cloudfront.ListCloudFrontOriginAccessIdentitiesOutput, error) {
+	return a.client.ListCloudFrontOriginAccessIdentitiesWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListDistributions(input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error) {
-	return a.client.ListDistributions(input)
+func (a *CloudFrontActivities) ListDistributions(ctx context.Context, input *cloudfront.ListDistributionsInput) (*cloudfront.ListDistributionsOutput, error) {
+	return a.client.ListDistributionsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListDistributionsByCachePolicyId(input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
-	return a.client.ListDistributionsByCachePolicyId(input)
+func (a *CloudFrontActivities) ListDistributionsByCachePolicyId(ctx context.Context, input *cloudfront.ListDistributionsByCachePolicyIdInput) (*cloudfront.ListDistributionsByCachePolicyIdOutput, error) {
+	return a.client.ListDistributionsByCachePolicyIdWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListDistributionsByOriginRequestPolicyId(input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
-	return a.client.ListDistributionsByOriginRequestPolicyId(input)
+func (a *CloudFrontActivities) ListDistributionsByOriginRequestPolicyId(ctx context.Context, input *cloudfront.ListDistributionsByOriginRequestPolicyIdInput) (*cloudfront.ListDistributionsByOriginRequestPolicyIdOutput, error) {
+	return a.client.ListDistributionsByOriginRequestPolicyIdWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListDistributionsByRealtimeLogConfig(input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
-	return a.client.ListDistributionsByRealtimeLogConfig(input)
+func (a *CloudFrontActivities) ListDistributionsByRealtimeLogConfig(ctx context.Context, input *cloudfront.ListDistributionsByRealtimeLogConfigInput) (*cloudfront.ListDistributionsByRealtimeLogConfigOutput, error) {
+	return a.client.ListDistributionsByRealtimeLogConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListDistributionsByWebACLId(input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
-	return a.client.ListDistributionsByWebACLId(input)
+func (a *CloudFrontActivities) ListDistributionsByWebACLId(ctx context.Context, input *cloudfront.ListDistributionsByWebACLIdInput) (*cloudfront.ListDistributionsByWebACLIdOutput, error) {
+	return a.client.ListDistributionsByWebACLIdWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListFieldLevelEncryptionConfigs(input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
-	return a.client.ListFieldLevelEncryptionConfigs(input)
+func (a *CloudFrontActivities) ListFieldLevelEncryptionConfigs(ctx context.Context, input *cloudfront.ListFieldLevelEncryptionConfigsInput) (*cloudfront.ListFieldLevelEncryptionConfigsOutput, error) {
+	return a.client.ListFieldLevelEncryptionConfigsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListFieldLevelEncryptionProfiles(input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
-	return a.client.ListFieldLevelEncryptionProfiles(input)
+func (a *CloudFrontActivities) ListFieldLevelEncryptionProfiles(ctx context.Context, input *cloudfront.ListFieldLevelEncryptionProfilesInput) (*cloudfront.ListFieldLevelEncryptionProfilesOutput, error) {
+	return a.client.ListFieldLevelEncryptionProfilesWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListInvalidations(input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error) {
-	return a.client.ListInvalidations(input)
+func (a *CloudFrontActivities) ListInvalidations(ctx context.Context, input *cloudfront.ListInvalidationsInput) (*cloudfront.ListInvalidationsOutput, error) {
+	return a.client.ListInvalidationsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListOriginRequestPolicies(input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
-	return a.client.ListOriginRequestPolicies(input)
+func (a *CloudFrontActivities) ListOriginRequestPolicies(ctx context.Context, input *cloudfront.ListOriginRequestPoliciesInput) (*cloudfront.ListOriginRequestPoliciesOutput, error) {
+	return a.client.ListOriginRequestPoliciesWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListPublicKeys(input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error) {
-	return a.client.ListPublicKeys(input)
+func (a *CloudFrontActivities) ListPublicKeys(ctx context.Context, input *cloudfront.ListPublicKeysInput) (*cloudfront.ListPublicKeysOutput, error) {
+	return a.client.ListPublicKeysWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListRealtimeLogConfigs(input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
-	return a.client.ListRealtimeLogConfigs(input)
+func (a *CloudFrontActivities) ListRealtimeLogConfigs(ctx context.Context, input *cloudfront.ListRealtimeLogConfigsInput) (*cloudfront.ListRealtimeLogConfigsOutput, error) {
+	return a.client.ListRealtimeLogConfigsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListStreamingDistributions(input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
-	return a.client.ListStreamingDistributions(input)
+func (a *CloudFrontActivities) ListStreamingDistributions(ctx context.Context, input *cloudfront.ListStreamingDistributionsInput) (*cloudfront.ListStreamingDistributionsOutput, error) {
+	return a.client.ListStreamingDistributionsWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) ListTagsForResource(input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *CloudFrontActivities) ListTagsForResource(ctx context.Context, input *cloudfront.ListTagsForResourceInput) (*cloudfront.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) TagResource(input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *CloudFrontActivities) TagResource(ctx context.Context, input *cloudfront.TagResourceInput) (*cloudfront.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UntagResource(input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *CloudFrontActivities) UntagResource(ctx context.Context, input *cloudfront.UntagResourceInput) (*cloudfront.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateCachePolicy(input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error) {
-	return a.client.UpdateCachePolicy(input)
+func (a *CloudFrontActivities) UpdateCachePolicy(ctx context.Context, input *cloudfront.UpdateCachePolicyInput) (*cloudfront.UpdateCachePolicyOutput, error) {
+	return a.client.UpdateCachePolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateCloudFrontOriginAccessIdentity(input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
-	return a.client.UpdateCloudFrontOriginAccessIdentity(input)
+func (a *CloudFrontActivities) UpdateCloudFrontOriginAccessIdentity(ctx context.Context, input *cloudfront.UpdateCloudFrontOriginAccessIdentityInput) (*cloudfront.UpdateCloudFrontOriginAccessIdentityOutput, error) {
+	return a.client.UpdateCloudFrontOriginAccessIdentityWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateDistribution(input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error) {
-	return a.client.UpdateDistribution(input)
+func (a *CloudFrontActivities) UpdateDistribution(ctx context.Context, input *cloudfront.UpdateDistributionInput) (*cloudfront.UpdateDistributionOutput, error) {
+	return a.client.UpdateDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateFieldLevelEncryptionConfig(input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
-	return a.client.UpdateFieldLevelEncryptionConfig(input)
+func (a *CloudFrontActivities) UpdateFieldLevelEncryptionConfig(ctx context.Context, input *cloudfront.UpdateFieldLevelEncryptionConfigInput) (*cloudfront.UpdateFieldLevelEncryptionConfigOutput, error) {
+	return a.client.UpdateFieldLevelEncryptionConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateFieldLevelEncryptionProfile(input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
-	return a.client.UpdateFieldLevelEncryptionProfile(input)
+func (a *CloudFrontActivities) UpdateFieldLevelEncryptionProfile(ctx context.Context, input *cloudfront.UpdateFieldLevelEncryptionProfileInput) (*cloudfront.UpdateFieldLevelEncryptionProfileOutput, error) {
+	return a.client.UpdateFieldLevelEncryptionProfileWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateOriginRequestPolicy(input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
-	return a.client.UpdateOriginRequestPolicy(input)
+func (a *CloudFrontActivities) UpdateOriginRequestPolicy(ctx context.Context, input *cloudfront.UpdateOriginRequestPolicyInput) (*cloudfront.UpdateOriginRequestPolicyOutput, error) {
+	return a.client.UpdateOriginRequestPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdatePublicKey(input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error) {
-	return a.client.UpdatePublicKey(input)
+func (a *CloudFrontActivities) UpdatePublicKey(ctx context.Context, input *cloudfront.UpdatePublicKeyInput) (*cloudfront.UpdatePublicKeyOutput, error) {
+	return a.client.UpdatePublicKeyWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateRealtimeLogConfig(input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
-	return a.client.UpdateRealtimeLogConfig(input)
+func (a *CloudFrontActivities) UpdateRealtimeLogConfig(ctx context.Context, input *cloudfront.UpdateRealtimeLogConfigInput) (*cloudfront.UpdateRealtimeLogConfigOutput, error) {
+	return a.client.UpdateRealtimeLogConfigWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) UpdateStreamingDistribution(input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {
-	return a.client.UpdateStreamingDistribution(input)
+func (a *CloudFrontActivities) UpdateStreamingDistribution(ctx context.Context, input *cloudfront.UpdateStreamingDistributionInput) (*cloudfront.UpdateStreamingDistributionOutput, error) {
+	return a.client.UpdateStreamingDistributionWithContext(ctx, input)
 }
 
-func (a *CloudFrontActivities) WaitUntilDistributionDeployed(input *cloudfront.GetDistributionInput) error {
-	return a.client.WaitUntilDistributionDeployed(input)
+func (a *CloudFrontActivities) WaitUntilDistributionDeployed(ctx context.Context, input *cloudfront.GetDistributionInput) error {
+	return a.client.WaitUntilDistributionDeployedWithContext(ctx, input)
+
 }
 
-func (a *CloudFrontActivities) WaitUntilInvalidationCompleted(input *cloudfront.GetInvalidationInput) error {
-	return a.client.WaitUntilInvalidationCompleted(input)
+func (a *CloudFrontActivities) WaitUntilInvalidationCompleted(ctx context.Context, input *cloudfront.GetInvalidationInput) error {
+	return a.client.WaitUntilInvalidationCompletedWithContext(ctx, input)
+
 }
+
+func (a *CloudFrontActivities) WaitUntilStreamingDistributionDeployed(ctx context.Context, input *cloudfront.GetStreamingDistributionInput) error {
+	return a.client.WaitUntilStreamingDistributionDeployedWithContext(ctx, input)
 
-func (a *CloudFrontActivities) WaitUntilStreamingDistributionDeployed(input *cloudfront.GetStreamingDistributionInput) error {
-	return a.client.WaitUntilStreamingDistributionDeployed(input)
 }

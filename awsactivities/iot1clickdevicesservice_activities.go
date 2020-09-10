@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iot1clickdevicesservice"
 	"github.com/aws/aws-sdk-go/service/iot1clickdevicesservice/iot1clickdevicesserviceiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type IoT1ClickDevicesServiceActivities struct {
 	client iot1clickdevicesserviceiface.IoT1ClickDevicesServiceAPI
@@ -16,54 +21,54 @@ func NewIoT1ClickDevicesServiceActivities(session *session.Session, config ...*a
 	return &IoT1ClickDevicesServiceActivities{client: client}
 }
 
-func (a *IoT1ClickDevicesServiceActivities) ClaimDevicesByClaimCode(input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error) {
-	return a.client.ClaimDevicesByClaimCode(input)
+func (a *IoT1ClickDevicesServiceActivities) ClaimDevicesByClaimCode(ctx context.Context, input *iot1clickdevicesservice.ClaimDevicesByClaimCodeInput) (*iot1clickdevicesservice.ClaimDevicesByClaimCodeOutput, error) {
+	return a.client.ClaimDevicesByClaimCodeWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) DescribeDevice(input *iot1clickdevicesservice.DescribeDeviceInput) (*iot1clickdevicesservice.DescribeDeviceOutput, error) {
-	return a.client.DescribeDevice(input)
+func (a *IoT1ClickDevicesServiceActivities) DescribeDevice(ctx context.Context, input *iot1clickdevicesservice.DescribeDeviceInput) (*iot1clickdevicesservice.DescribeDeviceOutput, error) {
+	return a.client.DescribeDeviceWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) FinalizeDeviceClaim(input *iot1clickdevicesservice.FinalizeDeviceClaimInput) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error) {
-	return a.client.FinalizeDeviceClaim(input)
+func (a *IoT1ClickDevicesServiceActivities) FinalizeDeviceClaim(ctx context.Context, input *iot1clickdevicesservice.FinalizeDeviceClaimInput) (*iot1clickdevicesservice.FinalizeDeviceClaimOutput, error) {
+	return a.client.FinalizeDeviceClaimWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) GetDeviceMethods(input *iot1clickdevicesservice.GetDeviceMethodsInput) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error) {
-	return a.client.GetDeviceMethods(input)
+func (a *IoT1ClickDevicesServiceActivities) GetDeviceMethods(ctx context.Context, input *iot1clickdevicesservice.GetDeviceMethodsInput) (*iot1clickdevicesservice.GetDeviceMethodsOutput, error) {
+	return a.client.GetDeviceMethodsWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) InitiateDeviceClaim(input *iot1clickdevicesservice.InitiateDeviceClaimInput) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error) {
-	return a.client.InitiateDeviceClaim(input)
+func (a *IoT1ClickDevicesServiceActivities) InitiateDeviceClaim(ctx context.Context, input *iot1clickdevicesservice.InitiateDeviceClaimInput) (*iot1clickdevicesservice.InitiateDeviceClaimOutput, error) {
+	return a.client.InitiateDeviceClaimWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) InvokeDeviceMethod(input *iot1clickdevicesservice.InvokeDeviceMethodInput) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error) {
-	return a.client.InvokeDeviceMethod(input)
+func (a *IoT1ClickDevicesServiceActivities) InvokeDeviceMethod(ctx context.Context, input *iot1clickdevicesservice.InvokeDeviceMethodInput) (*iot1clickdevicesservice.InvokeDeviceMethodOutput, error) {
+	return a.client.InvokeDeviceMethodWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) ListDeviceEvents(input *iot1clickdevicesservice.ListDeviceEventsInput) (*iot1clickdevicesservice.ListDeviceEventsOutput, error) {
-	return a.client.ListDeviceEvents(input)
+func (a *IoT1ClickDevicesServiceActivities) ListDeviceEvents(ctx context.Context, input *iot1clickdevicesservice.ListDeviceEventsInput) (*iot1clickdevicesservice.ListDeviceEventsOutput, error) {
+	return a.client.ListDeviceEventsWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) ListDevices(input *iot1clickdevicesservice.ListDevicesInput) (*iot1clickdevicesservice.ListDevicesOutput, error) {
-	return a.client.ListDevices(input)
+func (a *IoT1ClickDevicesServiceActivities) ListDevices(ctx context.Context, input *iot1clickdevicesservice.ListDevicesInput) (*iot1clickdevicesservice.ListDevicesOutput, error) {
+	return a.client.ListDevicesWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) ListTagsForResource(input *iot1clickdevicesservice.ListTagsForResourceInput) (*iot1clickdevicesservice.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *IoT1ClickDevicesServiceActivities) ListTagsForResource(ctx context.Context, input *iot1clickdevicesservice.ListTagsForResourceInput) (*iot1clickdevicesservice.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) TagResource(input *iot1clickdevicesservice.TagResourceInput) (*iot1clickdevicesservice.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *IoT1ClickDevicesServiceActivities) TagResource(ctx context.Context, input *iot1clickdevicesservice.TagResourceInput) (*iot1clickdevicesservice.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) UnclaimDevice(input *iot1clickdevicesservice.UnclaimDeviceInput) (*iot1clickdevicesservice.UnclaimDeviceOutput, error) {
-	return a.client.UnclaimDevice(input)
+func (a *IoT1ClickDevicesServiceActivities) UnclaimDevice(ctx context.Context, input *iot1clickdevicesservice.UnclaimDeviceInput) (*iot1clickdevicesservice.UnclaimDeviceOutput, error) {
+	return a.client.UnclaimDeviceWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) UntagResource(input *iot1clickdevicesservice.UntagResourceInput) (*iot1clickdevicesservice.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *IoT1ClickDevicesServiceActivities) UntagResource(ctx context.Context, input *iot1clickdevicesservice.UntagResourceInput) (*iot1clickdevicesservice.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *IoT1ClickDevicesServiceActivities) UpdateDeviceState(input *iot1clickdevicesservice.UpdateDeviceStateInput) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error) {
-	return a.client.UpdateDeviceState(input)
+func (a *IoT1ClickDevicesServiceActivities) UpdateDeviceState(ctx context.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) (*iot1clickdevicesservice.UpdateDeviceStateOutput, error) {
+	return a.client.UpdateDeviceStateWithContext(ctx, input)
 }

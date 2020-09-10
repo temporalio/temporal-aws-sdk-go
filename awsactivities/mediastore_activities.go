@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediastore"
 	"github.com/aws/aws-sdk-go/service/mediastore/mediastoreiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type MediaStoreActivities struct {
 	client mediastoreiface.MediaStoreAPI
@@ -16,86 +21,86 @@ func NewMediaStoreActivities(session *session.Session, config ...*aws.Config) *M
 	return &MediaStoreActivities{client: client}
 }
 
-func (a *MediaStoreActivities) CreateContainer(input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error) {
-	return a.client.CreateContainer(input)
+func (a *MediaStoreActivities) CreateContainer(ctx context.Context, input *mediastore.CreateContainerInput) (*mediastore.CreateContainerOutput, error) {
+	return a.client.CreateContainerWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DeleteContainer(input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error) {
-	return a.client.DeleteContainer(input)
+func (a *MediaStoreActivities) DeleteContainer(ctx context.Context, input *mediastore.DeleteContainerInput) (*mediastore.DeleteContainerOutput, error) {
+	return a.client.DeleteContainerWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DeleteContainerPolicy(input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error) {
-	return a.client.DeleteContainerPolicy(input)
+func (a *MediaStoreActivities) DeleteContainerPolicy(ctx context.Context, input *mediastore.DeleteContainerPolicyInput) (*mediastore.DeleteContainerPolicyOutput, error) {
+	return a.client.DeleteContainerPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DeleteCorsPolicy(input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
-	return a.client.DeleteCorsPolicy(input)
+func (a *MediaStoreActivities) DeleteCorsPolicy(ctx context.Context, input *mediastore.DeleteCorsPolicyInput) (*mediastore.DeleteCorsPolicyOutput, error) {
+	return a.client.DeleteCorsPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DeleteLifecyclePolicy(input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error) {
-	return a.client.DeleteLifecyclePolicy(input)
+func (a *MediaStoreActivities) DeleteLifecyclePolicy(ctx context.Context, input *mediastore.DeleteLifecyclePolicyInput) (*mediastore.DeleteLifecyclePolicyOutput, error) {
+	return a.client.DeleteLifecyclePolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DeleteMetricPolicy(input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error) {
-	return a.client.DeleteMetricPolicy(input)
+func (a *MediaStoreActivities) DeleteMetricPolicy(ctx context.Context, input *mediastore.DeleteMetricPolicyInput) (*mediastore.DeleteMetricPolicyOutput, error) {
+	return a.client.DeleteMetricPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) DescribeContainer(input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error) {
-	return a.client.DescribeContainer(input)
+func (a *MediaStoreActivities) DescribeContainer(ctx context.Context, input *mediastore.DescribeContainerInput) (*mediastore.DescribeContainerOutput, error) {
+	return a.client.DescribeContainerWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) GetContainerPolicy(input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error) {
-	return a.client.GetContainerPolicy(input)
+func (a *MediaStoreActivities) GetContainerPolicy(ctx context.Context, input *mediastore.GetContainerPolicyInput) (*mediastore.GetContainerPolicyOutput, error) {
+	return a.client.GetContainerPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) GetCorsPolicy(input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
-	return a.client.GetCorsPolicy(input)
+func (a *MediaStoreActivities) GetCorsPolicy(ctx context.Context, input *mediastore.GetCorsPolicyInput) (*mediastore.GetCorsPolicyOutput, error) {
+	return a.client.GetCorsPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) GetLifecyclePolicy(input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error) {
-	return a.client.GetLifecyclePolicy(input)
+func (a *MediaStoreActivities) GetLifecyclePolicy(ctx context.Context, input *mediastore.GetLifecyclePolicyInput) (*mediastore.GetLifecyclePolicyOutput, error) {
+	return a.client.GetLifecyclePolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) GetMetricPolicy(input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error) {
-	return a.client.GetMetricPolicy(input)
+func (a *MediaStoreActivities) GetMetricPolicy(ctx context.Context, input *mediastore.GetMetricPolicyInput) (*mediastore.GetMetricPolicyOutput, error) {
+	return a.client.GetMetricPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) ListContainers(input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error) {
-	return a.client.ListContainers(input)
+func (a *MediaStoreActivities) ListContainers(ctx context.Context, input *mediastore.ListContainersInput) (*mediastore.ListContainersOutput, error) {
+	return a.client.ListContainersWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) ListTagsForResource(input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *MediaStoreActivities) ListTagsForResource(ctx context.Context, input *mediastore.ListTagsForResourceInput) (*mediastore.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) PutContainerPolicy(input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error) {
-	return a.client.PutContainerPolicy(input)
+func (a *MediaStoreActivities) PutContainerPolicy(ctx context.Context, input *mediastore.PutContainerPolicyInput) (*mediastore.PutContainerPolicyOutput, error) {
+	return a.client.PutContainerPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) PutCorsPolicy(input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
-	return a.client.PutCorsPolicy(input)
+func (a *MediaStoreActivities) PutCorsPolicy(ctx context.Context, input *mediastore.PutCorsPolicyInput) (*mediastore.PutCorsPolicyOutput, error) {
+	return a.client.PutCorsPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) PutLifecyclePolicy(input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error) {
-	return a.client.PutLifecyclePolicy(input)
+func (a *MediaStoreActivities) PutLifecyclePolicy(ctx context.Context, input *mediastore.PutLifecyclePolicyInput) (*mediastore.PutLifecyclePolicyOutput, error) {
+	return a.client.PutLifecyclePolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) PutMetricPolicy(input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error) {
-	return a.client.PutMetricPolicy(input)
+func (a *MediaStoreActivities) PutMetricPolicy(ctx context.Context, input *mediastore.PutMetricPolicyInput) (*mediastore.PutMetricPolicyOutput, error) {
+	return a.client.PutMetricPolicyWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) StartAccessLogging(input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error) {
-	return a.client.StartAccessLogging(input)
+func (a *MediaStoreActivities) StartAccessLogging(ctx context.Context, input *mediastore.StartAccessLoggingInput) (*mediastore.StartAccessLoggingOutput, error) {
+	return a.client.StartAccessLoggingWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) StopAccessLogging(input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error) {
-	return a.client.StopAccessLogging(input)
+func (a *MediaStoreActivities) StopAccessLogging(ctx context.Context, input *mediastore.StopAccessLoggingInput) (*mediastore.StopAccessLoggingOutput, error) {
+	return a.client.StopAccessLoggingWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) TagResource(input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *MediaStoreActivities) TagResource(ctx context.Context, input *mediastore.TagResourceInput) (*mediastore.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *MediaStoreActivities) UntagResource(input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *MediaStoreActivities) UntagResource(ctx context.Context, input *mediastore.UntagResourceInput) (*mediastore.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }

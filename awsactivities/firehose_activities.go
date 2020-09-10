@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/firehose"
 	"github.com/aws/aws-sdk-go/service/firehose/firehoseiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type FirehoseActivities struct {
 	client firehoseiface.FirehoseAPI
@@ -16,50 +21,50 @@ func NewFirehoseActivities(session *session.Session, config ...*aws.Config) *Fir
 	return &FirehoseActivities{client: client}
 }
 
-func (a *FirehoseActivities) CreateDeliveryStream(input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error) {
-	return a.client.CreateDeliveryStream(input)
+func (a *FirehoseActivities) CreateDeliveryStream(ctx context.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error) {
+	return a.client.CreateDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) DeleteDeliveryStream(input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error) {
-	return a.client.DeleteDeliveryStream(input)
+func (a *FirehoseActivities) DeleteDeliveryStream(ctx context.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error) {
+	return a.client.DeleteDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) DescribeDeliveryStream(input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error) {
-	return a.client.DescribeDeliveryStream(input)
+func (a *FirehoseActivities) DescribeDeliveryStream(ctx context.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error) {
+	return a.client.DescribeDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) ListDeliveryStreams(input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error) {
-	return a.client.ListDeliveryStreams(input)
+func (a *FirehoseActivities) ListDeliveryStreams(ctx context.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error) {
+	return a.client.ListDeliveryStreamsWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) ListTagsForDeliveryStream(input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error) {
-	return a.client.ListTagsForDeliveryStream(input)
+func (a *FirehoseActivities) ListTagsForDeliveryStream(ctx context.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error) {
+	return a.client.ListTagsForDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) PutRecord(input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error) {
-	return a.client.PutRecord(input)
+func (a *FirehoseActivities) PutRecord(ctx context.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error) {
+	return a.client.PutRecordWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) PutRecordBatch(input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error) {
-	return a.client.PutRecordBatch(input)
+func (a *FirehoseActivities) PutRecordBatch(ctx context.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error) {
+	return a.client.PutRecordBatchWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) StartDeliveryStreamEncryption(input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
-	return a.client.StartDeliveryStreamEncryption(input)
+func (a *FirehoseActivities) StartDeliveryStreamEncryption(ctx context.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
+	return a.client.StartDeliveryStreamEncryptionWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) StopDeliveryStreamEncryption(input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
-	return a.client.StopDeliveryStreamEncryption(input)
+func (a *FirehoseActivities) StopDeliveryStreamEncryption(ctx context.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
+	return a.client.StopDeliveryStreamEncryptionWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) TagDeliveryStream(input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error) {
-	return a.client.TagDeliveryStream(input)
+func (a *FirehoseActivities) TagDeliveryStream(ctx context.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error) {
+	return a.client.TagDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) UntagDeliveryStream(input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error) {
-	return a.client.UntagDeliveryStream(input)
+func (a *FirehoseActivities) UntagDeliveryStream(ctx context.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error) {
+	return a.client.UntagDeliveryStreamWithContext(ctx, input)
 }
 
-func (a *FirehoseActivities) UpdateDestination(input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error) {
-	return a.client.UpdateDestination(input)
+func (a *FirehoseActivities) UpdateDestination(ctx context.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error) {
+	return a.client.UpdateDestinationWithContext(ctx, input)
 }

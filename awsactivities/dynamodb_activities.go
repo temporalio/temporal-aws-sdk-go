@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type DynamoDBActivities struct {
 	client dynamodbiface.DynamoDBAPI
@@ -16,174 +21,176 @@ func NewDynamoDBActivities(session *session.Session, config ...*aws.Config) *Dyn
 	return &DynamoDBActivities{client: client}
 }
 
-func (a *DynamoDBActivities) BatchGetItem(input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
-	return a.client.BatchGetItem(input)
+func (a *DynamoDBActivities) BatchGetItem(ctx context.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
+	return a.client.BatchGetItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) BatchWriteItem(input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error) {
-	return a.client.BatchWriteItem(input)
+func (a *DynamoDBActivities) BatchWriteItem(ctx context.Context, input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error) {
+	return a.client.BatchWriteItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) CreateBackup(input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
-	return a.client.CreateBackup(input)
+func (a *DynamoDBActivities) CreateBackup(ctx context.Context, input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
+	return a.client.CreateBackupWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) CreateGlobalTable(input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
-	return a.client.CreateGlobalTable(input)
+func (a *DynamoDBActivities) CreateGlobalTable(ctx context.Context, input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
+	return a.client.CreateGlobalTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) CreateTable(input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error) {
-	return a.client.CreateTable(input)
+func (a *DynamoDBActivities) CreateTable(ctx context.Context, input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error) {
+	return a.client.CreateTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DeleteBackup(input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
-	return a.client.DeleteBackup(input)
+func (a *DynamoDBActivities) DeleteBackup(ctx context.Context, input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
+	return a.client.DeleteBackupWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DeleteItem(input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error) {
-	return a.client.DeleteItem(input)
+func (a *DynamoDBActivities) DeleteItem(ctx context.Context, input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error) {
+	return a.client.DeleteItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DeleteTable(input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error) {
-	return a.client.DeleteTable(input)
+func (a *DynamoDBActivities) DeleteTable(ctx context.Context, input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error) {
+	return a.client.DeleteTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeBackup(input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
-	return a.client.DescribeBackup(input)
+func (a *DynamoDBActivities) DescribeBackup(ctx context.Context, input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
+	return a.client.DescribeBackupWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeContinuousBackups(input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
-	return a.client.DescribeContinuousBackups(input)
+func (a *DynamoDBActivities) DescribeContinuousBackups(ctx context.Context, input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
+	return a.client.DescribeContinuousBackupsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeContributorInsights(input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error) {
-	return a.client.DescribeContributorInsights(input)
+func (a *DynamoDBActivities) DescribeContributorInsights(ctx context.Context, input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error) {
+	return a.client.DescribeContributorInsightsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeEndpoints(input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
-	return a.client.DescribeEndpoints(input)
+func (a *DynamoDBActivities) DescribeEndpoints(ctx context.Context, input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
+	return a.client.DescribeEndpointsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeGlobalTable(input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
-	return a.client.DescribeGlobalTable(input)
+func (a *DynamoDBActivities) DescribeGlobalTable(ctx context.Context, input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
+	return a.client.DescribeGlobalTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeGlobalTableSettings(input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
-	return a.client.DescribeGlobalTableSettings(input)
+func (a *DynamoDBActivities) DescribeGlobalTableSettings(ctx context.Context, input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
+	return a.client.DescribeGlobalTableSettingsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeLimits(input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error) {
-	return a.client.DescribeLimits(input)
+func (a *DynamoDBActivities) DescribeLimits(ctx context.Context, input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error) {
+	return a.client.DescribeLimitsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeTable(input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error) {
-	return a.client.DescribeTable(input)
+func (a *DynamoDBActivities) DescribeTable(ctx context.Context, input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error) {
+	return a.client.DescribeTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeTableReplicaAutoScaling(input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
-	return a.client.DescribeTableReplicaAutoScaling(input)
+func (a *DynamoDBActivities) DescribeTableReplicaAutoScaling(ctx context.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
+	return a.client.DescribeTableReplicaAutoScalingWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) DescribeTimeToLive(input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error) {
-	return a.client.DescribeTimeToLive(input)
+func (a *DynamoDBActivities) DescribeTimeToLive(ctx context.Context, input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error) {
+	return a.client.DescribeTimeToLiveWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) GetItem(input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error) {
-	return a.client.GetItem(input)
+func (a *DynamoDBActivities) GetItem(ctx context.Context, input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error) {
+	return a.client.GetItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) ListBackups(input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
-	return a.client.ListBackups(input)
+func (a *DynamoDBActivities) ListBackups(ctx context.Context, input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
+	return a.client.ListBackupsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) ListContributorInsights(input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error) {
-	return a.client.ListContributorInsights(input)
+func (a *DynamoDBActivities) ListContributorInsights(ctx context.Context, input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error) {
+	return a.client.ListContributorInsightsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) ListGlobalTables(input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
-	return a.client.ListGlobalTables(input)
+func (a *DynamoDBActivities) ListGlobalTables(ctx context.Context, input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
+	return a.client.ListGlobalTablesWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) ListTables(input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error) {
-	return a.client.ListTables(input)
+func (a *DynamoDBActivities) ListTables(ctx context.Context, input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error) {
+	return a.client.ListTablesWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) ListTagsOfResource(input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error) {
-	return a.client.ListTagsOfResource(input)
+func (a *DynamoDBActivities) ListTagsOfResource(ctx context.Context, input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error) {
+	return a.client.ListTagsOfResourceWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) PutItem(input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error) {
-	return a.client.PutItem(input)
+func (a *DynamoDBActivities) PutItem(ctx context.Context, input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error) {
+	return a.client.PutItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) Query(input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error) {
-	return a.client.Query(input)
+func (a *DynamoDBActivities) Query(ctx context.Context, input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error) {
+	return a.client.QueryWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) RestoreTableFromBackup(input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
-	return a.client.RestoreTableFromBackup(input)
+func (a *DynamoDBActivities) RestoreTableFromBackup(ctx context.Context, input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
+	return a.client.RestoreTableFromBackupWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) RestoreTableToPointInTime(input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
-	return a.client.RestoreTableToPointInTime(input)
+func (a *DynamoDBActivities) RestoreTableToPointInTime(ctx context.Context, input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
+	return a.client.RestoreTableToPointInTimeWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) Scan(input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error) {
-	return a.client.Scan(input)
+func (a *DynamoDBActivities) Scan(ctx context.Context, input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error) {
+	return a.client.ScanWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) TagResource(input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *DynamoDBActivities) TagResource(ctx context.Context, input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) TransactGetItems(input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error) {
-	return a.client.TransactGetItems(input)
+func (a *DynamoDBActivities) TransactGetItems(ctx context.Context, input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error) {
+	return a.client.TransactGetItemsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) TransactWriteItems(input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error) {
-	return a.client.TransactWriteItems(input)
+func (a *DynamoDBActivities) TransactWriteItems(ctx context.Context, input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error) {
+	return a.client.TransactWriteItemsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UntagResource(input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *DynamoDBActivities) UntagResource(ctx context.Context, input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateContinuousBackups(input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error) {
-	return a.client.UpdateContinuousBackups(input)
+func (a *DynamoDBActivities) UpdateContinuousBackups(ctx context.Context, input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error) {
+	return a.client.UpdateContinuousBackupsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateContributorInsights(input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error) {
-	return a.client.UpdateContributorInsights(input)
+func (a *DynamoDBActivities) UpdateContributorInsights(ctx context.Context, input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error) {
+	return a.client.UpdateContributorInsightsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateGlobalTable(input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
-	return a.client.UpdateGlobalTable(input)
+func (a *DynamoDBActivities) UpdateGlobalTable(ctx context.Context, input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
+	return a.client.UpdateGlobalTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateGlobalTableSettings(input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
-	return a.client.UpdateGlobalTableSettings(input)
+func (a *DynamoDBActivities) UpdateGlobalTableSettings(ctx context.Context, input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
+	return a.client.UpdateGlobalTableSettingsWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateItem(input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error) {
-	return a.client.UpdateItem(input)
+func (a *DynamoDBActivities) UpdateItem(ctx context.Context, input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error) {
+	return a.client.UpdateItemWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateTable(input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error) {
-	return a.client.UpdateTable(input)
+func (a *DynamoDBActivities) UpdateTable(ctx context.Context, input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error) {
+	return a.client.UpdateTableWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateTableReplicaAutoScaling(input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
-	return a.client.UpdateTableReplicaAutoScaling(input)
+func (a *DynamoDBActivities) UpdateTableReplicaAutoScaling(ctx context.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
+	return a.client.UpdateTableReplicaAutoScalingWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) UpdateTimeToLive(input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error) {
-	return a.client.UpdateTimeToLive(input)
+func (a *DynamoDBActivities) UpdateTimeToLive(ctx context.Context, input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error) {
+	return a.client.UpdateTimeToLiveWithContext(ctx, input)
 }
 
-func (a *DynamoDBActivities) WaitUntilTableExists(input *dynamodb.DescribeTableInput) error {
-	return a.client.WaitUntilTableExists(input)
+func (a *DynamoDBActivities) WaitUntilTableExists(ctx context.Context, input *dynamodb.DescribeTableInput) error {
+	return a.client.WaitUntilTableExistsWithContext(ctx, input)
+
 }
 
-func (a *DynamoDBActivities) WaitUntilTableNotExists(input *dynamodb.DescribeTableInput) error {
-	return a.client.WaitUntilTableNotExists(input)
+func (a *DynamoDBActivities) WaitUntilTableNotExists(ctx context.Context, input *dynamodb.DescribeTableInput) error {
+	return a.client.WaitUntilTableNotExistsWithContext(ctx, input)
+
 }

@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/servicequotas"
 	"github.com/aws/aws-sdk-go/service/servicequotas/servicequotasiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type ServiceQuotasActivities struct {
 	client servicequotasiface.ServiceQuotasAPI
@@ -16,66 +21,66 @@ func NewServiceQuotasActivities(session *session.Session, config ...*aws.Config)
 	return &ServiceQuotasActivities{client: client}
 }
 
-func (a *ServiceQuotasActivities) AssociateServiceQuotaTemplate(input *servicequotas.AssociateServiceQuotaTemplateInput) (*servicequotas.AssociateServiceQuotaTemplateOutput, error) {
-	return a.client.AssociateServiceQuotaTemplate(input)
+func (a *ServiceQuotasActivities) AssociateServiceQuotaTemplate(ctx context.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) (*servicequotas.AssociateServiceQuotaTemplateOutput, error) {
+	return a.client.AssociateServiceQuotaTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) DeleteServiceQuotaIncreaseRequestFromTemplate(input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
-	return a.client.DeleteServiceQuotaIncreaseRequestFromTemplate(input)
+func (a *ServiceQuotasActivities) DeleteServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
+	return a.client.DeleteServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) DisassociateServiceQuotaTemplate(input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
-	return a.client.DisassociateServiceQuotaTemplate(input)
+func (a *ServiceQuotasActivities) DisassociateServiceQuotaTemplate(ctx context.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
+	return a.client.DisassociateServiceQuotaTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) GetAWSDefaultServiceQuota(input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
-	return a.client.GetAWSDefaultServiceQuota(input)
+func (a *ServiceQuotasActivities) GetAWSDefaultServiceQuota(ctx context.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
+	return a.client.GetAWSDefaultServiceQuotaWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) GetAssociationForServiceQuotaTemplate(input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
-	return a.client.GetAssociationForServiceQuotaTemplate(input)
+func (a *ServiceQuotasActivities) GetAssociationForServiceQuotaTemplate(ctx context.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
+	return a.client.GetAssociationForServiceQuotaTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) GetRequestedServiceQuotaChange(input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
-	return a.client.GetRequestedServiceQuotaChange(input)
+func (a *ServiceQuotasActivities) GetRequestedServiceQuotaChange(ctx context.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
+	return a.client.GetRequestedServiceQuotaChangeWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) GetServiceQuota(input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error) {
-	return a.client.GetServiceQuota(input)
+func (a *ServiceQuotasActivities) GetServiceQuota(ctx context.Context, input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error) {
+	return a.client.GetServiceQuotaWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) GetServiceQuotaIncreaseRequestFromTemplate(input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
-	return a.client.GetServiceQuotaIncreaseRequestFromTemplate(input)
+func (a *ServiceQuotasActivities) GetServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
+	return a.client.GetServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListAWSDefaultServiceQuotas(input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
-	return a.client.ListAWSDefaultServiceQuotas(input)
+func (a *ServiceQuotasActivities) ListAWSDefaultServiceQuotas(ctx context.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
+	return a.client.ListAWSDefaultServiceQuotasWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistory(input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
-	return a.client.ListRequestedServiceQuotaChangeHistory(input)
+func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistory(ctx context.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
+	return a.client.ListRequestedServiceQuotaChangeHistoryWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistoryByQuota(input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
-	return a.client.ListRequestedServiceQuotaChangeHistoryByQuota(input)
+func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistoryByQuota(ctx context.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
+	return a.client.ListRequestedServiceQuotaChangeHistoryByQuotaWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListServiceQuotaIncreaseRequestsInTemplate(input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
-	return a.client.ListServiceQuotaIncreaseRequestsInTemplate(input)
+func (a *ServiceQuotasActivities) ListServiceQuotaIncreaseRequestsInTemplate(ctx context.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
+	return a.client.ListServiceQuotaIncreaseRequestsInTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListServiceQuotas(input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error) {
-	return a.client.ListServiceQuotas(input)
+func (a *ServiceQuotasActivities) ListServiceQuotas(ctx context.Context, input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error) {
+	return a.client.ListServiceQuotasWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) ListServices(input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error) {
-	return a.client.ListServices(input)
+func (a *ServiceQuotasActivities) ListServices(ctx context.Context, input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error) {
+	return a.client.ListServicesWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) PutServiceQuotaIncreaseRequestIntoTemplate(input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
-	return a.client.PutServiceQuotaIncreaseRequestIntoTemplate(input)
+func (a *ServiceQuotasActivities) PutServiceQuotaIncreaseRequestIntoTemplate(ctx context.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
+	return a.client.PutServiceQuotaIncreaseRequestIntoTemplateWithContext(ctx, input)
 }
 
-func (a *ServiceQuotasActivities) RequestServiceQuotaIncrease(input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
-	return a.client.RequestServiceQuotaIncrease(input)
+func (a *ServiceQuotasActivities) RequestServiceQuotaIncrease(ctx context.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
+	return a.client.RequestServiceQuotaIncreaseWithContext(ctx, input)
 }

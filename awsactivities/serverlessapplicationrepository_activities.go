@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/serverlessapplicationrepository"
 	"github.com/aws/aws-sdk-go/service/serverlessapplicationrepository/serverlessapplicationrepositoryiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type ServerlessApplicationRepositoryActivities struct {
 	client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI
@@ -16,58 +21,64 @@ func NewServerlessApplicationRepositoryActivities(session *session.Session, conf
 	return &ServerlessApplicationRepositoryActivities{client: client}
 }
 
-func (a *ServerlessApplicationRepositoryActivities) CreateApplication(input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error) {
-	return a.client.CreateApplication(input)
+func (a *ServerlessApplicationRepositoryActivities) CreateApplication(ctx context.Context, input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error) {
+	return a.client.CreateApplicationWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) CreateApplicationVersion(input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
-	return a.client.CreateApplicationVersion(input)
+func (a *ServerlessApplicationRepositoryActivities) CreateApplicationVersion(ctx context.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
+	return a.client.CreateApplicationVersionWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationChangeSet(input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
-	return a.client.CreateCloudFormationChangeSet(input)
+func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationChangeSet(ctx context.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateCloudFormationChangeSetWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationTemplate(input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
-	return a.client.CreateCloudFormationTemplate(input)
+func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationTemplate(ctx context.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
+	return a.client.CreateCloudFormationTemplateWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) DeleteApplication(input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
-	return a.client.DeleteApplication(input)
+func (a *ServerlessApplicationRepositoryActivities) DeleteApplication(ctx context.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
+	return a.client.DeleteApplicationWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) GetApplication(input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error) {
-	return a.client.GetApplication(input)
+func (a *ServerlessApplicationRepositoryActivities) GetApplication(ctx context.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error) {
+	return a.client.GetApplicationWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) GetApplicationPolicy(input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
-	return a.client.GetApplicationPolicy(input)
+func (a *ServerlessApplicationRepositoryActivities) GetApplicationPolicy(ctx context.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
+	return a.client.GetApplicationPolicyWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) GetCloudFormationTemplate(input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
-	return a.client.GetCloudFormationTemplate(input)
+func (a *ServerlessApplicationRepositoryActivities) GetCloudFormationTemplate(ctx context.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
+	return a.client.GetCloudFormationTemplateWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) ListApplicationDependencies(input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
-	return a.client.ListApplicationDependencies(input)
+func (a *ServerlessApplicationRepositoryActivities) ListApplicationDependencies(ctx context.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
+	return a.client.ListApplicationDependenciesWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) ListApplicationVersions(input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
-	return a.client.ListApplicationVersions(input)
+func (a *ServerlessApplicationRepositoryActivities) ListApplicationVersions(ctx context.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
+	return a.client.ListApplicationVersionsWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) ListApplications(input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
-	return a.client.ListApplications(input)
+func (a *ServerlessApplicationRepositoryActivities) ListApplications(ctx context.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
+	return a.client.ListApplicationsWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) PutApplicationPolicy(input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
-	return a.client.PutApplicationPolicy(input)
+func (a *ServerlessApplicationRepositoryActivities) PutApplicationPolicy(ctx context.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
+	return a.client.PutApplicationPolicyWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) UnshareApplication(input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
-	return a.client.UnshareApplication(input)
+func (a *ServerlessApplicationRepositoryActivities) UnshareApplication(ctx context.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
+	return a.client.UnshareApplicationWithContext(ctx, input)
 }
 
-func (a *ServerlessApplicationRepositoryActivities) UpdateApplication(input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
-	return a.client.UpdateApplication(input)
+func (a *ServerlessApplicationRepositoryActivities) UpdateApplication(ctx context.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
+	return a.client.UpdateApplicationWithContext(ctx, input)
 }

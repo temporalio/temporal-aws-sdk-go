@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/workdocs"
 	"github.com/aws/aws-sdk-go/service/workdocs/workdocsiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type WorkDocsActivities struct {
 	client workdocsiface.WorkDocsAPI
@@ -16,166 +21,166 @@ func NewWorkDocsActivities(session *session.Session, config ...*aws.Config) *Wor
 	return &WorkDocsActivities{client: client}
 }
 
-func (a *WorkDocsActivities) AbortDocumentVersionUpload(input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error) {
-	return a.client.AbortDocumentVersionUpload(input)
+func (a *WorkDocsActivities) AbortDocumentVersionUpload(ctx context.Context, input *workdocs.AbortDocumentVersionUploadInput) (*workdocs.AbortDocumentVersionUploadOutput, error) {
+	return a.client.AbortDocumentVersionUploadWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) ActivateUser(input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error) {
-	return a.client.ActivateUser(input)
+func (a *WorkDocsActivities) ActivateUser(ctx context.Context, input *workdocs.ActivateUserInput) (*workdocs.ActivateUserOutput, error) {
+	return a.client.ActivateUserWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) AddResourcePermissions(input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error) {
-	return a.client.AddResourcePermissions(input)
+func (a *WorkDocsActivities) AddResourcePermissions(ctx context.Context, input *workdocs.AddResourcePermissionsInput) (*workdocs.AddResourcePermissionsOutput, error) {
+	return a.client.AddResourcePermissionsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateComment(input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error) {
-	return a.client.CreateComment(input)
+func (a *WorkDocsActivities) CreateComment(ctx context.Context, input *workdocs.CreateCommentInput) (*workdocs.CreateCommentOutput, error) {
+	return a.client.CreateCommentWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateCustomMetadata(input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error) {
-	return a.client.CreateCustomMetadata(input)
+func (a *WorkDocsActivities) CreateCustomMetadata(ctx context.Context, input *workdocs.CreateCustomMetadataInput) (*workdocs.CreateCustomMetadataOutput, error) {
+	return a.client.CreateCustomMetadataWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateFolder(input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error) {
-	return a.client.CreateFolder(input)
+func (a *WorkDocsActivities) CreateFolder(ctx context.Context, input *workdocs.CreateFolderInput) (*workdocs.CreateFolderOutput, error) {
+	return a.client.CreateFolderWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateLabels(input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error) {
-	return a.client.CreateLabels(input)
+func (a *WorkDocsActivities) CreateLabels(ctx context.Context, input *workdocs.CreateLabelsInput) (*workdocs.CreateLabelsOutput, error) {
+	return a.client.CreateLabelsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateNotificationSubscription(input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error) {
-	return a.client.CreateNotificationSubscription(input)
+func (a *WorkDocsActivities) CreateNotificationSubscription(ctx context.Context, input *workdocs.CreateNotificationSubscriptionInput) (*workdocs.CreateNotificationSubscriptionOutput, error) {
+	return a.client.CreateNotificationSubscriptionWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) CreateUser(input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error) {
-	return a.client.CreateUser(input)
+func (a *WorkDocsActivities) CreateUser(ctx context.Context, input *workdocs.CreateUserInput) (*workdocs.CreateUserOutput, error) {
+	return a.client.CreateUserWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeactivateUser(input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error) {
-	return a.client.DeactivateUser(input)
+func (a *WorkDocsActivities) DeactivateUser(ctx context.Context, input *workdocs.DeactivateUserInput) (*workdocs.DeactivateUserOutput, error) {
+	return a.client.DeactivateUserWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteComment(input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error) {
-	return a.client.DeleteComment(input)
+func (a *WorkDocsActivities) DeleteComment(ctx context.Context, input *workdocs.DeleteCommentInput) (*workdocs.DeleteCommentOutput, error) {
+	return a.client.DeleteCommentWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteCustomMetadata(input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error) {
-	return a.client.DeleteCustomMetadata(input)
+func (a *WorkDocsActivities) DeleteCustomMetadata(ctx context.Context, input *workdocs.DeleteCustomMetadataInput) (*workdocs.DeleteCustomMetadataOutput, error) {
+	return a.client.DeleteCustomMetadataWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteDocument(input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error) {
-	return a.client.DeleteDocument(input)
+func (a *WorkDocsActivities) DeleteDocument(ctx context.Context, input *workdocs.DeleteDocumentInput) (*workdocs.DeleteDocumentOutput, error) {
+	return a.client.DeleteDocumentWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteFolder(input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error) {
-	return a.client.DeleteFolder(input)
+func (a *WorkDocsActivities) DeleteFolder(ctx context.Context, input *workdocs.DeleteFolderInput) (*workdocs.DeleteFolderOutput, error) {
+	return a.client.DeleteFolderWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteFolderContents(input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error) {
-	return a.client.DeleteFolderContents(input)
+func (a *WorkDocsActivities) DeleteFolderContents(ctx context.Context, input *workdocs.DeleteFolderContentsInput) (*workdocs.DeleteFolderContentsOutput, error) {
+	return a.client.DeleteFolderContentsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteLabels(input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error) {
-	return a.client.DeleteLabels(input)
+func (a *WorkDocsActivities) DeleteLabels(ctx context.Context, input *workdocs.DeleteLabelsInput) (*workdocs.DeleteLabelsOutput, error) {
+	return a.client.DeleteLabelsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteNotificationSubscription(input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
-	return a.client.DeleteNotificationSubscription(input)
+func (a *WorkDocsActivities) DeleteNotificationSubscription(ctx context.Context, input *workdocs.DeleteNotificationSubscriptionInput) (*workdocs.DeleteNotificationSubscriptionOutput, error) {
+	return a.client.DeleteNotificationSubscriptionWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DeleteUser(input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error) {
-	return a.client.DeleteUser(input)
+func (a *WorkDocsActivities) DeleteUser(ctx context.Context, input *workdocs.DeleteUserInput) (*workdocs.DeleteUserOutput, error) {
+	return a.client.DeleteUserWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeActivities(input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error) {
-	return a.client.DescribeActivities(input)
+func (a *WorkDocsActivities) DescribeActivities(ctx context.Context, input *workdocs.DescribeActivitiesInput) (*workdocs.DescribeActivitiesOutput, error) {
+	return a.client.DescribeActivitiesWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeComments(input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error) {
-	return a.client.DescribeComments(input)
+func (a *WorkDocsActivities) DescribeComments(ctx context.Context, input *workdocs.DescribeCommentsInput) (*workdocs.DescribeCommentsOutput, error) {
+	return a.client.DescribeCommentsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeDocumentVersions(input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error) {
-	return a.client.DescribeDocumentVersions(input)
+func (a *WorkDocsActivities) DescribeDocumentVersions(ctx context.Context, input *workdocs.DescribeDocumentVersionsInput) (*workdocs.DescribeDocumentVersionsOutput, error) {
+	return a.client.DescribeDocumentVersionsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeFolderContents(input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error) {
-	return a.client.DescribeFolderContents(input)
+func (a *WorkDocsActivities) DescribeFolderContents(ctx context.Context, input *workdocs.DescribeFolderContentsInput) (*workdocs.DescribeFolderContentsOutput, error) {
+	return a.client.DescribeFolderContentsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeGroups(input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
-	return a.client.DescribeGroups(input)
+func (a *WorkDocsActivities) DescribeGroups(ctx context.Context, input *workdocs.DescribeGroupsInput) (*workdocs.DescribeGroupsOutput, error) {
+	return a.client.DescribeGroupsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeNotificationSubscriptions(input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
-	return a.client.DescribeNotificationSubscriptions(input)
+func (a *WorkDocsActivities) DescribeNotificationSubscriptions(ctx context.Context, input *workdocs.DescribeNotificationSubscriptionsInput) (*workdocs.DescribeNotificationSubscriptionsOutput, error) {
+	return a.client.DescribeNotificationSubscriptionsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeResourcePermissions(input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error) {
-	return a.client.DescribeResourcePermissions(input)
+func (a *WorkDocsActivities) DescribeResourcePermissions(ctx context.Context, input *workdocs.DescribeResourcePermissionsInput) (*workdocs.DescribeResourcePermissionsOutput, error) {
+	return a.client.DescribeResourcePermissionsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeRootFolders(input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error) {
-	return a.client.DescribeRootFolders(input)
+func (a *WorkDocsActivities) DescribeRootFolders(ctx context.Context, input *workdocs.DescribeRootFoldersInput) (*workdocs.DescribeRootFoldersOutput, error) {
+	return a.client.DescribeRootFoldersWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) DescribeUsers(input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error) {
-	return a.client.DescribeUsers(input)
+func (a *WorkDocsActivities) DescribeUsers(ctx context.Context, input *workdocs.DescribeUsersInput) (*workdocs.DescribeUsersOutput, error) {
+	return a.client.DescribeUsersWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetCurrentUser(input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error) {
-	return a.client.GetCurrentUser(input)
+func (a *WorkDocsActivities) GetCurrentUser(ctx context.Context, input *workdocs.GetCurrentUserInput) (*workdocs.GetCurrentUserOutput, error) {
+	return a.client.GetCurrentUserWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetDocument(input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error) {
-	return a.client.GetDocument(input)
+func (a *WorkDocsActivities) GetDocument(ctx context.Context, input *workdocs.GetDocumentInput) (*workdocs.GetDocumentOutput, error) {
+	return a.client.GetDocumentWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetDocumentPath(input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error) {
-	return a.client.GetDocumentPath(input)
+func (a *WorkDocsActivities) GetDocumentPath(ctx context.Context, input *workdocs.GetDocumentPathInput) (*workdocs.GetDocumentPathOutput, error) {
+	return a.client.GetDocumentPathWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetDocumentVersion(input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error) {
-	return a.client.GetDocumentVersion(input)
+func (a *WorkDocsActivities) GetDocumentVersion(ctx context.Context, input *workdocs.GetDocumentVersionInput) (*workdocs.GetDocumentVersionOutput, error) {
+	return a.client.GetDocumentVersionWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetFolder(input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error) {
-	return a.client.GetFolder(input)
+func (a *WorkDocsActivities) GetFolder(ctx context.Context, input *workdocs.GetFolderInput) (*workdocs.GetFolderOutput, error) {
+	return a.client.GetFolderWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetFolderPath(input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error) {
-	return a.client.GetFolderPath(input)
+func (a *WorkDocsActivities) GetFolderPath(ctx context.Context, input *workdocs.GetFolderPathInput) (*workdocs.GetFolderPathOutput, error) {
+	return a.client.GetFolderPathWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) GetResources(input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error) {
-	return a.client.GetResources(input)
+func (a *WorkDocsActivities) GetResources(ctx context.Context, input *workdocs.GetResourcesInput) (*workdocs.GetResourcesOutput, error) {
+	return a.client.GetResourcesWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) InitiateDocumentVersionUpload(input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
-	return a.client.InitiateDocumentVersionUpload(input)
+func (a *WorkDocsActivities) InitiateDocumentVersionUpload(ctx context.Context, input *workdocs.InitiateDocumentVersionUploadInput) (*workdocs.InitiateDocumentVersionUploadOutput, error) {
+	return a.client.InitiateDocumentVersionUploadWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) RemoveAllResourcePermissions(input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
-	return a.client.RemoveAllResourcePermissions(input)
+func (a *WorkDocsActivities) RemoveAllResourcePermissions(ctx context.Context, input *workdocs.RemoveAllResourcePermissionsInput) (*workdocs.RemoveAllResourcePermissionsOutput, error) {
+	return a.client.RemoveAllResourcePermissionsWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) RemoveResourcePermission(input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error) {
-	return a.client.RemoveResourcePermission(input)
+func (a *WorkDocsActivities) RemoveResourcePermission(ctx context.Context, input *workdocs.RemoveResourcePermissionInput) (*workdocs.RemoveResourcePermissionOutput, error) {
+	return a.client.RemoveResourcePermissionWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) UpdateDocument(input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error) {
-	return a.client.UpdateDocument(input)
+func (a *WorkDocsActivities) UpdateDocument(ctx context.Context, input *workdocs.UpdateDocumentInput) (*workdocs.UpdateDocumentOutput, error) {
+	return a.client.UpdateDocumentWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) UpdateDocumentVersion(input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error) {
-	return a.client.UpdateDocumentVersion(input)
+func (a *WorkDocsActivities) UpdateDocumentVersion(ctx context.Context, input *workdocs.UpdateDocumentVersionInput) (*workdocs.UpdateDocumentVersionOutput, error) {
+	return a.client.UpdateDocumentVersionWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) UpdateFolder(input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error) {
-	return a.client.UpdateFolder(input)
+func (a *WorkDocsActivities) UpdateFolder(ctx context.Context, input *workdocs.UpdateFolderInput) (*workdocs.UpdateFolderOutput, error) {
+	return a.client.UpdateFolderWithContext(ctx, input)
 }
 
-func (a *WorkDocsActivities) UpdateUser(input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error) {
-	return a.client.UpdateUser(input)
+func (a *WorkDocsActivities) UpdateUser(ctx context.Context, input *workdocs.UpdateUserInput) (*workdocs.UpdateUserOutput, error) {
+	return a.client.UpdateUserWithContext(ctx, input)
 }

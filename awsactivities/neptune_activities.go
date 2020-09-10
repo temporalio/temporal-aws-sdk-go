@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/neptune"
 	"github.com/aws/aws-sdk-go/service/neptune/neptuneiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type NeptuneActivities struct {
 	client neptuneiface.NeptuneAPI
@@ -16,246 +21,248 @@ func NewNeptuneActivities(session *session.Session, config ...*aws.Config) *Nept
 	return &NeptuneActivities{client: client}
 }
 
-func (a *NeptuneActivities) AddRoleToDBCluster(input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error) {
-	return a.client.AddRoleToDBCluster(input)
+func (a *NeptuneActivities) AddRoleToDBCluster(ctx context.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error) {
+	return a.client.AddRoleToDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) AddSourceIdentifierToSubscription(input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
-	return a.client.AddSourceIdentifierToSubscription(input)
+func (a *NeptuneActivities) AddSourceIdentifierToSubscription(ctx context.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
+	return a.client.AddSourceIdentifierToSubscriptionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) AddTagsToResource(input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error) {
-	return a.client.AddTagsToResource(input)
+func (a *NeptuneActivities) AddTagsToResource(ctx context.Context, input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error) {
+	return a.client.AddTagsToResourceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ApplyPendingMaintenanceAction(input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
-	return a.client.ApplyPendingMaintenanceAction(input)
+func (a *NeptuneActivities) ApplyPendingMaintenanceAction(ctx context.Context, input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
+	return a.client.ApplyPendingMaintenanceActionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CopyDBClusterParameterGroup(input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error) {
-	return a.client.CopyDBClusterParameterGroup(input)
+func (a *NeptuneActivities) CopyDBClusterParameterGroup(ctx context.Context, input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error) {
+	return a.client.CopyDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CopyDBClusterSnapshot(input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error) {
-	return a.client.CopyDBClusterSnapshot(input)
+func (a *NeptuneActivities) CopyDBClusterSnapshot(ctx context.Context, input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error) {
+	return a.client.CopyDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CopyDBParameterGroup(input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error) {
-	return a.client.CopyDBParameterGroup(input)
+func (a *NeptuneActivities) CopyDBParameterGroup(ctx context.Context, input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error) {
+	return a.client.CopyDBParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBCluster(input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error) {
-	return a.client.CreateDBCluster(input)
+func (a *NeptuneActivities) CreateDBCluster(ctx context.Context, input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error) {
+	return a.client.CreateDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBClusterParameterGroup(input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error) {
-	return a.client.CreateDBClusterParameterGroup(input)
+func (a *NeptuneActivities) CreateDBClusterParameterGroup(ctx context.Context, input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error) {
+	return a.client.CreateDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBClusterSnapshot(input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error) {
-	return a.client.CreateDBClusterSnapshot(input)
+func (a *NeptuneActivities) CreateDBClusterSnapshot(ctx context.Context, input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error) {
+	return a.client.CreateDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBInstance(input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error) {
-	return a.client.CreateDBInstance(input)
+func (a *NeptuneActivities) CreateDBInstance(ctx context.Context, input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error) {
+	return a.client.CreateDBInstanceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBParameterGroup(input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error) {
-	return a.client.CreateDBParameterGroup(input)
+func (a *NeptuneActivities) CreateDBParameterGroup(ctx context.Context, input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error) {
+	return a.client.CreateDBParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateDBSubnetGroup(input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error) {
-	return a.client.CreateDBSubnetGroup(input)
+func (a *NeptuneActivities) CreateDBSubnetGroup(ctx context.Context, input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error) {
+	return a.client.CreateDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) CreateEventSubscription(input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error) {
-	return a.client.CreateEventSubscription(input)
+func (a *NeptuneActivities) CreateEventSubscription(ctx context.Context, input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error) {
+	return a.client.CreateEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBCluster(input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error) {
-	return a.client.DeleteDBCluster(input)
+func (a *NeptuneActivities) DeleteDBCluster(ctx context.Context, input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error) {
+	return a.client.DeleteDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBClusterParameterGroup(input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
-	return a.client.DeleteDBClusterParameterGroup(input)
+func (a *NeptuneActivities) DeleteDBClusterParameterGroup(ctx context.Context, input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
+	return a.client.DeleteDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBClusterSnapshot(input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error) {
-	return a.client.DeleteDBClusterSnapshot(input)
+func (a *NeptuneActivities) DeleteDBClusterSnapshot(ctx context.Context, input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error) {
+	return a.client.DeleteDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBInstance(input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error) {
-	return a.client.DeleteDBInstance(input)
+func (a *NeptuneActivities) DeleteDBInstance(ctx context.Context, input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error) {
+	return a.client.DeleteDBInstanceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBParameterGroup(input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error) {
-	return a.client.DeleteDBParameterGroup(input)
+func (a *NeptuneActivities) DeleteDBParameterGroup(ctx context.Context, input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error) {
+	return a.client.DeleteDBParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteDBSubnetGroup(input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error) {
-	return a.client.DeleteDBSubnetGroup(input)
+func (a *NeptuneActivities) DeleteDBSubnetGroup(ctx context.Context, input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error) {
+	return a.client.DeleteDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DeleteEventSubscription(input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error) {
-	return a.client.DeleteEventSubscription(input)
+func (a *NeptuneActivities) DeleteEventSubscription(ctx context.Context, input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error) {
+	return a.client.DeleteEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBClusterParameterGroups(input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
-	return a.client.DescribeDBClusterParameterGroups(input)
+func (a *NeptuneActivities) DescribeDBClusterParameterGroups(ctx context.Context, input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
+	return a.client.DescribeDBClusterParameterGroupsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBClusterParameters(input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error) {
-	return a.client.DescribeDBClusterParameters(input)
+func (a *NeptuneActivities) DescribeDBClusterParameters(ctx context.Context, input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error) {
+	return a.client.DescribeDBClusterParametersWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBClusterSnapshotAttributes(input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
-	return a.client.DescribeDBClusterSnapshotAttributes(input)
+func (a *NeptuneActivities) DescribeDBClusterSnapshotAttributes(ctx context.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
+	return a.client.DescribeDBClusterSnapshotAttributesWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBClusterSnapshots(input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
-	return a.client.DescribeDBClusterSnapshots(input)
+func (a *NeptuneActivities) DescribeDBClusterSnapshots(ctx context.Context, input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
+	return a.client.DescribeDBClusterSnapshotsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBClusters(input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error) {
-	return a.client.DescribeDBClusters(input)
+func (a *NeptuneActivities) DescribeDBClusters(ctx context.Context, input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error) {
+	return a.client.DescribeDBClustersWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBEngineVersions(input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error) {
-	return a.client.DescribeDBEngineVersions(input)
+func (a *NeptuneActivities) DescribeDBEngineVersions(ctx context.Context, input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error) {
+	return a.client.DescribeDBEngineVersionsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBInstances(input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error) {
-	return a.client.DescribeDBInstances(input)
+func (a *NeptuneActivities) DescribeDBInstances(ctx context.Context, input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error) {
+	return a.client.DescribeDBInstancesWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBParameterGroups(input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error) {
-	return a.client.DescribeDBParameterGroups(input)
+func (a *NeptuneActivities) DescribeDBParameterGroups(ctx context.Context, input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error) {
+	return a.client.DescribeDBParameterGroupsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBParameters(input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error) {
-	return a.client.DescribeDBParameters(input)
+func (a *NeptuneActivities) DescribeDBParameters(ctx context.Context, input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error) {
+	return a.client.DescribeDBParametersWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeDBSubnetGroups(input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error) {
-	return a.client.DescribeDBSubnetGroups(input)
+func (a *NeptuneActivities) DescribeDBSubnetGroups(ctx context.Context, input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error) {
+	return a.client.DescribeDBSubnetGroupsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeEngineDefaultClusterParameters(input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
-	return a.client.DescribeEngineDefaultClusterParameters(input)
+func (a *NeptuneActivities) DescribeEngineDefaultClusterParameters(ctx context.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
+	return a.client.DescribeEngineDefaultClusterParametersWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeEngineDefaultParameters(input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error) {
-	return a.client.DescribeEngineDefaultParameters(input)
+func (a *NeptuneActivities) DescribeEngineDefaultParameters(ctx context.Context, input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error) {
+	return a.client.DescribeEngineDefaultParametersWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeEventCategories(input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error) {
-	return a.client.DescribeEventCategories(input)
+func (a *NeptuneActivities) DescribeEventCategories(ctx context.Context, input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error) {
+	return a.client.DescribeEventCategoriesWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeEventSubscriptions(input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error) {
-	return a.client.DescribeEventSubscriptions(input)
+func (a *NeptuneActivities) DescribeEventSubscriptions(ctx context.Context, input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error) {
+	return a.client.DescribeEventSubscriptionsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeEvents(input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error) {
-	return a.client.DescribeEvents(input)
+func (a *NeptuneActivities) DescribeEvents(ctx context.Context, input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error) {
+	return a.client.DescribeEventsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeOrderableDBInstanceOptions(input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
-	return a.client.DescribeOrderableDBInstanceOptions(input)
+func (a *NeptuneActivities) DescribeOrderableDBInstanceOptions(ctx context.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
+	return a.client.DescribeOrderableDBInstanceOptionsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribePendingMaintenanceActions(input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
-	return a.client.DescribePendingMaintenanceActions(input)
+func (a *NeptuneActivities) DescribePendingMaintenanceActions(ctx context.Context, input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
+	return a.client.DescribePendingMaintenanceActionsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) DescribeValidDBInstanceModifications(input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
-	return a.client.DescribeValidDBInstanceModifications(input)
+func (a *NeptuneActivities) DescribeValidDBInstanceModifications(ctx context.Context, input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
+	return a.client.DescribeValidDBInstanceModificationsWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) FailoverDBCluster(input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error) {
-	return a.client.FailoverDBCluster(input)
+func (a *NeptuneActivities) FailoverDBCluster(ctx context.Context, input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error) {
+	return a.client.FailoverDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ListTagsForResource(input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *NeptuneActivities) ListTagsForResource(ctx context.Context, input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBCluster(input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error) {
-	return a.client.ModifyDBCluster(input)
+func (a *NeptuneActivities) ModifyDBCluster(ctx context.Context, input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error) {
+	return a.client.ModifyDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBClusterParameterGroup(input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
-	return a.client.ModifyDBClusterParameterGroup(input)
+func (a *NeptuneActivities) ModifyDBClusterParameterGroup(ctx context.Context, input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
+	return a.client.ModifyDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBClusterSnapshotAttribute(input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
-	return a.client.ModifyDBClusterSnapshotAttribute(input)
+func (a *NeptuneActivities) ModifyDBClusterSnapshotAttribute(ctx context.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
+	return a.client.ModifyDBClusterSnapshotAttributeWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBInstance(input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error) {
-	return a.client.ModifyDBInstance(input)
+func (a *NeptuneActivities) ModifyDBInstance(ctx context.Context, input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error) {
+	return a.client.ModifyDBInstanceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBParameterGroup(input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
-	return a.client.ModifyDBParameterGroup(input)
+func (a *NeptuneActivities) ModifyDBParameterGroup(ctx context.Context, input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
+	return a.client.ModifyDBParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyDBSubnetGroup(input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error) {
-	return a.client.ModifyDBSubnetGroup(input)
+func (a *NeptuneActivities) ModifyDBSubnetGroup(ctx context.Context, input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error) {
+	return a.client.ModifyDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ModifyEventSubscription(input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error) {
-	return a.client.ModifyEventSubscription(input)
+func (a *NeptuneActivities) ModifyEventSubscription(ctx context.Context, input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error) {
+	return a.client.ModifyEventSubscriptionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) PromoteReadReplicaDBCluster(input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
-	return a.client.PromoteReadReplicaDBCluster(input)
+func (a *NeptuneActivities) PromoteReadReplicaDBCluster(ctx context.Context, input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
+	return a.client.PromoteReadReplicaDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RebootDBInstance(input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error) {
-	return a.client.RebootDBInstance(input)
+func (a *NeptuneActivities) RebootDBInstance(ctx context.Context, input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error) {
+	return a.client.RebootDBInstanceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RemoveRoleFromDBCluster(input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error) {
-	return a.client.RemoveRoleFromDBCluster(input)
+func (a *NeptuneActivities) RemoveRoleFromDBCluster(ctx context.Context, input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error) {
+	return a.client.RemoveRoleFromDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RemoveSourceIdentifierFromSubscription(input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
-	return a.client.RemoveSourceIdentifierFromSubscription(input)
+func (a *NeptuneActivities) RemoveSourceIdentifierFromSubscription(ctx context.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
+	return a.client.RemoveSourceIdentifierFromSubscriptionWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RemoveTagsFromResource(input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error) {
-	return a.client.RemoveTagsFromResource(input)
+func (a *NeptuneActivities) RemoveTagsFromResource(ctx context.Context, input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error) {
+	return a.client.RemoveTagsFromResourceWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ResetDBClusterParameterGroup(input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
-	return a.client.ResetDBClusterParameterGroup(input)
+func (a *NeptuneActivities) ResetDBClusterParameterGroup(ctx context.Context, input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
+	return a.client.ResetDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) ResetDBParameterGroup(input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
-	return a.client.ResetDBParameterGroup(input)
+func (a *NeptuneActivities) ResetDBParameterGroup(ctx context.Context, input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
+	return a.client.ResetDBParameterGroupWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RestoreDBClusterFromSnapshot(input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
-	return a.client.RestoreDBClusterFromSnapshot(input)
+func (a *NeptuneActivities) RestoreDBClusterFromSnapshot(ctx context.Context, input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
+	return a.client.RestoreDBClusterFromSnapshotWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) RestoreDBClusterToPointInTime(input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
-	return a.client.RestoreDBClusterToPointInTime(input)
+func (a *NeptuneActivities) RestoreDBClusterToPointInTime(ctx context.Context, input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
+	return a.client.RestoreDBClusterToPointInTimeWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) StartDBCluster(input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error) {
-	return a.client.StartDBCluster(input)
+func (a *NeptuneActivities) StartDBCluster(ctx context.Context, input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error) {
+	return a.client.StartDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) StopDBCluster(input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error) {
-	return a.client.StopDBCluster(input)
+func (a *NeptuneActivities) StopDBCluster(ctx context.Context, input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error) {
+	return a.client.StopDBClusterWithContext(ctx, input)
 }
 
-func (a *NeptuneActivities) WaitUntilDBInstanceAvailable(input *neptune.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceAvailable(input)
+func (a *NeptuneActivities) WaitUntilDBInstanceAvailable(ctx context.Context, input *neptune.DescribeDBInstancesInput) error {
+	return a.client.WaitUntilDBInstanceAvailableWithContext(ctx, input)
+
 }
 
-func (a *NeptuneActivities) WaitUntilDBInstanceDeleted(input *neptune.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceDeleted(input)
+func (a *NeptuneActivities) WaitUntilDBInstanceDeleted(ctx context.Context, input *neptune.DescribeDBInstancesInput) error {
+	return a.client.WaitUntilDBInstanceDeletedWithContext(ctx, input)
+
 }

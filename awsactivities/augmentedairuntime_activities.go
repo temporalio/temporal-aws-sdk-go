@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/augmentedairuntime"
 	"github.com/aws/aws-sdk-go/service/augmentedairuntime/augmentedairuntimeiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type AugmentedAIRuntimeActivities struct {
 	client augmentedairuntimeiface.AugmentedAIRuntimeAPI
@@ -16,22 +21,22 @@ func NewAugmentedAIRuntimeActivities(session *session.Session, config ...*aws.Co
 	return &AugmentedAIRuntimeActivities{client: client}
 }
 
-func (a *AugmentedAIRuntimeActivities) DeleteHumanLoop(input *augmentedairuntime.DeleteHumanLoopInput) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
-	return a.client.DeleteHumanLoop(input)
+func (a *AugmentedAIRuntimeActivities) DeleteHumanLoop(ctx context.Context, input *augmentedairuntime.DeleteHumanLoopInput) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
+	return a.client.DeleteHumanLoopWithContext(ctx, input)
 }
 
-func (a *AugmentedAIRuntimeActivities) DescribeHumanLoop(input *augmentedairuntime.DescribeHumanLoopInput) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
-	return a.client.DescribeHumanLoop(input)
+func (a *AugmentedAIRuntimeActivities) DescribeHumanLoop(ctx context.Context, input *augmentedairuntime.DescribeHumanLoopInput) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
+	return a.client.DescribeHumanLoopWithContext(ctx, input)
 }
 
-func (a *AugmentedAIRuntimeActivities) ListHumanLoops(input *augmentedairuntime.ListHumanLoopsInput) (*augmentedairuntime.ListHumanLoopsOutput, error) {
-	return a.client.ListHumanLoops(input)
+func (a *AugmentedAIRuntimeActivities) ListHumanLoops(ctx context.Context, input *augmentedairuntime.ListHumanLoopsInput) (*augmentedairuntime.ListHumanLoopsOutput, error) {
+	return a.client.ListHumanLoopsWithContext(ctx, input)
 }
 
-func (a *AugmentedAIRuntimeActivities) StartHumanLoop(input *augmentedairuntime.StartHumanLoopInput) (*augmentedairuntime.StartHumanLoopOutput, error) {
-	return a.client.StartHumanLoop(input)
+func (a *AugmentedAIRuntimeActivities) StartHumanLoop(ctx context.Context, input *augmentedairuntime.StartHumanLoopInput) (*augmentedairuntime.StartHumanLoopOutput, error) {
+	return a.client.StartHumanLoopWithContext(ctx, input)
 }
 
-func (a *AugmentedAIRuntimeActivities) StopHumanLoop(input *augmentedairuntime.StopHumanLoopInput) (*augmentedairuntime.StopHumanLoopOutput, error) {
-	return a.client.StopHumanLoop(input)
+func (a *AugmentedAIRuntimeActivities) StopHumanLoop(ctx context.Context, input *augmentedairuntime.StopHumanLoopInput) (*augmentedairuntime.StopHumanLoopOutput, error) {
+	return a.client.StopHumanLoopWithContext(ctx, input)
 }

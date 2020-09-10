@@ -4,13 +4,18 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 {{- range .Imports }}
 	"github.com/aws/aws-sdk-go/service/{{ . }}"
 {{- end }}
 	"github.com/aws/aws-sdk-go/service/{{ $lowerName }}/{{ $lowerName }}iface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type {{ $name }}Activities struct {
     client {{ $lowerName }}iface.{{ $name }}API
@@ -24,12 +29,29 @@ func New{{ $name }}Activities(session *session.Session, config ...*aws.Config) *
 {{- range $i, $method := .Methods }}
 
 {{ if IsNil $method.Output -}}
-func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
-    return a.client.{{ $method.Name }}(input)
+func (a *{{ $name }}Activities) {{ $method.Name }}(ctx context.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
+    {{- if HasField $method.Input "ClientToken" }}
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+    {{- end }}
+    return a.client.{{ $method.Name }}WithContext(ctx, input)
+
 }
 {{- else -}}
-func (a *{{ $name }}Activities) {{ $method.Name }}(input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
-    return a.client.{{ $method.Name }}(input)
+func (a *{{ $name }}Activities) {{ $method.Name }}(ctx context.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
+    {{- if HasField $method.Input "ClientToken" }}
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+    {{- end }}
+    return a.client.{{ $method.Name }}WithContext(ctx, input)
 }
 {{- end }}
 

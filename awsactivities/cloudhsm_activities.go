@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudhsm"
 	"github.com/aws/aws-sdk-go/service/cloudhsm/cloudhsmiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CloudHSMActivities struct {
 	client cloudhsmiface.CloudHSMAPI
@@ -16,82 +21,88 @@ func NewCloudHSMActivities(session *session.Session, config ...*aws.Config) *Clo
 	return &CloudHSMActivities{client: client}
 }
 
-func (a *CloudHSMActivities) AddTagsToResource(input *cloudhsm.AddTagsToResourceInput) (*cloudhsm.AddTagsToResourceOutput, error) {
-	return a.client.AddTagsToResource(input)
+func (a *CloudHSMActivities) AddTagsToResource(ctx context.Context, input *cloudhsm.AddTagsToResourceInput) (*cloudhsm.AddTagsToResourceOutput, error) {
+	return a.client.AddTagsToResourceWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) CreateHapg(input *cloudhsm.CreateHapgInput) (*cloudhsm.CreateHapgOutput, error) {
-	return a.client.CreateHapg(input)
+func (a *CloudHSMActivities) CreateHapg(ctx context.Context, input *cloudhsm.CreateHapgInput) (*cloudhsm.CreateHapgOutput, error) {
+	return a.client.CreateHapgWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) CreateHsm(input *cloudhsm.CreateHsmInput) (*cloudhsm.CreateHsmOutput, error) {
-	return a.client.CreateHsm(input)
+func (a *CloudHSMActivities) CreateHsm(ctx context.Context, input *cloudhsm.CreateHsmInput) (*cloudhsm.CreateHsmOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateHsmWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) CreateLunaClient(input *cloudhsm.CreateLunaClientInput) (*cloudhsm.CreateLunaClientOutput, error) {
-	return a.client.CreateLunaClient(input)
+func (a *CloudHSMActivities) CreateLunaClient(ctx context.Context, input *cloudhsm.CreateLunaClientInput) (*cloudhsm.CreateLunaClientOutput, error) {
+	return a.client.CreateLunaClientWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DeleteHapg(input *cloudhsm.DeleteHapgInput) (*cloudhsm.DeleteHapgOutput, error) {
-	return a.client.DeleteHapg(input)
+func (a *CloudHSMActivities) DeleteHapg(ctx context.Context, input *cloudhsm.DeleteHapgInput) (*cloudhsm.DeleteHapgOutput, error) {
+	return a.client.DeleteHapgWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DeleteHsm(input *cloudhsm.DeleteHsmInput) (*cloudhsm.DeleteHsmOutput, error) {
-	return a.client.DeleteHsm(input)
+func (a *CloudHSMActivities) DeleteHsm(ctx context.Context, input *cloudhsm.DeleteHsmInput) (*cloudhsm.DeleteHsmOutput, error) {
+	return a.client.DeleteHsmWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DeleteLunaClient(input *cloudhsm.DeleteLunaClientInput) (*cloudhsm.DeleteLunaClientOutput, error) {
-	return a.client.DeleteLunaClient(input)
+func (a *CloudHSMActivities) DeleteLunaClient(ctx context.Context, input *cloudhsm.DeleteLunaClientInput) (*cloudhsm.DeleteLunaClientOutput, error) {
+	return a.client.DeleteLunaClientWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DescribeHapg(input *cloudhsm.DescribeHapgInput) (*cloudhsm.DescribeHapgOutput, error) {
-	return a.client.DescribeHapg(input)
+func (a *CloudHSMActivities) DescribeHapg(ctx context.Context, input *cloudhsm.DescribeHapgInput) (*cloudhsm.DescribeHapgOutput, error) {
+	return a.client.DescribeHapgWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DescribeHsm(input *cloudhsm.DescribeHsmInput) (*cloudhsm.DescribeHsmOutput, error) {
-	return a.client.DescribeHsm(input)
+func (a *CloudHSMActivities) DescribeHsm(ctx context.Context, input *cloudhsm.DescribeHsmInput) (*cloudhsm.DescribeHsmOutput, error) {
+	return a.client.DescribeHsmWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) DescribeLunaClient(input *cloudhsm.DescribeLunaClientInput) (*cloudhsm.DescribeLunaClientOutput, error) {
-	return a.client.DescribeLunaClient(input)
+func (a *CloudHSMActivities) DescribeLunaClient(ctx context.Context, input *cloudhsm.DescribeLunaClientInput) (*cloudhsm.DescribeLunaClientOutput, error) {
+	return a.client.DescribeLunaClientWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) GetConfig(input *cloudhsm.GetConfigInput) (*cloudhsm.GetConfigOutput, error) {
-	return a.client.GetConfig(input)
+func (a *CloudHSMActivities) GetConfig(ctx context.Context, input *cloudhsm.GetConfigInput) (*cloudhsm.GetConfigOutput, error) {
+	return a.client.GetConfigWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ListAvailableZones(input *cloudhsm.ListAvailableZonesInput) (*cloudhsm.ListAvailableZonesOutput, error) {
-	return a.client.ListAvailableZones(input)
+func (a *CloudHSMActivities) ListAvailableZones(ctx context.Context, input *cloudhsm.ListAvailableZonesInput) (*cloudhsm.ListAvailableZonesOutput, error) {
+	return a.client.ListAvailableZonesWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ListHapgs(input *cloudhsm.ListHapgsInput) (*cloudhsm.ListHapgsOutput, error) {
-	return a.client.ListHapgs(input)
+func (a *CloudHSMActivities) ListHapgs(ctx context.Context, input *cloudhsm.ListHapgsInput) (*cloudhsm.ListHapgsOutput, error) {
+	return a.client.ListHapgsWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ListHsms(input *cloudhsm.ListHsmsInput) (*cloudhsm.ListHsmsOutput, error) {
-	return a.client.ListHsms(input)
+func (a *CloudHSMActivities) ListHsms(ctx context.Context, input *cloudhsm.ListHsmsInput) (*cloudhsm.ListHsmsOutput, error) {
+	return a.client.ListHsmsWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ListLunaClients(input *cloudhsm.ListLunaClientsInput) (*cloudhsm.ListLunaClientsOutput, error) {
-	return a.client.ListLunaClients(input)
+func (a *CloudHSMActivities) ListLunaClients(ctx context.Context, input *cloudhsm.ListLunaClientsInput) (*cloudhsm.ListLunaClientsOutput, error) {
+	return a.client.ListLunaClientsWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ListTagsForResource(input *cloudhsm.ListTagsForResourceInput) (*cloudhsm.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *CloudHSMActivities) ListTagsForResource(ctx context.Context, input *cloudhsm.ListTagsForResourceInput) (*cloudhsm.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ModifyHapg(input *cloudhsm.ModifyHapgInput) (*cloudhsm.ModifyHapgOutput, error) {
-	return a.client.ModifyHapg(input)
+func (a *CloudHSMActivities) ModifyHapg(ctx context.Context, input *cloudhsm.ModifyHapgInput) (*cloudhsm.ModifyHapgOutput, error) {
+	return a.client.ModifyHapgWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ModifyHsm(input *cloudhsm.ModifyHsmInput) (*cloudhsm.ModifyHsmOutput, error) {
-	return a.client.ModifyHsm(input)
+func (a *CloudHSMActivities) ModifyHsm(ctx context.Context, input *cloudhsm.ModifyHsmInput) (*cloudhsm.ModifyHsmOutput, error) {
+	return a.client.ModifyHsmWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) ModifyLunaClient(input *cloudhsm.ModifyLunaClientInput) (*cloudhsm.ModifyLunaClientOutput, error) {
-	return a.client.ModifyLunaClient(input)
+func (a *CloudHSMActivities) ModifyLunaClient(ctx context.Context, input *cloudhsm.ModifyLunaClientInput) (*cloudhsm.ModifyLunaClientOutput, error) {
+	return a.client.ModifyLunaClientWithContext(ctx, input)
 }
 
-func (a *CloudHSMActivities) RemoveTagsFromResource(input *cloudhsm.RemoveTagsFromResourceInput) (*cloudhsm.RemoveTagsFromResourceOutput, error) {
-	return a.client.RemoveTagsFromResource(input)
+func (a *CloudHSMActivities) RemoveTagsFromResource(ctx context.Context, input *cloudhsm.RemoveTagsFromResourceInput) (*cloudhsm.RemoveTagsFromResourceOutput, error) {
+	return a.client.RemoveTagsFromResourceWithContext(ctx, input)
 }

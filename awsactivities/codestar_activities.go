@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codestar"
 	"github.com/aws/aws-sdk-go/service/codestar/codestariface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CodeStarActivities struct {
 	client codestariface.CodeStarAPI
@@ -16,74 +21,74 @@ func NewCodeStarActivities(session *session.Session, config ...*aws.Config) *Cod
 	return &CodeStarActivities{client: client}
 }
 
-func (a *CodeStarActivities) AssociateTeamMember(input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error) {
-	return a.client.AssociateTeamMember(input)
+func (a *CodeStarActivities) AssociateTeamMember(ctx context.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error) {
+	return a.client.AssociateTeamMemberWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) CreateProject(input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error) {
-	return a.client.CreateProject(input)
+func (a *CodeStarActivities) CreateProject(ctx context.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error) {
+	return a.client.CreateProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) CreateUserProfile(input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error) {
-	return a.client.CreateUserProfile(input)
+func (a *CodeStarActivities) CreateUserProfile(ctx context.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error) {
+	return a.client.CreateUserProfileWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) DeleteProject(input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error) {
-	return a.client.DeleteProject(input)
+func (a *CodeStarActivities) DeleteProject(ctx context.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error) {
+	return a.client.DeleteProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) DeleteUserProfile(input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error) {
-	return a.client.DeleteUserProfile(input)
+func (a *CodeStarActivities) DeleteUserProfile(ctx context.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error) {
+	return a.client.DeleteUserProfileWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) DescribeProject(input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error) {
-	return a.client.DescribeProject(input)
+func (a *CodeStarActivities) DescribeProject(ctx context.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error) {
+	return a.client.DescribeProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) DescribeUserProfile(input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error) {
-	return a.client.DescribeUserProfile(input)
+func (a *CodeStarActivities) DescribeUserProfile(ctx context.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error) {
+	return a.client.DescribeUserProfileWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) DisassociateTeamMember(input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error) {
-	return a.client.DisassociateTeamMember(input)
+func (a *CodeStarActivities) DisassociateTeamMember(ctx context.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error) {
+	return a.client.DisassociateTeamMemberWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) ListProjects(input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error) {
-	return a.client.ListProjects(input)
+func (a *CodeStarActivities) ListProjects(ctx context.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error) {
+	return a.client.ListProjectsWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) ListResources(input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error) {
-	return a.client.ListResources(input)
+func (a *CodeStarActivities) ListResources(ctx context.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error) {
+	return a.client.ListResourcesWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) ListTagsForProject(input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error) {
-	return a.client.ListTagsForProject(input)
+func (a *CodeStarActivities) ListTagsForProject(ctx context.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error) {
+	return a.client.ListTagsForProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) ListTeamMembers(input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error) {
-	return a.client.ListTeamMembers(input)
+func (a *CodeStarActivities) ListTeamMembers(ctx context.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error) {
+	return a.client.ListTeamMembersWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) ListUserProfiles(input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error) {
-	return a.client.ListUserProfiles(input)
+func (a *CodeStarActivities) ListUserProfiles(ctx context.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error) {
+	return a.client.ListUserProfilesWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) TagProject(input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error) {
-	return a.client.TagProject(input)
+func (a *CodeStarActivities) TagProject(ctx context.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error) {
+	return a.client.TagProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) UntagProject(input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error) {
-	return a.client.UntagProject(input)
+func (a *CodeStarActivities) UntagProject(ctx context.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error) {
+	return a.client.UntagProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) UpdateProject(input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error) {
-	return a.client.UpdateProject(input)
+func (a *CodeStarActivities) UpdateProject(ctx context.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error) {
+	return a.client.UpdateProjectWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) UpdateTeamMember(input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error) {
-	return a.client.UpdateTeamMember(input)
+func (a *CodeStarActivities) UpdateTeamMember(ctx context.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error) {
+	return a.client.UpdateTeamMemberWithContext(ctx, input)
 }
 
-func (a *CodeStarActivities) UpdateUserProfile(input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error) {
-	return a.client.UpdateUserProfile(input)
+func (a *CodeStarActivities) UpdateUserProfile(ctx context.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error) {
+	return a.client.UpdateUserProfileWithContext(ctx, input)
 }

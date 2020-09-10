@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pinpointsmsvoice"
 	"github.com/aws/aws-sdk-go/service/pinpointsmsvoice/pinpointsmsvoiceiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type PinpointSMSVoiceActivities struct {
 	client pinpointsmsvoiceiface.PinpointSMSVoiceAPI
@@ -16,34 +21,34 @@ func NewPinpointSMSVoiceActivities(session *session.Session, config ...*aws.Conf
 	return &PinpointSMSVoiceActivities{client: client}
 }
 
-func (a *PinpointSMSVoiceActivities) CreateConfigurationSet(input *pinpointsmsvoice.CreateConfigurationSetInput) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
-	return a.client.CreateConfigurationSet(input)
+func (a *PinpointSMSVoiceActivities) CreateConfigurationSet(ctx context.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
+	return a.client.CreateConfigurationSetWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) CreateConfigurationSetEventDestination(input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
-	return a.client.CreateConfigurationSetEventDestination(input)
+func (a *PinpointSMSVoiceActivities) CreateConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
+	return a.client.CreateConfigurationSetEventDestinationWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) DeleteConfigurationSet(input *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
-	return a.client.DeleteConfigurationSet(input)
+func (a *PinpointSMSVoiceActivities) DeleteConfigurationSet(ctx context.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
+	return a.client.DeleteConfigurationSetWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) DeleteConfigurationSetEventDestination(input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
-	return a.client.DeleteConfigurationSetEventDestination(input)
+func (a *PinpointSMSVoiceActivities) DeleteConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
+	return a.client.DeleteConfigurationSetEventDestinationWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) GetConfigurationSetEventDestinations(input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
-	return a.client.GetConfigurationSetEventDestinations(input)
+func (a *PinpointSMSVoiceActivities) GetConfigurationSetEventDestinations(ctx context.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
+	return a.client.GetConfigurationSetEventDestinationsWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) ListConfigurationSets(input *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
-	return a.client.ListConfigurationSets(input)
+func (a *PinpointSMSVoiceActivities) ListConfigurationSets(ctx context.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
+	return a.client.ListConfigurationSetsWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) SendVoiceMessage(input *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
-	return a.client.SendVoiceMessage(input)
+func (a *PinpointSMSVoiceActivities) SendVoiceMessage(ctx context.Context, input *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
+	return a.client.SendVoiceMessageWithContext(ctx, input)
 }
 
-func (a *PinpointSMSVoiceActivities) UpdateConfigurationSetEventDestination(input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
-	return a.client.UpdateConfigurationSetEventDestination(input)
+func (a *PinpointSMSVoiceActivities) UpdateConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
+	return a.client.UpdateConfigurationSetEventDestinationWithContext(ctx, input)
 }

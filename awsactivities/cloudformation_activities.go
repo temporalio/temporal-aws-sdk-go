@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 	"github.com/aws/aws-sdk-go/service/cloudformation/cloudformationiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CloudFormationActivities struct {
 	client cloudformationiface.CloudFormationAPI
@@ -16,254 +21,268 @@ func NewCloudFormationActivities(session *session.Session, config ...*aws.Config
 	return &CloudFormationActivities{client: client}
 }
 
-func (a *CloudFormationActivities) CancelUpdateStack(input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
-	return a.client.CancelUpdateStack(input)
+func (a *CloudFormationActivities) CancelUpdateStack(ctx context.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
+	return a.client.CancelUpdateStackWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ContinueUpdateRollback(input *cloudformation.ContinueUpdateRollbackInput) (*cloudformation.ContinueUpdateRollbackOutput, error) {
-	return a.client.ContinueUpdateRollback(input)
+func (a *CloudFormationActivities) ContinueUpdateRollback(ctx context.Context, input *cloudformation.ContinueUpdateRollbackInput) (*cloudformation.ContinueUpdateRollbackOutput, error) {
+	return a.client.ContinueUpdateRollbackWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) CreateChangeSet(input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error) {
-	return a.client.CreateChangeSet(input)
+func (a *CloudFormationActivities) CreateChangeSet(ctx context.Context, input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateChangeSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) CreateStack(input *cloudformation.CreateStackInput) (*cloudformation.CreateStackOutput, error) {
-	return a.client.CreateStack(input)
+func (a *CloudFormationActivities) CreateStack(ctx context.Context, input *cloudformation.CreateStackInput) (*cloudformation.CreateStackOutput, error) {
+	return a.client.CreateStackWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) CreateStackInstances(input *cloudformation.CreateStackInstancesInput) (*cloudformation.CreateStackInstancesOutput, error) {
-	return a.client.CreateStackInstances(input)
+func (a *CloudFormationActivities) CreateStackInstances(ctx context.Context, input *cloudformation.CreateStackInstancesInput) (*cloudformation.CreateStackInstancesOutput, error) {
+	return a.client.CreateStackInstancesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) CreateStackSet(input *cloudformation.CreateStackSetInput) (*cloudformation.CreateStackSetOutput, error) {
-	return a.client.CreateStackSet(input)
+func (a *CloudFormationActivities) CreateStackSet(ctx context.Context, input *cloudformation.CreateStackSetInput) (*cloudformation.CreateStackSetOutput, error) {
+	return a.client.CreateStackSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DeleteChangeSet(input *cloudformation.DeleteChangeSetInput) (*cloudformation.DeleteChangeSetOutput, error) {
-	return a.client.DeleteChangeSet(input)
+func (a *CloudFormationActivities) DeleteChangeSet(ctx context.Context, input *cloudformation.DeleteChangeSetInput) (*cloudformation.DeleteChangeSetOutput, error) {
+	return a.client.DeleteChangeSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DeleteStack(input *cloudformation.DeleteStackInput) (*cloudformation.DeleteStackOutput, error) {
-	return a.client.DeleteStack(input)
+func (a *CloudFormationActivities) DeleteStack(ctx context.Context, input *cloudformation.DeleteStackInput) (*cloudformation.DeleteStackOutput, error) {
+	return a.client.DeleteStackWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DeleteStackInstances(input *cloudformation.DeleteStackInstancesInput) (*cloudformation.DeleteStackInstancesOutput, error) {
-	return a.client.DeleteStackInstances(input)
+func (a *CloudFormationActivities) DeleteStackInstances(ctx context.Context, input *cloudformation.DeleteStackInstancesInput) (*cloudformation.DeleteStackInstancesOutput, error) {
+	return a.client.DeleteStackInstancesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DeleteStackSet(input *cloudformation.DeleteStackSetInput) (*cloudformation.DeleteStackSetOutput, error) {
-	return a.client.DeleteStackSet(input)
+func (a *CloudFormationActivities) DeleteStackSet(ctx context.Context, input *cloudformation.DeleteStackSetInput) (*cloudformation.DeleteStackSetOutput, error) {
+	return a.client.DeleteStackSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DeregisterType(input *cloudformation.DeregisterTypeInput) (*cloudformation.DeregisterTypeOutput, error) {
-	return a.client.DeregisterType(input)
+func (a *CloudFormationActivities) DeregisterType(ctx context.Context, input *cloudformation.DeregisterTypeInput) (*cloudformation.DeregisterTypeOutput, error) {
+	return a.client.DeregisterTypeWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeAccountLimits(input *cloudformation.DescribeAccountLimitsInput) (*cloudformation.DescribeAccountLimitsOutput, error) {
-	return a.client.DescribeAccountLimits(input)
+func (a *CloudFormationActivities) DescribeAccountLimits(ctx context.Context, input *cloudformation.DescribeAccountLimitsInput) (*cloudformation.DescribeAccountLimitsOutput, error) {
+	return a.client.DescribeAccountLimitsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeChangeSet(input *cloudformation.DescribeChangeSetInput) (*cloudformation.DescribeChangeSetOutput, error) {
-	return a.client.DescribeChangeSet(input)
+func (a *CloudFormationActivities) DescribeChangeSet(ctx context.Context, input *cloudformation.DescribeChangeSetInput) (*cloudformation.DescribeChangeSetOutput, error) {
+	return a.client.DescribeChangeSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackDriftDetectionStatus(input *cloudformation.DescribeStackDriftDetectionStatusInput) (*cloudformation.DescribeStackDriftDetectionStatusOutput, error) {
-	return a.client.DescribeStackDriftDetectionStatus(input)
+func (a *CloudFormationActivities) DescribeStackDriftDetectionStatus(ctx context.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) (*cloudformation.DescribeStackDriftDetectionStatusOutput, error) {
+	return a.client.DescribeStackDriftDetectionStatusWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackEvents(input *cloudformation.DescribeStackEventsInput) (*cloudformation.DescribeStackEventsOutput, error) {
-	return a.client.DescribeStackEvents(input)
+func (a *CloudFormationActivities) DescribeStackEvents(ctx context.Context, input *cloudformation.DescribeStackEventsInput) (*cloudformation.DescribeStackEventsOutput, error) {
+	return a.client.DescribeStackEventsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackInstance(input *cloudformation.DescribeStackInstanceInput) (*cloudformation.DescribeStackInstanceOutput, error) {
-	return a.client.DescribeStackInstance(input)
+func (a *CloudFormationActivities) DescribeStackInstance(ctx context.Context, input *cloudformation.DescribeStackInstanceInput) (*cloudformation.DescribeStackInstanceOutput, error) {
+	return a.client.DescribeStackInstanceWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackResource(input *cloudformation.DescribeStackResourceInput) (*cloudformation.DescribeStackResourceOutput, error) {
-	return a.client.DescribeStackResource(input)
+func (a *CloudFormationActivities) DescribeStackResource(ctx context.Context, input *cloudformation.DescribeStackResourceInput) (*cloudformation.DescribeStackResourceOutput, error) {
+	return a.client.DescribeStackResourceWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackResourceDrifts(input *cloudformation.DescribeStackResourceDriftsInput) (*cloudformation.DescribeStackResourceDriftsOutput, error) {
-	return a.client.DescribeStackResourceDrifts(input)
+func (a *CloudFormationActivities) DescribeStackResourceDrifts(ctx context.Context, input *cloudformation.DescribeStackResourceDriftsInput) (*cloudformation.DescribeStackResourceDriftsOutput, error) {
+	return a.client.DescribeStackResourceDriftsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackResources(input *cloudformation.DescribeStackResourcesInput) (*cloudformation.DescribeStackResourcesOutput, error) {
-	return a.client.DescribeStackResources(input)
+func (a *CloudFormationActivities) DescribeStackResources(ctx context.Context, input *cloudformation.DescribeStackResourcesInput) (*cloudformation.DescribeStackResourcesOutput, error) {
+	return a.client.DescribeStackResourcesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackSet(input *cloudformation.DescribeStackSetInput) (*cloudformation.DescribeStackSetOutput, error) {
-	return a.client.DescribeStackSet(input)
+func (a *CloudFormationActivities) DescribeStackSet(ctx context.Context, input *cloudformation.DescribeStackSetInput) (*cloudformation.DescribeStackSetOutput, error) {
+	return a.client.DescribeStackSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStackSetOperation(input *cloudformation.DescribeStackSetOperationInput) (*cloudformation.DescribeStackSetOperationOutput, error) {
-	return a.client.DescribeStackSetOperation(input)
+func (a *CloudFormationActivities) DescribeStackSetOperation(ctx context.Context, input *cloudformation.DescribeStackSetOperationInput) (*cloudformation.DescribeStackSetOperationOutput, error) {
+	return a.client.DescribeStackSetOperationWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeStacks(input *cloudformation.DescribeStacksInput) (*cloudformation.DescribeStacksOutput, error) {
-	return a.client.DescribeStacks(input)
+func (a *CloudFormationActivities) DescribeStacks(ctx context.Context, input *cloudformation.DescribeStacksInput) (*cloudformation.DescribeStacksOutput, error) {
+	return a.client.DescribeStacksWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeType(input *cloudformation.DescribeTypeInput) (*cloudformation.DescribeTypeOutput, error) {
-	return a.client.DescribeType(input)
+func (a *CloudFormationActivities) DescribeType(ctx context.Context, input *cloudformation.DescribeTypeInput) (*cloudformation.DescribeTypeOutput, error) {
+	return a.client.DescribeTypeWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DescribeTypeRegistration(input *cloudformation.DescribeTypeRegistrationInput) (*cloudformation.DescribeTypeRegistrationOutput, error) {
-	return a.client.DescribeTypeRegistration(input)
+func (a *CloudFormationActivities) DescribeTypeRegistration(ctx context.Context, input *cloudformation.DescribeTypeRegistrationInput) (*cloudformation.DescribeTypeRegistrationOutput, error) {
+	return a.client.DescribeTypeRegistrationWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DetectStackDrift(input *cloudformation.DetectStackDriftInput) (*cloudformation.DetectStackDriftOutput, error) {
-	return a.client.DetectStackDrift(input)
+func (a *CloudFormationActivities) DetectStackDrift(ctx context.Context, input *cloudformation.DetectStackDriftInput) (*cloudformation.DetectStackDriftOutput, error) {
+	return a.client.DetectStackDriftWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DetectStackResourceDrift(input *cloudformation.DetectStackResourceDriftInput) (*cloudformation.DetectStackResourceDriftOutput, error) {
-	return a.client.DetectStackResourceDrift(input)
+func (a *CloudFormationActivities) DetectStackResourceDrift(ctx context.Context, input *cloudformation.DetectStackResourceDriftInput) (*cloudformation.DetectStackResourceDriftOutput, error) {
+	return a.client.DetectStackResourceDriftWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) DetectStackSetDrift(input *cloudformation.DetectStackSetDriftInput) (*cloudformation.DetectStackSetDriftOutput, error) {
-	return a.client.DetectStackSetDrift(input)
+func (a *CloudFormationActivities) DetectStackSetDrift(ctx context.Context, input *cloudformation.DetectStackSetDriftInput) (*cloudformation.DetectStackSetDriftOutput, error) {
+	return a.client.DetectStackSetDriftWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) EstimateTemplateCost(input *cloudformation.EstimateTemplateCostInput) (*cloudformation.EstimateTemplateCostOutput, error) {
-	return a.client.EstimateTemplateCost(input)
+func (a *CloudFormationActivities) EstimateTemplateCost(ctx context.Context, input *cloudformation.EstimateTemplateCostInput) (*cloudformation.EstimateTemplateCostOutput, error) {
+	return a.client.EstimateTemplateCostWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ExecuteChangeSet(input *cloudformation.ExecuteChangeSetInput) (*cloudformation.ExecuteChangeSetOutput, error) {
-	return a.client.ExecuteChangeSet(input)
+func (a *CloudFormationActivities) ExecuteChangeSet(ctx context.Context, input *cloudformation.ExecuteChangeSetInput) (*cloudformation.ExecuteChangeSetOutput, error) {
+	return a.client.ExecuteChangeSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) GetStackPolicy(input *cloudformation.GetStackPolicyInput) (*cloudformation.GetStackPolicyOutput, error) {
-	return a.client.GetStackPolicy(input)
+func (a *CloudFormationActivities) GetStackPolicy(ctx context.Context, input *cloudformation.GetStackPolicyInput) (*cloudformation.GetStackPolicyOutput, error) {
+	return a.client.GetStackPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) GetTemplate(input *cloudformation.GetTemplateInput) (*cloudformation.GetTemplateOutput, error) {
-	return a.client.GetTemplate(input)
+func (a *CloudFormationActivities) GetTemplate(ctx context.Context, input *cloudformation.GetTemplateInput) (*cloudformation.GetTemplateOutput, error) {
+	return a.client.GetTemplateWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) GetTemplateSummary(input *cloudformation.GetTemplateSummaryInput) (*cloudformation.GetTemplateSummaryOutput, error) {
-	return a.client.GetTemplateSummary(input)
+func (a *CloudFormationActivities) GetTemplateSummary(ctx context.Context, input *cloudformation.GetTemplateSummaryInput) (*cloudformation.GetTemplateSummaryOutput, error) {
+	return a.client.GetTemplateSummaryWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListChangeSets(input *cloudformation.ListChangeSetsInput) (*cloudformation.ListChangeSetsOutput, error) {
-	return a.client.ListChangeSets(input)
+func (a *CloudFormationActivities) ListChangeSets(ctx context.Context, input *cloudformation.ListChangeSetsInput) (*cloudformation.ListChangeSetsOutput, error) {
+	return a.client.ListChangeSetsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListExports(input *cloudformation.ListExportsInput) (*cloudformation.ListExportsOutput, error) {
-	return a.client.ListExports(input)
+func (a *CloudFormationActivities) ListExports(ctx context.Context, input *cloudformation.ListExportsInput) (*cloudformation.ListExportsOutput, error) {
+	return a.client.ListExportsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListImports(input *cloudformation.ListImportsInput) (*cloudformation.ListImportsOutput, error) {
-	return a.client.ListImports(input)
+func (a *CloudFormationActivities) ListImports(ctx context.Context, input *cloudformation.ListImportsInput) (*cloudformation.ListImportsOutput, error) {
+	return a.client.ListImportsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStackInstances(input *cloudformation.ListStackInstancesInput) (*cloudformation.ListStackInstancesOutput, error) {
-	return a.client.ListStackInstances(input)
+func (a *CloudFormationActivities) ListStackInstances(ctx context.Context, input *cloudformation.ListStackInstancesInput) (*cloudformation.ListStackInstancesOutput, error) {
+	return a.client.ListStackInstancesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStackResources(input *cloudformation.ListStackResourcesInput) (*cloudformation.ListStackResourcesOutput, error) {
-	return a.client.ListStackResources(input)
+func (a *CloudFormationActivities) ListStackResources(ctx context.Context, input *cloudformation.ListStackResourcesInput) (*cloudformation.ListStackResourcesOutput, error) {
+	return a.client.ListStackResourcesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStackSetOperationResults(input *cloudformation.ListStackSetOperationResultsInput) (*cloudformation.ListStackSetOperationResultsOutput, error) {
-	return a.client.ListStackSetOperationResults(input)
+func (a *CloudFormationActivities) ListStackSetOperationResults(ctx context.Context, input *cloudformation.ListStackSetOperationResultsInput) (*cloudformation.ListStackSetOperationResultsOutput, error) {
+	return a.client.ListStackSetOperationResultsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStackSetOperations(input *cloudformation.ListStackSetOperationsInput) (*cloudformation.ListStackSetOperationsOutput, error) {
-	return a.client.ListStackSetOperations(input)
+func (a *CloudFormationActivities) ListStackSetOperations(ctx context.Context, input *cloudformation.ListStackSetOperationsInput) (*cloudformation.ListStackSetOperationsOutput, error) {
+	return a.client.ListStackSetOperationsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStackSets(input *cloudformation.ListStackSetsInput) (*cloudformation.ListStackSetsOutput, error) {
-	return a.client.ListStackSets(input)
+func (a *CloudFormationActivities) ListStackSets(ctx context.Context, input *cloudformation.ListStackSetsInput) (*cloudformation.ListStackSetsOutput, error) {
+	return a.client.ListStackSetsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListStacks(input *cloudformation.ListStacksInput) (*cloudformation.ListStacksOutput, error) {
-	return a.client.ListStacks(input)
+func (a *CloudFormationActivities) ListStacks(ctx context.Context, input *cloudformation.ListStacksInput) (*cloudformation.ListStacksOutput, error) {
+	return a.client.ListStacksWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListTypeRegistrations(input *cloudformation.ListTypeRegistrationsInput) (*cloudformation.ListTypeRegistrationsOutput, error) {
-	return a.client.ListTypeRegistrations(input)
+func (a *CloudFormationActivities) ListTypeRegistrations(ctx context.Context, input *cloudformation.ListTypeRegistrationsInput) (*cloudformation.ListTypeRegistrationsOutput, error) {
+	return a.client.ListTypeRegistrationsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListTypeVersions(input *cloudformation.ListTypeVersionsInput) (*cloudformation.ListTypeVersionsOutput, error) {
-	return a.client.ListTypeVersions(input)
+func (a *CloudFormationActivities) ListTypeVersions(ctx context.Context, input *cloudformation.ListTypeVersionsInput) (*cloudformation.ListTypeVersionsOutput, error) {
+	return a.client.ListTypeVersionsWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ListTypes(input *cloudformation.ListTypesInput) (*cloudformation.ListTypesOutput, error) {
-	return a.client.ListTypes(input)
+func (a *CloudFormationActivities) ListTypes(ctx context.Context, input *cloudformation.ListTypesInput) (*cloudformation.ListTypesOutput, error) {
+	return a.client.ListTypesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) RecordHandlerProgress(input *cloudformation.RecordHandlerProgressInput) (*cloudformation.RecordHandlerProgressOutput, error) {
-	return a.client.RecordHandlerProgress(input)
+func (a *CloudFormationActivities) RecordHandlerProgress(ctx context.Context, input *cloudformation.RecordHandlerProgressInput) (*cloudformation.RecordHandlerProgressOutput, error) {
+	return a.client.RecordHandlerProgressWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) RegisterType(input *cloudformation.RegisterTypeInput) (*cloudformation.RegisterTypeOutput, error) {
-	return a.client.RegisterType(input)
+func (a *CloudFormationActivities) RegisterType(ctx context.Context, input *cloudformation.RegisterTypeInput) (*cloudformation.RegisterTypeOutput, error) {
+	return a.client.RegisterTypeWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) SetStackPolicy(input *cloudformation.SetStackPolicyInput) (*cloudformation.SetStackPolicyOutput, error) {
-	return a.client.SetStackPolicy(input)
+func (a *CloudFormationActivities) SetStackPolicy(ctx context.Context, input *cloudformation.SetStackPolicyInput) (*cloudformation.SetStackPolicyOutput, error) {
+	return a.client.SetStackPolicyWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) SetTypeDefaultVersion(input *cloudformation.SetTypeDefaultVersionInput) (*cloudformation.SetTypeDefaultVersionOutput, error) {
-	return a.client.SetTypeDefaultVersion(input)
+func (a *CloudFormationActivities) SetTypeDefaultVersion(ctx context.Context, input *cloudformation.SetTypeDefaultVersionInput) (*cloudformation.SetTypeDefaultVersionOutput, error) {
+	return a.client.SetTypeDefaultVersionWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) SignalResource(input *cloudformation.SignalResourceInput) (*cloudformation.SignalResourceOutput, error) {
-	return a.client.SignalResource(input)
+func (a *CloudFormationActivities) SignalResource(ctx context.Context, input *cloudformation.SignalResourceInput) (*cloudformation.SignalResourceOutput, error) {
+	return a.client.SignalResourceWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) StopStackSetOperation(input *cloudformation.StopStackSetOperationInput) (*cloudformation.StopStackSetOperationOutput, error) {
-	return a.client.StopStackSetOperation(input)
+func (a *CloudFormationActivities) StopStackSetOperation(ctx context.Context, input *cloudformation.StopStackSetOperationInput) (*cloudformation.StopStackSetOperationOutput, error) {
+	return a.client.StopStackSetOperationWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) UpdateStack(input *cloudformation.UpdateStackInput) (*cloudformation.UpdateStackOutput, error) {
-	return a.client.UpdateStack(input)
+func (a *CloudFormationActivities) UpdateStack(ctx context.Context, input *cloudformation.UpdateStackInput) (*cloudformation.UpdateStackOutput, error) {
+	return a.client.UpdateStackWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) UpdateStackInstances(input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error) {
-	return a.client.UpdateStackInstances(input)
+func (a *CloudFormationActivities) UpdateStackInstances(ctx context.Context, input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error) {
+	return a.client.UpdateStackInstancesWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) UpdateStackSet(input *cloudformation.UpdateStackSetInput) (*cloudformation.UpdateStackSetOutput, error) {
-	return a.client.UpdateStackSet(input)
+func (a *CloudFormationActivities) UpdateStackSet(ctx context.Context, input *cloudformation.UpdateStackSetInput) (*cloudformation.UpdateStackSetOutput, error) {
+	return a.client.UpdateStackSetWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) UpdateTerminationProtection(input *cloudformation.UpdateTerminationProtectionInput) (*cloudformation.UpdateTerminationProtectionOutput, error) {
-	return a.client.UpdateTerminationProtection(input)
+func (a *CloudFormationActivities) UpdateTerminationProtection(ctx context.Context, input *cloudformation.UpdateTerminationProtectionInput) (*cloudformation.UpdateTerminationProtectionOutput, error) {
+	return a.client.UpdateTerminationProtectionWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) ValidateTemplate(input *cloudformation.ValidateTemplateInput) (*cloudformation.ValidateTemplateOutput, error) {
-	return a.client.ValidateTemplate(input)
+func (a *CloudFormationActivities) ValidateTemplate(ctx context.Context, input *cloudformation.ValidateTemplateInput) (*cloudformation.ValidateTemplateOutput, error) {
+	return a.client.ValidateTemplateWithContext(ctx, input)
 }
 
-func (a *CloudFormationActivities) WaitUntilChangeSetCreateComplete(input *cloudformation.DescribeChangeSetInput) error {
-	return a.client.WaitUntilChangeSetCreateComplete(input)
+func (a *CloudFormationActivities) WaitUntilChangeSetCreateComplete(ctx context.Context, input *cloudformation.DescribeChangeSetInput) error {
+	return a.client.WaitUntilChangeSetCreateCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackCreateComplete(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackCreateComplete(input)
+func (a *CloudFormationActivities) WaitUntilStackCreateComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackCreateCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackDeleteComplete(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackDeleteComplete(input)
+func (a *CloudFormationActivities) WaitUntilStackDeleteComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackDeleteCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackExists(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackExists(input)
+func (a *CloudFormationActivities) WaitUntilStackExists(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackExistsWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackImportComplete(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackImportComplete(input)
+func (a *CloudFormationActivities) WaitUntilStackImportComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackImportCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackRollbackComplete(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackRollbackComplete(input)
+func (a *CloudFormationActivities) WaitUntilStackRollbackComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackRollbackCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilStackUpdateComplete(input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackUpdateComplete(input)
+func (a *CloudFormationActivities) WaitUntilStackUpdateComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
+	return a.client.WaitUntilStackUpdateCompleteWithContext(ctx, input)
+
 }
 
-func (a *CloudFormationActivities) WaitUntilTypeRegistrationComplete(input *cloudformation.DescribeTypeRegistrationInput) error {
-	return a.client.WaitUntilTypeRegistrationComplete(input)
+func (a *CloudFormationActivities) WaitUntilTypeRegistrationComplete(ctx context.Context, input *cloudformation.DescribeTypeRegistrationInput) error {
+	return a.client.WaitUntilTypeRegistrationCompleteWithContext(ctx, input)
+
 }

@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/mediapackage"
 	"github.com/aws/aws-sdk-go/service/mediapackage/mediapackageiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type MediaPackageActivities struct {
 	client mediapackageiface.MediaPackageAPI
@@ -16,74 +21,74 @@ func NewMediaPackageActivities(session *session.Session, config ...*aws.Config) 
 	return &MediaPackageActivities{client: client}
 }
 
-func (a *MediaPackageActivities) CreateChannel(input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error) {
-	return a.client.CreateChannel(input)
+func (a *MediaPackageActivities) CreateChannel(ctx context.Context, input *mediapackage.CreateChannelInput) (*mediapackage.CreateChannelOutput, error) {
+	return a.client.CreateChannelWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) CreateHarvestJob(input *mediapackage.CreateHarvestJobInput) (*mediapackage.CreateHarvestJobOutput, error) {
-	return a.client.CreateHarvestJob(input)
+func (a *MediaPackageActivities) CreateHarvestJob(ctx context.Context, input *mediapackage.CreateHarvestJobInput) (*mediapackage.CreateHarvestJobOutput, error) {
+	return a.client.CreateHarvestJobWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) CreateOriginEndpoint(input *mediapackage.CreateOriginEndpointInput) (*mediapackage.CreateOriginEndpointOutput, error) {
-	return a.client.CreateOriginEndpoint(input)
+func (a *MediaPackageActivities) CreateOriginEndpoint(ctx context.Context, input *mediapackage.CreateOriginEndpointInput) (*mediapackage.CreateOriginEndpointOutput, error) {
+	return a.client.CreateOriginEndpointWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) DeleteChannel(input *mediapackage.DeleteChannelInput) (*mediapackage.DeleteChannelOutput, error) {
-	return a.client.DeleteChannel(input)
+func (a *MediaPackageActivities) DeleteChannel(ctx context.Context, input *mediapackage.DeleteChannelInput) (*mediapackage.DeleteChannelOutput, error) {
+	return a.client.DeleteChannelWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) DeleteOriginEndpoint(input *mediapackage.DeleteOriginEndpointInput) (*mediapackage.DeleteOriginEndpointOutput, error) {
-	return a.client.DeleteOriginEndpoint(input)
+func (a *MediaPackageActivities) DeleteOriginEndpoint(ctx context.Context, input *mediapackage.DeleteOriginEndpointInput) (*mediapackage.DeleteOriginEndpointOutput, error) {
+	return a.client.DeleteOriginEndpointWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) DescribeChannel(input *mediapackage.DescribeChannelInput) (*mediapackage.DescribeChannelOutput, error) {
-	return a.client.DescribeChannel(input)
+func (a *MediaPackageActivities) DescribeChannel(ctx context.Context, input *mediapackage.DescribeChannelInput) (*mediapackage.DescribeChannelOutput, error) {
+	return a.client.DescribeChannelWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) DescribeHarvestJob(input *mediapackage.DescribeHarvestJobInput) (*mediapackage.DescribeHarvestJobOutput, error) {
-	return a.client.DescribeHarvestJob(input)
+func (a *MediaPackageActivities) DescribeHarvestJob(ctx context.Context, input *mediapackage.DescribeHarvestJobInput) (*mediapackage.DescribeHarvestJobOutput, error) {
+	return a.client.DescribeHarvestJobWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) DescribeOriginEndpoint(input *mediapackage.DescribeOriginEndpointInput) (*mediapackage.DescribeOriginEndpointOutput, error) {
-	return a.client.DescribeOriginEndpoint(input)
+func (a *MediaPackageActivities) DescribeOriginEndpoint(ctx context.Context, input *mediapackage.DescribeOriginEndpointInput) (*mediapackage.DescribeOriginEndpointOutput, error) {
+	return a.client.DescribeOriginEndpointWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) ListChannels(input *mediapackage.ListChannelsInput) (*mediapackage.ListChannelsOutput, error) {
-	return a.client.ListChannels(input)
+func (a *MediaPackageActivities) ListChannels(ctx context.Context, input *mediapackage.ListChannelsInput) (*mediapackage.ListChannelsOutput, error) {
+	return a.client.ListChannelsWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) ListHarvestJobs(input *mediapackage.ListHarvestJobsInput) (*mediapackage.ListHarvestJobsOutput, error) {
-	return a.client.ListHarvestJobs(input)
+func (a *MediaPackageActivities) ListHarvestJobs(ctx context.Context, input *mediapackage.ListHarvestJobsInput) (*mediapackage.ListHarvestJobsOutput, error) {
+	return a.client.ListHarvestJobsWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) ListOriginEndpoints(input *mediapackage.ListOriginEndpointsInput) (*mediapackage.ListOriginEndpointsOutput, error) {
-	return a.client.ListOriginEndpoints(input)
+func (a *MediaPackageActivities) ListOriginEndpoints(ctx context.Context, input *mediapackage.ListOriginEndpointsInput) (*mediapackage.ListOriginEndpointsOutput, error) {
+	return a.client.ListOriginEndpointsWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) ListTagsForResource(input *mediapackage.ListTagsForResourceInput) (*mediapackage.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *MediaPackageActivities) ListTagsForResource(ctx context.Context, input *mediapackage.ListTagsForResourceInput) (*mediapackage.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) RotateChannelCredentials(input *mediapackage.RotateChannelCredentialsInput) (*mediapackage.RotateChannelCredentialsOutput, error) {
-	return a.client.RotateChannelCredentials(input)
+func (a *MediaPackageActivities) RotateChannelCredentials(ctx context.Context, input *mediapackage.RotateChannelCredentialsInput) (*mediapackage.RotateChannelCredentialsOutput, error) {
+	return a.client.RotateChannelCredentialsWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) RotateIngestEndpointCredentials(input *mediapackage.RotateIngestEndpointCredentialsInput) (*mediapackage.RotateIngestEndpointCredentialsOutput, error) {
-	return a.client.RotateIngestEndpointCredentials(input)
+func (a *MediaPackageActivities) RotateIngestEndpointCredentials(ctx context.Context, input *mediapackage.RotateIngestEndpointCredentialsInput) (*mediapackage.RotateIngestEndpointCredentialsOutput, error) {
+	return a.client.RotateIngestEndpointCredentialsWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) TagResource(input *mediapackage.TagResourceInput) (*mediapackage.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *MediaPackageActivities) TagResource(ctx context.Context, input *mediapackage.TagResourceInput) (*mediapackage.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) UntagResource(input *mediapackage.UntagResourceInput) (*mediapackage.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *MediaPackageActivities) UntagResource(ctx context.Context, input *mediapackage.UntagResourceInput) (*mediapackage.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) UpdateChannel(input *mediapackage.UpdateChannelInput) (*mediapackage.UpdateChannelOutput, error) {
-	return a.client.UpdateChannel(input)
+func (a *MediaPackageActivities) UpdateChannel(ctx context.Context, input *mediapackage.UpdateChannelInput) (*mediapackage.UpdateChannelOutput, error) {
+	return a.client.UpdateChannelWithContext(ctx, input)
 }
 
-func (a *MediaPackageActivities) UpdateOriginEndpoint(input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error) {
-	return a.client.UpdateOriginEndpoint(input)
+func (a *MediaPackageActivities) UpdateOriginEndpoint(ctx context.Context, input *mediapackage.UpdateOriginEndpointInput) (*mediapackage.UpdateOriginEndpointOutput, error) {
+	return a.client.UpdateOriginEndpointWithContext(ctx, input)
 }

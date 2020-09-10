@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/docdb"
 	"github.com/aws/aws-sdk-go/service/docdb/docdbiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type DocDBActivities struct {
 	client docdbiface.DocDBAPI
@@ -16,178 +21,180 @@ func NewDocDBActivities(session *session.Session, config ...*aws.Config) *DocDBA
 	return &DocDBActivities{client: client}
 }
 
-func (a *DocDBActivities) AddTagsToResource(input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error) {
-	return a.client.AddTagsToResource(input)
+func (a *DocDBActivities) AddTagsToResource(ctx context.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error) {
+	return a.client.AddTagsToResourceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ApplyPendingMaintenanceAction(input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error) {
-	return a.client.ApplyPendingMaintenanceAction(input)
+func (a *DocDBActivities) ApplyPendingMaintenanceAction(ctx context.Context, input *docdb.ApplyPendingMaintenanceActionInput) (*docdb.ApplyPendingMaintenanceActionOutput, error) {
+	return a.client.ApplyPendingMaintenanceActionWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CopyDBClusterParameterGroup(input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error) {
-	return a.client.CopyDBClusterParameterGroup(input)
+func (a *DocDBActivities) CopyDBClusterParameterGroup(ctx context.Context, input *docdb.CopyDBClusterParameterGroupInput) (*docdb.CopyDBClusterParameterGroupOutput, error) {
+	return a.client.CopyDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CopyDBClusterSnapshot(input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error) {
-	return a.client.CopyDBClusterSnapshot(input)
+func (a *DocDBActivities) CopyDBClusterSnapshot(ctx context.Context, input *docdb.CopyDBClusterSnapshotInput) (*docdb.CopyDBClusterSnapshotOutput, error) {
+	return a.client.CopyDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CreateDBCluster(input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error) {
-	return a.client.CreateDBCluster(input)
+func (a *DocDBActivities) CreateDBCluster(ctx context.Context, input *docdb.CreateDBClusterInput) (*docdb.CreateDBClusterOutput, error) {
+	return a.client.CreateDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CreateDBClusterParameterGroup(input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error) {
-	return a.client.CreateDBClusterParameterGroup(input)
+func (a *DocDBActivities) CreateDBClusterParameterGroup(ctx context.Context, input *docdb.CreateDBClusterParameterGroupInput) (*docdb.CreateDBClusterParameterGroupOutput, error) {
+	return a.client.CreateDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CreateDBClusterSnapshot(input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error) {
-	return a.client.CreateDBClusterSnapshot(input)
+func (a *DocDBActivities) CreateDBClusterSnapshot(ctx context.Context, input *docdb.CreateDBClusterSnapshotInput) (*docdb.CreateDBClusterSnapshotOutput, error) {
+	return a.client.CreateDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CreateDBInstance(input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error) {
-	return a.client.CreateDBInstance(input)
+func (a *DocDBActivities) CreateDBInstance(ctx context.Context, input *docdb.CreateDBInstanceInput) (*docdb.CreateDBInstanceOutput, error) {
+	return a.client.CreateDBInstanceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) CreateDBSubnetGroup(input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error) {
-	return a.client.CreateDBSubnetGroup(input)
+func (a *DocDBActivities) CreateDBSubnetGroup(ctx context.Context, input *docdb.CreateDBSubnetGroupInput) (*docdb.CreateDBSubnetGroupOutput, error) {
+	return a.client.CreateDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DeleteDBCluster(input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error) {
-	return a.client.DeleteDBCluster(input)
+func (a *DocDBActivities) DeleteDBCluster(ctx context.Context, input *docdb.DeleteDBClusterInput) (*docdb.DeleteDBClusterOutput, error) {
+	return a.client.DeleteDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DeleteDBClusterParameterGroup(input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error) {
-	return a.client.DeleteDBClusterParameterGroup(input)
+func (a *DocDBActivities) DeleteDBClusterParameterGroup(ctx context.Context, input *docdb.DeleteDBClusterParameterGroupInput) (*docdb.DeleteDBClusterParameterGroupOutput, error) {
+	return a.client.DeleteDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DeleteDBClusterSnapshot(input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error) {
-	return a.client.DeleteDBClusterSnapshot(input)
+func (a *DocDBActivities) DeleteDBClusterSnapshot(ctx context.Context, input *docdb.DeleteDBClusterSnapshotInput) (*docdb.DeleteDBClusterSnapshotOutput, error) {
+	return a.client.DeleteDBClusterSnapshotWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DeleteDBInstance(input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error) {
-	return a.client.DeleteDBInstance(input)
+func (a *DocDBActivities) DeleteDBInstance(ctx context.Context, input *docdb.DeleteDBInstanceInput) (*docdb.DeleteDBInstanceOutput, error) {
+	return a.client.DeleteDBInstanceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DeleteDBSubnetGroup(input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error) {
-	return a.client.DeleteDBSubnetGroup(input)
+func (a *DocDBActivities) DeleteDBSubnetGroup(ctx context.Context, input *docdb.DeleteDBSubnetGroupInput) (*docdb.DeleteDBSubnetGroupOutput, error) {
+	return a.client.DeleteDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeCertificates(input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error) {
-	return a.client.DescribeCertificates(input)
+func (a *DocDBActivities) DescribeCertificates(ctx context.Context, input *docdb.DescribeCertificatesInput) (*docdb.DescribeCertificatesOutput, error) {
+	return a.client.DescribeCertificatesWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBClusterParameterGroups(input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error) {
-	return a.client.DescribeDBClusterParameterGroups(input)
+func (a *DocDBActivities) DescribeDBClusterParameterGroups(ctx context.Context, input *docdb.DescribeDBClusterParameterGroupsInput) (*docdb.DescribeDBClusterParameterGroupsOutput, error) {
+	return a.client.DescribeDBClusterParameterGroupsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBClusterParameters(input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error) {
-	return a.client.DescribeDBClusterParameters(input)
+func (a *DocDBActivities) DescribeDBClusterParameters(ctx context.Context, input *docdb.DescribeDBClusterParametersInput) (*docdb.DescribeDBClusterParametersOutput, error) {
+	return a.client.DescribeDBClusterParametersWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBClusterSnapshotAttributes(input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error) {
-	return a.client.DescribeDBClusterSnapshotAttributes(input)
+func (a *DocDBActivities) DescribeDBClusterSnapshotAttributes(ctx context.Context, input *docdb.DescribeDBClusterSnapshotAttributesInput) (*docdb.DescribeDBClusterSnapshotAttributesOutput, error) {
+	return a.client.DescribeDBClusterSnapshotAttributesWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBClusterSnapshots(input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error) {
-	return a.client.DescribeDBClusterSnapshots(input)
+func (a *DocDBActivities) DescribeDBClusterSnapshots(ctx context.Context, input *docdb.DescribeDBClusterSnapshotsInput) (*docdb.DescribeDBClusterSnapshotsOutput, error) {
+	return a.client.DescribeDBClusterSnapshotsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBClusters(input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error) {
-	return a.client.DescribeDBClusters(input)
+func (a *DocDBActivities) DescribeDBClusters(ctx context.Context, input *docdb.DescribeDBClustersInput) (*docdb.DescribeDBClustersOutput, error) {
+	return a.client.DescribeDBClustersWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBEngineVersions(input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error) {
-	return a.client.DescribeDBEngineVersions(input)
+func (a *DocDBActivities) DescribeDBEngineVersions(ctx context.Context, input *docdb.DescribeDBEngineVersionsInput) (*docdb.DescribeDBEngineVersionsOutput, error) {
+	return a.client.DescribeDBEngineVersionsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBInstances(input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error) {
-	return a.client.DescribeDBInstances(input)
+func (a *DocDBActivities) DescribeDBInstances(ctx context.Context, input *docdb.DescribeDBInstancesInput) (*docdb.DescribeDBInstancesOutput, error) {
+	return a.client.DescribeDBInstancesWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeDBSubnetGroups(input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error) {
-	return a.client.DescribeDBSubnetGroups(input)
+func (a *DocDBActivities) DescribeDBSubnetGroups(ctx context.Context, input *docdb.DescribeDBSubnetGroupsInput) (*docdb.DescribeDBSubnetGroupsOutput, error) {
+	return a.client.DescribeDBSubnetGroupsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeEngineDefaultClusterParameters(input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error) {
-	return a.client.DescribeEngineDefaultClusterParameters(input)
+func (a *DocDBActivities) DescribeEngineDefaultClusterParameters(ctx context.Context, input *docdb.DescribeEngineDefaultClusterParametersInput) (*docdb.DescribeEngineDefaultClusterParametersOutput, error) {
+	return a.client.DescribeEngineDefaultClusterParametersWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeEventCategories(input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error) {
-	return a.client.DescribeEventCategories(input)
+func (a *DocDBActivities) DescribeEventCategories(ctx context.Context, input *docdb.DescribeEventCategoriesInput) (*docdb.DescribeEventCategoriesOutput, error) {
+	return a.client.DescribeEventCategoriesWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeEvents(input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error) {
-	return a.client.DescribeEvents(input)
+func (a *DocDBActivities) DescribeEvents(ctx context.Context, input *docdb.DescribeEventsInput) (*docdb.DescribeEventsOutput, error) {
+	return a.client.DescribeEventsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribeOrderableDBInstanceOptions(input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error) {
-	return a.client.DescribeOrderableDBInstanceOptions(input)
+func (a *DocDBActivities) DescribeOrderableDBInstanceOptions(ctx context.Context, input *docdb.DescribeOrderableDBInstanceOptionsInput) (*docdb.DescribeOrderableDBInstanceOptionsOutput, error) {
+	return a.client.DescribeOrderableDBInstanceOptionsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) DescribePendingMaintenanceActions(input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error) {
-	return a.client.DescribePendingMaintenanceActions(input)
+func (a *DocDBActivities) DescribePendingMaintenanceActions(ctx context.Context, input *docdb.DescribePendingMaintenanceActionsInput) (*docdb.DescribePendingMaintenanceActionsOutput, error) {
+	return a.client.DescribePendingMaintenanceActionsWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) FailoverDBCluster(input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error) {
-	return a.client.FailoverDBCluster(input)
+func (a *DocDBActivities) FailoverDBCluster(ctx context.Context, input *docdb.FailoverDBClusterInput) (*docdb.FailoverDBClusterOutput, error) {
+	return a.client.FailoverDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ListTagsForResource(input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *DocDBActivities) ListTagsForResource(ctx context.Context, input *docdb.ListTagsForResourceInput) (*docdb.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ModifyDBCluster(input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error) {
-	return a.client.ModifyDBCluster(input)
+func (a *DocDBActivities) ModifyDBCluster(ctx context.Context, input *docdb.ModifyDBClusterInput) (*docdb.ModifyDBClusterOutput, error) {
+	return a.client.ModifyDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ModifyDBClusterParameterGroup(input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error) {
-	return a.client.ModifyDBClusterParameterGroup(input)
+func (a *DocDBActivities) ModifyDBClusterParameterGroup(ctx context.Context, input *docdb.ModifyDBClusterParameterGroupInput) (*docdb.ModifyDBClusterParameterGroupOutput, error) {
+	return a.client.ModifyDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ModifyDBClusterSnapshotAttribute(input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error) {
-	return a.client.ModifyDBClusterSnapshotAttribute(input)
+func (a *DocDBActivities) ModifyDBClusterSnapshotAttribute(ctx context.Context, input *docdb.ModifyDBClusterSnapshotAttributeInput) (*docdb.ModifyDBClusterSnapshotAttributeOutput, error) {
+	return a.client.ModifyDBClusterSnapshotAttributeWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ModifyDBInstance(input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error) {
-	return a.client.ModifyDBInstance(input)
+func (a *DocDBActivities) ModifyDBInstance(ctx context.Context, input *docdb.ModifyDBInstanceInput) (*docdb.ModifyDBInstanceOutput, error) {
+	return a.client.ModifyDBInstanceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ModifyDBSubnetGroup(input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error) {
-	return a.client.ModifyDBSubnetGroup(input)
+func (a *DocDBActivities) ModifyDBSubnetGroup(ctx context.Context, input *docdb.ModifyDBSubnetGroupInput) (*docdb.ModifyDBSubnetGroupOutput, error) {
+	return a.client.ModifyDBSubnetGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) RebootDBInstance(input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error) {
-	return a.client.RebootDBInstance(input)
+func (a *DocDBActivities) RebootDBInstance(ctx context.Context, input *docdb.RebootDBInstanceInput) (*docdb.RebootDBInstanceOutput, error) {
+	return a.client.RebootDBInstanceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) RemoveTagsFromResource(input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error) {
-	return a.client.RemoveTagsFromResource(input)
+func (a *DocDBActivities) RemoveTagsFromResource(ctx context.Context, input *docdb.RemoveTagsFromResourceInput) (*docdb.RemoveTagsFromResourceOutput, error) {
+	return a.client.RemoveTagsFromResourceWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) ResetDBClusterParameterGroup(input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error) {
-	return a.client.ResetDBClusterParameterGroup(input)
+func (a *DocDBActivities) ResetDBClusterParameterGroup(ctx context.Context, input *docdb.ResetDBClusterParameterGroupInput) (*docdb.ResetDBClusterParameterGroupOutput, error) {
+	return a.client.ResetDBClusterParameterGroupWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) RestoreDBClusterFromSnapshot(input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error) {
-	return a.client.RestoreDBClusterFromSnapshot(input)
+func (a *DocDBActivities) RestoreDBClusterFromSnapshot(ctx context.Context, input *docdb.RestoreDBClusterFromSnapshotInput) (*docdb.RestoreDBClusterFromSnapshotOutput, error) {
+	return a.client.RestoreDBClusterFromSnapshotWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) RestoreDBClusterToPointInTime(input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error) {
-	return a.client.RestoreDBClusterToPointInTime(input)
+func (a *DocDBActivities) RestoreDBClusterToPointInTime(ctx context.Context, input *docdb.RestoreDBClusterToPointInTimeInput) (*docdb.RestoreDBClusterToPointInTimeOutput, error) {
+	return a.client.RestoreDBClusterToPointInTimeWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) StartDBCluster(input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error) {
-	return a.client.StartDBCluster(input)
+func (a *DocDBActivities) StartDBCluster(ctx context.Context, input *docdb.StartDBClusterInput) (*docdb.StartDBClusterOutput, error) {
+	return a.client.StartDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) StopDBCluster(input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error) {
-	return a.client.StopDBCluster(input)
+func (a *DocDBActivities) StopDBCluster(ctx context.Context, input *docdb.StopDBClusterInput) (*docdb.StopDBClusterOutput, error) {
+	return a.client.StopDBClusterWithContext(ctx, input)
 }
 
-func (a *DocDBActivities) WaitUntilDBInstanceAvailable(input *docdb.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceAvailable(input)
+func (a *DocDBActivities) WaitUntilDBInstanceAvailable(ctx context.Context, input *docdb.DescribeDBInstancesInput) error {
+	return a.client.WaitUntilDBInstanceAvailableWithContext(ctx, input)
+
 }
 
-func (a *DocDBActivities) WaitUntilDBInstanceDeleted(input *docdb.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceDeleted(input)
+func (a *DocDBActivities) WaitUntilDBInstanceDeleted(ctx context.Context, input *docdb.DescribeDBInstancesInput) error {
+	return a.client.WaitUntilDBInstanceDeletedWithContext(ctx, input)
+
 }

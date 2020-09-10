@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sso"
 	"github.com/aws/aws-sdk-go/service/sso/ssoiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type SSOActivities struct {
 	client ssoiface.SSOAPI
@@ -16,18 +21,18 @@ func NewSSOActivities(session *session.Session, config ...*aws.Config) *SSOActiv
 	return &SSOActivities{client: client}
 }
 
-func (a *SSOActivities) GetRoleCredentials(input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
-	return a.client.GetRoleCredentials(input)
+func (a *SSOActivities) GetRoleCredentials(ctx context.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
+	return a.client.GetRoleCredentialsWithContext(ctx, input)
 }
 
-func (a *SSOActivities) ListAccountRoles(input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
-	return a.client.ListAccountRoles(input)
+func (a *SSOActivities) ListAccountRoles(ctx context.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
+	return a.client.ListAccountRolesWithContext(ctx, input)
 }
 
-func (a *SSOActivities) ListAccounts(input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
-	return a.client.ListAccounts(input)
+func (a *SSOActivities) ListAccounts(ctx context.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
+	return a.client.ListAccountsWithContext(ctx, input)
 }
 
-func (a *SSOActivities) Logout(input *sso.LogoutInput) (*sso.LogoutOutput, error) {
-	return a.client.Logout(input)
+func (a *SSOActivities) Logout(ctx context.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error) {
+	return a.client.LogoutWithContext(ctx, input)
 }

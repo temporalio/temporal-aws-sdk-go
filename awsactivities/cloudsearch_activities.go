@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudsearch"
 	"github.com/aws/aws-sdk-go/service/cloudsearch/cloudsearchiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CloudSearchActivities struct {
 	client cloudsearchiface.CloudSearchAPI
@@ -16,106 +21,106 @@ func NewCloudSearchActivities(session *session.Session, config ...*aws.Config) *
 	return &CloudSearchActivities{client: client}
 }
 
-func (a *CloudSearchActivities) BuildSuggesters(input *cloudsearch.BuildSuggestersInput) (*cloudsearch.BuildSuggestersOutput, error) {
-	return a.client.BuildSuggesters(input)
+func (a *CloudSearchActivities) BuildSuggesters(ctx context.Context, input *cloudsearch.BuildSuggestersInput) (*cloudsearch.BuildSuggestersOutput, error) {
+	return a.client.BuildSuggestersWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) CreateDomain(input *cloudsearch.CreateDomainInput) (*cloudsearch.CreateDomainOutput, error) {
-	return a.client.CreateDomain(input)
+func (a *CloudSearchActivities) CreateDomain(ctx context.Context, input *cloudsearch.CreateDomainInput) (*cloudsearch.CreateDomainOutput, error) {
+	return a.client.CreateDomainWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DefineAnalysisScheme(input *cloudsearch.DefineAnalysisSchemeInput) (*cloudsearch.DefineAnalysisSchemeOutput, error) {
-	return a.client.DefineAnalysisScheme(input)
+func (a *CloudSearchActivities) DefineAnalysisScheme(ctx context.Context, input *cloudsearch.DefineAnalysisSchemeInput) (*cloudsearch.DefineAnalysisSchemeOutput, error) {
+	return a.client.DefineAnalysisSchemeWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DefineExpression(input *cloudsearch.DefineExpressionInput) (*cloudsearch.DefineExpressionOutput, error) {
-	return a.client.DefineExpression(input)
+func (a *CloudSearchActivities) DefineExpression(ctx context.Context, input *cloudsearch.DefineExpressionInput) (*cloudsearch.DefineExpressionOutput, error) {
+	return a.client.DefineExpressionWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DefineIndexField(input *cloudsearch.DefineIndexFieldInput) (*cloudsearch.DefineIndexFieldOutput, error) {
-	return a.client.DefineIndexField(input)
+func (a *CloudSearchActivities) DefineIndexField(ctx context.Context, input *cloudsearch.DefineIndexFieldInput) (*cloudsearch.DefineIndexFieldOutput, error) {
+	return a.client.DefineIndexFieldWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DefineSuggester(input *cloudsearch.DefineSuggesterInput) (*cloudsearch.DefineSuggesterOutput, error) {
-	return a.client.DefineSuggester(input)
+func (a *CloudSearchActivities) DefineSuggester(ctx context.Context, input *cloudsearch.DefineSuggesterInput) (*cloudsearch.DefineSuggesterOutput, error) {
+	return a.client.DefineSuggesterWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DeleteAnalysisScheme(input *cloudsearch.DeleteAnalysisSchemeInput) (*cloudsearch.DeleteAnalysisSchemeOutput, error) {
-	return a.client.DeleteAnalysisScheme(input)
+func (a *CloudSearchActivities) DeleteAnalysisScheme(ctx context.Context, input *cloudsearch.DeleteAnalysisSchemeInput) (*cloudsearch.DeleteAnalysisSchemeOutput, error) {
+	return a.client.DeleteAnalysisSchemeWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DeleteDomain(input *cloudsearch.DeleteDomainInput) (*cloudsearch.DeleteDomainOutput, error) {
-	return a.client.DeleteDomain(input)
+func (a *CloudSearchActivities) DeleteDomain(ctx context.Context, input *cloudsearch.DeleteDomainInput) (*cloudsearch.DeleteDomainOutput, error) {
+	return a.client.DeleteDomainWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DeleteExpression(input *cloudsearch.DeleteExpressionInput) (*cloudsearch.DeleteExpressionOutput, error) {
-	return a.client.DeleteExpression(input)
+func (a *CloudSearchActivities) DeleteExpression(ctx context.Context, input *cloudsearch.DeleteExpressionInput) (*cloudsearch.DeleteExpressionOutput, error) {
+	return a.client.DeleteExpressionWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DeleteIndexField(input *cloudsearch.DeleteIndexFieldInput) (*cloudsearch.DeleteIndexFieldOutput, error) {
-	return a.client.DeleteIndexField(input)
+func (a *CloudSearchActivities) DeleteIndexField(ctx context.Context, input *cloudsearch.DeleteIndexFieldInput) (*cloudsearch.DeleteIndexFieldOutput, error) {
+	return a.client.DeleteIndexFieldWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DeleteSuggester(input *cloudsearch.DeleteSuggesterInput) (*cloudsearch.DeleteSuggesterOutput, error) {
-	return a.client.DeleteSuggester(input)
+func (a *CloudSearchActivities) DeleteSuggester(ctx context.Context, input *cloudsearch.DeleteSuggesterInput) (*cloudsearch.DeleteSuggesterOutput, error) {
+	return a.client.DeleteSuggesterWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeAnalysisSchemes(input *cloudsearch.DescribeAnalysisSchemesInput) (*cloudsearch.DescribeAnalysisSchemesOutput, error) {
-	return a.client.DescribeAnalysisSchemes(input)
+func (a *CloudSearchActivities) DescribeAnalysisSchemes(ctx context.Context, input *cloudsearch.DescribeAnalysisSchemesInput) (*cloudsearch.DescribeAnalysisSchemesOutput, error) {
+	return a.client.DescribeAnalysisSchemesWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeAvailabilityOptions(input *cloudsearch.DescribeAvailabilityOptionsInput) (*cloudsearch.DescribeAvailabilityOptionsOutput, error) {
-	return a.client.DescribeAvailabilityOptions(input)
+func (a *CloudSearchActivities) DescribeAvailabilityOptions(ctx context.Context, input *cloudsearch.DescribeAvailabilityOptionsInput) (*cloudsearch.DescribeAvailabilityOptionsOutput, error) {
+	return a.client.DescribeAvailabilityOptionsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeDomainEndpointOptions(input *cloudsearch.DescribeDomainEndpointOptionsInput) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error) {
-	return a.client.DescribeDomainEndpointOptions(input)
+func (a *CloudSearchActivities) DescribeDomainEndpointOptions(ctx context.Context, input *cloudsearch.DescribeDomainEndpointOptionsInput) (*cloudsearch.DescribeDomainEndpointOptionsOutput, error) {
+	return a.client.DescribeDomainEndpointOptionsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeDomains(input *cloudsearch.DescribeDomainsInput) (*cloudsearch.DescribeDomainsOutput, error) {
-	return a.client.DescribeDomains(input)
+func (a *CloudSearchActivities) DescribeDomains(ctx context.Context, input *cloudsearch.DescribeDomainsInput) (*cloudsearch.DescribeDomainsOutput, error) {
+	return a.client.DescribeDomainsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeExpressions(input *cloudsearch.DescribeExpressionsInput) (*cloudsearch.DescribeExpressionsOutput, error) {
-	return a.client.DescribeExpressions(input)
+func (a *CloudSearchActivities) DescribeExpressions(ctx context.Context, input *cloudsearch.DescribeExpressionsInput) (*cloudsearch.DescribeExpressionsOutput, error) {
+	return a.client.DescribeExpressionsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeIndexFields(input *cloudsearch.DescribeIndexFieldsInput) (*cloudsearch.DescribeIndexFieldsOutput, error) {
-	return a.client.DescribeIndexFields(input)
+func (a *CloudSearchActivities) DescribeIndexFields(ctx context.Context, input *cloudsearch.DescribeIndexFieldsInput) (*cloudsearch.DescribeIndexFieldsOutput, error) {
+	return a.client.DescribeIndexFieldsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeScalingParameters(input *cloudsearch.DescribeScalingParametersInput) (*cloudsearch.DescribeScalingParametersOutput, error) {
-	return a.client.DescribeScalingParameters(input)
+func (a *CloudSearchActivities) DescribeScalingParameters(ctx context.Context, input *cloudsearch.DescribeScalingParametersInput) (*cloudsearch.DescribeScalingParametersOutput, error) {
+	return a.client.DescribeScalingParametersWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeServiceAccessPolicies(input *cloudsearch.DescribeServiceAccessPoliciesInput) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error) {
-	return a.client.DescribeServiceAccessPolicies(input)
+func (a *CloudSearchActivities) DescribeServiceAccessPolicies(ctx context.Context, input *cloudsearch.DescribeServiceAccessPoliciesInput) (*cloudsearch.DescribeServiceAccessPoliciesOutput, error) {
+	return a.client.DescribeServiceAccessPoliciesWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) DescribeSuggesters(input *cloudsearch.DescribeSuggestersInput) (*cloudsearch.DescribeSuggestersOutput, error) {
-	return a.client.DescribeSuggesters(input)
+func (a *CloudSearchActivities) DescribeSuggesters(ctx context.Context, input *cloudsearch.DescribeSuggestersInput) (*cloudsearch.DescribeSuggestersOutput, error) {
+	return a.client.DescribeSuggestersWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) IndexDocuments(input *cloudsearch.IndexDocumentsInput) (*cloudsearch.IndexDocumentsOutput, error) {
-	return a.client.IndexDocuments(input)
+func (a *CloudSearchActivities) IndexDocuments(ctx context.Context, input *cloudsearch.IndexDocumentsInput) (*cloudsearch.IndexDocumentsOutput, error) {
+	return a.client.IndexDocumentsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) ListDomainNames(input *cloudsearch.ListDomainNamesInput) (*cloudsearch.ListDomainNamesOutput, error) {
-	return a.client.ListDomainNames(input)
+func (a *CloudSearchActivities) ListDomainNames(ctx context.Context, input *cloudsearch.ListDomainNamesInput) (*cloudsearch.ListDomainNamesOutput, error) {
+	return a.client.ListDomainNamesWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) UpdateAvailabilityOptions(input *cloudsearch.UpdateAvailabilityOptionsInput) (*cloudsearch.UpdateAvailabilityOptionsOutput, error) {
-	return a.client.UpdateAvailabilityOptions(input)
+func (a *CloudSearchActivities) UpdateAvailabilityOptions(ctx context.Context, input *cloudsearch.UpdateAvailabilityOptionsInput) (*cloudsearch.UpdateAvailabilityOptionsOutput, error) {
+	return a.client.UpdateAvailabilityOptionsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) UpdateDomainEndpointOptions(input *cloudsearch.UpdateDomainEndpointOptionsInput) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error) {
-	return a.client.UpdateDomainEndpointOptions(input)
+func (a *CloudSearchActivities) UpdateDomainEndpointOptions(ctx context.Context, input *cloudsearch.UpdateDomainEndpointOptionsInput) (*cloudsearch.UpdateDomainEndpointOptionsOutput, error) {
+	return a.client.UpdateDomainEndpointOptionsWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) UpdateScalingParameters(input *cloudsearch.UpdateScalingParametersInput) (*cloudsearch.UpdateScalingParametersOutput, error) {
-	return a.client.UpdateScalingParameters(input)
+func (a *CloudSearchActivities) UpdateScalingParameters(ctx context.Context, input *cloudsearch.UpdateScalingParametersInput) (*cloudsearch.UpdateScalingParametersOutput, error) {
+	return a.client.UpdateScalingParametersWithContext(ctx, input)
 }
 
-func (a *CloudSearchActivities) UpdateServiceAccessPolicies(input *cloudsearch.UpdateServiceAccessPoliciesInput) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error) {
-	return a.client.UpdateServiceAccessPolicies(input)
+func (a *CloudSearchActivities) UpdateServiceAccessPolicies(ctx context.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) (*cloudsearch.UpdateServiceAccessPoliciesOutput, error) {
+	return a.client.UpdateServiceAccessPoliciesWithContext(ctx, input)
 }

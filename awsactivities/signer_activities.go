@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/signer"
 	"github.com/aws/aws-sdk-go/service/signer/signeriface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type SignerActivities struct {
 	client signeriface.SignerAPI
@@ -16,54 +21,55 @@ func NewSignerActivities(session *session.Session, config ...*aws.Config) *Signe
 	return &SignerActivities{client: client}
 }
 
-func (a *SignerActivities) CancelSigningProfile(input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
-	return a.client.CancelSigningProfile(input)
+func (a *SignerActivities) CancelSigningProfile(ctx context.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
+	return a.client.CancelSigningProfileWithContext(ctx, input)
 }
 
-func (a *SignerActivities) DescribeSigningJob(input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error) {
-	return a.client.DescribeSigningJob(input)
+func (a *SignerActivities) DescribeSigningJob(ctx context.Context, input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error) {
+	return a.client.DescribeSigningJobWithContext(ctx, input)
 }
 
-func (a *SignerActivities) GetSigningPlatform(input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error) {
-	return a.client.GetSigningPlatform(input)
+func (a *SignerActivities) GetSigningPlatform(ctx context.Context, input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error) {
+	return a.client.GetSigningPlatformWithContext(ctx, input)
 }
 
-func (a *SignerActivities) GetSigningProfile(input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error) {
-	return a.client.GetSigningProfile(input)
+func (a *SignerActivities) GetSigningProfile(ctx context.Context, input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error) {
+	return a.client.GetSigningProfileWithContext(ctx, input)
 }
 
-func (a *SignerActivities) ListSigningJobs(input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error) {
-	return a.client.ListSigningJobs(input)
+func (a *SignerActivities) ListSigningJobs(ctx context.Context, input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error) {
+	return a.client.ListSigningJobsWithContext(ctx, input)
 }
 
-func (a *SignerActivities) ListSigningPlatforms(input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error) {
-	return a.client.ListSigningPlatforms(input)
+func (a *SignerActivities) ListSigningPlatforms(ctx context.Context, input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error) {
+	return a.client.ListSigningPlatformsWithContext(ctx, input)
 }
 
-func (a *SignerActivities) ListSigningProfiles(input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error) {
-	return a.client.ListSigningProfiles(input)
+func (a *SignerActivities) ListSigningProfiles(ctx context.Context, input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error) {
+	return a.client.ListSigningProfilesWithContext(ctx, input)
 }
 
-func (a *SignerActivities) ListTagsForResource(input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *SignerActivities) ListTagsForResource(ctx context.Context, input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *SignerActivities) PutSigningProfile(input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error) {
-	return a.client.PutSigningProfile(input)
+func (a *SignerActivities) PutSigningProfile(ctx context.Context, input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error) {
+	return a.client.PutSigningProfileWithContext(ctx, input)
 }
 
-func (a *SignerActivities) StartSigningJob(input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error) {
-	return a.client.StartSigningJob(input)
+func (a *SignerActivities) StartSigningJob(ctx context.Context, input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error) {
+	return a.client.StartSigningJobWithContext(ctx, input)
 }
 
-func (a *SignerActivities) TagResource(input *signer.TagResourceInput) (*signer.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *SignerActivities) TagResource(ctx context.Context, input *signer.TagResourceInput) (*signer.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *SignerActivities) UntagResource(input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *SignerActivities) UntagResource(ctx context.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *SignerActivities) WaitUntilSuccessfulSigningJob(input *signer.DescribeSigningJobInput) error {
-	return a.client.WaitUntilSuccessfulSigningJob(input)
+func (a *SignerActivities) WaitUntilSuccessfulSigningJob(ctx context.Context, input *signer.DescribeSigningJobInput) error {
+	return a.client.WaitUntilSuccessfulSigningJobWithContext(ctx, input)
+
 }

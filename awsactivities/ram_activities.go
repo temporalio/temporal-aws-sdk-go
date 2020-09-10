@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ram"
 	"github.com/aws/aws-sdk-go/service/ram/ramiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type RAMActivities struct {
 	client ramiface.RAMAPI
@@ -16,98 +21,152 @@ func NewRAMActivities(session *session.Session, config ...*aws.Config) *RAMActiv
 	return &RAMActivities{client: client}
 }
 
-func (a *RAMActivities) AcceptResourceShareInvitation(input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error) {
-	return a.client.AcceptResourceShareInvitation(input)
+func (a *RAMActivities) AcceptResourceShareInvitation(ctx context.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.AcceptResourceShareInvitationWithContext(ctx, input)
 }
 
-func (a *RAMActivities) AssociateResourceShare(input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
-	return a.client.AssociateResourceShare(input)
+func (a *RAMActivities) AssociateResourceShare(ctx context.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.AssociateResourceShareWithContext(ctx, input)
 }
 
-func (a *RAMActivities) AssociateResourceSharePermission(input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
-	return a.client.AssociateResourceSharePermission(input)
+func (a *RAMActivities) AssociateResourceSharePermission(ctx context.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.AssociateResourceSharePermissionWithContext(ctx, input)
 }
 
-func (a *RAMActivities) CreateResourceShare(input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
-	return a.client.CreateResourceShare(input)
+func (a *RAMActivities) CreateResourceShare(ctx context.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateResourceShareWithContext(ctx, input)
 }
 
-func (a *RAMActivities) DeleteResourceShare(input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
-	return a.client.DeleteResourceShare(input)
+func (a *RAMActivities) DeleteResourceShare(ctx context.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.DeleteResourceShareWithContext(ctx, input)
 }
 
-func (a *RAMActivities) DisassociateResourceShare(input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
-	return a.client.DisassociateResourceShare(input)
+func (a *RAMActivities) DisassociateResourceShare(ctx context.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.DisassociateResourceShareWithContext(ctx, input)
 }
 
-func (a *RAMActivities) DisassociateResourceSharePermission(input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
-	return a.client.DisassociateResourceSharePermission(input)
+func (a *RAMActivities) DisassociateResourceSharePermission(ctx context.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.DisassociateResourceSharePermissionWithContext(ctx, input)
 }
 
-func (a *RAMActivities) EnableSharingWithAwsOrganization(input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
-	return a.client.EnableSharingWithAwsOrganization(input)
+func (a *RAMActivities) EnableSharingWithAwsOrganization(ctx context.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
+	return a.client.EnableSharingWithAwsOrganizationWithContext(ctx, input)
 }
 
-func (a *RAMActivities) GetPermission(input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error) {
-	return a.client.GetPermission(input)
+func (a *RAMActivities) GetPermission(ctx context.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error) {
+	return a.client.GetPermissionWithContext(ctx, input)
 }
 
-func (a *RAMActivities) GetResourcePolicies(input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error) {
-	return a.client.GetResourcePolicies(input)
+func (a *RAMActivities) GetResourcePolicies(ctx context.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error) {
+	return a.client.GetResourcePoliciesWithContext(ctx, input)
 }
 
-func (a *RAMActivities) GetResourceShareAssociations(input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error) {
-	return a.client.GetResourceShareAssociations(input)
+func (a *RAMActivities) GetResourceShareAssociations(ctx context.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error) {
+	return a.client.GetResourceShareAssociationsWithContext(ctx, input)
 }
 
-func (a *RAMActivities) GetResourceShareInvitations(input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error) {
-	return a.client.GetResourceShareInvitations(input)
+func (a *RAMActivities) GetResourceShareInvitations(ctx context.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error) {
+	return a.client.GetResourceShareInvitationsWithContext(ctx, input)
 }
 
-func (a *RAMActivities) GetResourceShares(input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error) {
-	return a.client.GetResourceShares(input)
+func (a *RAMActivities) GetResourceShares(ctx context.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error) {
+	return a.client.GetResourceSharesWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListPendingInvitationResources(input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error) {
-	return a.client.ListPendingInvitationResources(input)
+func (a *RAMActivities) ListPendingInvitationResources(ctx context.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error) {
+	return a.client.ListPendingInvitationResourcesWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListPermissions(input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
-	return a.client.ListPermissions(input)
+func (a *RAMActivities) ListPermissions(ctx context.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
+	return a.client.ListPermissionsWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListPrincipals(input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error) {
-	return a.client.ListPrincipals(input)
+func (a *RAMActivities) ListPrincipals(ctx context.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error) {
+	return a.client.ListPrincipalsWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListResourceSharePermissions(input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error) {
-	return a.client.ListResourceSharePermissions(input)
+func (a *RAMActivities) ListResourceSharePermissions(ctx context.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error) {
+	return a.client.ListResourceSharePermissionsWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListResourceTypes(input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error) {
-	return a.client.ListResourceTypes(input)
+func (a *RAMActivities) ListResourceTypes(ctx context.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error) {
+	return a.client.ListResourceTypesWithContext(ctx, input)
 }
 
-func (a *RAMActivities) ListResources(input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error) {
-	return a.client.ListResources(input)
+func (a *RAMActivities) ListResources(ctx context.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error) {
+	return a.client.ListResourcesWithContext(ctx, input)
 }
 
-func (a *RAMActivities) PromoteResourceShareCreatedFromPolicy(input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
-	return a.client.PromoteResourceShareCreatedFromPolicy(input)
+func (a *RAMActivities) PromoteResourceShareCreatedFromPolicy(ctx context.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
+	return a.client.PromoteResourceShareCreatedFromPolicyWithContext(ctx, input)
 }
 
-func (a *RAMActivities) RejectResourceShareInvitation(input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
-	return a.client.RejectResourceShareInvitation(input)
+func (a *RAMActivities) RejectResourceShareInvitation(ctx context.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.RejectResourceShareInvitationWithContext(ctx, input)
 }
 
-func (a *RAMActivities) TagResource(input *ram.TagResourceInput) (*ram.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *RAMActivities) TagResource(ctx context.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *RAMActivities) UntagResource(input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *RAMActivities) UntagResource(ctx context.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *RAMActivities) UpdateResourceShare(input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
-	return a.client.UpdateResourceShare(input)
+func (a *RAMActivities) UpdateResourceShare(ctx context.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.UpdateResourceShareWithContext(ctx, input)
 }

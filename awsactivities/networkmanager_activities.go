@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/networkmanager"
 	"github.com/aws/aws-sdk-go/service/networkmanager/networkmanageriface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type NetworkManagerActivities struct {
 	client networkmanageriface.NetworkManagerAPI
@@ -16,114 +21,114 @@ func NewNetworkManagerActivities(session *session.Session, config ...*aws.Config
 	return &NetworkManagerActivities{client: client}
 }
 
-func (a *NetworkManagerActivities) AssociateCustomerGateway(input *networkmanager.AssociateCustomerGatewayInput) (*networkmanager.AssociateCustomerGatewayOutput, error) {
-	return a.client.AssociateCustomerGateway(input)
+func (a *NetworkManagerActivities) AssociateCustomerGateway(ctx context.Context, input *networkmanager.AssociateCustomerGatewayInput) (*networkmanager.AssociateCustomerGatewayOutput, error) {
+	return a.client.AssociateCustomerGatewayWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) AssociateLink(input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error) {
-	return a.client.AssociateLink(input)
+func (a *NetworkManagerActivities) AssociateLink(ctx context.Context, input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error) {
+	return a.client.AssociateLinkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) CreateDevice(input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error) {
-	return a.client.CreateDevice(input)
+func (a *NetworkManagerActivities) CreateDevice(ctx context.Context, input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error) {
+	return a.client.CreateDeviceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) CreateGlobalNetwork(input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error) {
-	return a.client.CreateGlobalNetwork(input)
+func (a *NetworkManagerActivities) CreateGlobalNetwork(ctx context.Context, input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error) {
+	return a.client.CreateGlobalNetworkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) CreateLink(input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error) {
-	return a.client.CreateLink(input)
+func (a *NetworkManagerActivities) CreateLink(ctx context.Context, input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error) {
+	return a.client.CreateLinkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) CreateSite(input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error) {
-	return a.client.CreateSite(input)
+func (a *NetworkManagerActivities) CreateSite(ctx context.Context, input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error) {
+	return a.client.CreateSiteWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DeleteDevice(input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error) {
-	return a.client.DeleteDevice(input)
+func (a *NetworkManagerActivities) DeleteDevice(ctx context.Context, input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error) {
+	return a.client.DeleteDeviceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DeleteGlobalNetwork(input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error) {
-	return a.client.DeleteGlobalNetwork(input)
+func (a *NetworkManagerActivities) DeleteGlobalNetwork(ctx context.Context, input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error) {
+	return a.client.DeleteGlobalNetworkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DeleteLink(input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error) {
-	return a.client.DeleteLink(input)
+func (a *NetworkManagerActivities) DeleteLink(ctx context.Context, input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error) {
+	return a.client.DeleteLinkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DeleteSite(input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error) {
-	return a.client.DeleteSite(input)
+func (a *NetworkManagerActivities) DeleteSite(ctx context.Context, input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error) {
+	return a.client.DeleteSiteWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DeregisterTransitGateway(input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error) {
-	return a.client.DeregisterTransitGateway(input)
+func (a *NetworkManagerActivities) DeregisterTransitGateway(ctx context.Context, input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error) {
+	return a.client.DeregisterTransitGatewayWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DescribeGlobalNetworks(input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error) {
-	return a.client.DescribeGlobalNetworks(input)
+func (a *NetworkManagerActivities) DescribeGlobalNetworks(ctx context.Context, input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error) {
+	return a.client.DescribeGlobalNetworksWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DisassociateCustomerGateway(input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
-	return a.client.DisassociateCustomerGateway(input)
+func (a *NetworkManagerActivities) DisassociateCustomerGateway(ctx context.Context, input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
+	return a.client.DisassociateCustomerGatewayWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) DisassociateLink(input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error) {
-	return a.client.DisassociateLink(input)
+func (a *NetworkManagerActivities) DisassociateLink(ctx context.Context, input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error) {
+	return a.client.DisassociateLinkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetCustomerGatewayAssociations(input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
-	return a.client.GetCustomerGatewayAssociations(input)
+func (a *NetworkManagerActivities) GetCustomerGatewayAssociations(ctx context.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
+	return a.client.GetCustomerGatewayAssociationsWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetDevices(input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error) {
-	return a.client.GetDevices(input)
+func (a *NetworkManagerActivities) GetDevices(ctx context.Context, input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error) {
+	return a.client.GetDevicesWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetLinkAssociations(input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error) {
-	return a.client.GetLinkAssociations(input)
+func (a *NetworkManagerActivities) GetLinkAssociations(ctx context.Context, input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error) {
+	return a.client.GetLinkAssociationsWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetLinks(input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error) {
-	return a.client.GetLinks(input)
+func (a *NetworkManagerActivities) GetLinks(ctx context.Context, input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error) {
+	return a.client.GetLinksWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetSites(input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error) {
-	return a.client.GetSites(input)
+func (a *NetworkManagerActivities) GetSites(ctx context.Context, input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error) {
+	return a.client.GetSitesWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) GetTransitGatewayRegistrations(input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
-	return a.client.GetTransitGatewayRegistrations(input)
+func (a *NetworkManagerActivities) GetTransitGatewayRegistrations(ctx context.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
+	return a.client.GetTransitGatewayRegistrationsWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) ListTagsForResource(input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *NetworkManagerActivities) ListTagsForResource(ctx context.Context, input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) RegisterTransitGateway(input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error) {
-	return a.client.RegisterTransitGateway(input)
+func (a *NetworkManagerActivities) RegisterTransitGateway(ctx context.Context, input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error) {
+	return a.client.RegisterTransitGatewayWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) TagResource(input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *NetworkManagerActivities) TagResource(ctx context.Context, input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) UntagResource(input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *NetworkManagerActivities) UntagResource(ctx context.Context, input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) UpdateDevice(input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error) {
-	return a.client.UpdateDevice(input)
+func (a *NetworkManagerActivities) UpdateDevice(ctx context.Context, input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error) {
+	return a.client.UpdateDeviceWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) UpdateGlobalNetwork(input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error) {
-	return a.client.UpdateGlobalNetwork(input)
+func (a *NetworkManagerActivities) UpdateGlobalNetwork(ctx context.Context, input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error) {
+	return a.client.UpdateGlobalNetworkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) UpdateLink(input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error) {
-	return a.client.UpdateLink(input)
+func (a *NetworkManagerActivities) UpdateLink(ctx context.Context, input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error) {
+	return a.client.UpdateLinkWithContext(ctx, input)
 }
 
-func (a *NetworkManagerActivities) UpdateSite(input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error) {
-	return a.client.UpdateSite(input)
+func (a *NetworkManagerActivities) UpdateSite(ctx context.Context, input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error) {
+	return a.client.UpdateSiteWithContext(ctx, input)
 }

@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iot"
 	"github.com/aws/aws-sdk-go/service/iot/iotiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type IoTActivities struct {
 	client iotiface.IoTAPI
@@ -16,850 +21,850 @@ func NewIoTActivities(session *session.Session, config ...*aws.Config) *IoTActiv
 	return &IoTActivities{client: client}
 }
 
-func (a *IoTActivities) AcceptCertificateTransfer(input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error) {
-	return a.client.AcceptCertificateTransfer(input)
+func (a *IoTActivities) AcceptCertificateTransfer(ctx context.Context, input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error) {
+	return a.client.AcceptCertificateTransferWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AddThingToBillingGroup(input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error) {
-	return a.client.AddThingToBillingGroup(input)
+func (a *IoTActivities) AddThingToBillingGroup(ctx context.Context, input *iot.AddThingToBillingGroupInput) (*iot.AddThingToBillingGroupOutput, error) {
+	return a.client.AddThingToBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AddThingToThingGroup(input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error) {
-	return a.client.AddThingToThingGroup(input)
+func (a *IoTActivities) AddThingToThingGroup(ctx context.Context, input *iot.AddThingToThingGroupInput) (*iot.AddThingToThingGroupOutput, error) {
+	return a.client.AddThingToThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AssociateTargetsWithJob(input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error) {
-	return a.client.AssociateTargetsWithJob(input)
+func (a *IoTActivities) AssociateTargetsWithJob(ctx context.Context, input *iot.AssociateTargetsWithJobInput) (*iot.AssociateTargetsWithJobOutput, error) {
+	return a.client.AssociateTargetsWithJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AttachPolicy(input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error) {
-	return a.client.AttachPolicy(input)
+func (a *IoTActivities) AttachPolicy(ctx context.Context, input *iot.AttachPolicyInput) (*iot.AttachPolicyOutput, error) {
+	return a.client.AttachPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AttachPrincipalPolicy(input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error) {
-	return a.client.AttachPrincipalPolicy(input)
+func (a *IoTActivities) AttachPrincipalPolicy(ctx context.Context, input *iot.AttachPrincipalPolicyInput) (*iot.AttachPrincipalPolicyOutput, error) {
+	return a.client.AttachPrincipalPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AttachSecurityProfile(input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error) {
-	return a.client.AttachSecurityProfile(input)
+func (a *IoTActivities) AttachSecurityProfile(ctx context.Context, input *iot.AttachSecurityProfileInput) (*iot.AttachSecurityProfileOutput, error) {
+	return a.client.AttachSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) AttachThingPrincipal(input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error) {
-	return a.client.AttachThingPrincipal(input)
+func (a *IoTActivities) AttachThingPrincipal(ctx context.Context, input *iot.AttachThingPrincipalInput) (*iot.AttachThingPrincipalOutput, error) {
+	return a.client.AttachThingPrincipalWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CancelAuditMitigationActionsTask(input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
-	return a.client.CancelAuditMitigationActionsTask(input)
+func (a *IoTActivities) CancelAuditMitigationActionsTask(ctx context.Context, input *iot.CancelAuditMitigationActionsTaskInput) (*iot.CancelAuditMitigationActionsTaskOutput, error) {
+	return a.client.CancelAuditMitigationActionsTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CancelAuditTask(input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error) {
-	return a.client.CancelAuditTask(input)
+func (a *IoTActivities) CancelAuditTask(ctx context.Context, input *iot.CancelAuditTaskInput) (*iot.CancelAuditTaskOutput, error) {
+	return a.client.CancelAuditTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CancelCertificateTransfer(input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error) {
-	return a.client.CancelCertificateTransfer(input)
+func (a *IoTActivities) CancelCertificateTransfer(ctx context.Context, input *iot.CancelCertificateTransferInput) (*iot.CancelCertificateTransferOutput, error) {
+	return a.client.CancelCertificateTransferWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CancelJob(input *iot.CancelJobInput) (*iot.CancelJobOutput, error) {
-	return a.client.CancelJob(input)
+func (a *IoTActivities) CancelJob(ctx context.Context, input *iot.CancelJobInput) (*iot.CancelJobOutput, error) {
+	return a.client.CancelJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CancelJobExecution(input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error) {
-	return a.client.CancelJobExecution(input)
+func (a *IoTActivities) CancelJobExecution(ctx context.Context, input *iot.CancelJobExecutionInput) (*iot.CancelJobExecutionOutput, error) {
+	return a.client.CancelJobExecutionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ClearDefaultAuthorizer(input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error) {
-	return a.client.ClearDefaultAuthorizer(input)
+func (a *IoTActivities) ClearDefaultAuthorizer(ctx context.Context, input *iot.ClearDefaultAuthorizerInput) (*iot.ClearDefaultAuthorizerOutput, error) {
+	return a.client.ClearDefaultAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ConfirmTopicRuleDestination(input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error) {
-	return a.client.ConfirmTopicRuleDestination(input)
+func (a *IoTActivities) ConfirmTopicRuleDestination(ctx context.Context, input *iot.ConfirmTopicRuleDestinationInput) (*iot.ConfirmTopicRuleDestinationOutput, error) {
+	return a.client.ConfirmTopicRuleDestinationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateAuditSuppression(input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error) {
-	return a.client.CreateAuditSuppression(input)
+func (a *IoTActivities) CreateAuditSuppression(ctx context.Context, input *iot.CreateAuditSuppressionInput) (*iot.CreateAuditSuppressionOutput, error) {
+	return a.client.CreateAuditSuppressionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateAuthorizer(input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error) {
-	return a.client.CreateAuthorizer(input)
+func (a *IoTActivities) CreateAuthorizer(ctx context.Context, input *iot.CreateAuthorizerInput) (*iot.CreateAuthorizerOutput, error) {
+	return a.client.CreateAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateBillingGroup(input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error) {
-	return a.client.CreateBillingGroup(input)
+func (a *IoTActivities) CreateBillingGroup(ctx context.Context, input *iot.CreateBillingGroupInput) (*iot.CreateBillingGroupOutput, error) {
+	return a.client.CreateBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateCertificateFromCsr(input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error) {
-	return a.client.CreateCertificateFromCsr(input)
+func (a *IoTActivities) CreateCertificateFromCsr(ctx context.Context, input *iot.CreateCertificateFromCsrInput) (*iot.CreateCertificateFromCsrOutput, error) {
+	return a.client.CreateCertificateFromCsrWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateDimension(input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error) {
-	return a.client.CreateDimension(input)
+func (a *IoTActivities) CreateDimension(ctx context.Context, input *iot.CreateDimensionInput) (*iot.CreateDimensionOutput, error) {
+	return a.client.CreateDimensionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateDomainConfiguration(input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error) {
-	return a.client.CreateDomainConfiguration(input)
+func (a *IoTActivities) CreateDomainConfiguration(ctx context.Context, input *iot.CreateDomainConfigurationInput) (*iot.CreateDomainConfigurationOutput, error) {
+	return a.client.CreateDomainConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateDynamicThingGroup(input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error) {
-	return a.client.CreateDynamicThingGroup(input)
+func (a *IoTActivities) CreateDynamicThingGroup(ctx context.Context, input *iot.CreateDynamicThingGroupInput) (*iot.CreateDynamicThingGroupOutput, error) {
+	return a.client.CreateDynamicThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateJob(input *iot.CreateJobInput) (*iot.CreateJobOutput, error) {
-	return a.client.CreateJob(input)
+func (a *IoTActivities) CreateJob(ctx context.Context, input *iot.CreateJobInput) (*iot.CreateJobOutput, error) {
+	return a.client.CreateJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateKeysAndCertificate(input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error) {
-	return a.client.CreateKeysAndCertificate(input)
+func (a *IoTActivities) CreateKeysAndCertificate(ctx context.Context, input *iot.CreateKeysAndCertificateInput) (*iot.CreateKeysAndCertificateOutput, error) {
+	return a.client.CreateKeysAndCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateMitigationAction(input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error) {
-	return a.client.CreateMitigationAction(input)
+func (a *IoTActivities) CreateMitigationAction(ctx context.Context, input *iot.CreateMitigationActionInput) (*iot.CreateMitigationActionOutput, error) {
+	return a.client.CreateMitigationActionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateOTAUpdate(input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error) {
-	return a.client.CreateOTAUpdate(input)
+func (a *IoTActivities) CreateOTAUpdate(ctx context.Context, input *iot.CreateOTAUpdateInput) (*iot.CreateOTAUpdateOutput, error) {
+	return a.client.CreateOTAUpdateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreatePolicy(input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error) {
-	return a.client.CreatePolicy(input)
+func (a *IoTActivities) CreatePolicy(ctx context.Context, input *iot.CreatePolicyInput) (*iot.CreatePolicyOutput, error) {
+	return a.client.CreatePolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreatePolicyVersion(input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error) {
-	return a.client.CreatePolicyVersion(input)
+func (a *IoTActivities) CreatePolicyVersion(ctx context.Context, input *iot.CreatePolicyVersionInput) (*iot.CreatePolicyVersionOutput, error) {
+	return a.client.CreatePolicyVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateProvisioningClaim(input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error) {
-	return a.client.CreateProvisioningClaim(input)
+func (a *IoTActivities) CreateProvisioningClaim(ctx context.Context, input *iot.CreateProvisioningClaimInput) (*iot.CreateProvisioningClaimOutput, error) {
+	return a.client.CreateProvisioningClaimWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateProvisioningTemplate(input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error) {
-	return a.client.CreateProvisioningTemplate(input)
+func (a *IoTActivities) CreateProvisioningTemplate(ctx context.Context, input *iot.CreateProvisioningTemplateInput) (*iot.CreateProvisioningTemplateOutput, error) {
+	return a.client.CreateProvisioningTemplateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateProvisioningTemplateVersion(input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error) {
-	return a.client.CreateProvisioningTemplateVersion(input)
+func (a *IoTActivities) CreateProvisioningTemplateVersion(ctx context.Context, input *iot.CreateProvisioningTemplateVersionInput) (*iot.CreateProvisioningTemplateVersionOutput, error) {
+	return a.client.CreateProvisioningTemplateVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateRoleAlias(input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error) {
-	return a.client.CreateRoleAlias(input)
+func (a *IoTActivities) CreateRoleAlias(ctx context.Context, input *iot.CreateRoleAliasInput) (*iot.CreateRoleAliasOutput, error) {
+	return a.client.CreateRoleAliasWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateScheduledAudit(input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error) {
-	return a.client.CreateScheduledAudit(input)
+func (a *IoTActivities) CreateScheduledAudit(ctx context.Context, input *iot.CreateScheduledAuditInput) (*iot.CreateScheduledAuditOutput, error) {
+	return a.client.CreateScheduledAuditWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateSecurityProfile(input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error) {
-	return a.client.CreateSecurityProfile(input)
+func (a *IoTActivities) CreateSecurityProfile(ctx context.Context, input *iot.CreateSecurityProfileInput) (*iot.CreateSecurityProfileOutput, error) {
+	return a.client.CreateSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateStream(input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error) {
-	return a.client.CreateStream(input)
+func (a *IoTActivities) CreateStream(ctx context.Context, input *iot.CreateStreamInput) (*iot.CreateStreamOutput, error) {
+	return a.client.CreateStreamWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateThing(input *iot.CreateThingInput) (*iot.CreateThingOutput, error) {
-	return a.client.CreateThing(input)
+func (a *IoTActivities) CreateThing(ctx context.Context, input *iot.CreateThingInput) (*iot.CreateThingOutput, error) {
+	return a.client.CreateThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateThingGroup(input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error) {
-	return a.client.CreateThingGroup(input)
+func (a *IoTActivities) CreateThingGroup(ctx context.Context, input *iot.CreateThingGroupInput) (*iot.CreateThingGroupOutput, error) {
+	return a.client.CreateThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateThingType(input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error) {
-	return a.client.CreateThingType(input)
+func (a *IoTActivities) CreateThingType(ctx context.Context, input *iot.CreateThingTypeInput) (*iot.CreateThingTypeOutput, error) {
+	return a.client.CreateThingTypeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateTopicRule(input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error) {
-	return a.client.CreateTopicRule(input)
+func (a *IoTActivities) CreateTopicRule(ctx context.Context, input *iot.CreateTopicRuleInput) (*iot.CreateTopicRuleOutput, error) {
+	return a.client.CreateTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) CreateTopicRuleDestination(input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error) {
-	return a.client.CreateTopicRuleDestination(input)
+func (a *IoTActivities) CreateTopicRuleDestination(ctx context.Context, input *iot.CreateTopicRuleDestinationInput) (*iot.CreateTopicRuleDestinationOutput, error) {
+	return a.client.CreateTopicRuleDestinationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteAccountAuditConfiguration(input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error) {
-	return a.client.DeleteAccountAuditConfiguration(input)
+func (a *IoTActivities) DeleteAccountAuditConfiguration(ctx context.Context, input *iot.DeleteAccountAuditConfigurationInput) (*iot.DeleteAccountAuditConfigurationOutput, error) {
+	return a.client.DeleteAccountAuditConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteAuditSuppression(input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error) {
-	return a.client.DeleteAuditSuppression(input)
+func (a *IoTActivities) DeleteAuditSuppression(ctx context.Context, input *iot.DeleteAuditSuppressionInput) (*iot.DeleteAuditSuppressionOutput, error) {
+	return a.client.DeleteAuditSuppressionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteAuthorizer(input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error) {
-	return a.client.DeleteAuthorizer(input)
+func (a *IoTActivities) DeleteAuthorizer(ctx context.Context, input *iot.DeleteAuthorizerInput) (*iot.DeleteAuthorizerOutput, error) {
+	return a.client.DeleteAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteBillingGroup(input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error) {
-	return a.client.DeleteBillingGroup(input)
+func (a *IoTActivities) DeleteBillingGroup(ctx context.Context, input *iot.DeleteBillingGroupInput) (*iot.DeleteBillingGroupOutput, error) {
+	return a.client.DeleteBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteCACertificate(input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error) {
-	return a.client.DeleteCACertificate(input)
+func (a *IoTActivities) DeleteCACertificate(ctx context.Context, input *iot.DeleteCACertificateInput) (*iot.DeleteCACertificateOutput, error) {
+	return a.client.DeleteCACertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteCertificate(input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error) {
-	return a.client.DeleteCertificate(input)
+func (a *IoTActivities) DeleteCertificate(ctx context.Context, input *iot.DeleteCertificateInput) (*iot.DeleteCertificateOutput, error) {
+	return a.client.DeleteCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteDimension(input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error) {
-	return a.client.DeleteDimension(input)
+func (a *IoTActivities) DeleteDimension(ctx context.Context, input *iot.DeleteDimensionInput) (*iot.DeleteDimensionOutput, error) {
+	return a.client.DeleteDimensionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteDomainConfiguration(input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error) {
-	return a.client.DeleteDomainConfiguration(input)
+func (a *IoTActivities) DeleteDomainConfiguration(ctx context.Context, input *iot.DeleteDomainConfigurationInput) (*iot.DeleteDomainConfigurationOutput, error) {
+	return a.client.DeleteDomainConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteDynamicThingGroup(input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error) {
-	return a.client.DeleteDynamicThingGroup(input)
+func (a *IoTActivities) DeleteDynamicThingGroup(ctx context.Context, input *iot.DeleteDynamicThingGroupInput) (*iot.DeleteDynamicThingGroupOutput, error) {
+	return a.client.DeleteDynamicThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteJob(input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error) {
-	return a.client.DeleteJob(input)
+func (a *IoTActivities) DeleteJob(ctx context.Context, input *iot.DeleteJobInput) (*iot.DeleteJobOutput, error) {
+	return a.client.DeleteJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteJobExecution(input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error) {
-	return a.client.DeleteJobExecution(input)
+func (a *IoTActivities) DeleteJobExecution(ctx context.Context, input *iot.DeleteJobExecutionInput) (*iot.DeleteJobExecutionOutput, error) {
+	return a.client.DeleteJobExecutionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteMitigationAction(input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error) {
-	return a.client.DeleteMitigationAction(input)
+func (a *IoTActivities) DeleteMitigationAction(ctx context.Context, input *iot.DeleteMitigationActionInput) (*iot.DeleteMitigationActionOutput, error) {
+	return a.client.DeleteMitigationActionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteOTAUpdate(input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error) {
-	return a.client.DeleteOTAUpdate(input)
+func (a *IoTActivities) DeleteOTAUpdate(ctx context.Context, input *iot.DeleteOTAUpdateInput) (*iot.DeleteOTAUpdateOutput, error) {
+	return a.client.DeleteOTAUpdateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeletePolicy(input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error) {
-	return a.client.DeletePolicy(input)
+func (a *IoTActivities) DeletePolicy(ctx context.Context, input *iot.DeletePolicyInput) (*iot.DeletePolicyOutput, error) {
+	return a.client.DeletePolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeletePolicyVersion(input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error) {
-	return a.client.DeletePolicyVersion(input)
+func (a *IoTActivities) DeletePolicyVersion(ctx context.Context, input *iot.DeletePolicyVersionInput) (*iot.DeletePolicyVersionOutput, error) {
+	return a.client.DeletePolicyVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteProvisioningTemplate(input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error) {
-	return a.client.DeleteProvisioningTemplate(input)
+func (a *IoTActivities) DeleteProvisioningTemplate(ctx context.Context, input *iot.DeleteProvisioningTemplateInput) (*iot.DeleteProvisioningTemplateOutput, error) {
+	return a.client.DeleteProvisioningTemplateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteProvisioningTemplateVersion(input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
-	return a.client.DeleteProvisioningTemplateVersion(input)
+func (a *IoTActivities) DeleteProvisioningTemplateVersion(ctx context.Context, input *iot.DeleteProvisioningTemplateVersionInput) (*iot.DeleteProvisioningTemplateVersionOutput, error) {
+	return a.client.DeleteProvisioningTemplateVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteRegistrationCode(input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error) {
-	return a.client.DeleteRegistrationCode(input)
+func (a *IoTActivities) DeleteRegistrationCode(ctx context.Context, input *iot.DeleteRegistrationCodeInput) (*iot.DeleteRegistrationCodeOutput, error) {
+	return a.client.DeleteRegistrationCodeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteRoleAlias(input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error) {
-	return a.client.DeleteRoleAlias(input)
+func (a *IoTActivities) DeleteRoleAlias(ctx context.Context, input *iot.DeleteRoleAliasInput) (*iot.DeleteRoleAliasOutput, error) {
+	return a.client.DeleteRoleAliasWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteScheduledAudit(input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error) {
-	return a.client.DeleteScheduledAudit(input)
+func (a *IoTActivities) DeleteScheduledAudit(ctx context.Context, input *iot.DeleteScheduledAuditInput) (*iot.DeleteScheduledAuditOutput, error) {
+	return a.client.DeleteScheduledAuditWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteSecurityProfile(input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error) {
-	return a.client.DeleteSecurityProfile(input)
+func (a *IoTActivities) DeleteSecurityProfile(ctx context.Context, input *iot.DeleteSecurityProfileInput) (*iot.DeleteSecurityProfileOutput, error) {
+	return a.client.DeleteSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteStream(input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error) {
-	return a.client.DeleteStream(input)
+func (a *IoTActivities) DeleteStream(ctx context.Context, input *iot.DeleteStreamInput) (*iot.DeleteStreamOutput, error) {
+	return a.client.DeleteStreamWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteThing(input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error) {
-	return a.client.DeleteThing(input)
+func (a *IoTActivities) DeleteThing(ctx context.Context, input *iot.DeleteThingInput) (*iot.DeleteThingOutput, error) {
+	return a.client.DeleteThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteThingGroup(input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error) {
-	return a.client.DeleteThingGroup(input)
+func (a *IoTActivities) DeleteThingGroup(ctx context.Context, input *iot.DeleteThingGroupInput) (*iot.DeleteThingGroupOutput, error) {
+	return a.client.DeleteThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteThingType(input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error) {
-	return a.client.DeleteThingType(input)
+func (a *IoTActivities) DeleteThingType(ctx context.Context, input *iot.DeleteThingTypeInput) (*iot.DeleteThingTypeOutput, error) {
+	return a.client.DeleteThingTypeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteTopicRule(input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error) {
-	return a.client.DeleteTopicRule(input)
+func (a *IoTActivities) DeleteTopicRule(ctx context.Context, input *iot.DeleteTopicRuleInput) (*iot.DeleteTopicRuleOutput, error) {
+	return a.client.DeleteTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteTopicRuleDestination(input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error) {
-	return a.client.DeleteTopicRuleDestination(input)
+func (a *IoTActivities) DeleteTopicRuleDestination(ctx context.Context, input *iot.DeleteTopicRuleDestinationInput) (*iot.DeleteTopicRuleDestinationOutput, error) {
+	return a.client.DeleteTopicRuleDestinationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeleteV2LoggingLevel(input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error) {
-	return a.client.DeleteV2LoggingLevel(input)
+func (a *IoTActivities) DeleteV2LoggingLevel(ctx context.Context, input *iot.DeleteV2LoggingLevelInput) (*iot.DeleteV2LoggingLevelOutput, error) {
+	return a.client.DeleteV2LoggingLevelWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DeprecateThingType(input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error) {
-	return a.client.DeprecateThingType(input)
+func (a *IoTActivities) DeprecateThingType(ctx context.Context, input *iot.DeprecateThingTypeInput) (*iot.DeprecateThingTypeOutput, error) {
+	return a.client.DeprecateThingTypeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAccountAuditConfiguration(input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error) {
-	return a.client.DescribeAccountAuditConfiguration(input)
+func (a *IoTActivities) DescribeAccountAuditConfiguration(ctx context.Context, input *iot.DescribeAccountAuditConfigurationInput) (*iot.DescribeAccountAuditConfigurationOutput, error) {
+	return a.client.DescribeAccountAuditConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAuditFinding(input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error) {
-	return a.client.DescribeAuditFinding(input)
+func (a *IoTActivities) DescribeAuditFinding(ctx context.Context, input *iot.DescribeAuditFindingInput) (*iot.DescribeAuditFindingOutput, error) {
+	return a.client.DescribeAuditFindingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAuditMitigationActionsTask(input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
-	return a.client.DescribeAuditMitigationActionsTask(input)
+func (a *IoTActivities) DescribeAuditMitigationActionsTask(ctx context.Context, input *iot.DescribeAuditMitigationActionsTaskInput) (*iot.DescribeAuditMitigationActionsTaskOutput, error) {
+	return a.client.DescribeAuditMitigationActionsTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAuditSuppression(input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error) {
-	return a.client.DescribeAuditSuppression(input)
+func (a *IoTActivities) DescribeAuditSuppression(ctx context.Context, input *iot.DescribeAuditSuppressionInput) (*iot.DescribeAuditSuppressionOutput, error) {
+	return a.client.DescribeAuditSuppressionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAuditTask(input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error) {
-	return a.client.DescribeAuditTask(input)
+func (a *IoTActivities) DescribeAuditTask(ctx context.Context, input *iot.DescribeAuditTaskInput) (*iot.DescribeAuditTaskOutput, error) {
+	return a.client.DescribeAuditTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeAuthorizer(input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error) {
-	return a.client.DescribeAuthorizer(input)
+func (a *IoTActivities) DescribeAuthorizer(ctx context.Context, input *iot.DescribeAuthorizerInput) (*iot.DescribeAuthorizerOutput, error) {
+	return a.client.DescribeAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeBillingGroup(input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error) {
-	return a.client.DescribeBillingGroup(input)
+func (a *IoTActivities) DescribeBillingGroup(ctx context.Context, input *iot.DescribeBillingGroupInput) (*iot.DescribeBillingGroupOutput, error) {
+	return a.client.DescribeBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeCACertificate(input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error) {
-	return a.client.DescribeCACertificate(input)
+func (a *IoTActivities) DescribeCACertificate(ctx context.Context, input *iot.DescribeCACertificateInput) (*iot.DescribeCACertificateOutput, error) {
+	return a.client.DescribeCACertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeCertificate(input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error) {
-	return a.client.DescribeCertificate(input)
+func (a *IoTActivities) DescribeCertificate(ctx context.Context, input *iot.DescribeCertificateInput) (*iot.DescribeCertificateOutput, error) {
+	return a.client.DescribeCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeDefaultAuthorizer(input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error) {
-	return a.client.DescribeDefaultAuthorizer(input)
+func (a *IoTActivities) DescribeDefaultAuthorizer(ctx context.Context, input *iot.DescribeDefaultAuthorizerInput) (*iot.DescribeDefaultAuthorizerOutput, error) {
+	return a.client.DescribeDefaultAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeDimension(input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error) {
-	return a.client.DescribeDimension(input)
+func (a *IoTActivities) DescribeDimension(ctx context.Context, input *iot.DescribeDimensionInput) (*iot.DescribeDimensionOutput, error) {
+	return a.client.DescribeDimensionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeDomainConfiguration(input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error) {
-	return a.client.DescribeDomainConfiguration(input)
+func (a *IoTActivities) DescribeDomainConfiguration(ctx context.Context, input *iot.DescribeDomainConfigurationInput) (*iot.DescribeDomainConfigurationOutput, error) {
+	return a.client.DescribeDomainConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeEndpoint(input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error) {
-	return a.client.DescribeEndpoint(input)
+func (a *IoTActivities) DescribeEndpoint(ctx context.Context, input *iot.DescribeEndpointInput) (*iot.DescribeEndpointOutput, error) {
+	return a.client.DescribeEndpointWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeEventConfigurations(input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error) {
-	return a.client.DescribeEventConfigurations(input)
+func (a *IoTActivities) DescribeEventConfigurations(ctx context.Context, input *iot.DescribeEventConfigurationsInput) (*iot.DescribeEventConfigurationsOutput, error) {
+	return a.client.DescribeEventConfigurationsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeIndex(input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error) {
-	return a.client.DescribeIndex(input)
+func (a *IoTActivities) DescribeIndex(ctx context.Context, input *iot.DescribeIndexInput) (*iot.DescribeIndexOutput, error) {
+	return a.client.DescribeIndexWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeJob(input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error) {
-	return a.client.DescribeJob(input)
+func (a *IoTActivities) DescribeJob(ctx context.Context, input *iot.DescribeJobInput) (*iot.DescribeJobOutput, error) {
+	return a.client.DescribeJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeJobExecution(input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error) {
-	return a.client.DescribeJobExecution(input)
+func (a *IoTActivities) DescribeJobExecution(ctx context.Context, input *iot.DescribeJobExecutionInput) (*iot.DescribeJobExecutionOutput, error) {
+	return a.client.DescribeJobExecutionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeMitigationAction(input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error) {
-	return a.client.DescribeMitigationAction(input)
+func (a *IoTActivities) DescribeMitigationAction(ctx context.Context, input *iot.DescribeMitigationActionInput) (*iot.DescribeMitigationActionOutput, error) {
+	return a.client.DescribeMitigationActionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeProvisioningTemplate(input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error) {
-	return a.client.DescribeProvisioningTemplate(input)
+func (a *IoTActivities) DescribeProvisioningTemplate(ctx context.Context, input *iot.DescribeProvisioningTemplateInput) (*iot.DescribeProvisioningTemplateOutput, error) {
+	return a.client.DescribeProvisioningTemplateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeProvisioningTemplateVersion(input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
-	return a.client.DescribeProvisioningTemplateVersion(input)
+func (a *IoTActivities) DescribeProvisioningTemplateVersion(ctx context.Context, input *iot.DescribeProvisioningTemplateVersionInput) (*iot.DescribeProvisioningTemplateVersionOutput, error) {
+	return a.client.DescribeProvisioningTemplateVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeRoleAlias(input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error) {
-	return a.client.DescribeRoleAlias(input)
+func (a *IoTActivities) DescribeRoleAlias(ctx context.Context, input *iot.DescribeRoleAliasInput) (*iot.DescribeRoleAliasOutput, error) {
+	return a.client.DescribeRoleAliasWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeScheduledAudit(input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error) {
-	return a.client.DescribeScheduledAudit(input)
+func (a *IoTActivities) DescribeScheduledAudit(ctx context.Context, input *iot.DescribeScheduledAuditInput) (*iot.DescribeScheduledAuditOutput, error) {
+	return a.client.DescribeScheduledAuditWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeSecurityProfile(input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error) {
-	return a.client.DescribeSecurityProfile(input)
+func (a *IoTActivities) DescribeSecurityProfile(ctx context.Context, input *iot.DescribeSecurityProfileInput) (*iot.DescribeSecurityProfileOutput, error) {
+	return a.client.DescribeSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeStream(input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error) {
-	return a.client.DescribeStream(input)
+func (a *IoTActivities) DescribeStream(ctx context.Context, input *iot.DescribeStreamInput) (*iot.DescribeStreamOutput, error) {
+	return a.client.DescribeStreamWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeThing(input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error) {
-	return a.client.DescribeThing(input)
+func (a *IoTActivities) DescribeThing(ctx context.Context, input *iot.DescribeThingInput) (*iot.DescribeThingOutput, error) {
+	return a.client.DescribeThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeThingGroup(input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error) {
-	return a.client.DescribeThingGroup(input)
+func (a *IoTActivities) DescribeThingGroup(ctx context.Context, input *iot.DescribeThingGroupInput) (*iot.DescribeThingGroupOutput, error) {
+	return a.client.DescribeThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeThingRegistrationTask(input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error) {
-	return a.client.DescribeThingRegistrationTask(input)
+func (a *IoTActivities) DescribeThingRegistrationTask(ctx context.Context, input *iot.DescribeThingRegistrationTaskInput) (*iot.DescribeThingRegistrationTaskOutput, error) {
+	return a.client.DescribeThingRegistrationTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DescribeThingType(input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error) {
-	return a.client.DescribeThingType(input)
+func (a *IoTActivities) DescribeThingType(ctx context.Context, input *iot.DescribeThingTypeInput) (*iot.DescribeThingTypeOutput, error) {
+	return a.client.DescribeThingTypeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DetachPolicy(input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error) {
-	return a.client.DetachPolicy(input)
+func (a *IoTActivities) DetachPolicy(ctx context.Context, input *iot.DetachPolicyInput) (*iot.DetachPolicyOutput, error) {
+	return a.client.DetachPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DetachPrincipalPolicy(input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error) {
-	return a.client.DetachPrincipalPolicy(input)
+func (a *IoTActivities) DetachPrincipalPolicy(ctx context.Context, input *iot.DetachPrincipalPolicyInput) (*iot.DetachPrincipalPolicyOutput, error) {
+	return a.client.DetachPrincipalPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DetachSecurityProfile(input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error) {
-	return a.client.DetachSecurityProfile(input)
+func (a *IoTActivities) DetachSecurityProfile(ctx context.Context, input *iot.DetachSecurityProfileInput) (*iot.DetachSecurityProfileOutput, error) {
+	return a.client.DetachSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DetachThingPrincipal(input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error) {
-	return a.client.DetachThingPrincipal(input)
+func (a *IoTActivities) DetachThingPrincipal(ctx context.Context, input *iot.DetachThingPrincipalInput) (*iot.DetachThingPrincipalOutput, error) {
+	return a.client.DetachThingPrincipalWithContext(ctx, input)
 }
 
-func (a *IoTActivities) DisableTopicRule(input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error) {
-	return a.client.DisableTopicRule(input)
+func (a *IoTActivities) DisableTopicRule(ctx context.Context, input *iot.DisableTopicRuleInput) (*iot.DisableTopicRuleOutput, error) {
+	return a.client.DisableTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) EnableTopicRule(input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error) {
-	return a.client.EnableTopicRule(input)
+func (a *IoTActivities) EnableTopicRule(ctx context.Context, input *iot.EnableTopicRuleInput) (*iot.EnableTopicRuleOutput, error) {
+	return a.client.EnableTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetCardinality(input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error) {
-	return a.client.GetCardinality(input)
+func (a *IoTActivities) GetCardinality(ctx context.Context, input *iot.GetCardinalityInput) (*iot.GetCardinalityOutput, error) {
+	return a.client.GetCardinalityWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetEffectivePolicies(input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error) {
-	return a.client.GetEffectivePolicies(input)
+func (a *IoTActivities) GetEffectivePolicies(ctx context.Context, input *iot.GetEffectivePoliciesInput) (*iot.GetEffectivePoliciesOutput, error) {
+	return a.client.GetEffectivePoliciesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetIndexingConfiguration(input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error) {
-	return a.client.GetIndexingConfiguration(input)
+func (a *IoTActivities) GetIndexingConfiguration(ctx context.Context, input *iot.GetIndexingConfigurationInput) (*iot.GetIndexingConfigurationOutput, error) {
+	return a.client.GetIndexingConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetJobDocument(input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error) {
-	return a.client.GetJobDocument(input)
+func (a *IoTActivities) GetJobDocument(ctx context.Context, input *iot.GetJobDocumentInput) (*iot.GetJobDocumentOutput, error) {
+	return a.client.GetJobDocumentWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetLoggingOptions(input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error) {
-	return a.client.GetLoggingOptions(input)
+func (a *IoTActivities) GetLoggingOptions(ctx context.Context, input *iot.GetLoggingOptionsInput) (*iot.GetLoggingOptionsOutput, error) {
+	return a.client.GetLoggingOptionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetOTAUpdate(input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error) {
-	return a.client.GetOTAUpdate(input)
+func (a *IoTActivities) GetOTAUpdate(ctx context.Context, input *iot.GetOTAUpdateInput) (*iot.GetOTAUpdateOutput, error) {
+	return a.client.GetOTAUpdateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetPercentiles(input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error) {
-	return a.client.GetPercentiles(input)
+func (a *IoTActivities) GetPercentiles(ctx context.Context, input *iot.GetPercentilesInput) (*iot.GetPercentilesOutput, error) {
+	return a.client.GetPercentilesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetPolicy(input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error) {
-	return a.client.GetPolicy(input)
+func (a *IoTActivities) GetPolicy(ctx context.Context, input *iot.GetPolicyInput) (*iot.GetPolicyOutput, error) {
+	return a.client.GetPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetPolicyVersion(input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error) {
-	return a.client.GetPolicyVersion(input)
+func (a *IoTActivities) GetPolicyVersion(ctx context.Context, input *iot.GetPolicyVersionInput) (*iot.GetPolicyVersionOutput, error) {
+	return a.client.GetPolicyVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetRegistrationCode(input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error) {
-	return a.client.GetRegistrationCode(input)
+func (a *IoTActivities) GetRegistrationCode(ctx context.Context, input *iot.GetRegistrationCodeInput) (*iot.GetRegistrationCodeOutput, error) {
+	return a.client.GetRegistrationCodeWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetStatistics(input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error) {
-	return a.client.GetStatistics(input)
+func (a *IoTActivities) GetStatistics(ctx context.Context, input *iot.GetStatisticsInput) (*iot.GetStatisticsOutput, error) {
+	return a.client.GetStatisticsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetTopicRule(input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error) {
-	return a.client.GetTopicRule(input)
+func (a *IoTActivities) GetTopicRule(ctx context.Context, input *iot.GetTopicRuleInput) (*iot.GetTopicRuleOutput, error) {
+	return a.client.GetTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetTopicRuleDestination(input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error) {
-	return a.client.GetTopicRuleDestination(input)
+func (a *IoTActivities) GetTopicRuleDestination(ctx context.Context, input *iot.GetTopicRuleDestinationInput) (*iot.GetTopicRuleDestinationOutput, error) {
+	return a.client.GetTopicRuleDestinationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) GetV2LoggingOptions(input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error) {
-	return a.client.GetV2LoggingOptions(input)
+func (a *IoTActivities) GetV2LoggingOptions(ctx context.Context, input *iot.GetV2LoggingOptionsInput) (*iot.GetV2LoggingOptionsOutput, error) {
+	return a.client.GetV2LoggingOptionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListActiveViolations(input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error) {
-	return a.client.ListActiveViolations(input)
+func (a *IoTActivities) ListActiveViolations(ctx context.Context, input *iot.ListActiveViolationsInput) (*iot.ListActiveViolationsOutput, error) {
+	return a.client.ListActiveViolationsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAttachedPolicies(input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error) {
-	return a.client.ListAttachedPolicies(input)
+func (a *IoTActivities) ListAttachedPolicies(ctx context.Context, input *iot.ListAttachedPoliciesInput) (*iot.ListAttachedPoliciesOutput, error) {
+	return a.client.ListAttachedPoliciesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuditFindings(input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error) {
-	return a.client.ListAuditFindings(input)
+func (a *IoTActivities) ListAuditFindings(ctx context.Context, input *iot.ListAuditFindingsInput) (*iot.ListAuditFindingsOutput, error) {
+	return a.client.ListAuditFindingsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuditMitigationActionsExecutions(input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
-	return a.client.ListAuditMitigationActionsExecutions(input)
+func (a *IoTActivities) ListAuditMitigationActionsExecutions(ctx context.Context, input *iot.ListAuditMitigationActionsExecutionsInput) (*iot.ListAuditMitigationActionsExecutionsOutput, error) {
+	return a.client.ListAuditMitigationActionsExecutionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuditMitigationActionsTasks(input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error) {
-	return a.client.ListAuditMitigationActionsTasks(input)
+func (a *IoTActivities) ListAuditMitigationActionsTasks(ctx context.Context, input *iot.ListAuditMitigationActionsTasksInput) (*iot.ListAuditMitigationActionsTasksOutput, error) {
+	return a.client.ListAuditMitigationActionsTasksWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuditSuppressions(input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error) {
-	return a.client.ListAuditSuppressions(input)
+func (a *IoTActivities) ListAuditSuppressions(ctx context.Context, input *iot.ListAuditSuppressionsInput) (*iot.ListAuditSuppressionsOutput, error) {
+	return a.client.ListAuditSuppressionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuditTasks(input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error) {
-	return a.client.ListAuditTasks(input)
+func (a *IoTActivities) ListAuditTasks(ctx context.Context, input *iot.ListAuditTasksInput) (*iot.ListAuditTasksOutput, error) {
+	return a.client.ListAuditTasksWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListAuthorizers(input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error) {
-	return a.client.ListAuthorizers(input)
+func (a *IoTActivities) ListAuthorizers(ctx context.Context, input *iot.ListAuthorizersInput) (*iot.ListAuthorizersOutput, error) {
+	return a.client.ListAuthorizersWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListBillingGroups(input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error) {
-	return a.client.ListBillingGroups(input)
+func (a *IoTActivities) ListBillingGroups(ctx context.Context, input *iot.ListBillingGroupsInput) (*iot.ListBillingGroupsOutput, error) {
+	return a.client.ListBillingGroupsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListCACertificates(input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error) {
-	return a.client.ListCACertificates(input)
+func (a *IoTActivities) ListCACertificates(ctx context.Context, input *iot.ListCACertificatesInput) (*iot.ListCACertificatesOutput, error) {
+	return a.client.ListCACertificatesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListCertificates(input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error) {
-	return a.client.ListCertificates(input)
+func (a *IoTActivities) ListCertificates(ctx context.Context, input *iot.ListCertificatesInput) (*iot.ListCertificatesOutput, error) {
+	return a.client.ListCertificatesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListCertificatesByCA(input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error) {
-	return a.client.ListCertificatesByCA(input)
+func (a *IoTActivities) ListCertificatesByCA(ctx context.Context, input *iot.ListCertificatesByCAInput) (*iot.ListCertificatesByCAOutput, error) {
+	return a.client.ListCertificatesByCAWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListDimensions(input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error) {
-	return a.client.ListDimensions(input)
+func (a *IoTActivities) ListDimensions(ctx context.Context, input *iot.ListDimensionsInput) (*iot.ListDimensionsOutput, error) {
+	return a.client.ListDimensionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListDomainConfigurations(input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error) {
-	return a.client.ListDomainConfigurations(input)
+func (a *IoTActivities) ListDomainConfigurations(ctx context.Context, input *iot.ListDomainConfigurationsInput) (*iot.ListDomainConfigurationsOutput, error) {
+	return a.client.ListDomainConfigurationsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListIndices(input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error) {
-	return a.client.ListIndices(input)
+func (a *IoTActivities) ListIndices(ctx context.Context, input *iot.ListIndicesInput) (*iot.ListIndicesOutput, error) {
+	return a.client.ListIndicesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListJobExecutionsForJob(input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error) {
-	return a.client.ListJobExecutionsForJob(input)
+func (a *IoTActivities) ListJobExecutionsForJob(ctx context.Context, input *iot.ListJobExecutionsForJobInput) (*iot.ListJobExecutionsForJobOutput, error) {
+	return a.client.ListJobExecutionsForJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListJobExecutionsForThing(input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error) {
-	return a.client.ListJobExecutionsForThing(input)
+func (a *IoTActivities) ListJobExecutionsForThing(ctx context.Context, input *iot.ListJobExecutionsForThingInput) (*iot.ListJobExecutionsForThingOutput, error) {
+	return a.client.ListJobExecutionsForThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListJobs(input *iot.ListJobsInput) (*iot.ListJobsOutput, error) {
-	return a.client.ListJobs(input)
+func (a *IoTActivities) ListJobs(ctx context.Context, input *iot.ListJobsInput) (*iot.ListJobsOutput, error) {
+	return a.client.ListJobsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListMitigationActions(input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error) {
-	return a.client.ListMitigationActions(input)
+func (a *IoTActivities) ListMitigationActions(ctx context.Context, input *iot.ListMitigationActionsInput) (*iot.ListMitigationActionsOutput, error) {
+	return a.client.ListMitigationActionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListOTAUpdates(input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error) {
-	return a.client.ListOTAUpdates(input)
+func (a *IoTActivities) ListOTAUpdates(ctx context.Context, input *iot.ListOTAUpdatesInput) (*iot.ListOTAUpdatesOutput, error) {
+	return a.client.ListOTAUpdatesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListOutgoingCertificates(input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error) {
-	return a.client.ListOutgoingCertificates(input)
+func (a *IoTActivities) ListOutgoingCertificates(ctx context.Context, input *iot.ListOutgoingCertificatesInput) (*iot.ListOutgoingCertificatesOutput, error) {
+	return a.client.ListOutgoingCertificatesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListPolicies(input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error) {
-	return a.client.ListPolicies(input)
+func (a *IoTActivities) ListPolicies(ctx context.Context, input *iot.ListPoliciesInput) (*iot.ListPoliciesOutput, error) {
+	return a.client.ListPoliciesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListPolicyPrincipals(input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error) {
-	return a.client.ListPolicyPrincipals(input)
+func (a *IoTActivities) ListPolicyPrincipals(ctx context.Context, input *iot.ListPolicyPrincipalsInput) (*iot.ListPolicyPrincipalsOutput, error) {
+	return a.client.ListPolicyPrincipalsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListPolicyVersions(input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error) {
-	return a.client.ListPolicyVersions(input)
+func (a *IoTActivities) ListPolicyVersions(ctx context.Context, input *iot.ListPolicyVersionsInput) (*iot.ListPolicyVersionsOutput, error) {
+	return a.client.ListPolicyVersionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListPrincipalPolicies(input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error) {
-	return a.client.ListPrincipalPolicies(input)
+func (a *IoTActivities) ListPrincipalPolicies(ctx context.Context, input *iot.ListPrincipalPoliciesInput) (*iot.ListPrincipalPoliciesOutput, error) {
+	return a.client.ListPrincipalPoliciesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListPrincipalThings(input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error) {
-	return a.client.ListPrincipalThings(input)
+func (a *IoTActivities) ListPrincipalThings(ctx context.Context, input *iot.ListPrincipalThingsInput) (*iot.ListPrincipalThingsOutput, error) {
+	return a.client.ListPrincipalThingsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListProvisioningTemplateVersions(input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error) {
-	return a.client.ListProvisioningTemplateVersions(input)
+func (a *IoTActivities) ListProvisioningTemplateVersions(ctx context.Context, input *iot.ListProvisioningTemplateVersionsInput) (*iot.ListProvisioningTemplateVersionsOutput, error) {
+	return a.client.ListProvisioningTemplateVersionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListProvisioningTemplates(input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error) {
-	return a.client.ListProvisioningTemplates(input)
+func (a *IoTActivities) ListProvisioningTemplates(ctx context.Context, input *iot.ListProvisioningTemplatesInput) (*iot.ListProvisioningTemplatesOutput, error) {
+	return a.client.ListProvisioningTemplatesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListRoleAliases(input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error) {
-	return a.client.ListRoleAliases(input)
+func (a *IoTActivities) ListRoleAliases(ctx context.Context, input *iot.ListRoleAliasesInput) (*iot.ListRoleAliasesOutput, error) {
+	return a.client.ListRoleAliasesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListScheduledAudits(input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error) {
-	return a.client.ListScheduledAudits(input)
+func (a *IoTActivities) ListScheduledAudits(ctx context.Context, input *iot.ListScheduledAuditsInput) (*iot.ListScheduledAuditsOutput, error) {
+	return a.client.ListScheduledAuditsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListSecurityProfiles(input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error) {
-	return a.client.ListSecurityProfiles(input)
+func (a *IoTActivities) ListSecurityProfiles(ctx context.Context, input *iot.ListSecurityProfilesInput) (*iot.ListSecurityProfilesOutput, error) {
+	return a.client.ListSecurityProfilesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListSecurityProfilesForTarget(input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error) {
-	return a.client.ListSecurityProfilesForTarget(input)
+func (a *IoTActivities) ListSecurityProfilesForTarget(ctx context.Context, input *iot.ListSecurityProfilesForTargetInput) (*iot.ListSecurityProfilesForTargetOutput, error) {
+	return a.client.ListSecurityProfilesForTargetWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListStreams(input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error) {
-	return a.client.ListStreams(input)
+func (a *IoTActivities) ListStreams(ctx context.Context, input *iot.ListStreamsInput) (*iot.ListStreamsOutput, error) {
+	return a.client.ListStreamsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListTagsForResource(input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *IoTActivities) ListTagsForResource(ctx context.Context, input *iot.ListTagsForResourceInput) (*iot.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListTargetsForPolicy(input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error) {
-	return a.client.ListTargetsForPolicy(input)
+func (a *IoTActivities) ListTargetsForPolicy(ctx context.Context, input *iot.ListTargetsForPolicyInput) (*iot.ListTargetsForPolicyOutput, error) {
+	return a.client.ListTargetsForPolicyWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListTargetsForSecurityProfile(input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error) {
-	return a.client.ListTargetsForSecurityProfile(input)
+func (a *IoTActivities) ListTargetsForSecurityProfile(ctx context.Context, input *iot.ListTargetsForSecurityProfileInput) (*iot.ListTargetsForSecurityProfileOutput, error) {
+	return a.client.ListTargetsForSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingGroups(input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error) {
-	return a.client.ListThingGroups(input)
+func (a *IoTActivities) ListThingGroups(ctx context.Context, input *iot.ListThingGroupsInput) (*iot.ListThingGroupsOutput, error) {
+	return a.client.ListThingGroupsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingGroupsForThing(input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error) {
-	return a.client.ListThingGroupsForThing(input)
+func (a *IoTActivities) ListThingGroupsForThing(ctx context.Context, input *iot.ListThingGroupsForThingInput) (*iot.ListThingGroupsForThingOutput, error) {
+	return a.client.ListThingGroupsForThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingPrincipals(input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error) {
-	return a.client.ListThingPrincipals(input)
+func (a *IoTActivities) ListThingPrincipals(ctx context.Context, input *iot.ListThingPrincipalsInput) (*iot.ListThingPrincipalsOutput, error) {
+	return a.client.ListThingPrincipalsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingRegistrationTaskReports(input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error) {
-	return a.client.ListThingRegistrationTaskReports(input)
+func (a *IoTActivities) ListThingRegistrationTaskReports(ctx context.Context, input *iot.ListThingRegistrationTaskReportsInput) (*iot.ListThingRegistrationTaskReportsOutput, error) {
+	return a.client.ListThingRegistrationTaskReportsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingRegistrationTasks(input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error) {
-	return a.client.ListThingRegistrationTasks(input)
+func (a *IoTActivities) ListThingRegistrationTasks(ctx context.Context, input *iot.ListThingRegistrationTasksInput) (*iot.ListThingRegistrationTasksOutput, error) {
+	return a.client.ListThingRegistrationTasksWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingTypes(input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error) {
-	return a.client.ListThingTypes(input)
+func (a *IoTActivities) ListThingTypes(ctx context.Context, input *iot.ListThingTypesInput) (*iot.ListThingTypesOutput, error) {
+	return a.client.ListThingTypesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThings(input *iot.ListThingsInput) (*iot.ListThingsOutput, error) {
-	return a.client.ListThings(input)
+func (a *IoTActivities) ListThings(ctx context.Context, input *iot.ListThingsInput) (*iot.ListThingsOutput, error) {
+	return a.client.ListThingsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingsInBillingGroup(input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error) {
-	return a.client.ListThingsInBillingGroup(input)
+func (a *IoTActivities) ListThingsInBillingGroup(ctx context.Context, input *iot.ListThingsInBillingGroupInput) (*iot.ListThingsInBillingGroupOutput, error) {
+	return a.client.ListThingsInBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListThingsInThingGroup(input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error) {
-	return a.client.ListThingsInThingGroup(input)
+func (a *IoTActivities) ListThingsInThingGroup(ctx context.Context, input *iot.ListThingsInThingGroupInput) (*iot.ListThingsInThingGroupOutput, error) {
+	return a.client.ListThingsInThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListTopicRuleDestinations(input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error) {
-	return a.client.ListTopicRuleDestinations(input)
+func (a *IoTActivities) ListTopicRuleDestinations(ctx context.Context, input *iot.ListTopicRuleDestinationsInput) (*iot.ListTopicRuleDestinationsOutput, error) {
+	return a.client.ListTopicRuleDestinationsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListTopicRules(input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error) {
-	return a.client.ListTopicRules(input)
+func (a *IoTActivities) ListTopicRules(ctx context.Context, input *iot.ListTopicRulesInput) (*iot.ListTopicRulesOutput, error) {
+	return a.client.ListTopicRulesWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListV2LoggingLevels(input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error) {
-	return a.client.ListV2LoggingLevels(input)
+func (a *IoTActivities) ListV2LoggingLevels(ctx context.Context, input *iot.ListV2LoggingLevelsInput) (*iot.ListV2LoggingLevelsOutput, error) {
+	return a.client.ListV2LoggingLevelsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ListViolationEvents(input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error) {
-	return a.client.ListViolationEvents(input)
+func (a *IoTActivities) ListViolationEvents(ctx context.Context, input *iot.ListViolationEventsInput) (*iot.ListViolationEventsOutput, error) {
+	return a.client.ListViolationEventsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RegisterCACertificate(input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error) {
-	return a.client.RegisterCACertificate(input)
+func (a *IoTActivities) RegisterCACertificate(ctx context.Context, input *iot.RegisterCACertificateInput) (*iot.RegisterCACertificateOutput, error) {
+	return a.client.RegisterCACertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RegisterCertificate(input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error) {
-	return a.client.RegisterCertificate(input)
+func (a *IoTActivities) RegisterCertificate(ctx context.Context, input *iot.RegisterCertificateInput) (*iot.RegisterCertificateOutput, error) {
+	return a.client.RegisterCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RegisterCertificateWithoutCA(input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error) {
-	return a.client.RegisterCertificateWithoutCA(input)
+func (a *IoTActivities) RegisterCertificateWithoutCA(ctx context.Context, input *iot.RegisterCertificateWithoutCAInput) (*iot.RegisterCertificateWithoutCAOutput, error) {
+	return a.client.RegisterCertificateWithoutCAWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RegisterThing(input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error) {
-	return a.client.RegisterThing(input)
+func (a *IoTActivities) RegisterThing(ctx context.Context, input *iot.RegisterThingInput) (*iot.RegisterThingOutput, error) {
+	return a.client.RegisterThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RejectCertificateTransfer(input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error) {
-	return a.client.RejectCertificateTransfer(input)
+func (a *IoTActivities) RejectCertificateTransfer(ctx context.Context, input *iot.RejectCertificateTransferInput) (*iot.RejectCertificateTransferOutput, error) {
+	return a.client.RejectCertificateTransferWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RemoveThingFromBillingGroup(input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error) {
-	return a.client.RemoveThingFromBillingGroup(input)
+func (a *IoTActivities) RemoveThingFromBillingGroup(ctx context.Context, input *iot.RemoveThingFromBillingGroupInput) (*iot.RemoveThingFromBillingGroupOutput, error) {
+	return a.client.RemoveThingFromBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) RemoveThingFromThingGroup(input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error) {
-	return a.client.RemoveThingFromThingGroup(input)
+func (a *IoTActivities) RemoveThingFromThingGroup(ctx context.Context, input *iot.RemoveThingFromThingGroupInput) (*iot.RemoveThingFromThingGroupOutput, error) {
+	return a.client.RemoveThingFromThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ReplaceTopicRule(input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error) {
-	return a.client.ReplaceTopicRule(input)
+func (a *IoTActivities) ReplaceTopicRule(ctx context.Context, input *iot.ReplaceTopicRuleInput) (*iot.ReplaceTopicRuleOutput, error) {
+	return a.client.ReplaceTopicRuleWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SearchIndex(input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error) {
-	return a.client.SearchIndex(input)
+func (a *IoTActivities) SearchIndex(ctx context.Context, input *iot.SearchIndexInput) (*iot.SearchIndexOutput, error) {
+	return a.client.SearchIndexWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SetDefaultAuthorizer(input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error) {
-	return a.client.SetDefaultAuthorizer(input)
+func (a *IoTActivities) SetDefaultAuthorizer(ctx context.Context, input *iot.SetDefaultAuthorizerInput) (*iot.SetDefaultAuthorizerOutput, error) {
+	return a.client.SetDefaultAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SetDefaultPolicyVersion(input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error) {
-	return a.client.SetDefaultPolicyVersion(input)
+func (a *IoTActivities) SetDefaultPolicyVersion(ctx context.Context, input *iot.SetDefaultPolicyVersionInput) (*iot.SetDefaultPolicyVersionOutput, error) {
+	return a.client.SetDefaultPolicyVersionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SetLoggingOptions(input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error) {
-	return a.client.SetLoggingOptions(input)
+func (a *IoTActivities) SetLoggingOptions(ctx context.Context, input *iot.SetLoggingOptionsInput) (*iot.SetLoggingOptionsOutput, error) {
+	return a.client.SetLoggingOptionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SetV2LoggingLevel(input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error) {
-	return a.client.SetV2LoggingLevel(input)
+func (a *IoTActivities) SetV2LoggingLevel(ctx context.Context, input *iot.SetV2LoggingLevelInput) (*iot.SetV2LoggingLevelOutput, error) {
+	return a.client.SetV2LoggingLevelWithContext(ctx, input)
 }
 
-func (a *IoTActivities) SetV2LoggingOptions(input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error) {
-	return a.client.SetV2LoggingOptions(input)
+func (a *IoTActivities) SetV2LoggingOptions(ctx context.Context, input *iot.SetV2LoggingOptionsInput) (*iot.SetV2LoggingOptionsOutput, error) {
+	return a.client.SetV2LoggingOptionsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) StartAuditMitigationActionsTask(input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error) {
-	return a.client.StartAuditMitigationActionsTask(input)
+func (a *IoTActivities) StartAuditMitigationActionsTask(ctx context.Context, input *iot.StartAuditMitigationActionsTaskInput) (*iot.StartAuditMitigationActionsTaskOutput, error) {
+	return a.client.StartAuditMitigationActionsTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) StartOnDemandAuditTask(input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error) {
-	return a.client.StartOnDemandAuditTask(input)
+func (a *IoTActivities) StartOnDemandAuditTask(ctx context.Context, input *iot.StartOnDemandAuditTaskInput) (*iot.StartOnDemandAuditTaskOutput, error) {
+	return a.client.StartOnDemandAuditTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) StartThingRegistrationTask(input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error) {
-	return a.client.StartThingRegistrationTask(input)
+func (a *IoTActivities) StartThingRegistrationTask(ctx context.Context, input *iot.StartThingRegistrationTaskInput) (*iot.StartThingRegistrationTaskOutput, error) {
+	return a.client.StartThingRegistrationTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) StopThingRegistrationTask(input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error) {
-	return a.client.StopThingRegistrationTask(input)
+func (a *IoTActivities) StopThingRegistrationTask(ctx context.Context, input *iot.StopThingRegistrationTaskInput) (*iot.StopThingRegistrationTaskOutput, error) {
+	return a.client.StopThingRegistrationTaskWithContext(ctx, input)
 }
 
-func (a *IoTActivities) TagResource(input *iot.TagResourceInput) (*iot.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *IoTActivities) TagResource(ctx context.Context, input *iot.TagResourceInput) (*iot.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *IoTActivities) TestAuthorization(input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error) {
-	return a.client.TestAuthorization(input)
+func (a *IoTActivities) TestAuthorization(ctx context.Context, input *iot.TestAuthorizationInput) (*iot.TestAuthorizationOutput, error) {
+	return a.client.TestAuthorizationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) TestInvokeAuthorizer(input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error) {
-	return a.client.TestInvokeAuthorizer(input)
+func (a *IoTActivities) TestInvokeAuthorizer(ctx context.Context, input *iot.TestInvokeAuthorizerInput) (*iot.TestInvokeAuthorizerOutput, error) {
+	return a.client.TestInvokeAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) TransferCertificate(input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error) {
-	return a.client.TransferCertificate(input)
+func (a *IoTActivities) TransferCertificate(ctx context.Context, input *iot.TransferCertificateInput) (*iot.TransferCertificateOutput, error) {
+	return a.client.TransferCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UntagResource(input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *IoTActivities) UntagResource(ctx context.Context, input *iot.UntagResourceInput) (*iot.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateAccountAuditConfiguration(input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error) {
-	return a.client.UpdateAccountAuditConfiguration(input)
+func (a *IoTActivities) UpdateAccountAuditConfiguration(ctx context.Context, input *iot.UpdateAccountAuditConfigurationInput) (*iot.UpdateAccountAuditConfigurationOutput, error) {
+	return a.client.UpdateAccountAuditConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateAuditSuppression(input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error) {
-	return a.client.UpdateAuditSuppression(input)
+func (a *IoTActivities) UpdateAuditSuppression(ctx context.Context, input *iot.UpdateAuditSuppressionInput) (*iot.UpdateAuditSuppressionOutput, error) {
+	return a.client.UpdateAuditSuppressionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateAuthorizer(input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error) {
-	return a.client.UpdateAuthorizer(input)
+func (a *IoTActivities) UpdateAuthorizer(ctx context.Context, input *iot.UpdateAuthorizerInput) (*iot.UpdateAuthorizerOutput, error) {
+	return a.client.UpdateAuthorizerWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateBillingGroup(input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error) {
-	return a.client.UpdateBillingGroup(input)
+func (a *IoTActivities) UpdateBillingGroup(ctx context.Context, input *iot.UpdateBillingGroupInput) (*iot.UpdateBillingGroupOutput, error) {
+	return a.client.UpdateBillingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateCACertificate(input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error) {
-	return a.client.UpdateCACertificate(input)
+func (a *IoTActivities) UpdateCACertificate(ctx context.Context, input *iot.UpdateCACertificateInput) (*iot.UpdateCACertificateOutput, error) {
+	return a.client.UpdateCACertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateCertificate(input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error) {
-	return a.client.UpdateCertificate(input)
+func (a *IoTActivities) UpdateCertificate(ctx context.Context, input *iot.UpdateCertificateInput) (*iot.UpdateCertificateOutput, error) {
+	return a.client.UpdateCertificateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateDimension(input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error) {
-	return a.client.UpdateDimension(input)
+func (a *IoTActivities) UpdateDimension(ctx context.Context, input *iot.UpdateDimensionInput) (*iot.UpdateDimensionOutput, error) {
+	return a.client.UpdateDimensionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateDomainConfiguration(input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error) {
-	return a.client.UpdateDomainConfiguration(input)
+func (a *IoTActivities) UpdateDomainConfiguration(ctx context.Context, input *iot.UpdateDomainConfigurationInput) (*iot.UpdateDomainConfigurationOutput, error) {
+	return a.client.UpdateDomainConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateDynamicThingGroup(input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error) {
-	return a.client.UpdateDynamicThingGroup(input)
+func (a *IoTActivities) UpdateDynamicThingGroup(ctx context.Context, input *iot.UpdateDynamicThingGroupInput) (*iot.UpdateDynamicThingGroupOutput, error) {
+	return a.client.UpdateDynamicThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateEventConfigurations(input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error) {
-	return a.client.UpdateEventConfigurations(input)
+func (a *IoTActivities) UpdateEventConfigurations(ctx context.Context, input *iot.UpdateEventConfigurationsInput) (*iot.UpdateEventConfigurationsOutput, error) {
+	return a.client.UpdateEventConfigurationsWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateIndexingConfiguration(input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error) {
-	return a.client.UpdateIndexingConfiguration(input)
+func (a *IoTActivities) UpdateIndexingConfiguration(ctx context.Context, input *iot.UpdateIndexingConfigurationInput) (*iot.UpdateIndexingConfigurationOutput, error) {
+	return a.client.UpdateIndexingConfigurationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateJob(input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error) {
-	return a.client.UpdateJob(input)
+func (a *IoTActivities) UpdateJob(ctx context.Context, input *iot.UpdateJobInput) (*iot.UpdateJobOutput, error) {
+	return a.client.UpdateJobWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateMitigationAction(input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error) {
-	return a.client.UpdateMitigationAction(input)
+func (a *IoTActivities) UpdateMitigationAction(ctx context.Context, input *iot.UpdateMitigationActionInput) (*iot.UpdateMitigationActionOutput, error) {
+	return a.client.UpdateMitigationActionWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateProvisioningTemplate(input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error) {
-	return a.client.UpdateProvisioningTemplate(input)
+func (a *IoTActivities) UpdateProvisioningTemplate(ctx context.Context, input *iot.UpdateProvisioningTemplateInput) (*iot.UpdateProvisioningTemplateOutput, error) {
+	return a.client.UpdateProvisioningTemplateWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateRoleAlias(input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error) {
-	return a.client.UpdateRoleAlias(input)
+func (a *IoTActivities) UpdateRoleAlias(ctx context.Context, input *iot.UpdateRoleAliasInput) (*iot.UpdateRoleAliasOutput, error) {
+	return a.client.UpdateRoleAliasWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateScheduledAudit(input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error) {
-	return a.client.UpdateScheduledAudit(input)
+func (a *IoTActivities) UpdateScheduledAudit(ctx context.Context, input *iot.UpdateScheduledAuditInput) (*iot.UpdateScheduledAuditOutput, error) {
+	return a.client.UpdateScheduledAuditWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateSecurityProfile(input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error) {
-	return a.client.UpdateSecurityProfile(input)
+func (a *IoTActivities) UpdateSecurityProfile(ctx context.Context, input *iot.UpdateSecurityProfileInput) (*iot.UpdateSecurityProfileOutput, error) {
+	return a.client.UpdateSecurityProfileWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateStream(input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error) {
-	return a.client.UpdateStream(input)
+func (a *IoTActivities) UpdateStream(ctx context.Context, input *iot.UpdateStreamInput) (*iot.UpdateStreamOutput, error) {
+	return a.client.UpdateStreamWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateThing(input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error) {
-	return a.client.UpdateThing(input)
+func (a *IoTActivities) UpdateThing(ctx context.Context, input *iot.UpdateThingInput) (*iot.UpdateThingOutput, error) {
+	return a.client.UpdateThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateThingGroup(input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error) {
-	return a.client.UpdateThingGroup(input)
+func (a *IoTActivities) UpdateThingGroup(ctx context.Context, input *iot.UpdateThingGroupInput) (*iot.UpdateThingGroupOutput, error) {
+	return a.client.UpdateThingGroupWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateThingGroupsForThing(input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error) {
-	return a.client.UpdateThingGroupsForThing(input)
+func (a *IoTActivities) UpdateThingGroupsForThing(ctx context.Context, input *iot.UpdateThingGroupsForThingInput) (*iot.UpdateThingGroupsForThingOutput, error) {
+	return a.client.UpdateThingGroupsForThingWithContext(ctx, input)
 }
 
-func (a *IoTActivities) UpdateTopicRuleDestination(input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error) {
-	return a.client.UpdateTopicRuleDestination(input)
+func (a *IoTActivities) UpdateTopicRuleDestination(ctx context.Context, input *iot.UpdateTopicRuleDestinationInput) (*iot.UpdateTopicRuleDestinationOutput, error) {
+	return a.client.UpdateTopicRuleDestinationWithContext(ctx, input)
 }
 
-func (a *IoTActivities) ValidateSecurityProfileBehaviors(input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
-	return a.client.ValidateSecurityProfileBehaviors(input)
+func (a *IoTActivities) ValidateSecurityProfileBehaviors(ctx context.Context, input *iot.ValidateSecurityProfileBehaviorsInput) (*iot.ValidateSecurityProfileBehaviorsOutput, error) {
+	return a.client.ValidateSecurityProfileBehaviorsWithContext(ctx, input)
 }

@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ivs"
 	"github.com/aws/aws-sdk-go/service/ivs/ivsiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type IVSActivities struct {
 	client ivsiface.IVSAPI
@@ -16,90 +21,90 @@ func NewIVSActivities(session *session.Session, config ...*aws.Config) *IVSActiv
 	return &IVSActivities{client: client}
 }
 
-func (a *IVSActivities) BatchGetChannel(input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error) {
-	return a.client.BatchGetChannel(input)
+func (a *IVSActivities) BatchGetChannel(ctx context.Context, input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error) {
+	return a.client.BatchGetChannelWithContext(ctx, input)
 }
 
-func (a *IVSActivities) BatchGetStreamKey(input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error) {
-	return a.client.BatchGetStreamKey(input)
+func (a *IVSActivities) BatchGetStreamKey(ctx context.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error) {
+	return a.client.BatchGetStreamKeyWithContext(ctx, input)
 }
 
-func (a *IVSActivities) CreateChannel(input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error) {
-	return a.client.CreateChannel(input)
+func (a *IVSActivities) CreateChannel(ctx context.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error) {
+	return a.client.CreateChannelWithContext(ctx, input)
 }
 
-func (a *IVSActivities) CreateStreamKey(input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error) {
-	return a.client.CreateStreamKey(input)
+func (a *IVSActivities) CreateStreamKey(ctx context.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error) {
+	return a.client.CreateStreamKeyWithContext(ctx, input)
 }
 
-func (a *IVSActivities) DeleteChannel(input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error) {
-	return a.client.DeleteChannel(input)
+func (a *IVSActivities) DeleteChannel(ctx context.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error) {
+	return a.client.DeleteChannelWithContext(ctx, input)
 }
 
-func (a *IVSActivities) DeletePlaybackKeyPair(input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error) {
-	return a.client.DeletePlaybackKeyPair(input)
+func (a *IVSActivities) DeletePlaybackKeyPair(ctx context.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error) {
+	return a.client.DeletePlaybackKeyPairWithContext(ctx, input)
 }
 
-func (a *IVSActivities) DeleteStreamKey(input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error) {
-	return a.client.DeleteStreamKey(input)
+func (a *IVSActivities) DeleteStreamKey(ctx context.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error) {
+	return a.client.DeleteStreamKeyWithContext(ctx, input)
 }
 
-func (a *IVSActivities) GetChannel(input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error) {
-	return a.client.GetChannel(input)
+func (a *IVSActivities) GetChannel(ctx context.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error) {
+	return a.client.GetChannelWithContext(ctx, input)
 }
 
-func (a *IVSActivities) GetPlaybackKeyPair(input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error) {
-	return a.client.GetPlaybackKeyPair(input)
+func (a *IVSActivities) GetPlaybackKeyPair(ctx context.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error) {
+	return a.client.GetPlaybackKeyPairWithContext(ctx, input)
 }
 
-func (a *IVSActivities) GetStream(input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error) {
-	return a.client.GetStream(input)
+func (a *IVSActivities) GetStream(ctx context.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error) {
+	return a.client.GetStreamWithContext(ctx, input)
 }
 
-func (a *IVSActivities) GetStreamKey(input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error) {
-	return a.client.GetStreamKey(input)
+func (a *IVSActivities) GetStreamKey(ctx context.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error) {
+	return a.client.GetStreamKeyWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ImportPlaybackKeyPair(input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error) {
-	return a.client.ImportPlaybackKeyPair(input)
+func (a *IVSActivities) ImportPlaybackKeyPair(ctx context.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error) {
+	return a.client.ImportPlaybackKeyPairWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ListChannels(input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error) {
-	return a.client.ListChannels(input)
+func (a *IVSActivities) ListChannels(ctx context.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error) {
+	return a.client.ListChannelsWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ListPlaybackKeyPairs(input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error) {
-	return a.client.ListPlaybackKeyPairs(input)
+func (a *IVSActivities) ListPlaybackKeyPairs(ctx context.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error) {
+	return a.client.ListPlaybackKeyPairsWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ListStreamKeys(input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error) {
-	return a.client.ListStreamKeys(input)
+func (a *IVSActivities) ListStreamKeys(ctx context.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error) {
+	return a.client.ListStreamKeysWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ListStreams(input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error) {
-	return a.client.ListStreams(input)
+func (a *IVSActivities) ListStreams(ctx context.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error) {
+	return a.client.ListStreamsWithContext(ctx, input)
 }
 
-func (a *IVSActivities) ListTagsForResource(input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *IVSActivities) ListTagsForResource(ctx context.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *IVSActivities) PutMetadata(input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error) {
-	return a.client.PutMetadata(input)
+func (a *IVSActivities) PutMetadata(ctx context.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error) {
+	return a.client.PutMetadataWithContext(ctx, input)
 }
 
-func (a *IVSActivities) StopStream(input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error) {
-	return a.client.StopStream(input)
+func (a *IVSActivities) StopStream(ctx context.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error) {
+	return a.client.StopStreamWithContext(ctx, input)
 }
 
-func (a *IVSActivities) TagResource(input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *IVSActivities) TagResource(ctx context.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *IVSActivities) UntagResource(input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *IVSActivities) UntagResource(ctx context.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *IVSActivities) UpdateChannel(input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error) {
-	return a.client.UpdateChannel(input)
+func (a *IVSActivities) UpdateChannel(ctx context.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error) {
+	return a.client.UpdateChannelWithContext(ctx, input)
 }

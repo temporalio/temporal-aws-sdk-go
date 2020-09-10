@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticinference"
 	"github.com/aws/aws-sdk-go/service/elasticinference/elasticinferenceiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type ElasticInferenceActivities struct {
 	client elasticinferenceiface.ElasticInferenceAPI
@@ -16,26 +21,26 @@ func NewElasticInferenceActivities(session *session.Session, config ...*aws.Conf
 	return &ElasticInferenceActivities{client: client}
 }
 
-func (a *ElasticInferenceActivities) DescribeAcceleratorOfferings(input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
-	return a.client.DescribeAcceleratorOfferings(input)
+func (a *ElasticInferenceActivities) DescribeAcceleratorOfferings(ctx context.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
+	return a.client.DescribeAcceleratorOfferingsWithContext(ctx, input)
 }
 
-func (a *ElasticInferenceActivities) DescribeAcceleratorTypes(input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
-	return a.client.DescribeAcceleratorTypes(input)
+func (a *ElasticInferenceActivities) DescribeAcceleratorTypes(ctx context.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
+	return a.client.DescribeAcceleratorTypesWithContext(ctx, input)
 }
 
-func (a *ElasticInferenceActivities) DescribeAccelerators(input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
-	return a.client.DescribeAccelerators(input)
+func (a *ElasticInferenceActivities) DescribeAccelerators(ctx context.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
+	return a.client.DescribeAcceleratorsWithContext(ctx, input)
 }
 
-func (a *ElasticInferenceActivities) ListTagsForResource(input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *ElasticInferenceActivities) ListTagsForResource(ctx context.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *ElasticInferenceActivities) TagResource(input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *ElasticInferenceActivities) TagResource(ctx context.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *ElasticInferenceActivities) UntagResource(input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *ElasticInferenceActivities) UntagResource(ctx context.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }

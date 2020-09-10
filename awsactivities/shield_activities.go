@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/shield"
 	"github.com/aws/aws-sdk-go/service/shield/shieldiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type ShieldActivities struct {
 	client shieldiface.ShieldAPI
@@ -16,94 +21,94 @@ func NewShieldActivities(session *session.Session, config ...*aws.Config) *Shiel
 	return &ShieldActivities{client: client}
 }
 
-func (a *ShieldActivities) AssociateDRTLogBucket(input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error) {
-	return a.client.AssociateDRTLogBucket(input)
+func (a *ShieldActivities) AssociateDRTLogBucket(ctx context.Context, input *shield.AssociateDRTLogBucketInput) (*shield.AssociateDRTLogBucketOutput, error) {
+	return a.client.AssociateDRTLogBucketWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) AssociateDRTRole(input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error) {
-	return a.client.AssociateDRTRole(input)
+func (a *ShieldActivities) AssociateDRTRole(ctx context.Context, input *shield.AssociateDRTRoleInput) (*shield.AssociateDRTRoleOutput, error) {
+	return a.client.AssociateDRTRoleWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) AssociateHealthCheck(input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error) {
-	return a.client.AssociateHealthCheck(input)
+func (a *ShieldActivities) AssociateHealthCheck(ctx context.Context, input *shield.AssociateHealthCheckInput) (*shield.AssociateHealthCheckOutput, error) {
+	return a.client.AssociateHealthCheckWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) AssociateProactiveEngagementDetails(input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
-	return a.client.AssociateProactiveEngagementDetails(input)
+func (a *ShieldActivities) AssociateProactiveEngagementDetails(ctx context.Context, input *shield.AssociateProactiveEngagementDetailsInput) (*shield.AssociateProactiveEngagementDetailsOutput, error) {
+	return a.client.AssociateProactiveEngagementDetailsWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) CreateProtection(input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error) {
-	return a.client.CreateProtection(input)
+func (a *ShieldActivities) CreateProtection(ctx context.Context, input *shield.CreateProtectionInput) (*shield.CreateProtectionOutput, error) {
+	return a.client.CreateProtectionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) CreateSubscription(input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error) {
-	return a.client.CreateSubscription(input)
+func (a *ShieldActivities) CreateSubscription(ctx context.Context, input *shield.CreateSubscriptionInput) (*shield.CreateSubscriptionOutput, error) {
+	return a.client.CreateSubscriptionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DeleteProtection(input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error) {
-	return a.client.DeleteProtection(input)
+func (a *ShieldActivities) DeleteProtection(ctx context.Context, input *shield.DeleteProtectionInput) (*shield.DeleteProtectionOutput, error) {
+	return a.client.DeleteProtectionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DeleteSubscription(input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error) {
-	return a.client.DeleteSubscription(input)
+func (a *ShieldActivities) DeleteSubscription(ctx context.Context, input *shield.DeleteSubscriptionInput) (*shield.DeleteSubscriptionOutput, error) {
+	return a.client.DeleteSubscriptionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DescribeAttack(input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error) {
-	return a.client.DescribeAttack(input)
+func (a *ShieldActivities) DescribeAttack(ctx context.Context, input *shield.DescribeAttackInput) (*shield.DescribeAttackOutput, error) {
+	return a.client.DescribeAttackWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DescribeDRTAccess(input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error) {
-	return a.client.DescribeDRTAccess(input)
+func (a *ShieldActivities) DescribeDRTAccess(ctx context.Context, input *shield.DescribeDRTAccessInput) (*shield.DescribeDRTAccessOutput, error) {
+	return a.client.DescribeDRTAccessWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DescribeEmergencyContactSettings(input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error) {
-	return a.client.DescribeEmergencyContactSettings(input)
+func (a *ShieldActivities) DescribeEmergencyContactSettings(ctx context.Context, input *shield.DescribeEmergencyContactSettingsInput) (*shield.DescribeEmergencyContactSettingsOutput, error) {
+	return a.client.DescribeEmergencyContactSettingsWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DescribeProtection(input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error) {
-	return a.client.DescribeProtection(input)
+func (a *ShieldActivities) DescribeProtection(ctx context.Context, input *shield.DescribeProtectionInput) (*shield.DescribeProtectionOutput, error) {
+	return a.client.DescribeProtectionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DescribeSubscription(input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error) {
-	return a.client.DescribeSubscription(input)
+func (a *ShieldActivities) DescribeSubscription(ctx context.Context, input *shield.DescribeSubscriptionInput) (*shield.DescribeSubscriptionOutput, error) {
+	return a.client.DescribeSubscriptionWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DisableProactiveEngagement(input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error) {
-	return a.client.DisableProactiveEngagement(input)
+func (a *ShieldActivities) DisableProactiveEngagement(ctx context.Context, input *shield.DisableProactiveEngagementInput) (*shield.DisableProactiveEngagementOutput, error) {
+	return a.client.DisableProactiveEngagementWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DisassociateDRTLogBucket(input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error) {
-	return a.client.DisassociateDRTLogBucket(input)
+func (a *ShieldActivities) DisassociateDRTLogBucket(ctx context.Context, input *shield.DisassociateDRTLogBucketInput) (*shield.DisassociateDRTLogBucketOutput, error) {
+	return a.client.DisassociateDRTLogBucketWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DisassociateDRTRole(input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error) {
-	return a.client.DisassociateDRTRole(input)
+func (a *ShieldActivities) DisassociateDRTRole(ctx context.Context, input *shield.DisassociateDRTRoleInput) (*shield.DisassociateDRTRoleOutput, error) {
+	return a.client.DisassociateDRTRoleWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) DisassociateHealthCheck(input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error) {
-	return a.client.DisassociateHealthCheck(input)
+func (a *ShieldActivities) DisassociateHealthCheck(ctx context.Context, input *shield.DisassociateHealthCheckInput) (*shield.DisassociateHealthCheckOutput, error) {
+	return a.client.DisassociateHealthCheckWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) EnableProactiveEngagement(input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error) {
-	return a.client.EnableProactiveEngagement(input)
+func (a *ShieldActivities) EnableProactiveEngagement(ctx context.Context, input *shield.EnableProactiveEngagementInput) (*shield.EnableProactiveEngagementOutput, error) {
+	return a.client.EnableProactiveEngagementWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) GetSubscriptionState(input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error) {
-	return a.client.GetSubscriptionState(input)
+func (a *ShieldActivities) GetSubscriptionState(ctx context.Context, input *shield.GetSubscriptionStateInput) (*shield.GetSubscriptionStateOutput, error) {
+	return a.client.GetSubscriptionStateWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) ListAttacks(input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error) {
-	return a.client.ListAttacks(input)
+func (a *ShieldActivities) ListAttacks(ctx context.Context, input *shield.ListAttacksInput) (*shield.ListAttacksOutput, error) {
+	return a.client.ListAttacksWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) ListProtections(input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error) {
-	return a.client.ListProtections(input)
+func (a *ShieldActivities) ListProtections(ctx context.Context, input *shield.ListProtectionsInput) (*shield.ListProtectionsOutput, error) {
+	return a.client.ListProtectionsWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) UpdateEmergencyContactSettings(input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error) {
-	return a.client.UpdateEmergencyContactSettings(input)
+func (a *ShieldActivities) UpdateEmergencyContactSettings(ctx context.Context, input *shield.UpdateEmergencyContactSettingsInput) (*shield.UpdateEmergencyContactSettingsOutput, error) {
+	return a.client.UpdateEmergencyContactSettingsWithContext(ctx, input)
 }
 
-func (a *ShieldActivities) UpdateSubscription(input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error) {
-	return a.client.UpdateSubscription(input)
+func (a *ShieldActivities) UpdateSubscription(ctx context.Context, input *shield.UpdateSubscriptionInput) (*shield.UpdateSubscriptionOutput, error) {
+	return a.client.UpdateSubscriptionWithContext(ctx, input)
 }

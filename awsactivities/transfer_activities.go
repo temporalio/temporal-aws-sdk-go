@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/transfer"
 	"github.com/aws/aws-sdk-go/service/transfer/transferiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type TransferActivities struct {
 	client transferiface.TransferAPI
@@ -16,82 +21,82 @@ func NewTransferActivities(session *session.Session, config ...*aws.Config) *Tra
 	return &TransferActivities{client: client}
 }
 
-func (a *TransferActivities) CreateServer(input *transfer.CreateServerInput) (*transfer.CreateServerOutput, error) {
-	return a.client.CreateServer(input)
+func (a *TransferActivities) CreateServer(ctx context.Context, input *transfer.CreateServerInput) (*transfer.CreateServerOutput, error) {
+	return a.client.CreateServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) CreateUser(input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error) {
-	return a.client.CreateUser(input)
+func (a *TransferActivities) CreateUser(ctx context.Context, input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error) {
+	return a.client.CreateUserWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DeleteServer(input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error) {
-	return a.client.DeleteServer(input)
+func (a *TransferActivities) DeleteServer(ctx context.Context, input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error) {
+	return a.client.DeleteServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DeleteSshPublicKey(input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error) {
-	return a.client.DeleteSshPublicKey(input)
+func (a *TransferActivities) DeleteSshPublicKey(ctx context.Context, input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error) {
+	return a.client.DeleteSshPublicKeyWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DeleteUser(input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error) {
-	return a.client.DeleteUser(input)
+func (a *TransferActivities) DeleteUser(ctx context.Context, input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error) {
+	return a.client.DeleteUserWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DescribeSecurityPolicy(input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error) {
-	return a.client.DescribeSecurityPolicy(input)
+func (a *TransferActivities) DescribeSecurityPolicy(ctx context.Context, input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error) {
+	return a.client.DescribeSecurityPolicyWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DescribeServer(input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error) {
-	return a.client.DescribeServer(input)
+func (a *TransferActivities) DescribeServer(ctx context.Context, input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error) {
+	return a.client.DescribeServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) DescribeUser(input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error) {
-	return a.client.DescribeUser(input)
+func (a *TransferActivities) DescribeUser(ctx context.Context, input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error) {
+	return a.client.DescribeUserWithContext(ctx, input)
 }
 
-func (a *TransferActivities) ImportSshPublicKey(input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error) {
-	return a.client.ImportSshPublicKey(input)
+func (a *TransferActivities) ImportSshPublicKey(ctx context.Context, input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error) {
+	return a.client.ImportSshPublicKeyWithContext(ctx, input)
 }
 
-func (a *TransferActivities) ListSecurityPolicies(input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error) {
-	return a.client.ListSecurityPolicies(input)
+func (a *TransferActivities) ListSecurityPolicies(ctx context.Context, input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error) {
+	return a.client.ListSecurityPoliciesWithContext(ctx, input)
 }
 
-func (a *TransferActivities) ListServers(input *transfer.ListServersInput) (*transfer.ListServersOutput, error) {
-	return a.client.ListServers(input)
+func (a *TransferActivities) ListServers(ctx context.Context, input *transfer.ListServersInput) (*transfer.ListServersOutput, error) {
+	return a.client.ListServersWithContext(ctx, input)
 }
 
-func (a *TransferActivities) ListTagsForResource(input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *TransferActivities) ListTagsForResource(ctx context.Context, input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *TransferActivities) ListUsers(input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error) {
-	return a.client.ListUsers(input)
+func (a *TransferActivities) ListUsers(ctx context.Context, input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error) {
+	return a.client.ListUsersWithContext(ctx, input)
 }
 
-func (a *TransferActivities) StartServer(input *transfer.StartServerInput) (*transfer.StartServerOutput, error) {
-	return a.client.StartServer(input)
+func (a *TransferActivities) StartServer(ctx context.Context, input *transfer.StartServerInput) (*transfer.StartServerOutput, error) {
+	return a.client.StartServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) StopServer(input *transfer.StopServerInput) (*transfer.StopServerOutput, error) {
-	return a.client.StopServer(input)
+func (a *TransferActivities) StopServer(ctx context.Context, input *transfer.StopServerInput) (*transfer.StopServerOutput, error) {
+	return a.client.StopServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) TagResource(input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *TransferActivities) TagResource(ctx context.Context, input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *TransferActivities) TestIdentityProvider(input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error) {
-	return a.client.TestIdentityProvider(input)
+func (a *TransferActivities) TestIdentityProvider(ctx context.Context, input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error) {
+	return a.client.TestIdentityProviderWithContext(ctx, input)
 }
 
-func (a *TransferActivities) UntagResource(input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *TransferActivities) UntagResource(ctx context.Context, input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *TransferActivities) UpdateServer(input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error) {
-	return a.client.UpdateServer(input)
+func (a *TransferActivities) UpdateServer(ctx context.Context, input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error) {
+	return a.client.UpdateServerWithContext(ctx, input)
 }
 
-func (a *TransferActivities) UpdateUser(input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error) {
-	return a.client.UpdateUser(input)
+func (a *TransferActivities) UpdateUser(ctx context.Context, input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error) {
+	return a.client.UpdateUserWithContext(ctx, input)
 }

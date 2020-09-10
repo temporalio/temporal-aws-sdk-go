@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codepipeline"
 	"github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type CodePipelineActivities struct {
 	client codepipelineiface.CodePipelineAPI
@@ -16,150 +21,174 @@ func NewCodePipelineActivities(session *session.Session, config ...*aws.Config) 
 	return &CodePipelineActivities{client: client}
 }
 
-func (a *CodePipelineActivities) AcknowledgeJob(input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error) {
-	return a.client.AcknowledgeJob(input)
+func (a *CodePipelineActivities) AcknowledgeJob(ctx context.Context, input *codepipeline.AcknowledgeJobInput) (*codepipeline.AcknowledgeJobOutput, error) {
+	return a.client.AcknowledgeJobWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) AcknowledgeThirdPartyJob(input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
-	return a.client.AcknowledgeThirdPartyJob(input)
+func (a *CodePipelineActivities) AcknowledgeThirdPartyJob(ctx context.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.AcknowledgeThirdPartyJobWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) CreateCustomActionType(input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error) {
-	return a.client.CreateCustomActionType(input)
+func (a *CodePipelineActivities) CreateCustomActionType(ctx context.Context, input *codepipeline.CreateCustomActionTypeInput) (*codepipeline.CreateCustomActionTypeOutput, error) {
+	return a.client.CreateCustomActionTypeWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) CreatePipeline(input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error) {
-	return a.client.CreatePipeline(input)
+func (a *CodePipelineActivities) CreatePipeline(ctx context.Context, input *codepipeline.CreatePipelineInput) (*codepipeline.CreatePipelineOutput, error) {
+	return a.client.CreatePipelineWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) DeleteCustomActionType(input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error) {
-	return a.client.DeleteCustomActionType(input)
+func (a *CodePipelineActivities) DeleteCustomActionType(ctx context.Context, input *codepipeline.DeleteCustomActionTypeInput) (*codepipeline.DeleteCustomActionTypeOutput, error) {
+	return a.client.DeleteCustomActionTypeWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) DeletePipeline(input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error) {
-	return a.client.DeletePipeline(input)
+func (a *CodePipelineActivities) DeletePipeline(ctx context.Context, input *codepipeline.DeletePipelineInput) (*codepipeline.DeletePipelineOutput, error) {
+	return a.client.DeletePipelineWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) DeleteWebhook(input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error) {
-	return a.client.DeleteWebhook(input)
+func (a *CodePipelineActivities) DeleteWebhook(ctx context.Context, input *codepipeline.DeleteWebhookInput) (*codepipeline.DeleteWebhookOutput, error) {
+	return a.client.DeleteWebhookWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) DeregisterWebhookWithThirdParty(input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error) {
-	return a.client.DeregisterWebhookWithThirdParty(input)
+func (a *CodePipelineActivities) DeregisterWebhookWithThirdParty(ctx context.Context, input *codepipeline.DeregisterWebhookWithThirdPartyInput) (*codepipeline.DeregisterWebhookWithThirdPartyOutput, error) {
+	return a.client.DeregisterWebhookWithThirdPartyWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) DisableStageTransition(input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error) {
-	return a.client.DisableStageTransition(input)
+func (a *CodePipelineActivities) DisableStageTransition(ctx context.Context, input *codepipeline.DisableStageTransitionInput) (*codepipeline.DisableStageTransitionOutput, error) {
+	return a.client.DisableStageTransitionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) EnableStageTransition(input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error) {
-	return a.client.EnableStageTransition(input)
+func (a *CodePipelineActivities) EnableStageTransition(ctx context.Context, input *codepipeline.EnableStageTransitionInput) (*codepipeline.EnableStageTransitionOutput, error) {
+	return a.client.EnableStageTransitionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) GetJobDetails(input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error) {
-	return a.client.GetJobDetails(input)
+func (a *CodePipelineActivities) GetJobDetails(ctx context.Context, input *codepipeline.GetJobDetailsInput) (*codepipeline.GetJobDetailsOutput, error) {
+	return a.client.GetJobDetailsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) GetPipeline(input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error) {
-	return a.client.GetPipeline(input)
+func (a *CodePipelineActivities) GetPipeline(ctx context.Context, input *codepipeline.GetPipelineInput) (*codepipeline.GetPipelineOutput, error) {
+	return a.client.GetPipelineWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) GetPipelineExecution(input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error) {
-	return a.client.GetPipelineExecution(input)
+func (a *CodePipelineActivities) GetPipelineExecution(ctx context.Context, input *codepipeline.GetPipelineExecutionInput) (*codepipeline.GetPipelineExecutionOutput, error) {
+	return a.client.GetPipelineExecutionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) GetPipelineState(input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error) {
-	return a.client.GetPipelineState(input)
+func (a *CodePipelineActivities) GetPipelineState(ctx context.Context, input *codepipeline.GetPipelineStateInput) (*codepipeline.GetPipelineStateOutput, error) {
+	return a.client.GetPipelineStateWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) GetThirdPartyJobDetails(input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
-	return a.client.GetThirdPartyJobDetails(input)
+func (a *CodePipelineActivities) GetThirdPartyJobDetails(ctx context.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.GetThirdPartyJobDetailsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListActionExecutions(input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error) {
-	return a.client.ListActionExecutions(input)
+func (a *CodePipelineActivities) ListActionExecutions(ctx context.Context, input *codepipeline.ListActionExecutionsInput) (*codepipeline.ListActionExecutionsOutput, error) {
+	return a.client.ListActionExecutionsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListActionTypes(input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error) {
-	return a.client.ListActionTypes(input)
+func (a *CodePipelineActivities) ListActionTypes(ctx context.Context, input *codepipeline.ListActionTypesInput) (*codepipeline.ListActionTypesOutput, error) {
+	return a.client.ListActionTypesWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListPipelineExecutions(input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error) {
-	return a.client.ListPipelineExecutions(input)
+func (a *CodePipelineActivities) ListPipelineExecutions(ctx context.Context, input *codepipeline.ListPipelineExecutionsInput) (*codepipeline.ListPipelineExecutionsOutput, error) {
+	return a.client.ListPipelineExecutionsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListPipelines(input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error) {
-	return a.client.ListPipelines(input)
+func (a *CodePipelineActivities) ListPipelines(ctx context.Context, input *codepipeline.ListPipelinesInput) (*codepipeline.ListPipelinesOutput, error) {
+	return a.client.ListPipelinesWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListTagsForResource(input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *CodePipelineActivities) ListTagsForResource(ctx context.Context, input *codepipeline.ListTagsForResourceInput) (*codepipeline.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) ListWebhooks(input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error) {
-	return a.client.ListWebhooks(input)
+func (a *CodePipelineActivities) ListWebhooks(ctx context.Context, input *codepipeline.ListWebhooksInput) (*codepipeline.ListWebhooksOutput, error) {
+	return a.client.ListWebhooksWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PollForJobs(input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error) {
-	return a.client.PollForJobs(input)
+func (a *CodePipelineActivities) PollForJobs(ctx context.Context, input *codepipeline.PollForJobsInput) (*codepipeline.PollForJobsOutput, error) {
+	return a.client.PollForJobsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PollForThirdPartyJobs(input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error) {
-	return a.client.PollForThirdPartyJobs(input)
+func (a *CodePipelineActivities) PollForThirdPartyJobs(ctx context.Context, input *codepipeline.PollForThirdPartyJobsInput) (*codepipeline.PollForThirdPartyJobsOutput, error) {
+	return a.client.PollForThirdPartyJobsWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutActionRevision(input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error) {
-	return a.client.PutActionRevision(input)
+func (a *CodePipelineActivities) PutActionRevision(ctx context.Context, input *codepipeline.PutActionRevisionInput) (*codepipeline.PutActionRevisionOutput, error) {
+	return a.client.PutActionRevisionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutApprovalResult(input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error) {
-	return a.client.PutApprovalResult(input)
+func (a *CodePipelineActivities) PutApprovalResult(ctx context.Context, input *codepipeline.PutApprovalResultInput) (*codepipeline.PutApprovalResultOutput, error) {
+	return a.client.PutApprovalResultWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutJobFailureResult(input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error) {
-	return a.client.PutJobFailureResult(input)
+func (a *CodePipelineActivities) PutJobFailureResult(ctx context.Context, input *codepipeline.PutJobFailureResultInput) (*codepipeline.PutJobFailureResultOutput, error) {
+	return a.client.PutJobFailureResultWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutJobSuccessResult(input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error) {
-	return a.client.PutJobSuccessResult(input)
+func (a *CodePipelineActivities) PutJobSuccessResult(ctx context.Context, input *codepipeline.PutJobSuccessResultInput) (*codepipeline.PutJobSuccessResultOutput, error) {
+	return a.client.PutJobSuccessResultWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutThirdPartyJobFailureResult(input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
-	return a.client.PutThirdPartyJobFailureResult(input)
+func (a *CodePipelineActivities) PutThirdPartyJobFailureResult(ctx context.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.PutThirdPartyJobFailureResultWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutThirdPartyJobSuccessResult(input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
-	return a.client.PutThirdPartyJobSuccessResult(input)
+func (a *CodePipelineActivities) PutThirdPartyJobSuccessResult(ctx context.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.PutThirdPartyJobSuccessResultWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) PutWebhook(input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error) {
-	return a.client.PutWebhook(input)
+func (a *CodePipelineActivities) PutWebhook(ctx context.Context, input *codepipeline.PutWebhookInput) (*codepipeline.PutWebhookOutput, error) {
+	return a.client.PutWebhookWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) RegisterWebhookWithThirdParty(input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error) {
-	return a.client.RegisterWebhookWithThirdParty(input)
+func (a *CodePipelineActivities) RegisterWebhookWithThirdParty(ctx context.Context, input *codepipeline.RegisterWebhookWithThirdPartyInput) (*codepipeline.RegisterWebhookWithThirdPartyOutput, error) {
+	return a.client.RegisterWebhookWithThirdPartyWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) RetryStageExecution(input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error) {
-	return a.client.RetryStageExecution(input)
+func (a *CodePipelineActivities) RetryStageExecution(ctx context.Context, input *codepipeline.RetryStageExecutionInput) (*codepipeline.RetryStageExecutionOutput, error) {
+	return a.client.RetryStageExecutionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) StartPipelineExecution(input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error) {
-	return a.client.StartPipelineExecution(input)
+func (a *CodePipelineActivities) StartPipelineExecution(ctx context.Context, input *codepipeline.StartPipelineExecutionInput) (*codepipeline.StartPipelineExecutionOutput, error) {
+	return a.client.StartPipelineExecutionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) StopPipelineExecution(input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error) {
-	return a.client.StopPipelineExecution(input)
+func (a *CodePipelineActivities) StopPipelineExecution(ctx context.Context, input *codepipeline.StopPipelineExecutionInput) (*codepipeline.StopPipelineExecutionOutput, error) {
+	return a.client.StopPipelineExecutionWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) TagResource(input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *CodePipelineActivities) TagResource(ctx context.Context, input *codepipeline.TagResourceInput) (*codepipeline.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) UntagResource(input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *CodePipelineActivities) UntagResource(ctx context.Context, input *codepipeline.UntagResourceInput) (*codepipeline.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *CodePipelineActivities) UpdatePipeline(input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error) {
-	return a.client.UpdatePipeline(input)
+func (a *CodePipelineActivities) UpdatePipeline(ctx context.Context, input *codepipeline.UpdatePipelineInput) (*codepipeline.UpdatePipelineOutput, error) {
+	return a.client.UpdatePipelineWithContext(ctx, input)
 }

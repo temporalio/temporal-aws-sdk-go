@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/pricing"
 	"github.com/aws/aws-sdk-go/service/pricing/pricingiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type PricingActivities struct {
 	client pricingiface.PricingAPI
@@ -16,14 +21,14 @@ func NewPricingActivities(session *session.Session, config ...*aws.Config) *Pric
 	return &PricingActivities{client: client}
 }
 
-func (a *PricingActivities) DescribeServices(input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
-	return a.client.DescribeServices(input)
+func (a *PricingActivities) DescribeServices(ctx context.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
+	return a.client.DescribeServicesWithContext(ctx, input)
 }
 
-func (a *PricingActivities) GetAttributeValues(input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
-	return a.client.GetAttributeValues(input)
+func (a *PricingActivities) GetAttributeValues(ctx context.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
+	return a.client.GetAttributeValuesWithContext(ctx, input)
 }
 
-func (a *PricingActivities) GetProducts(input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
-	return a.client.GetProducts(input)
+func (a *PricingActivities) GetProducts(ctx context.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
+	return a.client.GetProductsWithContext(ctx, input)
 }

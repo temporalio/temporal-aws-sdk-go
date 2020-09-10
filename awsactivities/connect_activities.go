@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/connect"
 	"github.com/aws/aws-sdk-go/service/connect/connectiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type ConnectActivities struct {
 	client connectiface.ConnectAPI
@@ -16,134 +21,146 @@ func NewConnectActivities(session *session.Session, config ...*aws.Config) *Conn
 	return &ConnectActivities{client: client}
 }
 
-func (a *ConnectActivities) CreateUser(input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
-	return a.client.CreateUser(input)
+func (a *ConnectActivities) CreateUser(ctx context.Context, input *connect.CreateUserInput) (*connect.CreateUserOutput, error) {
+	return a.client.CreateUserWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) DeleteUser(input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error) {
-	return a.client.DeleteUser(input)
+func (a *ConnectActivities) DeleteUser(ctx context.Context, input *connect.DeleteUserInput) (*connect.DeleteUserOutput, error) {
+	return a.client.DeleteUserWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) DescribeUser(input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
-	return a.client.DescribeUser(input)
+func (a *ConnectActivities) DescribeUser(ctx context.Context, input *connect.DescribeUserInput) (*connect.DescribeUserOutput, error) {
+	return a.client.DescribeUserWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) DescribeUserHierarchyGroup(input *connect.DescribeUserHierarchyGroupInput) (*connect.DescribeUserHierarchyGroupOutput, error) {
-	return a.client.DescribeUserHierarchyGroup(input)
+func (a *ConnectActivities) DescribeUserHierarchyGroup(ctx context.Context, input *connect.DescribeUserHierarchyGroupInput) (*connect.DescribeUserHierarchyGroupOutput, error) {
+	return a.client.DescribeUserHierarchyGroupWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) DescribeUserHierarchyStructure(input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error) {
-	return a.client.DescribeUserHierarchyStructure(input)
+func (a *ConnectActivities) DescribeUserHierarchyStructure(ctx context.Context, input *connect.DescribeUserHierarchyStructureInput) (*connect.DescribeUserHierarchyStructureOutput, error) {
+	return a.client.DescribeUserHierarchyStructureWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) GetContactAttributes(input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
-	return a.client.GetContactAttributes(input)
+func (a *ConnectActivities) GetContactAttributes(ctx context.Context, input *connect.GetContactAttributesInput) (*connect.GetContactAttributesOutput, error) {
+	return a.client.GetContactAttributesWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) GetCurrentMetricData(input *connect.GetCurrentMetricDataInput) (*connect.GetCurrentMetricDataOutput, error) {
-	return a.client.GetCurrentMetricData(input)
+func (a *ConnectActivities) GetCurrentMetricData(ctx context.Context, input *connect.GetCurrentMetricDataInput) (*connect.GetCurrentMetricDataOutput, error) {
+	return a.client.GetCurrentMetricDataWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) GetFederationToken(input *connect.GetFederationTokenInput) (*connect.GetFederationTokenOutput, error) {
-	return a.client.GetFederationToken(input)
+func (a *ConnectActivities) GetFederationToken(ctx context.Context, input *connect.GetFederationTokenInput) (*connect.GetFederationTokenOutput, error) {
+	return a.client.GetFederationTokenWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) GetMetricData(input *connect.GetMetricDataInput) (*connect.GetMetricDataOutput, error) {
-	return a.client.GetMetricData(input)
+func (a *ConnectActivities) GetMetricData(ctx context.Context, input *connect.GetMetricDataInput) (*connect.GetMetricDataOutput, error) {
+	return a.client.GetMetricDataWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListContactFlows(input *connect.ListContactFlowsInput) (*connect.ListContactFlowsOutput, error) {
-	return a.client.ListContactFlows(input)
+func (a *ConnectActivities) ListContactFlows(ctx context.Context, input *connect.ListContactFlowsInput) (*connect.ListContactFlowsOutput, error) {
+	return a.client.ListContactFlowsWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListHoursOfOperations(input *connect.ListHoursOfOperationsInput) (*connect.ListHoursOfOperationsOutput, error) {
-	return a.client.ListHoursOfOperations(input)
+func (a *ConnectActivities) ListHoursOfOperations(ctx context.Context, input *connect.ListHoursOfOperationsInput) (*connect.ListHoursOfOperationsOutput, error) {
+	return a.client.ListHoursOfOperationsWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListPhoneNumbers(input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error) {
-	return a.client.ListPhoneNumbers(input)
+func (a *ConnectActivities) ListPhoneNumbers(ctx context.Context, input *connect.ListPhoneNumbersInput) (*connect.ListPhoneNumbersOutput, error) {
+	return a.client.ListPhoneNumbersWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListQueues(input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
-	return a.client.ListQueues(input)
+func (a *ConnectActivities) ListQueues(ctx context.Context, input *connect.ListQueuesInput) (*connect.ListQueuesOutput, error) {
+	return a.client.ListQueuesWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListRoutingProfiles(input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
-	return a.client.ListRoutingProfiles(input)
+func (a *ConnectActivities) ListRoutingProfiles(ctx context.Context, input *connect.ListRoutingProfilesInput) (*connect.ListRoutingProfilesOutput, error) {
+	return a.client.ListRoutingProfilesWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListSecurityProfiles(input *connect.ListSecurityProfilesInput) (*connect.ListSecurityProfilesOutput, error) {
-	return a.client.ListSecurityProfiles(input)
+func (a *ConnectActivities) ListSecurityProfiles(ctx context.Context, input *connect.ListSecurityProfilesInput) (*connect.ListSecurityProfilesOutput, error) {
+	return a.client.ListSecurityProfilesWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListTagsForResource(input *connect.ListTagsForResourceInput) (*connect.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *ConnectActivities) ListTagsForResource(ctx context.Context, input *connect.ListTagsForResourceInput) (*connect.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListUserHierarchyGroups(input *connect.ListUserHierarchyGroupsInput) (*connect.ListUserHierarchyGroupsOutput, error) {
-	return a.client.ListUserHierarchyGroups(input)
+func (a *ConnectActivities) ListUserHierarchyGroups(ctx context.Context, input *connect.ListUserHierarchyGroupsInput) (*connect.ListUserHierarchyGroupsOutput, error) {
+	return a.client.ListUserHierarchyGroupsWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ListUsers(input *connect.ListUsersInput) (*connect.ListUsersOutput, error) {
-	return a.client.ListUsers(input)
+func (a *ConnectActivities) ListUsers(ctx context.Context, input *connect.ListUsersInput) (*connect.ListUsersOutput, error) {
+	return a.client.ListUsersWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) ResumeContactRecording(input *connect.ResumeContactRecordingInput) (*connect.ResumeContactRecordingOutput, error) {
-	return a.client.ResumeContactRecording(input)
+func (a *ConnectActivities) ResumeContactRecording(ctx context.Context, input *connect.ResumeContactRecordingInput) (*connect.ResumeContactRecordingOutput, error) {
+	return a.client.ResumeContactRecordingWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) StartChatContact(input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error) {
-	return a.client.StartChatContact(input)
+func (a *ConnectActivities) StartChatContact(ctx context.Context, input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.StartChatContactWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) StartContactRecording(input *connect.StartContactRecordingInput) (*connect.StartContactRecordingOutput, error) {
-	return a.client.StartContactRecording(input)
+func (a *ConnectActivities) StartContactRecording(ctx context.Context, input *connect.StartContactRecordingInput) (*connect.StartContactRecordingOutput, error) {
+	return a.client.StartContactRecordingWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) StartOutboundVoiceContact(input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error) {
-	return a.client.StartOutboundVoiceContact(input)
+func (a *ConnectActivities) StartOutboundVoiceContact(ctx context.Context, input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.StartOutboundVoiceContactWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) StopContact(input *connect.StopContactInput) (*connect.StopContactOutput, error) {
-	return a.client.StopContact(input)
+func (a *ConnectActivities) StopContact(ctx context.Context, input *connect.StopContactInput) (*connect.StopContactOutput, error) {
+	return a.client.StopContactWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) StopContactRecording(input *connect.StopContactRecordingInput) (*connect.StopContactRecordingOutput, error) {
-	return a.client.StopContactRecording(input)
+func (a *ConnectActivities) StopContactRecording(ctx context.Context, input *connect.StopContactRecordingInput) (*connect.StopContactRecordingOutput, error) {
+	return a.client.StopContactRecordingWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) SuspendContactRecording(input *connect.SuspendContactRecordingInput) (*connect.SuspendContactRecordingOutput, error) {
-	return a.client.SuspendContactRecording(input)
+func (a *ConnectActivities) SuspendContactRecording(ctx context.Context, input *connect.SuspendContactRecordingInput) (*connect.SuspendContactRecordingOutput, error) {
+	return a.client.SuspendContactRecordingWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) TagResource(input *connect.TagResourceInput) (*connect.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *ConnectActivities) TagResource(ctx context.Context, input *connect.TagResourceInput) (*connect.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UntagResource(input *connect.UntagResourceInput) (*connect.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *ConnectActivities) UntagResource(ctx context.Context, input *connect.UntagResourceInput) (*connect.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateContactAttributes(input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error) {
-	return a.client.UpdateContactAttributes(input)
+func (a *ConnectActivities) UpdateContactAttributes(ctx context.Context, input *connect.UpdateContactAttributesInput) (*connect.UpdateContactAttributesOutput, error) {
+	return a.client.UpdateContactAttributesWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateUserHierarchy(input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {
-	return a.client.UpdateUserHierarchy(input)
+func (a *ConnectActivities) UpdateUserHierarchy(ctx context.Context, input *connect.UpdateUserHierarchyInput) (*connect.UpdateUserHierarchyOutput, error) {
+	return a.client.UpdateUserHierarchyWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateUserIdentityInfo(input *connect.UpdateUserIdentityInfoInput) (*connect.UpdateUserIdentityInfoOutput, error) {
-	return a.client.UpdateUserIdentityInfo(input)
+func (a *ConnectActivities) UpdateUserIdentityInfo(ctx context.Context, input *connect.UpdateUserIdentityInfoInput) (*connect.UpdateUserIdentityInfoOutput, error) {
+	return a.client.UpdateUserIdentityInfoWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateUserPhoneConfig(input *connect.UpdateUserPhoneConfigInput) (*connect.UpdateUserPhoneConfigOutput, error) {
-	return a.client.UpdateUserPhoneConfig(input)
+func (a *ConnectActivities) UpdateUserPhoneConfig(ctx context.Context, input *connect.UpdateUserPhoneConfigInput) (*connect.UpdateUserPhoneConfigOutput, error) {
+	return a.client.UpdateUserPhoneConfigWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateUserRoutingProfile(input *connect.UpdateUserRoutingProfileInput) (*connect.UpdateUserRoutingProfileOutput, error) {
-	return a.client.UpdateUserRoutingProfile(input)
+func (a *ConnectActivities) UpdateUserRoutingProfile(ctx context.Context, input *connect.UpdateUserRoutingProfileInput) (*connect.UpdateUserRoutingProfileOutput, error) {
+	return a.client.UpdateUserRoutingProfileWithContext(ctx, input)
 }
 
-func (a *ConnectActivities) UpdateUserSecurityProfiles(input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error) {
-	return a.client.UpdateUserSecurityProfiles(input)
+func (a *ConnectActivities) UpdateUserSecurityProfiles(ctx context.Context, input *connect.UpdateUserSecurityProfilesInput) (*connect.UpdateUserSecurityProfilesOutput, error) {
+	return a.client.UpdateUserSecurityProfilesWithContext(ctx, input)
 }

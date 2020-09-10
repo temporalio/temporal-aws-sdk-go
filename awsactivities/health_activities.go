@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/health"
 	"github.com/aws/aws-sdk-go/service/health/healthiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type HealthActivities struct {
 	client healthiface.HealthAPI
@@ -16,54 +21,54 @@ func NewHealthActivities(session *session.Session, config ...*aws.Config) *Healt
 	return &HealthActivities{client: client}
 }
 
-func (a *HealthActivities) DescribeAffectedAccountsForOrganization(input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
-	return a.client.DescribeAffectedAccountsForOrganization(input)
+func (a *HealthActivities) DescribeAffectedAccountsForOrganization(ctx context.Context, input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
+	return a.client.DescribeAffectedAccountsForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeAffectedEntities(input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error) {
-	return a.client.DescribeAffectedEntities(input)
+func (a *HealthActivities) DescribeAffectedEntities(ctx context.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error) {
+	return a.client.DescribeAffectedEntitiesWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeAffectedEntitiesForOrganization(input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
-	return a.client.DescribeAffectedEntitiesForOrganization(input)
+func (a *HealthActivities) DescribeAffectedEntitiesForOrganization(ctx context.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
+	return a.client.DescribeAffectedEntitiesForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEntityAggregates(input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error) {
-	return a.client.DescribeEntityAggregates(input)
+func (a *HealthActivities) DescribeEntityAggregates(ctx context.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error) {
+	return a.client.DescribeEntityAggregatesWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEventAggregates(input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error) {
-	return a.client.DescribeEventAggregates(input)
+func (a *HealthActivities) DescribeEventAggregates(ctx context.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error) {
+	return a.client.DescribeEventAggregatesWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEventDetails(input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error) {
-	return a.client.DescribeEventDetails(input)
+func (a *HealthActivities) DescribeEventDetails(ctx context.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error) {
+	return a.client.DescribeEventDetailsWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEventDetailsForOrganization(input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error) {
-	return a.client.DescribeEventDetailsForOrganization(input)
+func (a *HealthActivities) DescribeEventDetailsForOrganization(ctx context.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error) {
+	return a.client.DescribeEventDetailsForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEventTypes(input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error) {
-	return a.client.DescribeEventTypes(input)
+func (a *HealthActivities) DescribeEventTypes(ctx context.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error) {
+	return a.client.DescribeEventTypesWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEvents(input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error) {
-	return a.client.DescribeEvents(input)
+func (a *HealthActivities) DescribeEvents(ctx context.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error) {
+	return a.client.DescribeEventsWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeEventsForOrganization(input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error) {
-	return a.client.DescribeEventsForOrganization(input)
+func (a *HealthActivities) DescribeEventsForOrganization(ctx context.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error) {
+	return a.client.DescribeEventsForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DescribeHealthServiceStatusForOrganization(input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
-	return a.client.DescribeHealthServiceStatusForOrganization(input)
+func (a *HealthActivities) DescribeHealthServiceStatusForOrganization(ctx context.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
+	return a.client.DescribeHealthServiceStatusForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) DisableHealthServiceAccessForOrganization(input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
-	return a.client.DisableHealthServiceAccessForOrganization(input)
+func (a *HealthActivities) DisableHealthServiceAccessForOrganization(ctx context.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
+	return a.client.DisableHealthServiceAccessForOrganizationWithContext(ctx, input)
 }
 
-func (a *HealthActivities) EnableHealthServiceAccessForOrganization(input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
-	return a.client.EnableHealthServiceAccessForOrganization(input)
+func (a *HealthActivities) EnableHealthServiceAccessForOrganization(ctx context.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
+	return a.client.EnableHealthServiceAccessForOrganizationWithContext(ctx, input)
 }

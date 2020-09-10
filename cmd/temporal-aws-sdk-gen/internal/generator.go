@@ -84,6 +84,10 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 		"IsNil": func(value interface{}) bool {
 			return value == nil || (reflect.ValueOf(value).Kind() == reflect.Ptr && reflect.ValueOf(value).IsNil())
 		},
+		"HasField": func(structure *StructDefinition, fieldName string) bool {
+			_, ok := structure.Fields[fieldName]
+			return ok
+		},
 	}
 
 	templates, err := template.New(templateFile).Funcs(funcMap).ParseFiles(g.TemplateDir + "/" + templateFile)

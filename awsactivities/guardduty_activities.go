@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/guardduty"
 	"github.com/aws/aws-sdk-go/service/guardduty/guarddutyiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type GuardDutyActivities struct {
 	client guarddutyiface.GuardDutyAPI
@@ -16,234 +21,264 @@ func NewGuardDutyActivities(session *session.Session, config ...*aws.Config) *Gu
 	return &GuardDutyActivities{client: client}
 }
 
-func (a *GuardDutyActivities) AcceptInvitation(input *guardduty.AcceptInvitationInput) (*guardduty.AcceptInvitationOutput, error) {
-	return a.client.AcceptInvitation(input)
+func (a *GuardDutyActivities) AcceptInvitation(ctx context.Context, input *guardduty.AcceptInvitationInput) (*guardduty.AcceptInvitationOutput, error) {
+	return a.client.AcceptInvitationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ArchiveFindings(input *guardduty.ArchiveFindingsInput) (*guardduty.ArchiveFindingsOutput, error) {
-	return a.client.ArchiveFindings(input)
+func (a *GuardDutyActivities) ArchiveFindings(ctx context.Context, input *guardduty.ArchiveFindingsInput) (*guardduty.ArchiveFindingsOutput, error) {
+	return a.client.ArchiveFindingsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateDetector(input *guardduty.CreateDetectorInput) (*guardduty.CreateDetectorOutput, error) {
-	return a.client.CreateDetector(input)
+func (a *GuardDutyActivities) CreateDetector(ctx context.Context, input *guardduty.CreateDetectorInput) (*guardduty.CreateDetectorOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateDetectorWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateFilter(input *guardduty.CreateFilterInput) (*guardduty.CreateFilterOutput, error) {
-	return a.client.CreateFilter(input)
+func (a *GuardDutyActivities) CreateFilter(ctx context.Context, input *guardduty.CreateFilterInput) (*guardduty.CreateFilterOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateFilterWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateIPSet(input *guardduty.CreateIPSetInput) (*guardduty.CreateIPSetOutput, error) {
-	return a.client.CreateIPSet(input)
+func (a *GuardDutyActivities) CreateIPSet(ctx context.Context, input *guardduty.CreateIPSetInput) (*guardduty.CreateIPSetOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateIPSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateMembers(input *guardduty.CreateMembersInput) (*guardduty.CreateMembersOutput, error) {
-	return a.client.CreateMembers(input)
+func (a *GuardDutyActivities) CreateMembers(ctx context.Context, input *guardduty.CreateMembersInput) (*guardduty.CreateMembersOutput, error) {
+	return a.client.CreateMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreatePublishingDestination(input *guardduty.CreatePublishingDestinationInput) (*guardduty.CreatePublishingDestinationOutput, error) {
-	return a.client.CreatePublishingDestination(input)
+func (a *GuardDutyActivities) CreatePublishingDestination(ctx context.Context, input *guardduty.CreatePublishingDestinationInput) (*guardduty.CreatePublishingDestinationOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreatePublishingDestinationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateSampleFindings(input *guardduty.CreateSampleFindingsInput) (*guardduty.CreateSampleFindingsOutput, error) {
-	return a.client.CreateSampleFindings(input)
+func (a *GuardDutyActivities) CreateSampleFindings(ctx context.Context, input *guardduty.CreateSampleFindingsInput) (*guardduty.CreateSampleFindingsOutput, error) {
+	return a.client.CreateSampleFindingsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) CreateThreatIntelSet(input *guardduty.CreateThreatIntelSetInput) (*guardduty.CreateThreatIntelSetOutput, error) {
-	return a.client.CreateThreatIntelSet(input)
+func (a *GuardDutyActivities) CreateThreatIntelSet(ctx context.Context, input *guardduty.CreateThreatIntelSetInput) (*guardduty.CreateThreatIntelSetOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateThreatIntelSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeclineInvitations(input *guardduty.DeclineInvitationsInput) (*guardduty.DeclineInvitationsOutput, error) {
-	return a.client.DeclineInvitations(input)
+func (a *GuardDutyActivities) DeclineInvitations(ctx context.Context, input *guardduty.DeclineInvitationsInput) (*guardduty.DeclineInvitationsOutput, error) {
+	return a.client.DeclineInvitationsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteDetector(input *guardduty.DeleteDetectorInput) (*guardduty.DeleteDetectorOutput, error) {
-	return a.client.DeleteDetector(input)
+func (a *GuardDutyActivities) DeleteDetector(ctx context.Context, input *guardduty.DeleteDetectorInput) (*guardduty.DeleteDetectorOutput, error) {
+	return a.client.DeleteDetectorWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteFilter(input *guardduty.DeleteFilterInput) (*guardduty.DeleteFilterOutput, error) {
-	return a.client.DeleteFilter(input)
+func (a *GuardDutyActivities) DeleteFilter(ctx context.Context, input *guardduty.DeleteFilterInput) (*guardduty.DeleteFilterOutput, error) {
+	return a.client.DeleteFilterWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteIPSet(input *guardduty.DeleteIPSetInput) (*guardduty.DeleteIPSetOutput, error) {
-	return a.client.DeleteIPSet(input)
+func (a *GuardDutyActivities) DeleteIPSet(ctx context.Context, input *guardduty.DeleteIPSetInput) (*guardduty.DeleteIPSetOutput, error) {
+	return a.client.DeleteIPSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteInvitations(input *guardduty.DeleteInvitationsInput) (*guardduty.DeleteInvitationsOutput, error) {
-	return a.client.DeleteInvitations(input)
+func (a *GuardDutyActivities) DeleteInvitations(ctx context.Context, input *guardduty.DeleteInvitationsInput) (*guardduty.DeleteInvitationsOutput, error) {
+	return a.client.DeleteInvitationsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteMembers(input *guardduty.DeleteMembersInput) (*guardduty.DeleteMembersOutput, error) {
-	return a.client.DeleteMembers(input)
+func (a *GuardDutyActivities) DeleteMembers(ctx context.Context, input *guardduty.DeleteMembersInput) (*guardduty.DeleteMembersOutput, error) {
+	return a.client.DeleteMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeletePublishingDestination(input *guardduty.DeletePublishingDestinationInput) (*guardduty.DeletePublishingDestinationOutput, error) {
-	return a.client.DeletePublishingDestination(input)
+func (a *GuardDutyActivities) DeletePublishingDestination(ctx context.Context, input *guardduty.DeletePublishingDestinationInput) (*guardduty.DeletePublishingDestinationOutput, error) {
+	return a.client.DeletePublishingDestinationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DeleteThreatIntelSet(input *guardduty.DeleteThreatIntelSetInput) (*guardduty.DeleteThreatIntelSetOutput, error) {
-	return a.client.DeleteThreatIntelSet(input)
+func (a *GuardDutyActivities) DeleteThreatIntelSet(ctx context.Context, input *guardduty.DeleteThreatIntelSetInput) (*guardduty.DeleteThreatIntelSetOutput, error) {
+	return a.client.DeleteThreatIntelSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DescribeOrganizationConfiguration(input *guardduty.DescribeOrganizationConfigurationInput) (*guardduty.DescribeOrganizationConfigurationOutput, error) {
-	return a.client.DescribeOrganizationConfiguration(input)
+func (a *GuardDutyActivities) DescribeOrganizationConfiguration(ctx context.Context, input *guardduty.DescribeOrganizationConfigurationInput) (*guardduty.DescribeOrganizationConfigurationOutput, error) {
+	return a.client.DescribeOrganizationConfigurationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DescribePublishingDestination(input *guardduty.DescribePublishingDestinationInput) (*guardduty.DescribePublishingDestinationOutput, error) {
-	return a.client.DescribePublishingDestination(input)
+func (a *GuardDutyActivities) DescribePublishingDestination(ctx context.Context, input *guardduty.DescribePublishingDestinationInput) (*guardduty.DescribePublishingDestinationOutput, error) {
+	return a.client.DescribePublishingDestinationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DisableOrganizationAdminAccount(input *guardduty.DisableOrganizationAdminAccountInput) (*guardduty.DisableOrganizationAdminAccountOutput, error) {
-	return a.client.DisableOrganizationAdminAccount(input)
+func (a *GuardDutyActivities) DisableOrganizationAdminAccount(ctx context.Context, input *guardduty.DisableOrganizationAdminAccountInput) (*guardduty.DisableOrganizationAdminAccountOutput, error) {
+	return a.client.DisableOrganizationAdminAccountWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DisassociateFromMasterAccount(input *guardduty.DisassociateFromMasterAccountInput) (*guardduty.DisassociateFromMasterAccountOutput, error) {
-	return a.client.DisassociateFromMasterAccount(input)
+func (a *GuardDutyActivities) DisassociateFromMasterAccount(ctx context.Context, input *guardduty.DisassociateFromMasterAccountInput) (*guardduty.DisassociateFromMasterAccountOutput, error) {
+	return a.client.DisassociateFromMasterAccountWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) DisassociateMembers(input *guardduty.DisassociateMembersInput) (*guardduty.DisassociateMembersOutput, error) {
-	return a.client.DisassociateMembers(input)
+func (a *GuardDutyActivities) DisassociateMembers(ctx context.Context, input *guardduty.DisassociateMembersInput) (*guardduty.DisassociateMembersOutput, error) {
+	return a.client.DisassociateMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) EnableOrganizationAdminAccount(input *guardduty.EnableOrganizationAdminAccountInput) (*guardduty.EnableOrganizationAdminAccountOutput, error) {
-	return a.client.EnableOrganizationAdminAccount(input)
+func (a *GuardDutyActivities) EnableOrganizationAdminAccount(ctx context.Context, input *guardduty.EnableOrganizationAdminAccountInput) (*guardduty.EnableOrganizationAdminAccountOutput, error) {
+	return a.client.EnableOrganizationAdminAccountWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetDetector(input *guardduty.GetDetectorInput) (*guardduty.GetDetectorOutput, error) {
-	return a.client.GetDetector(input)
+func (a *GuardDutyActivities) GetDetector(ctx context.Context, input *guardduty.GetDetectorInput) (*guardduty.GetDetectorOutput, error) {
+	return a.client.GetDetectorWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetFilter(input *guardduty.GetFilterInput) (*guardduty.GetFilterOutput, error) {
-	return a.client.GetFilter(input)
+func (a *GuardDutyActivities) GetFilter(ctx context.Context, input *guardduty.GetFilterInput) (*guardduty.GetFilterOutput, error) {
+	return a.client.GetFilterWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetFindings(input *guardduty.GetFindingsInput) (*guardduty.GetFindingsOutput, error) {
-	return a.client.GetFindings(input)
+func (a *GuardDutyActivities) GetFindings(ctx context.Context, input *guardduty.GetFindingsInput) (*guardduty.GetFindingsOutput, error) {
+	return a.client.GetFindingsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetFindingsStatistics(input *guardduty.GetFindingsStatisticsInput) (*guardduty.GetFindingsStatisticsOutput, error) {
-	return a.client.GetFindingsStatistics(input)
+func (a *GuardDutyActivities) GetFindingsStatistics(ctx context.Context, input *guardduty.GetFindingsStatisticsInput) (*guardduty.GetFindingsStatisticsOutput, error) {
+	return a.client.GetFindingsStatisticsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetIPSet(input *guardduty.GetIPSetInput) (*guardduty.GetIPSetOutput, error) {
-	return a.client.GetIPSet(input)
+func (a *GuardDutyActivities) GetIPSet(ctx context.Context, input *guardduty.GetIPSetInput) (*guardduty.GetIPSetOutput, error) {
+	return a.client.GetIPSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetInvitationsCount(input *guardduty.GetInvitationsCountInput) (*guardduty.GetInvitationsCountOutput, error) {
-	return a.client.GetInvitationsCount(input)
+func (a *GuardDutyActivities) GetInvitationsCount(ctx context.Context, input *guardduty.GetInvitationsCountInput) (*guardduty.GetInvitationsCountOutput, error) {
+	return a.client.GetInvitationsCountWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetMasterAccount(input *guardduty.GetMasterAccountInput) (*guardduty.GetMasterAccountOutput, error) {
-	return a.client.GetMasterAccount(input)
+func (a *GuardDutyActivities) GetMasterAccount(ctx context.Context, input *guardduty.GetMasterAccountInput) (*guardduty.GetMasterAccountOutput, error) {
+	return a.client.GetMasterAccountWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetMemberDetectors(input *guardduty.GetMemberDetectorsInput) (*guardduty.GetMemberDetectorsOutput, error) {
-	return a.client.GetMemberDetectors(input)
+func (a *GuardDutyActivities) GetMemberDetectors(ctx context.Context, input *guardduty.GetMemberDetectorsInput) (*guardduty.GetMemberDetectorsOutput, error) {
+	return a.client.GetMemberDetectorsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetMembers(input *guardduty.GetMembersInput) (*guardduty.GetMembersOutput, error) {
-	return a.client.GetMembers(input)
+func (a *GuardDutyActivities) GetMembers(ctx context.Context, input *guardduty.GetMembersInput) (*guardduty.GetMembersOutput, error) {
+	return a.client.GetMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetThreatIntelSet(input *guardduty.GetThreatIntelSetInput) (*guardduty.GetThreatIntelSetOutput, error) {
-	return a.client.GetThreatIntelSet(input)
+func (a *GuardDutyActivities) GetThreatIntelSet(ctx context.Context, input *guardduty.GetThreatIntelSetInput) (*guardduty.GetThreatIntelSetOutput, error) {
+	return a.client.GetThreatIntelSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) GetUsageStatistics(input *guardduty.GetUsageStatisticsInput) (*guardduty.GetUsageStatisticsOutput, error) {
-	return a.client.GetUsageStatistics(input)
+func (a *GuardDutyActivities) GetUsageStatistics(ctx context.Context, input *guardduty.GetUsageStatisticsInput) (*guardduty.GetUsageStatisticsOutput, error) {
+	return a.client.GetUsageStatisticsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) InviteMembers(input *guardduty.InviteMembersInput) (*guardduty.InviteMembersOutput, error) {
-	return a.client.InviteMembers(input)
+func (a *GuardDutyActivities) InviteMembers(ctx context.Context, input *guardduty.InviteMembersInput) (*guardduty.InviteMembersOutput, error) {
+	return a.client.InviteMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListDetectors(input *guardduty.ListDetectorsInput) (*guardduty.ListDetectorsOutput, error) {
-	return a.client.ListDetectors(input)
+func (a *GuardDutyActivities) ListDetectors(ctx context.Context, input *guardduty.ListDetectorsInput) (*guardduty.ListDetectorsOutput, error) {
+	return a.client.ListDetectorsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListFilters(input *guardduty.ListFiltersInput) (*guardduty.ListFiltersOutput, error) {
-	return a.client.ListFilters(input)
+func (a *GuardDutyActivities) ListFilters(ctx context.Context, input *guardduty.ListFiltersInput) (*guardduty.ListFiltersOutput, error) {
+	return a.client.ListFiltersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListFindings(input *guardduty.ListFindingsInput) (*guardduty.ListFindingsOutput, error) {
-	return a.client.ListFindings(input)
+func (a *GuardDutyActivities) ListFindings(ctx context.Context, input *guardduty.ListFindingsInput) (*guardduty.ListFindingsOutput, error) {
+	return a.client.ListFindingsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListIPSets(input *guardduty.ListIPSetsInput) (*guardduty.ListIPSetsOutput, error) {
-	return a.client.ListIPSets(input)
+func (a *GuardDutyActivities) ListIPSets(ctx context.Context, input *guardduty.ListIPSetsInput) (*guardduty.ListIPSetsOutput, error) {
+	return a.client.ListIPSetsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListInvitations(input *guardduty.ListInvitationsInput) (*guardduty.ListInvitationsOutput, error) {
-	return a.client.ListInvitations(input)
+func (a *GuardDutyActivities) ListInvitations(ctx context.Context, input *guardduty.ListInvitationsInput) (*guardduty.ListInvitationsOutput, error) {
+	return a.client.ListInvitationsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListMembers(input *guardduty.ListMembersInput) (*guardduty.ListMembersOutput, error) {
-	return a.client.ListMembers(input)
+func (a *GuardDutyActivities) ListMembers(ctx context.Context, input *guardduty.ListMembersInput) (*guardduty.ListMembersOutput, error) {
+	return a.client.ListMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListOrganizationAdminAccounts(input *guardduty.ListOrganizationAdminAccountsInput) (*guardduty.ListOrganizationAdminAccountsOutput, error) {
-	return a.client.ListOrganizationAdminAccounts(input)
+func (a *GuardDutyActivities) ListOrganizationAdminAccounts(ctx context.Context, input *guardduty.ListOrganizationAdminAccountsInput) (*guardduty.ListOrganizationAdminAccountsOutput, error) {
+	return a.client.ListOrganizationAdminAccountsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListPublishingDestinations(input *guardduty.ListPublishingDestinationsInput) (*guardduty.ListPublishingDestinationsOutput, error) {
-	return a.client.ListPublishingDestinations(input)
+func (a *GuardDutyActivities) ListPublishingDestinations(ctx context.Context, input *guardduty.ListPublishingDestinationsInput) (*guardduty.ListPublishingDestinationsOutput, error) {
+	return a.client.ListPublishingDestinationsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListTagsForResource(input *guardduty.ListTagsForResourceInput) (*guardduty.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *GuardDutyActivities) ListTagsForResource(ctx context.Context, input *guardduty.ListTagsForResourceInput) (*guardduty.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) ListThreatIntelSets(input *guardduty.ListThreatIntelSetsInput) (*guardduty.ListThreatIntelSetsOutput, error) {
-	return a.client.ListThreatIntelSets(input)
+func (a *GuardDutyActivities) ListThreatIntelSets(ctx context.Context, input *guardduty.ListThreatIntelSetsInput) (*guardduty.ListThreatIntelSetsOutput, error) {
+	return a.client.ListThreatIntelSetsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) StartMonitoringMembers(input *guardduty.StartMonitoringMembersInput) (*guardduty.StartMonitoringMembersOutput, error) {
-	return a.client.StartMonitoringMembers(input)
+func (a *GuardDutyActivities) StartMonitoringMembers(ctx context.Context, input *guardduty.StartMonitoringMembersInput) (*guardduty.StartMonitoringMembersOutput, error) {
+	return a.client.StartMonitoringMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) StopMonitoringMembers(input *guardduty.StopMonitoringMembersInput) (*guardduty.StopMonitoringMembersOutput, error) {
-	return a.client.StopMonitoringMembers(input)
+func (a *GuardDutyActivities) StopMonitoringMembers(ctx context.Context, input *guardduty.StopMonitoringMembersInput) (*guardduty.StopMonitoringMembersOutput, error) {
+	return a.client.StopMonitoringMembersWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) TagResource(input *guardduty.TagResourceInput) (*guardduty.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *GuardDutyActivities) TagResource(ctx context.Context, input *guardduty.TagResourceInput) (*guardduty.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UnarchiveFindings(input *guardduty.UnarchiveFindingsInput) (*guardduty.UnarchiveFindingsOutput, error) {
-	return a.client.UnarchiveFindings(input)
+func (a *GuardDutyActivities) UnarchiveFindings(ctx context.Context, input *guardduty.UnarchiveFindingsInput) (*guardduty.UnarchiveFindingsOutput, error) {
+	return a.client.UnarchiveFindingsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UntagResource(input *guardduty.UntagResourceInput) (*guardduty.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *GuardDutyActivities) UntagResource(ctx context.Context, input *guardduty.UntagResourceInput) (*guardduty.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateDetector(input *guardduty.UpdateDetectorInput) (*guardduty.UpdateDetectorOutput, error) {
-	return a.client.UpdateDetector(input)
+func (a *GuardDutyActivities) UpdateDetector(ctx context.Context, input *guardduty.UpdateDetectorInput) (*guardduty.UpdateDetectorOutput, error) {
+	return a.client.UpdateDetectorWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateFilter(input *guardduty.UpdateFilterInput) (*guardduty.UpdateFilterOutput, error) {
-	return a.client.UpdateFilter(input)
+func (a *GuardDutyActivities) UpdateFilter(ctx context.Context, input *guardduty.UpdateFilterInput) (*guardduty.UpdateFilterOutput, error) {
+	return a.client.UpdateFilterWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateFindingsFeedback(input *guardduty.UpdateFindingsFeedbackInput) (*guardduty.UpdateFindingsFeedbackOutput, error) {
-	return a.client.UpdateFindingsFeedback(input)
+func (a *GuardDutyActivities) UpdateFindingsFeedback(ctx context.Context, input *guardduty.UpdateFindingsFeedbackInput) (*guardduty.UpdateFindingsFeedbackOutput, error) {
+	return a.client.UpdateFindingsFeedbackWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateIPSet(input *guardduty.UpdateIPSetInput) (*guardduty.UpdateIPSetOutput, error) {
-	return a.client.UpdateIPSet(input)
+func (a *GuardDutyActivities) UpdateIPSet(ctx context.Context, input *guardduty.UpdateIPSetInput) (*guardduty.UpdateIPSetOutput, error) {
+	return a.client.UpdateIPSetWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateMemberDetectors(input *guardduty.UpdateMemberDetectorsInput) (*guardduty.UpdateMemberDetectorsOutput, error) {
-	return a.client.UpdateMemberDetectors(input)
+func (a *GuardDutyActivities) UpdateMemberDetectors(ctx context.Context, input *guardduty.UpdateMemberDetectorsInput) (*guardduty.UpdateMemberDetectorsOutput, error) {
+	return a.client.UpdateMemberDetectorsWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateOrganizationConfiguration(input *guardduty.UpdateOrganizationConfigurationInput) (*guardduty.UpdateOrganizationConfigurationOutput, error) {
-	return a.client.UpdateOrganizationConfiguration(input)
+func (a *GuardDutyActivities) UpdateOrganizationConfiguration(ctx context.Context, input *guardduty.UpdateOrganizationConfigurationInput) (*guardduty.UpdateOrganizationConfigurationOutput, error) {
+	return a.client.UpdateOrganizationConfigurationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdatePublishingDestination(input *guardduty.UpdatePublishingDestinationInput) (*guardduty.UpdatePublishingDestinationOutput, error) {
-	return a.client.UpdatePublishingDestination(input)
+func (a *GuardDutyActivities) UpdatePublishingDestination(ctx context.Context, input *guardduty.UpdatePublishingDestinationInput) (*guardduty.UpdatePublishingDestinationOutput, error) {
+	return a.client.UpdatePublishingDestinationWithContext(ctx, input)
 }
 
-func (a *GuardDutyActivities) UpdateThreatIntelSet(input *guardduty.UpdateThreatIntelSetInput) (*guardduty.UpdateThreatIntelSetOutput, error) {
-	return a.client.UpdateThreatIntelSet(input)
+func (a *GuardDutyActivities) UpdateThreatIntelSet(ctx context.Context, input *guardduty.UpdateThreatIntelSetInput) (*guardduty.UpdateThreatIntelSetOutput, error) {
+	return a.client.UpdateThreatIntelSetWithContext(ctx, input)
 }

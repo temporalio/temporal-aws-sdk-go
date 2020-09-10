@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/migrationhub"
 	"github.com/aws/aws-sdk-go/service/migrationhub/migrationhubiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type MigrationHubActivities struct {
 	client migrationhubiface.MigrationHubAPI
@@ -16,70 +21,70 @@ func NewMigrationHubActivities(session *session.Session, config ...*aws.Config) 
 	return &MigrationHubActivities{client: client}
 }
 
-func (a *MigrationHubActivities) AssociateCreatedArtifact(input *migrationhub.AssociateCreatedArtifactInput) (*migrationhub.AssociateCreatedArtifactOutput, error) {
-	return a.client.AssociateCreatedArtifact(input)
+func (a *MigrationHubActivities) AssociateCreatedArtifact(ctx context.Context, input *migrationhub.AssociateCreatedArtifactInput) (*migrationhub.AssociateCreatedArtifactOutput, error) {
+	return a.client.AssociateCreatedArtifactWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) AssociateDiscoveredResource(input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
-	return a.client.AssociateDiscoveredResource(input)
+func (a *MigrationHubActivities) AssociateDiscoveredResource(ctx context.Context, input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
+	return a.client.AssociateDiscoveredResourceWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) CreateProgressUpdateStream(input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
-	return a.client.CreateProgressUpdateStream(input)
+func (a *MigrationHubActivities) CreateProgressUpdateStream(ctx context.Context, input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
+	return a.client.CreateProgressUpdateStreamWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) DeleteProgressUpdateStream(input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
-	return a.client.DeleteProgressUpdateStream(input)
+func (a *MigrationHubActivities) DeleteProgressUpdateStream(ctx context.Context, input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
+	return a.client.DeleteProgressUpdateStreamWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) DescribeApplicationState(input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error) {
-	return a.client.DescribeApplicationState(input)
+func (a *MigrationHubActivities) DescribeApplicationState(ctx context.Context, input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error) {
+	return a.client.DescribeApplicationStateWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) DescribeMigrationTask(input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error) {
-	return a.client.DescribeMigrationTask(input)
+func (a *MigrationHubActivities) DescribeMigrationTask(ctx context.Context, input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error) {
+	return a.client.DescribeMigrationTaskWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) DisassociateCreatedArtifact(input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
-	return a.client.DisassociateCreatedArtifact(input)
+func (a *MigrationHubActivities) DisassociateCreatedArtifact(ctx context.Context, input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
+	return a.client.DisassociateCreatedArtifactWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) DisassociateDiscoveredResource(input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
-	return a.client.DisassociateDiscoveredResource(input)
+func (a *MigrationHubActivities) DisassociateDiscoveredResource(ctx context.Context, input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
+	return a.client.DisassociateDiscoveredResourceWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ImportMigrationTask(input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error) {
-	return a.client.ImportMigrationTask(input)
+func (a *MigrationHubActivities) ImportMigrationTask(ctx context.Context, input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error) {
+	return a.client.ImportMigrationTaskWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ListApplicationStates(input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error) {
-	return a.client.ListApplicationStates(input)
+func (a *MigrationHubActivities) ListApplicationStates(ctx context.Context, input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error) {
+	return a.client.ListApplicationStatesWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ListCreatedArtifacts(input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error) {
-	return a.client.ListCreatedArtifacts(input)
+func (a *MigrationHubActivities) ListCreatedArtifacts(ctx context.Context, input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error) {
+	return a.client.ListCreatedArtifactsWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ListDiscoveredResources(input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error) {
-	return a.client.ListDiscoveredResources(input)
+func (a *MigrationHubActivities) ListDiscoveredResources(ctx context.Context, input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error) {
+	return a.client.ListDiscoveredResourcesWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ListMigrationTasks(input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error) {
-	return a.client.ListMigrationTasks(input)
+func (a *MigrationHubActivities) ListMigrationTasks(ctx context.Context, input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error) {
+	return a.client.ListMigrationTasksWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) ListProgressUpdateStreams(input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
-	return a.client.ListProgressUpdateStreams(input)
+func (a *MigrationHubActivities) ListProgressUpdateStreams(ctx context.Context, input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
+	return a.client.ListProgressUpdateStreamsWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) NotifyApplicationState(input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error) {
-	return a.client.NotifyApplicationState(input)
+func (a *MigrationHubActivities) NotifyApplicationState(ctx context.Context, input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error) {
+	return a.client.NotifyApplicationStateWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) NotifyMigrationTaskState(input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
-	return a.client.NotifyMigrationTaskState(input)
+func (a *MigrationHubActivities) NotifyMigrationTaskState(ctx context.Context, input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
+	return a.client.NotifyMigrationTaskStateWithContext(ctx, input)
 }
 
-func (a *MigrationHubActivities) PutResourceAttributes(input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error) {
-	return a.client.PutResourceAttributes(input)
+func (a *MigrationHubActivities) PutResourceAttributes(ctx context.Context, input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error) {
+	return a.client.PutResourceAttributesWithContext(ctx, input)
 }

@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/inspector"
 	"github.com/aws/aws-sdk-go/service/inspector/inspectoriface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type InspectorActivities struct {
 	client inspectoriface.InspectorAPI
@@ -16,150 +21,150 @@ func NewInspectorActivities(session *session.Session, config ...*aws.Config) *In
 	return &InspectorActivities{client: client}
 }
 
-func (a *InspectorActivities) AddAttributesToFindings(input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error) {
-	return a.client.AddAttributesToFindings(input)
+func (a *InspectorActivities) AddAttributesToFindings(ctx context.Context, input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error) {
+	return a.client.AddAttributesToFindingsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) CreateAssessmentTarget(input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error) {
-	return a.client.CreateAssessmentTarget(input)
+func (a *InspectorActivities) CreateAssessmentTarget(ctx context.Context, input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error) {
+	return a.client.CreateAssessmentTargetWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) CreateAssessmentTemplate(input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error) {
-	return a.client.CreateAssessmentTemplate(input)
+func (a *InspectorActivities) CreateAssessmentTemplate(ctx context.Context, input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error) {
+	return a.client.CreateAssessmentTemplateWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) CreateExclusionsPreview(input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error) {
-	return a.client.CreateExclusionsPreview(input)
+func (a *InspectorActivities) CreateExclusionsPreview(ctx context.Context, input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error) {
+	return a.client.CreateExclusionsPreviewWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) CreateResourceGroup(input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error) {
-	return a.client.CreateResourceGroup(input)
+func (a *InspectorActivities) CreateResourceGroup(ctx context.Context, input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error) {
+	return a.client.CreateResourceGroupWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DeleteAssessmentRun(input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error) {
-	return a.client.DeleteAssessmentRun(input)
+func (a *InspectorActivities) DeleteAssessmentRun(ctx context.Context, input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error) {
+	return a.client.DeleteAssessmentRunWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DeleteAssessmentTarget(input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error) {
-	return a.client.DeleteAssessmentTarget(input)
+func (a *InspectorActivities) DeleteAssessmentTarget(ctx context.Context, input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error) {
+	return a.client.DeleteAssessmentTargetWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DeleteAssessmentTemplate(input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error) {
-	return a.client.DeleteAssessmentTemplate(input)
+func (a *InspectorActivities) DeleteAssessmentTemplate(ctx context.Context, input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error) {
+	return a.client.DeleteAssessmentTemplateWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeAssessmentRuns(input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error) {
-	return a.client.DescribeAssessmentRuns(input)
+func (a *InspectorActivities) DescribeAssessmentRuns(ctx context.Context, input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error) {
+	return a.client.DescribeAssessmentRunsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeAssessmentTargets(input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error) {
-	return a.client.DescribeAssessmentTargets(input)
+func (a *InspectorActivities) DescribeAssessmentTargets(ctx context.Context, input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error) {
+	return a.client.DescribeAssessmentTargetsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeAssessmentTemplates(input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error) {
-	return a.client.DescribeAssessmentTemplates(input)
+func (a *InspectorActivities) DescribeAssessmentTemplates(ctx context.Context, input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error) {
+	return a.client.DescribeAssessmentTemplatesWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeCrossAccountAccessRole(input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
-	return a.client.DescribeCrossAccountAccessRole(input)
+func (a *InspectorActivities) DescribeCrossAccountAccessRole(ctx context.Context, input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
+	return a.client.DescribeCrossAccountAccessRoleWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeExclusions(input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error) {
-	return a.client.DescribeExclusions(input)
+func (a *InspectorActivities) DescribeExclusions(ctx context.Context, input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error) {
+	return a.client.DescribeExclusionsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeFindings(input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error) {
-	return a.client.DescribeFindings(input)
+func (a *InspectorActivities) DescribeFindings(ctx context.Context, input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error) {
+	return a.client.DescribeFindingsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeResourceGroups(input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error) {
-	return a.client.DescribeResourceGroups(input)
+func (a *InspectorActivities) DescribeResourceGroups(ctx context.Context, input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error) {
+	return a.client.DescribeResourceGroupsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) DescribeRulesPackages(input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error) {
-	return a.client.DescribeRulesPackages(input)
+func (a *InspectorActivities) DescribeRulesPackages(ctx context.Context, input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error) {
+	return a.client.DescribeRulesPackagesWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) GetAssessmentReport(input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error) {
-	return a.client.GetAssessmentReport(input)
+func (a *InspectorActivities) GetAssessmentReport(ctx context.Context, input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error) {
+	return a.client.GetAssessmentReportWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) GetExclusionsPreview(input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error) {
-	return a.client.GetExclusionsPreview(input)
+func (a *InspectorActivities) GetExclusionsPreview(ctx context.Context, input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error) {
+	return a.client.GetExclusionsPreviewWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) GetTelemetryMetadata(input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error) {
-	return a.client.GetTelemetryMetadata(input)
+func (a *InspectorActivities) GetTelemetryMetadata(ctx context.Context, input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error) {
+	return a.client.GetTelemetryMetadataWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListAssessmentRunAgents(input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error) {
-	return a.client.ListAssessmentRunAgents(input)
+func (a *InspectorActivities) ListAssessmentRunAgents(ctx context.Context, input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error) {
+	return a.client.ListAssessmentRunAgentsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListAssessmentRuns(input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error) {
-	return a.client.ListAssessmentRuns(input)
+func (a *InspectorActivities) ListAssessmentRuns(ctx context.Context, input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error) {
+	return a.client.ListAssessmentRunsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListAssessmentTargets(input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error) {
-	return a.client.ListAssessmentTargets(input)
+func (a *InspectorActivities) ListAssessmentTargets(ctx context.Context, input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error) {
+	return a.client.ListAssessmentTargetsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListAssessmentTemplates(input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error) {
-	return a.client.ListAssessmentTemplates(input)
+func (a *InspectorActivities) ListAssessmentTemplates(ctx context.Context, input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error) {
+	return a.client.ListAssessmentTemplatesWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListEventSubscriptions(input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error) {
-	return a.client.ListEventSubscriptions(input)
+func (a *InspectorActivities) ListEventSubscriptions(ctx context.Context, input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error) {
+	return a.client.ListEventSubscriptionsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListExclusions(input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error) {
-	return a.client.ListExclusions(input)
+func (a *InspectorActivities) ListExclusions(ctx context.Context, input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error) {
+	return a.client.ListExclusionsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListFindings(input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error) {
-	return a.client.ListFindings(input)
+func (a *InspectorActivities) ListFindings(ctx context.Context, input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error) {
+	return a.client.ListFindingsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListRulesPackages(input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error) {
-	return a.client.ListRulesPackages(input)
+func (a *InspectorActivities) ListRulesPackages(ctx context.Context, input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error) {
+	return a.client.ListRulesPackagesWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) ListTagsForResource(input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *InspectorActivities) ListTagsForResource(ctx context.Context, input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) PreviewAgents(input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error) {
-	return a.client.PreviewAgents(input)
+func (a *InspectorActivities) PreviewAgents(ctx context.Context, input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error) {
+	return a.client.PreviewAgentsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) RegisterCrossAccountAccessRole(input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
-	return a.client.RegisterCrossAccountAccessRole(input)
+func (a *InspectorActivities) RegisterCrossAccountAccessRole(ctx context.Context, input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
+	return a.client.RegisterCrossAccountAccessRoleWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) RemoveAttributesFromFindings(input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error) {
-	return a.client.RemoveAttributesFromFindings(input)
+func (a *InspectorActivities) RemoveAttributesFromFindings(ctx context.Context, input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error) {
+	return a.client.RemoveAttributesFromFindingsWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) SetTagsForResource(input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error) {
-	return a.client.SetTagsForResource(input)
+func (a *InspectorActivities) SetTagsForResource(ctx context.Context, input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error) {
+	return a.client.SetTagsForResourceWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) StartAssessmentRun(input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error) {
-	return a.client.StartAssessmentRun(input)
+func (a *InspectorActivities) StartAssessmentRun(ctx context.Context, input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error) {
+	return a.client.StartAssessmentRunWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) StopAssessmentRun(input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error) {
-	return a.client.StopAssessmentRun(input)
+func (a *InspectorActivities) StopAssessmentRun(ctx context.Context, input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error) {
+	return a.client.StopAssessmentRunWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) SubscribeToEvent(input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error) {
-	return a.client.SubscribeToEvent(input)
+func (a *InspectorActivities) SubscribeToEvent(ctx context.Context, input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error) {
+	return a.client.SubscribeToEventWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) UnsubscribeFromEvent(input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error) {
-	return a.client.UnsubscribeFromEvent(input)
+func (a *InspectorActivities) UnsubscribeFromEvent(ctx context.Context, input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error) {
+	return a.client.UnsubscribeFromEventWithContext(ctx, input)
 }
 
-func (a *InspectorActivities) UpdateAssessmentTarget(input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error) {
-	return a.client.UpdateAssessmentTarget(input)
+func (a *InspectorActivities) UpdateAssessmentTarget(ctx context.Context, input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error) {
+	return a.client.UpdateAssessmentTargetWithContext(ctx, input)
 }

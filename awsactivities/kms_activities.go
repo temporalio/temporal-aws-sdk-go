@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/aws/aws-sdk-go/service/kms/kmsiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type KMSActivities struct {
 	client kmsiface.KMSAPI
@@ -16,186 +21,186 @@ func NewKMSActivities(session *session.Session, config ...*aws.Config) *KMSActiv
 	return &KMSActivities{client: client}
 }
 
-func (a *KMSActivities) CancelKeyDeletion(input *kms.CancelKeyDeletionInput) (*kms.CancelKeyDeletionOutput, error) {
-	return a.client.CancelKeyDeletion(input)
+func (a *KMSActivities) CancelKeyDeletion(ctx context.Context, input *kms.CancelKeyDeletionInput) (*kms.CancelKeyDeletionOutput, error) {
+	return a.client.CancelKeyDeletionWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ConnectCustomKeyStore(input *kms.ConnectCustomKeyStoreInput) (*kms.ConnectCustomKeyStoreOutput, error) {
-	return a.client.ConnectCustomKeyStore(input)
+func (a *KMSActivities) ConnectCustomKeyStore(ctx context.Context, input *kms.ConnectCustomKeyStoreInput) (*kms.ConnectCustomKeyStoreOutput, error) {
+	return a.client.ConnectCustomKeyStoreWithContext(ctx, input)
 }
 
-func (a *KMSActivities) CreateAlias(input *kms.CreateAliasInput) (*kms.CreateAliasOutput, error) {
-	return a.client.CreateAlias(input)
+func (a *KMSActivities) CreateAlias(ctx context.Context, input *kms.CreateAliasInput) (*kms.CreateAliasOutput, error) {
+	return a.client.CreateAliasWithContext(ctx, input)
 }
 
-func (a *KMSActivities) CreateCustomKeyStore(input *kms.CreateCustomKeyStoreInput) (*kms.CreateCustomKeyStoreOutput, error) {
-	return a.client.CreateCustomKeyStore(input)
+func (a *KMSActivities) CreateCustomKeyStore(ctx context.Context, input *kms.CreateCustomKeyStoreInput) (*kms.CreateCustomKeyStoreOutput, error) {
+	return a.client.CreateCustomKeyStoreWithContext(ctx, input)
 }
 
-func (a *KMSActivities) CreateGrant(input *kms.CreateGrantInput) (*kms.CreateGrantOutput, error) {
-	return a.client.CreateGrant(input)
+func (a *KMSActivities) CreateGrant(ctx context.Context, input *kms.CreateGrantInput) (*kms.CreateGrantOutput, error) {
+	return a.client.CreateGrantWithContext(ctx, input)
 }
 
-func (a *KMSActivities) CreateKey(input *kms.CreateKeyInput) (*kms.CreateKeyOutput, error) {
-	return a.client.CreateKey(input)
+func (a *KMSActivities) CreateKey(ctx context.Context, input *kms.CreateKeyInput) (*kms.CreateKeyOutput, error) {
+	return a.client.CreateKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) Decrypt(input *kms.DecryptInput) (*kms.DecryptOutput, error) {
-	return a.client.Decrypt(input)
+func (a *KMSActivities) Decrypt(ctx context.Context, input *kms.DecryptInput) (*kms.DecryptOutput, error) {
+	return a.client.DecryptWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DeleteAlias(input *kms.DeleteAliasInput) (*kms.DeleteAliasOutput, error) {
-	return a.client.DeleteAlias(input)
+func (a *KMSActivities) DeleteAlias(ctx context.Context, input *kms.DeleteAliasInput) (*kms.DeleteAliasOutput, error) {
+	return a.client.DeleteAliasWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DeleteCustomKeyStore(input *kms.DeleteCustomKeyStoreInput) (*kms.DeleteCustomKeyStoreOutput, error) {
-	return a.client.DeleteCustomKeyStore(input)
+func (a *KMSActivities) DeleteCustomKeyStore(ctx context.Context, input *kms.DeleteCustomKeyStoreInput) (*kms.DeleteCustomKeyStoreOutput, error) {
+	return a.client.DeleteCustomKeyStoreWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DeleteImportedKeyMaterial(input *kms.DeleteImportedKeyMaterialInput) (*kms.DeleteImportedKeyMaterialOutput, error) {
-	return a.client.DeleteImportedKeyMaterial(input)
+func (a *KMSActivities) DeleteImportedKeyMaterial(ctx context.Context, input *kms.DeleteImportedKeyMaterialInput) (*kms.DeleteImportedKeyMaterialOutput, error) {
+	return a.client.DeleteImportedKeyMaterialWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DescribeCustomKeyStores(input *kms.DescribeCustomKeyStoresInput) (*kms.DescribeCustomKeyStoresOutput, error) {
-	return a.client.DescribeCustomKeyStores(input)
+func (a *KMSActivities) DescribeCustomKeyStores(ctx context.Context, input *kms.DescribeCustomKeyStoresInput) (*kms.DescribeCustomKeyStoresOutput, error) {
+	return a.client.DescribeCustomKeyStoresWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DescribeKey(input *kms.DescribeKeyInput) (*kms.DescribeKeyOutput, error) {
-	return a.client.DescribeKey(input)
+func (a *KMSActivities) DescribeKey(ctx context.Context, input *kms.DescribeKeyInput) (*kms.DescribeKeyOutput, error) {
+	return a.client.DescribeKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DisableKey(input *kms.DisableKeyInput) (*kms.DisableKeyOutput, error) {
-	return a.client.DisableKey(input)
+func (a *KMSActivities) DisableKey(ctx context.Context, input *kms.DisableKeyInput) (*kms.DisableKeyOutput, error) {
+	return a.client.DisableKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DisableKeyRotation(input *kms.DisableKeyRotationInput) (*kms.DisableKeyRotationOutput, error) {
-	return a.client.DisableKeyRotation(input)
+func (a *KMSActivities) DisableKeyRotation(ctx context.Context, input *kms.DisableKeyRotationInput) (*kms.DisableKeyRotationOutput, error) {
+	return a.client.DisableKeyRotationWithContext(ctx, input)
 }
 
-func (a *KMSActivities) DisconnectCustomKeyStore(input *kms.DisconnectCustomKeyStoreInput) (*kms.DisconnectCustomKeyStoreOutput, error) {
-	return a.client.DisconnectCustomKeyStore(input)
+func (a *KMSActivities) DisconnectCustomKeyStore(ctx context.Context, input *kms.DisconnectCustomKeyStoreInput) (*kms.DisconnectCustomKeyStoreOutput, error) {
+	return a.client.DisconnectCustomKeyStoreWithContext(ctx, input)
 }
 
-func (a *KMSActivities) EnableKey(input *kms.EnableKeyInput) (*kms.EnableKeyOutput, error) {
-	return a.client.EnableKey(input)
+func (a *KMSActivities) EnableKey(ctx context.Context, input *kms.EnableKeyInput) (*kms.EnableKeyOutput, error) {
+	return a.client.EnableKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) EnableKeyRotation(input *kms.EnableKeyRotationInput) (*kms.EnableKeyRotationOutput, error) {
-	return a.client.EnableKeyRotation(input)
+func (a *KMSActivities) EnableKeyRotation(ctx context.Context, input *kms.EnableKeyRotationInput) (*kms.EnableKeyRotationOutput, error) {
+	return a.client.EnableKeyRotationWithContext(ctx, input)
 }
 
-func (a *KMSActivities) Encrypt(input *kms.EncryptInput) (*kms.EncryptOutput, error) {
-	return a.client.Encrypt(input)
+func (a *KMSActivities) Encrypt(ctx context.Context, input *kms.EncryptInput) (*kms.EncryptOutput, error) {
+	return a.client.EncryptWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GenerateDataKey(input *kms.GenerateDataKeyInput) (*kms.GenerateDataKeyOutput, error) {
-	return a.client.GenerateDataKey(input)
+func (a *KMSActivities) GenerateDataKey(ctx context.Context, input *kms.GenerateDataKeyInput) (*kms.GenerateDataKeyOutput, error) {
+	return a.client.GenerateDataKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GenerateDataKeyPair(input *kms.GenerateDataKeyPairInput) (*kms.GenerateDataKeyPairOutput, error) {
-	return a.client.GenerateDataKeyPair(input)
+func (a *KMSActivities) GenerateDataKeyPair(ctx context.Context, input *kms.GenerateDataKeyPairInput) (*kms.GenerateDataKeyPairOutput, error) {
+	return a.client.GenerateDataKeyPairWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GenerateDataKeyPairWithoutPlaintext(input *kms.GenerateDataKeyPairWithoutPlaintextInput) (*kms.GenerateDataKeyPairWithoutPlaintextOutput, error) {
-	return a.client.GenerateDataKeyPairWithoutPlaintext(input)
+func (a *KMSActivities) GenerateDataKeyPairWithoutPlaintext(ctx context.Context, input *kms.GenerateDataKeyPairWithoutPlaintextInput) (*kms.GenerateDataKeyPairWithoutPlaintextOutput, error) {
+	return a.client.GenerateDataKeyPairWithoutPlaintextWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GenerateDataKeyWithoutPlaintext(input *kms.GenerateDataKeyWithoutPlaintextInput) (*kms.GenerateDataKeyWithoutPlaintextOutput, error) {
-	return a.client.GenerateDataKeyWithoutPlaintext(input)
+func (a *KMSActivities) GenerateDataKeyWithoutPlaintext(ctx context.Context, input *kms.GenerateDataKeyWithoutPlaintextInput) (*kms.GenerateDataKeyWithoutPlaintextOutput, error) {
+	return a.client.GenerateDataKeyWithoutPlaintextWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GenerateRandom(input *kms.GenerateRandomInput) (*kms.GenerateRandomOutput, error) {
-	return a.client.GenerateRandom(input)
+func (a *KMSActivities) GenerateRandom(ctx context.Context, input *kms.GenerateRandomInput) (*kms.GenerateRandomOutput, error) {
+	return a.client.GenerateRandomWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GetKeyPolicy(input *kms.GetKeyPolicyInput) (*kms.GetKeyPolicyOutput, error) {
-	return a.client.GetKeyPolicy(input)
+func (a *KMSActivities) GetKeyPolicy(ctx context.Context, input *kms.GetKeyPolicyInput) (*kms.GetKeyPolicyOutput, error) {
+	return a.client.GetKeyPolicyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GetKeyRotationStatus(input *kms.GetKeyRotationStatusInput) (*kms.GetKeyRotationStatusOutput, error) {
-	return a.client.GetKeyRotationStatus(input)
+func (a *KMSActivities) GetKeyRotationStatus(ctx context.Context, input *kms.GetKeyRotationStatusInput) (*kms.GetKeyRotationStatusOutput, error) {
+	return a.client.GetKeyRotationStatusWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GetParametersForImport(input *kms.GetParametersForImportInput) (*kms.GetParametersForImportOutput, error) {
-	return a.client.GetParametersForImport(input)
+func (a *KMSActivities) GetParametersForImport(ctx context.Context, input *kms.GetParametersForImportInput) (*kms.GetParametersForImportOutput, error) {
+	return a.client.GetParametersForImportWithContext(ctx, input)
 }
 
-func (a *KMSActivities) GetPublicKey(input *kms.GetPublicKeyInput) (*kms.GetPublicKeyOutput, error) {
-	return a.client.GetPublicKey(input)
+func (a *KMSActivities) GetPublicKey(ctx context.Context, input *kms.GetPublicKeyInput) (*kms.GetPublicKeyOutput, error) {
+	return a.client.GetPublicKeyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ImportKeyMaterial(input *kms.ImportKeyMaterialInput) (*kms.ImportKeyMaterialOutput, error) {
-	return a.client.ImportKeyMaterial(input)
+func (a *KMSActivities) ImportKeyMaterial(ctx context.Context, input *kms.ImportKeyMaterialInput) (*kms.ImportKeyMaterialOutput, error) {
+	return a.client.ImportKeyMaterialWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListAliases(input *kms.ListAliasesInput) (*kms.ListAliasesOutput, error) {
-	return a.client.ListAliases(input)
+func (a *KMSActivities) ListAliases(ctx context.Context, input *kms.ListAliasesInput) (*kms.ListAliasesOutput, error) {
+	return a.client.ListAliasesWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListGrants(input *kms.ListGrantsInput) (*kms.ListGrantsResponse, error) {
-	return a.client.ListGrants(input)
+func (a *KMSActivities) ListGrants(ctx context.Context, input *kms.ListGrantsInput) (*kms.ListGrantsResponse, error) {
+	return a.client.ListGrantsWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListKeyPolicies(input *kms.ListKeyPoliciesInput) (*kms.ListKeyPoliciesOutput, error) {
-	return a.client.ListKeyPolicies(input)
+func (a *KMSActivities) ListKeyPolicies(ctx context.Context, input *kms.ListKeyPoliciesInput) (*kms.ListKeyPoliciesOutput, error) {
+	return a.client.ListKeyPoliciesWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListKeys(input *kms.ListKeysInput) (*kms.ListKeysOutput, error) {
-	return a.client.ListKeys(input)
+func (a *KMSActivities) ListKeys(ctx context.Context, input *kms.ListKeysInput) (*kms.ListKeysOutput, error) {
+	return a.client.ListKeysWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListResourceTags(input *kms.ListResourceTagsInput) (*kms.ListResourceTagsOutput, error) {
-	return a.client.ListResourceTags(input)
+func (a *KMSActivities) ListResourceTags(ctx context.Context, input *kms.ListResourceTagsInput) (*kms.ListResourceTagsOutput, error) {
+	return a.client.ListResourceTagsWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ListRetirableGrants(input *kms.ListRetirableGrantsInput) (*kms.ListGrantsResponse, error) {
-	return a.client.ListRetirableGrants(input)
+func (a *KMSActivities) ListRetirableGrants(ctx context.Context, input *kms.ListRetirableGrantsInput) (*kms.ListGrantsResponse, error) {
+	return a.client.ListRetirableGrantsWithContext(ctx, input)
 }
 
-func (a *KMSActivities) PutKeyPolicy(input *kms.PutKeyPolicyInput) (*kms.PutKeyPolicyOutput, error) {
-	return a.client.PutKeyPolicy(input)
+func (a *KMSActivities) PutKeyPolicy(ctx context.Context, input *kms.PutKeyPolicyInput) (*kms.PutKeyPolicyOutput, error) {
+	return a.client.PutKeyPolicyWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ReEncrypt(input *kms.ReEncryptInput) (*kms.ReEncryptOutput, error) {
-	return a.client.ReEncrypt(input)
+func (a *KMSActivities) ReEncrypt(ctx context.Context, input *kms.ReEncryptInput) (*kms.ReEncryptOutput, error) {
+	return a.client.ReEncryptWithContext(ctx, input)
 }
 
-func (a *KMSActivities) RetireGrant(input *kms.RetireGrantInput) (*kms.RetireGrantOutput, error) {
-	return a.client.RetireGrant(input)
+func (a *KMSActivities) RetireGrant(ctx context.Context, input *kms.RetireGrantInput) (*kms.RetireGrantOutput, error) {
+	return a.client.RetireGrantWithContext(ctx, input)
 }
 
-func (a *KMSActivities) RevokeGrant(input *kms.RevokeGrantInput) (*kms.RevokeGrantOutput, error) {
-	return a.client.RevokeGrant(input)
+func (a *KMSActivities) RevokeGrant(ctx context.Context, input *kms.RevokeGrantInput) (*kms.RevokeGrantOutput, error) {
+	return a.client.RevokeGrantWithContext(ctx, input)
 }
 
-func (a *KMSActivities) ScheduleKeyDeletion(input *kms.ScheduleKeyDeletionInput) (*kms.ScheduleKeyDeletionOutput, error) {
-	return a.client.ScheduleKeyDeletion(input)
+func (a *KMSActivities) ScheduleKeyDeletion(ctx context.Context, input *kms.ScheduleKeyDeletionInput) (*kms.ScheduleKeyDeletionOutput, error) {
+	return a.client.ScheduleKeyDeletionWithContext(ctx, input)
 }
 
-func (a *KMSActivities) Sign(input *kms.SignInput) (*kms.SignOutput, error) {
-	return a.client.Sign(input)
+func (a *KMSActivities) Sign(ctx context.Context, input *kms.SignInput) (*kms.SignOutput, error) {
+	return a.client.SignWithContext(ctx, input)
 }
 
-func (a *KMSActivities) TagResource(input *kms.TagResourceInput) (*kms.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *KMSActivities) TagResource(ctx context.Context, input *kms.TagResourceInput) (*kms.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *KMSActivities) UntagResource(input *kms.UntagResourceInput) (*kms.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *KMSActivities) UntagResource(ctx context.Context, input *kms.UntagResourceInput) (*kms.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *KMSActivities) UpdateAlias(input *kms.UpdateAliasInput) (*kms.UpdateAliasOutput, error) {
-	return a.client.UpdateAlias(input)
+func (a *KMSActivities) UpdateAlias(ctx context.Context, input *kms.UpdateAliasInput) (*kms.UpdateAliasOutput, error) {
+	return a.client.UpdateAliasWithContext(ctx, input)
 }
 
-func (a *KMSActivities) UpdateCustomKeyStore(input *kms.UpdateCustomKeyStoreInput) (*kms.UpdateCustomKeyStoreOutput, error) {
-	return a.client.UpdateCustomKeyStore(input)
+func (a *KMSActivities) UpdateCustomKeyStore(ctx context.Context, input *kms.UpdateCustomKeyStoreInput) (*kms.UpdateCustomKeyStoreOutput, error) {
+	return a.client.UpdateCustomKeyStoreWithContext(ctx, input)
 }
 
-func (a *KMSActivities) UpdateKeyDescription(input *kms.UpdateKeyDescriptionInput) (*kms.UpdateKeyDescriptionOutput, error) {
-	return a.client.UpdateKeyDescription(input)
+func (a *KMSActivities) UpdateKeyDescription(ctx context.Context, input *kms.UpdateKeyDescriptionInput) (*kms.UpdateKeyDescriptionOutput, error) {
+	return a.client.UpdateKeyDescriptionWithContext(ctx, input)
 }
 
-func (a *KMSActivities) Verify(input *kms.VerifyInput) (*kms.VerifyOutput, error) {
-	return a.client.Verify(input)
+func (a *KMSActivities) Verify(ctx context.Context, input *kms.VerifyInput) (*kms.VerifyOutput, error) {
+	return a.client.VerifyWithContext(ctx, input)
 }

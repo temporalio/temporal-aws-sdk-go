@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kinesisvideo"
 	"github.com/aws/aws-sdk-go/service/kinesisvideo/kinesisvideoiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type KinesisVideoActivities struct {
 	client kinesisvideoiface.KinesisVideoAPI
@@ -16,78 +21,78 @@ func NewKinesisVideoActivities(session *session.Session, config ...*aws.Config) 
 	return &KinesisVideoActivities{client: client}
 }
 
-func (a *KinesisVideoActivities) CreateSignalingChannel(input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error) {
-	return a.client.CreateSignalingChannel(input)
+func (a *KinesisVideoActivities) CreateSignalingChannel(ctx context.Context, input *kinesisvideo.CreateSignalingChannelInput) (*kinesisvideo.CreateSignalingChannelOutput, error) {
+	return a.client.CreateSignalingChannelWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) CreateStream(input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error) {
-	return a.client.CreateStream(input)
+func (a *KinesisVideoActivities) CreateStream(ctx context.Context, input *kinesisvideo.CreateStreamInput) (*kinesisvideo.CreateStreamOutput, error) {
+	return a.client.CreateStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) DeleteSignalingChannel(input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error) {
-	return a.client.DeleteSignalingChannel(input)
+func (a *KinesisVideoActivities) DeleteSignalingChannel(ctx context.Context, input *kinesisvideo.DeleteSignalingChannelInput) (*kinesisvideo.DeleteSignalingChannelOutput, error) {
+	return a.client.DeleteSignalingChannelWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) DeleteStream(input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error) {
-	return a.client.DeleteStream(input)
+func (a *KinesisVideoActivities) DeleteStream(ctx context.Context, input *kinesisvideo.DeleteStreamInput) (*kinesisvideo.DeleteStreamOutput, error) {
+	return a.client.DeleteStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) DescribeSignalingChannel(input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error) {
-	return a.client.DescribeSignalingChannel(input)
+func (a *KinesisVideoActivities) DescribeSignalingChannel(ctx context.Context, input *kinesisvideo.DescribeSignalingChannelInput) (*kinesisvideo.DescribeSignalingChannelOutput, error) {
+	return a.client.DescribeSignalingChannelWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) DescribeStream(input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error) {
-	return a.client.DescribeStream(input)
+func (a *KinesisVideoActivities) DescribeStream(ctx context.Context, input *kinesisvideo.DescribeStreamInput) (*kinesisvideo.DescribeStreamOutput, error) {
+	return a.client.DescribeStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) GetDataEndpoint(input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error) {
-	return a.client.GetDataEndpoint(input)
+func (a *KinesisVideoActivities) GetDataEndpoint(ctx context.Context, input *kinesisvideo.GetDataEndpointInput) (*kinesisvideo.GetDataEndpointOutput, error) {
+	return a.client.GetDataEndpointWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) GetSignalingChannelEndpoint(input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error) {
-	return a.client.GetSignalingChannelEndpoint(input)
+func (a *KinesisVideoActivities) GetSignalingChannelEndpoint(ctx context.Context, input *kinesisvideo.GetSignalingChannelEndpointInput) (*kinesisvideo.GetSignalingChannelEndpointOutput, error) {
+	return a.client.GetSignalingChannelEndpointWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) ListSignalingChannels(input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error) {
-	return a.client.ListSignalingChannels(input)
+func (a *KinesisVideoActivities) ListSignalingChannels(ctx context.Context, input *kinesisvideo.ListSignalingChannelsInput) (*kinesisvideo.ListSignalingChannelsOutput, error) {
+	return a.client.ListSignalingChannelsWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) ListStreams(input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error) {
-	return a.client.ListStreams(input)
+func (a *KinesisVideoActivities) ListStreams(ctx context.Context, input *kinesisvideo.ListStreamsInput) (*kinesisvideo.ListStreamsOutput, error) {
+	return a.client.ListStreamsWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) ListTagsForResource(input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *KinesisVideoActivities) ListTagsForResource(ctx context.Context, input *kinesisvideo.ListTagsForResourceInput) (*kinesisvideo.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) ListTagsForStream(input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error) {
-	return a.client.ListTagsForStream(input)
+func (a *KinesisVideoActivities) ListTagsForStream(ctx context.Context, input *kinesisvideo.ListTagsForStreamInput) (*kinesisvideo.ListTagsForStreamOutput, error) {
+	return a.client.ListTagsForStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) TagResource(input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *KinesisVideoActivities) TagResource(ctx context.Context, input *kinesisvideo.TagResourceInput) (*kinesisvideo.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) TagStream(input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error) {
-	return a.client.TagStream(input)
+func (a *KinesisVideoActivities) TagStream(ctx context.Context, input *kinesisvideo.TagStreamInput) (*kinesisvideo.TagStreamOutput, error) {
+	return a.client.TagStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) UntagResource(input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *KinesisVideoActivities) UntagResource(ctx context.Context, input *kinesisvideo.UntagResourceInput) (*kinesisvideo.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) UntagStream(input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error) {
-	return a.client.UntagStream(input)
+func (a *KinesisVideoActivities) UntagStream(ctx context.Context, input *kinesisvideo.UntagStreamInput) (*kinesisvideo.UntagStreamOutput, error) {
+	return a.client.UntagStreamWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) UpdateDataRetention(input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error) {
-	return a.client.UpdateDataRetention(input)
+func (a *KinesisVideoActivities) UpdateDataRetention(ctx context.Context, input *kinesisvideo.UpdateDataRetentionInput) (*kinesisvideo.UpdateDataRetentionOutput, error) {
+	return a.client.UpdateDataRetentionWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) UpdateSignalingChannel(input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error) {
-	return a.client.UpdateSignalingChannel(input)
+func (a *KinesisVideoActivities) UpdateSignalingChannel(ctx context.Context, input *kinesisvideo.UpdateSignalingChannelInput) (*kinesisvideo.UpdateSignalingChannelOutput, error) {
+	return a.client.UpdateSignalingChannelWithContext(ctx, input)
 }
 
-func (a *KinesisVideoActivities) UpdateStream(input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error) {
-	return a.client.UpdateStream(input)
+func (a *KinesisVideoActivities) UpdateStream(ctx context.Context, input *kinesisvideo.UpdateStreamInput) (*kinesisvideo.UpdateStreamOutput, error) {
+	return a.client.UpdateStreamWithContext(ctx, input)
 }

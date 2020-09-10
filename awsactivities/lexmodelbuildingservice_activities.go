@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lexmodelbuildingservice"
 	"github.com/aws/aws-sdk-go/service/lexmodelbuildingservice/lexmodelbuildingserviceiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type LexModelBuildingServiceActivities struct {
 	client lexmodelbuildingserviceiface.LexModelBuildingServiceAPI
@@ -16,158 +21,158 @@ func NewLexModelBuildingServiceActivities(session *session.Session, config ...*a
 	return &LexModelBuildingServiceActivities{client: client}
 }
 
-func (a *LexModelBuildingServiceActivities) CreateBotVersion(input *lexmodelbuildingservice.CreateBotVersionInput) (*lexmodelbuildingservice.CreateBotVersionOutput, error) {
-	return a.client.CreateBotVersion(input)
+func (a *LexModelBuildingServiceActivities) CreateBotVersion(ctx context.Context, input *lexmodelbuildingservice.CreateBotVersionInput) (*lexmodelbuildingservice.CreateBotVersionOutput, error) {
+	return a.client.CreateBotVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) CreateIntentVersion(input *lexmodelbuildingservice.CreateIntentVersionInput) (*lexmodelbuildingservice.CreateIntentVersionOutput, error) {
-	return a.client.CreateIntentVersion(input)
+func (a *LexModelBuildingServiceActivities) CreateIntentVersion(ctx context.Context, input *lexmodelbuildingservice.CreateIntentVersionInput) (*lexmodelbuildingservice.CreateIntentVersionOutput, error) {
+	return a.client.CreateIntentVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) CreateSlotTypeVersion(input *lexmodelbuildingservice.CreateSlotTypeVersionInput) (*lexmodelbuildingservice.CreateSlotTypeVersionOutput, error) {
-	return a.client.CreateSlotTypeVersion(input)
+func (a *LexModelBuildingServiceActivities) CreateSlotTypeVersion(ctx context.Context, input *lexmodelbuildingservice.CreateSlotTypeVersionInput) (*lexmodelbuildingservice.CreateSlotTypeVersionOutput, error) {
+	return a.client.CreateSlotTypeVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteBot(input *lexmodelbuildingservice.DeleteBotInput) (*lexmodelbuildingservice.DeleteBotOutput, error) {
-	return a.client.DeleteBot(input)
+func (a *LexModelBuildingServiceActivities) DeleteBot(ctx context.Context, input *lexmodelbuildingservice.DeleteBotInput) (*lexmodelbuildingservice.DeleteBotOutput, error) {
+	return a.client.DeleteBotWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteBotAlias(input *lexmodelbuildingservice.DeleteBotAliasInput) (*lexmodelbuildingservice.DeleteBotAliasOutput, error) {
-	return a.client.DeleteBotAlias(input)
+func (a *LexModelBuildingServiceActivities) DeleteBotAlias(ctx context.Context, input *lexmodelbuildingservice.DeleteBotAliasInput) (*lexmodelbuildingservice.DeleteBotAliasOutput, error) {
+	return a.client.DeleteBotAliasWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteBotChannelAssociation(input *lexmodelbuildingservice.DeleteBotChannelAssociationInput) (*lexmodelbuildingservice.DeleteBotChannelAssociationOutput, error) {
-	return a.client.DeleteBotChannelAssociation(input)
+func (a *LexModelBuildingServiceActivities) DeleteBotChannelAssociation(ctx context.Context, input *lexmodelbuildingservice.DeleteBotChannelAssociationInput) (*lexmodelbuildingservice.DeleteBotChannelAssociationOutput, error) {
+	return a.client.DeleteBotChannelAssociationWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteBotVersion(input *lexmodelbuildingservice.DeleteBotVersionInput) (*lexmodelbuildingservice.DeleteBotVersionOutput, error) {
-	return a.client.DeleteBotVersion(input)
+func (a *LexModelBuildingServiceActivities) DeleteBotVersion(ctx context.Context, input *lexmodelbuildingservice.DeleteBotVersionInput) (*lexmodelbuildingservice.DeleteBotVersionOutput, error) {
+	return a.client.DeleteBotVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteIntent(input *lexmodelbuildingservice.DeleteIntentInput) (*lexmodelbuildingservice.DeleteIntentOutput, error) {
-	return a.client.DeleteIntent(input)
+func (a *LexModelBuildingServiceActivities) DeleteIntent(ctx context.Context, input *lexmodelbuildingservice.DeleteIntentInput) (*lexmodelbuildingservice.DeleteIntentOutput, error) {
+	return a.client.DeleteIntentWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteIntentVersion(input *lexmodelbuildingservice.DeleteIntentVersionInput) (*lexmodelbuildingservice.DeleteIntentVersionOutput, error) {
-	return a.client.DeleteIntentVersion(input)
+func (a *LexModelBuildingServiceActivities) DeleteIntentVersion(ctx context.Context, input *lexmodelbuildingservice.DeleteIntentVersionInput) (*lexmodelbuildingservice.DeleteIntentVersionOutput, error) {
+	return a.client.DeleteIntentVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteSlotType(input *lexmodelbuildingservice.DeleteSlotTypeInput) (*lexmodelbuildingservice.DeleteSlotTypeOutput, error) {
-	return a.client.DeleteSlotType(input)
+func (a *LexModelBuildingServiceActivities) DeleteSlotType(ctx context.Context, input *lexmodelbuildingservice.DeleteSlotTypeInput) (*lexmodelbuildingservice.DeleteSlotTypeOutput, error) {
+	return a.client.DeleteSlotTypeWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteSlotTypeVersion(input *lexmodelbuildingservice.DeleteSlotTypeVersionInput) (*lexmodelbuildingservice.DeleteSlotTypeVersionOutput, error) {
-	return a.client.DeleteSlotTypeVersion(input)
+func (a *LexModelBuildingServiceActivities) DeleteSlotTypeVersion(ctx context.Context, input *lexmodelbuildingservice.DeleteSlotTypeVersionInput) (*lexmodelbuildingservice.DeleteSlotTypeVersionOutput, error) {
+	return a.client.DeleteSlotTypeVersionWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) DeleteUtterances(input *lexmodelbuildingservice.DeleteUtterancesInput) (*lexmodelbuildingservice.DeleteUtterancesOutput, error) {
-	return a.client.DeleteUtterances(input)
+func (a *LexModelBuildingServiceActivities) DeleteUtterances(ctx context.Context, input *lexmodelbuildingservice.DeleteUtterancesInput) (*lexmodelbuildingservice.DeleteUtterancesOutput, error) {
+	return a.client.DeleteUtterancesWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBot(input *lexmodelbuildingservice.GetBotInput) (*lexmodelbuildingservice.GetBotOutput, error) {
-	return a.client.GetBot(input)
+func (a *LexModelBuildingServiceActivities) GetBot(ctx context.Context, input *lexmodelbuildingservice.GetBotInput) (*lexmodelbuildingservice.GetBotOutput, error) {
+	return a.client.GetBotWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBotAlias(input *lexmodelbuildingservice.GetBotAliasInput) (*lexmodelbuildingservice.GetBotAliasOutput, error) {
-	return a.client.GetBotAlias(input)
+func (a *LexModelBuildingServiceActivities) GetBotAlias(ctx context.Context, input *lexmodelbuildingservice.GetBotAliasInput) (*lexmodelbuildingservice.GetBotAliasOutput, error) {
+	return a.client.GetBotAliasWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBotAliases(input *lexmodelbuildingservice.GetBotAliasesInput) (*lexmodelbuildingservice.GetBotAliasesOutput, error) {
-	return a.client.GetBotAliases(input)
+func (a *LexModelBuildingServiceActivities) GetBotAliases(ctx context.Context, input *lexmodelbuildingservice.GetBotAliasesInput) (*lexmodelbuildingservice.GetBotAliasesOutput, error) {
+	return a.client.GetBotAliasesWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBotChannelAssociation(input *lexmodelbuildingservice.GetBotChannelAssociationInput) (*lexmodelbuildingservice.GetBotChannelAssociationOutput, error) {
-	return a.client.GetBotChannelAssociation(input)
+func (a *LexModelBuildingServiceActivities) GetBotChannelAssociation(ctx context.Context, input *lexmodelbuildingservice.GetBotChannelAssociationInput) (*lexmodelbuildingservice.GetBotChannelAssociationOutput, error) {
+	return a.client.GetBotChannelAssociationWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBotChannelAssociations(input *lexmodelbuildingservice.GetBotChannelAssociationsInput) (*lexmodelbuildingservice.GetBotChannelAssociationsOutput, error) {
-	return a.client.GetBotChannelAssociations(input)
+func (a *LexModelBuildingServiceActivities) GetBotChannelAssociations(ctx context.Context, input *lexmodelbuildingservice.GetBotChannelAssociationsInput) (*lexmodelbuildingservice.GetBotChannelAssociationsOutput, error) {
+	return a.client.GetBotChannelAssociationsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBotVersions(input *lexmodelbuildingservice.GetBotVersionsInput) (*lexmodelbuildingservice.GetBotVersionsOutput, error) {
-	return a.client.GetBotVersions(input)
+func (a *LexModelBuildingServiceActivities) GetBotVersions(ctx context.Context, input *lexmodelbuildingservice.GetBotVersionsInput) (*lexmodelbuildingservice.GetBotVersionsOutput, error) {
+	return a.client.GetBotVersionsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBots(input *lexmodelbuildingservice.GetBotsInput) (*lexmodelbuildingservice.GetBotsOutput, error) {
-	return a.client.GetBots(input)
+func (a *LexModelBuildingServiceActivities) GetBots(ctx context.Context, input *lexmodelbuildingservice.GetBotsInput) (*lexmodelbuildingservice.GetBotsOutput, error) {
+	return a.client.GetBotsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBuiltinIntent(input *lexmodelbuildingservice.GetBuiltinIntentInput) (*lexmodelbuildingservice.GetBuiltinIntentOutput, error) {
-	return a.client.GetBuiltinIntent(input)
+func (a *LexModelBuildingServiceActivities) GetBuiltinIntent(ctx context.Context, input *lexmodelbuildingservice.GetBuiltinIntentInput) (*lexmodelbuildingservice.GetBuiltinIntentOutput, error) {
+	return a.client.GetBuiltinIntentWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBuiltinIntents(input *lexmodelbuildingservice.GetBuiltinIntentsInput) (*lexmodelbuildingservice.GetBuiltinIntentsOutput, error) {
-	return a.client.GetBuiltinIntents(input)
+func (a *LexModelBuildingServiceActivities) GetBuiltinIntents(ctx context.Context, input *lexmodelbuildingservice.GetBuiltinIntentsInput) (*lexmodelbuildingservice.GetBuiltinIntentsOutput, error) {
+	return a.client.GetBuiltinIntentsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetBuiltinSlotTypes(input *lexmodelbuildingservice.GetBuiltinSlotTypesInput) (*lexmodelbuildingservice.GetBuiltinSlotTypesOutput, error) {
-	return a.client.GetBuiltinSlotTypes(input)
+func (a *LexModelBuildingServiceActivities) GetBuiltinSlotTypes(ctx context.Context, input *lexmodelbuildingservice.GetBuiltinSlotTypesInput) (*lexmodelbuildingservice.GetBuiltinSlotTypesOutput, error) {
+	return a.client.GetBuiltinSlotTypesWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetExport(input *lexmodelbuildingservice.GetExportInput) (*lexmodelbuildingservice.GetExportOutput, error) {
-	return a.client.GetExport(input)
+func (a *LexModelBuildingServiceActivities) GetExport(ctx context.Context, input *lexmodelbuildingservice.GetExportInput) (*lexmodelbuildingservice.GetExportOutput, error) {
+	return a.client.GetExportWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetImport(input *lexmodelbuildingservice.GetImportInput) (*lexmodelbuildingservice.GetImportOutput, error) {
-	return a.client.GetImport(input)
+func (a *LexModelBuildingServiceActivities) GetImport(ctx context.Context, input *lexmodelbuildingservice.GetImportInput) (*lexmodelbuildingservice.GetImportOutput, error) {
+	return a.client.GetImportWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetIntent(input *lexmodelbuildingservice.GetIntentInput) (*lexmodelbuildingservice.GetIntentOutput, error) {
-	return a.client.GetIntent(input)
+func (a *LexModelBuildingServiceActivities) GetIntent(ctx context.Context, input *lexmodelbuildingservice.GetIntentInput) (*lexmodelbuildingservice.GetIntentOutput, error) {
+	return a.client.GetIntentWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetIntentVersions(input *lexmodelbuildingservice.GetIntentVersionsInput) (*lexmodelbuildingservice.GetIntentVersionsOutput, error) {
-	return a.client.GetIntentVersions(input)
+func (a *LexModelBuildingServiceActivities) GetIntentVersions(ctx context.Context, input *lexmodelbuildingservice.GetIntentVersionsInput) (*lexmodelbuildingservice.GetIntentVersionsOutput, error) {
+	return a.client.GetIntentVersionsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetIntents(input *lexmodelbuildingservice.GetIntentsInput) (*lexmodelbuildingservice.GetIntentsOutput, error) {
-	return a.client.GetIntents(input)
+func (a *LexModelBuildingServiceActivities) GetIntents(ctx context.Context, input *lexmodelbuildingservice.GetIntentsInput) (*lexmodelbuildingservice.GetIntentsOutput, error) {
+	return a.client.GetIntentsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetSlotType(input *lexmodelbuildingservice.GetSlotTypeInput) (*lexmodelbuildingservice.GetSlotTypeOutput, error) {
-	return a.client.GetSlotType(input)
+func (a *LexModelBuildingServiceActivities) GetSlotType(ctx context.Context, input *lexmodelbuildingservice.GetSlotTypeInput) (*lexmodelbuildingservice.GetSlotTypeOutput, error) {
+	return a.client.GetSlotTypeWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetSlotTypeVersions(input *lexmodelbuildingservice.GetSlotTypeVersionsInput) (*lexmodelbuildingservice.GetSlotTypeVersionsOutput, error) {
-	return a.client.GetSlotTypeVersions(input)
+func (a *LexModelBuildingServiceActivities) GetSlotTypeVersions(ctx context.Context, input *lexmodelbuildingservice.GetSlotTypeVersionsInput) (*lexmodelbuildingservice.GetSlotTypeVersionsOutput, error) {
+	return a.client.GetSlotTypeVersionsWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetSlotTypes(input *lexmodelbuildingservice.GetSlotTypesInput) (*lexmodelbuildingservice.GetSlotTypesOutput, error) {
-	return a.client.GetSlotTypes(input)
+func (a *LexModelBuildingServiceActivities) GetSlotTypes(ctx context.Context, input *lexmodelbuildingservice.GetSlotTypesInput) (*lexmodelbuildingservice.GetSlotTypesOutput, error) {
+	return a.client.GetSlotTypesWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) GetUtterancesView(input *lexmodelbuildingservice.GetUtterancesViewInput) (*lexmodelbuildingservice.GetUtterancesViewOutput, error) {
-	return a.client.GetUtterancesView(input)
+func (a *LexModelBuildingServiceActivities) GetUtterancesView(ctx context.Context, input *lexmodelbuildingservice.GetUtterancesViewInput) (*lexmodelbuildingservice.GetUtterancesViewOutput, error) {
+	return a.client.GetUtterancesViewWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) ListTagsForResource(input *lexmodelbuildingservice.ListTagsForResourceInput) (*lexmodelbuildingservice.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *LexModelBuildingServiceActivities) ListTagsForResource(ctx context.Context, input *lexmodelbuildingservice.ListTagsForResourceInput) (*lexmodelbuildingservice.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) PutBot(input *lexmodelbuildingservice.PutBotInput) (*lexmodelbuildingservice.PutBotOutput, error) {
-	return a.client.PutBot(input)
+func (a *LexModelBuildingServiceActivities) PutBot(ctx context.Context, input *lexmodelbuildingservice.PutBotInput) (*lexmodelbuildingservice.PutBotOutput, error) {
+	return a.client.PutBotWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) PutBotAlias(input *lexmodelbuildingservice.PutBotAliasInput) (*lexmodelbuildingservice.PutBotAliasOutput, error) {
-	return a.client.PutBotAlias(input)
+func (a *LexModelBuildingServiceActivities) PutBotAlias(ctx context.Context, input *lexmodelbuildingservice.PutBotAliasInput) (*lexmodelbuildingservice.PutBotAliasOutput, error) {
+	return a.client.PutBotAliasWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) PutIntent(input *lexmodelbuildingservice.PutIntentInput) (*lexmodelbuildingservice.PutIntentOutput, error) {
-	return a.client.PutIntent(input)
+func (a *LexModelBuildingServiceActivities) PutIntent(ctx context.Context, input *lexmodelbuildingservice.PutIntentInput) (*lexmodelbuildingservice.PutIntentOutput, error) {
+	return a.client.PutIntentWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) PutSlotType(input *lexmodelbuildingservice.PutSlotTypeInput) (*lexmodelbuildingservice.PutSlotTypeOutput, error) {
-	return a.client.PutSlotType(input)
+func (a *LexModelBuildingServiceActivities) PutSlotType(ctx context.Context, input *lexmodelbuildingservice.PutSlotTypeInput) (*lexmodelbuildingservice.PutSlotTypeOutput, error) {
+	return a.client.PutSlotTypeWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) StartImport(input *lexmodelbuildingservice.StartImportInput) (*lexmodelbuildingservice.StartImportOutput, error) {
-	return a.client.StartImport(input)
+func (a *LexModelBuildingServiceActivities) StartImport(ctx context.Context, input *lexmodelbuildingservice.StartImportInput) (*lexmodelbuildingservice.StartImportOutput, error) {
+	return a.client.StartImportWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) TagResource(input *lexmodelbuildingservice.TagResourceInput) (*lexmodelbuildingservice.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *LexModelBuildingServiceActivities) TagResource(ctx context.Context, input *lexmodelbuildingservice.TagResourceInput) (*lexmodelbuildingservice.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *LexModelBuildingServiceActivities) UntagResource(input *lexmodelbuildingservice.UntagResourceInput) (*lexmodelbuildingservice.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *LexModelBuildingServiceActivities) UntagResource(ctx context.Context, input *lexmodelbuildingservice.UntagResourceInput) (*lexmodelbuildingservice.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }

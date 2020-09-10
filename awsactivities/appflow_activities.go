@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appflow"
 	"github.com/aws/aws-sdk-go/service/appflow/appflowiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type AppflowActivities struct {
 	client appflowiface.AppflowAPI
@@ -16,74 +21,74 @@ func NewAppflowActivities(session *session.Session, config ...*aws.Config) *Appf
 	return &AppflowActivities{client: client}
 }
 
-func (a *AppflowActivities) CreateConnectorProfile(input *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error) {
-	return a.client.CreateConnectorProfile(input)
+func (a *AppflowActivities) CreateConnectorProfile(ctx context.Context, input *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error) {
+	return a.client.CreateConnectorProfileWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) CreateFlow(input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error) {
-	return a.client.CreateFlow(input)
+func (a *AppflowActivities) CreateFlow(ctx context.Context, input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error) {
+	return a.client.CreateFlowWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DeleteConnectorProfile(input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error) {
-	return a.client.DeleteConnectorProfile(input)
+func (a *AppflowActivities) DeleteConnectorProfile(ctx context.Context, input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error) {
+	return a.client.DeleteConnectorProfileWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DeleteFlow(input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error) {
-	return a.client.DeleteFlow(input)
+func (a *AppflowActivities) DeleteFlow(ctx context.Context, input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error) {
+	return a.client.DeleteFlowWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DescribeConnectorEntity(input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error) {
-	return a.client.DescribeConnectorEntity(input)
+func (a *AppflowActivities) DescribeConnectorEntity(ctx context.Context, input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error) {
+	return a.client.DescribeConnectorEntityWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DescribeConnectorProfiles(input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error) {
-	return a.client.DescribeConnectorProfiles(input)
+func (a *AppflowActivities) DescribeConnectorProfiles(ctx context.Context, input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error) {
+	return a.client.DescribeConnectorProfilesWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DescribeConnectors(input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error) {
-	return a.client.DescribeConnectors(input)
+func (a *AppflowActivities) DescribeConnectors(ctx context.Context, input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error) {
+	return a.client.DescribeConnectorsWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DescribeFlow(input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error) {
-	return a.client.DescribeFlow(input)
+func (a *AppflowActivities) DescribeFlow(ctx context.Context, input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error) {
+	return a.client.DescribeFlowWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) DescribeFlowExecutionRecords(input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
-	return a.client.DescribeFlowExecutionRecords(input)
+func (a *AppflowActivities) DescribeFlowExecutionRecords(ctx context.Context, input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
+	return a.client.DescribeFlowExecutionRecordsWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) ListConnectorEntities(input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error) {
-	return a.client.ListConnectorEntities(input)
+func (a *AppflowActivities) ListConnectorEntities(ctx context.Context, input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error) {
+	return a.client.ListConnectorEntitiesWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) ListFlows(input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error) {
-	return a.client.ListFlows(input)
+func (a *AppflowActivities) ListFlows(ctx context.Context, input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error) {
+	return a.client.ListFlowsWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) ListTagsForResource(input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *AppflowActivities) ListTagsForResource(ctx context.Context, input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) StartFlow(input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error) {
-	return a.client.StartFlow(input)
+func (a *AppflowActivities) StartFlow(ctx context.Context, input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error) {
+	return a.client.StartFlowWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) StopFlow(input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error) {
-	return a.client.StopFlow(input)
+func (a *AppflowActivities) StopFlow(ctx context.Context, input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error) {
+	return a.client.StopFlowWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) TagResource(input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *AppflowActivities) TagResource(ctx context.Context, input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) UntagResource(input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *AppflowActivities) UntagResource(ctx context.Context, input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) UpdateConnectorProfile(input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error) {
-	return a.client.UpdateConnectorProfile(input)
+func (a *AppflowActivities) UpdateConnectorProfile(ctx context.Context, input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error) {
+	return a.client.UpdateConnectorProfileWithContext(ctx, input)
 }
 
-func (a *AppflowActivities) UpdateFlow(input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error) {
-	return a.client.UpdateFlow(input)
+func (a *AppflowActivities) UpdateFlow(ctx context.Context, input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error) {
+	return a.client.UpdateFlowWithContext(ctx, input)
 }

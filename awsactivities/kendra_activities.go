@@ -1,11 +1,16 @@
 package awsactivities
 
 import (
+	"context"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kendra"
 	"github.com/aws/aws-sdk-go/service/kendra/kendraiface"
+	"go.temporal.io/sdk/activity"
 )
+
+// ensure that activity import is valid even if not used by the generated code
+type _ = activity.Info
 
 type KendraActivities struct {
 	client kendraiface.KendraAPI
@@ -16,98 +21,104 @@ func NewKendraActivities(session *session.Session, config ...*aws.Config) *Kendr
 	return &KendraActivities{client: client}
 }
 
-func (a *KendraActivities) BatchDeleteDocument(input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error) {
-	return a.client.BatchDeleteDocument(input)
+func (a *KendraActivities) BatchDeleteDocument(ctx context.Context, input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error) {
+	return a.client.BatchDeleteDocumentWithContext(ctx, input)
 }
 
-func (a *KendraActivities) BatchPutDocument(input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error) {
-	return a.client.BatchPutDocument(input)
+func (a *KendraActivities) BatchPutDocument(ctx context.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error) {
+	return a.client.BatchPutDocumentWithContext(ctx, input)
 }
 
-func (a *KendraActivities) CreateDataSource(input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error) {
-	return a.client.CreateDataSource(input)
+func (a *KendraActivities) CreateDataSource(ctx context.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error) {
+	return a.client.CreateDataSourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) CreateFaq(input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error) {
-	return a.client.CreateFaq(input)
+func (a *KendraActivities) CreateFaq(ctx context.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error) {
+	return a.client.CreateFaqWithContext(ctx, input)
 }
 
-func (a *KendraActivities) CreateIndex(input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error) {
-	return a.client.CreateIndex(input)
+func (a *KendraActivities) CreateIndex(ctx context.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error) {
+	// Use the same token during retries
+	if input.ClientToken == nil {
+		info := activity.GetInfo(ctx)
+		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
+		input.ClientToken = &token
+	}
+	return a.client.CreateIndexWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DeleteDataSource(input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error) {
-	return a.client.DeleteDataSource(input)
+func (a *KendraActivities) DeleteDataSource(ctx context.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error) {
+	return a.client.DeleteDataSourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DeleteFaq(input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error) {
-	return a.client.DeleteFaq(input)
+func (a *KendraActivities) DeleteFaq(ctx context.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error) {
+	return a.client.DeleteFaqWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DeleteIndex(input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error) {
-	return a.client.DeleteIndex(input)
+func (a *KendraActivities) DeleteIndex(ctx context.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error) {
+	return a.client.DeleteIndexWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DescribeDataSource(input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error) {
-	return a.client.DescribeDataSource(input)
+func (a *KendraActivities) DescribeDataSource(ctx context.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error) {
+	return a.client.DescribeDataSourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DescribeFaq(input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error) {
-	return a.client.DescribeFaq(input)
+func (a *KendraActivities) DescribeFaq(ctx context.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error) {
+	return a.client.DescribeFaqWithContext(ctx, input)
 }
 
-func (a *KendraActivities) DescribeIndex(input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error) {
-	return a.client.DescribeIndex(input)
+func (a *KendraActivities) DescribeIndex(ctx context.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error) {
+	return a.client.DescribeIndexWithContext(ctx, input)
 }
 
-func (a *KendraActivities) ListDataSourceSyncJobs(input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error) {
-	return a.client.ListDataSourceSyncJobs(input)
+func (a *KendraActivities) ListDataSourceSyncJobs(ctx context.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error) {
+	return a.client.ListDataSourceSyncJobsWithContext(ctx, input)
 }
 
-func (a *KendraActivities) ListDataSources(input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error) {
-	return a.client.ListDataSources(input)
+func (a *KendraActivities) ListDataSources(ctx context.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error) {
+	return a.client.ListDataSourcesWithContext(ctx, input)
 }
 
-func (a *KendraActivities) ListFaqs(input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error) {
-	return a.client.ListFaqs(input)
+func (a *KendraActivities) ListFaqs(ctx context.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error) {
+	return a.client.ListFaqsWithContext(ctx, input)
 }
 
-func (a *KendraActivities) ListIndices(input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error) {
-	return a.client.ListIndices(input)
+func (a *KendraActivities) ListIndices(ctx context.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error) {
+	return a.client.ListIndicesWithContext(ctx, input)
 }
 
-func (a *KendraActivities) ListTagsForResource(input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResource(input)
+func (a *KendraActivities) ListTagsForResource(ctx context.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error) {
+	return a.client.ListTagsForResourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) Query(input *kendra.QueryInput) (*kendra.QueryOutput, error) {
-	return a.client.Query(input)
+func (a *KendraActivities) Query(ctx context.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error) {
+	return a.client.QueryWithContext(ctx, input)
 }
 
-func (a *KendraActivities) StartDataSourceSyncJob(input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error) {
-	return a.client.StartDataSourceSyncJob(input)
+func (a *KendraActivities) StartDataSourceSyncJob(ctx context.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error) {
+	return a.client.StartDataSourceSyncJobWithContext(ctx, input)
 }
 
-func (a *KendraActivities) StopDataSourceSyncJob(input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error) {
-	return a.client.StopDataSourceSyncJob(input)
+func (a *KendraActivities) StopDataSourceSyncJob(ctx context.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error) {
+	return a.client.StopDataSourceSyncJobWithContext(ctx, input)
 }
 
-func (a *KendraActivities) SubmitFeedback(input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error) {
-	return a.client.SubmitFeedback(input)
+func (a *KendraActivities) SubmitFeedback(ctx context.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error) {
+	return a.client.SubmitFeedbackWithContext(ctx, input)
 }
 
-func (a *KendraActivities) TagResource(input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error) {
-	return a.client.TagResource(input)
+func (a *KendraActivities) TagResource(ctx context.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error) {
+	return a.client.TagResourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) UntagResource(input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error) {
-	return a.client.UntagResource(input)
+func (a *KendraActivities) UntagResource(ctx context.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error) {
+	return a.client.UntagResourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) UpdateDataSource(input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error) {
-	return a.client.UpdateDataSource(input)
+func (a *KendraActivities) UpdateDataSource(ctx context.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error) {
+	return a.client.UpdateDataSourceWithContext(ctx, input)
 }
 
-func (a *KendraActivities) UpdateIndex(input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error) {
-	return a.client.UpdateIndex(input)
+func (a *KendraActivities) UpdateIndex(ctx context.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error) {
+	return a.client.UpdateIndexWithContext(ctx, input)
 }
