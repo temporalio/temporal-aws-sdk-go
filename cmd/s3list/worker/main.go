@@ -43,5 +43,4 @@ func main() {
 		fmt.Printf("* %s created on %s\n",
 			aws.StringValue(b.Name), aws.TimeValue(b.CreationDate))
 	}
-	<-worker.InterruptCh()
 }

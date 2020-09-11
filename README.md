@@ -39,3 +39,28 @@ Templates that are used for code generation are located in
 [cmd/temporal-aws-sdk-gen/templates](cmd/temporal-aws-sdk-gen/templates) directory.
 They use Go [text/template](https://golang.org/pkg/text/template/) package. Each template is invoked with
 [InterfaceDefinition](cmd/temporal-aws-sdk-gen/internal/parser.go#L31) structure as a parameter.
+
+## Running Temporal AWS SDK Activities
+
+To run Temporal AWS SDK activities:
+
+Create `~/.aws/credentials` file with aws access key id and secret or set corresponding environment variables.
+The basic credentials file format: 
+```
+[default]
+aws_access_key_id = <ID>
+aws_secret_access_key = <SECRET>
+```
+See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details. 
+```bash
+go run cmd/awsactivities/main.go
+```
+
+## S3 Sample
+
+`cmd/s3list` directory contains very simple example of a workflow that lists S3 buckets under an account. The sample
+assumes that AWS SDK activities are already running.
+
+```bash
+go run cmd/s3list/worker/main.go
+```
