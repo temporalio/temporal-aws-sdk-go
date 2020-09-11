@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,18 +13,17 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type SageMakerRuntimeActivities struct {
-	client sagemakerruntimeiface.SageMakerRuntimeAPI
+    client sagemakerruntimeiface.SageMakerRuntimeAPI
 }
 
 func NewSageMakerRuntimeActivities(session *session.Session, config ...*aws.Config) *SageMakerRuntimeActivities {
-	client := sagemakerruntime.New(session, config...)
-	return &SageMakerRuntimeActivities{client: client}
+    client := sagemakerruntime.New(session, config...)
+    return &SageMakerRuntimeActivities{client: client}
 }
 
 func (a *SageMakerRuntimeActivities) InvokeEndpoint(ctx context.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
-	return a.client.InvokeEndpointWithContext(ctx, input)
+    return a.client.InvokeEndpointWithContext(ctx, input)
 }

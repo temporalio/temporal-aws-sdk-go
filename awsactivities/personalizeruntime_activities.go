@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,22 +13,21 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PersonalizeRuntimeActivities struct {
-	client personalizeruntimeiface.PersonalizeRuntimeAPI
+    client personalizeruntimeiface.PersonalizeRuntimeAPI
 }
 
 func NewPersonalizeRuntimeActivities(session *session.Session, config ...*aws.Config) *PersonalizeRuntimeActivities {
-	client := personalizeruntime.New(session, config...)
-	return &PersonalizeRuntimeActivities{client: client}
+    client := personalizeruntime.New(session, config...)
+    return &PersonalizeRuntimeActivities{client: client}
 }
 
 func (a *PersonalizeRuntimeActivities) GetPersonalizedRanking(ctx context.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
-	return a.client.GetPersonalizedRankingWithContext(ctx, input)
+    return a.client.GetPersonalizedRankingWithContext(ctx, input)
 }
 
 func (a *PersonalizeRuntimeActivities) GetRecommendations(ctx context.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
-	return a.client.GetRecommendationsWithContext(ctx, input)
+    return a.client.GetRecommendationsWithContext(ctx, input)
 }

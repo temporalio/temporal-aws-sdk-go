@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,34 +13,33 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type KinesisVideoArchivedMediaActivities struct {
-	client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI
+    client kinesisvideoarchivedmediaiface.KinesisVideoArchivedMediaAPI
 }
 
 func NewKinesisVideoArchivedMediaActivities(session *session.Session, config ...*aws.Config) *KinesisVideoArchivedMediaActivities {
-	client := kinesisvideoarchivedmedia.New(session, config...)
-	return &KinesisVideoArchivedMediaActivities{client: client}
+    client := kinesisvideoarchivedmedia.New(session, config...)
+    return &KinesisVideoArchivedMediaActivities{client: client}
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetClip(ctx context.Context, input *kinesisvideoarchivedmedia.GetClipInput) (*kinesisvideoarchivedmedia.GetClipOutput, error) {
-	return a.client.GetClipWithContext(ctx, input)
+    return a.client.GetClipWithContext(ctx, input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetDASHStreamingSessionURL(ctx context.Context, input *kinesisvideoarchivedmedia.GetDASHStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetDASHStreamingSessionURLOutput, error) {
-	return a.client.GetDASHStreamingSessionURLWithContext(ctx, input)
+    return a.client.GetDASHStreamingSessionURLWithContext(ctx, input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetHLSStreamingSessionURL(ctx context.Context, input *kinesisvideoarchivedmedia.GetHLSStreamingSessionURLInput) (*kinesisvideoarchivedmedia.GetHLSStreamingSessionURLOutput, error) {
-	return a.client.GetHLSStreamingSessionURLWithContext(ctx, input)
+    return a.client.GetHLSStreamingSessionURLWithContext(ctx, input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) GetMediaForFragmentList(ctx context.Context, input *kinesisvideoarchivedmedia.GetMediaForFragmentListInput) (*kinesisvideoarchivedmedia.GetMediaForFragmentListOutput, error) {
-	return a.client.GetMediaForFragmentListWithContext(ctx, input)
+    return a.client.GetMediaForFragmentListWithContext(ctx, input)
 }
 
 func (a *KinesisVideoArchivedMediaActivities) ListFragments(ctx context.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) (*kinesisvideoarchivedmedia.ListFragmentsOutput, error) {
-	return a.client.ListFragmentsWithContext(ctx, input)
+    return a.client.ListFragmentsWithContext(ctx, input)
 }

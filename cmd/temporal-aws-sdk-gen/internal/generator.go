@@ -106,6 +106,7 @@ func (g *TemporalAWSGenerator) generateOneService(templateFile string, outputDir
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 	err = templates.Execute(f, definition)
 	if err != nil {
 		return err
@@ -146,6 +147,7 @@ func (g *TemporalAWSGenerator) generateGlobal(templateFile string, outputDir str
 	if err != nil {
 		return err
 	}
+	defer f.Close()
 	err = templates.Execute(f, definitions)
 	if err != nil {
 		return err

@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,18 +13,17 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type WorkMailMessageFlowActivities struct {
-	client workmailmessageflowiface.WorkMailMessageFlowAPI
+    client workmailmessageflowiface.WorkMailMessageFlowAPI
 }
 
 func NewWorkMailMessageFlowActivities(session *session.Session, config ...*aws.Config) *WorkMailMessageFlowActivities {
-	client := workmailmessageflow.New(session, config...)
-	return &WorkMailMessageFlowActivities{client: client}
+    client := workmailmessageflow.New(session, config...)
+    return &WorkMailMessageFlowActivities{client: client}
 }
 
 func (a *WorkMailMessageFlowActivities) GetRawMessageContent(ctx context.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
-	return a.client.GetRawMessageContentWithContext(ctx, input)
+    return a.client.GetRawMessageContentWithContext(ctx, input)
 }

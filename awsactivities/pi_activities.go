@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,22 +13,21 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PIActivities struct {
-	client piiface.PIAPI
+    client piiface.PIAPI
 }
 
 func NewPIActivities(session *session.Session, config ...*aws.Config) *PIActivities {
-	client := pi.New(session, config...)
-	return &PIActivities{client: client}
+    client := pi.New(session, config...)
+    return &PIActivities{client: client}
 }
 
 func (a *PIActivities) DescribeDimensionKeys(ctx context.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error) {
-	return a.client.DescribeDimensionKeysWithContext(ctx, input)
+    return a.client.DescribeDimensionKeysWithContext(ctx, input)
 }
 
 func (a *PIActivities) GetResourceMetrics(ctx context.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
-	return a.client.GetResourceMetricsWithContext(ctx, input)
+    return a.client.GetResourceMetricsWithContext(ctx, input)
 }

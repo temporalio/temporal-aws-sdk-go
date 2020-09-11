@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,34 +13,33 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type IoTDataPlaneActivities struct {
-	client iotdataplaneiface.IoTDataPlaneAPI
+    client iotdataplaneiface.IoTDataPlaneAPI
 }
 
 func NewIoTDataPlaneActivities(session *session.Session, config ...*aws.Config) *IoTDataPlaneActivities {
-	client := iotdataplane.New(session, config...)
-	return &IoTDataPlaneActivities{client: client}
+    client := iotdataplane.New(session, config...)
+    return &IoTDataPlaneActivities{client: client}
 }
 
 func (a *IoTDataPlaneActivities) DeleteThingShadow(ctx context.Context, input *iotdataplane.DeleteThingShadowInput) (*iotdataplane.DeleteThingShadowOutput, error) {
-	return a.client.DeleteThingShadowWithContext(ctx, input)
+    return a.client.DeleteThingShadowWithContext(ctx, input)
 }
 
 func (a *IoTDataPlaneActivities) GetThingShadow(ctx context.Context, input *iotdataplane.GetThingShadowInput) (*iotdataplane.GetThingShadowOutput, error) {
-	return a.client.GetThingShadowWithContext(ctx, input)
+    return a.client.GetThingShadowWithContext(ctx, input)
 }
 
 func (a *IoTDataPlaneActivities) ListNamedShadowsForThing(ctx context.Context, input *iotdataplane.ListNamedShadowsForThingInput) (*iotdataplane.ListNamedShadowsForThingOutput, error) {
-	return a.client.ListNamedShadowsForThingWithContext(ctx, input)
+    return a.client.ListNamedShadowsForThingWithContext(ctx, input)
 }
 
 func (a *IoTDataPlaneActivities) Publish(ctx context.Context, input *iotdataplane.PublishInput) (*iotdataplane.PublishOutput, error) {
-	return a.client.PublishWithContext(ctx, input)
+    return a.client.PublishWithContext(ctx, input)
 }
 
 func (a *IoTDataPlaneActivities) UpdateThingShadow(ctx context.Context, input *iotdataplane.UpdateThingShadowInput) (*iotdataplane.UpdateThingShadowOutput, error) {
-	return a.client.UpdateThingShadowWithContext(ctx, input)
+    return a.client.UpdateThingShadowWithContext(ctx, input)
 }

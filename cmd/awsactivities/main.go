@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"go.temporal.io/sdk/client"
 	"go.temporal.io/sdk/worker"
@@ -15,10 +16,12 @@ func main() {
 	}
 	defer c.Close()
 
-	w := worker.New(c, "hello-world", worker.Options{})
+	w := worker.New(c, "aws-sdk", worker.Options{})
 
 	// TODO(maxim): command line flags to override session and config options
-	sess, err := session.NewSession()
+	sess, err := session.NewSession(&aws.Config{
+		Region: aws.String("us-west-2")},
+	)
 	if err != nil {
 		log.Fatalln("Failed to create AWS session", err)
 	}

@@ -7,7 +7,6 @@ import (
 	"github.com/aws/aws-sdk-go/service/{{ . }}"
 {{- end }}
 	"go.temporal.io/sdk/workflow"
-	"temporal.io/aws-sdk/awsactivities"
 )
 
 type {{ $name }}Client interface {
@@ -20,6 +19,13 @@ type {{ $name }}Client interface {
 {{ "       "}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Result
 {{ end }}
 {{- end -}}
+}
+
+type {{ $name }}Stub struct {
+}
+
+func New{{ $name }}Stub() {{ $name }}Client {
+    return &{{ $name }}Stub{}
 }
 {{range $i, $method := .Methods }}
 {{- if not (IsDuplicatedOutput $method.Output) }}
@@ -35,32 +41,25 @@ func (r *{{ $prefix }}{{ $method.Name }}Result) Get(ctx workflow.Context) (*{{ $
 }
 {{- end }}
 {{- end }}
-type {{ $name }}Stub struct {
-    activities awsactivities.{{ $name }}Activities
-}
-
-func New{{ $name }}Stub() {{ $name }}Client {
-    return &{{ $name }}Stub{}
-}
 {{- range $i, $method := .Methods }}
 {{ if HasPrefix $method.Name "Wait" }}
 func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error {
-    return workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input).Get(ctx, nil)
+    return workflow.ExecuteActivity(ctx, "{{ $name }}.{{$method.Name}}", input).Get(ctx, nil)
 }
 
 func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) workflow.Future {
-    return workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input)
+    return workflow.ExecuteActivity(ctx, "{{ $name }}.{{$method.Name}}", input)
 }
 {{ else }}
 {{- $prefix := ToPrefix $method.Output.Package }}
 func (a *{{ $name }}Stub) {{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
     var output {{ $method.Output.Package }}.{{ $method.Output.Name }}
-    err := workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input).Get(ctx, &output)
+    err := workflow.ExecuteActivity(ctx, "{{ $name }}.{{$method.Name}}", input).Get(ctx, &output)
     return &output, err
 }
 
 func (a *{{ $name }}Stub) {{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Result {
-    future := workflow.ExecuteActivity(ctx, a.activities.{{$method.Name}}, input)
+    future := workflow.ExecuteActivity(ctx, "{{ $name }}.{{$method.Name}}", input)
     return &{{$prefix}}{{ $method.Name }}Result{Result: future}
 }
 {{- end }}

@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,18 +13,17 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type KinesisVideoMediaActivities struct {
-	client kinesisvideomediaiface.KinesisVideoMediaAPI
+    client kinesisvideomediaiface.KinesisVideoMediaAPI
 }
 
 func NewKinesisVideoMediaActivities(session *session.Session, config ...*aws.Config) *KinesisVideoMediaActivities {
-	client := kinesisvideomedia.New(session, config...)
-	return &KinesisVideoMediaActivities{client: client}
+    client := kinesisvideomedia.New(session, config...)
+    return &KinesisVideoMediaActivities{client: client}
 }
 
 func (a *KinesisVideoMediaActivities) GetMedia(ctx context.Context, input *kinesisvideomedia.GetMediaInput) (*kinesisvideomedia.GetMediaOutput, error) {
-	return a.client.GetMediaWithContext(ctx, input)
+    return a.client.GetMediaWithContext(ctx, input)
 }

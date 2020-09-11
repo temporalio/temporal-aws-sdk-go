@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,18 +13,17 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PersonalizeEventsActivities struct {
-	client personalizeeventsiface.PersonalizeEventsAPI
+    client personalizeeventsiface.PersonalizeEventsAPI
 }
 
 func NewPersonalizeEventsActivities(session *session.Session, config ...*aws.Config) *PersonalizeEventsActivities {
-	client := personalizeevents.New(session, config...)
-	return &PersonalizeEventsActivities{client: client}
+    client := personalizeevents.New(session, config...)
+    return &PersonalizeEventsActivities{client: client}
 }
 
 func (a *PersonalizeEventsActivities) PutEvents(ctx context.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
-	return a.client.PutEventsWithContext(ctx, input)
+    return a.client.PutEventsWithContext(ctx, input)
 }

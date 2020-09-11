@@ -1,3 +1,4 @@
+
 package awsactivities
 
 import (
@@ -12,22 +13,21 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type KinesisVideoSignalingChannelsActivities struct {
-	client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
+    client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
 }
 
 func NewKinesisVideoSignalingChannelsActivities(session *session.Session, config ...*aws.Config) *KinesisVideoSignalingChannelsActivities {
-	client := kinesisvideosignalingchannels.New(session, config...)
-	return &KinesisVideoSignalingChannelsActivities{client: client}
+    client := kinesisvideosignalingchannels.New(session, config...)
+    return &KinesisVideoSignalingChannelsActivities{client: client}
 }
 
 func (a *KinesisVideoSignalingChannelsActivities) GetIceServerConfig(ctx context.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
-	return a.client.GetIceServerConfigWithContext(ctx, input)
+    return a.client.GetIceServerConfigWithContext(ctx, input)
 }
 
 func (a *KinesisVideoSignalingChannelsActivities) SendAlexaOfferToMaster(ctx context.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
-	return a.client.SendAlexaOfferToMasterWithContext(ctx, input)
+    return a.client.SendAlexaOfferToMasterWithContext(ctx, input)
 }
