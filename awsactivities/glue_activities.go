@@ -308,6 +308,10 @@ func (a *GlueActivities) GetPartition(ctx context.Context, input *glue.GetPartit
 	return a.client.GetPartitionWithContext(ctx, input)
 }
 
+func (a *GlueActivities) GetPartitionIndexes(ctx context.Context, input *glue.GetPartitionIndexesInput) (*glue.GetPartitionIndexesOutput, error) {
+	return a.client.GetPartitionIndexesWithContext(ctx, input)
+}
+
 func (a *GlueActivities) GetPartitions(ctx context.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error) {
 	return a.client.GetPartitionsWithContext(ctx, input)
 }

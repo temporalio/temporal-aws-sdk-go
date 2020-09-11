@@ -178,6 +178,9 @@ type ApiGatewayV2Client interface {
 	ReimportApi(ctx workflow.Context, input *apigatewayv2.ReimportApiInput) (*apigatewayv2.ReimportApiOutput, error)
 	ReimportApiAsync(ctx workflow.Context, input *apigatewayv2.ReimportApiInput) *Apigatewayv2ReimportApiResult
 
+	ResetAuthorizersCache(ctx workflow.Context, input *apigatewayv2.ResetAuthorizersCacheInput) (*apigatewayv2.ResetAuthorizersCacheOutput, error)
+	ResetAuthorizersCacheAsync(ctx workflow.Context, input *apigatewayv2.ResetAuthorizersCacheInput) *Apigatewayv2ResetAuthorizersCacheResult
+
 	TagResource(ctx workflow.Context, input *apigatewayv2.TagResourceInput) (*apigatewayv2.TagResourceOutput, error)
 	TagResourceAsync(ctx workflow.Context, input *apigatewayv2.TagResourceInput) *Apigatewayv2TagResourceResult
 
@@ -787,6 +790,16 @@ type Apigatewayv2ReimportApiResult struct {
 
 func (r *Apigatewayv2ReimportApiResult) Get(ctx workflow.Context) (*apigatewayv2.ReimportApiOutput, error) {
 	var output apigatewayv2.ReimportApiOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type Apigatewayv2ResetAuthorizersCacheResult struct {
+	Result workflow.Future
+}
+
+func (r *Apigatewayv2ResetAuthorizersCacheResult) Get(ctx workflow.Context) (*apigatewayv2.ResetAuthorizersCacheOutput, error) {
+	var output apigatewayv2.ResetAuthorizersCacheOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -1564,6 +1577,17 @@ func (a *ApiGatewayV2Stub) ReimportApi(ctx workflow.Context, input *apigatewayv2
 func (a *ApiGatewayV2Stub) ReimportApiAsync(ctx workflow.Context, input *apigatewayv2.ReimportApiInput) *Apigatewayv2ReimportApiResult {
 	future := workflow.ExecuteActivity(ctx, a.activities.ReimportApi, input)
 	return &Apigatewayv2ReimportApiResult{Result: future}
+}
+
+func (a *ApiGatewayV2Stub) ResetAuthorizersCache(ctx workflow.Context, input *apigatewayv2.ResetAuthorizersCacheInput) (*apigatewayv2.ResetAuthorizersCacheOutput, error) {
+	var output apigatewayv2.ResetAuthorizersCacheOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.ResetAuthorizersCache, input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *ApiGatewayV2Stub) ResetAuthorizersCacheAsync(ctx workflow.Context, input *apigatewayv2.ResetAuthorizersCacheInput) *Apigatewayv2ResetAuthorizersCacheResult {
+	future := workflow.ExecuteActivity(ctx, a.activities.ResetAuthorizersCache, input)
+	return &Apigatewayv2ResetAuthorizersCacheResult{Result: future}
 }
 
 func (a *ApiGatewayV2Stub) TagResource(ctx workflow.Context, input *apigatewayv2.TagResourceInput) (*apigatewayv2.TagResourceOutput, error) {

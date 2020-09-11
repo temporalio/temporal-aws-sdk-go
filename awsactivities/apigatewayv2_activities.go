@@ -252,6 +252,10 @@ func (a *ApiGatewayV2Activities) ReimportApi(ctx context.Context, input *apigate
 	return a.client.ReimportApiWithContext(ctx, input)
 }
 
+func (a *ApiGatewayV2Activities) ResetAuthorizersCache(ctx context.Context, input *apigatewayv2.ResetAuthorizersCacheInput) (*apigatewayv2.ResetAuthorizersCacheOutput, error) {
+	return a.client.ResetAuthorizersCacheWithContext(ctx, input)
+}
+
 func (a *ApiGatewayV2Activities) TagResource(ctx context.Context, input *apigatewayv2.TagResourceInput) (*apigatewayv2.TagResourceOutput, error) {
 	return a.client.TagResourceWithContext(ctx, input)
 }

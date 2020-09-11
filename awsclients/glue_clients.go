@@ -220,6 +220,9 @@ type GlueClient interface {
 	GetPartition(ctx workflow.Context, input *glue.GetPartitionInput) (*glue.GetPartitionOutput, error)
 	GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GlueGetPartitionResult
 
+	GetPartitionIndexes(ctx workflow.Context, input *glue.GetPartitionIndexesInput) (*glue.GetPartitionIndexesOutput, error)
+	GetPartitionIndexesAsync(ctx workflow.Context, input *glue.GetPartitionIndexesInput) *GlueGetPartitionIndexesResult
+
 	GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error)
 	GetPartitionsAsync(ctx workflow.Context, input *glue.GetPartitionsInput) *GlueGetPartitionsResult
 
@@ -1113,6 +1116,16 @@ type GlueGetPartitionResult struct {
 
 func (r *GlueGetPartitionResult) Get(ctx workflow.Context) (*glue.GetPartitionOutput, error) {
 	var output glue.GetPartitionOutput
+	err := r.Result.Get(ctx, &output)
+	return &output, err
+}
+
+type GlueGetPartitionIndexesResult struct {
+	Result workflow.Future
+}
+
+func (r *GlueGetPartitionIndexesResult) Get(ctx workflow.Context) (*glue.GetPartitionIndexesOutput, error) {
+	var output glue.GetPartitionIndexesOutput
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
@@ -2524,6 +2537,17 @@ func (a *GlueStub) GetPartition(ctx workflow.Context, input *glue.GetPartitionIn
 func (a *GlueStub) GetPartitionAsync(ctx workflow.Context, input *glue.GetPartitionInput) *GlueGetPartitionResult {
 	future := workflow.ExecuteActivity(ctx, a.activities.GetPartition, input)
 	return &GlueGetPartitionResult{Result: future}
+}
+
+func (a *GlueStub) GetPartitionIndexes(ctx workflow.Context, input *glue.GetPartitionIndexesInput) (*glue.GetPartitionIndexesOutput, error) {
+	var output glue.GetPartitionIndexesOutput
+	err := workflow.ExecuteActivity(ctx, a.activities.GetPartitionIndexes, input).Get(ctx, &output)
+	return &output, err
+}
+
+func (a *GlueStub) GetPartitionIndexesAsync(ctx workflow.Context, input *glue.GetPartitionIndexesInput) *GlueGetPartitionIndexesResult {
+	future := workflow.ExecuteActivity(ctx, a.activities.GetPartitionIndexes, input)
+	return &GlueGetPartitionIndexesResult{Result: future}
 }
 
 func (a *GlueStub) GetPartitions(ctx workflow.Context, input *glue.GetPartitionsInput) (*glue.GetPartitionsOutput, error) {
