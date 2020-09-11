@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/medialive"
 	"github.com/aws/aws-sdk-go/service/medialive/medialiveiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type MediaLiveActivities struct {
 	client medialiveiface.MediaLiveAPI
@@ -210,56 +213,67 @@ func (a *MediaLiveActivities) UpdateReservation(ctx context.Context, input *medi
 }
 
 func (a *MediaLiveActivities) WaitUntilChannelCreated(ctx context.Context, input *medialive.DescribeChannelInput) error {
-	return a.client.WaitUntilChannelCreatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilChannelCreatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilChannelDeleted(ctx context.Context, input *medialive.DescribeChannelInput) error {
-	return a.client.WaitUntilChannelDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilChannelDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilChannelRunning(ctx context.Context, input *medialive.DescribeChannelInput) error {
-	return a.client.WaitUntilChannelRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilChannelRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilChannelStopped(ctx context.Context, input *medialive.DescribeChannelInput) error {
-	return a.client.WaitUntilChannelStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilChannelStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilInputAttached(ctx context.Context, input *medialive.DescribeInputInput) error {
-	return a.client.WaitUntilInputAttachedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInputAttachedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilInputDeleted(ctx context.Context, input *medialive.DescribeInputInput) error {
-	return a.client.WaitUntilInputDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInputDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilInputDetached(ctx context.Context, input *medialive.DescribeInputInput) error {
-	return a.client.WaitUntilInputDetachedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInputDetachedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilMultiplexCreated(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
-	return a.client.WaitUntilMultiplexCreatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilMultiplexCreatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilMultiplexDeleted(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
-	return a.client.WaitUntilMultiplexDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilMultiplexDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilMultiplexRunning(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
-	return a.client.WaitUntilMultiplexRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilMultiplexRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MediaLiveActivities) WaitUntilMultiplexStopped(ctx context.Context, input *medialive.DescribeMultiplexInput) error {
-	return a.client.WaitUntilMultiplexStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilMultiplexStoppedWithContext(ctx, input, options...)
+	})
 }

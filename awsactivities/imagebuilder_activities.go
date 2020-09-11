@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/imagebuilder"
 	"github.com/aws/aws-sdk-go/service/imagebuilder/imagebuilderiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ImagebuilderActivities struct {
 	client imagebuilderiface.ImagebuilderAPI
@@ -22,72 +25,37 @@ func NewImagebuilderActivities(session *session.Session, config ...*aws.Config) 
 }
 
 func (a *ImagebuilderActivities) CancelImageCreation(ctx context.Context, input *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CancelImageCreationWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateComponent(ctx context.Context, input *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateComponentWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateDistributionConfiguration(ctx context.Context, input *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateDistributionConfigurationWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateImage(ctx context.Context, input *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateImageWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateImagePipeline(ctx context.Context, input *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateImagePipelineWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateImageRecipe(ctx context.Context, input *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateImageRecipeWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) CreateInfrastructureConfiguration(ctx context.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateInfrastructureConfigurationWithContext(ctx, input)
 }
 
@@ -152,12 +120,7 @@ func (a *ImagebuilderActivities) GetInfrastructureConfiguration(ctx context.Cont
 }
 
 func (a *ImagebuilderActivities) ImportComponent(ctx context.Context, input *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ImportComponentWithContext(ctx, input)
 }
 
@@ -214,12 +177,7 @@ func (a *ImagebuilderActivities) PutImageRecipePolicy(ctx context.Context, input
 }
 
 func (a *ImagebuilderActivities) StartImagePipelineExecution(ctx context.Context, input *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.StartImagePipelineExecutionWithContext(ctx, input)
 }
 
@@ -232,31 +190,16 @@ func (a *ImagebuilderActivities) UntagResource(ctx context.Context, input *image
 }
 
 func (a *ImagebuilderActivities) UpdateDistributionConfiguration(ctx context.Context, input *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateDistributionConfigurationWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) UpdateImagePipeline(ctx context.Context, input *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateImagePipelineWithContext(ctx, input)
 }
 
 func (a *ImagebuilderActivities) UpdateInfrastructureConfiguration(ctx context.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateInfrastructureConfigurationWithContext(ctx, input)
 }

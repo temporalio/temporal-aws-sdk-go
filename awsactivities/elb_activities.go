@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elb"
 	"github.com/aws/aws-sdk-go/service/elb/elbiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ELBActivities struct {
 	client elbiface.ELBAPI
@@ -138,16 +141,19 @@ func (a *ELBActivities) SetLoadBalancerPoliciesOfListener(ctx context.Context, i
 }
 
 func (a *ELBActivities) WaitUntilAnyInstanceInService(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
-	return a.client.WaitUntilAnyInstanceInServiceWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAnyInstanceInServiceWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ELBActivities) WaitUntilInstanceDeregistered(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
-	return a.client.WaitUntilInstanceDeregisteredWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceDeregisteredWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ELBActivities) WaitUntilInstanceInService(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
-	return a.client.WaitUntilInstanceInServiceWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceInServiceWithContext(ctx, input, options...)
+	})
 }

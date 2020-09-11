@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/opsworks"
 	"github.com/aws/aws-sdk-go/service/opsworks/opsworksiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type OpsWorksActivities struct {
 	client opsworksiface.OpsWorksAPI
@@ -318,31 +321,37 @@ func (a *OpsWorksActivities) UpdateVolume(ctx context.Context, input *opsworks.U
 }
 
 func (a *OpsWorksActivities) WaitUntilAppExists(ctx context.Context, input *opsworks.DescribeAppsInput) error {
-	return a.client.WaitUntilAppExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAppExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *OpsWorksActivities) WaitUntilDeploymentSuccessful(ctx context.Context, input *opsworks.DescribeDeploymentsInput) error {
-	return a.client.WaitUntilDeploymentSuccessfulWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilDeploymentSuccessfulWithContext(ctx, input, options...)
+	})
 }
 
 func (a *OpsWorksActivities) WaitUntilInstanceOnline(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceOnlineWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceOnlineWithContext(ctx, input, options...)
+	})
 }
 
 func (a *OpsWorksActivities) WaitUntilInstanceRegistered(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceRegisteredWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceRegisteredWithContext(ctx, input, options...)
+	})
 }
 
 func (a *OpsWorksActivities) WaitUntilInstanceStopped(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *OpsWorksActivities) WaitUntilInstanceTerminated(ctx context.Context, input *opsworks.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceTerminatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceTerminatedWithContext(ctx, input, options...)
+	})
 }

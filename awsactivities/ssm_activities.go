@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ssm"
 	"github.com/aws/aws-sdk-go/service/ssm/ssmiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type SSMActivities struct {
 	client ssmiface.SSMAPI
@@ -50,12 +53,7 @@ func (a *SSMActivities) CreateDocument(ctx context.Context, input *ssm.CreateDoc
 }
 
 func (a *SSMActivities) CreateMaintenanceWindow(ctx context.Context, input *ssm.CreateMaintenanceWindowInput) (*ssm.CreateMaintenanceWindowOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateMaintenanceWindowWithContext(ctx, input)
 }
 
@@ -64,12 +62,7 @@ func (a *SSMActivities) CreateOpsItem(ctx context.Context, input *ssm.CreateOpsI
 }
 
 func (a *SSMActivities) CreatePatchBaseline(ctx context.Context, input *ssm.CreatePatchBaselineInput) (*ssm.CreatePatchBaselineOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreatePatchBaselineWithContext(ctx, input)
 }
 
@@ -90,12 +83,7 @@ func (a *SSMActivities) DeleteDocument(ctx context.Context, input *ssm.DeleteDoc
 }
 
 func (a *SSMActivities) DeleteInventory(ctx context.Context, input *ssm.DeleteInventoryInput) (*ssm.DeleteInventoryOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteInventoryWithContext(ctx, input)
 }
 
@@ -432,22 +420,12 @@ func (a *SSMActivities) RegisterPatchBaselineForPatchGroup(ctx context.Context, 
 }
 
 func (a *SSMActivities) RegisterTargetWithMaintenanceWindow(ctx context.Context, input *ssm.RegisterTargetWithMaintenanceWindowInput) (*ssm.RegisterTargetWithMaintenanceWindowOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RegisterTargetWithMaintenanceWindowWithContext(ctx, input)
 }
 
 func (a *SSMActivities) RegisterTaskWithMaintenanceWindow(ctx context.Context, input *ssm.RegisterTaskWithMaintenanceWindowInput) (*ssm.RegisterTaskWithMaintenanceWindowOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RegisterTaskWithMaintenanceWindowWithContext(ctx, input)
 }
 
@@ -476,12 +454,7 @@ func (a *SSMActivities) StartAssociationsOnce(ctx context.Context, input *ssm.St
 }
 
 func (a *SSMActivities) StartAutomationExecution(ctx context.Context, input *ssm.StartAutomationExecutionInput) (*ssm.StartAutomationExecutionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.StartAutomationExecutionWithContext(ctx, input)
 }
 
@@ -546,6 +519,7 @@ func (a *SSMActivities) UpdateServiceSetting(ctx context.Context, input *ssm.Upd
 }
 
 func (a *SSMActivities) WaitUntilCommandExecuted(ctx context.Context, input *ssm.GetCommandInvocationInput) error {
-	return a.client.WaitUntilCommandExecutedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCommandExecutedWithContext(ctx, input, options...)
+	})
 }

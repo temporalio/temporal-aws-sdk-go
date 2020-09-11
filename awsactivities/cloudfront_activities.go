@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudfront"
 	"github.com/aws/aws-sdk-go/service/cloudfront/cloudfrontiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type CloudFrontActivities struct {
 	client cloudfrontiface.CloudFrontAPI
@@ -294,16 +297,19 @@ func (a *CloudFrontActivities) UpdateStreamingDistribution(ctx context.Context, 
 }
 
 func (a *CloudFrontActivities) WaitUntilDistributionDeployed(ctx context.Context, input *cloudfront.GetDistributionInput) error {
-	return a.client.WaitUntilDistributionDeployedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilDistributionDeployedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFrontActivities) WaitUntilInvalidationCompleted(ctx context.Context, input *cloudfront.GetInvalidationInput) error {
-	return a.client.WaitUntilInvalidationCompletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInvalidationCompletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFrontActivities) WaitUntilStreamingDistributionDeployed(ctx context.Context, input *cloudfront.GetStreamingDistributionInput) error {
-	return a.client.WaitUntilStreamingDistributionDeployedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStreamingDistributionDeployedWithContext(ctx, input, options...)
+	})
 }

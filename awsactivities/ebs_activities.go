@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ebs"
 	"github.com/aws/aws-sdk-go/service/ebs/ebsiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type EBSActivities struct {
 	client ebsiface.EBSAPI
@@ -42,11 +45,6 @@ func (a *EBSActivities) PutSnapshotBlock(ctx context.Context, input *ebs.PutSnap
 }
 
 func (a *EBSActivities) StartSnapshot(ctx context.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.StartSnapshotWithContext(ctx, input)
 }

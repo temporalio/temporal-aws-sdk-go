@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/braket"
 	"github.com/aws/aws-sdk-go/service/braket/braketiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type BraketActivities struct {
 	client braketiface.BraketAPI
@@ -22,22 +25,12 @@ func NewBraketActivities(session *session.Session, config ...*aws.Config) *Brake
 }
 
 func (a *BraketActivities) CancelQuantumTask(ctx context.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CancelQuantumTaskWithContext(ctx, input)
 }
 
 func (a *BraketActivities) CreateQuantumTask(ctx context.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateQuantumTaskWithContext(ctx, input)
 }
 

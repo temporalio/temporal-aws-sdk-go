@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ram"
 	"github.com/aws/aws-sdk-go/service/ram/ramiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type RAMActivities struct {
 	client ramiface.RAMAPI
@@ -22,72 +25,37 @@ func NewRAMActivities(session *session.Session, config ...*aws.Config) *RAMActiv
 }
 
 func (a *RAMActivities) AcceptResourceShareInvitation(ctx context.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AcceptResourceShareInvitationWithContext(ctx, input)
 }
 
 func (a *RAMActivities) AssociateResourceShare(ctx context.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AssociateResourceShareWithContext(ctx, input)
 }
 
 func (a *RAMActivities) AssociateResourceSharePermission(ctx context.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AssociateResourceSharePermissionWithContext(ctx, input)
 }
 
 func (a *RAMActivities) CreateResourceShare(ctx context.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateResourceShareWithContext(ctx, input)
 }
 
 func (a *RAMActivities) DeleteResourceShare(ctx context.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteResourceShareWithContext(ctx, input)
 }
 
 func (a *RAMActivities) DisassociateResourceShare(ctx context.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DisassociateResourceShareWithContext(ctx, input)
 }
 
 func (a *RAMActivities) DisassociateResourceSharePermission(ctx context.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DisassociateResourceSharePermissionWithContext(ctx, input)
 }
 
@@ -144,12 +112,7 @@ func (a *RAMActivities) PromoteResourceShareCreatedFromPolicy(ctx context.Contex
 }
 
 func (a *RAMActivities) RejectResourceShareInvitation(ctx context.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RejectResourceShareInvitationWithContext(ctx, input)
 }
 
@@ -162,11 +125,6 @@ func (a *RAMActivities) UntagResource(ctx context.Context, input *ram.UntagResou
 }
 
 func (a *RAMActivities) UpdateResourceShare(ctx context.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateResourceShareWithContext(ctx, input)
 }

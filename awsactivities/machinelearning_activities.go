@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/machinelearning"
 	"github.com/aws/aws-sdk-go/service/machinelearning/machinelearningiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type MachineLearningActivities struct {
 	client machinelearningiface.MachineLearningAPI
@@ -134,21 +137,25 @@ func (a *MachineLearningActivities) UpdateMLModel(ctx context.Context, input *ma
 }
 
 func (a *MachineLearningActivities) WaitUntilBatchPredictionAvailable(ctx context.Context, input *machinelearning.DescribeBatchPredictionsInput) error {
-	return a.client.WaitUntilBatchPredictionAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilBatchPredictionAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MachineLearningActivities) WaitUntilDataSourceAvailable(ctx context.Context, input *machinelearning.DescribeDataSourcesInput) error {
-	return a.client.WaitUntilDataSourceAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilDataSourceAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MachineLearningActivities) WaitUntilEvaluationAvailable(ctx context.Context, input *machinelearning.DescribeEvaluationsInput) error {
-	return a.client.WaitUntilEvaluationAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEvaluationAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *MachineLearningActivities) WaitUntilMLModelAvailable(ctx context.Context, input *machinelearning.DescribeMLModelsInput) error {
-	return a.client.WaitUntilMLModelAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilMLModelAvailableWithContext(ctx, input, options...)
+	})
 }

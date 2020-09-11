@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/codepipeline"
 	"github.com/aws/aws-sdk-go/service/codepipeline/codepipelineiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type CodePipelineActivities struct {
 	client codepipelineiface.CodePipelineAPI
@@ -26,12 +29,7 @@ func (a *CodePipelineActivities) AcknowledgeJob(ctx context.Context, input *code
 }
 
 func (a *CodePipelineActivities) AcknowledgeThirdPartyJob(ctx context.Context, input *codepipeline.AcknowledgeThirdPartyJobInput) (*codepipeline.AcknowledgeThirdPartyJobOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AcknowledgeThirdPartyJobWithContext(ctx, input)
 }
 
@@ -84,12 +82,7 @@ func (a *CodePipelineActivities) GetPipelineState(ctx context.Context, input *co
 }
 
 func (a *CodePipelineActivities) GetThirdPartyJobDetails(ctx context.Context, input *codepipeline.GetThirdPartyJobDetailsInput) (*codepipeline.GetThirdPartyJobDetailsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.GetThirdPartyJobDetailsWithContext(ctx, input)
 }
 
@@ -142,22 +135,12 @@ func (a *CodePipelineActivities) PutJobSuccessResult(ctx context.Context, input 
 }
 
 func (a *CodePipelineActivities) PutThirdPartyJobFailureResult(ctx context.Context, input *codepipeline.PutThirdPartyJobFailureResultInput) (*codepipeline.PutThirdPartyJobFailureResultOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.PutThirdPartyJobFailureResultWithContext(ctx, input)
 }
 
 func (a *CodePipelineActivities) PutThirdPartyJobSuccessResult(ctx context.Context, input *codepipeline.PutThirdPartyJobSuccessResultInput) (*codepipeline.PutThirdPartyJobSuccessResultOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.PutThirdPartyJobSuccessResultWithContext(ctx, input)
 }
 

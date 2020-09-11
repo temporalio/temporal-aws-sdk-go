@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/acmpca"
 	"github.com/aws/aws-sdk-go/service/acmpca/acmpcaiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ACMPCAActivities struct {
 	client acmpcaiface.ACMPCAAPI
@@ -114,16 +117,19 @@ func (a *ACMPCAActivities) UpdateCertificateAuthority(ctx context.Context, input
 }
 
 func (a *ACMPCAActivities) WaitUntilAuditReportCreated(ctx context.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error {
-	return a.client.WaitUntilAuditReportCreatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAuditReportCreatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ACMPCAActivities) WaitUntilCertificateAuthorityCSRCreated(ctx context.Context, input *acmpca.GetCertificateAuthorityCsrInput) error {
-	return a.client.WaitUntilCertificateAuthorityCSRCreatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCertificateAuthorityCSRCreatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ACMPCAActivities) WaitUntilCertificateIssued(ctx context.Context, input *acmpca.GetCertificateInput) error {
-	return a.client.WaitUntilCertificateIssuedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCertificateIssuedWithContext(ctx, input, options...)
+	})
 }

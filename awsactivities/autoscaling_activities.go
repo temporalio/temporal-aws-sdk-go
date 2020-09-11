@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/autoscaling"
 	"github.com/aws/aws-sdk-go/service/autoscaling/autoscalingiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type AutoScalingActivities struct {
 	client autoscalingiface.AutoScalingAPI
@@ -250,16 +253,19 @@ func (a *AutoScalingActivities) UpdateAutoScalingGroup(ctx context.Context, inpu
 }
 
 func (a *AutoScalingActivities) WaitUntilGroupExists(ctx context.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
-	return a.client.WaitUntilGroupExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilGroupExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *AutoScalingActivities) WaitUntilGroupInService(ctx context.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
-	return a.client.WaitUntilGroupInServiceWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilGroupInServiceWithContext(ctx, input, options...)
+	})
 }
 
 func (a *AutoScalingActivities) WaitUntilGroupNotExists(ctx context.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error {
-	return a.client.WaitUntilGroupNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilGroupNotExistsWithContext(ctx, input, options...)
+	})
 }

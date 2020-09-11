@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk"
 	"github.com/aws/aws-sdk-go/service/elasticbeanstalk/elasticbeanstalkiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ElasticBeanstalkActivities struct {
 	client elasticbeanstalkiface.ElasticBeanstalkAPI
@@ -210,16 +213,19 @@ func (a *ElasticBeanstalkActivities) ValidateConfigurationSettings(ctx context.C
 }
 
 func (a *ElasticBeanstalkActivities) WaitUntilEnvironmentExists(ctx context.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {
-	return a.client.WaitUntilEnvironmentExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEnvironmentExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ElasticBeanstalkActivities) WaitUntilEnvironmentTerminated(ctx context.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {
-	return a.client.WaitUntilEnvironmentTerminatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEnvironmentTerminatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ElasticBeanstalkActivities) WaitUntilEnvironmentUpdated(ctx context.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error {
-	return a.client.WaitUntilEnvironmentUpdatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEnvironmentUpdatedWithContext(ctx, input, options...)
+	})
 }

@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/databasemigrationservice"
 	"github.com/aws/aws-sdk-go/service/databasemigrationservice/databasemigrationserviceiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type DatabaseMigrationServiceActivities struct {
 	client databasemigrationserviceiface.DatabaseMigrationServiceAPI
@@ -234,41 +237,49 @@ func (a *DatabaseMigrationServiceActivities) TestConnection(ctx context.Context,
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilEndpointDeleted(ctx context.Context, input *databasemigrationservice.DescribeEndpointsInput) error {
-	return a.client.WaitUntilEndpointDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEndpointDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationInstanceAvailable(ctx context.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
-	return a.client.WaitUntilReplicationInstanceAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationInstanceAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationInstanceDeleted(ctx context.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
-	return a.client.WaitUntilReplicationInstanceDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationInstanceDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationTaskDeleted(ctx context.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return a.client.WaitUntilReplicationTaskDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationTaskDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationTaskReady(ctx context.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return a.client.WaitUntilReplicationTaskReadyWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationTaskReadyWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationTaskRunning(ctx context.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return a.client.WaitUntilReplicationTaskRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationTaskRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilReplicationTaskStopped(ctx context.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return a.client.WaitUntilReplicationTaskStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationTaskStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *DatabaseMigrationServiceActivities) WaitUntilTestConnectionSucceeds(ctx context.Context, input *databasemigrationservice.DescribeConnectionsInput) error {
-	return a.client.WaitUntilTestConnectionSucceedsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTestConnectionSucceedsWithContext(ctx, input, options...)
+	})
 }

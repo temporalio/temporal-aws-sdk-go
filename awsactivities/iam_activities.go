@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iam"
 	"github.com/aws/aws-sdk-go/service/iam/iamiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type IAMActivities struct {
 	client iamiface.IAMAPI
@@ -582,21 +585,25 @@ func (a *IAMActivities) UploadSigningCertificate(ctx context.Context, input *iam
 }
 
 func (a *IAMActivities) WaitUntilInstanceProfileExists(ctx context.Context, input *iam.GetInstanceProfileInput) error {
-	return a.client.WaitUntilInstanceProfileExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceProfileExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IAMActivities) WaitUntilPolicyExists(ctx context.Context, input *iam.GetPolicyInput) error {
-	return a.client.WaitUntilPolicyExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilPolicyExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IAMActivities) WaitUntilRoleExists(ctx context.Context, input *iam.GetRoleInput) error {
-	return a.client.WaitUntilRoleExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilRoleExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IAMActivities) WaitUntilUserExists(ctx context.Context, input *iam.GetUserInput) error {
-	return a.client.WaitUntilUserExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilUserExistsWithContext(ctx, input, options...)
+	})
 }

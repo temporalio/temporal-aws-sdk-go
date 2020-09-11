@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/elasticache"
 	"github.com/aws/aws-sdk-go/service/elasticache/elasticacheiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ElastiCacheActivities struct {
 	client elasticacheiface.ElastiCacheAPI
@@ -250,21 +253,25 @@ func (a *ElastiCacheActivities) TestFailover(ctx context.Context, input *elastic
 }
 
 func (a *ElastiCacheActivities) WaitUntilCacheClusterAvailable(ctx context.Context, input *elasticache.DescribeCacheClustersInput) error {
-	return a.client.WaitUntilCacheClusterAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCacheClusterAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ElastiCacheActivities) WaitUntilCacheClusterDeleted(ctx context.Context, input *elasticache.DescribeCacheClustersInput) error {
-	return a.client.WaitUntilCacheClusterDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCacheClusterDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ElastiCacheActivities) WaitUntilReplicationGroupAvailable(ctx context.Context, input *elasticache.DescribeReplicationGroupsInput) error {
-	return a.client.WaitUntilReplicationGroupAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationGroupAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ElastiCacheActivities) WaitUntilReplicationGroupDeleted(ctx context.Context, input *elasticache.DescribeReplicationGroupsInput) error {
-	return a.client.WaitUntilReplicationGroupDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilReplicationGroupDeletedWithContext(ctx, input, options...)
+	})
 }

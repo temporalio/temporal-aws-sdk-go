@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudwatch"
 	"github.com/aws/aws-sdk-go/service/cloudwatch/cloudwatchiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type CloudWatchActivities struct {
 	client cloudwatchiface.CloudWatchAPI
@@ -142,11 +145,13 @@ func (a *CloudWatchActivities) UntagResource(ctx context.Context, input *cloudwa
 }
 
 func (a *CloudWatchActivities) WaitUntilAlarmExists(ctx context.Context, input *cloudwatch.DescribeAlarmsInput) error {
-	return a.client.WaitUntilAlarmExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAlarmExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudWatchActivities) WaitUntilCompositeAlarmExists(ctx context.Context, input *cloudwatch.DescribeAlarmsInput) error {
-	return a.client.WaitUntilCompositeAlarmExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCompositeAlarmExistsWithContext(ctx, input, options...)
+	})
 }

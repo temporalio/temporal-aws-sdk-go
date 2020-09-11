@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/redshift"
 	"github.com/aws/aws-sdk-go/service/redshift/redshiftiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type RedshiftActivities struct {
 	client redshiftiface.RedshiftAPI
@@ -390,21 +393,25 @@ func (a *RedshiftActivities) RotateEncryptionKey(ctx context.Context, input *red
 }
 
 func (a *RedshiftActivities) WaitUntilClusterAvailable(ctx context.Context, input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *RedshiftActivities) WaitUntilClusterDeleted(ctx context.Context, input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *RedshiftActivities) WaitUntilClusterRestored(ctx context.Context, input *redshift.DescribeClustersInput) error {
-	return a.client.WaitUntilClusterRestoredWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterRestoredWithContext(ctx, input, options...)
+	})
 }
 
 func (a *RedshiftActivities) WaitUntilSnapshotAvailable(ctx context.Context, input *redshift.DescribeClusterSnapshotsInput) error {
-	return a.client.WaitUntilSnapshotAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSnapshotAvailableWithContext(ctx, input, options...)
+	})
 }

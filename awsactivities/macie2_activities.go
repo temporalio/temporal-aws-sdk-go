@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/macie2"
 	"github.com/aws/aws-sdk-go/service/macie2/macie2iface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type Macie2Activities struct {
 	client macie2iface.Macie2API
@@ -30,32 +33,17 @@ func (a *Macie2Activities) BatchGetCustomDataIdentifiers(ctx context.Context, in
 }
 
 func (a *Macie2Activities) CreateClassificationJob(ctx context.Context, input *macie2.CreateClassificationJobInput) (*macie2.CreateClassificationJobOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateClassificationJobWithContext(ctx, input)
 }
 
 func (a *Macie2Activities) CreateCustomDataIdentifier(ctx context.Context, input *macie2.CreateCustomDataIdentifierInput) (*macie2.CreateCustomDataIdentifierOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateCustomDataIdentifierWithContext(ctx, input)
 }
 
 func (a *Macie2Activities) CreateFindingsFilter(ctx context.Context, input *macie2.CreateFindingsFilterInput) (*macie2.CreateFindingsFilterOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateFindingsFilterWithContext(ctx, input)
 }
 
@@ -120,22 +108,12 @@ func (a *Macie2Activities) DisassociateMember(ctx context.Context, input *macie2
 }
 
 func (a *Macie2Activities) EnableMacie(ctx context.Context, input *macie2.EnableMacieInput) (*macie2.EnableMacieOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.EnableMacieWithContext(ctx, input)
 }
 
 func (a *Macie2Activities) EnableOrganizationAdminAccount(ctx context.Context, input *macie2.EnableOrganizationAdminAccountInput) (*macie2.EnableOrganizationAdminAccountOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.EnableOrganizationAdminAccountWithContext(ctx, input)
 }
 

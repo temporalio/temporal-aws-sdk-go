@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/connect"
 	"github.com/aws/aws-sdk-go/service/connect/connectiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ConnectActivities struct {
 	client connectiface.ConnectAPI
@@ -98,12 +101,7 @@ func (a *ConnectActivities) ResumeContactRecording(ctx context.Context, input *c
 }
 
 func (a *ConnectActivities) StartChatContact(ctx context.Context, input *connect.StartChatContactInput) (*connect.StartChatContactOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.StartChatContactWithContext(ctx, input)
 }
 
@@ -112,12 +110,7 @@ func (a *ConnectActivities) StartContactRecording(ctx context.Context, input *co
 }
 
 func (a *ConnectActivities) StartOutboundVoiceContact(ctx context.Context, input *connect.StartOutboundVoiceContactInput) (*connect.StartOutboundVoiceContactOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.StartOutboundVoiceContactWithContext(ctx, input)
 }
 

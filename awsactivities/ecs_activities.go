@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ecs"
 	"github.com/aws/aws-sdk-go/service/ecs/ecsiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type ECSActivities struct {
 	client ecsiface.ECSAPI
@@ -30,22 +33,12 @@ func (a *ECSActivities) CreateCluster(ctx context.Context, input *ecs.CreateClus
 }
 
 func (a *ECSActivities) CreateService(ctx context.Context, input *ecs.CreateServiceInput) (*ecs.CreateServiceOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateServiceWithContext(ctx, input)
 }
 
 func (a *ECSActivities) CreateTaskSet(ctx context.Context, input *ecs.CreateTaskSetInput) (*ecs.CreateTaskSetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTaskSetWithContext(ctx, input)
 }
 
@@ -230,21 +223,25 @@ func (a *ECSActivities) UpdateTaskSet(ctx context.Context, input *ecs.UpdateTask
 }
 
 func (a *ECSActivities) WaitUntilServicesInactive(ctx context.Context, input *ecs.DescribeServicesInput) error {
-	return a.client.WaitUntilServicesInactiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilServicesInactiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ECSActivities) WaitUntilServicesStable(ctx context.Context, input *ecs.DescribeServicesInput) error {
-	return a.client.WaitUntilServicesStableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilServicesStableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ECSActivities) WaitUntilTasksRunning(ctx context.Context, input *ecs.DescribeTasksInput) error {
-	return a.client.WaitUntilTasksRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTasksRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *ECSActivities) WaitUntilTasksStopped(ctx context.Context, input *ecs.DescribeTasksInput) error {
-	return a.client.WaitUntilTasksStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTasksStoppedWithContext(ctx, input, options...)
+	})
 }

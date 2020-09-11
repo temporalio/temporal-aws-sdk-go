@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/lambda"
 	"github.com/aws/aws-sdk-go/service/lambda/lambdaiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type LambdaActivities struct {
 	client lambdaiface.LambdaAPI
@@ -214,16 +217,19 @@ func (a *LambdaActivities) UpdateFunctionEventInvokeConfig(ctx context.Context, 
 }
 
 func (a *LambdaActivities) WaitUntilFunctionActive(ctx context.Context, input *lambda.GetFunctionConfigurationInput) error {
-	return a.client.WaitUntilFunctionActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilFunctionActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *LambdaActivities) WaitUntilFunctionExists(ctx context.Context, input *lambda.GetFunctionInput) error {
-	return a.client.WaitUntilFunctionExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilFunctionExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *LambdaActivities) WaitUntilFunctionUpdated(ctx context.Context, input *lambda.GetFunctionConfigurationInput) error {
-	return a.client.WaitUntilFunctionUpdatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilFunctionUpdatedWithContext(ctx, input, options...)
+	})
 }

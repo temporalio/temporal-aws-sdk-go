@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/aws/aws-sdk-go/service/s3/s3iface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type S3Activities struct {
 	client s3iface.S3API
@@ -374,21 +377,25 @@ func (a *S3Activities) UploadPartCopy(ctx context.Context, input *s3.UploadPartC
 }
 
 func (a *S3Activities) WaitUntilBucketExists(ctx context.Context, input *s3.HeadBucketInput) error {
-	return a.client.WaitUntilBucketExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilBucketExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *S3Activities) WaitUntilBucketNotExists(ctx context.Context, input *s3.HeadBucketInput) error {
-	return a.client.WaitUntilBucketNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilBucketNotExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *S3Activities) WaitUntilObjectExists(ctx context.Context, input *s3.HeadObjectInput) error {
-	return a.client.WaitUntilObjectExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilObjectExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *S3Activities) WaitUntilObjectNotExists(ctx context.Context, input *s3.HeadObjectInput) error {
-	return a.client.WaitUntilObjectNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilObjectNotExistsWithContext(ctx, input, options...)
+	})
 }

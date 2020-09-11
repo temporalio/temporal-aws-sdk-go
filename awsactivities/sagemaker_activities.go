@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sagemaker"
 	"github.com/aws/aws-sdk-go/service/sagemaker/sagemakeriface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type SageMakerActivities struct {
 	client sagemakeriface.SageMakerAPI
@@ -570,41 +573,49 @@ func (a *SageMakerActivities) UpdateWorkteam(ctx context.Context, input *sagemak
 }
 
 func (a *SageMakerActivities) WaitUntilEndpointDeleted(ctx context.Context, input *sagemaker.DescribeEndpointInput) error {
-	return a.client.WaitUntilEndpointDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEndpointDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilEndpointInService(ctx context.Context, input *sagemaker.DescribeEndpointInput) error {
-	return a.client.WaitUntilEndpointInServiceWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilEndpointInServiceWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilNotebookInstanceDeleted(ctx context.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
-	return a.client.WaitUntilNotebookInstanceDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNotebookInstanceDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilNotebookInstanceInService(ctx context.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
-	return a.client.WaitUntilNotebookInstanceInServiceWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNotebookInstanceInServiceWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilNotebookInstanceStopped(ctx context.Context, input *sagemaker.DescribeNotebookInstanceInput) error {
-	return a.client.WaitUntilNotebookInstanceStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNotebookInstanceStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilProcessingJobCompletedOrStopped(ctx context.Context, input *sagemaker.DescribeProcessingJobInput) error {
-	return a.client.WaitUntilProcessingJobCompletedOrStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilProcessingJobCompletedOrStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilTrainingJobCompletedOrStopped(ctx context.Context, input *sagemaker.DescribeTrainingJobInput) error {
-	return a.client.WaitUntilTrainingJobCompletedOrStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTrainingJobCompletedOrStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *SageMakerActivities) WaitUntilTransformJobCompletedOrStopped(ctx context.Context, input *sagemaker.DescribeTransformJobInput) error {
-	return a.client.WaitUntilTransformJobCompletedOrStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTransformJobCompletedOrStoppedWithContext(ctx, input, options...)
+	})
 }

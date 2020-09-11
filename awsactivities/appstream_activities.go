@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/appstream"
 	"github.com/aws/aws-sdk-go/service/appstream/appstreamiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type AppStreamActivities struct {
 	client appstreamiface.AppStreamAPI
@@ -210,11 +213,13 @@ func (a *AppStreamActivities) UpdateStack(ctx context.Context, input *appstream.
 }
 
 func (a *AppStreamActivities) WaitUntilFleetStarted(ctx context.Context, input *appstream.DescribeFleetsInput) error {
-	return a.client.WaitUntilFleetStartedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilFleetStartedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *AppStreamActivities) WaitUntilFleetStopped(ctx context.Context, input *appstream.DescribeFleetsInput) error {
-	return a.client.WaitUntilFleetStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilFleetStoppedWithContext(ctx, input, options...)
+	})
 }

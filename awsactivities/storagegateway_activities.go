@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/storagegateway"
 	"github.com/aws/aws-sdk-go/service/storagegateway/storagegatewayiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type StorageGatewayActivities struct {
 	client storagegatewayiface.StorageGatewayAPI
@@ -58,32 +61,17 @@ func (a *StorageGatewayActivities) CancelRetrieval(ctx context.Context, input *s
 }
 
 func (a *StorageGatewayActivities) CreateCachediSCSIVolume(ctx context.Context, input *storagegateway.CreateCachediSCSIVolumeInput) (*storagegateway.CreateCachediSCSIVolumeOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateCachediSCSIVolumeWithContext(ctx, input)
 }
 
 func (a *StorageGatewayActivities) CreateNFSFileShare(ctx context.Context, input *storagegateway.CreateNFSFileShareInput) (*storagegateway.CreateNFSFileShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateNFSFileShareWithContext(ctx, input)
 }
 
 func (a *StorageGatewayActivities) CreateSMBFileShare(ctx context.Context, input *storagegateway.CreateSMBFileShareInput) (*storagegateway.CreateSMBFileShareOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateSMBFileShareWithContext(ctx, input)
 }
 
@@ -108,12 +96,7 @@ func (a *StorageGatewayActivities) CreateTapeWithBarcode(ctx context.Context, in
 }
 
 func (a *StorageGatewayActivities) CreateTapes(ctx context.Context, input *storagegateway.CreateTapesInput) (*storagegateway.CreateTapesOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTapesWithContext(ctx, input)
 }
 

@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 	"github.com/aws/aws-sdk-go/service/cloudformation/cloudformationiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type CloudFormationActivities struct {
 	client cloudformationiface.CloudFormationAPI
@@ -30,12 +33,7 @@ func (a *CloudFormationActivities) ContinueUpdateRollback(ctx context.Context, i
 }
 
 func (a *CloudFormationActivities) CreateChangeSet(ctx context.Context, input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateChangeSetWithContext(ctx, input)
 }
 
@@ -248,41 +246,49 @@ func (a *CloudFormationActivities) ValidateTemplate(ctx context.Context, input *
 }
 
 func (a *CloudFormationActivities) WaitUntilChangeSetCreateComplete(ctx context.Context, input *cloudformation.DescribeChangeSetInput) error {
-	return a.client.WaitUntilChangeSetCreateCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilChangeSetCreateCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackCreateComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackCreateCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackCreateCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackDeleteComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackDeleteCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackDeleteCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackExists(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackImportComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackImportCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackImportCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackRollbackComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackRollbackCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackRollbackCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilStackUpdateComplete(ctx context.Context, input *cloudformation.DescribeStacksInput) error {
-	return a.client.WaitUntilStackUpdateCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStackUpdateCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *CloudFormationActivities) WaitUntilTypeRegistrationComplete(ctx context.Context, input *cloudformation.DescribeTypeRegistrationInput) error {
-	return a.client.WaitUntilTypeRegistrationCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilTypeRegistrationCompleteWithContext(ctx, input, options...)
+	})
 }

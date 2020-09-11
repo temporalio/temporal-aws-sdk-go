@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/emr"
 	"github.com/aws/aws-sdk-go/service/emr/emriface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type EMRActivities struct {
 	client emriface.EMRAPI
@@ -170,16 +173,19 @@ func (a *EMRActivities) TerminateJobFlows(ctx context.Context, input *emr.Termin
 }
 
 func (a *EMRActivities) WaitUntilClusterRunning(ctx context.Context, input *emr.DescribeClusterInput) error {
-	return a.client.WaitUntilClusterRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EMRActivities) WaitUntilClusterTerminated(ctx context.Context, input *emr.DescribeClusterInput) error {
-	return a.client.WaitUntilClusterTerminatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterTerminatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EMRActivities) WaitUntilStepComplete(ctx context.Context, input *emr.DescribeStepInput) error {
-	return a.client.WaitUntilStepCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilStepCompleteWithContext(ctx, input, options...)
+	})
 }

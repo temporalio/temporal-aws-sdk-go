@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ec2"
 	"github.com/aws/aws-sdk-go/service/ec2/ec2iface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type EC2Activities struct {
 	client ec2iface.EC2API
@@ -50,12 +53,7 @@ func (a *EC2Activities) AllocateAddress(ctx context.Context, input *ec2.Allocate
 }
 
 func (a *EC2Activities) AllocateHosts(ctx context.Context, input *ec2.AllocateHostsInput) (*ec2.AllocateHostsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AllocateHostsWithContext(ctx, input)
 }
 
@@ -76,12 +74,7 @@ func (a *EC2Activities) AssociateAddress(ctx context.Context, input *ec2.Associa
 }
 
 func (a *EC2Activities) AssociateClientVpnTargetNetwork(ctx context.Context, input *ec2.AssociateClientVpnTargetNetworkInput) (*ec2.AssociateClientVpnTargetNetworkOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AssociateClientVpnTargetNetworkWithContext(ctx, input)
 }
 
@@ -134,12 +127,7 @@ func (a *EC2Activities) AttachVpnGateway(ctx context.Context, input *ec2.AttachV
 }
 
 func (a *EC2Activities) AuthorizeClientVpnIngress(ctx context.Context, input *ec2.AuthorizeClientVpnIngressInput) (*ec2.AuthorizeClientVpnIngressOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AuthorizeClientVpnIngressWithContext(ctx, input)
 }
 
@@ -192,22 +180,12 @@ func (a *EC2Activities) ConfirmProductInstance(ctx context.Context, input *ec2.C
 }
 
 func (a *EC2Activities) CopyFpgaImage(ctx context.Context, input *ec2.CopyFpgaImageInput) (*ec2.CopyFpgaImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CopyFpgaImageWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CopyImage(ctx context.Context, input *ec2.CopyImageInput) (*ec2.CopyImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CopyImageWithContext(ctx, input)
 }
 
@@ -216,42 +194,22 @@ func (a *EC2Activities) CopySnapshot(ctx context.Context, input *ec2.CopySnapsho
 }
 
 func (a *EC2Activities) CreateCapacityReservation(ctx context.Context, input *ec2.CreateCapacityReservationInput) (*ec2.CreateCapacityReservationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateCapacityReservationWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateCarrierGateway(ctx context.Context, input *ec2.CreateCarrierGatewayInput) (*ec2.CreateCarrierGatewayOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateCarrierGatewayWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateClientVpnEndpoint(ctx context.Context, input *ec2.CreateClientVpnEndpointInput) (*ec2.CreateClientVpnEndpointOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateClientVpnEndpointWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateClientVpnRoute(ctx context.Context, input *ec2.CreateClientVpnRouteInput) (*ec2.CreateClientVpnRouteOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateClientVpnRouteWithContext(ctx, input)
 }
 
@@ -272,42 +230,22 @@ func (a *EC2Activities) CreateDhcpOptions(ctx context.Context, input *ec2.Create
 }
 
 func (a *EC2Activities) CreateEgressOnlyInternetGateway(ctx context.Context, input *ec2.CreateEgressOnlyInternetGatewayInput) (*ec2.CreateEgressOnlyInternetGatewayOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateEgressOnlyInternetGatewayWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateFleet(ctx context.Context, input *ec2.CreateFleetInput) (*ec2.CreateFleetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateFleetWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateFlowLogs(ctx context.Context, input *ec2.CreateFlowLogsInput) (*ec2.CreateFlowLogsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateFlowLogsWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateFpgaImage(ctx context.Context, input *ec2.CreateFpgaImageInput) (*ec2.CreateFpgaImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateFpgaImageWithContext(ctx, input)
 }
 
@@ -328,22 +266,12 @@ func (a *EC2Activities) CreateKeyPair(ctx context.Context, input *ec2.CreateKeyP
 }
 
 func (a *EC2Activities) CreateLaunchTemplate(ctx context.Context, input *ec2.CreateLaunchTemplateInput) (*ec2.CreateLaunchTemplateOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateLaunchTemplateWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateLaunchTemplateVersion(ctx context.Context, input *ec2.CreateLaunchTemplateVersionInput) (*ec2.CreateLaunchTemplateVersionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateLaunchTemplateVersionWithContext(ctx, input)
 }
 
@@ -356,22 +284,12 @@ func (a *EC2Activities) CreateLocalGatewayRouteTableVpcAssociation(ctx context.C
 }
 
 func (a *EC2Activities) CreateManagedPrefixList(ctx context.Context, input *ec2.CreateManagedPrefixListInput) (*ec2.CreateManagedPrefixListOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateManagedPrefixListWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateNatGateway(ctx context.Context, input *ec2.CreateNatGatewayInput) (*ec2.CreateNatGatewayOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateNatGatewayWithContext(ctx, input)
 }
 
@@ -396,12 +314,7 @@ func (a *EC2Activities) CreatePlacementGroup(ctx context.Context, input *ec2.Cre
 }
 
 func (a *EC2Activities) CreateReservedInstancesListing(ctx context.Context, input *ec2.CreateReservedInstancesListingInput) (*ec2.CreateReservedInstancesListingOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateReservedInstancesListingWithContext(ctx, input)
 }
 
@@ -438,42 +351,22 @@ func (a *EC2Activities) CreateTags(ctx context.Context, input *ec2.CreateTagsInp
 }
 
 func (a *EC2Activities) CreateTrafficMirrorFilter(ctx context.Context, input *ec2.CreateTrafficMirrorFilterInput) (*ec2.CreateTrafficMirrorFilterOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTrafficMirrorFilterWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateTrafficMirrorFilterRule(ctx context.Context, input *ec2.CreateTrafficMirrorFilterRuleInput) (*ec2.CreateTrafficMirrorFilterRuleOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTrafficMirrorFilterRuleWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateTrafficMirrorSession(ctx context.Context, input *ec2.CreateTrafficMirrorSessionInput) (*ec2.CreateTrafficMirrorSessionOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTrafficMirrorSessionWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateTrafficMirrorTarget(ctx context.Context, input *ec2.CreateTrafficMirrorTargetInput) (*ec2.CreateTrafficMirrorTargetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateTrafficMirrorTargetWithContext(ctx, input)
 }
 
@@ -514,32 +407,17 @@ func (a *EC2Activities) CreateVpc(ctx context.Context, input *ec2.CreateVpcInput
 }
 
 func (a *EC2Activities) CreateVpcEndpoint(ctx context.Context, input *ec2.CreateVpcEndpointInput) (*ec2.CreateVpcEndpointOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateVpcEndpointWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateVpcEndpointConnectionNotification(ctx context.Context, input *ec2.CreateVpcEndpointConnectionNotificationInput) (*ec2.CreateVpcEndpointConnectionNotificationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateVpcEndpointConnectionNotificationWithContext(ctx, input)
 }
 
 func (a *EC2Activities) CreateVpcEndpointServiceConfiguration(ctx context.Context, input *ec2.CreateVpcEndpointServiceConfigurationInput) (*ec2.CreateVpcEndpointServiceConfigurationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateVpcEndpointServiceConfigurationWithContext(ctx, input)
 }
 
@@ -1352,12 +1230,7 @@ func (a *EC2Activities) ExportClientVpnClientConfiguration(ctx context.Context, 
 }
 
 func (a *EC2Activities) ExportImage(ctx context.Context, input *ec2.ExportImageInput) (*ec2.ExportImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ExportImageWithContext(ctx, input)
 }
 
@@ -1450,12 +1323,7 @@ func (a *EC2Activities) ImportClientVpnClientCertificateRevocationList(ctx conte
 }
 
 func (a *EC2Activities) ImportImage(ctx context.Context, input *ec2.ImportImageInput) (*ec2.ImportImageOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ImportImageWithContext(ctx, input)
 }
 
@@ -1468,12 +1336,7 @@ func (a *EC2Activities) ImportKeyPair(ctx context.Context, input *ec2.ImportKeyP
 }
 
 func (a *EC2Activities) ImportSnapshot(ctx context.Context, input *ec2.ImportSnapshotInput) (*ec2.ImportSnapshotOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ImportSnapshotWithContext(ctx, input)
 }
 
@@ -1534,12 +1397,7 @@ func (a *EC2Activities) ModifyInstanceCapacityReservationAttributes(ctx context.
 }
 
 func (a *EC2Activities) ModifyInstanceCreditSpecification(ctx context.Context, input *ec2.ModifyInstanceCreditSpecificationInput) (*ec2.ModifyInstanceCreditSpecificationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ModifyInstanceCreditSpecificationWithContext(ctx, input)
 }
 
@@ -1556,12 +1414,7 @@ func (a *EC2Activities) ModifyInstancePlacement(ctx context.Context, input *ec2.
 }
 
 func (a *EC2Activities) ModifyLaunchTemplate(ctx context.Context, input *ec2.ModifyLaunchTemplateInput) (*ec2.ModifyLaunchTemplateOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ModifyLaunchTemplateWithContext(ctx, input)
 }
 
@@ -1574,12 +1427,7 @@ func (a *EC2Activities) ModifyNetworkInterfaceAttribute(ctx context.Context, inp
 }
 
 func (a *EC2Activities) ModifyReservedInstances(ctx context.Context, input *ec2.ModifyReservedInstancesInput) (*ec2.ModifyReservedInstancesOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.ModifyReservedInstancesWithContext(ctx, input)
 }
 
@@ -1680,12 +1528,7 @@ func (a *EC2Activities) ProvisionByoipCidr(ctx context.Context, input *ec2.Provi
 }
 
 func (a *EC2Activities) PurchaseHostReservation(ctx context.Context, input *ec2.PurchaseHostReservationInput) (*ec2.PurchaseHostReservationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.PurchaseHostReservationWithContext(ctx, input)
 }
 
@@ -1694,12 +1537,7 @@ func (a *EC2Activities) PurchaseReservedInstancesOffering(ctx context.Context, i
 }
 
 func (a *EC2Activities) PurchaseScheduledInstances(ctx context.Context, input *ec2.PurchaseScheduledInstancesInput) (*ec2.PurchaseScheduledInstancesOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.PurchaseScheduledInstancesWithContext(ctx, input)
 }
 
@@ -1780,12 +1618,7 @@ func (a *EC2Activities) RequestSpotFleet(ctx context.Context, input *ec2.Request
 }
 
 func (a *EC2Activities) RequestSpotInstances(ctx context.Context, input *ec2.RequestSpotInstancesInput) (*ec2.RequestSpotInstancesOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RequestSpotInstancesWithContext(ctx, input)
 }
 
@@ -1834,22 +1667,12 @@ func (a *EC2Activities) RevokeSecurityGroupIngress(ctx context.Context, input *e
 }
 
 func (a *EC2Activities) RunInstances(ctx context.Context, input *ec2.RunInstancesInput) (*ec2.Reservation, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RunInstancesWithContext(ctx, input)
 }
 
 func (a *EC2Activities) RunScheduledInstances(ctx context.Context, input *ec2.RunScheduledInstancesInput) (*ec2.RunScheduledInstancesOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.RunScheduledInstancesWithContext(ctx, input)
 }
 
@@ -1914,161 +1737,193 @@ func (a *EC2Activities) WithdrawByoipCidr(ctx context.Context, input *ec2.Withdr
 }
 
 func (a *EC2Activities) WaitUntilBundleTaskComplete(ctx context.Context, input *ec2.DescribeBundleTasksInput) error {
-	return a.client.WaitUntilBundleTaskCompleteWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilBundleTaskCompleteWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilConversionTaskCancelled(ctx context.Context, input *ec2.DescribeConversionTasksInput) error {
-	return a.client.WaitUntilConversionTaskCancelledWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilConversionTaskCancelledWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilConversionTaskCompleted(ctx context.Context, input *ec2.DescribeConversionTasksInput) error {
-	return a.client.WaitUntilConversionTaskCompletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilConversionTaskCompletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilConversionTaskDeleted(ctx context.Context, input *ec2.DescribeConversionTasksInput) error {
-	return a.client.WaitUntilConversionTaskDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilConversionTaskDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilCustomerGatewayAvailable(ctx context.Context, input *ec2.DescribeCustomerGatewaysInput) error {
-	return a.client.WaitUntilCustomerGatewayAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCustomerGatewayAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilExportTaskCancelled(ctx context.Context, input *ec2.DescribeExportTasksInput) error {
-	return a.client.WaitUntilExportTaskCancelledWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilExportTaskCancelledWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilExportTaskCompleted(ctx context.Context, input *ec2.DescribeExportTasksInput) error {
-	return a.client.WaitUntilExportTaskCompletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilExportTaskCompletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilImageAvailable(ctx context.Context, input *ec2.DescribeImagesInput) error {
-	return a.client.WaitUntilImageAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilImageAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilImageExists(ctx context.Context, input *ec2.DescribeImagesInput) error {
-	return a.client.WaitUntilImageExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilImageExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilInstanceExists(ctx context.Context, input *ec2.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilInstanceRunning(ctx context.Context, input *ec2.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceRunningWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceRunningWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilInstanceStatusOk(ctx context.Context, input *ec2.DescribeInstanceStatusInput) error {
-	return a.client.WaitUntilInstanceStatusOkWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceStatusOkWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilInstanceStopped(ctx context.Context, input *ec2.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceStoppedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceStoppedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilInstanceTerminated(ctx context.Context, input *ec2.DescribeInstancesInput) error {
-	return a.client.WaitUntilInstanceTerminatedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilInstanceTerminatedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilKeyPairExists(ctx context.Context, input *ec2.DescribeKeyPairsInput) error {
-	return a.client.WaitUntilKeyPairExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilKeyPairExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilNatGatewayAvailable(ctx context.Context, input *ec2.DescribeNatGatewaysInput) error {
-	return a.client.WaitUntilNatGatewayAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNatGatewayAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilNetworkInterfaceAvailable(ctx context.Context, input *ec2.DescribeNetworkInterfacesInput) error {
-	return a.client.WaitUntilNetworkInterfaceAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNetworkInterfaceAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilPasswordDataAvailable(ctx context.Context, input *ec2.GetPasswordDataInput) error {
-	return a.client.WaitUntilPasswordDataAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilPasswordDataAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilSecurityGroupExists(ctx context.Context, input *ec2.DescribeSecurityGroupsInput) error {
-	return a.client.WaitUntilSecurityGroupExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSecurityGroupExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilSnapshotCompleted(ctx context.Context, input *ec2.DescribeSnapshotsInput) error {
-	return a.client.WaitUntilSnapshotCompletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSnapshotCompletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilSpotInstanceRequestFulfilled(ctx context.Context, input *ec2.DescribeSpotInstanceRequestsInput) error {
-	return a.client.WaitUntilSpotInstanceRequestFulfilledWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSpotInstanceRequestFulfilledWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilSubnetAvailable(ctx context.Context, input *ec2.DescribeSubnetsInput) error {
-	return a.client.WaitUntilSubnetAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSubnetAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilSystemStatusOk(ctx context.Context, input *ec2.DescribeInstanceStatusInput) error {
-	return a.client.WaitUntilSystemStatusOkWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilSystemStatusOkWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVolumeAvailable(ctx context.Context, input *ec2.DescribeVolumesInput) error {
-	return a.client.WaitUntilVolumeAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVolumeAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVolumeDeleted(ctx context.Context, input *ec2.DescribeVolumesInput) error {
-	return a.client.WaitUntilVolumeDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVolumeDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVolumeInUse(ctx context.Context, input *ec2.DescribeVolumesInput) error {
-	return a.client.WaitUntilVolumeInUseWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVolumeInUseWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpcAvailable(ctx context.Context, input *ec2.DescribeVpcsInput) error {
-	return a.client.WaitUntilVpcAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpcAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpcExists(ctx context.Context, input *ec2.DescribeVpcsInput) error {
-	return a.client.WaitUntilVpcExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpcExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpcPeeringConnectionDeleted(ctx context.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error {
-	return a.client.WaitUntilVpcPeeringConnectionDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpcPeeringConnectionDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpcPeeringConnectionExists(ctx context.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error {
-	return a.client.WaitUntilVpcPeeringConnectionExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpcPeeringConnectionExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpnConnectionAvailable(ctx context.Context, input *ec2.DescribeVpnConnectionsInput) error {
-	return a.client.WaitUntilVpnConnectionAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpnConnectionAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EC2Activities) WaitUntilVpnConnectionDeleted(ctx context.Context, input *ec2.DescribeVpnConnectionsInput) error {
-	return a.client.WaitUntilVpnConnectionDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilVpnConnectionDeletedWithContext(ctx, input, options...)
+	})
 }

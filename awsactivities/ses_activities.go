@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/ses"
 	"github.com/aws/aws-sdk-go/service/ses/sesiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type SESActivities struct {
 	client sesiface.SESAPI
@@ -306,6 +309,7 @@ func (a *SESActivities) VerifyEmailIdentity(ctx context.Context, input *ses.Veri
 }
 
 func (a *SESActivities) WaitUntilIdentityExists(ctx context.Context, input *ses.GetIdentityVerificationAttributesInput) error {
-	return a.client.WaitUntilIdentityExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilIdentityExistsWithContext(ctx, input, options...)
+	})
 }

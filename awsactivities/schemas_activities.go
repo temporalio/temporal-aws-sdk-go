@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/schemas"
 	"github.com/aws/aws-sdk-go/service/schemas/schemasiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type SchemasActivities struct {
 	client schemasiface.SchemasAPI
@@ -142,6 +145,7 @@ func (a *SchemasActivities) UpdateSchema(ctx context.Context, input *schemas.Upd
 }
 
 func (a *SchemasActivities) WaitUntilCodeBindingExists(ctx context.Context, input *schemas.DescribeCodeBindingInput) error {
-	return a.client.WaitUntilCodeBindingExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilCodeBindingExistsWithContext(ctx, input, options...)
+	})
 }

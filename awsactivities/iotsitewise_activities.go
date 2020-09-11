@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/iotsitewise"
 	"github.com/aws/aws-sdk-go/service/iotsitewise/iotsitewiseiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type IoTSiteWiseActivities struct {
 	client iotsitewiseiface.IoTSiteWiseAPI
@@ -22,32 +25,17 @@ func NewIoTSiteWiseActivities(session *session.Session, config ...*aws.Config) *
 }
 
 func (a *IoTSiteWiseActivities) AssociateAssets(ctx context.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.AssociateAssetsWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) BatchAssociateProjectAssets(ctx context.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) (*iotsitewise.BatchAssociateProjectAssetsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.BatchAssociateProjectAssetsWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) BatchDisassociateProjectAssets(ctx context.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) (*iotsitewise.BatchDisassociateProjectAssetsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.BatchDisassociateProjectAssetsWithContext(ctx, input)
 }
 
@@ -56,42 +44,22 @@ func (a *IoTSiteWiseActivities) BatchPutAssetPropertyValue(ctx context.Context, 
 }
 
 func (a *IoTSiteWiseActivities) CreateAccessPolicy(ctx context.Context, input *iotsitewise.CreateAccessPolicyInput) (*iotsitewise.CreateAccessPolicyOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateAccessPolicyWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) CreateAsset(ctx context.Context, input *iotsitewise.CreateAssetInput) (*iotsitewise.CreateAssetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateAssetWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) CreateAssetModel(ctx context.Context, input *iotsitewise.CreateAssetModelInput) (*iotsitewise.CreateAssetModelOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateAssetModelWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) CreateDashboard(ctx context.Context, input *iotsitewise.CreateDashboardInput) (*iotsitewise.CreateDashboardOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateDashboardWithContext(ctx, input)
 }
 
@@ -100,62 +68,32 @@ func (a *IoTSiteWiseActivities) CreateGateway(ctx context.Context, input *iotsit
 }
 
 func (a *IoTSiteWiseActivities) CreatePortal(ctx context.Context, input *iotsitewise.CreatePortalInput) (*iotsitewise.CreatePortalOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreatePortalWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) CreateProject(ctx context.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateProjectWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) DeleteAccessPolicy(ctx context.Context, input *iotsitewise.DeleteAccessPolicyInput) (*iotsitewise.DeleteAccessPolicyOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteAccessPolicyWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) DeleteAsset(ctx context.Context, input *iotsitewise.DeleteAssetInput) (*iotsitewise.DeleteAssetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteAssetWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) DeleteAssetModel(ctx context.Context, input *iotsitewise.DeleteAssetModelInput) (*iotsitewise.DeleteAssetModelOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteAssetModelWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) DeleteDashboard(ctx context.Context, input *iotsitewise.DeleteDashboardInput) (*iotsitewise.DeleteDashboardOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteDashboardWithContext(ctx, input)
 }
 
@@ -164,22 +102,12 @@ func (a *IoTSiteWiseActivities) DeleteGateway(ctx context.Context, input *iotsit
 }
 
 func (a *IoTSiteWiseActivities) DeletePortal(ctx context.Context, input *iotsitewise.DeletePortalInput) (*iotsitewise.DeletePortalOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeletePortalWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) DeleteProject(ctx context.Context, input *iotsitewise.DeleteProjectInput) (*iotsitewise.DeleteProjectOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DeleteProjectWithContext(ctx, input)
 }
 
@@ -224,12 +152,7 @@ func (a *IoTSiteWiseActivities) DescribeProject(ctx context.Context, input *iots
 }
 
 func (a *IoTSiteWiseActivities) DisassociateAssets(ctx context.Context, input *iotsitewise.DisassociateAssetsInput) (*iotsitewise.DisassociateAssetsOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.DisassociateAssetsWithContext(ctx, input)
 }
 
@@ -298,52 +221,27 @@ func (a *IoTSiteWiseActivities) UntagResource(ctx context.Context, input *iotsit
 }
 
 func (a *IoTSiteWiseActivities) UpdateAccessPolicy(ctx context.Context, input *iotsitewise.UpdateAccessPolicyInput) (*iotsitewise.UpdateAccessPolicyOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateAccessPolicyWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) UpdateAsset(ctx context.Context, input *iotsitewise.UpdateAssetInput) (*iotsitewise.UpdateAssetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateAssetWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) UpdateAssetModel(ctx context.Context, input *iotsitewise.UpdateAssetModelInput) (*iotsitewise.UpdateAssetModelOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateAssetModelWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) UpdateAssetProperty(ctx context.Context, input *iotsitewise.UpdateAssetPropertyInput) (*iotsitewise.UpdateAssetPropertyOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateAssetPropertyWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) UpdateDashboard(ctx context.Context, input *iotsitewise.UpdateDashboardInput) (*iotsitewise.UpdateDashboardOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateDashboardWithContext(ctx, input)
 }
 
@@ -356,51 +254,47 @@ func (a *IoTSiteWiseActivities) UpdateGatewayCapabilityConfiguration(ctx context
 }
 
 func (a *IoTSiteWiseActivities) UpdatePortal(ctx context.Context, input *iotsitewise.UpdatePortalInput) (*iotsitewise.UpdatePortalOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdatePortalWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) UpdateProject(ctx context.Context, input *iotsitewise.UpdateProjectInput) (*iotsitewise.UpdateProjectOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.UpdateProjectWithContext(ctx, input)
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilAssetActive(ctx context.Context, input *iotsitewise.DescribeAssetInput) error {
-	return a.client.WaitUntilAssetActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAssetActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilAssetModelActive(ctx context.Context, input *iotsitewise.DescribeAssetModelInput) error {
-	return a.client.WaitUntilAssetModelActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAssetModelActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilAssetModelNotExists(ctx context.Context, input *iotsitewise.DescribeAssetModelInput) error {
-	return a.client.WaitUntilAssetModelNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAssetModelNotExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilAssetNotExists(ctx context.Context, input *iotsitewise.DescribeAssetInput) error {
-	return a.client.WaitUntilAssetNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilAssetNotExistsWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilPortalActive(ctx context.Context, input *iotsitewise.DescribePortalInput) error {
-	return a.client.WaitUntilPortalActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilPortalActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *IoTSiteWiseActivities) WaitUntilPortalNotExists(ctx context.Context, input *iotsitewise.DescribePortalInput) error {
-	return a.client.WaitUntilPortalNotExistsWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilPortalNotExistsWithContext(ctx, input, options...)
+	})
 }

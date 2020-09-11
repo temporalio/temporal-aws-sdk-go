@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/eks"
 	"github.com/aws/aws-sdk-go/service/eks/eksiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type EKSActivities struct {
 	client eksiface.EKSAPI
@@ -106,21 +109,25 @@ func (a *EKSActivities) UpdateNodegroupVersion(ctx context.Context, input *eks.U
 }
 
 func (a *EKSActivities) WaitUntilClusterActive(ctx context.Context, input *eks.DescribeClusterInput) error {
-	return a.client.WaitUntilClusterActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EKSActivities) WaitUntilClusterDeleted(ctx context.Context, input *eks.DescribeClusterInput) error {
-	return a.client.WaitUntilClusterDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilClusterDeletedWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EKSActivities) WaitUntilNodegroupActive(ctx context.Context, input *eks.DescribeNodegroupInput) error {
-	return a.client.WaitUntilNodegroupActiveWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNodegroupActiveWithContext(ctx, input, options...)
+	})
 }
 
 func (a *EKSActivities) WaitUntilNodegroupDeleted(ctx context.Context, input *eks.DescribeNodegroupInput) error {
-	return a.client.WaitUntilNodegroupDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilNodegroupDeletedWithContext(ctx, input, options...)
+	})
 }

@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/guardduty"
 	"github.com/aws/aws-sdk-go/service/guardduty/guarddutyiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type GuardDutyActivities struct {
 	client guarddutyiface.GuardDutyAPI
@@ -30,32 +33,17 @@ func (a *GuardDutyActivities) ArchiveFindings(ctx context.Context, input *guardd
 }
 
 func (a *GuardDutyActivities) CreateDetector(ctx context.Context, input *guardduty.CreateDetectorInput) (*guardduty.CreateDetectorOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateDetectorWithContext(ctx, input)
 }
 
 func (a *GuardDutyActivities) CreateFilter(ctx context.Context, input *guardduty.CreateFilterInput) (*guardduty.CreateFilterOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateFilterWithContext(ctx, input)
 }
 
 func (a *GuardDutyActivities) CreateIPSet(ctx context.Context, input *guardduty.CreateIPSetInput) (*guardduty.CreateIPSetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateIPSetWithContext(ctx, input)
 }
 
@@ -64,12 +52,7 @@ func (a *GuardDutyActivities) CreateMembers(ctx context.Context, input *guarddut
 }
 
 func (a *GuardDutyActivities) CreatePublishingDestination(ctx context.Context, input *guardduty.CreatePublishingDestinationInput) (*guardduty.CreatePublishingDestinationOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreatePublishingDestinationWithContext(ctx, input)
 }
 
@@ -78,12 +61,7 @@ func (a *GuardDutyActivities) CreateSampleFindings(ctx context.Context, input *g
 }
 
 func (a *GuardDutyActivities) CreateThreatIntelSet(ctx context.Context, input *guardduty.CreateThreatIntelSetInput) (*guardduty.CreateThreatIntelSetOutput, error) {
-	// Use the same token during retries
-	if input.ClientToken == nil {
-		info := activity.GetInfo(ctx)
-		token := info.WorkflowExecution.RunID + "-" + info.ActivityID
-		input.ClientToken = &token
-	}
+	internal.SetClientToken(ctx, &input.ClientToken)
 	return a.client.CreateThreatIntelSetWithContext(ctx, input)
 }
 

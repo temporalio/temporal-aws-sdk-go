@@ -3,14 +3,17 @@ package awsactivities
 import (
 	"context"
 	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/neptune"
 	"github.com/aws/aws-sdk-go/service/neptune/neptuneiface"
-	"go.temporal.io/sdk/activity"
+	"temporal.io/aws-sdk/internal"
 )
 
-// ensure that activity import is valid even if not used by the generated code
-type _ = activity.Info
+// ensure that imports are valid even if not used by the generated code
+var _ = internal.SetClientToken
+
+type _ request.Option
 
 type NeptuneActivities struct {
 	client neptuneiface.NeptuneAPI
@@ -258,11 +261,13 @@ func (a *NeptuneActivities) StopDBCluster(ctx context.Context, input *neptune.St
 }
 
 func (a *NeptuneActivities) WaitUntilDBInstanceAvailable(ctx context.Context, input *neptune.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceAvailableWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilDBInstanceAvailableWithContext(ctx, input, options...)
+	})
 }
 
 func (a *NeptuneActivities) WaitUntilDBInstanceDeleted(ctx context.Context, input *neptune.DescribeDBInstancesInput) error {
-	return a.client.WaitUntilDBInstanceDeletedWithContext(ctx, input)
-
+	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
+		return a.client.WaitUntilDBInstanceDeletedWithContext(ctx, input, options...)
+	})
 }
