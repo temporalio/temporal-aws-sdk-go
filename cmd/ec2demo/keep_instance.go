@@ -20,39 +20,40 @@ func KeepInstance(ctx workflow.Context) error {
 		if err2 != nil {
 			return err2
 		}
-		describe := &ec2.DescribeInstancesInput{
+
+		err := ec2Client.WaitUntilInstanceTerminated(ctx, &ec2.DescribeInstancesInput{
 			InstanceIds: []*string{instanceId},
-		}
-		err := ec2Client.WaitUntilInstanceTerminated(ctx, describe)
+		})
 		if err != nil {
 			return err
 		}
-		logger.Info("EC2 instance terminated.", "instanceId", instanceId)
+
+		logger.Info("EC2 instance terminated.", "instanceId", *instanceId)
 	}
 	return nil
 }
 
 func launchInstance(ctx workflow.Context, ec2Client awsclients.EC2Client) (*string, error) {
 	logger := workflow.GetLogger(ctx)
-	runInstances := &ec2.RunInstancesInput{
+	reservation, err := ec2Client.RunInstances(ctx, &ec2.RunInstancesInput{
 		ImageId:      aws.String("ami-0947d2ba12ee1ff75"),
 		InstanceType: aws.String("t2.nano"),
 		MinCount:     aws.Int64(1),
 		MaxCount:     aws.Int64(1),
-	}
-	reservation, err := ec2Client.RunInstances(ctx, runInstances)
+	})
 	if err != nil {
 		return nil, err
 	}
 	instanceId := reservation.Instances[0].InstanceId
 	logger.Info("Starting EC2 instance", "instanceId", *instanceId)
-	describe := &ec2.DescribeInstancesInput{
+
+	err = ec2Client.WaitUntilInstanceRunning(ctx, &ec2.DescribeInstancesInput{
 		InstanceIds: []*string{instanceId},
-	}
-	ec2Client.WaitUntilInstanceRunning(ctx, describe)
+	})
 	if err != nil {
 		return nil, err
 	}
 	logger.Info("EC2 instance running", "instanceId", *instanceId)
+
 	return instanceId, nil
 }
