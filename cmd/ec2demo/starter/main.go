@@ -1,8 +1,8 @@
 package main
 
 import (
+	"context"
 	"go.temporal.io/sdk/client"
-	"go.temporal.io/sdk/worker"
 	"log"
 	"temporal.io/aws-sdk/cmd/ec2demo"
 )
@@ -16,12 +16,12 @@ func main() {
 	}
 	defer c.Close()
 
-	w := worker.New(c, taskQueue, worker.Options{})
-
-	w.RegisterWorkflow(ec2demo.KeepInstance)
-
-	err = w.Run(worker.InterruptCh())
-	if err != nil {
-		log.Fatalln("Unable to start worker", err)
+	options := client.StartWorkflowOptions{
+		TaskQueue: taskQueue,
 	}
+	wRun, err := c.ExecuteWorkflow(context.Background(), options, ec2demo.KeepInstance)
+	if err != nil {
+		log.Fatalln("Failure starting workflow", err)
+	}
+	log.Printf("Started KeepInstanceWorkflow. WorkflowID=%v", wRun.GetID())
 }
