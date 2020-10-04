@@ -4,7 +4,7 @@
 | --- |
 
 This repository is a prototype of generated [Temporal](https://github.com/temporalio/) activities and workflow stubs for all AWS APIs
-exposed by [AWS Go SDK](https://github.com/aws/aws-sdk-go).
+exposed by [AWS Go SDK](https://github.com/aws/aws-sdk-go)
 
 Generated activities and stubs are in Go at this point. 
 Java SDK has to call them by string name until Java activity interface generation is added.  
