@@ -20,35 +20,78 @@ type _ request.Option
 
 type BraketActivities struct {
 	client braketiface.BraketAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewBraketActivities(session *session.Session, config ...*aws.Config) *BraketActivities {
-	client := braket.New(session, config...)
+func NewBraketActivities(sess *session.Session, config ...*aws.Config) *BraketActivities {
+	client := braket.New(sess, config...)
 	return &BraketActivities{client: client}
 }
 
+func NewBraketActivitiesWithSessionFactory(sessionFactory SessionFactory) *BraketActivities {
+	return &BraketActivities{sessionFactory: sessionFactory}
+}
+
+func (a *BraketActivities) getClient(ctx context.Context) (braketiface.BraketAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return braket.New(sess), nil
+}
+
 func (a *BraketActivities) CancelQuantumTask(ctx context.Context, input *braket.CancelQuantumTaskInput) (*braket.CancelQuantumTaskOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.CancelQuantumTaskWithContext(ctx, input)
+	return client.CancelQuantumTaskWithContext(ctx, input)
 }
 
 func (a *BraketActivities) CreateQuantumTask(ctx context.Context, input *braket.CreateQuantumTaskInput) (*braket.CreateQuantumTaskOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.CreateQuantumTaskWithContext(ctx, input)
+	return client.CreateQuantumTaskWithContext(ctx, input)
 }
 
 func (a *BraketActivities) GetDevice(ctx context.Context, input *braket.GetDeviceInput) (*braket.GetDeviceOutput, error) {
-	return a.client.GetDeviceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetDeviceWithContext(ctx, input)
 }
 
 func (a *BraketActivities) GetQuantumTask(ctx context.Context, input *braket.GetQuantumTaskInput) (*braket.GetQuantumTaskOutput, error) {
-	return a.client.GetQuantumTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetQuantumTaskWithContext(ctx, input)
 }
 
 func (a *BraketActivities) SearchDevices(ctx context.Context, input *braket.SearchDevicesInput) (*braket.SearchDevicesOutput, error) {
-	return a.client.SearchDevicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchDevicesWithContext(ctx, input)
 }
 
 func (a *BraketActivities) SearchQuantumTasks(ctx context.Context, input *braket.SearchQuantumTasksInput) (*braket.SearchQuantumTasksOutput, error) {
-	return a.client.SearchQuantumTasksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchQuantumTasksWithContext(ctx, input)
 }

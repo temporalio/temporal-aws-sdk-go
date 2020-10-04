@@ -20,219 +20,442 @@ type _ request.Option
 
 type LambdaActivities struct {
 	client lambdaiface.LambdaAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewLambdaActivities(session *session.Session, config ...*aws.Config) *LambdaActivities {
-	client := lambda.New(session, config...)
+func NewLambdaActivities(sess *session.Session, config ...*aws.Config) *LambdaActivities {
+	client := lambda.New(sess, config...)
 	return &LambdaActivities{client: client}
 }
 
+func NewLambdaActivitiesWithSessionFactory(sessionFactory SessionFactory) *LambdaActivities {
+	return &LambdaActivities{sessionFactory: sessionFactory}
+}
+
+func (a *LambdaActivities) getClient(ctx context.Context) (lambdaiface.LambdaAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return lambda.New(sess), nil
+}
+
 func (a *LambdaActivities) AddLayerVersionPermission(ctx context.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error) {
-	return a.client.AddLayerVersionPermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddLayerVersionPermissionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) AddPermission(ctx context.Context, input *lambda.AddPermissionInput) (*lambda.AddPermissionOutput, error) {
-	return a.client.AddPermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddPermissionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) CreateAlias(ctx context.Context, input *lambda.CreateAliasInput) (*lambda.AliasConfiguration, error) {
-	return a.client.CreateAliasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateAliasWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) CreateEventSourceMapping(ctx context.Context, input *lambda.CreateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
-	return a.client.CreateEventSourceMappingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateEventSourceMappingWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) CreateFunction(ctx context.Context, input *lambda.CreateFunctionInput) (*lambda.FunctionConfiguration, error) {
-	return a.client.CreateFunctionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateFunctionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteAlias(ctx context.Context, input *lambda.DeleteAliasInput) (*lambda.DeleteAliasOutput, error) {
-	return a.client.DeleteAliasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteAliasWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteEventSourceMapping(ctx context.Context, input *lambda.DeleteEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
-	return a.client.DeleteEventSourceMappingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteEventSourceMappingWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteFunction(ctx context.Context, input *lambda.DeleteFunctionInput) (*lambda.DeleteFunctionOutput, error) {
-	return a.client.DeleteFunctionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteFunctionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteFunctionConcurrency(ctx context.Context, input *lambda.DeleteFunctionConcurrencyInput) (*lambda.DeleteFunctionConcurrencyOutput, error) {
-	return a.client.DeleteFunctionConcurrencyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteFunctionConcurrencyWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteFunctionEventInvokeConfig(ctx context.Context, input *lambda.DeleteFunctionEventInvokeConfigInput) (*lambda.DeleteFunctionEventInvokeConfigOutput, error) {
-	return a.client.DeleteFunctionEventInvokeConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteFunctionEventInvokeConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteLayerVersion(ctx context.Context, input *lambda.DeleteLayerVersionInput) (*lambda.DeleteLayerVersionOutput, error) {
-	return a.client.DeleteLayerVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLayerVersionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) DeleteProvisionedConcurrencyConfig(ctx context.Context, input *lambda.DeleteProvisionedConcurrencyConfigInput) (*lambda.DeleteProvisionedConcurrencyConfigOutput, error) {
-	return a.client.DeleteProvisionedConcurrencyConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteProvisionedConcurrencyConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetAccountSettings(ctx context.Context, input *lambda.GetAccountSettingsInput) (*lambda.GetAccountSettingsOutput, error) {
-	return a.client.GetAccountSettingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAccountSettingsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetAlias(ctx context.Context, input *lambda.GetAliasInput) (*lambda.AliasConfiguration, error) {
-	return a.client.GetAliasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAliasWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetEventSourceMapping(ctx context.Context, input *lambda.GetEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
-	return a.client.GetEventSourceMappingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetEventSourceMappingWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetFunction(ctx context.Context, input *lambda.GetFunctionInput) (*lambda.GetFunctionOutput, error) {
-	return a.client.GetFunctionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFunctionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetFunctionConcurrency(ctx context.Context, input *lambda.GetFunctionConcurrencyInput) (*lambda.GetFunctionConcurrencyOutput, error) {
-	return a.client.GetFunctionConcurrencyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFunctionConcurrencyWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetFunctionConfiguration(ctx context.Context, input *lambda.GetFunctionConfigurationInput) (*lambda.FunctionConfiguration, error) {
-	return a.client.GetFunctionConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFunctionConfigurationWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetFunctionEventInvokeConfig(ctx context.Context, input *lambda.GetFunctionEventInvokeConfigInput) (*lambda.GetFunctionEventInvokeConfigOutput, error) {
-	return a.client.GetFunctionEventInvokeConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFunctionEventInvokeConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetLayerVersion(ctx context.Context, input *lambda.GetLayerVersionInput) (*lambda.GetLayerVersionOutput, error) {
-	return a.client.GetLayerVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLayerVersionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetLayerVersionByArn(ctx context.Context, input *lambda.GetLayerVersionByArnInput) (*lambda.GetLayerVersionByArnOutput, error) {
-	return a.client.GetLayerVersionByArnWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLayerVersionByArnWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetLayerVersionPolicy(ctx context.Context, input *lambda.GetLayerVersionPolicyInput) (*lambda.GetLayerVersionPolicyOutput, error) {
-	return a.client.GetLayerVersionPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLayerVersionPolicyWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetPolicy(ctx context.Context, input *lambda.GetPolicyInput) (*lambda.GetPolicyOutput, error) {
-	return a.client.GetPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPolicyWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) GetProvisionedConcurrencyConfig(ctx context.Context, input *lambda.GetProvisionedConcurrencyConfigInput) (*lambda.GetProvisionedConcurrencyConfigOutput, error) {
-	return a.client.GetProvisionedConcurrencyConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetProvisionedConcurrencyConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) Invoke(ctx context.Context, input *lambda.InvokeInput) (*lambda.InvokeOutput, error) {
-	return a.client.InvokeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.InvokeWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListAliases(ctx context.Context, input *lambda.ListAliasesInput) (*lambda.ListAliasesOutput, error) {
-	return a.client.ListAliasesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListAliasesWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListEventSourceMappings(ctx context.Context, input *lambda.ListEventSourceMappingsInput) (*lambda.ListEventSourceMappingsOutput, error) {
-	return a.client.ListEventSourceMappingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListEventSourceMappingsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListFunctionEventInvokeConfigs(ctx context.Context, input *lambda.ListFunctionEventInvokeConfigsInput) (*lambda.ListFunctionEventInvokeConfigsOutput, error) {
-	return a.client.ListFunctionEventInvokeConfigsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListFunctionEventInvokeConfigsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListFunctions(ctx context.Context, input *lambda.ListFunctionsInput) (*lambda.ListFunctionsOutput, error) {
-	return a.client.ListFunctionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListFunctionsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListLayerVersions(ctx context.Context, input *lambda.ListLayerVersionsInput) (*lambda.ListLayerVersionsOutput, error) {
-	return a.client.ListLayerVersionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListLayerVersionsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListLayers(ctx context.Context, input *lambda.ListLayersInput) (*lambda.ListLayersOutput, error) {
-	return a.client.ListLayersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListLayersWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListProvisionedConcurrencyConfigs(ctx context.Context, input *lambda.ListProvisionedConcurrencyConfigsInput) (*lambda.ListProvisionedConcurrencyConfigsOutput, error) {
-	return a.client.ListProvisionedConcurrencyConfigsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListProvisionedConcurrencyConfigsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListTags(ctx context.Context, input *lambda.ListTagsInput) (*lambda.ListTagsOutput, error) {
-	return a.client.ListTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) ListVersionsByFunction(ctx context.Context, input *lambda.ListVersionsByFunctionInput) (*lambda.ListVersionsByFunctionOutput, error) {
-	return a.client.ListVersionsByFunctionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListVersionsByFunctionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) PublishLayerVersion(ctx context.Context, input *lambda.PublishLayerVersionInput) (*lambda.PublishLayerVersionOutput, error) {
-	return a.client.PublishLayerVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PublishLayerVersionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) PublishVersion(ctx context.Context, input *lambda.PublishVersionInput) (*lambda.FunctionConfiguration, error) {
-	return a.client.PublishVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PublishVersionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) PutFunctionConcurrency(ctx context.Context, input *lambda.PutFunctionConcurrencyInput) (*lambda.PutFunctionConcurrencyOutput, error) {
-	return a.client.PutFunctionConcurrencyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutFunctionConcurrencyWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) PutFunctionEventInvokeConfig(ctx context.Context, input *lambda.PutFunctionEventInvokeConfigInput) (*lambda.PutFunctionEventInvokeConfigOutput, error) {
-	return a.client.PutFunctionEventInvokeConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutFunctionEventInvokeConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) PutProvisionedConcurrencyConfig(ctx context.Context, input *lambda.PutProvisionedConcurrencyConfigInput) (*lambda.PutProvisionedConcurrencyConfigOutput, error) {
-	return a.client.PutProvisionedConcurrencyConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutProvisionedConcurrencyConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) RemoveLayerVersionPermission(ctx context.Context, input *lambda.RemoveLayerVersionPermissionInput) (*lambda.RemoveLayerVersionPermissionOutput, error) {
-	return a.client.RemoveLayerVersionPermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveLayerVersionPermissionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) RemovePermission(ctx context.Context, input *lambda.RemovePermissionInput) (*lambda.RemovePermissionOutput, error) {
-	return a.client.RemovePermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemovePermissionWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) TagResource(ctx context.Context, input *lambda.TagResourceInput) (*lambda.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UntagResource(ctx context.Context, input *lambda.UntagResourceInput) (*lambda.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UpdateAlias(ctx context.Context, input *lambda.UpdateAliasInput) (*lambda.AliasConfiguration, error) {
-	return a.client.UpdateAliasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateAliasWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UpdateEventSourceMapping(ctx context.Context, input *lambda.UpdateEventSourceMappingInput) (*lambda.EventSourceMappingConfiguration, error) {
-	return a.client.UpdateEventSourceMappingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateEventSourceMappingWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UpdateFunctionCode(ctx context.Context, input *lambda.UpdateFunctionCodeInput) (*lambda.FunctionConfiguration, error) {
-	return a.client.UpdateFunctionCodeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateFunctionCodeWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UpdateFunctionConfiguration(ctx context.Context, input *lambda.UpdateFunctionConfigurationInput) (*lambda.FunctionConfiguration, error) {
-	return a.client.UpdateFunctionConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateFunctionConfigurationWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) UpdateFunctionEventInvokeConfig(ctx context.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) (*lambda.UpdateFunctionEventInvokeConfigOutput, error) {
-	return a.client.UpdateFunctionEventInvokeConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateFunctionEventInvokeConfigWithContext(ctx, input)
 }
 
 func (a *LambdaActivities) WaitUntilFunctionActive(ctx context.Context, input *lambda.GetFunctionConfigurationInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilFunctionActiveWithContext(ctx, input, options...)
+		return client.WaitUntilFunctionActiveWithContext(ctx, input, options...)
 	})
 }
 
 func (a *LambdaActivities) WaitUntilFunctionExists(ctx context.Context, input *lambda.GetFunctionInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilFunctionExistsWithContext(ctx, input, options...)
+		return client.WaitUntilFunctionExistsWithContext(ctx, input, options...)
 	})
 }
 
 func (a *LambdaActivities) WaitUntilFunctionUpdated(ctx context.Context, input *lambda.GetFunctionConfigurationInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilFunctionUpdatedWithContext(ctx, input, options...)
+		return client.WaitUntilFunctionUpdatedWithContext(ctx, input, options...)
 	})
 }

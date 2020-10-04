@@ -20,29 +20,68 @@ type _ request.Option
 
 type MediaStoreDataActivities struct {
 	client mediastoredataiface.MediaStoreDataAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMediaStoreDataActivities(session *session.Session, config ...*aws.Config) *MediaStoreDataActivities {
-	client := mediastoredata.New(session, config...)
+func NewMediaStoreDataActivities(sess *session.Session, config ...*aws.Config) *MediaStoreDataActivities {
+	client := mediastoredata.New(sess, config...)
 	return &MediaStoreDataActivities{client: client}
 }
 
+func NewMediaStoreDataActivitiesWithSessionFactory(sessionFactory SessionFactory) *MediaStoreDataActivities {
+	return &MediaStoreDataActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MediaStoreDataActivities) getClient(ctx context.Context) (mediastoredataiface.MediaStoreDataAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return mediastoredata.New(sess), nil
+}
+
 func (a *MediaStoreDataActivities) DeleteObject(ctx context.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error) {
-	return a.client.DeleteObjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteObjectWithContext(ctx, input)
 }
 
 func (a *MediaStoreDataActivities) DescribeObject(ctx context.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error) {
-	return a.client.DescribeObjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeObjectWithContext(ctx, input)
 }
 
 func (a *MediaStoreDataActivities) GetObject(ctx context.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error) {
-	return a.client.GetObjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetObjectWithContext(ctx, input)
 }
 
 func (a *MediaStoreDataActivities) ListItems(ctx context.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error) {
-	return a.client.ListItemsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListItemsWithContext(ctx, input)
 }
 
 func (a *MediaStoreDataActivities) PutObject(ctx context.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error) {
-	return a.client.PutObjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutObjectWithContext(ctx, input)
 }

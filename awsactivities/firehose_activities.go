@@ -20,57 +20,124 @@ type _ request.Option
 
 type FirehoseActivities struct {
 	client firehoseiface.FirehoseAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewFirehoseActivities(session *session.Session, config ...*aws.Config) *FirehoseActivities {
-	client := firehose.New(session, config...)
+func NewFirehoseActivities(sess *session.Session, config ...*aws.Config) *FirehoseActivities {
+	client := firehose.New(sess, config...)
 	return &FirehoseActivities{client: client}
 }
 
+func NewFirehoseActivitiesWithSessionFactory(sessionFactory SessionFactory) *FirehoseActivities {
+	return &FirehoseActivities{sessionFactory: sessionFactory}
+}
+
+func (a *FirehoseActivities) getClient(ctx context.Context) (firehoseiface.FirehoseAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return firehose.New(sess), nil
+}
+
 func (a *FirehoseActivities) CreateDeliveryStream(ctx context.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error) {
-	return a.client.CreateDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) DeleteDeliveryStream(ctx context.Context, input *firehose.DeleteDeliveryStreamInput) (*firehose.DeleteDeliveryStreamOutput, error) {
-	return a.client.DeleteDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) DescribeDeliveryStream(ctx context.Context, input *firehose.DescribeDeliveryStreamInput) (*firehose.DescribeDeliveryStreamOutput, error) {
-	return a.client.DescribeDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) ListDeliveryStreams(ctx context.Context, input *firehose.ListDeliveryStreamsInput) (*firehose.ListDeliveryStreamsOutput, error) {
-	return a.client.ListDeliveryStreamsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListDeliveryStreamsWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) ListTagsForDeliveryStream(ctx context.Context, input *firehose.ListTagsForDeliveryStreamInput) (*firehose.ListTagsForDeliveryStreamOutput, error) {
-	return a.client.ListTagsForDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) PutRecord(ctx context.Context, input *firehose.PutRecordInput) (*firehose.PutRecordOutput, error) {
-	return a.client.PutRecordWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRecordWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) PutRecordBatch(ctx context.Context, input *firehose.PutRecordBatchInput) (*firehose.PutRecordBatchOutput, error) {
-	return a.client.PutRecordBatchWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRecordBatchWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) StartDeliveryStreamEncryption(ctx context.Context, input *firehose.StartDeliveryStreamEncryptionInput) (*firehose.StartDeliveryStreamEncryptionOutput, error) {
-	return a.client.StartDeliveryStreamEncryptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartDeliveryStreamEncryptionWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) StopDeliveryStreamEncryption(ctx context.Context, input *firehose.StopDeliveryStreamEncryptionInput) (*firehose.StopDeliveryStreamEncryptionOutput, error) {
-	return a.client.StopDeliveryStreamEncryptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopDeliveryStreamEncryptionWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) TagDeliveryStream(ctx context.Context, input *firehose.TagDeliveryStreamInput) (*firehose.TagDeliveryStreamOutput, error) {
-	return a.client.TagDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) UntagDeliveryStream(ctx context.Context, input *firehose.UntagDeliveryStreamInput) (*firehose.UntagDeliveryStreamOutput, error) {
-	return a.client.UntagDeliveryStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagDeliveryStreamWithContext(ctx, input)
 }
 
 func (a *FirehoseActivities) UpdateDestination(ctx context.Context, input *firehose.UpdateDestinationInput) (*firehose.UpdateDestinationOutput, error) {
-	return a.client.UpdateDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateDestinationWithContext(ctx, input)
 }

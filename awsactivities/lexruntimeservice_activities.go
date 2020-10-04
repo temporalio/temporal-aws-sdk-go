@@ -20,29 +20,68 @@ type _ request.Option
 
 type LexRuntimeServiceActivities struct {
 	client lexruntimeserviceiface.LexRuntimeServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewLexRuntimeServiceActivities(session *session.Session, config ...*aws.Config) *LexRuntimeServiceActivities {
-	client := lexruntimeservice.New(session, config...)
+func NewLexRuntimeServiceActivities(sess *session.Session, config ...*aws.Config) *LexRuntimeServiceActivities {
+	client := lexruntimeservice.New(sess, config...)
 	return &LexRuntimeServiceActivities{client: client}
 }
 
+func NewLexRuntimeServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *LexRuntimeServiceActivities {
+	return &LexRuntimeServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *LexRuntimeServiceActivities) getClient(ctx context.Context) (lexruntimeserviceiface.LexRuntimeServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return lexruntimeservice.New(sess), nil
+}
+
 func (a *LexRuntimeServiceActivities) DeleteSession(ctx context.Context, input *lexruntimeservice.DeleteSessionInput) (*lexruntimeservice.DeleteSessionOutput, error) {
-	return a.client.DeleteSessionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteSessionWithContext(ctx, input)
 }
 
 func (a *LexRuntimeServiceActivities) GetSession(ctx context.Context, input *lexruntimeservice.GetSessionInput) (*lexruntimeservice.GetSessionOutput, error) {
-	return a.client.GetSessionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSessionWithContext(ctx, input)
 }
 
 func (a *LexRuntimeServiceActivities) PostContent(ctx context.Context, input *lexruntimeservice.PostContentInput) (*lexruntimeservice.PostContentOutput, error) {
-	return a.client.PostContentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PostContentWithContext(ctx, input)
 }
 
 func (a *LexRuntimeServiceActivities) PostText(ctx context.Context, input *lexruntimeservice.PostTextInput) (*lexruntimeservice.PostTextOutput, error) {
-	return a.client.PostTextWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PostTextWithContext(ctx, input)
 }
 
 func (a *LexRuntimeServiceActivities) PutSession(ctx context.Context, input *lexruntimeservice.PutSessionInput) (*lexruntimeservice.PutSessionOutput, error) {
-	return a.client.PutSessionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutSessionWithContext(ctx, input)
 }

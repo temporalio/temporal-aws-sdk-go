@@ -20,37 +20,84 @@ type _ request.Option
 
 type MacieActivities struct {
 	client macieiface.MacieAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMacieActivities(session *session.Session, config ...*aws.Config) *MacieActivities {
-	client := macie.New(session, config...)
+func NewMacieActivities(sess *session.Session, config ...*aws.Config) *MacieActivities {
+	client := macie.New(sess, config...)
 	return &MacieActivities{client: client}
 }
 
+func NewMacieActivitiesWithSessionFactory(sessionFactory SessionFactory) *MacieActivities {
+	return &MacieActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MacieActivities) getClient(ctx context.Context) (macieiface.MacieAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return macie.New(sess), nil
+}
+
 func (a *MacieActivities) AssociateMemberAccount(ctx context.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error) {
-	return a.client.AssociateMemberAccountWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateMemberAccountWithContext(ctx, input)
 }
 
 func (a *MacieActivities) AssociateS3Resources(ctx context.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error) {
-	return a.client.AssociateS3ResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateS3ResourcesWithContext(ctx, input)
 }
 
 func (a *MacieActivities) DisassociateMemberAccount(ctx context.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error) {
-	return a.client.DisassociateMemberAccountWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateMemberAccountWithContext(ctx, input)
 }
 
 func (a *MacieActivities) DisassociateS3Resources(ctx context.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error) {
-	return a.client.DisassociateS3ResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateS3ResourcesWithContext(ctx, input)
 }
 
 func (a *MacieActivities) ListMemberAccounts(ctx context.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error) {
-	return a.client.ListMemberAccountsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListMemberAccountsWithContext(ctx, input)
 }
 
 func (a *MacieActivities) ListS3Resources(ctx context.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error) {
-	return a.client.ListS3ResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListS3ResourcesWithContext(ctx, input)
 }
 
 func (a *MacieActivities) UpdateS3Resources(ctx context.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error) {
-	return a.client.UpdateS3ResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateS3ResourcesWithContext(ctx, input)
 }

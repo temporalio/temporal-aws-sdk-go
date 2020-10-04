@@ -20,65 +20,140 @@ type _ request.Option
 
 type SupportActivities struct {
 	client supportiface.SupportAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSupportActivities(session *session.Session, config ...*aws.Config) *SupportActivities {
-	client := support.New(session, config...)
+func NewSupportActivities(sess *session.Session, config ...*aws.Config) *SupportActivities {
+	client := support.New(sess, config...)
 	return &SupportActivities{client: client}
 }
 
+func NewSupportActivitiesWithSessionFactory(sessionFactory SessionFactory) *SupportActivities {
+	return &SupportActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SupportActivities) getClient(ctx context.Context) (supportiface.SupportAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return support.New(sess), nil
+}
+
 func (a *SupportActivities) AddAttachmentsToSet(ctx context.Context, input *support.AddAttachmentsToSetInput) (*support.AddAttachmentsToSetOutput, error) {
-	return a.client.AddAttachmentsToSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddAttachmentsToSetWithContext(ctx, input)
 }
 
 func (a *SupportActivities) AddCommunicationToCase(ctx context.Context, input *support.AddCommunicationToCaseInput) (*support.AddCommunicationToCaseOutput, error) {
-	return a.client.AddCommunicationToCaseWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddCommunicationToCaseWithContext(ctx, input)
 }
 
 func (a *SupportActivities) CreateCase(ctx context.Context, input *support.CreateCaseInput) (*support.CreateCaseOutput, error) {
-	return a.client.CreateCaseWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCaseWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeAttachment(ctx context.Context, input *support.DescribeAttachmentInput) (*support.DescribeAttachmentOutput, error) {
-	return a.client.DescribeAttachmentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAttachmentWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeCases(ctx context.Context, input *support.DescribeCasesInput) (*support.DescribeCasesOutput, error) {
-	return a.client.DescribeCasesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCasesWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeCommunications(ctx context.Context, input *support.DescribeCommunicationsInput) (*support.DescribeCommunicationsOutput, error) {
-	return a.client.DescribeCommunicationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCommunicationsWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeServices(ctx context.Context, input *support.DescribeServicesInput) (*support.DescribeServicesOutput, error) {
-	return a.client.DescribeServicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeServicesWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeSeverityLevels(ctx context.Context, input *support.DescribeSeverityLevelsInput) (*support.DescribeSeverityLevelsOutput, error) {
-	return a.client.DescribeSeverityLevelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSeverityLevelsWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckRefreshStatuses(ctx context.Context, input *support.DescribeTrustedAdvisorCheckRefreshStatusesInput) (*support.DescribeTrustedAdvisorCheckRefreshStatusesOutput, error) {
-	return a.client.DescribeTrustedAdvisorCheckRefreshStatusesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTrustedAdvisorCheckRefreshStatusesWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckResult(ctx context.Context, input *support.DescribeTrustedAdvisorCheckResultInput) (*support.DescribeTrustedAdvisorCheckResultOutput, error) {
-	return a.client.DescribeTrustedAdvisorCheckResultWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTrustedAdvisorCheckResultWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorCheckSummaries(ctx context.Context, input *support.DescribeTrustedAdvisorCheckSummariesInput) (*support.DescribeTrustedAdvisorCheckSummariesOutput, error) {
-	return a.client.DescribeTrustedAdvisorCheckSummariesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTrustedAdvisorCheckSummariesWithContext(ctx, input)
 }
 
 func (a *SupportActivities) DescribeTrustedAdvisorChecks(ctx context.Context, input *support.DescribeTrustedAdvisorChecksInput) (*support.DescribeTrustedAdvisorChecksOutput, error) {
-	return a.client.DescribeTrustedAdvisorChecksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTrustedAdvisorChecksWithContext(ctx, input)
 }
 
 func (a *SupportActivities) RefreshTrustedAdvisorCheck(ctx context.Context, input *support.RefreshTrustedAdvisorCheckInput) (*support.RefreshTrustedAdvisorCheckOutput, error) {
-	return a.client.RefreshTrustedAdvisorCheckWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RefreshTrustedAdvisorCheckWithContext(ctx, input)
 }
 
 func (a *SupportActivities) ResolveCase(ctx context.Context, input *support.ResolveCaseInput) (*support.ResolveCaseOutput, error) {
-	return a.client.ResolveCaseWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ResolveCaseWithContext(ctx, input)
 }

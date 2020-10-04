@@ -20,37 +20,84 @@ type _ request.Option
 
 type IoTSecureTunnelingActivities struct {
 	client iotsecuretunnelingiface.IoTSecureTunnelingAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewIoTSecureTunnelingActivities(session *session.Session, config ...*aws.Config) *IoTSecureTunnelingActivities {
-	client := iotsecuretunneling.New(session, config...)
+func NewIoTSecureTunnelingActivities(sess *session.Session, config ...*aws.Config) *IoTSecureTunnelingActivities {
+	client := iotsecuretunneling.New(sess, config...)
 	return &IoTSecureTunnelingActivities{client: client}
 }
 
+func NewIoTSecureTunnelingActivitiesWithSessionFactory(sessionFactory SessionFactory) *IoTSecureTunnelingActivities {
+	return &IoTSecureTunnelingActivities{sessionFactory: sessionFactory}
+}
+
+func (a *IoTSecureTunnelingActivities) getClient(ctx context.Context) (iotsecuretunnelingiface.IoTSecureTunnelingAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return iotsecuretunneling.New(sess), nil
+}
+
 func (a *IoTSecureTunnelingActivities) CloseTunnel(ctx context.Context, input *iotsecuretunneling.CloseTunnelInput) (*iotsecuretunneling.CloseTunnelOutput, error) {
-	return a.client.CloseTunnelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CloseTunnelWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) DescribeTunnel(ctx context.Context, input *iotsecuretunneling.DescribeTunnelInput) (*iotsecuretunneling.DescribeTunnelOutput, error) {
-	return a.client.DescribeTunnelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTunnelWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) ListTagsForResource(ctx context.Context, input *iotsecuretunneling.ListTagsForResourceInput) (*iotsecuretunneling.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) ListTunnels(ctx context.Context, input *iotsecuretunneling.ListTunnelsInput) (*iotsecuretunneling.ListTunnelsOutput, error) {
-	return a.client.ListTunnelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTunnelsWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) OpenTunnel(ctx context.Context, input *iotsecuretunneling.OpenTunnelInput) (*iotsecuretunneling.OpenTunnelOutput, error) {
-	return a.client.OpenTunnelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.OpenTunnelWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) TagResource(ctx context.Context, input *iotsecuretunneling.TagResourceInput) (*iotsecuretunneling.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *IoTSecureTunnelingActivities) UntagResource(ctx context.Context, input *iotsecuretunneling.UntagResourceInput) (*iotsecuretunneling.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }

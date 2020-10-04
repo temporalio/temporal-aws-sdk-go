@@ -20,145 +20,292 @@ type _ request.Option
 
 type MachineLearningActivities struct {
 	client machinelearningiface.MachineLearningAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMachineLearningActivities(session *session.Session, config ...*aws.Config) *MachineLearningActivities {
-	client := machinelearning.New(session, config...)
+func NewMachineLearningActivities(sess *session.Session, config ...*aws.Config) *MachineLearningActivities {
+	client := machinelearning.New(sess, config...)
 	return &MachineLearningActivities{client: client}
 }
 
+func NewMachineLearningActivitiesWithSessionFactory(sessionFactory SessionFactory) *MachineLearningActivities {
+	return &MachineLearningActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MachineLearningActivities) getClient(ctx context.Context) (machinelearningiface.MachineLearningAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return machinelearning.New(sess), nil
+}
+
 func (a *MachineLearningActivities) AddTags(ctx context.Context, input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error) {
-	return a.client.AddTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateBatchPrediction(ctx context.Context, input *machinelearning.CreateBatchPredictionInput) (*machinelearning.CreateBatchPredictionOutput, error) {
-	return a.client.CreateBatchPredictionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateBatchPredictionWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateDataSourceFromRDS(ctx context.Context, input *machinelearning.CreateDataSourceFromRDSInput) (*machinelearning.CreateDataSourceFromRDSOutput, error) {
-	return a.client.CreateDataSourceFromRDSWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDataSourceFromRDSWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateDataSourceFromRedshift(ctx context.Context, input *machinelearning.CreateDataSourceFromRedshiftInput) (*machinelearning.CreateDataSourceFromRedshiftOutput, error) {
-	return a.client.CreateDataSourceFromRedshiftWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDataSourceFromRedshiftWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateDataSourceFromS3(ctx context.Context, input *machinelearning.CreateDataSourceFromS3Input) (*machinelearning.CreateDataSourceFromS3Output, error) {
-	return a.client.CreateDataSourceFromS3WithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDataSourceFromS3WithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateEvaluation(ctx context.Context, input *machinelearning.CreateEvaluationInput) (*machinelearning.CreateEvaluationOutput, error) {
-	return a.client.CreateEvaluationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateEvaluationWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateMLModel(ctx context.Context, input *machinelearning.CreateMLModelInput) (*machinelearning.CreateMLModelOutput, error) {
-	return a.client.CreateMLModelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateMLModelWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) CreateRealtimeEndpoint(ctx context.Context, input *machinelearning.CreateRealtimeEndpointInput) (*machinelearning.CreateRealtimeEndpointOutput, error) {
-	return a.client.CreateRealtimeEndpointWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateRealtimeEndpointWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteBatchPrediction(ctx context.Context, input *machinelearning.DeleteBatchPredictionInput) (*machinelearning.DeleteBatchPredictionOutput, error) {
-	return a.client.DeleteBatchPredictionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteBatchPredictionWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteDataSource(ctx context.Context, input *machinelearning.DeleteDataSourceInput) (*machinelearning.DeleteDataSourceOutput, error) {
-	return a.client.DeleteDataSourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteDataSourceWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteEvaluation(ctx context.Context, input *machinelearning.DeleteEvaluationInput) (*machinelearning.DeleteEvaluationOutput, error) {
-	return a.client.DeleteEvaluationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteEvaluationWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteMLModel(ctx context.Context, input *machinelearning.DeleteMLModelInput) (*machinelearning.DeleteMLModelOutput, error) {
-	return a.client.DeleteMLModelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteMLModelWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteRealtimeEndpoint(ctx context.Context, input *machinelearning.DeleteRealtimeEndpointInput) (*machinelearning.DeleteRealtimeEndpointOutput, error) {
-	return a.client.DeleteRealtimeEndpointWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteRealtimeEndpointWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DeleteTags(ctx context.Context, input *machinelearning.DeleteTagsInput) (*machinelearning.DeleteTagsOutput, error) {
-	return a.client.DeleteTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteTagsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DescribeBatchPredictions(ctx context.Context, input *machinelearning.DescribeBatchPredictionsInput) (*machinelearning.DescribeBatchPredictionsOutput, error) {
-	return a.client.DescribeBatchPredictionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeBatchPredictionsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DescribeDataSources(ctx context.Context, input *machinelearning.DescribeDataSourcesInput) (*machinelearning.DescribeDataSourcesOutput, error) {
-	return a.client.DescribeDataSourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDataSourcesWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DescribeEvaluations(ctx context.Context, input *machinelearning.DescribeEvaluationsInput) (*machinelearning.DescribeEvaluationsOutput, error) {
-	return a.client.DescribeEvaluationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeEvaluationsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DescribeMLModels(ctx context.Context, input *machinelearning.DescribeMLModelsInput) (*machinelearning.DescribeMLModelsOutput, error) {
-	return a.client.DescribeMLModelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeMLModelsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) DescribeTags(ctx context.Context, input *machinelearning.DescribeTagsInput) (*machinelearning.DescribeTagsOutput, error) {
-	return a.client.DescribeTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTagsWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) GetBatchPrediction(ctx context.Context, input *machinelearning.GetBatchPredictionInput) (*machinelearning.GetBatchPredictionOutput, error) {
-	return a.client.GetBatchPredictionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetBatchPredictionWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) GetDataSource(ctx context.Context, input *machinelearning.GetDataSourceInput) (*machinelearning.GetDataSourceOutput, error) {
-	return a.client.GetDataSourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetDataSourceWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) GetEvaluation(ctx context.Context, input *machinelearning.GetEvaluationInput) (*machinelearning.GetEvaluationOutput, error) {
-	return a.client.GetEvaluationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetEvaluationWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) GetMLModel(ctx context.Context, input *machinelearning.GetMLModelInput) (*machinelearning.GetMLModelOutput, error) {
-	return a.client.GetMLModelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetMLModelWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) Predict(ctx context.Context, input *machinelearning.PredictInput) (*machinelearning.PredictOutput, error) {
-	return a.client.PredictWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PredictWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) UpdateBatchPrediction(ctx context.Context, input *machinelearning.UpdateBatchPredictionInput) (*machinelearning.UpdateBatchPredictionOutput, error) {
-	return a.client.UpdateBatchPredictionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateBatchPredictionWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) UpdateDataSource(ctx context.Context, input *machinelearning.UpdateDataSourceInput) (*machinelearning.UpdateDataSourceOutput, error) {
-	return a.client.UpdateDataSourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateDataSourceWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) UpdateEvaluation(ctx context.Context, input *machinelearning.UpdateEvaluationInput) (*machinelearning.UpdateEvaluationOutput, error) {
-	return a.client.UpdateEvaluationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateEvaluationWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) UpdateMLModel(ctx context.Context, input *machinelearning.UpdateMLModelInput) (*machinelearning.UpdateMLModelOutput, error) {
-	return a.client.UpdateMLModelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateMLModelWithContext(ctx, input)
 }
 
 func (a *MachineLearningActivities) WaitUntilBatchPredictionAvailable(ctx context.Context, input *machinelearning.DescribeBatchPredictionsInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilBatchPredictionAvailableWithContext(ctx, input, options...)
+		return client.WaitUntilBatchPredictionAvailableWithContext(ctx, input, options...)
 	})
 }
 
 func (a *MachineLearningActivities) WaitUntilDataSourceAvailable(ctx context.Context, input *machinelearning.DescribeDataSourcesInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilDataSourceAvailableWithContext(ctx, input, options...)
+		return client.WaitUntilDataSourceAvailableWithContext(ctx, input, options...)
 	})
 }
 
 func (a *MachineLearningActivities) WaitUntilEvaluationAvailable(ctx context.Context, input *machinelearning.DescribeEvaluationsInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilEvaluationAvailableWithContext(ctx, input, options...)
+		return client.WaitUntilEvaluationAvailableWithContext(ctx, input, options...)
 	})
 }
 
 func (a *MachineLearningActivities) WaitUntilMLModelAvailable(ctx context.Context, input *machinelearning.DescribeMLModelsInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilMLModelAvailableWithContext(ctx, input, options...)
+		return client.WaitUntilMLModelAvailableWithContext(ctx, input, options...)
 	})
 }

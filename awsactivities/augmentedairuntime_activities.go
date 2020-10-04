@@ -20,29 +20,68 @@ type _ request.Option
 
 type AugmentedAIRuntimeActivities struct {
 	client augmentedairuntimeiface.AugmentedAIRuntimeAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewAugmentedAIRuntimeActivities(session *session.Session, config ...*aws.Config) *AugmentedAIRuntimeActivities {
-	client := augmentedairuntime.New(session, config...)
+func NewAugmentedAIRuntimeActivities(sess *session.Session, config ...*aws.Config) *AugmentedAIRuntimeActivities {
+	client := augmentedairuntime.New(sess, config...)
 	return &AugmentedAIRuntimeActivities{client: client}
 }
 
+func NewAugmentedAIRuntimeActivitiesWithSessionFactory(sessionFactory SessionFactory) *AugmentedAIRuntimeActivities {
+	return &AugmentedAIRuntimeActivities{sessionFactory: sessionFactory}
+}
+
+func (a *AugmentedAIRuntimeActivities) getClient(ctx context.Context) (augmentedairuntimeiface.AugmentedAIRuntimeAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return augmentedairuntime.New(sess), nil
+}
+
 func (a *AugmentedAIRuntimeActivities) DeleteHumanLoop(ctx context.Context, input *augmentedairuntime.DeleteHumanLoopInput) (*augmentedairuntime.DeleteHumanLoopOutput, error) {
-	return a.client.DeleteHumanLoopWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteHumanLoopWithContext(ctx, input)
 }
 
 func (a *AugmentedAIRuntimeActivities) DescribeHumanLoop(ctx context.Context, input *augmentedairuntime.DescribeHumanLoopInput) (*augmentedairuntime.DescribeHumanLoopOutput, error) {
-	return a.client.DescribeHumanLoopWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeHumanLoopWithContext(ctx, input)
 }
 
 func (a *AugmentedAIRuntimeActivities) ListHumanLoops(ctx context.Context, input *augmentedairuntime.ListHumanLoopsInput) (*augmentedairuntime.ListHumanLoopsOutput, error) {
-	return a.client.ListHumanLoopsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListHumanLoopsWithContext(ctx, input)
 }
 
 func (a *AugmentedAIRuntimeActivities) StartHumanLoop(ctx context.Context, input *augmentedairuntime.StartHumanLoopInput) (*augmentedairuntime.StartHumanLoopOutput, error) {
-	return a.client.StartHumanLoopWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartHumanLoopWithContext(ctx, input)
 }
 
 func (a *AugmentedAIRuntimeActivities) StopHumanLoop(ctx context.Context, input *augmentedairuntime.StopHumanLoopInput) (*augmentedairuntime.StopHumanLoopOutput, error) {
-	return a.client.StopHumanLoopWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopHumanLoopWithContext(ctx, input)
 }

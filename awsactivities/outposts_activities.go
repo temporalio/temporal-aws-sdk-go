@@ -20,37 +20,84 @@ type _ request.Option
 
 type OutpostsActivities struct {
 	client outpostsiface.OutpostsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewOutpostsActivities(session *session.Session, config ...*aws.Config) *OutpostsActivities {
-	client := outposts.New(session, config...)
+func NewOutpostsActivities(sess *session.Session, config ...*aws.Config) *OutpostsActivities {
+	client := outposts.New(sess, config...)
 	return &OutpostsActivities{client: client}
 }
 
+func NewOutpostsActivitiesWithSessionFactory(sessionFactory SessionFactory) *OutpostsActivities {
+	return &OutpostsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *OutpostsActivities) getClient(ctx context.Context) (outpostsiface.OutpostsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return outposts.New(sess), nil
+}
+
 func (a *OutpostsActivities) CreateOutpost(ctx context.Context, input *outposts.CreateOutpostInput) (*outposts.CreateOutpostOutput, error) {
-	return a.client.CreateOutpostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateOutpostWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) DeleteOutpost(ctx context.Context, input *outposts.DeleteOutpostInput) (*outposts.DeleteOutpostOutput, error) {
-	return a.client.DeleteOutpostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteOutpostWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) DeleteSite(ctx context.Context, input *outposts.DeleteSiteInput) (*outposts.DeleteSiteOutput, error) {
-	return a.client.DeleteSiteWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteSiteWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) GetOutpost(ctx context.Context, input *outposts.GetOutpostInput) (*outposts.GetOutpostOutput, error) {
-	return a.client.GetOutpostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetOutpostWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) GetOutpostInstanceTypes(ctx context.Context, input *outposts.GetOutpostInstanceTypesInput) (*outposts.GetOutpostInstanceTypesOutput, error) {
-	return a.client.GetOutpostInstanceTypesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetOutpostInstanceTypesWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) ListOutposts(ctx context.Context, input *outposts.ListOutpostsInput) (*outposts.ListOutpostsOutput, error) {
-	return a.client.ListOutpostsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListOutpostsWithContext(ctx, input)
 }
 
 func (a *OutpostsActivities) ListSites(ctx context.Context, input *outposts.ListSitesInput) (*outposts.ListSitesOutput, error) {
-	return a.client.ListSitesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListSitesWithContext(ctx, input)
 }

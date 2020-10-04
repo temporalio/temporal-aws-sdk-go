@@ -20,109 +20,228 @@ type _ request.Option
 
 type GroundStationActivities struct {
 	client groundstationiface.GroundStationAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewGroundStationActivities(session *session.Session, config ...*aws.Config) *GroundStationActivities {
-	client := groundstation.New(session, config...)
+func NewGroundStationActivities(sess *session.Session, config ...*aws.Config) *GroundStationActivities {
+	client := groundstation.New(sess, config...)
 	return &GroundStationActivities{client: client}
 }
 
+func NewGroundStationActivitiesWithSessionFactory(sessionFactory SessionFactory) *GroundStationActivities {
+	return &GroundStationActivities{sessionFactory: sessionFactory}
+}
+
+func (a *GroundStationActivities) getClient(ctx context.Context) (groundstationiface.GroundStationAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return groundstation.New(sess), nil
+}
+
 func (a *GroundStationActivities) CancelContact(ctx context.Context, input *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error) {
-	return a.client.CancelContactWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelContactWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) CreateConfig(ctx context.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error) {
-	return a.client.CreateConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateConfigWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) CreateDataflowEndpointGroup(ctx context.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
-	return a.client.CreateDataflowEndpointGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDataflowEndpointGroupWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) CreateMissionProfile(ctx context.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error) {
-	return a.client.CreateMissionProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateMissionProfileWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) DeleteConfig(ctx context.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error) {
-	return a.client.DeleteConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConfigWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) DeleteDataflowEndpointGroup(ctx context.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
-	return a.client.DeleteDataflowEndpointGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteDataflowEndpointGroupWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) DeleteMissionProfile(ctx context.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error) {
-	return a.client.DeleteMissionProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteMissionProfileWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) DescribeContact(ctx context.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error) {
-	return a.client.DescribeContactWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeContactWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) GetConfig(ctx context.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error) {
-	return a.client.GetConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetConfigWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) GetDataflowEndpointGroup(ctx context.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error) {
-	return a.client.GetDataflowEndpointGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetDataflowEndpointGroupWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) GetMinuteUsage(ctx context.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error) {
-	return a.client.GetMinuteUsageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetMinuteUsageWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) GetMissionProfile(ctx context.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error) {
-	return a.client.GetMissionProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetMissionProfileWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) GetSatellite(ctx context.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error) {
-	return a.client.GetSatelliteWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSatelliteWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListConfigs(ctx context.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error) {
-	return a.client.ListConfigsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListConfigsWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListContacts(ctx context.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error) {
-	return a.client.ListContactsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListContactsWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListDataflowEndpointGroups(ctx context.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
-	return a.client.ListDataflowEndpointGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListDataflowEndpointGroupsWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListGroundStations(ctx context.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error) {
-	return a.client.ListGroundStationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListGroundStationsWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListMissionProfiles(ctx context.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error) {
-	return a.client.ListMissionProfilesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListMissionProfilesWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListSatellites(ctx context.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error) {
-	return a.client.ListSatellitesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListSatellitesWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ListTagsForResource(ctx context.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) ReserveContact(ctx context.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error) {
-	return a.client.ReserveContactWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ReserveContactWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) TagResource(ctx context.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) UntagResource(ctx context.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) UpdateConfig(ctx context.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error) {
-	return a.client.UpdateConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateConfigWithContext(ctx, input)
 }
 
 func (a *GroundStationActivities) UpdateMissionProfile(ctx context.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error) {
-	return a.client.UpdateMissionProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateMissionProfileWithContext(ctx, input)
 }

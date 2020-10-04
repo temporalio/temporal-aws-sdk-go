@@ -20,33 +20,76 @@ type _ request.Option
 
 type ElasticInferenceActivities struct {
 	client elasticinferenceiface.ElasticInferenceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewElasticInferenceActivities(session *session.Session, config ...*aws.Config) *ElasticInferenceActivities {
-	client := elasticinference.New(session, config...)
+func NewElasticInferenceActivities(sess *session.Session, config ...*aws.Config) *ElasticInferenceActivities {
+	client := elasticinference.New(sess, config...)
 	return &ElasticInferenceActivities{client: client}
 }
 
+func NewElasticInferenceActivitiesWithSessionFactory(sessionFactory SessionFactory) *ElasticInferenceActivities {
+	return &ElasticInferenceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ElasticInferenceActivities) getClient(ctx context.Context) (elasticinferenceiface.ElasticInferenceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return elasticinference.New(sess), nil
+}
+
 func (a *ElasticInferenceActivities) DescribeAcceleratorOfferings(ctx context.Context, input *elasticinference.DescribeAcceleratorOfferingsInput) (*elasticinference.DescribeAcceleratorOfferingsOutput, error) {
-	return a.client.DescribeAcceleratorOfferingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAcceleratorOfferingsWithContext(ctx, input)
 }
 
 func (a *ElasticInferenceActivities) DescribeAcceleratorTypes(ctx context.Context, input *elasticinference.DescribeAcceleratorTypesInput) (*elasticinference.DescribeAcceleratorTypesOutput, error) {
-	return a.client.DescribeAcceleratorTypesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAcceleratorTypesWithContext(ctx, input)
 }
 
 func (a *ElasticInferenceActivities) DescribeAccelerators(ctx context.Context, input *elasticinference.DescribeAcceleratorsInput) (*elasticinference.DescribeAcceleratorsOutput, error) {
-	return a.client.DescribeAcceleratorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAcceleratorsWithContext(ctx, input)
 }
 
 func (a *ElasticInferenceActivities) ListTagsForResource(ctx context.Context, input *elasticinference.ListTagsForResourceInput) (*elasticinference.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *ElasticInferenceActivities) TagResource(ctx context.Context, input *elasticinference.TagResourceInput) (*elasticinference.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *ElasticInferenceActivities) UntagResource(ctx context.Context, input *elasticinference.UntagResourceInput) (*elasticinference.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }

@@ -20,81 +20,172 @@ type _ request.Option
 
 type CodeStarActivities struct {
 	client codestariface.CodeStarAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCodeStarActivities(session *session.Session, config ...*aws.Config) *CodeStarActivities {
-	client := codestar.New(session, config...)
+func NewCodeStarActivities(sess *session.Session, config ...*aws.Config) *CodeStarActivities {
+	client := codestar.New(sess, config...)
 	return &CodeStarActivities{client: client}
 }
 
+func NewCodeStarActivitiesWithSessionFactory(sessionFactory SessionFactory) *CodeStarActivities {
+	return &CodeStarActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CodeStarActivities) getClient(ctx context.Context) (codestariface.CodeStarAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return codestar.New(sess), nil
+}
+
 func (a *CodeStarActivities) AssociateTeamMember(ctx context.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error) {
-	return a.client.AssociateTeamMemberWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateTeamMemberWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) CreateProject(ctx context.Context, input *codestar.CreateProjectInput) (*codestar.CreateProjectOutput, error) {
-	return a.client.CreateProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) CreateUserProfile(ctx context.Context, input *codestar.CreateUserProfileInput) (*codestar.CreateUserProfileOutput, error) {
-	return a.client.CreateUserProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateUserProfileWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) DeleteProject(ctx context.Context, input *codestar.DeleteProjectInput) (*codestar.DeleteProjectOutput, error) {
-	return a.client.DeleteProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) DeleteUserProfile(ctx context.Context, input *codestar.DeleteUserProfileInput) (*codestar.DeleteUserProfileOutput, error) {
-	return a.client.DeleteUserProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteUserProfileWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) DescribeProject(ctx context.Context, input *codestar.DescribeProjectInput) (*codestar.DescribeProjectOutput, error) {
-	return a.client.DescribeProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) DescribeUserProfile(ctx context.Context, input *codestar.DescribeUserProfileInput) (*codestar.DescribeUserProfileOutput, error) {
-	return a.client.DescribeUserProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeUserProfileWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) DisassociateTeamMember(ctx context.Context, input *codestar.DisassociateTeamMemberInput) (*codestar.DisassociateTeamMemberOutput, error) {
-	return a.client.DisassociateTeamMemberWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateTeamMemberWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) ListProjects(ctx context.Context, input *codestar.ListProjectsInput) (*codestar.ListProjectsOutput, error) {
-	return a.client.ListProjectsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListProjectsWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) ListResources(ctx context.Context, input *codestar.ListResourcesInput) (*codestar.ListResourcesOutput, error) {
-	return a.client.ListResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListResourcesWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) ListTagsForProject(ctx context.Context, input *codestar.ListTagsForProjectInput) (*codestar.ListTagsForProjectOutput, error) {
-	return a.client.ListTagsForProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) ListTeamMembers(ctx context.Context, input *codestar.ListTeamMembersInput) (*codestar.ListTeamMembersOutput, error) {
-	return a.client.ListTeamMembersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTeamMembersWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) ListUserProfiles(ctx context.Context, input *codestar.ListUserProfilesInput) (*codestar.ListUserProfilesOutput, error) {
-	return a.client.ListUserProfilesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListUserProfilesWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) TagProject(ctx context.Context, input *codestar.TagProjectInput) (*codestar.TagProjectOutput, error) {
-	return a.client.TagProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) UntagProject(ctx context.Context, input *codestar.UntagProjectInput) (*codestar.UntagProjectOutput, error) {
-	return a.client.UntagProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) UpdateProject(ctx context.Context, input *codestar.UpdateProjectInput) (*codestar.UpdateProjectOutput, error) {
-	return a.client.UpdateProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateProjectWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) UpdateTeamMember(ctx context.Context, input *codestar.UpdateTeamMemberInput) (*codestar.UpdateTeamMemberOutput, error) {
-	return a.client.UpdateTeamMemberWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateTeamMemberWithContext(ctx, input)
 }
 
 func (a *CodeStarActivities) UpdateUserProfile(ctx context.Context, input *codestar.UpdateUserProfileInput) (*codestar.UpdateUserProfileOutput, error) {
-	return a.client.UpdateUserProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateUserProfileWithContext(ctx, input)
 }
