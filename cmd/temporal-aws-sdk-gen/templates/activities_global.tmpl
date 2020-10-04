@@ -15,7 +15,6 @@ func RegisterAwsActivities(worker worker.Worker, session *session.Session, confi
 {{- range . }}
 {{- $name := .Name }}
 	worker.RegisterActivity(New{{ .Name }}Activities(session, config...))
-	worker.RegisterActivityWithOptions(New{{ .Name }}Activities(session, config...), activity.RegisterOptions{Name: "{{.Name}}."})
+	worker.RegisterActivityWithOptions(New{{ .Name }}Activities(session, config...), activity.RegisterOptions{Name: "aws.{{.ID}}."})
 {{- end }}
 }
-

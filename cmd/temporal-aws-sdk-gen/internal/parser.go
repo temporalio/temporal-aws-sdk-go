@@ -94,7 +94,7 @@ func parseAwsService(pkg *packages.Package) (*InterfaceDefinition, []*StructDefi
 	}
 
 	interfaceFileName := filepath.Join(filepath.Dir(apiFileName), fmt.Sprintf("%siface", pkg.Name), "interface.go")
-	definition, err := parseAwsServiceInterface(interfaceFileName)
+	definition, err := parseAwsServiceInterface(pkg.Name, interfaceFileName)
 	if err != nil {
 		return nil, nil, err
 	}
@@ -106,7 +106,7 @@ func parseAwsService(pkg *packages.Package) (*InterfaceDefinition, []*StructDefi
 	return &definition, structs, nil
 }
 
-func parseAwsServiceInterface(fileName string) (iDefinition InterfaceDefinition, err error) {
+func parseAwsServiceInterface(serviceName string, fileName string) (iDefinition InterfaceDefinition, err error) {
 	body, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		return InterfaceDefinition{}, err
@@ -118,7 +118,11 @@ func parseAwsServiceInterface(fileName string) (iDefinition InterfaceDefinition,
 	}
 	v := NewAWSInterfaceVisitor(fileSet)
 	ast.Walk(v, file)
-	return v.definition, nil
+
+	definition := v.definition
+	definition.ID = serviceName
+
+	return definition, nil
 }
 
 func parseAwsApi(packageName, fileName string) (structs []*StructDefinition, err error) {
