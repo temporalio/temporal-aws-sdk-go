@@ -278,220 +278,220 @@ func (r *TransferUpdateUserResult) Get(ctx workflow.Context) (*transfer.UpdateUs
 
 func (a *TransferStub) CreateServer(ctx workflow.Context, input *transfer.CreateServerInput) (*transfer.CreateServerOutput, error) {
 	var output transfer.CreateServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.CreateServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.CreateServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) CreateServerAsync(ctx workflow.Context, input *transfer.CreateServerInput) *TransferCreateServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.CreateServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.CreateServer", input)
 	return &TransferCreateServerResult{Result: future}
 }
 
 func (a *TransferStub) CreateUser(ctx workflow.Context, input *transfer.CreateUserInput) (*transfer.CreateUserOutput, error) {
 	var output transfer.CreateUserOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.CreateUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.CreateUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) CreateUserAsync(ctx workflow.Context, input *transfer.CreateUserInput) *TransferCreateUserResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.CreateUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.CreateUser", input)
 	return &TransferCreateUserResult{Result: future}
 }
 
 func (a *TransferStub) DeleteServer(ctx workflow.Context, input *transfer.DeleteServerInput) (*transfer.DeleteServerOutput, error) {
 	var output transfer.DeleteServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DeleteServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DeleteServerAsync(ctx workflow.Context, input *transfer.DeleteServerInput) *TransferDeleteServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DeleteServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteServer", input)
 	return &TransferDeleteServerResult{Result: future}
 }
 
 func (a *TransferStub) DeleteSshPublicKey(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) (*transfer.DeleteSshPublicKeyOutput, error) {
 	var output transfer.DeleteSshPublicKeyOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DeleteSshPublicKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteSshPublicKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DeleteSshPublicKeyAsync(ctx workflow.Context, input *transfer.DeleteSshPublicKeyInput) *TransferDeleteSshPublicKeyResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DeleteSshPublicKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteSshPublicKey", input)
 	return &TransferDeleteSshPublicKeyResult{Result: future}
 }
 
 func (a *TransferStub) DeleteUser(ctx workflow.Context, input *transfer.DeleteUserInput) (*transfer.DeleteUserOutput, error) {
 	var output transfer.DeleteUserOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DeleteUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DeleteUserAsync(ctx workflow.Context, input *transfer.DeleteUserInput) *TransferDeleteUserResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DeleteUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DeleteUser", input)
 	return &TransferDeleteUserResult{Result: future}
 }
 
 func (a *TransferStub) DescribeSecurityPolicy(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) (*transfer.DescribeSecurityPolicyOutput, error) {
 	var output transfer.DescribeSecurityPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DescribeSecurityPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeSecurityPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DescribeSecurityPolicyAsync(ctx workflow.Context, input *transfer.DescribeSecurityPolicyInput) *TransferDescribeSecurityPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DescribeSecurityPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeSecurityPolicy", input)
 	return &TransferDescribeSecurityPolicyResult{Result: future}
 }
 
 func (a *TransferStub) DescribeServer(ctx workflow.Context, input *transfer.DescribeServerInput) (*transfer.DescribeServerOutput, error) {
 	var output transfer.DescribeServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DescribeServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DescribeServerAsync(ctx workflow.Context, input *transfer.DescribeServerInput) *TransferDescribeServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DescribeServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeServer", input)
 	return &TransferDescribeServerResult{Result: future}
 }
 
 func (a *TransferStub) DescribeUser(ctx workflow.Context, input *transfer.DescribeUserInput) (*transfer.DescribeUserOutput, error) {
 	var output transfer.DescribeUserOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.DescribeUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) DescribeUserAsync(ctx workflow.Context, input *transfer.DescribeUserInput) *TransferDescribeUserResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.DescribeUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.DescribeUser", input)
 	return &TransferDescribeUserResult{Result: future}
 }
 
 func (a *TransferStub) ImportSshPublicKey(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) (*transfer.ImportSshPublicKeyOutput, error) {
 	var output transfer.ImportSshPublicKeyOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.ImportSshPublicKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.ImportSshPublicKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) ImportSshPublicKeyAsync(ctx workflow.Context, input *transfer.ImportSshPublicKeyInput) *TransferImportSshPublicKeyResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.ImportSshPublicKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.ImportSshPublicKey", input)
 	return &TransferImportSshPublicKeyResult{Result: future}
 }
 
 func (a *TransferStub) ListSecurityPolicies(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) (*transfer.ListSecurityPoliciesOutput, error) {
 	var output transfer.ListSecurityPoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.ListSecurityPolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.ListSecurityPolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) ListSecurityPoliciesAsync(ctx workflow.Context, input *transfer.ListSecurityPoliciesInput) *TransferListSecurityPoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.ListSecurityPolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListSecurityPolicies", input)
 	return &TransferListSecurityPoliciesResult{Result: future}
 }
 
 func (a *TransferStub) ListServers(ctx workflow.Context, input *transfer.ListServersInput) (*transfer.ListServersOutput, error) {
 	var output transfer.ListServersOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.ListServers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.ListServers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) ListServersAsync(ctx workflow.Context, input *transfer.ListServersInput) *TransferListServersResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.ListServers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListServers", input)
 	return &TransferListServersResult{Result: future}
 }
 
 func (a *TransferStub) ListTagsForResource(ctx workflow.Context, input *transfer.ListTagsForResourceInput) (*transfer.ListTagsForResourceOutput, error) {
 	var output transfer.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) ListTagsForResourceAsync(ctx workflow.Context, input *transfer.ListTagsForResourceInput) *TransferListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListTagsForResource", input)
 	return &TransferListTagsForResourceResult{Result: future}
 }
 
 func (a *TransferStub) ListUsers(ctx workflow.Context, input *transfer.ListUsersInput) (*transfer.ListUsersOutput, error) {
 	var output transfer.ListUsersOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.ListUsers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.ListUsers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) ListUsersAsync(ctx workflow.Context, input *transfer.ListUsersInput) *TransferListUsersResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.ListUsers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.ListUsers", input)
 	return &TransferListUsersResult{Result: future}
 }
 
 func (a *TransferStub) StartServer(ctx workflow.Context, input *transfer.StartServerInput) (*transfer.StartServerOutput, error) {
 	var output transfer.StartServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.StartServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.StartServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) StartServerAsync(ctx workflow.Context, input *transfer.StartServerInput) *TransferStartServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.StartServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.StartServer", input)
 	return &TransferStartServerResult{Result: future}
 }
 
 func (a *TransferStub) StopServer(ctx workflow.Context, input *transfer.StopServerInput) (*transfer.StopServerOutput, error) {
 	var output transfer.StopServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.StopServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.StopServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) StopServerAsync(ctx workflow.Context, input *transfer.StopServerInput) *TransferStopServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.StopServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.StopServer", input)
 	return &TransferStopServerResult{Result: future}
 }
 
 func (a *TransferStub) TagResource(ctx workflow.Context, input *transfer.TagResourceInput) (*transfer.TagResourceOutput, error) {
 	var output transfer.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) TagResourceAsync(ctx workflow.Context, input *transfer.TagResourceInput) *TransferTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.TagResource", input)
 	return &TransferTagResourceResult{Result: future}
 }
 
 func (a *TransferStub) TestIdentityProvider(ctx workflow.Context, input *transfer.TestIdentityProviderInput) (*transfer.TestIdentityProviderOutput, error) {
 	var output transfer.TestIdentityProviderOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.TestIdentityProvider", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.TestIdentityProvider", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) TestIdentityProviderAsync(ctx workflow.Context, input *transfer.TestIdentityProviderInput) *TransferTestIdentityProviderResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.TestIdentityProvider", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.TestIdentityProvider", input)
 	return &TransferTestIdentityProviderResult{Result: future}
 }
 
 func (a *TransferStub) UntagResource(ctx workflow.Context, input *transfer.UntagResourceInput) (*transfer.UntagResourceOutput, error) {
 	var output transfer.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) UntagResourceAsync(ctx workflow.Context, input *transfer.UntagResourceInput) *TransferUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.UntagResource", input)
 	return &TransferUntagResourceResult{Result: future}
 }
 
 func (a *TransferStub) UpdateServer(ctx workflow.Context, input *transfer.UpdateServerInput) (*transfer.UpdateServerOutput, error) {
 	var output transfer.UpdateServerOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.UpdateServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) UpdateServerAsync(ctx workflow.Context, input *transfer.UpdateServerInput) *TransferUpdateServerResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.UpdateServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateServer", input)
 	return &TransferUpdateServerResult{Result: future}
 }
 
 func (a *TransferStub) UpdateUser(ctx workflow.Context, input *transfer.UpdateUserInput) (*transfer.UpdateUserOutput, error) {
 	var output transfer.UpdateUserOutput
-	err := workflow.ExecuteActivity(ctx, "Transfer.UpdateUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TransferStub) UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *TransferUpdateUserResult {
-	future := workflow.ExecuteActivity(ctx, "Transfer.UpdateUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transfer.UpdateUser", input)
 	return &TransferUpdateUserResult{Result: future}
 }

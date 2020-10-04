@@ -343,275 +343,275 @@ func (r *GroundstationUpdateMissionProfileResult) Get(ctx workflow.Context) (*gr
 
 func (a *GroundStationStub) CancelContact(ctx workflow.Context, input *groundstation.CancelContactInput) (*groundstation.CancelContactOutput, error) {
 	var output groundstation.CancelContactOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.CancelContact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.CancelContact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) CancelContactAsync(ctx workflow.Context, input *groundstation.CancelContactInput) *GroundstationCancelContactResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.CancelContact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CancelContact", input)
 	return &GroundstationCancelContactResult{Result: future}
 }
 
 func (a *GroundStationStub) CreateConfig(ctx workflow.Context, input *groundstation.CreateConfigInput) (*groundstation.CreateConfigOutput, error) {
 	var output groundstation.CreateConfigOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.CreateConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) CreateConfigAsync(ctx workflow.Context, input *groundstation.CreateConfigInput) *GroundstationCreateConfigResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.CreateConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateConfig", input)
 	return &GroundstationCreateConfigResult{Result: future}
 }
 
 func (a *GroundStationStub) CreateDataflowEndpointGroup(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) (*groundstation.CreateDataflowEndpointGroupOutput, error) {
 	var output groundstation.CreateDataflowEndpointGroupOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.CreateDataflowEndpointGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateDataflowEndpointGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) CreateDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.CreateDataflowEndpointGroupInput) *GroundstationCreateDataflowEndpointGroupResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.CreateDataflowEndpointGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateDataflowEndpointGroup", input)
 	return &GroundstationCreateDataflowEndpointGroupResult{Result: future}
 }
 
 func (a *GroundStationStub) CreateMissionProfile(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) (*groundstation.CreateMissionProfileOutput, error) {
 	var output groundstation.CreateMissionProfileOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.CreateMissionProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateMissionProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) CreateMissionProfileAsync(ctx workflow.Context, input *groundstation.CreateMissionProfileInput) *GroundstationCreateMissionProfileResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.CreateMissionProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.CreateMissionProfile", input)
 	return &GroundstationCreateMissionProfileResult{Result: future}
 }
 
 func (a *GroundStationStub) DeleteConfig(ctx workflow.Context, input *groundstation.DeleteConfigInput) (*groundstation.DeleteConfigOutput, error) {
 	var output groundstation.DeleteConfigOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.DeleteConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) DeleteConfigAsync(ctx workflow.Context, input *groundstation.DeleteConfigInput) *GroundstationDeleteConfigResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.DeleteConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteConfig", input)
 	return &GroundstationDeleteConfigResult{Result: future}
 }
 
 func (a *GroundStationStub) DeleteDataflowEndpointGroup(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) (*groundstation.DeleteDataflowEndpointGroupOutput, error) {
 	var output groundstation.DeleteDataflowEndpointGroupOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.DeleteDataflowEndpointGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteDataflowEndpointGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) DeleteDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.DeleteDataflowEndpointGroupInput) *GroundstationDeleteDataflowEndpointGroupResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.DeleteDataflowEndpointGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteDataflowEndpointGroup", input)
 	return &GroundstationDeleteDataflowEndpointGroupResult{Result: future}
 }
 
 func (a *GroundStationStub) DeleteMissionProfile(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) (*groundstation.DeleteMissionProfileOutput, error) {
 	var output groundstation.DeleteMissionProfileOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.DeleteMissionProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteMissionProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) DeleteMissionProfileAsync(ctx workflow.Context, input *groundstation.DeleteMissionProfileInput) *GroundstationDeleteMissionProfileResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.DeleteMissionProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DeleteMissionProfile", input)
 	return &GroundstationDeleteMissionProfileResult{Result: future}
 }
 
 func (a *GroundStationStub) DescribeContact(ctx workflow.Context, input *groundstation.DescribeContactInput) (*groundstation.DescribeContactOutput, error) {
 	var output groundstation.DescribeContactOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.DescribeContact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.DescribeContact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) DescribeContactAsync(ctx workflow.Context, input *groundstation.DescribeContactInput) *GroundstationDescribeContactResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.DescribeContact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.DescribeContact", input)
 	return &GroundstationDescribeContactResult{Result: future}
 }
 
 func (a *GroundStationStub) GetConfig(ctx workflow.Context, input *groundstation.GetConfigInput) (*groundstation.GetConfigOutput, error) {
 	var output groundstation.GetConfigOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.GetConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.GetConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) GetConfigAsync(ctx workflow.Context, input *groundstation.GetConfigInput) *GroundstationGetConfigResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.GetConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetConfig", input)
 	return &GroundstationGetConfigResult{Result: future}
 }
 
 func (a *GroundStationStub) GetDataflowEndpointGroup(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) (*groundstation.GetDataflowEndpointGroupOutput, error) {
 	var output groundstation.GetDataflowEndpointGroupOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.GetDataflowEndpointGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.GetDataflowEndpointGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) GetDataflowEndpointGroupAsync(ctx workflow.Context, input *groundstation.GetDataflowEndpointGroupInput) *GroundstationGetDataflowEndpointGroupResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.GetDataflowEndpointGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetDataflowEndpointGroup", input)
 	return &GroundstationGetDataflowEndpointGroupResult{Result: future}
 }
 
 func (a *GroundStationStub) GetMinuteUsage(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) (*groundstation.GetMinuteUsageOutput, error) {
 	var output groundstation.GetMinuteUsageOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.GetMinuteUsage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMinuteUsage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) GetMinuteUsageAsync(ctx workflow.Context, input *groundstation.GetMinuteUsageInput) *GroundstationGetMinuteUsageResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.GetMinuteUsage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMinuteUsage", input)
 	return &GroundstationGetMinuteUsageResult{Result: future}
 }
 
 func (a *GroundStationStub) GetMissionProfile(ctx workflow.Context, input *groundstation.GetMissionProfileInput) (*groundstation.GetMissionProfileOutput, error) {
 	var output groundstation.GetMissionProfileOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.GetMissionProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMissionProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) GetMissionProfileAsync(ctx workflow.Context, input *groundstation.GetMissionProfileInput) *GroundstationGetMissionProfileResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.GetMissionProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetMissionProfile", input)
 	return &GroundstationGetMissionProfileResult{Result: future}
 }
 
 func (a *GroundStationStub) GetSatellite(ctx workflow.Context, input *groundstation.GetSatelliteInput) (*groundstation.GetSatelliteOutput, error) {
 	var output groundstation.GetSatelliteOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.GetSatellite", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.GetSatellite", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) GetSatelliteAsync(ctx workflow.Context, input *groundstation.GetSatelliteInput) *GroundstationGetSatelliteResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.GetSatellite", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.GetSatellite", input)
 	return &GroundstationGetSatelliteResult{Result: future}
 }
 
 func (a *GroundStationStub) ListConfigs(ctx workflow.Context, input *groundstation.ListConfigsInput) (*groundstation.ListConfigsOutput, error) {
 	var output groundstation.ListConfigsOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListConfigs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListConfigs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListConfigsAsync(ctx workflow.Context, input *groundstation.ListConfigsInput) *GroundstationListConfigsResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListConfigs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListConfigs", input)
 	return &GroundstationListConfigsResult{Result: future}
 }
 
 func (a *GroundStationStub) ListContacts(ctx workflow.Context, input *groundstation.ListContactsInput) (*groundstation.ListContactsOutput, error) {
 	var output groundstation.ListContactsOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListContacts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListContacts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListContactsAsync(ctx workflow.Context, input *groundstation.ListContactsInput) *GroundstationListContactsResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListContacts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListContacts", input)
 	return &GroundstationListContactsResult{Result: future}
 }
 
 func (a *GroundStationStub) ListDataflowEndpointGroups(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) (*groundstation.ListDataflowEndpointGroupsOutput, error) {
 	var output groundstation.ListDataflowEndpointGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListDataflowEndpointGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListDataflowEndpointGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListDataflowEndpointGroupsAsync(ctx workflow.Context, input *groundstation.ListDataflowEndpointGroupsInput) *GroundstationListDataflowEndpointGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListDataflowEndpointGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListDataflowEndpointGroups", input)
 	return &GroundstationListDataflowEndpointGroupsResult{Result: future}
 }
 
 func (a *GroundStationStub) ListGroundStations(ctx workflow.Context, input *groundstation.ListGroundStationsInput) (*groundstation.ListGroundStationsOutput, error) {
 	var output groundstation.ListGroundStationsOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListGroundStations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListGroundStations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListGroundStationsAsync(ctx workflow.Context, input *groundstation.ListGroundStationsInput) *GroundstationListGroundStationsResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListGroundStations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListGroundStations", input)
 	return &GroundstationListGroundStationsResult{Result: future}
 }
 
 func (a *GroundStationStub) ListMissionProfiles(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) (*groundstation.ListMissionProfilesOutput, error) {
 	var output groundstation.ListMissionProfilesOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListMissionProfiles", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListMissionProfiles", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListMissionProfilesAsync(ctx workflow.Context, input *groundstation.ListMissionProfilesInput) *GroundstationListMissionProfilesResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListMissionProfiles", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListMissionProfiles", input)
 	return &GroundstationListMissionProfilesResult{Result: future}
 }
 
 func (a *GroundStationStub) ListSatellites(ctx workflow.Context, input *groundstation.ListSatellitesInput) (*groundstation.ListSatellitesOutput, error) {
 	var output groundstation.ListSatellitesOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListSatellites", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListSatellites", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListSatellitesAsync(ctx workflow.Context, input *groundstation.ListSatellitesInput) *GroundstationListSatellitesResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListSatellites", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListSatellites", input)
 	return &GroundstationListSatellitesResult{Result: future}
 }
 
 func (a *GroundStationStub) ListTagsForResource(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) (*groundstation.ListTagsForResourceOutput, error) {
 	var output groundstation.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ListTagsForResourceAsync(ctx workflow.Context, input *groundstation.ListTagsForResourceInput) *GroundstationListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ListTagsForResource", input)
 	return &GroundstationListTagsForResourceResult{Result: future}
 }
 
 func (a *GroundStationStub) ReserveContact(ctx workflow.Context, input *groundstation.ReserveContactInput) (*groundstation.ReserveContactOutput, error) {
 	var output groundstation.ReserveContactOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.ReserveContact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.ReserveContact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) ReserveContactAsync(ctx workflow.Context, input *groundstation.ReserveContactInput) *GroundstationReserveContactResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.ReserveContact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.ReserveContact", input)
 	return &GroundstationReserveContactResult{Result: future}
 }
 
 func (a *GroundStationStub) TagResource(ctx workflow.Context, input *groundstation.TagResourceInput) (*groundstation.TagResourceOutput, error) {
 	var output groundstation.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) TagResourceAsync(ctx workflow.Context, input *groundstation.TagResourceInput) *GroundstationTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.TagResource", input)
 	return &GroundstationTagResourceResult{Result: future}
 }
 
 func (a *GroundStationStub) UntagResource(ctx workflow.Context, input *groundstation.UntagResourceInput) (*groundstation.UntagResourceOutput, error) {
 	var output groundstation.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) UntagResourceAsync(ctx workflow.Context, input *groundstation.UntagResourceInput) *GroundstationUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UntagResource", input)
 	return &GroundstationUntagResourceResult{Result: future}
 }
 
 func (a *GroundStationStub) UpdateConfig(ctx workflow.Context, input *groundstation.UpdateConfigInput) (*groundstation.UpdateConfigOutput, error) {
 	var output groundstation.UpdateConfigOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.UpdateConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) UpdateConfigAsync(ctx workflow.Context, input *groundstation.UpdateConfigInput) *GroundstationUpdateConfigResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.UpdateConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateConfig", input)
 	return &GroundstationUpdateConfigResult{Result: future}
 }
 
 func (a *GroundStationStub) UpdateMissionProfile(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) (*groundstation.UpdateMissionProfileOutput, error) {
 	var output groundstation.UpdateMissionProfileOutput
-	err := workflow.ExecuteActivity(ctx, "GroundStation.UpdateMissionProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateMissionProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GroundStationStub) UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileResult {
-	future := workflow.ExecuteActivity(ctx, "GroundStation.UpdateMissionProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.groundstation.UpdateMissionProfile", input)
 	return &GroundstationUpdateMissionProfileResult{Result: future}
 }

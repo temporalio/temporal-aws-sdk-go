@@ -304,242 +304,242 @@ func (r *IvsUpdateChannelResult) Get(ctx workflow.Context) (*ivs.UpdateChannelOu
 
 func (a *IVSStub) BatchGetChannel(ctx workflow.Context, input *ivs.BatchGetChannelInput) (*ivs.BatchGetChannelOutput, error) {
 	var output ivs.BatchGetChannelOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.BatchGetChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) BatchGetChannelAsync(ctx workflow.Context, input *ivs.BatchGetChannelInput) *IvsBatchGetChannelResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.BatchGetChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetChannel", input)
 	return &IvsBatchGetChannelResult{Result: future}
 }
 
 func (a *IVSStub) BatchGetStreamKey(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) (*ivs.BatchGetStreamKeyOutput, error) {
 	var output ivs.BatchGetStreamKeyOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.BatchGetStreamKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetStreamKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) BatchGetStreamKeyAsync(ctx workflow.Context, input *ivs.BatchGetStreamKeyInput) *IvsBatchGetStreamKeyResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.BatchGetStreamKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.BatchGetStreamKey", input)
 	return &IvsBatchGetStreamKeyResult{Result: future}
 }
 
 func (a *IVSStub) CreateChannel(ctx workflow.Context, input *ivs.CreateChannelInput) (*ivs.CreateChannelOutput, error) {
 	var output ivs.CreateChannelOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.CreateChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.CreateChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) CreateChannelAsync(ctx workflow.Context, input *ivs.CreateChannelInput) *IvsCreateChannelResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.CreateChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.CreateChannel", input)
 	return &IvsCreateChannelResult{Result: future}
 }
 
 func (a *IVSStub) CreateStreamKey(ctx workflow.Context, input *ivs.CreateStreamKeyInput) (*ivs.CreateStreamKeyOutput, error) {
 	var output ivs.CreateStreamKeyOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.CreateStreamKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.CreateStreamKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) CreateStreamKeyAsync(ctx workflow.Context, input *ivs.CreateStreamKeyInput) *IvsCreateStreamKeyResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.CreateStreamKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.CreateStreamKey", input)
 	return &IvsCreateStreamKeyResult{Result: future}
 }
 
 func (a *IVSStub) DeleteChannel(ctx workflow.Context, input *ivs.DeleteChannelInput) (*ivs.DeleteChannelOutput, error) {
 	var output ivs.DeleteChannelOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.DeleteChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) DeleteChannelAsync(ctx workflow.Context, input *ivs.DeleteChannelInput) *IvsDeleteChannelResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.DeleteChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteChannel", input)
 	return &IvsDeleteChannelResult{Result: future}
 }
 
 func (a *IVSStub) DeletePlaybackKeyPair(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) (*ivs.DeletePlaybackKeyPairOutput, error) {
 	var output ivs.DeletePlaybackKeyPairOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.DeletePlaybackKeyPair", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.DeletePlaybackKeyPair", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) DeletePlaybackKeyPairAsync(ctx workflow.Context, input *ivs.DeletePlaybackKeyPairInput) *IvsDeletePlaybackKeyPairResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.DeletePlaybackKeyPair", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeletePlaybackKeyPair", input)
 	return &IvsDeletePlaybackKeyPairResult{Result: future}
 }
 
 func (a *IVSStub) DeleteStreamKey(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) (*ivs.DeleteStreamKeyOutput, error) {
 	var output ivs.DeleteStreamKeyOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.DeleteStreamKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteStreamKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) DeleteStreamKeyAsync(ctx workflow.Context, input *ivs.DeleteStreamKeyInput) *IvsDeleteStreamKeyResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.DeleteStreamKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.DeleteStreamKey", input)
 	return &IvsDeleteStreamKeyResult{Result: future}
 }
 
 func (a *IVSStub) GetChannel(ctx workflow.Context, input *ivs.GetChannelInput) (*ivs.GetChannelOutput, error) {
 	var output ivs.GetChannelOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.GetChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.GetChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) GetChannelAsync(ctx workflow.Context, input *ivs.GetChannelInput) *IvsGetChannelResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.GetChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetChannel", input)
 	return &IvsGetChannelResult{Result: future}
 }
 
 func (a *IVSStub) GetPlaybackKeyPair(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) (*ivs.GetPlaybackKeyPairOutput, error) {
 	var output ivs.GetPlaybackKeyPairOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.GetPlaybackKeyPair", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.GetPlaybackKeyPair", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) GetPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.GetPlaybackKeyPairInput) *IvsGetPlaybackKeyPairResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.GetPlaybackKeyPair", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetPlaybackKeyPair", input)
 	return &IvsGetPlaybackKeyPairResult{Result: future}
 }
 
 func (a *IVSStub) GetStream(ctx workflow.Context, input *ivs.GetStreamInput) (*ivs.GetStreamOutput, error) {
 	var output ivs.GetStreamOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.GetStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.GetStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) GetStreamAsync(ctx workflow.Context, input *ivs.GetStreamInput) *IvsGetStreamResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.GetStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetStream", input)
 	return &IvsGetStreamResult{Result: future}
 }
 
 func (a *IVSStub) GetStreamKey(ctx workflow.Context, input *ivs.GetStreamKeyInput) (*ivs.GetStreamKeyOutput, error) {
 	var output ivs.GetStreamKeyOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.GetStreamKey", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.GetStreamKey", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) GetStreamKeyAsync(ctx workflow.Context, input *ivs.GetStreamKeyInput) *IvsGetStreamKeyResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.GetStreamKey", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.GetStreamKey", input)
 	return &IvsGetStreamKeyResult{Result: future}
 }
 
 func (a *IVSStub) ImportPlaybackKeyPair(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) (*ivs.ImportPlaybackKeyPairOutput, error) {
 	var output ivs.ImportPlaybackKeyPairOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ImportPlaybackKeyPair", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ImportPlaybackKeyPair", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ImportPlaybackKeyPairAsync(ctx workflow.Context, input *ivs.ImportPlaybackKeyPairInput) *IvsImportPlaybackKeyPairResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ImportPlaybackKeyPair", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ImportPlaybackKeyPair", input)
 	return &IvsImportPlaybackKeyPairResult{Result: future}
 }
 
 func (a *IVSStub) ListChannels(ctx workflow.Context, input *ivs.ListChannelsInput) (*ivs.ListChannelsOutput, error) {
 	var output ivs.ListChannelsOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ListChannels", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ListChannels", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ListChannelsAsync(ctx workflow.Context, input *ivs.ListChannelsInput) *IvsListChannelsResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ListChannels", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListChannels", input)
 	return &IvsListChannelsResult{Result: future}
 }
 
 func (a *IVSStub) ListPlaybackKeyPairs(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) (*ivs.ListPlaybackKeyPairsOutput, error) {
 	var output ivs.ListPlaybackKeyPairsOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ListPlaybackKeyPairs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ListPlaybackKeyPairs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ListPlaybackKeyPairsAsync(ctx workflow.Context, input *ivs.ListPlaybackKeyPairsInput) *IvsListPlaybackKeyPairsResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ListPlaybackKeyPairs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListPlaybackKeyPairs", input)
 	return &IvsListPlaybackKeyPairsResult{Result: future}
 }
 
 func (a *IVSStub) ListStreamKeys(ctx workflow.Context, input *ivs.ListStreamKeysInput) (*ivs.ListStreamKeysOutput, error) {
 	var output ivs.ListStreamKeysOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ListStreamKeys", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreamKeys", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ListStreamKeysAsync(ctx workflow.Context, input *ivs.ListStreamKeysInput) *IvsListStreamKeysResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ListStreamKeys", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreamKeys", input)
 	return &IvsListStreamKeysResult{Result: future}
 }
 
 func (a *IVSStub) ListStreams(ctx workflow.Context, input *ivs.ListStreamsInput) (*ivs.ListStreamsOutput, error) {
 	var output ivs.ListStreamsOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ListStreams", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreams", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ListStreamsAsync(ctx workflow.Context, input *ivs.ListStreamsInput) *IvsListStreamsResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ListStreams", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListStreams", input)
 	return &IvsListStreamsResult{Result: future}
 }
 
 func (a *IVSStub) ListTagsForResource(ctx workflow.Context, input *ivs.ListTagsForResourceInput) (*ivs.ListTagsForResourceOutput, error) {
 	var output ivs.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) ListTagsForResourceAsync(ctx workflow.Context, input *ivs.ListTagsForResourceInput) *IvsListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.ListTagsForResource", input)
 	return &IvsListTagsForResourceResult{Result: future}
 }
 
 func (a *IVSStub) PutMetadata(ctx workflow.Context, input *ivs.PutMetadataInput) (*ivs.PutMetadataOutput, error) {
 	var output ivs.PutMetadataOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.PutMetadata", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.PutMetadata", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) PutMetadataAsync(ctx workflow.Context, input *ivs.PutMetadataInput) *IvsPutMetadataResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.PutMetadata", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.PutMetadata", input)
 	return &IvsPutMetadataResult{Result: future}
 }
 
 func (a *IVSStub) StopStream(ctx workflow.Context, input *ivs.StopStreamInput) (*ivs.StopStreamOutput, error) {
 	var output ivs.StopStreamOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.StopStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.StopStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) StopStreamAsync(ctx workflow.Context, input *ivs.StopStreamInput) *IvsStopStreamResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.StopStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.StopStream", input)
 	return &IvsStopStreamResult{Result: future}
 }
 
 func (a *IVSStub) TagResource(ctx workflow.Context, input *ivs.TagResourceInput) (*ivs.TagResourceOutput, error) {
 	var output ivs.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) TagResourceAsync(ctx workflow.Context, input *ivs.TagResourceInput) *IvsTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.TagResource", input)
 	return &IvsTagResourceResult{Result: future}
 }
 
 func (a *IVSStub) UntagResource(ctx workflow.Context, input *ivs.UntagResourceInput) (*ivs.UntagResourceOutput, error) {
 	var output ivs.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) UntagResourceAsync(ctx workflow.Context, input *ivs.UntagResourceInput) *IvsUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.UntagResource", input)
 	return &IvsUntagResourceResult{Result: future}
 }
 
 func (a *IVSStub) UpdateChannel(ctx workflow.Context, input *ivs.UpdateChannelInput) (*ivs.UpdateChannelOutput, error) {
 	var output ivs.UpdateChannelOutput
-	err := workflow.ExecuteActivity(ctx, "IVS.UpdateChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ivs.UpdateChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IVSStub) UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IvsUpdateChannelResult {
-	future := workflow.ExecuteActivity(ctx, "IVS.UpdateChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ivs.UpdateChannel", input)
 	return &IvsUpdateChannelResult{Result: future}
 }

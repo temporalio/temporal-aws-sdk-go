@@ -1188,990 +1188,990 @@ func (r *GreengrassUpdateSubscriptionDefinitionResult) Get(ctx workflow.Context)
 
 func (a *GreengrassStub) AssociateRoleToGroup(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) (*greengrass.AssociateRoleToGroupOutput, error) {
 	var output greengrass.AssociateRoleToGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.AssociateRoleToGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.AssociateRoleToGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) AssociateRoleToGroupAsync(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) *GreengrassAssociateRoleToGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.AssociateRoleToGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.AssociateRoleToGroup", input)
 	return &GreengrassAssociateRoleToGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) AssociateServiceRoleToAccount(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) (*greengrass.AssociateServiceRoleToAccountOutput, error) {
 	var output greengrass.AssociateServiceRoleToAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.AssociateServiceRoleToAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.AssociateServiceRoleToAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) AssociateServiceRoleToAccountAsync(ctx workflow.Context, input *greengrass.AssociateServiceRoleToAccountInput) *GreengrassAssociateServiceRoleToAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.AssociateServiceRoleToAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.AssociateServiceRoleToAccount", input)
 	return &GreengrassAssociateServiceRoleToAccountResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateConnectorDefinition(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) (*greengrass.CreateConnectorDefinitionOutput, error) {
 	var output greengrass.CreateConnectorDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateConnectorDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateConnectorDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionInput) *GreengrassCreateConnectorDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateConnectorDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateConnectorDefinition", input)
 	return &GreengrassCreateConnectorDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) (*greengrass.CreateConnectorDefinitionVersionOutput, error) {
 	var output greengrass.CreateConnectorDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateConnectorDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateConnectorDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateConnectorDefinitionVersionInput) *GreengrassCreateConnectorDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateConnectorDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateConnectorDefinitionVersion", input)
 	return &GreengrassCreateConnectorDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateCoreDefinition(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) (*greengrass.CreateCoreDefinitionOutput, error) {
 	var output greengrass.CreateCoreDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateCoreDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateCoreDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionInput) *GreengrassCreateCoreDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateCoreDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateCoreDefinition", input)
 	return &GreengrassCreateCoreDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateCoreDefinitionVersion(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) (*greengrass.CreateCoreDefinitionVersionOutput, error) {
 	var output greengrass.CreateCoreDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateCoreDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateCoreDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateCoreDefinitionVersionInput) *GreengrassCreateCoreDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateCoreDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateCoreDefinitionVersion", input)
 	return &GreengrassCreateCoreDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateDeployment(ctx workflow.Context, input *greengrass.CreateDeploymentInput) (*greengrass.CreateDeploymentOutput, error) {
 	var output greengrass.CreateDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateDeploymentAsync(ctx workflow.Context, input *greengrass.CreateDeploymentInput) *GreengrassCreateDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeployment", input)
 	return &GreengrassCreateDeploymentResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateDeviceDefinition(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) (*greengrass.CreateDeviceDefinitionOutput, error) {
 	var output greengrass.CreateDeviceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeviceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeviceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionInput) *GreengrassCreateDeviceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeviceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeviceDefinition", input)
 	return &GreengrassCreateDeviceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) (*greengrass.CreateDeviceDefinitionVersionOutput, error) {
 	var output greengrass.CreateDeviceDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeviceDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeviceDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateDeviceDefinitionVersionInput) *GreengrassCreateDeviceDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateDeviceDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateDeviceDefinitionVersion", input)
 	return &GreengrassCreateDeviceDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateFunctionDefinition(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) (*greengrass.CreateFunctionDefinitionOutput, error) {
 	var output greengrass.CreateFunctionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateFunctionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateFunctionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionInput) *GreengrassCreateFunctionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateFunctionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateFunctionDefinition", input)
 	return &GreengrassCreateFunctionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) (*greengrass.CreateFunctionDefinitionVersionOutput, error) {
 	var output greengrass.CreateFunctionDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateFunctionDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateFunctionDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateFunctionDefinitionVersionInput) *GreengrassCreateFunctionDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateFunctionDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateFunctionDefinitionVersion", input)
 	return &GreengrassCreateFunctionDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateGroup(ctx workflow.Context, input *greengrass.CreateGroupInput) (*greengrass.CreateGroupOutput, error) {
 	var output greengrass.CreateGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateGroupAsync(ctx workflow.Context, input *greengrass.CreateGroupInput) *GreengrassCreateGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroup", input)
 	return &GreengrassCreateGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateGroupCertificateAuthority(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) (*greengrass.CreateGroupCertificateAuthorityOutput, error) {
 	var output greengrass.CreateGroupCertificateAuthorityOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroupCertificateAuthority", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroupCertificateAuthority", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.CreateGroupCertificateAuthorityInput) *GreengrassCreateGroupCertificateAuthorityResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroupCertificateAuthority", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroupCertificateAuthority", input)
 	return &GreengrassCreateGroupCertificateAuthorityResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateGroupVersion(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) (*greengrass.CreateGroupVersionOutput, error) {
 	var output greengrass.CreateGroupVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroupVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroupVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateGroupVersionAsync(ctx workflow.Context, input *greengrass.CreateGroupVersionInput) *GreengrassCreateGroupVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateGroupVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateGroupVersion", input)
 	return &GreengrassCreateGroupVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateLoggerDefinition(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) (*greengrass.CreateLoggerDefinitionOutput, error) {
 	var output greengrass.CreateLoggerDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateLoggerDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateLoggerDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionInput) *GreengrassCreateLoggerDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateLoggerDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateLoggerDefinition", input)
 	return &GreengrassCreateLoggerDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) (*greengrass.CreateLoggerDefinitionVersionOutput, error) {
 	var output greengrass.CreateLoggerDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateLoggerDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateLoggerDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateLoggerDefinitionVersionInput) *GreengrassCreateLoggerDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateLoggerDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateLoggerDefinitionVersion", input)
 	return &GreengrassCreateLoggerDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateResourceDefinition(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) (*greengrass.CreateResourceDefinitionOutput, error) {
 	var output greengrass.CreateResourceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateResourceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateResourceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionInput) *GreengrassCreateResourceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateResourceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateResourceDefinition", input)
 	return &GreengrassCreateResourceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateResourceDefinitionVersion(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) (*greengrass.CreateResourceDefinitionVersionOutput, error) {
 	var output greengrass.CreateResourceDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateResourceDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateResourceDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateResourceDefinitionVersionInput) *GreengrassCreateResourceDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateResourceDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateResourceDefinitionVersion", input)
 	return &GreengrassCreateResourceDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateSoftwareUpdateJob(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) (*greengrass.CreateSoftwareUpdateJobOutput, error) {
 	var output greengrass.CreateSoftwareUpdateJobOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateSoftwareUpdateJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSoftwareUpdateJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateSoftwareUpdateJobAsync(ctx workflow.Context, input *greengrass.CreateSoftwareUpdateJobInput) *GreengrassCreateSoftwareUpdateJobResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateSoftwareUpdateJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSoftwareUpdateJob", input)
 	return &GreengrassCreateSoftwareUpdateJobResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateSubscriptionDefinition(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) (*greengrass.CreateSubscriptionDefinitionOutput, error) {
 	var output greengrass.CreateSubscriptionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateSubscriptionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSubscriptionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionInput) *GreengrassCreateSubscriptionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateSubscriptionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSubscriptionDefinition", input)
 	return &GreengrassCreateSubscriptionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) CreateSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) (*greengrass.CreateSubscriptionDefinitionVersionOutput, error) {
 	var output greengrass.CreateSubscriptionDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.CreateSubscriptionDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSubscriptionDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) CreateSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.CreateSubscriptionDefinitionVersionInput) *GreengrassCreateSubscriptionDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.CreateSubscriptionDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.CreateSubscriptionDefinitionVersion", input)
 	return &GreengrassCreateSubscriptionDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteConnectorDefinition(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) (*greengrass.DeleteConnectorDefinitionOutput, error) {
 	var output greengrass.DeleteConnectorDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteConnectorDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteConnectorDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteConnectorDefinitionInput) *GreengrassDeleteConnectorDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteConnectorDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteConnectorDefinition", input)
 	return &GreengrassDeleteConnectorDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteCoreDefinition(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) (*greengrass.DeleteCoreDefinitionOutput, error) {
 	var output greengrass.DeleteCoreDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteCoreDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteCoreDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteCoreDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteCoreDefinitionInput) *GreengrassDeleteCoreDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteCoreDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteCoreDefinition", input)
 	return &GreengrassDeleteCoreDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteDeviceDefinition(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) (*greengrass.DeleteDeviceDefinitionOutput, error) {
 	var output greengrass.DeleteDeviceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteDeviceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteDeviceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteDeviceDefinitionInput) *GreengrassDeleteDeviceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteDeviceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteDeviceDefinition", input)
 	return &GreengrassDeleteDeviceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteFunctionDefinition(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) (*greengrass.DeleteFunctionDefinitionOutput, error) {
 	var output greengrass.DeleteFunctionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteFunctionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteFunctionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteFunctionDefinitionInput) *GreengrassDeleteFunctionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteFunctionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteFunctionDefinition", input)
 	return &GreengrassDeleteFunctionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteGroup(ctx workflow.Context, input *greengrass.DeleteGroupInput) (*greengrass.DeleteGroupOutput, error) {
 	var output greengrass.DeleteGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteGroupAsync(ctx workflow.Context, input *greengrass.DeleteGroupInput) *GreengrassDeleteGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteGroup", input)
 	return &GreengrassDeleteGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteLoggerDefinition(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) (*greengrass.DeleteLoggerDefinitionOutput, error) {
 	var output greengrass.DeleteLoggerDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteLoggerDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteLoggerDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteLoggerDefinitionInput) *GreengrassDeleteLoggerDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteLoggerDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteLoggerDefinition", input)
 	return &GreengrassDeleteLoggerDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteResourceDefinition(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) (*greengrass.DeleteResourceDefinitionOutput, error) {
 	var output greengrass.DeleteResourceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteResourceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteResourceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteResourceDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteResourceDefinitionInput) *GreengrassDeleteResourceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteResourceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteResourceDefinition", input)
 	return &GreengrassDeleteResourceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DeleteSubscriptionDefinition(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) (*greengrass.DeleteSubscriptionDefinitionOutput, error) {
 	var output greengrass.DeleteSubscriptionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DeleteSubscriptionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteSubscriptionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DeleteSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.DeleteSubscriptionDefinitionInput) *GreengrassDeleteSubscriptionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DeleteSubscriptionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DeleteSubscriptionDefinition", input)
 	return &GreengrassDeleteSubscriptionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) DisassociateRoleFromGroup(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) (*greengrass.DisassociateRoleFromGroupOutput, error) {
 	var output greengrass.DisassociateRoleFromGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DisassociateRoleFromGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DisassociateRoleFromGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DisassociateRoleFromGroupAsync(ctx workflow.Context, input *greengrass.DisassociateRoleFromGroupInput) *GreengrassDisassociateRoleFromGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DisassociateRoleFromGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DisassociateRoleFromGroup", input)
 	return &GreengrassDisassociateRoleFromGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) DisassociateServiceRoleFromAccount(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) (*greengrass.DisassociateServiceRoleFromAccountOutput, error) {
 	var output greengrass.DisassociateServiceRoleFromAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.DisassociateServiceRoleFromAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.DisassociateServiceRoleFromAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) DisassociateServiceRoleFromAccountAsync(ctx workflow.Context, input *greengrass.DisassociateServiceRoleFromAccountInput) *GreengrassDisassociateServiceRoleFromAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.DisassociateServiceRoleFromAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.DisassociateServiceRoleFromAccount", input)
 	return &GreengrassDisassociateServiceRoleFromAccountResult{Result: future}
 }
 
 func (a *GreengrassStub) GetAssociatedRole(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) (*greengrass.GetAssociatedRoleOutput, error) {
 	var output greengrass.GetAssociatedRoleOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetAssociatedRole", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetAssociatedRole", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetAssociatedRoleAsync(ctx workflow.Context, input *greengrass.GetAssociatedRoleInput) *GreengrassGetAssociatedRoleResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetAssociatedRole", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetAssociatedRole", input)
 	return &GreengrassGetAssociatedRoleResult{Result: future}
 }
 
 func (a *GreengrassStub) GetBulkDeploymentStatus(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) (*greengrass.GetBulkDeploymentStatusOutput, error) {
 	var output greengrass.GetBulkDeploymentStatusOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetBulkDeploymentStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetBulkDeploymentStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetBulkDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetBulkDeploymentStatusInput) *GreengrassGetBulkDeploymentStatusResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetBulkDeploymentStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetBulkDeploymentStatus", input)
 	return &GreengrassGetBulkDeploymentStatusResult{Result: future}
 }
 
 func (a *GreengrassStub) GetConnectivityInfo(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) (*greengrass.GetConnectivityInfoOutput, error) {
 	var output greengrass.GetConnectivityInfoOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectivityInfo", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectivityInfo", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetConnectivityInfoAsync(ctx workflow.Context, input *greengrass.GetConnectivityInfoInput) *GreengrassGetConnectivityInfoResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectivityInfo", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectivityInfo", input)
 	return &GreengrassGetConnectivityInfoResult{Result: future}
 }
 
 func (a *GreengrassStub) GetConnectorDefinition(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) (*greengrass.GetConnectorDefinitionOutput, error) {
 	var output greengrass.GetConnectorDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectorDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectorDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionInput) *GreengrassGetConnectorDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectorDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectorDefinition", input)
 	return &GreengrassGetConnectorDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetConnectorDefinitionVersion(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) (*greengrass.GetConnectorDefinitionVersionOutput, error) {
 	var output greengrass.GetConnectorDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectorDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectorDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetConnectorDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetConnectorDefinitionVersionInput) *GreengrassGetConnectorDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetConnectorDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetConnectorDefinitionVersion", input)
 	return &GreengrassGetConnectorDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetCoreDefinition(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) (*greengrass.GetCoreDefinitionOutput, error) {
 	var output greengrass.GetCoreDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetCoreDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetCoreDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetCoreDefinitionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionInput) *GreengrassGetCoreDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetCoreDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetCoreDefinition", input)
 	return &GreengrassGetCoreDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetCoreDefinitionVersion(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) (*greengrass.GetCoreDefinitionVersionOutput, error) {
 	var output greengrass.GetCoreDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetCoreDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetCoreDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetCoreDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetCoreDefinitionVersionInput) *GreengrassGetCoreDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetCoreDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetCoreDefinitionVersion", input)
 	return &GreengrassGetCoreDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetDeploymentStatus(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) (*greengrass.GetDeploymentStatusOutput, error) {
 	var output greengrass.GetDeploymentStatusOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetDeploymentStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeploymentStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetDeploymentStatusAsync(ctx workflow.Context, input *greengrass.GetDeploymentStatusInput) *GreengrassGetDeploymentStatusResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetDeploymentStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeploymentStatus", input)
 	return &GreengrassGetDeploymentStatusResult{Result: future}
 }
 
 func (a *GreengrassStub) GetDeviceDefinition(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) (*greengrass.GetDeviceDefinitionOutput, error) {
 	var output greengrass.GetDeviceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetDeviceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeviceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionInput) *GreengrassGetDeviceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetDeviceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeviceDefinition", input)
 	return &GreengrassGetDeviceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetDeviceDefinitionVersion(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) (*greengrass.GetDeviceDefinitionVersionOutput, error) {
 	var output greengrass.GetDeviceDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetDeviceDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeviceDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetDeviceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetDeviceDefinitionVersionInput) *GreengrassGetDeviceDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetDeviceDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetDeviceDefinitionVersion", input)
 	return &GreengrassGetDeviceDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetFunctionDefinition(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) (*greengrass.GetFunctionDefinitionOutput, error) {
 	var output greengrass.GetFunctionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetFunctionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetFunctionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionInput) *GreengrassGetFunctionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetFunctionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetFunctionDefinition", input)
 	return &GreengrassGetFunctionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetFunctionDefinitionVersion(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) (*greengrass.GetFunctionDefinitionVersionOutput, error) {
 	var output greengrass.GetFunctionDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetFunctionDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetFunctionDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetFunctionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetFunctionDefinitionVersionInput) *GreengrassGetFunctionDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetFunctionDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetFunctionDefinitionVersion", input)
 	return &GreengrassGetFunctionDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetGroup(ctx workflow.Context, input *greengrass.GetGroupInput) (*greengrass.GetGroupOutput, error) {
 	var output greengrass.GetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetGroupAsync(ctx workflow.Context, input *greengrass.GetGroupInput) *GreengrassGetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroup", input)
 	return &GreengrassGetGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) GetGroupCertificateAuthority(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) (*greengrass.GetGroupCertificateAuthorityOutput, error) {
 	var output greengrass.GetGroupCertificateAuthorityOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupCertificateAuthority", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupCertificateAuthority", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetGroupCertificateAuthorityAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateAuthorityInput) *GreengrassGetGroupCertificateAuthorityResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupCertificateAuthority", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupCertificateAuthority", input)
 	return &GreengrassGetGroupCertificateAuthorityResult{Result: future}
 }
 
 func (a *GreengrassStub) GetGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) (*greengrass.GetGroupCertificateConfigurationOutput, error) {
 	var output greengrass.GetGroupCertificateConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupCertificateConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupCertificateConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.GetGroupCertificateConfigurationInput) *GreengrassGetGroupCertificateConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupCertificateConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupCertificateConfiguration", input)
 	return &GreengrassGetGroupCertificateConfigurationResult{Result: future}
 }
 
 func (a *GreengrassStub) GetGroupVersion(ctx workflow.Context, input *greengrass.GetGroupVersionInput) (*greengrass.GetGroupVersionOutput, error) {
 	var output greengrass.GetGroupVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetGroupVersionAsync(ctx workflow.Context, input *greengrass.GetGroupVersionInput) *GreengrassGetGroupVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetGroupVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetGroupVersion", input)
 	return &GreengrassGetGroupVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetLoggerDefinition(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) (*greengrass.GetLoggerDefinitionOutput, error) {
 	var output greengrass.GetLoggerDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetLoggerDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetLoggerDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionInput) *GreengrassGetLoggerDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetLoggerDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetLoggerDefinition", input)
 	return &GreengrassGetLoggerDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetLoggerDefinitionVersion(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) (*greengrass.GetLoggerDefinitionVersionOutput, error) {
 	var output greengrass.GetLoggerDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetLoggerDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetLoggerDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetLoggerDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetLoggerDefinitionVersionInput) *GreengrassGetLoggerDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetLoggerDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetLoggerDefinitionVersion", input)
 	return &GreengrassGetLoggerDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetResourceDefinition(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) (*greengrass.GetResourceDefinitionOutput, error) {
 	var output greengrass.GetResourceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetResourceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetResourceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetResourceDefinitionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionInput) *GreengrassGetResourceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetResourceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetResourceDefinition", input)
 	return &GreengrassGetResourceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetResourceDefinitionVersion(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) (*greengrass.GetResourceDefinitionVersionOutput, error) {
 	var output greengrass.GetResourceDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetResourceDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetResourceDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetResourceDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetResourceDefinitionVersionInput) *GreengrassGetResourceDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetResourceDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetResourceDefinitionVersion", input)
 	return &GreengrassGetResourceDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetServiceRoleForAccount(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) (*greengrass.GetServiceRoleForAccountOutput, error) {
 	var output greengrass.GetServiceRoleForAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetServiceRoleForAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetServiceRoleForAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetServiceRoleForAccountAsync(ctx workflow.Context, input *greengrass.GetServiceRoleForAccountInput) *GreengrassGetServiceRoleForAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetServiceRoleForAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetServiceRoleForAccount", input)
 	return &GreengrassGetServiceRoleForAccountResult{Result: future}
 }
 
 func (a *GreengrassStub) GetSubscriptionDefinition(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) (*greengrass.GetSubscriptionDefinitionOutput, error) {
 	var output greengrass.GetSubscriptionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetSubscriptionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetSubscriptionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionInput) *GreengrassGetSubscriptionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetSubscriptionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetSubscriptionDefinition", input)
 	return &GreengrassGetSubscriptionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) GetSubscriptionDefinitionVersion(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) (*greengrass.GetSubscriptionDefinitionVersionOutput, error) {
 	var output greengrass.GetSubscriptionDefinitionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.GetSubscriptionDefinitionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.GetSubscriptionDefinitionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) GetSubscriptionDefinitionVersionAsync(ctx workflow.Context, input *greengrass.GetSubscriptionDefinitionVersionInput) *GreengrassGetSubscriptionDefinitionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.GetSubscriptionDefinitionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.GetSubscriptionDefinitionVersion", input)
 	return &GreengrassGetSubscriptionDefinitionVersionResult{Result: future}
 }
 
 func (a *GreengrassStub) ListBulkDeploymentDetailedReports(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) (*greengrass.ListBulkDeploymentDetailedReportsOutput, error) {
 	var output greengrass.ListBulkDeploymentDetailedReportsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListBulkDeploymentDetailedReports", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListBulkDeploymentDetailedReports", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListBulkDeploymentDetailedReportsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentDetailedReportsInput) *GreengrassListBulkDeploymentDetailedReportsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListBulkDeploymentDetailedReports", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListBulkDeploymentDetailedReports", input)
 	return &GreengrassListBulkDeploymentDetailedReportsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListBulkDeployments(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) (*greengrass.ListBulkDeploymentsOutput, error) {
 	var output greengrass.ListBulkDeploymentsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListBulkDeployments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListBulkDeployments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListBulkDeploymentsAsync(ctx workflow.Context, input *greengrass.ListBulkDeploymentsInput) *GreengrassListBulkDeploymentsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListBulkDeployments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListBulkDeployments", input)
 	return &GreengrassListBulkDeploymentsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListConnectorDefinitionVersions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) (*greengrass.ListConnectorDefinitionVersionsOutput, error) {
 	var output greengrass.ListConnectorDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListConnectorDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListConnectorDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListConnectorDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionVersionsInput) *GreengrassListConnectorDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListConnectorDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListConnectorDefinitionVersions", input)
 	return &GreengrassListConnectorDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListConnectorDefinitions(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) (*greengrass.ListConnectorDefinitionsOutput, error) {
 	var output greengrass.ListConnectorDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListConnectorDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListConnectorDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListConnectorDefinitionsAsync(ctx workflow.Context, input *greengrass.ListConnectorDefinitionsInput) *GreengrassListConnectorDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListConnectorDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListConnectorDefinitions", input)
 	return &GreengrassListConnectorDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListCoreDefinitionVersions(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) (*greengrass.ListCoreDefinitionVersionsOutput, error) {
 	var output greengrass.ListCoreDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListCoreDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListCoreDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListCoreDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionVersionsInput) *GreengrassListCoreDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListCoreDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListCoreDefinitionVersions", input)
 	return &GreengrassListCoreDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListCoreDefinitions(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) (*greengrass.ListCoreDefinitionsOutput, error) {
 	var output greengrass.ListCoreDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListCoreDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListCoreDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListCoreDefinitionsAsync(ctx workflow.Context, input *greengrass.ListCoreDefinitionsInput) *GreengrassListCoreDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListCoreDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListCoreDefinitions", input)
 	return &GreengrassListCoreDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListDeployments(ctx workflow.Context, input *greengrass.ListDeploymentsInput) (*greengrass.ListDeploymentsOutput, error) {
 	var output greengrass.ListDeploymentsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListDeployments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeployments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListDeploymentsAsync(ctx workflow.Context, input *greengrass.ListDeploymentsInput) *GreengrassListDeploymentsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListDeployments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeployments", input)
 	return &GreengrassListDeploymentsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListDeviceDefinitionVersions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) (*greengrass.ListDeviceDefinitionVersionsOutput, error) {
 	var output greengrass.ListDeviceDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListDeviceDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeviceDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListDeviceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionVersionsInput) *GreengrassListDeviceDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListDeviceDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeviceDefinitionVersions", input)
 	return &GreengrassListDeviceDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListDeviceDefinitions(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) (*greengrass.ListDeviceDefinitionsOutput, error) {
 	var output greengrass.ListDeviceDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListDeviceDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeviceDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListDeviceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListDeviceDefinitionsInput) *GreengrassListDeviceDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListDeviceDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListDeviceDefinitions", input)
 	return &GreengrassListDeviceDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListFunctionDefinitionVersions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) (*greengrass.ListFunctionDefinitionVersionsOutput, error) {
 	var output greengrass.ListFunctionDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListFunctionDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListFunctionDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListFunctionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionVersionsInput) *GreengrassListFunctionDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListFunctionDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListFunctionDefinitionVersions", input)
 	return &GreengrassListFunctionDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListFunctionDefinitions(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) (*greengrass.ListFunctionDefinitionsOutput, error) {
 	var output greengrass.ListFunctionDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListFunctionDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListFunctionDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListFunctionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListFunctionDefinitionsInput) *GreengrassListFunctionDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListFunctionDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListFunctionDefinitions", input)
 	return &GreengrassListFunctionDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListGroupCertificateAuthorities(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) (*greengrass.ListGroupCertificateAuthoritiesOutput, error) {
 	var output greengrass.ListGroupCertificateAuthoritiesOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListGroupCertificateAuthorities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroupCertificateAuthorities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListGroupCertificateAuthoritiesAsync(ctx workflow.Context, input *greengrass.ListGroupCertificateAuthoritiesInput) *GreengrassListGroupCertificateAuthoritiesResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListGroupCertificateAuthorities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroupCertificateAuthorities", input)
 	return &GreengrassListGroupCertificateAuthoritiesResult{Result: future}
 }
 
 func (a *GreengrassStub) ListGroupVersions(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) (*greengrass.ListGroupVersionsOutput, error) {
 	var output greengrass.ListGroupVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListGroupVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroupVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListGroupVersionsAsync(ctx workflow.Context, input *greengrass.ListGroupVersionsInput) *GreengrassListGroupVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListGroupVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroupVersions", input)
 	return &GreengrassListGroupVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListGroups(ctx workflow.Context, input *greengrass.ListGroupsInput) (*greengrass.ListGroupsOutput, error) {
 	var output greengrass.ListGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListGroupsAsync(ctx workflow.Context, input *greengrass.ListGroupsInput) *GreengrassListGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListGroups", input)
 	return &GreengrassListGroupsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListLoggerDefinitionVersions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) (*greengrass.ListLoggerDefinitionVersionsOutput, error) {
 	var output greengrass.ListLoggerDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListLoggerDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListLoggerDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListLoggerDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionVersionsInput) *GreengrassListLoggerDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListLoggerDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListLoggerDefinitionVersions", input)
 	return &GreengrassListLoggerDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListLoggerDefinitions(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) (*greengrass.ListLoggerDefinitionsOutput, error) {
 	var output greengrass.ListLoggerDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListLoggerDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListLoggerDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListLoggerDefinitionsAsync(ctx workflow.Context, input *greengrass.ListLoggerDefinitionsInput) *GreengrassListLoggerDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListLoggerDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListLoggerDefinitions", input)
 	return &GreengrassListLoggerDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListResourceDefinitionVersions(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) (*greengrass.ListResourceDefinitionVersionsOutput, error) {
 	var output greengrass.ListResourceDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListResourceDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListResourceDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListResourceDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionVersionsInput) *GreengrassListResourceDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListResourceDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListResourceDefinitionVersions", input)
 	return &GreengrassListResourceDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListResourceDefinitions(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) (*greengrass.ListResourceDefinitionsOutput, error) {
 	var output greengrass.ListResourceDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListResourceDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListResourceDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListResourceDefinitionsAsync(ctx workflow.Context, input *greengrass.ListResourceDefinitionsInput) *GreengrassListResourceDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListResourceDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListResourceDefinitions", input)
 	return &GreengrassListResourceDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListSubscriptionDefinitionVersions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) (*greengrass.ListSubscriptionDefinitionVersionsOutput, error) {
 	var output greengrass.ListSubscriptionDefinitionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListSubscriptionDefinitionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListSubscriptionDefinitionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListSubscriptionDefinitionVersionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionVersionsInput) *GreengrassListSubscriptionDefinitionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListSubscriptionDefinitionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListSubscriptionDefinitionVersions", input)
 	return &GreengrassListSubscriptionDefinitionVersionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListSubscriptionDefinitions(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) (*greengrass.ListSubscriptionDefinitionsOutput, error) {
 	var output greengrass.ListSubscriptionDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListSubscriptionDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListSubscriptionDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListSubscriptionDefinitionsAsync(ctx workflow.Context, input *greengrass.ListSubscriptionDefinitionsInput) *GreengrassListSubscriptionDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListSubscriptionDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListSubscriptionDefinitions", input)
 	return &GreengrassListSubscriptionDefinitionsResult{Result: future}
 }
 
 func (a *GreengrassStub) ListTagsForResource(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) (*greengrass.ListTagsForResourceOutput, error) {
 	var output greengrass.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ListTagsForResourceAsync(ctx workflow.Context, input *greengrass.ListTagsForResourceInput) *GreengrassListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ListTagsForResource", input)
 	return &GreengrassListTagsForResourceResult{Result: future}
 }
 
 func (a *GreengrassStub) ResetDeployments(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) (*greengrass.ResetDeploymentsOutput, error) {
 	var output greengrass.ResetDeploymentsOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.ResetDeployments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.ResetDeployments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) ResetDeploymentsAsync(ctx workflow.Context, input *greengrass.ResetDeploymentsInput) *GreengrassResetDeploymentsResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.ResetDeployments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.ResetDeployments", input)
 	return &GreengrassResetDeploymentsResult{Result: future}
 }
 
 func (a *GreengrassStub) StartBulkDeployment(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) (*greengrass.StartBulkDeploymentOutput, error) {
 	var output greengrass.StartBulkDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.StartBulkDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.StartBulkDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) StartBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StartBulkDeploymentInput) *GreengrassStartBulkDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.StartBulkDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.StartBulkDeployment", input)
 	return &GreengrassStartBulkDeploymentResult{Result: future}
 }
 
 func (a *GreengrassStub) StopBulkDeployment(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) (*greengrass.StopBulkDeploymentOutput, error) {
 	var output greengrass.StopBulkDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.StopBulkDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.StopBulkDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) StopBulkDeploymentAsync(ctx workflow.Context, input *greengrass.StopBulkDeploymentInput) *GreengrassStopBulkDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.StopBulkDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.StopBulkDeployment", input)
 	return &GreengrassStopBulkDeploymentResult{Result: future}
 }
 
 func (a *GreengrassStub) TagResource(ctx workflow.Context, input *greengrass.TagResourceInput) (*greengrass.TagResourceOutput, error) {
 	var output greengrass.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) TagResourceAsync(ctx workflow.Context, input *greengrass.TagResourceInput) *GreengrassTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.TagResource", input)
 	return &GreengrassTagResourceResult{Result: future}
 }
 
 func (a *GreengrassStub) UntagResource(ctx workflow.Context, input *greengrass.UntagResourceInput) (*greengrass.UntagResourceOutput, error) {
 	var output greengrass.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UntagResourceAsync(ctx workflow.Context, input *greengrass.UntagResourceInput) *GreengrassUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UntagResource", input)
 	return &GreengrassUntagResourceResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateConnectivityInfo(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) (*greengrass.UpdateConnectivityInfoOutput, error) {
 	var output greengrass.UpdateConnectivityInfoOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateConnectivityInfo", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateConnectivityInfo", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateConnectivityInfoAsync(ctx workflow.Context, input *greengrass.UpdateConnectivityInfoInput) *GreengrassUpdateConnectivityInfoResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateConnectivityInfo", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateConnectivityInfo", input)
 	return &GreengrassUpdateConnectivityInfoResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateConnectorDefinition(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) (*greengrass.UpdateConnectorDefinitionOutput, error) {
 	var output greengrass.UpdateConnectorDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateConnectorDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateConnectorDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateConnectorDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateConnectorDefinitionInput) *GreengrassUpdateConnectorDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateConnectorDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateConnectorDefinition", input)
 	return &GreengrassUpdateConnectorDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateCoreDefinition(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) (*greengrass.UpdateCoreDefinitionOutput, error) {
 	var output greengrass.UpdateCoreDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateCoreDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateCoreDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateCoreDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateCoreDefinitionInput) *GreengrassUpdateCoreDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateCoreDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateCoreDefinition", input)
 	return &GreengrassUpdateCoreDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateDeviceDefinition(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) (*greengrass.UpdateDeviceDefinitionOutput, error) {
 	var output greengrass.UpdateDeviceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateDeviceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateDeviceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateDeviceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateDeviceDefinitionInput) *GreengrassUpdateDeviceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateDeviceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateDeviceDefinition", input)
 	return &GreengrassUpdateDeviceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateFunctionDefinition(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) (*greengrass.UpdateFunctionDefinitionOutput, error) {
 	var output greengrass.UpdateFunctionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateFunctionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateFunctionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateFunctionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateFunctionDefinitionInput) *GreengrassUpdateFunctionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateFunctionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateFunctionDefinition", input)
 	return &GreengrassUpdateFunctionDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateGroup(ctx workflow.Context, input *greengrass.UpdateGroupInput) (*greengrass.UpdateGroupOutput, error) {
 	var output greengrass.UpdateGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateGroupAsync(ctx workflow.Context, input *greengrass.UpdateGroupInput) *GreengrassUpdateGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateGroup", input)
 	return &GreengrassUpdateGroupResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateGroupCertificateConfiguration(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) (*greengrass.UpdateGroupCertificateConfigurationOutput, error) {
 	var output greengrass.UpdateGroupCertificateConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateGroupCertificateConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateGroupCertificateConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateGroupCertificateConfigurationAsync(ctx workflow.Context, input *greengrass.UpdateGroupCertificateConfigurationInput) *GreengrassUpdateGroupCertificateConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateGroupCertificateConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateGroupCertificateConfiguration", input)
 	return &GreengrassUpdateGroupCertificateConfigurationResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateLoggerDefinition(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) (*greengrass.UpdateLoggerDefinitionOutput, error) {
 	var output greengrass.UpdateLoggerDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateLoggerDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateLoggerDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateLoggerDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateLoggerDefinitionInput) *GreengrassUpdateLoggerDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateLoggerDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateLoggerDefinition", input)
 	return &GreengrassUpdateLoggerDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateResourceDefinition(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) (*greengrass.UpdateResourceDefinitionOutput, error) {
 	var output greengrass.UpdateResourceDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateResourceDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateResourceDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateResourceDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateResourceDefinitionInput) *GreengrassUpdateResourceDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateResourceDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateResourceDefinition", input)
 	return &GreengrassUpdateResourceDefinitionResult{Result: future}
 }
 
 func (a *GreengrassStub) UpdateSubscriptionDefinition(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) (*greengrass.UpdateSubscriptionDefinitionOutput, error) {
 	var output greengrass.UpdateSubscriptionDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Greengrass.UpdateSubscriptionDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateSubscriptionDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *GreengrassStub) UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Greengrass.UpdateSubscriptionDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.greengrass.UpdateSubscriptionDefinition", input)
 	return &GreengrassUpdateSubscriptionDefinitionResult{Result: future}
 }

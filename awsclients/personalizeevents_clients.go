@@ -31,11 +31,11 @@ func (r *PersonalizeeventsPutEventsResult) Get(ctx workflow.Context) (*personali
 
 func (a *PersonalizeEventsStub) PutEvents(ctx workflow.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
 	var output personalizeevents.PutEventsOutput
-	err := workflow.ExecuteActivity(ctx, "PersonalizeEvents.PutEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalizeevents.PutEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeEventsStub) PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult {
-	future := workflow.ExecuteActivity(ctx, "PersonalizeEvents.PutEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalizeevents.PutEvents", input)
 	return &PersonalizeeventsPutEventsResult{Result: future}
 }

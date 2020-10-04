@@ -187,143 +187,143 @@ func (r *HealthEnableHealthServiceAccessForOrganizationResult) Get(ctx workflow.
 
 func (a *HealthStub) DescribeAffectedAccountsForOrganization(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) (*health.DescribeAffectedAccountsForOrganizationOutput, error) {
 	var output health.DescribeAffectedAccountsForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedAccountsForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedAccountsForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeAffectedAccountsForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedAccountsForOrganizationInput) *HealthDescribeAffectedAccountsForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedAccountsForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedAccountsForOrganization", input)
 	return &HealthDescribeAffectedAccountsForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) DescribeAffectedEntities(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) (*health.DescribeAffectedEntitiesOutput, error) {
 	var output health.DescribeAffectedEntitiesOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedEntities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeAffectedEntitiesAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesInput) *HealthDescribeAffectedEntitiesResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedEntities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntities", input)
 	return &HealthDescribeAffectedEntitiesResult{Result: future}
 }
 
 func (a *HealthStub) DescribeAffectedEntitiesForOrganization(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) (*health.DescribeAffectedEntitiesForOrganizationOutput, error) {
 	var output health.DescribeAffectedEntitiesForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedEntitiesForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntitiesForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeAffectedEntitiesForOrganizationAsync(ctx workflow.Context, input *health.DescribeAffectedEntitiesForOrganizationInput) *HealthDescribeAffectedEntitiesForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeAffectedEntitiesForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeAffectedEntitiesForOrganization", input)
 	return &HealthDescribeAffectedEntitiesForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEntityAggregates(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) (*health.DescribeEntityAggregatesOutput, error) {
 	var output health.DescribeEntityAggregatesOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEntityAggregates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEntityAggregates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEntityAggregatesAsync(ctx workflow.Context, input *health.DescribeEntityAggregatesInput) *HealthDescribeEntityAggregatesResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEntityAggregates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEntityAggregates", input)
 	return &HealthDescribeEntityAggregatesResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEventAggregates(ctx workflow.Context, input *health.DescribeEventAggregatesInput) (*health.DescribeEventAggregatesOutput, error) {
 	var output health.DescribeEventAggregatesOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEventAggregates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventAggregates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventAggregatesAsync(ctx workflow.Context, input *health.DescribeEventAggregatesInput) *HealthDescribeEventAggregatesResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEventAggregates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventAggregates", input)
 	return &HealthDescribeEventAggregatesResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEventDetails(ctx workflow.Context, input *health.DescribeEventDetailsInput) (*health.DescribeEventDetailsOutput, error) {
 	var output health.DescribeEventDetailsOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEventDetails", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetails", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventDetailsAsync(ctx workflow.Context, input *health.DescribeEventDetailsInput) *HealthDescribeEventDetailsResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEventDetails", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetails", input)
 	return &HealthDescribeEventDetailsResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEventDetailsForOrganization(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) (*health.DescribeEventDetailsForOrganizationOutput, error) {
 	var output health.DescribeEventDetailsForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEventDetailsForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetailsForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventDetailsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventDetailsForOrganizationInput) *HealthDescribeEventDetailsForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEventDetailsForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventDetailsForOrganization", input)
 	return &HealthDescribeEventDetailsForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEventTypes(ctx workflow.Context, input *health.DescribeEventTypesInput) (*health.DescribeEventTypesOutput, error) {
 	var output health.DescribeEventTypesOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEventTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventTypesAsync(ctx workflow.Context, input *health.DescribeEventTypesInput) *HealthDescribeEventTypesResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEventTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventTypes", input)
 	return &HealthDescribeEventTypesResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEvents(ctx workflow.Context, input *health.DescribeEventsInput) (*health.DescribeEventsOutput, error) {
 	var output health.DescribeEventsOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventsAsync(ctx workflow.Context, input *health.DescribeEventsInput) *HealthDescribeEventsResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEvents", input)
 	return &HealthDescribeEventsResult{Result: future}
 }
 
 func (a *HealthStub) DescribeEventsForOrganization(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) (*health.DescribeEventsForOrganizationOutput, error) {
 	var output health.DescribeEventsForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeEventsForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventsForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeEventsForOrganizationAsync(ctx workflow.Context, input *health.DescribeEventsForOrganizationInput) *HealthDescribeEventsForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeEventsForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeEventsForOrganization", input)
 	return &HealthDescribeEventsForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) DescribeHealthServiceStatusForOrganization(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) (*health.DescribeHealthServiceStatusForOrganizationOutput, error) {
 	var output health.DescribeHealthServiceStatusForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DescribeHealthServiceStatusForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DescribeHealthServiceStatusForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DescribeHealthServiceStatusForOrganizationAsync(ctx workflow.Context, input *health.DescribeHealthServiceStatusForOrganizationInput) *HealthDescribeHealthServiceStatusForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DescribeHealthServiceStatusForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DescribeHealthServiceStatusForOrganization", input)
 	return &HealthDescribeHealthServiceStatusForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) DisableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) (*health.DisableHealthServiceAccessForOrganizationOutput, error) {
 	var output health.DisableHealthServiceAccessForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.DisableHealthServiceAccessForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.DisableHealthServiceAccessForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) DisableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.DisableHealthServiceAccessForOrganizationInput) *HealthDisableHealthServiceAccessForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.DisableHealthServiceAccessForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.DisableHealthServiceAccessForOrganization", input)
 	return &HealthDisableHealthServiceAccessForOrganizationResult{Result: future}
 }
 
 func (a *HealthStub) EnableHealthServiceAccessForOrganization(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) (*health.EnableHealthServiceAccessForOrganizationOutput, error) {
 	var output health.EnableHealthServiceAccessForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Health.EnableHealthServiceAccessForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.health.EnableHealthServiceAccessForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HealthStub) EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Health.EnableHealthServiceAccessForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.health.EnableHealthServiceAccessForOrganization", input)
 	return &HealthEnableHealthServiceAccessForOrganizationResult{Result: future}
 }

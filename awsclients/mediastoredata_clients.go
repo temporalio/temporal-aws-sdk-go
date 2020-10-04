@@ -83,55 +83,55 @@ func (r *MediastoredataPutObjectResult) Get(ctx workflow.Context) (*mediastoreda
 
 func (a *MediaStoreDataStub) DeleteObject(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) (*mediastoredata.DeleteObjectOutput, error) {
 	var output mediastoredata.DeleteObjectOutput
-	err := workflow.ExecuteActivity(ctx, "MediaStoreData.DeleteObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DeleteObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MediaStoreDataStub) DeleteObjectAsync(ctx workflow.Context, input *mediastoredata.DeleteObjectInput) *MediastoredataDeleteObjectResult {
-	future := workflow.ExecuteActivity(ctx, "MediaStoreData.DeleteObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DeleteObject", input)
 	return &MediastoredataDeleteObjectResult{Result: future}
 }
 
 func (a *MediaStoreDataStub) DescribeObject(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) (*mediastoredata.DescribeObjectOutput, error) {
 	var output mediastoredata.DescribeObjectOutput
-	err := workflow.ExecuteActivity(ctx, "MediaStoreData.DescribeObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DescribeObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MediaStoreDataStub) DescribeObjectAsync(ctx workflow.Context, input *mediastoredata.DescribeObjectInput) *MediastoredataDescribeObjectResult {
-	future := workflow.ExecuteActivity(ctx, "MediaStoreData.DescribeObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.DescribeObject", input)
 	return &MediastoredataDescribeObjectResult{Result: future}
 }
 
 func (a *MediaStoreDataStub) GetObject(ctx workflow.Context, input *mediastoredata.GetObjectInput) (*mediastoredata.GetObjectOutput, error) {
 	var output mediastoredata.GetObjectOutput
-	err := workflow.ExecuteActivity(ctx, "MediaStoreData.GetObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mediastoredata.GetObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MediaStoreDataStub) GetObjectAsync(ctx workflow.Context, input *mediastoredata.GetObjectInput) *MediastoredataGetObjectResult {
-	future := workflow.ExecuteActivity(ctx, "MediaStoreData.GetObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.GetObject", input)
 	return &MediastoredataGetObjectResult{Result: future}
 }
 
 func (a *MediaStoreDataStub) ListItems(ctx workflow.Context, input *mediastoredata.ListItemsInput) (*mediastoredata.ListItemsOutput, error) {
 	var output mediastoredata.ListItemsOutput
-	err := workflow.ExecuteActivity(ctx, "MediaStoreData.ListItems", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mediastoredata.ListItems", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MediaStoreDataStub) ListItemsAsync(ctx workflow.Context, input *mediastoredata.ListItemsInput) *MediastoredataListItemsResult {
-	future := workflow.ExecuteActivity(ctx, "MediaStoreData.ListItems", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.ListItems", input)
 	return &MediastoredataListItemsResult{Result: future}
 }
 
 func (a *MediaStoreDataStub) PutObject(ctx workflow.Context, input *mediastoredata.PutObjectInput) (*mediastoredata.PutObjectOutput, error) {
 	var output mediastoredata.PutObjectOutput
-	err := workflow.ExecuteActivity(ctx, "MediaStoreData.PutObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mediastoredata.PutObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MediaStoreDataStub) PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectResult {
-	future := workflow.ExecuteActivity(ctx, "MediaStoreData.PutObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mediastoredata.PutObject", input)
 	return &MediastoredataPutObjectResult{Result: future}
 }

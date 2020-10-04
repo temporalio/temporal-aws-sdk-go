@@ -44,22 +44,22 @@ func (r *HoneycodeInvokeScreenAutomationResult) Get(ctx workflow.Context) (*hone
 
 func (a *HoneycodeStub) GetScreenData(ctx workflow.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error) {
 	var output honeycode.GetScreenDataOutput
-	err := workflow.ExecuteActivity(ctx, "Honeycode.GetScreenData", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.honeycode.GetScreenData", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HoneycodeStub) GetScreenDataAsync(ctx workflow.Context, input *honeycode.GetScreenDataInput) *HoneycodeGetScreenDataResult {
-	future := workflow.ExecuteActivity(ctx, "Honeycode.GetScreenData", input)
+	future := workflow.ExecuteActivity(ctx, "aws.honeycode.GetScreenData", input)
 	return &HoneycodeGetScreenDataResult{Result: future}
 }
 
 func (a *HoneycodeStub) InvokeScreenAutomation(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
 	var output honeycode.InvokeScreenAutomationOutput
-	err := workflow.ExecuteActivity(ctx, "Honeycode.InvokeScreenAutomation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.honeycode.InvokeScreenAutomation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *HoneycodeStub) InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult {
-	future := workflow.ExecuteActivity(ctx, "Honeycode.InvokeScreenAutomation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.honeycode.InvokeScreenAutomation", input)
 	return &HoneycodeInvokeScreenAutomationResult{Result: future}
 }

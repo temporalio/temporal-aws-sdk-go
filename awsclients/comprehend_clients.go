@@ -681,561 +681,561 @@ func (r *ComprehendUpdateEndpointResult) Get(ctx workflow.Context) (*comprehend.
 
 func (a *ComprehendStub) BatchDetectDominantLanguage(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) (*comprehend.BatchDetectDominantLanguageOutput, error) {
 	var output comprehend.BatchDetectDominantLanguageOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectDominantLanguage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectDominantLanguage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) BatchDetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.BatchDetectDominantLanguageInput) *ComprehendBatchDetectDominantLanguageResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectDominantLanguage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectDominantLanguage", input)
 	return &ComprehendBatchDetectDominantLanguageResult{Result: future}
 }
 
 func (a *ComprehendStub) BatchDetectEntities(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) (*comprehend.BatchDetectEntitiesOutput, error) {
 	var output comprehend.BatchDetectEntitiesOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectEntities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectEntities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) BatchDetectEntitiesAsync(ctx workflow.Context, input *comprehend.BatchDetectEntitiesInput) *ComprehendBatchDetectEntitiesResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectEntities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectEntities", input)
 	return &ComprehendBatchDetectEntitiesResult{Result: future}
 }
 
 func (a *ComprehendStub) BatchDetectKeyPhrases(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) (*comprehend.BatchDetectKeyPhrasesOutput, error) {
 	var output comprehend.BatchDetectKeyPhrasesOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectKeyPhrases", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectKeyPhrases", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) BatchDetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.BatchDetectKeyPhrasesInput) *ComprehendBatchDetectKeyPhrasesResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectKeyPhrases", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectKeyPhrases", input)
 	return &ComprehendBatchDetectKeyPhrasesResult{Result: future}
 }
 
 func (a *ComprehendStub) BatchDetectSentiment(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) (*comprehend.BatchDetectSentimentOutput, error) {
 	var output comprehend.BatchDetectSentimentOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectSentiment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectSentiment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) BatchDetectSentimentAsync(ctx workflow.Context, input *comprehend.BatchDetectSentimentInput) *ComprehendBatchDetectSentimentResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectSentiment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectSentiment", input)
 	return &ComprehendBatchDetectSentimentResult{Result: future}
 }
 
 func (a *ComprehendStub) BatchDetectSyntax(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) (*comprehend.BatchDetectSyntaxOutput, error) {
 	var output comprehend.BatchDetectSyntaxOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectSyntax", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectSyntax", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) BatchDetectSyntaxAsync(ctx workflow.Context, input *comprehend.BatchDetectSyntaxInput) *ComprehendBatchDetectSyntaxResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.BatchDetectSyntax", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.BatchDetectSyntax", input)
 	return &ComprehendBatchDetectSyntaxResult{Result: future}
 }
 
 func (a *ComprehendStub) ClassifyDocument(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) (*comprehend.ClassifyDocumentOutput, error) {
 	var output comprehend.ClassifyDocumentOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ClassifyDocument", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ClassifyDocument", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ClassifyDocumentAsync(ctx workflow.Context, input *comprehend.ClassifyDocumentInput) *ComprehendClassifyDocumentResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ClassifyDocument", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ClassifyDocument", input)
 	return &ComprehendClassifyDocumentResult{Result: future}
 }
 
 func (a *ComprehendStub) CreateDocumentClassifier(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) (*comprehend.CreateDocumentClassifierOutput, error) {
 	var output comprehend.CreateDocumentClassifierOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.CreateDocumentClassifier", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateDocumentClassifier", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) CreateDocumentClassifierAsync(ctx workflow.Context, input *comprehend.CreateDocumentClassifierInput) *ComprehendCreateDocumentClassifierResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.CreateDocumentClassifier", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateDocumentClassifier", input)
 	return &ComprehendCreateDocumentClassifierResult{Result: future}
 }
 
 func (a *ComprehendStub) CreateEndpoint(ctx workflow.Context, input *comprehend.CreateEndpointInput) (*comprehend.CreateEndpointOutput, error) {
 	var output comprehend.CreateEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.CreateEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) CreateEndpointAsync(ctx workflow.Context, input *comprehend.CreateEndpointInput) *ComprehendCreateEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.CreateEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateEndpoint", input)
 	return &ComprehendCreateEndpointResult{Result: future}
 }
 
 func (a *ComprehendStub) CreateEntityRecognizer(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) (*comprehend.CreateEntityRecognizerOutput, error) {
 	var output comprehend.CreateEntityRecognizerOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.CreateEntityRecognizer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateEntityRecognizer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) CreateEntityRecognizerAsync(ctx workflow.Context, input *comprehend.CreateEntityRecognizerInput) *ComprehendCreateEntityRecognizerResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.CreateEntityRecognizer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.CreateEntityRecognizer", input)
 	return &ComprehendCreateEntityRecognizerResult{Result: future}
 }
 
 func (a *ComprehendStub) DeleteDocumentClassifier(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) (*comprehend.DeleteDocumentClassifierOutput, error) {
 	var output comprehend.DeleteDocumentClassifierOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DeleteDocumentClassifier", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteDocumentClassifier", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DeleteDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DeleteDocumentClassifierInput) *ComprehendDeleteDocumentClassifierResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DeleteDocumentClassifier", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteDocumentClassifier", input)
 	return &ComprehendDeleteDocumentClassifierResult{Result: future}
 }
 
 func (a *ComprehendStub) DeleteEndpoint(ctx workflow.Context, input *comprehend.DeleteEndpointInput) (*comprehend.DeleteEndpointOutput, error) {
 	var output comprehend.DeleteEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DeleteEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DeleteEndpointAsync(ctx workflow.Context, input *comprehend.DeleteEndpointInput) *ComprehendDeleteEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DeleteEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteEndpoint", input)
 	return &ComprehendDeleteEndpointResult{Result: future}
 }
 
 func (a *ComprehendStub) DeleteEntityRecognizer(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) (*comprehend.DeleteEntityRecognizerOutput, error) {
 	var output comprehend.DeleteEntityRecognizerOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DeleteEntityRecognizer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteEntityRecognizer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DeleteEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DeleteEntityRecognizerInput) *ComprehendDeleteEntityRecognizerResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DeleteEntityRecognizer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DeleteEntityRecognizer", input)
 	return &ComprehendDeleteEntityRecognizerResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeDocumentClassificationJob(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) (*comprehend.DescribeDocumentClassificationJobOutput, error) {
 	var output comprehend.DescribeDocumentClassificationJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDocumentClassificationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDocumentClassificationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassificationJobInput) *ComprehendDescribeDocumentClassificationJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDocumentClassificationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDocumentClassificationJob", input)
 	return &ComprehendDescribeDocumentClassificationJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeDocumentClassifier(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) (*comprehend.DescribeDocumentClassifierOutput, error) {
 	var output comprehend.DescribeDocumentClassifierOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDocumentClassifier", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDocumentClassifier", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeDocumentClassifierAsync(ctx workflow.Context, input *comprehend.DescribeDocumentClassifierInput) *ComprehendDescribeDocumentClassifierResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDocumentClassifier", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDocumentClassifier", input)
 	return &ComprehendDescribeDocumentClassifierResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) (*comprehend.DescribeDominantLanguageDetectionJobOutput, error) {
 	var output comprehend.DescribeDominantLanguageDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDominantLanguageDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDominantLanguageDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeDominantLanguageDetectionJobInput) *ComprehendDescribeDominantLanguageDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeDominantLanguageDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeDominantLanguageDetectionJob", input)
 	return &ComprehendDescribeDominantLanguageDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeEndpoint(ctx workflow.Context, input *comprehend.DescribeEndpointInput) (*comprehend.DescribeEndpointOutput, error) {
 	var output comprehend.DescribeEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeEndpointAsync(ctx workflow.Context, input *comprehend.DescribeEndpointInput) *ComprehendDescribeEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEndpoint", input)
 	return &ComprehendDescribeEndpointResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeEntitiesDetectionJob(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) (*comprehend.DescribeEntitiesDetectionJobOutput, error) {
 	var output comprehend.DescribeEntitiesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEntitiesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEntitiesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeEntitiesDetectionJobInput) *ComprehendDescribeEntitiesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEntitiesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEntitiesDetectionJob", input)
 	return &ComprehendDescribeEntitiesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeEntityRecognizer(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) (*comprehend.DescribeEntityRecognizerOutput, error) {
 	var output comprehend.DescribeEntityRecognizerOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEntityRecognizer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEntityRecognizer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeEntityRecognizerAsync(ctx workflow.Context, input *comprehend.DescribeEntityRecognizerInput) *ComprehendDescribeEntityRecognizerResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeEntityRecognizer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeEntityRecognizer", input)
 	return &ComprehendDescribeEntityRecognizerResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) (*comprehend.DescribeKeyPhrasesDetectionJobOutput, error) {
 	var output comprehend.DescribeKeyPhrasesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeKeyPhrasesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeKeyPhrasesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeKeyPhrasesDetectionJobInput) *ComprehendDescribeKeyPhrasesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeKeyPhrasesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeKeyPhrasesDetectionJob", input)
 	return &ComprehendDescribeKeyPhrasesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeSentimentDetectionJob(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) (*comprehend.DescribeSentimentDetectionJobOutput, error) {
 	var output comprehend.DescribeSentimentDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeSentimentDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeSentimentDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeSentimentDetectionJobInput) *ComprehendDescribeSentimentDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeSentimentDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeSentimentDetectionJob", input)
 	return &ComprehendDescribeSentimentDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DescribeTopicsDetectionJob(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) (*comprehend.DescribeTopicsDetectionJobOutput, error) {
 	var output comprehend.DescribeTopicsDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DescribeTopicsDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeTopicsDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DescribeTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.DescribeTopicsDetectionJobInput) *ComprehendDescribeTopicsDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DescribeTopicsDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DescribeTopicsDetectionJob", input)
 	return &ComprehendDescribeTopicsDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectDominantLanguage(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) (*comprehend.DetectDominantLanguageOutput, error) {
 	var output comprehend.DetectDominantLanguageOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DetectDominantLanguage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectDominantLanguage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DetectDominantLanguageAsync(ctx workflow.Context, input *comprehend.DetectDominantLanguageInput) *ComprehendDetectDominantLanguageResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DetectDominantLanguage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectDominantLanguage", input)
 	return &ComprehendDetectDominantLanguageResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectEntities(ctx workflow.Context, input *comprehend.DetectEntitiesInput) (*comprehend.DetectEntitiesOutput, error) {
 	var output comprehend.DetectEntitiesOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DetectEntities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectEntities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DetectEntitiesAsync(ctx workflow.Context, input *comprehend.DetectEntitiesInput) *ComprehendDetectEntitiesResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DetectEntities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectEntities", input)
 	return &ComprehendDetectEntitiesResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectKeyPhrases(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) (*comprehend.DetectKeyPhrasesOutput, error) {
 	var output comprehend.DetectKeyPhrasesOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DetectKeyPhrases", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectKeyPhrases", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DetectKeyPhrasesAsync(ctx workflow.Context, input *comprehend.DetectKeyPhrasesInput) *ComprehendDetectKeyPhrasesResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DetectKeyPhrases", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectKeyPhrases", input)
 	return &ComprehendDetectKeyPhrasesResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectSentiment(ctx workflow.Context, input *comprehend.DetectSentimentInput) (*comprehend.DetectSentimentOutput, error) {
 	var output comprehend.DetectSentimentOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DetectSentiment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectSentiment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DetectSentimentAsync(ctx workflow.Context, input *comprehend.DetectSentimentInput) *ComprehendDetectSentimentResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DetectSentiment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectSentiment", input)
 	return &ComprehendDetectSentimentResult{Result: future}
 }
 
 func (a *ComprehendStub) DetectSyntax(ctx workflow.Context, input *comprehend.DetectSyntaxInput) (*comprehend.DetectSyntaxOutput, error) {
 	var output comprehend.DetectSyntaxOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.DetectSyntax", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectSyntax", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) DetectSyntaxAsync(ctx workflow.Context, input *comprehend.DetectSyntaxInput) *ComprehendDetectSyntaxResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.DetectSyntax", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.DetectSyntax", input)
 	return &ComprehendDetectSyntaxResult{Result: future}
 }
 
 func (a *ComprehendStub) ListDocumentClassificationJobs(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) (*comprehend.ListDocumentClassificationJobsOutput, error) {
 	var output comprehend.ListDocumentClassificationJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListDocumentClassificationJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDocumentClassificationJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListDocumentClassificationJobsAsync(ctx workflow.Context, input *comprehend.ListDocumentClassificationJobsInput) *ComprehendListDocumentClassificationJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListDocumentClassificationJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDocumentClassificationJobs", input)
 	return &ComprehendListDocumentClassificationJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListDocumentClassifiers(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) (*comprehend.ListDocumentClassifiersOutput, error) {
 	var output comprehend.ListDocumentClassifiersOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListDocumentClassifiers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDocumentClassifiers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListDocumentClassifiersAsync(ctx workflow.Context, input *comprehend.ListDocumentClassifiersInput) *ComprehendListDocumentClassifiersResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListDocumentClassifiers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDocumentClassifiers", input)
 	return &ComprehendListDocumentClassifiersResult{Result: future}
 }
 
 func (a *ComprehendStub) ListDominantLanguageDetectionJobs(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) (*comprehend.ListDominantLanguageDetectionJobsOutput, error) {
 	var output comprehend.ListDominantLanguageDetectionJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListDominantLanguageDetectionJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDominantLanguageDetectionJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListDominantLanguageDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListDominantLanguageDetectionJobsInput) *ComprehendListDominantLanguageDetectionJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListDominantLanguageDetectionJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListDominantLanguageDetectionJobs", input)
 	return &ComprehendListDominantLanguageDetectionJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListEndpoints(ctx workflow.Context, input *comprehend.ListEndpointsInput) (*comprehend.ListEndpointsOutput, error) {
 	var output comprehend.ListEndpointsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListEndpoints", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEndpoints", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListEndpointsAsync(ctx workflow.Context, input *comprehend.ListEndpointsInput) *ComprehendListEndpointsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListEndpoints", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEndpoints", input)
 	return &ComprehendListEndpointsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListEntitiesDetectionJobs(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) (*comprehend.ListEntitiesDetectionJobsOutput, error) {
 	var output comprehend.ListEntitiesDetectionJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListEntitiesDetectionJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEntitiesDetectionJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListEntitiesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListEntitiesDetectionJobsInput) *ComprehendListEntitiesDetectionJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListEntitiesDetectionJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEntitiesDetectionJobs", input)
 	return &ComprehendListEntitiesDetectionJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListEntityRecognizers(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) (*comprehend.ListEntityRecognizersOutput, error) {
 	var output comprehend.ListEntityRecognizersOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListEntityRecognizers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEntityRecognizers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListEntityRecognizersAsync(ctx workflow.Context, input *comprehend.ListEntityRecognizersInput) *ComprehendListEntityRecognizersResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListEntityRecognizers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListEntityRecognizers", input)
 	return &ComprehendListEntityRecognizersResult{Result: future}
 }
 
 func (a *ComprehendStub) ListKeyPhrasesDetectionJobs(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) (*comprehend.ListKeyPhrasesDetectionJobsOutput, error) {
 	var output comprehend.ListKeyPhrasesDetectionJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListKeyPhrasesDetectionJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListKeyPhrasesDetectionJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListKeyPhrasesDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListKeyPhrasesDetectionJobsInput) *ComprehendListKeyPhrasesDetectionJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListKeyPhrasesDetectionJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListKeyPhrasesDetectionJobs", input)
 	return &ComprehendListKeyPhrasesDetectionJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListSentimentDetectionJobs(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) (*comprehend.ListSentimentDetectionJobsOutput, error) {
 	var output comprehend.ListSentimentDetectionJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListSentimentDetectionJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListSentimentDetectionJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListSentimentDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListSentimentDetectionJobsInput) *ComprehendListSentimentDetectionJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListSentimentDetectionJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListSentimentDetectionJobs", input)
 	return &ComprehendListSentimentDetectionJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) ListTagsForResource(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) (*comprehend.ListTagsForResourceOutput, error) {
 	var output comprehend.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListTagsForResourceAsync(ctx workflow.Context, input *comprehend.ListTagsForResourceInput) *ComprehendListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListTagsForResource", input)
 	return &ComprehendListTagsForResourceResult{Result: future}
 }
 
 func (a *ComprehendStub) ListTopicsDetectionJobs(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) (*comprehend.ListTopicsDetectionJobsOutput, error) {
 	var output comprehend.ListTopicsDetectionJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.ListTopicsDetectionJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.ListTopicsDetectionJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) ListTopicsDetectionJobsAsync(ctx workflow.Context, input *comprehend.ListTopicsDetectionJobsInput) *ComprehendListTopicsDetectionJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.ListTopicsDetectionJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.ListTopicsDetectionJobs", input)
 	return &ComprehendListTopicsDetectionJobsResult{Result: future}
 }
 
 func (a *ComprehendStub) StartDocumentClassificationJob(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) (*comprehend.StartDocumentClassificationJobOutput, error) {
 	var output comprehend.StartDocumentClassificationJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartDocumentClassificationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartDocumentClassificationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartDocumentClassificationJobAsync(ctx workflow.Context, input *comprehend.StartDocumentClassificationJobInput) *ComprehendStartDocumentClassificationJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartDocumentClassificationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartDocumentClassificationJob", input)
 	return &ComprehendStartDocumentClassificationJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StartDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) (*comprehend.StartDominantLanguageDetectionJobOutput, error) {
 	var output comprehend.StartDominantLanguageDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartDominantLanguageDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartDominantLanguageDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StartDominantLanguageDetectionJobInput) *ComprehendStartDominantLanguageDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartDominantLanguageDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartDominantLanguageDetectionJob", input)
 	return &ComprehendStartDominantLanguageDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StartEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) (*comprehend.StartEntitiesDetectionJobOutput, error) {
 	var output comprehend.StartEntitiesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartEntitiesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartEntitiesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartEntitiesDetectionJobInput) *ComprehendStartEntitiesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartEntitiesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartEntitiesDetectionJob", input)
 	return &ComprehendStartEntitiesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StartKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) (*comprehend.StartKeyPhrasesDetectionJobOutput, error) {
 	var output comprehend.StartKeyPhrasesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartKeyPhrasesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartKeyPhrasesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StartKeyPhrasesDetectionJobInput) *ComprehendStartKeyPhrasesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartKeyPhrasesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartKeyPhrasesDetectionJob", input)
 	return &ComprehendStartKeyPhrasesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StartSentimentDetectionJob(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) (*comprehend.StartSentimentDetectionJobOutput, error) {
 	var output comprehend.StartSentimentDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartSentimentDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartSentimentDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StartSentimentDetectionJobInput) *ComprehendStartSentimentDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartSentimentDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartSentimentDetectionJob", input)
 	return &ComprehendStartSentimentDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StartTopicsDetectionJob(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) (*comprehend.StartTopicsDetectionJobOutput, error) {
 	var output comprehend.StartTopicsDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StartTopicsDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StartTopicsDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StartTopicsDetectionJobAsync(ctx workflow.Context, input *comprehend.StartTopicsDetectionJobInput) *ComprehendStartTopicsDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StartTopicsDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StartTopicsDetectionJob", input)
 	return &ComprehendStartTopicsDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopDominantLanguageDetectionJob(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) (*comprehend.StopDominantLanguageDetectionJobOutput, error) {
 	var output comprehend.StopDominantLanguageDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopDominantLanguageDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopDominantLanguageDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopDominantLanguageDetectionJobAsync(ctx workflow.Context, input *comprehend.StopDominantLanguageDetectionJobInput) *ComprehendStopDominantLanguageDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopDominantLanguageDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopDominantLanguageDetectionJob", input)
 	return &ComprehendStopDominantLanguageDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopEntitiesDetectionJob(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) (*comprehend.StopEntitiesDetectionJobOutput, error) {
 	var output comprehend.StopEntitiesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopEntitiesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopEntitiesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopEntitiesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopEntitiesDetectionJobInput) *ComprehendStopEntitiesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopEntitiesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopEntitiesDetectionJob", input)
 	return &ComprehendStopEntitiesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopKeyPhrasesDetectionJob(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) (*comprehend.StopKeyPhrasesDetectionJobOutput, error) {
 	var output comprehend.StopKeyPhrasesDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopKeyPhrasesDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopKeyPhrasesDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopKeyPhrasesDetectionJobAsync(ctx workflow.Context, input *comprehend.StopKeyPhrasesDetectionJobInput) *ComprehendStopKeyPhrasesDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopKeyPhrasesDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopKeyPhrasesDetectionJob", input)
 	return &ComprehendStopKeyPhrasesDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopSentimentDetectionJob(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) (*comprehend.StopSentimentDetectionJobOutput, error) {
 	var output comprehend.StopSentimentDetectionJobOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopSentimentDetectionJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopSentimentDetectionJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopSentimentDetectionJobAsync(ctx workflow.Context, input *comprehend.StopSentimentDetectionJobInput) *ComprehendStopSentimentDetectionJobResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopSentimentDetectionJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopSentimentDetectionJob", input)
 	return &ComprehendStopSentimentDetectionJobResult{Result: future}
 }
 
 func (a *ComprehendStub) StopTrainingDocumentClassifier(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) (*comprehend.StopTrainingDocumentClassifierOutput, error) {
 	var output comprehend.StopTrainingDocumentClassifierOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopTrainingDocumentClassifier", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopTrainingDocumentClassifier", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopTrainingDocumentClassifierAsync(ctx workflow.Context, input *comprehend.StopTrainingDocumentClassifierInput) *ComprehendStopTrainingDocumentClassifierResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopTrainingDocumentClassifier", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopTrainingDocumentClassifier", input)
 	return &ComprehendStopTrainingDocumentClassifierResult{Result: future}
 }
 
 func (a *ComprehendStub) StopTrainingEntityRecognizer(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) (*comprehend.StopTrainingEntityRecognizerOutput, error) {
 	var output comprehend.StopTrainingEntityRecognizerOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.StopTrainingEntityRecognizer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.StopTrainingEntityRecognizer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) StopTrainingEntityRecognizerAsync(ctx workflow.Context, input *comprehend.StopTrainingEntityRecognizerInput) *ComprehendStopTrainingEntityRecognizerResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.StopTrainingEntityRecognizer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.StopTrainingEntityRecognizer", input)
 	return &ComprehendStopTrainingEntityRecognizerResult{Result: future}
 }
 
 func (a *ComprehendStub) TagResource(ctx workflow.Context, input *comprehend.TagResourceInput) (*comprehend.TagResourceOutput, error) {
 	var output comprehend.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) TagResourceAsync(ctx workflow.Context, input *comprehend.TagResourceInput) *ComprehendTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.TagResource", input)
 	return &ComprehendTagResourceResult{Result: future}
 }
 
 func (a *ComprehendStub) UntagResource(ctx workflow.Context, input *comprehend.UntagResourceInput) (*comprehend.UntagResourceOutput, error) {
 	var output comprehend.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) UntagResourceAsync(ctx workflow.Context, input *comprehend.UntagResourceInput) *ComprehendUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.UntagResource", input)
 	return &ComprehendUntagResourceResult{Result: future}
 }
 
 func (a *ComprehendStub) UpdateEndpoint(ctx workflow.Context, input *comprehend.UpdateEndpointInput) (*comprehend.UpdateEndpointOutput, error) {
 	var output comprehend.UpdateEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Comprehend.UpdateEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.comprehend.UpdateEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ComprehendStub) UpdateEndpointAsync(ctx workflow.Context, input *comprehend.UpdateEndpointInput) *ComprehendUpdateEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Comprehend.UpdateEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.comprehend.UpdateEndpoint", input)
 	return &ComprehendUpdateEndpointResult{Result: future}
 }

@@ -1097,913 +1097,913 @@ func (r *ServicecatalogUpdateTagOptionResult) Get(ctx workflow.Context) (*servic
 
 func (a *ServiceCatalogStub) AcceptPortfolioShare(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) (*servicecatalog.AcceptPortfolioShareOutput, error) {
 	var output servicecatalog.AcceptPortfolioShareOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AcceptPortfolioShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AcceptPortfolioShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AcceptPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.AcceptPortfolioShareInput) *ServicecatalogAcceptPortfolioShareResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AcceptPortfolioShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AcceptPortfolioShare", input)
 	return &ServicecatalogAcceptPortfolioShareResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) AssociateBudgetWithResource(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) (*servicecatalog.AssociateBudgetWithResourceOutput, error) {
 	var output servicecatalog.AssociateBudgetWithResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateBudgetWithResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateBudgetWithResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AssociateBudgetWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateBudgetWithResourceInput) *ServicecatalogAssociateBudgetWithResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateBudgetWithResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateBudgetWithResource", input)
 	return &ServicecatalogAssociateBudgetWithResourceResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) AssociatePrincipalWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) (*servicecatalog.AssociatePrincipalWithPortfolioOutput, error) {
 	var output servicecatalog.AssociatePrincipalWithPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociatePrincipalWithPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociatePrincipalWithPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AssociatePrincipalWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociatePrincipalWithPortfolioInput) *ServicecatalogAssociatePrincipalWithPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociatePrincipalWithPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociatePrincipalWithPortfolio", input)
 	return &ServicecatalogAssociatePrincipalWithPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) AssociateProductWithPortfolio(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) (*servicecatalog.AssociateProductWithPortfolioOutput, error) {
 	var output servicecatalog.AssociateProductWithPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateProductWithPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateProductWithPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AssociateProductWithPortfolioAsync(ctx workflow.Context, input *servicecatalog.AssociateProductWithPortfolioInput) *ServicecatalogAssociateProductWithPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateProductWithPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateProductWithPortfolio", input)
 	return &ServicecatalogAssociateProductWithPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) AssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput, error) {
 	var output servicecatalog.AssociateServiceActionWithProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateServiceActionWithProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateServiceActionWithProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.AssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogAssociateServiceActionWithProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateServiceActionWithProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateServiceActionWithProvisioningArtifact", input)
 	return &ServicecatalogAssociateServiceActionWithProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) AssociateTagOptionWithResource(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) (*servicecatalog.AssociateTagOptionWithResourceOutput, error) {
 	var output servicecatalog.AssociateTagOptionWithResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateTagOptionWithResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateTagOptionWithResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) AssociateTagOptionWithResourceAsync(ctx workflow.Context, input *servicecatalog.AssociateTagOptionWithResourceInput) *ServicecatalogAssociateTagOptionWithResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.AssociateTagOptionWithResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.AssociateTagOptionWithResource", input)
 	return &ServicecatalogAssociateTagOptionWithResourceResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) BatchAssociateServiceActionWithProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) (*servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput, error) {
 	var output servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.BatchAssociateServiceActionWithProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.BatchAssociateServiceActionWithProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) BatchAssociateServiceActionWithProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchAssociateServiceActionWithProvisioningArtifactInput) *ServicecatalogBatchAssociateServiceActionWithProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.BatchAssociateServiceActionWithProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.BatchAssociateServiceActionWithProvisioningArtifact", input)
 	return &ServicecatalogBatchAssociateServiceActionWithProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) BatchDisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput, error) {
 	var output servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.BatchDisassociateServiceActionFromProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) BatchDisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogBatchDisassociateServiceActionFromProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.BatchDisassociateServiceActionFromProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.BatchDisassociateServiceActionFromProvisioningArtifact", input)
 	return &ServicecatalogBatchDisassociateServiceActionFromProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CopyProduct(ctx workflow.Context, input *servicecatalog.CopyProductInput) (*servicecatalog.CopyProductOutput, error) {
 	var output servicecatalog.CopyProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CopyProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CopyProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CopyProductAsync(ctx workflow.Context, input *servicecatalog.CopyProductInput) *ServicecatalogCopyProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CopyProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CopyProduct", input)
 	return &ServicecatalogCopyProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateConstraint(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) (*servicecatalog.CreateConstraintOutput, error) {
 	var output servicecatalog.CreateConstraintOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateConstraint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateConstraint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateConstraintAsync(ctx workflow.Context, input *servicecatalog.CreateConstraintInput) *ServicecatalogCreateConstraintResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateConstraint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateConstraint", input)
 	return &ServicecatalogCreateConstraintResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreatePortfolio(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) (*servicecatalog.CreatePortfolioOutput, error) {
 	var output servicecatalog.CreatePortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreatePortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreatePortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreatePortfolioAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioInput) *ServicecatalogCreatePortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreatePortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreatePortfolio", input)
 	return &ServicecatalogCreatePortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreatePortfolioShare(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) (*servicecatalog.CreatePortfolioShareOutput, error) {
 	var output servicecatalog.CreatePortfolioShareOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreatePortfolioShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreatePortfolioShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreatePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.CreatePortfolioShareInput) *ServicecatalogCreatePortfolioShareResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreatePortfolioShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreatePortfolioShare", input)
 	return &ServicecatalogCreatePortfolioShareResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateProduct(ctx workflow.Context, input *servicecatalog.CreateProductInput) (*servicecatalog.CreateProductOutput, error) {
 	var output servicecatalog.CreateProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateProductAsync(ctx workflow.Context, input *servicecatalog.CreateProductInput) *ServicecatalogCreateProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProduct", input)
 	return &ServicecatalogCreateProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) (*servicecatalog.CreateProvisionedProductPlanOutput, error) {
 	var output servicecatalog.CreateProvisionedProductPlanOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProvisionedProductPlan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProvisionedProductPlan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.CreateProvisionedProductPlanInput) *ServicecatalogCreateProvisionedProductPlanResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProvisionedProductPlan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProvisionedProductPlan", input)
 	return &ServicecatalogCreateProvisionedProductPlanResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) (*servicecatalog.CreateProvisioningArtifactOutput, error) {
 	var output servicecatalog.CreateProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.CreateProvisioningArtifactInput) *ServicecatalogCreateProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateProvisioningArtifact", input)
 	return &ServicecatalogCreateProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateServiceAction(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) (*servicecatalog.CreateServiceActionOutput, error) {
 	var output servicecatalog.CreateServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateServiceActionAsync(ctx workflow.Context, input *servicecatalog.CreateServiceActionInput) *ServicecatalogCreateServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateServiceAction", input)
 	return &ServicecatalogCreateServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) CreateTagOption(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) (*servicecatalog.CreateTagOptionOutput, error) {
 	var output servicecatalog.CreateTagOptionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateTagOption", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateTagOption", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) CreateTagOptionAsync(ctx workflow.Context, input *servicecatalog.CreateTagOptionInput) *ServicecatalogCreateTagOptionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.CreateTagOption", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.CreateTagOption", input)
 	return &ServicecatalogCreateTagOptionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteConstraint(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) (*servicecatalog.DeleteConstraintOutput, error) {
 	var output servicecatalog.DeleteConstraintOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteConstraint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteConstraint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteConstraintAsync(ctx workflow.Context, input *servicecatalog.DeleteConstraintInput) *ServicecatalogDeleteConstraintResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteConstraint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteConstraint", input)
 	return &ServicecatalogDeleteConstraintResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeletePortfolio(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) (*servicecatalog.DeletePortfolioOutput, error) {
 	var output servicecatalog.DeletePortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeletePortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeletePortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeletePortfolioAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioInput) *ServicecatalogDeletePortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeletePortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeletePortfolio", input)
 	return &ServicecatalogDeletePortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeletePortfolioShare(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) (*servicecatalog.DeletePortfolioShareOutput, error) {
 	var output servicecatalog.DeletePortfolioShareOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeletePortfolioShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeletePortfolioShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeletePortfolioShareAsync(ctx workflow.Context, input *servicecatalog.DeletePortfolioShareInput) *ServicecatalogDeletePortfolioShareResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeletePortfolioShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeletePortfolioShare", input)
 	return &ServicecatalogDeletePortfolioShareResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteProduct(ctx workflow.Context, input *servicecatalog.DeleteProductInput) (*servicecatalog.DeleteProductOutput, error) {
 	var output servicecatalog.DeleteProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteProductAsync(ctx workflow.Context, input *servicecatalog.DeleteProductInput) *ServicecatalogDeleteProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProduct", input)
 	return &ServicecatalogDeleteProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) (*servicecatalog.DeleteProvisionedProductPlanOutput, error) {
 	var output servicecatalog.DeleteProvisionedProductPlanOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProvisionedProductPlan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProvisionedProductPlan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisionedProductPlanInput) *ServicecatalogDeleteProvisionedProductPlanResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProvisionedProductPlan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProvisionedProductPlan", input)
 	return &ServicecatalogDeleteProvisionedProductPlanResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) (*servicecatalog.DeleteProvisioningArtifactOutput, error) {
 	var output servicecatalog.DeleteProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DeleteProvisioningArtifactInput) *ServicecatalogDeleteProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteProvisioningArtifact", input)
 	return &ServicecatalogDeleteProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteServiceAction(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) (*servicecatalog.DeleteServiceActionOutput, error) {
 	var output servicecatalog.DeleteServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteServiceActionAsync(ctx workflow.Context, input *servicecatalog.DeleteServiceActionInput) *ServicecatalogDeleteServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteServiceAction", input)
 	return &ServicecatalogDeleteServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DeleteTagOption(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) (*servicecatalog.DeleteTagOptionOutput, error) {
 	var output servicecatalog.DeleteTagOptionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteTagOption", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteTagOption", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DeleteTagOptionAsync(ctx workflow.Context, input *servicecatalog.DeleteTagOptionInput) *ServicecatalogDeleteTagOptionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DeleteTagOption", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DeleteTagOption", input)
 	return &ServicecatalogDeleteTagOptionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeConstraint(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) (*servicecatalog.DescribeConstraintOutput, error) {
 	var output servicecatalog.DescribeConstraintOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeConstraint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeConstraint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeConstraintAsync(ctx workflow.Context, input *servicecatalog.DescribeConstraintInput) *ServicecatalogDescribeConstraintResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeConstraint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeConstraint", input)
 	return &ServicecatalogDescribeConstraintResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeCopyProductStatus(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) (*servicecatalog.DescribeCopyProductStatusOutput, error) {
 	var output servicecatalog.DescribeCopyProductStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeCopyProductStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeCopyProductStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeCopyProductStatusAsync(ctx workflow.Context, input *servicecatalog.DescribeCopyProductStatusInput) *ServicecatalogDescribeCopyProductStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeCopyProductStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeCopyProductStatus", input)
 	return &ServicecatalogDescribeCopyProductStatusResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribePortfolio(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) (*servicecatalog.DescribePortfolioOutput, error) {
 	var output servicecatalog.DescribePortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribePortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribePortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribePortfolioAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioInput) *ServicecatalogDescribePortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribePortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribePortfolio", input)
 	return &ServicecatalogDescribePortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribePortfolioShareStatus(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) (*servicecatalog.DescribePortfolioShareStatusOutput, error) {
 	var output servicecatalog.DescribePortfolioShareStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribePortfolioShareStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribePortfolioShareStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribePortfolioShareStatusAsync(ctx workflow.Context, input *servicecatalog.DescribePortfolioShareStatusInput) *ServicecatalogDescribePortfolioShareStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribePortfolioShareStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribePortfolioShareStatus", input)
 	return &ServicecatalogDescribePortfolioShareStatusResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProduct(ctx workflow.Context, input *servicecatalog.DescribeProductInput) (*servicecatalog.DescribeProductOutput, error) {
 	var output servicecatalog.DescribeProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProductInput) *ServicecatalogDescribeProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProduct", input)
 	return &ServicecatalogDescribeProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProductAsAdmin(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) (*servicecatalog.DescribeProductAsAdminOutput, error) {
 	var output servicecatalog.DescribeProductAsAdminOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProductAsAdmin", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProductAsAdmin", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProductAsAdminAsync(ctx workflow.Context, input *servicecatalog.DescribeProductAsAdminInput) *ServicecatalogDescribeProductAsAdminResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProductAsAdmin", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProductAsAdmin", input)
 	return &ServicecatalogDescribeProductAsAdminResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProductView(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) (*servicecatalog.DescribeProductViewOutput, error) {
 	var output servicecatalog.DescribeProductViewOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProductView", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProductView", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProductViewAsync(ctx workflow.Context, input *servicecatalog.DescribeProductViewInput) *ServicecatalogDescribeProductViewResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProductView", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProductView", input)
 	return &ServicecatalogDescribeProductViewResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProvisionedProduct(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) (*servicecatalog.DescribeProvisionedProductOutput, error) {
 	var output servicecatalog.DescribeProvisionedProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisionedProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisionedProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductInput) *ServicecatalogDescribeProvisionedProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisionedProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisionedProduct", input)
 	return &ServicecatalogDescribeProvisionedProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) (*servicecatalog.DescribeProvisionedProductPlanOutput, error) {
 	var output servicecatalog.DescribeProvisionedProductPlanOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisionedProductPlan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisionedProductPlan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisionedProductPlanInput) *ServicecatalogDescribeProvisionedProductPlanResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisionedProductPlan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisionedProductPlan", input)
 	return &ServicecatalogDescribeProvisionedProductPlanResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) (*servicecatalog.DescribeProvisioningArtifactOutput, error) {
 	var output servicecatalog.DescribeProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningArtifactInput) *ServicecatalogDescribeProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisioningArtifact", input)
 	return &ServicecatalogDescribeProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeProvisioningParameters(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) (*servicecatalog.DescribeProvisioningParametersOutput, error) {
 	var output servicecatalog.DescribeProvisioningParametersOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisioningParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisioningParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeProvisioningParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeProvisioningParametersInput) *ServicecatalogDescribeProvisioningParametersResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeProvisioningParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeProvisioningParameters", input)
 	return &ServicecatalogDescribeProvisioningParametersResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeRecord(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) (*servicecatalog.DescribeRecordOutput, error) {
 	var output servicecatalog.DescribeRecordOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeRecord", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeRecord", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeRecordAsync(ctx workflow.Context, input *servicecatalog.DescribeRecordInput) *ServicecatalogDescribeRecordResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeRecord", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeRecord", input)
 	return &ServicecatalogDescribeRecordResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeServiceAction(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) (*servicecatalog.DescribeServiceActionOutput, error) {
 	var output servicecatalog.DescribeServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeServiceActionAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionInput) *ServicecatalogDescribeServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeServiceAction", input)
 	return &ServicecatalogDescribeServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeServiceActionExecutionParameters(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) (*servicecatalog.DescribeServiceActionExecutionParametersOutput, error) {
 	var output servicecatalog.DescribeServiceActionExecutionParametersOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeServiceActionExecutionParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeServiceActionExecutionParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeServiceActionExecutionParametersAsync(ctx workflow.Context, input *servicecatalog.DescribeServiceActionExecutionParametersInput) *ServicecatalogDescribeServiceActionExecutionParametersResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeServiceActionExecutionParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeServiceActionExecutionParameters", input)
 	return &ServicecatalogDescribeServiceActionExecutionParametersResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DescribeTagOption(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) (*servicecatalog.DescribeTagOptionOutput, error) {
 	var output servicecatalog.DescribeTagOptionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeTagOption", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeTagOption", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DescribeTagOptionAsync(ctx workflow.Context, input *servicecatalog.DescribeTagOptionInput) *ServicecatalogDescribeTagOptionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DescribeTagOption", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DescribeTagOption", input)
 	return &ServicecatalogDescribeTagOptionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) (*servicecatalog.DisableAWSOrganizationsAccessOutput, error) {
 	var output servicecatalog.DisableAWSOrganizationsAccessOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisableAWSOrganizationsAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisableAWSOrganizationsAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.DisableAWSOrganizationsAccessInput) *ServicecatalogDisableAWSOrganizationsAccessResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisableAWSOrganizationsAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisableAWSOrganizationsAccess", input)
 	return &ServicecatalogDisableAWSOrganizationsAccessResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisassociateBudgetFromResource(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) (*servicecatalog.DisassociateBudgetFromResourceOutput, error) {
 	var output servicecatalog.DisassociateBudgetFromResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateBudgetFromResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateBudgetFromResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisassociateBudgetFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateBudgetFromResourceInput) *ServicecatalogDisassociateBudgetFromResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateBudgetFromResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateBudgetFromResource", input)
 	return &ServicecatalogDisassociateBudgetFromResourceResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisassociatePrincipalFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) (*servicecatalog.DisassociatePrincipalFromPortfolioOutput, error) {
 	var output servicecatalog.DisassociatePrincipalFromPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociatePrincipalFromPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociatePrincipalFromPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisassociatePrincipalFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociatePrincipalFromPortfolioInput) *ServicecatalogDisassociatePrincipalFromPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociatePrincipalFromPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociatePrincipalFromPortfolio", input)
 	return &ServicecatalogDisassociatePrincipalFromPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisassociateProductFromPortfolio(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) (*servicecatalog.DisassociateProductFromPortfolioOutput, error) {
 	var output servicecatalog.DisassociateProductFromPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateProductFromPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateProductFromPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisassociateProductFromPortfolioAsync(ctx workflow.Context, input *servicecatalog.DisassociateProductFromPortfolioInput) *ServicecatalogDisassociateProductFromPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateProductFromPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateProductFromPortfolio", input)
 	return &ServicecatalogDisassociateProductFromPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisassociateServiceActionFromProvisioningArtifact(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) (*servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput, error) {
 	var output servicecatalog.DisassociateServiceActionFromProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateServiceActionFromProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateServiceActionFromProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisassociateServiceActionFromProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.DisassociateServiceActionFromProvisioningArtifactInput) *ServicecatalogDisassociateServiceActionFromProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateServiceActionFromProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateServiceActionFromProvisioningArtifact", input)
 	return &ServicecatalogDisassociateServiceActionFromProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) DisassociateTagOptionFromResource(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) (*servicecatalog.DisassociateTagOptionFromResourceOutput, error) {
 	var output servicecatalog.DisassociateTagOptionFromResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateTagOptionFromResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateTagOptionFromResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) DisassociateTagOptionFromResourceAsync(ctx workflow.Context, input *servicecatalog.DisassociateTagOptionFromResourceInput) *ServicecatalogDisassociateTagOptionFromResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.DisassociateTagOptionFromResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.DisassociateTagOptionFromResource", input)
 	return &ServicecatalogDisassociateTagOptionFromResourceResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) EnableAWSOrganizationsAccess(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) (*servicecatalog.EnableAWSOrganizationsAccessOutput, error) {
 	var output servicecatalog.EnableAWSOrganizationsAccessOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.EnableAWSOrganizationsAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.EnableAWSOrganizationsAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) EnableAWSOrganizationsAccessAsync(ctx workflow.Context, input *servicecatalog.EnableAWSOrganizationsAccessInput) *ServicecatalogEnableAWSOrganizationsAccessResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.EnableAWSOrganizationsAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.EnableAWSOrganizationsAccess", input)
 	return &ServicecatalogEnableAWSOrganizationsAccessResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ExecuteProvisionedProductPlan(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) (*servicecatalog.ExecuteProvisionedProductPlanOutput, error) {
 	var output servicecatalog.ExecuteProvisionedProductPlanOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ExecuteProvisionedProductPlan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ExecuteProvisionedProductPlan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ExecuteProvisionedProductPlanAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductPlanInput) *ServicecatalogExecuteProvisionedProductPlanResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ExecuteProvisionedProductPlan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ExecuteProvisionedProductPlan", input)
 	return &ServicecatalogExecuteProvisionedProductPlanResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ExecuteProvisionedProductServiceAction(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) (*servicecatalog.ExecuteProvisionedProductServiceActionOutput, error) {
 	var output servicecatalog.ExecuteProvisionedProductServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ExecuteProvisionedProductServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ExecuteProvisionedProductServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ExecuteProvisionedProductServiceActionAsync(ctx workflow.Context, input *servicecatalog.ExecuteProvisionedProductServiceActionInput) *ServicecatalogExecuteProvisionedProductServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ExecuteProvisionedProductServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ExecuteProvisionedProductServiceAction", input)
 	return &ServicecatalogExecuteProvisionedProductServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatus(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) (*servicecatalog.GetAWSOrganizationsAccessStatusOutput, error) {
 	var output servicecatalog.GetAWSOrganizationsAccessStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.GetAWSOrganizationsAccessStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.GetAWSOrganizationsAccessStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) GetAWSOrganizationsAccessStatusAsync(ctx workflow.Context, input *servicecatalog.GetAWSOrganizationsAccessStatusInput) *ServicecatalogGetAWSOrganizationsAccessStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.GetAWSOrganizationsAccessStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.GetAWSOrganizationsAccessStatus", input)
 	return &ServicecatalogGetAWSOrganizationsAccessStatusResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListAcceptedPortfolioShares(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) (*servicecatalog.ListAcceptedPortfolioSharesOutput, error) {
 	var output servicecatalog.ListAcceptedPortfolioSharesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListAcceptedPortfolioShares", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListAcceptedPortfolioShares", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListAcceptedPortfolioSharesAsync(ctx workflow.Context, input *servicecatalog.ListAcceptedPortfolioSharesInput) *ServicecatalogListAcceptedPortfolioSharesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListAcceptedPortfolioShares", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListAcceptedPortfolioShares", input)
 	return &ServicecatalogListAcceptedPortfolioSharesResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListBudgetsForResource(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) (*servicecatalog.ListBudgetsForResourceOutput, error) {
 	var output servicecatalog.ListBudgetsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListBudgetsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListBudgetsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListBudgetsForResourceAsync(ctx workflow.Context, input *servicecatalog.ListBudgetsForResourceInput) *ServicecatalogListBudgetsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListBudgetsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListBudgetsForResource", input)
 	return &ServicecatalogListBudgetsForResourceResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListConstraintsForPortfolio(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) (*servicecatalog.ListConstraintsForPortfolioOutput, error) {
 	var output servicecatalog.ListConstraintsForPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListConstraintsForPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListConstraintsForPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListConstraintsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListConstraintsForPortfolioInput) *ServicecatalogListConstraintsForPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListConstraintsForPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListConstraintsForPortfolio", input)
 	return &ServicecatalogListConstraintsForPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListLaunchPaths(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) (*servicecatalog.ListLaunchPathsOutput, error) {
 	var output servicecatalog.ListLaunchPathsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListLaunchPaths", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListLaunchPaths", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListLaunchPathsAsync(ctx workflow.Context, input *servicecatalog.ListLaunchPathsInput) *ServicecatalogListLaunchPathsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListLaunchPaths", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListLaunchPaths", input)
 	return &ServicecatalogListLaunchPathsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListOrganizationPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) (*servicecatalog.ListOrganizationPortfolioAccessOutput, error) {
 	var output servicecatalog.ListOrganizationPortfolioAccessOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListOrganizationPortfolioAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListOrganizationPortfolioAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListOrganizationPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListOrganizationPortfolioAccessInput) *ServicecatalogListOrganizationPortfolioAccessResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListOrganizationPortfolioAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListOrganizationPortfolioAccess", input)
 	return &ServicecatalogListOrganizationPortfolioAccessResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListPortfolioAccess(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) (*servicecatalog.ListPortfolioAccessOutput, error) {
 	var output servicecatalog.ListPortfolioAccessOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfolioAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfolioAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListPortfolioAccessAsync(ctx workflow.Context, input *servicecatalog.ListPortfolioAccessInput) *ServicecatalogListPortfolioAccessResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfolioAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfolioAccess", input)
 	return &ServicecatalogListPortfolioAccessResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListPortfolios(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) (*servicecatalog.ListPortfoliosOutput, error) {
 	var output servicecatalog.ListPortfoliosOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfolios", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfolios", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListPortfoliosAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosInput) *ServicecatalogListPortfoliosResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfolios", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfolios", input)
 	return &ServicecatalogListPortfoliosResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListPortfoliosForProduct(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) (*servicecatalog.ListPortfoliosForProductOutput, error) {
 	var output servicecatalog.ListPortfoliosForProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfoliosForProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfoliosForProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListPortfoliosForProductAsync(ctx workflow.Context, input *servicecatalog.ListPortfoliosForProductInput) *ServicecatalogListPortfoliosForProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPortfoliosForProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPortfoliosForProduct", input)
 	return &ServicecatalogListPortfoliosForProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListPrincipalsForPortfolio(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) (*servicecatalog.ListPrincipalsForPortfolioOutput, error) {
 	var output servicecatalog.ListPrincipalsForPortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPrincipalsForPortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPrincipalsForPortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListPrincipalsForPortfolioAsync(ctx workflow.Context, input *servicecatalog.ListPrincipalsForPortfolioInput) *ServicecatalogListPrincipalsForPortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListPrincipalsForPortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListPrincipalsForPortfolio", input)
 	return &ServicecatalogListPrincipalsForPortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListProvisionedProductPlans(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) (*servicecatalog.ListProvisionedProductPlansOutput, error) {
 	var output servicecatalog.ListProvisionedProductPlansOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisionedProductPlans", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisionedProductPlans", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListProvisionedProductPlansAsync(ctx workflow.Context, input *servicecatalog.ListProvisionedProductPlansInput) *ServicecatalogListProvisionedProductPlansResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisionedProductPlans", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisionedProductPlans", input)
 	return &ServicecatalogListProvisionedProductPlansResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListProvisioningArtifacts(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) (*servicecatalog.ListProvisioningArtifactsOutput, error) {
 	var output servicecatalog.ListProvisioningArtifactsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisioningArtifacts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisioningArtifacts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListProvisioningArtifactsAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsInput) *ServicecatalogListProvisioningArtifactsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisioningArtifacts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisioningArtifacts", input)
 	return &ServicecatalogListProvisioningArtifactsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListProvisioningArtifactsForServiceAction(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) (*servicecatalog.ListProvisioningArtifactsForServiceActionOutput, error) {
 	var output servicecatalog.ListProvisioningArtifactsForServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisioningArtifactsForServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisioningArtifactsForServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListProvisioningArtifactsForServiceActionAsync(ctx workflow.Context, input *servicecatalog.ListProvisioningArtifactsForServiceActionInput) *ServicecatalogListProvisioningArtifactsForServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListProvisioningArtifactsForServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListProvisioningArtifactsForServiceAction", input)
 	return &ServicecatalogListProvisioningArtifactsForServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListRecordHistory(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) (*servicecatalog.ListRecordHistoryOutput, error) {
 	var output servicecatalog.ListRecordHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListRecordHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListRecordHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListRecordHistoryAsync(ctx workflow.Context, input *servicecatalog.ListRecordHistoryInput) *ServicecatalogListRecordHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListRecordHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListRecordHistory", input)
 	return &ServicecatalogListRecordHistoryResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListResourcesForTagOption(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) (*servicecatalog.ListResourcesForTagOptionOutput, error) {
 	var output servicecatalog.ListResourcesForTagOptionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListResourcesForTagOption", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListResourcesForTagOption", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListResourcesForTagOptionAsync(ctx workflow.Context, input *servicecatalog.ListResourcesForTagOptionInput) *ServicecatalogListResourcesForTagOptionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListResourcesForTagOption", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListResourcesForTagOption", input)
 	return &ServicecatalogListResourcesForTagOptionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListServiceActions(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) (*servicecatalog.ListServiceActionsOutput, error) {
 	var output servicecatalog.ListServiceActionsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListServiceActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListServiceActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListServiceActionsAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsInput) *ServicecatalogListServiceActionsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListServiceActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListServiceActions", input)
 	return &ServicecatalogListServiceActionsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListServiceActionsForProvisioningArtifact(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) (*servicecatalog.ListServiceActionsForProvisioningArtifactOutput, error) {
 	var output servicecatalog.ListServiceActionsForProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListServiceActionsForProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListServiceActionsForProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListServiceActionsForProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.ListServiceActionsForProvisioningArtifactInput) *ServicecatalogListServiceActionsForProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListServiceActionsForProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListServiceActionsForProvisioningArtifact", input)
 	return &ServicecatalogListServiceActionsForProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListStackInstancesForProvisionedProduct(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) (*servicecatalog.ListStackInstancesForProvisionedProductOutput, error) {
 	var output servicecatalog.ListStackInstancesForProvisionedProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListStackInstancesForProvisionedProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListStackInstancesForProvisionedProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListStackInstancesForProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.ListStackInstancesForProvisionedProductInput) *ServicecatalogListStackInstancesForProvisionedProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListStackInstancesForProvisionedProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListStackInstancesForProvisionedProduct", input)
 	return &ServicecatalogListStackInstancesForProvisionedProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ListTagOptions(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) (*servicecatalog.ListTagOptionsOutput, error) {
 	var output servicecatalog.ListTagOptionsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListTagOptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListTagOptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ListTagOptionsAsync(ctx workflow.Context, input *servicecatalog.ListTagOptionsInput) *ServicecatalogListTagOptionsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ListTagOptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ListTagOptions", input)
 	return &ServicecatalogListTagOptionsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ProvisionProduct(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) (*servicecatalog.ProvisionProductOutput, error) {
 	var output servicecatalog.ProvisionProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ProvisionProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ProvisionProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ProvisionProductAsync(ctx workflow.Context, input *servicecatalog.ProvisionProductInput) *ServicecatalogProvisionProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ProvisionProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ProvisionProduct", input)
 	return &ServicecatalogProvisionProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) RejectPortfolioShare(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) (*servicecatalog.RejectPortfolioShareOutput, error) {
 	var output servicecatalog.RejectPortfolioShareOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.RejectPortfolioShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.RejectPortfolioShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) RejectPortfolioShareAsync(ctx workflow.Context, input *servicecatalog.RejectPortfolioShareInput) *ServicecatalogRejectPortfolioShareResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.RejectPortfolioShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.RejectPortfolioShare", input)
 	return &ServicecatalogRejectPortfolioShareResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) ScanProvisionedProducts(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) (*servicecatalog.ScanProvisionedProductsOutput, error) {
 	var output servicecatalog.ScanProvisionedProductsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.ScanProvisionedProducts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ScanProvisionedProducts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) ScanProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.ScanProvisionedProductsInput) *ServicecatalogScanProvisionedProductsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.ScanProvisionedProducts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.ScanProvisionedProducts", input)
 	return &ServicecatalogScanProvisionedProductsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) SearchProducts(ctx workflow.Context, input *servicecatalog.SearchProductsInput) (*servicecatalog.SearchProductsOutput, error) {
 	var output servicecatalog.SearchProductsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProducts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProducts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) SearchProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProductsInput) *ServicecatalogSearchProductsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProducts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProducts", input)
 	return &ServicecatalogSearchProductsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) SearchProductsAsAdmin(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) (*servicecatalog.SearchProductsAsAdminOutput, error) {
 	var output servicecatalog.SearchProductsAsAdminOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProductsAsAdmin", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProductsAsAdmin", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) SearchProductsAsAdminAsync(ctx workflow.Context, input *servicecatalog.SearchProductsAsAdminInput) *ServicecatalogSearchProductsAsAdminResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProductsAsAdmin", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProductsAsAdmin", input)
 	return &ServicecatalogSearchProductsAsAdminResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) SearchProvisionedProducts(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) (*servicecatalog.SearchProvisionedProductsOutput, error) {
 	var output servicecatalog.SearchProvisionedProductsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProvisionedProducts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProvisionedProducts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) SearchProvisionedProductsAsync(ctx workflow.Context, input *servicecatalog.SearchProvisionedProductsInput) *ServicecatalogSearchProvisionedProductsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.SearchProvisionedProducts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.SearchProvisionedProducts", input)
 	return &ServicecatalogSearchProvisionedProductsResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) TerminateProvisionedProduct(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) (*servicecatalog.TerminateProvisionedProductOutput, error) {
 	var output servicecatalog.TerminateProvisionedProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.TerminateProvisionedProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.TerminateProvisionedProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) TerminateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.TerminateProvisionedProductInput) *ServicecatalogTerminateProvisionedProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.TerminateProvisionedProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.TerminateProvisionedProduct", input)
 	return &ServicecatalogTerminateProvisionedProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateConstraint(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) (*servicecatalog.UpdateConstraintOutput, error) {
 	var output servicecatalog.UpdateConstraintOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateConstraint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateConstraint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateConstraintAsync(ctx workflow.Context, input *servicecatalog.UpdateConstraintInput) *ServicecatalogUpdateConstraintResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateConstraint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateConstraint", input)
 	return &ServicecatalogUpdateConstraintResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdatePortfolio(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) (*servicecatalog.UpdatePortfolioOutput, error) {
 	var output servicecatalog.UpdatePortfolioOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdatePortfolio", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdatePortfolio", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdatePortfolioAsync(ctx workflow.Context, input *servicecatalog.UpdatePortfolioInput) *ServicecatalogUpdatePortfolioResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdatePortfolio", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdatePortfolio", input)
 	return &ServicecatalogUpdatePortfolioResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateProduct(ctx workflow.Context, input *servicecatalog.UpdateProductInput) (*servicecatalog.UpdateProductOutput, error) {
 	var output servicecatalog.UpdateProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProductInput) *ServicecatalogUpdateProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProduct", input)
 	return &ServicecatalogUpdateProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateProvisionedProduct(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) (*servicecatalog.UpdateProvisionedProductOutput, error) {
 	var output servicecatalog.UpdateProvisionedProductOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisionedProduct", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisionedProduct", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateProvisionedProductAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductInput) *ServicecatalogUpdateProvisionedProductResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisionedProduct", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisionedProduct", input)
 	return &ServicecatalogUpdateProvisionedProductResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateProvisionedProductProperties(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) (*servicecatalog.UpdateProvisionedProductPropertiesOutput, error) {
 	var output servicecatalog.UpdateProvisionedProductPropertiesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisionedProductProperties", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisionedProductProperties", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateProvisionedProductPropertiesAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisionedProductPropertiesInput) *ServicecatalogUpdateProvisionedProductPropertiesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisionedProductProperties", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisionedProductProperties", input)
 	return &ServicecatalogUpdateProvisionedProductPropertiesResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateProvisioningArtifact(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) (*servicecatalog.UpdateProvisioningArtifactOutput, error) {
 	var output servicecatalog.UpdateProvisioningArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisioningArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisioningArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateProvisioningArtifactAsync(ctx workflow.Context, input *servicecatalog.UpdateProvisioningArtifactInput) *ServicecatalogUpdateProvisioningArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateProvisioningArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateProvisioningArtifact", input)
 	return &ServicecatalogUpdateProvisioningArtifactResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateServiceAction(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) (*servicecatalog.UpdateServiceActionOutput, error) {
 	var output servicecatalog.UpdateServiceActionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateServiceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateServiceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateServiceActionAsync(ctx workflow.Context, input *servicecatalog.UpdateServiceActionInput) *ServicecatalogUpdateServiceActionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateServiceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateServiceAction", input)
 	return &ServicecatalogUpdateServiceActionResult{Result: future}
 }
 
 func (a *ServiceCatalogStub) UpdateTagOption(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) (*servicecatalog.UpdateTagOptionOutput, error) {
 	var output servicecatalog.UpdateTagOptionOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateTagOption", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateTagOption", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceCatalogStub) UpdateTagOptionAsync(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) *ServicecatalogUpdateTagOptionResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceCatalog.UpdateTagOption", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicecatalog.UpdateTagOption", input)
 	return &ServicecatalogUpdateTagOptionResult{Result: future}
 }

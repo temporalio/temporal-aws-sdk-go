@@ -239,187 +239,187 @@ func (r *MigrationhubPutResourceAttributesResult) Get(ctx workflow.Context) (*mi
 
 func (a *MigrationHubStub) AssociateCreatedArtifact(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) (*migrationhub.AssociateCreatedArtifactOutput, error) {
 	var output migrationhub.AssociateCreatedArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.AssociateCreatedArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateCreatedArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) AssociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.AssociateCreatedArtifactInput) *MigrationhubAssociateCreatedArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.AssociateCreatedArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateCreatedArtifact", input)
 	return &MigrationhubAssociateCreatedArtifactResult{Result: future}
 }
 
 func (a *MigrationHubStub) AssociateDiscoveredResource(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) (*migrationhub.AssociateDiscoveredResourceOutput, error) {
 	var output migrationhub.AssociateDiscoveredResourceOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.AssociateDiscoveredResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateDiscoveredResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) AssociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.AssociateDiscoveredResourceInput) *MigrationhubAssociateDiscoveredResourceResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.AssociateDiscoveredResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.AssociateDiscoveredResource", input)
 	return &MigrationhubAssociateDiscoveredResourceResult{Result: future}
 }
 
 func (a *MigrationHubStub) CreateProgressUpdateStream(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) (*migrationhub.CreateProgressUpdateStreamOutput, error) {
 	var output migrationhub.CreateProgressUpdateStreamOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.CreateProgressUpdateStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.CreateProgressUpdateStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) CreateProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.CreateProgressUpdateStreamInput) *MigrationhubCreateProgressUpdateStreamResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.CreateProgressUpdateStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.CreateProgressUpdateStream", input)
 	return &MigrationhubCreateProgressUpdateStreamResult{Result: future}
 }
 
 func (a *MigrationHubStub) DeleteProgressUpdateStream(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) (*migrationhub.DeleteProgressUpdateStreamOutput, error) {
 	var output migrationhub.DeleteProgressUpdateStreamOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.DeleteProgressUpdateStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.DeleteProgressUpdateStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) DeleteProgressUpdateStreamAsync(ctx workflow.Context, input *migrationhub.DeleteProgressUpdateStreamInput) *MigrationhubDeleteProgressUpdateStreamResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.DeleteProgressUpdateStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DeleteProgressUpdateStream", input)
 	return &MigrationhubDeleteProgressUpdateStreamResult{Result: future}
 }
 
 func (a *MigrationHubStub) DescribeApplicationState(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) (*migrationhub.DescribeApplicationStateOutput, error) {
 	var output migrationhub.DescribeApplicationStateOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.DescribeApplicationState", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeApplicationState", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) DescribeApplicationStateAsync(ctx workflow.Context, input *migrationhub.DescribeApplicationStateInput) *MigrationhubDescribeApplicationStateResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.DescribeApplicationState", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeApplicationState", input)
 	return &MigrationhubDescribeApplicationStateResult{Result: future}
 }
 
 func (a *MigrationHubStub) DescribeMigrationTask(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) (*migrationhub.DescribeMigrationTaskOutput, error) {
 	var output migrationhub.DescribeMigrationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.DescribeMigrationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeMigrationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) DescribeMigrationTaskAsync(ctx workflow.Context, input *migrationhub.DescribeMigrationTaskInput) *MigrationhubDescribeMigrationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.DescribeMigrationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DescribeMigrationTask", input)
 	return &MigrationhubDescribeMigrationTaskResult{Result: future}
 }
 
 func (a *MigrationHubStub) DisassociateCreatedArtifact(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) (*migrationhub.DisassociateCreatedArtifactOutput, error) {
 	var output migrationhub.DisassociateCreatedArtifactOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.DisassociateCreatedArtifact", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateCreatedArtifact", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) DisassociateCreatedArtifactAsync(ctx workflow.Context, input *migrationhub.DisassociateCreatedArtifactInput) *MigrationhubDisassociateCreatedArtifactResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.DisassociateCreatedArtifact", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateCreatedArtifact", input)
 	return &MigrationhubDisassociateCreatedArtifactResult{Result: future}
 }
 
 func (a *MigrationHubStub) DisassociateDiscoveredResource(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) (*migrationhub.DisassociateDiscoveredResourceOutput, error) {
 	var output migrationhub.DisassociateDiscoveredResourceOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.DisassociateDiscoveredResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateDiscoveredResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) DisassociateDiscoveredResourceAsync(ctx workflow.Context, input *migrationhub.DisassociateDiscoveredResourceInput) *MigrationhubDisassociateDiscoveredResourceResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.DisassociateDiscoveredResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.DisassociateDiscoveredResource", input)
 	return &MigrationhubDisassociateDiscoveredResourceResult{Result: future}
 }
 
 func (a *MigrationHubStub) ImportMigrationTask(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) (*migrationhub.ImportMigrationTaskOutput, error) {
 	var output migrationhub.ImportMigrationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ImportMigrationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ImportMigrationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ImportMigrationTaskAsync(ctx workflow.Context, input *migrationhub.ImportMigrationTaskInput) *MigrationhubImportMigrationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ImportMigrationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ImportMigrationTask", input)
 	return &MigrationhubImportMigrationTaskResult{Result: future}
 }
 
 func (a *MigrationHubStub) ListApplicationStates(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) (*migrationhub.ListApplicationStatesOutput, error) {
 	var output migrationhub.ListApplicationStatesOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ListApplicationStates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListApplicationStates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ListApplicationStatesAsync(ctx workflow.Context, input *migrationhub.ListApplicationStatesInput) *MigrationhubListApplicationStatesResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ListApplicationStates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListApplicationStates", input)
 	return &MigrationhubListApplicationStatesResult{Result: future}
 }
 
 func (a *MigrationHubStub) ListCreatedArtifacts(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) (*migrationhub.ListCreatedArtifactsOutput, error) {
 	var output migrationhub.ListCreatedArtifactsOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ListCreatedArtifacts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListCreatedArtifacts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ListCreatedArtifactsAsync(ctx workflow.Context, input *migrationhub.ListCreatedArtifactsInput) *MigrationhubListCreatedArtifactsResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ListCreatedArtifacts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListCreatedArtifacts", input)
 	return &MigrationhubListCreatedArtifactsResult{Result: future}
 }
 
 func (a *MigrationHubStub) ListDiscoveredResources(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) (*migrationhub.ListDiscoveredResourcesOutput, error) {
 	var output migrationhub.ListDiscoveredResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ListDiscoveredResources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListDiscoveredResources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ListDiscoveredResourcesAsync(ctx workflow.Context, input *migrationhub.ListDiscoveredResourcesInput) *MigrationhubListDiscoveredResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ListDiscoveredResources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListDiscoveredResources", input)
 	return &MigrationhubListDiscoveredResourcesResult{Result: future}
 }
 
 func (a *MigrationHubStub) ListMigrationTasks(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) (*migrationhub.ListMigrationTasksOutput, error) {
 	var output migrationhub.ListMigrationTasksOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ListMigrationTasks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListMigrationTasks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ListMigrationTasksAsync(ctx workflow.Context, input *migrationhub.ListMigrationTasksInput) *MigrationhubListMigrationTasksResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ListMigrationTasks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListMigrationTasks", input)
 	return &MigrationhubListMigrationTasksResult{Result: future}
 }
 
 func (a *MigrationHubStub) ListProgressUpdateStreams(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) (*migrationhub.ListProgressUpdateStreamsOutput, error) {
 	var output migrationhub.ListProgressUpdateStreamsOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.ListProgressUpdateStreams", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListProgressUpdateStreams", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) ListProgressUpdateStreamsAsync(ctx workflow.Context, input *migrationhub.ListProgressUpdateStreamsInput) *MigrationhubListProgressUpdateStreamsResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.ListProgressUpdateStreams", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.ListProgressUpdateStreams", input)
 	return &MigrationhubListProgressUpdateStreamsResult{Result: future}
 }
 
 func (a *MigrationHubStub) NotifyApplicationState(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) (*migrationhub.NotifyApplicationStateOutput, error) {
 	var output migrationhub.NotifyApplicationStateOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.NotifyApplicationState", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyApplicationState", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) NotifyApplicationStateAsync(ctx workflow.Context, input *migrationhub.NotifyApplicationStateInput) *MigrationhubNotifyApplicationStateResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.NotifyApplicationState", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyApplicationState", input)
 	return &MigrationhubNotifyApplicationStateResult{Result: future}
 }
 
 func (a *MigrationHubStub) NotifyMigrationTaskState(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) (*migrationhub.NotifyMigrationTaskStateOutput, error) {
 	var output migrationhub.NotifyMigrationTaskStateOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.NotifyMigrationTaskState", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyMigrationTaskState", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) NotifyMigrationTaskStateAsync(ctx workflow.Context, input *migrationhub.NotifyMigrationTaskStateInput) *MigrationhubNotifyMigrationTaskStateResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.NotifyMigrationTaskState", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.NotifyMigrationTaskState", input)
 	return &MigrationhubNotifyMigrationTaskStateResult{Result: future}
 }
 
 func (a *MigrationHubStub) PutResourceAttributes(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) (*migrationhub.PutResourceAttributesOutput, error) {
 	var output migrationhub.PutResourceAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHub.PutResourceAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhub.PutResourceAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubStub) PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *MigrationhubPutResourceAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHub.PutResourceAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhub.PutResourceAttributes", input)
 	return &MigrationhubPutResourceAttributesResult{Result: future}
 }

@@ -992,862 +992,862 @@ func (r *OpsworksUpdateVolumeResult) Get(ctx workflow.Context) (*opsworks.Update
 
 func (a *OpsWorksStub) AssignInstance(ctx workflow.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error) {
 	var output opsworks.AssignInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.AssignInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) AssignInstanceAsync(ctx workflow.Context, input *opsworks.AssignInstanceInput) *OpsworksAssignInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.AssignInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignInstance", input)
 	return &OpsworksAssignInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) AssignVolume(ctx workflow.Context, input *opsworks.AssignVolumeInput) (*opsworks.AssignVolumeOutput, error) {
 	var output opsworks.AssignVolumeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.AssignVolume", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignVolume", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) AssignVolumeAsync(ctx workflow.Context, input *opsworks.AssignVolumeInput) *OpsworksAssignVolumeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.AssignVolume", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssignVolume", input)
 	return &OpsworksAssignVolumeResult{Result: future}
 }
 
 func (a *OpsWorksStub) AssociateElasticIp(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) (*opsworks.AssociateElasticIpOutput, error) {
 	var output opsworks.AssociateElasticIpOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.AssociateElasticIp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.AssociateElasticIp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) AssociateElasticIpAsync(ctx workflow.Context, input *opsworks.AssociateElasticIpInput) *OpsworksAssociateElasticIpResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.AssociateElasticIp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AssociateElasticIp", input)
 	return &OpsworksAssociateElasticIpResult{Result: future}
 }
 
 func (a *OpsWorksStub) AttachElasticLoadBalancer(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) (*opsworks.AttachElasticLoadBalancerOutput, error) {
 	var output opsworks.AttachElasticLoadBalancerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.AttachElasticLoadBalancer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.AttachElasticLoadBalancer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) AttachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.AttachElasticLoadBalancerInput) *OpsworksAttachElasticLoadBalancerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.AttachElasticLoadBalancer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.AttachElasticLoadBalancer", input)
 	return &OpsworksAttachElasticLoadBalancerResult{Result: future}
 }
 
 func (a *OpsWorksStub) CloneStack(ctx workflow.Context, input *opsworks.CloneStackInput) (*opsworks.CloneStackOutput, error) {
 	var output opsworks.CloneStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CloneStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CloneStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CloneStackAsync(ctx workflow.Context, input *opsworks.CloneStackInput) *OpsworksCloneStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CloneStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CloneStack", input)
 	return &OpsworksCloneStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateApp(ctx workflow.Context, input *opsworks.CreateAppInput) (*opsworks.CreateAppOutput, error) {
 	var output opsworks.CreateAppOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateAppAsync(ctx workflow.Context, input *opsworks.CreateAppInput) *OpsworksCreateAppResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateApp", input)
 	return &OpsworksCreateAppResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateDeployment(ctx workflow.Context, input *opsworks.CreateDeploymentInput) (*opsworks.CreateDeploymentOutput, error) {
 	var output opsworks.CreateDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateDeploymentAsync(ctx workflow.Context, input *opsworks.CreateDeploymentInput) *OpsworksCreateDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateDeployment", input)
 	return &OpsworksCreateDeploymentResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateInstance(ctx workflow.Context, input *opsworks.CreateInstanceInput) (*opsworks.CreateInstanceOutput, error) {
 	var output opsworks.CreateInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateInstanceAsync(ctx workflow.Context, input *opsworks.CreateInstanceInput) *OpsworksCreateInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateInstance", input)
 	return &OpsworksCreateInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateLayer(ctx workflow.Context, input *opsworks.CreateLayerInput) (*opsworks.CreateLayerOutput, error) {
 	var output opsworks.CreateLayerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateLayer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateLayer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateLayerAsync(ctx workflow.Context, input *opsworks.CreateLayerInput) *OpsworksCreateLayerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateLayer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateLayer", input)
 	return &OpsworksCreateLayerResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateStack(ctx workflow.Context, input *opsworks.CreateStackInput) (*opsworks.CreateStackOutput, error) {
 	var output opsworks.CreateStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateStackAsync(ctx workflow.Context, input *opsworks.CreateStackInput) *OpsworksCreateStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateStack", input)
 	return &OpsworksCreateStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) CreateUserProfile(ctx workflow.Context, input *opsworks.CreateUserProfileInput) (*opsworks.CreateUserProfileOutput, error) {
 	var output opsworks.CreateUserProfileOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.CreateUserProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateUserProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) CreateUserProfileAsync(ctx workflow.Context, input *opsworks.CreateUserProfileInput) *OpsworksCreateUserProfileResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.CreateUserProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.CreateUserProfile", input)
 	return &OpsworksCreateUserProfileResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeleteApp(ctx workflow.Context, input *opsworks.DeleteAppInput) (*opsworks.DeleteAppOutput, error) {
 	var output opsworks.DeleteAppOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeleteAppAsync(ctx workflow.Context, input *opsworks.DeleteAppInput) *OpsworksDeleteAppResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteApp", input)
 	return &OpsworksDeleteAppResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeleteInstance(ctx workflow.Context, input *opsworks.DeleteInstanceInput) (*opsworks.DeleteInstanceOutput, error) {
 	var output opsworks.DeleteInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeleteInstanceAsync(ctx workflow.Context, input *opsworks.DeleteInstanceInput) *OpsworksDeleteInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteInstance", input)
 	return &OpsworksDeleteInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeleteLayer(ctx workflow.Context, input *opsworks.DeleteLayerInput) (*opsworks.DeleteLayerOutput, error) {
 	var output opsworks.DeleteLayerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteLayer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteLayer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeleteLayerAsync(ctx workflow.Context, input *opsworks.DeleteLayerInput) *OpsworksDeleteLayerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteLayer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteLayer", input)
 	return &OpsworksDeleteLayerResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeleteStack(ctx workflow.Context, input *opsworks.DeleteStackInput) (*opsworks.DeleteStackOutput, error) {
 	var output opsworks.DeleteStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeleteStackAsync(ctx workflow.Context, input *opsworks.DeleteStackInput) *OpsworksDeleteStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteStack", input)
 	return &OpsworksDeleteStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeleteUserProfile(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) (*opsworks.DeleteUserProfileOutput, error) {
 	var output opsworks.DeleteUserProfileOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteUserProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteUserProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeleteUserProfileAsync(ctx workflow.Context, input *opsworks.DeleteUserProfileInput) *OpsworksDeleteUserProfileResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeleteUserProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeleteUserProfile", input)
 	return &OpsworksDeleteUserProfileResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeregisterEcsCluster(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) (*opsworks.DeregisterEcsClusterOutput, error) {
 	var output opsworks.DeregisterEcsClusterOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterEcsCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterEcsCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeregisterEcsClusterAsync(ctx workflow.Context, input *opsworks.DeregisterEcsClusterInput) *OpsworksDeregisterEcsClusterResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterEcsCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterEcsCluster", input)
 	return &OpsworksDeregisterEcsClusterResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeregisterElasticIp(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) (*opsworks.DeregisterElasticIpOutput, error) {
 	var output opsworks.DeregisterElasticIpOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterElasticIp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterElasticIp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeregisterElasticIpAsync(ctx workflow.Context, input *opsworks.DeregisterElasticIpInput) *OpsworksDeregisterElasticIpResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterElasticIp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterElasticIp", input)
 	return &OpsworksDeregisterElasticIpResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeregisterInstance(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) (*opsworks.DeregisterInstanceOutput, error) {
 	var output opsworks.DeregisterInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeregisterInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterInstanceInput) *OpsworksDeregisterInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterInstance", input)
 	return &OpsworksDeregisterInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeregisterRdsDbInstance(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) (*opsworks.DeregisterRdsDbInstanceOutput, error) {
 	var output opsworks.DeregisterRdsDbInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterRdsDbInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterRdsDbInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeregisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.DeregisterRdsDbInstanceInput) *OpsworksDeregisterRdsDbInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterRdsDbInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterRdsDbInstance", input)
 	return &OpsworksDeregisterRdsDbInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) DeregisterVolume(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) (*opsworks.DeregisterVolumeOutput, error) {
 	var output opsworks.DeregisterVolumeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterVolume", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterVolume", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DeregisterVolumeAsync(ctx workflow.Context, input *opsworks.DeregisterVolumeInput) *OpsworksDeregisterVolumeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DeregisterVolume", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DeregisterVolume", input)
 	return &OpsworksDeregisterVolumeResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeAgentVersions(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) (*opsworks.DescribeAgentVersionsOutput, error) {
 	var output opsworks.DescribeAgentVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeAgentVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeAgentVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeAgentVersionsAsync(ctx workflow.Context, input *opsworks.DescribeAgentVersionsInput) *OpsworksDescribeAgentVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeAgentVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeAgentVersions", input)
 	return &OpsworksDescribeAgentVersionsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeApps(ctx workflow.Context, input *opsworks.DescribeAppsInput) (*opsworks.DescribeAppsOutput, error) {
 	var output opsworks.DescribeAppsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeApps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeApps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeAppsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) *OpsworksDescribeAppsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeApps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeApps", input)
 	return &OpsworksDescribeAppsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeCommands(ctx workflow.Context, input *opsworks.DescribeCommandsInput) (*opsworks.DescribeCommandsOutput, error) {
 	var output opsworks.DescribeCommandsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeCommands", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeCommands", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeCommandsAsync(ctx workflow.Context, input *opsworks.DescribeCommandsInput) *OpsworksDescribeCommandsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeCommands", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeCommands", input)
 	return &OpsworksDescribeCommandsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeDeployments(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) (*opsworks.DescribeDeploymentsOutput, error) {
 	var output opsworks.DescribeDeploymentsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeDeployments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeDeployments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeDeploymentsAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) *OpsworksDescribeDeploymentsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeDeployments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeDeployments", input)
 	return &OpsworksDescribeDeploymentsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeEcsClusters(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) (*opsworks.DescribeEcsClustersOutput, error) {
 	var output opsworks.DescribeEcsClustersOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeEcsClusters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeEcsClusters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeEcsClustersAsync(ctx workflow.Context, input *opsworks.DescribeEcsClustersInput) *OpsworksDescribeEcsClustersResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeEcsClusters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeEcsClusters", input)
 	return &OpsworksDescribeEcsClustersResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeElasticIps(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) (*opsworks.DescribeElasticIpsOutput, error) {
 	var output opsworks.DescribeElasticIpsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeElasticIps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticIps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeElasticIpsAsync(ctx workflow.Context, input *opsworks.DescribeElasticIpsInput) *OpsworksDescribeElasticIpsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeElasticIps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticIps", input)
 	return &OpsworksDescribeElasticIpsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeElasticLoadBalancers(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) (*opsworks.DescribeElasticLoadBalancersOutput, error) {
 	var output opsworks.DescribeElasticLoadBalancersOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeElasticLoadBalancers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticLoadBalancers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeElasticLoadBalancersAsync(ctx workflow.Context, input *opsworks.DescribeElasticLoadBalancersInput) *OpsworksDescribeElasticLoadBalancersResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeElasticLoadBalancers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeElasticLoadBalancers", input)
 	return &OpsworksDescribeElasticLoadBalancersResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeInstances(ctx workflow.Context, input *opsworks.DescribeInstancesInput) (*opsworks.DescribeInstancesOutput, error) {
 	var output opsworks.DescribeInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeInstancesAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) *OpsworksDescribeInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeInstances", input)
 	return &OpsworksDescribeInstancesResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeLayers(ctx workflow.Context, input *opsworks.DescribeLayersInput) (*opsworks.DescribeLayersOutput, error) {
 	var output opsworks.DescribeLayersOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeLayers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLayers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeLayersAsync(ctx workflow.Context, input *opsworks.DescribeLayersInput) *OpsworksDescribeLayersResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeLayers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLayers", input)
 	return &OpsworksDescribeLayersResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) (*opsworks.DescribeLoadBasedAutoScalingOutput, error) {
 	var output opsworks.DescribeLoadBasedAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeLoadBasedAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLoadBasedAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeLoadBasedAutoScalingInput) *OpsworksDescribeLoadBasedAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeLoadBasedAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeLoadBasedAutoScaling", input)
 	return &OpsworksDescribeLoadBasedAutoScalingResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeMyUserProfile(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) (*opsworks.DescribeMyUserProfileOutput, error) {
 	var output opsworks.DescribeMyUserProfileOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeMyUserProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeMyUserProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeMyUserProfileAsync(ctx workflow.Context, input *opsworks.DescribeMyUserProfileInput) *OpsworksDescribeMyUserProfileResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeMyUserProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeMyUserProfile", input)
 	return &OpsworksDescribeMyUserProfileResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeOperatingSystems(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) (*opsworks.DescribeOperatingSystemsOutput, error) {
 	var output opsworks.DescribeOperatingSystemsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeOperatingSystems", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeOperatingSystems", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeOperatingSystemsAsync(ctx workflow.Context, input *opsworks.DescribeOperatingSystemsInput) *OpsworksDescribeOperatingSystemsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeOperatingSystems", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeOperatingSystems", input)
 	return &OpsworksDescribeOperatingSystemsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribePermissions(ctx workflow.Context, input *opsworks.DescribePermissionsInput) (*opsworks.DescribePermissionsOutput, error) {
 	var output opsworks.DescribePermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribePermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribePermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribePermissionsAsync(ctx workflow.Context, input *opsworks.DescribePermissionsInput) *OpsworksDescribePermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribePermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribePermissions", input)
 	return &OpsworksDescribePermissionsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeRaidArrays(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) (*opsworks.DescribeRaidArraysOutput, error) {
 	var output opsworks.DescribeRaidArraysOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeRaidArrays", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRaidArrays", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeRaidArraysAsync(ctx workflow.Context, input *opsworks.DescribeRaidArraysInput) *OpsworksDescribeRaidArraysResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeRaidArrays", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRaidArrays", input)
 	return &OpsworksDescribeRaidArraysResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeRdsDbInstances(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) (*opsworks.DescribeRdsDbInstancesOutput, error) {
 	var output opsworks.DescribeRdsDbInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeRdsDbInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRdsDbInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeRdsDbInstancesAsync(ctx workflow.Context, input *opsworks.DescribeRdsDbInstancesInput) *OpsworksDescribeRdsDbInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeRdsDbInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeRdsDbInstances", input)
 	return &OpsworksDescribeRdsDbInstancesResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeServiceErrors(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) (*opsworks.DescribeServiceErrorsOutput, error) {
 	var output opsworks.DescribeServiceErrorsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeServiceErrors", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeServiceErrors", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeServiceErrorsAsync(ctx workflow.Context, input *opsworks.DescribeServiceErrorsInput) *OpsworksDescribeServiceErrorsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeServiceErrors", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeServiceErrors", input)
 	return &OpsworksDescribeServiceErrorsResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeStackProvisioningParameters(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) (*opsworks.DescribeStackProvisioningParametersOutput, error) {
 	var output opsworks.DescribeStackProvisioningParametersOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStackProvisioningParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackProvisioningParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeStackProvisioningParametersAsync(ctx workflow.Context, input *opsworks.DescribeStackProvisioningParametersInput) *OpsworksDescribeStackProvisioningParametersResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStackProvisioningParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackProvisioningParameters", input)
 	return &OpsworksDescribeStackProvisioningParametersResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeStackSummary(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) (*opsworks.DescribeStackSummaryOutput, error) {
 	var output opsworks.DescribeStackSummaryOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStackSummary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackSummary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeStackSummaryAsync(ctx workflow.Context, input *opsworks.DescribeStackSummaryInput) *OpsworksDescribeStackSummaryResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStackSummary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStackSummary", input)
 	return &OpsworksDescribeStackSummaryResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeStacks(ctx workflow.Context, input *opsworks.DescribeStacksInput) (*opsworks.DescribeStacksOutput, error) {
 	var output opsworks.DescribeStacksOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStacks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStacks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeStacksAsync(ctx workflow.Context, input *opsworks.DescribeStacksInput) *OpsworksDescribeStacksResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeStacks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeStacks", input)
 	return &OpsworksDescribeStacksResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) (*opsworks.DescribeTimeBasedAutoScalingOutput, error) {
 	var output opsworks.DescribeTimeBasedAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeTimeBasedAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeTimeBasedAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.DescribeTimeBasedAutoScalingInput) *OpsworksDescribeTimeBasedAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeTimeBasedAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeTimeBasedAutoScaling", input)
 	return &OpsworksDescribeTimeBasedAutoScalingResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeUserProfiles(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) (*opsworks.DescribeUserProfilesOutput, error) {
 	var output opsworks.DescribeUserProfilesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeUserProfiles", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeUserProfiles", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeUserProfilesAsync(ctx workflow.Context, input *opsworks.DescribeUserProfilesInput) *OpsworksDescribeUserProfilesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeUserProfiles", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeUserProfiles", input)
 	return &OpsworksDescribeUserProfilesResult{Result: future}
 }
 
 func (a *OpsWorksStub) DescribeVolumes(ctx workflow.Context, input *opsworks.DescribeVolumesInput) (*opsworks.DescribeVolumesOutput, error) {
 	var output opsworks.DescribeVolumesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeVolumes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeVolumes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DescribeVolumesAsync(ctx workflow.Context, input *opsworks.DescribeVolumesInput) *OpsworksDescribeVolumesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DescribeVolumes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DescribeVolumes", input)
 	return &OpsworksDescribeVolumesResult{Result: future}
 }
 
 func (a *OpsWorksStub) DetachElasticLoadBalancer(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) (*opsworks.DetachElasticLoadBalancerOutput, error) {
 	var output opsworks.DetachElasticLoadBalancerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DetachElasticLoadBalancer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DetachElasticLoadBalancer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DetachElasticLoadBalancerAsync(ctx workflow.Context, input *opsworks.DetachElasticLoadBalancerInput) *OpsworksDetachElasticLoadBalancerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DetachElasticLoadBalancer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DetachElasticLoadBalancer", input)
 	return &OpsworksDetachElasticLoadBalancerResult{Result: future}
 }
 
 func (a *OpsWorksStub) DisassociateElasticIp(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) (*opsworks.DisassociateElasticIpOutput, error) {
 	var output opsworks.DisassociateElasticIpOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.DisassociateElasticIp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.DisassociateElasticIp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) DisassociateElasticIpAsync(ctx workflow.Context, input *opsworks.DisassociateElasticIpInput) *OpsworksDisassociateElasticIpResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.DisassociateElasticIp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.DisassociateElasticIp", input)
 	return &OpsworksDisassociateElasticIpResult{Result: future}
 }
 
 func (a *OpsWorksStub) GetHostnameSuggestion(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) (*opsworks.GetHostnameSuggestionOutput, error) {
 	var output opsworks.GetHostnameSuggestionOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.GetHostnameSuggestion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.GetHostnameSuggestion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) GetHostnameSuggestionAsync(ctx workflow.Context, input *opsworks.GetHostnameSuggestionInput) *OpsworksGetHostnameSuggestionResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.GetHostnameSuggestion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.GetHostnameSuggestion", input)
 	return &OpsworksGetHostnameSuggestionResult{Result: future}
 }
 
 func (a *OpsWorksStub) GrantAccess(ctx workflow.Context, input *opsworks.GrantAccessInput) (*opsworks.GrantAccessOutput, error) {
 	var output opsworks.GrantAccessOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.GrantAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.GrantAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) GrantAccessAsync(ctx workflow.Context, input *opsworks.GrantAccessInput) *OpsworksGrantAccessResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.GrantAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.GrantAccess", input)
 	return &OpsworksGrantAccessResult{Result: future}
 }
 
 func (a *OpsWorksStub) ListTags(ctx workflow.Context, input *opsworks.ListTagsInput) (*opsworks.ListTagsOutput, error) {
 	var output opsworks.ListTagsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.ListTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.ListTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) ListTagsAsync(ctx workflow.Context, input *opsworks.ListTagsInput) *OpsworksListTagsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.ListTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.ListTags", input)
 	return &OpsworksListTagsResult{Result: future}
 }
 
 func (a *OpsWorksStub) RebootInstance(ctx workflow.Context, input *opsworks.RebootInstanceInput) (*opsworks.RebootInstanceOutput, error) {
 	var output opsworks.RebootInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RebootInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RebootInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RebootInstanceAsync(ctx workflow.Context, input *opsworks.RebootInstanceInput) *OpsworksRebootInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RebootInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RebootInstance", input)
 	return &OpsworksRebootInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) RegisterEcsCluster(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) (*opsworks.RegisterEcsClusterOutput, error) {
 	var output opsworks.RegisterEcsClusterOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterEcsCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterEcsCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RegisterEcsClusterAsync(ctx workflow.Context, input *opsworks.RegisterEcsClusterInput) *OpsworksRegisterEcsClusterResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterEcsCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterEcsCluster", input)
 	return &OpsworksRegisterEcsClusterResult{Result: future}
 }
 
 func (a *OpsWorksStub) RegisterElasticIp(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) (*opsworks.RegisterElasticIpOutput, error) {
 	var output opsworks.RegisterElasticIpOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterElasticIp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterElasticIp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RegisterElasticIpAsync(ctx workflow.Context, input *opsworks.RegisterElasticIpInput) *OpsworksRegisterElasticIpResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterElasticIp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterElasticIp", input)
 	return &OpsworksRegisterElasticIpResult{Result: future}
 }
 
 func (a *OpsWorksStub) RegisterInstance(ctx workflow.Context, input *opsworks.RegisterInstanceInput) (*opsworks.RegisterInstanceOutput, error) {
 	var output opsworks.RegisterInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RegisterInstanceAsync(ctx workflow.Context, input *opsworks.RegisterInstanceInput) *OpsworksRegisterInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterInstance", input)
 	return &OpsworksRegisterInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) RegisterRdsDbInstance(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) (*opsworks.RegisterRdsDbInstanceOutput, error) {
 	var output opsworks.RegisterRdsDbInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterRdsDbInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterRdsDbInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RegisterRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.RegisterRdsDbInstanceInput) *OpsworksRegisterRdsDbInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterRdsDbInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterRdsDbInstance", input)
 	return &OpsworksRegisterRdsDbInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) RegisterVolume(ctx workflow.Context, input *opsworks.RegisterVolumeInput) (*opsworks.RegisterVolumeOutput, error) {
 	var output opsworks.RegisterVolumeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterVolume", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterVolume", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) RegisterVolumeAsync(ctx workflow.Context, input *opsworks.RegisterVolumeInput) *OpsworksRegisterVolumeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.RegisterVolume", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.RegisterVolume", input)
 	return &OpsworksRegisterVolumeResult{Result: future}
 }
 
 func (a *OpsWorksStub) SetLoadBasedAutoScaling(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) (*opsworks.SetLoadBasedAutoScalingOutput, error) {
 	var output opsworks.SetLoadBasedAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.SetLoadBasedAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.SetLoadBasedAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) SetLoadBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetLoadBasedAutoScalingInput) *OpsworksSetLoadBasedAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.SetLoadBasedAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetLoadBasedAutoScaling", input)
 	return &OpsworksSetLoadBasedAutoScalingResult{Result: future}
 }
 
 func (a *OpsWorksStub) SetPermission(ctx workflow.Context, input *opsworks.SetPermissionInput) (*opsworks.SetPermissionOutput, error) {
 	var output opsworks.SetPermissionOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.SetPermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.SetPermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) SetPermissionAsync(ctx workflow.Context, input *opsworks.SetPermissionInput) *OpsworksSetPermissionResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.SetPermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetPermission", input)
 	return &OpsworksSetPermissionResult{Result: future}
 }
 
 func (a *OpsWorksStub) SetTimeBasedAutoScaling(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) (*opsworks.SetTimeBasedAutoScalingOutput, error) {
 	var output opsworks.SetTimeBasedAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.SetTimeBasedAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.SetTimeBasedAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) SetTimeBasedAutoScalingAsync(ctx workflow.Context, input *opsworks.SetTimeBasedAutoScalingInput) *OpsworksSetTimeBasedAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.SetTimeBasedAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.SetTimeBasedAutoScaling", input)
 	return &OpsworksSetTimeBasedAutoScalingResult{Result: future}
 }
 
 func (a *OpsWorksStub) StartInstance(ctx workflow.Context, input *opsworks.StartInstanceInput) (*opsworks.StartInstanceOutput, error) {
 	var output opsworks.StartInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.StartInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.StartInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) StartInstanceAsync(ctx workflow.Context, input *opsworks.StartInstanceInput) *OpsworksStartInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.StartInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StartInstance", input)
 	return &OpsworksStartInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) StartStack(ctx workflow.Context, input *opsworks.StartStackInput) (*opsworks.StartStackOutput, error) {
 	var output opsworks.StartStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.StartStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.StartStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) StartStackAsync(ctx workflow.Context, input *opsworks.StartStackInput) *OpsworksStartStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.StartStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StartStack", input)
 	return &OpsworksStartStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) StopInstance(ctx workflow.Context, input *opsworks.StopInstanceInput) (*opsworks.StopInstanceOutput, error) {
 	var output opsworks.StopInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.StopInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.StopInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) StopInstanceAsync(ctx workflow.Context, input *opsworks.StopInstanceInput) *OpsworksStopInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.StopInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StopInstance", input)
 	return &OpsworksStopInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) StopStack(ctx workflow.Context, input *opsworks.StopStackInput) (*opsworks.StopStackOutput, error) {
 	var output opsworks.StopStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.StopStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.StopStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) StopStackAsync(ctx workflow.Context, input *opsworks.StopStackInput) *OpsworksStopStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.StopStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.StopStack", input)
 	return &OpsworksStopStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) TagResource(ctx workflow.Context, input *opsworks.TagResourceInput) (*opsworks.TagResourceOutput, error) {
 	var output opsworks.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) TagResourceAsync(ctx workflow.Context, input *opsworks.TagResourceInput) *OpsworksTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.TagResource", input)
 	return &OpsworksTagResourceResult{Result: future}
 }
 
 func (a *OpsWorksStub) UnassignInstance(ctx workflow.Context, input *opsworks.UnassignInstanceInput) (*opsworks.UnassignInstanceOutput, error) {
 	var output opsworks.UnassignInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UnassignInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UnassignInstanceAsync(ctx workflow.Context, input *opsworks.UnassignInstanceInput) *OpsworksUnassignInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UnassignInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignInstance", input)
 	return &OpsworksUnassignInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) UnassignVolume(ctx workflow.Context, input *opsworks.UnassignVolumeInput) (*opsworks.UnassignVolumeOutput, error) {
 	var output opsworks.UnassignVolumeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UnassignVolume", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignVolume", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UnassignVolumeAsync(ctx workflow.Context, input *opsworks.UnassignVolumeInput) *OpsworksUnassignVolumeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UnassignVolume", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UnassignVolume", input)
 	return &OpsworksUnassignVolumeResult{Result: future}
 }
 
 func (a *OpsWorksStub) UntagResource(ctx workflow.Context, input *opsworks.UntagResourceInput) (*opsworks.UntagResourceOutput, error) {
 	var output opsworks.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UntagResourceAsync(ctx workflow.Context, input *opsworks.UntagResourceInput) *OpsworksUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UntagResource", input)
 	return &OpsworksUntagResourceResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateApp(ctx workflow.Context, input *opsworks.UpdateAppInput) (*opsworks.UpdateAppOutput, error) {
 	var output opsworks.UpdateAppOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateAppAsync(ctx workflow.Context, input *opsworks.UpdateAppInput) *OpsworksUpdateAppResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateApp", input)
 	return &OpsworksUpdateAppResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateElasticIp(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) (*opsworks.UpdateElasticIpOutput, error) {
 	var output opsworks.UpdateElasticIpOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateElasticIp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateElasticIp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateElasticIpAsync(ctx workflow.Context, input *opsworks.UpdateElasticIpInput) *OpsworksUpdateElasticIpResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateElasticIp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateElasticIp", input)
 	return &OpsworksUpdateElasticIpResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateInstance(ctx workflow.Context, input *opsworks.UpdateInstanceInput) (*opsworks.UpdateInstanceOutput, error) {
 	var output opsworks.UpdateInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateInstanceAsync(ctx workflow.Context, input *opsworks.UpdateInstanceInput) *OpsworksUpdateInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateInstance", input)
 	return &OpsworksUpdateInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateLayer(ctx workflow.Context, input *opsworks.UpdateLayerInput) (*opsworks.UpdateLayerOutput, error) {
 	var output opsworks.UpdateLayerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateLayer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateLayer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateLayerAsync(ctx workflow.Context, input *opsworks.UpdateLayerInput) *OpsworksUpdateLayerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateLayer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateLayer", input)
 	return &OpsworksUpdateLayerResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateMyUserProfile(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) (*opsworks.UpdateMyUserProfileOutput, error) {
 	var output opsworks.UpdateMyUserProfileOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateMyUserProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateMyUserProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateMyUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateMyUserProfileInput) *OpsworksUpdateMyUserProfileResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateMyUserProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateMyUserProfile", input)
 	return &OpsworksUpdateMyUserProfileResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateRdsDbInstance(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) (*opsworks.UpdateRdsDbInstanceOutput, error) {
 	var output opsworks.UpdateRdsDbInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateRdsDbInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateRdsDbInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateRdsDbInstanceAsync(ctx workflow.Context, input *opsworks.UpdateRdsDbInstanceInput) *OpsworksUpdateRdsDbInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateRdsDbInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateRdsDbInstance", input)
 	return &OpsworksUpdateRdsDbInstanceResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateStack(ctx workflow.Context, input *opsworks.UpdateStackInput) (*opsworks.UpdateStackOutput, error) {
 	var output opsworks.UpdateStackOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateStackAsync(ctx workflow.Context, input *opsworks.UpdateStackInput) *OpsworksUpdateStackResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateStack", input)
 	return &OpsworksUpdateStackResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateUserProfile(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) (*opsworks.UpdateUserProfileOutput, error) {
 	var output opsworks.UpdateUserProfileOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateUserProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateUserProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateUserProfileAsync(ctx workflow.Context, input *opsworks.UpdateUserProfileInput) *OpsworksUpdateUserProfileResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateUserProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateUserProfile", input)
 	return &OpsworksUpdateUserProfileResult{Result: future}
 }
 
 func (a *OpsWorksStub) UpdateVolume(ctx workflow.Context, input *opsworks.UpdateVolumeInput) (*opsworks.UpdateVolumeOutput, error) {
 	var output opsworks.UpdateVolumeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateVolume", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateVolume", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksStub) UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsworksUpdateVolumeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorks.UpdateVolume", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworks.UpdateVolume", input)
 	return &OpsworksUpdateVolumeResult{Result: future}
 }
 
 func (a *OpsWorksStub) WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilAppExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilAppExists", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilAppExistsAsync(ctx workflow.Context, input *opsworks.DescribeAppsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilAppExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilAppExists", input)
 }
 
 func (a *OpsWorksStub) WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilDeploymentSuccessful", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilDeploymentSuccessful", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilDeploymentSuccessfulAsync(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilDeploymentSuccessful", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilDeploymentSuccessful", input)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceOnline", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceOnline", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceOnlineAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceOnline", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceOnline", input)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceRegistered", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceRegistered", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceRegisteredAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceRegistered", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceRegistered", input)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceStopped", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceStopped", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceStoppedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceStopped", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceStopped", input)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceTerminated", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceTerminated", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksStub) WaitUntilInstanceTerminatedAsync(ctx workflow.Context, input *opsworks.DescribeInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorks.WaitUntilInstanceTerminated", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworks.WaitUntilInstanceTerminated", input)
 }

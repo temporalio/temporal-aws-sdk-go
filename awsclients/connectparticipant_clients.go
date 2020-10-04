@@ -83,55 +83,55 @@ func (r *ConnectparticipantSendMessageResult) Get(ctx workflow.Context) (*connec
 
 func (a *ConnectParticipantStub) CreateParticipantConnection(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) (*connectparticipant.CreateParticipantConnectionOutput, error) {
 	var output connectparticipant.CreateParticipantConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ConnectParticipant.CreateParticipantConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.connectparticipant.CreateParticipantConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ConnectParticipantStub) CreateParticipantConnectionAsync(ctx workflow.Context, input *connectparticipant.CreateParticipantConnectionInput) *ConnectparticipantCreateParticipantConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ConnectParticipant.CreateParticipantConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.connectparticipant.CreateParticipantConnection", input)
 	return &ConnectparticipantCreateParticipantConnectionResult{Result: future}
 }
 
 func (a *ConnectParticipantStub) DisconnectParticipant(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) (*connectparticipant.DisconnectParticipantOutput, error) {
 	var output connectparticipant.DisconnectParticipantOutput
-	err := workflow.ExecuteActivity(ctx, "ConnectParticipant.DisconnectParticipant", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.connectparticipant.DisconnectParticipant", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ConnectParticipantStub) DisconnectParticipantAsync(ctx workflow.Context, input *connectparticipant.DisconnectParticipantInput) *ConnectparticipantDisconnectParticipantResult {
-	future := workflow.ExecuteActivity(ctx, "ConnectParticipant.DisconnectParticipant", input)
+	future := workflow.ExecuteActivity(ctx, "aws.connectparticipant.DisconnectParticipant", input)
 	return &ConnectparticipantDisconnectParticipantResult{Result: future}
 }
 
 func (a *ConnectParticipantStub) GetTranscript(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) (*connectparticipant.GetTranscriptOutput, error) {
 	var output connectparticipant.GetTranscriptOutput
-	err := workflow.ExecuteActivity(ctx, "ConnectParticipant.GetTranscript", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.connectparticipant.GetTranscript", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ConnectParticipantStub) GetTranscriptAsync(ctx workflow.Context, input *connectparticipant.GetTranscriptInput) *ConnectparticipantGetTranscriptResult {
-	future := workflow.ExecuteActivity(ctx, "ConnectParticipant.GetTranscript", input)
+	future := workflow.ExecuteActivity(ctx, "aws.connectparticipant.GetTranscript", input)
 	return &ConnectparticipantGetTranscriptResult{Result: future}
 }
 
 func (a *ConnectParticipantStub) SendEvent(ctx workflow.Context, input *connectparticipant.SendEventInput) (*connectparticipant.SendEventOutput, error) {
 	var output connectparticipant.SendEventOutput
-	err := workflow.ExecuteActivity(ctx, "ConnectParticipant.SendEvent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.connectparticipant.SendEvent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ConnectParticipantStub) SendEventAsync(ctx workflow.Context, input *connectparticipant.SendEventInput) *ConnectparticipantSendEventResult {
-	future := workflow.ExecuteActivity(ctx, "ConnectParticipant.SendEvent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.connectparticipant.SendEvent", input)
 	return &ConnectparticipantSendEventResult{Result: future}
 }
 
 func (a *ConnectParticipantStub) SendMessage(ctx workflow.Context, input *connectparticipant.SendMessageInput) (*connectparticipant.SendMessageOutput, error) {
 	var output connectparticipant.SendMessageOutput
-	err := workflow.ExecuteActivity(ctx, "ConnectParticipant.SendMessage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.connectparticipant.SendMessage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ConnectParticipantStub) SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *ConnectparticipantSendMessageResult {
-	future := workflow.ExecuteActivity(ctx, "ConnectParticipant.SendMessage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.connectparticipant.SendMessage", input)
 	return &ConnectparticipantSendMessageResult{Result: future}
 }

@@ -356,286 +356,286 @@ func (r *FmsUntagResourceResult) Get(ctx workflow.Context) (*fms.UntagResourceOu
 
 func (a *FMSStub) AssociateAdminAccount(ctx workflow.Context, input *fms.AssociateAdminAccountInput) (*fms.AssociateAdminAccountOutput, error) {
 	var output fms.AssociateAdminAccountOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.AssociateAdminAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.AssociateAdminAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) AssociateAdminAccountAsync(ctx workflow.Context, input *fms.AssociateAdminAccountInput) *FmsAssociateAdminAccountResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.AssociateAdminAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.AssociateAdminAccount", input)
 	return &FmsAssociateAdminAccountResult{Result: future}
 }
 
 func (a *FMSStub) DeleteAppsList(ctx workflow.Context, input *fms.DeleteAppsListInput) (*fms.DeleteAppsListOutput, error) {
 	var output fms.DeleteAppsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.DeleteAppsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.DeleteAppsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) DeleteAppsListAsync(ctx workflow.Context, input *fms.DeleteAppsListInput) *FmsDeleteAppsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.DeleteAppsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteAppsList", input)
 	return &FmsDeleteAppsListResult{Result: future}
 }
 
 func (a *FMSStub) DeleteNotificationChannel(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) (*fms.DeleteNotificationChannelOutput, error) {
 	var output fms.DeleteNotificationChannelOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.DeleteNotificationChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.DeleteNotificationChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) DeleteNotificationChannelAsync(ctx workflow.Context, input *fms.DeleteNotificationChannelInput) *FmsDeleteNotificationChannelResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.DeleteNotificationChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteNotificationChannel", input)
 	return &FmsDeleteNotificationChannelResult{Result: future}
 }
 
 func (a *FMSStub) DeletePolicy(ctx workflow.Context, input *fms.DeletePolicyInput) (*fms.DeletePolicyOutput, error) {
 	var output fms.DeletePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.DeletePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.DeletePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) DeletePolicyAsync(ctx workflow.Context, input *fms.DeletePolicyInput) *FmsDeletePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.DeletePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.DeletePolicy", input)
 	return &FmsDeletePolicyResult{Result: future}
 }
 
 func (a *FMSStub) DeleteProtocolsList(ctx workflow.Context, input *fms.DeleteProtocolsListInput) (*fms.DeleteProtocolsListOutput, error) {
 	var output fms.DeleteProtocolsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.DeleteProtocolsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.DeleteProtocolsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) DeleteProtocolsListAsync(ctx workflow.Context, input *fms.DeleteProtocolsListInput) *FmsDeleteProtocolsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.DeleteProtocolsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.DeleteProtocolsList", input)
 	return &FmsDeleteProtocolsListResult{Result: future}
 }
 
 func (a *FMSStub) DisassociateAdminAccount(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) (*fms.DisassociateAdminAccountOutput, error) {
 	var output fms.DisassociateAdminAccountOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.DisassociateAdminAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.DisassociateAdminAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) DisassociateAdminAccountAsync(ctx workflow.Context, input *fms.DisassociateAdminAccountInput) *FmsDisassociateAdminAccountResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.DisassociateAdminAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.DisassociateAdminAccount", input)
 	return &FmsDisassociateAdminAccountResult{Result: future}
 }
 
 func (a *FMSStub) GetAdminAccount(ctx workflow.Context, input *fms.GetAdminAccountInput) (*fms.GetAdminAccountOutput, error) {
 	var output fms.GetAdminAccountOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetAdminAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetAdminAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetAdminAccountAsync(ctx workflow.Context, input *fms.GetAdminAccountInput) *FmsGetAdminAccountResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetAdminAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetAdminAccount", input)
 	return &FmsGetAdminAccountResult{Result: future}
 }
 
 func (a *FMSStub) GetAppsList(ctx workflow.Context, input *fms.GetAppsListInput) (*fms.GetAppsListOutput, error) {
 	var output fms.GetAppsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetAppsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetAppsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetAppsListAsync(ctx workflow.Context, input *fms.GetAppsListInput) *FmsGetAppsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetAppsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetAppsList", input)
 	return &FmsGetAppsListResult{Result: future}
 }
 
 func (a *FMSStub) GetComplianceDetail(ctx workflow.Context, input *fms.GetComplianceDetailInput) (*fms.GetComplianceDetailOutput, error) {
 	var output fms.GetComplianceDetailOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetComplianceDetail", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetComplianceDetail", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetComplianceDetailAsync(ctx workflow.Context, input *fms.GetComplianceDetailInput) *FmsGetComplianceDetailResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetComplianceDetail", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetComplianceDetail", input)
 	return &FmsGetComplianceDetailResult{Result: future}
 }
 
 func (a *FMSStub) GetNotificationChannel(ctx workflow.Context, input *fms.GetNotificationChannelInput) (*fms.GetNotificationChannelOutput, error) {
 	var output fms.GetNotificationChannelOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetNotificationChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetNotificationChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetNotificationChannelAsync(ctx workflow.Context, input *fms.GetNotificationChannelInput) *FmsGetNotificationChannelResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetNotificationChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetNotificationChannel", input)
 	return &FmsGetNotificationChannelResult{Result: future}
 }
 
 func (a *FMSStub) GetPolicy(ctx workflow.Context, input *fms.GetPolicyInput) (*fms.GetPolicyOutput, error) {
 	var output fms.GetPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetPolicyAsync(ctx workflow.Context, input *fms.GetPolicyInput) *FmsGetPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetPolicy", input)
 	return &FmsGetPolicyResult{Result: future}
 }
 
 func (a *FMSStub) GetProtectionStatus(ctx workflow.Context, input *fms.GetProtectionStatusInput) (*fms.GetProtectionStatusOutput, error) {
 	var output fms.GetProtectionStatusOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetProtectionStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetProtectionStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetProtectionStatusAsync(ctx workflow.Context, input *fms.GetProtectionStatusInput) *FmsGetProtectionStatusResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetProtectionStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetProtectionStatus", input)
 	return &FmsGetProtectionStatusResult{Result: future}
 }
 
 func (a *FMSStub) GetProtocolsList(ctx workflow.Context, input *fms.GetProtocolsListInput) (*fms.GetProtocolsListOutput, error) {
 	var output fms.GetProtocolsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetProtocolsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetProtocolsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetProtocolsListAsync(ctx workflow.Context, input *fms.GetProtocolsListInput) *FmsGetProtocolsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetProtocolsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetProtocolsList", input)
 	return &FmsGetProtocolsListResult{Result: future}
 }
 
 func (a *FMSStub) GetViolationDetails(ctx workflow.Context, input *fms.GetViolationDetailsInput) (*fms.GetViolationDetailsOutput, error) {
 	var output fms.GetViolationDetailsOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.GetViolationDetails", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.GetViolationDetails", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) GetViolationDetailsAsync(ctx workflow.Context, input *fms.GetViolationDetailsInput) *FmsGetViolationDetailsResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.GetViolationDetails", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.GetViolationDetails", input)
 	return &FmsGetViolationDetailsResult{Result: future}
 }
 
 func (a *FMSStub) ListAppsLists(ctx workflow.Context, input *fms.ListAppsListsInput) (*fms.ListAppsListsOutput, error) {
 	var output fms.ListAppsListsOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListAppsLists", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListAppsLists", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListAppsListsAsync(ctx workflow.Context, input *fms.ListAppsListsInput) *FmsListAppsListsResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListAppsLists", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListAppsLists", input)
 	return &FmsListAppsListsResult{Result: future}
 }
 
 func (a *FMSStub) ListComplianceStatus(ctx workflow.Context, input *fms.ListComplianceStatusInput) (*fms.ListComplianceStatusOutput, error) {
 	var output fms.ListComplianceStatusOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListComplianceStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListComplianceStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListComplianceStatusAsync(ctx workflow.Context, input *fms.ListComplianceStatusInput) *FmsListComplianceStatusResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListComplianceStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListComplianceStatus", input)
 	return &FmsListComplianceStatusResult{Result: future}
 }
 
 func (a *FMSStub) ListMemberAccounts(ctx workflow.Context, input *fms.ListMemberAccountsInput) (*fms.ListMemberAccountsOutput, error) {
 	var output fms.ListMemberAccountsOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListMemberAccounts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListMemberAccounts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListMemberAccountsAsync(ctx workflow.Context, input *fms.ListMemberAccountsInput) *FmsListMemberAccountsResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListMemberAccounts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListMemberAccounts", input)
 	return &FmsListMemberAccountsResult{Result: future}
 }
 
 func (a *FMSStub) ListPolicies(ctx workflow.Context, input *fms.ListPoliciesInput) (*fms.ListPoliciesOutput, error) {
 	var output fms.ListPoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListPolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListPolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListPoliciesAsync(ctx workflow.Context, input *fms.ListPoliciesInput) *FmsListPoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListPolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListPolicies", input)
 	return &FmsListPoliciesResult{Result: future}
 }
 
 func (a *FMSStub) ListProtocolsLists(ctx workflow.Context, input *fms.ListProtocolsListsInput) (*fms.ListProtocolsListsOutput, error) {
 	var output fms.ListProtocolsListsOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListProtocolsLists", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListProtocolsLists", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListProtocolsListsAsync(ctx workflow.Context, input *fms.ListProtocolsListsInput) *FmsListProtocolsListsResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListProtocolsLists", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListProtocolsLists", input)
 	return &FmsListProtocolsListsResult{Result: future}
 }
 
 func (a *FMSStub) ListTagsForResource(ctx workflow.Context, input *fms.ListTagsForResourceInput) (*fms.ListTagsForResourceOutput, error) {
 	var output fms.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) ListTagsForResourceAsync(ctx workflow.Context, input *fms.ListTagsForResourceInput) *FmsListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.ListTagsForResource", input)
 	return &FmsListTagsForResourceResult{Result: future}
 }
 
 func (a *FMSStub) PutAppsList(ctx workflow.Context, input *fms.PutAppsListInput) (*fms.PutAppsListOutput, error) {
 	var output fms.PutAppsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.PutAppsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.PutAppsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) PutAppsListAsync(ctx workflow.Context, input *fms.PutAppsListInput) *FmsPutAppsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.PutAppsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.PutAppsList", input)
 	return &FmsPutAppsListResult{Result: future}
 }
 
 func (a *FMSStub) PutNotificationChannel(ctx workflow.Context, input *fms.PutNotificationChannelInput) (*fms.PutNotificationChannelOutput, error) {
 	var output fms.PutNotificationChannelOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.PutNotificationChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.PutNotificationChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) PutNotificationChannelAsync(ctx workflow.Context, input *fms.PutNotificationChannelInput) *FmsPutNotificationChannelResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.PutNotificationChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.PutNotificationChannel", input)
 	return &FmsPutNotificationChannelResult{Result: future}
 }
 
 func (a *FMSStub) PutPolicy(ctx workflow.Context, input *fms.PutPolicyInput) (*fms.PutPolicyOutput, error) {
 	var output fms.PutPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.PutPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.PutPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) PutPolicyAsync(ctx workflow.Context, input *fms.PutPolicyInput) *FmsPutPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.PutPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.PutPolicy", input)
 	return &FmsPutPolicyResult{Result: future}
 }
 
 func (a *FMSStub) PutProtocolsList(ctx workflow.Context, input *fms.PutProtocolsListInput) (*fms.PutProtocolsListOutput, error) {
 	var output fms.PutProtocolsListOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.PutProtocolsList", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.PutProtocolsList", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) PutProtocolsListAsync(ctx workflow.Context, input *fms.PutProtocolsListInput) *FmsPutProtocolsListResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.PutProtocolsList", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.PutProtocolsList", input)
 	return &FmsPutProtocolsListResult{Result: future}
 }
 
 func (a *FMSStub) TagResource(ctx workflow.Context, input *fms.TagResourceInput) (*fms.TagResourceOutput, error) {
 	var output fms.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) TagResourceAsync(ctx workflow.Context, input *fms.TagResourceInput) *FmsTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.TagResource", input)
 	return &FmsTagResourceResult{Result: future}
 }
 
 func (a *FMSStub) UntagResource(ctx workflow.Context, input *fms.UntagResourceInput) (*fms.UntagResourceOutput, error) {
 	var output fms.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "FMS.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.fms.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *FMSStub) UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "FMS.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.fms.UntagResource", input)
 	return &FmsUntagResourceResult{Result: future}
 }

@@ -57,33 +57,33 @@ func (r *PricingGetProductsResult) Get(ctx workflow.Context) (*pricing.GetProduc
 
 func (a *PricingStub) DescribeServices(ctx workflow.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
 	var output pricing.DescribeServicesOutput
-	err := workflow.ExecuteActivity(ctx, "Pricing.DescribeServices", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pricing.DescribeServices", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PricingStub) DescribeServicesAsync(ctx workflow.Context, input *pricing.DescribeServicesInput) *PricingDescribeServicesResult {
-	future := workflow.ExecuteActivity(ctx, "Pricing.DescribeServices", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pricing.DescribeServices", input)
 	return &PricingDescribeServicesResult{Result: future}
 }
 
 func (a *PricingStub) GetAttributeValues(ctx workflow.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
 	var output pricing.GetAttributeValuesOutput
-	err := workflow.ExecuteActivity(ctx, "Pricing.GetAttributeValues", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pricing.GetAttributeValues", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PricingStub) GetAttributeValuesAsync(ctx workflow.Context, input *pricing.GetAttributeValuesInput) *PricingGetAttributeValuesResult {
-	future := workflow.ExecuteActivity(ctx, "Pricing.GetAttributeValues", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pricing.GetAttributeValues", input)
 	return &PricingGetAttributeValuesResult{Result: future}
 }
 
 func (a *PricingStub) GetProducts(ctx workflow.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
 	var output pricing.GetProductsOutput
-	err := workflow.ExecuteActivity(ctx, "Pricing.GetProducts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pricing.GetProducts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PricingStub) GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsResult {
-	future := workflow.ExecuteActivity(ctx, "Pricing.GetProducts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pricing.GetProducts", input)
 	return &PricingGetProductsResult{Result: future}
 }

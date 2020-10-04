@@ -410,338 +410,338 @@ func (r *SchemasUpdateSchemaResult) Get(ctx workflow.Context) (*schemas.UpdateSc
 
 func (a *SchemasStub) CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
 	var output schemas.CreateDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.CreateDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.CreateDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) CreateDiscovererAsync(ctx workflow.Context, input *schemas.CreateDiscovererInput) *SchemasCreateDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.CreateDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateDiscoverer", input)
 	return &SchemasCreateDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) CreateRegistry(ctx workflow.Context, input *schemas.CreateRegistryInput) (*schemas.CreateRegistryOutput, error) {
 	var output schemas.CreateRegistryOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.CreateRegistry", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.CreateRegistry", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) CreateRegistryAsync(ctx workflow.Context, input *schemas.CreateRegistryInput) *SchemasCreateRegistryResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.CreateRegistry", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateRegistry", input)
 	return &SchemasCreateRegistryResult{Result: future}
 }
 
 func (a *SchemasStub) CreateSchema(ctx workflow.Context, input *schemas.CreateSchemaInput) (*schemas.CreateSchemaOutput, error) {
 	var output schemas.CreateSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.CreateSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.CreateSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) CreateSchemaAsync(ctx workflow.Context, input *schemas.CreateSchemaInput) *SchemasCreateSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.CreateSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.CreateSchema", input)
 	return &SchemasCreateSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) DeleteDiscoverer(ctx workflow.Context, input *schemas.DeleteDiscovererInput) (*schemas.DeleteDiscovererOutput, error) {
 	var output schemas.DeleteDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DeleteDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DeleteDiscovererAsync(ctx workflow.Context, input *schemas.DeleteDiscovererInput) *SchemasDeleteDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DeleteDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteDiscoverer", input)
 	return &SchemasDeleteDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) DeleteRegistry(ctx workflow.Context, input *schemas.DeleteRegistryInput) (*schemas.DeleteRegistryOutput, error) {
 	var output schemas.DeleteRegistryOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DeleteRegistry", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteRegistry", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DeleteRegistryAsync(ctx workflow.Context, input *schemas.DeleteRegistryInput) *SchemasDeleteRegistryResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DeleteRegistry", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteRegistry", input)
 	return &SchemasDeleteRegistryResult{Result: future}
 }
 
 func (a *SchemasStub) DeleteResourcePolicy(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) (*schemas.DeleteResourcePolicyOutput, error) {
 	var output schemas.DeleteResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DeleteResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *schemas.DeleteResourcePolicyInput) *SchemasDeleteResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DeleteResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteResourcePolicy", input)
 	return &SchemasDeleteResourcePolicyResult{Result: future}
 }
 
 func (a *SchemasStub) DeleteSchema(ctx workflow.Context, input *schemas.DeleteSchemaInput) (*schemas.DeleteSchemaOutput, error) {
 	var output schemas.DeleteSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DeleteSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DeleteSchemaAsync(ctx workflow.Context, input *schemas.DeleteSchemaInput) *SchemasDeleteSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DeleteSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchema", input)
 	return &SchemasDeleteSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) DeleteSchemaVersion(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) (*schemas.DeleteSchemaVersionOutput, error) {
 	var output schemas.DeleteSchemaVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DeleteSchemaVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchemaVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DeleteSchemaVersionAsync(ctx workflow.Context, input *schemas.DeleteSchemaVersionInput) *SchemasDeleteSchemaVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DeleteSchemaVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DeleteSchemaVersion", input)
 	return &SchemasDeleteSchemaVersionResult{Result: future}
 }
 
 func (a *SchemasStub) DescribeCodeBinding(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) (*schemas.DescribeCodeBindingOutput, error) {
 	var output schemas.DescribeCodeBindingOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DescribeCodeBinding", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeCodeBinding", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DescribeCodeBindingAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) *SchemasDescribeCodeBindingResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DescribeCodeBinding", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeCodeBinding", input)
 	return &SchemasDescribeCodeBindingResult{Result: future}
 }
 
 func (a *SchemasStub) DescribeDiscoverer(ctx workflow.Context, input *schemas.DescribeDiscovererInput) (*schemas.DescribeDiscovererOutput, error) {
 	var output schemas.DescribeDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DescribeDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DescribeDiscovererAsync(ctx workflow.Context, input *schemas.DescribeDiscovererInput) *SchemasDescribeDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DescribeDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeDiscoverer", input)
 	return &SchemasDescribeDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) DescribeRegistry(ctx workflow.Context, input *schemas.DescribeRegistryInput) (*schemas.DescribeRegistryOutput, error) {
 	var output schemas.DescribeRegistryOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DescribeRegistry", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeRegistry", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DescribeRegistryAsync(ctx workflow.Context, input *schemas.DescribeRegistryInput) *SchemasDescribeRegistryResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DescribeRegistry", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeRegistry", input)
 	return &SchemasDescribeRegistryResult{Result: future}
 }
 
 func (a *SchemasStub) DescribeSchema(ctx workflow.Context, input *schemas.DescribeSchemaInput) (*schemas.DescribeSchemaOutput, error) {
 	var output schemas.DescribeSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.DescribeSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) DescribeSchemaAsync(ctx workflow.Context, input *schemas.DescribeSchemaInput) *SchemasDescribeSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.DescribeSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.DescribeSchema", input)
 	return &SchemasDescribeSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) GetCodeBindingSource(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) (*schemas.GetCodeBindingSourceOutput, error) {
 	var output schemas.GetCodeBindingSourceOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.GetCodeBindingSource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.GetCodeBindingSource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) GetCodeBindingSourceAsync(ctx workflow.Context, input *schemas.GetCodeBindingSourceInput) *SchemasGetCodeBindingSourceResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.GetCodeBindingSource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetCodeBindingSource", input)
 	return &SchemasGetCodeBindingSourceResult{Result: future}
 }
 
 func (a *SchemasStub) GetDiscoveredSchema(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) (*schemas.GetDiscoveredSchemaOutput, error) {
 	var output schemas.GetDiscoveredSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.GetDiscoveredSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.GetDiscoveredSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) GetDiscoveredSchemaAsync(ctx workflow.Context, input *schemas.GetDiscoveredSchemaInput) *SchemasGetDiscoveredSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.GetDiscoveredSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetDiscoveredSchema", input)
 	return &SchemasGetDiscoveredSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) GetResourcePolicy(ctx workflow.Context, input *schemas.GetResourcePolicyInput) (*schemas.GetResourcePolicyOutput, error) {
 	var output schemas.GetResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.GetResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.GetResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) GetResourcePolicyAsync(ctx workflow.Context, input *schemas.GetResourcePolicyInput) *SchemasGetResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.GetResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.GetResourcePolicy", input)
 	return &SchemasGetResourcePolicyResult{Result: future}
 }
 
 func (a *SchemasStub) ListDiscoverers(ctx workflow.Context, input *schemas.ListDiscoverersInput) (*schemas.ListDiscoverersOutput, error) {
 	var output schemas.ListDiscoverersOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.ListDiscoverers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ListDiscoverers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) ListDiscoverersAsync(ctx workflow.Context, input *schemas.ListDiscoverersInput) *SchemasListDiscoverersResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.ListDiscoverers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListDiscoverers", input)
 	return &SchemasListDiscoverersResult{Result: future}
 }
 
 func (a *SchemasStub) ListRegistries(ctx workflow.Context, input *schemas.ListRegistriesInput) (*schemas.ListRegistriesOutput, error) {
 	var output schemas.ListRegistriesOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.ListRegistries", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ListRegistries", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) ListRegistriesAsync(ctx workflow.Context, input *schemas.ListRegistriesInput) *SchemasListRegistriesResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.ListRegistries", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListRegistries", input)
 	return &SchemasListRegistriesResult{Result: future}
 }
 
 func (a *SchemasStub) ListSchemaVersions(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) (*schemas.ListSchemaVersionsOutput, error) {
 	var output schemas.ListSchemaVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.ListSchemaVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemaVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) ListSchemaVersionsAsync(ctx workflow.Context, input *schemas.ListSchemaVersionsInput) *SchemasListSchemaVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.ListSchemaVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemaVersions", input)
 	return &SchemasListSchemaVersionsResult{Result: future}
 }
 
 func (a *SchemasStub) ListSchemas(ctx workflow.Context, input *schemas.ListSchemasInput) (*schemas.ListSchemasOutput, error) {
 	var output schemas.ListSchemasOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.ListSchemas", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemas", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) ListSchemasAsync(ctx workflow.Context, input *schemas.ListSchemasInput) *SchemasListSchemasResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.ListSchemas", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListSchemas", input)
 	return &SchemasListSchemasResult{Result: future}
 }
 
 func (a *SchemasStub) ListTagsForResource(ctx workflow.Context, input *schemas.ListTagsForResourceInput) (*schemas.ListTagsForResourceOutput, error) {
 	var output schemas.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) ListTagsForResourceAsync(ctx workflow.Context, input *schemas.ListTagsForResourceInput) *SchemasListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.ListTagsForResource", input)
 	return &SchemasListTagsForResourceResult{Result: future}
 }
 
 func (a *SchemasStub) PutCodeBinding(ctx workflow.Context, input *schemas.PutCodeBindingInput) (*schemas.PutCodeBindingOutput, error) {
 	var output schemas.PutCodeBindingOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.PutCodeBinding", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.PutCodeBinding", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) PutCodeBindingAsync(ctx workflow.Context, input *schemas.PutCodeBindingInput) *SchemasPutCodeBindingResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.PutCodeBinding", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.PutCodeBinding", input)
 	return &SchemasPutCodeBindingResult{Result: future}
 }
 
 func (a *SchemasStub) PutResourcePolicy(ctx workflow.Context, input *schemas.PutResourcePolicyInput) (*schemas.PutResourcePolicyOutput, error) {
 	var output schemas.PutResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.PutResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.PutResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) PutResourcePolicyAsync(ctx workflow.Context, input *schemas.PutResourcePolicyInput) *SchemasPutResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.PutResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.PutResourcePolicy", input)
 	return &SchemasPutResourcePolicyResult{Result: future}
 }
 
 func (a *SchemasStub) SearchSchemas(ctx workflow.Context, input *schemas.SearchSchemasInput) (*schemas.SearchSchemasOutput, error) {
 	var output schemas.SearchSchemasOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.SearchSchemas", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.SearchSchemas", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) SearchSchemasAsync(ctx workflow.Context, input *schemas.SearchSchemasInput) *SchemasSearchSchemasResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.SearchSchemas", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.SearchSchemas", input)
 	return &SchemasSearchSchemasResult{Result: future}
 }
 
 func (a *SchemasStub) StartDiscoverer(ctx workflow.Context, input *schemas.StartDiscovererInput) (*schemas.StartDiscovererOutput, error) {
 	var output schemas.StartDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.StartDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.StartDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) StartDiscovererAsync(ctx workflow.Context, input *schemas.StartDiscovererInput) *SchemasStartDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.StartDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.StartDiscoverer", input)
 	return &SchemasStartDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) StopDiscoverer(ctx workflow.Context, input *schemas.StopDiscovererInput) (*schemas.StopDiscovererOutput, error) {
 	var output schemas.StopDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.StopDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.StopDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) StopDiscovererAsync(ctx workflow.Context, input *schemas.StopDiscovererInput) *SchemasStopDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.StopDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.StopDiscoverer", input)
 	return &SchemasStopDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) TagResource(ctx workflow.Context, input *schemas.TagResourceInput) (*schemas.TagResourceOutput, error) {
 	var output schemas.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) TagResourceAsync(ctx workflow.Context, input *schemas.TagResourceInput) *SchemasTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.TagResource", input)
 	return &SchemasTagResourceResult{Result: future}
 }
 
 func (a *SchemasStub) UntagResource(ctx workflow.Context, input *schemas.UntagResourceInput) (*schemas.UntagResourceOutput, error) {
 	var output schemas.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) UntagResourceAsync(ctx workflow.Context, input *schemas.UntagResourceInput) *SchemasUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.UntagResource", input)
 	return &SchemasUntagResourceResult{Result: future}
 }
 
 func (a *SchemasStub) UpdateDiscoverer(ctx workflow.Context, input *schemas.UpdateDiscovererInput) (*schemas.UpdateDiscovererOutput, error) {
 	var output schemas.UpdateDiscovererOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.UpdateDiscoverer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateDiscoverer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) UpdateDiscovererAsync(ctx workflow.Context, input *schemas.UpdateDiscovererInput) *SchemasUpdateDiscovererResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.UpdateDiscoverer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateDiscoverer", input)
 	return &SchemasUpdateDiscovererResult{Result: future}
 }
 
 func (a *SchemasStub) UpdateRegistry(ctx workflow.Context, input *schemas.UpdateRegistryInput) (*schemas.UpdateRegistryOutput, error) {
 	var output schemas.UpdateRegistryOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.UpdateRegistry", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateRegistry", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) UpdateRegistryAsync(ctx workflow.Context, input *schemas.UpdateRegistryInput) *SchemasUpdateRegistryResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.UpdateRegistry", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateRegistry", input)
 	return &SchemasUpdateRegistryResult{Result: future}
 }
 
 func (a *SchemasStub) UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error) {
 	var output schemas.UpdateSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Schemas.UpdateSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SchemasStub) UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Schemas.UpdateSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.schemas.UpdateSchema", input)
 	return &SchemasUpdateSchemaResult{Result: future}
 }
 
 func (a *SchemasStub) WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error {
-	return workflow.ExecuteActivity(ctx, "Schemas.WaitUntilCodeBindingExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input).Get(ctx, nil)
 }
 
 func (a *SchemasStub) WaitUntilCodeBindingExistsAsync(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "Schemas.WaitUntilCodeBindingExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.schemas.WaitUntilCodeBindingExists", input)
 }

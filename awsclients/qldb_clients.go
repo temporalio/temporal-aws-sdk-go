@@ -265,209 +265,209 @@ func (r *QldbUpdateLedgerResult) Get(ctx workflow.Context) (*qldb.UpdateLedgerOu
 
 func (a *QLDBStub) CancelJournalKinesisStream(ctx workflow.Context, input *qldb.CancelJournalKinesisStreamInput) (*qldb.CancelJournalKinesisStreamOutput, error) {
 	var output qldb.CancelJournalKinesisStreamOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.CancelJournalKinesisStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.CancelJournalKinesisStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) CancelJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.CancelJournalKinesisStreamInput) *QldbCancelJournalKinesisStreamResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.CancelJournalKinesisStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.CancelJournalKinesisStream", input)
 	return &QldbCancelJournalKinesisStreamResult{Result: future}
 }
 
 func (a *QLDBStub) CreateLedger(ctx workflow.Context, input *qldb.CreateLedgerInput) (*qldb.CreateLedgerOutput, error) {
 	var output qldb.CreateLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.CreateLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.CreateLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) CreateLedgerAsync(ctx workflow.Context, input *qldb.CreateLedgerInput) *QldbCreateLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.CreateLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.CreateLedger", input)
 	return &QldbCreateLedgerResult{Result: future}
 }
 
 func (a *QLDBStub) DeleteLedger(ctx workflow.Context, input *qldb.DeleteLedgerInput) (*qldb.DeleteLedgerOutput, error) {
 	var output qldb.DeleteLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.DeleteLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.DeleteLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) DeleteLedgerAsync(ctx workflow.Context, input *qldb.DeleteLedgerInput) *QldbDeleteLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.DeleteLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.DeleteLedger", input)
 	return &QldbDeleteLedgerResult{Result: future}
 }
 
 func (a *QLDBStub) DescribeJournalKinesisStream(ctx workflow.Context, input *qldb.DescribeJournalKinesisStreamInput) (*qldb.DescribeJournalKinesisStreamOutput, error) {
 	var output qldb.DescribeJournalKinesisStreamOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.DescribeJournalKinesisStream", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalKinesisStream", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) DescribeJournalKinesisStreamAsync(ctx workflow.Context, input *qldb.DescribeJournalKinesisStreamInput) *QldbDescribeJournalKinesisStreamResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.DescribeJournalKinesisStream", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalKinesisStream", input)
 	return &QldbDescribeJournalKinesisStreamResult{Result: future}
 }
 
 func (a *QLDBStub) DescribeJournalS3Export(ctx workflow.Context, input *qldb.DescribeJournalS3ExportInput) (*qldb.DescribeJournalS3ExportOutput, error) {
 	var output qldb.DescribeJournalS3ExportOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.DescribeJournalS3Export", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalS3Export", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) DescribeJournalS3ExportAsync(ctx workflow.Context, input *qldb.DescribeJournalS3ExportInput) *QldbDescribeJournalS3ExportResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.DescribeJournalS3Export", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeJournalS3Export", input)
 	return &QldbDescribeJournalS3ExportResult{Result: future}
 }
 
 func (a *QLDBStub) DescribeLedger(ctx workflow.Context, input *qldb.DescribeLedgerInput) (*qldb.DescribeLedgerOutput, error) {
 	var output qldb.DescribeLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.DescribeLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) DescribeLedgerAsync(ctx workflow.Context, input *qldb.DescribeLedgerInput) *QldbDescribeLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.DescribeLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.DescribeLedger", input)
 	return &QldbDescribeLedgerResult{Result: future}
 }
 
 func (a *QLDBStub) ExportJournalToS3(ctx workflow.Context, input *qldb.ExportJournalToS3Input) (*qldb.ExportJournalToS3Output, error) {
 	var output qldb.ExportJournalToS3Output
-	err := workflow.ExecuteActivity(ctx, "QLDB.ExportJournalToS3", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ExportJournalToS3", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ExportJournalToS3Async(ctx workflow.Context, input *qldb.ExportJournalToS3Input) *QldbExportJournalToS3Result {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ExportJournalToS3", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ExportJournalToS3", input)
 	return &QldbExportJournalToS3Result{Result: future}
 }
 
 func (a *QLDBStub) GetBlock(ctx workflow.Context, input *qldb.GetBlockInput) (*qldb.GetBlockOutput, error) {
 	var output qldb.GetBlockOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.GetBlock", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.GetBlock", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) GetBlockAsync(ctx workflow.Context, input *qldb.GetBlockInput) *QldbGetBlockResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.GetBlock", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetBlock", input)
 	return &QldbGetBlockResult{Result: future}
 }
 
 func (a *QLDBStub) GetDigest(ctx workflow.Context, input *qldb.GetDigestInput) (*qldb.GetDigestOutput, error) {
 	var output qldb.GetDigestOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.GetDigest", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.GetDigest", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) GetDigestAsync(ctx workflow.Context, input *qldb.GetDigestInput) *QldbGetDigestResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.GetDigest", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetDigest", input)
 	return &QldbGetDigestResult{Result: future}
 }
 
 func (a *QLDBStub) GetRevision(ctx workflow.Context, input *qldb.GetRevisionInput) (*qldb.GetRevisionOutput, error) {
 	var output qldb.GetRevisionOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.GetRevision", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.GetRevision", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) GetRevisionAsync(ctx workflow.Context, input *qldb.GetRevisionInput) *QldbGetRevisionResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.GetRevision", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.GetRevision", input)
 	return &QldbGetRevisionResult{Result: future}
 }
 
 func (a *QLDBStub) ListJournalKinesisStreamsForLedger(ctx workflow.Context, input *qldb.ListJournalKinesisStreamsForLedgerInput) (*qldb.ListJournalKinesisStreamsForLedgerOutput, error) {
 	var output qldb.ListJournalKinesisStreamsForLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.ListJournalKinesisStreamsForLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalKinesisStreamsForLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ListJournalKinesisStreamsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalKinesisStreamsForLedgerInput) *QldbListJournalKinesisStreamsForLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ListJournalKinesisStreamsForLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalKinesisStreamsForLedger", input)
 	return &QldbListJournalKinesisStreamsForLedgerResult{Result: future}
 }
 
 func (a *QLDBStub) ListJournalS3Exports(ctx workflow.Context, input *qldb.ListJournalS3ExportsInput) (*qldb.ListJournalS3ExportsOutput, error) {
 	var output qldb.ListJournalS3ExportsOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.ListJournalS3Exports", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3Exports", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ListJournalS3ExportsAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsInput) *QldbListJournalS3ExportsResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ListJournalS3Exports", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3Exports", input)
 	return &QldbListJournalS3ExportsResult{Result: future}
 }
 
 func (a *QLDBStub) ListJournalS3ExportsForLedger(ctx workflow.Context, input *qldb.ListJournalS3ExportsForLedgerInput) (*qldb.ListJournalS3ExportsForLedgerOutput, error) {
 	var output qldb.ListJournalS3ExportsForLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.ListJournalS3ExportsForLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3ExportsForLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ListJournalS3ExportsForLedgerAsync(ctx workflow.Context, input *qldb.ListJournalS3ExportsForLedgerInput) *QldbListJournalS3ExportsForLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ListJournalS3ExportsForLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListJournalS3ExportsForLedger", input)
 	return &QldbListJournalS3ExportsForLedgerResult{Result: future}
 }
 
 func (a *QLDBStub) ListLedgers(ctx workflow.Context, input *qldb.ListLedgersInput) (*qldb.ListLedgersOutput, error) {
 	var output qldb.ListLedgersOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.ListLedgers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ListLedgers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ListLedgersAsync(ctx workflow.Context, input *qldb.ListLedgersInput) *QldbListLedgersResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ListLedgers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListLedgers", input)
 	return &QldbListLedgersResult{Result: future}
 }
 
 func (a *QLDBStub) ListTagsForResource(ctx workflow.Context, input *qldb.ListTagsForResourceInput) (*qldb.ListTagsForResourceOutput, error) {
 	var output qldb.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) ListTagsForResourceAsync(ctx workflow.Context, input *qldb.ListTagsForResourceInput) *QldbListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.ListTagsForResource", input)
 	return &QldbListTagsForResourceResult{Result: future}
 }
 
 func (a *QLDBStub) StreamJournalToKinesis(ctx workflow.Context, input *qldb.StreamJournalToKinesisInput) (*qldb.StreamJournalToKinesisOutput, error) {
 	var output qldb.StreamJournalToKinesisOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.StreamJournalToKinesis", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.StreamJournalToKinesis", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) StreamJournalToKinesisAsync(ctx workflow.Context, input *qldb.StreamJournalToKinesisInput) *QldbStreamJournalToKinesisResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.StreamJournalToKinesis", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.StreamJournalToKinesis", input)
 	return &QldbStreamJournalToKinesisResult{Result: future}
 }
 
 func (a *QLDBStub) TagResource(ctx workflow.Context, input *qldb.TagResourceInput) (*qldb.TagResourceOutput, error) {
 	var output qldb.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) TagResourceAsync(ctx workflow.Context, input *qldb.TagResourceInput) *QldbTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.TagResource", input)
 	return &QldbTagResourceResult{Result: future}
 }
 
 func (a *QLDBStub) UntagResource(ctx workflow.Context, input *qldb.UntagResourceInput) (*qldb.UntagResourceOutput, error) {
 	var output qldb.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) UntagResourceAsync(ctx workflow.Context, input *qldb.UntagResourceInput) *QldbUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.UntagResource", input)
 	return &QldbUntagResourceResult{Result: future}
 }
 
 func (a *QLDBStub) UpdateLedger(ctx workflow.Context, input *qldb.UpdateLedgerInput) (*qldb.UpdateLedgerOutput, error) {
 	var output qldb.UpdateLedgerOutput
-	err := workflow.ExecuteActivity(ctx, "QLDB.UpdateLedger", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldb.UpdateLedger", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBStub) UpdateLedgerAsync(ctx workflow.Context, input *qldb.UpdateLedgerInput) *QldbUpdateLedgerResult {
-	future := workflow.ExecuteActivity(ctx, "QLDB.UpdateLedger", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldb.UpdateLedger", input)
 	return &QldbUpdateLedgerResult{Result: future}
 }

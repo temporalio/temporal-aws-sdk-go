@@ -187,143 +187,143 @@ func (r *SyntheticsUpdateCanaryResult) Get(ctx workflow.Context) (*synthetics.Up
 
 func (a *SyntheticsStub) CreateCanary(ctx workflow.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error) {
 	var output synthetics.CreateCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.CreateCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.CreateCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *SyntheticsCreateCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.CreateCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.CreateCanary", input)
 	return &SyntheticsCreateCanaryResult{Result: future}
 }
 
 func (a *SyntheticsStub) DeleteCanary(ctx workflow.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error) {
 	var output synthetics.DeleteCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.DeleteCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.DeleteCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) DeleteCanaryAsync(ctx workflow.Context, input *synthetics.DeleteCanaryInput) *SyntheticsDeleteCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.DeleteCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.DeleteCanary", input)
 	return &SyntheticsDeleteCanaryResult{Result: future}
 }
 
 func (a *SyntheticsStub) DescribeCanaries(ctx workflow.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error) {
 	var output synthetics.DescribeCanariesOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.DescribeCanaries", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeCanaries", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) DescribeCanariesAsync(ctx workflow.Context, input *synthetics.DescribeCanariesInput) *SyntheticsDescribeCanariesResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.DescribeCanaries", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeCanaries", input)
 	return &SyntheticsDescribeCanariesResult{Result: future}
 }
 
 func (a *SyntheticsStub) DescribeCanariesLastRun(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error) {
 	var output synthetics.DescribeCanariesLastRunOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.DescribeCanariesLastRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeCanariesLastRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) DescribeCanariesLastRunAsync(ctx workflow.Context, input *synthetics.DescribeCanariesLastRunInput) *SyntheticsDescribeCanariesLastRunResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.DescribeCanariesLastRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeCanariesLastRun", input)
 	return &SyntheticsDescribeCanariesLastRunResult{Result: future}
 }
 
 func (a *SyntheticsStub) DescribeRuntimeVersions(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error) {
 	var output synthetics.DescribeRuntimeVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.DescribeRuntimeVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeRuntimeVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) DescribeRuntimeVersionsAsync(ctx workflow.Context, input *synthetics.DescribeRuntimeVersionsInput) *SyntheticsDescribeRuntimeVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.DescribeRuntimeVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.DescribeRuntimeVersions", input)
 	return &SyntheticsDescribeRuntimeVersionsResult{Result: future}
 }
 
 func (a *SyntheticsStub) GetCanary(ctx workflow.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error) {
 	var output synthetics.GetCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.GetCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.GetCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) GetCanaryAsync(ctx workflow.Context, input *synthetics.GetCanaryInput) *SyntheticsGetCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.GetCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.GetCanary", input)
 	return &SyntheticsGetCanaryResult{Result: future}
 }
 
 func (a *SyntheticsStub) GetCanaryRuns(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error) {
 	var output synthetics.GetCanaryRunsOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.GetCanaryRuns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.GetCanaryRuns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) GetCanaryRunsAsync(ctx workflow.Context, input *synthetics.GetCanaryRunsInput) *SyntheticsGetCanaryRunsResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.GetCanaryRuns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.GetCanaryRuns", input)
 	return &SyntheticsGetCanaryRunsResult{Result: future}
 }
 
 func (a *SyntheticsStub) ListTagsForResource(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error) {
 	var output synthetics.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) ListTagsForResourceAsync(ctx workflow.Context, input *synthetics.ListTagsForResourceInput) *SyntheticsListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.ListTagsForResource", input)
 	return &SyntheticsListTagsForResourceResult{Result: future}
 }
 
 func (a *SyntheticsStub) StartCanary(ctx workflow.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error) {
 	var output synthetics.StartCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.StartCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.StartCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) StartCanaryAsync(ctx workflow.Context, input *synthetics.StartCanaryInput) *SyntheticsStartCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.StartCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.StartCanary", input)
 	return &SyntheticsStartCanaryResult{Result: future}
 }
 
 func (a *SyntheticsStub) StopCanary(ctx workflow.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error) {
 	var output synthetics.StopCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.StopCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.StopCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) StopCanaryAsync(ctx workflow.Context, input *synthetics.StopCanaryInput) *SyntheticsStopCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.StopCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.StopCanary", input)
 	return &SyntheticsStopCanaryResult{Result: future}
 }
 
 func (a *SyntheticsStub) TagResource(ctx workflow.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error) {
 	var output synthetics.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) TagResourceAsync(ctx workflow.Context, input *synthetics.TagResourceInput) *SyntheticsTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.TagResource", input)
 	return &SyntheticsTagResourceResult{Result: future}
 }
 
 func (a *SyntheticsStub) UntagResource(ctx workflow.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error) {
 	var output synthetics.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) UntagResourceAsync(ctx workflow.Context, input *synthetics.UntagResourceInput) *SyntheticsUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.UntagResource", input)
 	return &SyntheticsUntagResourceResult{Result: future}
 }
 
 func (a *SyntheticsStub) UpdateCanary(ctx workflow.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error) {
 	var output synthetics.UpdateCanaryOutput
-	err := workflow.ExecuteActivity(ctx, "Synthetics.UpdateCanary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.synthetics.UpdateCanary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SyntheticsStub) UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *SyntheticsUpdateCanaryResult {
-	future := workflow.ExecuteActivity(ctx, "Synthetics.UpdateCanary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.synthetics.UpdateCanary", input)
 	return &SyntheticsUpdateCanaryResult{Result: future}
 }

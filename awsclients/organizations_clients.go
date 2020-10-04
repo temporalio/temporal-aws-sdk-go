@@ -681,561 +681,561 @@ func (r *OrganizationsUpdatePolicyResult) Get(ctx workflow.Context) (*organizati
 
 func (a *OrganizationsStub) AcceptHandshake(ctx workflow.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error) {
 	var output organizations.AcceptHandshakeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.AcceptHandshake", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.AcceptHandshake", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *OrganizationsAcceptHandshakeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.AcceptHandshake", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.AcceptHandshake", input)
 	return &OrganizationsAcceptHandshakeResult{Result: future}
 }
 
 func (a *OrganizationsStub) AttachPolicy(ctx workflow.Context, input *organizations.AttachPolicyInput) (*organizations.AttachPolicyOutput, error) {
 	var output organizations.AttachPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.AttachPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.AttachPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) AttachPolicyAsync(ctx workflow.Context, input *organizations.AttachPolicyInput) *OrganizationsAttachPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.AttachPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.AttachPolicy", input)
 	return &OrganizationsAttachPolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) CancelHandshake(ctx workflow.Context, input *organizations.CancelHandshakeInput) (*organizations.CancelHandshakeOutput, error) {
 	var output organizations.CancelHandshakeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CancelHandshake", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CancelHandshake", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CancelHandshakeAsync(ctx workflow.Context, input *organizations.CancelHandshakeInput) *OrganizationsCancelHandshakeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CancelHandshake", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CancelHandshake", input)
 	return &OrganizationsCancelHandshakeResult{Result: future}
 }
 
 func (a *OrganizationsStub) CreateAccount(ctx workflow.Context, input *organizations.CreateAccountInput) (*organizations.CreateAccountOutput, error) {
 	var output organizations.CreateAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CreateAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CreateAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CreateAccountAsync(ctx workflow.Context, input *organizations.CreateAccountInput) *OrganizationsCreateAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CreateAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateAccount", input)
 	return &OrganizationsCreateAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) CreateGovCloudAccount(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) (*organizations.CreateGovCloudAccountOutput, error) {
 	var output organizations.CreateGovCloudAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CreateGovCloudAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CreateGovCloudAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CreateGovCloudAccountAsync(ctx workflow.Context, input *organizations.CreateGovCloudAccountInput) *OrganizationsCreateGovCloudAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CreateGovCloudAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateGovCloudAccount", input)
 	return &OrganizationsCreateGovCloudAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) CreateOrganization(ctx workflow.Context, input *organizations.CreateOrganizationInput) (*organizations.CreateOrganizationOutput, error) {
 	var output organizations.CreateOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CreateOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CreateOrganizationAsync(ctx workflow.Context, input *organizations.CreateOrganizationInput) *OrganizationsCreateOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CreateOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganization", input)
 	return &OrganizationsCreateOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) CreateOrganizationalUnit(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) (*organizations.CreateOrganizationalUnitOutput, error) {
 	var output organizations.CreateOrganizationalUnitOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CreateOrganizationalUnit", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganizationalUnit", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CreateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.CreateOrganizationalUnitInput) *OrganizationsCreateOrganizationalUnitResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CreateOrganizationalUnit", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreateOrganizationalUnit", input)
 	return &OrganizationsCreateOrganizationalUnitResult{Result: future}
 }
 
 func (a *OrganizationsStub) CreatePolicy(ctx workflow.Context, input *organizations.CreatePolicyInput) (*organizations.CreatePolicyOutput, error) {
 	var output organizations.CreatePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.CreatePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.CreatePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) CreatePolicyAsync(ctx workflow.Context, input *organizations.CreatePolicyInput) *OrganizationsCreatePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.CreatePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.CreatePolicy", input)
 	return &OrganizationsCreatePolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) DeclineHandshake(ctx workflow.Context, input *organizations.DeclineHandshakeInput) (*organizations.DeclineHandshakeOutput, error) {
 	var output organizations.DeclineHandshakeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DeclineHandshake", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DeclineHandshake", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DeclineHandshakeAsync(ctx workflow.Context, input *organizations.DeclineHandshakeInput) *OrganizationsDeclineHandshakeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DeclineHandshake", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeclineHandshake", input)
 	return &OrganizationsDeclineHandshakeResult{Result: future}
 }
 
 func (a *OrganizationsStub) DeleteOrganization(ctx workflow.Context, input *organizations.DeleteOrganizationInput) (*organizations.DeleteOrganizationOutput, error) {
 	var output organizations.DeleteOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DeleteOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DeleteOrganizationAsync(ctx workflow.Context, input *organizations.DeleteOrganizationInput) *OrganizationsDeleteOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DeleteOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganization", input)
 	return &OrganizationsDeleteOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) DeleteOrganizationalUnit(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) (*organizations.DeleteOrganizationalUnitOutput, error) {
 	var output organizations.DeleteOrganizationalUnitOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DeleteOrganizationalUnit", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganizationalUnit", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DeleteOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DeleteOrganizationalUnitInput) *OrganizationsDeleteOrganizationalUnitResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DeleteOrganizationalUnit", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeleteOrganizationalUnit", input)
 	return &OrganizationsDeleteOrganizationalUnitResult{Result: future}
 }
 
 func (a *OrganizationsStub) DeletePolicy(ctx workflow.Context, input *organizations.DeletePolicyInput) (*organizations.DeletePolicyOutput, error) {
 	var output organizations.DeletePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DeletePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DeletePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DeletePolicyAsync(ctx workflow.Context, input *organizations.DeletePolicyInput) *OrganizationsDeletePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DeletePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeletePolicy", input)
 	return &OrganizationsDeletePolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) DeregisterDelegatedAdministrator(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) (*organizations.DeregisterDelegatedAdministratorOutput, error) {
 	var output organizations.DeregisterDelegatedAdministratorOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DeregisterDelegatedAdministrator", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DeregisterDelegatedAdministrator", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DeregisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.DeregisterDelegatedAdministratorInput) *OrganizationsDeregisterDelegatedAdministratorResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DeregisterDelegatedAdministrator", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DeregisterDelegatedAdministrator", input)
 	return &OrganizationsDeregisterDelegatedAdministratorResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeAccount(ctx workflow.Context, input *organizations.DescribeAccountInput) (*organizations.DescribeAccountOutput, error) {
 	var output organizations.DescribeAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeAccountAsync(ctx workflow.Context, input *organizations.DescribeAccountInput) *OrganizationsDescribeAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeAccount", input)
 	return &OrganizationsDescribeAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeCreateAccountStatus(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) (*organizations.DescribeCreateAccountStatusOutput, error) {
 	var output organizations.DescribeCreateAccountStatusOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeCreateAccountStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeCreateAccountStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeCreateAccountStatusAsync(ctx workflow.Context, input *organizations.DescribeCreateAccountStatusInput) *OrganizationsDescribeCreateAccountStatusResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeCreateAccountStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeCreateAccountStatus", input)
 	return &OrganizationsDescribeCreateAccountStatusResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeEffectivePolicy(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) (*organizations.DescribeEffectivePolicyOutput, error) {
 	var output organizations.DescribeEffectivePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeEffectivePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeEffectivePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeEffectivePolicyAsync(ctx workflow.Context, input *organizations.DescribeEffectivePolicyInput) *OrganizationsDescribeEffectivePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeEffectivePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeEffectivePolicy", input)
 	return &OrganizationsDescribeEffectivePolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeHandshake(ctx workflow.Context, input *organizations.DescribeHandshakeInput) (*organizations.DescribeHandshakeOutput, error) {
 	var output organizations.DescribeHandshakeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeHandshake", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeHandshake", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeHandshakeAsync(ctx workflow.Context, input *organizations.DescribeHandshakeInput) *OrganizationsDescribeHandshakeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeHandshake", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeHandshake", input)
 	return &OrganizationsDescribeHandshakeResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeOrganization(ctx workflow.Context, input *organizations.DescribeOrganizationInput) (*organizations.DescribeOrganizationOutput, error) {
 	var output organizations.DescribeOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeOrganizationAsync(ctx workflow.Context, input *organizations.DescribeOrganizationInput) *OrganizationsDescribeOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganization", input)
 	return &OrganizationsDescribeOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribeOrganizationalUnit(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) (*organizations.DescribeOrganizationalUnitOutput, error) {
 	var output organizations.DescribeOrganizationalUnitOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribeOrganizationalUnit", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganizationalUnit", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribeOrganizationalUnitAsync(ctx workflow.Context, input *organizations.DescribeOrganizationalUnitInput) *OrganizationsDescribeOrganizationalUnitResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribeOrganizationalUnit", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribeOrganizationalUnit", input)
 	return &OrganizationsDescribeOrganizationalUnitResult{Result: future}
 }
 
 func (a *OrganizationsStub) DescribePolicy(ctx workflow.Context, input *organizations.DescribePolicyInput) (*organizations.DescribePolicyOutput, error) {
 	var output organizations.DescribePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DescribePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DescribePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DescribePolicyAsync(ctx workflow.Context, input *organizations.DescribePolicyInput) *OrganizationsDescribePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DescribePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DescribePolicy", input)
 	return &OrganizationsDescribePolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) DetachPolicy(ctx workflow.Context, input *organizations.DetachPolicyInput) (*organizations.DetachPolicyOutput, error) {
 	var output organizations.DetachPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DetachPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DetachPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DetachPolicyAsync(ctx workflow.Context, input *organizations.DetachPolicyInput) *OrganizationsDetachPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DetachPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DetachPolicy", input)
 	return &OrganizationsDetachPolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) DisableAWSServiceAccess(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) (*organizations.DisableAWSServiceAccessOutput, error) {
 	var output organizations.DisableAWSServiceAccessOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DisableAWSServiceAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DisableAWSServiceAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DisableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.DisableAWSServiceAccessInput) *OrganizationsDisableAWSServiceAccessResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DisableAWSServiceAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DisableAWSServiceAccess", input)
 	return &OrganizationsDisableAWSServiceAccessResult{Result: future}
 }
 
 func (a *OrganizationsStub) DisablePolicyType(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) (*organizations.DisablePolicyTypeOutput, error) {
 	var output organizations.DisablePolicyTypeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.DisablePolicyType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.DisablePolicyType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) DisablePolicyTypeAsync(ctx workflow.Context, input *organizations.DisablePolicyTypeInput) *OrganizationsDisablePolicyTypeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.DisablePolicyType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.DisablePolicyType", input)
 	return &OrganizationsDisablePolicyTypeResult{Result: future}
 }
 
 func (a *OrganizationsStub) EnableAWSServiceAccess(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) (*organizations.EnableAWSServiceAccessOutput, error) {
 	var output organizations.EnableAWSServiceAccessOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.EnableAWSServiceAccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAWSServiceAccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) EnableAWSServiceAccessAsync(ctx workflow.Context, input *organizations.EnableAWSServiceAccessInput) *OrganizationsEnableAWSServiceAccessResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.EnableAWSServiceAccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAWSServiceAccess", input)
 	return &OrganizationsEnableAWSServiceAccessResult{Result: future}
 }
 
 func (a *OrganizationsStub) EnableAllFeatures(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) (*organizations.EnableAllFeaturesOutput, error) {
 	var output organizations.EnableAllFeaturesOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.EnableAllFeatures", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAllFeatures", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) EnableAllFeaturesAsync(ctx workflow.Context, input *organizations.EnableAllFeaturesInput) *OrganizationsEnableAllFeaturesResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.EnableAllFeatures", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnableAllFeatures", input)
 	return &OrganizationsEnableAllFeaturesResult{Result: future}
 }
 
 func (a *OrganizationsStub) EnablePolicyType(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) (*organizations.EnablePolicyTypeOutput, error) {
 	var output organizations.EnablePolicyTypeOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.EnablePolicyType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.EnablePolicyType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) EnablePolicyTypeAsync(ctx workflow.Context, input *organizations.EnablePolicyTypeInput) *OrganizationsEnablePolicyTypeResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.EnablePolicyType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.EnablePolicyType", input)
 	return &OrganizationsEnablePolicyTypeResult{Result: future}
 }
 
 func (a *OrganizationsStub) InviteAccountToOrganization(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) (*organizations.InviteAccountToOrganizationOutput, error) {
 	var output organizations.InviteAccountToOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.InviteAccountToOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.InviteAccountToOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) InviteAccountToOrganizationAsync(ctx workflow.Context, input *organizations.InviteAccountToOrganizationInput) *OrganizationsInviteAccountToOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.InviteAccountToOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.InviteAccountToOrganization", input)
 	return &OrganizationsInviteAccountToOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) LeaveOrganization(ctx workflow.Context, input *organizations.LeaveOrganizationInput) (*organizations.LeaveOrganizationOutput, error) {
 	var output organizations.LeaveOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.LeaveOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.LeaveOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) LeaveOrganizationAsync(ctx workflow.Context, input *organizations.LeaveOrganizationInput) *OrganizationsLeaveOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.LeaveOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.LeaveOrganization", input)
 	return &OrganizationsLeaveOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListAWSServiceAccessForOrganization(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) (*organizations.ListAWSServiceAccessForOrganizationOutput, error) {
 	var output organizations.ListAWSServiceAccessForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListAWSServiceAccessForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListAWSServiceAccessForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListAWSServiceAccessForOrganizationAsync(ctx workflow.Context, input *organizations.ListAWSServiceAccessForOrganizationInput) *OrganizationsListAWSServiceAccessForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListAWSServiceAccessForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAWSServiceAccessForOrganization", input)
 	return &OrganizationsListAWSServiceAccessForOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListAccounts(ctx workflow.Context, input *organizations.ListAccountsInput) (*organizations.ListAccountsOutput, error) {
 	var output organizations.ListAccountsOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListAccounts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccounts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListAccountsAsync(ctx workflow.Context, input *organizations.ListAccountsInput) *OrganizationsListAccountsResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListAccounts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccounts", input)
 	return &OrganizationsListAccountsResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListAccountsForParent(ctx workflow.Context, input *organizations.ListAccountsForParentInput) (*organizations.ListAccountsForParentOutput, error) {
 	var output organizations.ListAccountsForParentOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListAccountsForParent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccountsForParent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListAccountsForParentAsync(ctx workflow.Context, input *organizations.ListAccountsForParentInput) *OrganizationsListAccountsForParentResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListAccountsForParent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListAccountsForParent", input)
 	return &OrganizationsListAccountsForParentResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListChildren(ctx workflow.Context, input *organizations.ListChildrenInput) (*organizations.ListChildrenOutput, error) {
 	var output organizations.ListChildrenOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListChildren", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListChildren", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListChildrenAsync(ctx workflow.Context, input *organizations.ListChildrenInput) *OrganizationsListChildrenResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListChildren", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListChildren", input)
 	return &OrganizationsListChildrenResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListCreateAccountStatus(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) (*organizations.ListCreateAccountStatusOutput, error) {
 	var output organizations.ListCreateAccountStatusOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListCreateAccountStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListCreateAccountStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListCreateAccountStatusAsync(ctx workflow.Context, input *organizations.ListCreateAccountStatusInput) *OrganizationsListCreateAccountStatusResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListCreateAccountStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListCreateAccountStatus", input)
 	return &OrganizationsListCreateAccountStatusResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListDelegatedAdministrators(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) (*organizations.ListDelegatedAdministratorsOutput, error) {
 	var output organizations.ListDelegatedAdministratorsOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListDelegatedAdministrators", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedAdministrators", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListDelegatedAdministratorsAsync(ctx workflow.Context, input *organizations.ListDelegatedAdministratorsInput) *OrganizationsListDelegatedAdministratorsResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListDelegatedAdministrators", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedAdministrators", input)
 	return &OrganizationsListDelegatedAdministratorsResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListDelegatedServicesForAccount(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) (*organizations.ListDelegatedServicesForAccountOutput, error) {
 	var output organizations.ListDelegatedServicesForAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListDelegatedServicesForAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedServicesForAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListDelegatedServicesForAccountAsync(ctx workflow.Context, input *organizations.ListDelegatedServicesForAccountInput) *OrganizationsListDelegatedServicesForAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListDelegatedServicesForAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListDelegatedServicesForAccount", input)
 	return &OrganizationsListDelegatedServicesForAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListHandshakesForAccount(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) (*organizations.ListHandshakesForAccountOutput, error) {
 	var output organizations.ListHandshakesForAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListHandshakesForAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListHandshakesForAccountAsync(ctx workflow.Context, input *organizations.ListHandshakesForAccountInput) *OrganizationsListHandshakesForAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListHandshakesForAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForAccount", input)
 	return &OrganizationsListHandshakesForAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListHandshakesForOrganization(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) (*organizations.ListHandshakesForOrganizationOutput, error) {
 	var output organizations.ListHandshakesForOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListHandshakesForOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListHandshakesForOrganizationAsync(ctx workflow.Context, input *organizations.ListHandshakesForOrganizationInput) *OrganizationsListHandshakesForOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListHandshakesForOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListHandshakesForOrganization", input)
 	return &OrganizationsListHandshakesForOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListOrganizationalUnitsForParent(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) (*organizations.ListOrganizationalUnitsForParentOutput, error) {
 	var output organizations.ListOrganizationalUnitsForParentOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListOrganizationalUnitsForParent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListOrganizationalUnitsForParent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListOrganizationalUnitsForParentAsync(ctx workflow.Context, input *organizations.ListOrganizationalUnitsForParentInput) *OrganizationsListOrganizationalUnitsForParentResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListOrganizationalUnitsForParent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListOrganizationalUnitsForParent", input)
 	return &OrganizationsListOrganizationalUnitsForParentResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListParents(ctx workflow.Context, input *organizations.ListParentsInput) (*organizations.ListParentsOutput, error) {
 	var output organizations.ListParentsOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListParents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListParents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListParentsAsync(ctx workflow.Context, input *organizations.ListParentsInput) *OrganizationsListParentsResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListParents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListParents", input)
 	return &OrganizationsListParentsResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListPolicies(ctx workflow.Context, input *organizations.ListPoliciesInput) (*organizations.ListPoliciesOutput, error) {
 	var output organizations.ListPoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListPolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListPolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListPoliciesAsync(ctx workflow.Context, input *organizations.ListPoliciesInput) *OrganizationsListPoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListPolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListPolicies", input)
 	return &OrganizationsListPoliciesResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListPoliciesForTarget(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) (*organizations.ListPoliciesForTargetOutput, error) {
 	var output organizations.ListPoliciesForTargetOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListPoliciesForTarget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListPoliciesForTarget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListPoliciesForTargetAsync(ctx workflow.Context, input *organizations.ListPoliciesForTargetInput) *OrganizationsListPoliciesForTargetResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListPoliciesForTarget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListPoliciesForTarget", input)
 	return &OrganizationsListPoliciesForTargetResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListRoots(ctx workflow.Context, input *organizations.ListRootsInput) (*organizations.ListRootsOutput, error) {
 	var output organizations.ListRootsOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListRoots", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListRoots", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListRootsAsync(ctx workflow.Context, input *organizations.ListRootsInput) *OrganizationsListRootsResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListRoots", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListRoots", input)
 	return &OrganizationsListRootsResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListTagsForResource(ctx workflow.Context, input *organizations.ListTagsForResourceInput) (*organizations.ListTagsForResourceOutput, error) {
 	var output organizations.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListTagsForResourceAsync(ctx workflow.Context, input *organizations.ListTagsForResourceInput) *OrganizationsListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListTagsForResource", input)
 	return &OrganizationsListTagsForResourceResult{Result: future}
 }
 
 func (a *OrganizationsStub) ListTargetsForPolicy(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) (*organizations.ListTargetsForPolicyOutput, error) {
 	var output organizations.ListTargetsForPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.ListTargetsForPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.ListTargetsForPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) ListTargetsForPolicyAsync(ctx workflow.Context, input *organizations.ListTargetsForPolicyInput) *OrganizationsListTargetsForPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.ListTargetsForPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.ListTargetsForPolicy", input)
 	return &OrganizationsListTargetsForPolicyResult{Result: future}
 }
 
 func (a *OrganizationsStub) MoveAccount(ctx workflow.Context, input *organizations.MoveAccountInput) (*organizations.MoveAccountOutput, error) {
 	var output organizations.MoveAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.MoveAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.MoveAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) MoveAccountAsync(ctx workflow.Context, input *organizations.MoveAccountInput) *OrganizationsMoveAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.MoveAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.MoveAccount", input)
 	return &OrganizationsMoveAccountResult{Result: future}
 }
 
 func (a *OrganizationsStub) RegisterDelegatedAdministrator(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) (*organizations.RegisterDelegatedAdministratorOutput, error) {
 	var output organizations.RegisterDelegatedAdministratorOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.RegisterDelegatedAdministrator", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.RegisterDelegatedAdministrator", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) RegisterDelegatedAdministratorAsync(ctx workflow.Context, input *organizations.RegisterDelegatedAdministratorInput) *OrganizationsRegisterDelegatedAdministratorResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.RegisterDelegatedAdministrator", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.RegisterDelegatedAdministrator", input)
 	return &OrganizationsRegisterDelegatedAdministratorResult{Result: future}
 }
 
 func (a *OrganizationsStub) RemoveAccountFromOrganization(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) (*organizations.RemoveAccountFromOrganizationOutput, error) {
 	var output organizations.RemoveAccountFromOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.RemoveAccountFromOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.RemoveAccountFromOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) RemoveAccountFromOrganizationAsync(ctx workflow.Context, input *organizations.RemoveAccountFromOrganizationInput) *OrganizationsRemoveAccountFromOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.RemoveAccountFromOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.RemoveAccountFromOrganization", input)
 	return &OrganizationsRemoveAccountFromOrganizationResult{Result: future}
 }
 
 func (a *OrganizationsStub) TagResource(ctx workflow.Context, input *organizations.TagResourceInput) (*organizations.TagResourceOutput, error) {
 	var output organizations.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) TagResourceAsync(ctx workflow.Context, input *organizations.TagResourceInput) *OrganizationsTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.TagResource", input)
 	return &OrganizationsTagResourceResult{Result: future}
 }
 
 func (a *OrganizationsStub) UntagResource(ctx workflow.Context, input *organizations.UntagResourceInput) (*organizations.UntagResourceOutput, error) {
 	var output organizations.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) UntagResourceAsync(ctx workflow.Context, input *organizations.UntagResourceInput) *OrganizationsUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.UntagResource", input)
 	return &OrganizationsUntagResourceResult{Result: future}
 }
 
 func (a *OrganizationsStub) UpdateOrganizationalUnit(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) (*organizations.UpdateOrganizationalUnitOutput, error) {
 	var output organizations.UpdateOrganizationalUnitOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.UpdateOrganizationalUnit", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.UpdateOrganizationalUnit", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) UpdateOrganizationalUnitAsync(ctx workflow.Context, input *organizations.UpdateOrganizationalUnitInput) *OrganizationsUpdateOrganizationalUnitResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.UpdateOrganizationalUnit", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.UpdateOrganizationalUnit", input)
 	return &OrganizationsUpdateOrganizationalUnitResult{Result: future}
 }
 
 func (a *OrganizationsStub) UpdatePolicy(ctx workflow.Context, input *organizations.UpdatePolicyInput) (*organizations.UpdatePolicyOutput, error) {
 	var output organizations.UpdatePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Organizations.UpdatePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.organizations.UpdatePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OrganizationsStub) UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Organizations.UpdatePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.organizations.UpdatePolicy", input)
 	return &OrganizationsUpdatePolicyResult{Result: future}
 }
