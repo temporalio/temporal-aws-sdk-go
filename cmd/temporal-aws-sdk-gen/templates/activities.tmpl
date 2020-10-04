@@ -23,12 +23,12 @@ var _ = internal.SetClientToken
 type _ request.Option
 
 type {{ $name }}Activities struct {
-    client {{ $lowerName }}iface.{{ $name }}API
+	client {{ $lowerName }}iface.{{ $name }}API
 }
 
 func New{{ $name }}Activities(session *session.Session, config ...*aws.Config) *{{ $name }}Activities {
-    client := {{ $lowerName }}.New(session, config...)
-    return &{{ $name }}Activities{client: client}
+	client := {{ $lowerName }}.New(session, config...)
+	return &{{ $name }}Activities{client: client}
 }
 
 {{- range $i, $method := .Methods }}
@@ -40,18 +40,18 @@ func (a *{{ $name }}Activities) {{ $method.Name }}(ctx context.Context, input *{
 		return a.client.{{ $method.Name }}WithContext(ctx, input, options...)
 	})
 {{- else }}
-    {{- if HasField $method.Input "ClientToken" }}
-        internal.SetClientToken(ctx, &input.ClientToken)
-    {{- end }}
-    return a.client.{{ $method.Name }}WithContext(ctx, input)
+	{{- if HasField $method.Input "ClientToken" }}
+		internal.SetClientToken(ctx, &input.ClientToken)
+	{{- end }}
+	return a.client.{{ $method.Name }}WithContext(ctx, input)
 {{- end }}
 }
 {{- else -}}
 func (a *{{ $name }}Activities) {{ $method.Name }}(ctx context.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error) {
-    {{- if HasField $method.Input "ClientToken" }}
-    internal.SetClientToken(ctx, &input.ClientToken)
-    {{- end }}
-    return a.client.{{ $method.Name }}WithContext(ctx, input)
+	{{- if HasField $method.Input "ClientToken" }}
+	internal.SetClientToken(ctx, &input.ClientToken)
+	{{- end }}
+	return a.client.{{ $method.Name }}WithContext(ctx, input)
 }
 {{- end }}
 {{- end }}

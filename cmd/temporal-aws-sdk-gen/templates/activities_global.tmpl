@@ -5,17 +5,17 @@
 package awsactivities
 
 import (
-    "github.com/aws/aws-sdk-go/aws"
-    "github.com/aws/aws-sdk-go/aws/session"
-    "go.temporal.io/sdk/activity"
-    "go.temporal.io/sdk/worker"
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"go.temporal.io/sdk/activity"
+	"go.temporal.io/sdk/worker"
 )
 
 func RegisterAwsActivities(worker worker.Worker, session *session.Session, config... *aws.Config) {
 {{- range . }}
 {{- $name := .Name }}
-    worker.RegisterActivity(New{{ .Name }}Activities(session, config...))
-    worker.RegisterActivityWithOptions(New{{ .Name }}Activities(session, config...), activity.RegisterOptions{Name: "{{.Name}}."})
+	worker.RegisterActivity(New{{ .Name }}Activities(session, config...))
+	worker.RegisterActivityWithOptions(New{{ .Name }}Activities(session, config...), activity.RegisterOptions{Name: "{{.Name}}."})
 {{- end }}
 }
 
