@@ -1,15 +1,17 @@
 package main
 
 import (
-	"github.com/urfave/cli/v2"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/urfave/cli/v2"
+
 	"temporal.io/aws-sdk/cmd/temporal-aws-sdk-gen/internal"
 )
 
 func main() {
-	var sdkDir, templateDir, outputDir, service string
+	var templateDir, outputDir, service string
 
 	app := cli.NewApp()
 	app.Name = "temporal-aws-sdk-gen"
@@ -21,12 +23,6 @@ func main() {
 			Value:       "./cmd/temporal-aws-sdk-gen/templates",
 			Usage:       "location of code generation template directory",
 			Destination: &templateDir,
-		},
-		&cli.StringFlag{
-			Name:        "aws-sdk-dir",
-			Usage:       "location of AWS Go SDK repository",
-			Value:       "./awssdkgo",
-			Destination: &sdkDir,
 		},
 		&cli.StringFlag{
 			Name:        "output-dir",
