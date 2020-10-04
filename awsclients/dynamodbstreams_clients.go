@@ -22,8 +22,7 @@ type DynamoDBStreamsClient interface {
 	ListStreamsAsync(ctx workflow.Context, input *dynamodbstreams.ListStreamsInput) *DynamodbstreamsListStreamsResult
 }
 
-type DynamoDBStreamsStub struct {
-}
+type DynamoDBStreamsStub struct{}
 
 func NewDynamoDBStreamsStub() DynamoDBStreamsClient {
 	return &DynamoDBStreamsStub{}

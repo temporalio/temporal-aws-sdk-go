@@ -22,8 +22,7 @@ type IoTJobsDataPlaneClient interface {
 	UpdateJobExecutionAsync(ctx workflow.Context, input *iotjobsdataplane.UpdateJobExecutionInput) *IotjobsdataplaneUpdateJobExecutionResult
 }
 
-type IoTJobsDataPlaneStub struct {
-}
+type IoTJobsDataPlaneStub struct{}
 
 func NewIoTJobsDataPlaneStub() IoTJobsDataPlaneClient {
 	return &IoTJobsDataPlaneStub{}

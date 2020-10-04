@@ -130,8 +130,7 @@ type WAFV2Client interface {
 	UpdateWebACLAsync(ctx workflow.Context, input *wafv2.UpdateWebACLInput) *Wafv2UpdateWebACLResult
 }
 
-type WAFV2Stub struct {
-}
+type WAFV2Stub struct{}
 
 func NewWAFV2Stub() WAFV2Client {
 	return &WAFV2Stub{}

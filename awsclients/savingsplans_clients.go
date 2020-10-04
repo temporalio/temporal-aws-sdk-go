@@ -34,8 +34,7 @@ type SavingsPlansClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceResult
 }
 
-type SavingsPlansStub struct {
-}
+type SavingsPlansStub struct{}
 
 func NewSavingsPlansStub() SavingsPlansClient {
 	return &SavingsPlansStub{}

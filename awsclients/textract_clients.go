@@ -28,8 +28,7 @@ type TextractClient interface {
 	StartDocumentTextDetectionAsync(ctx workflow.Context, input *textract.StartDocumentTextDetectionInput) *TextractStartDocumentTextDetectionResult
 }
 
-type TextractStub struct {
-}
+type TextractStub struct{}
 
 func NewTextractStub() TextractClient {
 	return &TextractStub{}

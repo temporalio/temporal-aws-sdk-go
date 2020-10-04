@@ -66,11 +66,9 @@ type OpsWorksCMClient interface {
 	UpdateServerEngineAttributes(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error)
 	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsworkscmUpdateServerEngineAttributesResult
 
-	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error
-}
+	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error}
 
-type OpsWorksCMStub struct {
-}
+type OpsWorksCMStub struct{}
 
 func NewOpsWorksCMStub() OpsWorksCMClient {
 	return &OpsWorksCMStub{}
@@ -265,6 +263,7 @@ func (r *OpsworkscmUpdateServerEngineAttributesResult) Get(ctx workflow.Context)
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *OpsWorksCMStub) AssociateNode(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error) {
 	var output opsworkscm.AssociateNodeOutput

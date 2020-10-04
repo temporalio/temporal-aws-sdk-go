@@ -31,8 +31,7 @@ type MediaTailorClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *mediatailor.UntagResourceInput) *MediatailorUntagResourceResult
 }
 
-type MediaTailorStub struct {
-}
+type MediaTailorStub struct{}
 
 func NewMediaTailorStub() MediaTailorClient {
 	return &MediaTailorStub{}

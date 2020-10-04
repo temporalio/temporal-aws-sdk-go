@@ -79,8 +79,7 @@ type ServiceDiscoveryClient interface {
 	UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServicediscoveryUpdateServiceResult
 }
 
-type ServiceDiscoveryStub struct {
-}
+type ServiceDiscoveryStub struct{}
 
 func NewServiceDiscoveryStub() ServiceDiscoveryClient {
 	return &ServiceDiscoveryStub{}

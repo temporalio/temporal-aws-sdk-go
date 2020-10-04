@@ -241,8 +241,7 @@ type WAFClient interface {
 	UpdateXssMatchSetAsync(ctx workflow.Context, input *waf.UpdateXssMatchSetInput) *WafUpdateXssMatchSetResult
 }
 
-type WAFStub struct {
-}
+type WAFStub struct{}
 
 func NewWAFStub() WAFClient {
 	return &WAFStub{}

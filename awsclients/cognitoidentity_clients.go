@@ -73,8 +73,7 @@ type CognitoIdentityClient interface {
 	UpdateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.IdentityPool) *CognitoidentityUpdateIdentityPoolResult
 }
 
-type CognitoIdentityStub struct {
-}
+type CognitoIdentityStub struct{}
 
 func NewCognitoIdentityStub() CognitoIdentityClient {
 	return &CognitoIdentityStub{}

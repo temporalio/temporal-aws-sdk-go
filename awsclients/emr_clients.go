@@ -122,11 +122,9 @@ type EMRClient interface {
 
 	WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
 	WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
-	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error
-}
+	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error}
 
-type EMRStub struct {
-}
+type EMRStub struct{}
 
 func NewEMRStub() EMRClient {
 	return &EMRStub{}
@@ -501,6 +499,9 @@ func (r *EmrTerminateJobFlowsResult) Get(ctx workflow.Context) (*emr.TerminateJo
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *EMRStub) AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error) {
 	var output emr.AddInstanceFleetOutput

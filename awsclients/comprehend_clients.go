@@ -163,8 +163,7 @@ type ComprehendClient interface {
 	UpdateEndpointAsync(ctx workflow.Context, input *comprehend.UpdateEndpointInput) *ComprehendUpdateEndpointResult
 }
 
-type ComprehendStub struct {
-}
+type ComprehendStub struct{}
 
 func NewComprehendStub() ComprehendClient {
 	return &ComprehendStub{}

@@ -49,8 +49,7 @@ type CodeStarNotificationsClient interface {
 	UpdateNotificationRuleAsync(ctx workflow.Context, input *codestarnotifications.UpdateNotificationRuleInput) *CodestarnotificationsUpdateNotificationRuleResult
 }
 
-type CodeStarNotificationsStub struct {
-}
+type CodeStarNotificationsStub struct{}
 
 func NewCodeStarNotificationsStub() CodeStarNotificationsClient {
 	return &CodeStarNotificationsStub{}

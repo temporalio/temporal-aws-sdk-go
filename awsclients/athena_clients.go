@@ -94,8 +94,7 @@ type AthenaClient interface {
 	UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *AthenaUpdateWorkGroupResult
 }
 
-type AthenaStub struct {
-}
+type AthenaStub struct{}
 
 func NewAthenaStub() AthenaClient {
 	return &AthenaStub{}

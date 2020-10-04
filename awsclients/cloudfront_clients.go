@@ -215,11 +215,9 @@ type CloudFrontClient interface {
 
 	WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error
 	WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error
-	WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error
-}
+	WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error}
 
-type CloudFrontStub struct {
-}
+type CloudFrontStub struct{}
 
 func NewCloudFrontStub() CloudFrontClient {
 	return &CloudFrontStub{}
@@ -904,6 +902,9 @@ func (r *CloudfrontUpdateStreamingDistributionResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *CloudFrontStub) CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
 	var output cloudfront.CreateCachePolicyOutput

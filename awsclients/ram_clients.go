@@ -82,8 +82,7 @@ type RAMClient interface {
 	UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RamUpdateResourceShareResult
 }
 
-type RAMStub struct {
-}
+type RAMStub struct{}
 
 func NewRAMStub() RAMClient {
 	return &RAMStub{}

@@ -28,8 +28,7 @@ type BraketClient interface {
 	SearchQuantumTasksAsync(ctx workflow.Context, input *braket.SearchQuantumTasksInput) *BraketSearchQuantumTasksResult
 }
 
-type BraketStub struct {
-}
+type BraketStub struct{}
 
 func NewBraketStub() BraketClient {
 	return &BraketStub{}

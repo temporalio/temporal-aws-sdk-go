@@ -222,11 +222,9 @@ type SESClient interface {
 	VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
 	VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
 
-	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error
-}
+	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error}
 
-type SESStub struct {
-}
+type SESStub struct{}
 
 func NewSESStub() SESClient {
 	return &SESStub{}
@@ -941,6 +939,7 @@ func (r *SesVerifyEmailIdentityResult) Get(ctx workflow.Context) (*ses.VerifyEma
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *SESStub) CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error) {
 	var output ses.CloneReceiptRuleSetOutput

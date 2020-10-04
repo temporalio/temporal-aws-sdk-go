@@ -136,8 +136,7 @@ type PinpointEmailClient interface {
 	UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointemail.UpdateConfigurationSetEventDestinationInput) *PinpointemailUpdateConfigurationSetEventDestinationResult
 }
 
-type PinpointEmailStub struct {
-}
+type PinpointEmailStub struct{}
 
 func NewPinpointEmailStub() PinpointEmailClient {
 	return &PinpointEmailStub{}

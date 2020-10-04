@@ -180,11 +180,9 @@ type Route53Client interface {
 	UpdateTrafficPolicyInstance(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) (*route53.UpdateTrafficPolicyInstanceOutput, error)
 	UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceResult
 
-	WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error
-}
+	WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error}
 
-type Route53Stub struct {
-}
+type Route53Stub struct{}
 
 func NewRoute53Stub() Route53Client {
 	return &Route53Stub{}
@@ -759,6 +757,7 @@ func (r *Route53UpdateTrafficPolicyInstanceResult) Get(ctx workflow.Context) (*r
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *Route53Stub) AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error) {
 	var output route53.AssociateVPCWithHostedZoneOutput

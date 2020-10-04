@@ -58,8 +58,7 @@ type LicenseManagerClient interface {
 	UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult
 }
 
-type LicenseManagerStub struct {
-}
+type LicenseManagerStub struct{}
 
 func NewLicenseManagerStub() LicenseManagerClient {
 	return &LicenseManagerStub{}

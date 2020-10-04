@@ -96,11 +96,9 @@ type MachineLearningClient interface {
 	WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error
 	WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error
 	WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error
-	WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error
-}
+	WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error}
 
-type MachineLearningStub struct {
-}
+type MachineLearningStub struct{}
 
 func NewMachineLearningStub() MachineLearningClient {
 	return &MachineLearningStub{}
@@ -385,6 +383,10 @@ func (r *MachinelearningUpdateMLModelResult) Get(ctx workflow.Context) (*machine
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *MachineLearningStub) AddTags(ctx workflow.Context, input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error) {
 	var output machinelearning.AddTagsOutput

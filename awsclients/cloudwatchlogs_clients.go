@@ -136,8 +136,7 @@ type CloudWatchLogsClient interface {
 	UntagLogGroupAsync(ctx workflow.Context, input *cloudwatchlogs.UntagLogGroupInput) *CloudwatchlogsUntagLogGroupResult
 }
 
-type CloudWatchLogsStub struct {
-}
+type CloudWatchLogsStub struct{}
 
 func NewCloudWatchLogsStub() CloudWatchLogsClient {
 	return &CloudWatchLogsStub{}

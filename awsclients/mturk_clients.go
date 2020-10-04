@@ -121,8 +121,7 @@ type MTurkClient interface {
 	UpdateQualificationTypeAsync(ctx workflow.Context, input *mturk.UpdateQualificationTypeInput) *MturkUpdateQualificationTypeResult
 }
 
-type MTurkStub struct {
-}
+type MTurkStub struct{}
 
 func NewMTurkStub() MTurkClient {
 	return &MTurkStub{}

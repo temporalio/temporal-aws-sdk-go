@@ -19,8 +19,7 @@ type ApiGatewayManagementApiClient interface {
 	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionResult
 }
 
-type ApiGatewayManagementApiStub struct {
-}
+type ApiGatewayManagementApiStub struct{}
 
 func NewApiGatewayManagementApiStub() ApiGatewayManagementApiClient {
 	return &ApiGatewayManagementApiStub{}

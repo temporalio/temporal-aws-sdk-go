@@ -412,8 +412,7 @@ type GlueClient interface {
 	UpdateWorkflowAsync(ctx workflow.Context, input *glue.UpdateWorkflowInput) *GlueUpdateWorkflowResult
 }
 
-type GlueStub struct {
-}
+type GlueStub struct{}
 
 func NewGlueStub() GlueClient {
 	return &GlueStub{}

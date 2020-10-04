@@ -49,8 +49,7 @@ type Cloud9Client interface {
 	UpdateEnvironmentMembershipAsync(ctx workflow.Context, input *cloud9.UpdateEnvironmentMembershipInput) *Cloud9UpdateEnvironmentMembershipResult
 }
 
-type Cloud9Stub struct {
-}
+type Cloud9Stub struct{}
 
 func NewCloud9Stub() Cloud9Client {
 	return &Cloud9Stub{}

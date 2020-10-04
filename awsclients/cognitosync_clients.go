@@ -61,8 +61,7 @@ type CognitoSyncClient interface {
 	UpdateRecordsAsync(ctx workflow.Context, input *cognitosync.UpdateRecordsInput) *CognitosyncUpdateRecordsResult
 }
 
-type CognitoSyncStub struct {
-}
+type CognitoSyncStub struct{}
 
 func NewCognitoSyncStub() CognitoSyncClient {
 	return &CognitoSyncStub{}

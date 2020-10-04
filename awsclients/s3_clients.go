@@ -276,11 +276,9 @@ type S3Client interface {
 	WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
 	WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
 	WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-}
+	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error}
 
-type S3Stub struct {
-}
+type S3Stub struct{}
 
 func NewS3Stub() S3Client {
 	return &S3Stub{}
@@ -1165,6 +1163,10 @@ func (r *S3UploadPartCopyResult) Get(ctx workflow.Context) (*s3.UploadPartCopyOu
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *S3Stub) AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMultipartUploadInput) (*s3.AbortMultipartUploadOutput, error) {
 	var output s3.AbortMultipartUploadOutput

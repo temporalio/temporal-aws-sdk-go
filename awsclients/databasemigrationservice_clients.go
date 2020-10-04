@@ -175,11 +175,9 @@ type DatabaseMigrationServiceClient interface {
 	WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
 	WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
 	WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error
-}
+	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
 
-type DatabaseMigrationServiceStub struct {
-}
+type DatabaseMigrationServiceStub struct{}
 
 func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
 	return &DatabaseMigrationServiceStub{}
@@ -714,6 +712,14 @@ func (r *DatabasemigrationserviceTestConnectionResult) Get(ctx workflow.Context)
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
 
 func (a *DatabaseMigrationServiceStub) AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error) {
 	var output databasemigrationservice.AddTagsToResourceOutput

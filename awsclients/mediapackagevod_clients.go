@@ -58,8 +58,7 @@ type MediaPackageVodClient interface {
 	UpdatePackagingGroupAsync(ctx workflow.Context, input *mediapackagevod.UpdatePackagingGroupInput) *MediapackagevodUpdatePackagingGroupResult
 }
 
-type MediaPackageVodStub struct {
-}
+type MediaPackageVodStub struct{}
 
 func NewMediaPackageVodStub() MediaPackageVodClient {
 	return &MediaPackageVodStub{}

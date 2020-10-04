@@ -70,8 +70,7 @@ type CloudHSMClient interface {
 	RemoveTagsFromResourceAsync(ctx workflow.Context, input *cloudhsm.RemoveTagsFromResourceInput) *CloudhsmRemoveTagsFromResourceResult
 }
 
-type CloudHSMStub struct {
-}
+type CloudHSMStub struct{}
 
 func NewCloudHSMStub() CloudHSMClient {
 	return &CloudHSMStub{}

@@ -241,8 +241,7 @@ type DeviceFarmClient interface {
 	UpdateVPCEConfigurationAsync(ctx workflow.Context, input *devicefarm.UpdateVPCEConfigurationInput) *DevicefarmUpdateVPCEConfigurationResult
 }
 
-type DeviceFarmStub struct {
-}
+type DeviceFarmStub struct{}
 
 func NewDeviceFarmStub() DeviceFarmClient {
 	return &DeviceFarmStub{}

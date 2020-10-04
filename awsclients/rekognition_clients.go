@@ -151,11 +151,9 @@ type RekognitionClient interface {
 	StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *RekognitionStopStreamProcessorResult
 
 	WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
-	WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
-}
+	WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error}
 
-type RekognitionStub struct {
-}
+type RekognitionStub struct{}
 
 func NewRekognitionStub() RekognitionClient {
 	return &RekognitionStub{}
@@ -630,6 +628,8 @@ func (r *RekognitionStopStreamProcessorResult) Get(ctx workflow.Context) (*rekog
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *RekognitionStub) CompareFaces(ctx workflow.Context, input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error) {
 	var output rekognition.CompareFacesOutput

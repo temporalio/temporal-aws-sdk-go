@@ -43,8 +43,7 @@ type CodeStarConnectionsClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *codestarconnections.UntagResourceInput) *CodestarconnectionsUntagResourceResult
 }
 
-type CodeStarConnectionsStub struct {
-}
+type CodeStarConnectionsStub struct{}
 
 func NewCodeStarConnectionsStub() CodeStarConnectionsClient {
 	return &CodeStarConnectionsStub{}

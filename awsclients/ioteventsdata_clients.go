@@ -22,8 +22,7 @@ type IoTEventsDataClient interface {
 	ListDetectorsAsync(ctx workflow.Context, input *ioteventsdata.ListDetectorsInput) *IoteventsdataListDetectorsResult
 }
 
-type IoTEventsDataStub struct {
-}
+type IoTEventsDataStub struct{}
 
 func NewIoTEventsDataStub() IoTEventsDataClient {
 	return &IoTEventsDataStub{}

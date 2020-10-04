@@ -646,8 +646,7 @@ type IoTClient interface {
 	ValidateSecurityProfileBehaviorsAsync(ctx workflow.Context, input *iot.ValidateSecurityProfileBehaviorsInput) *IotValidateSecurityProfileBehaviorsResult
 }
 
-type IoTStub struct {
-}
+type IoTStub struct{}
 
 func NewIoTStub() IoTClient {
 	return &IoTStub{}

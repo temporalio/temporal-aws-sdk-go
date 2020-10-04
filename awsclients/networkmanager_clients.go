@@ -94,8 +94,7 @@ type NetworkManagerClient interface {
 	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkmanagerUpdateSiteResult
 }
 
-type NetworkManagerStub struct {
-}
+type NetworkManagerStub struct{}
 
 func NewNetworkManagerStub() NetworkManagerClient {
 	return &NetworkManagerStub{}

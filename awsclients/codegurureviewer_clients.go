@@ -43,8 +43,7 @@ type CodeGuruReviewerClient interface {
 	PutRecommendationFeedbackAsync(ctx workflow.Context, input *codegurureviewer.PutRecommendationFeedbackInput) *CodegurureviewerPutRecommendationFeedbackResult
 }
 
-type CodeGuruReviewerStub struct {
-}
+type CodeGuruReviewerStub struct{}
 
 func NewCodeGuruReviewerStub() CodeGuruReviewerClient {
 	return &CodeGuruReviewerStub{}

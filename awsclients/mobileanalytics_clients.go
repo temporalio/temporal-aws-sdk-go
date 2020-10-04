@@ -13,8 +13,7 @@ type MobileAnalyticsClient interface {
 	PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult
 }
 
-type MobileAnalyticsStub struct {
-}
+type MobileAnalyticsStub struct{}
 
 func NewMobileAnalyticsStub() MobileAnalyticsClient {
 	return &MobileAnalyticsStub{}

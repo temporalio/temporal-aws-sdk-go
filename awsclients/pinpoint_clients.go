@@ -346,8 +346,7 @@ type PinpointClient interface {
 	UpdateVoiceTemplateAsync(ctx workflow.Context, input *pinpoint.UpdateVoiceTemplateInput) *PinpointUpdateVoiceTemplateResult
 }
 
-type PinpointStub struct {
-}
+type PinpointStub struct{}
 
 func NewPinpointStub() PinpointClient {
 	return &PinpointStub{}

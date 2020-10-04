@@ -37,8 +37,7 @@ type PollyClient interface {
 	SynthesizeSpeechAsync(ctx workflow.Context, input *polly.SynthesizeSpeechInput) *PollySynthesizeSpeechResult
 }
 
-type PollyStub struct {
-}
+type PollyStub struct{}
 
 func NewPollyStub() PollyClient {
 	return &PollyStub{}

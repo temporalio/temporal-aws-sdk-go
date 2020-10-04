@@ -34,8 +34,7 @@ type DLMClient interface {
 	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult
 }
 
-type DLMStub struct {
-}
+type DLMStub struct{}
 
 func NewDLMStub() DLMClient {
 	return &DLMStub{}

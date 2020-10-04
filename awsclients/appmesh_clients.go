@@ -124,8 +124,7 @@ type AppMeshClient interface {
 	UpdateVirtualServiceAsync(ctx workflow.Context, input *appmesh.UpdateVirtualServiceInput) *AppmeshUpdateVirtualServiceResult
 }
 
-type AppMeshStub struct {
-}
+type AppMeshStub struct{}
 
 func NewAppMeshStub() AppMeshClient {
 	return &AppMeshStub{}

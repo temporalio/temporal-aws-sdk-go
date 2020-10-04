@@ -13,8 +13,7 @@ type ForecastQueryServiceClient interface {
 	QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult
 }
 
-type ForecastQueryServiceStub struct {
-}
+type ForecastQueryServiceStub struct{}
 
 func NewForecastQueryServiceStub() ForecastQueryServiceClient {
 	return &ForecastQueryServiceStub{}

@@ -76,8 +76,7 @@ type MQClient interface {
 	UpdateUserAsync(ctx workflow.Context, input *mq.UpdateUserRequest) *MqUpdateUserResult
 }
 
-type MQStub struct {
-}
+type MQStub struct{}
 
 func NewMQStub() MQClient {
 	return &MQStub{}

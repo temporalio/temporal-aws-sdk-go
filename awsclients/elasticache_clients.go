@@ -183,11 +183,9 @@ type ElastiCacheClient interface {
 	WaitUntilCacheClusterAvailable(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
 	WaitUntilCacheClusterDeleted(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
 	WaitUntilReplicationGroupAvailable(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
-	WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
-}
+	WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error}
 
-type ElastiCacheStub struct {
-}
+type ElastiCacheStub struct{}
 
 func NewElastiCacheStub() ElastiCacheClient {
 	return &ElastiCacheStub{}
@@ -762,6 +760,10 @@ func (r *ElasticacheTestFailoverResult) Get(ctx workflow.Context) (*elasticache.
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *ElastiCacheStub) AddTagsToResource(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) (*elasticache.TagListMessage, error) {
 	var output elasticache.TagListMessage

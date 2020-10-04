@@ -40,8 +40,7 @@ type ApplicationAutoScalingClient interface {
 	RegisterScalableTargetAsync(ctx workflow.Context, input *applicationautoscaling.RegisterScalableTargetInput) *ApplicationautoscalingRegisterScalableTargetResult
 }
 
-type ApplicationAutoScalingStub struct {
-}
+type ApplicationAutoScalingStub struct{}
 
 func NewApplicationAutoScalingStub() ApplicationAutoScalingClient {
 	return &ApplicationAutoScalingStub{}

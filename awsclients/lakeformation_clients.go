@@ -49,8 +49,7 @@ type LakeFormationClient interface {
 	UpdateResourceAsync(ctx workflow.Context, input *lakeformation.UpdateResourceInput) *LakeformationUpdateResourceResult
 }
 
-type LakeFormationStub struct {
-}
+type LakeFormationStub struct{}
 
 func NewLakeFormationStub() LakeFormationClient {
 	return &LakeFormationStub{}

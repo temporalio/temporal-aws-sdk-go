@@ -151,11 +151,9 @@ type AppStreamClient interface {
 	UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult
 
 	WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-}
+	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
 
-type AppStreamStub struct {
-}
+type AppStreamStub struct{}
 
 func NewAppStreamStub() AppStreamClient {
 	return &AppStreamStub{}
@@ -630,6 +628,8 @@ func (r *AppstreamUpdateStackResult) Get(ctx workflow.Context) (*appstream.Updat
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *AppStreamStub) AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error) {
 	var output appstream.AssociateFleetOutput

@@ -58,8 +58,7 @@ type IoT1ClickProjectsClient interface {
 	UpdateProjectAsync(ctx workflow.Context, input *iot1clickprojects.UpdateProjectInput) *Iot1clickprojectsUpdateProjectResult
 }
 
-type IoT1ClickProjectsStub struct {
-}
+type IoT1ClickProjectsStub struct{}
 
 func NewIoT1ClickProjectsStub() IoT1ClickProjectsClient {
 	return &IoT1ClickProjectsStub{}

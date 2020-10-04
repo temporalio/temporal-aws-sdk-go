@@ -25,8 +25,7 @@ type LexRuntimeServiceClient interface {
 	PutSessionAsync(ctx workflow.Context, input *lexruntimeservice.PutSessionInput) *LexruntimeservicePutSessionResult
 }
 
-type LexRuntimeServiceStub struct {
-}
+type LexRuntimeServiceStub struct{}
 
 func NewLexRuntimeServiceStub() LexRuntimeServiceClient {
 	return &LexRuntimeServiceStub{}

@@ -19,8 +19,7 @@ type SSOOIDCClient interface {
 	StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult
 }
 
-type SSOOIDCStub struct {
-}
+type SSOOIDCStub struct{}
 
 func NewSSOOIDCStub() SSOOIDCClient {
 	return &SSOOIDCStub{}

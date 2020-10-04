@@ -31,8 +31,7 @@ type OutpostsClient interface {
 	ListSitesAsync(ctx workflow.Context, input *outposts.ListSitesInput) *OutpostsListSitesResult
 }
 
-type OutpostsStub struct {
-}
+type OutpostsStub struct{}
 
 func NewOutpostsStub() OutpostsClient {
 	return &OutpostsStub{}

@@ -160,11 +160,9 @@ type MediaLiveClient interface {
 	WaitUntilMultiplexCreated(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
 	WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
 	WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-}
+	WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error}
 
-type MediaLiveStub struct {
-}
+type MediaLiveStub struct{}
 
 func NewMediaLiveStub() MediaLiveClient {
 	return &MediaLiveStub{}
@@ -639,6 +637,17 @@ func (r *MedialiveUpdateReservationResult) Get(ctx workflow.Context) (*medialive
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
+
+
+
 
 func (a *MediaLiveStub) BatchUpdateSchedule(ctx workflow.Context, input *medialive.BatchUpdateScheduleInput) (*medialive.BatchUpdateScheduleOutput, error) {
 	var output medialive.BatchUpdateScheduleOutput

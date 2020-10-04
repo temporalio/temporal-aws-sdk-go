@@ -25,8 +25,7 @@ type ConnectParticipantClient interface {
 	SendMessageAsync(ctx workflow.Context, input *connectparticipant.SendMessageInput) *ConnectparticipantSendMessageResult
 }
 
-type ConnectParticipantStub struct {
-}
+type ConnectParticipantStub struct{}
 
 func NewConnectParticipantStub() ConnectParticipantClient {
 	return &ConnectParticipantStub{}

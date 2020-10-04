@@ -208,8 +208,7 @@ type CloudDirectoryClient interface {
 	UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaResult
 }
 
-type CloudDirectoryStub struct {
-}
+type CloudDirectoryStub struct{}
 
 func NewCloudDirectoryStub() CloudDirectoryClient {
 	return &CloudDirectoryStub{}

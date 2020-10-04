@@ -28,8 +28,7 @@ type RDSDataServiceClient interface {
 	RollbackTransactionAsync(ctx workflow.Context, input *rdsdataservice.RollbackTransactionInput) *RdsdataserviceRollbackTransactionResult
 }
 
-type RDSDataServiceStub struct {
-}
+type RDSDataServiceStub struct{}
 
 func NewRDSDataServiceStub() RDSDataServiceClient {
 	return &RDSDataServiceStub{}

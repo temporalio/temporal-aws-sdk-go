@@ -136,8 +136,7 @@ type ImagebuilderClient interface {
 	UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationResult
 }
 
-type ImagebuilderStub struct {
-}
+type ImagebuilderStub struct{}
 
 func NewImagebuilderStub() ImagebuilderClient {
 	return &ImagebuilderStub{}

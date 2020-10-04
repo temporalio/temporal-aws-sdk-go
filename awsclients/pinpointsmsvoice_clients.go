@@ -34,8 +34,7 @@ type PinpointSMSVoiceClient interface {
 	UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) *PinpointsmsvoiceUpdateConfigurationSetEventDestinationResult
 }
 
-type PinpointSMSVoiceStub struct {
-}
+type PinpointSMSVoiceStub struct{}
 
 func NewPinpointSMSVoiceStub() PinpointSMSVoiceClient {
 	return &PinpointSMSVoiceStub{}

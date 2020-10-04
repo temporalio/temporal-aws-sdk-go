@@ -103,8 +103,7 @@ type CloudWatchEventsClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudwatchevents.UntagResourceInput) *CloudwatcheventsUntagResourceResult
 }
 
-type CloudWatchEventsStub struct {
-}
+type CloudWatchEventsStub struct{}
 
 func NewCloudWatchEventsStub() CloudWatchEventsClient {
 	return &CloudWatchEventsStub{}

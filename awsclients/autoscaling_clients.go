@@ -182,11 +182,9 @@ type AutoScalingClient interface {
 
 	WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
 	WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-	WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-}
+	WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error}
 
-type AutoScalingStub struct {
-}
+type AutoScalingStub struct{}
 
 func NewAutoScalingStub() AutoScalingClient {
 	return &AutoScalingStub{}
@@ -761,6 +759,9 @@ func (r *AutoscalingUpdateAutoScalingGroupResult) Get(ctx workflow.Context) (*au
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *AutoScalingStub) AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error) {
 	var output autoscaling.AttachInstancesOutput

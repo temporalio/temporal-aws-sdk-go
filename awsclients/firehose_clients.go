@@ -46,8 +46,7 @@ type FirehoseClient interface {
 	UpdateDestinationAsync(ctx workflow.Context, input *firehose.UpdateDestinationInput) *FirehoseUpdateDestinationResult
 }
 
-type FirehoseStub struct {
-}
+type FirehoseStub struct{}
 
 func NewFirehoseStub() FirehoseClient {
 	return &FirehoseStub{}

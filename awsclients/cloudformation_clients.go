@@ -181,11 +181,9 @@ type CloudFormationClient interface {
 	WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
 	WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
 	WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error
-}
+	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error}
 
-type CloudFormationStub struct {
-}
+type CloudFormationStub struct{}
 
 func NewCloudFormationStub() CloudFormationClient {
 	return &CloudFormationStub{}
@@ -740,6 +738,14 @@ func (r *CloudformationValidateTemplateResult) Get(ctx workflow.Context) (*cloud
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
 
 func (a *CloudFormationStub) CancelUpdateStack(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
 	var output cloudformation.CancelUpdateStackOutput

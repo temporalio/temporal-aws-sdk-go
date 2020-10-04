@@ -70,8 +70,7 @@ type TransferClient interface {
 	UpdateUserAsync(ctx workflow.Context, input *transfer.UpdateUserInput) *TransferUpdateUserResult
 }
 
-type TransferStub struct {
-}
+type TransferStub struct{}
 
 func NewTransferStub() TransferClient {
 	return &TransferStub{}

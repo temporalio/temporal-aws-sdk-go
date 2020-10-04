@@ -103,8 +103,7 @@ type DataSyncClient interface {
 	UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult
 }
 
-type DataSyncStub struct {
-}
+type DataSyncStub struct{}
 
 func NewDataSyncStub() DataSyncClient {
 	return &DataSyncStub{}

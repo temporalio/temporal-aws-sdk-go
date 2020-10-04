@@ -163,8 +163,7 @@ type OrganizationsClient interface {
 	UpdatePolicyAsync(ctx workflow.Context, input *organizations.UpdatePolicyInput) *OrganizationsUpdatePolicyResult
 }
 
-type OrganizationsStub struct {
-}
+type OrganizationsStub struct{}
 
 func NewOrganizationsStub() OrganizationsClient {
 	return &OrganizationsStub{}

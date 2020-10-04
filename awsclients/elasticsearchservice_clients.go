@@ -121,8 +121,7 @@ type ElasticsearchServiceClient interface {
 	UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *ElasticsearchserviceUpgradeElasticsearchDomainResult
 }
 
-type ElasticsearchServiceStub struct {
-}
+type ElasticsearchServiceStub struct{}
 
 func NewElasticsearchServiceStub() ElasticsearchServiceClient {
 	return &ElasticsearchServiceStub{}

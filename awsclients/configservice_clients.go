@@ -244,8 +244,7 @@ type ConfigServiceClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *configservice.UntagResourceInput) *ConfigserviceUntagResourceResult
 }
 
-type ConfigServiceStub struct {
-}
+type ConfigServiceStub struct{}
 
 func NewConfigServiceStub() ConfigServiceClient {
 	return &ConfigServiceStub{}

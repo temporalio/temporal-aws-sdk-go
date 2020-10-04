@@ -73,8 +73,7 @@ type ComprehendMedicalClient interface {
 	StopRxNormInferenceJobAsync(ctx workflow.Context, input *comprehendmedical.StopRxNormInferenceJobInput) *ComprehendmedicalStopRxNormInferenceJobResult
 }
 
-type ComprehendMedicalStub struct {
-}
+type ComprehendMedicalStub struct{}
 
 func NewComprehendMedicalStub() ComprehendMedicalClient {
 	return &ComprehendMedicalStub{}

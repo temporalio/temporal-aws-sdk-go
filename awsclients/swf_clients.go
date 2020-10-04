@@ -121,8 +121,7 @@ type SWFClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *swf.UntagResourceInput) *SwfUntagResourceResult
 }
 
-type SWFStub struct {
-}
+type SWFStub struct{}
 
 func NewSWFStub() SWFClient {
 	return &SWFStub{}

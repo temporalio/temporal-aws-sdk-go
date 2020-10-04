@@ -70,8 +70,7 @@ type SQSClient interface {
 	UntagQueueAsync(ctx workflow.Context, input *sqs.UntagQueueInput) *SqsUntagQueueResult
 }
 
-type SQSStub struct {
-}
+type SQSStub struct{}
 
 func NewSQSStub() SQSClient {
 	return &SQSStub{}

@@ -109,8 +109,7 @@ type WorkLinkClient interface {
 	UpdateIdentityProviderConfigurationAsync(ctx workflow.Context, input *worklink.UpdateIdentityProviderConfigurationInput) *WorklinkUpdateIdentityProviderConfigurationResult
 }
 
-type WorkLinkStub struct {
-}
+type WorkLinkStub struct{}
 
 func NewWorkLinkStub() WorkLinkClient {
 	return &WorkLinkStub{}

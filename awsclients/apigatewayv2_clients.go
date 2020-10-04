@@ -226,8 +226,7 @@ type ApiGatewayV2Client interface {
 	UpdateVpcLinkAsync(ctx workflow.Context, input *apigatewayv2.UpdateVpcLinkInput) *Apigatewayv2UpdateVpcLinkResult
 }
 
-type ApiGatewayV2Stub struct {
-}
+type ApiGatewayV2Stub struct{}
 
 func NewApiGatewayV2Stub() ApiGatewayV2Client {
 	return &ApiGatewayV2Stub{}

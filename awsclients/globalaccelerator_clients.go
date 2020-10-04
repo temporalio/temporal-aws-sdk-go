@@ -85,8 +85,7 @@ type GlobalAcceleratorClient interface {
 	WithdrawByoipCidrAsync(ctx workflow.Context, input *globalaccelerator.WithdrawByoipCidrInput) *GlobalacceleratorWithdrawByoipCidrResult
 }
 
-type GlobalAcceleratorStub struct {
-}
+type GlobalAcceleratorStub struct{}
 
 func NewGlobalAcceleratorStub() GlobalAcceleratorClient {
 	return &GlobalAcceleratorStub{}

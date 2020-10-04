@@ -79,8 +79,7 @@ type CodeGuruProfilerClient interface {
 	UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *CodeguruprofilerUpdateProfilingGroupResult
 }
 
-type CodeGuruProfilerStub struct {
-}
+type CodeGuruProfilerStub struct{}
 
 func NewCodeGuruProfilerStub() CodeGuruProfilerClient {
 	return &CodeGuruProfilerStub{}

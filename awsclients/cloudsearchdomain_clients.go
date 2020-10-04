@@ -19,8 +19,7 @@ type CloudSearchDomainClient interface {
 	UploadDocumentsAsync(ctx workflow.Context, input *cloudsearchdomain.UploadDocumentsInput) *CloudsearchdomainUploadDocumentsResult
 }
 
-type CloudSearchDomainStub struct {
-}
+type CloudSearchDomainStub struct{}
 
 func NewCloudSearchDomainStub() CloudSearchDomainClient {
 	return &CloudSearchDomainStub{}

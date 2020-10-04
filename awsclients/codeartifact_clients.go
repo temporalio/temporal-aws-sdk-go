@@ -103,8 +103,7 @@ type CodeArtifactClient interface {
 	UpdateRepositoryAsync(ctx workflow.Context, input *codeartifact.UpdateRepositoryInput) *CodeartifactUpdateRepositoryResult
 }
 
-type CodeArtifactStub struct {
-}
+type CodeArtifactStub struct{}
 
 func NewCodeArtifactStub() CodeArtifactClient {
 	return &CodeArtifactStub{}

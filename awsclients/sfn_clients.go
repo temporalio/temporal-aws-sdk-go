@@ -76,8 +76,7 @@ type SFNClient interface {
 	UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SfnUpdateStateMachineResult
 }
 
-type SFNStub struct {
-}
+type SFNStub struct{}
 
 func NewSFNStub() SFNClient {
 	return &SFNStub{}

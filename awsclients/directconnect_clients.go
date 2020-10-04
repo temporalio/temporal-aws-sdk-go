@@ -178,8 +178,7 @@ type DirectConnectClient interface {
 	UpdateVirtualInterfaceAttributesAsync(ctx workflow.Context, input *directconnect.UpdateVirtualInterfaceAttributesInput) *DirectconnectUpdateVirtualInterfaceAttributesResult
 }
 
-type DirectConnectStub struct {
-}
+type DirectConnectStub struct{}
 
 func NewDirectConnectStub() DirectConnectClient {
 	return &DirectConnectStub{}

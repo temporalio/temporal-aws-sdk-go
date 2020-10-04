@@ -103,8 +103,7 @@ type EventBridgeClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *eventbridge.UntagResourceInput) *EventbridgeUntagResourceResult
 }
 
-type EventBridgeStub struct {
-}
+type EventBridgeStub struct{}
 
 func NewEventBridgeStub() EventBridgeClient {
 	return &EventBridgeStub{}

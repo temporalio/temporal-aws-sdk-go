@@ -76,8 +76,7 @@ type IVSClient interface {
 	UpdateChannelAsync(ctx workflow.Context, input *ivs.UpdateChannelInput) *IvsUpdateChannelResult
 }
 
-type IVSStub struct {
-}
+type IVSStub struct{}
 
 func NewIVSStub() IVSClient {
 	return &IVSStub{}

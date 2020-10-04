@@ -31,8 +31,7 @@ type MacieClient interface {
 	UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult
 }
 
-type MacieStub struct {
-}
+type MacieStub struct{}
 
 func NewMacieStub() MacieClient {
 	return &MacieStub{}

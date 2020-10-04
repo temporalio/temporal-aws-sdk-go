@@ -109,8 +109,7 @@ type AppConfigClient interface {
 	ValidateConfigurationAsync(ctx workflow.Context, input *appconfig.ValidateConfigurationInput) *AppconfigValidateConfigurationResult
 }
 
-type AppConfigStub struct {
-}
+type AppConfigStub struct{}
 
 func NewAppConfigStub() AppConfigClient {
 	return &AppConfigStub{}

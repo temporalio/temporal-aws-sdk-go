@@ -28,8 +28,7 @@ type ElasticInferenceClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *elasticinference.UntagResourceInput) *ElasticinferenceUntagResourceResult
 }
 
-type ElasticInferenceStub struct {
-}
+type ElasticInferenceStub struct{}
 
 func NewElasticInferenceStub() ElasticInferenceClient {
 	return &ElasticInferenceStub{}

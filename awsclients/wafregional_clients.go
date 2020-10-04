@@ -254,8 +254,7 @@ type WAFRegionalClient interface {
 	UpdateXssMatchSetAsync(ctx workflow.Context, input *waf.UpdateXssMatchSetInput) *WafUpdateXssMatchSetResult
 }
 
-type WAFRegionalStub struct {
-}
+type WAFRegionalStub struct{}
 
 func NewWAFRegionalStub() WAFRegionalClient {
 	return &WAFRegionalStub{}
@@ -271,6 +270,33 @@ func (r *WafregionalAssociateWebACLResult) Get(ctx workflow.Context) (*wafregion
 	return &output, err
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 type WafregionalDisassociateWebACLResult struct {
 	Result workflow.Future
 }
@@ -280,6 +306,23 @@ func (r *WafregionalDisassociateWebACLResult) Get(ctx workflow.Context) (*wafreg
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 type WafregionalGetWebACLForResourceResult struct {
 	Result workflow.Future
@@ -291,6 +334,15 @@ func (r *WafregionalGetWebACLForResourceResult) Get(ctx workflow.Context) (*wafr
 	return &output, err
 }
 
+
+
+
+
+
+
+
+
+
 type WafregionalListResourcesForWebACLResult struct {
 	Result workflow.Future
 }
@@ -300,6 +352,30 @@ func (r *WafregionalListResourcesForWebACLResult) Get(ctx workflow.Context) (*wa
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 func (a *WAFRegionalStub) AssociateWebACL(ctx workflow.Context, input *wafregional.AssociateWebACLInput) (*wafregional.AssociateWebACLOutput, error) {
 	var output wafregional.AssociateWebACLOutput

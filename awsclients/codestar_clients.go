@@ -64,8 +64,7 @@ type CodeStarClient interface {
 	UpdateUserProfileAsync(ctx workflow.Context, input *codestar.UpdateUserProfileInput) *CodestarUpdateUserProfileResult
 }
 
-type CodeStarStub struct {
-}
+type CodeStarStub struct{}
 
 func NewCodeStarStub() CodeStarClient {
 	return &CodeStarStub{}

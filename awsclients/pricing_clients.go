@@ -19,8 +19,7 @@ type PricingClient interface {
 	GetProductsAsync(ctx workflow.Context, input *pricing.GetProductsInput) *PricingGetProductsResult
 }
 
-type PricingStub struct {
-}
+type PricingStub struct{}
 
 func NewPricingStub() PricingClient {
 	return &PricingStub{}

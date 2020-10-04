@@ -155,11 +155,9 @@ type LambdaClient interface {
 
 	WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
 	WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
-	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
-}
+	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error}
 
-type LambdaStub struct {
-}
+type LambdaStub struct{}
 
 func NewLambdaStub() LambdaClient {
 	return &LambdaStub{}
@@ -644,6 +642,9 @@ func (r *LambdaUpdateFunctionEventInvokeConfigResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *LambdaStub) AddLayerVersionPermission(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error) {
 	var output lambda.AddLayerVersionPermissionOutput

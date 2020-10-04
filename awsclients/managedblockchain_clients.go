@@ -70,8 +70,7 @@ type ManagedBlockchainClient interface {
 	VoteOnProposalAsync(ctx workflow.Context, input *managedblockchain.VoteOnProposalInput) *ManagedblockchainVoteOnProposalResult
 }
 
-type ManagedBlockchainStub struct {
-}
+type ManagedBlockchainStub struct{}
 
 func NewManagedBlockchainStub() ManagedBlockchainClient {
 	return &ManagedBlockchainStub{}

@@ -67,8 +67,7 @@ type SecretsManagerClient interface {
 	ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsmanagerValidateResourcePolicyResult
 }
 
-type SecretsManagerStub struct {
-}
+type SecretsManagerStub struct{}
 
 func NewSecretsManagerStub() SecretsManagerClient {
 	return &SecretsManagerStub{}

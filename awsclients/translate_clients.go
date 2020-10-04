@@ -37,8 +37,7 @@ type TranslateClient interface {
 	TextAsync(ctx workflow.Context, input *translate.TextInput) *TranslateTextResult
 }
 
-type TranslateStub struct {
-}
+type TranslateStub struct{}
 
 func NewTranslateStub() TranslateClient {
 	return &TranslateStub{}

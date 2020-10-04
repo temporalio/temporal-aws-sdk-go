@@ -13,8 +13,7 @@ type WorkMailMessageFlowClient interface {
 	GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult
 }
 
-type WorkMailMessageFlowStub struct {
-}
+type WorkMailMessageFlowStub struct{}
 
 func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
 	return &WorkMailMessageFlowStub{}

@@ -37,8 +37,7 @@ type ComputeOptimizerClient interface {
 	UpdateEnrollmentStatusAsync(ctx workflow.Context, input *computeoptimizer.UpdateEnrollmentStatusInput) *ComputeoptimizerUpdateEnrollmentStatusResult
 }
 
-type ComputeOptimizerStub struct {
-}
+type ComputeOptimizerStub struct{}
 
 func NewComputeOptimizerStub() ComputeOptimizerClient {
 	return &ComputeOptimizerStub{}

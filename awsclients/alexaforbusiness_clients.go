@@ -289,8 +289,7 @@ type AlexaForBusinessClient interface {
 	UpdateSkillGroupAsync(ctx workflow.Context, input *alexaforbusiness.UpdateSkillGroupInput) *AlexaforbusinessUpdateSkillGroupResult
 }
 
-type AlexaForBusinessStub struct {
-}
+type AlexaForBusinessStub struct{}
 
 func NewAlexaForBusinessStub() AlexaForBusinessClient {
 	return &AlexaForBusinessStub{}

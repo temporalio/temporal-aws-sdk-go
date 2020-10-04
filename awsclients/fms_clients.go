@@ -88,8 +88,7 @@ type FMSClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *fms.UntagResourceInput) *FmsUntagResourceResult
 }
 
-type FMSStub struct {
-}
+type FMSStub struct{}
 
 func NewFMSStub() FMSClient {
 	return &FMSStub{}

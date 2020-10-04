@@ -150,11 +150,9 @@ type CodeDeployClient interface {
 	UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error)
 	UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult
 
-	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error
-}
+	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error}
 
-type CodeDeployStub struct {
-}
+type CodeDeployStub struct{}
 
 func NewCodeDeployStub() CodeDeployClient {
 	return &CodeDeployStub{}
@@ -629,6 +627,7 @@ func (r *CodedeployUpdateDeploymentGroupResult) Get(ctx workflow.Context) (*code
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *CodeDeployStub) AddTagsToOnPremisesInstances(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error) {
 	var output codedeploy.AddTagsToOnPremisesInstancesOutput

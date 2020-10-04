@@ -13,8 +13,7 @@ type SageMakerRuntimeClient interface {
 	InvokeEndpointAsync(ctx workflow.Context, input *sagemakerruntime.InvokeEndpointInput) *SagemakerruntimeInvokeEndpointResult
 }
 
-type SageMakerRuntimeStub struct {
-}
+type SageMakerRuntimeStub struct{}
 
 func NewSageMakerRuntimeStub() SageMakerRuntimeClient {
 	return &SageMakerRuntimeStub{}

@@ -229,8 +229,7 @@ type CodeCommitClient interface {
 	UpdateRepositoryNameAsync(ctx workflow.Context, input *codecommit.UpdateRepositoryNameInput) *CodecommitUpdateRepositoryNameResult
 }
 
-type CodeCommitStub struct {
-}
+type CodeCommitStub struct{}
 
 func NewCodeCommitStub() CodeCommitClient {
 	return &CodeCommitStub{}

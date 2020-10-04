@@ -139,8 +139,7 @@ type WorkSpacesClient interface {
 	UpdateWorkspaceImagePermissionAsync(ctx workflow.Context, input *workspaces.UpdateWorkspaceImagePermissionInput) *WorkspacesUpdateWorkspaceImagePermissionResult
 }
 
-type WorkSpacesStub struct {
-}
+type WorkSpacesStub struct{}
 
 func NewWorkSpacesStub() WorkSpacesClient {
 	return &WorkSpacesStub{}
