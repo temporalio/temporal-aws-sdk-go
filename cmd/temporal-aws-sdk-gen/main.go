@@ -41,10 +41,10 @@ func main() {
 		},
 	}
 	app.Action = func(c *cli.Context) (err error) {
-		parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
+		//parser := &internal.AWSSDKParser{SdkDirectory: sdkDir}
 		generator := internal.NewGenerator(templateDir)
 		s := strings.ToLower(service)
-		definitions, err := parser.ParseAwsSdk(s)
+		definitions, err := internal.ParseAwsSdk(s)
 		if err != nil {
 			log.Fatal(err)
 		}
