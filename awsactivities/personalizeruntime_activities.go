@@ -20,17 +20,44 @@ type _ request.Option
 
 type PersonalizeRuntimeActivities struct {
 	client personalizeruntimeiface.PersonalizeRuntimeAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPersonalizeRuntimeActivities(session *session.Session, config ...*aws.Config) *PersonalizeRuntimeActivities {
-	client := personalizeruntime.New(session, config...)
+func NewPersonalizeRuntimeActivities(sess *session.Session, config ...*aws.Config) *PersonalizeRuntimeActivities {
+	client := personalizeruntime.New(sess, config...)
 	return &PersonalizeRuntimeActivities{client: client}
 }
 
+func NewPersonalizeRuntimeActivitiesWithSessionFactory(sessionFactory SessionFactory) *PersonalizeRuntimeActivities {
+	return &PersonalizeRuntimeActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PersonalizeRuntimeActivities) getClient(ctx context.Context) (personalizeruntimeiface.PersonalizeRuntimeAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return personalizeruntime.New(sess), nil
+}
+
 func (a *PersonalizeRuntimeActivities) GetPersonalizedRanking(ctx context.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
-	return a.client.GetPersonalizedRankingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPersonalizedRankingWithContext(ctx, input)
 }
 
 func (a *PersonalizeRuntimeActivities) GetRecommendations(ctx context.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
-	return a.client.GetRecommendationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRecommendationsWithContext(ctx, input)
 }

@@ -20,61 +20,132 @@ type _ request.Option
 
 type SyntheticsActivities struct {
 	client syntheticsiface.SyntheticsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSyntheticsActivities(session *session.Session, config ...*aws.Config) *SyntheticsActivities {
-	client := synthetics.New(session, config...)
+func NewSyntheticsActivities(sess *session.Session, config ...*aws.Config) *SyntheticsActivities {
+	client := synthetics.New(sess, config...)
 	return &SyntheticsActivities{client: client}
 }
 
+func NewSyntheticsActivitiesWithSessionFactory(sessionFactory SessionFactory) *SyntheticsActivities {
+	return &SyntheticsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SyntheticsActivities) getClient(ctx context.Context) (syntheticsiface.SyntheticsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return synthetics.New(sess), nil
+}
+
 func (a *SyntheticsActivities) CreateCanary(ctx context.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error) {
-	return a.client.CreateCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCanaryWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) DeleteCanary(ctx context.Context, input *synthetics.DeleteCanaryInput) (*synthetics.DeleteCanaryOutput, error) {
-	return a.client.DeleteCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteCanaryWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) DescribeCanaries(ctx context.Context, input *synthetics.DescribeCanariesInput) (*synthetics.DescribeCanariesOutput, error) {
-	return a.client.DescribeCanariesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCanariesWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) DescribeCanariesLastRun(ctx context.Context, input *synthetics.DescribeCanariesLastRunInput) (*synthetics.DescribeCanariesLastRunOutput, error) {
-	return a.client.DescribeCanariesLastRunWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCanariesLastRunWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) DescribeRuntimeVersions(ctx context.Context, input *synthetics.DescribeRuntimeVersionsInput) (*synthetics.DescribeRuntimeVersionsOutput, error) {
-	return a.client.DescribeRuntimeVersionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeRuntimeVersionsWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) GetCanary(ctx context.Context, input *synthetics.GetCanaryInput) (*synthetics.GetCanaryOutput, error) {
-	return a.client.GetCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCanaryWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) GetCanaryRuns(ctx context.Context, input *synthetics.GetCanaryRunsInput) (*synthetics.GetCanaryRunsOutput, error) {
-	return a.client.GetCanaryRunsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCanaryRunsWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) ListTagsForResource(ctx context.Context, input *synthetics.ListTagsForResourceInput) (*synthetics.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) StartCanary(ctx context.Context, input *synthetics.StartCanaryInput) (*synthetics.StartCanaryOutput, error) {
-	return a.client.StartCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartCanaryWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) StopCanary(ctx context.Context, input *synthetics.StopCanaryInput) (*synthetics.StopCanaryOutput, error) {
-	return a.client.StopCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopCanaryWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) TagResource(ctx context.Context, input *synthetics.TagResourceInput) (*synthetics.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) UntagResource(ctx context.Context, input *synthetics.UntagResourceInput) (*synthetics.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *SyntheticsActivities) UpdateCanary(ctx context.Context, input *synthetics.UpdateCanaryInput) (*synthetics.UpdateCanaryOutput, error) {
-	return a.client.UpdateCanaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateCanaryWithContext(ctx, input)
 }

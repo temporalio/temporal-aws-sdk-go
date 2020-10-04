@@ -20,89 +20,188 @@ type _ request.Option
 
 type KinesisAnalyticsActivities struct {
 	client kinesisanalyticsiface.KinesisAnalyticsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewKinesisAnalyticsActivities(session *session.Session, config ...*aws.Config) *KinesisAnalyticsActivities {
-	client := kinesisanalytics.New(session, config...)
+func NewKinesisAnalyticsActivities(sess *session.Session, config ...*aws.Config) *KinesisAnalyticsActivities {
+	client := kinesisanalytics.New(sess, config...)
 	return &KinesisAnalyticsActivities{client: client}
 }
 
+func NewKinesisAnalyticsActivitiesWithSessionFactory(sessionFactory SessionFactory) *KinesisAnalyticsActivities {
+	return &KinesisAnalyticsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *KinesisAnalyticsActivities) getClient(ctx context.Context) (kinesisanalyticsiface.KinesisAnalyticsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return kinesisanalytics.New(sess), nil
+}
+
 func (a *KinesisAnalyticsActivities) AddApplicationCloudWatchLoggingOption(ctx context.Context, input *kinesisanalytics.AddApplicationCloudWatchLoggingOptionInput) (*kinesisanalytics.AddApplicationCloudWatchLoggingOptionOutput, error) {
-	return a.client.AddApplicationCloudWatchLoggingOptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddApplicationCloudWatchLoggingOptionWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) AddApplicationInput(ctx context.Context, input *kinesisanalytics.AddApplicationInputInput) (*kinesisanalytics.AddApplicationInputOutput, error) {
-	return a.client.AddApplicationInputWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddApplicationInputWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) AddApplicationInputProcessingConfiguration(ctx context.Context, input *kinesisanalytics.AddApplicationInputProcessingConfigurationInput) (*kinesisanalytics.AddApplicationInputProcessingConfigurationOutput, error) {
-	return a.client.AddApplicationInputProcessingConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddApplicationInputProcessingConfigurationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) AddApplicationOutput(ctx context.Context, input *kinesisanalytics.AddApplicationOutputInput) (*kinesisanalytics.AddApplicationOutputOutput, error) {
-	return a.client.AddApplicationOutputWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddApplicationOutputWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) AddApplicationReferenceDataSource(ctx context.Context, input *kinesisanalytics.AddApplicationReferenceDataSourceInput) (*kinesisanalytics.AddApplicationReferenceDataSourceOutput, error) {
-	return a.client.AddApplicationReferenceDataSourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddApplicationReferenceDataSourceWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) CreateApplication(ctx context.Context, input *kinesisanalytics.CreateApplicationInput) (*kinesisanalytics.CreateApplicationOutput, error) {
-	return a.client.CreateApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateApplicationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DeleteApplication(ctx context.Context, input *kinesisanalytics.DeleteApplicationInput) (*kinesisanalytics.DeleteApplicationOutput, error) {
-	return a.client.DeleteApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DeleteApplicationCloudWatchLoggingOption(ctx context.Context, input *kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionInput) (*kinesisanalytics.DeleteApplicationCloudWatchLoggingOptionOutput, error) {
-	return a.client.DeleteApplicationCloudWatchLoggingOptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationCloudWatchLoggingOptionWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DeleteApplicationInputProcessingConfiguration(ctx context.Context, input *kinesisanalytics.DeleteApplicationInputProcessingConfigurationInput) (*kinesisanalytics.DeleteApplicationInputProcessingConfigurationOutput, error) {
-	return a.client.DeleteApplicationInputProcessingConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationInputProcessingConfigurationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DeleteApplicationOutput(ctx context.Context, input *kinesisanalytics.DeleteApplicationOutputInput) (*kinesisanalytics.DeleteApplicationOutputOutput, error) {
-	return a.client.DeleteApplicationOutputWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationOutputWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DeleteApplicationReferenceDataSource(ctx context.Context, input *kinesisanalytics.DeleteApplicationReferenceDataSourceInput) (*kinesisanalytics.DeleteApplicationReferenceDataSourceOutput, error) {
-	return a.client.DeleteApplicationReferenceDataSourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationReferenceDataSourceWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DescribeApplication(ctx context.Context, input *kinesisanalytics.DescribeApplicationInput) (*kinesisanalytics.DescribeApplicationOutput, error) {
-	return a.client.DescribeApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeApplicationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) DiscoverInputSchema(ctx context.Context, input *kinesisanalytics.DiscoverInputSchemaInput) (*kinesisanalytics.DiscoverInputSchemaOutput, error) {
-	return a.client.DiscoverInputSchemaWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DiscoverInputSchemaWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) ListApplications(ctx context.Context, input *kinesisanalytics.ListApplicationsInput) (*kinesisanalytics.ListApplicationsOutput, error) {
-	return a.client.ListApplicationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListApplicationsWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) ListTagsForResource(ctx context.Context, input *kinesisanalytics.ListTagsForResourceInput) (*kinesisanalytics.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) StartApplication(ctx context.Context, input *kinesisanalytics.StartApplicationInput) (*kinesisanalytics.StartApplicationOutput, error) {
-	return a.client.StartApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartApplicationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) StopApplication(ctx context.Context, input *kinesisanalytics.StopApplicationInput) (*kinesisanalytics.StopApplicationOutput, error) {
-	return a.client.StopApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopApplicationWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) TagResource(ctx context.Context, input *kinesisanalytics.TagResourceInput) (*kinesisanalytics.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) UntagResource(ctx context.Context, input *kinesisanalytics.UntagResourceInput) (*kinesisanalytics.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *KinesisAnalyticsActivities) UpdateApplication(ctx context.Context, input *kinesisanalytics.UpdateApplicationInput) (*kinesisanalytics.UpdateApplicationOutput, error) {
-	return a.client.UpdateApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateApplicationWithContext(ctx, input)
 }

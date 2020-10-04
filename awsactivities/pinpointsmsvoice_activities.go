@@ -20,41 +20,92 @@ type _ request.Option
 
 type PinpointSMSVoiceActivities struct {
 	client pinpointsmsvoiceiface.PinpointSMSVoiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPinpointSMSVoiceActivities(session *session.Session, config ...*aws.Config) *PinpointSMSVoiceActivities {
-	client := pinpointsmsvoice.New(session, config...)
+func NewPinpointSMSVoiceActivities(sess *session.Session, config ...*aws.Config) *PinpointSMSVoiceActivities {
+	client := pinpointsmsvoice.New(sess, config...)
 	return &PinpointSMSVoiceActivities{client: client}
 }
 
+func NewPinpointSMSVoiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *PinpointSMSVoiceActivities {
+	return &PinpointSMSVoiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PinpointSMSVoiceActivities) getClient(ctx context.Context) (pinpointsmsvoiceiface.PinpointSMSVoiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return pinpointsmsvoice.New(sess), nil
+}
+
 func (a *PinpointSMSVoiceActivities) CreateConfigurationSet(ctx context.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
-	return a.client.CreateConfigurationSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateConfigurationSetWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) CreateConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
-	return a.client.CreateConfigurationSetEventDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateConfigurationSetEventDestinationWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) DeleteConfigurationSet(ctx context.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
-	return a.client.DeleteConfigurationSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConfigurationSetWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) DeleteConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
-	return a.client.DeleteConfigurationSetEventDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConfigurationSetEventDestinationWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) GetConfigurationSetEventDestinations(ctx context.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
-	return a.client.GetConfigurationSetEventDestinationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetConfigurationSetEventDestinationsWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) ListConfigurationSets(ctx context.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
-	return a.client.ListConfigurationSetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListConfigurationSetsWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) SendVoiceMessage(ctx context.Context, input *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
-	return a.client.SendVoiceMessageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SendVoiceMessageWithContext(ctx, input)
 }
 
 func (a *PinpointSMSVoiceActivities) UpdateConfigurationSetEventDestination(ctx context.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
-	return a.client.UpdateConfigurationSetEventDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateConfigurationSetEventDestinationWithContext(ctx, input)
 }

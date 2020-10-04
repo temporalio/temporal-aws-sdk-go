@@ -20,34 +20,77 @@ type _ request.Option
 
 type EBSActivities struct {
 	client ebsiface.EBSAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewEBSActivities(session *session.Session, config ...*aws.Config) *EBSActivities {
-	client := ebs.New(session, config...)
+func NewEBSActivities(sess *session.Session, config ...*aws.Config) *EBSActivities {
+	client := ebs.New(sess, config...)
 	return &EBSActivities{client: client}
 }
 
+func NewEBSActivitiesWithSessionFactory(sessionFactory SessionFactory) *EBSActivities {
+	return &EBSActivities{sessionFactory: sessionFactory}
+}
+
+func (a *EBSActivities) getClient(ctx context.Context) (ebsiface.EBSAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return ebs.New(sess), nil
+}
+
 func (a *EBSActivities) CompleteSnapshot(ctx context.Context, input *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error) {
-	return a.client.CompleteSnapshotWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CompleteSnapshotWithContext(ctx, input)
 }
 
 func (a *EBSActivities) GetSnapshotBlock(ctx context.Context, input *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error) {
-	return a.client.GetSnapshotBlockWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSnapshotBlockWithContext(ctx, input)
 }
 
 func (a *EBSActivities) ListChangedBlocks(ctx context.Context, input *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error) {
-	return a.client.ListChangedBlocksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListChangedBlocksWithContext(ctx, input)
 }
 
 func (a *EBSActivities) ListSnapshotBlocks(ctx context.Context, input *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error) {
-	return a.client.ListSnapshotBlocksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListSnapshotBlocksWithContext(ctx, input)
 }
 
 func (a *EBSActivities) PutSnapshotBlock(ctx context.Context, input *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error) {
-	return a.client.PutSnapshotBlockWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutSnapshotBlockWithContext(ctx, input)
 }
 
 func (a *EBSActivities) StartSnapshot(ctx context.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.StartSnapshotWithContext(ctx, input)
+	return client.StartSnapshotWithContext(ctx, input)
 }

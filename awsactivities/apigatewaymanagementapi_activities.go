@@ -20,21 +20,52 @@ type _ request.Option
 
 type ApiGatewayManagementApiActivities struct {
 	client apigatewaymanagementapiiface.ApiGatewayManagementApiAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewApiGatewayManagementApiActivities(session *session.Session, config ...*aws.Config) *ApiGatewayManagementApiActivities {
-	client := apigatewaymanagementapi.New(session, config...)
+func NewApiGatewayManagementApiActivities(sess *session.Session, config ...*aws.Config) *ApiGatewayManagementApiActivities {
+	client := apigatewaymanagementapi.New(sess, config...)
 	return &ApiGatewayManagementApiActivities{client: client}
 }
 
+func NewApiGatewayManagementApiActivitiesWithSessionFactory(sessionFactory SessionFactory) *ApiGatewayManagementApiActivities {
+	return &ApiGatewayManagementApiActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ApiGatewayManagementApiActivities) getClient(ctx context.Context) (apigatewaymanagementapiiface.ApiGatewayManagementApiAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return apigatewaymanagementapi.New(sess), nil
+}
+
 func (a *ApiGatewayManagementApiActivities) DeleteConnection(ctx context.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error) {
-	return a.client.DeleteConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConnectionWithContext(ctx, input)
 }
 
 func (a *ApiGatewayManagementApiActivities) GetConnection(ctx context.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error) {
-	return a.client.GetConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetConnectionWithContext(ctx, input)
 }
 
 func (a *ApiGatewayManagementApiActivities) PostToConnection(ctx context.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error) {
-	return a.client.PostToConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PostToConnectionWithContext(ctx, input)
 }

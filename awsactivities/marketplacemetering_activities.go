@@ -20,25 +20,60 @@ type _ request.Option
 
 type MarketplaceMeteringActivities struct {
 	client marketplacemeteringiface.MarketplaceMeteringAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMarketplaceMeteringActivities(session *session.Session, config ...*aws.Config) *MarketplaceMeteringActivities {
-	client := marketplacemetering.New(session, config...)
+func NewMarketplaceMeteringActivities(sess *session.Session, config ...*aws.Config) *MarketplaceMeteringActivities {
+	client := marketplacemetering.New(sess, config...)
 	return &MarketplaceMeteringActivities{client: client}
 }
 
+func NewMarketplaceMeteringActivitiesWithSessionFactory(sessionFactory SessionFactory) *MarketplaceMeteringActivities {
+	return &MarketplaceMeteringActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MarketplaceMeteringActivities) getClient(ctx context.Context) (marketplacemeteringiface.MarketplaceMeteringAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return marketplacemetering.New(sess), nil
+}
+
 func (a *MarketplaceMeteringActivities) BatchMeterUsage(ctx context.Context, input *marketplacemetering.BatchMeterUsageInput) (*marketplacemetering.BatchMeterUsageOutput, error) {
-	return a.client.BatchMeterUsageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchMeterUsageWithContext(ctx, input)
 }
 
 func (a *MarketplaceMeteringActivities) MeterUsage(ctx context.Context, input *marketplacemetering.MeterUsageInput) (*marketplacemetering.MeterUsageOutput, error) {
-	return a.client.MeterUsageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.MeterUsageWithContext(ctx, input)
 }
 
 func (a *MarketplaceMeteringActivities) RegisterUsage(ctx context.Context, input *marketplacemetering.RegisterUsageInput) (*marketplacemetering.RegisterUsageOutput, error) {
-	return a.client.RegisterUsageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterUsageWithContext(ctx, input)
 }
 
 func (a *MarketplaceMeteringActivities) ResolveCustomer(ctx context.Context, input *marketplacemetering.ResolveCustomerInput) (*marketplacemetering.ResolveCustomerOutput, error) {
-	return a.client.ResolveCustomerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ResolveCustomerWithContext(ctx, input)
 }

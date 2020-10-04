@@ -20,32 +20,71 @@ type _ request.Option
 
 type ConnectParticipantActivities struct {
 	client connectparticipantiface.ConnectParticipantAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewConnectParticipantActivities(session *session.Session, config ...*aws.Config) *ConnectParticipantActivities {
-	client := connectparticipant.New(session, config...)
+func NewConnectParticipantActivities(sess *session.Session, config ...*aws.Config) *ConnectParticipantActivities {
+	client := connectparticipant.New(sess, config...)
 	return &ConnectParticipantActivities{client: client}
 }
 
+func NewConnectParticipantActivitiesWithSessionFactory(sessionFactory SessionFactory) *ConnectParticipantActivities {
+	return &ConnectParticipantActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ConnectParticipantActivities) getClient(ctx context.Context) (connectparticipantiface.ConnectParticipantAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return connectparticipant.New(sess), nil
+}
+
 func (a *ConnectParticipantActivities) CreateParticipantConnection(ctx context.Context, input *connectparticipant.CreateParticipantConnectionInput) (*connectparticipant.CreateParticipantConnectionOutput, error) {
-	return a.client.CreateParticipantConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateParticipantConnectionWithContext(ctx, input)
 }
 
 func (a *ConnectParticipantActivities) DisconnectParticipant(ctx context.Context, input *connectparticipant.DisconnectParticipantInput) (*connectparticipant.DisconnectParticipantOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.DisconnectParticipantWithContext(ctx, input)
+	return client.DisconnectParticipantWithContext(ctx, input)
 }
 
 func (a *ConnectParticipantActivities) GetTranscript(ctx context.Context, input *connectparticipant.GetTranscriptInput) (*connectparticipant.GetTranscriptOutput, error) {
-	return a.client.GetTranscriptWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTranscriptWithContext(ctx, input)
 }
 
 func (a *ConnectParticipantActivities) SendEvent(ctx context.Context, input *connectparticipant.SendEventInput) (*connectparticipant.SendEventOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.SendEventWithContext(ctx, input)
+	return client.SendEventWithContext(ctx, input)
 }
 
 func (a *ConnectParticipantActivities) SendMessage(ctx context.Context, input *connectparticipant.SendMessageInput) (*connectparticipant.SendMessageOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.SendMessageWithContext(ctx, input)
+	return client.SendMessageWithContext(ctx, input)
 }

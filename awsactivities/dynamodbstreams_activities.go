@@ -20,25 +20,60 @@ type _ request.Option
 
 type DynamoDBStreamsActivities struct {
 	client dynamodbstreamsiface.DynamoDBStreamsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewDynamoDBStreamsActivities(session *session.Session, config ...*aws.Config) *DynamoDBStreamsActivities {
-	client := dynamodbstreams.New(session, config...)
+func NewDynamoDBStreamsActivities(sess *session.Session, config ...*aws.Config) *DynamoDBStreamsActivities {
+	client := dynamodbstreams.New(sess, config...)
 	return &DynamoDBStreamsActivities{client: client}
 }
 
+func NewDynamoDBStreamsActivitiesWithSessionFactory(sessionFactory SessionFactory) *DynamoDBStreamsActivities {
+	return &DynamoDBStreamsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *DynamoDBStreamsActivities) getClient(ctx context.Context) (dynamodbstreamsiface.DynamoDBStreamsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return dynamodbstreams.New(sess), nil
+}
+
 func (a *DynamoDBStreamsActivities) DescribeStream(ctx context.Context, input *dynamodbstreams.DescribeStreamInput) (*dynamodbstreams.DescribeStreamOutput, error) {
-	return a.client.DescribeStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStreamWithContext(ctx, input)
 }
 
 func (a *DynamoDBStreamsActivities) GetRecords(ctx context.Context, input *dynamodbstreams.GetRecordsInput) (*dynamodbstreams.GetRecordsOutput, error) {
-	return a.client.GetRecordsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRecordsWithContext(ctx, input)
 }
 
 func (a *DynamoDBStreamsActivities) GetShardIterator(ctx context.Context, input *dynamodbstreams.GetShardIteratorInput) (*dynamodbstreams.GetShardIteratorOutput, error) {
-	return a.client.GetShardIteratorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetShardIteratorWithContext(ctx, input)
 }
 
 func (a *DynamoDBStreamsActivities) ListStreams(ctx context.Context, input *dynamodbstreams.ListStreamsInput) (*dynamodbstreams.ListStreamsOutput, error) {
-	return a.client.ListStreamsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListStreamsWithContext(ctx, input)
 }

@@ -20,133 +20,272 @@ type _ request.Option
 
 type KinesisActivities struct {
 	client kinesisiface.KinesisAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewKinesisActivities(session *session.Session, config ...*aws.Config) *KinesisActivities {
-	client := kinesis.New(session, config...)
+func NewKinesisActivities(sess *session.Session, config ...*aws.Config) *KinesisActivities {
+	client := kinesis.New(sess, config...)
 	return &KinesisActivities{client: client}
 }
 
+func NewKinesisActivitiesWithSessionFactory(sessionFactory SessionFactory) *KinesisActivities {
+	return &KinesisActivities{sessionFactory: sessionFactory}
+}
+
+func (a *KinesisActivities) getClient(ctx context.Context) (kinesisiface.KinesisAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return kinesis.New(sess), nil
+}
+
 func (a *KinesisActivities) AddTagsToStream(ctx context.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error) {
-	return a.client.AddTagsToStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsToStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) CreateStream(ctx context.Context, input *kinesis.CreateStreamInput) (*kinesis.CreateStreamOutput, error) {
-	return a.client.CreateStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DecreaseStreamRetentionPeriod(ctx context.Context, input *kinesis.DecreaseStreamRetentionPeriodInput) (*kinesis.DecreaseStreamRetentionPeriodOutput, error) {
-	return a.client.DecreaseStreamRetentionPeriodWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DecreaseStreamRetentionPeriodWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DeleteStream(ctx context.Context, input *kinesis.DeleteStreamInput) (*kinesis.DeleteStreamOutput, error) {
-	return a.client.DeleteStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DeregisterStreamConsumer(ctx context.Context, input *kinesis.DeregisterStreamConsumerInput) (*kinesis.DeregisterStreamConsumerOutput, error) {
-	return a.client.DeregisterStreamConsumerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterStreamConsumerWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DescribeLimits(ctx context.Context, input *kinesis.DescribeLimitsInput) (*kinesis.DescribeLimitsOutput, error) {
-	return a.client.DescribeLimitsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLimitsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DescribeStream(ctx context.Context, input *kinesis.DescribeStreamInput) (*kinesis.DescribeStreamOutput, error) {
-	return a.client.DescribeStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DescribeStreamConsumer(ctx context.Context, input *kinesis.DescribeStreamConsumerInput) (*kinesis.DescribeStreamConsumerOutput, error) {
-	return a.client.DescribeStreamConsumerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStreamConsumerWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DescribeStreamSummary(ctx context.Context, input *kinesis.DescribeStreamSummaryInput) (*kinesis.DescribeStreamSummaryOutput, error) {
-	return a.client.DescribeStreamSummaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStreamSummaryWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) DisableEnhancedMonitoring(ctx context.Context, input *kinesis.DisableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error) {
-	return a.client.DisableEnhancedMonitoringWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisableEnhancedMonitoringWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) EnableEnhancedMonitoring(ctx context.Context, input *kinesis.EnableEnhancedMonitoringInput) (*kinesis.EnhancedMonitoringOutput, error) {
-	return a.client.EnableEnhancedMonitoringWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.EnableEnhancedMonitoringWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) GetRecords(ctx context.Context, input *kinesis.GetRecordsInput) (*kinesis.GetRecordsOutput, error) {
-	return a.client.GetRecordsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRecordsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) GetShardIterator(ctx context.Context, input *kinesis.GetShardIteratorInput) (*kinesis.GetShardIteratorOutput, error) {
-	return a.client.GetShardIteratorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetShardIteratorWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) IncreaseStreamRetentionPeriod(ctx context.Context, input *kinesis.IncreaseStreamRetentionPeriodInput) (*kinesis.IncreaseStreamRetentionPeriodOutput, error) {
-	return a.client.IncreaseStreamRetentionPeriodWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.IncreaseStreamRetentionPeriodWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) ListShards(ctx context.Context, input *kinesis.ListShardsInput) (*kinesis.ListShardsOutput, error) {
-	return a.client.ListShardsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListShardsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) ListStreamConsumers(ctx context.Context, input *kinesis.ListStreamConsumersInput) (*kinesis.ListStreamConsumersOutput, error) {
-	return a.client.ListStreamConsumersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListStreamConsumersWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) ListStreams(ctx context.Context, input *kinesis.ListStreamsInput) (*kinesis.ListStreamsOutput, error) {
-	return a.client.ListStreamsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListStreamsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) ListTagsForStream(ctx context.Context, input *kinesis.ListTagsForStreamInput) (*kinesis.ListTagsForStreamOutput, error) {
-	return a.client.ListTagsForStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) MergeShards(ctx context.Context, input *kinesis.MergeShardsInput) (*kinesis.MergeShardsOutput, error) {
-	return a.client.MergeShardsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.MergeShardsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) PutRecord(ctx context.Context, input *kinesis.PutRecordInput) (*kinesis.PutRecordOutput, error) {
-	return a.client.PutRecordWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRecordWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) PutRecords(ctx context.Context, input *kinesis.PutRecordsInput) (*kinesis.PutRecordsOutput, error) {
-	return a.client.PutRecordsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRecordsWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) RegisterStreamConsumer(ctx context.Context, input *kinesis.RegisterStreamConsumerInput) (*kinesis.RegisterStreamConsumerOutput, error) {
-	return a.client.RegisterStreamConsumerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterStreamConsumerWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) RemoveTagsFromStream(ctx context.Context, input *kinesis.RemoveTagsFromStreamInput) (*kinesis.RemoveTagsFromStreamOutput, error) {
-	return a.client.RemoveTagsFromStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveTagsFromStreamWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) SplitShard(ctx context.Context, input *kinesis.SplitShardInput) (*kinesis.SplitShardOutput, error) {
-	return a.client.SplitShardWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SplitShardWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) StartStreamEncryption(ctx context.Context, input *kinesis.StartStreamEncryptionInput) (*kinesis.StartStreamEncryptionOutput, error) {
-	return a.client.StartStreamEncryptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartStreamEncryptionWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) StopStreamEncryption(ctx context.Context, input *kinesis.StopStreamEncryptionInput) (*kinesis.StopStreamEncryptionOutput, error) {
-	return a.client.StopStreamEncryptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopStreamEncryptionWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) SubscribeToShard(ctx context.Context, input *kinesis.SubscribeToShardInput) (*kinesis.SubscribeToShardOutput, error) {
-	return a.client.SubscribeToShardWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SubscribeToShardWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) UpdateShardCount(ctx context.Context, input *kinesis.UpdateShardCountInput) (*kinesis.UpdateShardCountOutput, error) {
-	return a.client.UpdateShardCountWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateShardCountWithContext(ctx, input)
 }
 
 func (a *KinesisActivities) WaitUntilStreamExists(ctx context.Context, input *kinesis.DescribeStreamInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilStreamExistsWithContext(ctx, input, options...)
+		return client.WaitUntilStreamExistsWithContext(ctx, input, options...)
 	})
 }
 
 func (a *KinesisActivities) WaitUntilStreamNotExists(ctx context.Context, input *kinesis.DescribeStreamInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilStreamNotExistsWithContext(ctx, input, options...)
+		return client.WaitUntilStreamNotExistsWithContext(ctx, input, options...)
 	})
 }

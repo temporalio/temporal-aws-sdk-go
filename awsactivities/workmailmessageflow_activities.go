@@ -20,13 +20,36 @@ type _ request.Option
 
 type WorkMailMessageFlowActivities struct {
 	client workmailmessageflowiface.WorkMailMessageFlowAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewWorkMailMessageFlowActivities(session *session.Session, config ...*aws.Config) *WorkMailMessageFlowActivities {
-	client := workmailmessageflow.New(session, config...)
+func NewWorkMailMessageFlowActivities(sess *session.Session, config ...*aws.Config) *WorkMailMessageFlowActivities {
+	client := workmailmessageflow.New(sess, config...)
 	return &WorkMailMessageFlowActivities{client: client}
 }
 
+func NewWorkMailMessageFlowActivitiesWithSessionFactory(sessionFactory SessionFactory) *WorkMailMessageFlowActivities {
+	return &WorkMailMessageFlowActivities{sessionFactory: sessionFactory}
+}
+
+func (a *WorkMailMessageFlowActivities) getClient(ctx context.Context) (workmailmessageflowiface.WorkMailMessageFlowAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return workmailmessageflow.New(sess), nil
+}
+
 func (a *WorkMailMessageFlowActivities) GetRawMessageContent(ctx context.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
-	return a.client.GetRawMessageContentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRawMessageContentWithContext(ctx, input)
 }

@@ -20,53 +20,116 @@ type _ request.Option
 
 type CodeStarConnectionsActivities struct {
 	client codestarconnectionsiface.CodeStarConnectionsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCodeStarConnectionsActivities(session *session.Session, config ...*aws.Config) *CodeStarConnectionsActivities {
-	client := codestarconnections.New(session, config...)
+func NewCodeStarConnectionsActivities(sess *session.Session, config ...*aws.Config) *CodeStarConnectionsActivities {
+	client := codestarconnections.New(sess, config...)
 	return &CodeStarConnectionsActivities{client: client}
 }
 
+func NewCodeStarConnectionsActivitiesWithSessionFactory(sessionFactory SessionFactory) *CodeStarConnectionsActivities {
+	return &CodeStarConnectionsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CodeStarConnectionsActivities) getClient(ctx context.Context) (codestarconnectionsiface.CodeStarConnectionsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return codestarconnections.New(sess), nil
+}
+
 func (a *CodeStarConnectionsActivities) CreateConnection(ctx context.Context, input *codestarconnections.CreateConnectionInput) (*codestarconnections.CreateConnectionOutput, error) {
-	return a.client.CreateConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateConnectionWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) CreateHost(ctx context.Context, input *codestarconnections.CreateHostInput) (*codestarconnections.CreateHostOutput, error) {
-	return a.client.CreateHostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateHostWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) DeleteConnection(ctx context.Context, input *codestarconnections.DeleteConnectionInput) (*codestarconnections.DeleteConnectionOutput, error) {
-	return a.client.DeleteConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteConnectionWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) DeleteHost(ctx context.Context, input *codestarconnections.DeleteHostInput) (*codestarconnections.DeleteHostOutput, error) {
-	return a.client.DeleteHostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteHostWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) GetConnection(ctx context.Context, input *codestarconnections.GetConnectionInput) (*codestarconnections.GetConnectionOutput, error) {
-	return a.client.GetConnectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetConnectionWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) GetHost(ctx context.Context, input *codestarconnections.GetHostInput) (*codestarconnections.GetHostOutput, error) {
-	return a.client.GetHostWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetHostWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) ListConnections(ctx context.Context, input *codestarconnections.ListConnectionsInput) (*codestarconnections.ListConnectionsOutput, error) {
-	return a.client.ListConnectionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListConnectionsWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) ListHosts(ctx context.Context, input *codestarconnections.ListHostsInput) (*codestarconnections.ListHostsOutput, error) {
-	return a.client.ListHostsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListHostsWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) ListTagsForResource(ctx context.Context, input *codestarconnections.ListTagsForResourceInput) (*codestarconnections.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) TagResource(ctx context.Context, input *codestarconnections.TagResourceInput) (*codestarconnections.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *CodeStarConnectionsActivities) UntagResource(ctx context.Context, input *codestarconnections.UntagResourceInput) (*codestarconnections.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }

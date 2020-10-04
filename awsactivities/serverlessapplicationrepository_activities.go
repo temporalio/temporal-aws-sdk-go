@@ -20,66 +20,141 @@ type _ request.Option
 
 type ServerlessApplicationRepositoryActivities struct {
 	client serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewServerlessApplicationRepositoryActivities(session *session.Session, config ...*aws.Config) *ServerlessApplicationRepositoryActivities {
-	client := serverlessapplicationrepository.New(session, config...)
+func NewServerlessApplicationRepositoryActivities(sess *session.Session, config ...*aws.Config) *ServerlessApplicationRepositoryActivities {
+	client := serverlessapplicationrepository.New(sess, config...)
 	return &ServerlessApplicationRepositoryActivities{client: client}
 }
 
+func NewServerlessApplicationRepositoryActivitiesWithSessionFactory(sessionFactory SessionFactory) *ServerlessApplicationRepositoryActivities {
+	return &ServerlessApplicationRepositoryActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ServerlessApplicationRepositoryActivities) getClient(ctx context.Context) (serverlessapplicationrepositoryiface.ServerlessApplicationRepositoryAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return serverlessapplicationrepository.New(sess), nil
+}
+
 func (a *ServerlessApplicationRepositoryActivities) CreateApplication(ctx context.Context, input *serverlessapplicationrepository.CreateApplicationRequest) (*serverlessapplicationrepository.CreateApplicationOutput, error) {
-	return a.client.CreateApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateApplicationWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) CreateApplicationVersion(ctx context.Context, input *serverlessapplicationrepository.CreateApplicationVersionRequest) (*serverlessapplicationrepository.CreateApplicationVersionOutput, error) {
-	return a.client.CreateApplicationVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateApplicationVersionWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationChangeSet(ctx context.Context, input *serverlessapplicationrepository.CreateCloudFormationChangeSetRequest) (*serverlessapplicationrepository.CreateCloudFormationChangeSetOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.CreateCloudFormationChangeSetWithContext(ctx, input)
+	return client.CreateCloudFormationChangeSetWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) CreateCloudFormationTemplate(ctx context.Context, input *serverlessapplicationrepository.CreateCloudFormationTemplateInput) (*serverlessapplicationrepository.CreateCloudFormationTemplateOutput, error) {
-	return a.client.CreateCloudFormationTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCloudFormationTemplateWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) DeleteApplication(ctx context.Context, input *serverlessapplicationrepository.DeleteApplicationInput) (*serverlessapplicationrepository.DeleteApplicationOutput, error) {
-	return a.client.DeleteApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteApplicationWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) GetApplication(ctx context.Context, input *serverlessapplicationrepository.GetApplicationInput) (*serverlessapplicationrepository.GetApplicationOutput, error) {
-	return a.client.GetApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetApplicationWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) GetApplicationPolicy(ctx context.Context, input *serverlessapplicationrepository.GetApplicationPolicyInput) (*serverlessapplicationrepository.GetApplicationPolicyOutput, error) {
-	return a.client.GetApplicationPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetApplicationPolicyWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) GetCloudFormationTemplate(ctx context.Context, input *serverlessapplicationrepository.GetCloudFormationTemplateInput) (*serverlessapplicationrepository.GetCloudFormationTemplateOutput, error) {
-	return a.client.GetCloudFormationTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCloudFormationTemplateWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) ListApplicationDependencies(ctx context.Context, input *serverlessapplicationrepository.ListApplicationDependenciesInput) (*serverlessapplicationrepository.ListApplicationDependenciesOutput, error) {
-	return a.client.ListApplicationDependenciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListApplicationDependenciesWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) ListApplicationVersions(ctx context.Context, input *serverlessapplicationrepository.ListApplicationVersionsInput) (*serverlessapplicationrepository.ListApplicationVersionsOutput, error) {
-	return a.client.ListApplicationVersionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListApplicationVersionsWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) ListApplications(ctx context.Context, input *serverlessapplicationrepository.ListApplicationsInput) (*serverlessapplicationrepository.ListApplicationsOutput, error) {
-	return a.client.ListApplicationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListApplicationsWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) PutApplicationPolicy(ctx context.Context, input *serverlessapplicationrepository.PutApplicationPolicyInput) (*serverlessapplicationrepository.PutApplicationPolicyOutput, error) {
-	return a.client.PutApplicationPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutApplicationPolicyWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) UnshareApplication(ctx context.Context, input *serverlessapplicationrepository.UnshareApplicationInput) (*serverlessapplicationrepository.UnshareApplicationOutput, error) {
-	return a.client.UnshareApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UnshareApplicationWithContext(ctx, input)
 }
 
 func (a *ServerlessApplicationRepositoryActivities) UpdateApplication(ctx context.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) (*serverlessapplicationrepository.UpdateApplicationOutput, error) {
-	return a.client.UpdateApplicationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateApplicationWithContext(ctx, input)
 }

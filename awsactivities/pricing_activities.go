@@ -20,21 +20,52 @@ type _ request.Option
 
 type PricingActivities struct {
 	client pricingiface.PricingAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPricingActivities(session *session.Session, config ...*aws.Config) *PricingActivities {
-	client := pricing.New(session, config...)
+func NewPricingActivities(sess *session.Session, config ...*aws.Config) *PricingActivities {
+	client := pricing.New(sess, config...)
 	return &PricingActivities{client: client}
 }
 
+func NewPricingActivitiesWithSessionFactory(sessionFactory SessionFactory) *PricingActivities {
+	return &PricingActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PricingActivities) getClient(ctx context.Context) (pricingiface.PricingAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return pricing.New(sess), nil
+}
+
 func (a *PricingActivities) DescribeServices(ctx context.Context, input *pricing.DescribeServicesInput) (*pricing.DescribeServicesOutput, error) {
-	return a.client.DescribeServicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeServicesWithContext(ctx, input)
 }
 
 func (a *PricingActivities) GetAttributeValues(ctx context.Context, input *pricing.GetAttributeValuesInput) (*pricing.GetAttributeValuesOutput, error) {
-	return a.client.GetAttributeValuesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAttributeValuesWithContext(ctx, input)
 }
 
 func (a *PricingActivities) GetProducts(ctx context.Context, input *pricing.GetProductsInput) (*pricing.GetProductsOutput, error) {
-	return a.client.GetProductsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetProductsWithContext(ctx, input)
 }

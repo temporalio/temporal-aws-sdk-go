@@ -20,25 +20,60 @@ type _ request.Option
 
 type IoTJobsDataPlaneActivities struct {
 	client iotjobsdataplaneiface.IoTJobsDataPlaneAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewIoTJobsDataPlaneActivities(session *session.Session, config ...*aws.Config) *IoTJobsDataPlaneActivities {
-	client := iotjobsdataplane.New(session, config...)
+func NewIoTJobsDataPlaneActivities(sess *session.Session, config ...*aws.Config) *IoTJobsDataPlaneActivities {
+	client := iotjobsdataplane.New(sess, config...)
 	return &IoTJobsDataPlaneActivities{client: client}
 }
 
+func NewIoTJobsDataPlaneActivitiesWithSessionFactory(sessionFactory SessionFactory) *IoTJobsDataPlaneActivities {
+	return &IoTJobsDataPlaneActivities{sessionFactory: sessionFactory}
+}
+
+func (a *IoTJobsDataPlaneActivities) getClient(ctx context.Context) (iotjobsdataplaneiface.IoTJobsDataPlaneAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return iotjobsdataplane.New(sess), nil
+}
+
 func (a *IoTJobsDataPlaneActivities) DescribeJobExecution(ctx context.Context, input *iotjobsdataplane.DescribeJobExecutionInput) (*iotjobsdataplane.DescribeJobExecutionOutput, error) {
-	return a.client.DescribeJobExecutionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeJobExecutionWithContext(ctx, input)
 }
 
 func (a *IoTJobsDataPlaneActivities) GetPendingJobExecutions(ctx context.Context, input *iotjobsdataplane.GetPendingJobExecutionsInput) (*iotjobsdataplane.GetPendingJobExecutionsOutput, error) {
-	return a.client.GetPendingJobExecutionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPendingJobExecutionsWithContext(ctx, input)
 }
 
 func (a *IoTJobsDataPlaneActivities) StartNextPendingJobExecution(ctx context.Context, input *iotjobsdataplane.StartNextPendingJobExecutionInput) (*iotjobsdataplane.StartNextPendingJobExecutionOutput, error) {
-	return a.client.StartNextPendingJobExecutionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartNextPendingJobExecutionWithContext(ctx, input)
 }
 
 func (a *IoTJobsDataPlaneActivities) UpdateJobExecution(ctx context.Context, input *iotjobsdataplane.UpdateJobExecutionInput) (*iotjobsdataplane.UpdateJobExecutionOutput, error) {
-	return a.client.UpdateJobExecutionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateJobExecutionWithContext(ctx, input)
 }

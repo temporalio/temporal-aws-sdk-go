@@ -20,209 +20,424 @@ type _ request.Option
 
 type RekognitionActivities struct {
 	client rekognitioniface.RekognitionAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewRekognitionActivities(session *session.Session, config ...*aws.Config) *RekognitionActivities {
-	client := rekognition.New(session, config...)
+func NewRekognitionActivities(sess *session.Session, config ...*aws.Config) *RekognitionActivities {
+	client := rekognition.New(sess, config...)
 	return &RekognitionActivities{client: client}
 }
 
+func NewRekognitionActivitiesWithSessionFactory(sessionFactory SessionFactory) *RekognitionActivities {
+	return &RekognitionActivities{sessionFactory: sessionFactory}
+}
+
+func (a *RekognitionActivities) getClient(ctx context.Context) (rekognitioniface.RekognitionAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return rekognition.New(sess), nil
+}
+
 func (a *RekognitionActivities) CompareFaces(ctx context.Context, input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error) {
-	return a.client.CompareFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CompareFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) CreateCollection(ctx context.Context, input *rekognition.CreateCollectionInput) (*rekognition.CreateCollectionOutput, error) {
-	return a.client.CreateCollectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCollectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) CreateProject(ctx context.Context, input *rekognition.CreateProjectInput) (*rekognition.CreateProjectOutput, error) {
-	return a.client.CreateProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateProjectWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) CreateProjectVersion(ctx context.Context, input *rekognition.CreateProjectVersionInput) (*rekognition.CreateProjectVersionOutput, error) {
-	return a.client.CreateProjectVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateProjectVersionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) CreateStreamProcessor(ctx context.Context, input *rekognition.CreateStreamProcessorInput) (*rekognition.CreateStreamProcessorOutput, error) {
-	return a.client.CreateStreamProcessorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateStreamProcessorWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DeleteCollection(ctx context.Context, input *rekognition.DeleteCollectionInput) (*rekognition.DeleteCollectionOutput, error) {
-	return a.client.DeleteCollectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteCollectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DeleteFaces(ctx context.Context, input *rekognition.DeleteFacesInput) (*rekognition.DeleteFacesOutput, error) {
-	return a.client.DeleteFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DeleteProject(ctx context.Context, input *rekognition.DeleteProjectInput) (*rekognition.DeleteProjectOutput, error) {
-	return a.client.DeleteProjectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteProjectWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DeleteProjectVersion(ctx context.Context, input *rekognition.DeleteProjectVersionInput) (*rekognition.DeleteProjectVersionOutput, error) {
-	return a.client.DeleteProjectVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteProjectVersionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DeleteStreamProcessor(ctx context.Context, input *rekognition.DeleteStreamProcessorInput) (*rekognition.DeleteStreamProcessorOutput, error) {
-	return a.client.DeleteStreamProcessorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteStreamProcessorWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DescribeCollection(ctx context.Context, input *rekognition.DescribeCollectionInput) (*rekognition.DescribeCollectionOutput, error) {
-	return a.client.DescribeCollectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCollectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DescribeProjectVersions(ctx context.Context, input *rekognition.DescribeProjectVersionsInput) (*rekognition.DescribeProjectVersionsOutput, error) {
-	return a.client.DescribeProjectVersionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeProjectVersionsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DescribeProjects(ctx context.Context, input *rekognition.DescribeProjectsInput) (*rekognition.DescribeProjectsOutput, error) {
-	return a.client.DescribeProjectsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeProjectsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DescribeStreamProcessor(ctx context.Context, input *rekognition.DescribeStreamProcessorInput) (*rekognition.DescribeStreamProcessorOutput, error) {
-	return a.client.DescribeStreamProcessorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStreamProcessorWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DetectCustomLabels(ctx context.Context, input *rekognition.DetectCustomLabelsInput) (*rekognition.DetectCustomLabelsOutput, error) {
-	return a.client.DetectCustomLabelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectCustomLabelsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DetectFaces(ctx context.Context, input *rekognition.DetectFacesInput) (*rekognition.DetectFacesOutput, error) {
-	return a.client.DetectFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DetectLabels(ctx context.Context, input *rekognition.DetectLabelsInput) (*rekognition.DetectLabelsOutput, error) {
-	return a.client.DetectLabelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectLabelsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DetectModerationLabels(ctx context.Context, input *rekognition.DetectModerationLabelsInput) (*rekognition.DetectModerationLabelsOutput, error) {
-	return a.client.DetectModerationLabelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectModerationLabelsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) DetectText(ctx context.Context, input *rekognition.DetectTextInput) (*rekognition.DetectTextOutput, error) {
-	return a.client.DetectTextWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetectTextWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetCelebrityInfo(ctx context.Context, input *rekognition.GetCelebrityInfoInput) (*rekognition.GetCelebrityInfoOutput, error) {
-	return a.client.GetCelebrityInfoWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCelebrityInfoWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetCelebrityRecognition(ctx context.Context, input *rekognition.GetCelebrityRecognitionInput) (*rekognition.GetCelebrityRecognitionOutput, error) {
-	return a.client.GetCelebrityRecognitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCelebrityRecognitionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetContentModeration(ctx context.Context, input *rekognition.GetContentModerationInput) (*rekognition.GetContentModerationOutput, error) {
-	return a.client.GetContentModerationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetContentModerationWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetFaceDetection(ctx context.Context, input *rekognition.GetFaceDetectionInput) (*rekognition.GetFaceDetectionOutput, error) {
-	return a.client.GetFaceDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFaceDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetFaceSearch(ctx context.Context, input *rekognition.GetFaceSearchInput) (*rekognition.GetFaceSearchOutput, error) {
-	return a.client.GetFaceSearchWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFaceSearchWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetLabelDetection(ctx context.Context, input *rekognition.GetLabelDetectionInput) (*rekognition.GetLabelDetectionOutput, error) {
-	return a.client.GetLabelDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLabelDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetPersonTracking(ctx context.Context, input *rekognition.GetPersonTrackingInput) (*rekognition.GetPersonTrackingOutput, error) {
-	return a.client.GetPersonTrackingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPersonTrackingWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetSegmentDetection(ctx context.Context, input *rekognition.GetSegmentDetectionInput) (*rekognition.GetSegmentDetectionOutput, error) {
-	return a.client.GetSegmentDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSegmentDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) GetTextDetection(ctx context.Context, input *rekognition.GetTextDetectionInput) (*rekognition.GetTextDetectionOutput, error) {
-	return a.client.GetTextDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTextDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) IndexFaces(ctx context.Context, input *rekognition.IndexFacesInput) (*rekognition.IndexFacesOutput, error) {
-	return a.client.IndexFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.IndexFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) ListCollections(ctx context.Context, input *rekognition.ListCollectionsInput) (*rekognition.ListCollectionsOutput, error) {
-	return a.client.ListCollectionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListCollectionsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) ListFaces(ctx context.Context, input *rekognition.ListFacesInput) (*rekognition.ListFacesOutput, error) {
-	return a.client.ListFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) ListStreamProcessors(ctx context.Context, input *rekognition.ListStreamProcessorsInput) (*rekognition.ListStreamProcessorsOutput, error) {
-	return a.client.ListStreamProcessorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListStreamProcessorsWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) RecognizeCelebrities(ctx context.Context, input *rekognition.RecognizeCelebritiesInput) (*rekognition.RecognizeCelebritiesOutput, error) {
-	return a.client.RecognizeCelebritiesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RecognizeCelebritiesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) SearchFaces(ctx context.Context, input *rekognition.SearchFacesInput) (*rekognition.SearchFacesOutput, error) {
-	return a.client.SearchFacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchFacesWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) SearchFacesByImage(ctx context.Context, input *rekognition.SearchFacesByImageInput) (*rekognition.SearchFacesByImageOutput, error) {
-	return a.client.SearchFacesByImageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchFacesByImageWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartCelebrityRecognition(ctx context.Context, input *rekognition.StartCelebrityRecognitionInput) (*rekognition.StartCelebrityRecognitionOutput, error) {
-	return a.client.StartCelebrityRecognitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartCelebrityRecognitionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartContentModeration(ctx context.Context, input *rekognition.StartContentModerationInput) (*rekognition.StartContentModerationOutput, error) {
-	return a.client.StartContentModerationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartContentModerationWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartFaceDetection(ctx context.Context, input *rekognition.StartFaceDetectionInput) (*rekognition.StartFaceDetectionOutput, error) {
-	return a.client.StartFaceDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartFaceDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartFaceSearch(ctx context.Context, input *rekognition.StartFaceSearchInput) (*rekognition.StartFaceSearchOutput, error) {
-	return a.client.StartFaceSearchWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartFaceSearchWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartLabelDetection(ctx context.Context, input *rekognition.StartLabelDetectionInput) (*rekognition.StartLabelDetectionOutput, error) {
-	return a.client.StartLabelDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartLabelDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartPersonTracking(ctx context.Context, input *rekognition.StartPersonTrackingInput) (*rekognition.StartPersonTrackingOutput, error) {
-	return a.client.StartPersonTrackingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartPersonTrackingWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartProjectVersion(ctx context.Context, input *rekognition.StartProjectVersionInput) (*rekognition.StartProjectVersionOutput, error) {
-	return a.client.StartProjectVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartProjectVersionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartSegmentDetection(ctx context.Context, input *rekognition.StartSegmentDetectionInput) (*rekognition.StartSegmentDetectionOutput, error) {
-	return a.client.StartSegmentDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartSegmentDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartStreamProcessor(ctx context.Context, input *rekognition.StartStreamProcessorInput) (*rekognition.StartStreamProcessorOutput, error) {
-	return a.client.StartStreamProcessorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartStreamProcessorWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StartTextDetection(ctx context.Context, input *rekognition.StartTextDetectionInput) (*rekognition.StartTextDetectionOutput, error) {
-	return a.client.StartTextDetectionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartTextDetectionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StopProjectVersion(ctx context.Context, input *rekognition.StopProjectVersionInput) (*rekognition.StopProjectVersionOutput, error) {
-	return a.client.StopProjectVersionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopProjectVersionWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) StopStreamProcessor(ctx context.Context, input *rekognition.StopStreamProcessorInput) (*rekognition.StopStreamProcessorOutput, error) {
-	return a.client.StopStreamProcessorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopStreamProcessorWithContext(ctx, input)
 }
 
 func (a *RekognitionActivities) WaitUntilProjectVersionRunning(ctx context.Context, input *rekognition.DescribeProjectVersionsInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilProjectVersionRunningWithContext(ctx, input, options...)
+		return client.WaitUntilProjectVersionRunningWithContext(ctx, input, options...)
 	})
 }
 
 func (a *RekognitionActivities) WaitUntilProjectVersionTrainingCompleted(ctx context.Context, input *rekognition.DescribeProjectVersionsInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilProjectVersionTrainingCompletedWithContext(ctx, input, options...)
+		return client.WaitUntilProjectVersionTrainingCompletedWithContext(ctx, input, options...)
 	})
 }

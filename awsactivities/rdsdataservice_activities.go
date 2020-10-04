@@ -20,33 +20,76 @@ type _ request.Option
 
 type RDSDataServiceActivities struct {
 	client rdsdataserviceiface.RDSDataServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewRDSDataServiceActivities(session *session.Session, config ...*aws.Config) *RDSDataServiceActivities {
-	client := rdsdataservice.New(session, config...)
+func NewRDSDataServiceActivities(sess *session.Session, config ...*aws.Config) *RDSDataServiceActivities {
+	client := rdsdataservice.New(sess, config...)
 	return &RDSDataServiceActivities{client: client}
 }
 
+func NewRDSDataServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *RDSDataServiceActivities {
+	return &RDSDataServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *RDSDataServiceActivities) getClient(ctx context.Context) (rdsdataserviceiface.RDSDataServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return rdsdataservice.New(sess), nil
+}
+
 func (a *RDSDataServiceActivities) BatchExecuteStatement(ctx context.Context, input *rdsdataservice.BatchExecuteStatementInput) (*rdsdataservice.BatchExecuteStatementOutput, error) {
-	return a.client.BatchExecuteStatementWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchExecuteStatementWithContext(ctx, input)
 }
 
 func (a *RDSDataServiceActivities) BeginTransaction(ctx context.Context, input *rdsdataservice.BeginTransactionInput) (*rdsdataservice.BeginTransactionOutput, error) {
-	return a.client.BeginTransactionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BeginTransactionWithContext(ctx, input)
 }
 
 func (a *RDSDataServiceActivities) CommitTransaction(ctx context.Context, input *rdsdataservice.CommitTransactionInput) (*rdsdataservice.CommitTransactionOutput, error) {
-	return a.client.CommitTransactionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CommitTransactionWithContext(ctx, input)
 }
 
 func (a *RDSDataServiceActivities) ExecuteSql(ctx context.Context, input *rdsdataservice.ExecuteSqlInput) (*rdsdataservice.ExecuteSqlOutput, error) {
-	return a.client.ExecuteSqlWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ExecuteSqlWithContext(ctx, input)
 }
 
 func (a *RDSDataServiceActivities) ExecuteStatement(ctx context.Context, input *rdsdataservice.ExecuteStatementInput) (*rdsdataservice.ExecuteStatementOutput, error) {
-	return a.client.ExecuteStatementWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ExecuteStatementWithContext(ctx, input)
 }
 
 func (a *RDSDataServiceActivities) RollbackTransaction(ctx context.Context, input *rdsdataservice.RollbackTransactionInput) (*rdsdataservice.RollbackTransactionOutput, error) {
-	return a.client.RollbackTransactionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RollbackTransactionWithContext(ctx, input)
 }

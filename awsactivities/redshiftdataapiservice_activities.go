@@ -20,45 +20,100 @@ type _ request.Option
 
 type RedshiftDataAPIServiceActivities struct {
 	client redshiftdataapiserviceiface.RedshiftDataAPIServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewRedshiftDataAPIServiceActivities(session *session.Session, config ...*aws.Config) *RedshiftDataAPIServiceActivities {
-	client := redshiftdataapiservice.New(session, config...)
+func NewRedshiftDataAPIServiceActivities(sess *session.Session, config ...*aws.Config) *RedshiftDataAPIServiceActivities {
+	client := redshiftdataapiservice.New(sess, config...)
 	return &RedshiftDataAPIServiceActivities{client: client}
 }
 
+func NewRedshiftDataAPIServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *RedshiftDataAPIServiceActivities {
+	return &RedshiftDataAPIServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *RedshiftDataAPIServiceActivities) getClient(ctx context.Context) (redshiftdataapiserviceiface.RedshiftDataAPIServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return redshiftdataapiservice.New(sess), nil
+}
+
 func (a *RedshiftDataAPIServiceActivities) CancelStatement(ctx context.Context, input *redshiftdataapiservice.CancelStatementInput) (*redshiftdataapiservice.CancelStatementOutput, error) {
-	return a.client.CancelStatementWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelStatementWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) DescribeStatement(ctx context.Context, input *redshiftdataapiservice.DescribeStatementInput) (*redshiftdataapiservice.DescribeStatementOutput, error) {
-	return a.client.DescribeStatementWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeStatementWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) DescribeTable(ctx context.Context, input *redshiftdataapiservice.DescribeTableInput) (*redshiftdataapiservice.DescribeTableOutput, error) {
-	return a.client.DescribeTableWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTableWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) ExecuteStatement(ctx context.Context, input *redshiftdataapiservice.ExecuteStatementInput) (*redshiftdataapiservice.ExecuteStatementOutput, error) {
-	return a.client.ExecuteStatementWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ExecuteStatementWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) GetStatementResult(ctx context.Context, input *redshiftdataapiservice.GetStatementResultInput) (*redshiftdataapiservice.GetStatementResultOutput, error) {
-	return a.client.GetStatementResultWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetStatementResultWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) ListDatabases(ctx context.Context, input *redshiftdataapiservice.ListDatabasesInput) (*redshiftdataapiservice.ListDatabasesOutput, error) {
-	return a.client.ListDatabasesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListDatabasesWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) ListSchemas(ctx context.Context, input *redshiftdataapiservice.ListSchemasInput) (*redshiftdataapiservice.ListSchemasOutput, error) {
-	return a.client.ListSchemasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListSchemasWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) ListStatements(ctx context.Context, input *redshiftdataapiservice.ListStatementsInput) (*redshiftdataapiservice.ListStatementsOutput, error) {
-	return a.client.ListStatementsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListStatementsWithContext(ctx, input)
 }
 
 func (a *RedshiftDataAPIServiceActivities) ListTables(ctx context.Context, input *redshiftdataapiservice.ListTablesInput) (*redshiftdataapiservice.ListTablesOutput, error) {
-	return a.client.ListTablesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTablesWithContext(ctx, input)
 }

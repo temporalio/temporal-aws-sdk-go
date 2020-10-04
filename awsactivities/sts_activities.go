@@ -20,41 +20,92 @@ type _ request.Option
 
 type STSActivities struct {
 	client stsiface.STSAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSTSActivities(session *session.Session, config ...*aws.Config) *STSActivities {
-	client := sts.New(session, config...)
+func NewSTSActivities(sess *session.Session, config ...*aws.Config) *STSActivities {
+	client := sts.New(sess, config...)
 	return &STSActivities{client: client}
 }
 
+func NewSTSActivitiesWithSessionFactory(sessionFactory SessionFactory) *STSActivities {
+	return &STSActivities{sessionFactory: sessionFactory}
+}
+
+func (a *STSActivities) getClient(ctx context.Context) (stsiface.STSAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return sts.New(sess), nil
+}
+
 func (a *STSActivities) AssumeRole(ctx context.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error) {
-	return a.client.AssumeRoleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssumeRoleWithContext(ctx, input)
 }
 
 func (a *STSActivities) AssumeRoleWithSAML(ctx context.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error) {
-	return a.client.AssumeRoleWithSAMLWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssumeRoleWithSAMLWithContext(ctx, input)
 }
 
 func (a *STSActivities) AssumeRoleWithWebIdentity(ctx context.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error) {
-	return a.client.AssumeRoleWithWebIdentityWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssumeRoleWithWebIdentityWithContext(ctx, input)
 }
 
 func (a *STSActivities) DecodeAuthorizationMessage(ctx context.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error) {
-	return a.client.DecodeAuthorizationMessageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DecodeAuthorizationMessageWithContext(ctx, input)
 }
 
 func (a *STSActivities) GetAccessKeyInfo(ctx context.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error) {
-	return a.client.GetAccessKeyInfoWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAccessKeyInfoWithContext(ctx, input)
 }
 
 func (a *STSActivities) GetCallerIdentity(ctx context.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error) {
-	return a.client.GetCallerIdentityWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCallerIdentityWithContext(ctx, input)
 }
 
 func (a *STSActivities) GetFederationToken(ctx context.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error) {
-	return a.client.GetFederationTokenWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFederationTokenWithContext(ctx, input)
 }
 
 func (a *STSActivities) GetSessionToken(ctx context.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error) {
-	return a.client.GetSessionTokenWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSessionTokenWithContext(ctx, input)
 }

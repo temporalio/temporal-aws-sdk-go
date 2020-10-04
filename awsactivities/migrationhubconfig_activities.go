@@ -20,21 +20,52 @@ type _ request.Option
 
 type MigrationHubConfigActivities struct {
 	client migrationhubconfigiface.MigrationHubConfigAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMigrationHubConfigActivities(session *session.Session, config ...*aws.Config) *MigrationHubConfigActivities {
-	client := migrationhubconfig.New(session, config...)
+func NewMigrationHubConfigActivities(sess *session.Session, config ...*aws.Config) *MigrationHubConfigActivities {
+	client := migrationhubconfig.New(sess, config...)
 	return &MigrationHubConfigActivities{client: client}
 }
 
+func NewMigrationHubConfigActivitiesWithSessionFactory(sessionFactory SessionFactory) *MigrationHubConfigActivities {
+	return &MigrationHubConfigActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MigrationHubConfigActivities) getClient(ctx context.Context) (migrationhubconfigiface.MigrationHubConfigAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return migrationhubconfig.New(sess), nil
+}
+
 func (a *MigrationHubConfigActivities) CreateHomeRegionControl(ctx context.Context, input *migrationhubconfig.CreateHomeRegionControlInput) (*migrationhubconfig.CreateHomeRegionControlOutput, error) {
-	return a.client.CreateHomeRegionControlWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateHomeRegionControlWithContext(ctx, input)
 }
 
 func (a *MigrationHubConfigActivities) DescribeHomeRegionControls(ctx context.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error) {
-	return a.client.DescribeHomeRegionControlsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeHomeRegionControlsWithContext(ctx, input)
 }
 
 func (a *MigrationHubConfigActivities) GetHomeRegion(ctx context.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error) {
-	return a.client.GetHomeRegionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetHomeRegionWithContext(ctx, input)
 }

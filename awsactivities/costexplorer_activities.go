@@ -20,85 +20,180 @@ type _ request.Option
 
 type CostExplorerActivities struct {
 	client costexploreriface.CostExplorerAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCostExplorerActivities(session *session.Session, config ...*aws.Config) *CostExplorerActivities {
-	client := costexplorer.New(session, config...)
+func NewCostExplorerActivities(sess *session.Session, config ...*aws.Config) *CostExplorerActivities {
+	client := costexplorer.New(sess, config...)
 	return &CostExplorerActivities{client: client}
 }
 
+func NewCostExplorerActivitiesWithSessionFactory(sessionFactory SessionFactory) *CostExplorerActivities {
+	return &CostExplorerActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CostExplorerActivities) getClient(ctx context.Context) (costexploreriface.CostExplorerAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return costexplorer.New(sess), nil
+}
+
 func (a *CostExplorerActivities) CreateCostCategoryDefinition(ctx context.Context, input *costexplorer.CreateCostCategoryDefinitionInput) (*costexplorer.CreateCostCategoryDefinitionOutput, error) {
-	return a.client.CreateCostCategoryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCostCategoryDefinitionWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) DeleteCostCategoryDefinition(ctx context.Context, input *costexplorer.DeleteCostCategoryDefinitionInput) (*costexplorer.DeleteCostCategoryDefinitionOutput, error) {
-	return a.client.DeleteCostCategoryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteCostCategoryDefinitionWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) DescribeCostCategoryDefinition(ctx context.Context, input *costexplorer.DescribeCostCategoryDefinitionInput) (*costexplorer.DescribeCostCategoryDefinitionOutput, error) {
-	return a.client.DescribeCostCategoryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCostCategoryDefinitionWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetCostAndUsage(ctx context.Context, input *costexplorer.GetCostAndUsageInput) (*costexplorer.GetCostAndUsageOutput, error) {
-	return a.client.GetCostAndUsageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCostAndUsageWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetCostAndUsageWithResources(ctx context.Context, input *costexplorer.GetCostAndUsageWithResourcesInput) (*costexplorer.GetCostAndUsageWithResourcesOutput, error) {
-	return a.client.GetCostAndUsageWithResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCostAndUsageWithResourcesWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetCostForecast(ctx context.Context, input *costexplorer.GetCostForecastInput) (*costexplorer.GetCostForecastOutput, error) {
-	return a.client.GetCostForecastWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetCostForecastWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetDimensionValues(ctx context.Context, input *costexplorer.GetDimensionValuesInput) (*costexplorer.GetDimensionValuesOutput, error) {
-	return a.client.GetDimensionValuesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetDimensionValuesWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetReservationCoverage(ctx context.Context, input *costexplorer.GetReservationCoverageInput) (*costexplorer.GetReservationCoverageOutput, error) {
-	return a.client.GetReservationCoverageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetReservationCoverageWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetReservationPurchaseRecommendation(ctx context.Context, input *costexplorer.GetReservationPurchaseRecommendationInput) (*costexplorer.GetReservationPurchaseRecommendationOutput, error) {
-	return a.client.GetReservationPurchaseRecommendationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetReservationPurchaseRecommendationWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetReservationUtilization(ctx context.Context, input *costexplorer.GetReservationUtilizationInput) (*costexplorer.GetReservationUtilizationOutput, error) {
-	return a.client.GetReservationUtilizationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetReservationUtilizationWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetRightsizingRecommendation(ctx context.Context, input *costexplorer.GetRightsizingRecommendationInput) (*costexplorer.GetRightsizingRecommendationOutput, error) {
-	return a.client.GetRightsizingRecommendationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRightsizingRecommendationWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetSavingsPlansCoverage(ctx context.Context, input *costexplorer.GetSavingsPlansCoverageInput) (*costexplorer.GetSavingsPlansCoverageOutput, error) {
-	return a.client.GetSavingsPlansCoverageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSavingsPlansCoverageWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetSavingsPlansPurchaseRecommendation(ctx context.Context, input *costexplorer.GetSavingsPlansPurchaseRecommendationInput) (*costexplorer.GetSavingsPlansPurchaseRecommendationOutput, error) {
-	return a.client.GetSavingsPlansPurchaseRecommendationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSavingsPlansPurchaseRecommendationWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetSavingsPlansUtilization(ctx context.Context, input *costexplorer.GetSavingsPlansUtilizationInput) (*costexplorer.GetSavingsPlansUtilizationOutput, error) {
-	return a.client.GetSavingsPlansUtilizationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSavingsPlansUtilizationWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetSavingsPlansUtilizationDetails(ctx context.Context, input *costexplorer.GetSavingsPlansUtilizationDetailsInput) (*costexplorer.GetSavingsPlansUtilizationDetailsOutput, error) {
-	return a.client.GetSavingsPlansUtilizationDetailsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSavingsPlansUtilizationDetailsWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetTags(ctx context.Context, input *costexplorer.GetTagsInput) (*costexplorer.GetTagsOutput, error) {
-	return a.client.GetTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTagsWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) GetUsageForecast(ctx context.Context, input *costexplorer.GetUsageForecastInput) (*costexplorer.GetUsageForecastOutput, error) {
-	return a.client.GetUsageForecastWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetUsageForecastWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) ListCostCategoryDefinitions(ctx context.Context, input *costexplorer.ListCostCategoryDefinitionsInput) (*costexplorer.ListCostCategoryDefinitionsOutput, error) {
-	return a.client.ListCostCategoryDefinitionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListCostCategoryDefinitionsWithContext(ctx, input)
 }
 
 func (a *CostExplorerActivities) UpdateCostCategoryDefinition(ctx context.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) (*costexplorer.UpdateCostCategoryDefinitionOutput, error) {
-	return a.client.UpdateCostCategoryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateCostCategoryDefinitionWithContext(ctx, input)
 }

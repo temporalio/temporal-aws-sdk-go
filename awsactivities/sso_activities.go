@@ -20,25 +20,60 @@ type _ request.Option
 
 type SSOActivities struct {
 	client ssoiface.SSOAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSSOActivities(session *session.Session, config ...*aws.Config) *SSOActivities {
-	client := sso.New(session, config...)
+func NewSSOActivities(sess *session.Session, config ...*aws.Config) *SSOActivities {
+	client := sso.New(sess, config...)
 	return &SSOActivities{client: client}
 }
 
+func NewSSOActivitiesWithSessionFactory(sessionFactory SessionFactory) *SSOActivities {
+	return &SSOActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SSOActivities) getClient(ctx context.Context) (ssoiface.SSOAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return sso.New(sess), nil
+}
+
 func (a *SSOActivities) GetRoleCredentials(ctx context.Context, input *sso.GetRoleCredentialsInput) (*sso.GetRoleCredentialsOutput, error) {
-	return a.client.GetRoleCredentialsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRoleCredentialsWithContext(ctx, input)
 }
 
 func (a *SSOActivities) ListAccountRoles(ctx context.Context, input *sso.ListAccountRolesInput) (*sso.ListAccountRolesOutput, error) {
-	return a.client.ListAccountRolesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListAccountRolesWithContext(ctx, input)
 }
 
 func (a *SSOActivities) ListAccounts(ctx context.Context, input *sso.ListAccountsInput) (*sso.ListAccountsOutput, error) {
-	return a.client.ListAccountsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListAccountsWithContext(ctx, input)
 }
 
 func (a *SSOActivities) Logout(ctx context.Context, input *sso.LogoutInput) (*sso.LogoutOutput, error) {
-	return a.client.LogoutWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.LogoutWithContext(ctx, input)
 }

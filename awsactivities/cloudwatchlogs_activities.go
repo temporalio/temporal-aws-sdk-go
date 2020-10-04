@@ -20,177 +20,364 @@ type _ request.Option
 
 type CloudWatchLogsActivities struct {
 	client cloudwatchlogsiface.CloudWatchLogsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCloudWatchLogsActivities(session *session.Session, config ...*aws.Config) *CloudWatchLogsActivities {
-	client := cloudwatchlogs.New(session, config...)
+func NewCloudWatchLogsActivities(sess *session.Session, config ...*aws.Config) *CloudWatchLogsActivities {
+	client := cloudwatchlogs.New(sess, config...)
 	return &CloudWatchLogsActivities{client: client}
 }
 
+func NewCloudWatchLogsActivitiesWithSessionFactory(sessionFactory SessionFactory) *CloudWatchLogsActivities {
+	return &CloudWatchLogsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CloudWatchLogsActivities) getClient(ctx context.Context) (cloudwatchlogsiface.CloudWatchLogsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return cloudwatchlogs.New(sess), nil
+}
+
 func (a *CloudWatchLogsActivities) AssociateKmsKey(ctx context.Context, input *cloudwatchlogs.AssociateKmsKeyInput) (*cloudwatchlogs.AssociateKmsKeyOutput, error) {
-	return a.client.AssociateKmsKeyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateKmsKeyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) CancelExportTask(ctx context.Context, input *cloudwatchlogs.CancelExportTaskInput) (*cloudwatchlogs.CancelExportTaskOutput, error) {
-	return a.client.CancelExportTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelExportTaskWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) CreateExportTask(ctx context.Context, input *cloudwatchlogs.CreateExportTaskInput) (*cloudwatchlogs.CreateExportTaskOutput, error) {
-	return a.client.CreateExportTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateExportTaskWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) CreateLogGroup(ctx context.Context, input *cloudwatchlogs.CreateLogGroupInput) (*cloudwatchlogs.CreateLogGroupOutput, error) {
-	return a.client.CreateLogGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLogGroupWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) CreateLogStream(ctx context.Context, input *cloudwatchlogs.CreateLogStreamInput) (*cloudwatchlogs.CreateLogStreamOutput, error) {
-	return a.client.CreateLogStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLogStreamWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteDestination(ctx context.Context, input *cloudwatchlogs.DeleteDestinationInput) (*cloudwatchlogs.DeleteDestinationOutput, error) {
-	return a.client.DeleteDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteDestinationWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteLogGroup(ctx context.Context, input *cloudwatchlogs.DeleteLogGroupInput) (*cloudwatchlogs.DeleteLogGroupOutput, error) {
-	return a.client.DeleteLogGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLogGroupWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteLogStream(ctx context.Context, input *cloudwatchlogs.DeleteLogStreamInput) (*cloudwatchlogs.DeleteLogStreamOutput, error) {
-	return a.client.DeleteLogStreamWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLogStreamWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteMetricFilter(ctx context.Context, input *cloudwatchlogs.DeleteMetricFilterInput) (*cloudwatchlogs.DeleteMetricFilterOutput, error) {
-	return a.client.DeleteMetricFilterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteMetricFilterWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteQueryDefinition(ctx context.Context, input *cloudwatchlogs.DeleteQueryDefinitionInput) (*cloudwatchlogs.DeleteQueryDefinitionOutput, error) {
-	return a.client.DeleteQueryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteQueryDefinitionWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteResourcePolicy(ctx context.Context, input *cloudwatchlogs.DeleteResourcePolicyInput) (*cloudwatchlogs.DeleteResourcePolicyOutput, error) {
-	return a.client.DeleteResourcePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteResourcePolicyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteRetentionPolicy(ctx context.Context, input *cloudwatchlogs.DeleteRetentionPolicyInput) (*cloudwatchlogs.DeleteRetentionPolicyOutput, error) {
-	return a.client.DeleteRetentionPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteRetentionPolicyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DeleteSubscriptionFilter(ctx context.Context, input *cloudwatchlogs.DeleteSubscriptionFilterInput) (*cloudwatchlogs.DeleteSubscriptionFilterOutput, error) {
-	return a.client.DeleteSubscriptionFilterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteSubscriptionFilterWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeDestinations(ctx context.Context, input *cloudwatchlogs.DescribeDestinationsInput) (*cloudwatchlogs.DescribeDestinationsOutput, error) {
-	return a.client.DescribeDestinationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDestinationsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeExportTasks(ctx context.Context, input *cloudwatchlogs.DescribeExportTasksInput) (*cloudwatchlogs.DescribeExportTasksOutput, error) {
-	return a.client.DescribeExportTasksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeExportTasksWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeLogGroups(ctx context.Context, input *cloudwatchlogs.DescribeLogGroupsInput) (*cloudwatchlogs.DescribeLogGroupsOutput, error) {
-	return a.client.DescribeLogGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLogGroupsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeLogStreams(ctx context.Context, input *cloudwatchlogs.DescribeLogStreamsInput) (*cloudwatchlogs.DescribeLogStreamsOutput, error) {
-	return a.client.DescribeLogStreamsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLogStreamsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeMetricFilters(ctx context.Context, input *cloudwatchlogs.DescribeMetricFiltersInput) (*cloudwatchlogs.DescribeMetricFiltersOutput, error) {
-	return a.client.DescribeMetricFiltersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeMetricFiltersWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeQueries(ctx context.Context, input *cloudwatchlogs.DescribeQueriesInput) (*cloudwatchlogs.DescribeQueriesOutput, error) {
-	return a.client.DescribeQueriesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeQueriesWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeQueryDefinitions(ctx context.Context, input *cloudwatchlogs.DescribeQueryDefinitionsInput) (*cloudwatchlogs.DescribeQueryDefinitionsOutput, error) {
-	return a.client.DescribeQueryDefinitionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeQueryDefinitionsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeResourcePolicies(ctx context.Context, input *cloudwatchlogs.DescribeResourcePoliciesInput) (*cloudwatchlogs.DescribeResourcePoliciesOutput, error) {
-	return a.client.DescribeResourcePoliciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeResourcePoliciesWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DescribeSubscriptionFilters(ctx context.Context, input *cloudwatchlogs.DescribeSubscriptionFiltersInput) (*cloudwatchlogs.DescribeSubscriptionFiltersOutput, error) {
-	return a.client.DescribeSubscriptionFiltersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSubscriptionFiltersWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) DisassociateKmsKey(ctx context.Context, input *cloudwatchlogs.DisassociateKmsKeyInput) (*cloudwatchlogs.DisassociateKmsKeyOutput, error) {
-	return a.client.DisassociateKmsKeyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateKmsKeyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) FilterLogEvents(ctx context.Context, input *cloudwatchlogs.FilterLogEventsInput) (*cloudwatchlogs.FilterLogEventsOutput, error) {
-	return a.client.FilterLogEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.FilterLogEventsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) GetLogEvents(ctx context.Context, input *cloudwatchlogs.GetLogEventsInput) (*cloudwatchlogs.GetLogEventsOutput, error) {
-	return a.client.GetLogEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLogEventsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) GetLogGroupFields(ctx context.Context, input *cloudwatchlogs.GetLogGroupFieldsInput) (*cloudwatchlogs.GetLogGroupFieldsOutput, error) {
-	return a.client.GetLogGroupFieldsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLogGroupFieldsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) GetLogRecord(ctx context.Context, input *cloudwatchlogs.GetLogRecordInput) (*cloudwatchlogs.GetLogRecordOutput, error) {
-	return a.client.GetLogRecordWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLogRecordWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) GetQueryResults(ctx context.Context, input *cloudwatchlogs.GetQueryResultsInput) (*cloudwatchlogs.GetQueryResultsOutput, error) {
-	return a.client.GetQueryResultsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetQueryResultsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) ListTagsLogGroup(ctx context.Context, input *cloudwatchlogs.ListTagsLogGroupInput) (*cloudwatchlogs.ListTagsLogGroupOutput, error) {
-	return a.client.ListTagsLogGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsLogGroupWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutDestination(ctx context.Context, input *cloudwatchlogs.PutDestinationInput) (*cloudwatchlogs.PutDestinationOutput, error) {
-	return a.client.PutDestinationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutDestinationWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutDestinationPolicy(ctx context.Context, input *cloudwatchlogs.PutDestinationPolicyInput) (*cloudwatchlogs.PutDestinationPolicyOutput, error) {
-	return a.client.PutDestinationPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutDestinationPolicyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutLogEvents(ctx context.Context, input *cloudwatchlogs.PutLogEventsInput) (*cloudwatchlogs.PutLogEventsOutput, error) {
-	return a.client.PutLogEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutLogEventsWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutMetricFilter(ctx context.Context, input *cloudwatchlogs.PutMetricFilterInput) (*cloudwatchlogs.PutMetricFilterOutput, error) {
-	return a.client.PutMetricFilterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutMetricFilterWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutQueryDefinition(ctx context.Context, input *cloudwatchlogs.PutQueryDefinitionInput) (*cloudwatchlogs.PutQueryDefinitionOutput, error) {
-	return a.client.PutQueryDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutQueryDefinitionWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutResourcePolicy(ctx context.Context, input *cloudwatchlogs.PutResourcePolicyInput) (*cloudwatchlogs.PutResourcePolicyOutput, error) {
-	return a.client.PutResourcePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutResourcePolicyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutRetentionPolicy(ctx context.Context, input *cloudwatchlogs.PutRetentionPolicyInput) (*cloudwatchlogs.PutRetentionPolicyOutput, error) {
-	return a.client.PutRetentionPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRetentionPolicyWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) PutSubscriptionFilter(ctx context.Context, input *cloudwatchlogs.PutSubscriptionFilterInput) (*cloudwatchlogs.PutSubscriptionFilterOutput, error) {
-	return a.client.PutSubscriptionFilterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutSubscriptionFilterWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) StartQuery(ctx context.Context, input *cloudwatchlogs.StartQueryInput) (*cloudwatchlogs.StartQueryOutput, error) {
-	return a.client.StartQueryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartQueryWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) StopQuery(ctx context.Context, input *cloudwatchlogs.StopQueryInput) (*cloudwatchlogs.StopQueryOutput, error) {
-	return a.client.StopQueryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopQueryWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) TagLogGroup(ctx context.Context, input *cloudwatchlogs.TagLogGroupInput) (*cloudwatchlogs.TagLogGroupOutput, error) {
-	return a.client.TagLogGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagLogGroupWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) TestMetricFilter(ctx context.Context, input *cloudwatchlogs.TestMetricFilterInput) (*cloudwatchlogs.TestMetricFilterOutput, error) {
-	return a.client.TestMetricFilterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TestMetricFilterWithContext(ctx, input)
 }
 
 func (a *CloudWatchLogsActivities) UntagLogGroup(ctx context.Context, input *cloudwatchlogs.UntagLogGroupInput) (*cloudwatchlogs.UntagLogGroupOutput, error) {
-	return a.client.UntagLogGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagLogGroupWithContext(ctx, input)
 }

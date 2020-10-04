@@ -20,49 +20,108 @@ type _ request.Option
 
 type ApplicationAutoScalingActivities struct {
 	client applicationautoscalingiface.ApplicationAutoScalingAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewApplicationAutoScalingActivities(session *session.Session, config ...*aws.Config) *ApplicationAutoScalingActivities {
-	client := applicationautoscaling.New(session, config...)
+func NewApplicationAutoScalingActivities(sess *session.Session, config ...*aws.Config) *ApplicationAutoScalingActivities {
+	client := applicationautoscaling.New(sess, config...)
 	return &ApplicationAutoScalingActivities{client: client}
 }
 
+func NewApplicationAutoScalingActivitiesWithSessionFactory(sessionFactory SessionFactory) *ApplicationAutoScalingActivities {
+	return &ApplicationAutoScalingActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ApplicationAutoScalingActivities) getClient(ctx context.Context) (applicationautoscalingiface.ApplicationAutoScalingAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return applicationautoscaling.New(sess), nil
+}
+
 func (a *ApplicationAutoScalingActivities) DeleteScalingPolicy(ctx context.Context, input *applicationautoscaling.DeleteScalingPolicyInput) (*applicationautoscaling.DeleteScalingPolicyOutput, error) {
-	return a.client.DeleteScalingPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteScalingPolicyWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DeleteScheduledAction(ctx context.Context, input *applicationautoscaling.DeleteScheduledActionInput) (*applicationautoscaling.DeleteScheduledActionOutput, error) {
-	return a.client.DeleteScheduledActionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteScheduledActionWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DeregisterScalableTarget(ctx context.Context, input *applicationautoscaling.DeregisterScalableTargetInput) (*applicationautoscaling.DeregisterScalableTargetOutput, error) {
-	return a.client.DeregisterScalableTargetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterScalableTargetWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DescribeScalableTargets(ctx context.Context, input *applicationautoscaling.DescribeScalableTargetsInput) (*applicationautoscaling.DescribeScalableTargetsOutput, error) {
-	return a.client.DescribeScalableTargetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScalableTargetsWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DescribeScalingActivities(ctx context.Context, input *applicationautoscaling.DescribeScalingActivitiesInput) (*applicationautoscaling.DescribeScalingActivitiesOutput, error) {
-	return a.client.DescribeScalingActivitiesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScalingActivitiesWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DescribeScalingPolicies(ctx context.Context, input *applicationautoscaling.DescribeScalingPoliciesInput) (*applicationautoscaling.DescribeScalingPoliciesOutput, error) {
-	return a.client.DescribeScalingPoliciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScalingPoliciesWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) DescribeScheduledActions(ctx context.Context, input *applicationautoscaling.DescribeScheduledActionsInput) (*applicationautoscaling.DescribeScheduledActionsOutput, error) {
-	return a.client.DescribeScheduledActionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScheduledActionsWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) PutScalingPolicy(ctx context.Context, input *applicationautoscaling.PutScalingPolicyInput) (*applicationautoscaling.PutScalingPolicyOutput, error) {
-	return a.client.PutScalingPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutScalingPolicyWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) PutScheduledAction(ctx context.Context, input *applicationautoscaling.PutScheduledActionInput) (*applicationautoscaling.PutScheduledActionOutput, error) {
-	return a.client.PutScheduledActionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutScheduledActionWithContext(ctx, input)
 }
 
 func (a *ApplicationAutoScalingActivities) RegisterScalableTarget(ctx context.Context, input *applicationautoscaling.RegisterScalableTargetInput) (*applicationautoscaling.RegisterScalableTargetOutput, error) {
-	return a.client.RegisterScalableTargetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterScalableTargetWithContext(ctx, input)
 }

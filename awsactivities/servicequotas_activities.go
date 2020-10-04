@@ -20,73 +20,156 @@ type _ request.Option
 
 type ServiceQuotasActivities struct {
 	client servicequotasiface.ServiceQuotasAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewServiceQuotasActivities(session *session.Session, config ...*aws.Config) *ServiceQuotasActivities {
-	client := servicequotas.New(session, config...)
+func NewServiceQuotasActivities(sess *session.Session, config ...*aws.Config) *ServiceQuotasActivities {
+	client := servicequotas.New(sess, config...)
 	return &ServiceQuotasActivities{client: client}
 }
 
+func NewServiceQuotasActivitiesWithSessionFactory(sessionFactory SessionFactory) *ServiceQuotasActivities {
+	return &ServiceQuotasActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ServiceQuotasActivities) getClient(ctx context.Context) (servicequotasiface.ServiceQuotasAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return servicequotas.New(sess), nil
+}
+
 func (a *ServiceQuotasActivities) AssociateServiceQuotaTemplate(ctx context.Context, input *servicequotas.AssociateServiceQuotaTemplateInput) (*servicequotas.AssociateServiceQuotaTemplateOutput, error) {
-	return a.client.AssociateServiceQuotaTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateServiceQuotaTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) DeleteServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, input *servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.DeleteServiceQuotaIncreaseRequestFromTemplateOutput, error) {
-	return a.client.DeleteServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) DisassociateServiceQuotaTemplate(ctx context.Context, input *servicequotas.DisassociateServiceQuotaTemplateInput) (*servicequotas.DisassociateServiceQuotaTemplateOutput, error) {
-	return a.client.DisassociateServiceQuotaTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateServiceQuotaTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) GetAWSDefaultServiceQuota(ctx context.Context, input *servicequotas.GetAWSDefaultServiceQuotaInput) (*servicequotas.GetAWSDefaultServiceQuotaOutput, error) {
-	return a.client.GetAWSDefaultServiceQuotaWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAWSDefaultServiceQuotaWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) GetAssociationForServiceQuotaTemplate(ctx context.Context, input *servicequotas.GetAssociationForServiceQuotaTemplateInput) (*servicequotas.GetAssociationForServiceQuotaTemplateOutput, error) {
-	return a.client.GetAssociationForServiceQuotaTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAssociationForServiceQuotaTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) GetRequestedServiceQuotaChange(ctx context.Context, input *servicequotas.GetRequestedServiceQuotaChangeInput) (*servicequotas.GetRequestedServiceQuotaChangeOutput, error) {
-	return a.client.GetRequestedServiceQuotaChangeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRequestedServiceQuotaChangeWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) GetServiceQuota(ctx context.Context, input *servicequotas.GetServiceQuotaInput) (*servicequotas.GetServiceQuotaOutput, error) {
-	return a.client.GetServiceQuotaWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetServiceQuotaWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) GetServiceQuotaIncreaseRequestFromTemplate(ctx context.Context, input *servicequotas.GetServiceQuotaIncreaseRequestFromTemplateInput) (*servicequotas.GetServiceQuotaIncreaseRequestFromTemplateOutput, error) {
-	return a.client.GetServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetServiceQuotaIncreaseRequestFromTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListAWSDefaultServiceQuotas(ctx context.Context, input *servicequotas.ListAWSDefaultServiceQuotasInput) (*servicequotas.ListAWSDefaultServiceQuotasOutput, error) {
-	return a.client.ListAWSDefaultServiceQuotasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListAWSDefaultServiceQuotasWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistory(ctx context.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryOutput, error) {
-	return a.client.ListRequestedServiceQuotaChangeHistoryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRequestedServiceQuotaChangeHistoryWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListRequestedServiceQuotaChangeHistoryByQuota(ctx context.Context, input *servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaInput) (*servicequotas.ListRequestedServiceQuotaChangeHistoryByQuotaOutput, error) {
-	return a.client.ListRequestedServiceQuotaChangeHistoryByQuotaWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRequestedServiceQuotaChangeHistoryByQuotaWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListServiceQuotaIncreaseRequestsInTemplate(ctx context.Context, input *servicequotas.ListServiceQuotaIncreaseRequestsInTemplateInput) (*servicequotas.ListServiceQuotaIncreaseRequestsInTemplateOutput, error) {
-	return a.client.ListServiceQuotaIncreaseRequestsInTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListServiceQuotaIncreaseRequestsInTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListServiceQuotas(ctx context.Context, input *servicequotas.ListServiceQuotasInput) (*servicequotas.ListServiceQuotasOutput, error) {
-	return a.client.ListServiceQuotasWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListServiceQuotasWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) ListServices(ctx context.Context, input *servicequotas.ListServicesInput) (*servicequotas.ListServicesOutput, error) {
-	return a.client.ListServicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListServicesWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) PutServiceQuotaIncreaseRequestIntoTemplate(ctx context.Context, input *servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateInput) (*servicequotas.PutServiceQuotaIncreaseRequestIntoTemplateOutput, error) {
-	return a.client.PutServiceQuotaIncreaseRequestIntoTemplateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutServiceQuotaIncreaseRequestIntoTemplateWithContext(ctx, input)
 }
 
 func (a *ServiceQuotasActivities) RequestServiceQuotaIncrease(ctx context.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) (*servicequotas.RequestServiceQuotaIncreaseOutput, error) {
-	return a.client.RequestServiceQuotaIncreaseWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RequestServiceQuotaIncreaseWithContext(ctx, input)
 }

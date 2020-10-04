@@ -20,57 +20,124 @@ type _ request.Option
 
 type DetectiveActivities struct {
 	client detectiveiface.DetectiveAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewDetectiveActivities(session *session.Session, config ...*aws.Config) *DetectiveActivities {
-	client := detective.New(session, config...)
+func NewDetectiveActivities(sess *session.Session, config ...*aws.Config) *DetectiveActivities {
+	client := detective.New(sess, config...)
 	return &DetectiveActivities{client: client}
 }
 
+func NewDetectiveActivitiesWithSessionFactory(sessionFactory SessionFactory) *DetectiveActivities {
+	return &DetectiveActivities{sessionFactory: sessionFactory}
+}
+
+func (a *DetectiveActivities) getClient(ctx context.Context) (detectiveiface.DetectiveAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return detective.New(sess), nil
+}
+
 func (a *DetectiveActivities) AcceptInvitation(ctx context.Context, input *detective.AcceptInvitationInput) (*detective.AcceptInvitationOutput, error) {
-	return a.client.AcceptInvitationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AcceptInvitationWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) CreateGraph(ctx context.Context, input *detective.CreateGraphInput) (*detective.CreateGraphOutput, error) {
-	return a.client.CreateGraphWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateGraphWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) CreateMembers(ctx context.Context, input *detective.CreateMembersInput) (*detective.CreateMembersOutput, error) {
-	return a.client.CreateMembersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateMembersWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) DeleteGraph(ctx context.Context, input *detective.DeleteGraphInput) (*detective.DeleteGraphOutput, error) {
-	return a.client.DeleteGraphWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteGraphWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) DeleteMembers(ctx context.Context, input *detective.DeleteMembersInput) (*detective.DeleteMembersOutput, error) {
-	return a.client.DeleteMembersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteMembersWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) DisassociateMembership(ctx context.Context, input *detective.DisassociateMembershipInput) (*detective.DisassociateMembershipOutput, error) {
-	return a.client.DisassociateMembershipWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateMembershipWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) GetMembers(ctx context.Context, input *detective.GetMembersInput) (*detective.GetMembersOutput, error) {
-	return a.client.GetMembersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetMembersWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) ListGraphs(ctx context.Context, input *detective.ListGraphsInput) (*detective.ListGraphsOutput, error) {
-	return a.client.ListGraphsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListGraphsWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) ListInvitations(ctx context.Context, input *detective.ListInvitationsInput) (*detective.ListInvitationsOutput, error) {
-	return a.client.ListInvitationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListInvitationsWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) ListMembers(ctx context.Context, input *detective.ListMembersInput) (*detective.ListMembersOutput, error) {
-	return a.client.ListMembersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListMembersWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) RejectInvitation(ctx context.Context, input *detective.RejectInvitationInput) (*detective.RejectInvitationOutput, error) {
-	return a.client.RejectInvitationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RejectInvitationWithContext(ctx, input)
 }
 
 func (a *DetectiveActivities) StartMonitoringMember(ctx context.Context, input *detective.StartMonitoringMemberInput) (*detective.StartMonitoringMemberOutput, error) {
-	return a.client.StartMonitoringMemberWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartMonitoringMemberWithContext(ctx, input)
 }

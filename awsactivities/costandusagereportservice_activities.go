@@ -20,25 +20,60 @@ type _ request.Option
 
 type CostandUsageReportServiceActivities struct {
 	client costandusagereportserviceiface.CostandUsageReportServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCostandUsageReportServiceActivities(session *session.Session, config ...*aws.Config) *CostandUsageReportServiceActivities {
-	client := costandusagereportservice.New(session, config...)
+func NewCostandUsageReportServiceActivities(sess *session.Session, config ...*aws.Config) *CostandUsageReportServiceActivities {
+	client := costandusagereportservice.New(sess, config...)
 	return &CostandUsageReportServiceActivities{client: client}
 }
 
+func NewCostandUsageReportServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *CostandUsageReportServiceActivities {
+	return &CostandUsageReportServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CostandUsageReportServiceActivities) getClient(ctx context.Context) (costandusagereportserviceiface.CostandUsageReportServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return costandusagereportservice.New(sess), nil
+}
+
 func (a *CostandUsageReportServiceActivities) DeleteReportDefinition(ctx context.Context, input *costandusagereportservice.DeleteReportDefinitionInput) (*costandusagereportservice.DeleteReportDefinitionOutput, error) {
-	return a.client.DeleteReportDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteReportDefinitionWithContext(ctx, input)
 }
 
 func (a *CostandUsageReportServiceActivities) DescribeReportDefinitions(ctx context.Context, input *costandusagereportservice.DescribeReportDefinitionsInput) (*costandusagereportservice.DescribeReportDefinitionsOutput, error) {
-	return a.client.DescribeReportDefinitionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeReportDefinitionsWithContext(ctx, input)
 }
 
 func (a *CostandUsageReportServiceActivities) ModifyReportDefinition(ctx context.Context, input *costandusagereportservice.ModifyReportDefinitionInput) (*costandusagereportservice.ModifyReportDefinitionOutput, error) {
-	return a.client.ModifyReportDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyReportDefinitionWithContext(ctx, input)
 }
 
 func (a *CostandUsageReportServiceActivities) PutReportDefinition(ctx context.Context, input *costandusagereportservice.PutReportDefinitionInput) (*costandusagereportservice.PutReportDefinitionOutput, error) {
-	return a.client.PutReportDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutReportDefinitionWithContext(ctx, input)
 }
