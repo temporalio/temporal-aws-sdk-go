@@ -112,8 +112,7 @@ type IoTAnalyticsClient interface {
 	UpdatePipelineAsync(ctx workflow.Context, input *iotanalytics.UpdatePipelineInput) *IotanalyticsUpdatePipelineResult
 }
 
-type IoTAnalyticsStub struct {
-}
+type IoTAnalyticsStub struct{}
 
 func NewIoTAnalyticsStub() IoTAnalyticsClient {
 	return &IoTAnalyticsStub{}

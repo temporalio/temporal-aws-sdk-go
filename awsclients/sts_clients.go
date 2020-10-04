@@ -34,8 +34,7 @@ type STSClient interface {
 	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult
 }
 
-type STSStub struct {
-}
+type STSStub struct{}
 
 func NewSTSStub() STSClient {
 	return &STSStub{}

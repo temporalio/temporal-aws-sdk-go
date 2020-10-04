@@ -55,8 +55,7 @@ type ResourceGroupsClient interface {
 	UpdateGroupQueryAsync(ctx workflow.Context, input *resourcegroups.UpdateGroupQueryInput) *ResourcegroupsUpdateGroupQueryResult
 }
 
-type ResourceGroupsStub struct {
-}
+type ResourceGroupsStub struct{}
 
 func NewResourceGroupsStub() ResourceGroupsClient {
 	return &ResourceGroupsStub{}

@@ -236,11 +236,9 @@ type OpsWorksClient interface {
 	WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
 	WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
 	WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-}
+	WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error}
 
-type OpsWorksStub struct {
-}
+type OpsWorksStub struct{}
 
 func NewOpsWorksStub() OpsWorksClient {
 	return &OpsWorksStub{}
@@ -985,6 +983,12 @@ func (r *OpsworksUpdateVolumeResult) Get(ctx workflow.Context) (*opsworks.Update
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
 
 func (a *OpsWorksStub) AssignInstance(ctx workflow.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error) {
 	var output opsworks.AssignInstanceOutput

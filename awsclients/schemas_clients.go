@@ -99,11 +99,9 @@ type SchemasClient interface {
 	UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error)
 	UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
 
-	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error
-}
+	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error}
 
-type SchemasStub struct {
-}
+type SchemasStub struct{}
 
 func NewSchemasStub() SchemasClient {
 	return &SchemasStub{}
@@ -408,6 +406,7 @@ func (r *SchemasUpdateSchemaResult) Get(ctx workflow.Context) (*schemas.UpdateSc
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *SchemasStub) CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
 	var output schemas.CreateDiscovererOutput

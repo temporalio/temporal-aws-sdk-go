@@ -79,8 +79,7 @@ type XRayClient interface {
 	UpdateSamplingRuleAsync(ctx workflow.Context, input *xray.UpdateSamplingRuleInput) *XrayUpdateSamplingRuleResult
 }
 
-type XRayStub struct {
-}
+type XRayStub struct{}
 
 func NewXRayStub() XRayClient {
 	return &XRayStub{}

@@ -40,8 +40,7 @@ type SimpleDBClient interface {
 	SelectAsync(ctx workflow.Context, input *simpledb.SelectInput) *SimpledbSelectResult
 }
 
-type SimpleDBStub struct {
-}
+type SimpleDBStub struct{}
 
 func NewSimpleDBStub() SimpleDBClient {
 	return &SimpleDBStub{}

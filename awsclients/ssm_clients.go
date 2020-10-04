@@ -375,11 +375,9 @@ type SSMClient interface {
 	UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
 	UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
 
-	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error
-}
+	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error}
 
-type SSMStub struct {
-}
+type SSMStub struct{}
 
 func NewSSMStub() SSMClient {
 	return &SSMStub{}
@@ -1604,6 +1602,7 @@ func (r *SsmUpdateServiceSettingResult) Get(ctx workflow.Context) (*ssm.UpdateSe
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *SSMStub) AddTagsToResource(ctx workflow.Context, input *ssm.AddTagsToResourceInput) (*ssm.AddTagsToResourceOutput, error) {
 	var output ssm.AddTagsToResourceOutput

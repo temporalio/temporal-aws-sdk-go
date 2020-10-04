@@ -16,8 +16,7 @@ type HoneycodeClient interface {
 	InvokeScreenAutomationAsync(ctx workflow.Context, input *honeycode.InvokeScreenAutomationInput) *HoneycodeInvokeScreenAutomationResult
 }
 
-type HoneycodeStub struct {
-}
+type HoneycodeStub struct{}
 
 func NewHoneycodeStub() HoneycodeClient {
 	return &HoneycodeStub{}

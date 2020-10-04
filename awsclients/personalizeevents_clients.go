@@ -13,8 +13,7 @@ type PersonalizeEventsClient interface {
 	PutEventsAsync(ctx workflow.Context, input *personalizeevents.PutEventsInput) *PersonalizeeventsPutEventsResult
 }
 
-type PersonalizeEventsStub struct {
-}
+type PersonalizeEventsStub struct{}
 
 func NewPersonalizeEventsStub() PersonalizeEventsClient {
 	return &PersonalizeEventsStub{}

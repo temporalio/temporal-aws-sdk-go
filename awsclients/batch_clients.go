@@ -58,8 +58,7 @@ type BatchClient interface {
 	UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *BatchUpdateJobQueueResult
 }
 
-type BatchStub struct {
-}
+type BatchStub struct{}
 
 func NewBatchStub() BatchClient {
 	return &BatchStub{}

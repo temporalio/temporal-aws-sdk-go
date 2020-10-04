@@ -67,8 +67,7 @@ type QLDBClient interface {
 	UpdateLedgerAsync(ctx workflow.Context, input *qldb.UpdateLedgerInput) *QldbUpdateLedgerResult
 }
 
-type QLDBStub struct {
-}
+type QLDBStub struct{}
 
 func NewQLDBStub() QLDBClient {
 	return &QLDBStub{}

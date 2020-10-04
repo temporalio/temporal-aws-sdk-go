@@ -22,8 +22,7 @@ type SSOClient interface {
 	LogoutAsync(ctx workflow.Context, input *sso.LogoutInput) *SsoLogoutResult
 }
 
-type SSOStub struct {
-}
+type SSOStub struct{}
 
 func NewSSOStub() SSOClient {
 	return &SSOStub{}

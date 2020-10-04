@@ -152,11 +152,9 @@ type ElasticBeanstalkClient interface {
 
 	WaitUntilEnvironmentExists(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
 	WaitUntilEnvironmentTerminated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-}
+	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error}
 
-type ElasticBeanstalkStub struct {
-}
+type ElasticBeanstalkStub struct{}
 
 func NewElasticBeanstalkStub() ElasticBeanstalkClient {
 	return &ElasticBeanstalkStub{}
@@ -631,6 +629,9 @@ func (r *ElasticbeanstalkValidateConfigurationSettingsResult) Get(ctx workflow.C
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *ElasticBeanstalkStub) AbortEnvironmentUpdate(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error) {
 	var output elasticbeanstalk.AbortEnvironmentUpdateOutput

@@ -16,8 +16,7 @@ type MarketplaceCommerceAnalyticsClient interface {
 	StartSupportDataExportAsync(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) *MarketplacecommerceanalyticsStartSupportDataExportResult
 }
 
-type MarketplaceCommerceAnalyticsStub struct {
-}
+type MarketplaceCommerceAnalyticsStub struct{}
 
 func NewMarketplaceCommerceAnalyticsStub() MarketplaceCommerceAnalyticsClient {
 	return &MarketplaceCommerceAnalyticsStub{}

@@ -85,8 +85,7 @@ type ApplicationDiscoveryServiceClient interface {
 	UpdateApplicationAsync(ctx workflow.Context, input *applicationdiscoveryservice.UpdateApplicationInput) *ApplicationdiscoveryserviceUpdateApplicationResult
 }
 
-type ApplicationDiscoveryServiceStub struct {
-}
+type ApplicationDiscoveryServiceStub struct{}
 
 func NewApplicationDiscoveryServiceStub() ApplicationDiscoveryServiceClient {
 	return &ApplicationDiscoveryServiceStub{}

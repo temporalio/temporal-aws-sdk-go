@@ -88,8 +88,7 @@ type CloudSearchClient interface {
 	UpdateServiceAccessPoliciesAsync(ctx workflow.Context, input *cloudsearch.UpdateServiceAccessPoliciesInput) *CloudsearchUpdateServiceAccessPoliciesResult
 }
 
-type CloudSearchStub struct {
-}
+type CloudSearchStub struct{}
 
 func NewCloudSearchStub() CloudSearchClient {
 	return &CloudSearchStub{}

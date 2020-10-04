@@ -307,8 +307,7 @@ type QuickSightClient interface {
 	UpdateUserAsync(ctx workflow.Context, input *quicksight.UpdateUserInput) *QuicksightUpdateUserResult
 }
 
-type QuickSightStub struct {
-}
+type QuickSightStub struct{}
 
 func NewQuickSightStub() QuickSightClient {
 	return &QuickSightStub{}

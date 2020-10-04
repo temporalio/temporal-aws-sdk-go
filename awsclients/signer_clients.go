@@ -45,11 +45,9 @@ type SignerClient interface {
 	UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error)
 	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceResult
 
-	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error
-}
+	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error}
 
-type SignerStub struct {
-}
+type SignerStub struct{}
 
 func NewSignerStub() SignerClient {
 	return &SignerStub{}
@@ -174,6 +172,7 @@ func (r *SignerUntagResourceResult) Get(ctx workflow.Context) (*signer.UntagReso
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *SignerStub) CancelSigningProfile(ctx workflow.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
 	var output signer.CancelSigningProfileOutput

@@ -181,8 +181,7 @@ type DirectoryServiceClient interface {
 	VerifyTrustAsync(ctx workflow.Context, input *directoryservice.VerifyTrustInput) *DirectoryserviceVerifyTrustResult
 }
 
-type DirectoryServiceStub struct {
-}
+type DirectoryServiceStub struct{}
 
 func NewDirectoryServiceStub() DirectoryServiceClient {
 	return &DirectoryServiceStub{}

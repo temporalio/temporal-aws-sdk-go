@@ -73,8 +73,7 @@ type DAXClient interface {
 	UpdateSubnetGroupAsync(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) *DaxUpdateSubnetGroupResult
 }
 
-type DAXStub struct {
-}
+type DAXStub struct{}
 
 func NewDAXStub() DAXClient {
 	return &DAXStub{}

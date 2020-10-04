@@ -133,11 +133,9 @@ type DynamoDBClient interface {
 	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamodbUpdateTimeToLiveResult
 
 	WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-}
+	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error}
 
-type DynamoDBStub struct {
-}
+type DynamoDBStub struct{}
 
 func NewDynamoDBStub() DynamoDBClient {
 	return &DynamoDBStub{}
@@ -552,6 +550,8 @@ func (r *DynamodbUpdateTimeToLiveResult) Get(ctx workflow.Context) (*dynamodb.Up
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *DynamoDBStub) BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
 	var output dynamodb.BatchGetItemOutput

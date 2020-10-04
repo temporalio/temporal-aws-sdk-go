@@ -91,8 +91,7 @@ type ApplicationInsightsClient interface {
 	UpdateLogPatternAsync(ctx workflow.Context, input *applicationinsights.UpdateLogPatternInput) *ApplicationinsightsUpdateLogPatternResult
 }
 
-type ApplicationInsightsStub struct {
-}
+type ApplicationInsightsStub struct{}
 
 func NewApplicationInsightsStub() ApplicationInsightsClient {
 	return &ApplicationInsightsStub{}

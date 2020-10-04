@@ -220,8 +220,7 @@ type SESV2Client interface {
 	UpdateEmailTemplateAsync(ctx workflow.Context, input *sesv2.UpdateEmailTemplateInput) *Sesv2UpdateEmailTemplateResult
 }
 
-type SESV2Stub struct {
-}
+type SESV2Stub struct{}
 
 func NewSESV2Stub() SESV2Client {
 	return &SESV2Stub{}

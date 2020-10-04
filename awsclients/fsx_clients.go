@@ -52,8 +52,7 @@ type FSxClient interface {
 	UpdateFileSystemAsync(ctx workflow.Context, input *fsx.UpdateFileSystemInput) *FsxUpdateFileSystemResult
 }
 
-type FSxStub struct {
-}
+type FSxStub struct{}
 
 func NewFSxStub() FSxClient {
 	return &FSxStub{}

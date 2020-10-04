@@ -1297,11 +1297,9 @@ type EC2Client interface {
 	WaitUntilVpcPeeringConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
 	WaitUntilVpcPeeringConnectionExists(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
 	WaitUntilVpnConnectionAvailable(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
-	WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
-}
+	WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error}
 
-type EC2Stub struct {
-}
+type EC2Stub struct{}
 
 func NewEC2Stub() EC2Client {
 	return &EC2Stub{}
@@ -5496,6 +5494,38 @@ func (r *Ec2WithdrawByoipCidrResult) Get(ctx workflow.Context) (*ec2.WithdrawByo
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 func (a *EC2Stub) AcceptReservedInstancesExchangeQuote(ctx workflow.Context, input *ec2.AcceptReservedInstancesExchangeQuoteInput) (*ec2.AcceptReservedInstancesExchangeQuoteOutput, error) {
 	var output ec2.AcceptReservedInstancesExchangeQuoteOutput

@@ -64,8 +64,7 @@ type AppflowClient interface {
 	UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowResult
 }
 
-type AppflowStub struct {
-}
+type AppflowStub struct{}
 
 func NewAppflowStub() AppflowClient {
 	return &AppflowStub{}

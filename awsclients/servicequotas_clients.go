@@ -58,8 +58,7 @@ type ServiceQuotasClient interface {
 	RequestServiceQuotaIncreaseAsync(ctx workflow.Context, input *servicequotas.RequestServiceQuotaIncreaseInput) *ServicequotasRequestServiceQuotaIncreaseResult
 }
 
-type ServiceQuotasStub struct {
-}
+type ServiceQuotasStub struct{}
 
 func NewServiceQuotasStub() ServiceQuotasClient {
 	return &ServiceQuotasStub{}

@@ -259,8 +259,7 @@ type ServiceCatalogClient interface {
 	UpdateTagOptionAsync(ctx workflow.Context, input *servicecatalog.UpdateTagOptionInput) *ServicecatalogUpdateTagOptionResult
 }
 
-type ServiceCatalogStub struct {
-}
+type ServiceCatalogStub struct{}
 
 func NewServiceCatalogStub() ServiceCatalogClient {
 	return &ServiceCatalogStub{}

@@ -61,8 +61,7 @@ type MigrationHubClient interface {
 	PutResourceAttributesAsync(ctx workflow.Context, input *migrationhub.PutResourceAttributesInput) *MigrationhubPutResourceAttributesResult
 }
 
-type MigrationHubStub struct {
-}
+type MigrationHubStub struct{}
 
 func NewMigrationHubStub() MigrationHubClient {
 	return &MigrationHubStub{}

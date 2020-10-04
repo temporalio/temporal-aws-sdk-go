@@ -64,8 +64,7 @@ type CloudTrailClient interface {
 	UpdateTrailAsync(ctx workflow.Context, input *cloudtrail.UpdateTrailInput) *CloudtrailUpdateTrailResult
 }
 
-type CloudTrailStub struct {
-}
+type CloudTrailStub struct{}
 
 func NewCloudTrailStub() CloudTrailClient {
 	return &CloudTrailStub{}

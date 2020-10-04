@@ -154,8 +154,7 @@ type BackupClient interface {
 	UpdateRegionSettingsAsync(ctx workflow.Context, input *backup.UpdateRegionSettingsInput) *BackupUpdateRegionSettingsResult
 }
 
-type BackupStub struct {
-}
+type BackupStub struct{}
 
 func NewBackupStub() BackupClient {
 	return &BackupStub{}

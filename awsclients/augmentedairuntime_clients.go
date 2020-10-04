@@ -25,8 +25,7 @@ type AugmentedAIRuntimeClient interface {
 	StopHumanLoopAsync(ctx workflow.Context, input *augmentedairuntime.StopHumanLoopInput) *AugmentedairuntimeStopHumanLoopResult
 }
 
-type AugmentedAIRuntimeStub struct {
-}
+type AugmentedAIRuntimeStub struct{}
 
 func NewAugmentedAIRuntimeStub() AugmentedAIRuntimeClient {
 	return &AugmentedAIRuntimeStub{}

@@ -88,8 +88,7 @@ type KafkaClient interface {
 	UpdateMonitoringAsync(ctx workflow.Context, input *kafka.UpdateMonitoringInput) *KafkaUpdateMonitoringResult
 }
 
-type KafkaStub struct {
-}
+type KafkaStub struct{}
 
 func NewKafkaStub() KafkaClient {
 	return &KafkaStub{}

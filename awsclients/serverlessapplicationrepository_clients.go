@@ -52,8 +52,7 @@ type ServerlessApplicationRepositoryClient interface {
 	UpdateApplicationAsync(ctx workflow.Context, input *serverlessapplicationrepository.UpdateApplicationRequest) *ServerlessapplicationrepositoryUpdateApplicationResult
 }
 
-type ServerlessApplicationRepositoryStub struct {
-}
+type ServerlessApplicationRepositoryStub struct{}
 
 func NewServerlessApplicationRepositoryStub() ServerlessApplicationRepositoryClient {
 	return &ServerlessApplicationRepositoryStub{}

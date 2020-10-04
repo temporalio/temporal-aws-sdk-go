@@ -25,8 +25,7 @@ type KinesisVideoArchivedMediaClient interface {
 	ListFragmentsAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.ListFragmentsInput) *KinesisvideoarchivedmediaListFragmentsResult
 }
 
-type KinesisVideoArchivedMediaStub struct {
-}
+type KinesisVideoArchivedMediaStub struct{}
 
 func NewKinesisVideoArchivedMediaStub() KinesisVideoArchivedMediaClient {
 	return &KinesisVideoArchivedMediaStub{}

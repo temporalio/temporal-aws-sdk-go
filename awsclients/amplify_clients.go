@@ -121,8 +121,7 @@ type AmplifyClient interface {
 	UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookResult
 }
 
-type AmplifyStub struct {
-}
+type AmplifyStub struct{}
 
 func NewAmplifyStub() AmplifyClient {
 	return &AmplifyStub{}

@@ -52,8 +52,7 @@ type BudgetsClient interface {
 	UpdateSubscriberAsync(ctx workflow.Context, input *budgets.UpdateSubscriberInput) *BudgetsUpdateSubscriberResult
 }
 
-type BudgetsStub struct {
-}
+type BudgetsStub struct{}
 
 func NewBudgetsStub() BudgetsClient {
 	return &BudgetsStub{}

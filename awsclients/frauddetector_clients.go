@@ -145,8 +145,7 @@ type FraudDetectorClient interface {
 	UpdateVariableAsync(ctx workflow.Context, input *frauddetector.UpdateVariableInput) *FrauddetectorUpdateVariableResult
 }
 
-type FraudDetectorStub struct {
-}
+type FraudDetectorStub struct{}
 
 func NewFraudDetectorStub() FraudDetectorClient {
 	return &FraudDetectorStub{}

@@ -109,11 +109,9 @@ type GlacierClient interface {
 	UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *GlacierUploadMultipartPartResult
 
 	WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
-	WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
-}
+	WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error}
 
-type GlacierStub struct {
-}
+type GlacierStub struct{}
 
 func NewGlacierStub() GlacierClient {
 	return &GlacierStub{}
@@ -448,6 +446,8 @@ func (r *GlacierUploadMultipartPartResult) Get(ctx workflow.Context) (*glacier.U
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *GlacierStub) AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) (*glacier.AbortMultipartUploadOutput, error) {
 	var output glacier.AbortMultipartUploadOutput

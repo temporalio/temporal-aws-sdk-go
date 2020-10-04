@@ -16,8 +16,7 @@ type PIClient interface {
 	GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult
 }
 
-type PIStub struct {
-}
+type PIStub struct{}
 
 func NewPIStub() PIClient {
 	return &PIStub{}

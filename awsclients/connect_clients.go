@@ -109,8 +109,7 @@ type ConnectClient interface {
 	UpdateUserSecurityProfilesAsync(ctx workflow.Context, input *connect.UpdateUserSecurityProfilesInput) *ConnectUpdateUserSecurityProfilesResult
 }
 
-type ConnectStub struct {
-}
+type ConnectStub struct{}
 
 func NewConnectStub() ConnectClient {
 	return &ConnectStub{}

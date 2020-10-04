@@ -13,8 +13,7 @@ type KinesisVideoMediaClient interface {
 	GetMediaAsync(ctx workflow.Context, input *kinesisvideomedia.GetMediaInput) *KinesisvideomediaGetMediaResult
 }
 
-type KinesisVideoMediaStub struct {
-}
+type KinesisVideoMediaStub struct{}
 
 func NewKinesisVideoMediaStub() KinesisVideoMediaClient {
 	return &KinesisVideoMediaStub{}

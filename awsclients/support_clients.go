@@ -52,8 +52,7 @@ type SupportClient interface {
 	ResolveCaseAsync(ctx workflow.Context, input *support.ResolveCaseInput) *SupportResolveCaseResult
 }
 
-type SupportStub struct {
-}
+type SupportStub struct{}
 
 func NewSupportStub() SupportClient {
 	return &SupportStub{}

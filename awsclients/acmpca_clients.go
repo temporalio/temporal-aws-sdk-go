@@ -80,11 +80,9 @@ type ACMPCAClient interface {
 
 	WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error
 	WaitUntilCertificateAuthorityCSRCreated(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) error
-	WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error
-}
+	WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error}
 
-type ACMPCAStub struct {
-}
+type ACMPCAStub struct{}
 
 func NewACMPCAStub() ACMPCAClient {
 	return &ACMPCAStub{}
@@ -319,6 +317,9 @@ func (r *AcmpcaUpdateCertificateAuthorityResult) Get(ctx workflow.Context) (*acm
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *ACMPCAStub) CreateCertificateAuthority(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) (*acmpca.CreateCertificateAuthorityOutput, error) {
 	var output acmpca.CreateCertificateAuthorityOutput

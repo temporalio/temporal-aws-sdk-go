@@ -48,11 +48,9 @@ type ACMClient interface {
 	UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error)
 	UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult
 
-	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error
-}
+	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error}
 
-type ACMStub struct {
-}
+type ACMStub struct{}
 
 func NewACMStub() ACMClient {
 	return &ACMStub{}
@@ -187,6 +185,7 @@ func (r *AcmUpdateCertificateOptionsResult) Get(ctx workflow.Context) (*acm.Upda
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *ACMStub) AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error) {
 	var output acm.AddTagsToCertificateOutput

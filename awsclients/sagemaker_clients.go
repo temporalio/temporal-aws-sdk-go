@@ -427,11 +427,9 @@ type SageMakerClient interface {
 	WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
 	WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error
 	WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error
-	WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error
-}
+	WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error}
 
-type SageMakerStub struct {
-}
+type SageMakerStub struct{}
 
 func NewSageMakerStub() SageMakerClient {
 	return &SageMakerStub{}
@@ -1806,6 +1804,14 @@ func (r *SagemakerUpdateWorkteamResult) Get(ctx workflow.Context) (*sagemaker.Up
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
+
+
 
 func (a *SageMakerStub) AddTags(ctx workflow.Context, input *sagemaker.AddTagsInput) (*sagemaker.AddTagsOutput, error) {
 	var output sagemaker.AddTagsOutput

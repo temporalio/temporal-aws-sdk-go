@@ -136,11 +136,9 @@ type DocDBClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-}
+	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error}
 
-type DocDBStub struct {
-}
+type DocDBStub struct{}
 
 func NewDocDBStub() DocDBClient {
 	return &DocDBStub{}
@@ -565,6 +563,8 @@ func (r *DocdbStopDBClusterResult) Get(ctx workflow.Context) (*docdb.StopDBClust
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *DocDBStub) AddTagsToResource(ctx workflow.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error) {
 	var output docdb.AddTagsToResourceOutput

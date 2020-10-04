@@ -22,8 +22,7 @@ type IdentityStoreClient interface {
 	ListUsersAsync(ctx workflow.Context, input *identitystore.ListUsersInput) *IdentitystoreListUsersResult
 }
 
-type IdentityStoreStub struct {
-}
+type IdentityStoreStub struct{}
 
 func NewIdentityStoreStub() IdentityStoreClient {
 	return &IdentityStoreStub{}

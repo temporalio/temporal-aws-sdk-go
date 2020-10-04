@@ -13,8 +13,7 @@ type QLDBSessionClient interface {
 	SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult
 }
 
-type QLDBSessionStub struct {
-}
+type QLDBSessionStub struct{}
 
 func NewQLDBSessionStub() QLDBSessionClient {
 	return &QLDBSessionStub{}

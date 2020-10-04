@@ -121,8 +121,7 @@ type InspectorClient interface {
 	UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetResult
 }
 
-type InspectorStub struct {
-}
+type InspectorStub struct{}
 
 func NewInspectorStub() InspectorClient {
 	return &InspectorStub{}

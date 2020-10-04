@@ -159,11 +159,9 @@ type ECSClient interface {
 	WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
 	WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
 	WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-}
+	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error}
 
-type ECSStub struct {
-}
+type ECSStub struct{}
 
 func NewECSStub() ECSClient {
 	return &ECSStub{}
@@ -658,6 +656,10 @@ func (r *EcsUpdateTaskSetResult) Get(ctx workflow.Context) (*ecs.UpdateTaskSetOu
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *ECSStub) CreateCapacityProvider(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error) {
 	var output ecs.CreateCapacityProviderOutput

@@ -176,11 +176,9 @@ type IoTSiteWiseClient interface {
 	WaitUntilAssetModelNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error
 	WaitUntilAssetNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
 	WaitUntilPortalActive(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
-	WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
-}
+	WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error}
 
-type IoTSiteWiseStub struct {
-}
+type IoTSiteWiseStub struct{}
 
 func NewIoTSiteWiseStub() IoTSiteWiseClient {
 	return &IoTSiteWiseStub{}
@@ -725,6 +723,12 @@ func (r *IotsitewiseUpdateProjectResult) Get(ctx workflow.Context) (*iotsitewise
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
 
 func (a *IoTSiteWiseStub) AssociateAssets(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error) {
 	var output iotsitewise.AssociateAssetsOutput

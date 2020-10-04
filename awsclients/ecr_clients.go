@@ -97,11 +97,9 @@ type ECRClient interface {
 	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *EcrUploadLayerPartResult
 
 	WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error
-	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error
-}
+	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error}
 
-type ECRStub struct {
-}
+type ECRStub struct{}
 
 func NewECRStub() ECRClient {
 	return &ECRStub{}
@@ -396,6 +394,8 @@ func (r *EcrUploadLayerPartResult) Get(ctx workflow.Context) (*ecr.UploadLayerPa
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *ECRStub) BatchCheckLayerAvailability(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) (*ecr.BatchCheckLayerAvailabilityOutput, error) {
 	var output ecr.BatchCheckLayerAvailabilityOutput

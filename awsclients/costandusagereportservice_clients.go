@@ -22,8 +22,7 @@ type CostandUsageReportServiceClient interface {
 	PutReportDefinitionAsync(ctx workflow.Context, input *costandusagereportservice.PutReportDefinitionInput) *CostandusagereportservicePutReportDefinitionResult
 }
 
-type CostandUsageReportServiceStub struct {
-}
+type CostandUsageReportServiceStub struct{}
 
 func NewCostandUsageReportServiceStub() CostandUsageReportServiceClient {
 	return &CostandUsageReportServiceStub{}

@@ -28,8 +28,7 @@ type AutoScalingPlansClient interface {
 	UpdateScalingPlanAsync(ctx workflow.Context, input *autoscalingplans.UpdateScalingPlanInput) *AutoscalingplansUpdateScalingPlanResult
 }
 
-type AutoScalingPlansStub struct {
-}
+type AutoScalingPlansStub struct{}
 
 func NewAutoScalingPlansStub() AutoScalingPlansClient {
 	return &AutoScalingPlansStub{}

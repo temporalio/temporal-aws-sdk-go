@@ -22,8 +22,7 @@ type MarketplaceMeteringClient interface {
 	ResolveCustomerAsync(ctx workflow.Context, input *marketplacemetering.ResolveCustomerInput) *MarketplacemeteringResolveCustomerResult
 }
 
-type MarketplaceMeteringStub struct {
-}
+type MarketplaceMeteringStub struct{}
 
 func NewMarketplaceMeteringStub() MarketplaceMeteringClient {
 	return &MarketplaceMeteringStub{}

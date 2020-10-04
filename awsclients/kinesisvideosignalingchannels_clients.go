@@ -16,8 +16,7 @@ type KinesisVideoSignalingChannelsClient interface {
 	SendAlexaOfferToMasterAsync(ctx workflow.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) *KinesisvideosignalingchannelsSendAlexaOfferToMasterResult
 }
 
-type KinesisVideoSignalingChannelsStub struct {
-}
+type KinesisVideoSignalingChannelsStub struct{}
 
 func NewKinesisVideoSignalingChannelsStub() KinesisVideoSignalingChannelsClient {
 	return &KinesisVideoSignalingChannelsStub{}

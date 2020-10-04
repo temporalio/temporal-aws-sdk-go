@@ -404,11 +404,9 @@ type RDSClient interface {
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
 	WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-	WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-}
+	WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error}
 
-type RDSStub struct {
-}
+type RDSStub struct{}
 
 func NewRDSStub() RDSClient {
 	return &RDSStub{}
@@ -1713,6 +1711,12 @@ func (r *RdsStopDBInstanceResult) Get(ctx workflow.Context) (*rds.StopDBInstance
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
+
 
 func (a *RDSStub) AddRoleToDBCluster(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error) {
 	var output rds.AddRoleToDBClusterOutput

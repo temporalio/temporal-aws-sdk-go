@@ -148,8 +148,7 @@ type KMSClient interface {
 	VerifyAsync(ctx workflow.Context, input *kms.VerifyInput) *KmsVerifyResult
 }
 
-type KMSStub struct {
-}
+type KMSStub struct{}
 
 func NewKMSStub() KMSClient {
 	return &KMSStub{}

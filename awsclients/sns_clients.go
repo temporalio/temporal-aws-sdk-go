@@ -109,8 +109,7 @@ type SNSClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *sns.UntagResourceInput) *SnsUntagResourceResult
 }
 
-type SNSStub struct {
-}
+type SNSStub struct{}
 
 func NewSNSStub() SNSClient {
 	return &SNSStub{}

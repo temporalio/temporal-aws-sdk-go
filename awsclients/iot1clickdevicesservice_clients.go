@@ -49,8 +49,7 @@ type IoT1ClickDevicesServiceClient interface {
 	UpdateDeviceStateAsync(ctx workflow.Context, input *iot1clickdevicesservice.UpdateDeviceStateInput) *Iot1clickdevicesserviceUpdateDeviceStateResult
 }
 
-type IoT1ClickDevicesServiceStub struct {
-}
+type IoT1ClickDevicesServiceStub struct{}
 
 func NewIoT1ClickDevicesServiceStub() IoT1ClickDevicesServiceClient {
 	return &IoT1ClickDevicesServiceStub{}

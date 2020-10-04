@@ -85,8 +85,7 @@ type MediaConvertClient interface {
 	UpdateQueueAsync(ctx workflow.Context, input *mediaconvert.UpdateQueueInput) *MediaconvertUpdateQueueResult
 }
 
-type MediaConvertStub struct {
-}
+type MediaConvertStub struct{}
 
 func NewMediaConvertStub() MediaConvertClient {
 	return &MediaConvertStub{}

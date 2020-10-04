@@ -28,8 +28,7 @@ type EBSClient interface {
 	StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EbsStartSnapshotResult
 }
 
-type EBSStub struct {
-}
+type EBSStub struct{}
 
 func NewEBSStub() EBSClient {
 	return &EBSStub{}

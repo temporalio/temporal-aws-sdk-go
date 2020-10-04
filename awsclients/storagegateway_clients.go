@@ -253,8 +253,7 @@ type StorageGatewayClient interface {
 	UpdateVTLDeviceTypeAsync(ctx workflow.Context, input *storagegateway.UpdateVTLDeviceTypeInput) *StoragegatewayUpdateVTLDeviceTypeResult
 }
 
-type StorageGatewayStub struct {
-}
+type StorageGatewayStub struct{}
 
 func NewStorageGatewayStub() StorageGatewayClient {
 	return &StorageGatewayStub{}

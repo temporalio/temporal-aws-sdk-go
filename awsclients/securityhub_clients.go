@@ -139,8 +139,7 @@ type SecurityHubClient interface {
 	UpdateStandardsControlAsync(ctx workflow.Context, input *securityhub.UpdateStandardsControlInput) *SecurityhubUpdateStandardsControlResult
 }
 
-type SecurityHubStub struct {
-}
+type SecurityHubStub struct{}
 
 func NewSecurityHubStub() SecurityHubClient {
 	return &SecurityHubStub{}

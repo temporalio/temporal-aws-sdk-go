@@ -60,11 +60,9 @@ type ElasticTranscoderClient interface {
 	UpdatePipelineStatus(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) (*elastictranscoder.UpdatePipelineStatusOutput, error)
 	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElastictranscoderUpdatePipelineStatusResult
 
-	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error
-}
+	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error}
 
-type ElasticTranscoderStub struct {
-}
+type ElasticTranscoderStub struct{}
 
 func NewElasticTranscoderStub() ElasticTranscoderClient {
 	return &ElasticTranscoderStub{}
@@ -239,6 +237,7 @@ func (r *ElastictranscoderUpdatePipelineStatusResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
 
 func (a *ElasticTranscoderStub) CancelJob(ctx workflow.Context, input *elastictranscoder.CancelJobInput) (*elastictranscoder.CancelJobOutput, error) {
 	var output elastictranscoder.CancelJobOutput

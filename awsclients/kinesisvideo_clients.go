@@ -67,8 +67,7 @@ type KinesisVideoClient interface {
 	UpdateStreamAsync(ctx workflow.Context, input *kinesisvideo.UpdateStreamInput) *KinesisvideoUpdateStreamResult
 }
 
-type KinesisVideoStub struct {
-}
+type KinesisVideoStub struct{}
 
 func NewKinesisVideoStub() KinesisVideoClient {
 	return &KinesisVideoStub{}

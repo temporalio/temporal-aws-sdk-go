@@ -76,8 +76,7 @@ type MediaConnectClient interface {
 	UpdateFlowSourceAsync(ctx workflow.Context, input *mediaconnect.UpdateFlowSourceInput) *MediaconnectUpdateFlowSourceResult
 }
 
-type MediaConnectStub struct {
-}
+type MediaConnectStub struct{}
 
 func NewMediaConnectStub() MediaConnectClient {
 	return &MediaConnectStub{}

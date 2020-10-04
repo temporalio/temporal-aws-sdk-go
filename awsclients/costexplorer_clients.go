@@ -67,8 +67,7 @@ type CostExplorerClient interface {
 	UpdateCostCategoryDefinitionAsync(ctx workflow.Context, input *costexplorer.UpdateCostCategoryDefinitionInput) *CostexplorerUpdateCostCategoryDefinitionResult
 }
 
-type CostExplorerStub struct {
-}
+type CostExplorerStub struct{}
 
 func NewCostExplorerStub() CostExplorerClient {
 	return &CostExplorerStub{}

@@ -94,8 +94,7 @@ type Route53DomainsClient interface {
 	ViewBillingAsync(ctx workflow.Context, input *route53domains.ViewBillingInput) *Route53domainsViewBillingResult
 }
 
-type Route53DomainsStub struct {
-}
+type Route53DomainsStub struct{}
 
 func NewRoute53DomainsStub() Route53DomainsClient {
 	return &Route53DomainsStub{}

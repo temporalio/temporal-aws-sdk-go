@@ -184,8 +184,7 @@ type GuardDutyClient interface {
 	UpdateThreatIntelSetAsync(ctx workflow.Context, input *guardduty.UpdateThreatIntelSetInput) *GuarddutyUpdateThreatIntelSetResult
 }
 
-type GuardDutyStub struct {
-}
+type GuardDutyStub struct{}
 
 func NewGuardDutyStub() GuardDutyClient {
 	return &GuardDutyStub{}

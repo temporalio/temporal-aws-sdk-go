@@ -25,8 +25,7 @@ type IoTDataPlaneClient interface {
 	UpdateThingShadowAsync(ctx workflow.Context, input *iotdataplane.UpdateThingShadowInput) *IotdataplaneUpdateThingShadowResult
 }
 
-type IoTDataPlaneStub struct {
-}
+type IoTDataPlaneStub struct{}
 
 func NewIoTDataPlaneStub() IoTDataPlaneClient {
 	return &IoTDataPlaneStub{}

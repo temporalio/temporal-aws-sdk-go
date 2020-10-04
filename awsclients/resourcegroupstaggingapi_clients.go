@@ -34,8 +34,7 @@ type ResourceGroupsTaggingAPIClient interface {
 	UntagResourcesAsync(ctx workflow.Context, input *resourcegroupstaggingapi.UntagResourcesInput) *ResourcegroupstaggingapiUntagResourcesResult
 }
 
-type ResourceGroupsTaggingAPIStub struct {
-}
+type ResourceGroupsTaggingAPIStub struct{}
 
 func NewResourceGroupsTaggingAPIStub() ResourceGroupsTaggingAPIClient {
 	return &ResourceGroupsTaggingAPIStub{}

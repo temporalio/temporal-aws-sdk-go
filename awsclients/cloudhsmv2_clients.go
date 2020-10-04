@@ -49,8 +49,7 @@ type CloudHSMV2Client interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudhsmv2.UntagResourceInput) *Cloudhsmv2UntagResourceResult
 }
 
-type CloudHSMV2Stub struct {
-}
+type CloudHSMV2Stub struct{}
 
 func NewCloudHSMV2Stub() CloudHSMV2Client {
 	return &CloudHSMV2Stub{}

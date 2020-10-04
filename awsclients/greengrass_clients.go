@@ -280,8 +280,7 @@ type GreengrassClient interface {
 	UpdateSubscriptionDefinitionAsync(ctx workflow.Context, input *greengrass.UpdateSubscriptionDefinitionInput) *GreengrassUpdateSubscriptionDefinitionResult
 }
 
-type GreengrassStub struct {
-}
+type GreengrassStub struct{}
 
 func NewGreengrassStub() GreengrassClient {
 	return &GreengrassStub{}

@@ -25,8 +25,7 @@ type MediaStoreDataClient interface {
 	PutObjectAsync(ctx workflow.Context, input *mediastoredata.PutObjectInput) *MediastoredataPutObjectResult
 }
 
-type MediaStoreDataStub struct {
-}
+type MediaStoreDataStub struct{}
 
 func NewMediaStoreDataStub() MediaStoreDataClient {
 	return &MediaStoreDataStub{}

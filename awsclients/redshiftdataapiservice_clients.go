@@ -37,8 +37,7 @@ type RedshiftDataAPIServiceClient interface {
 	ListTablesAsync(ctx workflow.Context, input *redshiftdataapiservice.ListTablesInput) *RedshiftdataapiserviceListTablesResult
 }
 
-type RedshiftDataAPIServiceStub struct {
-}
+type RedshiftDataAPIServiceStub struct{}
 
 func NewRedshiftDataAPIServiceStub() RedshiftDataAPIServiceClient {
 	return &RedshiftDataAPIServiceStub{}

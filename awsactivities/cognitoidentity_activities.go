@@ -16,7 +16,6 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CognitoIdentityActivities struct {

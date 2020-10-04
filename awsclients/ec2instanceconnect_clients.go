@@ -13,8 +13,7 @@ type EC2InstanceConnectClient interface {
 	SendSSHPublicKeyAsync(ctx workflow.Context, input *ec2instanceconnect.SendSSHPublicKeyInput) *Ec2instanceconnectSendSSHPublicKeyResult
 }
 
-type EC2InstanceConnectStub struct {
-}
+type EC2InstanceConnectStub struct{}
 
 func NewEC2InstanceConnectStub() EC2InstanceConnectClient {
 	return &EC2InstanceConnectStub{}

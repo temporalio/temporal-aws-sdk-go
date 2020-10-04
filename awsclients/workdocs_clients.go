@@ -133,8 +133,7 @@ type WorkDocsClient interface {
 	UpdateUserAsync(ctx workflow.Context, input *workdocs.UpdateUserInput) *WorkdocsUpdateUserResult
 }
 
-type WorkDocsStub struct {
-}
+type WorkDocsStub struct{}
 
 func NewWorkDocsStub() WorkDocsClient {
 	return &WorkDocsStub{}

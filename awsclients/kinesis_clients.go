@@ -94,11 +94,9 @@ type KinesisClient interface {
 	UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult
 
 	WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-}
+	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error}
 
-type KinesisStub struct {
-}
+type KinesisStub struct{}
 
 func NewKinesisStub() KinesisClient {
 	return &KinesisStub{}
@@ -383,6 +381,8 @@ func (r *KinesisUpdateShardCountResult) Get(ctx workflow.Context) (*kinesis.Upda
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *KinesisStub) AddTagsToStream(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error) {
 	var output kinesis.AddTagsToStreamOutput

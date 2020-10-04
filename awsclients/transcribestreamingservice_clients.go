@@ -13,8 +13,7 @@ type TranscribeStreamingServiceClient interface {
 	StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult
 }
 
-type TranscribeStreamingServiceStub struct {
-}
+type TranscribeStreamingServiceStub struct{}
 
 func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
 	return &TranscribeStreamingServiceStub{}

@@ -115,11 +115,9 @@ type ELBV2Client interface {
 	WaitUntilLoadBalancerExists(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
 	WaitUntilLoadBalancersDeleted(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
 	WaitUntilTargetDeregistered(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
-	WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
-}
+	WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error}
 
-type ELBV2Stub struct {
-}
+type ELBV2Stub struct{}
 
 func NewELBV2Stub() ELBV2Client {
 	return &ELBV2Stub{}
@@ -464,6 +462,11 @@ func (r *Elbv2SetSubnetsResult) Get(ctx workflow.Context) (*elbv2.SetSubnetsOutp
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
+
 
 func (a *ELBV2Stub) AddListenerCertificates(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error) {
 	var output elbv2.AddListenerCertificatesOutput

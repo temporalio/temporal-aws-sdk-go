@@ -391,8 +391,7 @@ type LightsailClient interface {
 	UpdateRelationalDatabaseParametersAsync(ctx workflow.Context, input *lightsail.UpdateRelationalDatabaseParametersInput) *LightsailUpdateRelationalDatabaseParametersResult
 }
 
-type LightsailStub struct {
-}
+type LightsailStub struct{}
 
 func NewLightsailStub() LightsailClient {
 	return &LightsailStub{}

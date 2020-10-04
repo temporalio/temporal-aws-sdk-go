@@ -31,8 +31,7 @@ type IoTSecureTunnelingClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *iotsecuretunneling.UntagResourceInput) *IotsecuretunnelingUntagResourceResult
 }
 
-type IoTSecureTunnelingStub struct {
-}
+type IoTSecureTunnelingStub struct{}
 
 func NewIoTSecureTunnelingStub() IoTSecureTunnelingClient {
 	return &IoTSecureTunnelingStub{}

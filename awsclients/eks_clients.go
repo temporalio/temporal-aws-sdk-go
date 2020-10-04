@@ -75,11 +75,9 @@ type EKSClient interface {
 	WaitUntilClusterActive(ctx workflow.Context, input *eks.DescribeClusterInput) error
 	WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error
 	WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
-	WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
-}
+	WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error}
 
-type EKSStub struct {
-}
+type EKSStub struct{}
 
 func NewEKSStub() EKSClient {
 	return &EKSStub{}
@@ -294,6 +292,10 @@ func (r *EksUpdateNodegroupVersionResult) Get(ctx workflow.Context) (*eks.Update
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *EKSStub) CreateCluster(ctx workflow.Context, input *eks.CreateClusterInput) (*eks.CreateClusterOutput, error) {
 	var output eks.CreateClusterOutput

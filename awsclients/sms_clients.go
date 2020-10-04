@@ -115,8 +115,7 @@ type SMSClient interface {
 	UpdateReplicationJobAsync(ctx workflow.Context, input *sms.UpdateReplicationJobInput) *SmsUpdateReplicationJobResult
 }
 
-type SMSStub struct {
-}
+type SMSStub struct{}
 
 func NewSMSStub() SMSClient {
 	return &SMSStub{}

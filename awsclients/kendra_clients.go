@@ -82,8 +82,7 @@ type KendraClient interface {
 	UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult
 }
 
-type KendraStub struct {
-}
+type KendraStub struct{}
 
 func NewKendraStub() KendraClient {
 	return &KendraStub{}

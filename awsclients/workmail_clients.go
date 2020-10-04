@@ -139,8 +139,7 @@ type WorkMailClient interface {
 	UpdateResourceAsync(ctx workflow.Context, input *workmail.UpdateResourceInput) *WorkmailUpdateResourceResult
 }
 
-type WorkMailStub struct {
-}
+type WorkMailStub struct{}
 
 func NewWorkMailStub() WorkMailClient {
 	return &WorkMailStub{}

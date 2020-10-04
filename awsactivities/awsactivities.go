@@ -11,7 +11,7 @@ import (
 	"go.temporal.io/sdk/worker"
 )
 
-func RegisterAwsActivities(worker worker.Worker, session *session.Session, config ...*aws.Config) {
+func RegisterAwsActivities(worker worker.Worker, session *session.Session, config... *aws.Config) {
 	worker.RegisterActivity(NewAccessAnalyzerActivities(session, config...))
 	worker.RegisterActivityWithOptions(NewAccessAnalyzerActivities(session, config...), activity.RegisterOptions{Name: "AccessAnalyzer."})
 	worker.RegisterActivity(NewACMActivities(session, config...))
@@ -475,3 +475,4 @@ func RegisterAwsActivities(worker worker.Worker, session *session.Session, confi
 	worker.RegisterActivity(NewXRayActivities(session, config...))
 	worker.RegisterActivityWithOptions(NewXRayActivities(session, config...), activity.RegisterOptions{Name: "XRay."})
 }
+

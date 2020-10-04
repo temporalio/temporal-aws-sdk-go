@@ -37,8 +37,7 @@ type MobileClient interface {
 	UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectResult
 }
 
-type MobileStub struct {
-}
+type MobileStub struct{}
 
 func NewMobileStub() MobileClient {
 	return &MobileStub{}

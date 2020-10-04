@@ -163,8 +163,7 @@ type Macie2Client interface {
 	UpdateOrganizationConfigurationAsync(ctx workflow.Context, input *macie2.UpdateOrganizationConfigurationInput) *Macie2UpdateOrganizationConfigurationResult
 }
 
-type Macie2Stub struct {
-}
+type Macie2Stub struct{}
 
 func NewMacie2Stub() Macie2Client {
 	return &Macie2Stub{}

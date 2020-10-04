@@ -139,8 +139,7 @@ type CodeBuildClient interface {
 	UpdateWebhookAsync(ctx workflow.Context, input *codebuild.UpdateWebhookInput) *CodebuildUpdateWebhookResult
 }
 
-type CodeBuildStub struct {
-}
+type CodeBuildStub struct{}
 
 func NewCodeBuildStub() CodeBuildClient {
 	return &CodeBuildStub{}

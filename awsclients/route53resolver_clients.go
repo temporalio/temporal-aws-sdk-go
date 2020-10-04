@@ -106,8 +106,7 @@ type Route53ResolverClient interface {
 	UpdateResolverRuleAsync(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) *Route53resolverUpdateResolverRuleResult
 }
 
-type Route53ResolverStub struct {
-}
+type Route53ResolverStub struct{}
 
 func NewRoute53ResolverStub() Route53ResolverClient {
 	return &Route53ResolverStub{}

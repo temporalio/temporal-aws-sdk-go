@@ -370,8 +370,7 @@ type APIGatewayClient interface {
 	UpdateVpcLinkAsync(ctx workflow.Context, input *apigateway.UpdateVpcLinkInput) *ApigatewayUpdateVpcLinkResult
 }
 
-type APIGatewayStub struct {
-}
+type APIGatewayStub struct{}
 
 func NewAPIGatewayStub() APIGatewayClient {
 	return &APIGatewayStub{}

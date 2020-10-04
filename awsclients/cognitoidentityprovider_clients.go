@@ -310,8 +310,7 @@ type CognitoIdentityProviderClient interface {
 	VerifyUserAttributeAsync(ctx workflow.Context, input *cognitoidentityprovider.VerifyUserAttributeInput) *CognitoidentityproviderVerifyUserAttributeResult
 }
 
-type CognitoIdentityProviderStub struct {
-}
+type CognitoIdentityProviderStub struct{}
 
 func NewCognitoIdentityProviderStub() CognitoIdentityProviderClient {
 	return &CognitoIdentityProviderStub{}

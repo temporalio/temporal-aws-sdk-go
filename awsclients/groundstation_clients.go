@@ -85,8 +85,7 @@ type GroundStationClient interface {
 	UpdateMissionProfileAsync(ctx workflow.Context, input *groundstation.UpdateMissionProfileInput) *GroundstationUpdateMissionProfileResult
 }
 
-type GroundStationStub struct {
-}
+type GroundStationStub struct{}
 
 func NewGroundStationStub() GroundStationClient {
 	return &GroundStationStub{}

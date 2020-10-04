@@ -91,8 +91,7 @@ type SSOAdminClient interface {
 	UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *SsoadminUpdatePermissionSetResult
 }
 
-type SSOAdminStub struct {
-}
+type SSOAdminStub struct{}
 
 func NewSSOAdminStub() SSOAdminClient {
 	return &SSOAdminStub{}

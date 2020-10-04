@@ -64,8 +64,7 @@ type AccessAnalyzerClient interface {
 	UpdateFindingsAsync(ctx workflow.Context, input *accessanalyzer.UpdateFindingsInput) *AccessanalyzerUpdateFindingsResult
 }
 
-type AccessAnalyzerStub struct {
-}
+type AccessAnalyzerStub struct{}
 
 func NewAccessAnalyzerStub() AccessAnalyzerClient {
 	return &AccessAnalyzerStub{}

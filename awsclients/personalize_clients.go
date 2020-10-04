@@ -139,8 +139,7 @@ type PersonalizeClient interface {
 	UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult
 }
 
-type PersonalizeStub struct {
-}
+type PersonalizeStub struct{}
 
 func NewPersonalizeStub() PersonalizeClient {
 	return &PersonalizeStub{}

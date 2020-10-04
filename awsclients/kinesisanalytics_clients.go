@@ -70,8 +70,7 @@ type KinesisAnalyticsClient interface {
 	UpdateApplicationAsync(ctx workflow.Context, input *kinesisanalytics.UpdateApplicationInput) *KinesisanalyticsUpdateApplicationResult
 }
 
-type KinesisAnalyticsStub struct {
-}
+type KinesisAnalyticsStub struct{}
 
 func NewKinesisAnalyticsStub() KinesisAnalyticsClient {
 	return &KinesisAnalyticsStub{}

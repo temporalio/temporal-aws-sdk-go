@@ -73,8 +73,7 @@ type MediaStoreClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *mediastore.UntagResourceInput) *MediastoreUntagResourceResult
 }
 
-type MediaStoreStub struct {
-}
+type MediaStoreStub struct{}
 
 func NewMediaStoreStub() MediaStoreClient {
 	return &MediaStoreStub{}

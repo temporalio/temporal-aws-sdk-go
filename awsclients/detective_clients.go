@@ -46,8 +46,7 @@ type DetectiveClient interface {
 	StartMonitoringMemberAsync(ctx workflow.Context, input *detective.StartMonitoringMemberInput) *DetectiveStartMonitoringMemberResult
 }
 
-type DetectiveStub struct {
-}
+type DetectiveStub struct{}
 
 func NewDetectiveStub() DetectiveClient {
 	return &DetectiveStub{}

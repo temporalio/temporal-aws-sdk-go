@@ -181,8 +181,7 @@ type RoboMakerClient interface {
 	UpdateWorldTemplateAsync(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) *RobomakerUpdateWorldTemplateResult
 }
 
-type RoboMakerStub struct {
-}
+type RoboMakerStub struct{}
 
 func NewRoboMakerStub() RoboMakerClient {
 	return &RoboMakerStub{}

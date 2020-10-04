@@ -367,8 +367,7 @@ type ChimeClient interface {
 	UpdateVoiceConnectorGroupAsync(ctx workflow.Context, input *chime.UpdateVoiceConnectorGroupInput) *ChimeUpdateVoiceConnectorGroupResult
 }
 
-type ChimeStub struct {
-}
+type ChimeStub struct{}
 
 func NewChimeStub() ChimeClient {
 	return &ChimeStub{}

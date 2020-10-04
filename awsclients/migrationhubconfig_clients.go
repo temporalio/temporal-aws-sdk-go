@@ -19,8 +19,7 @@ type MigrationHubConfigClient interface {
 	GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult
 }
 
-type MigrationHubConfigStub struct {
-}
+type MigrationHubConfigStub struct{}
 
 func NewMigrationHubConfigStub() MigrationHubConfigClient {
 	return &MigrationHubConfigStub{}

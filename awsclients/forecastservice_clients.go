@@ -97,8 +97,7 @@ type ForecastServiceClient interface {
 	UpdateDatasetGroupAsync(ctx workflow.Context, input *forecastservice.UpdateDatasetGroupInput) *ForecastserviceUpdateDatasetGroupResult
 }
 
-type ForecastServiceStub struct {
-}
+type ForecastServiceStub struct{}
 
 func NewForecastServiceStub() ForecastServiceClient {
 	return &ForecastServiceStub{}

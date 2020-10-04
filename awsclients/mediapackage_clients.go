@@ -64,8 +64,7 @@ type MediaPackageClient interface {
 	UpdateOriginEndpointAsync(ctx workflow.Context, input *mediapackage.UpdateOriginEndpointInput) *MediapackageUpdateOriginEndpointResult
 }
 
-type MediaPackageStub struct {
-}
+type MediaPackageStub struct{}
 
 func NewMediaPackageStub() MediaPackageClient {
 	return &MediaPackageStub{}

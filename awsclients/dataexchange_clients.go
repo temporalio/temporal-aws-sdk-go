@@ -76,8 +76,7 @@ type DataExchangeClient interface {
 	UpdateRevisionAsync(ctx workflow.Context, input *dataexchange.UpdateRevisionInput) *DataexchangeUpdateRevisionResult
 }
 
-type DataExchangeStub struct {
-}
+type DataExchangeStub struct{}
 
 func NewDataExchangeStub() DataExchangeClient {
 	return &DataExchangeStub{}

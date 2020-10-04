@@ -67,8 +67,7 @@ type S3ControlClient interface {
 	UpdateJobStatusAsync(ctx workflow.Context, input *s3control.UpdateJobStatusInput) *S3controlUpdateJobStatusResult
 }
 
-type S3ControlStub struct {
-}
+type S3ControlStub struct{}
 
 func NewS3ControlStub() S3ControlClient {
 	return &S3ControlStub{}

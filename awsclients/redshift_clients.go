@@ -288,11 +288,9 @@ type RedshiftClient interface {
 	WaitUntilClusterAvailable(ctx workflow.Context, input *redshift.DescribeClustersInput) error
 	WaitUntilClusterDeleted(ctx workflow.Context, input *redshift.DescribeClustersInput) error
 	WaitUntilClusterRestored(ctx workflow.Context, input *redshift.DescribeClustersInput) error
-	WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error
-}
+	WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error}
 
-type RedshiftStub struct {
-}
+type RedshiftStub struct{}
 
 func NewRedshiftStub() RedshiftClient {
 	return &RedshiftStub{}
@@ -1217,6 +1215,10 @@ func (r *RedshiftRotateEncryptionKeyResult) Get(ctx workflow.Context) (*redshift
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
+
 
 func (a *RedshiftStub) AcceptReservedNodeExchange(ctx workflow.Context, input *redshift.AcceptReservedNodeExchangeInput) (*redshift.AcceptReservedNodeExchangeOutput, error) {
 	var output redshift.AcceptReservedNodeExchangeOutput

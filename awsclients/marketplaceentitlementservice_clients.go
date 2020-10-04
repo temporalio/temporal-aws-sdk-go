@@ -13,8 +13,7 @@ type MarketplaceEntitlementServiceClient interface {
 	GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsResult
 }
 
-type MarketplaceEntitlementServiceStub struct {
-}
+type MarketplaceEntitlementServiceStub struct{}
 
 func NewMarketplaceEntitlementServiceStub() MarketplaceEntitlementServiceClient {
 	return &MarketplaceEntitlementServiceStub{}

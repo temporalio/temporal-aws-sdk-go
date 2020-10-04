@@ -280,8 +280,7 @@ type GameLiftClient interface {
 	ValidateMatchmakingRuleSetAsync(ctx workflow.Context, input *gamelift.ValidateMatchmakingRuleSetInput) *GameliftValidateMatchmakingRuleSetResult
 }
 
-type GameLiftStub struct {
-}
+type GameLiftStub struct{}
 
 func NewGameLiftStub() GameLiftClient {
 	return &GameLiftStub{}

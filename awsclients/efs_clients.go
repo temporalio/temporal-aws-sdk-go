@@ -85,8 +85,7 @@ type EFSClient interface {
 	UpdateFileSystemAsync(ctx workflow.Context, input *efs.UpdateFileSystemInput) *EfsUpdateFileSystemResult
 }
 
-type EFSStub struct {
-}
+type EFSStub struct{}
 
 func NewEFSStub() EFSClient {
 	return &EFSStub{}

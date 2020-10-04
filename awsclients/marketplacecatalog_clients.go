@@ -28,8 +28,7 @@ type MarketplaceCatalogClient interface {
 	StartChangeSetAsync(ctx workflow.Context, input *marketplacecatalog.StartChangeSetInput) *MarketplacecatalogStartChangeSetResult
 }
 
-type MarketplaceCatalogStub struct {
-}
+type MarketplaceCatalogStub struct{}
 
 func NewMarketplaceCatalogStub() MarketplaceCatalogClient {
 	return &MarketplaceCatalogStub{}

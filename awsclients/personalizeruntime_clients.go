@@ -16,8 +16,7 @@ type PersonalizeRuntimeClient interface {
 	GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult
 }
 
-type PersonalizeRuntimeStub struct {
-}
+type PersonalizeRuntimeStub struct{}
 
 func NewPersonalizeRuntimeStub() PersonalizeRuntimeClient {
 	return &PersonalizeRuntimeStub{}

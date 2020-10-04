@@ -121,8 +121,7 @@ type CodePipelineClient interface {
 	UpdatePipelineAsync(ctx workflow.Context, input *codepipeline.UpdatePipelineInput) *CodepipelineUpdatePipelineResult
 }
 
-type CodePipelineStub struct {
-}
+type CodePipelineStub struct{}
 
 func NewCodePipelineStub() CodePipelineClient {
 	return &CodePipelineStub{}

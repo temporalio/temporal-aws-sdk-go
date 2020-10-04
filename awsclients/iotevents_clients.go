@@ -58,8 +58,7 @@ type IoTEventsClient interface {
 	UpdateInputAsync(ctx workflow.Context, input *iotevents.UpdateInputInput) *IoteventsUpdateInputResult
 }
 
-type IoTEventsStub struct {
-}
+type IoTEventsStub struct{}
 
 func NewIoTEventsStub() IoTEventsClient {
 	return &IoTEventsStub{}

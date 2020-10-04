@@ -98,11 +98,9 @@ type ELBClient interface {
 
 	WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
 	WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-	WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-}
+	WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error}
 
-type ELBStub struct {
-}
+type ELBStub struct{}
 
 func NewELBStub() ELBClient {
 	return &ELBStub{}
@@ -397,6 +395,9 @@ func (r *ElbSetLoadBalancerPoliciesOfListenerResult) Get(ctx workflow.Context) (
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
+
 
 func (a *ELBStub) AddTags(ctx workflow.Context, input *elb.AddTagsInput) (*elb.AddTagsOutput, error) {
 	var output elb.AddTagsOutput

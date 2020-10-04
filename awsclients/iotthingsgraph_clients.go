@@ -115,8 +115,7 @@ type IoTThingsGraphClient interface {
 	UploadEntityDefinitionsAsync(ctx workflow.Context, input *iotthingsgraph.UploadEntityDefinitionsInput) *IotthingsgraphUploadEntityDefinitionsResult
 }
 
-type IoTThingsGraphStub struct {
-}
+type IoTThingsGraphStub struct{}
 
 func NewIoTThingsGraphStub() IoTThingsGraphClient {
 	return &IoTThingsGraphStub{}

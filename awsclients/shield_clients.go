@@ -79,8 +79,7 @@ type ShieldClient interface {
 	UpdateSubscriptionAsync(ctx workflow.Context, input *shield.UpdateSubscriptionInput) *ShieldUpdateSubscriptionResult
 }
 
-type ShieldStub struct {
-}
+type ShieldStub struct{}
 
 func NewShieldStub() ShieldClient {
 	return &ShieldStub{}

@@ -100,11 +100,9 @@ type CloudWatchClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult
 
 	WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-}
+	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error}
 
-type CloudWatchStub struct {
-}
+type CloudWatchStub struct{}
 
 func NewCloudWatchStub() CloudWatchClient {
 	return &CloudWatchStub{}
@@ -409,6 +407,8 @@ func (r *CloudwatchUntagResourceResult) Get(ctx workflow.Context) (*cloudwatch.U
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *CloudWatchStub) DeleteAlarms(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error) {
 	var output cloudwatch.DeleteAlarmsOutput

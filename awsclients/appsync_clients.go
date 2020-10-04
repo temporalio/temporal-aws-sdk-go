@@ -133,8 +133,7 @@ type AppSyncClient interface {
 	UpdateTypeAsync(ctx workflow.Context, input *appsync.UpdateTypeInput) *AppsyncUpdateTypeResult
 }
 
-type AppSyncStub struct {
-}
+type AppSyncStub struct{}
 
 func NewAppSyncStub() AppSyncClient {
 	return &AppSyncStub{}

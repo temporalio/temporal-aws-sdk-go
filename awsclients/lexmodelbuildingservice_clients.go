@@ -127,8 +127,7 @@ type LexModelBuildingServiceClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *lexmodelbuildingservice.UntagResourceInput) *LexmodelbuildingserviceUntagResourceResult
 }
 
-type LexModelBuildingServiceStub struct {
-}
+type LexModelBuildingServiceStub struct{}
 
 func NewLexModelBuildingServiceStub() LexModelBuildingServiceClient {
 	return &LexModelBuildingServiceStub{}

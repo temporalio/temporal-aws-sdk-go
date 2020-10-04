@@ -49,8 +49,7 @@ type HealthClient interface {
 	EnableHealthServiceAccessForOrganizationAsync(ctx workflow.Context, input *health.EnableHealthServiceAccessForOrganizationInput) *HealthEnableHealthServiceAccessForOrganizationResult
 }
 
-type HealthStub struct {
-}
+type HealthStub struct{}
 
 func NewHealthStub() HealthClient {
 	return &HealthStub{}

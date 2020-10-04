@@ -91,8 +91,7 @@ type TranscribeServiceClient interface {
 	UpdateVocabularyFilterAsync(ctx workflow.Context, input *transcribeservice.UpdateVocabularyFilterInput) *TranscribeserviceUpdateVocabularyFilterResult
 }
 
-type TranscribeServiceStub struct {
-}
+type TranscribeServiceStub struct{}
 
 func NewTranscribeServiceStub() TranscribeServiceClient {
 	return &TranscribeServiceStub{}

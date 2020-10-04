@@ -67,8 +67,7 @@ type SnowballClient interface {
 	UpdateJobAsync(ctx workflow.Context, input *snowball.UpdateJobInput) *SnowballUpdateJobResult
 }
 
-type SnowballStub struct {
-}
+type SnowballStub struct{}
 
 func NewSnowballStub() SnowballClient {
 	return &SnowballStub{}

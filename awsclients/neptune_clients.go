@@ -187,11 +187,9 @@ type NeptuneClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-}
+	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error}
 
-type NeptuneStub struct {
-}
+type NeptuneStub struct{}
 
 func NewNeptuneStub() NeptuneClient {
 	return &NeptuneStub{}
@@ -786,6 +784,8 @@ func (r *NeptuneStopDBClusterResult) Get(ctx workflow.Context) (*neptune.StopDBC
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
+
+
 
 func (a *NeptuneStub) AddRoleToDBCluster(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error) {
 	var output neptune.AddRoleToDBClusterOutput

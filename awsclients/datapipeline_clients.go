@@ -67,8 +67,7 @@ type DataPipelineClient interface {
 	ValidatePipelineDefinitionAsync(ctx workflow.Context, input *datapipeline.ValidatePipelineDefinitionInput) *DatapipelineValidatePipelineDefinitionResult
 }
 
-type DataPipelineStub struct {
-}
+type DataPipelineStub struct{}
 
 func NewDataPipelineStub() DataPipelineClient {
 	return &DataPipelineStub{}

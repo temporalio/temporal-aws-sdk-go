@@ -49,8 +49,7 @@ type SyntheticsClient interface {
 	UpdateCanaryAsync(ctx workflow.Context, input *synthetics.UpdateCanaryInput) *SyntheticsUpdateCanaryResult
 }
 
-type SyntheticsStub struct {
-}
+type SyntheticsStub struct{}
 
 func NewSyntheticsStub() SyntheticsClient {
 	return &SyntheticsStub{}
