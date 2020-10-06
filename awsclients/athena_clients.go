@@ -382,308 +382,308 @@ func (r *AthenaUpdateWorkGroupResult) Get(ctx workflow.Context) (*athena.UpdateW
 
 func (a *AthenaStub) BatchGetNamedQuery(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) (*athena.BatchGetNamedQueryOutput, error) {
 	var output athena.BatchGetNamedQueryOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.BatchGetNamedQuery", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetNamedQuery", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) BatchGetNamedQueryAsync(ctx workflow.Context, input *athena.BatchGetNamedQueryInput) *AthenaBatchGetNamedQueryResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.BatchGetNamedQuery", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetNamedQuery", input)
 	return &AthenaBatchGetNamedQueryResult{Result: future}
 }
 
 func (a *AthenaStub) BatchGetQueryExecution(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) (*athena.BatchGetQueryExecutionOutput, error) {
 	var output athena.BatchGetQueryExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.BatchGetQueryExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetQueryExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) BatchGetQueryExecutionAsync(ctx workflow.Context, input *athena.BatchGetQueryExecutionInput) *AthenaBatchGetQueryExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.BatchGetQueryExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.BatchGetQueryExecution", input)
 	return &AthenaBatchGetQueryExecutionResult{Result: future}
 }
 
 func (a *AthenaStub) CreateDataCatalog(ctx workflow.Context, input *athena.CreateDataCatalogInput) (*athena.CreateDataCatalogOutput, error) {
 	var output athena.CreateDataCatalogOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.CreateDataCatalog", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.CreateDataCatalog", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) CreateDataCatalogAsync(ctx workflow.Context, input *athena.CreateDataCatalogInput) *AthenaCreateDataCatalogResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.CreateDataCatalog", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateDataCatalog", input)
 	return &AthenaCreateDataCatalogResult{Result: future}
 }
 
 func (a *AthenaStub) CreateNamedQuery(ctx workflow.Context, input *athena.CreateNamedQueryInput) (*athena.CreateNamedQueryOutput, error) {
 	var output athena.CreateNamedQueryOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.CreateNamedQuery", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.CreateNamedQuery", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) CreateNamedQueryAsync(ctx workflow.Context, input *athena.CreateNamedQueryInput) *AthenaCreateNamedQueryResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.CreateNamedQuery", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateNamedQuery", input)
 	return &AthenaCreateNamedQueryResult{Result: future}
 }
 
 func (a *AthenaStub) CreateWorkGroup(ctx workflow.Context, input *athena.CreateWorkGroupInput) (*athena.CreateWorkGroupOutput, error) {
 	var output athena.CreateWorkGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.CreateWorkGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.CreateWorkGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) CreateWorkGroupAsync(ctx workflow.Context, input *athena.CreateWorkGroupInput) *AthenaCreateWorkGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.CreateWorkGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.CreateWorkGroup", input)
 	return &AthenaCreateWorkGroupResult{Result: future}
 }
 
 func (a *AthenaStub) DeleteDataCatalog(ctx workflow.Context, input *athena.DeleteDataCatalogInput) (*athena.DeleteDataCatalogOutput, error) {
 	var output athena.DeleteDataCatalogOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.DeleteDataCatalog", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.DeleteDataCatalog", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) DeleteDataCatalogAsync(ctx workflow.Context, input *athena.DeleteDataCatalogInput) *AthenaDeleteDataCatalogResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.DeleteDataCatalog", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteDataCatalog", input)
 	return &AthenaDeleteDataCatalogResult{Result: future}
 }
 
 func (a *AthenaStub) DeleteNamedQuery(ctx workflow.Context, input *athena.DeleteNamedQueryInput) (*athena.DeleteNamedQueryOutput, error) {
 	var output athena.DeleteNamedQueryOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.DeleteNamedQuery", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.DeleteNamedQuery", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) DeleteNamedQueryAsync(ctx workflow.Context, input *athena.DeleteNamedQueryInput) *AthenaDeleteNamedQueryResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.DeleteNamedQuery", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteNamedQuery", input)
 	return &AthenaDeleteNamedQueryResult{Result: future}
 }
 
 func (a *AthenaStub) DeleteWorkGroup(ctx workflow.Context, input *athena.DeleteWorkGroupInput) (*athena.DeleteWorkGroupOutput, error) {
 	var output athena.DeleteWorkGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.DeleteWorkGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.DeleteWorkGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) DeleteWorkGroupAsync(ctx workflow.Context, input *athena.DeleteWorkGroupInput) *AthenaDeleteWorkGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.DeleteWorkGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.DeleteWorkGroup", input)
 	return &AthenaDeleteWorkGroupResult{Result: future}
 }
 
 func (a *AthenaStub) GetDataCatalog(ctx workflow.Context, input *athena.GetDataCatalogInput) (*athena.GetDataCatalogOutput, error) {
 	var output athena.GetDataCatalogOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetDataCatalog", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetDataCatalog", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetDataCatalogAsync(ctx workflow.Context, input *athena.GetDataCatalogInput) *AthenaGetDataCatalogResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetDataCatalog", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetDataCatalog", input)
 	return &AthenaGetDataCatalogResult{Result: future}
 }
 
 func (a *AthenaStub) GetDatabase(ctx workflow.Context, input *athena.GetDatabaseInput) (*athena.GetDatabaseOutput, error) {
 	var output athena.GetDatabaseOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetDatabase", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetDatabase", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetDatabaseAsync(ctx workflow.Context, input *athena.GetDatabaseInput) *AthenaGetDatabaseResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetDatabase", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetDatabase", input)
 	return &AthenaGetDatabaseResult{Result: future}
 }
 
 func (a *AthenaStub) GetNamedQuery(ctx workflow.Context, input *athena.GetNamedQueryInput) (*athena.GetNamedQueryOutput, error) {
 	var output athena.GetNamedQueryOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetNamedQuery", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetNamedQuery", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetNamedQueryAsync(ctx workflow.Context, input *athena.GetNamedQueryInput) *AthenaGetNamedQueryResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetNamedQuery", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetNamedQuery", input)
 	return &AthenaGetNamedQueryResult{Result: future}
 }
 
 func (a *AthenaStub) GetQueryExecution(ctx workflow.Context, input *athena.GetQueryExecutionInput) (*athena.GetQueryExecutionOutput, error) {
 	var output athena.GetQueryExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetQueryExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetQueryExecutionAsync(ctx workflow.Context, input *athena.GetQueryExecutionInput) *AthenaGetQueryExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetQueryExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryExecution", input)
 	return &AthenaGetQueryExecutionResult{Result: future}
 }
 
 func (a *AthenaStub) GetQueryResults(ctx workflow.Context, input *athena.GetQueryResultsInput) (*athena.GetQueryResultsOutput, error) {
 	var output athena.GetQueryResultsOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetQueryResults", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryResults", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetQueryResultsAsync(ctx workflow.Context, input *athena.GetQueryResultsInput) *AthenaGetQueryResultsResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetQueryResults", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetQueryResults", input)
 	return &AthenaGetQueryResultsResult{Result: future}
 }
 
 func (a *AthenaStub) GetTableMetadata(ctx workflow.Context, input *athena.GetTableMetadataInput) (*athena.GetTableMetadataOutput, error) {
 	var output athena.GetTableMetadataOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetTableMetadata", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetTableMetadata", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetTableMetadataAsync(ctx workflow.Context, input *athena.GetTableMetadataInput) *AthenaGetTableMetadataResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetTableMetadata", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetTableMetadata", input)
 	return &AthenaGetTableMetadataResult{Result: future}
 }
 
 func (a *AthenaStub) GetWorkGroup(ctx workflow.Context, input *athena.GetWorkGroupInput) (*athena.GetWorkGroupOutput, error) {
 	var output athena.GetWorkGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.GetWorkGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.GetWorkGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) GetWorkGroupAsync(ctx workflow.Context, input *athena.GetWorkGroupInput) *AthenaGetWorkGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.GetWorkGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.GetWorkGroup", input)
 	return &AthenaGetWorkGroupResult{Result: future}
 }
 
 func (a *AthenaStub) ListDataCatalogs(ctx workflow.Context, input *athena.ListDataCatalogsInput) (*athena.ListDataCatalogsOutput, error) {
 	var output athena.ListDataCatalogsOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListDataCatalogs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListDataCatalogs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListDataCatalogsAsync(ctx workflow.Context, input *athena.ListDataCatalogsInput) *AthenaListDataCatalogsResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListDataCatalogs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListDataCatalogs", input)
 	return &AthenaListDataCatalogsResult{Result: future}
 }
 
 func (a *AthenaStub) ListDatabases(ctx workflow.Context, input *athena.ListDatabasesInput) (*athena.ListDatabasesOutput, error) {
 	var output athena.ListDatabasesOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListDatabases", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListDatabases", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListDatabasesAsync(ctx workflow.Context, input *athena.ListDatabasesInput) *AthenaListDatabasesResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListDatabases", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListDatabases", input)
 	return &AthenaListDatabasesResult{Result: future}
 }
 
 func (a *AthenaStub) ListNamedQueries(ctx workflow.Context, input *athena.ListNamedQueriesInput) (*athena.ListNamedQueriesOutput, error) {
 	var output athena.ListNamedQueriesOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListNamedQueries", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListNamedQueries", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListNamedQueriesAsync(ctx workflow.Context, input *athena.ListNamedQueriesInput) *AthenaListNamedQueriesResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListNamedQueries", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListNamedQueries", input)
 	return &AthenaListNamedQueriesResult{Result: future}
 }
 
 func (a *AthenaStub) ListQueryExecutions(ctx workflow.Context, input *athena.ListQueryExecutionsInput) (*athena.ListQueryExecutionsOutput, error) {
 	var output athena.ListQueryExecutionsOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListQueryExecutions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListQueryExecutions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListQueryExecutionsAsync(ctx workflow.Context, input *athena.ListQueryExecutionsInput) *AthenaListQueryExecutionsResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListQueryExecutions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListQueryExecutions", input)
 	return &AthenaListQueryExecutionsResult{Result: future}
 }
 
 func (a *AthenaStub) ListTableMetadata(ctx workflow.Context, input *athena.ListTableMetadataInput) (*athena.ListTableMetadataOutput, error) {
 	var output athena.ListTableMetadataOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListTableMetadata", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListTableMetadata", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListTableMetadataAsync(ctx workflow.Context, input *athena.ListTableMetadataInput) *AthenaListTableMetadataResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListTableMetadata", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListTableMetadata", input)
 	return &AthenaListTableMetadataResult{Result: future}
 }
 
 func (a *AthenaStub) ListTagsForResource(ctx workflow.Context, input *athena.ListTagsForResourceInput) (*athena.ListTagsForResourceOutput, error) {
 	var output athena.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListTagsForResourceAsync(ctx workflow.Context, input *athena.ListTagsForResourceInput) *AthenaListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListTagsForResource", input)
 	return &AthenaListTagsForResourceResult{Result: future}
 }
 
 func (a *AthenaStub) ListWorkGroups(ctx workflow.Context, input *athena.ListWorkGroupsInput) (*athena.ListWorkGroupsOutput, error) {
 	var output athena.ListWorkGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.ListWorkGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.ListWorkGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) ListWorkGroupsAsync(ctx workflow.Context, input *athena.ListWorkGroupsInput) *AthenaListWorkGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.ListWorkGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.ListWorkGroups", input)
 	return &AthenaListWorkGroupsResult{Result: future}
 }
 
 func (a *AthenaStub) StartQueryExecution(ctx workflow.Context, input *athena.StartQueryExecutionInput) (*athena.StartQueryExecutionOutput, error) {
 	var output athena.StartQueryExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.StartQueryExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.StartQueryExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) StartQueryExecutionAsync(ctx workflow.Context, input *athena.StartQueryExecutionInput) *AthenaStartQueryExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.StartQueryExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.StartQueryExecution", input)
 	return &AthenaStartQueryExecutionResult{Result: future}
 }
 
 func (a *AthenaStub) StopQueryExecution(ctx workflow.Context, input *athena.StopQueryExecutionInput) (*athena.StopQueryExecutionOutput, error) {
 	var output athena.StopQueryExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.StopQueryExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.StopQueryExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) StopQueryExecutionAsync(ctx workflow.Context, input *athena.StopQueryExecutionInput) *AthenaStopQueryExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.StopQueryExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.StopQueryExecution", input)
 	return &AthenaStopQueryExecutionResult{Result: future}
 }
 
 func (a *AthenaStub) TagResource(ctx workflow.Context, input *athena.TagResourceInput) (*athena.TagResourceOutput, error) {
 	var output athena.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) TagResourceAsync(ctx workflow.Context, input *athena.TagResourceInput) *AthenaTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.TagResource", input)
 	return &AthenaTagResourceResult{Result: future}
 }
 
 func (a *AthenaStub) UntagResource(ctx workflow.Context, input *athena.UntagResourceInput) (*athena.UntagResourceOutput, error) {
 	var output athena.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) UntagResourceAsync(ctx workflow.Context, input *athena.UntagResourceInput) *AthenaUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.UntagResource", input)
 	return &AthenaUntagResourceResult{Result: future}
 }
 
 func (a *AthenaStub) UpdateDataCatalog(ctx workflow.Context, input *athena.UpdateDataCatalogInput) (*athena.UpdateDataCatalogOutput, error) {
 	var output athena.UpdateDataCatalogOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.UpdateDataCatalog", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.UpdateDataCatalog", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) UpdateDataCatalogAsync(ctx workflow.Context, input *athena.UpdateDataCatalogInput) *AthenaUpdateDataCatalogResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.UpdateDataCatalog", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.UpdateDataCatalog", input)
 	return &AthenaUpdateDataCatalogResult{Result: future}
 }
 
 func (a *AthenaStub) UpdateWorkGroup(ctx workflow.Context, input *athena.UpdateWorkGroupInput) (*athena.UpdateWorkGroupOutput, error) {
 	var output athena.UpdateWorkGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Athena.UpdateWorkGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.athena.UpdateWorkGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AthenaStub) UpdateWorkGroupAsync(ctx workflow.Context, input *athena.UpdateWorkGroupInput) *AthenaUpdateWorkGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Athena.UpdateWorkGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.athena.UpdateWorkGroup", input)
 	return &AthenaUpdateWorkGroupResult{Result: future}
 }

@@ -421,341 +421,341 @@ func (r *DatasyncUpdateTaskResult) Get(ctx workflow.Context) (*datasync.UpdateTa
 
 func (a *DataSyncStub) CancelTaskExecution(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) (*datasync.CancelTaskExecutionOutput, error) {
 	var output datasync.CancelTaskExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CancelTaskExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CancelTaskExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CancelTaskExecutionAsync(ctx workflow.Context, input *datasync.CancelTaskExecutionInput) *DatasyncCancelTaskExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CancelTaskExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CancelTaskExecution", input)
 	return &DatasyncCancelTaskExecutionResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateAgent(ctx workflow.Context, input *datasync.CreateAgentInput) (*datasync.CreateAgentOutput, error) {
 	var output datasync.CreateAgentOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateAgent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateAgent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateAgentAsync(ctx workflow.Context, input *datasync.CreateAgentInput) *DatasyncCreateAgentResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateAgent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateAgent", input)
 	return &DatasyncCreateAgentResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationEfs(ctx workflow.Context, input *datasync.CreateLocationEfsInput) (*datasync.CreateLocationEfsOutput, error) {
 	var output datasync.CreateLocationEfsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationEfs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationEfs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationEfsAsync(ctx workflow.Context, input *datasync.CreateLocationEfsInput) *DatasyncCreateLocationEfsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationEfs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationEfs", input)
 	return &DatasyncCreateLocationEfsResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationFsxWindows(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) (*datasync.CreateLocationFsxWindowsOutput, error) {
 	var output datasync.CreateLocationFsxWindowsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationFsxWindows", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationFsxWindows", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.CreateLocationFsxWindowsInput) *DatasyncCreateLocationFsxWindowsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationFsxWindows", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationFsxWindows", input)
 	return &DatasyncCreateLocationFsxWindowsResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationNfs(ctx workflow.Context, input *datasync.CreateLocationNfsInput) (*datasync.CreateLocationNfsOutput, error) {
 	var output datasync.CreateLocationNfsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationNfs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationNfs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationNfsAsync(ctx workflow.Context, input *datasync.CreateLocationNfsInput) *DatasyncCreateLocationNfsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationNfs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationNfs", input)
 	return &DatasyncCreateLocationNfsResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationObjectStorage(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) (*datasync.CreateLocationObjectStorageOutput, error) {
 	var output datasync.CreateLocationObjectStorageOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationObjectStorage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationObjectStorage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationObjectStorageAsync(ctx workflow.Context, input *datasync.CreateLocationObjectStorageInput) *DatasyncCreateLocationObjectStorageResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationObjectStorage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationObjectStorage", input)
 	return &DatasyncCreateLocationObjectStorageResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationS3(ctx workflow.Context, input *datasync.CreateLocationS3Input) (*datasync.CreateLocationS3Output, error) {
 	var output datasync.CreateLocationS3Output
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationS3", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationS3", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationS3Async(ctx workflow.Context, input *datasync.CreateLocationS3Input) *DatasyncCreateLocationS3Result {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationS3", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationS3", input)
 	return &DatasyncCreateLocationS3Result{Result: future}
 }
 
 func (a *DataSyncStub) CreateLocationSmb(ctx workflow.Context, input *datasync.CreateLocationSmbInput) (*datasync.CreateLocationSmbOutput, error) {
 	var output datasync.CreateLocationSmbOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationSmb", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationSmb", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateLocationSmbAsync(ctx workflow.Context, input *datasync.CreateLocationSmbInput) *DatasyncCreateLocationSmbResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateLocationSmb", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateLocationSmb", input)
 	return &DatasyncCreateLocationSmbResult{Result: future}
 }
 
 func (a *DataSyncStub) CreateTask(ctx workflow.Context, input *datasync.CreateTaskInput) (*datasync.CreateTaskOutput, error) {
 	var output datasync.CreateTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.CreateTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.CreateTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) CreateTaskAsync(ctx workflow.Context, input *datasync.CreateTaskInput) *DatasyncCreateTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.CreateTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.CreateTask", input)
 	return &DatasyncCreateTaskResult{Result: future}
 }
 
 func (a *DataSyncStub) DeleteAgent(ctx workflow.Context, input *datasync.DeleteAgentInput) (*datasync.DeleteAgentOutput, error) {
 	var output datasync.DeleteAgentOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DeleteAgent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteAgent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DeleteAgentAsync(ctx workflow.Context, input *datasync.DeleteAgentInput) *DatasyncDeleteAgentResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DeleteAgent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteAgent", input)
 	return &DatasyncDeleteAgentResult{Result: future}
 }
 
 func (a *DataSyncStub) DeleteLocation(ctx workflow.Context, input *datasync.DeleteLocationInput) (*datasync.DeleteLocationOutput, error) {
 	var output datasync.DeleteLocationOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DeleteLocation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteLocation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DeleteLocationAsync(ctx workflow.Context, input *datasync.DeleteLocationInput) *DatasyncDeleteLocationResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DeleteLocation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteLocation", input)
 	return &DatasyncDeleteLocationResult{Result: future}
 }
 
 func (a *DataSyncStub) DeleteTask(ctx workflow.Context, input *datasync.DeleteTaskInput) (*datasync.DeleteTaskOutput, error) {
 	var output datasync.DeleteTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DeleteTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DeleteTaskAsync(ctx workflow.Context, input *datasync.DeleteTaskInput) *DatasyncDeleteTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DeleteTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DeleteTask", input)
 	return &DatasyncDeleteTaskResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeAgent(ctx workflow.Context, input *datasync.DescribeAgentInput) (*datasync.DescribeAgentOutput, error) {
 	var output datasync.DescribeAgentOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeAgent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeAgent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeAgentAsync(ctx workflow.Context, input *datasync.DescribeAgentInput) *DatasyncDescribeAgentResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeAgent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeAgent", input)
 	return &DatasyncDescribeAgentResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationEfs(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) (*datasync.DescribeLocationEfsOutput, error) {
 	var output datasync.DescribeLocationEfsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationEfs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationEfs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationEfsAsync(ctx workflow.Context, input *datasync.DescribeLocationEfsInput) *DatasyncDescribeLocationEfsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationEfs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationEfs", input)
 	return &DatasyncDescribeLocationEfsResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationFsxWindows(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) (*datasync.DescribeLocationFsxWindowsOutput, error) {
 	var output datasync.DescribeLocationFsxWindowsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationFsxWindows", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationFsxWindows", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationFsxWindowsAsync(ctx workflow.Context, input *datasync.DescribeLocationFsxWindowsInput) *DatasyncDescribeLocationFsxWindowsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationFsxWindows", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationFsxWindows", input)
 	return &DatasyncDescribeLocationFsxWindowsResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationNfs(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) (*datasync.DescribeLocationNfsOutput, error) {
 	var output datasync.DescribeLocationNfsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationNfs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationNfs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationNfsAsync(ctx workflow.Context, input *datasync.DescribeLocationNfsInput) *DatasyncDescribeLocationNfsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationNfs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationNfs", input)
 	return &DatasyncDescribeLocationNfsResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationObjectStorage(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) (*datasync.DescribeLocationObjectStorageOutput, error) {
 	var output datasync.DescribeLocationObjectStorageOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationObjectStorage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationObjectStorage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationObjectStorageAsync(ctx workflow.Context, input *datasync.DescribeLocationObjectStorageInput) *DatasyncDescribeLocationObjectStorageResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationObjectStorage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationObjectStorage", input)
 	return &DatasyncDescribeLocationObjectStorageResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationS3(ctx workflow.Context, input *datasync.DescribeLocationS3Input) (*datasync.DescribeLocationS3Output, error) {
 	var output datasync.DescribeLocationS3Output
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationS3", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationS3", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationS3Async(ctx workflow.Context, input *datasync.DescribeLocationS3Input) *DatasyncDescribeLocationS3Result {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationS3", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationS3", input)
 	return &DatasyncDescribeLocationS3Result{Result: future}
 }
 
 func (a *DataSyncStub) DescribeLocationSmb(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) (*datasync.DescribeLocationSmbOutput, error) {
 	var output datasync.DescribeLocationSmbOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationSmb", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationSmb", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeLocationSmbAsync(ctx workflow.Context, input *datasync.DescribeLocationSmbInput) *DatasyncDescribeLocationSmbResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeLocationSmb", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeLocationSmb", input)
 	return &DatasyncDescribeLocationSmbResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeTask(ctx workflow.Context, input *datasync.DescribeTaskInput) (*datasync.DescribeTaskOutput, error) {
 	var output datasync.DescribeTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeTaskAsync(ctx workflow.Context, input *datasync.DescribeTaskInput) *DatasyncDescribeTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTask", input)
 	return &DatasyncDescribeTaskResult{Result: future}
 }
 
 func (a *DataSyncStub) DescribeTaskExecution(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) (*datasync.DescribeTaskExecutionOutput, error) {
 	var output datasync.DescribeTaskExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.DescribeTaskExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTaskExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) DescribeTaskExecutionAsync(ctx workflow.Context, input *datasync.DescribeTaskExecutionInput) *DatasyncDescribeTaskExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.DescribeTaskExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.DescribeTaskExecution", input)
 	return &DatasyncDescribeTaskExecutionResult{Result: future}
 }
 
 func (a *DataSyncStub) ListAgents(ctx workflow.Context, input *datasync.ListAgentsInput) (*datasync.ListAgentsOutput, error) {
 	var output datasync.ListAgentsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.ListAgents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.ListAgents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) ListAgentsAsync(ctx workflow.Context, input *datasync.ListAgentsInput) *DatasyncListAgentsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.ListAgents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListAgents", input)
 	return &DatasyncListAgentsResult{Result: future}
 }
 
 func (a *DataSyncStub) ListLocations(ctx workflow.Context, input *datasync.ListLocationsInput) (*datasync.ListLocationsOutput, error) {
 	var output datasync.ListLocationsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.ListLocations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.ListLocations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) ListLocationsAsync(ctx workflow.Context, input *datasync.ListLocationsInput) *DatasyncListLocationsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.ListLocations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListLocations", input)
 	return &DatasyncListLocationsResult{Result: future}
 }
 
 func (a *DataSyncStub) ListTagsForResource(ctx workflow.Context, input *datasync.ListTagsForResourceInput) (*datasync.ListTagsForResourceOutput, error) {
 	var output datasync.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) ListTagsForResourceAsync(ctx workflow.Context, input *datasync.ListTagsForResourceInput) *DatasyncListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTagsForResource", input)
 	return &DatasyncListTagsForResourceResult{Result: future}
 }
 
 func (a *DataSyncStub) ListTaskExecutions(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) (*datasync.ListTaskExecutionsOutput, error) {
 	var output datasync.ListTaskExecutionsOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.ListTaskExecutions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.ListTaskExecutions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) ListTaskExecutionsAsync(ctx workflow.Context, input *datasync.ListTaskExecutionsInput) *DatasyncListTaskExecutionsResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.ListTaskExecutions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTaskExecutions", input)
 	return &DatasyncListTaskExecutionsResult{Result: future}
 }
 
 func (a *DataSyncStub) ListTasks(ctx workflow.Context, input *datasync.ListTasksInput) (*datasync.ListTasksOutput, error) {
 	var output datasync.ListTasksOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.ListTasks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.ListTasks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) ListTasksAsync(ctx workflow.Context, input *datasync.ListTasksInput) *DatasyncListTasksResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.ListTasks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.ListTasks", input)
 	return &DatasyncListTasksResult{Result: future}
 }
 
 func (a *DataSyncStub) StartTaskExecution(ctx workflow.Context, input *datasync.StartTaskExecutionInput) (*datasync.StartTaskExecutionOutput, error) {
 	var output datasync.StartTaskExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.StartTaskExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.StartTaskExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) StartTaskExecutionAsync(ctx workflow.Context, input *datasync.StartTaskExecutionInput) *DatasyncStartTaskExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.StartTaskExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.StartTaskExecution", input)
 	return &DatasyncStartTaskExecutionResult{Result: future}
 }
 
 func (a *DataSyncStub) TagResource(ctx workflow.Context, input *datasync.TagResourceInput) (*datasync.TagResourceOutput, error) {
 	var output datasync.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) TagResourceAsync(ctx workflow.Context, input *datasync.TagResourceInput) *DatasyncTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.TagResource", input)
 	return &DatasyncTagResourceResult{Result: future}
 }
 
 func (a *DataSyncStub) UntagResource(ctx workflow.Context, input *datasync.UntagResourceInput) (*datasync.UntagResourceOutput, error) {
 	var output datasync.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) UntagResourceAsync(ctx workflow.Context, input *datasync.UntagResourceInput) *DatasyncUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.UntagResource", input)
 	return &DatasyncUntagResourceResult{Result: future}
 }
 
 func (a *DataSyncStub) UpdateAgent(ctx workflow.Context, input *datasync.UpdateAgentInput) (*datasync.UpdateAgentOutput, error) {
 	var output datasync.UpdateAgentOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.UpdateAgent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateAgent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) UpdateAgentAsync(ctx workflow.Context, input *datasync.UpdateAgentInput) *DatasyncUpdateAgentResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.UpdateAgent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateAgent", input)
 	return &DatasyncUpdateAgentResult{Result: future}
 }
 
 func (a *DataSyncStub) UpdateTask(ctx workflow.Context, input *datasync.UpdateTaskInput) (*datasync.UpdateTaskOutput, error) {
 	var output datasync.UpdateTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DataSync.UpdateTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DataSyncStub) UpdateTaskAsync(ctx workflow.Context, input *datasync.UpdateTaskInput) *DatasyncUpdateTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DataSync.UpdateTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.datasync.UpdateTask", input)
 	return &DatasyncUpdateTaskResult{Result: future}
 }

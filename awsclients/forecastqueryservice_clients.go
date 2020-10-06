@@ -31,11 +31,11 @@ func (r *ForecastqueryserviceQueryForecastResult) Get(ctx workflow.Context) (*fo
 
 func (a *ForecastQueryServiceStub) QueryForecast(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) (*forecastqueryservice.QueryForecastOutput, error) {
 	var output forecastqueryservice.QueryForecastOutput
-	err := workflow.ExecuteActivity(ctx, "ForecastQueryService.QueryForecast", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.forecastqueryservice.QueryForecast", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ForecastQueryServiceStub) QueryForecastAsync(ctx workflow.Context, input *forecastqueryservice.QueryForecastInput) *ForecastqueryserviceQueryForecastResult {
-	future := workflow.ExecuteActivity(ctx, "ForecastQueryService.QueryForecast", input)
+	future := workflow.ExecuteActivity(ctx, "aws.forecastqueryservice.QueryForecast", input)
 	return &ForecastqueryserviceQueryForecastResult{Result: future}
 }

@@ -759,627 +759,627 @@ func (r *DirectoryserviceVerifyTrustResult) Get(ctx workflow.Context) (*director
 
 func (a *DirectoryServiceStub) AcceptSharedDirectory(ctx workflow.Context, input *directoryservice.AcceptSharedDirectoryInput) (*directoryservice.AcceptSharedDirectoryOutput, error) {
 	var output directoryservice.AcceptSharedDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.AcceptSharedDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.AcceptSharedDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) AcceptSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.AcceptSharedDirectoryInput) *DirectoryserviceAcceptSharedDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.AcceptSharedDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AcceptSharedDirectory", input)
 	return &DirectoryserviceAcceptSharedDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) AddIpRoutes(ctx workflow.Context, input *directoryservice.AddIpRoutesInput) (*directoryservice.AddIpRoutesOutput, error) {
 	var output directoryservice.AddIpRoutesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.AddIpRoutes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddIpRoutes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) AddIpRoutesAsync(ctx workflow.Context, input *directoryservice.AddIpRoutesInput) *DirectoryserviceAddIpRoutesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.AddIpRoutes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddIpRoutes", input)
 	return &DirectoryserviceAddIpRoutesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) AddTagsToResource(ctx workflow.Context, input *directoryservice.AddTagsToResourceInput) (*directoryservice.AddTagsToResourceOutput, error) {
 	var output directoryservice.AddTagsToResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.AddTagsToResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddTagsToResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) AddTagsToResourceAsync(ctx workflow.Context, input *directoryservice.AddTagsToResourceInput) *DirectoryserviceAddTagsToResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.AddTagsToResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.AddTagsToResource", input)
 	return &DirectoryserviceAddTagsToResourceResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CancelSchemaExtension(ctx workflow.Context, input *directoryservice.CancelSchemaExtensionInput) (*directoryservice.CancelSchemaExtensionOutput, error) {
 	var output directoryservice.CancelSchemaExtensionOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CancelSchemaExtension", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CancelSchemaExtension", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CancelSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.CancelSchemaExtensionInput) *DirectoryserviceCancelSchemaExtensionResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CancelSchemaExtension", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CancelSchemaExtension", input)
 	return &DirectoryserviceCancelSchemaExtensionResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ConnectDirectory(ctx workflow.Context, input *directoryservice.ConnectDirectoryInput) (*directoryservice.ConnectDirectoryOutput, error) {
 	var output directoryservice.ConnectDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ConnectDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ConnectDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ConnectDirectoryAsync(ctx workflow.Context, input *directoryservice.ConnectDirectoryInput) *DirectoryserviceConnectDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ConnectDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ConnectDirectory", input)
 	return &DirectoryserviceConnectDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateAlias(ctx workflow.Context, input *directoryservice.CreateAliasInput) (*directoryservice.CreateAliasOutput, error) {
 	var output directoryservice.CreateAliasOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateAlias", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateAlias", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateAliasAsync(ctx workflow.Context, input *directoryservice.CreateAliasInput) *DirectoryserviceCreateAliasResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateAlias", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateAlias", input)
 	return &DirectoryserviceCreateAliasResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateComputer(ctx workflow.Context, input *directoryservice.CreateComputerInput) (*directoryservice.CreateComputerOutput, error) {
 	var output directoryservice.CreateComputerOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateComputer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateComputer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateComputerAsync(ctx workflow.Context, input *directoryservice.CreateComputerInput) *DirectoryserviceCreateComputerResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateComputer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateComputer", input)
 	return &DirectoryserviceCreateComputerResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateConditionalForwarder(ctx workflow.Context, input *directoryservice.CreateConditionalForwarderInput) (*directoryservice.CreateConditionalForwarderOutput, error) {
 	var output directoryservice.CreateConditionalForwarderOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateConditionalForwarder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateConditionalForwarder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.CreateConditionalForwarderInput) *DirectoryserviceCreateConditionalForwarderResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateConditionalForwarder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateConditionalForwarder", input)
 	return &DirectoryserviceCreateConditionalForwarderResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateDirectory(ctx workflow.Context, input *directoryservice.CreateDirectoryInput) (*directoryservice.CreateDirectoryOutput, error) {
 	var output directoryservice.CreateDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateDirectoryAsync(ctx workflow.Context, input *directoryservice.CreateDirectoryInput) *DirectoryserviceCreateDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateDirectory", input)
 	return &DirectoryserviceCreateDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateLogSubscription(ctx workflow.Context, input *directoryservice.CreateLogSubscriptionInput) (*directoryservice.CreateLogSubscriptionOutput, error) {
 	var output directoryservice.CreateLogSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateLogSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateLogSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.CreateLogSubscriptionInput) *DirectoryserviceCreateLogSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateLogSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateLogSubscription", input)
 	return &DirectoryserviceCreateLogSubscriptionResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateMicrosoftAD(ctx workflow.Context, input *directoryservice.CreateMicrosoftADInput) (*directoryservice.CreateMicrosoftADOutput, error) {
 	var output directoryservice.CreateMicrosoftADOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateMicrosoftAD", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateMicrosoftAD", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateMicrosoftADAsync(ctx workflow.Context, input *directoryservice.CreateMicrosoftADInput) *DirectoryserviceCreateMicrosoftADResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateMicrosoftAD", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateMicrosoftAD", input)
 	return &DirectoryserviceCreateMicrosoftADResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateSnapshot(ctx workflow.Context, input *directoryservice.CreateSnapshotInput) (*directoryservice.CreateSnapshotOutput, error) {
 	var output directoryservice.CreateSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateSnapshotAsync(ctx workflow.Context, input *directoryservice.CreateSnapshotInput) *DirectoryserviceCreateSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateSnapshot", input)
 	return &DirectoryserviceCreateSnapshotResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) CreateTrust(ctx workflow.Context, input *directoryservice.CreateTrustInput) (*directoryservice.CreateTrustOutput, error) {
 	var output directoryservice.CreateTrustOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.CreateTrust", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateTrust", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) CreateTrustAsync(ctx workflow.Context, input *directoryservice.CreateTrustInput) *DirectoryserviceCreateTrustResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.CreateTrust", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.CreateTrust", input)
 	return &DirectoryserviceCreateTrustResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeleteConditionalForwarder(ctx workflow.Context, input *directoryservice.DeleteConditionalForwarderInput) (*directoryservice.DeleteConditionalForwarderOutput, error) {
 	var output directoryservice.DeleteConditionalForwarderOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteConditionalForwarder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteConditionalForwarder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeleteConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.DeleteConditionalForwarderInput) *DirectoryserviceDeleteConditionalForwarderResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteConditionalForwarder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteConditionalForwarder", input)
 	return &DirectoryserviceDeleteConditionalForwarderResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeleteDirectory(ctx workflow.Context, input *directoryservice.DeleteDirectoryInput) (*directoryservice.DeleteDirectoryOutput, error) {
 	var output directoryservice.DeleteDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeleteDirectoryAsync(ctx workflow.Context, input *directoryservice.DeleteDirectoryInput) *DirectoryserviceDeleteDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteDirectory", input)
 	return &DirectoryserviceDeleteDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeleteLogSubscription(ctx workflow.Context, input *directoryservice.DeleteLogSubscriptionInput) (*directoryservice.DeleteLogSubscriptionOutput, error) {
 	var output directoryservice.DeleteLogSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteLogSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteLogSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeleteLogSubscriptionAsync(ctx workflow.Context, input *directoryservice.DeleteLogSubscriptionInput) *DirectoryserviceDeleteLogSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteLogSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteLogSubscription", input)
 	return &DirectoryserviceDeleteLogSubscriptionResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeleteSnapshot(ctx workflow.Context, input *directoryservice.DeleteSnapshotInput) (*directoryservice.DeleteSnapshotOutput, error) {
 	var output directoryservice.DeleteSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeleteSnapshotAsync(ctx workflow.Context, input *directoryservice.DeleteSnapshotInput) *DirectoryserviceDeleteSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteSnapshot", input)
 	return &DirectoryserviceDeleteSnapshotResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeleteTrust(ctx workflow.Context, input *directoryservice.DeleteTrustInput) (*directoryservice.DeleteTrustOutput, error) {
 	var output directoryservice.DeleteTrustOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteTrust", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteTrust", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeleteTrustAsync(ctx workflow.Context, input *directoryservice.DeleteTrustInput) *DirectoryserviceDeleteTrustResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeleteTrust", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeleteTrust", input)
 	return &DirectoryserviceDeleteTrustResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeregisterCertificate(ctx workflow.Context, input *directoryservice.DeregisterCertificateInput) (*directoryservice.DeregisterCertificateOutput, error) {
 	var output directoryservice.DeregisterCertificateOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeregisterCertificate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterCertificate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeregisterCertificateAsync(ctx workflow.Context, input *directoryservice.DeregisterCertificateInput) *DirectoryserviceDeregisterCertificateResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeregisterCertificate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterCertificate", input)
 	return &DirectoryserviceDeregisterCertificateResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DeregisterEventTopic(ctx workflow.Context, input *directoryservice.DeregisterEventTopicInput) (*directoryservice.DeregisterEventTopicOutput, error) {
 	var output directoryservice.DeregisterEventTopicOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DeregisterEventTopic", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterEventTopic", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DeregisterEventTopicAsync(ctx workflow.Context, input *directoryservice.DeregisterEventTopicInput) *DirectoryserviceDeregisterEventTopicResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DeregisterEventTopic", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DeregisterEventTopic", input)
 	return &DirectoryserviceDeregisterEventTopicResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeCertificate(ctx workflow.Context, input *directoryservice.DescribeCertificateInput) (*directoryservice.DescribeCertificateOutput, error) {
 	var output directoryservice.DescribeCertificateOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeCertificate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeCertificate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeCertificateAsync(ctx workflow.Context, input *directoryservice.DescribeCertificateInput) *DirectoryserviceDescribeCertificateResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeCertificate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeCertificate", input)
 	return &DirectoryserviceDescribeCertificateResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeConditionalForwarders(ctx workflow.Context, input *directoryservice.DescribeConditionalForwardersInput) (*directoryservice.DescribeConditionalForwardersOutput, error) {
 	var output directoryservice.DescribeConditionalForwardersOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeConditionalForwarders", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeConditionalForwarders", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeConditionalForwardersAsync(ctx workflow.Context, input *directoryservice.DescribeConditionalForwardersInput) *DirectoryserviceDescribeConditionalForwardersResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeConditionalForwarders", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeConditionalForwarders", input)
 	return &DirectoryserviceDescribeConditionalForwardersResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeDirectories(ctx workflow.Context, input *directoryservice.DescribeDirectoriesInput) (*directoryservice.DescribeDirectoriesOutput, error) {
 	var output directoryservice.DescribeDirectoriesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeDirectories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDirectories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeDirectoriesInput) *DirectoryserviceDescribeDirectoriesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeDirectories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDirectories", input)
 	return &DirectoryserviceDescribeDirectoriesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeDomainControllers(ctx workflow.Context, input *directoryservice.DescribeDomainControllersInput) (*directoryservice.DescribeDomainControllersOutput, error) {
 	var output directoryservice.DescribeDomainControllersOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeDomainControllers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDomainControllers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeDomainControllersAsync(ctx workflow.Context, input *directoryservice.DescribeDomainControllersInput) *DirectoryserviceDescribeDomainControllersResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeDomainControllers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeDomainControllers", input)
 	return &DirectoryserviceDescribeDomainControllersResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeEventTopics(ctx workflow.Context, input *directoryservice.DescribeEventTopicsInput) (*directoryservice.DescribeEventTopicsOutput, error) {
 	var output directoryservice.DescribeEventTopicsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeEventTopics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeEventTopics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeEventTopicsAsync(ctx workflow.Context, input *directoryservice.DescribeEventTopicsInput) *DirectoryserviceDescribeEventTopicsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeEventTopics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeEventTopics", input)
 	return &DirectoryserviceDescribeEventTopicsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeLDAPSSettings(ctx workflow.Context, input *directoryservice.DescribeLDAPSSettingsInput) (*directoryservice.DescribeLDAPSSettingsOutput, error) {
 	var output directoryservice.DescribeLDAPSSettingsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeLDAPSSettings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeLDAPSSettings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeLDAPSSettingsAsync(ctx workflow.Context, input *directoryservice.DescribeLDAPSSettingsInput) *DirectoryserviceDescribeLDAPSSettingsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeLDAPSSettings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeLDAPSSettings", input)
 	return &DirectoryserviceDescribeLDAPSSettingsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeSharedDirectories(ctx workflow.Context, input *directoryservice.DescribeSharedDirectoriesInput) (*directoryservice.DescribeSharedDirectoriesOutput, error) {
 	var output directoryservice.DescribeSharedDirectoriesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeSharedDirectories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSharedDirectories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeSharedDirectoriesAsync(ctx workflow.Context, input *directoryservice.DescribeSharedDirectoriesInput) *DirectoryserviceDescribeSharedDirectoriesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeSharedDirectories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSharedDirectories", input)
 	return &DirectoryserviceDescribeSharedDirectoriesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeSnapshots(ctx workflow.Context, input *directoryservice.DescribeSnapshotsInput) (*directoryservice.DescribeSnapshotsOutput, error) {
 	var output directoryservice.DescribeSnapshotsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeSnapshots", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSnapshots", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeSnapshotsAsync(ctx workflow.Context, input *directoryservice.DescribeSnapshotsInput) *DirectoryserviceDescribeSnapshotsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeSnapshots", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeSnapshots", input)
 	return &DirectoryserviceDescribeSnapshotsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DescribeTrusts(ctx workflow.Context, input *directoryservice.DescribeTrustsInput) (*directoryservice.DescribeTrustsOutput, error) {
 	var output directoryservice.DescribeTrustsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeTrusts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeTrusts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DescribeTrustsAsync(ctx workflow.Context, input *directoryservice.DescribeTrustsInput) *DirectoryserviceDescribeTrustsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DescribeTrusts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DescribeTrusts", input)
 	return &DirectoryserviceDescribeTrustsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DisableLDAPS(ctx workflow.Context, input *directoryservice.DisableLDAPSInput) (*directoryservice.DisableLDAPSOutput, error) {
 	var output directoryservice.DisableLDAPSOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DisableLDAPS", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableLDAPS", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DisableLDAPSAsync(ctx workflow.Context, input *directoryservice.DisableLDAPSInput) *DirectoryserviceDisableLDAPSResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DisableLDAPS", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableLDAPS", input)
 	return &DirectoryserviceDisableLDAPSResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DisableRadius(ctx workflow.Context, input *directoryservice.DisableRadiusInput) (*directoryservice.DisableRadiusOutput, error) {
 	var output directoryservice.DisableRadiusOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DisableRadius", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableRadius", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DisableRadiusAsync(ctx workflow.Context, input *directoryservice.DisableRadiusInput) *DirectoryserviceDisableRadiusResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DisableRadius", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableRadius", input)
 	return &DirectoryserviceDisableRadiusResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) DisableSso(ctx workflow.Context, input *directoryservice.DisableSsoInput) (*directoryservice.DisableSsoOutput, error) {
 	var output directoryservice.DisableSsoOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.DisableSso", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableSso", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) DisableSsoAsync(ctx workflow.Context, input *directoryservice.DisableSsoInput) *DirectoryserviceDisableSsoResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.DisableSso", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.DisableSso", input)
 	return &DirectoryserviceDisableSsoResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) EnableLDAPS(ctx workflow.Context, input *directoryservice.EnableLDAPSInput) (*directoryservice.EnableLDAPSOutput, error) {
 	var output directoryservice.EnableLDAPSOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.EnableLDAPS", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableLDAPS", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) EnableLDAPSAsync(ctx workflow.Context, input *directoryservice.EnableLDAPSInput) *DirectoryserviceEnableLDAPSResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.EnableLDAPS", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableLDAPS", input)
 	return &DirectoryserviceEnableLDAPSResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) EnableRadius(ctx workflow.Context, input *directoryservice.EnableRadiusInput) (*directoryservice.EnableRadiusOutput, error) {
 	var output directoryservice.EnableRadiusOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.EnableRadius", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableRadius", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) EnableRadiusAsync(ctx workflow.Context, input *directoryservice.EnableRadiusInput) *DirectoryserviceEnableRadiusResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.EnableRadius", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableRadius", input)
 	return &DirectoryserviceEnableRadiusResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) EnableSso(ctx workflow.Context, input *directoryservice.EnableSsoInput) (*directoryservice.EnableSsoOutput, error) {
 	var output directoryservice.EnableSsoOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.EnableSso", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableSso", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) EnableSsoAsync(ctx workflow.Context, input *directoryservice.EnableSsoInput) *DirectoryserviceEnableSsoResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.EnableSso", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.EnableSso", input)
 	return &DirectoryserviceEnableSsoResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) GetDirectoryLimits(ctx workflow.Context, input *directoryservice.GetDirectoryLimitsInput) (*directoryservice.GetDirectoryLimitsOutput, error) {
 	var output directoryservice.GetDirectoryLimitsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.GetDirectoryLimits", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetDirectoryLimits", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) GetDirectoryLimitsAsync(ctx workflow.Context, input *directoryservice.GetDirectoryLimitsInput) *DirectoryserviceGetDirectoryLimitsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.GetDirectoryLimits", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetDirectoryLimits", input)
 	return &DirectoryserviceGetDirectoryLimitsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) GetSnapshotLimits(ctx workflow.Context, input *directoryservice.GetSnapshotLimitsInput) (*directoryservice.GetSnapshotLimitsOutput, error) {
 	var output directoryservice.GetSnapshotLimitsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.GetSnapshotLimits", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetSnapshotLimits", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) GetSnapshotLimitsAsync(ctx workflow.Context, input *directoryservice.GetSnapshotLimitsInput) *DirectoryserviceGetSnapshotLimitsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.GetSnapshotLimits", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.GetSnapshotLimits", input)
 	return &DirectoryserviceGetSnapshotLimitsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ListCertificates(ctx workflow.Context, input *directoryservice.ListCertificatesInput) (*directoryservice.ListCertificatesOutput, error) {
 	var output directoryservice.ListCertificatesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ListCertificates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListCertificates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ListCertificatesAsync(ctx workflow.Context, input *directoryservice.ListCertificatesInput) *DirectoryserviceListCertificatesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ListCertificates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListCertificates", input)
 	return &DirectoryserviceListCertificatesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ListIpRoutes(ctx workflow.Context, input *directoryservice.ListIpRoutesInput) (*directoryservice.ListIpRoutesOutput, error) {
 	var output directoryservice.ListIpRoutesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ListIpRoutes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListIpRoutes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ListIpRoutesAsync(ctx workflow.Context, input *directoryservice.ListIpRoutesInput) *DirectoryserviceListIpRoutesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ListIpRoutes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListIpRoutes", input)
 	return &DirectoryserviceListIpRoutesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ListLogSubscriptions(ctx workflow.Context, input *directoryservice.ListLogSubscriptionsInput) (*directoryservice.ListLogSubscriptionsOutput, error) {
 	var output directoryservice.ListLogSubscriptionsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ListLogSubscriptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListLogSubscriptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ListLogSubscriptionsAsync(ctx workflow.Context, input *directoryservice.ListLogSubscriptionsInput) *DirectoryserviceListLogSubscriptionsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ListLogSubscriptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListLogSubscriptions", input)
 	return &DirectoryserviceListLogSubscriptionsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ListSchemaExtensions(ctx workflow.Context, input *directoryservice.ListSchemaExtensionsInput) (*directoryservice.ListSchemaExtensionsOutput, error) {
 	var output directoryservice.ListSchemaExtensionsOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ListSchemaExtensions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListSchemaExtensions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ListSchemaExtensionsAsync(ctx workflow.Context, input *directoryservice.ListSchemaExtensionsInput) *DirectoryserviceListSchemaExtensionsResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ListSchemaExtensions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListSchemaExtensions", input)
 	return &DirectoryserviceListSchemaExtensionsResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ListTagsForResource(ctx workflow.Context, input *directoryservice.ListTagsForResourceInput) (*directoryservice.ListTagsForResourceOutput, error) {
 	var output directoryservice.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input *directoryservice.ListTagsForResourceInput) *DirectoryserviceListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ListTagsForResource", input)
 	return &DirectoryserviceListTagsForResourceResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RegisterCertificate(ctx workflow.Context, input *directoryservice.RegisterCertificateInput) (*directoryservice.RegisterCertificateOutput, error) {
 	var output directoryservice.RegisterCertificateOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RegisterCertificate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterCertificate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RegisterCertificateAsync(ctx workflow.Context, input *directoryservice.RegisterCertificateInput) *DirectoryserviceRegisterCertificateResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RegisterCertificate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterCertificate", input)
 	return &DirectoryserviceRegisterCertificateResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RegisterEventTopic(ctx workflow.Context, input *directoryservice.RegisterEventTopicInput) (*directoryservice.RegisterEventTopicOutput, error) {
 	var output directoryservice.RegisterEventTopicOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RegisterEventTopic", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterEventTopic", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RegisterEventTopicAsync(ctx workflow.Context, input *directoryservice.RegisterEventTopicInput) *DirectoryserviceRegisterEventTopicResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RegisterEventTopic", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RegisterEventTopic", input)
 	return &DirectoryserviceRegisterEventTopicResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RejectSharedDirectory(ctx workflow.Context, input *directoryservice.RejectSharedDirectoryInput) (*directoryservice.RejectSharedDirectoryOutput, error) {
 	var output directoryservice.RejectSharedDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RejectSharedDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RejectSharedDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RejectSharedDirectoryAsync(ctx workflow.Context, input *directoryservice.RejectSharedDirectoryInput) *DirectoryserviceRejectSharedDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RejectSharedDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RejectSharedDirectory", input)
 	return &DirectoryserviceRejectSharedDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RemoveIpRoutes(ctx workflow.Context, input *directoryservice.RemoveIpRoutesInput) (*directoryservice.RemoveIpRoutesOutput, error) {
 	var output directoryservice.RemoveIpRoutesOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RemoveIpRoutes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveIpRoutes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RemoveIpRoutesAsync(ctx workflow.Context, input *directoryservice.RemoveIpRoutesInput) *DirectoryserviceRemoveIpRoutesResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RemoveIpRoutes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveIpRoutes", input)
 	return &DirectoryserviceRemoveIpRoutesResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RemoveTagsFromResource(ctx workflow.Context, input *directoryservice.RemoveTagsFromResourceInput) (*directoryservice.RemoveTagsFromResourceOutput, error) {
 	var output directoryservice.RemoveTagsFromResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RemoveTagsFromResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveTagsFromResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *directoryservice.RemoveTagsFromResourceInput) *DirectoryserviceRemoveTagsFromResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RemoveTagsFromResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RemoveTagsFromResource", input)
 	return &DirectoryserviceRemoveTagsFromResourceResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ResetUserPassword(ctx workflow.Context, input *directoryservice.ResetUserPasswordInput) (*directoryservice.ResetUserPasswordOutput, error) {
 	var output directoryservice.ResetUserPasswordOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ResetUserPassword", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ResetUserPassword", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ResetUserPasswordAsync(ctx workflow.Context, input *directoryservice.ResetUserPasswordInput) *DirectoryserviceResetUserPasswordResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ResetUserPassword", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ResetUserPassword", input)
 	return &DirectoryserviceResetUserPasswordResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) RestoreFromSnapshot(ctx workflow.Context, input *directoryservice.RestoreFromSnapshotInput) (*directoryservice.RestoreFromSnapshotOutput, error) {
 	var output directoryservice.RestoreFromSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.RestoreFromSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.RestoreFromSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) RestoreFromSnapshotAsync(ctx workflow.Context, input *directoryservice.RestoreFromSnapshotInput) *DirectoryserviceRestoreFromSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.RestoreFromSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.RestoreFromSnapshot", input)
 	return &DirectoryserviceRestoreFromSnapshotResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) ShareDirectory(ctx workflow.Context, input *directoryservice.ShareDirectoryInput) (*directoryservice.ShareDirectoryOutput, error) {
 	var output directoryservice.ShareDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.ShareDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.ShareDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) ShareDirectoryAsync(ctx workflow.Context, input *directoryservice.ShareDirectoryInput) *DirectoryserviceShareDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.ShareDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.ShareDirectory", input)
 	return &DirectoryserviceShareDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) StartSchemaExtension(ctx workflow.Context, input *directoryservice.StartSchemaExtensionInput) (*directoryservice.StartSchemaExtensionOutput, error) {
 	var output directoryservice.StartSchemaExtensionOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.StartSchemaExtension", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.StartSchemaExtension", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) StartSchemaExtensionAsync(ctx workflow.Context, input *directoryservice.StartSchemaExtensionInput) *DirectoryserviceStartSchemaExtensionResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.StartSchemaExtension", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.StartSchemaExtension", input)
 	return &DirectoryserviceStartSchemaExtensionResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) UnshareDirectory(ctx workflow.Context, input *directoryservice.UnshareDirectoryInput) (*directoryservice.UnshareDirectoryOutput, error) {
 	var output directoryservice.UnshareDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.UnshareDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.UnshareDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) UnshareDirectoryAsync(ctx workflow.Context, input *directoryservice.UnshareDirectoryInput) *DirectoryserviceUnshareDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.UnshareDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UnshareDirectory", input)
 	return &DirectoryserviceUnshareDirectoryResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) UpdateConditionalForwarder(ctx workflow.Context, input *directoryservice.UpdateConditionalForwarderInput) (*directoryservice.UpdateConditionalForwarderOutput, error) {
 	var output directoryservice.UpdateConditionalForwarderOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateConditionalForwarder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateConditionalForwarder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) UpdateConditionalForwarderAsync(ctx workflow.Context, input *directoryservice.UpdateConditionalForwarderInput) *DirectoryserviceUpdateConditionalForwarderResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateConditionalForwarder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateConditionalForwarder", input)
 	return &DirectoryserviceUpdateConditionalForwarderResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) UpdateNumberOfDomainControllers(ctx workflow.Context, input *directoryservice.UpdateNumberOfDomainControllersInput) (*directoryservice.UpdateNumberOfDomainControllersOutput, error) {
 	var output directoryservice.UpdateNumberOfDomainControllersOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateNumberOfDomainControllers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateNumberOfDomainControllers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) UpdateNumberOfDomainControllersAsync(ctx workflow.Context, input *directoryservice.UpdateNumberOfDomainControllersInput) *DirectoryserviceUpdateNumberOfDomainControllersResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateNumberOfDomainControllers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateNumberOfDomainControllers", input)
 	return &DirectoryserviceUpdateNumberOfDomainControllersResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) UpdateRadius(ctx workflow.Context, input *directoryservice.UpdateRadiusInput) (*directoryservice.UpdateRadiusOutput, error) {
 	var output directoryservice.UpdateRadiusOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateRadius", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateRadius", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) UpdateRadiusAsync(ctx workflow.Context, input *directoryservice.UpdateRadiusInput) *DirectoryserviceUpdateRadiusResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateRadius", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateRadius", input)
 	return &DirectoryserviceUpdateRadiusResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) UpdateTrust(ctx workflow.Context, input *directoryservice.UpdateTrustInput) (*directoryservice.UpdateTrustOutput, error) {
 	var output directoryservice.UpdateTrustOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateTrust", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateTrust", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) UpdateTrustAsync(ctx workflow.Context, input *directoryservice.UpdateTrustInput) *DirectoryserviceUpdateTrustResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.UpdateTrust", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.UpdateTrust", input)
 	return &DirectoryserviceUpdateTrustResult{Result: future}
 }
 
 func (a *DirectoryServiceStub) VerifyTrust(ctx workflow.Context, input *directoryservice.VerifyTrustInput) (*directoryservice.VerifyTrustOutput, error) {
 	var output directoryservice.VerifyTrustOutput
-	err := workflow.ExecuteActivity(ctx, "DirectoryService.VerifyTrust", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.directoryservice.VerifyTrust", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DirectoryServiceStub) VerifyTrustAsync(ctx workflow.Context, input *directoryservice.VerifyTrustInput) *DirectoryserviceVerifyTrustResult {
-	future := workflow.ExecuteActivity(ctx, "DirectoryService.VerifyTrust", input)
+	future := workflow.ExecuteActivity(ctx, "aws.directoryservice.VerifyTrust", input)
 	return &DirectoryserviceVerifyTrustResult{Result: future}
 }

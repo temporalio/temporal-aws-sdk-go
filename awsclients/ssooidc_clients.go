@@ -57,33 +57,33 @@ func (r *SsooidcStartDeviceAuthorizationResult) Get(ctx workflow.Context) (*ssoo
 
 func (a *SSOOIDCStub) CreateToken(ctx workflow.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error) {
 	var output ssooidc.CreateTokenOutput
-	err := workflow.ExecuteActivity(ctx, "SSOOIDC.CreateToken", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssooidc.CreateToken", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOOIDCStub) CreateTokenAsync(ctx workflow.Context, input *ssooidc.CreateTokenInput) *SsooidcCreateTokenResult {
-	future := workflow.ExecuteActivity(ctx, "SSOOIDC.CreateToken", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.CreateToken", input)
 	return &SsooidcCreateTokenResult{Result: future}
 }
 
 func (a *SSOOIDCStub) RegisterClient(ctx workflow.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error) {
 	var output ssooidc.RegisterClientOutput
-	err := workflow.ExecuteActivity(ctx, "SSOOIDC.RegisterClient", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssooidc.RegisterClient", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOOIDCStub) RegisterClientAsync(ctx workflow.Context, input *ssooidc.RegisterClientInput) *SsooidcRegisterClientResult {
-	future := workflow.ExecuteActivity(ctx, "SSOOIDC.RegisterClient", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.RegisterClient", input)
 	return &SsooidcRegisterClientResult{Result: future}
 }
 
 func (a *SSOOIDCStub) StartDeviceAuthorization(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error) {
 	var output ssooidc.StartDeviceAuthorizationOutput
-	err := workflow.ExecuteActivity(ctx, "SSOOIDC.StartDeviceAuthorization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssooidc.StartDeviceAuthorization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOOIDCStub) StartDeviceAuthorizationAsync(ctx workflow.Context, input *ssooidc.StartDeviceAuthorizationInput) *SsooidcStartDeviceAuthorizationResult {
-	future := workflow.ExecuteActivity(ctx, "SSOOIDC.StartDeviceAuthorization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssooidc.StartDeviceAuthorization", input)
 	return &SsooidcStartDeviceAuthorizationResult{Result: future}
 }

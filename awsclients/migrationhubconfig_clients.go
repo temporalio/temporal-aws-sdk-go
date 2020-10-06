@@ -57,33 +57,33 @@ func (r *MigrationhubconfigGetHomeRegionResult) Get(ctx workflow.Context) (*migr
 
 func (a *MigrationHubConfigStub) CreateHomeRegionControl(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) (*migrationhubconfig.CreateHomeRegionControlOutput, error) {
 	var output migrationhubconfig.CreateHomeRegionControlOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHubConfig.CreateHomeRegionControl", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.CreateHomeRegionControl", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubConfigStub) CreateHomeRegionControlAsync(ctx workflow.Context, input *migrationhubconfig.CreateHomeRegionControlInput) *MigrationhubconfigCreateHomeRegionControlResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHubConfig.CreateHomeRegionControl", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.CreateHomeRegionControl", input)
 	return &MigrationhubconfigCreateHomeRegionControlResult{Result: future}
 }
 
 func (a *MigrationHubConfigStub) DescribeHomeRegionControls(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) (*migrationhubconfig.DescribeHomeRegionControlsOutput, error) {
 	var output migrationhubconfig.DescribeHomeRegionControlsOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHubConfig.DescribeHomeRegionControls", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.DescribeHomeRegionControls", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubConfigStub) DescribeHomeRegionControlsAsync(ctx workflow.Context, input *migrationhubconfig.DescribeHomeRegionControlsInput) *MigrationhubconfigDescribeHomeRegionControlsResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHubConfig.DescribeHomeRegionControls", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.DescribeHomeRegionControls", input)
 	return &MigrationhubconfigDescribeHomeRegionControlsResult{Result: future}
 }
 
 func (a *MigrationHubConfigStub) GetHomeRegion(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) (*migrationhubconfig.GetHomeRegionOutput, error) {
 	var output migrationhubconfig.GetHomeRegionOutput
-	err := workflow.ExecuteActivity(ctx, "MigrationHubConfig.GetHomeRegion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.GetHomeRegion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MigrationHubConfigStub) GetHomeRegionAsync(ctx workflow.Context, input *migrationhubconfig.GetHomeRegionInput) *MigrationhubconfigGetHomeRegionResult {
-	future := workflow.ExecuteActivity(ctx, "MigrationHubConfig.GetHomeRegion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.migrationhubconfig.GetHomeRegion", input)
 	return &MigrationhubconfigGetHomeRegionResult{Result: future}
 }

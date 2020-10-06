@@ -317,253 +317,253 @@ func (r *CodeguruprofilerUpdateProfilingGroupResult) Get(ctx workflow.Context) (
 
 func (a *CodeGuruProfilerStub) AddNotificationChannels(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) (*codeguruprofiler.AddNotificationChannelsOutput, error) {
 	var output codeguruprofiler.AddNotificationChannelsOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.AddNotificationChannels", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.AddNotificationChannels", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) AddNotificationChannelsAsync(ctx workflow.Context, input *codeguruprofiler.AddNotificationChannelsInput) *CodeguruprofilerAddNotificationChannelsResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.AddNotificationChannels", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.AddNotificationChannels", input)
 	return &CodeguruprofilerAddNotificationChannelsResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) BatchGetFrameMetricData(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error) {
 	var output codeguruprofiler.BatchGetFrameMetricDataOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.BatchGetFrameMetricData", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.BatchGetFrameMetricData", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) BatchGetFrameMetricDataAsync(ctx workflow.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) *CodeguruprofilerBatchGetFrameMetricDataResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.BatchGetFrameMetricData", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.BatchGetFrameMetricData", input)
 	return &CodeguruprofilerBatchGetFrameMetricDataResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) ConfigureAgent(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) (*codeguruprofiler.ConfigureAgentOutput, error) {
 	var output codeguruprofiler.ConfigureAgentOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ConfigureAgent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ConfigureAgent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) ConfigureAgentAsync(ctx workflow.Context, input *codeguruprofiler.ConfigureAgentInput) *CodeguruprofilerConfigureAgentResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ConfigureAgent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ConfigureAgent", input)
 	return &CodeguruprofilerConfigureAgentResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) CreateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) (*codeguruprofiler.CreateProfilingGroupOutput, error) {
 	var output codeguruprofiler.CreateProfilingGroupOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.CreateProfilingGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.CreateProfilingGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) CreateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.CreateProfilingGroupInput) *CodeguruprofilerCreateProfilingGroupResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.CreateProfilingGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.CreateProfilingGroup", input)
 	return &CodeguruprofilerCreateProfilingGroupResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) DeleteProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) (*codeguruprofiler.DeleteProfilingGroupOutput, error) {
 	var output codeguruprofiler.DeleteProfilingGroupOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.DeleteProfilingGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DeleteProfilingGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) DeleteProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DeleteProfilingGroupInput) *CodeguruprofilerDeleteProfilingGroupResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.DeleteProfilingGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DeleteProfilingGroup", input)
 	return &CodeguruprofilerDeleteProfilingGroupResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) DescribeProfilingGroup(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) (*codeguruprofiler.DescribeProfilingGroupOutput, error) {
 	var output codeguruprofiler.DescribeProfilingGroupOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.DescribeProfilingGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DescribeProfilingGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) DescribeProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.DescribeProfilingGroupInput) *CodeguruprofilerDescribeProfilingGroupResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.DescribeProfilingGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.DescribeProfilingGroup", input)
 	return &CodeguruprofilerDescribeProfilingGroupResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) GetFindingsReportAccountSummary(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error) {
 	var output codeguruprofiler.GetFindingsReportAccountSummaryOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetFindingsReportAccountSummary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetFindingsReportAccountSummary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) GetFindingsReportAccountSummaryAsync(ctx workflow.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) *CodeguruprofilerGetFindingsReportAccountSummaryResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetFindingsReportAccountSummary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetFindingsReportAccountSummary", input)
 	return &CodeguruprofilerGetFindingsReportAccountSummaryResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) GetNotificationConfiguration(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) (*codeguruprofiler.GetNotificationConfigurationOutput, error) {
 	var output codeguruprofiler.GetNotificationConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetNotificationConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetNotificationConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) GetNotificationConfigurationAsync(ctx workflow.Context, input *codeguruprofiler.GetNotificationConfigurationInput) *CodeguruprofilerGetNotificationConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetNotificationConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetNotificationConfiguration", input)
 	return &CodeguruprofilerGetNotificationConfigurationResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) GetPolicy(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) (*codeguruprofiler.GetPolicyOutput, error) {
 	var output codeguruprofiler.GetPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) GetPolicyAsync(ctx workflow.Context, input *codeguruprofiler.GetPolicyInput) *CodeguruprofilerGetPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetPolicy", input)
 	return &CodeguruprofilerGetPolicyResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) GetProfile(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) (*codeguruprofiler.GetProfileOutput, error) {
 	var output codeguruprofiler.GetProfileOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) GetProfileAsync(ctx workflow.Context, input *codeguruprofiler.GetProfileInput) *CodeguruprofilerGetProfileResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetProfile", input)
 	return &CodeguruprofilerGetProfileResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) GetRecommendations(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) (*codeguruprofiler.GetRecommendationsOutput, error) {
 	var output codeguruprofiler.GetRecommendationsOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetRecommendations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetRecommendations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) GetRecommendationsAsync(ctx workflow.Context, input *codeguruprofiler.GetRecommendationsInput) *CodeguruprofilerGetRecommendationsResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.GetRecommendations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.GetRecommendations", input)
 	return &CodeguruprofilerGetRecommendationsResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) ListFindingsReports(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) (*codeguruprofiler.ListFindingsReportsOutput, error) {
 	var output codeguruprofiler.ListFindingsReportsOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListFindingsReports", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListFindingsReports", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) ListFindingsReportsAsync(ctx workflow.Context, input *codeguruprofiler.ListFindingsReportsInput) *CodeguruprofilerListFindingsReportsResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListFindingsReports", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListFindingsReports", input)
 	return &CodeguruprofilerListFindingsReportsResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) ListProfileTimes(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) (*codeguruprofiler.ListProfileTimesOutput, error) {
 	var output codeguruprofiler.ListProfileTimesOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListProfileTimes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfileTimes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) ListProfileTimesAsync(ctx workflow.Context, input *codeguruprofiler.ListProfileTimesInput) *CodeguruprofilerListProfileTimesResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListProfileTimes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfileTimes", input)
 	return &CodeguruprofilerListProfileTimesResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) ListProfilingGroups(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) (*codeguruprofiler.ListProfilingGroupsOutput, error) {
 	var output codeguruprofiler.ListProfilingGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListProfilingGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfilingGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) ListProfilingGroupsAsync(ctx workflow.Context, input *codeguruprofiler.ListProfilingGroupsInput) *CodeguruprofilerListProfilingGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListProfilingGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListProfilingGroups", input)
 	return &CodeguruprofilerListProfilingGroupsResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) ListTagsForResource(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) (*codeguruprofiler.ListTagsForResourceOutput, error) {
 	var output codeguruprofiler.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) ListTagsForResourceAsync(ctx workflow.Context, input *codeguruprofiler.ListTagsForResourceInput) *CodeguruprofilerListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.ListTagsForResource", input)
 	return &CodeguruprofilerListTagsForResourceResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) PostAgentProfile(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) (*codeguruprofiler.PostAgentProfileOutput, error) {
 	var output codeguruprofiler.PostAgentProfileOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.PostAgentProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PostAgentProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) PostAgentProfileAsync(ctx workflow.Context, input *codeguruprofiler.PostAgentProfileInput) *CodeguruprofilerPostAgentProfileResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.PostAgentProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PostAgentProfile", input)
 	return &CodeguruprofilerPostAgentProfileResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) PutPermission(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) (*codeguruprofiler.PutPermissionOutput, error) {
 	var output codeguruprofiler.PutPermissionOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.PutPermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PutPermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) PutPermissionAsync(ctx workflow.Context, input *codeguruprofiler.PutPermissionInput) *CodeguruprofilerPutPermissionResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.PutPermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.PutPermission", input)
 	return &CodeguruprofilerPutPermissionResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) RemoveNotificationChannel(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) (*codeguruprofiler.RemoveNotificationChannelOutput, error) {
 	var output codeguruprofiler.RemoveNotificationChannelOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.RemoveNotificationChannel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemoveNotificationChannel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) RemoveNotificationChannelAsync(ctx workflow.Context, input *codeguruprofiler.RemoveNotificationChannelInput) *CodeguruprofilerRemoveNotificationChannelResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.RemoveNotificationChannel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemoveNotificationChannel", input)
 	return &CodeguruprofilerRemoveNotificationChannelResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) RemovePermission(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) (*codeguruprofiler.RemovePermissionOutput, error) {
 	var output codeguruprofiler.RemovePermissionOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.RemovePermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemovePermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) RemovePermissionAsync(ctx workflow.Context, input *codeguruprofiler.RemovePermissionInput) *CodeguruprofilerRemovePermissionResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.RemovePermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.RemovePermission", input)
 	return &CodeguruprofilerRemovePermissionResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) SubmitFeedback(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) (*codeguruprofiler.SubmitFeedbackOutput, error) {
 	var output codeguruprofiler.SubmitFeedbackOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.SubmitFeedback", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.SubmitFeedback", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) SubmitFeedbackAsync(ctx workflow.Context, input *codeguruprofiler.SubmitFeedbackInput) *CodeguruprofilerSubmitFeedbackResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.SubmitFeedback", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.SubmitFeedback", input)
 	return &CodeguruprofilerSubmitFeedbackResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) TagResource(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) (*codeguruprofiler.TagResourceOutput, error) {
 	var output codeguruprofiler.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) TagResourceAsync(ctx workflow.Context, input *codeguruprofiler.TagResourceInput) *CodeguruprofilerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.TagResource", input)
 	return &CodeguruprofilerTagResourceResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) UntagResource(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) (*codeguruprofiler.UntagResourceOutput, error) {
 	var output codeguruprofiler.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) UntagResourceAsync(ctx workflow.Context, input *codeguruprofiler.UntagResourceInput) *CodeguruprofilerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UntagResource", input)
 	return &CodeguruprofilerUntagResourceResult{Result: future}
 }
 
 func (a *CodeGuruProfilerStub) UpdateProfilingGroup(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) (*codeguruprofiler.UpdateProfilingGroupOutput, error) {
 	var output codeguruprofiler.UpdateProfilingGroupOutput
-	err := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.UpdateProfilingGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UpdateProfilingGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CodeGuruProfilerStub) UpdateProfilingGroupAsync(ctx workflow.Context, input *codeguruprofiler.UpdateProfilingGroupInput) *CodeguruprofilerUpdateProfilingGroupResult {
-	future := workflow.ExecuteActivity(ctx, "CodeGuruProfiler.UpdateProfilingGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.codeguruprofiler.UpdateProfilingGroup", input)
 	return &CodeguruprofilerUpdateProfilingGroupResult{Result: future}
 }

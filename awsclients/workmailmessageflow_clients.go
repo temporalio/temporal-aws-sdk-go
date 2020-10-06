@@ -31,11 +31,11 @@ func (r *WorkmailmessageflowGetRawMessageContentResult) Get(ctx workflow.Context
 
 func (a *WorkMailMessageFlowStub) GetRawMessageContent(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) (*workmailmessageflow.GetRawMessageContentOutput, error) {
 	var output workmailmessageflow.GetRawMessageContentOutput
-	err := workflow.ExecuteActivity(ctx, "WorkMailMessageFlow.GetRawMessageContent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.workmailmessageflow.GetRawMessageContent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WorkMailMessageFlowStub) GetRawMessageContentAsync(ctx workflow.Context, input *workmailmessageflow.GetRawMessageContentInput) *WorkmailmessageflowGetRawMessageContentResult {
-	future := workflow.ExecuteActivity(ctx, "WorkMailMessageFlow.GetRawMessageContent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.workmailmessageflow.GetRawMessageContent", input)
 	return &WorkmailmessageflowGetRawMessageContentResult{Result: future}
 }

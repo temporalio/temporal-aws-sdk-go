@@ -31,11 +31,11 @@ func (r *QldbsessionSendCommandResult) Get(ctx workflow.Context) (*qldbsession.S
 
 func (a *QLDBSessionStub) SendCommand(ctx workflow.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
 	var output qldbsession.SendCommandOutput
-	err := workflow.ExecuteActivity(ctx, "QLDBSession.SendCommand", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.qldbsession.SendCommand", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *QLDBSessionStub) SendCommandAsync(ctx workflow.Context, input *qldbsession.SendCommandInput) *QldbsessionSendCommandResult {
-	future := workflow.ExecuteActivity(ctx, "QLDBSession.SendCommand", input)
+	future := workflow.ExecuteActivity(ctx, "aws.qldbsession.SendCommand", input)
 	return &QldbsessionSendCommandResult{Result: future}
 }

@@ -525,429 +525,429 @@ func (r *LexmodelbuildingserviceUntagResourceResult) Get(ctx workflow.Context) (
 
 func (a *LexModelBuildingServiceStub) CreateBotVersion(ctx workflow.Context, input *lexmodelbuildingservice.CreateBotVersionInput) (*lexmodelbuildingservice.CreateBotVersionOutput, error) {
 	var output lexmodelbuildingservice.CreateBotVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateBotVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateBotVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) CreateBotVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.CreateBotVersionInput) *LexmodelbuildingserviceCreateBotVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateBotVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateBotVersion", input)
 	return &LexmodelbuildingserviceCreateBotVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) CreateIntentVersion(ctx workflow.Context, input *lexmodelbuildingservice.CreateIntentVersionInput) (*lexmodelbuildingservice.CreateIntentVersionOutput, error) {
 	var output lexmodelbuildingservice.CreateIntentVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateIntentVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateIntentVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) CreateIntentVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.CreateIntentVersionInput) *LexmodelbuildingserviceCreateIntentVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateIntentVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateIntentVersion", input)
 	return &LexmodelbuildingserviceCreateIntentVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) CreateSlotTypeVersion(ctx workflow.Context, input *lexmodelbuildingservice.CreateSlotTypeVersionInput) (*lexmodelbuildingservice.CreateSlotTypeVersionOutput, error) {
 	var output lexmodelbuildingservice.CreateSlotTypeVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateSlotTypeVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateSlotTypeVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) CreateSlotTypeVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.CreateSlotTypeVersionInput) *LexmodelbuildingserviceCreateSlotTypeVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.CreateSlotTypeVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.CreateSlotTypeVersion", input)
 	return &LexmodelbuildingserviceCreateSlotTypeVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBot(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotInput) (*lexmodelbuildingservice.DeleteBotOutput, error) {
 	var output lexmodelbuildingservice.DeleteBotOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotInput) *LexmodelbuildingserviceDeleteBotResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBot", input)
 	return &LexmodelbuildingserviceDeleteBotResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotAlias(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotAliasInput) (*lexmodelbuildingservice.DeleteBotAliasOutput, error) {
 	var output lexmodelbuildingservice.DeleteBotAliasOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotAlias", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotAlias", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotAliasAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotAliasInput) *LexmodelbuildingserviceDeleteBotAliasResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotAlias", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotAlias", input)
 	return &LexmodelbuildingserviceDeleteBotAliasResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotChannelAssociation(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotChannelAssociationInput) (*lexmodelbuildingservice.DeleteBotChannelAssociationOutput, error) {
 	var output lexmodelbuildingservice.DeleteBotChannelAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotChannelAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotChannelAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotChannelAssociationAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotChannelAssociationInput) *LexmodelbuildingserviceDeleteBotChannelAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotChannelAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotChannelAssociation", input)
 	return &LexmodelbuildingserviceDeleteBotChannelAssociationResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotVersion(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotVersionInput) (*lexmodelbuildingservice.DeleteBotVersionOutput, error) {
 	var output lexmodelbuildingservice.DeleteBotVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteBotVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteBotVersionInput) *LexmodelbuildingserviceDeleteBotVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteBotVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteBotVersion", input)
 	return &LexmodelbuildingserviceDeleteBotVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteIntent(ctx workflow.Context, input *lexmodelbuildingservice.DeleteIntentInput) (*lexmodelbuildingservice.DeleteIntentOutput, error) {
 	var output lexmodelbuildingservice.DeleteIntentOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteIntent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteIntent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteIntentAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteIntentInput) *LexmodelbuildingserviceDeleteIntentResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteIntent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteIntent", input)
 	return &LexmodelbuildingserviceDeleteIntentResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteIntentVersion(ctx workflow.Context, input *lexmodelbuildingservice.DeleteIntentVersionInput) (*lexmodelbuildingservice.DeleteIntentVersionOutput, error) {
 	var output lexmodelbuildingservice.DeleteIntentVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteIntentVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteIntentVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteIntentVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteIntentVersionInput) *LexmodelbuildingserviceDeleteIntentVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteIntentVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteIntentVersion", input)
 	return &LexmodelbuildingserviceDeleteIntentVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteSlotType(ctx workflow.Context, input *lexmodelbuildingservice.DeleteSlotTypeInput) (*lexmodelbuildingservice.DeleteSlotTypeOutput, error) {
 	var output lexmodelbuildingservice.DeleteSlotTypeOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteSlotType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteSlotType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteSlotTypeAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteSlotTypeInput) *LexmodelbuildingserviceDeleteSlotTypeResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteSlotType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteSlotType", input)
 	return &LexmodelbuildingserviceDeleteSlotTypeResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteSlotTypeVersion(ctx workflow.Context, input *lexmodelbuildingservice.DeleteSlotTypeVersionInput) (*lexmodelbuildingservice.DeleteSlotTypeVersionOutput, error) {
 	var output lexmodelbuildingservice.DeleteSlotTypeVersionOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteSlotTypeVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteSlotTypeVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteSlotTypeVersionAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteSlotTypeVersionInput) *LexmodelbuildingserviceDeleteSlotTypeVersionResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteSlotTypeVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteSlotTypeVersion", input)
 	return &LexmodelbuildingserviceDeleteSlotTypeVersionResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) DeleteUtterances(ctx workflow.Context, input *lexmodelbuildingservice.DeleteUtterancesInput) (*lexmodelbuildingservice.DeleteUtterancesOutput, error) {
 	var output lexmodelbuildingservice.DeleteUtterancesOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteUtterances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteUtterances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) DeleteUtterancesAsync(ctx workflow.Context, input *lexmodelbuildingservice.DeleteUtterancesInput) *LexmodelbuildingserviceDeleteUtterancesResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.DeleteUtterances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.DeleteUtterances", input)
 	return &LexmodelbuildingserviceDeleteUtterancesResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBot(ctx workflow.Context, input *lexmodelbuildingservice.GetBotInput) (*lexmodelbuildingservice.GetBotOutput, error) {
 	var output lexmodelbuildingservice.GetBotOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotInput) *LexmodelbuildingserviceGetBotResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBot", input)
 	return &LexmodelbuildingserviceGetBotResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBotAlias(ctx workflow.Context, input *lexmodelbuildingservice.GetBotAliasInput) (*lexmodelbuildingservice.GetBotAliasOutput, error) {
 	var output lexmodelbuildingservice.GetBotAliasOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotAlias", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotAlias", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotAliasAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotAliasInput) *LexmodelbuildingserviceGetBotAliasResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotAlias", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotAlias", input)
 	return &LexmodelbuildingserviceGetBotAliasResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBotAliases(ctx workflow.Context, input *lexmodelbuildingservice.GetBotAliasesInput) (*lexmodelbuildingservice.GetBotAliasesOutput, error) {
 	var output lexmodelbuildingservice.GetBotAliasesOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotAliases", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotAliases", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotAliasesAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotAliasesInput) *LexmodelbuildingserviceGetBotAliasesResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotAliases", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotAliases", input)
 	return &LexmodelbuildingserviceGetBotAliasesResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBotChannelAssociation(ctx workflow.Context, input *lexmodelbuildingservice.GetBotChannelAssociationInput) (*lexmodelbuildingservice.GetBotChannelAssociationOutput, error) {
 	var output lexmodelbuildingservice.GetBotChannelAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotChannelAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotChannelAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotChannelAssociationAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotChannelAssociationInput) *LexmodelbuildingserviceGetBotChannelAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotChannelAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotChannelAssociation", input)
 	return &LexmodelbuildingserviceGetBotChannelAssociationResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBotChannelAssociations(ctx workflow.Context, input *lexmodelbuildingservice.GetBotChannelAssociationsInput) (*lexmodelbuildingservice.GetBotChannelAssociationsOutput, error) {
 	var output lexmodelbuildingservice.GetBotChannelAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotChannelAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotChannelAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotChannelAssociationsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotChannelAssociationsInput) *LexmodelbuildingserviceGetBotChannelAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotChannelAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotChannelAssociations", input)
 	return &LexmodelbuildingserviceGetBotChannelAssociationsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBotVersions(ctx workflow.Context, input *lexmodelbuildingservice.GetBotVersionsInput) (*lexmodelbuildingservice.GetBotVersionsOutput, error) {
 	var output lexmodelbuildingservice.GetBotVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotVersionsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotVersionsInput) *LexmodelbuildingserviceGetBotVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBotVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBotVersions", input)
 	return &LexmodelbuildingserviceGetBotVersionsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBots(ctx workflow.Context, input *lexmodelbuildingservice.GetBotsInput) (*lexmodelbuildingservice.GetBotsOutput, error) {
 	var output lexmodelbuildingservice.GetBotsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBots", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBots", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBotsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBotsInput) *LexmodelbuildingserviceGetBotsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBots", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBots", input)
 	return &LexmodelbuildingserviceGetBotsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinIntent(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinIntentInput) (*lexmodelbuildingservice.GetBuiltinIntentOutput, error) {
 	var output lexmodelbuildingservice.GetBuiltinIntentOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinIntent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinIntent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinIntentAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinIntentInput) *LexmodelbuildingserviceGetBuiltinIntentResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinIntent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinIntent", input)
 	return &LexmodelbuildingserviceGetBuiltinIntentResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinIntents(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinIntentsInput) (*lexmodelbuildingservice.GetBuiltinIntentsOutput, error) {
 	var output lexmodelbuildingservice.GetBuiltinIntentsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinIntents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinIntents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinIntentsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinIntentsInput) *LexmodelbuildingserviceGetBuiltinIntentsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinIntents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinIntents", input)
 	return &LexmodelbuildingserviceGetBuiltinIntentsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinSlotTypes(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinSlotTypesInput) (*lexmodelbuildingservice.GetBuiltinSlotTypesOutput, error) {
 	var output lexmodelbuildingservice.GetBuiltinSlotTypesOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinSlotTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinSlotTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetBuiltinSlotTypesAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetBuiltinSlotTypesInput) *LexmodelbuildingserviceGetBuiltinSlotTypesResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetBuiltinSlotTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetBuiltinSlotTypes", input)
 	return &LexmodelbuildingserviceGetBuiltinSlotTypesResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetExport(ctx workflow.Context, input *lexmodelbuildingservice.GetExportInput) (*lexmodelbuildingservice.GetExportOutput, error) {
 	var output lexmodelbuildingservice.GetExportOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetExport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetExport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetExportAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetExportInput) *LexmodelbuildingserviceGetExportResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetExport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetExport", input)
 	return &LexmodelbuildingserviceGetExportResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetImport(ctx workflow.Context, input *lexmodelbuildingservice.GetImportInput) (*lexmodelbuildingservice.GetImportOutput, error) {
 	var output lexmodelbuildingservice.GetImportOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetImport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetImport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetImportAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetImportInput) *LexmodelbuildingserviceGetImportResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetImport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetImport", input)
 	return &LexmodelbuildingserviceGetImportResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetIntent(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentInput) (*lexmodelbuildingservice.GetIntentOutput, error) {
 	var output lexmodelbuildingservice.GetIntentOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetIntentAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentInput) *LexmodelbuildingserviceGetIntentResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntent", input)
 	return &LexmodelbuildingserviceGetIntentResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetIntentVersions(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentVersionsInput) (*lexmodelbuildingservice.GetIntentVersionsOutput, error) {
 	var output lexmodelbuildingservice.GetIntentVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntentVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntentVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetIntentVersionsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentVersionsInput) *LexmodelbuildingserviceGetIntentVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntentVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntentVersions", input)
 	return &LexmodelbuildingserviceGetIntentVersionsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetIntents(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentsInput) (*lexmodelbuildingservice.GetIntentsOutput, error) {
 	var output lexmodelbuildingservice.GetIntentsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetIntentsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetIntentsInput) *LexmodelbuildingserviceGetIntentsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetIntents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetIntents", input)
 	return &LexmodelbuildingserviceGetIntentsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotType(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypeInput) (*lexmodelbuildingservice.GetSlotTypeOutput, error) {
 	var output lexmodelbuildingservice.GetSlotTypeOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotTypeAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypeInput) *LexmodelbuildingserviceGetSlotTypeResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotType", input)
 	return &LexmodelbuildingserviceGetSlotTypeResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotTypeVersions(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypeVersionsInput) (*lexmodelbuildingservice.GetSlotTypeVersionsOutput, error) {
 	var output lexmodelbuildingservice.GetSlotTypeVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotTypeVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotTypeVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotTypeVersionsAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypeVersionsInput) *LexmodelbuildingserviceGetSlotTypeVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotTypeVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotTypeVersions", input)
 	return &LexmodelbuildingserviceGetSlotTypeVersionsResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotTypes(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypesInput) (*lexmodelbuildingservice.GetSlotTypesOutput, error) {
 	var output lexmodelbuildingservice.GetSlotTypesOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetSlotTypesAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetSlotTypesInput) *LexmodelbuildingserviceGetSlotTypesResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetSlotTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetSlotTypes", input)
 	return &LexmodelbuildingserviceGetSlotTypesResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) GetUtterancesView(ctx workflow.Context, input *lexmodelbuildingservice.GetUtterancesViewInput) (*lexmodelbuildingservice.GetUtterancesViewOutput, error) {
 	var output lexmodelbuildingservice.GetUtterancesViewOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetUtterancesView", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetUtterancesView", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) GetUtterancesViewAsync(ctx workflow.Context, input *lexmodelbuildingservice.GetUtterancesViewInput) *LexmodelbuildingserviceGetUtterancesViewResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.GetUtterancesView", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.GetUtterancesView", input)
 	return &LexmodelbuildingserviceGetUtterancesViewResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) ListTagsForResource(ctx workflow.Context, input *lexmodelbuildingservice.ListTagsForResourceInput) (*lexmodelbuildingservice.ListTagsForResourceOutput, error) {
 	var output lexmodelbuildingservice.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input *lexmodelbuildingservice.ListTagsForResourceInput) *LexmodelbuildingserviceListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.ListTagsForResource", input)
 	return &LexmodelbuildingserviceListTagsForResourceResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) PutBot(ctx workflow.Context, input *lexmodelbuildingservice.PutBotInput) (*lexmodelbuildingservice.PutBotOutput, error) {
 	var output lexmodelbuildingservice.PutBotOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutBot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutBot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) PutBotAsync(ctx workflow.Context, input *lexmodelbuildingservice.PutBotInput) *LexmodelbuildingservicePutBotResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutBot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutBot", input)
 	return &LexmodelbuildingservicePutBotResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) PutBotAlias(ctx workflow.Context, input *lexmodelbuildingservice.PutBotAliasInput) (*lexmodelbuildingservice.PutBotAliasOutput, error) {
 	var output lexmodelbuildingservice.PutBotAliasOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutBotAlias", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutBotAlias", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) PutBotAliasAsync(ctx workflow.Context, input *lexmodelbuildingservice.PutBotAliasInput) *LexmodelbuildingservicePutBotAliasResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutBotAlias", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutBotAlias", input)
 	return &LexmodelbuildingservicePutBotAliasResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) PutIntent(ctx workflow.Context, input *lexmodelbuildingservice.PutIntentInput) (*lexmodelbuildingservice.PutIntentOutput, error) {
 	var output lexmodelbuildingservice.PutIntentOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutIntent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutIntent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) PutIntentAsync(ctx workflow.Context, input *lexmodelbuildingservice.PutIntentInput) *LexmodelbuildingservicePutIntentResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutIntent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutIntent", input)
 	return &LexmodelbuildingservicePutIntentResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) PutSlotType(ctx workflow.Context, input *lexmodelbuildingservice.PutSlotTypeInput) (*lexmodelbuildingservice.PutSlotTypeOutput, error) {
 	var output lexmodelbuildingservice.PutSlotTypeOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutSlotType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutSlotType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) PutSlotTypeAsync(ctx workflow.Context, input *lexmodelbuildingservice.PutSlotTypeInput) *LexmodelbuildingservicePutSlotTypeResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.PutSlotType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.PutSlotType", input)
 	return &LexmodelbuildingservicePutSlotTypeResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) StartImport(ctx workflow.Context, input *lexmodelbuildingservice.StartImportInput) (*lexmodelbuildingservice.StartImportOutput, error) {
 	var output lexmodelbuildingservice.StartImportOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.StartImport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.StartImport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) StartImportAsync(ctx workflow.Context, input *lexmodelbuildingservice.StartImportInput) *LexmodelbuildingserviceStartImportResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.StartImport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.StartImport", input)
 	return &LexmodelbuildingserviceStartImportResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) TagResource(ctx workflow.Context, input *lexmodelbuildingservice.TagResourceInput) (*lexmodelbuildingservice.TagResourceOutput, error) {
 	var output lexmodelbuildingservice.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) TagResourceAsync(ctx workflow.Context, input *lexmodelbuildingservice.TagResourceInput) *LexmodelbuildingserviceTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.TagResource", input)
 	return &LexmodelbuildingserviceTagResourceResult{Result: future}
 }
 
 func (a *LexModelBuildingServiceStub) UntagResource(ctx workflow.Context, input *lexmodelbuildingservice.UntagResourceInput) (*lexmodelbuildingservice.UntagResourceOutput, error) {
 	var output lexmodelbuildingservice.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LexModelBuildingService.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LexModelBuildingServiceStub) UntagResourceAsync(ctx workflow.Context, input *lexmodelbuildingservice.UntagResourceInput) *LexmodelbuildingserviceUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LexModelBuildingService.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.lexmodelbuildingservice.UntagResource", input)
 	return &LexmodelbuildingserviceUntagResourceResult{Result: future}
 }

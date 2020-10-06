@@ -31,11 +31,11 @@ func (r *TranscribestreamingserviceStartStreamTranscriptionResult) Get(ctx workf
 
 func (a *TranscribeStreamingServiceStub) StartStreamTranscription(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
 	var output transcribestreamingservice.StartStreamTranscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "TranscribeStreamingService.StartStreamTranscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.transcribestreamingservice.StartStreamTranscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *TranscribeStreamingServiceStub) StartStreamTranscriptionAsync(ctx workflow.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) *TranscribestreamingserviceStartStreamTranscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "TranscribeStreamingService.StartStreamTranscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.transcribestreamingservice.StartStreamTranscription", input)
 	return &TranscribestreamingserviceStartStreamTranscriptionResult{Result: future}
 }

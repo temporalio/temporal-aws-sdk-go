@@ -732,642 +732,642 @@ func (r *IotsitewiseUpdateProjectResult) Get(ctx workflow.Context) (*iotsitewise
 
 func (a *IoTSiteWiseStub) AssociateAssets(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error) {
 	var output iotsitewise.AssociateAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.AssociateAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.AssociateAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) AssociateAssetsAsync(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) *IotsitewiseAssociateAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.AssociateAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.AssociateAssets", input)
 	return &IotsitewiseAssociateAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) BatchAssociateProjectAssets(ctx workflow.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) (*iotsitewise.BatchAssociateProjectAssetsOutput, error) {
 	var output iotsitewise.BatchAssociateProjectAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchAssociateProjectAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchAssociateProjectAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) BatchAssociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchAssociateProjectAssetsInput) *IotsitewiseBatchAssociateProjectAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchAssociateProjectAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchAssociateProjectAssets", input)
 	return &IotsitewiseBatchAssociateProjectAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) BatchDisassociateProjectAssets(ctx workflow.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) (*iotsitewise.BatchDisassociateProjectAssetsOutput, error) {
 	var output iotsitewise.BatchDisassociateProjectAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchDisassociateProjectAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchDisassociateProjectAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) BatchDisassociateProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.BatchDisassociateProjectAssetsInput) *IotsitewiseBatchDisassociateProjectAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchDisassociateProjectAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchDisassociateProjectAssets", input)
 	return &IotsitewiseBatchDisassociateProjectAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) BatchPutAssetPropertyValue(ctx workflow.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) (*iotsitewise.BatchPutAssetPropertyValueOutput, error) {
 	var output iotsitewise.BatchPutAssetPropertyValueOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchPutAssetPropertyValue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchPutAssetPropertyValue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) BatchPutAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.BatchPutAssetPropertyValueInput) *IotsitewiseBatchPutAssetPropertyValueResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.BatchPutAssetPropertyValue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.BatchPutAssetPropertyValue", input)
 	return &IotsitewiseBatchPutAssetPropertyValueResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateAccessPolicy(ctx workflow.Context, input *iotsitewise.CreateAccessPolicyInput) (*iotsitewise.CreateAccessPolicyOutput, error) {
 	var output iotsitewise.CreateAccessPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAccessPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAccessPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.CreateAccessPolicyInput) *IotsitewiseCreateAccessPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAccessPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAccessPolicy", input)
 	return &IotsitewiseCreateAccessPolicyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateAsset(ctx workflow.Context, input *iotsitewise.CreateAssetInput) (*iotsitewise.CreateAssetOutput, error) {
 	var output iotsitewise.CreateAssetOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAsset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAsset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateAssetAsync(ctx workflow.Context, input *iotsitewise.CreateAssetInput) *IotsitewiseCreateAssetResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAsset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAsset", input)
 	return &IotsitewiseCreateAssetResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateAssetModel(ctx workflow.Context, input *iotsitewise.CreateAssetModelInput) (*iotsitewise.CreateAssetModelOutput, error) {
 	var output iotsitewise.CreateAssetModelOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAssetModel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAssetModel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateAssetModelAsync(ctx workflow.Context, input *iotsitewise.CreateAssetModelInput) *IotsitewiseCreateAssetModelResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateAssetModel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateAssetModel", input)
 	return &IotsitewiseCreateAssetModelResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateDashboard(ctx workflow.Context, input *iotsitewise.CreateDashboardInput) (*iotsitewise.CreateDashboardOutput, error) {
 	var output iotsitewise.CreateDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateDashboardAsync(ctx workflow.Context, input *iotsitewise.CreateDashboardInput) *IotsitewiseCreateDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateDashboard", input)
 	return &IotsitewiseCreateDashboardResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateGateway(ctx workflow.Context, input *iotsitewise.CreateGatewayInput) (*iotsitewise.CreateGatewayOutput, error) {
 	var output iotsitewise.CreateGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateGatewayAsync(ctx workflow.Context, input *iotsitewise.CreateGatewayInput) *IotsitewiseCreateGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateGateway", input)
 	return &IotsitewiseCreateGatewayResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreatePortal(ctx workflow.Context, input *iotsitewise.CreatePortalInput) (*iotsitewise.CreatePortalOutput, error) {
 	var output iotsitewise.CreatePortalOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreatePortal", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreatePortal", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreatePortalAsync(ctx workflow.Context, input *iotsitewise.CreatePortalInput) *IotsitewiseCreatePortalResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreatePortal", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreatePortal", input)
 	return &IotsitewiseCreatePortalResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) CreateProject(ctx workflow.Context, input *iotsitewise.CreateProjectInput) (*iotsitewise.CreateProjectOutput, error) {
 	var output iotsitewise.CreateProjectOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) CreateProjectAsync(ctx workflow.Context, input *iotsitewise.CreateProjectInput) *IotsitewiseCreateProjectResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.CreateProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.CreateProject", input)
 	return &IotsitewiseCreateProjectResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteAccessPolicy(ctx workflow.Context, input *iotsitewise.DeleteAccessPolicyInput) (*iotsitewise.DeleteAccessPolicyOutput, error) {
 	var output iotsitewise.DeleteAccessPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAccessPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAccessPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DeleteAccessPolicyInput) *IotsitewiseDeleteAccessPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAccessPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAccessPolicy", input)
 	return &IotsitewiseDeleteAccessPolicyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteAsset(ctx workflow.Context, input *iotsitewise.DeleteAssetInput) (*iotsitewise.DeleteAssetOutput, error) {
 	var output iotsitewise.DeleteAssetOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAsset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAsset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteAssetAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetInput) *IotsitewiseDeleteAssetResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAsset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAsset", input)
 	return &IotsitewiseDeleteAssetResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteAssetModel(ctx workflow.Context, input *iotsitewise.DeleteAssetModelInput) (*iotsitewise.DeleteAssetModelOutput, error) {
 	var output iotsitewise.DeleteAssetModelOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAssetModel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAssetModel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteAssetModelAsync(ctx workflow.Context, input *iotsitewise.DeleteAssetModelInput) *IotsitewiseDeleteAssetModelResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteAssetModel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteAssetModel", input)
 	return &IotsitewiseDeleteAssetModelResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteDashboard(ctx workflow.Context, input *iotsitewise.DeleteDashboardInput) (*iotsitewise.DeleteDashboardOutput, error) {
 	var output iotsitewise.DeleteDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteDashboardAsync(ctx workflow.Context, input *iotsitewise.DeleteDashboardInput) *IotsitewiseDeleteDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteDashboard", input)
 	return &IotsitewiseDeleteDashboardResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteGateway(ctx workflow.Context, input *iotsitewise.DeleteGatewayInput) (*iotsitewise.DeleteGatewayOutput, error) {
 	var output iotsitewise.DeleteGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteGatewayAsync(ctx workflow.Context, input *iotsitewise.DeleteGatewayInput) *IotsitewiseDeleteGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteGateway", input)
 	return &IotsitewiseDeleteGatewayResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeletePortal(ctx workflow.Context, input *iotsitewise.DeletePortalInput) (*iotsitewise.DeletePortalOutput, error) {
 	var output iotsitewise.DeletePortalOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeletePortal", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeletePortal", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeletePortalAsync(ctx workflow.Context, input *iotsitewise.DeletePortalInput) *IotsitewiseDeletePortalResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeletePortal", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeletePortal", input)
 	return &IotsitewiseDeletePortalResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DeleteProject(ctx workflow.Context, input *iotsitewise.DeleteProjectInput) (*iotsitewise.DeleteProjectOutput, error) {
 	var output iotsitewise.DeleteProjectOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DeleteProjectAsync(ctx workflow.Context, input *iotsitewise.DeleteProjectInput) *IotsitewiseDeleteProjectResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DeleteProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DeleteProject", input)
 	return &IotsitewiseDeleteProjectResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeAccessPolicy(ctx workflow.Context, input *iotsitewise.DescribeAccessPolicyInput) (*iotsitewise.DescribeAccessPolicyOutput, error) {
 	var output iotsitewise.DescribeAccessPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAccessPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAccessPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.DescribeAccessPolicyInput) *IotsitewiseDescribeAccessPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAccessPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAccessPolicy", input)
 	return &IotsitewiseDescribeAccessPolicyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeAsset(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) (*iotsitewise.DescribeAssetOutput, error) {
 	var output iotsitewise.DescribeAssetOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAsset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAsset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeAssetAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) *IotsitewiseDescribeAssetResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAsset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAsset", input)
 	return &IotsitewiseDescribeAssetResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeAssetModel(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) (*iotsitewise.DescribeAssetModelOutput, error) {
 	var output iotsitewise.DescribeAssetModelOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAssetModel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAssetModel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeAssetModelAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) *IotsitewiseDescribeAssetModelResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAssetModel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAssetModel", input)
 	return &IotsitewiseDescribeAssetModelResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeAssetProperty(ctx workflow.Context, input *iotsitewise.DescribeAssetPropertyInput) (*iotsitewise.DescribeAssetPropertyOutput, error) {
 	var output iotsitewise.DescribeAssetPropertyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAssetProperty", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAssetProperty", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetPropertyInput) *IotsitewiseDescribeAssetPropertyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeAssetProperty", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeAssetProperty", input)
 	return &IotsitewiseDescribeAssetPropertyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeDashboard(ctx workflow.Context, input *iotsitewise.DescribeDashboardInput) (*iotsitewise.DescribeDashboardOutput, error) {
 	var output iotsitewise.DescribeDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeDashboardAsync(ctx workflow.Context, input *iotsitewise.DescribeDashboardInput) *IotsitewiseDescribeDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeDashboard", input)
 	return &IotsitewiseDescribeDashboardResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeGateway(ctx workflow.Context, input *iotsitewise.DescribeGatewayInput) (*iotsitewise.DescribeGatewayOutput, error) {
 	var output iotsitewise.DescribeGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeGatewayAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayInput) *IotsitewiseDescribeGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeGateway", input)
 	return &IotsitewiseDescribeGatewayResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeGatewayCapabilityConfiguration(ctx workflow.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) (*iotsitewise.DescribeGatewayCapabilityConfigurationOutput, error) {
 	var output iotsitewise.DescribeGatewayCapabilityConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeGatewayCapabilityConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeGatewayCapabilityConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.DescribeGatewayCapabilityConfigurationInput) *IotsitewiseDescribeGatewayCapabilityConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeGatewayCapabilityConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeGatewayCapabilityConfiguration", input)
 	return &IotsitewiseDescribeGatewayCapabilityConfigurationResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeLoggingOptions(ctx workflow.Context, input *iotsitewise.DescribeLoggingOptionsInput) (*iotsitewise.DescribeLoggingOptionsOutput, error) {
 	var output iotsitewise.DescribeLoggingOptionsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeLoggingOptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeLoggingOptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.DescribeLoggingOptionsInput) *IotsitewiseDescribeLoggingOptionsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeLoggingOptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeLoggingOptions", input)
 	return &IotsitewiseDescribeLoggingOptionsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribePortal(ctx workflow.Context, input *iotsitewise.DescribePortalInput) (*iotsitewise.DescribePortalOutput, error) {
 	var output iotsitewise.DescribePortalOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribePortal", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribePortal", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribePortalAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) *IotsitewiseDescribePortalResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribePortal", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribePortal", input)
 	return &IotsitewiseDescribePortalResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DescribeProject(ctx workflow.Context, input *iotsitewise.DescribeProjectInput) (*iotsitewise.DescribeProjectOutput, error) {
 	var output iotsitewise.DescribeProjectOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DescribeProjectAsync(ctx workflow.Context, input *iotsitewise.DescribeProjectInput) *IotsitewiseDescribeProjectResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DescribeProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DescribeProject", input)
 	return &IotsitewiseDescribeProjectResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) DisassociateAssets(ctx workflow.Context, input *iotsitewise.DisassociateAssetsInput) (*iotsitewise.DisassociateAssetsOutput, error) {
 	var output iotsitewise.DisassociateAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.DisassociateAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DisassociateAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) DisassociateAssetsAsync(ctx workflow.Context, input *iotsitewise.DisassociateAssetsInput) *IotsitewiseDisassociateAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.DisassociateAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.DisassociateAssets", input)
 	return &IotsitewiseDisassociateAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyAggregates(ctx workflow.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) (*iotsitewise.GetAssetPropertyAggregatesOutput, error) {
 	var output iotsitewise.GetAssetPropertyAggregatesOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyAggregates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyAggregates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyAggregatesAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyAggregatesInput) *IotsitewiseGetAssetPropertyAggregatesResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyAggregates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyAggregates", input)
 	return &IotsitewiseGetAssetPropertyAggregatesResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyValue(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueInput) (*iotsitewise.GetAssetPropertyValueOutput, error) {
 	var output iotsitewise.GetAssetPropertyValueOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyValue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyValue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyValueAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueInput) *IotsitewiseGetAssetPropertyValueResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyValue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyValue", input)
 	return &IotsitewiseGetAssetPropertyValueResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyValueHistory(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) (*iotsitewise.GetAssetPropertyValueHistoryOutput, error) {
 	var output iotsitewise.GetAssetPropertyValueHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyValueHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyValueHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) GetAssetPropertyValueHistoryAsync(ctx workflow.Context, input *iotsitewise.GetAssetPropertyValueHistoryInput) *IotsitewiseGetAssetPropertyValueHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.GetAssetPropertyValueHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.GetAssetPropertyValueHistory", input)
 	return &IotsitewiseGetAssetPropertyValueHistoryResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListAccessPolicies(ctx workflow.Context, input *iotsitewise.ListAccessPoliciesInput) (*iotsitewise.ListAccessPoliciesOutput, error) {
 	var output iotsitewise.ListAccessPoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAccessPolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAccessPolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListAccessPoliciesAsync(ctx workflow.Context, input *iotsitewise.ListAccessPoliciesInput) *IotsitewiseListAccessPoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAccessPolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAccessPolicies", input)
 	return &IotsitewiseListAccessPoliciesResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListAssetModels(ctx workflow.Context, input *iotsitewise.ListAssetModelsInput) (*iotsitewise.ListAssetModelsOutput, error) {
 	var output iotsitewise.ListAssetModelsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssetModels", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssetModels", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListAssetModelsAsync(ctx workflow.Context, input *iotsitewise.ListAssetModelsInput) *IotsitewiseListAssetModelsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssetModels", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssetModels", input)
 	return &IotsitewiseListAssetModelsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListAssets(ctx workflow.Context, input *iotsitewise.ListAssetsInput) (*iotsitewise.ListAssetsOutput, error) {
 	var output iotsitewise.ListAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssetsInput) *IotsitewiseListAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssets", input)
 	return &IotsitewiseListAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListAssociatedAssets(ctx workflow.Context, input *iotsitewise.ListAssociatedAssetsInput) (*iotsitewise.ListAssociatedAssetsOutput, error) {
 	var output iotsitewise.ListAssociatedAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssociatedAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssociatedAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListAssociatedAssetsAsync(ctx workflow.Context, input *iotsitewise.ListAssociatedAssetsInput) *IotsitewiseListAssociatedAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListAssociatedAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListAssociatedAssets", input)
 	return &IotsitewiseListAssociatedAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListDashboards(ctx workflow.Context, input *iotsitewise.ListDashboardsInput) (*iotsitewise.ListDashboardsOutput, error) {
 	var output iotsitewise.ListDashboardsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListDashboards", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListDashboards", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListDashboardsAsync(ctx workflow.Context, input *iotsitewise.ListDashboardsInput) *IotsitewiseListDashboardsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListDashboards", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListDashboards", input)
 	return &IotsitewiseListDashboardsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListGateways(ctx workflow.Context, input *iotsitewise.ListGatewaysInput) (*iotsitewise.ListGatewaysOutput, error) {
 	var output iotsitewise.ListGatewaysOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListGateways", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListGateways", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListGatewaysAsync(ctx workflow.Context, input *iotsitewise.ListGatewaysInput) *IotsitewiseListGatewaysResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListGateways", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListGateways", input)
 	return &IotsitewiseListGatewaysResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListPortals(ctx workflow.Context, input *iotsitewise.ListPortalsInput) (*iotsitewise.ListPortalsOutput, error) {
 	var output iotsitewise.ListPortalsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListPortals", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListPortals", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListPortalsAsync(ctx workflow.Context, input *iotsitewise.ListPortalsInput) *IotsitewiseListPortalsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListPortals", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListPortals", input)
 	return &IotsitewiseListPortalsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListProjectAssets(ctx workflow.Context, input *iotsitewise.ListProjectAssetsInput) (*iotsitewise.ListProjectAssetsOutput, error) {
 	var output iotsitewise.ListProjectAssetsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListProjectAssets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListProjectAssets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListProjectAssetsAsync(ctx workflow.Context, input *iotsitewise.ListProjectAssetsInput) *IotsitewiseListProjectAssetsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListProjectAssets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListProjectAssets", input)
 	return &IotsitewiseListProjectAssetsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListProjects(ctx workflow.Context, input *iotsitewise.ListProjectsInput) (*iotsitewise.ListProjectsOutput, error) {
 	var output iotsitewise.ListProjectsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListProjects", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListProjects", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListProjectsAsync(ctx workflow.Context, input *iotsitewise.ListProjectsInput) *IotsitewiseListProjectsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListProjects", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListProjects", input)
 	return &IotsitewiseListProjectsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) ListTagsForResource(ctx workflow.Context, input *iotsitewise.ListTagsForResourceInput) (*iotsitewise.ListTagsForResourceOutput, error) {
 	var output iotsitewise.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) ListTagsForResourceAsync(ctx workflow.Context, input *iotsitewise.ListTagsForResourceInput) *IotsitewiseListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.ListTagsForResource", input)
 	return &IotsitewiseListTagsForResourceResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) PutLoggingOptions(ctx workflow.Context, input *iotsitewise.PutLoggingOptionsInput) (*iotsitewise.PutLoggingOptionsOutput, error) {
 	var output iotsitewise.PutLoggingOptionsOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.PutLoggingOptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.PutLoggingOptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) PutLoggingOptionsAsync(ctx workflow.Context, input *iotsitewise.PutLoggingOptionsInput) *IotsitewisePutLoggingOptionsResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.PutLoggingOptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.PutLoggingOptions", input)
 	return &IotsitewisePutLoggingOptionsResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) TagResource(ctx workflow.Context, input *iotsitewise.TagResourceInput) (*iotsitewise.TagResourceOutput, error) {
 	var output iotsitewise.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) TagResourceAsync(ctx workflow.Context, input *iotsitewise.TagResourceInput) *IotsitewiseTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.TagResource", input)
 	return &IotsitewiseTagResourceResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UntagResource(ctx workflow.Context, input *iotsitewise.UntagResourceInput) (*iotsitewise.UntagResourceOutput, error) {
 	var output iotsitewise.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UntagResourceAsync(ctx workflow.Context, input *iotsitewise.UntagResourceInput) *IotsitewiseUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UntagResource", input)
 	return &IotsitewiseUntagResourceResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateAccessPolicy(ctx workflow.Context, input *iotsitewise.UpdateAccessPolicyInput) (*iotsitewise.UpdateAccessPolicyOutput, error) {
 	var output iotsitewise.UpdateAccessPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAccessPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAccessPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateAccessPolicyAsync(ctx workflow.Context, input *iotsitewise.UpdateAccessPolicyInput) *IotsitewiseUpdateAccessPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAccessPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAccessPolicy", input)
 	return &IotsitewiseUpdateAccessPolicyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateAsset(ctx workflow.Context, input *iotsitewise.UpdateAssetInput) (*iotsitewise.UpdateAssetOutput, error) {
 	var output iotsitewise.UpdateAssetOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAsset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAsset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateAssetAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetInput) *IotsitewiseUpdateAssetResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAsset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAsset", input)
 	return &IotsitewiseUpdateAssetResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateAssetModel(ctx workflow.Context, input *iotsitewise.UpdateAssetModelInput) (*iotsitewise.UpdateAssetModelOutput, error) {
 	var output iotsitewise.UpdateAssetModelOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAssetModel", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAssetModel", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateAssetModelAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetModelInput) *IotsitewiseUpdateAssetModelResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAssetModel", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAssetModel", input)
 	return &IotsitewiseUpdateAssetModelResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateAssetProperty(ctx workflow.Context, input *iotsitewise.UpdateAssetPropertyInput) (*iotsitewise.UpdateAssetPropertyOutput, error) {
 	var output iotsitewise.UpdateAssetPropertyOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAssetProperty", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAssetProperty", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateAssetPropertyAsync(ctx workflow.Context, input *iotsitewise.UpdateAssetPropertyInput) *IotsitewiseUpdateAssetPropertyResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateAssetProperty", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateAssetProperty", input)
 	return &IotsitewiseUpdateAssetPropertyResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateDashboard(ctx workflow.Context, input *iotsitewise.UpdateDashboardInput) (*iotsitewise.UpdateDashboardOutput, error) {
 	var output iotsitewise.UpdateDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateDashboardAsync(ctx workflow.Context, input *iotsitewise.UpdateDashboardInput) *IotsitewiseUpdateDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateDashboard", input)
 	return &IotsitewiseUpdateDashboardResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateGateway(ctx workflow.Context, input *iotsitewise.UpdateGatewayInput) (*iotsitewise.UpdateGatewayOutput, error) {
 	var output iotsitewise.UpdateGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateGatewayAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayInput) *IotsitewiseUpdateGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateGateway", input)
 	return &IotsitewiseUpdateGatewayResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateGatewayCapabilityConfiguration(ctx workflow.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) (*iotsitewise.UpdateGatewayCapabilityConfigurationOutput, error) {
 	var output iotsitewise.UpdateGatewayCapabilityConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateGatewayCapabilityConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateGatewayCapabilityConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateGatewayCapabilityConfigurationAsync(ctx workflow.Context, input *iotsitewise.UpdateGatewayCapabilityConfigurationInput) *IotsitewiseUpdateGatewayCapabilityConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateGatewayCapabilityConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateGatewayCapabilityConfiguration", input)
 	return &IotsitewiseUpdateGatewayCapabilityConfigurationResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdatePortal(ctx workflow.Context, input *iotsitewise.UpdatePortalInput) (*iotsitewise.UpdatePortalOutput, error) {
 	var output iotsitewise.UpdatePortalOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdatePortal", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdatePortal", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdatePortalAsync(ctx workflow.Context, input *iotsitewise.UpdatePortalInput) *IotsitewiseUpdatePortalResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdatePortal", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdatePortal", input)
 	return &IotsitewiseUpdatePortalResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) UpdateProject(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) (*iotsitewise.UpdateProjectOutput, error) {
 	var output iotsitewise.UpdateProjectOutput
-	err := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *IoTSiteWiseStub) UpdateProjectAsync(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) *IotsitewiseUpdateProjectResult {
-	future := workflow.ExecuteActivity(ctx, "IoTSiteWise.UpdateProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.iotsitewise.UpdateProject", input)
 	return &IotsitewiseUpdateProjectResult{Result: future}
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetActive(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetActive", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetActive", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetActive", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetActive", input)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelActive(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetModelActive", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelActive", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelActiveAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetModelActive", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelActive", input)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetModelNotExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelNotExists", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetModelNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetModelNotExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetModelNotExists", input)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetNotExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetNotExists", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilAssetNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilAssetNotExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilAssetNotExists", input)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalActive(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilPortalActive", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalActive", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalActiveAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilPortalActive", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalActive", input)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilPortalNotExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalNotExists", input).Get(ctx, nil)
 }
 
 func (a *IoTSiteWiseStub) WaitUntilPortalNotExistsAsync(ctx workflow.Context, input *iotsitewise.DescribePortalInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "IoTSiteWise.WaitUntilPortalNotExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.iotsitewise.WaitUntilPortalNotExists", input)
 }

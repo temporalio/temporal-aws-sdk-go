@@ -369,297 +369,297 @@ func (r *SsoadminUpdatePermissionSetResult) Get(ctx workflow.Context) (*ssoadmin
 
 func (a *SSOAdminStub) AttachManagedPolicyToPermissionSet(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) (*ssoadmin.AttachManagedPolicyToPermissionSetOutput, error) {
 	var output ssoadmin.AttachManagedPolicyToPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.AttachManagedPolicyToPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.AttachManagedPolicyToPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) AttachManagedPolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.AttachManagedPolicyToPermissionSetInput) *SsoadminAttachManagedPolicyToPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.AttachManagedPolicyToPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.AttachManagedPolicyToPermissionSet", input)
 	return &SsoadminAttachManagedPolicyToPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) CreateAccountAssignment(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) (*ssoadmin.CreateAccountAssignmentOutput, error) {
 	var output ssoadmin.CreateAccountAssignmentOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.CreateAccountAssignment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreateAccountAssignment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) CreateAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.CreateAccountAssignmentInput) *SsoadminCreateAccountAssignmentResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.CreateAccountAssignment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreateAccountAssignment", input)
 	return &SsoadminCreateAccountAssignmentResult{Result: future}
 }
 
 func (a *SSOAdminStub) CreatePermissionSet(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) (*ssoadmin.CreatePermissionSetOutput, error) {
 	var output ssoadmin.CreatePermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.CreatePermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreatePermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) CreatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.CreatePermissionSetInput) *SsoadminCreatePermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.CreatePermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.CreatePermissionSet", input)
 	return &SsoadminCreatePermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) DeleteAccountAssignment(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) (*ssoadmin.DeleteAccountAssignmentOutput, error) {
 	var output ssoadmin.DeleteAccountAssignmentOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DeleteAccountAssignment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteAccountAssignment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DeleteAccountAssignmentAsync(ctx workflow.Context, input *ssoadmin.DeleteAccountAssignmentInput) *SsoadminDeleteAccountAssignmentResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DeleteAccountAssignment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteAccountAssignment", input)
 	return &SsoadminDeleteAccountAssignmentResult{Result: future}
 }
 
 func (a *SSOAdminStub) DeleteInlinePolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) (*ssoadmin.DeleteInlinePolicyFromPermissionSetOutput, error) {
 	var output ssoadmin.DeleteInlinePolicyFromPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DeleteInlinePolicyFromPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteInlinePolicyFromPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DeleteInlinePolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeleteInlinePolicyFromPermissionSetInput) *SsoadminDeleteInlinePolicyFromPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DeleteInlinePolicyFromPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeleteInlinePolicyFromPermissionSet", input)
 	return &SsoadminDeleteInlinePolicyFromPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) DeletePermissionSet(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) (*ssoadmin.DeletePermissionSetOutput, error) {
 	var output ssoadmin.DeletePermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DeletePermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeletePermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DeletePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DeletePermissionSetInput) *SsoadminDeletePermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DeletePermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DeletePermissionSet", input)
 	return &SsoadminDeletePermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) DescribeAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) (*ssoadmin.DescribeAccountAssignmentCreationStatusOutput, error) {
 	var output ssoadmin.DescribeAccountAssignmentCreationStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribeAccountAssignmentCreationStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentCreationStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DescribeAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentCreationStatusInput) *SsoadminDescribeAccountAssignmentCreationStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribeAccountAssignmentCreationStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentCreationStatus", input)
 	return &SsoadminDescribeAccountAssignmentCreationStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) DescribeAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) (*ssoadmin.DescribeAccountAssignmentDeletionStatusOutput, error) {
 	var output ssoadmin.DescribeAccountAssignmentDeletionStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribeAccountAssignmentDeletionStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentDeletionStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DescribeAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.DescribeAccountAssignmentDeletionStatusInput) *SsoadminDescribeAccountAssignmentDeletionStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribeAccountAssignmentDeletionStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribeAccountAssignmentDeletionStatus", input)
 	return &SsoadminDescribeAccountAssignmentDeletionStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) DescribePermissionSet(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) (*ssoadmin.DescribePermissionSetOutput, error) {
 	var output ssoadmin.DescribePermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribePermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DescribePermissionSetAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetInput) *SsoadminDescribePermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribePermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSet", input)
 	return &SsoadminDescribePermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) DescribePermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) (*ssoadmin.DescribePermissionSetProvisioningStatusOutput, error) {
 	var output ssoadmin.DescribePermissionSetProvisioningStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribePermissionSetProvisioningStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSetProvisioningStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DescribePermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.DescribePermissionSetProvisioningStatusInput) *SsoadminDescribePermissionSetProvisioningStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DescribePermissionSetProvisioningStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DescribePermissionSetProvisioningStatus", input)
 	return &SsoadminDescribePermissionSetProvisioningStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) DetachManagedPolicyFromPermissionSet(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) (*ssoadmin.DetachManagedPolicyFromPermissionSetOutput, error) {
 	var output ssoadmin.DetachManagedPolicyFromPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.DetachManagedPolicyFromPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DetachManagedPolicyFromPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) DetachManagedPolicyFromPermissionSetAsync(ctx workflow.Context, input *ssoadmin.DetachManagedPolicyFromPermissionSetInput) *SsoadminDetachManagedPolicyFromPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.DetachManagedPolicyFromPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.DetachManagedPolicyFromPermissionSet", input)
 	return &SsoadminDetachManagedPolicyFromPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) GetInlinePolicyForPermissionSet(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) (*ssoadmin.GetInlinePolicyForPermissionSetOutput, error) {
 	var output ssoadmin.GetInlinePolicyForPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.GetInlinePolicyForPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.GetInlinePolicyForPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) GetInlinePolicyForPermissionSetAsync(ctx workflow.Context, input *ssoadmin.GetInlinePolicyForPermissionSetInput) *SsoadminGetInlinePolicyForPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.GetInlinePolicyForPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.GetInlinePolicyForPermissionSet", input)
 	return &SsoadminGetInlinePolicyForPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListAccountAssignmentCreationStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) (*ssoadmin.ListAccountAssignmentCreationStatusOutput, error) {
 	var output ssoadmin.ListAccountAssignmentCreationStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignmentCreationStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentCreationStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListAccountAssignmentCreationStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentCreationStatusInput) *SsoadminListAccountAssignmentCreationStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignmentCreationStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentCreationStatus", input)
 	return &SsoadminListAccountAssignmentCreationStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListAccountAssignmentDeletionStatus(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) (*ssoadmin.ListAccountAssignmentDeletionStatusOutput, error) {
 	var output ssoadmin.ListAccountAssignmentDeletionStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignmentDeletionStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentDeletionStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListAccountAssignmentDeletionStatusAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentDeletionStatusInput) *SsoadminListAccountAssignmentDeletionStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignmentDeletionStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignmentDeletionStatus", input)
 	return &SsoadminListAccountAssignmentDeletionStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListAccountAssignments(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) (*ssoadmin.ListAccountAssignmentsOutput, error) {
 	var output ssoadmin.ListAccountAssignmentsOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListAccountAssignmentsAsync(ctx workflow.Context, input *ssoadmin.ListAccountAssignmentsInput) *SsoadminListAccountAssignmentsResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountAssignments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountAssignments", input)
 	return &SsoadminListAccountAssignmentsResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListAccountsForProvisionedPermissionSet(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) (*ssoadmin.ListAccountsForProvisionedPermissionSetOutput, error) {
 	var output ssoadmin.ListAccountsForProvisionedPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountsForProvisionedPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountsForProvisionedPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListAccountsForProvisionedPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListAccountsForProvisionedPermissionSetInput) *SsoadminListAccountsForProvisionedPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListAccountsForProvisionedPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListAccountsForProvisionedPermissionSet", input)
 	return &SsoadminListAccountsForProvisionedPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListInstances(ctx workflow.Context, input *ssoadmin.ListInstancesInput) (*ssoadmin.ListInstancesOutput, error) {
 	var output ssoadmin.ListInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListInstancesAsync(ctx workflow.Context, input *ssoadmin.ListInstancesInput) *SsoadminListInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListInstances", input)
 	return &SsoadminListInstancesResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListManagedPoliciesInPermissionSet(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) (*ssoadmin.ListManagedPoliciesInPermissionSetOutput, error) {
 	var output ssoadmin.ListManagedPoliciesInPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListManagedPoliciesInPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListManagedPoliciesInPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListManagedPoliciesInPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ListManagedPoliciesInPermissionSetInput) *SsoadminListManagedPoliciesInPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListManagedPoliciesInPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListManagedPoliciesInPermissionSet", input)
 	return &SsoadminListManagedPoliciesInPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListPermissionSetProvisioningStatus(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) (*ssoadmin.ListPermissionSetProvisioningStatusOutput, error) {
 	var output ssoadmin.ListPermissionSetProvisioningStatusOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSetProvisioningStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetProvisioningStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListPermissionSetProvisioningStatusAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetProvisioningStatusInput) *SsoadminListPermissionSetProvisioningStatusResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSetProvisioningStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetProvisioningStatus", input)
 	return &SsoadminListPermissionSetProvisioningStatusResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListPermissionSets(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) (*ssoadmin.ListPermissionSetsOutput, error) {
 	var output ssoadmin.ListPermissionSetsOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListPermissionSetsAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsInput) *SsoadminListPermissionSetsResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSets", input)
 	return &SsoadminListPermissionSetsResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListPermissionSetsProvisionedToAccount(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) (*ssoadmin.ListPermissionSetsProvisionedToAccountOutput, error) {
 	var output ssoadmin.ListPermissionSetsProvisionedToAccountOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSetsProvisionedToAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetsProvisionedToAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListPermissionSetsProvisionedToAccountAsync(ctx workflow.Context, input *ssoadmin.ListPermissionSetsProvisionedToAccountInput) *SsoadminListPermissionSetsProvisionedToAccountResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListPermissionSetsProvisionedToAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListPermissionSetsProvisionedToAccount", input)
 	return &SsoadminListPermissionSetsProvisionedToAccountResult{Result: future}
 }
 
 func (a *SSOAdminStub) ListTagsForResource(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) (*ssoadmin.ListTagsForResourceOutput, error) {
 	var output ssoadmin.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ListTagsForResourceAsync(ctx workflow.Context, input *ssoadmin.ListTagsForResourceInput) *SsoadminListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ListTagsForResource", input)
 	return &SsoadminListTagsForResourceResult{Result: future}
 }
 
 func (a *SSOAdminStub) ProvisionPermissionSet(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) (*ssoadmin.ProvisionPermissionSetOutput, error) {
 	var output ssoadmin.ProvisionPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.ProvisionPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ProvisionPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) ProvisionPermissionSetAsync(ctx workflow.Context, input *ssoadmin.ProvisionPermissionSetInput) *SsoadminProvisionPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.ProvisionPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.ProvisionPermissionSet", input)
 	return &SsoadminProvisionPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) PutInlinePolicyToPermissionSet(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) (*ssoadmin.PutInlinePolicyToPermissionSetOutput, error) {
 	var output ssoadmin.PutInlinePolicyToPermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.PutInlinePolicyToPermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.PutInlinePolicyToPermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) PutInlinePolicyToPermissionSetAsync(ctx workflow.Context, input *ssoadmin.PutInlinePolicyToPermissionSetInput) *SsoadminPutInlinePolicyToPermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.PutInlinePolicyToPermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.PutInlinePolicyToPermissionSet", input)
 	return &SsoadminPutInlinePolicyToPermissionSetResult{Result: future}
 }
 
 func (a *SSOAdminStub) TagResource(ctx workflow.Context, input *ssoadmin.TagResourceInput) (*ssoadmin.TagResourceOutput, error) {
 	var output ssoadmin.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) TagResourceAsync(ctx workflow.Context, input *ssoadmin.TagResourceInput) *SsoadminTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.TagResource", input)
 	return &SsoadminTagResourceResult{Result: future}
 }
 
 func (a *SSOAdminStub) UntagResource(ctx workflow.Context, input *ssoadmin.UntagResourceInput) (*ssoadmin.UntagResourceOutput, error) {
 	var output ssoadmin.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) UntagResourceAsync(ctx workflow.Context, input *ssoadmin.UntagResourceInput) *SsoadminUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UntagResource", input)
 	return &SsoadminUntagResourceResult{Result: future}
 }
 
 func (a *SSOAdminStub) UpdatePermissionSet(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) (*ssoadmin.UpdatePermissionSetOutput, error) {
 	var output ssoadmin.UpdatePermissionSetOutput
-	err := workflow.ExecuteActivity(ctx, "SSOAdmin.UpdatePermissionSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UpdatePermissionSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SSOAdminStub) UpdatePermissionSetAsync(ctx workflow.Context, input *ssoadmin.UpdatePermissionSetInput) *SsoadminUpdatePermissionSetResult {
-	future := workflow.ExecuteActivity(ctx, "SSOAdmin.UpdatePermissionSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ssoadmin.UpdatePermissionSet", input)
 	return &SsoadminUpdatePermissionSetResult{Result: future}
 }

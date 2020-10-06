@@ -44,22 +44,22 @@ func (r *PiGetResourceMetricsResult) Get(ctx workflow.Context) (*pi.GetResourceM
 
 func (a *PIStub) DescribeDimensionKeys(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error) {
 	var output pi.DescribeDimensionKeysOutput
-	err := workflow.ExecuteActivity(ctx, "PI.DescribeDimensionKeys", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pi.DescribeDimensionKeys", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PIStub) DescribeDimensionKeysAsync(ctx workflow.Context, input *pi.DescribeDimensionKeysInput) *PiDescribeDimensionKeysResult {
-	future := workflow.ExecuteActivity(ctx, "PI.DescribeDimensionKeys", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pi.DescribeDimensionKeys", input)
 	return &PiDescribeDimensionKeysResult{Result: future}
 }
 
 func (a *PIStub) GetResourceMetrics(ctx workflow.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
 	var output pi.GetResourceMetricsOutput
-	err := workflow.ExecuteActivity(ctx, "PI.GetResourceMetrics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pi.GetResourceMetrics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PIStub) GetResourceMetricsAsync(ctx workflow.Context, input *pi.GetResourceMetricsInput) *PiGetResourceMetricsResult {
-	future := workflow.ExecuteActivity(ctx, "PI.GetResourceMetrics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pi.GetResourceMetrics", input)
 	return &PiGetResourceMetricsResult{Result: future}
 }

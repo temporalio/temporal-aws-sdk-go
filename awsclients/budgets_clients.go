@@ -200,154 +200,154 @@ func (r *BudgetsUpdateSubscriberResult) Get(ctx workflow.Context) (*budgets.Upda
 
 func (a *BudgetsStub) CreateBudget(ctx workflow.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error) {
 	var output budgets.CreateBudgetOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.CreateBudget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.CreateBudget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) CreateBudgetAsync(ctx workflow.Context, input *budgets.CreateBudgetInput) *BudgetsCreateBudgetResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.CreateBudget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.CreateBudget", input)
 	return &BudgetsCreateBudgetResult{Result: future}
 }
 
 func (a *BudgetsStub) CreateNotification(ctx workflow.Context, input *budgets.CreateNotificationInput) (*budgets.CreateNotificationOutput, error) {
 	var output budgets.CreateNotificationOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.CreateNotification", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.CreateNotification", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) CreateNotificationAsync(ctx workflow.Context, input *budgets.CreateNotificationInput) *BudgetsCreateNotificationResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.CreateNotification", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.CreateNotification", input)
 	return &BudgetsCreateNotificationResult{Result: future}
 }
 
 func (a *BudgetsStub) CreateSubscriber(ctx workflow.Context, input *budgets.CreateSubscriberInput) (*budgets.CreateSubscriberOutput, error) {
 	var output budgets.CreateSubscriberOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.CreateSubscriber", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.CreateSubscriber", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) CreateSubscriberAsync(ctx workflow.Context, input *budgets.CreateSubscriberInput) *BudgetsCreateSubscriberResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.CreateSubscriber", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.CreateSubscriber", input)
 	return &BudgetsCreateSubscriberResult{Result: future}
 }
 
 func (a *BudgetsStub) DeleteBudget(ctx workflow.Context, input *budgets.DeleteBudgetInput) (*budgets.DeleteBudgetOutput, error) {
 	var output budgets.DeleteBudgetOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DeleteBudget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteBudget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DeleteBudgetAsync(ctx workflow.Context, input *budgets.DeleteBudgetInput) *BudgetsDeleteBudgetResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DeleteBudget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteBudget", input)
 	return &BudgetsDeleteBudgetResult{Result: future}
 }
 
 func (a *BudgetsStub) DeleteNotification(ctx workflow.Context, input *budgets.DeleteNotificationInput) (*budgets.DeleteNotificationOutput, error) {
 	var output budgets.DeleteNotificationOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DeleteNotification", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteNotification", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DeleteNotificationAsync(ctx workflow.Context, input *budgets.DeleteNotificationInput) *BudgetsDeleteNotificationResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DeleteNotification", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteNotification", input)
 	return &BudgetsDeleteNotificationResult{Result: future}
 }
 
 func (a *BudgetsStub) DeleteSubscriber(ctx workflow.Context, input *budgets.DeleteSubscriberInput) (*budgets.DeleteSubscriberOutput, error) {
 	var output budgets.DeleteSubscriberOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DeleteSubscriber", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteSubscriber", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DeleteSubscriberAsync(ctx workflow.Context, input *budgets.DeleteSubscriberInput) *BudgetsDeleteSubscriberResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DeleteSubscriber", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DeleteSubscriber", input)
 	return &BudgetsDeleteSubscriberResult{Result: future}
 }
 
 func (a *BudgetsStub) DescribeBudget(ctx workflow.Context, input *budgets.DescribeBudgetInput) (*budgets.DescribeBudgetOutput, error) {
 	var output budgets.DescribeBudgetOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DescribeBudgetAsync(ctx workflow.Context, input *budgets.DescribeBudgetInput) *BudgetsDescribeBudgetResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudget", input)
 	return &BudgetsDescribeBudgetResult{Result: future}
 }
 
 func (a *BudgetsStub) DescribeBudgetPerformanceHistory(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) (*budgets.DescribeBudgetPerformanceHistoryOutput, error) {
 	var output budgets.DescribeBudgetPerformanceHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudgetPerformanceHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudgetPerformanceHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DescribeBudgetPerformanceHistoryAsync(ctx workflow.Context, input *budgets.DescribeBudgetPerformanceHistoryInput) *BudgetsDescribeBudgetPerformanceHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudgetPerformanceHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudgetPerformanceHistory", input)
 	return &BudgetsDescribeBudgetPerformanceHistoryResult{Result: future}
 }
 
 func (a *BudgetsStub) DescribeBudgets(ctx workflow.Context, input *budgets.DescribeBudgetsInput) (*budgets.DescribeBudgetsOutput, error) {
 	var output budgets.DescribeBudgetsOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudgets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudgets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DescribeBudgetsAsync(ctx workflow.Context, input *budgets.DescribeBudgetsInput) *BudgetsDescribeBudgetsResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DescribeBudgets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeBudgets", input)
 	return &BudgetsDescribeBudgetsResult{Result: future}
 }
 
 func (a *BudgetsStub) DescribeNotificationsForBudget(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) (*budgets.DescribeNotificationsForBudgetOutput, error) {
 	var output budgets.DescribeNotificationsForBudgetOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DescribeNotificationsForBudget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeNotificationsForBudget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DescribeNotificationsForBudgetAsync(ctx workflow.Context, input *budgets.DescribeNotificationsForBudgetInput) *BudgetsDescribeNotificationsForBudgetResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DescribeNotificationsForBudget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeNotificationsForBudget", input)
 	return &BudgetsDescribeNotificationsForBudgetResult{Result: future}
 }
 
 func (a *BudgetsStub) DescribeSubscribersForNotification(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) (*budgets.DescribeSubscribersForNotificationOutput, error) {
 	var output budgets.DescribeSubscribersForNotificationOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.DescribeSubscribersForNotification", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeSubscribersForNotification", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) DescribeSubscribersForNotificationAsync(ctx workflow.Context, input *budgets.DescribeSubscribersForNotificationInput) *BudgetsDescribeSubscribersForNotificationResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.DescribeSubscribersForNotification", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.DescribeSubscribersForNotification", input)
 	return &BudgetsDescribeSubscribersForNotificationResult{Result: future}
 }
 
 func (a *BudgetsStub) UpdateBudget(ctx workflow.Context, input *budgets.UpdateBudgetInput) (*budgets.UpdateBudgetOutput, error) {
 	var output budgets.UpdateBudgetOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.UpdateBudget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateBudget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) UpdateBudgetAsync(ctx workflow.Context, input *budgets.UpdateBudgetInput) *BudgetsUpdateBudgetResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.UpdateBudget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateBudget", input)
 	return &BudgetsUpdateBudgetResult{Result: future}
 }
 
 func (a *BudgetsStub) UpdateNotification(ctx workflow.Context, input *budgets.UpdateNotificationInput) (*budgets.UpdateNotificationOutput, error) {
 	var output budgets.UpdateNotificationOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.UpdateNotification", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateNotification", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) UpdateNotificationAsync(ctx workflow.Context, input *budgets.UpdateNotificationInput) *BudgetsUpdateNotificationResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.UpdateNotification", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateNotification", input)
 	return &BudgetsUpdateNotificationResult{Result: future}
 }
 
 func (a *BudgetsStub) UpdateSubscriber(ctx workflow.Context, input *budgets.UpdateSubscriberInput) (*budgets.UpdateSubscriberOutput, error) {
 	var output budgets.UpdateSubscriberOutput
-	err := workflow.ExecuteActivity(ctx, "Budgets.UpdateSubscriber", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateSubscriber", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BudgetsStub) UpdateSubscriberAsync(ctx workflow.Context, input *budgets.UpdateSubscriberInput) *BudgetsUpdateSubscriberResult {
-	future := workflow.ExecuteActivity(ctx, "Budgets.UpdateSubscriber", input)
+	future := workflow.ExecuteActivity(ctx, "aws.budgets.UpdateSubscriber", input)
 	return &BudgetsUpdateSubscriberResult{Result: future}
 }

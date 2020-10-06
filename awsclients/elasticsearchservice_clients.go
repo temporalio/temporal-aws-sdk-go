@@ -499,407 +499,407 @@ func (r *ElasticsearchserviceUpgradeElasticsearchDomainResult) Get(ctx workflow.
 
 func (a *ElasticsearchServiceStub) AcceptInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.AcceptInboundCrossClusterSearchConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.AcceptInboundCrossClusterSearchConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AcceptInboundCrossClusterSearchConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) AcceptInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.AcceptInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.AcceptInboundCrossClusterSearchConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AcceptInboundCrossClusterSearchConnection", input)
 	return &ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) AddTags(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) (*elasticsearchservice.AddTagsOutput, error) {
 	var output elasticsearchservice.AddTagsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.AddTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AddTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) AddTagsAsync(ctx workflow.Context, input *elasticsearchservice.AddTagsInput) *ElasticsearchserviceAddTagsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.AddTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AddTags", input)
 	return &ElasticsearchserviceAddTagsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) AssociatePackage(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) (*elasticsearchservice.AssociatePackageOutput, error) {
 	var output elasticsearchservice.AssociatePackageOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.AssociatePackage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AssociatePackage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) AssociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.AssociatePackageInput) *ElasticsearchserviceAssociatePackageResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.AssociatePackage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.AssociatePackage", input)
 	return &ElasticsearchserviceAssociatePackageResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) CancelElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput, error) {
 	var output elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.CancelElasticsearchServiceSoftwareUpdate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CancelElasticsearchServiceSoftwareUpdate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) CancelElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.CancelElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceCancelElasticsearchServiceSoftwareUpdateResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.CancelElasticsearchServiceSoftwareUpdate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CancelElasticsearchServiceSoftwareUpdate", input)
 	return &ElasticsearchserviceCancelElasticsearchServiceSoftwareUpdateResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) CreateElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) (*elasticsearchservice.CreateElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.CreateElasticsearchDomainOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreateElasticsearchDomain", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateElasticsearchDomain", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) CreateElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.CreateElasticsearchDomainInput) *ElasticsearchserviceCreateElasticsearchDomainResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreateElasticsearchDomain", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateElasticsearchDomain", input)
 	return &ElasticsearchserviceCreateElasticsearchDomainResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) CreateOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.CreateOutboundCrossClusterSearchConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreateOutboundCrossClusterSearchConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateOutboundCrossClusterSearchConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) CreateOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.CreateOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceCreateOutboundCrossClusterSearchConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreateOutboundCrossClusterSearchConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreateOutboundCrossClusterSearchConnection", input)
 	return &ElasticsearchserviceCreateOutboundCrossClusterSearchConnectionResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) CreatePackage(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) (*elasticsearchservice.CreatePackageOutput, error) {
 	var output elasticsearchservice.CreatePackageOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreatePackage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreatePackage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) CreatePackageAsync(ctx workflow.Context, input *elasticsearchservice.CreatePackageInput) *ElasticsearchserviceCreatePackageResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.CreatePackage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.CreatePackage", input)
 	return &ElasticsearchserviceCreatePackageResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DeleteElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) (*elasticsearchservice.DeleteElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.DeleteElasticsearchDomainOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteElasticsearchDomain", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchDomain", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DeleteElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchDomainInput) *ElasticsearchserviceDeleteElasticsearchDomainResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteElasticsearchDomain", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchDomain", input)
 	return &ElasticsearchserviceDeleteElasticsearchDomainResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DeleteElasticsearchServiceRole(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) (*elasticsearchservice.DeleteElasticsearchServiceRoleOutput, error) {
 	var output elasticsearchservice.DeleteElasticsearchServiceRoleOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteElasticsearchServiceRole", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchServiceRole", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DeleteElasticsearchServiceRoleAsync(ctx workflow.Context, input *elasticsearchservice.DeleteElasticsearchServiceRoleInput) *ElasticsearchserviceDeleteElasticsearchServiceRoleResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteElasticsearchServiceRole", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteElasticsearchServiceRole", input)
 	return &ElasticsearchserviceDeleteElasticsearchServiceRoleResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DeleteInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.DeleteInboundCrossClusterSearchConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteInboundCrossClusterSearchConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteInboundCrossClusterSearchConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DeleteInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteInboundCrossClusterSearchConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteInboundCrossClusterSearchConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteInboundCrossClusterSearchConnection", input)
 	return &ElasticsearchserviceDeleteInboundCrossClusterSearchConnectionResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DeleteOutboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) (*elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteOutboundCrossClusterSearchConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteOutboundCrossClusterSearchConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DeleteOutboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.DeleteOutboundCrossClusterSearchConnectionInput) *ElasticsearchserviceDeleteOutboundCrossClusterSearchConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeleteOutboundCrossClusterSearchConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeleteOutboundCrossClusterSearchConnection", input)
 	return &ElasticsearchserviceDeleteOutboundCrossClusterSearchConnectionResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DeletePackage(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) (*elasticsearchservice.DeletePackageOutput, error) {
 	var output elasticsearchservice.DeletePackageOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeletePackage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeletePackage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DeletePackageAsync(ctx workflow.Context, input *elasticsearchservice.DeletePackageInput) *ElasticsearchserviceDeletePackageResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DeletePackage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DeletePackage", input)
 	return &ElasticsearchserviceDeletePackageResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) (*elasticsearchservice.DescribeElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomain", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomain", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainInput) *ElasticsearchserviceDescribeElasticsearchDomainResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomain", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomain", input)
 	return &ElasticsearchserviceDescribeElasticsearchDomainResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) (*elasticsearchservice.DescribeElasticsearchDomainConfigOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainConfigOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomainConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomainConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainConfigInput) *ElasticsearchserviceDescribeElasticsearchDomainConfigResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomainConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomainConfig", input)
 	return &ElasticsearchserviceDescribeElasticsearchDomainConfigResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomains(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) (*elasticsearchservice.DescribeElasticsearchDomainsOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchDomainsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomains", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomains", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchDomainsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchDomainsInput) *ElasticsearchserviceDescribeElasticsearchDomainsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchDomains", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchDomains", input)
 	return &ElasticsearchserviceDescribeElasticsearchDomainsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchInstanceTypeLimits(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) (*elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput, error) {
 	var output elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchInstanceTypeLimits", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchInstanceTypeLimits", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeElasticsearchInstanceTypeLimitsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeElasticsearchInstanceTypeLimitsInput) *ElasticsearchserviceDescribeElasticsearchInstanceTypeLimitsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeElasticsearchInstanceTypeLimits", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeElasticsearchInstanceTypeLimits", input)
 	return &ElasticsearchserviceDescribeElasticsearchInstanceTypeLimitsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeInboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput, error) {
 	var output elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeInboundCrossClusterSearchConnections", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeInboundCrossClusterSearchConnections", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeInboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeInboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeInboundCrossClusterSearchConnectionsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeInboundCrossClusterSearchConnections", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeInboundCrossClusterSearchConnections", input)
 	return &ElasticsearchserviceDescribeInboundCrossClusterSearchConnectionsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeOutboundCrossClusterSearchConnections(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) (*elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput, error) {
 	var output elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeOutboundCrossClusterSearchConnections", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeOutboundCrossClusterSearchConnections", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeOutboundCrossClusterSearchConnectionsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeOutboundCrossClusterSearchConnectionsInput) *ElasticsearchserviceDescribeOutboundCrossClusterSearchConnectionsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeOutboundCrossClusterSearchConnections", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeOutboundCrossClusterSearchConnections", input)
 	return &ElasticsearchserviceDescribeOutboundCrossClusterSearchConnectionsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribePackages(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) (*elasticsearchservice.DescribePackagesOutput, error) {
 	var output elasticsearchservice.DescribePackagesOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribePackages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribePackages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribePackagesAsync(ctx workflow.Context, input *elasticsearchservice.DescribePackagesInput) *ElasticsearchserviceDescribePackagesResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribePackages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribePackages", input)
 	return &ElasticsearchserviceDescribePackagesResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeReservedElasticsearchInstanceOfferings(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) (*elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput, error) {
 	var output elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeReservedElasticsearchInstanceOfferings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstanceOfferings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeReservedElasticsearchInstanceOfferingsAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstanceOfferingsInput) *ElasticsearchserviceDescribeReservedElasticsearchInstanceOfferingsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeReservedElasticsearchInstanceOfferings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstanceOfferings", input)
 	return &ElasticsearchserviceDescribeReservedElasticsearchInstanceOfferingsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DescribeReservedElasticsearchInstances(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) (*elasticsearchservice.DescribeReservedElasticsearchInstancesOutput, error) {
 	var output elasticsearchservice.DescribeReservedElasticsearchInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeReservedElasticsearchInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DescribeReservedElasticsearchInstancesAsync(ctx workflow.Context, input *elasticsearchservice.DescribeReservedElasticsearchInstancesInput) *ElasticsearchserviceDescribeReservedElasticsearchInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DescribeReservedElasticsearchInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DescribeReservedElasticsearchInstances", input)
 	return &ElasticsearchserviceDescribeReservedElasticsearchInstancesResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) DissociatePackage(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) (*elasticsearchservice.DissociatePackageOutput, error) {
 	var output elasticsearchservice.DissociatePackageOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.DissociatePackage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DissociatePackage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) DissociatePackageAsync(ctx workflow.Context, input *elasticsearchservice.DissociatePackageInput) *ElasticsearchserviceDissociatePackageResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.DissociatePackage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.DissociatePackage", input)
 	return &ElasticsearchserviceDissociatePackageResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) GetCompatibleElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) (*elasticsearchservice.GetCompatibleElasticsearchVersionsOutput, error) {
 	var output elasticsearchservice.GetCompatibleElasticsearchVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetCompatibleElasticsearchVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetCompatibleElasticsearchVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) GetCompatibleElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.GetCompatibleElasticsearchVersionsInput) *ElasticsearchserviceGetCompatibleElasticsearchVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetCompatibleElasticsearchVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetCompatibleElasticsearchVersions", input)
 	return &ElasticsearchserviceGetCompatibleElasticsearchVersionsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) GetUpgradeHistory(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) (*elasticsearchservice.GetUpgradeHistoryOutput, error) {
 	var output elasticsearchservice.GetUpgradeHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetUpgradeHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) GetUpgradeHistoryAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeHistoryInput) *ElasticsearchserviceGetUpgradeHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetUpgradeHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeHistory", input)
 	return &ElasticsearchserviceGetUpgradeHistoryResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) GetUpgradeStatus(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) (*elasticsearchservice.GetUpgradeStatusOutput, error) {
 	var output elasticsearchservice.GetUpgradeStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetUpgradeStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) GetUpgradeStatusAsync(ctx workflow.Context, input *elasticsearchservice.GetUpgradeStatusInput) *ElasticsearchserviceGetUpgradeStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.GetUpgradeStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.GetUpgradeStatus", input)
 	return &ElasticsearchserviceGetUpgradeStatusResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListDomainNames(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) (*elasticsearchservice.ListDomainNamesOutput, error) {
 	var output elasticsearchservice.ListDomainNamesOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListDomainNames", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainNames", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListDomainNamesAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainNamesInput) *ElasticsearchserviceListDomainNamesResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListDomainNames", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainNames", input)
 	return &ElasticsearchserviceListDomainNamesResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListDomainsForPackage(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) (*elasticsearchservice.ListDomainsForPackageOutput, error) {
 	var output elasticsearchservice.ListDomainsForPackageOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListDomainsForPackage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainsForPackage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListDomainsForPackageAsync(ctx workflow.Context, input *elasticsearchservice.ListDomainsForPackageInput) *ElasticsearchserviceListDomainsForPackageResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListDomainsForPackage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListDomainsForPackage", input)
 	return &ElasticsearchserviceListDomainsForPackageResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListElasticsearchInstanceTypes(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) (*elasticsearchservice.ListElasticsearchInstanceTypesOutput, error) {
 	var output elasticsearchservice.ListElasticsearchInstanceTypesOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListElasticsearchInstanceTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchInstanceTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListElasticsearchInstanceTypesAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchInstanceTypesInput) *ElasticsearchserviceListElasticsearchInstanceTypesResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListElasticsearchInstanceTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchInstanceTypes", input)
 	return &ElasticsearchserviceListElasticsearchInstanceTypesResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListElasticsearchVersions(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) (*elasticsearchservice.ListElasticsearchVersionsOutput, error) {
 	var output elasticsearchservice.ListElasticsearchVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListElasticsearchVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListElasticsearchVersionsAsync(ctx workflow.Context, input *elasticsearchservice.ListElasticsearchVersionsInput) *ElasticsearchserviceListElasticsearchVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListElasticsearchVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListElasticsearchVersions", input)
 	return &ElasticsearchserviceListElasticsearchVersionsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListPackagesForDomain(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) (*elasticsearchservice.ListPackagesForDomainOutput, error) {
 	var output elasticsearchservice.ListPackagesForDomainOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListPackagesForDomain", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListPackagesForDomain", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListPackagesForDomainAsync(ctx workflow.Context, input *elasticsearchservice.ListPackagesForDomainInput) *ElasticsearchserviceListPackagesForDomainResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListPackagesForDomain", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListPackagesForDomain", input)
 	return &ElasticsearchserviceListPackagesForDomainResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) ListTags(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) (*elasticsearchservice.ListTagsOutput, error) {
 	var output elasticsearchservice.ListTagsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) ListTagsAsync(ctx workflow.Context, input *elasticsearchservice.ListTagsInput) *ElasticsearchserviceListTagsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.ListTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.ListTags", input)
 	return &ElasticsearchserviceListTagsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) PurchaseReservedElasticsearchInstanceOffering(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) (*elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput, error) {
 	var output elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.PurchaseReservedElasticsearchInstanceOffering", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.PurchaseReservedElasticsearchInstanceOffering", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) PurchaseReservedElasticsearchInstanceOfferingAsync(ctx workflow.Context, input *elasticsearchservice.PurchaseReservedElasticsearchInstanceOfferingInput) *ElasticsearchservicePurchaseReservedElasticsearchInstanceOfferingResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.PurchaseReservedElasticsearchInstanceOffering", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.PurchaseReservedElasticsearchInstanceOffering", input)
 	return &ElasticsearchservicePurchaseReservedElasticsearchInstanceOfferingResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) RejectInboundCrossClusterSearchConnection(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) (*elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput, error) {
 	var output elasticsearchservice.RejectInboundCrossClusterSearchConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.RejectInboundCrossClusterSearchConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RejectInboundCrossClusterSearchConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) RejectInboundCrossClusterSearchConnectionAsync(ctx workflow.Context, input *elasticsearchservice.RejectInboundCrossClusterSearchConnectionInput) *ElasticsearchserviceRejectInboundCrossClusterSearchConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.RejectInboundCrossClusterSearchConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RejectInboundCrossClusterSearchConnection", input)
 	return &ElasticsearchserviceRejectInboundCrossClusterSearchConnectionResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) RemoveTags(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) (*elasticsearchservice.RemoveTagsOutput, error) {
 	var output elasticsearchservice.RemoveTagsOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.RemoveTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RemoveTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) RemoveTagsAsync(ctx workflow.Context, input *elasticsearchservice.RemoveTagsInput) *ElasticsearchserviceRemoveTagsResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.RemoveTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.RemoveTags", input)
 	return &ElasticsearchserviceRemoveTagsResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) StartElasticsearchServiceSoftwareUpdate(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) (*elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput, error) {
 	var output elasticsearchservice.StartElasticsearchServiceSoftwareUpdateOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.StartElasticsearchServiceSoftwareUpdate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.StartElasticsearchServiceSoftwareUpdate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) StartElasticsearchServiceSoftwareUpdateAsync(ctx workflow.Context, input *elasticsearchservice.StartElasticsearchServiceSoftwareUpdateInput) *ElasticsearchserviceStartElasticsearchServiceSoftwareUpdateResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.StartElasticsearchServiceSoftwareUpdate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.StartElasticsearchServiceSoftwareUpdate", input)
 	return &ElasticsearchserviceStartElasticsearchServiceSoftwareUpdateResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) UpdateElasticsearchDomainConfig(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) (*elasticsearchservice.UpdateElasticsearchDomainConfigOutput, error) {
 	var output elasticsearchservice.UpdateElasticsearchDomainConfigOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.UpdateElasticsearchDomainConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpdateElasticsearchDomainConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) UpdateElasticsearchDomainConfigAsync(ctx workflow.Context, input *elasticsearchservice.UpdateElasticsearchDomainConfigInput) *ElasticsearchserviceUpdateElasticsearchDomainConfigResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.UpdateElasticsearchDomainConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpdateElasticsearchDomainConfig", input)
 	return &ElasticsearchserviceUpdateElasticsearchDomainConfigResult{Result: future}
 }
 
 func (a *ElasticsearchServiceStub) UpgradeElasticsearchDomain(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) (*elasticsearchservice.UpgradeElasticsearchDomainOutput, error) {
 	var output elasticsearchservice.UpgradeElasticsearchDomainOutput
-	err := workflow.ExecuteActivity(ctx, "ElasticsearchService.UpgradeElasticsearchDomain", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpgradeElasticsearchDomain", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ElasticsearchServiceStub) UpgradeElasticsearchDomainAsync(ctx workflow.Context, input *elasticsearchservice.UpgradeElasticsearchDomainInput) *ElasticsearchserviceUpgradeElasticsearchDomainResult {
-	future := workflow.ExecuteActivity(ctx, "ElasticsearchService.UpgradeElasticsearchDomain", input)
+	future := workflow.ExecuteActivity(ctx, "aws.elasticsearchservice.UpgradeElasticsearchDomain", input)
 	return &ElasticsearchserviceUpgradeElasticsearchDomainResult{Result: future}
 }

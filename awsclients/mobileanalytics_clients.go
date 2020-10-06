@@ -31,11 +31,11 @@ func (r *MobileanalyticsPutEventsResult) Get(ctx workflow.Context) (*mobileanaly
 
 func (a *MobileAnalyticsStub) PutEvents(ctx workflow.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error) {
 	var output mobileanalytics.PutEventsOutput
-	err := workflow.ExecuteActivity(ctx, "MobileAnalytics.PutEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobileanalytics.PutEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileAnalyticsStub) PutEventsAsync(ctx workflow.Context, input *mobileanalytics.PutEventsInput) *MobileanalyticsPutEventsResult {
-	future := workflow.ExecuteActivity(ctx, "MobileAnalytics.PutEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobileanalytics.PutEvents", input)
 	return &MobileanalyticsPutEventsResult{Result: future}
 }

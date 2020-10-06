@@ -44,22 +44,22 @@ func (r *MarketplacecommerceanalyticsStartSupportDataExportResult) Get(ctx workf
 
 func (a *MarketplaceCommerceAnalyticsStub) GenerateDataSet(ctx workflow.Context, input *marketplacecommerceanalytics.GenerateDataSetInput) (*marketplacecommerceanalytics.GenerateDataSetOutput, error) {
 	var output marketplacecommerceanalytics.GenerateDataSetOutput
-	err := workflow.ExecuteActivity(ctx, "MarketplaceCommerceAnalytics.GenerateDataSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.GenerateDataSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MarketplaceCommerceAnalyticsStub) GenerateDataSetAsync(ctx workflow.Context, input *marketplacecommerceanalytics.GenerateDataSetInput) *MarketplacecommerceanalyticsGenerateDataSetResult {
-	future := workflow.ExecuteActivity(ctx, "MarketplaceCommerceAnalytics.GenerateDataSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.GenerateDataSet", input)
 	return &MarketplacecommerceanalyticsGenerateDataSetResult{Result: future}
 }
 
 func (a *MarketplaceCommerceAnalyticsStub) StartSupportDataExport(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) (*marketplacecommerceanalytics.StartSupportDataExportOutput, error) {
 	var output marketplacecommerceanalytics.StartSupportDataExportOutput
-	err := workflow.ExecuteActivity(ctx, "MarketplaceCommerceAnalytics.StartSupportDataExport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.StartSupportDataExport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MarketplaceCommerceAnalyticsStub) StartSupportDataExportAsync(ctx workflow.Context, input *marketplacecommerceanalytics.StartSupportDataExportInput) *MarketplacecommerceanalyticsStartSupportDataExportResult {
-	future := workflow.ExecuteActivity(ctx, "MarketplaceCommerceAnalytics.StartSupportDataExport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.marketplacecommerceanalytics.StartSupportDataExport", input)
 	return &MarketplacecommerceanalyticsStartSupportDataExportResult{Result: future}
 }

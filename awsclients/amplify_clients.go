@@ -499,407 +499,407 @@ func (r *AmplifyUpdateWebhookResult) Get(ctx workflow.Context) (*amplify.UpdateW
 
 func (a *AmplifyStub) CreateApp(ctx workflow.Context, input *amplify.CreateAppInput) (*amplify.CreateAppOutput, error) {
 	var output amplify.CreateAppOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateAppAsync(ctx workflow.Context, input *amplify.CreateAppInput) *AmplifyCreateAppResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateApp", input)
 	return &AmplifyCreateAppResult{Result: future}
 }
 
 func (a *AmplifyStub) CreateBackendEnvironment(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) (*amplify.CreateBackendEnvironmentOutput, error) {
 	var output amplify.CreateBackendEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateBackendEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBackendEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateBackendEnvironmentAsync(ctx workflow.Context, input *amplify.CreateBackendEnvironmentInput) *AmplifyCreateBackendEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateBackendEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBackendEnvironment", input)
 	return &AmplifyCreateBackendEnvironmentResult{Result: future}
 }
 
 func (a *AmplifyStub) CreateBranch(ctx workflow.Context, input *amplify.CreateBranchInput) (*amplify.CreateBranchOutput, error) {
 	var output amplify.CreateBranchOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateBranch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBranch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateBranchAsync(ctx workflow.Context, input *amplify.CreateBranchInput) *AmplifyCreateBranchResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateBranch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateBranch", input)
 	return &AmplifyCreateBranchResult{Result: future}
 }
 
 func (a *AmplifyStub) CreateDeployment(ctx workflow.Context, input *amplify.CreateDeploymentInput) (*amplify.CreateDeploymentOutput, error) {
 	var output amplify.CreateDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateDeploymentAsync(ctx workflow.Context, input *amplify.CreateDeploymentInput) *AmplifyCreateDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDeployment", input)
 	return &AmplifyCreateDeploymentResult{Result: future}
 }
 
 func (a *AmplifyStub) CreateDomainAssociation(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) (*amplify.CreateDomainAssociationOutput, error) {
 	var output amplify.CreateDomainAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateDomainAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDomainAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateDomainAssociationAsync(ctx workflow.Context, input *amplify.CreateDomainAssociationInput) *AmplifyCreateDomainAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateDomainAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateDomainAssociation", input)
 	return &AmplifyCreateDomainAssociationResult{Result: future}
 }
 
 func (a *AmplifyStub) CreateWebhook(ctx workflow.Context, input *amplify.CreateWebhookInput) (*amplify.CreateWebhookOutput, error) {
 	var output amplify.CreateWebhookOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.CreateWebhook", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.CreateWebhook", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) CreateWebhookAsync(ctx workflow.Context, input *amplify.CreateWebhookInput) *AmplifyCreateWebhookResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.CreateWebhook", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.CreateWebhook", input)
 	return &AmplifyCreateWebhookResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteApp(ctx workflow.Context, input *amplify.DeleteAppInput) (*amplify.DeleteAppOutput, error) {
 	var output amplify.DeleteAppOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteAppAsync(ctx workflow.Context, input *amplify.DeleteAppInput) *AmplifyDeleteAppResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteApp", input)
 	return &AmplifyDeleteAppResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteBackendEnvironment(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) (*amplify.DeleteBackendEnvironmentOutput, error) {
 	var output amplify.DeleteBackendEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteBackendEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBackendEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteBackendEnvironmentAsync(ctx workflow.Context, input *amplify.DeleteBackendEnvironmentInput) *AmplifyDeleteBackendEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteBackendEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBackendEnvironment", input)
 	return &AmplifyDeleteBackendEnvironmentResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteBranch(ctx workflow.Context, input *amplify.DeleteBranchInput) (*amplify.DeleteBranchOutput, error) {
 	var output amplify.DeleteBranchOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteBranch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBranch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteBranchAsync(ctx workflow.Context, input *amplify.DeleteBranchInput) *AmplifyDeleteBranchResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteBranch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteBranch", input)
 	return &AmplifyDeleteBranchResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteDomainAssociation(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) (*amplify.DeleteDomainAssociationOutput, error) {
 	var output amplify.DeleteDomainAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteDomainAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteDomainAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteDomainAssociationAsync(ctx workflow.Context, input *amplify.DeleteDomainAssociationInput) *AmplifyDeleteDomainAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteDomainAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteDomainAssociation", input)
 	return &AmplifyDeleteDomainAssociationResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteJob(ctx workflow.Context, input *amplify.DeleteJobInput) (*amplify.DeleteJobOutput, error) {
 	var output amplify.DeleteJobOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteJobAsync(ctx workflow.Context, input *amplify.DeleteJobInput) *AmplifyDeleteJobResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteJob", input)
 	return &AmplifyDeleteJobResult{Result: future}
 }
 
 func (a *AmplifyStub) DeleteWebhook(ctx workflow.Context, input *amplify.DeleteWebhookInput) (*amplify.DeleteWebhookOutput, error) {
 	var output amplify.DeleteWebhookOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.DeleteWebhook", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteWebhook", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) DeleteWebhookAsync(ctx workflow.Context, input *amplify.DeleteWebhookInput) *AmplifyDeleteWebhookResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.DeleteWebhook", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.DeleteWebhook", input)
 	return &AmplifyDeleteWebhookResult{Result: future}
 }
 
 func (a *AmplifyStub) GenerateAccessLogs(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) (*amplify.GenerateAccessLogsOutput, error) {
 	var output amplify.GenerateAccessLogsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GenerateAccessLogs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GenerateAccessLogs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GenerateAccessLogsAsync(ctx workflow.Context, input *amplify.GenerateAccessLogsInput) *AmplifyGenerateAccessLogsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GenerateAccessLogs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GenerateAccessLogs", input)
 	return &AmplifyGenerateAccessLogsResult{Result: future}
 }
 
 func (a *AmplifyStub) GetApp(ctx workflow.Context, input *amplify.GetAppInput) (*amplify.GetAppOutput, error) {
 	var output amplify.GetAppOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetAppAsync(ctx workflow.Context, input *amplify.GetAppInput) *AmplifyGetAppResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetApp", input)
 	return &AmplifyGetAppResult{Result: future}
 }
 
 func (a *AmplifyStub) GetArtifactUrl(ctx workflow.Context, input *amplify.GetArtifactUrlInput) (*amplify.GetArtifactUrlOutput, error) {
 	var output amplify.GetArtifactUrlOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetArtifactUrl", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetArtifactUrl", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetArtifactUrlAsync(ctx workflow.Context, input *amplify.GetArtifactUrlInput) *AmplifyGetArtifactUrlResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetArtifactUrl", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetArtifactUrl", input)
 	return &AmplifyGetArtifactUrlResult{Result: future}
 }
 
 func (a *AmplifyStub) GetBackendEnvironment(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) (*amplify.GetBackendEnvironmentOutput, error) {
 	var output amplify.GetBackendEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetBackendEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetBackendEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetBackendEnvironmentAsync(ctx workflow.Context, input *amplify.GetBackendEnvironmentInput) *AmplifyGetBackendEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetBackendEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetBackendEnvironment", input)
 	return &AmplifyGetBackendEnvironmentResult{Result: future}
 }
 
 func (a *AmplifyStub) GetBranch(ctx workflow.Context, input *amplify.GetBranchInput) (*amplify.GetBranchOutput, error) {
 	var output amplify.GetBranchOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetBranch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetBranch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetBranchAsync(ctx workflow.Context, input *amplify.GetBranchInput) *AmplifyGetBranchResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetBranch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetBranch", input)
 	return &AmplifyGetBranchResult{Result: future}
 }
 
 func (a *AmplifyStub) GetDomainAssociation(ctx workflow.Context, input *amplify.GetDomainAssociationInput) (*amplify.GetDomainAssociationOutput, error) {
 	var output amplify.GetDomainAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetDomainAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetDomainAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetDomainAssociationAsync(ctx workflow.Context, input *amplify.GetDomainAssociationInput) *AmplifyGetDomainAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetDomainAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetDomainAssociation", input)
 	return &AmplifyGetDomainAssociationResult{Result: future}
 }
 
 func (a *AmplifyStub) GetJob(ctx workflow.Context, input *amplify.GetJobInput) (*amplify.GetJobOutput, error) {
 	var output amplify.GetJobOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetJobAsync(ctx workflow.Context, input *amplify.GetJobInput) *AmplifyGetJobResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetJob", input)
 	return &AmplifyGetJobResult{Result: future}
 }
 
 func (a *AmplifyStub) GetWebhook(ctx workflow.Context, input *amplify.GetWebhookInput) (*amplify.GetWebhookOutput, error) {
 	var output amplify.GetWebhookOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.GetWebhook", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.GetWebhook", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) GetWebhookAsync(ctx workflow.Context, input *amplify.GetWebhookInput) *AmplifyGetWebhookResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.GetWebhook", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.GetWebhook", input)
 	return &AmplifyGetWebhookResult{Result: future}
 }
 
 func (a *AmplifyStub) ListApps(ctx workflow.Context, input *amplify.ListAppsInput) (*amplify.ListAppsOutput, error) {
 	var output amplify.ListAppsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListApps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListApps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListAppsAsync(ctx workflow.Context, input *amplify.ListAppsInput) *AmplifyListAppsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListApps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListApps", input)
 	return &AmplifyListAppsResult{Result: future}
 }
 
 func (a *AmplifyStub) ListArtifacts(ctx workflow.Context, input *amplify.ListArtifactsInput) (*amplify.ListArtifactsOutput, error) {
 	var output amplify.ListArtifactsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListArtifacts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListArtifacts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListArtifactsAsync(ctx workflow.Context, input *amplify.ListArtifactsInput) *AmplifyListArtifactsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListArtifacts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListArtifacts", input)
 	return &AmplifyListArtifactsResult{Result: future}
 }
 
 func (a *AmplifyStub) ListBackendEnvironments(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) (*amplify.ListBackendEnvironmentsOutput, error) {
 	var output amplify.ListBackendEnvironmentsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListBackendEnvironments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListBackendEnvironments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListBackendEnvironmentsAsync(ctx workflow.Context, input *amplify.ListBackendEnvironmentsInput) *AmplifyListBackendEnvironmentsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListBackendEnvironments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListBackendEnvironments", input)
 	return &AmplifyListBackendEnvironmentsResult{Result: future}
 }
 
 func (a *AmplifyStub) ListBranches(ctx workflow.Context, input *amplify.ListBranchesInput) (*amplify.ListBranchesOutput, error) {
 	var output amplify.ListBranchesOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListBranches", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListBranches", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListBranchesAsync(ctx workflow.Context, input *amplify.ListBranchesInput) *AmplifyListBranchesResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListBranches", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListBranches", input)
 	return &AmplifyListBranchesResult{Result: future}
 }
 
 func (a *AmplifyStub) ListDomainAssociations(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) (*amplify.ListDomainAssociationsOutput, error) {
 	var output amplify.ListDomainAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListDomainAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListDomainAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListDomainAssociationsAsync(ctx workflow.Context, input *amplify.ListDomainAssociationsInput) *AmplifyListDomainAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListDomainAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListDomainAssociations", input)
 	return &AmplifyListDomainAssociationsResult{Result: future}
 }
 
 func (a *AmplifyStub) ListJobs(ctx workflow.Context, input *amplify.ListJobsInput) (*amplify.ListJobsOutput, error) {
 	var output amplify.ListJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListJobsAsync(ctx workflow.Context, input *amplify.ListJobsInput) *AmplifyListJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListJobs", input)
 	return &AmplifyListJobsResult{Result: future}
 }
 
 func (a *AmplifyStub) ListTagsForResource(ctx workflow.Context, input *amplify.ListTagsForResourceInput) (*amplify.ListTagsForResourceOutput, error) {
 	var output amplify.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListTagsForResourceAsync(ctx workflow.Context, input *amplify.ListTagsForResourceInput) *AmplifyListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListTagsForResource", input)
 	return &AmplifyListTagsForResourceResult{Result: future}
 }
 
 func (a *AmplifyStub) ListWebhooks(ctx workflow.Context, input *amplify.ListWebhooksInput) (*amplify.ListWebhooksOutput, error) {
 	var output amplify.ListWebhooksOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.ListWebhooks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.ListWebhooks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) ListWebhooksAsync(ctx workflow.Context, input *amplify.ListWebhooksInput) *AmplifyListWebhooksResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.ListWebhooks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.ListWebhooks", input)
 	return &AmplifyListWebhooksResult{Result: future}
 }
 
 func (a *AmplifyStub) StartDeployment(ctx workflow.Context, input *amplify.StartDeploymentInput) (*amplify.StartDeploymentOutput, error) {
 	var output amplify.StartDeploymentOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.StartDeployment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.StartDeployment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) StartDeploymentAsync(ctx workflow.Context, input *amplify.StartDeploymentInput) *AmplifyStartDeploymentResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.StartDeployment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.StartDeployment", input)
 	return &AmplifyStartDeploymentResult{Result: future}
 }
 
 func (a *AmplifyStub) StartJob(ctx workflow.Context, input *amplify.StartJobInput) (*amplify.StartJobOutput, error) {
 	var output amplify.StartJobOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.StartJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.StartJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) StartJobAsync(ctx workflow.Context, input *amplify.StartJobInput) *AmplifyStartJobResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.StartJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.StartJob", input)
 	return &AmplifyStartJobResult{Result: future}
 }
 
 func (a *AmplifyStub) StopJob(ctx workflow.Context, input *amplify.StopJobInput) (*amplify.StopJobOutput, error) {
 	var output amplify.StopJobOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.StopJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.StopJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) StopJobAsync(ctx workflow.Context, input *amplify.StopJobInput) *AmplifyStopJobResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.StopJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.StopJob", input)
 	return &AmplifyStopJobResult{Result: future}
 }
 
 func (a *AmplifyStub) TagResource(ctx workflow.Context, input *amplify.TagResourceInput) (*amplify.TagResourceOutput, error) {
 	var output amplify.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) TagResourceAsync(ctx workflow.Context, input *amplify.TagResourceInput) *AmplifyTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.TagResource", input)
 	return &AmplifyTagResourceResult{Result: future}
 }
 
 func (a *AmplifyStub) UntagResource(ctx workflow.Context, input *amplify.UntagResourceInput) (*amplify.UntagResourceOutput, error) {
 	var output amplify.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) UntagResourceAsync(ctx workflow.Context, input *amplify.UntagResourceInput) *AmplifyUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.UntagResource", input)
 	return &AmplifyUntagResourceResult{Result: future}
 }
 
 func (a *AmplifyStub) UpdateApp(ctx workflow.Context, input *amplify.UpdateAppInput) (*amplify.UpdateAppOutput, error) {
 	var output amplify.UpdateAppOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.UpdateApp", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateApp", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) UpdateAppAsync(ctx workflow.Context, input *amplify.UpdateAppInput) *AmplifyUpdateAppResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.UpdateApp", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateApp", input)
 	return &AmplifyUpdateAppResult{Result: future}
 }
 
 func (a *AmplifyStub) UpdateBranch(ctx workflow.Context, input *amplify.UpdateBranchInput) (*amplify.UpdateBranchOutput, error) {
 	var output amplify.UpdateBranchOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.UpdateBranch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateBranch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) UpdateBranchAsync(ctx workflow.Context, input *amplify.UpdateBranchInput) *AmplifyUpdateBranchResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.UpdateBranch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateBranch", input)
 	return &AmplifyUpdateBranchResult{Result: future}
 }
 
 func (a *AmplifyStub) UpdateDomainAssociation(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) (*amplify.UpdateDomainAssociationOutput, error) {
 	var output amplify.UpdateDomainAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.UpdateDomainAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateDomainAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) UpdateDomainAssociationAsync(ctx workflow.Context, input *amplify.UpdateDomainAssociationInput) *AmplifyUpdateDomainAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.UpdateDomainAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateDomainAssociation", input)
 	return &AmplifyUpdateDomainAssociationResult{Result: future}
 }
 
 func (a *AmplifyStub) UpdateWebhook(ctx workflow.Context, input *amplify.UpdateWebhookInput) (*amplify.UpdateWebhookOutput, error) {
 	var output amplify.UpdateWebhookOutput
-	err := workflow.ExecuteActivity(ctx, "Amplify.UpdateWebhook", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateWebhook", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AmplifyStub) UpdateWebhookAsync(ctx workflow.Context, input *amplify.UpdateWebhookInput) *AmplifyUpdateWebhookResult {
-	future := workflow.ExecuteActivity(ctx, "Amplify.UpdateWebhook", input)
+	future := workflow.ExecuteActivity(ctx, "aws.amplify.UpdateWebhook", input)
 	return &AmplifyUpdateWebhookResult{Result: future}
 }
