@@ -6,10 +6,10 @@
 This repository is a prototype of generated [Temporal](https://github.com/temporalio/) activities and workflow stubs for all AWS APIs
 exposed by [AWS Go SDK](https://github.com/aws/aws-sdk-go).
 
-Generated activities and stubs are in Go at this point. 
-Java SDK has to call them by string name until Java activity interface generation is added.  
+Generated activities and stubs are in Go at this point.
+Java SDK has to call them by string name until Java activity interface generation is added.
 
-Contact [Maxim](https://github.com/mfateev) if you want to collaborate on this project. 
+Contact [Maxim](https://github.com/mfateev) if you want to collaborate on this project.
 
 ## Generated Code
 
@@ -26,16 +26,13 @@ git submodule update --init --recursive
 ```
 Regenerate code for all services:
 ```
-go run cmd/temporal-aws-sdk-gen/main.go
+make generate
 ```
-Regenerate code for a single service:
-```
-go run cmd/temporal-aws-sdk-gen/main.go
-```
+
 
 ## Templates
 
-Templates that are used for code generation are located in 
+Templates that are used for code generation are located in
 [cmd/temporal-aws-sdk-gen/templates](cmd/temporal-aws-sdk-gen/templates) directory.
 They use Go [text/template](https://golang.org/pkg/text/template/) package. Each template is invoked with
 [InterfaceDefinition](cmd/temporal-aws-sdk-gen/internal/parser.go#L31) structure as a parameter.
@@ -45,13 +42,13 @@ They use Go [text/template](https://golang.org/pkg/text/template/) package. Each
 To run Temporal AWS SDK activities:
 
 Create `~/.aws/credentials` file with aws access key id and secret or set corresponding environment variables.
-The basic credentials file format: 
+The basic credentials file format:
 ```
 [default]
 aws_access_key_id = <ID>
 aws_secret_access_key = <SECRET>
 ```
-See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details. 
+See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details.
 ```bash
 go run cmd/awsactivities/main.go
 ```
