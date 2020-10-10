@@ -58,8 +58,7 @@ type LicenseManagerClient interface {
 	UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult
 }
 
-type LicenseManagerStub struct {
-}
+type LicenseManagerStub struct{}
 
 func NewLicenseManagerStub() LicenseManagerClient {
 	return &LicenseManagerStub{}
@@ -227,176 +226,176 @@ func (r *LicensemanagerUpdateServiceSettingsResult) Get(ctx workflow.Context) (*
 
 func (a *LicenseManagerStub) CreateLicenseConfiguration(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) (*licensemanager.CreateLicenseConfigurationOutput, error) {
 	var output licensemanager.CreateLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.CreateLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.CreateLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) CreateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.CreateLicenseConfigurationInput) *LicensemanagerCreateLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.CreateLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.CreateLicenseConfiguration", input)
 	return &LicensemanagerCreateLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) DeleteLicenseConfiguration(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error) {
 	var output licensemanager.DeleteLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.DeleteLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.DeleteLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) DeleteLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.DeleteLicenseConfigurationInput) *LicensemanagerDeleteLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.DeleteLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.DeleteLicenseConfiguration", input)
 	return &LicensemanagerDeleteLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) GetLicenseConfiguration(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error) {
 	var output licensemanager.GetLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.GetLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) GetLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.GetLicenseConfigurationInput) *LicensemanagerGetLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.GetLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetLicenseConfiguration", input)
 	return &LicensemanagerGetLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) GetServiceSettings(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error) {
 	var output licensemanager.GetServiceSettingsOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.GetServiceSettings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetServiceSettings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) GetServiceSettingsAsync(ctx workflow.Context, input *licensemanager.GetServiceSettingsInput) *LicensemanagerGetServiceSettingsResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.GetServiceSettings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.GetServiceSettings", input)
 	return &LicensemanagerGetServiceSettingsResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListAssociationsForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
 	var output licensemanager.ListAssociationsForLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListAssociationsForLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListAssociationsForLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListAssociationsForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) *LicensemanagerListAssociationsForLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListAssociationsForLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListAssociationsForLicenseConfiguration", input)
 	return &LicensemanagerListAssociationsForLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperations(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error) {
 	var output licensemanager.ListFailuresForLicenseConfigurationOperationsOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListFailuresForLicenseConfigurationOperations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListFailuresForLicenseConfigurationOperations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListFailuresForLicenseConfigurationOperationsAsync(ctx workflow.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) *LicensemanagerListFailuresForLicenseConfigurationOperationsResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListFailuresForLicenseConfigurationOperations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListFailuresForLicenseConfigurationOperations", input)
 	return &LicensemanagerListFailuresForLicenseConfigurationOperationsResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListLicenseConfigurations(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error) {
 	var output licensemanager.ListLicenseConfigurationsOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListLicenseConfigurations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseConfigurations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListLicenseConfigurationsAsync(ctx workflow.Context, input *licensemanager.ListLicenseConfigurationsInput) *LicensemanagerListLicenseConfigurationsResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListLicenseConfigurations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseConfigurations", input)
 	return &LicensemanagerListLicenseConfigurationsResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error) {
 	var output licensemanager.ListLicenseSpecificationsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListLicenseSpecificationsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseSpecificationsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) *LicensemanagerListLicenseSpecificationsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListLicenseSpecificationsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListLicenseSpecificationsForResource", input)
 	return &LicensemanagerListLicenseSpecificationsForResourceResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListResourceInventory(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error) {
 	var output licensemanager.ListResourceInventoryOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListResourceInventory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListResourceInventory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListResourceInventoryAsync(ctx workflow.Context, input *licensemanager.ListResourceInventoryInput) *LicensemanagerListResourceInventoryResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListResourceInventory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListResourceInventory", input)
 	return &LicensemanagerListResourceInventoryResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListTagsForResource(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error) {
 	var output licensemanager.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *licensemanager.ListTagsForResourceInput) *LicensemanagerListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListTagsForResource", input)
 	return &LicensemanagerListTagsForResourceResult{Result: future}
 }
 
 func (a *LicenseManagerStub) ListUsageForLicenseConfiguration(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error) {
 	var output licensemanager.ListUsageForLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.ListUsageForLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListUsageForLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) ListUsageForLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) *LicensemanagerListUsageForLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.ListUsageForLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.ListUsageForLicenseConfiguration", input)
 	return &LicensemanagerListUsageForLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) TagResource(ctx workflow.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error) {
 	var output licensemanager.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) TagResourceAsync(ctx workflow.Context, input *licensemanager.TagResourceInput) *LicensemanagerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.TagResource", input)
 	return &LicensemanagerTagResourceResult{Result: future}
 }
 
 func (a *LicenseManagerStub) UntagResource(ctx workflow.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error) {
 	var output licensemanager.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) UntagResourceAsync(ctx workflow.Context, input *licensemanager.UntagResourceInput) *LicensemanagerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UntagResource", input)
 	return &LicensemanagerUntagResourceResult{Result: future}
 }
 
 func (a *LicenseManagerStub) UpdateLicenseConfiguration(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error) {
 	var output licensemanager.UpdateLicenseConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateLicenseConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) UpdateLicenseConfigurationAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseConfigurationInput) *LicensemanagerUpdateLicenseConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateLicenseConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseConfiguration", input)
 	return &LicensemanagerUpdateLicenseConfigurationResult{Result: future}
 }
 
 func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResource(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error) {
 	var output licensemanager.UpdateLicenseSpecificationsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateLicenseSpecificationsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseSpecificationsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) UpdateLicenseSpecificationsForResourceAsync(ctx workflow.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) *LicensemanagerUpdateLicenseSpecificationsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateLicenseSpecificationsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateLicenseSpecificationsForResource", input)
 	return &LicensemanagerUpdateLicenseSpecificationsForResourceResult{Result: future}
 }
 
 func (a *LicenseManagerStub) UpdateServiceSettings(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error) {
 	var output licensemanager.UpdateServiceSettingsOutput
-	err := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateServiceSettings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateServiceSettings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *LicenseManagerStub) UpdateServiceSettingsAsync(ctx workflow.Context, input *licensemanager.UpdateServiceSettingsInput) *LicensemanagerUpdateServiceSettingsResult {
-	future := workflow.ExecuteActivity(ctx, "LicenseManager.UpdateServiceSettings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.licensemanager.UpdateServiceSettings", input)
 	return &LicensemanagerUpdateServiceSettingsResult{Result: future}
 }

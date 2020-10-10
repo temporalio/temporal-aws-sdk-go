@@ -16,74 +16,152 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type ResourceGroupsActivities struct {
 	client resourcegroupsiface.ResourceGroupsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewResourceGroupsActivities(session *session.Session, config ...*aws.Config) *ResourceGroupsActivities {
-	client := resourcegroups.New(session, config...)
+func NewResourceGroupsActivities(sess *session.Session, config ...*aws.Config) *ResourceGroupsActivities {
+	client := resourcegroups.New(sess, config...)
 	return &ResourceGroupsActivities{client: client}
 }
 
+func NewResourceGroupsActivitiesWithSessionFactory(sessionFactory SessionFactory) *ResourceGroupsActivities {
+	return &ResourceGroupsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ResourceGroupsActivities) getClient(ctx context.Context) (resourcegroupsiface.ResourceGroupsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return resourcegroups.New(sess), nil
+}
+
 func (a *ResourceGroupsActivities) CreateGroup(ctx context.Context, input *resourcegroups.CreateGroupInput) (*resourcegroups.CreateGroupOutput, error) {
-	return a.client.CreateGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateGroupWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) DeleteGroup(ctx context.Context, input *resourcegroups.DeleteGroupInput) (*resourcegroups.DeleteGroupOutput, error) {
-	return a.client.DeleteGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteGroupWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) GetGroup(ctx context.Context, input *resourcegroups.GetGroupInput) (*resourcegroups.GetGroupOutput, error) {
-	return a.client.GetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetGroupWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) GetGroupConfiguration(ctx context.Context, input *resourcegroups.GetGroupConfigurationInput) (*resourcegroups.GetGroupConfigurationOutput, error) {
-	return a.client.GetGroupConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetGroupConfigurationWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) GetGroupQuery(ctx context.Context, input *resourcegroups.GetGroupQueryInput) (*resourcegroups.GetGroupQueryOutput, error) {
-	return a.client.GetGroupQueryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetGroupQueryWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) GetTags(ctx context.Context, input *resourcegroups.GetTagsInput) (*resourcegroups.GetTagsOutput, error) {
-	return a.client.GetTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTagsWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) GroupResources(ctx context.Context, input *resourcegroups.GroupResourcesInput) (*resourcegroups.GroupResourcesOutput, error) {
-	return a.client.GroupResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GroupResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) ListGroupResources(ctx context.Context, input *resourcegroups.ListGroupResourcesInput) (*resourcegroups.ListGroupResourcesOutput, error) {
-	return a.client.ListGroupResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListGroupResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) ListGroups(ctx context.Context, input *resourcegroups.ListGroupsInput) (*resourcegroups.ListGroupsOutput, error) {
-	return a.client.ListGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListGroupsWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) SearchResources(ctx context.Context, input *resourcegroups.SearchResourcesInput) (*resourcegroups.SearchResourcesOutput, error) {
-	return a.client.SearchResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) Tag(ctx context.Context, input *resourcegroups.TagInput) (*resourcegroups.TagOutput, error) {
-	return a.client.TagWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) UngroupResources(ctx context.Context, input *resourcegroups.UngroupResourcesInput) (*resourcegroups.UngroupResourcesOutput, error) {
-	return a.client.UngroupResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UngroupResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) Untag(ctx context.Context, input *resourcegroups.UntagInput) (*resourcegroups.UntagOutput, error) {
-	return a.client.UntagWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) UpdateGroup(ctx context.Context, input *resourcegroups.UpdateGroupInput) (*resourcegroups.UpdateGroupOutput, error) {
-	return a.client.UpdateGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateGroupWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsActivities) UpdateGroupQuery(ctx context.Context, input *resourcegroups.UpdateGroupQueryInput) (*resourcegroups.UpdateGroupQueryOutput, error) {
-	return a.client.UpdateGroupQueryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateGroupQueryWithContext(ctx, input)
 }

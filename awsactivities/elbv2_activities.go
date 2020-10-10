@@ -16,180 +16,354 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type ELBV2Activities struct {
 	client elbv2iface.ELBV2API
+
+	sessionFactory SessionFactory
 }
 
-func NewELBV2Activities(session *session.Session, config ...*aws.Config) *ELBV2Activities {
-	client := elbv2.New(session, config...)
+func NewELBV2Activities(sess *session.Session, config ...*aws.Config) *ELBV2Activities {
+	client := elbv2.New(sess, config...)
 	return &ELBV2Activities{client: client}
 }
 
+func NewELBV2ActivitiesWithSessionFactory(sessionFactory SessionFactory) *ELBV2Activities {
+	return &ELBV2Activities{sessionFactory: sessionFactory}
+}
+
+func (a *ELBV2Activities) getClient(ctx context.Context) (elbv2iface.ELBV2API, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return elbv2.New(sess), nil
+}
+
 func (a *ELBV2Activities) AddListenerCertificates(ctx context.Context, input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error) {
-	return a.client.AddListenerCertificatesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddListenerCertificatesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) AddTags(ctx context.Context, input *elbv2.AddTagsInput) (*elbv2.AddTagsOutput, error) {
-	return a.client.AddTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) CreateListener(ctx context.Context, input *elbv2.CreateListenerInput) (*elbv2.CreateListenerOutput, error) {
-	return a.client.CreateListenerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateListenerWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) CreateLoadBalancer(ctx context.Context, input *elbv2.CreateLoadBalancerInput) (*elbv2.CreateLoadBalancerOutput, error) {
-	return a.client.CreateLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) CreateRule(ctx context.Context, input *elbv2.CreateRuleInput) (*elbv2.CreateRuleOutput, error) {
-	return a.client.CreateRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateRuleWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) CreateTargetGroup(ctx context.Context, input *elbv2.CreateTargetGroupInput) (*elbv2.CreateTargetGroupOutput, error) {
-	return a.client.CreateTargetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateTargetGroupWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DeleteListener(ctx context.Context, input *elbv2.DeleteListenerInput) (*elbv2.DeleteListenerOutput, error) {
-	return a.client.DeleteListenerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteListenerWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DeleteLoadBalancer(ctx context.Context, input *elbv2.DeleteLoadBalancerInput) (*elbv2.DeleteLoadBalancerOutput, error) {
-	return a.client.DeleteLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DeleteRule(ctx context.Context, input *elbv2.DeleteRuleInput) (*elbv2.DeleteRuleOutput, error) {
-	return a.client.DeleteRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteRuleWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DeleteTargetGroup(ctx context.Context, input *elbv2.DeleteTargetGroupInput) (*elbv2.DeleteTargetGroupOutput, error) {
-	return a.client.DeleteTargetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteTargetGroupWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DeregisterTargets(ctx context.Context, input *elbv2.DeregisterTargetsInput) (*elbv2.DeregisterTargetsOutput, error) {
-	return a.client.DeregisterTargetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterTargetsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeAccountLimits(ctx context.Context, input *elbv2.DescribeAccountLimitsInput) (*elbv2.DescribeAccountLimitsOutput, error) {
-	return a.client.DescribeAccountLimitsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAccountLimitsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeListenerCertificates(ctx context.Context, input *elbv2.DescribeListenerCertificatesInput) (*elbv2.DescribeListenerCertificatesOutput, error) {
-	return a.client.DescribeListenerCertificatesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeListenerCertificatesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeListeners(ctx context.Context, input *elbv2.DescribeListenersInput) (*elbv2.DescribeListenersOutput, error) {
-	return a.client.DescribeListenersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeListenersWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeLoadBalancerAttributes(ctx context.Context, input *elbv2.DescribeLoadBalancerAttributesInput) (*elbv2.DescribeLoadBalancerAttributesOutput, error) {
-	return a.client.DescribeLoadBalancerAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancerAttributesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeLoadBalancers(ctx context.Context, input *elbv2.DescribeLoadBalancersInput) (*elbv2.DescribeLoadBalancersOutput, error) {
-	return a.client.DescribeLoadBalancersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancersWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeRules(ctx context.Context, input *elbv2.DescribeRulesInput) (*elbv2.DescribeRulesOutput, error) {
-	return a.client.DescribeRulesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeRulesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeSSLPolicies(ctx context.Context, input *elbv2.DescribeSSLPoliciesInput) (*elbv2.DescribeSSLPoliciesOutput, error) {
-	return a.client.DescribeSSLPoliciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSSLPoliciesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeTags(ctx context.Context, input *elbv2.DescribeTagsInput) (*elbv2.DescribeTagsOutput, error) {
-	return a.client.DescribeTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTagsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeTargetGroupAttributes(ctx context.Context, input *elbv2.DescribeTargetGroupAttributesInput) (*elbv2.DescribeTargetGroupAttributesOutput, error) {
-	return a.client.DescribeTargetGroupAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTargetGroupAttributesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeTargetGroups(ctx context.Context, input *elbv2.DescribeTargetGroupsInput) (*elbv2.DescribeTargetGroupsOutput, error) {
-	return a.client.DescribeTargetGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTargetGroupsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) DescribeTargetHealth(ctx context.Context, input *elbv2.DescribeTargetHealthInput) (*elbv2.DescribeTargetHealthOutput, error) {
-	return a.client.DescribeTargetHealthWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTargetHealthWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) ModifyListener(ctx context.Context, input *elbv2.ModifyListenerInput) (*elbv2.ModifyListenerOutput, error) {
-	return a.client.ModifyListenerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyListenerWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) ModifyLoadBalancerAttributes(ctx context.Context, input *elbv2.ModifyLoadBalancerAttributesInput) (*elbv2.ModifyLoadBalancerAttributesOutput, error) {
-	return a.client.ModifyLoadBalancerAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyLoadBalancerAttributesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) ModifyRule(ctx context.Context, input *elbv2.ModifyRuleInput) (*elbv2.ModifyRuleOutput, error) {
-	return a.client.ModifyRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyRuleWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) ModifyTargetGroup(ctx context.Context, input *elbv2.ModifyTargetGroupInput) (*elbv2.ModifyTargetGroupOutput, error) {
-	return a.client.ModifyTargetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyTargetGroupWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) ModifyTargetGroupAttributes(ctx context.Context, input *elbv2.ModifyTargetGroupAttributesInput) (*elbv2.ModifyTargetGroupAttributesOutput, error) {
-	return a.client.ModifyTargetGroupAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyTargetGroupAttributesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) RegisterTargets(ctx context.Context, input *elbv2.RegisterTargetsInput) (*elbv2.RegisterTargetsOutput, error) {
-	return a.client.RegisterTargetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterTargetsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) RemoveListenerCertificates(ctx context.Context, input *elbv2.RemoveListenerCertificatesInput) (*elbv2.RemoveListenerCertificatesOutput, error) {
-	return a.client.RemoveListenerCertificatesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveListenerCertificatesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) RemoveTags(ctx context.Context, input *elbv2.RemoveTagsInput) (*elbv2.RemoveTagsOutput, error) {
-	return a.client.RemoveTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveTagsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) SetIpAddressType(ctx context.Context, input *elbv2.SetIpAddressTypeInput) (*elbv2.SetIpAddressTypeOutput, error) {
-	return a.client.SetIpAddressTypeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetIpAddressTypeWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) SetRulePriorities(ctx context.Context, input *elbv2.SetRulePrioritiesInput) (*elbv2.SetRulePrioritiesOutput, error) {
-	return a.client.SetRulePrioritiesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetRulePrioritiesWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) SetSecurityGroups(ctx context.Context, input *elbv2.SetSecurityGroupsInput) (*elbv2.SetSecurityGroupsOutput, error) {
-	return a.client.SetSecurityGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetSecurityGroupsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) SetSubnets(ctx context.Context, input *elbv2.SetSubnetsInput) (*elbv2.SetSubnetsOutput, error) {
-	return a.client.SetSubnetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetSubnetsWithContext(ctx, input)
 }
 
 func (a *ELBV2Activities) WaitUntilLoadBalancerAvailable(ctx context.Context, input *elbv2.DescribeLoadBalancersInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilLoadBalancerAvailableWithContext(ctx, input, options...)
+		return client.WaitUntilLoadBalancerAvailableWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBV2Activities) WaitUntilLoadBalancerExists(ctx context.Context, input *elbv2.DescribeLoadBalancersInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilLoadBalancerExistsWithContext(ctx, input, options...)
+		return client.WaitUntilLoadBalancerExistsWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBV2Activities) WaitUntilLoadBalancersDeleted(ctx context.Context, input *elbv2.DescribeLoadBalancersInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilLoadBalancersDeletedWithContext(ctx, input, options...)
+		return client.WaitUntilLoadBalancersDeletedWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBV2Activities) WaitUntilTargetDeregistered(ctx context.Context, input *elbv2.DescribeTargetHealthInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilTargetDeregisteredWithContext(ctx, input, options...)
+		return client.WaitUntilTargetDeregisteredWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBV2Activities) WaitUntilTargetInService(ctx context.Context, input *elbv2.DescribeTargetHealthInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilTargetInServiceWithContext(ctx, input, options...)
+		return client.WaitUntilTargetInServiceWithContext(ctx, input, options...)
 	})
 }

@@ -16,47 +16,97 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type SavingsPlansActivities struct {
 	client savingsplansiface.SavingsPlansAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSavingsPlansActivities(session *session.Session, config ...*aws.Config) *SavingsPlansActivities {
-	client := savingsplans.New(session, config...)
+func NewSavingsPlansActivities(sess *session.Session, config ...*aws.Config) *SavingsPlansActivities {
+	client := savingsplans.New(sess, config...)
 	return &SavingsPlansActivities{client: client}
 }
 
+func NewSavingsPlansActivitiesWithSessionFactory(sessionFactory SessionFactory) *SavingsPlansActivities {
+	return &SavingsPlansActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SavingsPlansActivities) getClient(ctx context.Context) (savingsplansiface.SavingsPlansAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return savingsplans.New(sess), nil
+}
+
 func (a *SavingsPlansActivities) CreateSavingsPlan(ctx context.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.CreateSavingsPlanWithContext(ctx, input)
+	return client.CreateSavingsPlanWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlanRates(ctx context.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
-	return a.client.DescribeSavingsPlanRatesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSavingsPlanRatesWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlans(ctx context.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error) {
-	return a.client.DescribeSavingsPlansWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSavingsPlansWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlansOfferingRates(ctx context.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
-	return a.client.DescribeSavingsPlansOfferingRatesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSavingsPlansOfferingRatesWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) DescribeSavingsPlansOfferings(ctx context.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
-	return a.client.DescribeSavingsPlansOfferingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSavingsPlansOfferingsWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) ListTagsForResource(ctx context.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) TagResource(ctx context.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *SavingsPlansActivities) UntagResource(ctx context.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }

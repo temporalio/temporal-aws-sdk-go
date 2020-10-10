@@ -106,8 +106,7 @@ type Route53ResolverClient interface {
 	UpdateResolverRuleAsync(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) *Route53resolverUpdateResolverRuleResult
 }
 
-type Route53ResolverStub struct {
-}
+type Route53ResolverStub struct{}
 
 func NewRoute53ResolverStub() Route53ResolverClient {
 	return &Route53ResolverStub{}
@@ -435,352 +434,352 @@ func (r *Route53resolverUpdateResolverRuleResult) Get(ctx workflow.Context) (*ro
 
 func (a *Route53ResolverStub) AssociateResolverEndpointIpAddress(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) (*route53resolver.AssociateResolverEndpointIpAddressOutput, error) {
 	var output route53resolver.AssociateResolverEndpointIpAddressOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverEndpointIpAddress", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverEndpointIpAddress", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) AssociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) *Route53resolverAssociateResolverEndpointIpAddressResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverEndpointIpAddress", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverEndpointIpAddress", input)
 	return &Route53resolverAssociateResolverEndpointIpAddressResult{Result: future}
 }
 
 func (a *Route53ResolverStub) AssociateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.AssociateResolverQueryLogConfigInput) (*route53resolver.AssociateResolverQueryLogConfigOutput, error) {
 	var output route53resolver.AssociateResolverQueryLogConfigOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverQueryLogConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverQueryLogConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) AssociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.AssociateResolverQueryLogConfigInput) *Route53resolverAssociateResolverQueryLogConfigResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverQueryLogConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverQueryLogConfig", input)
 	return &Route53resolverAssociateResolverQueryLogConfigResult{Result: future}
 }
 
 func (a *Route53ResolverStub) AssociateResolverRule(ctx workflow.Context, input *route53resolver.AssociateResolverRuleInput) (*route53resolver.AssociateResolverRuleOutput, error) {
 	var output route53resolver.AssociateResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) AssociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.AssociateResolverRuleInput) *Route53resolverAssociateResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.AssociateResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.AssociateResolverRule", input)
 	return &Route53resolverAssociateResolverRuleResult{Result: future}
 }
 
 func (a *Route53ResolverStub) CreateResolverEndpoint(ctx workflow.Context, input *route53resolver.CreateResolverEndpointInput) (*route53resolver.CreateResolverEndpointOutput, error) {
 	var output route53resolver.CreateResolverEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) CreateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.CreateResolverEndpointInput) *Route53resolverCreateResolverEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverEndpoint", input)
 	return &Route53resolverCreateResolverEndpointResult{Result: future}
 }
 
 func (a *Route53ResolverStub) CreateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.CreateResolverQueryLogConfigInput) (*route53resolver.CreateResolverQueryLogConfigOutput, error) {
 	var output route53resolver.CreateResolverQueryLogConfigOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverQueryLogConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverQueryLogConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) CreateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.CreateResolverQueryLogConfigInput) *Route53resolverCreateResolverQueryLogConfigResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverQueryLogConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverQueryLogConfig", input)
 	return &Route53resolverCreateResolverQueryLogConfigResult{Result: future}
 }
 
 func (a *Route53ResolverStub) CreateResolverRule(ctx workflow.Context, input *route53resolver.CreateResolverRuleInput) (*route53resolver.CreateResolverRuleOutput, error) {
 	var output route53resolver.CreateResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) CreateResolverRuleAsync(ctx workflow.Context, input *route53resolver.CreateResolverRuleInput) *Route53resolverCreateResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.CreateResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.CreateResolverRule", input)
 	return &Route53resolverCreateResolverRuleResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DeleteResolverEndpoint(ctx workflow.Context, input *route53resolver.DeleteResolverEndpointInput) (*route53resolver.DeleteResolverEndpointOutput, error) {
 	var output route53resolver.DeleteResolverEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DeleteResolverEndpointAsync(ctx workflow.Context, input *route53resolver.DeleteResolverEndpointInput) *Route53resolverDeleteResolverEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverEndpoint", input)
 	return &Route53resolverDeleteResolverEndpointResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DeleteResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.DeleteResolverQueryLogConfigInput) (*route53resolver.DeleteResolverQueryLogConfigOutput, error) {
 	var output route53resolver.DeleteResolverQueryLogConfigOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverQueryLogConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverQueryLogConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DeleteResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DeleteResolverQueryLogConfigInput) *Route53resolverDeleteResolverQueryLogConfigResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverQueryLogConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverQueryLogConfig", input)
 	return &Route53resolverDeleteResolverQueryLogConfigResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DeleteResolverRule(ctx workflow.Context, input *route53resolver.DeleteResolverRuleInput) (*route53resolver.DeleteResolverRuleOutput, error) {
 	var output route53resolver.DeleteResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DeleteResolverRuleAsync(ctx workflow.Context, input *route53resolver.DeleteResolverRuleInput) *Route53resolverDeleteResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DeleteResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DeleteResolverRule", input)
 	return &Route53resolverDeleteResolverRuleResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DisassociateResolverEndpointIpAddress(ctx workflow.Context, input *route53resolver.DisassociateResolverEndpointIpAddressInput) (*route53resolver.DisassociateResolverEndpointIpAddressOutput, error) {
 	var output route53resolver.DisassociateResolverEndpointIpAddressOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverEndpointIpAddress", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverEndpointIpAddress", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DisassociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverEndpointIpAddressInput) *Route53resolverDisassociateResolverEndpointIpAddressResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverEndpointIpAddress", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverEndpointIpAddress", input)
 	return &Route53resolverDisassociateResolverEndpointIpAddressResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DisassociateResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.DisassociateResolverQueryLogConfigInput) (*route53resolver.DisassociateResolverQueryLogConfigOutput, error) {
 	var output route53resolver.DisassociateResolverQueryLogConfigOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverQueryLogConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverQueryLogConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DisassociateResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverQueryLogConfigInput) *Route53resolverDisassociateResolverQueryLogConfigResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverQueryLogConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverQueryLogConfig", input)
 	return &Route53resolverDisassociateResolverQueryLogConfigResult{Result: future}
 }
 
 func (a *Route53ResolverStub) DisassociateResolverRule(ctx workflow.Context, input *route53resolver.DisassociateResolverRuleInput) (*route53resolver.DisassociateResolverRuleOutput, error) {
 	var output route53resolver.DisassociateResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) DisassociateResolverRuleAsync(ctx workflow.Context, input *route53resolver.DisassociateResolverRuleInput) *Route53resolverDisassociateResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.DisassociateResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.DisassociateResolverRule", input)
 	return &Route53resolverDisassociateResolverRuleResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverEndpoint(ctx workflow.Context, input *route53resolver.GetResolverEndpointInput) (*route53resolver.GetResolverEndpointOutput, error) {
 	var output route53resolver.GetResolverEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverEndpointAsync(ctx workflow.Context, input *route53resolver.GetResolverEndpointInput) *Route53resolverGetResolverEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverEndpoint", input)
 	return &Route53resolverGetResolverEndpointResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfig(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigInput) (*route53resolver.GetResolverQueryLogConfigOutput, error) {
 	var output route53resolver.GetResolverQueryLogConfigOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfigAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigInput) *Route53resolverGetResolverQueryLogConfigResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfig", input)
 	return &Route53resolverGetResolverQueryLogConfigResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfigAssociation(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigAssociationInput) (*route53resolver.GetResolverQueryLogConfigAssociationOutput, error) {
 	var output route53resolver.GetResolverQueryLogConfigAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfigAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfigAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfigAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigAssociationInput) *Route53resolverGetResolverQueryLogConfigAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfigAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfigAssociation", input)
 	return &Route53resolverGetResolverQueryLogConfigAssociationResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfigPolicy(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigPolicyInput) (*route53resolver.GetResolverQueryLogConfigPolicyOutput, error) {
 	var output route53resolver.GetResolverQueryLogConfigPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfigPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfigPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverQueryLogConfigPolicyInput) *Route53resolverGetResolverQueryLogConfigPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverQueryLogConfigPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverQueryLogConfigPolicy", input)
 	return &Route53resolverGetResolverQueryLogConfigPolicyResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverRule(ctx workflow.Context, input *route53resolver.GetResolverRuleInput) (*route53resolver.GetResolverRuleOutput, error) {
 	var output route53resolver.GetResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverRuleAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleInput) *Route53resolverGetResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRule", input)
 	return &Route53resolverGetResolverRuleResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverRuleAssociation(ctx workflow.Context, input *route53resolver.GetResolverRuleAssociationInput) (*route53resolver.GetResolverRuleAssociationOutput, error) {
 	var output route53resolver.GetResolverRuleAssociationOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRuleAssociation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRuleAssociation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverRuleAssociationAsync(ctx workflow.Context, input *route53resolver.GetResolverRuleAssociationInput) *Route53resolverGetResolverRuleAssociationResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRuleAssociation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRuleAssociation", input)
 	return &Route53resolverGetResolverRuleAssociationResult{Result: future}
 }
 
 func (a *Route53ResolverStub) GetResolverRulePolicy(ctx workflow.Context, input *route53resolver.GetResolverRulePolicyInput) (*route53resolver.GetResolverRulePolicyOutput, error) {
 	var output route53resolver.GetResolverRulePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRulePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRulePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) GetResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.GetResolverRulePolicyInput) *Route53resolverGetResolverRulePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.GetResolverRulePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.GetResolverRulePolicy", input)
 	return &Route53resolverGetResolverRulePolicyResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverEndpointIpAddresses(ctx workflow.Context, input *route53resolver.ListResolverEndpointIpAddressesInput) (*route53resolver.ListResolverEndpointIpAddressesOutput, error) {
 	var output route53resolver.ListResolverEndpointIpAddressesOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverEndpointIpAddresses", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverEndpointIpAddresses", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverEndpointIpAddressesAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointIpAddressesInput) *Route53resolverListResolverEndpointIpAddressesResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverEndpointIpAddresses", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverEndpointIpAddresses", input)
 	return &Route53resolverListResolverEndpointIpAddressesResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverEndpoints(ctx workflow.Context, input *route53resolver.ListResolverEndpointsInput) (*route53resolver.ListResolverEndpointsOutput, error) {
 	var output route53resolver.ListResolverEndpointsOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverEndpoints", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverEndpoints", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverEndpointsAsync(ctx workflow.Context, input *route53resolver.ListResolverEndpointsInput) *Route53resolverListResolverEndpointsResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverEndpoints", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverEndpoints", input)
 	return &Route53resolverListResolverEndpointsResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverQueryLogConfigAssociations(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigAssociationsInput) (*route53resolver.ListResolverQueryLogConfigAssociationsOutput, error) {
 	var output route53resolver.ListResolverQueryLogConfigAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverQueryLogConfigAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverQueryLogConfigAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverQueryLogConfigAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigAssociationsInput) *Route53resolverListResolverQueryLogConfigAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverQueryLogConfigAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverQueryLogConfigAssociations", input)
 	return &Route53resolverListResolverQueryLogConfigAssociationsResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverQueryLogConfigs(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigsInput) (*route53resolver.ListResolverQueryLogConfigsOutput, error) {
 	var output route53resolver.ListResolverQueryLogConfigsOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverQueryLogConfigs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverQueryLogConfigs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverQueryLogConfigsAsync(ctx workflow.Context, input *route53resolver.ListResolverQueryLogConfigsInput) *Route53resolverListResolverQueryLogConfigsResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverQueryLogConfigs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverQueryLogConfigs", input)
 	return &Route53resolverListResolverQueryLogConfigsResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverRuleAssociations(ctx workflow.Context, input *route53resolver.ListResolverRuleAssociationsInput) (*route53resolver.ListResolverRuleAssociationsOutput, error) {
 	var output route53resolver.ListResolverRuleAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverRuleAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverRuleAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverRuleAssociationsAsync(ctx workflow.Context, input *route53resolver.ListResolverRuleAssociationsInput) *Route53resolverListResolverRuleAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverRuleAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverRuleAssociations", input)
 	return &Route53resolverListResolverRuleAssociationsResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListResolverRules(ctx workflow.Context, input *route53resolver.ListResolverRulesInput) (*route53resolver.ListResolverRulesOutput, error) {
 	var output route53resolver.ListResolverRulesOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverRules", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverRules", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListResolverRulesAsync(ctx workflow.Context, input *route53resolver.ListResolverRulesInput) *Route53resolverListResolverRulesResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListResolverRules", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListResolverRules", input)
 	return &Route53resolverListResolverRulesResult{Result: future}
 }
 
 func (a *Route53ResolverStub) ListTagsForResource(ctx workflow.Context, input *route53resolver.ListTagsForResourceInput) (*route53resolver.ListTagsForResourceOutput, error) {
 	var output route53resolver.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) ListTagsForResourceAsync(ctx workflow.Context, input *route53resolver.ListTagsForResourceInput) *Route53resolverListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.ListTagsForResource", input)
 	return &Route53resolverListTagsForResourceResult{Result: future}
 }
 
 func (a *Route53ResolverStub) PutResolverQueryLogConfigPolicy(ctx workflow.Context, input *route53resolver.PutResolverQueryLogConfigPolicyInput) (*route53resolver.PutResolverQueryLogConfigPolicyOutput, error) {
 	var output route53resolver.PutResolverQueryLogConfigPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.PutResolverQueryLogConfigPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.PutResolverQueryLogConfigPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) PutResolverQueryLogConfigPolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverQueryLogConfigPolicyInput) *Route53resolverPutResolverQueryLogConfigPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.PutResolverQueryLogConfigPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.PutResolverQueryLogConfigPolicy", input)
 	return &Route53resolverPutResolverQueryLogConfigPolicyResult{Result: future}
 }
 
 func (a *Route53ResolverStub) PutResolverRulePolicy(ctx workflow.Context, input *route53resolver.PutResolverRulePolicyInput) (*route53resolver.PutResolverRulePolicyOutput, error) {
 	var output route53resolver.PutResolverRulePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.PutResolverRulePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.PutResolverRulePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) PutResolverRulePolicyAsync(ctx workflow.Context, input *route53resolver.PutResolverRulePolicyInput) *Route53resolverPutResolverRulePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.PutResolverRulePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.PutResolverRulePolicy", input)
 	return &Route53resolverPutResolverRulePolicyResult{Result: future}
 }
 
 func (a *Route53ResolverStub) TagResource(ctx workflow.Context, input *route53resolver.TagResourceInput) (*route53resolver.TagResourceOutput, error) {
 	var output route53resolver.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) TagResourceAsync(ctx workflow.Context, input *route53resolver.TagResourceInput) *Route53resolverTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.TagResource", input)
 	return &Route53resolverTagResourceResult{Result: future}
 }
 
 func (a *Route53ResolverStub) UntagResource(ctx workflow.Context, input *route53resolver.UntagResourceInput) (*route53resolver.UntagResourceOutput, error) {
 	var output route53resolver.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) UntagResourceAsync(ctx workflow.Context, input *route53resolver.UntagResourceInput) *Route53resolverUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.UntagResource", input)
 	return &Route53resolverUntagResourceResult{Result: future}
 }
 
 func (a *Route53ResolverStub) UpdateResolverEndpoint(ctx workflow.Context, input *route53resolver.UpdateResolverEndpointInput) (*route53resolver.UpdateResolverEndpointOutput, error) {
 	var output route53resolver.UpdateResolverEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.UpdateResolverEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.UpdateResolverEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) UpdateResolverEndpointAsync(ctx workflow.Context, input *route53resolver.UpdateResolverEndpointInput) *Route53resolverUpdateResolverEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.UpdateResolverEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.UpdateResolverEndpoint", input)
 	return &Route53resolverUpdateResolverEndpointResult{Result: future}
 }
 
 func (a *Route53ResolverStub) UpdateResolverRule(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) (*route53resolver.UpdateResolverRuleOutput, error) {
 	var output route53resolver.UpdateResolverRuleOutput
-	err := workflow.ExecuteActivity(ctx, "Route53Resolver.UpdateResolverRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.route53resolver.UpdateResolverRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *Route53ResolverStub) UpdateResolverRuleAsync(ctx workflow.Context, input *route53resolver.UpdateResolverRuleInput) *Route53resolverUpdateResolverRuleResult {
-	future := workflow.ExecuteActivity(ctx, "Route53Resolver.UpdateResolverRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.route53resolver.UpdateResolverRule", input)
 	return &Route53resolverUpdateResolverRuleResult{Result: future}
 }

@@ -34,8 +34,7 @@ type STSClient interface {
 	GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult
 }
 
-type STSStub struct {
-}
+type STSStub struct{}
 
 func NewSTSStub() STSClient {
 	return &STSStub{}
@@ -123,88 +122,88 @@ func (r *StsGetSessionTokenResult) Get(ctx workflow.Context) (*sts.GetSessionTok
 
 func (a *STSStub) AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error) {
 	var output sts.AssumeRoleOutput
-	err := workflow.ExecuteActivity(ctx, "STS.AssumeRole", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRole", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *StsAssumeRoleResult {
-	future := workflow.ExecuteActivity(ctx, "STS.AssumeRole", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRole", input)
 	return &StsAssumeRoleResult{Result: future}
 }
 
 func (a *STSStub) AssumeRoleWithSAML(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) (*sts.AssumeRoleWithSAMLOutput, error) {
 	var output sts.AssumeRoleWithSAMLOutput
-	err := workflow.ExecuteActivity(ctx, "STS.AssumeRoleWithSAML", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithSAML", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) AssumeRoleWithSAMLAsync(ctx workflow.Context, input *sts.AssumeRoleWithSAMLInput) *StsAssumeRoleWithSAMLResult {
-	future := workflow.ExecuteActivity(ctx, "STS.AssumeRoleWithSAML", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithSAML", input)
 	return &StsAssumeRoleWithSAMLResult{Result: future}
 }
 
 func (a *STSStub) AssumeRoleWithWebIdentity(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) (*sts.AssumeRoleWithWebIdentityOutput, error) {
 	var output sts.AssumeRoleWithWebIdentityOutput
-	err := workflow.ExecuteActivity(ctx, "STS.AssumeRoleWithWebIdentity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithWebIdentity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) AssumeRoleWithWebIdentityAsync(ctx workflow.Context, input *sts.AssumeRoleWithWebIdentityInput) *StsAssumeRoleWithWebIdentityResult {
-	future := workflow.ExecuteActivity(ctx, "STS.AssumeRoleWithWebIdentity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.AssumeRoleWithWebIdentity", input)
 	return &StsAssumeRoleWithWebIdentityResult{Result: future}
 }
 
 func (a *STSStub) DecodeAuthorizationMessage(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) (*sts.DecodeAuthorizationMessageOutput, error) {
 	var output sts.DecodeAuthorizationMessageOutput
-	err := workflow.ExecuteActivity(ctx, "STS.DecodeAuthorizationMessage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.DecodeAuthorizationMessage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) DecodeAuthorizationMessageAsync(ctx workflow.Context, input *sts.DecodeAuthorizationMessageInput) *StsDecodeAuthorizationMessageResult {
-	future := workflow.ExecuteActivity(ctx, "STS.DecodeAuthorizationMessage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.DecodeAuthorizationMessage", input)
 	return &StsDecodeAuthorizationMessageResult{Result: future}
 }
 
 func (a *STSStub) GetAccessKeyInfo(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) (*sts.GetAccessKeyInfoOutput, error) {
 	var output sts.GetAccessKeyInfoOutput
-	err := workflow.ExecuteActivity(ctx, "STS.GetAccessKeyInfo", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.GetAccessKeyInfo", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) GetAccessKeyInfoAsync(ctx workflow.Context, input *sts.GetAccessKeyInfoInput) *StsGetAccessKeyInfoResult {
-	future := workflow.ExecuteActivity(ctx, "STS.GetAccessKeyInfo", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.GetAccessKeyInfo", input)
 	return &StsGetAccessKeyInfoResult{Result: future}
 }
 
 func (a *STSStub) GetCallerIdentity(ctx workflow.Context, input *sts.GetCallerIdentityInput) (*sts.GetCallerIdentityOutput, error) {
 	var output sts.GetCallerIdentityOutput
-	err := workflow.ExecuteActivity(ctx, "STS.GetCallerIdentity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.GetCallerIdentity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) GetCallerIdentityAsync(ctx workflow.Context, input *sts.GetCallerIdentityInput) *StsGetCallerIdentityResult {
-	future := workflow.ExecuteActivity(ctx, "STS.GetCallerIdentity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.GetCallerIdentity", input)
 	return &StsGetCallerIdentityResult{Result: future}
 }
 
 func (a *STSStub) GetFederationToken(ctx workflow.Context, input *sts.GetFederationTokenInput) (*sts.GetFederationTokenOutput, error) {
 	var output sts.GetFederationTokenOutput
-	err := workflow.ExecuteActivity(ctx, "STS.GetFederationToken", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.GetFederationToken", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) GetFederationTokenAsync(ctx workflow.Context, input *sts.GetFederationTokenInput) *StsGetFederationTokenResult {
-	future := workflow.ExecuteActivity(ctx, "STS.GetFederationToken", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.GetFederationToken", input)
 	return &StsGetFederationTokenResult{Result: future}
 }
 
 func (a *STSStub) GetSessionToken(ctx workflow.Context, input *sts.GetSessionTokenInput) (*sts.GetSessionTokenOutput, error) {
 	var output sts.GetSessionTokenOutput
-	err := workflow.ExecuteActivity(ctx, "STS.GetSessionToken", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sts.GetSessionToken", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *STSStub) GetSessionTokenAsync(ctx workflow.Context, input *sts.GetSessionTokenInput) *StsGetSessionTokenResult {
-	future := workflow.ExecuteActivity(ctx, "STS.GetSessionToken", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sts.GetSessionToken", input)
 	return &StsGetSessionTokenResult{Result: future}
 }

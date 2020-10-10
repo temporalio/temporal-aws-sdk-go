@@ -16,148 +16,294 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type ELBActivities struct {
 	client elbiface.ELBAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewELBActivities(session *session.Session, config ...*aws.Config) *ELBActivities {
-	client := elb.New(session, config...)
+func NewELBActivities(sess *session.Session, config ...*aws.Config) *ELBActivities {
+	client := elb.New(sess, config...)
 	return &ELBActivities{client: client}
 }
 
+func NewELBActivitiesWithSessionFactory(sessionFactory SessionFactory) *ELBActivities {
+	return &ELBActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ELBActivities) getClient(ctx context.Context) (elbiface.ELBAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return elb.New(sess), nil
+}
+
 func (a *ELBActivities) AddTags(ctx context.Context, input *elb.AddTagsInput) (*elb.AddTagsOutput, error) {
-	return a.client.AddTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) ApplySecurityGroupsToLoadBalancer(ctx context.Context, input *elb.ApplySecurityGroupsToLoadBalancerInput) (*elb.ApplySecurityGroupsToLoadBalancerOutput, error) {
-	return a.client.ApplySecurityGroupsToLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ApplySecurityGroupsToLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) AttachLoadBalancerToSubnets(ctx context.Context, input *elb.AttachLoadBalancerToSubnetsInput) (*elb.AttachLoadBalancerToSubnetsOutput, error) {
-	return a.client.AttachLoadBalancerToSubnetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AttachLoadBalancerToSubnetsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) ConfigureHealthCheck(ctx context.Context, input *elb.ConfigureHealthCheckInput) (*elb.ConfigureHealthCheckOutput, error) {
-	return a.client.ConfigureHealthCheckWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ConfigureHealthCheckWithContext(ctx, input)
 }
 
 func (a *ELBActivities) CreateAppCookieStickinessPolicy(ctx context.Context, input *elb.CreateAppCookieStickinessPolicyInput) (*elb.CreateAppCookieStickinessPolicyOutput, error) {
-	return a.client.CreateAppCookieStickinessPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateAppCookieStickinessPolicyWithContext(ctx, input)
 }
 
 func (a *ELBActivities) CreateLBCookieStickinessPolicy(ctx context.Context, input *elb.CreateLBCookieStickinessPolicyInput) (*elb.CreateLBCookieStickinessPolicyOutput, error) {
-	return a.client.CreateLBCookieStickinessPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLBCookieStickinessPolicyWithContext(ctx, input)
 }
 
 func (a *ELBActivities) CreateLoadBalancer(ctx context.Context, input *elb.CreateLoadBalancerInput) (*elb.CreateLoadBalancerOutput, error) {
-	return a.client.CreateLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) CreateLoadBalancerListeners(ctx context.Context, input *elb.CreateLoadBalancerListenersInput) (*elb.CreateLoadBalancerListenersOutput, error) {
-	return a.client.CreateLoadBalancerListenersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLoadBalancerListenersWithContext(ctx, input)
 }
 
 func (a *ELBActivities) CreateLoadBalancerPolicy(ctx context.Context, input *elb.CreateLoadBalancerPolicyInput) (*elb.CreateLoadBalancerPolicyOutput, error) {
-	return a.client.CreateLoadBalancerPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLoadBalancerPolicyWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DeleteLoadBalancer(ctx context.Context, input *elb.DeleteLoadBalancerInput) (*elb.DeleteLoadBalancerOutput, error) {
-	return a.client.DeleteLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DeleteLoadBalancerListeners(ctx context.Context, input *elb.DeleteLoadBalancerListenersInput) (*elb.DeleteLoadBalancerListenersOutput, error) {
-	return a.client.DeleteLoadBalancerListenersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLoadBalancerListenersWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DeleteLoadBalancerPolicy(ctx context.Context, input *elb.DeleteLoadBalancerPolicyInput) (*elb.DeleteLoadBalancerPolicyOutput, error) {
-	return a.client.DeleteLoadBalancerPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLoadBalancerPolicyWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DeregisterInstancesFromLoadBalancer(ctx context.Context, input *elb.DeregisterInstancesFromLoadBalancerInput) (*elb.DeregisterInstancesFromLoadBalancerOutput, error) {
-	return a.client.DeregisterInstancesFromLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterInstancesFromLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeAccountLimits(ctx context.Context, input *elb.DescribeAccountLimitsInput) (*elb.DescribeAccountLimitsOutput, error) {
-	return a.client.DescribeAccountLimitsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeAccountLimitsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeInstanceHealth(ctx context.Context, input *elb.DescribeInstanceHealthInput) (*elb.DescribeInstanceHealthOutput, error) {
-	return a.client.DescribeInstanceHealthWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeInstanceHealthWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeLoadBalancerAttributes(ctx context.Context, input *elb.DescribeLoadBalancerAttributesInput) (*elb.DescribeLoadBalancerAttributesOutput, error) {
-	return a.client.DescribeLoadBalancerAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancerAttributesWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeLoadBalancerPolicies(ctx context.Context, input *elb.DescribeLoadBalancerPoliciesInput) (*elb.DescribeLoadBalancerPoliciesOutput, error) {
-	return a.client.DescribeLoadBalancerPoliciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancerPoliciesWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeLoadBalancerPolicyTypes(ctx context.Context, input *elb.DescribeLoadBalancerPolicyTypesInput) (*elb.DescribeLoadBalancerPolicyTypesOutput, error) {
-	return a.client.DescribeLoadBalancerPolicyTypesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancerPolicyTypesWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeLoadBalancers(ctx context.Context, input *elb.DescribeLoadBalancersInput) (*elb.DescribeLoadBalancersOutput, error) {
-	return a.client.DescribeLoadBalancersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeLoadBalancersWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DescribeTags(ctx context.Context, input *elb.DescribeTagsInput) (*elb.DescribeTagsOutput, error) {
-	return a.client.DescribeTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTagsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DetachLoadBalancerFromSubnets(ctx context.Context, input *elb.DetachLoadBalancerFromSubnetsInput) (*elb.DetachLoadBalancerFromSubnetsOutput, error) {
-	return a.client.DetachLoadBalancerFromSubnetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DetachLoadBalancerFromSubnetsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) DisableAvailabilityZonesForLoadBalancer(ctx context.Context, input *elb.DisableAvailabilityZonesForLoadBalancerInput) (*elb.DisableAvailabilityZonesForLoadBalancerOutput, error) {
-	return a.client.DisableAvailabilityZonesForLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisableAvailabilityZonesForLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) EnableAvailabilityZonesForLoadBalancer(ctx context.Context, input *elb.EnableAvailabilityZonesForLoadBalancerInput) (*elb.EnableAvailabilityZonesForLoadBalancerOutput, error) {
-	return a.client.EnableAvailabilityZonesForLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.EnableAvailabilityZonesForLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) ModifyLoadBalancerAttributes(ctx context.Context, input *elb.ModifyLoadBalancerAttributesInput) (*elb.ModifyLoadBalancerAttributesOutput, error) {
-	return a.client.ModifyLoadBalancerAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ModifyLoadBalancerAttributesWithContext(ctx, input)
 }
 
 func (a *ELBActivities) RegisterInstancesWithLoadBalancer(ctx context.Context, input *elb.RegisterInstancesWithLoadBalancerInput) (*elb.RegisterInstancesWithLoadBalancerOutput, error) {
-	return a.client.RegisterInstancesWithLoadBalancerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterInstancesWithLoadBalancerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) RemoveTags(ctx context.Context, input *elb.RemoveTagsInput) (*elb.RemoveTagsOutput, error) {
-	return a.client.RemoveTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveTagsWithContext(ctx, input)
 }
 
 func (a *ELBActivities) SetLoadBalancerListenerSSLCertificate(ctx context.Context, input *elb.SetLoadBalancerListenerSSLCertificateInput) (*elb.SetLoadBalancerListenerSSLCertificateOutput, error) {
-	return a.client.SetLoadBalancerListenerSSLCertificateWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetLoadBalancerListenerSSLCertificateWithContext(ctx, input)
 }
 
 func (a *ELBActivities) SetLoadBalancerPoliciesForBackendServer(ctx context.Context, input *elb.SetLoadBalancerPoliciesForBackendServerInput) (*elb.SetLoadBalancerPoliciesForBackendServerOutput, error) {
-	return a.client.SetLoadBalancerPoliciesForBackendServerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetLoadBalancerPoliciesForBackendServerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) SetLoadBalancerPoliciesOfListener(ctx context.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) (*elb.SetLoadBalancerPoliciesOfListenerOutput, error) {
-	return a.client.SetLoadBalancerPoliciesOfListenerWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetLoadBalancerPoliciesOfListenerWithContext(ctx, input)
 }
 
 func (a *ELBActivities) WaitUntilAnyInstanceInService(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilAnyInstanceInServiceWithContext(ctx, input, options...)
+		return client.WaitUntilAnyInstanceInServiceWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBActivities) WaitUntilInstanceDeregistered(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilInstanceDeregisteredWithContext(ctx, input, options...)
+		return client.WaitUntilInstanceDeregisteredWithContext(ctx, input, options...)
 	})
 }
 
 func (a *ELBActivities) WaitUntilInstanceInService(ctx context.Context, input *elb.DescribeInstanceHealthInput) error {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return err
+	}
 	return internal.WaitUntilActivity(ctx, func(ctx context.Context, options ...request.WaiterOption) error {
-		return a.client.WaitUntilInstanceInServiceWithContext(ctx, input, options...)
+		return client.WaitUntilInstanceInServiceWithContext(ctx, input, options...)
 	})
 }

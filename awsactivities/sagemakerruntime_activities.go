@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type SageMakerRuntimeActivities struct {
 	client sagemakerruntimeiface.SageMakerRuntimeAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSageMakerRuntimeActivities(session *session.Session, config ...*aws.Config) *SageMakerRuntimeActivities {
-	client := sagemakerruntime.New(session, config...)
+func NewSageMakerRuntimeActivities(sess *session.Session, config ...*aws.Config) *SageMakerRuntimeActivities {
+	client := sagemakerruntime.New(sess, config...)
 	return &SageMakerRuntimeActivities{client: client}
 }
 
+func NewSageMakerRuntimeActivitiesWithSessionFactory(sessionFactory SessionFactory) *SageMakerRuntimeActivities {
+	return &SageMakerRuntimeActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SageMakerRuntimeActivities) getClient(ctx context.Context) (sagemakerruntimeiface.SageMakerRuntimeAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return sagemakerruntime.New(sess), nil
+}
+
 func (a *SageMakerRuntimeActivities) InvokeEndpoint(ctx context.Context, input *sagemakerruntime.InvokeEndpointInput) (*sagemakerruntime.InvokeEndpointOutput, error) {
-	return a.client.InvokeEndpointWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.InvokeEndpointWithContext(ctx, input)
 }

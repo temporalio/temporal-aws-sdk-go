@@ -16,70 +16,144 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type FSxActivities struct {
 	client fsxiface.FSxAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewFSxActivities(session *session.Session, config ...*aws.Config) *FSxActivities {
-	client := fsx.New(session, config...)
+func NewFSxActivities(sess *session.Session, config ...*aws.Config) *FSxActivities {
+	client := fsx.New(sess, config...)
 	return &FSxActivities{client: client}
 }
 
+func NewFSxActivitiesWithSessionFactory(sessionFactory SessionFactory) *FSxActivities {
+	return &FSxActivities{sessionFactory: sessionFactory}
+}
+
+func (a *FSxActivities) getClient(ctx context.Context) (fsxiface.FSxAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return fsx.New(sess), nil
+}
+
 func (a *FSxActivities) CancelDataRepositoryTask(ctx context.Context, input *fsx.CancelDataRepositoryTaskInput) (*fsx.CancelDataRepositoryTaskOutput, error) {
-	return a.client.CancelDataRepositoryTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelDataRepositoryTaskWithContext(ctx, input)
 }
 
 func (a *FSxActivities) CreateBackup(ctx context.Context, input *fsx.CreateBackupInput) (*fsx.CreateBackupOutput, error) {
-	return a.client.CreateBackupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateBackupWithContext(ctx, input)
 }
 
 func (a *FSxActivities) CreateDataRepositoryTask(ctx context.Context, input *fsx.CreateDataRepositoryTaskInput) (*fsx.CreateDataRepositoryTaskOutput, error) {
-	return a.client.CreateDataRepositoryTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDataRepositoryTaskWithContext(ctx, input)
 }
 
 func (a *FSxActivities) CreateFileSystem(ctx context.Context, input *fsx.CreateFileSystemInput) (*fsx.CreateFileSystemOutput, error) {
-	return a.client.CreateFileSystemWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateFileSystemWithContext(ctx, input)
 }
 
 func (a *FSxActivities) CreateFileSystemFromBackup(ctx context.Context, input *fsx.CreateFileSystemFromBackupInput) (*fsx.CreateFileSystemFromBackupOutput, error) {
-	return a.client.CreateFileSystemFromBackupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateFileSystemFromBackupWithContext(ctx, input)
 }
 
 func (a *FSxActivities) DeleteBackup(ctx context.Context, input *fsx.DeleteBackupInput) (*fsx.DeleteBackupOutput, error) {
-	return a.client.DeleteBackupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteBackupWithContext(ctx, input)
 }
 
 func (a *FSxActivities) DeleteFileSystem(ctx context.Context, input *fsx.DeleteFileSystemInput) (*fsx.DeleteFileSystemOutput, error) {
-	return a.client.DeleteFileSystemWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteFileSystemWithContext(ctx, input)
 }
 
 func (a *FSxActivities) DescribeBackups(ctx context.Context, input *fsx.DescribeBackupsInput) (*fsx.DescribeBackupsOutput, error) {
-	return a.client.DescribeBackupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeBackupsWithContext(ctx, input)
 }
 
 func (a *FSxActivities) DescribeDataRepositoryTasks(ctx context.Context, input *fsx.DescribeDataRepositoryTasksInput) (*fsx.DescribeDataRepositoryTasksOutput, error) {
-	return a.client.DescribeDataRepositoryTasksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDataRepositoryTasksWithContext(ctx, input)
 }
 
 func (a *FSxActivities) DescribeFileSystems(ctx context.Context, input *fsx.DescribeFileSystemsInput) (*fsx.DescribeFileSystemsOutput, error) {
-	return a.client.DescribeFileSystemsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeFileSystemsWithContext(ctx, input)
 }
 
 func (a *FSxActivities) ListTagsForResource(ctx context.Context, input *fsx.ListTagsForResourceInput) (*fsx.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *FSxActivities) TagResource(ctx context.Context, input *fsx.TagResourceInput) (*fsx.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *FSxActivities) UntagResource(ctx context.Context, input *fsx.UntagResourceInput) (*fsx.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *FSxActivities) UpdateFileSystem(ctx context.Context, input *fsx.UpdateFileSystemInput) (*fsx.UpdateFileSystemOutput, error) {
-	return a.client.UpdateFileSystemWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateFileSystemWithContext(ctx, input)
 }

@@ -37,8 +37,7 @@ type MobileClient interface {
 	UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectResult
 }
 
-type MobileStub struct {
-}
+type MobileStub struct{}
 
 func NewMobileStub() MobileClient {
 	return &MobileStub{}
@@ -136,99 +135,99 @@ func (r *MobileUpdateProjectResult) Get(ctx workflow.Context) (*mobile.UpdatePro
 
 func (a *MobileStub) CreateProject(ctx workflow.Context, input *mobile.CreateProjectInput) (*mobile.CreateProjectOutput, error) {
 	var output mobile.CreateProjectOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.CreateProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.CreateProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) CreateProjectAsync(ctx workflow.Context, input *mobile.CreateProjectInput) *MobileCreateProjectResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.CreateProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.CreateProject", input)
 	return &MobileCreateProjectResult{Result: future}
 }
 
 func (a *MobileStub) DeleteProject(ctx workflow.Context, input *mobile.DeleteProjectInput) (*mobile.DeleteProjectOutput, error) {
 	var output mobile.DeleteProjectOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.DeleteProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.DeleteProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) DeleteProjectAsync(ctx workflow.Context, input *mobile.DeleteProjectInput) *MobileDeleteProjectResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.DeleteProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.DeleteProject", input)
 	return &MobileDeleteProjectResult{Result: future}
 }
 
 func (a *MobileStub) DescribeBundle(ctx workflow.Context, input *mobile.DescribeBundleInput) (*mobile.DescribeBundleOutput, error) {
 	var output mobile.DescribeBundleOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.DescribeBundle", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.DescribeBundle", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) DescribeBundleAsync(ctx workflow.Context, input *mobile.DescribeBundleInput) *MobileDescribeBundleResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.DescribeBundle", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.DescribeBundle", input)
 	return &MobileDescribeBundleResult{Result: future}
 }
 
 func (a *MobileStub) DescribeProject(ctx workflow.Context, input *mobile.DescribeProjectInput) (*mobile.DescribeProjectOutput, error) {
 	var output mobile.DescribeProjectOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.DescribeProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.DescribeProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) DescribeProjectAsync(ctx workflow.Context, input *mobile.DescribeProjectInput) *MobileDescribeProjectResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.DescribeProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.DescribeProject", input)
 	return &MobileDescribeProjectResult{Result: future}
 }
 
 func (a *MobileStub) ExportBundle(ctx workflow.Context, input *mobile.ExportBundleInput) (*mobile.ExportBundleOutput, error) {
 	var output mobile.ExportBundleOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.ExportBundle", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.ExportBundle", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) ExportBundleAsync(ctx workflow.Context, input *mobile.ExportBundleInput) *MobileExportBundleResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.ExportBundle", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.ExportBundle", input)
 	return &MobileExportBundleResult{Result: future}
 }
 
 func (a *MobileStub) ExportProject(ctx workflow.Context, input *mobile.ExportProjectInput) (*mobile.ExportProjectOutput, error) {
 	var output mobile.ExportProjectOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.ExportProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.ExportProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) ExportProjectAsync(ctx workflow.Context, input *mobile.ExportProjectInput) *MobileExportProjectResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.ExportProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.ExportProject", input)
 	return &MobileExportProjectResult{Result: future}
 }
 
 func (a *MobileStub) ListBundles(ctx workflow.Context, input *mobile.ListBundlesInput) (*mobile.ListBundlesOutput, error) {
 	var output mobile.ListBundlesOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.ListBundles", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.ListBundles", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) ListBundlesAsync(ctx workflow.Context, input *mobile.ListBundlesInput) *MobileListBundlesResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.ListBundles", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.ListBundles", input)
 	return &MobileListBundlesResult{Result: future}
 }
 
 func (a *MobileStub) ListProjects(ctx workflow.Context, input *mobile.ListProjectsInput) (*mobile.ListProjectsOutput, error) {
 	var output mobile.ListProjectsOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.ListProjects", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.ListProjects", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) ListProjectsAsync(ctx workflow.Context, input *mobile.ListProjectsInput) *MobileListProjectsResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.ListProjects", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.ListProjects", input)
 	return &MobileListProjectsResult{Result: future}
 }
 
 func (a *MobileStub) UpdateProject(ctx workflow.Context, input *mobile.UpdateProjectInput) (*mobile.UpdateProjectOutput, error) {
 	var output mobile.UpdateProjectOutput
-	err := workflow.ExecuteActivity(ctx, "Mobile.UpdateProject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.mobile.UpdateProject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MobileStub) UpdateProjectAsync(ctx workflow.Context, input *mobile.UpdateProjectInput) *MobileUpdateProjectResult {
-	future := workflow.ExecuteActivity(ctx, "Mobile.UpdateProject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.mobile.UpdateProject", input)
 	return &MobileUpdateProjectResult{Result: future}
 }

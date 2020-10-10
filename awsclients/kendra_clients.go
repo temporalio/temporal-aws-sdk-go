@@ -82,8 +82,7 @@ type KendraClient interface {
 	UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult
 }
 
-type KendraStub struct {
-}
+type KendraStub struct{}
 
 func NewKendraStub() KendraClient {
 	return &KendraStub{}
@@ -331,264 +330,264 @@ func (r *KendraUpdateIndexResult) Get(ctx workflow.Context) (*kendra.UpdateIndex
 
 func (a *KendraStub) BatchDeleteDocument(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) (*kendra.BatchDeleteDocumentOutput, error) {
 	var output kendra.BatchDeleteDocumentOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.BatchDeleteDocument", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.BatchDeleteDocument", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) BatchDeleteDocumentAsync(ctx workflow.Context, input *kendra.BatchDeleteDocumentInput) *KendraBatchDeleteDocumentResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.BatchDeleteDocument", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.BatchDeleteDocument", input)
 	return &KendraBatchDeleteDocumentResult{Result: future}
 }
 
 func (a *KendraStub) BatchPutDocument(ctx workflow.Context, input *kendra.BatchPutDocumentInput) (*kendra.BatchPutDocumentOutput, error) {
 	var output kendra.BatchPutDocumentOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.BatchPutDocument", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.BatchPutDocument", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) BatchPutDocumentAsync(ctx workflow.Context, input *kendra.BatchPutDocumentInput) *KendraBatchPutDocumentResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.BatchPutDocument", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.BatchPutDocument", input)
 	return &KendraBatchPutDocumentResult{Result: future}
 }
 
 func (a *KendraStub) CreateDataSource(ctx workflow.Context, input *kendra.CreateDataSourceInput) (*kendra.CreateDataSourceOutput, error) {
 	var output kendra.CreateDataSourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.CreateDataSource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.CreateDataSource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) CreateDataSourceAsync(ctx workflow.Context, input *kendra.CreateDataSourceInput) *KendraCreateDataSourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.CreateDataSource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateDataSource", input)
 	return &KendraCreateDataSourceResult{Result: future}
 }
 
 func (a *KendraStub) CreateFaq(ctx workflow.Context, input *kendra.CreateFaqInput) (*kendra.CreateFaqOutput, error) {
 	var output kendra.CreateFaqOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.CreateFaq", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.CreateFaq", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) CreateFaqAsync(ctx workflow.Context, input *kendra.CreateFaqInput) *KendraCreateFaqResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.CreateFaq", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateFaq", input)
 	return &KendraCreateFaqResult{Result: future}
 }
 
 func (a *KendraStub) CreateIndex(ctx workflow.Context, input *kendra.CreateIndexInput) (*kendra.CreateIndexOutput, error) {
 	var output kendra.CreateIndexOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.CreateIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.CreateIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) CreateIndexAsync(ctx workflow.Context, input *kendra.CreateIndexInput) *KendraCreateIndexResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.CreateIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.CreateIndex", input)
 	return &KendraCreateIndexResult{Result: future}
 }
 
 func (a *KendraStub) DeleteDataSource(ctx workflow.Context, input *kendra.DeleteDataSourceInput) (*kendra.DeleteDataSourceOutput, error) {
 	var output kendra.DeleteDataSourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DeleteDataSource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteDataSource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DeleteDataSourceAsync(ctx workflow.Context, input *kendra.DeleteDataSourceInput) *KendraDeleteDataSourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DeleteDataSource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteDataSource", input)
 	return &KendraDeleteDataSourceResult{Result: future}
 }
 
 func (a *KendraStub) DeleteFaq(ctx workflow.Context, input *kendra.DeleteFaqInput) (*kendra.DeleteFaqOutput, error) {
 	var output kendra.DeleteFaqOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DeleteFaq", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteFaq", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DeleteFaqAsync(ctx workflow.Context, input *kendra.DeleteFaqInput) *KendraDeleteFaqResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DeleteFaq", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteFaq", input)
 	return &KendraDeleteFaqResult{Result: future}
 }
 
 func (a *KendraStub) DeleteIndex(ctx workflow.Context, input *kendra.DeleteIndexInput) (*kendra.DeleteIndexOutput, error) {
 	var output kendra.DeleteIndexOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DeleteIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DeleteIndexAsync(ctx workflow.Context, input *kendra.DeleteIndexInput) *KendraDeleteIndexResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DeleteIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DeleteIndex", input)
 	return &KendraDeleteIndexResult{Result: future}
 }
 
 func (a *KendraStub) DescribeDataSource(ctx workflow.Context, input *kendra.DescribeDataSourceInput) (*kendra.DescribeDataSourceOutput, error) {
 	var output kendra.DescribeDataSourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DescribeDataSource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeDataSource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DescribeDataSourceAsync(ctx workflow.Context, input *kendra.DescribeDataSourceInput) *KendraDescribeDataSourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DescribeDataSource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeDataSource", input)
 	return &KendraDescribeDataSourceResult{Result: future}
 }
 
 func (a *KendraStub) DescribeFaq(ctx workflow.Context, input *kendra.DescribeFaqInput) (*kendra.DescribeFaqOutput, error) {
 	var output kendra.DescribeFaqOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DescribeFaq", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeFaq", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DescribeFaqAsync(ctx workflow.Context, input *kendra.DescribeFaqInput) *KendraDescribeFaqResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DescribeFaq", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeFaq", input)
 	return &KendraDescribeFaqResult{Result: future}
 }
 
 func (a *KendraStub) DescribeIndex(ctx workflow.Context, input *kendra.DescribeIndexInput) (*kendra.DescribeIndexOutput, error) {
 	var output kendra.DescribeIndexOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.DescribeIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) DescribeIndexAsync(ctx workflow.Context, input *kendra.DescribeIndexInput) *KendraDescribeIndexResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.DescribeIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.DescribeIndex", input)
 	return &KendraDescribeIndexResult{Result: future}
 }
 
 func (a *KendraStub) ListDataSourceSyncJobs(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) (*kendra.ListDataSourceSyncJobsOutput, error) {
 	var output kendra.ListDataSourceSyncJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.ListDataSourceSyncJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSourceSyncJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) ListDataSourceSyncJobsAsync(ctx workflow.Context, input *kendra.ListDataSourceSyncJobsInput) *KendraListDataSourceSyncJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.ListDataSourceSyncJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSourceSyncJobs", input)
 	return &KendraListDataSourceSyncJobsResult{Result: future}
 }
 
 func (a *KendraStub) ListDataSources(ctx workflow.Context, input *kendra.ListDataSourcesInput) (*kendra.ListDataSourcesOutput, error) {
 	var output kendra.ListDataSourcesOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.ListDataSources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) ListDataSourcesAsync(ctx workflow.Context, input *kendra.ListDataSourcesInput) *KendraListDataSourcesResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.ListDataSources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListDataSources", input)
 	return &KendraListDataSourcesResult{Result: future}
 }
 
 func (a *KendraStub) ListFaqs(ctx workflow.Context, input *kendra.ListFaqsInput) (*kendra.ListFaqsOutput, error) {
 	var output kendra.ListFaqsOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.ListFaqs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.ListFaqs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) ListFaqsAsync(ctx workflow.Context, input *kendra.ListFaqsInput) *KendraListFaqsResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.ListFaqs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListFaqs", input)
 	return &KendraListFaqsResult{Result: future}
 }
 
 func (a *KendraStub) ListIndices(ctx workflow.Context, input *kendra.ListIndicesInput) (*kendra.ListIndicesOutput, error) {
 	var output kendra.ListIndicesOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.ListIndices", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.ListIndices", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) ListIndicesAsync(ctx workflow.Context, input *kendra.ListIndicesInput) *KendraListIndicesResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.ListIndices", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListIndices", input)
 	return &KendraListIndicesResult{Result: future}
 }
 
 func (a *KendraStub) ListTagsForResource(ctx workflow.Context, input *kendra.ListTagsForResourceInput) (*kendra.ListTagsForResourceOutput, error) {
 	var output kendra.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) ListTagsForResourceAsync(ctx workflow.Context, input *kendra.ListTagsForResourceInput) *KendraListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.ListTagsForResource", input)
 	return &KendraListTagsForResourceResult{Result: future}
 }
 
 func (a *KendraStub) Query(ctx workflow.Context, input *kendra.QueryInput) (*kendra.QueryOutput, error) {
 	var output kendra.QueryOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.Query", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.Query", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) QueryAsync(ctx workflow.Context, input *kendra.QueryInput) *KendraQueryResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.Query", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.Query", input)
 	return &KendraQueryResult{Result: future}
 }
 
 func (a *KendraStub) StartDataSourceSyncJob(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) (*kendra.StartDataSourceSyncJobOutput, error) {
 	var output kendra.StartDataSourceSyncJobOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.StartDataSourceSyncJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.StartDataSourceSyncJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) StartDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StartDataSourceSyncJobInput) *KendraStartDataSourceSyncJobResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.StartDataSourceSyncJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.StartDataSourceSyncJob", input)
 	return &KendraStartDataSourceSyncJobResult{Result: future}
 }
 
 func (a *KendraStub) StopDataSourceSyncJob(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) (*kendra.StopDataSourceSyncJobOutput, error) {
 	var output kendra.StopDataSourceSyncJobOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.StopDataSourceSyncJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.StopDataSourceSyncJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) StopDataSourceSyncJobAsync(ctx workflow.Context, input *kendra.StopDataSourceSyncJobInput) *KendraStopDataSourceSyncJobResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.StopDataSourceSyncJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.StopDataSourceSyncJob", input)
 	return &KendraStopDataSourceSyncJobResult{Result: future}
 }
 
 func (a *KendraStub) SubmitFeedback(ctx workflow.Context, input *kendra.SubmitFeedbackInput) (*kendra.SubmitFeedbackOutput, error) {
 	var output kendra.SubmitFeedbackOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.SubmitFeedback", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.SubmitFeedback", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) SubmitFeedbackAsync(ctx workflow.Context, input *kendra.SubmitFeedbackInput) *KendraSubmitFeedbackResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.SubmitFeedback", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.SubmitFeedback", input)
 	return &KendraSubmitFeedbackResult{Result: future}
 }
 
 func (a *KendraStub) TagResource(ctx workflow.Context, input *kendra.TagResourceInput) (*kendra.TagResourceOutput, error) {
 	var output kendra.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) TagResourceAsync(ctx workflow.Context, input *kendra.TagResourceInput) *KendraTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.TagResource", input)
 	return &KendraTagResourceResult{Result: future}
 }
 
 func (a *KendraStub) UntagResource(ctx workflow.Context, input *kendra.UntagResourceInput) (*kendra.UntagResourceOutput, error) {
 	var output kendra.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) UntagResourceAsync(ctx workflow.Context, input *kendra.UntagResourceInput) *KendraUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.UntagResource", input)
 	return &KendraUntagResourceResult{Result: future}
 }
 
 func (a *KendraStub) UpdateDataSource(ctx workflow.Context, input *kendra.UpdateDataSourceInput) (*kendra.UpdateDataSourceOutput, error) {
 	var output kendra.UpdateDataSourceOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.UpdateDataSource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateDataSource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) UpdateDataSourceAsync(ctx workflow.Context, input *kendra.UpdateDataSourceInput) *KendraUpdateDataSourceResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.UpdateDataSource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateDataSource", input)
 	return &KendraUpdateDataSourceResult{Result: future}
 }
 
 func (a *KendraStub) UpdateIndex(ctx workflow.Context, input *kendra.UpdateIndexInput) (*kendra.UpdateIndexOutput, error) {
 	var output kendra.UpdateIndexOutput
-	err := workflow.ExecuteActivity(ctx, "Kendra.UpdateIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *KendraStub) UpdateIndexAsync(ctx workflow.Context, input *kendra.UpdateIndexInput) *KendraUpdateIndexResult {
-	future := workflow.ExecuteActivity(ctx, "Kendra.UpdateIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.kendra.UpdateIndex", input)
 	return &KendraUpdateIndexResult{Result: future}
 }

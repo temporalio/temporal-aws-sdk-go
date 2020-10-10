@@ -16,46 +16,96 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type ResourceGroupsTaggingAPIActivities struct {
 	client resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewResourceGroupsTaggingAPIActivities(session *session.Session, config ...*aws.Config) *ResourceGroupsTaggingAPIActivities {
-	client := resourcegroupstaggingapi.New(session, config...)
+func NewResourceGroupsTaggingAPIActivities(sess *session.Session, config ...*aws.Config) *ResourceGroupsTaggingAPIActivities {
+	client := resourcegroupstaggingapi.New(sess, config...)
 	return &ResourceGroupsTaggingAPIActivities{client: client}
 }
 
+func NewResourceGroupsTaggingAPIActivitiesWithSessionFactory(sessionFactory SessionFactory) *ResourceGroupsTaggingAPIActivities {
+	return &ResourceGroupsTaggingAPIActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ResourceGroupsTaggingAPIActivities) getClient(ctx context.Context) (resourcegroupstaggingapiiface.ResourceGroupsTaggingAPIAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return resourcegroupstaggingapi.New(sess), nil
+}
+
 func (a *ResourceGroupsTaggingAPIActivities) DescribeReportCreation(ctx context.Context, input *resourcegroupstaggingapi.DescribeReportCreationInput) (*resourcegroupstaggingapi.DescribeReportCreationOutput, error) {
-	return a.client.DescribeReportCreationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeReportCreationWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) GetComplianceSummary(ctx context.Context, input *resourcegroupstaggingapi.GetComplianceSummaryInput) (*resourcegroupstaggingapi.GetComplianceSummaryOutput, error) {
-	return a.client.GetComplianceSummaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetComplianceSummaryWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) GetResources(ctx context.Context, input *resourcegroupstaggingapi.GetResourcesInput) (*resourcegroupstaggingapi.GetResourcesOutput, error) {
-	return a.client.GetResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) GetTagKeys(ctx context.Context, input *resourcegroupstaggingapi.GetTagKeysInput) (*resourcegroupstaggingapi.GetTagKeysOutput, error) {
-	return a.client.GetTagKeysWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTagKeysWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) GetTagValues(ctx context.Context, input *resourcegroupstaggingapi.GetTagValuesInput) (*resourcegroupstaggingapi.GetTagValuesOutput, error) {
-	return a.client.GetTagValuesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTagValuesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) StartReportCreation(ctx context.Context, input *resourcegroupstaggingapi.StartReportCreationInput) (*resourcegroupstaggingapi.StartReportCreationOutput, error) {
-	return a.client.StartReportCreationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartReportCreationWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) TagResources(ctx context.Context, input *resourcegroupstaggingapi.TagResourcesInput) (*resourcegroupstaggingapi.TagResourcesOutput, error) {
-	return a.client.TagResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourcesWithContext(ctx, input)
 }
 
 func (a *ResourceGroupsTaggingAPIActivities) UntagResources(ctx context.Context, input *resourcegroupstaggingapi.UntagResourcesInput) (*resourcegroupstaggingapi.UntagResourcesOutput, error) {
-	return a.client.UntagResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourcesWithContext(ctx, input)
 }

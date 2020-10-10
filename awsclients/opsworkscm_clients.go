@@ -66,11 +66,9 @@ type OpsWorksCMClient interface {
 	UpdateServerEngineAttributes(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error)
 	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsworkscmUpdateServerEngineAttributesResult
 
-	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error
-}
+	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error}
 
-type OpsWorksCMStub struct {
-}
+type OpsWorksCMStub struct{}
 
 func NewOpsWorksCMStub() OpsWorksCMClient {
 	return &OpsWorksCMStub{}
@@ -266,219 +264,220 @@ func (r *OpsworkscmUpdateServerEngineAttributesResult) Get(ctx workflow.Context)
 	return &output, err
 }
 
+
 func (a *OpsWorksCMStub) AssociateNode(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error) {
 	var output opsworkscm.AssociateNodeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.AssociateNode", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.AssociateNode", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) AssociateNodeAsync(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) *OpsworkscmAssociateNodeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.AssociateNode", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.AssociateNode", input)
 	return &OpsworkscmAssociateNodeResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) CreateBackup(ctx workflow.Context, input *opsworkscm.CreateBackupInput) (*opsworkscm.CreateBackupOutput, error) {
 	var output opsworkscm.CreateBackupOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.CreateBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.CreateBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) CreateBackupAsync(ctx workflow.Context, input *opsworkscm.CreateBackupInput) *OpsworkscmCreateBackupResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.CreateBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.CreateBackup", input)
 	return &OpsworkscmCreateBackupResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) CreateServer(ctx workflow.Context, input *opsworkscm.CreateServerInput) (*opsworkscm.CreateServerOutput, error) {
 	var output opsworkscm.CreateServerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.CreateServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.CreateServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) CreateServerAsync(ctx workflow.Context, input *opsworkscm.CreateServerInput) *OpsworkscmCreateServerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.CreateServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.CreateServer", input)
 	return &OpsworkscmCreateServerResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DeleteBackup(ctx workflow.Context, input *opsworkscm.DeleteBackupInput) (*opsworkscm.DeleteBackupOutput, error) {
 	var output opsworkscm.DeleteBackupOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DeleteBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DeleteBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DeleteBackupAsync(ctx workflow.Context, input *opsworkscm.DeleteBackupInput) *OpsworkscmDeleteBackupResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DeleteBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DeleteBackup", input)
 	return &OpsworkscmDeleteBackupResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DeleteServer(ctx workflow.Context, input *opsworkscm.DeleteServerInput) (*opsworkscm.DeleteServerOutput, error) {
 	var output opsworkscm.DeleteServerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DeleteServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DeleteServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DeleteServerAsync(ctx workflow.Context, input *opsworkscm.DeleteServerInput) *OpsworkscmDeleteServerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DeleteServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DeleteServer", input)
 	return &OpsworkscmDeleteServerResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DescribeAccountAttributes(ctx workflow.Context, input *opsworkscm.DescribeAccountAttributesInput) (*opsworkscm.DescribeAccountAttributesOutput, error) {
 	var output opsworkscm.DescribeAccountAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeAccountAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeAccountAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DescribeAccountAttributesAsync(ctx workflow.Context, input *opsworkscm.DescribeAccountAttributesInput) *OpsworkscmDescribeAccountAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeAccountAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeAccountAttributes", input)
 	return &OpsworkscmDescribeAccountAttributesResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DescribeBackups(ctx workflow.Context, input *opsworkscm.DescribeBackupsInput) (*opsworkscm.DescribeBackupsOutput, error) {
 	var output opsworkscm.DescribeBackupsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeBackups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeBackups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DescribeBackupsAsync(ctx workflow.Context, input *opsworkscm.DescribeBackupsInput) *OpsworkscmDescribeBackupsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeBackups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeBackups", input)
 	return &OpsworkscmDescribeBackupsResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DescribeEvents(ctx workflow.Context, input *opsworkscm.DescribeEventsInput) (*opsworkscm.DescribeEventsOutput, error) {
 	var output opsworkscm.DescribeEventsOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DescribeEventsAsync(ctx workflow.Context, input *opsworkscm.DescribeEventsInput) *OpsworkscmDescribeEventsResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeEvents", input)
 	return &OpsworkscmDescribeEventsResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DescribeNodeAssociationStatus(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) (*opsworkscm.DescribeNodeAssociationStatusOutput, error) {
 	var output opsworkscm.DescribeNodeAssociationStatusOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeNodeAssociationStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeNodeAssociationStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DescribeNodeAssociationStatusAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) *OpsworkscmDescribeNodeAssociationStatusResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeNodeAssociationStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeNodeAssociationStatus", input)
 	return &OpsworkscmDescribeNodeAssociationStatusResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DescribeServers(ctx workflow.Context, input *opsworkscm.DescribeServersInput) (*opsworkscm.DescribeServersOutput, error) {
 	var output opsworkscm.DescribeServersOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeServers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeServers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DescribeServersAsync(ctx workflow.Context, input *opsworkscm.DescribeServersInput) *OpsworkscmDescribeServersResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DescribeServers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DescribeServers", input)
 	return &OpsworkscmDescribeServersResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) DisassociateNode(ctx workflow.Context, input *opsworkscm.DisassociateNodeInput) (*opsworkscm.DisassociateNodeOutput, error) {
 	var output opsworkscm.DisassociateNodeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.DisassociateNode", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DisassociateNode", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) DisassociateNodeAsync(ctx workflow.Context, input *opsworkscm.DisassociateNodeInput) *OpsworkscmDisassociateNodeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.DisassociateNode", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.DisassociateNode", input)
 	return &OpsworkscmDisassociateNodeResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) ExportServerEngineAttribute(ctx workflow.Context, input *opsworkscm.ExportServerEngineAttributeInput) (*opsworkscm.ExportServerEngineAttributeOutput, error) {
 	var output opsworkscm.ExportServerEngineAttributeOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.ExportServerEngineAttribute", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.ExportServerEngineAttribute", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) ExportServerEngineAttributeAsync(ctx workflow.Context, input *opsworkscm.ExportServerEngineAttributeInput) *OpsworkscmExportServerEngineAttributeResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.ExportServerEngineAttribute", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.ExportServerEngineAttribute", input)
 	return &OpsworkscmExportServerEngineAttributeResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) ListTagsForResource(ctx workflow.Context, input *opsworkscm.ListTagsForResourceInput) (*opsworkscm.ListTagsForResourceOutput, error) {
 	var output opsworkscm.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) ListTagsForResourceAsync(ctx workflow.Context, input *opsworkscm.ListTagsForResourceInput) *OpsworkscmListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.ListTagsForResource", input)
 	return &OpsworkscmListTagsForResourceResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) RestoreServer(ctx workflow.Context, input *opsworkscm.RestoreServerInput) (*opsworkscm.RestoreServerOutput, error) {
 	var output opsworkscm.RestoreServerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.RestoreServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.RestoreServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) RestoreServerAsync(ctx workflow.Context, input *opsworkscm.RestoreServerInput) *OpsworkscmRestoreServerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.RestoreServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.RestoreServer", input)
 	return &OpsworkscmRestoreServerResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) StartMaintenance(ctx workflow.Context, input *opsworkscm.StartMaintenanceInput) (*opsworkscm.StartMaintenanceOutput, error) {
 	var output opsworkscm.StartMaintenanceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.StartMaintenance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.StartMaintenance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) StartMaintenanceAsync(ctx workflow.Context, input *opsworkscm.StartMaintenanceInput) *OpsworkscmStartMaintenanceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.StartMaintenance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.StartMaintenance", input)
 	return &OpsworkscmStartMaintenanceResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) TagResource(ctx workflow.Context, input *opsworkscm.TagResourceInput) (*opsworkscm.TagResourceOutput, error) {
 	var output opsworkscm.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) TagResourceAsync(ctx workflow.Context, input *opsworkscm.TagResourceInput) *OpsworkscmTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.TagResource", input)
 	return &OpsworkscmTagResourceResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) UntagResource(ctx workflow.Context, input *opsworkscm.UntagResourceInput) (*opsworkscm.UntagResourceOutput, error) {
 	var output opsworkscm.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) UntagResourceAsync(ctx workflow.Context, input *opsworkscm.UntagResourceInput) *OpsworkscmUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UntagResource", input)
 	return &OpsworkscmUntagResourceResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) UpdateServer(ctx workflow.Context, input *opsworkscm.UpdateServerInput) (*opsworkscm.UpdateServerOutput, error) {
 	var output opsworkscm.UpdateServerOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.UpdateServer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UpdateServer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) UpdateServerAsync(ctx workflow.Context, input *opsworkscm.UpdateServerInput) *OpsworkscmUpdateServerResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.UpdateServer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UpdateServer", input)
 	return &OpsworkscmUpdateServerResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) UpdateServerEngineAttributes(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error) {
 	var output opsworkscm.UpdateServerEngineAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "OpsWorksCM.UpdateServerEngineAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UpdateServerEngineAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *OpsWorksCMStub) UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsworkscmUpdateServerEngineAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "OpsWorksCM.UpdateServerEngineAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.opsworkscm.UpdateServerEngineAttributes", input)
 	return &OpsworkscmUpdateServerEngineAttributesResult{Result: future}
 }
 
 func (a *OpsWorksCMStub) WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error {
-	return workflow.ExecuteActivity(ctx, "OpsWorksCM.WaitUntilNodeAssociated", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.opsworkscm.WaitUntilNodeAssociated", input).Get(ctx, nil)
 }
 
 func (a *OpsWorksCMStub) WaitUntilNodeAssociatedAsync(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "OpsWorksCM.WaitUntilNodeAssociated", input)
+	return workflow.ExecuteActivity(ctx, "aws.opsworkscm.WaitUntilNodeAssociated", input)
 }

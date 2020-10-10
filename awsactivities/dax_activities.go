@@ -16,98 +16,200 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type DAXActivities struct {
 	client daxiface.DAXAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewDAXActivities(session *session.Session, config ...*aws.Config) *DAXActivities {
-	client := dax.New(session, config...)
+func NewDAXActivities(sess *session.Session, config ...*aws.Config) *DAXActivities {
+	client := dax.New(sess, config...)
 	return &DAXActivities{client: client}
 }
 
+func NewDAXActivitiesWithSessionFactory(sessionFactory SessionFactory) *DAXActivities {
+	return &DAXActivities{sessionFactory: sessionFactory}
+}
+
+func (a *DAXActivities) getClient(ctx context.Context) (daxiface.DAXAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return dax.New(sess), nil
+}
+
 func (a *DAXActivities) CreateCluster(ctx context.Context, input *dax.CreateClusterInput) (*dax.CreateClusterOutput, error) {
-	return a.client.CreateClusterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateClusterWithContext(ctx, input)
 }
 
 func (a *DAXActivities) CreateParameterGroup(ctx context.Context, input *dax.CreateParameterGroupInput) (*dax.CreateParameterGroupOutput, error) {
-	return a.client.CreateParameterGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateParameterGroupWithContext(ctx, input)
 }
 
 func (a *DAXActivities) CreateSubnetGroup(ctx context.Context, input *dax.CreateSubnetGroupInput) (*dax.CreateSubnetGroupOutput, error) {
-	return a.client.CreateSubnetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateSubnetGroupWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DecreaseReplicationFactor(ctx context.Context, input *dax.DecreaseReplicationFactorInput) (*dax.DecreaseReplicationFactorOutput, error) {
-	return a.client.DecreaseReplicationFactorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DecreaseReplicationFactorWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DeleteCluster(ctx context.Context, input *dax.DeleteClusterInput) (*dax.DeleteClusterOutput, error) {
-	return a.client.DeleteClusterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteClusterWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DeleteParameterGroup(ctx context.Context, input *dax.DeleteParameterGroupInput) (*dax.DeleteParameterGroupOutput, error) {
-	return a.client.DeleteParameterGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteParameterGroupWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DeleteSubnetGroup(ctx context.Context, input *dax.DeleteSubnetGroupInput) (*dax.DeleteSubnetGroupOutput, error) {
-	return a.client.DeleteSubnetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteSubnetGroupWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeClusters(ctx context.Context, input *dax.DescribeClustersInput) (*dax.DescribeClustersOutput, error) {
-	return a.client.DescribeClustersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeClustersWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeDefaultParameters(ctx context.Context, input *dax.DescribeDefaultParametersInput) (*dax.DescribeDefaultParametersOutput, error) {
-	return a.client.DescribeDefaultParametersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDefaultParametersWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeEvents(ctx context.Context, input *dax.DescribeEventsInput) (*dax.DescribeEventsOutput, error) {
-	return a.client.DescribeEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeEventsWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeParameterGroups(ctx context.Context, input *dax.DescribeParameterGroupsInput) (*dax.DescribeParameterGroupsOutput, error) {
-	return a.client.DescribeParameterGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeParameterGroupsWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeParameters(ctx context.Context, input *dax.DescribeParametersInput) (*dax.DescribeParametersOutput, error) {
-	return a.client.DescribeParametersWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeParametersWithContext(ctx, input)
 }
 
 func (a *DAXActivities) DescribeSubnetGroups(ctx context.Context, input *dax.DescribeSubnetGroupsInput) (*dax.DescribeSubnetGroupsOutput, error) {
-	return a.client.DescribeSubnetGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeSubnetGroupsWithContext(ctx, input)
 }
 
 func (a *DAXActivities) IncreaseReplicationFactor(ctx context.Context, input *dax.IncreaseReplicationFactorInput) (*dax.IncreaseReplicationFactorOutput, error) {
-	return a.client.IncreaseReplicationFactorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.IncreaseReplicationFactorWithContext(ctx, input)
 }
 
 func (a *DAXActivities) ListTags(ctx context.Context, input *dax.ListTagsInput) (*dax.ListTagsOutput, error) {
-	return a.client.ListTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsWithContext(ctx, input)
 }
 
 func (a *DAXActivities) RebootNode(ctx context.Context, input *dax.RebootNodeInput) (*dax.RebootNodeOutput, error) {
-	return a.client.RebootNodeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RebootNodeWithContext(ctx, input)
 }
 
 func (a *DAXActivities) TagResource(ctx context.Context, input *dax.TagResourceInput) (*dax.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *DAXActivities) UntagResource(ctx context.Context, input *dax.UntagResourceInput) (*dax.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *DAXActivities) UpdateCluster(ctx context.Context, input *dax.UpdateClusterInput) (*dax.UpdateClusterOutput, error) {
-	return a.client.UpdateClusterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateClusterWithContext(ctx, input)
 }
 
 func (a *DAXActivities) UpdateParameterGroup(ctx context.Context, input *dax.UpdateParameterGroupInput) (*dax.UpdateParameterGroupOutput, error) {
-	return a.client.UpdateParameterGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateParameterGroupWithContext(ctx, input)
 }
 
 func (a *DAXActivities) UpdateSubnetGroup(ctx context.Context, input *dax.UpdateSubnetGroupInput) (*dax.UpdateSubnetGroupOutput, error) {
-	return a.client.UpdateSubnetGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateSubnetGroupWithContext(ctx, input)
 }

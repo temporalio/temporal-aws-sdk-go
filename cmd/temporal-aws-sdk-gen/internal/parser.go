@@ -1,11 +1,16 @@
 package internal
 
 import (
+	"errors"
+	"fmt"
 	"go/ast"
 	"go/parser"
 	"go/token"
 	"io/ioutil"
+	"path/filepath"
 	"strings"
+
+	"golang.org/x/tools/go/packages"
 )
 
 var methodSuffixesToSkip = []string{"WithContext", "Request", "Pages"}
@@ -14,31 +19,45 @@ var blacklistedMethods = map[string]string{
 	"Lambda": "InvokeAsync",
 }
 
-type AWSSDKParser struct {
-	SdkDirectory string
-}
-
 // ParseAwsSdk calls generator function for each AWS Service iDefinition
-func (p *AWSSDKParser) ParseAwsSdk(serviceName string) ([]*InterfaceDefinition, error) {
-	var serviceNames []string
+func ParseAwsSdk(serviceName string) ([]*InterfaceDefinition, error) {
+	var pkgs []*packages.Package
+
+	config := &packages.Config{
+		Mode: packages.NeedName |
+			packages.NeedFiles |
+			packages.NeedCompiledGoFiles |
+			packages.NeedImports |
+			packages.NeedTypes |
+			packages.NeedTypesSizes |
+			packages.NeedTypesInfo,
+	}
+
 	if serviceName == "" {
-		serviceDir := p.SdkDirectory + "/service"
-		files, err := ioutil.ReadDir(serviceDir)
+		allPkgs, err := packages.Load(config, "github.com/aws/aws-sdk-go/service/...")
 		if err != nil {
 			return nil, err
 		}
-		for _, f := range files {
-			if f.IsDir() {
-				serviceNames = append(serviceNames, f.Name())
+
+		for _, pkg := range allPkgs {
+			if strings.TrimPrefix(pkg.PkgPath, "github.com/aws/aws-sdk-go/service/") == pkg.Name {
+				pkgs = append(pkgs, pkg)
 			}
 		}
 	} else {
-		serviceNames = append(serviceNames, serviceName)
+		servicePkgs, err := packages.Load(config, fmt.Sprintf("github.com/aws/aws-sdk-go/service/%s", serviceName))
+		if err != nil {
+			return nil, err
+		}
+
+		pkgs = append(pkgs, servicePkgs...)
 	}
+
 	var definitions []*InterfaceDefinition
 	structs := make(map[string]*StructDefinition)
-	for _, serviceName := range serviceNames {
-		definition, serviceStructs, err := p.parseAwsService(serviceName)
+
+	for _, pkg := range pkgs {
+		definition, serviceStructs, err := parseAwsService(pkg)
 		if err != nil {
 			return nil, err
 		}
@@ -47,6 +66,7 @@ func (p *AWSSDKParser) ParseAwsSdk(serviceName string) ([]*InterfaceDefinition, 
 			structs[serviceStruct.Package+"."+serviceStruct.Name] = serviceStruct
 		}
 	}
+
 	for _, definition := range definitions {
 		for _, method := range definition.Methods {
 			if method.Output != nil {
@@ -55,25 +75,38 @@ func (p *AWSSDKParser) ParseAwsSdk(serviceName string) ([]*InterfaceDefinition, 
 			method.Input = structs[method.Input.Package+"."+method.Input.Name]
 		}
 	}
+
 	return definitions, nil
 }
 
-func (p *AWSSDKParser) parseAwsService(serviceName string) (*InterfaceDefinition, []*StructDefinition, error) {
-	serviceDir := p.SdkDirectory + "/service"
-	fileName := serviceDir + "/" + serviceName + "/" + serviceName + "iface/interface.go"
-	definition, err := p.parseAwsServiceInterface(fileName)
+func parseAwsService(pkg *packages.Package) (*InterfaceDefinition, []*StructDefinition, error) {
+	var apiFileName string
+	for _, file := range pkg.GoFiles {
+		if filepath.Base(file) == "api.go" {
+			apiFileName = file
+
+			break
+		}
+	}
+
+	if apiFileName == "" {
+		return nil, nil, errors.New("api.go is not found in the service")
+	}
+
+	interfaceFileName := filepath.Join(filepath.Dir(apiFileName), fmt.Sprintf("%siface", pkg.Name), "interface.go")
+	definition, err := parseAwsServiceInterface(pkg.Name, interfaceFileName)
 	if err != nil {
 		return nil, nil, err
 	}
-	apiFileName := serviceDir + "/" + serviceName + "/api.go"
-	structs, err := p.parseAwsApi(strings.ToLower(serviceName), apiFileName)
+
+	structs, err := parseAwsApi(strings.ToLower(pkg.Name), apiFileName)
 	if err != nil {
 		return nil, nil, err
 	}
 	return &definition, structs, nil
 }
 
-func (p *AWSSDKParser) parseAwsServiceInterface(fileName string) (iDefinition InterfaceDefinition, err error) {
+func parseAwsServiceInterface(serviceName string, fileName string) (iDefinition InterfaceDefinition, err error) {
 	body, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		return InterfaceDefinition{}, err
@@ -85,10 +118,14 @@ func (p *AWSSDKParser) parseAwsServiceInterface(fileName string) (iDefinition In
 	}
 	v := NewAWSInterfaceVisitor(fileSet)
 	ast.Walk(v, file)
-	return v.definition, nil
+
+	definition := v.definition
+	definition.ID = serviceName
+
+	return definition, nil
 }
 
-func (p *AWSSDKParser) parseAwsApi(packageName, fileName string) (structs []*StructDefinition, err error) {
+func parseAwsApi(packageName, fileName string) (structs []*StructDefinition, err error) {
 	body, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		return nil, err

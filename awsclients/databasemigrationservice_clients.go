@@ -175,11 +175,9 @@ type DatabaseMigrationServiceClient interface {
 	WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
 	WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
 	WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error
-}
+	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
 
-type DatabaseMigrationServiceStub struct {
-}
+type DatabaseMigrationServiceStub struct{}
 
 func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
 	return &DatabaseMigrationServiceStub{}
@@ -715,649 +713,657 @@ func (r *DatabasemigrationserviceTestConnectionResult) Get(ctx workflow.Context)
 	return &output, err
 }
 
+
+
+
+
+
+
+
+
 func (a *DatabaseMigrationServiceStub) AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error) {
 	var output databasemigrationservice.AddTagsToResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.AddTagsToResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.AddTagsToResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) AddTagsToResourceAsync(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) *DatabasemigrationserviceAddTagsToResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.AddTagsToResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.AddTagsToResource", input)
 	return &DatabasemigrationserviceAddTagsToResourceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) (*databasemigrationservice.ApplyPendingMaintenanceActionOutput, error) {
 	var output databasemigrationservice.ApplyPendingMaintenanceActionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ApplyPendingMaintenanceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ApplyPendingMaintenanceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *databasemigrationservice.ApplyPendingMaintenanceActionInput) *DatabasemigrationserviceApplyPendingMaintenanceActionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ApplyPendingMaintenanceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ApplyPendingMaintenanceAction", input)
 	return &DatabasemigrationserviceApplyPendingMaintenanceActionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CancelReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) (*databasemigrationservice.CancelReplicationTaskAssessmentRunOutput, error) {
 	var output databasemigrationservice.CancelReplicationTaskAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CancelReplicationTaskAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CancelReplicationTaskAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CancelReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.CancelReplicationTaskAssessmentRunInput) *DatabasemigrationserviceCancelReplicationTaskAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CancelReplicationTaskAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CancelReplicationTaskAssessmentRun", input)
 	return &DatabasemigrationserviceCancelReplicationTaskAssessmentRunResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CreateEndpoint(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) (*databasemigrationservice.CreateEndpointOutput, error) {
 	var output databasemigrationservice.CreateEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CreateEndpointAsync(ctx workflow.Context, input *databasemigrationservice.CreateEndpointInput) *DatabasemigrationserviceCreateEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateEndpoint", input)
 	return &DatabasemigrationserviceCreateEndpointResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CreateEventSubscription(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) (*databasemigrationservice.CreateEventSubscriptionOutput, error) {
 	var output databasemigrationservice.CreateEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CreateEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.CreateEventSubscriptionInput) *DatabasemigrationserviceCreateEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateEventSubscription", input)
 	return &DatabasemigrationserviceCreateEventSubscriptionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationInstance(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) (*databasemigrationservice.CreateReplicationInstanceOutput, error) {
 	var output databasemigrationservice.CreateReplicationInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationInstanceInput) *DatabasemigrationserviceCreateReplicationInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationInstance", input)
 	return &DatabasemigrationserviceCreateReplicationInstanceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) (*databasemigrationservice.CreateReplicationSubnetGroupOutput, error) {
 	var output databasemigrationservice.CreateReplicationSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationSubnetGroupInput) *DatabasemigrationserviceCreateReplicationSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationSubnetGroup", input)
 	return &DatabasemigrationserviceCreateReplicationSubnetGroupResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationTask(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) (*databasemigrationservice.CreateReplicationTaskOutput, error) {
 	var output databasemigrationservice.CreateReplicationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) CreateReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.CreateReplicationTaskInput) *DatabasemigrationserviceCreateReplicationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.CreateReplicationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.CreateReplicationTask", input)
 	return &DatabasemigrationserviceCreateReplicationTaskResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteCertificate(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) (*databasemigrationservice.DeleteCertificateOutput, error) {
 	var output databasemigrationservice.DeleteCertificateOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteCertificate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteCertificate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteCertificateAsync(ctx workflow.Context, input *databasemigrationservice.DeleteCertificateInput) *DatabasemigrationserviceDeleteCertificateResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteCertificate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteCertificate", input)
 	return &DatabasemigrationserviceDeleteCertificateResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteConnection(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) (*databasemigrationservice.DeleteConnectionOutput, error) {
 	var output databasemigrationservice.DeleteConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteConnectionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteConnectionInput) *DatabasemigrationserviceDeleteConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteConnection", input)
 	return &DatabasemigrationserviceDeleteConnectionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteEndpoint(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) (*databasemigrationservice.DeleteEndpointOutput, error) {
 	var output databasemigrationservice.DeleteEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteEndpointAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEndpointInput) *DatabasemigrationserviceDeleteEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteEndpoint", input)
 	return &DatabasemigrationserviceDeleteEndpointResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteEventSubscription(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) (*databasemigrationservice.DeleteEventSubscriptionOutput, error) {
 	var output databasemigrationservice.DeleteEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.DeleteEventSubscriptionInput) *DatabasemigrationserviceDeleteEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteEventSubscription", input)
 	return &DatabasemigrationserviceDeleteEventSubscriptionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationInstance(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) (*databasemigrationservice.DeleteReplicationInstanceOutput, error) {
 	var output databasemigrationservice.DeleteReplicationInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationInstanceInput) *DatabasemigrationserviceDeleteReplicationInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationInstance", input)
 	return &DatabasemigrationserviceDeleteReplicationInstanceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) (*databasemigrationservice.DeleteReplicationSubnetGroupOutput, error) {
 	var output databasemigrationservice.DeleteReplicationSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationSubnetGroupInput) *DatabasemigrationserviceDeleteReplicationSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationSubnetGroup", input)
 	return &DatabasemigrationserviceDeleteReplicationSubnetGroupResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTask(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) (*databasemigrationservice.DeleteReplicationTaskOutput, error) {
 	var output databasemigrationservice.DeleteReplicationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskInput) *DatabasemigrationserviceDeleteReplicationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationTask", input)
 	return &DatabasemigrationserviceDeleteReplicationTaskResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) (*databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput, error) {
 	var output databasemigrationservice.DeleteReplicationTaskAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationTaskAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationTaskAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DeleteReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.DeleteReplicationTaskAssessmentRunInput) *DatabasemigrationserviceDeleteReplicationTaskAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DeleteReplicationTaskAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DeleteReplicationTaskAssessmentRun", input)
 	return &DatabasemigrationserviceDeleteReplicationTaskAssessmentRunResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeAccountAttributes(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) (*databasemigrationservice.DescribeAccountAttributesOutput, error) {
 	var output databasemigrationservice.DescribeAccountAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeAccountAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeAccountAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeAccountAttributesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeAccountAttributesInput) *DatabasemigrationserviceDescribeAccountAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeAccountAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeAccountAttributes", input)
 	return &DatabasemigrationserviceDescribeAccountAttributesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeApplicableIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) (*databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput, error) {
 	var output databasemigrationservice.DescribeApplicableIndividualAssessmentsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeApplicableIndividualAssessments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeApplicableIndividualAssessments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeApplicableIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeApplicableIndividualAssessmentsInput) *DatabasemigrationserviceDescribeApplicableIndividualAssessmentsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeApplicableIndividualAssessments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeApplicableIndividualAssessments", input)
 	return &DatabasemigrationserviceDescribeApplicableIndividualAssessmentsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeCertificates(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) (*databasemigrationservice.DescribeCertificatesOutput, error) {
 	var output databasemigrationservice.DescribeCertificatesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeCertificates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeCertificates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeCertificatesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeCertificatesInput) *DatabasemigrationserviceDescribeCertificatesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeCertificates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeCertificates", input)
 	return &DatabasemigrationserviceDescribeCertificatesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeConnections(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) (*databasemigrationservice.DescribeConnectionsOutput, error) {
 	var output databasemigrationservice.DescribeConnectionsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeConnections", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeConnections", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeConnectionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) *DatabasemigrationserviceDescribeConnectionsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeConnections", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeConnections", input)
 	return &DatabasemigrationserviceDescribeConnectionsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEndpointTypes(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) (*databasemigrationservice.DescribeEndpointTypesOutput, error) {
 	var output databasemigrationservice.DescribeEndpointTypesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEndpointTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEndpointTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEndpointTypesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointTypesInput) *DatabasemigrationserviceDescribeEndpointTypesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEndpointTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEndpointTypes", input)
 	return &DatabasemigrationserviceDescribeEndpointTypesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEndpoints(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) (*databasemigrationservice.DescribeEndpointsOutput, error) {
 	var output databasemigrationservice.DescribeEndpointsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEndpoints", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEndpoints", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEndpointsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) *DatabasemigrationserviceDescribeEndpointsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEndpoints", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEndpoints", input)
 	return &DatabasemigrationserviceDescribeEndpointsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEventCategories(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) (*databasemigrationservice.DescribeEventCategoriesOutput, error) {
 	var output databasemigrationservice.DescribeEventCategoriesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEventCategories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEventCategories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventCategoriesInput) *DatabasemigrationserviceDescribeEventCategoriesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEventCategories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEventCategories", input)
 	return &DatabasemigrationserviceDescribeEventCategoriesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEventSubscriptions(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) (*databasemigrationservice.DescribeEventSubscriptionsOutput, error) {
 	var output databasemigrationservice.DescribeEventSubscriptionsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEventSubscriptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEventSubscriptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventSubscriptionsInput) *DatabasemigrationserviceDescribeEventSubscriptionsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEventSubscriptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEventSubscriptions", input)
 	return &DatabasemigrationserviceDescribeEventSubscriptionsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEvents(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) (*databasemigrationservice.DescribeEventsOutput, error) {
 	var output databasemigrationservice.DescribeEventsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeEventsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEventsInput) *DatabasemigrationserviceDescribeEventsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeEvents", input)
 	return &DatabasemigrationserviceDescribeEventsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeOrderableReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) (*databasemigrationservice.DescribeOrderableReplicationInstancesOutput, error) {
 	var output databasemigrationservice.DescribeOrderableReplicationInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeOrderableReplicationInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeOrderableReplicationInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeOrderableReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeOrderableReplicationInstancesInput) *DatabasemigrationserviceDescribeOrderableReplicationInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeOrderableReplicationInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeOrderableReplicationInstances", input)
 	return &DatabasemigrationserviceDescribeOrderableReplicationInstancesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) (*databasemigrationservice.DescribePendingMaintenanceActionsOutput, error) {
 	var output databasemigrationservice.DescribePendingMaintenanceActionsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribePendingMaintenanceActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribePendingMaintenanceActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *databasemigrationservice.DescribePendingMaintenanceActionsInput) *DatabasemigrationserviceDescribePendingMaintenanceActionsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribePendingMaintenanceActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribePendingMaintenanceActions", input)
 	return &DatabasemigrationserviceDescribePendingMaintenanceActionsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeRefreshSchemasStatus(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) (*databasemigrationservice.DescribeRefreshSchemasStatusOutput, error) {
 	var output databasemigrationservice.DescribeRefreshSchemasStatusOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeRefreshSchemasStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeRefreshSchemasStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeRefreshSchemasStatusAsync(ctx workflow.Context, input *databasemigrationservice.DescribeRefreshSchemasStatusInput) *DatabasemigrationserviceDescribeRefreshSchemasStatusResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeRefreshSchemasStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeRefreshSchemasStatus", input)
 	return &DatabasemigrationserviceDescribeRefreshSchemasStatusResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstanceTaskLogs(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) (*databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput, error) {
 	var output databasemigrationservice.DescribeReplicationInstanceTaskLogsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationInstanceTaskLogs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationInstanceTaskLogs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstanceTaskLogsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstanceTaskLogsInput) *DatabasemigrationserviceDescribeReplicationInstanceTaskLogsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationInstanceTaskLogs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationInstanceTaskLogs", input)
 	return &DatabasemigrationserviceDescribeReplicationInstanceTaskLogsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstances(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) (*databasemigrationservice.DescribeReplicationInstancesOutput, error) {
 	var output databasemigrationservice.DescribeReplicationInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationInstancesAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) *DatabasemigrationserviceDescribeReplicationInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationInstances", input)
 	return &DatabasemigrationserviceDescribeReplicationInstancesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationSubnetGroups(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) (*databasemigrationservice.DescribeReplicationSubnetGroupsOutput, error) {
 	var output databasemigrationservice.DescribeReplicationSubnetGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationSubnetGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationSubnetGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationSubnetGroupsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationSubnetGroupsInput) *DatabasemigrationserviceDescribeReplicationSubnetGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationSubnetGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationSubnetGroups", input)
 	return &DatabasemigrationserviceDescribeReplicationSubnetGroupsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentResults(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput, error) {
 	var output databasemigrationservice.DescribeReplicationTaskAssessmentResultsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskAssessmentResults", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskAssessmentResults", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentResultsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentResultsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentResultsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskAssessmentResults", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskAssessmentResults", input)
 	return &DatabasemigrationserviceDescribeReplicationTaskAssessmentResultsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentRuns(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) (*databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput, error) {
 	var output databasemigrationservice.DescribeReplicationTaskAssessmentRunsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskAssessmentRuns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskAssessmentRuns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskAssessmentRunsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskAssessmentRunsInput) *DatabasemigrationserviceDescribeReplicationTaskAssessmentRunsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskAssessmentRuns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskAssessmentRuns", input)
 	return &DatabasemigrationserviceDescribeReplicationTaskAssessmentRunsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskIndividualAssessments(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) (*databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput, error) {
 	var output databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskIndividualAssessments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskIndividualAssessments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTaskIndividualAssessmentsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTaskIndividualAssessmentsInput) *DatabasemigrationserviceDescribeReplicationTaskIndividualAssessmentsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTaskIndividualAssessments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTaskIndividualAssessments", input)
 	return &DatabasemigrationserviceDescribeReplicationTaskIndividualAssessmentsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTasks(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) (*databasemigrationservice.DescribeReplicationTasksOutput, error) {
 	var output databasemigrationservice.DescribeReplicationTasksOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTasks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTasks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeReplicationTasksAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) *DatabasemigrationserviceDescribeReplicationTasksResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeReplicationTasks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeReplicationTasks", input)
 	return &DatabasemigrationserviceDescribeReplicationTasksResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeSchemas(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) (*databasemigrationservice.DescribeSchemasOutput, error) {
 	var output databasemigrationservice.DescribeSchemasOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeSchemas", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeSchemas", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeSchemasAsync(ctx workflow.Context, input *databasemigrationservice.DescribeSchemasInput) *DatabasemigrationserviceDescribeSchemasResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeSchemas", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeSchemas", input)
 	return &DatabasemigrationserviceDescribeSchemasResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeTableStatistics(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) (*databasemigrationservice.DescribeTableStatisticsOutput, error) {
 	var output databasemigrationservice.DescribeTableStatisticsOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeTableStatistics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeTableStatistics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) DescribeTableStatisticsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeTableStatisticsInput) *DatabasemigrationserviceDescribeTableStatisticsResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.DescribeTableStatistics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.DescribeTableStatistics", input)
 	return &DatabasemigrationserviceDescribeTableStatisticsResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ImportCertificate(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) (*databasemigrationservice.ImportCertificateOutput, error) {
 	var output databasemigrationservice.ImportCertificateOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ImportCertificate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ImportCertificate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ImportCertificateAsync(ctx workflow.Context, input *databasemigrationservice.ImportCertificateInput) *DatabasemigrationserviceImportCertificateResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ImportCertificate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ImportCertificate", input)
 	return &DatabasemigrationserviceImportCertificateResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ListTagsForResource(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) (*databasemigrationservice.ListTagsForResourceOutput, error) {
 	var output databasemigrationservice.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ListTagsForResourceAsync(ctx workflow.Context, input *databasemigrationservice.ListTagsForResourceInput) *DatabasemigrationserviceListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ListTagsForResource", input)
 	return &DatabasemigrationserviceListTagsForResourceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyEndpoint(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) (*databasemigrationservice.ModifyEndpointOutput, error) {
 	var output databasemigrationservice.ModifyEndpointOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyEndpoint", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyEndpoint", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyEndpointAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEndpointInput) *DatabasemigrationserviceModifyEndpointResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyEndpoint", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyEndpoint", input)
 	return &DatabasemigrationserviceModifyEndpointResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyEventSubscription(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) (*databasemigrationservice.ModifyEventSubscriptionOutput, error) {
 	var output databasemigrationservice.ModifyEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *databasemigrationservice.ModifyEventSubscriptionInput) *DatabasemigrationserviceModifyEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyEventSubscription", input)
 	return &DatabasemigrationserviceModifyEventSubscriptionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationInstance(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) (*databasemigrationservice.ModifyReplicationInstanceOutput, error) {
 	var output databasemigrationservice.ModifyReplicationInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationInstanceInput) *DatabasemigrationserviceModifyReplicationInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationInstance", input)
 	return &DatabasemigrationserviceModifyReplicationInstanceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationSubnetGroup(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) (*databasemigrationservice.ModifyReplicationSubnetGroupOutput, error) {
 	var output databasemigrationservice.ModifyReplicationSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationSubnetGroupAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationSubnetGroupInput) *DatabasemigrationserviceModifyReplicationSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationSubnetGroup", input)
 	return &DatabasemigrationserviceModifyReplicationSubnetGroupResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationTask(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) (*databasemigrationservice.ModifyReplicationTaskOutput, error) {
 	var output databasemigrationservice.ModifyReplicationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ModifyReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.ModifyReplicationTaskInput) *DatabasemigrationserviceModifyReplicationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ModifyReplicationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ModifyReplicationTask", input)
 	return &DatabasemigrationserviceModifyReplicationTaskResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) RebootReplicationInstance(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) (*databasemigrationservice.RebootReplicationInstanceOutput, error) {
 	var output databasemigrationservice.RebootReplicationInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RebootReplicationInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RebootReplicationInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) RebootReplicationInstanceAsync(ctx workflow.Context, input *databasemigrationservice.RebootReplicationInstanceInput) *DatabasemigrationserviceRebootReplicationInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RebootReplicationInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RebootReplicationInstance", input)
 	return &DatabasemigrationserviceRebootReplicationInstanceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) RefreshSchemas(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) (*databasemigrationservice.RefreshSchemasOutput, error) {
 	var output databasemigrationservice.RefreshSchemasOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RefreshSchemas", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RefreshSchemas", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) RefreshSchemasAsync(ctx workflow.Context, input *databasemigrationservice.RefreshSchemasInput) *DatabasemigrationserviceRefreshSchemasResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RefreshSchemas", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RefreshSchemas", input)
 	return &DatabasemigrationserviceRefreshSchemasResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) ReloadTables(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) (*databasemigrationservice.ReloadTablesOutput, error) {
 	var output databasemigrationservice.ReloadTablesOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ReloadTables", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ReloadTables", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) ReloadTablesAsync(ctx workflow.Context, input *databasemigrationservice.ReloadTablesInput) *DatabasemigrationserviceReloadTablesResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.ReloadTables", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.ReloadTables", input)
 	return &DatabasemigrationserviceReloadTablesResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) RemoveTagsFromResource(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) (*databasemigrationservice.RemoveTagsFromResourceOutput, error) {
 	var output databasemigrationservice.RemoveTagsFromResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RemoveTagsFromResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RemoveTagsFromResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *databasemigrationservice.RemoveTagsFromResourceInput) *DatabasemigrationserviceRemoveTagsFromResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.RemoveTagsFromResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.RemoveTagsFromResource", input)
 	return &DatabasemigrationserviceRemoveTagsFromResourceResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTask(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) (*databasemigrationservice.StartReplicationTaskOutput, error) {
 	var output databasemigrationservice.StartReplicationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskInput) *DatabasemigrationserviceStartReplicationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTask", input)
 	return &DatabasemigrationserviceStartReplicationTaskResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessment(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) (*databasemigrationservice.StartReplicationTaskAssessmentOutput, error) {
 	var output databasemigrationservice.StartReplicationTaskAssessmentOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTaskAssessment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTaskAssessment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentInput) *DatabasemigrationserviceStartReplicationTaskAssessmentResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTaskAssessment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTaskAssessment", input)
 	return &DatabasemigrationserviceStartReplicationTaskAssessmentResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentRun(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) (*databasemigrationservice.StartReplicationTaskAssessmentRunOutput, error) {
 	var output databasemigrationservice.StartReplicationTaskAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTaskAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTaskAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) StartReplicationTaskAssessmentRunAsync(ctx workflow.Context, input *databasemigrationservice.StartReplicationTaskAssessmentRunInput) *DatabasemigrationserviceStartReplicationTaskAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StartReplicationTaskAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StartReplicationTaskAssessmentRun", input)
 	return &DatabasemigrationserviceStartReplicationTaskAssessmentRunResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) StopReplicationTask(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) (*databasemigrationservice.StopReplicationTaskOutput, error) {
 	var output databasemigrationservice.StopReplicationTaskOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StopReplicationTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StopReplicationTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) StopReplicationTaskAsync(ctx workflow.Context, input *databasemigrationservice.StopReplicationTaskInput) *DatabasemigrationserviceStopReplicationTaskResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.StopReplicationTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.StopReplicationTask", input)
 	return &DatabasemigrationserviceStopReplicationTaskResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) TestConnection(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) (*databasemigrationservice.TestConnectionOutput, error) {
 	var output databasemigrationservice.TestConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.TestConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.TestConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DatabaseMigrationServiceStub) TestConnectionAsync(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) *DatabasemigrationserviceTestConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "DatabaseMigrationService.TestConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.TestConnection", input)
 	return &DatabasemigrationserviceTestConnectionResult{Result: future}
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilEndpointDeleted", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilEndpointDeleted", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilEndpointDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilEndpointDeleted", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilEndpointDeleted", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationInstanceAvailable", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceAvailable", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceAvailableAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationInstanceAvailable", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceAvailable", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationInstanceDeleted", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceDeleted", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationInstanceDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationInstanceDeleted", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationInstanceDeleted", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskDeleted", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskDeleted", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskDeletedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskDeleted", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskDeleted", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskReady", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskReady", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskReadyAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskReady", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskReady", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskRunning", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskRunning", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskRunningAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskRunning", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskRunning", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskStopped", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskStopped", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilReplicationTaskStoppedAsync(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilReplicationTaskStopped", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilReplicationTaskStopped", input)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilTestConnectionSucceeds", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilTestConnectionSucceeds", input).Get(ctx, nil)
 }
 
 func (a *DatabaseMigrationServiceStub) WaitUntilTestConnectionSucceedsAsync(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DatabaseMigrationService.WaitUntilTestConnectionSucceeds", input)
+	return workflow.ExecuteActivity(ctx, "aws.databasemigrationservice.WaitUntilTestConnectionSucceeds", input)
 }

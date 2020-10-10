@@ -58,8 +58,7 @@ type BatchClient interface {
 	UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *BatchUpdateJobQueueResult
 }
 
-type BatchStub struct {
-}
+type BatchStub struct{}
 
 func NewBatchStub() BatchClient {
 	return &BatchStub{}
@@ -227,176 +226,176 @@ func (r *BatchUpdateJobQueueResult) Get(ctx workflow.Context) (*batch.UpdateJobQ
 
 func (a *BatchStub) CancelJob(ctx workflow.Context, input *batch.CancelJobInput) (*batch.CancelJobOutput, error) {
 	var output batch.CancelJobOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.CancelJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.CancelJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) CancelJobAsync(ctx workflow.Context, input *batch.CancelJobInput) *BatchCancelJobResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.CancelJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.CancelJob", input)
 	return &BatchCancelJobResult{Result: future}
 }
 
 func (a *BatchStub) CreateComputeEnvironment(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) (*batch.CreateComputeEnvironmentOutput, error) {
 	var output batch.CreateComputeEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.CreateComputeEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.CreateComputeEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) CreateComputeEnvironmentAsync(ctx workflow.Context, input *batch.CreateComputeEnvironmentInput) *BatchCreateComputeEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.CreateComputeEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.CreateComputeEnvironment", input)
 	return &BatchCreateComputeEnvironmentResult{Result: future}
 }
 
 func (a *BatchStub) CreateJobQueue(ctx workflow.Context, input *batch.CreateJobQueueInput) (*batch.CreateJobQueueOutput, error) {
 	var output batch.CreateJobQueueOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.CreateJobQueue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.CreateJobQueue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) CreateJobQueueAsync(ctx workflow.Context, input *batch.CreateJobQueueInput) *BatchCreateJobQueueResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.CreateJobQueue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.CreateJobQueue", input)
 	return &BatchCreateJobQueueResult{Result: future}
 }
 
 func (a *BatchStub) DeleteComputeEnvironment(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) (*batch.DeleteComputeEnvironmentOutput, error) {
 	var output batch.DeleteComputeEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DeleteComputeEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DeleteComputeEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DeleteComputeEnvironmentAsync(ctx workflow.Context, input *batch.DeleteComputeEnvironmentInput) *BatchDeleteComputeEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DeleteComputeEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DeleteComputeEnvironment", input)
 	return &BatchDeleteComputeEnvironmentResult{Result: future}
 }
 
 func (a *BatchStub) DeleteJobQueue(ctx workflow.Context, input *batch.DeleteJobQueueInput) (*batch.DeleteJobQueueOutput, error) {
 	var output batch.DeleteJobQueueOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DeleteJobQueue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DeleteJobQueue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DeleteJobQueueAsync(ctx workflow.Context, input *batch.DeleteJobQueueInput) *BatchDeleteJobQueueResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DeleteJobQueue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DeleteJobQueue", input)
 	return &BatchDeleteJobQueueResult{Result: future}
 }
 
 func (a *BatchStub) DeregisterJobDefinition(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) (*batch.DeregisterJobDefinitionOutput, error) {
 	var output batch.DeregisterJobDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DeregisterJobDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DeregisterJobDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DeregisterJobDefinitionAsync(ctx workflow.Context, input *batch.DeregisterJobDefinitionInput) *BatchDeregisterJobDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DeregisterJobDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DeregisterJobDefinition", input)
 	return &BatchDeregisterJobDefinitionResult{Result: future}
 }
 
 func (a *BatchStub) DescribeComputeEnvironments(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) (*batch.DescribeComputeEnvironmentsOutput, error) {
 	var output batch.DescribeComputeEnvironmentsOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DescribeComputeEnvironments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DescribeComputeEnvironments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DescribeComputeEnvironmentsAsync(ctx workflow.Context, input *batch.DescribeComputeEnvironmentsInput) *BatchDescribeComputeEnvironmentsResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DescribeComputeEnvironments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeComputeEnvironments", input)
 	return &BatchDescribeComputeEnvironmentsResult{Result: future}
 }
 
 func (a *BatchStub) DescribeJobDefinitions(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) (*batch.DescribeJobDefinitionsOutput, error) {
 	var output batch.DescribeJobDefinitionsOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DescribeJobDefinitions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobDefinitions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DescribeJobDefinitionsAsync(ctx workflow.Context, input *batch.DescribeJobDefinitionsInput) *BatchDescribeJobDefinitionsResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DescribeJobDefinitions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobDefinitions", input)
 	return &BatchDescribeJobDefinitionsResult{Result: future}
 }
 
 func (a *BatchStub) DescribeJobQueues(ctx workflow.Context, input *batch.DescribeJobQueuesInput) (*batch.DescribeJobQueuesOutput, error) {
 	var output batch.DescribeJobQueuesOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DescribeJobQueues", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobQueues", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DescribeJobQueuesAsync(ctx workflow.Context, input *batch.DescribeJobQueuesInput) *BatchDescribeJobQueuesResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DescribeJobQueues", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobQueues", input)
 	return &BatchDescribeJobQueuesResult{Result: future}
 }
 
 func (a *BatchStub) DescribeJobs(ctx workflow.Context, input *batch.DescribeJobsInput) (*batch.DescribeJobsOutput, error) {
 	var output batch.DescribeJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.DescribeJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) DescribeJobsAsync(ctx workflow.Context, input *batch.DescribeJobsInput) *BatchDescribeJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.DescribeJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.DescribeJobs", input)
 	return &BatchDescribeJobsResult{Result: future}
 }
 
 func (a *BatchStub) ListJobs(ctx workflow.Context, input *batch.ListJobsInput) (*batch.ListJobsOutput, error) {
 	var output batch.ListJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.ListJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.ListJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) ListJobsAsync(ctx workflow.Context, input *batch.ListJobsInput) *BatchListJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.ListJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.ListJobs", input)
 	return &BatchListJobsResult{Result: future}
 }
 
 func (a *BatchStub) RegisterJobDefinition(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) (*batch.RegisterJobDefinitionOutput, error) {
 	var output batch.RegisterJobDefinitionOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.RegisterJobDefinition", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.RegisterJobDefinition", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) RegisterJobDefinitionAsync(ctx workflow.Context, input *batch.RegisterJobDefinitionInput) *BatchRegisterJobDefinitionResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.RegisterJobDefinition", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.RegisterJobDefinition", input)
 	return &BatchRegisterJobDefinitionResult{Result: future}
 }
 
 func (a *BatchStub) SubmitJob(ctx workflow.Context, input *batch.SubmitJobInput) (*batch.SubmitJobOutput, error) {
 	var output batch.SubmitJobOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.SubmitJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.SubmitJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) SubmitJobAsync(ctx workflow.Context, input *batch.SubmitJobInput) *BatchSubmitJobResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.SubmitJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.SubmitJob", input)
 	return &BatchSubmitJobResult{Result: future}
 }
 
 func (a *BatchStub) TerminateJob(ctx workflow.Context, input *batch.TerminateJobInput) (*batch.TerminateJobOutput, error) {
 	var output batch.TerminateJobOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.TerminateJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.TerminateJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) TerminateJobAsync(ctx workflow.Context, input *batch.TerminateJobInput) *BatchTerminateJobResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.TerminateJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.TerminateJob", input)
 	return &BatchTerminateJobResult{Result: future}
 }
 
 func (a *BatchStub) UpdateComputeEnvironment(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) (*batch.UpdateComputeEnvironmentOutput, error) {
 	var output batch.UpdateComputeEnvironmentOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.UpdateComputeEnvironment", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.UpdateComputeEnvironment", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) UpdateComputeEnvironmentAsync(ctx workflow.Context, input *batch.UpdateComputeEnvironmentInput) *BatchUpdateComputeEnvironmentResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.UpdateComputeEnvironment", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.UpdateComputeEnvironment", input)
 	return &BatchUpdateComputeEnvironmentResult{Result: future}
 }
 
 func (a *BatchStub) UpdateJobQueue(ctx workflow.Context, input *batch.UpdateJobQueueInput) (*batch.UpdateJobQueueOutput, error) {
 	var output batch.UpdateJobQueueOutput
-	err := workflow.ExecuteActivity(ctx, "Batch.UpdateJobQueue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.batch.UpdateJobQueue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *BatchStub) UpdateJobQueueAsync(ctx workflow.Context, input *batch.UpdateJobQueueInput) *BatchUpdateJobQueueResult {
-	future := workflow.ExecuteActivity(ctx, "Batch.UpdateJobQueue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.batch.UpdateJobQueue", input)
 	return &BatchUpdateJobQueueResult{Result: future}
 }

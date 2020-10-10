@@ -28,8 +28,7 @@ type EBSClient interface {
 	StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EbsStartSnapshotResult
 }
 
-type EBSStub struct {
-}
+type EBSStub struct{}
 
 func NewEBSStub() EBSClient {
 	return &EBSStub{}
@@ -97,66 +96,66 @@ func (r *EbsStartSnapshotResult) Get(ctx workflow.Context) (*ebs.StartSnapshotOu
 
 func (a *EBSStub) CompleteSnapshot(ctx workflow.Context, input *ebs.CompleteSnapshotInput) (*ebs.CompleteSnapshotOutput, error) {
 	var output ebs.CompleteSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.CompleteSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.CompleteSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) CompleteSnapshotAsync(ctx workflow.Context, input *ebs.CompleteSnapshotInput) *EbsCompleteSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.CompleteSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.CompleteSnapshot", input)
 	return &EbsCompleteSnapshotResult{Result: future}
 }
 
 func (a *EBSStub) GetSnapshotBlock(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) (*ebs.GetSnapshotBlockOutput, error) {
 	var output ebs.GetSnapshotBlockOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.GetSnapshotBlock", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.GetSnapshotBlock", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) GetSnapshotBlockAsync(ctx workflow.Context, input *ebs.GetSnapshotBlockInput) *EbsGetSnapshotBlockResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.GetSnapshotBlock", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.GetSnapshotBlock", input)
 	return &EbsGetSnapshotBlockResult{Result: future}
 }
 
 func (a *EBSStub) ListChangedBlocks(ctx workflow.Context, input *ebs.ListChangedBlocksInput) (*ebs.ListChangedBlocksOutput, error) {
 	var output ebs.ListChangedBlocksOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.ListChangedBlocks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.ListChangedBlocks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) ListChangedBlocksAsync(ctx workflow.Context, input *ebs.ListChangedBlocksInput) *EbsListChangedBlocksResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.ListChangedBlocks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.ListChangedBlocks", input)
 	return &EbsListChangedBlocksResult{Result: future}
 }
 
 func (a *EBSStub) ListSnapshotBlocks(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) (*ebs.ListSnapshotBlocksOutput, error) {
 	var output ebs.ListSnapshotBlocksOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.ListSnapshotBlocks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.ListSnapshotBlocks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) ListSnapshotBlocksAsync(ctx workflow.Context, input *ebs.ListSnapshotBlocksInput) *EbsListSnapshotBlocksResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.ListSnapshotBlocks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.ListSnapshotBlocks", input)
 	return &EbsListSnapshotBlocksResult{Result: future}
 }
 
 func (a *EBSStub) PutSnapshotBlock(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) (*ebs.PutSnapshotBlockOutput, error) {
 	var output ebs.PutSnapshotBlockOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.PutSnapshotBlock", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.PutSnapshotBlock", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) PutSnapshotBlockAsync(ctx workflow.Context, input *ebs.PutSnapshotBlockInput) *EbsPutSnapshotBlockResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.PutSnapshotBlock", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.PutSnapshotBlock", input)
 	return &EbsPutSnapshotBlockResult{Result: future}
 }
 
 func (a *EBSStub) StartSnapshot(ctx workflow.Context, input *ebs.StartSnapshotInput) (*ebs.StartSnapshotOutput, error) {
 	var output ebs.StartSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "EBS.StartSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ebs.StartSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EBSStub) StartSnapshotAsync(ctx workflow.Context, input *ebs.StartSnapshotInput) *EbsStartSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "EBS.StartSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ebs.StartSnapshot", input)
 	return &EbsStartSnapshotResult{Result: future}
 }

@@ -73,8 +73,7 @@ type DAXClient interface {
 	UpdateSubnetGroupAsync(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) *DaxUpdateSubnetGroupResult
 }
 
-type DAXStub struct {
-}
+type DAXStub struct{}
 
 func NewDAXStub() DAXClient {
 	return &DAXStub{}
@@ -292,231 +291,231 @@ func (r *DaxUpdateSubnetGroupResult) Get(ctx workflow.Context) (*dax.UpdateSubne
 
 func (a *DAXStub) CreateCluster(ctx workflow.Context, input *dax.CreateClusterInput) (*dax.CreateClusterOutput, error) {
 	var output dax.CreateClusterOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.CreateCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.CreateCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) CreateClusterAsync(ctx workflow.Context, input *dax.CreateClusterInput) *DaxCreateClusterResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.CreateCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.CreateCluster", input)
 	return &DaxCreateClusterResult{Result: future}
 }
 
 func (a *DAXStub) CreateParameterGroup(ctx workflow.Context, input *dax.CreateParameterGroupInput) (*dax.CreateParameterGroupOutput, error) {
 	var output dax.CreateParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.CreateParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.CreateParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) CreateParameterGroupAsync(ctx workflow.Context, input *dax.CreateParameterGroupInput) *DaxCreateParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.CreateParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.CreateParameterGroup", input)
 	return &DaxCreateParameterGroupResult{Result: future}
 }
 
 func (a *DAXStub) CreateSubnetGroup(ctx workflow.Context, input *dax.CreateSubnetGroupInput) (*dax.CreateSubnetGroupOutput, error) {
 	var output dax.CreateSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.CreateSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.CreateSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) CreateSubnetGroupAsync(ctx workflow.Context, input *dax.CreateSubnetGroupInput) *DaxCreateSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.CreateSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.CreateSubnetGroup", input)
 	return &DaxCreateSubnetGroupResult{Result: future}
 }
 
 func (a *DAXStub) DecreaseReplicationFactor(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) (*dax.DecreaseReplicationFactorOutput, error) {
 	var output dax.DecreaseReplicationFactorOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DecreaseReplicationFactor", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DecreaseReplicationFactor", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DecreaseReplicationFactorAsync(ctx workflow.Context, input *dax.DecreaseReplicationFactorInput) *DaxDecreaseReplicationFactorResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DecreaseReplicationFactor", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DecreaseReplicationFactor", input)
 	return &DaxDecreaseReplicationFactorResult{Result: future}
 }
 
 func (a *DAXStub) DeleteCluster(ctx workflow.Context, input *dax.DeleteClusterInput) (*dax.DeleteClusterOutput, error) {
 	var output dax.DeleteClusterOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DeleteCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DeleteCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DeleteClusterAsync(ctx workflow.Context, input *dax.DeleteClusterInput) *DaxDeleteClusterResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DeleteCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DeleteCluster", input)
 	return &DaxDeleteClusterResult{Result: future}
 }
 
 func (a *DAXStub) DeleteParameterGroup(ctx workflow.Context, input *dax.DeleteParameterGroupInput) (*dax.DeleteParameterGroupOutput, error) {
 	var output dax.DeleteParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DeleteParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DeleteParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DeleteParameterGroupAsync(ctx workflow.Context, input *dax.DeleteParameterGroupInput) *DaxDeleteParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DeleteParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DeleteParameterGroup", input)
 	return &DaxDeleteParameterGroupResult{Result: future}
 }
 
 func (a *DAXStub) DeleteSubnetGroup(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) (*dax.DeleteSubnetGroupOutput, error) {
 	var output dax.DeleteSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DeleteSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DeleteSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DeleteSubnetGroupAsync(ctx workflow.Context, input *dax.DeleteSubnetGroupInput) *DaxDeleteSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DeleteSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DeleteSubnetGroup", input)
 	return &DaxDeleteSubnetGroupResult{Result: future}
 }
 
 func (a *DAXStub) DescribeClusters(ctx workflow.Context, input *dax.DescribeClustersInput) (*dax.DescribeClustersOutput, error) {
 	var output dax.DescribeClustersOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeClusters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeClusters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeClustersAsync(ctx workflow.Context, input *dax.DescribeClustersInput) *DaxDescribeClustersResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeClusters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeClusters", input)
 	return &DaxDescribeClustersResult{Result: future}
 }
 
 func (a *DAXStub) DescribeDefaultParameters(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) (*dax.DescribeDefaultParametersOutput, error) {
 	var output dax.DescribeDefaultParametersOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeDefaultParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeDefaultParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeDefaultParametersAsync(ctx workflow.Context, input *dax.DescribeDefaultParametersInput) *DaxDescribeDefaultParametersResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeDefaultParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeDefaultParameters", input)
 	return &DaxDescribeDefaultParametersResult{Result: future}
 }
 
 func (a *DAXStub) DescribeEvents(ctx workflow.Context, input *dax.DescribeEventsInput) (*dax.DescribeEventsOutput, error) {
 	var output dax.DescribeEventsOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeEventsAsync(ctx workflow.Context, input *dax.DescribeEventsInput) *DaxDescribeEventsResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeEvents", input)
 	return &DaxDescribeEventsResult{Result: future}
 }
 
 func (a *DAXStub) DescribeParameterGroups(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) (*dax.DescribeParameterGroupsOutput, error) {
 	var output dax.DescribeParameterGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeParameterGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeParameterGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeParameterGroupsAsync(ctx workflow.Context, input *dax.DescribeParameterGroupsInput) *DaxDescribeParameterGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeParameterGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeParameterGroups", input)
 	return &DaxDescribeParameterGroupsResult{Result: future}
 }
 
 func (a *DAXStub) DescribeParameters(ctx workflow.Context, input *dax.DescribeParametersInput) (*dax.DescribeParametersOutput, error) {
 	var output dax.DescribeParametersOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeParametersAsync(ctx workflow.Context, input *dax.DescribeParametersInput) *DaxDescribeParametersResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeParameters", input)
 	return &DaxDescribeParametersResult{Result: future}
 }
 
 func (a *DAXStub) DescribeSubnetGroups(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) (*dax.DescribeSubnetGroupsOutput, error) {
 	var output dax.DescribeSubnetGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.DescribeSubnetGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.DescribeSubnetGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) DescribeSubnetGroupsAsync(ctx workflow.Context, input *dax.DescribeSubnetGroupsInput) *DaxDescribeSubnetGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.DescribeSubnetGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.DescribeSubnetGroups", input)
 	return &DaxDescribeSubnetGroupsResult{Result: future}
 }
 
 func (a *DAXStub) IncreaseReplicationFactor(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) (*dax.IncreaseReplicationFactorOutput, error) {
 	var output dax.IncreaseReplicationFactorOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.IncreaseReplicationFactor", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.IncreaseReplicationFactor", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) IncreaseReplicationFactorAsync(ctx workflow.Context, input *dax.IncreaseReplicationFactorInput) *DaxIncreaseReplicationFactorResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.IncreaseReplicationFactor", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.IncreaseReplicationFactor", input)
 	return &DaxIncreaseReplicationFactorResult{Result: future}
 }
 
 func (a *DAXStub) ListTags(ctx workflow.Context, input *dax.ListTagsInput) (*dax.ListTagsOutput, error) {
 	var output dax.ListTagsOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.ListTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.ListTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) ListTagsAsync(ctx workflow.Context, input *dax.ListTagsInput) *DaxListTagsResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.ListTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.ListTags", input)
 	return &DaxListTagsResult{Result: future}
 }
 
 func (a *DAXStub) RebootNode(ctx workflow.Context, input *dax.RebootNodeInput) (*dax.RebootNodeOutput, error) {
 	var output dax.RebootNodeOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.RebootNode", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.RebootNode", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) RebootNodeAsync(ctx workflow.Context, input *dax.RebootNodeInput) *DaxRebootNodeResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.RebootNode", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.RebootNode", input)
 	return &DaxRebootNodeResult{Result: future}
 }
 
 func (a *DAXStub) TagResource(ctx workflow.Context, input *dax.TagResourceInput) (*dax.TagResourceOutput, error) {
 	var output dax.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) TagResourceAsync(ctx workflow.Context, input *dax.TagResourceInput) *DaxTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.TagResource", input)
 	return &DaxTagResourceResult{Result: future}
 }
 
 func (a *DAXStub) UntagResource(ctx workflow.Context, input *dax.UntagResourceInput) (*dax.UntagResourceOutput, error) {
 	var output dax.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) UntagResourceAsync(ctx workflow.Context, input *dax.UntagResourceInput) *DaxUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.UntagResource", input)
 	return &DaxUntagResourceResult{Result: future}
 }
 
 func (a *DAXStub) UpdateCluster(ctx workflow.Context, input *dax.UpdateClusterInput) (*dax.UpdateClusterOutput, error) {
 	var output dax.UpdateClusterOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.UpdateCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.UpdateCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) UpdateClusterAsync(ctx workflow.Context, input *dax.UpdateClusterInput) *DaxUpdateClusterResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.UpdateCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.UpdateCluster", input)
 	return &DaxUpdateClusterResult{Result: future}
 }
 
 func (a *DAXStub) UpdateParameterGroup(ctx workflow.Context, input *dax.UpdateParameterGroupInput) (*dax.UpdateParameterGroupOutput, error) {
 	var output dax.UpdateParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.UpdateParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.UpdateParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) UpdateParameterGroupAsync(ctx workflow.Context, input *dax.UpdateParameterGroupInput) *DaxUpdateParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.UpdateParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.UpdateParameterGroup", input)
 	return &DaxUpdateParameterGroupResult{Result: future}
 }
 
 func (a *DAXStub) UpdateSubnetGroup(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) (*dax.UpdateSubnetGroupOutput, error) {
 	var output dax.UpdateSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "DAX.UpdateSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dax.UpdateSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DAXStub) UpdateSubnetGroupAsync(ctx workflow.Context, input *dax.UpdateSubnetGroupInput) *DaxUpdateSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "DAX.UpdateSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dax.UpdateSubnetGroup", input)
 	return &DaxUpdateSubnetGroupResult{Result: future}
 }

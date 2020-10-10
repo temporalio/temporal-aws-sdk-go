@@ -130,8 +130,7 @@ type WAFV2Client interface {
 	UpdateWebACLAsync(ctx workflow.Context, input *wafv2.UpdateWebACLInput) *Wafv2UpdateWebACLResult
 }
 
-type WAFV2Stub struct {
-}
+type WAFV2Stub struct{}
 
 func NewWAFV2Stub() WAFV2Client {
 	return &WAFV2Stub{}
@@ -539,440 +538,440 @@ func (r *Wafv2UpdateWebACLResult) Get(ctx workflow.Context) (*wafv2.UpdateWebACL
 
 func (a *WAFV2Stub) AssociateWebACL(ctx workflow.Context, input *wafv2.AssociateWebACLInput) (*wafv2.AssociateWebACLOutput, error) {
 	var output wafv2.AssociateWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.AssociateWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.AssociateWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) AssociateWebACLAsync(ctx workflow.Context, input *wafv2.AssociateWebACLInput) *Wafv2AssociateWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.AssociateWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.AssociateWebACL", input)
 	return &Wafv2AssociateWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) CheckCapacity(ctx workflow.Context, input *wafv2.CheckCapacityInput) (*wafv2.CheckCapacityOutput, error) {
 	var output wafv2.CheckCapacityOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.CheckCapacity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.CheckCapacity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) CheckCapacityAsync(ctx workflow.Context, input *wafv2.CheckCapacityInput) *Wafv2CheckCapacityResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.CheckCapacity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.CheckCapacity", input)
 	return &Wafv2CheckCapacityResult{Result: future}
 }
 
 func (a *WAFV2Stub) CreateIPSet(ctx workflow.Context, input *wafv2.CreateIPSetInput) (*wafv2.CreateIPSetOutput, error) {
 	var output wafv2.CreateIPSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.CreateIPSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateIPSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) CreateIPSetAsync(ctx workflow.Context, input *wafv2.CreateIPSetInput) *Wafv2CreateIPSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.CreateIPSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateIPSet", input)
 	return &Wafv2CreateIPSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) CreateRegexPatternSet(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) (*wafv2.CreateRegexPatternSetOutput, error) {
 	var output wafv2.CreateRegexPatternSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.CreateRegexPatternSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateRegexPatternSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) CreateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.CreateRegexPatternSetInput) *Wafv2CreateRegexPatternSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.CreateRegexPatternSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateRegexPatternSet", input)
 	return &Wafv2CreateRegexPatternSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) CreateRuleGroup(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) (*wafv2.CreateRuleGroupOutput, error) {
 	var output wafv2.CreateRuleGroupOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.CreateRuleGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateRuleGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) CreateRuleGroupAsync(ctx workflow.Context, input *wafv2.CreateRuleGroupInput) *Wafv2CreateRuleGroupResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.CreateRuleGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateRuleGroup", input)
 	return &Wafv2CreateRuleGroupResult{Result: future}
 }
 
 func (a *WAFV2Stub) CreateWebACL(ctx workflow.Context, input *wafv2.CreateWebACLInput) (*wafv2.CreateWebACLOutput, error) {
 	var output wafv2.CreateWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.CreateWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) CreateWebACLAsync(ctx workflow.Context, input *wafv2.CreateWebACLInput) *Wafv2CreateWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.CreateWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.CreateWebACL", input)
 	return &Wafv2CreateWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteFirewallManagerRuleGroups(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) (*wafv2.DeleteFirewallManagerRuleGroupsOutput, error) {
 	var output wafv2.DeleteFirewallManagerRuleGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteFirewallManagerRuleGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteFirewallManagerRuleGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteFirewallManagerRuleGroupsAsync(ctx workflow.Context, input *wafv2.DeleteFirewallManagerRuleGroupsInput) *Wafv2DeleteFirewallManagerRuleGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteFirewallManagerRuleGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteFirewallManagerRuleGroups", input)
 	return &Wafv2DeleteFirewallManagerRuleGroupsResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteIPSet(ctx workflow.Context, input *wafv2.DeleteIPSetInput) (*wafv2.DeleteIPSetOutput, error) {
 	var output wafv2.DeleteIPSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteIPSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteIPSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteIPSetAsync(ctx workflow.Context, input *wafv2.DeleteIPSetInput) *Wafv2DeleteIPSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteIPSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteIPSet", input)
 	return &Wafv2DeleteIPSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteLoggingConfiguration(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) (*wafv2.DeleteLoggingConfigurationOutput, error) {
 	var output wafv2.DeleteLoggingConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteLoggingConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteLoggingConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.DeleteLoggingConfigurationInput) *Wafv2DeleteLoggingConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteLoggingConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteLoggingConfiguration", input)
 	return &Wafv2DeleteLoggingConfigurationResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeletePermissionPolicy(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) (*wafv2.DeletePermissionPolicyOutput, error) {
 	var output wafv2.DeletePermissionPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeletePermissionPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeletePermissionPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeletePermissionPolicyAsync(ctx workflow.Context, input *wafv2.DeletePermissionPolicyInput) *Wafv2DeletePermissionPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeletePermissionPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeletePermissionPolicy", input)
 	return &Wafv2DeletePermissionPolicyResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteRegexPatternSet(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) (*wafv2.DeleteRegexPatternSetOutput, error) {
 	var output wafv2.DeleteRegexPatternSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteRegexPatternSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteRegexPatternSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteRegexPatternSetAsync(ctx workflow.Context, input *wafv2.DeleteRegexPatternSetInput) *Wafv2DeleteRegexPatternSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteRegexPatternSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteRegexPatternSet", input)
 	return &Wafv2DeleteRegexPatternSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteRuleGroup(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) (*wafv2.DeleteRuleGroupOutput, error) {
 	var output wafv2.DeleteRuleGroupOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteRuleGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteRuleGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteRuleGroupAsync(ctx workflow.Context, input *wafv2.DeleteRuleGroupInput) *Wafv2DeleteRuleGroupResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteRuleGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteRuleGroup", input)
 	return &Wafv2DeleteRuleGroupResult{Result: future}
 }
 
 func (a *WAFV2Stub) DeleteWebACL(ctx workflow.Context, input *wafv2.DeleteWebACLInput) (*wafv2.DeleteWebACLOutput, error) {
 	var output wafv2.DeleteWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DeleteWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DeleteWebACLAsync(ctx workflow.Context, input *wafv2.DeleteWebACLInput) *Wafv2DeleteWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DeleteWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DeleteWebACL", input)
 	return &Wafv2DeleteWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) DescribeManagedRuleGroup(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) (*wafv2.DescribeManagedRuleGroupOutput, error) {
 	var output wafv2.DescribeManagedRuleGroupOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DescribeManagedRuleGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DescribeManagedRuleGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DescribeManagedRuleGroupAsync(ctx workflow.Context, input *wafv2.DescribeManagedRuleGroupInput) *Wafv2DescribeManagedRuleGroupResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DescribeManagedRuleGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DescribeManagedRuleGroup", input)
 	return &Wafv2DescribeManagedRuleGroupResult{Result: future}
 }
 
 func (a *WAFV2Stub) DisassociateWebACL(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) (*wafv2.DisassociateWebACLOutput, error) {
 	var output wafv2.DisassociateWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.DisassociateWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.DisassociateWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) DisassociateWebACLAsync(ctx workflow.Context, input *wafv2.DisassociateWebACLInput) *Wafv2DisassociateWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.DisassociateWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.DisassociateWebACL", input)
 	return &Wafv2DisassociateWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetIPSet(ctx workflow.Context, input *wafv2.GetIPSetInput) (*wafv2.GetIPSetOutput, error) {
 	var output wafv2.GetIPSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetIPSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetIPSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetIPSetAsync(ctx workflow.Context, input *wafv2.GetIPSetInput) *Wafv2GetIPSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetIPSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetIPSet", input)
 	return &Wafv2GetIPSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetLoggingConfiguration(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) (*wafv2.GetLoggingConfigurationOutput, error) {
 	var output wafv2.GetLoggingConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetLoggingConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetLoggingConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.GetLoggingConfigurationInput) *Wafv2GetLoggingConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetLoggingConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetLoggingConfiguration", input)
 	return &Wafv2GetLoggingConfigurationResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetPermissionPolicy(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) (*wafv2.GetPermissionPolicyOutput, error) {
 	var output wafv2.GetPermissionPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetPermissionPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetPermissionPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetPermissionPolicyAsync(ctx workflow.Context, input *wafv2.GetPermissionPolicyInput) *Wafv2GetPermissionPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetPermissionPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetPermissionPolicy", input)
 	return &Wafv2GetPermissionPolicyResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetRateBasedStatementManagedKeys(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) (*wafv2.GetRateBasedStatementManagedKeysOutput, error) {
 	var output wafv2.GetRateBasedStatementManagedKeysOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetRateBasedStatementManagedKeys", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRateBasedStatementManagedKeys", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetRateBasedStatementManagedKeysAsync(ctx workflow.Context, input *wafv2.GetRateBasedStatementManagedKeysInput) *Wafv2GetRateBasedStatementManagedKeysResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetRateBasedStatementManagedKeys", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRateBasedStatementManagedKeys", input)
 	return &Wafv2GetRateBasedStatementManagedKeysResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetRegexPatternSet(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) (*wafv2.GetRegexPatternSetOutput, error) {
 	var output wafv2.GetRegexPatternSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetRegexPatternSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRegexPatternSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetRegexPatternSetAsync(ctx workflow.Context, input *wafv2.GetRegexPatternSetInput) *Wafv2GetRegexPatternSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetRegexPatternSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRegexPatternSet", input)
 	return &Wafv2GetRegexPatternSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetRuleGroup(ctx workflow.Context, input *wafv2.GetRuleGroupInput) (*wafv2.GetRuleGroupOutput, error) {
 	var output wafv2.GetRuleGroupOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetRuleGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRuleGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetRuleGroupAsync(ctx workflow.Context, input *wafv2.GetRuleGroupInput) *Wafv2GetRuleGroupResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetRuleGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetRuleGroup", input)
 	return &Wafv2GetRuleGroupResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetSampledRequests(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) (*wafv2.GetSampledRequestsOutput, error) {
 	var output wafv2.GetSampledRequestsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetSampledRequests", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetSampledRequests", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetSampledRequestsAsync(ctx workflow.Context, input *wafv2.GetSampledRequestsInput) *Wafv2GetSampledRequestsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetSampledRequests", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetSampledRequests", input)
 	return &Wafv2GetSampledRequestsResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetWebACL(ctx workflow.Context, input *wafv2.GetWebACLInput) (*wafv2.GetWebACLOutput, error) {
 	var output wafv2.GetWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetWebACLAsync(ctx workflow.Context, input *wafv2.GetWebACLInput) *Wafv2GetWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetWebACL", input)
 	return &Wafv2GetWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) GetWebACLForResource(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) (*wafv2.GetWebACLForResourceOutput, error) {
 	var output wafv2.GetWebACLForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.GetWebACLForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.GetWebACLForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) GetWebACLForResourceAsync(ctx workflow.Context, input *wafv2.GetWebACLForResourceInput) *Wafv2GetWebACLForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.GetWebACLForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.GetWebACLForResource", input)
 	return &Wafv2GetWebACLForResourceResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListAvailableManagedRuleGroups(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) (*wafv2.ListAvailableManagedRuleGroupsOutput, error) {
 	var output wafv2.ListAvailableManagedRuleGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListAvailableManagedRuleGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListAvailableManagedRuleGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListAvailableManagedRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListAvailableManagedRuleGroupsInput) *Wafv2ListAvailableManagedRuleGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListAvailableManagedRuleGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListAvailableManagedRuleGroups", input)
 	return &Wafv2ListAvailableManagedRuleGroupsResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListIPSets(ctx workflow.Context, input *wafv2.ListIPSetsInput) (*wafv2.ListIPSetsOutput, error) {
 	var output wafv2.ListIPSetsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListIPSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListIPSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListIPSetsAsync(ctx workflow.Context, input *wafv2.ListIPSetsInput) *Wafv2ListIPSetsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListIPSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListIPSets", input)
 	return &Wafv2ListIPSetsResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListLoggingConfigurations(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) (*wafv2.ListLoggingConfigurationsOutput, error) {
 	var output wafv2.ListLoggingConfigurationsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListLoggingConfigurations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListLoggingConfigurations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListLoggingConfigurationsAsync(ctx workflow.Context, input *wafv2.ListLoggingConfigurationsInput) *Wafv2ListLoggingConfigurationsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListLoggingConfigurations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListLoggingConfigurations", input)
 	return &Wafv2ListLoggingConfigurationsResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListRegexPatternSets(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) (*wafv2.ListRegexPatternSetsOutput, error) {
 	var output wafv2.ListRegexPatternSetsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListRegexPatternSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListRegexPatternSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListRegexPatternSetsAsync(ctx workflow.Context, input *wafv2.ListRegexPatternSetsInput) *Wafv2ListRegexPatternSetsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListRegexPatternSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListRegexPatternSets", input)
 	return &Wafv2ListRegexPatternSetsResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListResourcesForWebACL(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) (*wafv2.ListResourcesForWebACLOutput, error) {
 	var output wafv2.ListResourcesForWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListResourcesForWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListResourcesForWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListResourcesForWebACLAsync(ctx workflow.Context, input *wafv2.ListResourcesForWebACLInput) *Wafv2ListResourcesForWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListResourcesForWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListResourcesForWebACL", input)
 	return &Wafv2ListResourcesForWebACLResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListRuleGroups(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) (*wafv2.ListRuleGroupsOutput, error) {
 	var output wafv2.ListRuleGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListRuleGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListRuleGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListRuleGroupsAsync(ctx workflow.Context, input *wafv2.ListRuleGroupsInput) *Wafv2ListRuleGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListRuleGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListRuleGroups", input)
 	return &Wafv2ListRuleGroupsResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListTagsForResource(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) (*wafv2.ListTagsForResourceOutput, error) {
 	var output wafv2.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListTagsForResourceAsync(ctx workflow.Context, input *wafv2.ListTagsForResourceInput) *Wafv2ListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListTagsForResource", input)
 	return &Wafv2ListTagsForResourceResult{Result: future}
 }
 
 func (a *WAFV2Stub) ListWebACLs(ctx workflow.Context, input *wafv2.ListWebACLsInput) (*wafv2.ListWebACLsOutput, error) {
 	var output wafv2.ListWebACLsOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.ListWebACLs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.ListWebACLs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) ListWebACLsAsync(ctx workflow.Context, input *wafv2.ListWebACLsInput) *Wafv2ListWebACLsResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.ListWebACLs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.ListWebACLs", input)
 	return &Wafv2ListWebACLsResult{Result: future}
 }
 
 func (a *WAFV2Stub) PutLoggingConfiguration(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) (*wafv2.PutLoggingConfigurationOutput, error) {
 	var output wafv2.PutLoggingConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.PutLoggingConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.PutLoggingConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) PutLoggingConfigurationAsync(ctx workflow.Context, input *wafv2.PutLoggingConfigurationInput) *Wafv2PutLoggingConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.PutLoggingConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.PutLoggingConfiguration", input)
 	return &Wafv2PutLoggingConfigurationResult{Result: future}
 }
 
 func (a *WAFV2Stub) PutPermissionPolicy(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) (*wafv2.PutPermissionPolicyOutput, error) {
 	var output wafv2.PutPermissionPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.PutPermissionPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.PutPermissionPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) PutPermissionPolicyAsync(ctx workflow.Context, input *wafv2.PutPermissionPolicyInput) *Wafv2PutPermissionPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.PutPermissionPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.PutPermissionPolicy", input)
 	return &Wafv2PutPermissionPolicyResult{Result: future}
 }
 
 func (a *WAFV2Stub) TagResource(ctx workflow.Context, input *wafv2.TagResourceInput) (*wafv2.TagResourceOutput, error) {
 	var output wafv2.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) TagResourceAsync(ctx workflow.Context, input *wafv2.TagResourceInput) *Wafv2TagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.TagResource", input)
 	return &Wafv2TagResourceResult{Result: future}
 }
 
 func (a *WAFV2Stub) UntagResource(ctx workflow.Context, input *wafv2.UntagResourceInput) (*wafv2.UntagResourceOutput, error) {
 	var output wafv2.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) UntagResourceAsync(ctx workflow.Context, input *wafv2.UntagResourceInput) *Wafv2UntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.UntagResource", input)
 	return &Wafv2UntagResourceResult{Result: future}
 }
 
 func (a *WAFV2Stub) UpdateIPSet(ctx workflow.Context, input *wafv2.UpdateIPSetInput) (*wafv2.UpdateIPSetOutput, error) {
 	var output wafv2.UpdateIPSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.UpdateIPSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateIPSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) UpdateIPSetAsync(ctx workflow.Context, input *wafv2.UpdateIPSetInput) *Wafv2UpdateIPSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.UpdateIPSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateIPSet", input)
 	return &Wafv2UpdateIPSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) UpdateRegexPatternSet(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) (*wafv2.UpdateRegexPatternSetOutput, error) {
 	var output wafv2.UpdateRegexPatternSetOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.UpdateRegexPatternSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateRegexPatternSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) UpdateRegexPatternSetAsync(ctx workflow.Context, input *wafv2.UpdateRegexPatternSetInput) *Wafv2UpdateRegexPatternSetResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.UpdateRegexPatternSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateRegexPatternSet", input)
 	return &Wafv2UpdateRegexPatternSetResult{Result: future}
 }
 
 func (a *WAFV2Stub) UpdateRuleGroup(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) (*wafv2.UpdateRuleGroupOutput, error) {
 	var output wafv2.UpdateRuleGroupOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.UpdateRuleGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateRuleGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) UpdateRuleGroupAsync(ctx workflow.Context, input *wafv2.UpdateRuleGroupInput) *Wafv2UpdateRuleGroupResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.UpdateRuleGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateRuleGroup", input)
 	return &Wafv2UpdateRuleGroupResult{Result: future}
 }
 
 func (a *WAFV2Stub) UpdateWebACL(ctx workflow.Context, input *wafv2.UpdateWebACLInput) (*wafv2.UpdateWebACLOutput, error) {
 	var output wafv2.UpdateWebACLOutput
-	err := workflow.ExecuteActivity(ctx, "WAFV2.UpdateWebACL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateWebACL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *WAFV2Stub) UpdateWebACLAsync(ctx workflow.Context, input *wafv2.UpdateWebACLInput) *Wafv2UpdateWebACLResult {
-	future := workflow.ExecuteActivity(ctx, "WAFV2.UpdateWebACL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.wafv2.UpdateWebACL", input)
 	return &Wafv2UpdateWebACLResult{Result: future}
 }

@@ -16,38 +16,80 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type MarketplaceCatalogActivities struct {
 	client marketplacecatalogiface.MarketplaceCatalogAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMarketplaceCatalogActivities(session *session.Session, config ...*aws.Config) *MarketplaceCatalogActivities {
-	client := marketplacecatalog.New(session, config...)
+func NewMarketplaceCatalogActivities(sess *session.Session, config ...*aws.Config) *MarketplaceCatalogActivities {
+	client := marketplacecatalog.New(sess, config...)
 	return &MarketplaceCatalogActivities{client: client}
 }
 
+func NewMarketplaceCatalogActivitiesWithSessionFactory(sessionFactory SessionFactory) *MarketplaceCatalogActivities {
+	return &MarketplaceCatalogActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MarketplaceCatalogActivities) getClient(ctx context.Context) (marketplacecatalogiface.MarketplaceCatalogAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return marketplacecatalog.New(sess), nil
+}
+
 func (a *MarketplaceCatalogActivities) CancelChangeSet(ctx context.Context, input *marketplacecatalog.CancelChangeSetInput) (*marketplacecatalog.CancelChangeSetOutput, error) {
-	return a.client.CancelChangeSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelChangeSetWithContext(ctx, input)
 }
 
 func (a *MarketplaceCatalogActivities) DescribeChangeSet(ctx context.Context, input *marketplacecatalog.DescribeChangeSetInput) (*marketplacecatalog.DescribeChangeSetOutput, error) {
-	return a.client.DescribeChangeSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeChangeSetWithContext(ctx, input)
 }
 
 func (a *MarketplaceCatalogActivities) DescribeEntity(ctx context.Context, input *marketplacecatalog.DescribeEntityInput) (*marketplacecatalog.DescribeEntityOutput, error) {
-	return a.client.DescribeEntityWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeEntityWithContext(ctx, input)
 }
 
 func (a *MarketplaceCatalogActivities) ListChangeSets(ctx context.Context, input *marketplacecatalog.ListChangeSetsInput) (*marketplacecatalog.ListChangeSetsOutput, error) {
-	return a.client.ListChangeSetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListChangeSetsWithContext(ctx, input)
 }
 
 func (a *MarketplaceCatalogActivities) ListEntities(ctx context.Context, input *marketplacecatalog.ListEntitiesInput) (*marketplacecatalog.ListEntitiesOutput, error) {
-	return a.client.ListEntitiesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListEntitiesWithContext(ctx, input)
 }
 
 func (a *MarketplaceCatalogActivities) StartChangeSet(ctx context.Context, input *marketplacecatalog.StartChangeSetInput) (*marketplacecatalog.StartChangeSetOutput, error) {
-	return a.client.StartChangeSetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartChangeSetWithContext(ctx, input)
 }

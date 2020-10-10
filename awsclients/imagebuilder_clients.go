@@ -136,8 +136,7 @@ type ImagebuilderClient interface {
 	UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationResult
 }
 
-type ImagebuilderStub struct {
-}
+type ImagebuilderStub struct{}
 
 func NewImagebuilderStub() ImagebuilderClient {
 	return &ImagebuilderStub{}
@@ -565,462 +564,462 @@ func (r *ImagebuilderUpdateInfrastructureConfigurationResult) Get(ctx workflow.C
 
 func (a *ImagebuilderStub) CancelImageCreation(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error) {
 	var output imagebuilder.CancelImageCreationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CancelImageCreation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CancelImageCreation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *ImagebuilderCancelImageCreationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CancelImageCreation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CancelImageCreation", input)
 	return &ImagebuilderCancelImageCreationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateComponent(ctx workflow.Context, input *imagebuilder.CreateComponentInput) (*imagebuilder.CreateComponentOutput, error) {
 	var output imagebuilder.CreateComponentOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateComponent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateComponent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateComponentAsync(ctx workflow.Context, input *imagebuilder.CreateComponentInput) *ImagebuilderCreateComponentResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateComponent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateComponent", input)
 	return &ImagebuilderCreateComponentResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) (*imagebuilder.CreateDistributionConfigurationOutput, error) {
 	var output imagebuilder.CreateDistributionConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateDistributionConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateDistributionConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateDistributionConfigurationInput) *ImagebuilderCreateDistributionConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateDistributionConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateDistributionConfiguration", input)
 	return &ImagebuilderCreateDistributionConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateImage(ctx workflow.Context, input *imagebuilder.CreateImageInput) (*imagebuilder.CreateImageOutput, error) {
 	var output imagebuilder.CreateImageOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateImageAsync(ctx workflow.Context, input *imagebuilder.CreateImageInput) *ImagebuilderCreateImageResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImage", input)
 	return &ImagebuilderCreateImageResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateImagePipeline(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) (*imagebuilder.CreateImagePipelineOutput, error) {
 	var output imagebuilder.CreateImagePipelineOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImagePipeline", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImagePipeline", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.CreateImagePipelineInput) *ImagebuilderCreateImagePipelineResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImagePipeline", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImagePipeline", input)
 	return &ImagebuilderCreateImagePipelineResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateImageRecipe(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) (*imagebuilder.CreateImageRecipeOutput, error) {
 	var output imagebuilder.CreateImageRecipeOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImageRecipe", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImageRecipe", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateImageRecipeAsync(ctx workflow.Context, input *imagebuilder.CreateImageRecipeInput) *ImagebuilderCreateImageRecipeResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateImageRecipe", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateImageRecipe", input)
 	return &ImagebuilderCreateImageRecipeResult{Result: future}
 }
 
 func (a *ImagebuilderStub) CreateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) (*imagebuilder.CreateInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.CreateInfrastructureConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateInfrastructureConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateInfrastructureConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) CreateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.CreateInfrastructureConfigurationInput) *ImagebuilderCreateInfrastructureConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.CreateInfrastructureConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.CreateInfrastructureConfiguration", input)
 	return &ImagebuilderCreateInfrastructureConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteComponent(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) (*imagebuilder.DeleteComponentOutput, error) {
 	var output imagebuilder.DeleteComponentOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteComponent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteComponent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteComponentAsync(ctx workflow.Context, input *imagebuilder.DeleteComponentInput) *ImagebuilderDeleteComponentResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteComponent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteComponent", input)
 	return &ImagebuilderDeleteComponentResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteDistributionConfiguration(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) (*imagebuilder.DeleteDistributionConfigurationOutput, error) {
 	var output imagebuilder.DeleteDistributionConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteDistributionConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteDistributionConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteDistributionConfigurationInput) *ImagebuilderDeleteDistributionConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteDistributionConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteDistributionConfiguration", input)
 	return &ImagebuilderDeleteDistributionConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteImage(ctx workflow.Context, input *imagebuilder.DeleteImageInput) (*imagebuilder.DeleteImageOutput, error) {
 	var output imagebuilder.DeleteImageOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteImageAsync(ctx workflow.Context, input *imagebuilder.DeleteImageInput) *ImagebuilderDeleteImageResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImage", input)
 	return &ImagebuilderDeleteImageResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteImagePipeline(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) (*imagebuilder.DeleteImagePipelineOutput, error) {
 	var output imagebuilder.DeleteImagePipelineOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImagePipeline", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImagePipeline", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteImagePipelineAsync(ctx workflow.Context, input *imagebuilder.DeleteImagePipelineInput) *ImagebuilderDeleteImagePipelineResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImagePipeline", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImagePipeline", input)
 	return &ImagebuilderDeleteImagePipelineResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteImageRecipe(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) (*imagebuilder.DeleteImageRecipeOutput, error) {
 	var output imagebuilder.DeleteImageRecipeOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImageRecipe", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImageRecipe", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteImageRecipeAsync(ctx workflow.Context, input *imagebuilder.DeleteImageRecipeInput) *ImagebuilderDeleteImageRecipeResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteImageRecipe", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteImageRecipe", input)
 	return &ImagebuilderDeleteImageRecipeResult{Result: future}
 }
 
 func (a *ImagebuilderStub) DeleteInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) (*imagebuilder.DeleteInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.DeleteInfrastructureConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteInfrastructureConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteInfrastructureConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) DeleteInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.DeleteInfrastructureConfigurationInput) *ImagebuilderDeleteInfrastructureConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.DeleteInfrastructureConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.DeleteInfrastructureConfiguration", input)
 	return &ImagebuilderDeleteInfrastructureConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetComponent(ctx workflow.Context, input *imagebuilder.GetComponentInput) (*imagebuilder.GetComponentOutput, error) {
 	var output imagebuilder.GetComponentOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetComponent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetComponentAsync(ctx workflow.Context, input *imagebuilder.GetComponentInput) *ImagebuilderGetComponentResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetComponent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponent", input)
 	return &ImagebuilderGetComponentResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetComponentPolicy(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) (*imagebuilder.GetComponentPolicyOutput, error) {
 	var output imagebuilder.GetComponentPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetComponentPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponentPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.GetComponentPolicyInput) *ImagebuilderGetComponentPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetComponentPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetComponentPolicy", input)
 	return &ImagebuilderGetComponentPolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetDistributionConfiguration(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) (*imagebuilder.GetDistributionConfigurationOutput, error) {
 	var output imagebuilder.GetDistributionConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetDistributionConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetDistributionConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetDistributionConfigurationInput) *ImagebuilderGetDistributionConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetDistributionConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetDistributionConfiguration", input)
 	return &ImagebuilderGetDistributionConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetImage(ctx workflow.Context, input *imagebuilder.GetImageInput) (*imagebuilder.GetImageOutput, error) {
 	var output imagebuilder.GetImageOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetImageAsync(ctx workflow.Context, input *imagebuilder.GetImageInput) *ImagebuilderGetImageResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImage", input)
 	return &ImagebuilderGetImageResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetImagePipeline(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) (*imagebuilder.GetImagePipelineOutput, error) {
 	var output imagebuilder.GetImagePipelineOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImagePipeline", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePipeline", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetImagePipelineAsync(ctx workflow.Context, input *imagebuilder.GetImagePipelineInput) *ImagebuilderGetImagePipelineResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImagePipeline", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePipeline", input)
 	return &ImagebuilderGetImagePipelineResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetImagePolicy(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) (*imagebuilder.GetImagePolicyOutput, error) {
 	var output imagebuilder.GetImagePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImagePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetImagePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImagePolicyInput) *ImagebuilderGetImagePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImagePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImagePolicy", input)
 	return &ImagebuilderGetImagePolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetImageRecipe(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) (*imagebuilder.GetImageRecipeOutput, error) {
 	var output imagebuilder.GetImageRecipeOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImageRecipe", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipe", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetImageRecipeAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipeInput) *ImagebuilderGetImageRecipeResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImageRecipe", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipe", input)
 	return &ImagebuilderGetImageRecipeResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetImageRecipePolicy(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) (*imagebuilder.GetImageRecipePolicyOutput, error) {
 	var output imagebuilder.GetImageRecipePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImageRecipePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.GetImageRecipePolicyInput) *ImagebuilderGetImageRecipePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetImageRecipePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetImageRecipePolicy", input)
 	return &ImagebuilderGetImageRecipePolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) GetInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) (*imagebuilder.GetInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.GetInfrastructureConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.GetInfrastructureConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetInfrastructureConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) GetInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.GetInfrastructureConfigurationInput) *ImagebuilderGetInfrastructureConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.GetInfrastructureConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.GetInfrastructureConfiguration", input)
 	return &ImagebuilderGetInfrastructureConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ImportComponent(ctx workflow.Context, input *imagebuilder.ImportComponentInput) (*imagebuilder.ImportComponentOutput, error) {
 	var output imagebuilder.ImportComponentOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ImportComponent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ImportComponent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ImportComponentAsync(ctx workflow.Context, input *imagebuilder.ImportComponentInput) *ImagebuilderImportComponentResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ImportComponent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ImportComponent", input)
 	return &ImagebuilderImportComponentResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListComponentBuildVersions(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) (*imagebuilder.ListComponentBuildVersionsOutput, error) {
 	var output imagebuilder.ListComponentBuildVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListComponentBuildVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponentBuildVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListComponentBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListComponentBuildVersionsInput) *ImagebuilderListComponentBuildVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListComponentBuildVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponentBuildVersions", input)
 	return &ImagebuilderListComponentBuildVersionsResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListComponents(ctx workflow.Context, input *imagebuilder.ListComponentsInput) (*imagebuilder.ListComponentsOutput, error) {
 	var output imagebuilder.ListComponentsOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListComponents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListComponentsAsync(ctx workflow.Context, input *imagebuilder.ListComponentsInput) *ImagebuilderListComponentsResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListComponents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListComponents", input)
 	return &ImagebuilderListComponentsResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListDistributionConfigurations(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) (*imagebuilder.ListDistributionConfigurationsOutput, error) {
 	var output imagebuilder.ListDistributionConfigurationsOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListDistributionConfigurations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListDistributionConfigurations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListDistributionConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListDistributionConfigurationsInput) *ImagebuilderListDistributionConfigurationsResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListDistributionConfigurations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListDistributionConfigurations", input)
 	return &ImagebuilderListDistributionConfigurationsResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListImageBuildVersions(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) (*imagebuilder.ListImageBuildVersionsOutput, error) {
 	var output imagebuilder.ListImageBuildVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImageBuildVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageBuildVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListImageBuildVersionsAsync(ctx workflow.Context, input *imagebuilder.ListImageBuildVersionsInput) *ImagebuilderListImageBuildVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImageBuildVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageBuildVersions", input)
 	return &ImagebuilderListImageBuildVersionsResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListImagePipelineImages(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) (*imagebuilder.ListImagePipelineImagesOutput, error) {
 	var output imagebuilder.ListImagePipelineImagesOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImagePipelineImages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelineImages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListImagePipelineImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelineImagesInput) *ImagebuilderListImagePipelineImagesResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImagePipelineImages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelineImages", input)
 	return &ImagebuilderListImagePipelineImagesResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListImagePipelines(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) (*imagebuilder.ListImagePipelinesOutput, error) {
 	var output imagebuilder.ListImagePipelinesOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImagePipelines", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelines", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListImagePipelinesAsync(ctx workflow.Context, input *imagebuilder.ListImagePipelinesInput) *ImagebuilderListImagePipelinesResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImagePipelines", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImagePipelines", input)
 	return &ImagebuilderListImagePipelinesResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListImageRecipes(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) (*imagebuilder.ListImageRecipesOutput, error) {
 	var output imagebuilder.ListImageRecipesOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImageRecipes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageRecipes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListImageRecipesAsync(ctx workflow.Context, input *imagebuilder.ListImageRecipesInput) *ImagebuilderListImageRecipesResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImageRecipes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImageRecipes", input)
 	return &ImagebuilderListImageRecipesResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListImages(ctx workflow.Context, input *imagebuilder.ListImagesInput) (*imagebuilder.ListImagesOutput, error) {
 	var output imagebuilder.ListImagesOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListImagesAsync(ctx workflow.Context, input *imagebuilder.ListImagesInput) *ImagebuilderListImagesResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListImages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListImages", input)
 	return &ImagebuilderListImagesResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListInfrastructureConfigurations(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) (*imagebuilder.ListInfrastructureConfigurationsOutput, error) {
 	var output imagebuilder.ListInfrastructureConfigurationsOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListInfrastructureConfigurations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListInfrastructureConfigurations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListInfrastructureConfigurationsAsync(ctx workflow.Context, input *imagebuilder.ListInfrastructureConfigurationsInput) *ImagebuilderListInfrastructureConfigurationsResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListInfrastructureConfigurations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListInfrastructureConfigurations", input)
 	return &ImagebuilderListInfrastructureConfigurationsResult{Result: future}
 }
 
 func (a *ImagebuilderStub) ListTagsForResource(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) (*imagebuilder.ListTagsForResourceOutput, error) {
 	var output imagebuilder.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) ListTagsForResourceAsync(ctx workflow.Context, input *imagebuilder.ListTagsForResourceInput) *ImagebuilderListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.ListTagsForResource", input)
 	return &ImagebuilderListTagsForResourceResult{Result: future}
 }
 
 func (a *ImagebuilderStub) PutComponentPolicy(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) (*imagebuilder.PutComponentPolicyOutput, error) {
 	var output imagebuilder.PutComponentPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.PutComponentPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutComponentPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) PutComponentPolicyAsync(ctx workflow.Context, input *imagebuilder.PutComponentPolicyInput) *ImagebuilderPutComponentPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.PutComponentPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutComponentPolicy", input)
 	return &ImagebuilderPutComponentPolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) PutImagePolicy(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) (*imagebuilder.PutImagePolicyOutput, error) {
 	var output imagebuilder.PutImagePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.PutImagePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImagePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) PutImagePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImagePolicyInput) *ImagebuilderPutImagePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.PutImagePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImagePolicy", input)
 	return &ImagebuilderPutImagePolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) PutImageRecipePolicy(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) (*imagebuilder.PutImageRecipePolicyOutput, error) {
 	var output imagebuilder.PutImageRecipePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.PutImageRecipePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImageRecipePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) PutImageRecipePolicyAsync(ctx workflow.Context, input *imagebuilder.PutImageRecipePolicyInput) *ImagebuilderPutImageRecipePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.PutImageRecipePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.PutImageRecipePolicy", input)
 	return &ImagebuilderPutImageRecipePolicyResult{Result: future}
 }
 
 func (a *ImagebuilderStub) StartImagePipelineExecution(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) (*imagebuilder.StartImagePipelineExecutionOutput, error) {
 	var output imagebuilder.StartImagePipelineExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.StartImagePipelineExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.StartImagePipelineExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) StartImagePipelineExecutionAsync(ctx workflow.Context, input *imagebuilder.StartImagePipelineExecutionInput) *ImagebuilderStartImagePipelineExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.StartImagePipelineExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.StartImagePipelineExecution", input)
 	return &ImagebuilderStartImagePipelineExecutionResult{Result: future}
 }
 
 func (a *ImagebuilderStub) TagResource(ctx workflow.Context, input *imagebuilder.TagResourceInput) (*imagebuilder.TagResourceOutput, error) {
 	var output imagebuilder.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) TagResourceAsync(ctx workflow.Context, input *imagebuilder.TagResourceInput) *ImagebuilderTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.TagResource", input)
 	return &ImagebuilderTagResourceResult{Result: future}
 }
 
 func (a *ImagebuilderStub) UntagResource(ctx workflow.Context, input *imagebuilder.UntagResourceInput) (*imagebuilder.UntagResourceOutput, error) {
 	var output imagebuilder.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) UntagResourceAsync(ctx workflow.Context, input *imagebuilder.UntagResourceInput) *ImagebuilderUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UntagResource", input)
 	return &ImagebuilderUntagResourceResult{Result: future}
 }
 
 func (a *ImagebuilderStub) UpdateDistributionConfiguration(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) (*imagebuilder.UpdateDistributionConfigurationOutput, error) {
 	var output imagebuilder.UpdateDistributionConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateDistributionConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateDistributionConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) UpdateDistributionConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateDistributionConfigurationInput) *ImagebuilderUpdateDistributionConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateDistributionConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateDistributionConfiguration", input)
 	return &ImagebuilderUpdateDistributionConfigurationResult{Result: future}
 }
 
 func (a *ImagebuilderStub) UpdateImagePipeline(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) (*imagebuilder.UpdateImagePipelineOutput, error) {
 	var output imagebuilder.UpdateImagePipelineOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateImagePipeline", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateImagePipeline", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) UpdateImagePipelineAsync(ctx workflow.Context, input *imagebuilder.UpdateImagePipelineInput) *ImagebuilderUpdateImagePipelineResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateImagePipeline", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateImagePipeline", input)
 	return &ImagebuilderUpdateImagePipelineResult{Result: future}
 }
 
 func (a *ImagebuilderStub) UpdateInfrastructureConfiguration(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) (*imagebuilder.UpdateInfrastructureConfigurationOutput, error) {
 	var output imagebuilder.UpdateInfrastructureConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateInfrastructureConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateInfrastructureConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ImagebuilderStub) UpdateInfrastructureConfigurationAsync(ctx workflow.Context, input *imagebuilder.UpdateInfrastructureConfigurationInput) *ImagebuilderUpdateInfrastructureConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "Imagebuilder.UpdateInfrastructureConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.imagebuilder.UpdateInfrastructureConfiguration", input)
 	return &ImagebuilderUpdateInfrastructureConfigurationResult{Result: future}
 }

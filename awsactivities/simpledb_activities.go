@@ -16,54 +16,112 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type SimpleDBActivities struct {
 	client simpledbiface.SimpleDBAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSimpleDBActivities(session *session.Session, config ...*aws.Config) *SimpleDBActivities {
-	client := simpledb.New(session, config...)
+func NewSimpleDBActivities(sess *session.Session, config ...*aws.Config) *SimpleDBActivities {
+	client := simpledb.New(sess, config...)
 	return &SimpleDBActivities{client: client}
 }
 
+func NewSimpleDBActivitiesWithSessionFactory(sessionFactory SessionFactory) *SimpleDBActivities {
+	return &SimpleDBActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SimpleDBActivities) getClient(ctx context.Context) (simpledbiface.SimpleDBAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return simpledb.New(sess), nil
+}
+
 func (a *SimpleDBActivities) BatchDeleteAttributes(ctx context.Context, input *simpledb.BatchDeleteAttributesInput) (*simpledb.BatchDeleteAttributesOutput, error) {
-	return a.client.BatchDeleteAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchDeleteAttributesWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) BatchPutAttributes(ctx context.Context, input *simpledb.BatchPutAttributesInput) (*simpledb.BatchPutAttributesOutput, error) {
-	return a.client.BatchPutAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchPutAttributesWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) CreateDomain(ctx context.Context, input *simpledb.CreateDomainInput) (*simpledb.CreateDomainOutput, error) {
-	return a.client.CreateDomainWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateDomainWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) DeleteAttributes(ctx context.Context, input *simpledb.DeleteAttributesInput) (*simpledb.DeleteAttributesOutput, error) {
-	return a.client.DeleteAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteAttributesWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) DeleteDomain(ctx context.Context, input *simpledb.DeleteDomainInput) (*simpledb.DeleteDomainOutput, error) {
-	return a.client.DeleteDomainWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteDomainWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) DomainMetadata(ctx context.Context, input *simpledb.DomainMetadataInput) (*simpledb.DomainMetadataOutput, error) {
-	return a.client.DomainMetadataWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DomainMetadataWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) GetAttributes(ctx context.Context, input *simpledb.GetAttributesInput) (*simpledb.GetAttributesOutput, error) {
-	return a.client.GetAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetAttributesWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) ListDomains(ctx context.Context, input *simpledb.ListDomainsInput) (*simpledb.ListDomainsOutput, error) {
-	return a.client.ListDomainsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListDomainsWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) PutAttributes(ctx context.Context, input *simpledb.PutAttributesInput) (*simpledb.PutAttributesOutput, error) {
-	return a.client.PutAttributesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutAttributesWithContext(ctx, input)
 }
 
 func (a *SimpleDBActivities) Select(ctx context.Context, input *simpledb.SelectInput) (*simpledb.SelectOutput, error) {
-	return a.client.SelectWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SelectWithContext(ctx, input)
 }

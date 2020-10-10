@@ -16,58 +16,120 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CodeGuruReviewerActivities struct {
 	client codegururevieweriface.CodeGuruReviewerAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCodeGuruReviewerActivities(session *session.Session, config ...*aws.Config) *CodeGuruReviewerActivities {
-	client := codegurureviewer.New(session, config...)
+func NewCodeGuruReviewerActivities(sess *session.Session, config ...*aws.Config) *CodeGuruReviewerActivities {
+	client := codegurureviewer.New(sess, config...)
 	return &CodeGuruReviewerActivities{client: client}
 }
 
+func NewCodeGuruReviewerActivitiesWithSessionFactory(sessionFactory SessionFactory) *CodeGuruReviewerActivities {
+	return &CodeGuruReviewerActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CodeGuruReviewerActivities) getClient(ctx context.Context) (codegururevieweriface.CodeGuruReviewerAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return codegurureviewer.New(sess), nil
+}
+
 func (a *CodeGuruReviewerActivities) AssociateRepository(ctx context.Context, input *codegurureviewer.AssociateRepositoryInput) (*codegurureviewer.AssociateRepositoryOutput, error) {
-	return a.client.AssociateRepositoryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AssociateRepositoryWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) CreateCodeReview(ctx context.Context, input *codegurureviewer.CreateCodeReviewInput) (*codegurureviewer.CreateCodeReviewOutput, error) {
-	return a.client.CreateCodeReviewWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateCodeReviewWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeCodeReview(ctx context.Context, input *codegurureviewer.DescribeCodeReviewInput) (*codegurureviewer.DescribeCodeReviewOutput, error) {
-	return a.client.DescribeCodeReviewWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeCodeReviewWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeRecommendationFeedback(ctx context.Context, input *codegurureviewer.DescribeRecommendationFeedbackInput) (*codegurureviewer.DescribeRecommendationFeedbackOutput, error) {
-	return a.client.DescribeRecommendationFeedbackWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeRecommendationFeedbackWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) DescribeRepositoryAssociation(ctx context.Context, input *codegurureviewer.DescribeRepositoryAssociationInput) (*codegurureviewer.DescribeRepositoryAssociationOutput, error) {
-	return a.client.DescribeRepositoryAssociationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeRepositoryAssociationWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) DisassociateRepository(ctx context.Context, input *codegurureviewer.DisassociateRepositoryInput) (*codegurureviewer.DisassociateRepositoryOutput, error) {
-	return a.client.DisassociateRepositoryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DisassociateRepositoryWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) ListCodeReviews(ctx context.Context, input *codegurureviewer.ListCodeReviewsInput) (*codegurureviewer.ListCodeReviewsOutput, error) {
-	return a.client.ListCodeReviewsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListCodeReviewsWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRecommendationFeedback(ctx context.Context, input *codegurureviewer.ListRecommendationFeedbackInput) (*codegurureviewer.ListRecommendationFeedbackOutput, error) {
-	return a.client.ListRecommendationFeedbackWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRecommendationFeedbackWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRecommendations(ctx context.Context, input *codegurureviewer.ListRecommendationsInput) (*codegurureviewer.ListRecommendationsOutput, error) {
-	return a.client.ListRecommendationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRecommendationsWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) ListRepositoryAssociations(ctx context.Context, input *codegurureviewer.ListRepositoryAssociationsInput) (*codegurureviewer.ListRepositoryAssociationsOutput, error) {
-	return a.client.ListRepositoryAssociationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListRepositoryAssociationsWithContext(ctx, input)
 }
 
 func (a *CodeGuruReviewerActivities) PutRecommendationFeedback(ctx context.Context, input *codegurureviewer.PutRecommendationFeedbackInput) (*codegurureviewer.PutRecommendationFeedbackOutput, error) {
-	return a.client.PutRecommendationFeedbackWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutRecommendationFeedbackWithContext(ctx, input)
 }

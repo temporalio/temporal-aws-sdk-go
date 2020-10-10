@@ -16,66 +16,136 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CodeStarNotificationsActivities struct {
 	client codestarnotificationsiface.CodeStarNotificationsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCodeStarNotificationsActivities(session *session.Session, config ...*aws.Config) *CodeStarNotificationsActivities {
-	client := codestarnotifications.New(session, config...)
+func NewCodeStarNotificationsActivities(sess *session.Session, config ...*aws.Config) *CodeStarNotificationsActivities {
+	client := codestarnotifications.New(sess, config...)
 	return &CodeStarNotificationsActivities{client: client}
 }
 
+func NewCodeStarNotificationsActivitiesWithSessionFactory(sessionFactory SessionFactory) *CodeStarNotificationsActivities {
+	return &CodeStarNotificationsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CodeStarNotificationsActivities) getClient(ctx context.Context) (codestarnotificationsiface.CodeStarNotificationsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return codestarnotifications.New(sess), nil
+}
+
 func (a *CodeStarNotificationsActivities) CreateNotificationRule(ctx context.Context, input *codestarnotifications.CreateNotificationRuleInput) (*codestarnotifications.CreateNotificationRuleOutput, error) {
-	return a.client.CreateNotificationRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateNotificationRuleWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) DeleteNotificationRule(ctx context.Context, input *codestarnotifications.DeleteNotificationRuleInput) (*codestarnotifications.DeleteNotificationRuleOutput, error) {
-	return a.client.DeleteNotificationRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteNotificationRuleWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) DeleteTarget(ctx context.Context, input *codestarnotifications.DeleteTargetInput) (*codestarnotifications.DeleteTargetOutput, error) {
-	return a.client.DeleteTargetWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteTargetWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) DescribeNotificationRule(ctx context.Context, input *codestarnotifications.DescribeNotificationRuleInput) (*codestarnotifications.DescribeNotificationRuleOutput, error) {
-	return a.client.DescribeNotificationRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeNotificationRuleWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) ListEventTypes(ctx context.Context, input *codestarnotifications.ListEventTypesInput) (*codestarnotifications.ListEventTypesOutput, error) {
-	return a.client.ListEventTypesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListEventTypesWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) ListNotificationRules(ctx context.Context, input *codestarnotifications.ListNotificationRulesInput) (*codestarnotifications.ListNotificationRulesOutput, error) {
-	return a.client.ListNotificationRulesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListNotificationRulesWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) ListTagsForResource(ctx context.Context, input *codestarnotifications.ListTagsForResourceInput) (*codestarnotifications.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) ListTargets(ctx context.Context, input *codestarnotifications.ListTargetsInput) (*codestarnotifications.ListTargetsOutput, error) {
-	return a.client.ListTargetsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTargetsWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) Subscribe(ctx context.Context, input *codestarnotifications.SubscribeInput) (*codestarnotifications.SubscribeOutput, error) {
-	return a.client.SubscribeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SubscribeWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) TagResource(ctx context.Context, input *codestarnotifications.TagResourceInput) (*codestarnotifications.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) Unsubscribe(ctx context.Context, input *codestarnotifications.UnsubscribeInput) (*codestarnotifications.UnsubscribeOutput, error) {
-	return a.client.UnsubscribeWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UnsubscribeWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) UntagResource(ctx context.Context, input *codestarnotifications.UntagResourceInput) (*codestarnotifications.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *CodeStarNotificationsActivities) UpdateNotificationRule(ctx context.Context, input *codestarnotifications.UpdateNotificationRuleInput) (*codestarnotifications.UpdateNotificationRuleOutput, error) {
-	return a.client.UpdateNotificationRuleWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateNotificationRuleWithContext(ctx, input)
 }

@@ -79,8 +79,7 @@ type ServiceDiscoveryClient interface {
 	UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServicediscoveryUpdateServiceResult
 }
 
-type ServiceDiscoveryStub struct {
-}
+type ServiceDiscoveryStub struct{}
 
 func NewServiceDiscoveryStub() ServiceDiscoveryClient {
 	return &ServiceDiscoveryStub{}
@@ -318,253 +317,253 @@ func (r *ServicediscoveryUpdateServiceResult) Get(ctx workflow.Context) (*servic
 
 func (a *ServiceDiscoveryStub) CreateHttpNamespace(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) (*servicediscovery.CreateHttpNamespaceOutput, error) {
 	var output servicediscovery.CreateHttpNamespaceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreateHttpNamespace", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateHttpNamespace", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) CreateHttpNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreateHttpNamespaceInput) *ServicediscoveryCreateHttpNamespaceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreateHttpNamespace", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateHttpNamespace", input)
 	return &ServicediscoveryCreateHttpNamespaceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) CreatePrivateDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error) {
 	var output servicediscovery.CreatePrivateDnsNamespaceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreatePrivateDnsNamespace", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePrivateDnsNamespace", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) CreatePrivateDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) *ServicediscoveryCreatePrivateDnsNamespaceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreatePrivateDnsNamespace", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePrivateDnsNamespace", input)
 	return &ServicediscoveryCreatePrivateDnsNamespaceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) CreatePublicDnsNamespace(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) (*servicediscovery.CreatePublicDnsNamespaceOutput, error) {
 	var output servicediscovery.CreatePublicDnsNamespaceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreatePublicDnsNamespace", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePublicDnsNamespace", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) CreatePublicDnsNamespaceAsync(ctx workflow.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) *ServicediscoveryCreatePublicDnsNamespaceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreatePublicDnsNamespace", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreatePublicDnsNamespace", input)
 	return &ServicediscoveryCreatePublicDnsNamespaceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) CreateService(ctx workflow.Context, input *servicediscovery.CreateServiceInput) (*servicediscovery.CreateServiceOutput, error) {
 	var output servicediscovery.CreateServiceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreateService", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateService", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) CreateServiceAsync(ctx workflow.Context, input *servicediscovery.CreateServiceInput) *ServicediscoveryCreateServiceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.CreateService", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.CreateService", input)
 	return &ServicediscoveryCreateServiceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) DeleteNamespace(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) (*servicediscovery.DeleteNamespaceOutput, error) {
 	var output servicediscovery.DeleteNamespaceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeleteNamespace", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteNamespace", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) DeleteNamespaceAsync(ctx workflow.Context, input *servicediscovery.DeleteNamespaceInput) *ServicediscoveryDeleteNamespaceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeleteNamespace", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteNamespace", input)
 	return &ServicediscoveryDeleteNamespaceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) DeleteService(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) (*servicediscovery.DeleteServiceOutput, error) {
 	var output servicediscovery.DeleteServiceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeleteService", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteService", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) DeleteServiceAsync(ctx workflow.Context, input *servicediscovery.DeleteServiceInput) *ServicediscoveryDeleteServiceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeleteService", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeleteService", input)
 	return &ServicediscoveryDeleteServiceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) DeregisterInstance(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) (*servicediscovery.DeregisterInstanceOutput, error) {
 	var output servicediscovery.DeregisterInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeregisterInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeregisterInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) DeregisterInstanceAsync(ctx workflow.Context, input *servicediscovery.DeregisterInstanceInput) *ServicediscoveryDeregisterInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DeregisterInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DeregisterInstance", input)
 	return &ServicediscoveryDeregisterInstanceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) DiscoverInstances(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) (*servicediscovery.DiscoverInstancesOutput, error) {
 	var output servicediscovery.DiscoverInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DiscoverInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DiscoverInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) DiscoverInstancesAsync(ctx workflow.Context, input *servicediscovery.DiscoverInstancesInput) *ServicediscoveryDiscoverInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.DiscoverInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.DiscoverInstances", input)
 	return &ServicediscoveryDiscoverInstancesResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) GetInstance(ctx workflow.Context, input *servicediscovery.GetInstanceInput) (*servicediscovery.GetInstanceOutput, error) {
 	var output servicediscovery.GetInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) GetInstanceAsync(ctx workflow.Context, input *servicediscovery.GetInstanceInput) *ServicediscoveryGetInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstance", input)
 	return &ServicediscoveryGetInstanceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) GetInstancesHealthStatus(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) (*servicediscovery.GetInstancesHealthStatusOutput, error) {
 	var output servicediscovery.GetInstancesHealthStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetInstancesHealthStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstancesHealthStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) GetInstancesHealthStatusAsync(ctx workflow.Context, input *servicediscovery.GetInstancesHealthStatusInput) *ServicediscoveryGetInstancesHealthStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetInstancesHealthStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetInstancesHealthStatus", input)
 	return &ServicediscoveryGetInstancesHealthStatusResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) GetNamespace(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) (*servicediscovery.GetNamespaceOutput, error) {
 	var output servicediscovery.GetNamespaceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetNamespace", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetNamespace", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) GetNamespaceAsync(ctx workflow.Context, input *servicediscovery.GetNamespaceInput) *ServicediscoveryGetNamespaceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetNamespace", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetNamespace", input)
 	return &ServicediscoveryGetNamespaceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) GetOperation(ctx workflow.Context, input *servicediscovery.GetOperationInput) (*servicediscovery.GetOperationOutput, error) {
 	var output servicediscovery.GetOperationOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetOperation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetOperation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) GetOperationAsync(ctx workflow.Context, input *servicediscovery.GetOperationInput) *ServicediscoveryGetOperationResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetOperation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetOperation", input)
 	return &ServicediscoveryGetOperationResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) GetService(ctx workflow.Context, input *servicediscovery.GetServiceInput) (*servicediscovery.GetServiceOutput, error) {
 	var output servicediscovery.GetServiceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetService", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetService", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) GetServiceAsync(ctx workflow.Context, input *servicediscovery.GetServiceInput) *ServicediscoveryGetServiceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.GetService", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.GetService", input)
 	return &ServicediscoveryGetServiceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) ListInstances(ctx workflow.Context, input *servicediscovery.ListInstancesInput) (*servicediscovery.ListInstancesOutput, error) {
 	var output servicediscovery.ListInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) ListInstancesAsync(ctx workflow.Context, input *servicediscovery.ListInstancesInput) *ServicediscoveryListInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListInstances", input)
 	return &ServicediscoveryListInstancesResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) ListNamespaces(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) (*servicediscovery.ListNamespacesOutput, error) {
 	var output servicediscovery.ListNamespacesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListNamespaces", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListNamespaces", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) ListNamespacesAsync(ctx workflow.Context, input *servicediscovery.ListNamespacesInput) *ServicediscoveryListNamespacesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListNamespaces", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListNamespaces", input)
 	return &ServicediscoveryListNamespacesResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) ListOperations(ctx workflow.Context, input *servicediscovery.ListOperationsInput) (*servicediscovery.ListOperationsOutput, error) {
 	var output servicediscovery.ListOperationsOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListOperations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListOperations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) ListOperationsAsync(ctx workflow.Context, input *servicediscovery.ListOperationsInput) *ServicediscoveryListOperationsResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListOperations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListOperations", input)
 	return &ServicediscoveryListOperationsResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) ListServices(ctx workflow.Context, input *servicediscovery.ListServicesInput) (*servicediscovery.ListServicesOutput, error) {
 	var output servicediscovery.ListServicesOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListServices", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListServices", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) ListServicesAsync(ctx workflow.Context, input *servicediscovery.ListServicesInput) *ServicediscoveryListServicesResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListServices", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListServices", input)
 	return &ServicediscoveryListServicesResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) ListTagsForResource(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) (*servicediscovery.ListTagsForResourceOutput, error) {
 	var output servicediscovery.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) ListTagsForResourceAsync(ctx workflow.Context, input *servicediscovery.ListTagsForResourceInput) *ServicediscoveryListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.ListTagsForResource", input)
 	return &ServicediscoveryListTagsForResourceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) RegisterInstance(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) (*servicediscovery.RegisterInstanceOutput, error) {
 	var output servicediscovery.RegisterInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.RegisterInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.RegisterInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) RegisterInstanceAsync(ctx workflow.Context, input *servicediscovery.RegisterInstanceInput) *ServicediscoveryRegisterInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.RegisterInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.RegisterInstance", input)
 	return &ServicediscoveryRegisterInstanceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) TagResource(ctx workflow.Context, input *servicediscovery.TagResourceInput) (*servicediscovery.TagResourceOutput, error) {
 	var output servicediscovery.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) TagResourceAsync(ctx workflow.Context, input *servicediscovery.TagResourceInput) *ServicediscoveryTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.TagResource", input)
 	return &ServicediscoveryTagResourceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) UntagResource(ctx workflow.Context, input *servicediscovery.UntagResourceInput) (*servicediscovery.UntagResourceOutput, error) {
 	var output servicediscovery.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) UntagResourceAsync(ctx workflow.Context, input *servicediscovery.UntagResourceInput) *ServicediscoveryUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UntagResource", input)
 	return &ServicediscoveryUntagResourceResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) UpdateInstanceCustomHealthStatus(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
 	var output servicediscovery.UpdateInstanceCustomHealthStatusOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UpdateInstanceCustomHealthStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateInstanceCustomHealthStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) UpdateInstanceCustomHealthStatusAsync(ctx workflow.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) *ServicediscoveryUpdateInstanceCustomHealthStatusResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UpdateInstanceCustomHealthStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateInstanceCustomHealthStatus", input)
 	return &ServicediscoveryUpdateInstanceCustomHealthStatusResult{Result: future}
 }
 
 func (a *ServiceDiscoveryStub) UpdateService(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) (*servicediscovery.UpdateServiceOutput, error) {
 	var output servicediscovery.UpdateServiceOutput
-	err := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UpdateService", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateService", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ServiceDiscoveryStub) UpdateServiceAsync(ctx workflow.Context, input *servicediscovery.UpdateServiceInput) *ServicediscoveryUpdateServiceResult {
-	future := workflow.ExecuteActivity(ctx, "ServiceDiscovery.UpdateService", input)
+	future := workflow.ExecuteActivity(ctx, "aws.servicediscovery.UpdateService", input)
 	return &ServicediscoveryUpdateServiceResult{Result: future}
 }

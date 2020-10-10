@@ -16,78 +16,160 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type LicenseManagerActivities struct {
 	client licensemanageriface.LicenseManagerAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewLicenseManagerActivities(session *session.Session, config ...*aws.Config) *LicenseManagerActivities {
-	client := licensemanager.New(session, config...)
+func NewLicenseManagerActivities(sess *session.Session, config ...*aws.Config) *LicenseManagerActivities {
+	client := licensemanager.New(sess, config...)
 	return &LicenseManagerActivities{client: client}
 }
 
+func NewLicenseManagerActivitiesWithSessionFactory(sessionFactory SessionFactory) *LicenseManagerActivities {
+	return &LicenseManagerActivities{sessionFactory: sessionFactory}
+}
+
+func (a *LicenseManagerActivities) getClient(ctx context.Context) (licensemanageriface.LicenseManagerAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return licensemanager.New(sess), nil
+}
+
 func (a *LicenseManagerActivities) CreateLicenseConfiguration(ctx context.Context, input *licensemanager.CreateLicenseConfigurationInput) (*licensemanager.CreateLicenseConfigurationOutput, error) {
-	return a.client.CreateLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) DeleteLicenseConfiguration(ctx context.Context, input *licensemanager.DeleteLicenseConfigurationInput) (*licensemanager.DeleteLicenseConfigurationOutput, error) {
-	return a.client.DeleteLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) GetLicenseConfiguration(ctx context.Context, input *licensemanager.GetLicenseConfigurationInput) (*licensemanager.GetLicenseConfigurationOutput, error) {
-	return a.client.GetLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) GetServiceSettings(ctx context.Context, input *licensemanager.GetServiceSettingsInput) (*licensemanager.GetServiceSettingsOutput, error) {
-	return a.client.GetServiceSettingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetServiceSettingsWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListAssociationsForLicenseConfiguration(ctx context.Context, input *licensemanager.ListAssociationsForLicenseConfigurationInput) (*licensemanager.ListAssociationsForLicenseConfigurationOutput, error) {
-	return a.client.ListAssociationsForLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListAssociationsForLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListFailuresForLicenseConfigurationOperations(ctx context.Context, input *licensemanager.ListFailuresForLicenseConfigurationOperationsInput) (*licensemanager.ListFailuresForLicenseConfigurationOperationsOutput, error) {
-	return a.client.ListFailuresForLicenseConfigurationOperationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListFailuresForLicenseConfigurationOperationsWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListLicenseConfigurations(ctx context.Context, input *licensemanager.ListLicenseConfigurationsInput) (*licensemanager.ListLicenseConfigurationsOutput, error) {
-	return a.client.ListLicenseConfigurationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListLicenseConfigurationsWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListLicenseSpecificationsForResource(ctx context.Context, input *licensemanager.ListLicenseSpecificationsForResourceInput) (*licensemanager.ListLicenseSpecificationsForResourceOutput, error) {
-	return a.client.ListLicenseSpecificationsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListLicenseSpecificationsForResourceWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListResourceInventory(ctx context.Context, input *licensemanager.ListResourceInventoryInput) (*licensemanager.ListResourceInventoryOutput, error) {
-	return a.client.ListResourceInventoryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListResourceInventoryWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListTagsForResource(ctx context.Context, input *licensemanager.ListTagsForResourceInput) (*licensemanager.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) ListUsageForLicenseConfiguration(ctx context.Context, input *licensemanager.ListUsageForLicenseConfigurationInput) (*licensemanager.ListUsageForLicenseConfigurationOutput, error) {
-	return a.client.ListUsageForLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListUsageForLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) TagResource(ctx context.Context, input *licensemanager.TagResourceInput) (*licensemanager.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) UntagResource(ctx context.Context, input *licensemanager.UntagResourceInput) (*licensemanager.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) UpdateLicenseConfiguration(ctx context.Context, input *licensemanager.UpdateLicenseConfigurationInput) (*licensemanager.UpdateLicenseConfigurationOutput, error) {
-	return a.client.UpdateLicenseConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateLicenseConfigurationWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) UpdateLicenseSpecificationsForResource(ctx context.Context, input *licensemanager.UpdateLicenseSpecificationsForResourceInput) (*licensemanager.UpdateLicenseSpecificationsForResourceOutput, error) {
-	return a.client.UpdateLicenseSpecificationsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateLicenseSpecificationsForResourceWithContext(ctx, input)
 }
 
 func (a *LicenseManagerActivities) UpdateServiceSettings(ctx context.Context, input *licensemanager.UpdateServiceSettingsInput) (*licensemanager.UpdateServiceSettingsOutput, error) {
-	return a.client.UpdateServiceSettingsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateServiceSettingsWithContext(ctx, input)
 }

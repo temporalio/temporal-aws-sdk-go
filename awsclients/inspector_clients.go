@@ -121,8 +121,7 @@ type InspectorClient interface {
 	UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetResult
 }
 
-type InspectorStub struct {
-}
+type InspectorStub struct{}
 
 func NewInspectorStub() InspectorClient {
 	return &InspectorStub{}
@@ -500,407 +499,407 @@ func (r *InspectorUpdateAssessmentTargetResult) Get(ctx workflow.Context) (*insp
 
 func (a *InspectorStub) AddAttributesToFindings(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error) {
 	var output inspector.AddAttributesToFindingsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.AddAttributesToFindings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.AddAttributesToFindings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *InspectorAddAttributesToFindingsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.AddAttributesToFindings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.AddAttributesToFindings", input)
 	return &InspectorAddAttributesToFindingsResult{Result: future}
 }
 
 func (a *InspectorStub) CreateAssessmentTarget(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) (*inspector.CreateAssessmentTargetOutput, error) {
 	var output inspector.CreateAssessmentTargetOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.CreateAssessmentTarget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTarget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) CreateAssessmentTargetAsync(ctx workflow.Context, input *inspector.CreateAssessmentTargetInput) *InspectorCreateAssessmentTargetResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.CreateAssessmentTarget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTarget", input)
 	return &InspectorCreateAssessmentTargetResult{Result: future}
 }
 
 func (a *InspectorStub) CreateAssessmentTemplate(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) (*inspector.CreateAssessmentTemplateOutput, error) {
 	var output inspector.CreateAssessmentTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.CreateAssessmentTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) CreateAssessmentTemplateAsync(ctx workflow.Context, input *inspector.CreateAssessmentTemplateInput) *InspectorCreateAssessmentTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.CreateAssessmentTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateAssessmentTemplate", input)
 	return &InspectorCreateAssessmentTemplateResult{Result: future}
 }
 
 func (a *InspectorStub) CreateExclusionsPreview(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) (*inspector.CreateExclusionsPreviewOutput, error) {
 	var output inspector.CreateExclusionsPreviewOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.CreateExclusionsPreview", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.CreateExclusionsPreview", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) CreateExclusionsPreviewAsync(ctx workflow.Context, input *inspector.CreateExclusionsPreviewInput) *InspectorCreateExclusionsPreviewResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.CreateExclusionsPreview", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateExclusionsPreview", input)
 	return &InspectorCreateExclusionsPreviewResult{Result: future}
 }
 
 func (a *InspectorStub) CreateResourceGroup(ctx workflow.Context, input *inspector.CreateResourceGroupInput) (*inspector.CreateResourceGroupOutput, error) {
 	var output inspector.CreateResourceGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.CreateResourceGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.CreateResourceGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) CreateResourceGroupAsync(ctx workflow.Context, input *inspector.CreateResourceGroupInput) *InspectorCreateResourceGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.CreateResourceGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.CreateResourceGroup", input)
 	return &InspectorCreateResourceGroupResult{Result: future}
 }
 
 func (a *InspectorStub) DeleteAssessmentRun(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) (*inspector.DeleteAssessmentRunOutput, error) {
 	var output inspector.DeleteAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DeleteAssessmentRunAsync(ctx workflow.Context, input *inspector.DeleteAssessmentRunInput) *InspectorDeleteAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentRun", input)
 	return &InspectorDeleteAssessmentRunResult{Result: future}
 }
 
 func (a *InspectorStub) DeleteAssessmentTarget(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) (*inspector.DeleteAssessmentTargetOutput, error) {
 	var output inspector.DeleteAssessmentTargetOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentTarget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTarget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DeleteAssessmentTargetAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTargetInput) *InspectorDeleteAssessmentTargetResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentTarget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTarget", input)
 	return &InspectorDeleteAssessmentTargetResult{Result: future}
 }
 
 func (a *InspectorStub) DeleteAssessmentTemplate(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) (*inspector.DeleteAssessmentTemplateOutput, error) {
 	var output inspector.DeleteAssessmentTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DeleteAssessmentTemplateAsync(ctx workflow.Context, input *inspector.DeleteAssessmentTemplateInput) *InspectorDeleteAssessmentTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DeleteAssessmentTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DeleteAssessmentTemplate", input)
 	return &InspectorDeleteAssessmentTemplateResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeAssessmentRuns(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) (*inspector.DescribeAssessmentRunsOutput, error) {
 	var output inspector.DescribeAssessmentRunsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentRuns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentRuns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeAssessmentRunsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentRunsInput) *InspectorDescribeAssessmentRunsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentRuns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentRuns", input)
 	return &InspectorDescribeAssessmentRunsResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeAssessmentTargets(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) (*inspector.DescribeAssessmentTargetsOutput, error) {
 	var output inspector.DescribeAssessmentTargetsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentTargets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTargets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeAssessmentTargetsAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTargetsInput) *InspectorDescribeAssessmentTargetsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentTargets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTargets", input)
 	return &InspectorDescribeAssessmentTargetsResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeAssessmentTemplates(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) (*inspector.DescribeAssessmentTemplatesOutput, error) {
 	var output inspector.DescribeAssessmentTemplatesOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentTemplates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTemplates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.DescribeAssessmentTemplatesInput) *InspectorDescribeAssessmentTemplatesResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeAssessmentTemplates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeAssessmentTemplates", input)
 	return &InspectorDescribeAssessmentTemplatesResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeCrossAccountAccessRole(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) (*inspector.DescribeCrossAccountAccessRoleOutput, error) {
 	var output inspector.DescribeCrossAccountAccessRoleOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeCrossAccountAccessRole", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeCrossAccountAccessRole", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.DescribeCrossAccountAccessRoleInput) *InspectorDescribeCrossAccountAccessRoleResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeCrossAccountAccessRole", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeCrossAccountAccessRole", input)
 	return &InspectorDescribeCrossAccountAccessRoleResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeExclusions(ctx workflow.Context, input *inspector.DescribeExclusionsInput) (*inspector.DescribeExclusionsOutput, error) {
 	var output inspector.DescribeExclusionsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeExclusions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeExclusions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeExclusionsAsync(ctx workflow.Context, input *inspector.DescribeExclusionsInput) *InspectorDescribeExclusionsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeExclusions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeExclusions", input)
 	return &InspectorDescribeExclusionsResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeFindings(ctx workflow.Context, input *inspector.DescribeFindingsInput) (*inspector.DescribeFindingsOutput, error) {
 	var output inspector.DescribeFindingsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeFindings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeFindings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeFindingsAsync(ctx workflow.Context, input *inspector.DescribeFindingsInput) *InspectorDescribeFindingsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeFindings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeFindings", input)
 	return &InspectorDescribeFindingsResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeResourceGroups(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) (*inspector.DescribeResourceGroupsOutput, error) {
 	var output inspector.DescribeResourceGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeResourceGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeResourceGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeResourceGroupsAsync(ctx workflow.Context, input *inspector.DescribeResourceGroupsInput) *InspectorDescribeResourceGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeResourceGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeResourceGroups", input)
 	return &InspectorDescribeResourceGroupsResult{Result: future}
 }
 
 func (a *InspectorStub) DescribeRulesPackages(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) (*inspector.DescribeRulesPackagesOutput, error) {
 	var output inspector.DescribeRulesPackagesOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.DescribeRulesPackages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeRulesPackages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) DescribeRulesPackagesAsync(ctx workflow.Context, input *inspector.DescribeRulesPackagesInput) *InspectorDescribeRulesPackagesResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.DescribeRulesPackages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.DescribeRulesPackages", input)
 	return &InspectorDescribeRulesPackagesResult{Result: future}
 }
 
 func (a *InspectorStub) GetAssessmentReport(ctx workflow.Context, input *inspector.GetAssessmentReportInput) (*inspector.GetAssessmentReportOutput, error) {
 	var output inspector.GetAssessmentReportOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.GetAssessmentReport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.GetAssessmentReport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) GetAssessmentReportAsync(ctx workflow.Context, input *inspector.GetAssessmentReportInput) *InspectorGetAssessmentReportResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.GetAssessmentReport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetAssessmentReport", input)
 	return &InspectorGetAssessmentReportResult{Result: future}
 }
 
 func (a *InspectorStub) GetExclusionsPreview(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) (*inspector.GetExclusionsPreviewOutput, error) {
 	var output inspector.GetExclusionsPreviewOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.GetExclusionsPreview", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.GetExclusionsPreview", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) GetExclusionsPreviewAsync(ctx workflow.Context, input *inspector.GetExclusionsPreviewInput) *InspectorGetExclusionsPreviewResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.GetExclusionsPreview", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetExclusionsPreview", input)
 	return &InspectorGetExclusionsPreviewResult{Result: future}
 }
 
 func (a *InspectorStub) GetTelemetryMetadata(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) (*inspector.GetTelemetryMetadataOutput, error) {
 	var output inspector.GetTelemetryMetadataOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.GetTelemetryMetadata", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.GetTelemetryMetadata", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) GetTelemetryMetadataAsync(ctx workflow.Context, input *inspector.GetTelemetryMetadataInput) *InspectorGetTelemetryMetadataResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.GetTelemetryMetadata", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.GetTelemetryMetadata", input)
 	return &InspectorGetTelemetryMetadataResult{Result: future}
 }
 
 func (a *InspectorStub) ListAssessmentRunAgents(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) (*inspector.ListAssessmentRunAgentsOutput, error) {
 	var output inspector.ListAssessmentRunAgentsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentRunAgents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRunAgents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListAssessmentRunAgentsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunAgentsInput) *InspectorListAssessmentRunAgentsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentRunAgents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRunAgents", input)
 	return &InspectorListAssessmentRunAgentsResult{Result: future}
 }
 
 func (a *InspectorStub) ListAssessmentRuns(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) (*inspector.ListAssessmentRunsOutput, error) {
 	var output inspector.ListAssessmentRunsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentRuns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRuns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListAssessmentRunsAsync(ctx workflow.Context, input *inspector.ListAssessmentRunsInput) *InspectorListAssessmentRunsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentRuns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentRuns", input)
 	return &InspectorListAssessmentRunsResult{Result: future}
 }
 
 func (a *InspectorStub) ListAssessmentTargets(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) (*inspector.ListAssessmentTargetsOutput, error) {
 	var output inspector.ListAssessmentTargetsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentTargets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTargets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListAssessmentTargetsAsync(ctx workflow.Context, input *inspector.ListAssessmentTargetsInput) *InspectorListAssessmentTargetsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentTargets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTargets", input)
 	return &InspectorListAssessmentTargetsResult{Result: future}
 }
 
 func (a *InspectorStub) ListAssessmentTemplates(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) (*inspector.ListAssessmentTemplatesOutput, error) {
 	var output inspector.ListAssessmentTemplatesOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentTemplates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTemplates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListAssessmentTemplatesAsync(ctx workflow.Context, input *inspector.ListAssessmentTemplatesInput) *InspectorListAssessmentTemplatesResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListAssessmentTemplates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListAssessmentTemplates", input)
 	return &InspectorListAssessmentTemplatesResult{Result: future}
 }
 
 func (a *InspectorStub) ListEventSubscriptions(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) (*inspector.ListEventSubscriptionsOutput, error) {
 	var output inspector.ListEventSubscriptionsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListEventSubscriptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListEventSubscriptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListEventSubscriptionsAsync(ctx workflow.Context, input *inspector.ListEventSubscriptionsInput) *InspectorListEventSubscriptionsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListEventSubscriptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListEventSubscriptions", input)
 	return &InspectorListEventSubscriptionsResult{Result: future}
 }
 
 func (a *InspectorStub) ListExclusions(ctx workflow.Context, input *inspector.ListExclusionsInput) (*inspector.ListExclusionsOutput, error) {
 	var output inspector.ListExclusionsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListExclusions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListExclusions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListExclusionsAsync(ctx workflow.Context, input *inspector.ListExclusionsInput) *InspectorListExclusionsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListExclusions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListExclusions", input)
 	return &InspectorListExclusionsResult{Result: future}
 }
 
 func (a *InspectorStub) ListFindings(ctx workflow.Context, input *inspector.ListFindingsInput) (*inspector.ListFindingsOutput, error) {
 	var output inspector.ListFindingsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListFindings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListFindings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListFindingsAsync(ctx workflow.Context, input *inspector.ListFindingsInput) *InspectorListFindingsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListFindings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListFindings", input)
 	return &InspectorListFindingsResult{Result: future}
 }
 
 func (a *InspectorStub) ListRulesPackages(ctx workflow.Context, input *inspector.ListRulesPackagesInput) (*inspector.ListRulesPackagesOutput, error) {
 	var output inspector.ListRulesPackagesOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListRulesPackages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListRulesPackages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListRulesPackagesAsync(ctx workflow.Context, input *inspector.ListRulesPackagesInput) *InspectorListRulesPackagesResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListRulesPackages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListRulesPackages", input)
 	return &InspectorListRulesPackagesResult{Result: future}
 }
 
 func (a *InspectorStub) ListTagsForResource(ctx workflow.Context, input *inspector.ListTagsForResourceInput) (*inspector.ListTagsForResourceOutput, error) {
 	var output inspector.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) ListTagsForResourceAsync(ctx workflow.Context, input *inspector.ListTagsForResourceInput) *InspectorListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.ListTagsForResource", input)
 	return &InspectorListTagsForResourceResult{Result: future}
 }
 
 func (a *InspectorStub) PreviewAgents(ctx workflow.Context, input *inspector.PreviewAgentsInput) (*inspector.PreviewAgentsOutput, error) {
 	var output inspector.PreviewAgentsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.PreviewAgents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.PreviewAgents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) PreviewAgentsAsync(ctx workflow.Context, input *inspector.PreviewAgentsInput) *InspectorPreviewAgentsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.PreviewAgents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.PreviewAgents", input)
 	return &InspectorPreviewAgentsResult{Result: future}
 }
 
 func (a *InspectorStub) RegisterCrossAccountAccessRole(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) (*inspector.RegisterCrossAccountAccessRoleOutput, error) {
 	var output inspector.RegisterCrossAccountAccessRoleOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.RegisterCrossAccountAccessRole", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.RegisterCrossAccountAccessRole", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) RegisterCrossAccountAccessRoleAsync(ctx workflow.Context, input *inspector.RegisterCrossAccountAccessRoleInput) *InspectorRegisterCrossAccountAccessRoleResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.RegisterCrossAccountAccessRole", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.RegisterCrossAccountAccessRole", input)
 	return &InspectorRegisterCrossAccountAccessRoleResult{Result: future}
 }
 
 func (a *InspectorStub) RemoveAttributesFromFindings(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) (*inspector.RemoveAttributesFromFindingsOutput, error) {
 	var output inspector.RemoveAttributesFromFindingsOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.RemoveAttributesFromFindings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.RemoveAttributesFromFindings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) RemoveAttributesFromFindingsAsync(ctx workflow.Context, input *inspector.RemoveAttributesFromFindingsInput) *InspectorRemoveAttributesFromFindingsResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.RemoveAttributesFromFindings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.RemoveAttributesFromFindings", input)
 	return &InspectorRemoveAttributesFromFindingsResult{Result: future}
 }
 
 func (a *InspectorStub) SetTagsForResource(ctx workflow.Context, input *inspector.SetTagsForResourceInput) (*inspector.SetTagsForResourceOutput, error) {
 	var output inspector.SetTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.SetTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.SetTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) SetTagsForResourceAsync(ctx workflow.Context, input *inspector.SetTagsForResourceInput) *InspectorSetTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.SetTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.SetTagsForResource", input)
 	return &InspectorSetTagsForResourceResult{Result: future}
 }
 
 func (a *InspectorStub) StartAssessmentRun(ctx workflow.Context, input *inspector.StartAssessmentRunInput) (*inspector.StartAssessmentRunOutput, error) {
 	var output inspector.StartAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.StartAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.StartAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) StartAssessmentRunAsync(ctx workflow.Context, input *inspector.StartAssessmentRunInput) *InspectorStartAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.StartAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.StartAssessmentRun", input)
 	return &InspectorStartAssessmentRunResult{Result: future}
 }
 
 func (a *InspectorStub) StopAssessmentRun(ctx workflow.Context, input *inspector.StopAssessmentRunInput) (*inspector.StopAssessmentRunOutput, error) {
 	var output inspector.StopAssessmentRunOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.StopAssessmentRun", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.StopAssessmentRun", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) StopAssessmentRunAsync(ctx workflow.Context, input *inspector.StopAssessmentRunInput) *InspectorStopAssessmentRunResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.StopAssessmentRun", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.StopAssessmentRun", input)
 	return &InspectorStopAssessmentRunResult{Result: future}
 }
 
 func (a *InspectorStub) SubscribeToEvent(ctx workflow.Context, input *inspector.SubscribeToEventInput) (*inspector.SubscribeToEventOutput, error) {
 	var output inspector.SubscribeToEventOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.SubscribeToEvent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.SubscribeToEvent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) SubscribeToEventAsync(ctx workflow.Context, input *inspector.SubscribeToEventInput) *InspectorSubscribeToEventResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.SubscribeToEvent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.SubscribeToEvent", input)
 	return &InspectorSubscribeToEventResult{Result: future}
 }
 
 func (a *InspectorStub) UnsubscribeFromEvent(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) (*inspector.UnsubscribeFromEventOutput, error) {
 	var output inspector.UnsubscribeFromEventOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.UnsubscribeFromEvent", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.UnsubscribeFromEvent", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) UnsubscribeFromEventAsync(ctx workflow.Context, input *inspector.UnsubscribeFromEventInput) *InspectorUnsubscribeFromEventResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.UnsubscribeFromEvent", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.UnsubscribeFromEvent", input)
 	return &InspectorUnsubscribeFromEventResult{Result: future}
 }
 
 func (a *InspectorStub) UpdateAssessmentTarget(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) (*inspector.UpdateAssessmentTargetOutput, error) {
 	var output inspector.UpdateAssessmentTargetOutput
-	err := workflow.ExecuteActivity(ctx, "Inspector.UpdateAssessmentTarget", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.inspector.UpdateAssessmentTarget", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *InspectorStub) UpdateAssessmentTargetAsync(ctx workflow.Context, input *inspector.UpdateAssessmentTargetInput) *InspectorUpdateAssessmentTargetResult {
-	future := workflow.ExecuteActivity(ctx, "Inspector.UpdateAssessmentTarget", input)
+	future := workflow.ExecuteActivity(ctx, "aws.inspector.UpdateAssessmentTarget", input)
 	return &InspectorUpdateAssessmentTargetResult{Result: future}
 }

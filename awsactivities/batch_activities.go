@@ -16,78 +16,160 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type BatchActivities struct {
 	client batchiface.BatchAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewBatchActivities(session *session.Session, config ...*aws.Config) *BatchActivities {
-	client := batch.New(session, config...)
+func NewBatchActivities(sess *session.Session, config ...*aws.Config) *BatchActivities {
+	client := batch.New(sess, config...)
 	return &BatchActivities{client: client}
 }
 
+func NewBatchActivitiesWithSessionFactory(sessionFactory SessionFactory) *BatchActivities {
+	return &BatchActivities{sessionFactory: sessionFactory}
+}
+
+func (a *BatchActivities) getClient(ctx context.Context) (batchiface.BatchAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return batch.New(sess), nil
+}
+
 func (a *BatchActivities) CancelJob(ctx context.Context, input *batch.CancelJobInput) (*batch.CancelJobOutput, error) {
-	return a.client.CancelJobWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CancelJobWithContext(ctx, input)
 }
 
 func (a *BatchActivities) CreateComputeEnvironment(ctx context.Context, input *batch.CreateComputeEnvironmentInput) (*batch.CreateComputeEnvironmentOutput, error) {
-	return a.client.CreateComputeEnvironmentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateComputeEnvironmentWithContext(ctx, input)
 }
 
 func (a *BatchActivities) CreateJobQueue(ctx context.Context, input *batch.CreateJobQueueInput) (*batch.CreateJobQueueOutput, error) {
-	return a.client.CreateJobQueueWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateJobQueueWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DeleteComputeEnvironment(ctx context.Context, input *batch.DeleteComputeEnvironmentInput) (*batch.DeleteComputeEnvironmentOutput, error) {
-	return a.client.DeleteComputeEnvironmentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteComputeEnvironmentWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DeleteJobQueue(ctx context.Context, input *batch.DeleteJobQueueInput) (*batch.DeleteJobQueueOutput, error) {
-	return a.client.DeleteJobQueueWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteJobQueueWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DeregisterJobDefinition(ctx context.Context, input *batch.DeregisterJobDefinitionInput) (*batch.DeregisterJobDefinitionOutput, error) {
-	return a.client.DeregisterJobDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterJobDefinitionWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DescribeComputeEnvironments(ctx context.Context, input *batch.DescribeComputeEnvironmentsInput) (*batch.DescribeComputeEnvironmentsOutput, error) {
-	return a.client.DescribeComputeEnvironmentsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeComputeEnvironmentsWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DescribeJobDefinitions(ctx context.Context, input *batch.DescribeJobDefinitionsInput) (*batch.DescribeJobDefinitionsOutput, error) {
-	return a.client.DescribeJobDefinitionsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeJobDefinitionsWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DescribeJobQueues(ctx context.Context, input *batch.DescribeJobQueuesInput) (*batch.DescribeJobQueuesOutput, error) {
-	return a.client.DescribeJobQueuesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeJobQueuesWithContext(ctx, input)
 }
 
 func (a *BatchActivities) DescribeJobs(ctx context.Context, input *batch.DescribeJobsInput) (*batch.DescribeJobsOutput, error) {
-	return a.client.DescribeJobsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeJobsWithContext(ctx, input)
 }
 
 func (a *BatchActivities) ListJobs(ctx context.Context, input *batch.ListJobsInput) (*batch.ListJobsOutput, error) {
-	return a.client.ListJobsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListJobsWithContext(ctx, input)
 }
 
 func (a *BatchActivities) RegisterJobDefinition(ctx context.Context, input *batch.RegisterJobDefinitionInput) (*batch.RegisterJobDefinitionOutput, error) {
-	return a.client.RegisterJobDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterJobDefinitionWithContext(ctx, input)
 }
 
 func (a *BatchActivities) SubmitJob(ctx context.Context, input *batch.SubmitJobInput) (*batch.SubmitJobOutput, error) {
-	return a.client.SubmitJobWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SubmitJobWithContext(ctx, input)
 }
 
 func (a *BatchActivities) TerminateJob(ctx context.Context, input *batch.TerminateJobInput) (*batch.TerminateJobOutput, error) {
-	return a.client.TerminateJobWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TerminateJobWithContext(ctx, input)
 }
 
 func (a *BatchActivities) UpdateComputeEnvironment(ctx context.Context, input *batch.UpdateComputeEnvironmentInput) (*batch.UpdateComputeEnvironmentOutput, error) {
-	return a.client.UpdateComputeEnvironmentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateComputeEnvironmentWithContext(ctx, input)
 }
 
 func (a *BatchActivities) UpdateJobQueue(ctx context.Context, input *batch.UpdateJobQueueInput) (*batch.UpdateJobQueueOutput, error) {
-	return a.client.UpdateJobQueueWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateJobQueueWithContext(ctx, input)
 }

@@ -208,8 +208,7 @@ type CloudDirectoryClient interface {
 	UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaResult
 }
 
-type CloudDirectoryStub struct {
-}
+type CloudDirectoryStub struct{}
 
 func NewCloudDirectoryStub() CloudDirectoryClient {
 	return &CloudDirectoryStub{}
@@ -877,726 +876,726 @@ func (r *ClouddirectoryUpgradePublishedSchemaResult) Get(ctx workflow.Context) (
 
 func (a *CloudDirectoryStub) AddFacetToObject(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) (*clouddirectory.AddFacetToObjectOutput, error) {
 	var output clouddirectory.AddFacetToObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.AddFacetToObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AddFacetToObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) AddFacetToObjectAsync(ctx workflow.Context, input *clouddirectory.AddFacetToObjectInput) *ClouddirectoryAddFacetToObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.AddFacetToObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AddFacetToObject", input)
 	return &ClouddirectoryAddFacetToObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ApplySchema(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) (*clouddirectory.ApplySchemaOutput, error) {
 	var output clouddirectory.ApplySchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ApplySchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ApplySchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ApplySchemaAsync(ctx workflow.Context, input *clouddirectory.ApplySchemaInput) *ClouddirectoryApplySchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ApplySchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ApplySchema", input)
 	return &ClouddirectoryApplySchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) AttachObject(ctx workflow.Context, input *clouddirectory.AttachObjectInput) (*clouddirectory.AttachObjectOutput, error) {
 	var output clouddirectory.AttachObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) AttachObjectAsync(ctx workflow.Context, input *clouddirectory.AttachObjectInput) *ClouddirectoryAttachObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachObject", input)
 	return &ClouddirectoryAttachObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) AttachPolicy(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) (*clouddirectory.AttachPolicyOutput, error) {
 	var output clouddirectory.AttachPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) AttachPolicyAsync(ctx workflow.Context, input *clouddirectory.AttachPolicyInput) *ClouddirectoryAttachPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachPolicy", input)
 	return &ClouddirectoryAttachPolicyResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) AttachToIndex(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) (*clouddirectory.AttachToIndexOutput, error) {
 	var output clouddirectory.AttachToIndexOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachToIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachToIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) AttachToIndexAsync(ctx workflow.Context, input *clouddirectory.AttachToIndexInput) *ClouddirectoryAttachToIndexResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachToIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachToIndex", input)
 	return &ClouddirectoryAttachToIndexResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) AttachTypedLink(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) (*clouddirectory.AttachTypedLinkOutput, error) {
 	var output clouddirectory.AttachTypedLinkOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachTypedLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachTypedLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) AttachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.AttachTypedLinkInput) *ClouddirectoryAttachTypedLinkResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.AttachTypedLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.AttachTypedLink", input)
 	return &ClouddirectoryAttachTypedLinkResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) BatchRead(ctx workflow.Context, input *clouddirectory.BatchReadInput) (*clouddirectory.BatchReadOutput, error) {
 	var output clouddirectory.BatchReadOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.BatchRead", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchRead", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) BatchReadAsync(ctx workflow.Context, input *clouddirectory.BatchReadInput) *ClouddirectoryBatchReadResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.BatchRead", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchRead", input)
 	return &ClouddirectoryBatchReadResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) BatchWrite(ctx workflow.Context, input *clouddirectory.BatchWriteInput) (*clouddirectory.BatchWriteOutput, error) {
 	var output clouddirectory.BatchWriteOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.BatchWrite", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchWrite", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) BatchWriteAsync(ctx workflow.Context, input *clouddirectory.BatchWriteInput) *ClouddirectoryBatchWriteResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.BatchWrite", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.BatchWrite", input)
 	return &ClouddirectoryBatchWriteResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateDirectory(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) (*clouddirectory.CreateDirectoryOutput, error) {
 	var output clouddirectory.CreateDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateDirectoryAsync(ctx workflow.Context, input *clouddirectory.CreateDirectoryInput) *ClouddirectoryCreateDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateDirectory", input)
 	return &ClouddirectoryCreateDirectoryResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateFacet(ctx workflow.Context, input *clouddirectory.CreateFacetInput) (*clouddirectory.CreateFacetOutput, error) {
 	var output clouddirectory.CreateFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateFacetAsync(ctx workflow.Context, input *clouddirectory.CreateFacetInput) *ClouddirectoryCreateFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateFacet", input)
 	return &ClouddirectoryCreateFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateIndex(ctx workflow.Context, input *clouddirectory.CreateIndexInput) (*clouddirectory.CreateIndexOutput, error) {
 	var output clouddirectory.CreateIndexOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateIndexAsync(ctx workflow.Context, input *clouddirectory.CreateIndexInput) *ClouddirectoryCreateIndexResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateIndex", input)
 	return &ClouddirectoryCreateIndexResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateObject(ctx workflow.Context, input *clouddirectory.CreateObjectInput) (*clouddirectory.CreateObjectOutput, error) {
 	var output clouddirectory.CreateObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateObjectAsync(ctx workflow.Context, input *clouddirectory.CreateObjectInput) *ClouddirectoryCreateObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateObject", input)
 	return &ClouddirectoryCreateObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateSchema(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) (*clouddirectory.CreateSchemaOutput, error) {
 	var output clouddirectory.CreateSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateSchemaAsync(ctx workflow.Context, input *clouddirectory.CreateSchemaInput) *ClouddirectoryCreateSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateSchema", input)
 	return &ClouddirectoryCreateSchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) CreateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) (*clouddirectory.CreateTypedLinkFacetOutput, error) {
 	var output clouddirectory.CreateTypedLinkFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateTypedLinkFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateTypedLinkFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) CreateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.CreateTypedLinkFacetInput) *ClouddirectoryCreateTypedLinkFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.CreateTypedLinkFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.CreateTypedLinkFacet", input)
 	return &ClouddirectoryCreateTypedLinkFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DeleteDirectory(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) (*clouddirectory.DeleteDirectoryOutput, error) {
 	var output clouddirectory.DeleteDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DeleteDirectoryAsync(ctx workflow.Context, input *clouddirectory.DeleteDirectoryInput) *ClouddirectoryDeleteDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteDirectory", input)
 	return &ClouddirectoryDeleteDirectoryResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DeleteFacet(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) (*clouddirectory.DeleteFacetOutput, error) {
 	var output clouddirectory.DeleteFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DeleteFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteFacetInput) *ClouddirectoryDeleteFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteFacet", input)
 	return &ClouddirectoryDeleteFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DeleteObject(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) (*clouddirectory.DeleteObjectOutput, error) {
 	var output clouddirectory.DeleteObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DeleteObjectAsync(ctx workflow.Context, input *clouddirectory.DeleteObjectInput) *ClouddirectoryDeleteObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteObject", input)
 	return &ClouddirectoryDeleteObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DeleteSchema(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) (*clouddirectory.DeleteSchemaOutput, error) {
 	var output clouddirectory.DeleteSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DeleteSchemaAsync(ctx workflow.Context, input *clouddirectory.DeleteSchemaInput) *ClouddirectoryDeleteSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteSchema", input)
 	return &ClouddirectoryDeleteSchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DeleteTypedLinkFacet(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) (*clouddirectory.DeleteTypedLinkFacetOutput, error) {
 	var output clouddirectory.DeleteTypedLinkFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteTypedLinkFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteTypedLinkFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DeleteTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.DeleteTypedLinkFacetInput) *ClouddirectoryDeleteTypedLinkFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DeleteTypedLinkFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DeleteTypedLinkFacet", input)
 	return &ClouddirectoryDeleteTypedLinkFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DetachFromIndex(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) (*clouddirectory.DetachFromIndexOutput, error) {
 	var output clouddirectory.DetachFromIndexOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachFromIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachFromIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DetachFromIndexAsync(ctx workflow.Context, input *clouddirectory.DetachFromIndexInput) *ClouddirectoryDetachFromIndexResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachFromIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachFromIndex", input)
 	return &ClouddirectoryDetachFromIndexResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DetachObject(ctx workflow.Context, input *clouddirectory.DetachObjectInput) (*clouddirectory.DetachObjectOutput, error) {
 	var output clouddirectory.DetachObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DetachObjectAsync(ctx workflow.Context, input *clouddirectory.DetachObjectInput) *ClouddirectoryDetachObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachObject", input)
 	return &ClouddirectoryDetachObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DetachPolicy(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) (*clouddirectory.DetachPolicyOutput, error) {
 	var output clouddirectory.DetachPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DetachPolicyAsync(ctx workflow.Context, input *clouddirectory.DetachPolicyInput) *ClouddirectoryDetachPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachPolicy", input)
 	return &ClouddirectoryDetachPolicyResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DetachTypedLink(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) (*clouddirectory.DetachTypedLinkOutput, error) {
 	var output clouddirectory.DetachTypedLinkOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachTypedLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachTypedLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DetachTypedLinkAsync(ctx workflow.Context, input *clouddirectory.DetachTypedLinkInput) *ClouddirectoryDetachTypedLinkResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DetachTypedLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DetachTypedLink", input)
 	return &ClouddirectoryDetachTypedLinkResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) DisableDirectory(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) (*clouddirectory.DisableDirectoryOutput, error) {
 	var output clouddirectory.DisableDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.DisableDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DisableDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) DisableDirectoryAsync(ctx workflow.Context, input *clouddirectory.DisableDirectoryInput) *ClouddirectoryDisableDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.DisableDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.DisableDirectory", input)
 	return &ClouddirectoryDisableDirectoryResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) EnableDirectory(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) (*clouddirectory.EnableDirectoryOutput, error) {
 	var output clouddirectory.EnableDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.EnableDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.EnableDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) EnableDirectoryAsync(ctx workflow.Context, input *clouddirectory.EnableDirectoryInput) *ClouddirectoryEnableDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.EnableDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.EnableDirectory", input)
 	return &ClouddirectoryEnableDirectoryResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetAppliedSchemaVersion(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) (*clouddirectory.GetAppliedSchemaVersionOutput, error) {
 	var output clouddirectory.GetAppliedSchemaVersionOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetAppliedSchemaVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetAppliedSchemaVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetAppliedSchemaVersionAsync(ctx workflow.Context, input *clouddirectory.GetAppliedSchemaVersionInput) *ClouddirectoryGetAppliedSchemaVersionResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetAppliedSchemaVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetAppliedSchemaVersion", input)
 	return &ClouddirectoryGetAppliedSchemaVersionResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetDirectory(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) (*clouddirectory.GetDirectoryOutput, error) {
 	var output clouddirectory.GetDirectoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetDirectory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetDirectory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetDirectoryAsync(ctx workflow.Context, input *clouddirectory.GetDirectoryInput) *ClouddirectoryGetDirectoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetDirectory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetDirectory", input)
 	return &ClouddirectoryGetDirectoryResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetFacet(ctx workflow.Context, input *clouddirectory.GetFacetInput) (*clouddirectory.GetFacetOutput, error) {
 	var output clouddirectory.GetFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetFacetAsync(ctx workflow.Context, input *clouddirectory.GetFacetInput) *ClouddirectoryGetFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetFacet", input)
 	return &ClouddirectoryGetFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetLinkAttributes(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) (*clouddirectory.GetLinkAttributesOutput, error) {
 	var output clouddirectory.GetLinkAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetLinkAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetLinkAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.GetLinkAttributesInput) *ClouddirectoryGetLinkAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetLinkAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetLinkAttributes", input)
 	return &ClouddirectoryGetLinkAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetObjectAttributes(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) (*clouddirectory.GetObjectAttributesOutput, error) {
 	var output clouddirectory.GetObjectAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetObjectAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.GetObjectAttributesInput) *ClouddirectoryGetObjectAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetObjectAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectAttributes", input)
 	return &ClouddirectoryGetObjectAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetObjectInformation(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) (*clouddirectory.GetObjectInformationOutput, error) {
 	var output clouddirectory.GetObjectInformationOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetObjectInformation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectInformation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetObjectInformationAsync(ctx workflow.Context, input *clouddirectory.GetObjectInformationInput) *ClouddirectoryGetObjectInformationResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetObjectInformation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetObjectInformation", input)
 	return &ClouddirectoryGetObjectInformationResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetSchemaAsJson(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) (*clouddirectory.GetSchemaAsJsonOutput, error) {
 	var output clouddirectory.GetSchemaAsJsonOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetSchemaAsJson", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetSchemaAsJson", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetSchemaAsJsonAsync(ctx workflow.Context, input *clouddirectory.GetSchemaAsJsonInput) *ClouddirectoryGetSchemaAsJsonResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetSchemaAsJson", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetSchemaAsJson", input)
 	return &ClouddirectoryGetSchemaAsJsonResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) GetTypedLinkFacetInformation(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) (*clouddirectory.GetTypedLinkFacetInformationOutput, error) {
 	var output clouddirectory.GetTypedLinkFacetInformationOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.GetTypedLinkFacetInformation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetTypedLinkFacetInformation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) GetTypedLinkFacetInformationAsync(ctx workflow.Context, input *clouddirectory.GetTypedLinkFacetInformationInput) *ClouddirectoryGetTypedLinkFacetInformationResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.GetTypedLinkFacetInformation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.GetTypedLinkFacetInformation", input)
 	return &ClouddirectoryGetTypedLinkFacetInformationResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListAppliedSchemaArns(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) (*clouddirectory.ListAppliedSchemaArnsOutput, error) {
 	var output clouddirectory.ListAppliedSchemaArnsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListAppliedSchemaArns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAppliedSchemaArns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListAppliedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListAppliedSchemaArnsInput) *ClouddirectoryListAppliedSchemaArnsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListAppliedSchemaArns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAppliedSchemaArns", input)
 	return &ClouddirectoryListAppliedSchemaArnsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListAttachedIndices(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) (*clouddirectory.ListAttachedIndicesOutput, error) {
 	var output clouddirectory.ListAttachedIndicesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListAttachedIndices", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAttachedIndices", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListAttachedIndicesAsync(ctx workflow.Context, input *clouddirectory.ListAttachedIndicesInput) *ClouddirectoryListAttachedIndicesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListAttachedIndices", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListAttachedIndices", input)
 	return &ClouddirectoryListAttachedIndicesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListDevelopmentSchemaArns(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) (*clouddirectory.ListDevelopmentSchemaArnsOutput, error) {
 	var output clouddirectory.ListDevelopmentSchemaArnsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListDevelopmentSchemaArns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDevelopmentSchemaArns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListDevelopmentSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListDevelopmentSchemaArnsInput) *ClouddirectoryListDevelopmentSchemaArnsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListDevelopmentSchemaArns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDevelopmentSchemaArns", input)
 	return &ClouddirectoryListDevelopmentSchemaArnsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListDirectories(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) (*clouddirectory.ListDirectoriesOutput, error) {
 	var output clouddirectory.ListDirectoriesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListDirectories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDirectories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListDirectoriesAsync(ctx workflow.Context, input *clouddirectory.ListDirectoriesInput) *ClouddirectoryListDirectoriesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListDirectories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListDirectories", input)
 	return &ClouddirectoryListDirectoriesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListFacetAttributes(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) (*clouddirectory.ListFacetAttributesOutput, error) {
 	var output clouddirectory.ListFacetAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListFacetAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListFacetAttributesInput) *ClouddirectoryListFacetAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListFacetAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetAttributes", input)
 	return &ClouddirectoryListFacetAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListFacetNames(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) (*clouddirectory.ListFacetNamesOutput, error) {
 	var output clouddirectory.ListFacetNamesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListFacetNames", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetNames", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListFacetNamesInput) *ClouddirectoryListFacetNamesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListFacetNames", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListFacetNames", input)
 	return &ClouddirectoryListFacetNamesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListIncomingTypedLinks(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) (*clouddirectory.ListIncomingTypedLinksOutput, error) {
 	var output clouddirectory.ListIncomingTypedLinksOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListIncomingTypedLinks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIncomingTypedLinks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListIncomingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListIncomingTypedLinksInput) *ClouddirectoryListIncomingTypedLinksResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListIncomingTypedLinks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIncomingTypedLinks", input)
 	return &ClouddirectoryListIncomingTypedLinksResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListIndex(ctx workflow.Context, input *clouddirectory.ListIndexInput) (*clouddirectory.ListIndexOutput, error) {
 	var output clouddirectory.ListIndexOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListIndex", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIndex", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListIndexAsync(ctx workflow.Context, input *clouddirectory.ListIndexInput) *ClouddirectoryListIndexResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListIndex", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListIndex", input)
 	return &ClouddirectoryListIndexResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListManagedSchemaArns(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) (*clouddirectory.ListManagedSchemaArnsOutput, error) {
 	var output clouddirectory.ListManagedSchemaArnsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListManagedSchemaArns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListManagedSchemaArns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListManagedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListManagedSchemaArnsInput) *ClouddirectoryListManagedSchemaArnsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListManagedSchemaArns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListManagedSchemaArns", input)
 	return &ClouddirectoryListManagedSchemaArnsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectAttributes(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) (*clouddirectory.ListObjectAttributesOutput, error) {
 	var output clouddirectory.ListObjectAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.ListObjectAttributesInput) *ClouddirectoryListObjectAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectAttributes", input)
 	return &ClouddirectoryListObjectAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectChildren(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) (*clouddirectory.ListObjectChildrenOutput, error) {
 	var output clouddirectory.ListObjectChildrenOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectChildren", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectChildren", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListObjectChildrenAsync(ctx workflow.Context, input *clouddirectory.ListObjectChildrenInput) *ClouddirectoryListObjectChildrenResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectChildren", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectChildren", input)
 	return &ClouddirectoryListObjectChildrenResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectParentPaths(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) (*clouddirectory.ListObjectParentPathsOutput, error) {
 	var output clouddirectory.ListObjectParentPathsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectParentPaths", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParentPaths", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListObjectParentPathsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentPathsInput) *ClouddirectoryListObjectParentPathsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectParentPaths", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParentPaths", input)
 	return &ClouddirectoryListObjectParentPathsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectParents(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) (*clouddirectory.ListObjectParentsOutput, error) {
 	var output clouddirectory.ListObjectParentsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectParents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListObjectParentsAsync(ctx workflow.Context, input *clouddirectory.ListObjectParentsInput) *ClouddirectoryListObjectParentsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectParents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectParents", input)
 	return &ClouddirectoryListObjectParentsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListObjectPolicies(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) (*clouddirectory.ListObjectPoliciesOutput, error) {
 	var output clouddirectory.ListObjectPoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectPolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectPolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListObjectPoliciesAsync(ctx workflow.Context, input *clouddirectory.ListObjectPoliciesInput) *ClouddirectoryListObjectPoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListObjectPolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListObjectPolicies", input)
 	return &ClouddirectoryListObjectPoliciesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListOutgoingTypedLinks(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) (*clouddirectory.ListOutgoingTypedLinksOutput, error) {
 	var output clouddirectory.ListOutgoingTypedLinksOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListOutgoingTypedLinks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListOutgoingTypedLinks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListOutgoingTypedLinksAsync(ctx workflow.Context, input *clouddirectory.ListOutgoingTypedLinksInput) *ClouddirectoryListOutgoingTypedLinksResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListOutgoingTypedLinks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListOutgoingTypedLinks", input)
 	return &ClouddirectoryListOutgoingTypedLinksResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListPolicyAttachments(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) (*clouddirectory.ListPolicyAttachmentsOutput, error) {
 	var output clouddirectory.ListPolicyAttachmentsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListPolicyAttachments", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPolicyAttachments", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListPolicyAttachmentsAsync(ctx workflow.Context, input *clouddirectory.ListPolicyAttachmentsInput) *ClouddirectoryListPolicyAttachmentsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListPolicyAttachments", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPolicyAttachments", input)
 	return &ClouddirectoryListPolicyAttachmentsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListPublishedSchemaArns(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) (*clouddirectory.ListPublishedSchemaArnsOutput, error) {
 	var output clouddirectory.ListPublishedSchemaArnsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListPublishedSchemaArns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPublishedSchemaArns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListPublishedSchemaArnsAsync(ctx workflow.Context, input *clouddirectory.ListPublishedSchemaArnsInput) *ClouddirectoryListPublishedSchemaArnsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListPublishedSchemaArns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListPublishedSchemaArns", input)
 	return &ClouddirectoryListPublishedSchemaArnsResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListTagsForResource(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) (*clouddirectory.ListTagsForResourceOutput, error) {
 	var output clouddirectory.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListTagsForResourceAsync(ctx workflow.Context, input *clouddirectory.ListTagsForResourceInput) *ClouddirectoryListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTagsForResource", input)
 	return &ClouddirectoryListTagsForResourceResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetAttributes(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) (*clouddirectory.ListTypedLinkFacetAttributesOutput, error) {
 	var output clouddirectory.ListTypedLinkFacetAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTypedLinkFacetAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetAttributesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetAttributesInput) *ClouddirectoryListTypedLinkFacetAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTypedLinkFacetAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetAttributes", input)
 	return &ClouddirectoryListTypedLinkFacetAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetNames(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) (*clouddirectory.ListTypedLinkFacetNamesOutput, error) {
 	var output clouddirectory.ListTypedLinkFacetNamesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTypedLinkFacetNames", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetNames", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) ListTypedLinkFacetNamesAsync(ctx workflow.Context, input *clouddirectory.ListTypedLinkFacetNamesInput) *ClouddirectoryListTypedLinkFacetNamesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.ListTypedLinkFacetNames", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.ListTypedLinkFacetNames", input)
 	return &ClouddirectoryListTypedLinkFacetNamesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) LookupPolicy(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) (*clouddirectory.LookupPolicyOutput, error) {
 	var output clouddirectory.LookupPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.LookupPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.LookupPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) LookupPolicyAsync(ctx workflow.Context, input *clouddirectory.LookupPolicyInput) *ClouddirectoryLookupPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.LookupPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.LookupPolicy", input)
 	return &ClouddirectoryLookupPolicyResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) PublishSchema(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) (*clouddirectory.PublishSchemaOutput, error) {
 	var output clouddirectory.PublishSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.PublishSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PublishSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) PublishSchemaAsync(ctx workflow.Context, input *clouddirectory.PublishSchemaInput) *ClouddirectoryPublishSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.PublishSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PublishSchema", input)
 	return &ClouddirectoryPublishSchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) PutSchemaFromJson(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) (*clouddirectory.PutSchemaFromJsonOutput, error) {
 	var output clouddirectory.PutSchemaFromJsonOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.PutSchemaFromJson", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PutSchemaFromJson", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) PutSchemaFromJsonAsync(ctx workflow.Context, input *clouddirectory.PutSchemaFromJsonInput) *ClouddirectoryPutSchemaFromJsonResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.PutSchemaFromJson", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.PutSchemaFromJson", input)
 	return &ClouddirectoryPutSchemaFromJsonResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) RemoveFacetFromObject(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) (*clouddirectory.RemoveFacetFromObjectOutput, error) {
 	var output clouddirectory.RemoveFacetFromObjectOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.RemoveFacetFromObject", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.RemoveFacetFromObject", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) RemoveFacetFromObjectAsync(ctx workflow.Context, input *clouddirectory.RemoveFacetFromObjectInput) *ClouddirectoryRemoveFacetFromObjectResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.RemoveFacetFromObject", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.RemoveFacetFromObject", input)
 	return &ClouddirectoryRemoveFacetFromObjectResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) TagResource(ctx workflow.Context, input *clouddirectory.TagResourceInput) (*clouddirectory.TagResourceOutput, error) {
 	var output clouddirectory.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) TagResourceAsync(ctx workflow.Context, input *clouddirectory.TagResourceInput) *ClouddirectoryTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.TagResource", input)
 	return &ClouddirectoryTagResourceResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UntagResource(ctx workflow.Context, input *clouddirectory.UntagResourceInput) (*clouddirectory.UntagResourceOutput, error) {
 	var output clouddirectory.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UntagResourceAsync(ctx workflow.Context, input *clouddirectory.UntagResourceInput) *ClouddirectoryUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UntagResource", input)
 	return &ClouddirectoryUntagResourceResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpdateFacet(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) (*clouddirectory.UpdateFacetOutput, error) {
 	var output clouddirectory.UpdateFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpdateFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateFacetInput) *ClouddirectoryUpdateFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateFacet", input)
 	return &ClouddirectoryUpdateFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpdateLinkAttributes(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) (*clouddirectory.UpdateLinkAttributesOutput, error) {
 	var output clouddirectory.UpdateLinkAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateLinkAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateLinkAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpdateLinkAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateLinkAttributesInput) *ClouddirectoryUpdateLinkAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateLinkAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateLinkAttributes", input)
 	return &ClouddirectoryUpdateLinkAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpdateObjectAttributes(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) (*clouddirectory.UpdateObjectAttributesOutput, error) {
 	var output clouddirectory.UpdateObjectAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateObjectAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateObjectAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpdateObjectAttributesAsync(ctx workflow.Context, input *clouddirectory.UpdateObjectAttributesInput) *ClouddirectoryUpdateObjectAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateObjectAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateObjectAttributes", input)
 	return &ClouddirectoryUpdateObjectAttributesResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpdateSchema(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) (*clouddirectory.UpdateSchemaOutput, error) {
 	var output clouddirectory.UpdateSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpdateSchemaAsync(ctx workflow.Context, input *clouddirectory.UpdateSchemaInput) *ClouddirectoryUpdateSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateSchema", input)
 	return &ClouddirectoryUpdateSchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpdateTypedLinkFacet(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) (*clouddirectory.UpdateTypedLinkFacetOutput, error) {
 	var output clouddirectory.UpdateTypedLinkFacetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateTypedLinkFacet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateTypedLinkFacet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpdateTypedLinkFacetAsync(ctx workflow.Context, input *clouddirectory.UpdateTypedLinkFacetInput) *ClouddirectoryUpdateTypedLinkFacetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpdateTypedLinkFacet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpdateTypedLinkFacet", input)
 	return &ClouddirectoryUpdateTypedLinkFacetResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpgradeAppliedSchema(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) (*clouddirectory.UpgradeAppliedSchemaOutput, error) {
 	var output clouddirectory.UpgradeAppliedSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpgradeAppliedSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradeAppliedSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpgradeAppliedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradeAppliedSchemaInput) *ClouddirectoryUpgradeAppliedSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpgradeAppliedSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradeAppliedSchema", input)
 	return &ClouddirectoryUpgradeAppliedSchemaResult{Result: future}
 }
 
 func (a *CloudDirectoryStub) UpgradePublishedSchema(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) (*clouddirectory.UpgradePublishedSchemaOutput, error) {
 	var output clouddirectory.UpgradePublishedSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "CloudDirectory.UpgradePublishedSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradePublishedSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudDirectoryStub) UpgradePublishedSchemaAsync(ctx workflow.Context, input *clouddirectory.UpgradePublishedSchemaInput) *ClouddirectoryUpgradePublishedSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "CloudDirectory.UpgradePublishedSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.clouddirectory.UpgradePublishedSchema", input)
 	return &ClouddirectoryUpgradePublishedSchemaResult{Result: future}
 }

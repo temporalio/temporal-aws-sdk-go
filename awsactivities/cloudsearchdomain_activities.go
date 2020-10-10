@@ -16,26 +16,56 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CloudSearchDomainActivities struct {
 	client cloudsearchdomainiface.CloudSearchDomainAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCloudSearchDomainActivities(session *session.Session, config ...*aws.Config) *CloudSearchDomainActivities {
-	client := cloudsearchdomain.New(session, config...)
+func NewCloudSearchDomainActivities(sess *session.Session, config ...*aws.Config) *CloudSearchDomainActivities {
+	client := cloudsearchdomain.New(sess, config...)
 	return &CloudSearchDomainActivities{client: client}
 }
 
+func NewCloudSearchDomainActivitiesWithSessionFactory(sessionFactory SessionFactory) *CloudSearchDomainActivities {
+	return &CloudSearchDomainActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CloudSearchDomainActivities) getClient(ctx context.Context) (cloudsearchdomainiface.CloudSearchDomainAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return cloudsearchdomain.New(sess), nil
+}
+
 func (a *CloudSearchDomainActivities) Search(ctx context.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error) {
-	return a.client.SearchWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SearchWithContext(ctx, input)
 }
 
 func (a *CloudSearchDomainActivities) Suggest(ctx context.Context, input *cloudsearchdomain.SuggestInput) (*cloudsearchdomain.SuggestOutput, error) {
-	return a.client.SuggestWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SuggestWithContext(ctx, input)
 }
 
 func (a *CloudSearchDomainActivities) UploadDocuments(ctx context.Context, input *cloudsearchdomain.UploadDocumentsInput) (*cloudsearchdomain.UploadDocumentsOutput, error) {
-	return a.client.UploadDocumentsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UploadDocumentsWithContext(ctx, input)
 }

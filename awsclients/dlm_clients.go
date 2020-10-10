@@ -34,8 +34,7 @@ type DLMClient interface {
 	UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult
 }
 
-type DLMStub struct {
-}
+type DLMStub struct{}
 
 func NewDLMStub() DLMClient {
 	return &DLMStub{}
@@ -123,88 +122,88 @@ func (r *DlmUpdateLifecyclePolicyResult) Get(ctx workflow.Context) (*dlm.UpdateL
 
 func (a *DLMStub) CreateLifecyclePolicy(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error) {
 	var output dlm.CreateLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.CreateLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.CreateLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) CreateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.CreateLifecyclePolicyInput) *DlmCreateLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.CreateLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.CreateLifecyclePolicy", input)
 	return &DlmCreateLifecyclePolicyResult{Result: future}
 }
 
 func (a *DLMStub) DeleteLifecyclePolicy(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error) {
 	var output dlm.DeleteLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.DeleteLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.DeleteLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *dlm.DeleteLifecyclePolicyInput) *DlmDeleteLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.DeleteLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.DeleteLifecyclePolicy", input)
 	return &DlmDeleteLifecyclePolicyResult{Result: future}
 }
 
 func (a *DLMStub) GetLifecyclePolicies(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error) {
 	var output dlm.GetLifecyclePoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.GetLifecyclePolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) GetLifecyclePoliciesAsync(ctx workflow.Context, input *dlm.GetLifecyclePoliciesInput) *DlmGetLifecyclePoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.GetLifecyclePolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicies", input)
 	return &DlmGetLifecyclePoliciesResult{Result: future}
 }
 
 func (a *DLMStub) GetLifecyclePolicy(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error) {
 	var output dlm.GetLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.GetLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *dlm.GetLifecyclePolicyInput) *DlmGetLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.GetLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.GetLifecyclePolicy", input)
 	return &DlmGetLifecyclePolicyResult{Result: future}
 }
 
 func (a *DLMStub) ListTagsForResource(ctx workflow.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error) {
 	var output dlm.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) ListTagsForResourceAsync(ctx workflow.Context, input *dlm.ListTagsForResourceInput) *DlmListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.ListTagsForResource", input)
 	return &DlmListTagsForResourceResult{Result: future}
 }
 
 func (a *DLMStub) TagResource(ctx workflow.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error) {
 	var output dlm.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) TagResourceAsync(ctx workflow.Context, input *dlm.TagResourceInput) *DlmTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.TagResource", input)
 	return &DlmTagResourceResult{Result: future}
 }
 
 func (a *DLMStub) UntagResource(ctx workflow.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error) {
 	var output dlm.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) UntagResourceAsync(ctx workflow.Context, input *dlm.UntagResourceInput) *DlmUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.UntagResource", input)
 	return &DlmUntagResourceResult{Result: future}
 }
 
 func (a *DLMStub) UpdateLifecyclePolicy(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error) {
 	var output dlm.UpdateLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "DLM.UpdateLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dlm.UpdateLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DLMStub) UpdateLifecyclePolicyAsync(ctx workflow.Context, input *dlm.UpdateLifecyclePolicyInput) *DlmUpdateLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "DLM.UpdateLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dlm.UpdateLifecyclePolicy", input)
 	return &DlmUpdateLifecyclePolicyResult{Result: future}
 }

@@ -16,22 +16,48 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type HoneycodeActivities struct {
 	client honeycodeiface.HoneycodeAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewHoneycodeActivities(session *session.Session, config ...*aws.Config) *HoneycodeActivities {
-	client := honeycode.New(session, config...)
+func NewHoneycodeActivities(sess *session.Session, config ...*aws.Config) *HoneycodeActivities {
+	client := honeycode.New(sess, config...)
 	return &HoneycodeActivities{client: client}
 }
 
+func NewHoneycodeActivitiesWithSessionFactory(sessionFactory SessionFactory) *HoneycodeActivities {
+	return &HoneycodeActivities{sessionFactory: sessionFactory}
+}
+
+func (a *HoneycodeActivities) getClient(ctx context.Context) (honeycodeiface.HoneycodeAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return honeycode.New(sess), nil
+}
+
 func (a *HoneycodeActivities) GetScreenData(ctx context.Context, input *honeycode.GetScreenDataInput) (*honeycode.GetScreenDataOutput, error) {
-	return a.client.GetScreenDataWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetScreenDataWithContext(ctx, input)
 }
 
 func (a *HoneycodeActivities) InvokeScreenAutomation(ctx context.Context, input *honeycode.InvokeScreenAutomationInput) (*honeycode.InvokeScreenAutomationOutput, error) {
-	return a.client.InvokeScreenAutomationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.InvokeScreenAutomationWithContext(ctx, input)
 }

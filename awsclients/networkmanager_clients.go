@@ -94,8 +94,7 @@ type NetworkManagerClient interface {
 	UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkmanagerUpdateSiteResult
 }
 
-type NetworkManagerStub struct {
-}
+type NetworkManagerStub struct{}
 
 func NewNetworkManagerStub() NetworkManagerClient {
 	return &NetworkManagerStub{}
@@ -383,308 +382,308 @@ func (r *NetworkmanagerUpdateSiteResult) Get(ctx workflow.Context) (*networkmana
 
 func (a *NetworkManagerStub) AssociateCustomerGateway(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) (*networkmanager.AssociateCustomerGatewayOutput, error) {
 	var output networkmanager.AssociateCustomerGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.AssociateCustomerGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateCustomerGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) AssociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.AssociateCustomerGatewayInput) *NetworkmanagerAssociateCustomerGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.AssociateCustomerGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateCustomerGateway", input)
 	return &NetworkmanagerAssociateCustomerGatewayResult{Result: future}
 }
 
 func (a *NetworkManagerStub) AssociateLink(ctx workflow.Context, input *networkmanager.AssociateLinkInput) (*networkmanager.AssociateLinkOutput, error) {
 	var output networkmanager.AssociateLinkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.AssociateLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) AssociateLinkAsync(ctx workflow.Context, input *networkmanager.AssociateLinkInput) *NetworkmanagerAssociateLinkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.AssociateLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.AssociateLink", input)
 	return &NetworkmanagerAssociateLinkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) CreateDevice(ctx workflow.Context, input *networkmanager.CreateDeviceInput) (*networkmanager.CreateDeviceOutput, error) {
 	var output networkmanager.CreateDeviceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.CreateDevice", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateDevice", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) CreateDeviceAsync(ctx workflow.Context, input *networkmanager.CreateDeviceInput) *NetworkmanagerCreateDeviceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.CreateDevice", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateDevice", input)
 	return &NetworkmanagerCreateDeviceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) CreateGlobalNetwork(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) (*networkmanager.CreateGlobalNetworkOutput, error) {
 	var output networkmanager.CreateGlobalNetworkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.CreateGlobalNetwork", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateGlobalNetwork", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) CreateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.CreateGlobalNetworkInput) *NetworkmanagerCreateGlobalNetworkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.CreateGlobalNetwork", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateGlobalNetwork", input)
 	return &NetworkmanagerCreateGlobalNetworkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) CreateLink(ctx workflow.Context, input *networkmanager.CreateLinkInput) (*networkmanager.CreateLinkOutput, error) {
 	var output networkmanager.CreateLinkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.CreateLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) CreateLinkAsync(ctx workflow.Context, input *networkmanager.CreateLinkInput) *NetworkmanagerCreateLinkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.CreateLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateLink", input)
 	return &NetworkmanagerCreateLinkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) CreateSite(ctx workflow.Context, input *networkmanager.CreateSiteInput) (*networkmanager.CreateSiteOutput, error) {
 	var output networkmanager.CreateSiteOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.CreateSite", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateSite", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) CreateSiteAsync(ctx workflow.Context, input *networkmanager.CreateSiteInput) *NetworkmanagerCreateSiteResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.CreateSite", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.CreateSite", input)
 	return &NetworkmanagerCreateSiteResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DeleteDevice(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) (*networkmanager.DeleteDeviceOutput, error) {
 	var output networkmanager.DeleteDeviceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteDevice", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteDevice", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DeleteDeviceAsync(ctx workflow.Context, input *networkmanager.DeleteDeviceInput) *NetworkmanagerDeleteDeviceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteDevice", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteDevice", input)
 	return &NetworkmanagerDeleteDeviceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DeleteGlobalNetwork(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) (*networkmanager.DeleteGlobalNetworkOutput, error) {
 	var output networkmanager.DeleteGlobalNetworkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteGlobalNetwork", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteGlobalNetwork", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DeleteGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.DeleteGlobalNetworkInput) *NetworkmanagerDeleteGlobalNetworkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteGlobalNetwork", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteGlobalNetwork", input)
 	return &NetworkmanagerDeleteGlobalNetworkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DeleteLink(ctx workflow.Context, input *networkmanager.DeleteLinkInput) (*networkmanager.DeleteLinkOutput, error) {
 	var output networkmanager.DeleteLinkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DeleteLinkAsync(ctx workflow.Context, input *networkmanager.DeleteLinkInput) *NetworkmanagerDeleteLinkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteLink", input)
 	return &NetworkmanagerDeleteLinkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DeleteSite(ctx workflow.Context, input *networkmanager.DeleteSiteInput) (*networkmanager.DeleteSiteOutput, error) {
 	var output networkmanager.DeleteSiteOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteSite", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteSite", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DeleteSiteAsync(ctx workflow.Context, input *networkmanager.DeleteSiteInput) *NetworkmanagerDeleteSiteResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DeleteSite", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeleteSite", input)
 	return &NetworkmanagerDeleteSiteResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DeregisterTransitGateway(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) (*networkmanager.DeregisterTransitGatewayOutput, error) {
 	var output networkmanager.DeregisterTransitGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DeregisterTransitGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeregisterTransitGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DeregisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.DeregisterTransitGatewayInput) *NetworkmanagerDeregisterTransitGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DeregisterTransitGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DeregisterTransitGateway", input)
 	return &NetworkmanagerDeregisterTransitGatewayResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DescribeGlobalNetworks(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) (*networkmanager.DescribeGlobalNetworksOutput, error) {
 	var output networkmanager.DescribeGlobalNetworksOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DescribeGlobalNetworks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DescribeGlobalNetworks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DescribeGlobalNetworksAsync(ctx workflow.Context, input *networkmanager.DescribeGlobalNetworksInput) *NetworkmanagerDescribeGlobalNetworksResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DescribeGlobalNetworks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DescribeGlobalNetworks", input)
 	return &NetworkmanagerDescribeGlobalNetworksResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DisassociateCustomerGateway(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) (*networkmanager.DisassociateCustomerGatewayOutput, error) {
 	var output networkmanager.DisassociateCustomerGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DisassociateCustomerGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateCustomerGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DisassociateCustomerGatewayAsync(ctx workflow.Context, input *networkmanager.DisassociateCustomerGatewayInput) *NetworkmanagerDisassociateCustomerGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DisassociateCustomerGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateCustomerGateway", input)
 	return &NetworkmanagerDisassociateCustomerGatewayResult{Result: future}
 }
 
 func (a *NetworkManagerStub) DisassociateLink(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) (*networkmanager.DisassociateLinkOutput, error) {
 	var output networkmanager.DisassociateLinkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.DisassociateLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) DisassociateLinkAsync(ctx workflow.Context, input *networkmanager.DisassociateLinkInput) *NetworkmanagerDisassociateLinkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.DisassociateLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.DisassociateLink", input)
 	return &NetworkmanagerDisassociateLinkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetCustomerGatewayAssociations(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) (*networkmanager.GetCustomerGatewayAssociationsOutput, error) {
 	var output networkmanager.GetCustomerGatewayAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetCustomerGatewayAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetCustomerGatewayAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetCustomerGatewayAssociationsAsync(ctx workflow.Context, input *networkmanager.GetCustomerGatewayAssociationsInput) *NetworkmanagerGetCustomerGatewayAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetCustomerGatewayAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetCustomerGatewayAssociations", input)
 	return &NetworkmanagerGetCustomerGatewayAssociationsResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetDevices(ctx workflow.Context, input *networkmanager.GetDevicesInput) (*networkmanager.GetDevicesOutput, error) {
 	var output networkmanager.GetDevicesOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetDevices", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetDevices", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetDevicesAsync(ctx workflow.Context, input *networkmanager.GetDevicesInput) *NetworkmanagerGetDevicesResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetDevices", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetDevices", input)
 	return &NetworkmanagerGetDevicesResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetLinkAssociations(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) (*networkmanager.GetLinkAssociationsOutput, error) {
 	var output networkmanager.GetLinkAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetLinkAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinkAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetLinkAssociationsAsync(ctx workflow.Context, input *networkmanager.GetLinkAssociationsInput) *NetworkmanagerGetLinkAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetLinkAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinkAssociations", input)
 	return &NetworkmanagerGetLinkAssociationsResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetLinks(ctx workflow.Context, input *networkmanager.GetLinksInput) (*networkmanager.GetLinksOutput, error) {
 	var output networkmanager.GetLinksOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetLinks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetLinksAsync(ctx workflow.Context, input *networkmanager.GetLinksInput) *NetworkmanagerGetLinksResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetLinks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetLinks", input)
 	return &NetworkmanagerGetLinksResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetSites(ctx workflow.Context, input *networkmanager.GetSitesInput) (*networkmanager.GetSitesOutput, error) {
 	var output networkmanager.GetSitesOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetSites", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetSites", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetSitesAsync(ctx workflow.Context, input *networkmanager.GetSitesInput) *NetworkmanagerGetSitesResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetSites", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetSites", input)
 	return &NetworkmanagerGetSitesResult{Result: future}
 }
 
 func (a *NetworkManagerStub) GetTransitGatewayRegistrations(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) (*networkmanager.GetTransitGatewayRegistrationsOutput, error) {
 	var output networkmanager.GetTransitGatewayRegistrationsOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.GetTransitGatewayRegistrations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetTransitGatewayRegistrations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) GetTransitGatewayRegistrationsAsync(ctx workflow.Context, input *networkmanager.GetTransitGatewayRegistrationsInput) *NetworkmanagerGetTransitGatewayRegistrationsResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.GetTransitGatewayRegistrations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.GetTransitGatewayRegistrations", input)
 	return &NetworkmanagerGetTransitGatewayRegistrationsResult{Result: future}
 }
 
 func (a *NetworkManagerStub) ListTagsForResource(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) (*networkmanager.ListTagsForResourceOutput, error) {
 	var output networkmanager.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) ListTagsForResourceAsync(ctx workflow.Context, input *networkmanager.ListTagsForResourceInput) *NetworkmanagerListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.ListTagsForResource", input)
 	return &NetworkmanagerListTagsForResourceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) RegisterTransitGateway(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) (*networkmanager.RegisterTransitGatewayOutput, error) {
 	var output networkmanager.RegisterTransitGatewayOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.RegisterTransitGateway", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.RegisterTransitGateway", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) RegisterTransitGatewayAsync(ctx workflow.Context, input *networkmanager.RegisterTransitGatewayInput) *NetworkmanagerRegisterTransitGatewayResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.RegisterTransitGateway", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.RegisterTransitGateway", input)
 	return &NetworkmanagerRegisterTransitGatewayResult{Result: future}
 }
 
 func (a *NetworkManagerStub) TagResource(ctx workflow.Context, input *networkmanager.TagResourceInput) (*networkmanager.TagResourceOutput, error) {
 	var output networkmanager.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) TagResourceAsync(ctx workflow.Context, input *networkmanager.TagResourceInput) *NetworkmanagerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.TagResource", input)
 	return &NetworkmanagerTagResourceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) UntagResource(ctx workflow.Context, input *networkmanager.UntagResourceInput) (*networkmanager.UntagResourceOutput, error) {
 	var output networkmanager.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) UntagResourceAsync(ctx workflow.Context, input *networkmanager.UntagResourceInput) *NetworkmanagerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UntagResource", input)
 	return &NetworkmanagerUntagResourceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) UpdateDevice(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) (*networkmanager.UpdateDeviceOutput, error) {
 	var output networkmanager.UpdateDeviceOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateDevice", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateDevice", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) UpdateDeviceAsync(ctx workflow.Context, input *networkmanager.UpdateDeviceInput) *NetworkmanagerUpdateDeviceResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateDevice", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateDevice", input)
 	return &NetworkmanagerUpdateDeviceResult{Result: future}
 }
 
 func (a *NetworkManagerStub) UpdateGlobalNetwork(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) (*networkmanager.UpdateGlobalNetworkOutput, error) {
 	var output networkmanager.UpdateGlobalNetworkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateGlobalNetwork", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateGlobalNetwork", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) UpdateGlobalNetworkAsync(ctx workflow.Context, input *networkmanager.UpdateGlobalNetworkInput) *NetworkmanagerUpdateGlobalNetworkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateGlobalNetwork", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateGlobalNetwork", input)
 	return &NetworkmanagerUpdateGlobalNetworkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) UpdateLink(ctx workflow.Context, input *networkmanager.UpdateLinkInput) (*networkmanager.UpdateLinkOutput, error) {
 	var output networkmanager.UpdateLinkOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateLink", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateLink", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) UpdateLinkAsync(ctx workflow.Context, input *networkmanager.UpdateLinkInput) *NetworkmanagerUpdateLinkResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateLink", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateLink", input)
 	return &NetworkmanagerUpdateLinkResult{Result: future}
 }
 
 func (a *NetworkManagerStub) UpdateSite(ctx workflow.Context, input *networkmanager.UpdateSiteInput) (*networkmanager.UpdateSiteOutput, error) {
 	var output networkmanager.UpdateSiteOutput
-	err := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateSite", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateSite", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NetworkManagerStub) UpdateSiteAsync(ctx workflow.Context, input *networkmanager.UpdateSiteInput) *NetworkmanagerUpdateSiteResult {
-	future := workflow.ExecuteActivity(ctx, "NetworkManager.UpdateSite", input)
+	future := workflow.ExecuteActivity(ctx, "aws.networkmanager.UpdateSite", input)
 	return &NetworkmanagerUpdateSiteResult{Result: future}
 }

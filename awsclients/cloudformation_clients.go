@@ -181,11 +181,9 @@ type CloudFormationClient interface {
 	WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
 	WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
 	WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error
-}
+	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error}
 
-type CloudFormationStub struct {
-}
+type CloudFormationStub struct{}
 
 func NewCloudFormationStub() CloudFormationClient {
 	return &CloudFormationStub{}
@@ -741,671 +739,679 @@ func (r *CloudformationValidateTemplateResult) Get(ctx workflow.Context) (*cloud
 	return &output, err
 }
 
+
+
+
+
+
+
+
+
 func (a *CloudFormationStub) CancelUpdateStack(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
 	var output cloudformation.CancelUpdateStackOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.CancelUpdateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.CancelUpdateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) CancelUpdateStackAsync(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) *CloudformationCancelUpdateStackResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.CancelUpdateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.CancelUpdateStack", input)
 	return &CloudformationCancelUpdateStackResult{Result: future}
 }
 
 func (a *CloudFormationStub) ContinueUpdateRollback(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) (*cloudformation.ContinueUpdateRollbackOutput, error) {
 	var output cloudformation.ContinueUpdateRollbackOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ContinueUpdateRollback", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ContinueUpdateRollback", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ContinueUpdateRollbackAsync(ctx workflow.Context, input *cloudformation.ContinueUpdateRollbackInput) *CloudformationContinueUpdateRollbackResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ContinueUpdateRollback", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ContinueUpdateRollback", input)
 	return &CloudformationContinueUpdateRollbackResult{Result: future}
 }
 
 func (a *CloudFormationStub) CreateChangeSet(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) (*cloudformation.CreateChangeSetOutput, error) {
 	var output cloudformation.CreateChangeSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.CreateChangeSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateChangeSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) CreateChangeSetAsync(ctx workflow.Context, input *cloudformation.CreateChangeSetInput) *CloudformationCreateChangeSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.CreateChangeSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateChangeSet", input)
 	return &CloudformationCreateChangeSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) CreateStack(ctx workflow.Context, input *cloudformation.CreateStackInput) (*cloudformation.CreateStackOutput, error) {
 	var output cloudformation.CreateStackOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) CreateStackAsync(ctx workflow.Context, input *cloudformation.CreateStackInput) *CloudformationCreateStackResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStack", input)
 	return &CloudformationCreateStackResult{Result: future}
 }
 
 func (a *CloudFormationStub) CreateStackInstances(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) (*cloudformation.CreateStackInstancesOutput, error) {
 	var output cloudformation.CreateStackInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStackInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStackInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) CreateStackInstancesAsync(ctx workflow.Context, input *cloudformation.CreateStackInstancesInput) *CloudformationCreateStackInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStackInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStackInstances", input)
 	return &CloudformationCreateStackInstancesResult{Result: future}
 }
 
 func (a *CloudFormationStub) CreateStackSet(ctx workflow.Context, input *cloudformation.CreateStackSetInput) (*cloudformation.CreateStackSetOutput, error) {
 	var output cloudformation.CreateStackSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStackSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStackSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) CreateStackSetAsync(ctx workflow.Context, input *cloudformation.CreateStackSetInput) *CloudformationCreateStackSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.CreateStackSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.CreateStackSet", input)
 	return &CloudformationCreateStackSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) DeleteChangeSet(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) (*cloudformation.DeleteChangeSetOutput, error) {
 	var output cloudformation.DeleteChangeSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteChangeSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteChangeSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DeleteChangeSetAsync(ctx workflow.Context, input *cloudformation.DeleteChangeSetInput) *CloudformationDeleteChangeSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteChangeSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteChangeSet", input)
 	return &CloudformationDeleteChangeSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) DeleteStack(ctx workflow.Context, input *cloudformation.DeleteStackInput) (*cloudformation.DeleteStackOutput, error) {
 	var output cloudformation.DeleteStackOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DeleteStackAsync(ctx workflow.Context, input *cloudformation.DeleteStackInput) *CloudformationDeleteStackResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStack", input)
 	return &CloudformationDeleteStackResult{Result: future}
 }
 
 func (a *CloudFormationStub) DeleteStackInstances(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) (*cloudformation.DeleteStackInstancesOutput, error) {
 	var output cloudformation.DeleteStackInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStackInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStackInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DeleteStackInstancesAsync(ctx workflow.Context, input *cloudformation.DeleteStackInstancesInput) *CloudformationDeleteStackInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStackInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStackInstances", input)
 	return &CloudformationDeleteStackInstancesResult{Result: future}
 }
 
 func (a *CloudFormationStub) DeleteStackSet(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) (*cloudformation.DeleteStackSetOutput, error) {
 	var output cloudformation.DeleteStackSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStackSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStackSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DeleteStackSetAsync(ctx workflow.Context, input *cloudformation.DeleteStackSetInput) *CloudformationDeleteStackSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DeleteStackSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeleteStackSet", input)
 	return &CloudformationDeleteStackSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) DeregisterType(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) (*cloudformation.DeregisterTypeOutput, error) {
 	var output cloudformation.DeregisterTypeOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DeregisterType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeregisterType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DeregisterTypeAsync(ctx workflow.Context, input *cloudformation.DeregisterTypeInput) *CloudformationDeregisterTypeResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DeregisterType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DeregisterType", input)
 	return &CloudformationDeregisterTypeResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeAccountLimits(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) (*cloudformation.DescribeAccountLimitsOutput, error) {
 	var output cloudformation.DescribeAccountLimitsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeAccountLimits", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeAccountLimits", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeAccountLimitsAsync(ctx workflow.Context, input *cloudformation.DescribeAccountLimitsInput) *CloudformationDescribeAccountLimitsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeAccountLimits", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeAccountLimits", input)
 	return &CloudformationDescribeAccountLimitsResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeChangeSet(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) (*cloudformation.DescribeChangeSetOutput, error) {
 	var output cloudformation.DescribeChangeSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeChangeSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeChangeSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeChangeSetAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) *CloudformationDescribeChangeSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeChangeSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeChangeSet", input)
 	return &CloudformationDescribeChangeSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackDriftDetectionStatus(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) (*cloudformation.DescribeStackDriftDetectionStatusOutput, error) {
 	var output cloudformation.DescribeStackDriftDetectionStatusOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackDriftDetectionStatus", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackDriftDetectionStatus", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackDriftDetectionStatusAsync(ctx workflow.Context, input *cloudformation.DescribeStackDriftDetectionStatusInput) *CloudformationDescribeStackDriftDetectionStatusResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackDriftDetectionStatus", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackDriftDetectionStatus", input)
 	return &CloudformationDescribeStackDriftDetectionStatusResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackEvents(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) (*cloudformation.DescribeStackEventsOutput, error) {
 	var output cloudformation.DescribeStackEventsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackEventsAsync(ctx workflow.Context, input *cloudformation.DescribeStackEventsInput) *CloudformationDescribeStackEventsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackEvents", input)
 	return &CloudformationDescribeStackEventsResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackInstance(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) (*cloudformation.DescribeStackInstanceOutput, error) {
 	var output cloudformation.DescribeStackInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackInstanceAsync(ctx workflow.Context, input *cloudformation.DescribeStackInstanceInput) *CloudformationDescribeStackInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackInstance", input)
 	return &CloudformationDescribeStackInstanceResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackResource(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) (*cloudformation.DescribeStackResourceOutput, error) {
 	var output cloudformation.DescribeStackResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackResourceAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceInput) *CloudformationDescribeStackResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResource", input)
 	return &CloudformationDescribeStackResourceResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackResourceDrifts(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) (*cloudformation.DescribeStackResourceDriftsOutput, error) {
 	var output cloudformation.DescribeStackResourceDriftsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResourceDrifts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResourceDrifts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackResourceDriftsAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourceDriftsInput) *CloudformationDescribeStackResourceDriftsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResourceDrifts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResourceDrifts", input)
 	return &CloudformationDescribeStackResourceDriftsResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackResources(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) (*cloudformation.DescribeStackResourcesOutput, error) {
 	var output cloudformation.DescribeStackResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackResourcesAsync(ctx workflow.Context, input *cloudformation.DescribeStackResourcesInput) *CloudformationDescribeStackResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackResources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackResources", input)
 	return &CloudformationDescribeStackResourcesResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackSet(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) (*cloudformation.DescribeStackSetOutput, error) {
 	var output cloudformation.DescribeStackSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackSetAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetInput) *CloudformationDescribeStackSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackSet", input)
 	return &CloudformationDescribeStackSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStackSetOperation(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) (*cloudformation.DescribeStackSetOperationOutput, error) {
 	var output cloudformation.DescribeStackSetOperationOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackSetOperation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackSetOperation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStackSetOperationAsync(ctx workflow.Context, input *cloudformation.DescribeStackSetOperationInput) *CloudformationDescribeStackSetOperationResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStackSetOperation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStackSetOperation", input)
 	return &CloudformationDescribeStackSetOperationResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeStacks(ctx workflow.Context, input *cloudformation.DescribeStacksInput) (*cloudformation.DescribeStacksOutput, error) {
 	var output cloudformation.DescribeStacksOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStacks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStacks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeStacksAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) *CloudformationDescribeStacksResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeStacks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeStacks", input)
 	return &CloudformationDescribeStacksResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeType(ctx workflow.Context, input *cloudformation.DescribeTypeInput) (*cloudformation.DescribeTypeOutput, error) {
 	var output cloudformation.DescribeTypeOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeTypeAsync(ctx workflow.Context, input *cloudformation.DescribeTypeInput) *CloudformationDescribeTypeResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeType", input)
 	return &CloudformationDescribeTypeResult{Result: future}
 }
 
 func (a *CloudFormationStub) DescribeTypeRegistration(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) (*cloudformation.DescribeTypeRegistrationOutput, error) {
 	var output cloudformation.DescribeTypeRegistrationOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeTypeRegistration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeTypeRegistration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DescribeTypeRegistrationAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) *CloudformationDescribeTypeRegistrationResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DescribeTypeRegistration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DescribeTypeRegistration", input)
 	return &CloudformationDescribeTypeRegistrationResult{Result: future}
 }
 
 func (a *CloudFormationStub) DetectStackDrift(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) (*cloudformation.DetectStackDriftOutput, error) {
 	var output cloudformation.DetectStackDriftOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackDrift", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackDrift", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DetectStackDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackDriftInput) *CloudformationDetectStackDriftResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackDrift", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackDrift", input)
 	return &CloudformationDetectStackDriftResult{Result: future}
 }
 
 func (a *CloudFormationStub) DetectStackResourceDrift(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) (*cloudformation.DetectStackResourceDriftOutput, error) {
 	var output cloudformation.DetectStackResourceDriftOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackResourceDrift", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackResourceDrift", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DetectStackResourceDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackResourceDriftInput) *CloudformationDetectStackResourceDriftResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackResourceDrift", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackResourceDrift", input)
 	return &CloudformationDetectStackResourceDriftResult{Result: future}
 }
 
 func (a *CloudFormationStub) DetectStackSetDrift(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) (*cloudformation.DetectStackSetDriftOutput, error) {
 	var output cloudformation.DetectStackSetDriftOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackSetDrift", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackSetDrift", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) DetectStackSetDriftAsync(ctx workflow.Context, input *cloudformation.DetectStackSetDriftInput) *CloudformationDetectStackSetDriftResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.DetectStackSetDrift", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.DetectStackSetDrift", input)
 	return &CloudformationDetectStackSetDriftResult{Result: future}
 }
 
 func (a *CloudFormationStub) EstimateTemplateCost(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) (*cloudformation.EstimateTemplateCostOutput, error) {
 	var output cloudformation.EstimateTemplateCostOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.EstimateTemplateCost", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.EstimateTemplateCost", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) EstimateTemplateCostAsync(ctx workflow.Context, input *cloudformation.EstimateTemplateCostInput) *CloudformationEstimateTemplateCostResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.EstimateTemplateCost", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.EstimateTemplateCost", input)
 	return &CloudformationEstimateTemplateCostResult{Result: future}
 }
 
 func (a *CloudFormationStub) ExecuteChangeSet(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) (*cloudformation.ExecuteChangeSetOutput, error) {
 	var output cloudformation.ExecuteChangeSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ExecuteChangeSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ExecuteChangeSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ExecuteChangeSetAsync(ctx workflow.Context, input *cloudformation.ExecuteChangeSetInput) *CloudformationExecuteChangeSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ExecuteChangeSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ExecuteChangeSet", input)
 	return &CloudformationExecuteChangeSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) GetStackPolicy(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) (*cloudformation.GetStackPolicyOutput, error) {
 	var output cloudformation.GetStackPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.GetStackPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetStackPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) GetStackPolicyAsync(ctx workflow.Context, input *cloudformation.GetStackPolicyInput) *CloudformationGetStackPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.GetStackPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetStackPolicy", input)
 	return &CloudformationGetStackPolicyResult{Result: future}
 }
 
 func (a *CloudFormationStub) GetTemplate(ctx workflow.Context, input *cloudformation.GetTemplateInput) (*cloudformation.GetTemplateOutput, error) {
 	var output cloudformation.GetTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.GetTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) GetTemplateAsync(ctx workflow.Context, input *cloudformation.GetTemplateInput) *CloudformationGetTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.GetTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetTemplate", input)
 	return &CloudformationGetTemplateResult{Result: future}
 }
 
 func (a *CloudFormationStub) GetTemplateSummary(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) (*cloudformation.GetTemplateSummaryOutput, error) {
 	var output cloudformation.GetTemplateSummaryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.GetTemplateSummary", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetTemplateSummary", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) GetTemplateSummaryAsync(ctx workflow.Context, input *cloudformation.GetTemplateSummaryInput) *CloudformationGetTemplateSummaryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.GetTemplateSummary", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.GetTemplateSummary", input)
 	return &CloudformationGetTemplateSummaryResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListChangeSets(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) (*cloudformation.ListChangeSetsOutput, error) {
 	var output cloudformation.ListChangeSetsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListChangeSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListChangeSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListChangeSetsAsync(ctx workflow.Context, input *cloudformation.ListChangeSetsInput) *CloudformationListChangeSetsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListChangeSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListChangeSets", input)
 	return &CloudformationListChangeSetsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListExports(ctx workflow.Context, input *cloudformation.ListExportsInput) (*cloudformation.ListExportsOutput, error) {
 	var output cloudformation.ListExportsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListExports", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListExports", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListExportsAsync(ctx workflow.Context, input *cloudformation.ListExportsInput) *CloudformationListExportsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListExports", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListExports", input)
 	return &CloudformationListExportsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListImports(ctx workflow.Context, input *cloudformation.ListImportsInput) (*cloudformation.ListImportsOutput, error) {
 	var output cloudformation.ListImportsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListImports", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListImports", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListImportsAsync(ctx workflow.Context, input *cloudformation.ListImportsInput) *CloudformationListImportsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListImports", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListImports", input)
 	return &CloudformationListImportsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStackInstances(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) (*cloudformation.ListStackInstancesOutput, error) {
 	var output cloudformation.ListStackInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStackInstancesAsync(ctx workflow.Context, input *cloudformation.ListStackInstancesInput) *CloudformationListStackInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackInstances", input)
 	return &CloudformationListStackInstancesResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStackResources(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) (*cloudformation.ListStackResourcesOutput, error) {
 	var output cloudformation.ListStackResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackResources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackResources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStackResourcesAsync(ctx workflow.Context, input *cloudformation.ListStackResourcesInput) *CloudformationListStackResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackResources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackResources", input)
 	return &CloudformationListStackResourcesResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStackSetOperationResults(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) (*cloudformation.ListStackSetOperationResultsOutput, error) {
 	var output cloudformation.ListStackSetOperationResultsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSetOperationResults", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSetOperationResults", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStackSetOperationResultsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationResultsInput) *CloudformationListStackSetOperationResultsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSetOperationResults", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSetOperationResults", input)
 	return &CloudformationListStackSetOperationResultsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStackSetOperations(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) (*cloudformation.ListStackSetOperationsOutput, error) {
 	var output cloudformation.ListStackSetOperationsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSetOperations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSetOperations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStackSetOperationsAsync(ctx workflow.Context, input *cloudformation.ListStackSetOperationsInput) *CloudformationListStackSetOperationsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSetOperations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSetOperations", input)
 	return &CloudformationListStackSetOperationsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStackSets(ctx workflow.Context, input *cloudformation.ListStackSetsInput) (*cloudformation.ListStackSetsOutput, error) {
 	var output cloudformation.ListStackSetsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStackSetsAsync(ctx workflow.Context, input *cloudformation.ListStackSetsInput) *CloudformationListStackSetsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStackSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStackSets", input)
 	return &CloudformationListStackSetsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListStacks(ctx workflow.Context, input *cloudformation.ListStacksInput) (*cloudformation.ListStacksOutput, error) {
 	var output cloudformation.ListStacksOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListStacks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStacks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListStacksAsync(ctx workflow.Context, input *cloudformation.ListStacksInput) *CloudformationListStacksResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListStacks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListStacks", input)
 	return &CloudformationListStacksResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListTypeRegistrations(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) (*cloudformation.ListTypeRegistrationsOutput, error) {
 	var output cloudformation.ListTypeRegistrationsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypeRegistrations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypeRegistrations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListTypeRegistrationsAsync(ctx workflow.Context, input *cloudformation.ListTypeRegistrationsInput) *CloudformationListTypeRegistrationsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypeRegistrations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypeRegistrations", input)
 	return &CloudformationListTypeRegistrationsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListTypeVersions(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) (*cloudformation.ListTypeVersionsOutput, error) {
 	var output cloudformation.ListTypeVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypeVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypeVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListTypeVersionsAsync(ctx workflow.Context, input *cloudformation.ListTypeVersionsInput) *CloudformationListTypeVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypeVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypeVersions", input)
 	return &CloudformationListTypeVersionsResult{Result: future}
 }
 
 func (a *CloudFormationStub) ListTypes(ctx workflow.Context, input *cloudformation.ListTypesInput) (*cloudformation.ListTypesOutput, error) {
 	var output cloudformation.ListTypesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ListTypesAsync(ctx workflow.Context, input *cloudformation.ListTypesInput) *CloudformationListTypesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ListTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ListTypes", input)
 	return &CloudformationListTypesResult{Result: future}
 }
 
 func (a *CloudFormationStub) RecordHandlerProgress(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) (*cloudformation.RecordHandlerProgressOutput, error) {
 	var output cloudformation.RecordHandlerProgressOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.RecordHandlerProgress", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.RecordHandlerProgress", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) RecordHandlerProgressAsync(ctx workflow.Context, input *cloudformation.RecordHandlerProgressInput) *CloudformationRecordHandlerProgressResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.RecordHandlerProgress", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.RecordHandlerProgress", input)
 	return &CloudformationRecordHandlerProgressResult{Result: future}
 }
 
 func (a *CloudFormationStub) RegisterType(ctx workflow.Context, input *cloudformation.RegisterTypeInput) (*cloudformation.RegisterTypeOutput, error) {
 	var output cloudformation.RegisterTypeOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.RegisterType", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.RegisterType", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) RegisterTypeAsync(ctx workflow.Context, input *cloudformation.RegisterTypeInput) *CloudformationRegisterTypeResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.RegisterType", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.RegisterType", input)
 	return &CloudformationRegisterTypeResult{Result: future}
 }
 
 func (a *CloudFormationStub) SetStackPolicy(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) (*cloudformation.SetStackPolicyOutput, error) {
 	var output cloudformation.SetStackPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.SetStackPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.SetStackPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) SetStackPolicyAsync(ctx workflow.Context, input *cloudformation.SetStackPolicyInput) *CloudformationSetStackPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.SetStackPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.SetStackPolicy", input)
 	return &CloudformationSetStackPolicyResult{Result: future}
 }
 
 func (a *CloudFormationStub) SetTypeDefaultVersion(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) (*cloudformation.SetTypeDefaultVersionOutput, error) {
 	var output cloudformation.SetTypeDefaultVersionOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.SetTypeDefaultVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.SetTypeDefaultVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) SetTypeDefaultVersionAsync(ctx workflow.Context, input *cloudformation.SetTypeDefaultVersionInput) *CloudformationSetTypeDefaultVersionResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.SetTypeDefaultVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.SetTypeDefaultVersion", input)
 	return &CloudformationSetTypeDefaultVersionResult{Result: future}
 }
 
 func (a *CloudFormationStub) SignalResource(ctx workflow.Context, input *cloudformation.SignalResourceInput) (*cloudformation.SignalResourceOutput, error) {
 	var output cloudformation.SignalResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.SignalResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.SignalResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) SignalResourceAsync(ctx workflow.Context, input *cloudformation.SignalResourceInput) *CloudformationSignalResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.SignalResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.SignalResource", input)
 	return &CloudformationSignalResourceResult{Result: future}
 }
 
 func (a *CloudFormationStub) StopStackSetOperation(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) (*cloudformation.StopStackSetOperationOutput, error) {
 	var output cloudformation.StopStackSetOperationOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.StopStackSetOperation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.StopStackSetOperation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) StopStackSetOperationAsync(ctx workflow.Context, input *cloudformation.StopStackSetOperationInput) *CloudformationStopStackSetOperationResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.StopStackSetOperation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.StopStackSetOperation", input)
 	return &CloudformationStopStackSetOperationResult{Result: future}
 }
 
 func (a *CloudFormationStub) UpdateStack(ctx workflow.Context, input *cloudformation.UpdateStackInput) (*cloudformation.UpdateStackOutput, error) {
 	var output cloudformation.UpdateStackOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) UpdateStackAsync(ctx workflow.Context, input *cloudformation.UpdateStackInput) *CloudformationUpdateStackResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStack", input)
 	return &CloudformationUpdateStackResult{Result: future}
 }
 
 func (a *CloudFormationStub) UpdateStackInstances(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) (*cloudformation.UpdateStackInstancesOutput, error) {
 	var output cloudformation.UpdateStackInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStackInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStackInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) UpdateStackInstancesAsync(ctx workflow.Context, input *cloudformation.UpdateStackInstancesInput) *CloudformationUpdateStackInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStackInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStackInstances", input)
 	return &CloudformationUpdateStackInstancesResult{Result: future}
 }
 
 func (a *CloudFormationStub) UpdateStackSet(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) (*cloudformation.UpdateStackSetOutput, error) {
 	var output cloudformation.UpdateStackSetOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStackSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStackSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) UpdateStackSetAsync(ctx workflow.Context, input *cloudformation.UpdateStackSetInput) *CloudformationUpdateStackSetResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateStackSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateStackSet", input)
 	return &CloudformationUpdateStackSetResult{Result: future}
 }
 
 func (a *CloudFormationStub) UpdateTerminationProtection(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) (*cloudformation.UpdateTerminationProtectionOutput, error) {
 	var output cloudformation.UpdateTerminationProtectionOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateTerminationProtection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateTerminationProtection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) UpdateTerminationProtectionAsync(ctx workflow.Context, input *cloudformation.UpdateTerminationProtectionInput) *CloudformationUpdateTerminationProtectionResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.UpdateTerminationProtection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.UpdateTerminationProtection", input)
 	return &CloudformationUpdateTerminationProtectionResult{Result: future}
 }
 
 func (a *CloudFormationStub) ValidateTemplate(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) (*cloudformation.ValidateTemplateOutput, error) {
 	var output cloudformation.ValidateTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "CloudFormation.ValidateTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudformation.ValidateTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudFormationStub) ValidateTemplateAsync(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) *CloudformationValidateTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "CloudFormation.ValidateTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudformation.ValidateTemplate", input)
 	return &CloudformationValidateTemplateResult{Result: future}
 }
 
 func (a *CloudFormationStub) WaitUntilChangeSetCreateComplete(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilChangeSetCreateComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilChangeSetCreateComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilChangeSetCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilChangeSetCreateComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilChangeSetCreateComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackCreateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackCreateComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackCreateComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackCreateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackCreateComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackCreateComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackDeleteComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackDeleteComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackDeleteComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackDeleteCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackDeleteComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackDeleteComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackExists(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackExists", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackExistsAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackExists", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackImportComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackImportComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackImportCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackImportComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackImportComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackRollbackComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackRollbackComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackRollbackCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackRollbackComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackRollbackComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackUpdateComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackUpdateComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilStackUpdateCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeStacksInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilStackUpdateComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilStackUpdateComplete", input)
 }
 
 func (a *CloudFormationStub) WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilTypeRegistrationComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilTypeRegistrationComplete", input).Get(ctx, nil)
 }
 
 func (a *CloudFormationStub) WaitUntilTypeRegistrationCompleteAsync(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudFormation.WaitUntilTypeRegistrationComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudformation.WaitUntilTypeRegistrationComplete", input)
 }

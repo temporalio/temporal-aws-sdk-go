@@ -16,46 +16,96 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type DLMActivities struct {
 	client dlmiface.DLMAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewDLMActivities(session *session.Session, config ...*aws.Config) *DLMActivities {
-	client := dlm.New(session, config...)
+func NewDLMActivities(sess *session.Session, config ...*aws.Config) *DLMActivities {
+	client := dlm.New(sess, config...)
 	return &DLMActivities{client: client}
 }
 
+func NewDLMActivitiesWithSessionFactory(sessionFactory SessionFactory) *DLMActivities {
+	return &DLMActivities{sessionFactory: sessionFactory}
+}
+
+func (a *DLMActivities) getClient(ctx context.Context) (dlmiface.DLMAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return dlm.New(sess), nil
+}
+
 func (a *DLMActivities) CreateLifecyclePolicy(ctx context.Context, input *dlm.CreateLifecyclePolicyInput) (*dlm.CreateLifecyclePolicyOutput, error) {
-	return a.client.CreateLifecyclePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateLifecyclePolicyWithContext(ctx, input)
 }
 
 func (a *DLMActivities) DeleteLifecyclePolicy(ctx context.Context, input *dlm.DeleteLifecyclePolicyInput) (*dlm.DeleteLifecyclePolicyOutput, error) {
-	return a.client.DeleteLifecyclePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLifecyclePolicyWithContext(ctx, input)
 }
 
 func (a *DLMActivities) GetLifecyclePolicies(ctx context.Context, input *dlm.GetLifecyclePoliciesInput) (*dlm.GetLifecyclePoliciesOutput, error) {
-	return a.client.GetLifecyclePoliciesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLifecyclePoliciesWithContext(ctx, input)
 }
 
 func (a *DLMActivities) GetLifecyclePolicy(ctx context.Context, input *dlm.GetLifecyclePolicyInput) (*dlm.GetLifecyclePolicyOutput, error) {
-	return a.client.GetLifecyclePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLifecyclePolicyWithContext(ctx, input)
 }
 
 func (a *DLMActivities) ListTagsForResource(ctx context.Context, input *dlm.ListTagsForResourceInput) (*dlm.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *DLMActivities) TagResource(ctx context.Context, input *dlm.TagResourceInput) (*dlm.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *DLMActivities) UntagResource(ctx context.Context, input *dlm.UntagResourceInput) (*dlm.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *DLMActivities) UpdateLifecyclePolicy(ctx context.Context, input *dlm.UpdateLifecyclePolicyInput) (*dlm.UpdateLifecyclePolicyOutput, error) {
-	return a.client.UpdateLifecyclePolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateLifecyclePolicyWithContext(ctx, input)
 }

@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PersonalizeEventsActivities struct {
 	client personalizeeventsiface.PersonalizeEventsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPersonalizeEventsActivities(session *session.Session, config ...*aws.Config) *PersonalizeEventsActivities {
-	client := personalizeevents.New(session, config...)
+func NewPersonalizeEventsActivities(sess *session.Session, config ...*aws.Config) *PersonalizeEventsActivities {
+	client := personalizeevents.New(sess, config...)
 	return &PersonalizeEventsActivities{client: client}
 }
 
+func NewPersonalizeEventsActivitiesWithSessionFactory(sessionFactory SessionFactory) *PersonalizeEventsActivities {
+	return &PersonalizeEventsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PersonalizeEventsActivities) getClient(ctx context.Context) (personalizeeventsiface.PersonalizeEventsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return personalizeevents.New(sess), nil
+}
+
 func (a *PersonalizeEventsActivities) PutEvents(ctx context.Context, input *personalizeevents.PutEventsInput) (*personalizeevents.PutEventsOutput, error) {
-	return a.client.PutEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutEventsWithContext(ctx, input)
 }

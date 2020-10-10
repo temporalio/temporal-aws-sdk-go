@@ -16,107 +16,217 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CodeGuruProfilerActivities struct {
 	client codeguruprofileriface.CodeGuruProfilerAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCodeGuruProfilerActivities(session *session.Session, config ...*aws.Config) *CodeGuruProfilerActivities {
-	client := codeguruprofiler.New(session, config...)
+func NewCodeGuruProfilerActivities(sess *session.Session, config ...*aws.Config) *CodeGuruProfilerActivities {
+	client := codeguruprofiler.New(sess, config...)
 	return &CodeGuruProfilerActivities{client: client}
 }
 
+func NewCodeGuruProfilerActivitiesWithSessionFactory(sessionFactory SessionFactory) *CodeGuruProfilerActivities {
+	return &CodeGuruProfilerActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CodeGuruProfilerActivities) getClient(ctx context.Context) (codeguruprofileriface.CodeGuruProfilerAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return codeguruprofiler.New(sess), nil
+}
+
 func (a *CodeGuruProfilerActivities) AddNotificationChannels(ctx context.Context, input *codeguruprofiler.AddNotificationChannelsInput) (*codeguruprofiler.AddNotificationChannelsOutput, error) {
-	return a.client.AddNotificationChannelsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddNotificationChannelsWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) BatchGetFrameMetricData(ctx context.Context, input *codeguruprofiler.BatchGetFrameMetricDataInput) (*codeguruprofiler.BatchGetFrameMetricDataOutput, error) {
-	return a.client.BatchGetFrameMetricDataWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchGetFrameMetricDataWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) ConfigureAgent(ctx context.Context, input *codeguruprofiler.ConfigureAgentInput) (*codeguruprofiler.ConfigureAgentOutput, error) {
-	return a.client.ConfigureAgentWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ConfigureAgentWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) CreateProfilingGroup(ctx context.Context, input *codeguruprofiler.CreateProfilingGroupInput) (*codeguruprofiler.CreateProfilingGroupOutput, error) {
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
 	internal.SetClientToken(ctx, &input.ClientToken)
-	return a.client.CreateProfilingGroupWithContext(ctx, input)
+	return client.CreateProfilingGroupWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) DeleteProfilingGroup(ctx context.Context, input *codeguruprofiler.DeleteProfilingGroupInput) (*codeguruprofiler.DeleteProfilingGroupOutput, error) {
-	return a.client.DeleteProfilingGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteProfilingGroupWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) DescribeProfilingGroup(ctx context.Context, input *codeguruprofiler.DescribeProfilingGroupInput) (*codeguruprofiler.DescribeProfilingGroupOutput, error) {
-	return a.client.DescribeProfilingGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeProfilingGroupWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) GetFindingsReportAccountSummary(ctx context.Context, input *codeguruprofiler.GetFindingsReportAccountSummaryInput) (*codeguruprofiler.GetFindingsReportAccountSummaryOutput, error) {
-	return a.client.GetFindingsReportAccountSummaryWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetFindingsReportAccountSummaryWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) GetNotificationConfiguration(ctx context.Context, input *codeguruprofiler.GetNotificationConfigurationInput) (*codeguruprofiler.GetNotificationConfigurationOutput, error) {
-	return a.client.GetNotificationConfigurationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetNotificationConfigurationWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) GetPolicy(ctx context.Context, input *codeguruprofiler.GetPolicyInput) (*codeguruprofiler.GetPolicyOutput, error) {
-	return a.client.GetPolicyWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPolicyWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) GetProfile(ctx context.Context, input *codeguruprofiler.GetProfileInput) (*codeguruprofiler.GetProfileOutput, error) {
-	return a.client.GetProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetProfileWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) GetRecommendations(ctx context.Context, input *codeguruprofiler.GetRecommendationsInput) (*codeguruprofiler.GetRecommendationsOutput, error) {
-	return a.client.GetRecommendationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetRecommendationsWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) ListFindingsReports(ctx context.Context, input *codeguruprofiler.ListFindingsReportsInput) (*codeguruprofiler.ListFindingsReportsOutput, error) {
-	return a.client.ListFindingsReportsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListFindingsReportsWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) ListProfileTimes(ctx context.Context, input *codeguruprofiler.ListProfileTimesInput) (*codeguruprofiler.ListProfileTimesOutput, error) {
-	return a.client.ListProfileTimesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListProfileTimesWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) ListProfilingGroups(ctx context.Context, input *codeguruprofiler.ListProfilingGroupsInput) (*codeguruprofiler.ListProfilingGroupsOutput, error) {
-	return a.client.ListProfilingGroupsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListProfilingGroupsWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) ListTagsForResource(ctx context.Context, input *codeguruprofiler.ListTagsForResourceInput) (*codeguruprofiler.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) PostAgentProfile(ctx context.Context, input *codeguruprofiler.PostAgentProfileInput) (*codeguruprofiler.PostAgentProfileOutput, error) {
-	return a.client.PostAgentProfileWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PostAgentProfileWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) PutPermission(ctx context.Context, input *codeguruprofiler.PutPermissionInput) (*codeguruprofiler.PutPermissionOutput, error) {
-	return a.client.PutPermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutPermissionWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) RemoveNotificationChannel(ctx context.Context, input *codeguruprofiler.RemoveNotificationChannelInput) (*codeguruprofiler.RemoveNotificationChannelOutput, error) {
-	return a.client.RemoveNotificationChannelWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveNotificationChannelWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) RemovePermission(ctx context.Context, input *codeguruprofiler.RemovePermissionInput) (*codeguruprofiler.RemovePermissionOutput, error) {
-	return a.client.RemovePermissionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemovePermissionWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) SubmitFeedback(ctx context.Context, input *codeguruprofiler.SubmitFeedbackInput) (*codeguruprofiler.SubmitFeedbackOutput, error) {
-	return a.client.SubmitFeedbackWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SubmitFeedbackWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) TagResource(ctx context.Context, input *codeguruprofiler.TagResourceInput) (*codeguruprofiler.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) UntagResource(ctx context.Context, input *codeguruprofiler.UntagResourceInput) (*codeguruprofiler.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *CodeGuruProfilerActivities) UpdateProfilingGroup(ctx context.Context, input *codeguruprofiler.UpdateProfilingGroupInput) (*codeguruprofiler.UpdateProfilingGroupOutput, error) {
-	return a.client.UpdateProfilingGroupWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateProfilingGroupWithContext(ctx, input)
 }

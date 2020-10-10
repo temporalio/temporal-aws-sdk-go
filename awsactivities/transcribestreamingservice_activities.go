@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type TranscribeStreamingServiceActivities struct {
 	client transcribestreamingserviceiface.TranscribeStreamingServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewTranscribeStreamingServiceActivities(session *session.Session, config ...*aws.Config) *TranscribeStreamingServiceActivities {
-	client := transcribestreamingservice.New(session, config...)
+func NewTranscribeStreamingServiceActivities(sess *session.Session, config ...*aws.Config) *TranscribeStreamingServiceActivities {
+	client := transcribestreamingservice.New(sess, config...)
 	return &TranscribeStreamingServiceActivities{client: client}
 }
 
+func NewTranscribeStreamingServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *TranscribeStreamingServiceActivities {
+	return &TranscribeStreamingServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *TranscribeStreamingServiceActivities) getClient(ctx context.Context) (transcribestreamingserviceiface.TranscribeStreamingServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return transcribestreamingservice.New(sess), nil
+}
+
 func (a *TranscribeStreamingServiceActivities) StartStreamTranscription(ctx context.Context, input *transcribestreamingservice.StartStreamTranscriptionInput) (*transcribestreamingservice.StartStreamTranscriptionOutput, error) {
-	return a.client.StartStreamTranscriptionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartStreamTranscriptionWithContext(ctx, input)
 }

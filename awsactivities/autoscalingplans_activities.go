@@ -16,38 +16,80 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type AutoScalingPlansActivities struct {
 	client autoscalingplansiface.AutoScalingPlansAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewAutoScalingPlansActivities(session *session.Session, config ...*aws.Config) *AutoScalingPlansActivities {
-	client := autoscalingplans.New(session, config...)
+func NewAutoScalingPlansActivities(sess *session.Session, config ...*aws.Config) *AutoScalingPlansActivities {
+	client := autoscalingplans.New(sess, config...)
 	return &AutoScalingPlansActivities{client: client}
 }
 
+func NewAutoScalingPlansActivitiesWithSessionFactory(sessionFactory SessionFactory) *AutoScalingPlansActivities {
+	return &AutoScalingPlansActivities{sessionFactory: sessionFactory}
+}
+
+func (a *AutoScalingPlansActivities) getClient(ctx context.Context) (autoscalingplansiface.AutoScalingPlansAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return autoscalingplans.New(sess), nil
+}
+
 func (a *AutoScalingPlansActivities) CreateScalingPlan(ctx context.Context, input *autoscalingplans.CreateScalingPlanInput) (*autoscalingplans.CreateScalingPlanOutput, error) {
-	return a.client.CreateScalingPlanWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateScalingPlanWithContext(ctx, input)
 }
 
 func (a *AutoScalingPlansActivities) DeleteScalingPlan(ctx context.Context, input *autoscalingplans.DeleteScalingPlanInput) (*autoscalingplans.DeleteScalingPlanOutput, error) {
-	return a.client.DeleteScalingPlanWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteScalingPlanWithContext(ctx, input)
 }
 
 func (a *AutoScalingPlansActivities) DescribeScalingPlanResources(ctx context.Context, input *autoscalingplans.DescribeScalingPlanResourcesInput) (*autoscalingplans.DescribeScalingPlanResourcesOutput, error) {
-	return a.client.DescribeScalingPlanResourcesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScalingPlanResourcesWithContext(ctx, input)
 }
 
 func (a *AutoScalingPlansActivities) DescribeScalingPlans(ctx context.Context, input *autoscalingplans.DescribeScalingPlansInput) (*autoscalingplans.DescribeScalingPlansOutput, error) {
-	return a.client.DescribeScalingPlansWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeScalingPlansWithContext(ctx, input)
 }
 
 func (a *AutoScalingPlansActivities) GetScalingPlanResourceForecastData(ctx context.Context, input *autoscalingplans.GetScalingPlanResourceForecastDataInput) (*autoscalingplans.GetScalingPlanResourceForecastDataOutput, error) {
-	return a.client.GetScalingPlanResourceForecastDataWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetScalingPlanResourceForecastDataWithContext(ctx, input)
 }
 
 func (a *AutoScalingPlansActivities) UpdateScalingPlan(ctx context.Context, input *autoscalingplans.UpdateScalingPlanInput) (*autoscalingplans.UpdateScalingPlanOutput, error) {
-	return a.client.UpdateScalingPlanWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateScalingPlanWithContext(ctx, input)
 }

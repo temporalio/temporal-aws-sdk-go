@@ -16,22 +16,48 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PIActivities struct {
 	client piiface.PIAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPIActivities(session *session.Session, config ...*aws.Config) *PIActivities {
-	client := pi.New(session, config...)
+func NewPIActivities(sess *session.Session, config ...*aws.Config) *PIActivities {
+	client := pi.New(sess, config...)
 	return &PIActivities{client: client}
 }
 
+func NewPIActivitiesWithSessionFactory(sessionFactory SessionFactory) *PIActivities {
+	return &PIActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PIActivities) getClient(ctx context.Context) (piiface.PIAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return pi.New(sess), nil
+}
+
 func (a *PIActivities) DescribeDimensionKeys(ctx context.Context, input *pi.DescribeDimensionKeysInput) (*pi.DescribeDimensionKeysOutput, error) {
-	return a.client.DescribeDimensionKeysWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDimensionKeysWithContext(ctx, input)
 }
 
 func (a *PIActivities) GetResourceMetrics(ctx context.Context, input *pi.GetResourceMetricsInput) (*pi.GetResourceMetricsOutput, error) {
-	return a.client.GetResourceMetricsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetResourceMetricsWithContext(ctx, input)
 }

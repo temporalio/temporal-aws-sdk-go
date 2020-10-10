@@ -151,11 +151,9 @@ type AppStreamClient interface {
 	UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult
 
 	WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-}
+	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
 
-type AppStreamStub struct {
-}
+type AppStreamStub struct{}
 
 func NewAppStreamStub() AppStreamClient {
 	return &AppStreamStub{}
@@ -631,535 +629,537 @@ func (r *AppstreamUpdateStackResult) Get(ctx workflow.Context) (*appstream.Updat
 	return &output, err
 }
 
+
+
 func (a *AppStreamStub) AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error) {
 	var output appstream.AssociateFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.AssociateFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.AssociateFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) AssociateFleetAsync(ctx workflow.Context, input *appstream.AssociateFleetInput) *AppstreamAssociateFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.AssociateFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.AssociateFleet", input)
 	return &AppstreamAssociateFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) BatchAssociateUserStack(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) (*appstream.BatchAssociateUserStackOutput, error) {
 	var output appstream.BatchAssociateUserStackOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.BatchAssociateUserStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.BatchAssociateUserStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) BatchAssociateUserStackAsync(ctx workflow.Context, input *appstream.BatchAssociateUserStackInput) *AppstreamBatchAssociateUserStackResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.BatchAssociateUserStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.BatchAssociateUserStack", input)
 	return &AppstreamBatchAssociateUserStackResult{Result: future}
 }
 
 func (a *AppStreamStub) BatchDisassociateUserStack(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) (*appstream.BatchDisassociateUserStackOutput, error) {
 	var output appstream.BatchDisassociateUserStackOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.BatchDisassociateUserStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.BatchDisassociateUserStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) BatchDisassociateUserStackAsync(ctx workflow.Context, input *appstream.BatchDisassociateUserStackInput) *AppstreamBatchDisassociateUserStackResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.BatchDisassociateUserStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.BatchDisassociateUserStack", input)
 	return &AppstreamBatchDisassociateUserStackResult{Result: future}
 }
 
 func (a *AppStreamStub) CopyImage(ctx workflow.Context, input *appstream.CopyImageInput) (*appstream.CopyImageOutput, error) {
 	var output appstream.CopyImageOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CopyImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CopyImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CopyImageAsync(ctx workflow.Context, input *appstream.CopyImageInput) *AppstreamCopyImageResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CopyImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CopyImage", input)
 	return &AppstreamCopyImageResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateDirectoryConfig(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) (*appstream.CreateDirectoryConfigOutput, error) {
 	var output appstream.CreateDirectoryConfigOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateDirectoryConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateDirectoryConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateDirectoryConfigAsync(ctx workflow.Context, input *appstream.CreateDirectoryConfigInput) *AppstreamCreateDirectoryConfigResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateDirectoryConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateDirectoryConfig", input)
 	return &AppstreamCreateDirectoryConfigResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateFleet(ctx workflow.Context, input *appstream.CreateFleetInput) (*appstream.CreateFleetOutput, error) {
 	var output appstream.CreateFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateFleetAsync(ctx workflow.Context, input *appstream.CreateFleetInput) *AppstreamCreateFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateFleet", input)
 	return &AppstreamCreateFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateImageBuilder(ctx workflow.Context, input *appstream.CreateImageBuilderInput) (*appstream.CreateImageBuilderOutput, error) {
 	var output appstream.CreateImageBuilderOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateImageBuilder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateImageBuilder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateImageBuilderAsync(ctx workflow.Context, input *appstream.CreateImageBuilderInput) *AppstreamCreateImageBuilderResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateImageBuilder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateImageBuilder", input)
 	return &AppstreamCreateImageBuilderResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateImageBuilderStreamingURL(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) (*appstream.CreateImageBuilderStreamingURLOutput, error) {
 	var output appstream.CreateImageBuilderStreamingURLOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateImageBuilderStreamingURL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateImageBuilderStreamingURL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateImageBuilderStreamingURLAsync(ctx workflow.Context, input *appstream.CreateImageBuilderStreamingURLInput) *AppstreamCreateImageBuilderStreamingURLResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateImageBuilderStreamingURL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateImageBuilderStreamingURL", input)
 	return &AppstreamCreateImageBuilderStreamingURLResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateStack(ctx workflow.Context, input *appstream.CreateStackInput) (*appstream.CreateStackOutput, error) {
 	var output appstream.CreateStackOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateStackAsync(ctx workflow.Context, input *appstream.CreateStackInput) *AppstreamCreateStackResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateStack", input)
 	return &AppstreamCreateStackResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateStreamingURL(ctx workflow.Context, input *appstream.CreateStreamingURLInput) (*appstream.CreateStreamingURLOutput, error) {
 	var output appstream.CreateStreamingURLOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateStreamingURL", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateStreamingURL", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateStreamingURLAsync(ctx workflow.Context, input *appstream.CreateStreamingURLInput) *AppstreamCreateStreamingURLResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateStreamingURL", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateStreamingURL", input)
 	return &AppstreamCreateStreamingURLResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateUsageReportSubscription(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) (*appstream.CreateUsageReportSubscriptionOutput, error) {
 	var output appstream.CreateUsageReportSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateUsageReportSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateUsageReportSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.CreateUsageReportSubscriptionInput) *AppstreamCreateUsageReportSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateUsageReportSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateUsageReportSubscription", input)
 	return &AppstreamCreateUsageReportSubscriptionResult{Result: future}
 }
 
 func (a *AppStreamStub) CreateUser(ctx workflow.Context, input *appstream.CreateUserInput) (*appstream.CreateUserOutput, error) {
 	var output appstream.CreateUserOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.CreateUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.CreateUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) CreateUserAsync(ctx workflow.Context, input *appstream.CreateUserInput) *AppstreamCreateUserResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.CreateUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.CreateUser", input)
 	return &AppstreamCreateUserResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteDirectoryConfig(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) (*appstream.DeleteDirectoryConfigOutput, error) {
 	var output appstream.DeleteDirectoryConfigOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteDirectoryConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteDirectoryConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteDirectoryConfigAsync(ctx workflow.Context, input *appstream.DeleteDirectoryConfigInput) *AppstreamDeleteDirectoryConfigResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteDirectoryConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteDirectoryConfig", input)
 	return &AppstreamDeleteDirectoryConfigResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteFleet(ctx workflow.Context, input *appstream.DeleteFleetInput) (*appstream.DeleteFleetOutput, error) {
 	var output appstream.DeleteFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteFleetAsync(ctx workflow.Context, input *appstream.DeleteFleetInput) *AppstreamDeleteFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteFleet", input)
 	return &AppstreamDeleteFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteImage(ctx workflow.Context, input *appstream.DeleteImageInput) (*appstream.DeleteImageOutput, error) {
 	var output appstream.DeleteImageOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteImageAsync(ctx workflow.Context, input *appstream.DeleteImageInput) *AppstreamDeleteImageResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImage", input)
 	return &AppstreamDeleteImageResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteImageBuilder(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) (*appstream.DeleteImageBuilderOutput, error) {
 	var output appstream.DeleteImageBuilderOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteImageBuilder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImageBuilder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteImageBuilderAsync(ctx workflow.Context, input *appstream.DeleteImageBuilderInput) *AppstreamDeleteImageBuilderResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteImageBuilder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImageBuilder", input)
 	return &AppstreamDeleteImageBuilderResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteImagePermissions(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) (*appstream.DeleteImagePermissionsOutput, error) {
 	var output appstream.DeleteImagePermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteImagePermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImagePermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteImagePermissionsAsync(ctx workflow.Context, input *appstream.DeleteImagePermissionsInput) *AppstreamDeleteImagePermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteImagePermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteImagePermissions", input)
 	return &AppstreamDeleteImagePermissionsResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteStack(ctx workflow.Context, input *appstream.DeleteStackInput) (*appstream.DeleteStackOutput, error) {
 	var output appstream.DeleteStackOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteStackAsync(ctx workflow.Context, input *appstream.DeleteStackInput) *AppstreamDeleteStackResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteStack", input)
 	return &AppstreamDeleteStackResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteUsageReportSubscription(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) (*appstream.DeleteUsageReportSubscriptionOutput, error) {
 	var output appstream.DeleteUsageReportSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteUsageReportSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteUsageReportSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteUsageReportSubscriptionAsync(ctx workflow.Context, input *appstream.DeleteUsageReportSubscriptionInput) *AppstreamDeleteUsageReportSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteUsageReportSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteUsageReportSubscription", input)
 	return &AppstreamDeleteUsageReportSubscriptionResult{Result: future}
 }
 
 func (a *AppStreamStub) DeleteUser(ctx workflow.Context, input *appstream.DeleteUserInput) (*appstream.DeleteUserOutput, error) {
 	var output appstream.DeleteUserOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DeleteUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DeleteUserAsync(ctx workflow.Context, input *appstream.DeleteUserInput) *AppstreamDeleteUserResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DeleteUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DeleteUser", input)
 	return &AppstreamDeleteUserResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeDirectoryConfigs(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) (*appstream.DescribeDirectoryConfigsOutput, error) {
 	var output appstream.DescribeDirectoryConfigsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeDirectoryConfigs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeDirectoryConfigs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeDirectoryConfigsAsync(ctx workflow.Context, input *appstream.DescribeDirectoryConfigsInput) *AppstreamDescribeDirectoryConfigsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeDirectoryConfigs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeDirectoryConfigs", input)
 	return &AppstreamDescribeDirectoryConfigsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeFleets(ctx workflow.Context, input *appstream.DescribeFleetsInput) (*appstream.DescribeFleetsOutput, error) {
 	var output appstream.DescribeFleetsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeFleets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeFleets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeFleetsAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) *AppstreamDescribeFleetsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeFleets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeFleets", input)
 	return &AppstreamDescribeFleetsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeImageBuilders(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) (*appstream.DescribeImageBuildersOutput, error) {
 	var output appstream.DescribeImageBuildersOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeImageBuilders", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImageBuilders", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeImageBuildersAsync(ctx workflow.Context, input *appstream.DescribeImageBuildersInput) *AppstreamDescribeImageBuildersResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeImageBuilders", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImageBuilders", input)
 	return &AppstreamDescribeImageBuildersResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeImagePermissions(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) (*appstream.DescribeImagePermissionsOutput, error) {
 	var output appstream.DescribeImagePermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeImagePermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImagePermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeImagePermissionsAsync(ctx workflow.Context, input *appstream.DescribeImagePermissionsInput) *AppstreamDescribeImagePermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeImagePermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImagePermissions", input)
 	return &AppstreamDescribeImagePermissionsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeImages(ctx workflow.Context, input *appstream.DescribeImagesInput) (*appstream.DescribeImagesOutput, error) {
 	var output appstream.DescribeImagesOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeImages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeImagesAsync(ctx workflow.Context, input *appstream.DescribeImagesInput) *AppstreamDescribeImagesResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeImages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeImages", input)
 	return &AppstreamDescribeImagesResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeSessions(ctx workflow.Context, input *appstream.DescribeSessionsInput) (*appstream.DescribeSessionsOutput, error) {
 	var output appstream.DescribeSessionsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeSessions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeSessions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeSessionsAsync(ctx workflow.Context, input *appstream.DescribeSessionsInput) *AppstreamDescribeSessionsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeSessions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeSessions", input)
 	return &AppstreamDescribeSessionsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeStacks(ctx workflow.Context, input *appstream.DescribeStacksInput) (*appstream.DescribeStacksOutput, error) {
 	var output appstream.DescribeStacksOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeStacks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeStacks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeStacksAsync(ctx workflow.Context, input *appstream.DescribeStacksInput) *AppstreamDescribeStacksResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeStacks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeStacks", input)
 	return &AppstreamDescribeStacksResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeUsageReportSubscriptions(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) (*appstream.DescribeUsageReportSubscriptionsOutput, error) {
 	var output appstream.DescribeUsageReportSubscriptionsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeUsageReportSubscriptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUsageReportSubscriptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeUsageReportSubscriptionsAsync(ctx workflow.Context, input *appstream.DescribeUsageReportSubscriptionsInput) *AppstreamDescribeUsageReportSubscriptionsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeUsageReportSubscriptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUsageReportSubscriptions", input)
 	return &AppstreamDescribeUsageReportSubscriptionsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeUserStackAssociations(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) (*appstream.DescribeUserStackAssociationsOutput, error) {
 	var output appstream.DescribeUserStackAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeUserStackAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUserStackAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeUserStackAssociationsAsync(ctx workflow.Context, input *appstream.DescribeUserStackAssociationsInput) *AppstreamDescribeUserStackAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeUserStackAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUserStackAssociations", input)
 	return &AppstreamDescribeUserStackAssociationsResult{Result: future}
 }
 
 func (a *AppStreamStub) DescribeUsers(ctx workflow.Context, input *appstream.DescribeUsersInput) (*appstream.DescribeUsersOutput, error) {
 	var output appstream.DescribeUsersOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DescribeUsers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUsers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DescribeUsersAsync(ctx workflow.Context, input *appstream.DescribeUsersInput) *AppstreamDescribeUsersResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DescribeUsers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DescribeUsers", input)
 	return &AppstreamDescribeUsersResult{Result: future}
 }
 
 func (a *AppStreamStub) DisableUser(ctx workflow.Context, input *appstream.DisableUserInput) (*appstream.DisableUserOutput, error) {
 	var output appstream.DisableUserOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DisableUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DisableUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DisableUserAsync(ctx workflow.Context, input *appstream.DisableUserInput) *AppstreamDisableUserResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DisableUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DisableUser", input)
 	return &AppstreamDisableUserResult{Result: future}
 }
 
 func (a *AppStreamStub) DisassociateFleet(ctx workflow.Context, input *appstream.DisassociateFleetInput) (*appstream.DisassociateFleetOutput, error) {
 	var output appstream.DisassociateFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.DisassociateFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.DisassociateFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) DisassociateFleetAsync(ctx workflow.Context, input *appstream.DisassociateFleetInput) *AppstreamDisassociateFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.DisassociateFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.DisassociateFleet", input)
 	return &AppstreamDisassociateFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) EnableUser(ctx workflow.Context, input *appstream.EnableUserInput) (*appstream.EnableUserOutput, error) {
 	var output appstream.EnableUserOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.EnableUser", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.EnableUser", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) EnableUserAsync(ctx workflow.Context, input *appstream.EnableUserInput) *AppstreamEnableUserResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.EnableUser", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.EnableUser", input)
 	return &AppstreamEnableUserResult{Result: future}
 }
 
 func (a *AppStreamStub) ExpireSession(ctx workflow.Context, input *appstream.ExpireSessionInput) (*appstream.ExpireSessionOutput, error) {
 	var output appstream.ExpireSessionOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.ExpireSession", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.ExpireSession", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) ExpireSessionAsync(ctx workflow.Context, input *appstream.ExpireSessionInput) *AppstreamExpireSessionResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.ExpireSession", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.ExpireSession", input)
 	return &AppstreamExpireSessionResult{Result: future}
 }
 
 func (a *AppStreamStub) ListAssociatedFleets(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) (*appstream.ListAssociatedFleetsOutput, error) {
 	var output appstream.ListAssociatedFleetsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.ListAssociatedFleets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.ListAssociatedFleets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) ListAssociatedFleetsAsync(ctx workflow.Context, input *appstream.ListAssociatedFleetsInput) *AppstreamListAssociatedFleetsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.ListAssociatedFleets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.ListAssociatedFleets", input)
 	return &AppstreamListAssociatedFleetsResult{Result: future}
 }
 
 func (a *AppStreamStub) ListAssociatedStacks(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) (*appstream.ListAssociatedStacksOutput, error) {
 	var output appstream.ListAssociatedStacksOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.ListAssociatedStacks", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.ListAssociatedStacks", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) ListAssociatedStacksAsync(ctx workflow.Context, input *appstream.ListAssociatedStacksInput) *AppstreamListAssociatedStacksResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.ListAssociatedStacks", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.ListAssociatedStacks", input)
 	return &AppstreamListAssociatedStacksResult{Result: future}
 }
 
 func (a *AppStreamStub) ListTagsForResource(ctx workflow.Context, input *appstream.ListTagsForResourceInput) (*appstream.ListTagsForResourceOutput, error) {
 	var output appstream.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) ListTagsForResourceAsync(ctx workflow.Context, input *appstream.ListTagsForResourceInput) *AppstreamListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.ListTagsForResource", input)
 	return &AppstreamListTagsForResourceResult{Result: future}
 }
 
 func (a *AppStreamStub) StartFleet(ctx workflow.Context, input *appstream.StartFleetInput) (*appstream.StartFleetOutput, error) {
 	var output appstream.StartFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.StartFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.StartFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) StartFleetAsync(ctx workflow.Context, input *appstream.StartFleetInput) *AppstreamStartFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.StartFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.StartFleet", input)
 	return &AppstreamStartFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) StartImageBuilder(ctx workflow.Context, input *appstream.StartImageBuilderInput) (*appstream.StartImageBuilderOutput, error) {
 	var output appstream.StartImageBuilderOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.StartImageBuilder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.StartImageBuilder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) StartImageBuilderAsync(ctx workflow.Context, input *appstream.StartImageBuilderInput) *AppstreamStartImageBuilderResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.StartImageBuilder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.StartImageBuilder", input)
 	return &AppstreamStartImageBuilderResult{Result: future}
 }
 
 func (a *AppStreamStub) StopFleet(ctx workflow.Context, input *appstream.StopFleetInput) (*appstream.StopFleetOutput, error) {
 	var output appstream.StopFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.StopFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.StopFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) StopFleetAsync(ctx workflow.Context, input *appstream.StopFleetInput) *AppstreamStopFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.StopFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.StopFleet", input)
 	return &AppstreamStopFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) StopImageBuilder(ctx workflow.Context, input *appstream.StopImageBuilderInput) (*appstream.StopImageBuilderOutput, error) {
 	var output appstream.StopImageBuilderOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.StopImageBuilder", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.StopImageBuilder", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) StopImageBuilderAsync(ctx workflow.Context, input *appstream.StopImageBuilderInput) *AppstreamStopImageBuilderResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.StopImageBuilder", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.StopImageBuilder", input)
 	return &AppstreamStopImageBuilderResult{Result: future}
 }
 
 func (a *AppStreamStub) TagResource(ctx workflow.Context, input *appstream.TagResourceInput) (*appstream.TagResourceOutput, error) {
 	var output appstream.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) TagResourceAsync(ctx workflow.Context, input *appstream.TagResourceInput) *AppstreamTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.TagResource", input)
 	return &AppstreamTagResourceResult{Result: future}
 }
 
 func (a *AppStreamStub) UntagResource(ctx workflow.Context, input *appstream.UntagResourceInput) (*appstream.UntagResourceOutput, error) {
 	var output appstream.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) UntagResourceAsync(ctx workflow.Context, input *appstream.UntagResourceInput) *AppstreamUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.UntagResource", input)
 	return &AppstreamUntagResourceResult{Result: future}
 }
 
 func (a *AppStreamStub) UpdateDirectoryConfig(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) (*appstream.UpdateDirectoryConfigOutput, error) {
 	var output appstream.UpdateDirectoryConfigOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.UpdateDirectoryConfig", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateDirectoryConfig", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) UpdateDirectoryConfigAsync(ctx workflow.Context, input *appstream.UpdateDirectoryConfigInput) *AppstreamUpdateDirectoryConfigResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.UpdateDirectoryConfig", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateDirectoryConfig", input)
 	return &AppstreamUpdateDirectoryConfigResult{Result: future}
 }
 
 func (a *AppStreamStub) UpdateFleet(ctx workflow.Context, input *appstream.UpdateFleetInput) (*appstream.UpdateFleetOutput, error) {
 	var output appstream.UpdateFleetOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.UpdateFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) UpdateFleetAsync(ctx workflow.Context, input *appstream.UpdateFleetInput) *AppstreamUpdateFleetResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.UpdateFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateFleet", input)
 	return &AppstreamUpdateFleetResult{Result: future}
 }
 
 func (a *AppStreamStub) UpdateImagePermissions(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) (*appstream.UpdateImagePermissionsOutput, error) {
 	var output appstream.UpdateImagePermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.UpdateImagePermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateImagePermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) UpdateImagePermissionsAsync(ctx workflow.Context, input *appstream.UpdateImagePermissionsInput) *AppstreamUpdateImagePermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.UpdateImagePermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateImagePermissions", input)
 	return &AppstreamUpdateImagePermissionsResult{Result: future}
 }
 
 func (a *AppStreamStub) UpdateStack(ctx workflow.Context, input *appstream.UpdateStackInput) (*appstream.UpdateStackOutput, error) {
 	var output appstream.UpdateStackOutput
-	err := workflow.ExecuteActivity(ctx, "AppStream.UpdateStack", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateStack", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppStreamStub) UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult {
-	future := workflow.ExecuteActivity(ctx, "AppStream.UpdateStack", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appstream.UpdateStack", input)
 	return &AppstreamUpdateStackResult{Result: future}
 }
 
 func (a *AppStreamStub) WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error {
-	return workflow.ExecuteActivity(ctx, "AppStream.WaitUntilFleetStarted", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStarted", input).Get(ctx, nil)
 }
 
 func (a *AppStreamStub) WaitUntilFleetStartedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "AppStream.WaitUntilFleetStarted", input)
+	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStarted", input)
 }
 
 func (a *AppStreamStub) WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error {
-	return workflow.ExecuteActivity(ctx, "AppStream.WaitUntilFleetStopped", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStopped", input).Get(ctx, nil)
 }
 
 func (a *AppStreamStub) WaitUntilFleetStoppedAsync(ctx workflow.Context, input *appstream.DescribeFleetsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "AppStream.WaitUntilFleetStopped", input)
+	return workflow.ExecuteActivity(ctx, "aws.appstream.WaitUntilFleetStopped", input)
 }

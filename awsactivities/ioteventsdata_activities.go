@@ -16,30 +16,64 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type IoTEventsDataActivities struct {
 	client ioteventsdataiface.IoTEventsDataAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewIoTEventsDataActivities(session *session.Session, config ...*aws.Config) *IoTEventsDataActivities {
-	client := ioteventsdata.New(session, config...)
+func NewIoTEventsDataActivities(sess *session.Session, config ...*aws.Config) *IoTEventsDataActivities {
+	client := ioteventsdata.New(sess, config...)
 	return &IoTEventsDataActivities{client: client}
 }
 
+func NewIoTEventsDataActivitiesWithSessionFactory(sessionFactory SessionFactory) *IoTEventsDataActivities {
+	return &IoTEventsDataActivities{sessionFactory: sessionFactory}
+}
+
+func (a *IoTEventsDataActivities) getClient(ctx context.Context) (ioteventsdataiface.IoTEventsDataAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return ioteventsdata.New(sess), nil
+}
+
 func (a *IoTEventsDataActivities) BatchPutMessage(ctx context.Context, input *ioteventsdata.BatchPutMessageInput) (*ioteventsdata.BatchPutMessageOutput, error) {
-	return a.client.BatchPutMessageWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchPutMessageWithContext(ctx, input)
 }
 
 func (a *IoTEventsDataActivities) BatchUpdateDetector(ctx context.Context, input *ioteventsdata.BatchUpdateDetectorInput) (*ioteventsdata.BatchUpdateDetectorOutput, error) {
-	return a.client.BatchUpdateDetectorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.BatchUpdateDetectorWithContext(ctx, input)
 }
 
 func (a *IoTEventsDataActivities) DescribeDetector(ctx context.Context, input *ioteventsdata.DescribeDetectorInput) (*ioteventsdata.DescribeDetectorOutput, error) {
-	return a.client.DescribeDetectorWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeDetectorWithContext(ctx, input)
 }
 
 func (a *IoTEventsDataActivities) ListDetectors(ctx context.Context, input *ioteventsdata.ListDetectorsInput) (*ioteventsdata.ListDetectorsOutput, error) {
-	return a.client.ListDetectorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListDetectorsWithContext(ctx, input)
 }

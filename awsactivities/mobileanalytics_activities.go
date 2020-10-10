@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type MobileAnalyticsActivities struct {
 	client mobileanalyticsiface.MobileAnalyticsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMobileAnalyticsActivities(session *session.Session, config ...*aws.Config) *MobileAnalyticsActivities {
-	client := mobileanalytics.New(session, config...)
+func NewMobileAnalyticsActivities(sess *session.Session, config ...*aws.Config) *MobileAnalyticsActivities {
+	client := mobileanalytics.New(sess, config...)
 	return &MobileAnalyticsActivities{client: client}
 }
 
+func NewMobileAnalyticsActivitiesWithSessionFactory(sessionFactory SessionFactory) *MobileAnalyticsActivities {
+	return &MobileAnalyticsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MobileAnalyticsActivities) getClient(ctx context.Context) (mobileanalyticsiface.MobileAnalyticsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return mobileanalytics.New(sess), nil
+}
+
 func (a *MobileAnalyticsActivities) PutEvents(ctx context.Context, input *mobileanalytics.PutEventsInput) (*mobileanalytics.PutEventsOutput, error) {
-	return a.client.PutEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutEventsWithContext(ctx, input)
 }

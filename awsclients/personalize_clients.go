@@ -139,8 +139,7 @@ type PersonalizeClient interface {
 	UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult
 }
 
-type PersonalizeStub struct {
-}
+type PersonalizeStub struct{}
 
 func NewPersonalizeStub() PersonalizeClient {
 	return &PersonalizeStub{}
@@ -578,473 +577,473 @@ func (r *PersonalizeUpdateCampaignResult) Get(ctx workflow.Context) (*personaliz
 
 func (a *PersonalizeStub) CreateBatchInferenceJob(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error) {
 	var output personalize.CreateBatchInferenceJobOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateBatchInferenceJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateBatchInferenceJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateBatchInferenceJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateBatchInferenceJob", input)
 	return &PersonalizeCreateBatchInferenceJobResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateCampaign(ctx workflow.Context, input *personalize.CreateCampaignInput) (*personalize.CreateCampaignOutput, error) {
 	var output personalize.CreateCampaignOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateCampaign", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateCampaign", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateCampaignAsync(ctx workflow.Context, input *personalize.CreateCampaignInput) *PersonalizeCreateCampaignResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateCampaign", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateCampaign", input)
 	return &PersonalizeCreateCampaignResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateDataset(ctx workflow.Context, input *personalize.CreateDatasetInput) (*personalize.CreateDatasetOutput, error) {
 	var output personalize.CreateDatasetOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateDataset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDataset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateDatasetAsync(ctx workflow.Context, input *personalize.CreateDatasetInput) *PersonalizeCreateDatasetResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateDataset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDataset", input)
 	return &PersonalizeCreateDatasetResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateDatasetGroup(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) (*personalize.CreateDatasetGroupOutput, error) {
 	var output personalize.CreateDatasetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateDatasetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateDatasetGroupAsync(ctx workflow.Context, input *personalize.CreateDatasetGroupInput) *PersonalizeCreateDatasetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateDatasetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetGroup", input)
 	return &PersonalizeCreateDatasetGroupResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateDatasetImportJob(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) (*personalize.CreateDatasetImportJobOutput, error) {
 	var output personalize.CreateDatasetImportJobOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateDatasetImportJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetImportJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateDatasetImportJobAsync(ctx workflow.Context, input *personalize.CreateDatasetImportJobInput) *PersonalizeCreateDatasetImportJobResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateDatasetImportJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateDatasetImportJob", input)
 	return &PersonalizeCreateDatasetImportJobResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateEventTracker(ctx workflow.Context, input *personalize.CreateEventTrackerInput) (*personalize.CreateEventTrackerOutput, error) {
 	var output personalize.CreateEventTrackerOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateEventTracker", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateEventTracker", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateEventTrackerAsync(ctx workflow.Context, input *personalize.CreateEventTrackerInput) *PersonalizeCreateEventTrackerResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateEventTracker", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateEventTracker", input)
 	return &PersonalizeCreateEventTrackerResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateFilter(ctx workflow.Context, input *personalize.CreateFilterInput) (*personalize.CreateFilterOutput, error) {
 	var output personalize.CreateFilterOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateFilter", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateFilter", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateFilterAsync(ctx workflow.Context, input *personalize.CreateFilterInput) *PersonalizeCreateFilterResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateFilter", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateFilter", input)
 	return &PersonalizeCreateFilterResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateSchema(ctx workflow.Context, input *personalize.CreateSchemaInput) (*personalize.CreateSchemaOutput, error) {
 	var output personalize.CreateSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateSchemaAsync(ctx workflow.Context, input *personalize.CreateSchemaInput) *PersonalizeCreateSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSchema", input)
 	return &PersonalizeCreateSchemaResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateSolution(ctx workflow.Context, input *personalize.CreateSolutionInput) (*personalize.CreateSolutionOutput, error) {
 	var output personalize.CreateSolutionOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateSolution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateSolutionAsync(ctx workflow.Context, input *personalize.CreateSolutionInput) *PersonalizeCreateSolutionResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateSolution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolution", input)
 	return &PersonalizeCreateSolutionResult{Result: future}
 }
 
 func (a *PersonalizeStub) CreateSolutionVersion(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) (*personalize.CreateSolutionVersionOutput, error) {
 	var output personalize.CreateSolutionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.CreateSolutionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolutionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) CreateSolutionVersionAsync(ctx workflow.Context, input *personalize.CreateSolutionVersionInput) *PersonalizeCreateSolutionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.CreateSolutionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.CreateSolutionVersion", input)
 	return &PersonalizeCreateSolutionVersionResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteCampaign(ctx workflow.Context, input *personalize.DeleteCampaignInput) (*personalize.DeleteCampaignOutput, error) {
 	var output personalize.DeleteCampaignOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteCampaign", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteCampaign", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteCampaignAsync(ctx workflow.Context, input *personalize.DeleteCampaignInput) *PersonalizeDeleteCampaignResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteCampaign", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteCampaign", input)
 	return &PersonalizeDeleteCampaignResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteDataset(ctx workflow.Context, input *personalize.DeleteDatasetInput) (*personalize.DeleteDatasetOutput, error) {
 	var output personalize.DeleteDatasetOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteDataset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDataset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteDatasetAsync(ctx workflow.Context, input *personalize.DeleteDatasetInput) *PersonalizeDeleteDatasetResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteDataset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDataset", input)
 	return &PersonalizeDeleteDatasetResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteDatasetGroup(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) (*personalize.DeleteDatasetGroupOutput, error) {
 	var output personalize.DeleteDatasetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteDatasetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDatasetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteDatasetGroupAsync(ctx workflow.Context, input *personalize.DeleteDatasetGroupInput) *PersonalizeDeleteDatasetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteDatasetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteDatasetGroup", input)
 	return &PersonalizeDeleteDatasetGroupResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteEventTracker(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) (*personalize.DeleteEventTrackerOutput, error) {
 	var output personalize.DeleteEventTrackerOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteEventTracker", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteEventTracker", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteEventTrackerAsync(ctx workflow.Context, input *personalize.DeleteEventTrackerInput) *PersonalizeDeleteEventTrackerResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteEventTracker", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteEventTracker", input)
 	return &PersonalizeDeleteEventTrackerResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteFilter(ctx workflow.Context, input *personalize.DeleteFilterInput) (*personalize.DeleteFilterOutput, error) {
 	var output personalize.DeleteFilterOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteFilter", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteFilter", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteFilterAsync(ctx workflow.Context, input *personalize.DeleteFilterInput) *PersonalizeDeleteFilterResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteFilter", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteFilter", input)
 	return &PersonalizeDeleteFilterResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteSchema(ctx workflow.Context, input *personalize.DeleteSchemaInput) (*personalize.DeleteSchemaOutput, error) {
 	var output personalize.DeleteSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteSchemaAsync(ctx workflow.Context, input *personalize.DeleteSchemaInput) *PersonalizeDeleteSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSchema", input)
 	return &PersonalizeDeleteSchemaResult{Result: future}
 }
 
 func (a *PersonalizeStub) DeleteSolution(ctx workflow.Context, input *personalize.DeleteSolutionInput) (*personalize.DeleteSolutionOutput, error) {
 	var output personalize.DeleteSolutionOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DeleteSolution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSolution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DeleteSolutionAsync(ctx workflow.Context, input *personalize.DeleteSolutionInput) *PersonalizeDeleteSolutionResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DeleteSolution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DeleteSolution", input)
 	return &PersonalizeDeleteSolutionResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeAlgorithm(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) (*personalize.DescribeAlgorithmOutput, error) {
 	var output personalize.DescribeAlgorithmOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeAlgorithm", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeAlgorithm", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeAlgorithmAsync(ctx workflow.Context, input *personalize.DescribeAlgorithmInput) *PersonalizeDescribeAlgorithmResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeAlgorithm", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeAlgorithm", input)
 	return &PersonalizeDescribeAlgorithmResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeBatchInferenceJob(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) (*personalize.DescribeBatchInferenceJobOutput, error) {
 	var output personalize.DescribeBatchInferenceJobOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeBatchInferenceJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeBatchInferenceJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeBatchInferenceJobAsync(ctx workflow.Context, input *personalize.DescribeBatchInferenceJobInput) *PersonalizeDescribeBatchInferenceJobResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeBatchInferenceJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeBatchInferenceJob", input)
 	return &PersonalizeDescribeBatchInferenceJobResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeCampaign(ctx workflow.Context, input *personalize.DescribeCampaignInput) (*personalize.DescribeCampaignOutput, error) {
 	var output personalize.DescribeCampaignOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeCampaign", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeCampaign", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeCampaignAsync(ctx workflow.Context, input *personalize.DescribeCampaignInput) *PersonalizeDescribeCampaignResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeCampaign", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeCampaign", input)
 	return &PersonalizeDescribeCampaignResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeDataset(ctx workflow.Context, input *personalize.DescribeDatasetInput) (*personalize.DescribeDatasetOutput, error) {
 	var output personalize.DescribeDatasetOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeDataset", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDataset", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeDatasetAsync(ctx workflow.Context, input *personalize.DescribeDatasetInput) *PersonalizeDescribeDatasetResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeDataset", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDataset", input)
 	return &PersonalizeDescribeDatasetResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeDatasetGroup(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) (*personalize.DescribeDatasetGroupOutput, error) {
 	var output personalize.DescribeDatasetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeDatasetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeDatasetGroupAsync(ctx workflow.Context, input *personalize.DescribeDatasetGroupInput) *PersonalizeDescribeDatasetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeDatasetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetGroup", input)
 	return &PersonalizeDescribeDatasetGroupResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeDatasetImportJob(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) (*personalize.DescribeDatasetImportJobOutput, error) {
 	var output personalize.DescribeDatasetImportJobOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeDatasetImportJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetImportJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeDatasetImportJobAsync(ctx workflow.Context, input *personalize.DescribeDatasetImportJobInput) *PersonalizeDescribeDatasetImportJobResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeDatasetImportJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeDatasetImportJob", input)
 	return &PersonalizeDescribeDatasetImportJobResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeEventTracker(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) (*personalize.DescribeEventTrackerOutput, error) {
 	var output personalize.DescribeEventTrackerOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeEventTracker", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeEventTracker", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeEventTrackerAsync(ctx workflow.Context, input *personalize.DescribeEventTrackerInput) *PersonalizeDescribeEventTrackerResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeEventTracker", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeEventTracker", input)
 	return &PersonalizeDescribeEventTrackerResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeFeatureTransformation(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) (*personalize.DescribeFeatureTransformationOutput, error) {
 	var output personalize.DescribeFeatureTransformationOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeFeatureTransformation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFeatureTransformation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeFeatureTransformationAsync(ctx workflow.Context, input *personalize.DescribeFeatureTransformationInput) *PersonalizeDescribeFeatureTransformationResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeFeatureTransformation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFeatureTransformation", input)
 	return &PersonalizeDescribeFeatureTransformationResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeFilter(ctx workflow.Context, input *personalize.DescribeFilterInput) (*personalize.DescribeFilterOutput, error) {
 	var output personalize.DescribeFilterOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeFilter", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFilter", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeFilterAsync(ctx workflow.Context, input *personalize.DescribeFilterInput) *PersonalizeDescribeFilterResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeFilter", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeFilter", input)
 	return &PersonalizeDescribeFilterResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeRecipe(ctx workflow.Context, input *personalize.DescribeRecipeInput) (*personalize.DescribeRecipeOutput, error) {
 	var output personalize.DescribeRecipeOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeRecipe", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeRecipe", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeRecipeAsync(ctx workflow.Context, input *personalize.DescribeRecipeInput) *PersonalizeDescribeRecipeResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeRecipe", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeRecipe", input)
 	return &PersonalizeDescribeRecipeResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeSchema(ctx workflow.Context, input *personalize.DescribeSchemaInput) (*personalize.DescribeSchemaOutput, error) {
 	var output personalize.DescribeSchemaOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeSchema", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSchema", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeSchemaAsync(ctx workflow.Context, input *personalize.DescribeSchemaInput) *PersonalizeDescribeSchemaResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeSchema", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSchema", input)
 	return &PersonalizeDescribeSchemaResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeSolution(ctx workflow.Context, input *personalize.DescribeSolutionInput) (*personalize.DescribeSolutionOutput, error) {
 	var output personalize.DescribeSolutionOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeSolution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeSolutionAsync(ctx workflow.Context, input *personalize.DescribeSolutionInput) *PersonalizeDescribeSolutionResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeSolution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolution", input)
 	return &PersonalizeDescribeSolutionResult{Result: future}
 }
 
 func (a *PersonalizeStub) DescribeSolutionVersion(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) (*personalize.DescribeSolutionVersionOutput, error) {
 	var output personalize.DescribeSolutionVersionOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.DescribeSolutionVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolutionVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) DescribeSolutionVersionAsync(ctx workflow.Context, input *personalize.DescribeSolutionVersionInput) *PersonalizeDescribeSolutionVersionResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.DescribeSolutionVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.DescribeSolutionVersion", input)
 	return &PersonalizeDescribeSolutionVersionResult{Result: future}
 }
 
 func (a *PersonalizeStub) GetSolutionMetrics(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) (*personalize.GetSolutionMetricsOutput, error) {
 	var output personalize.GetSolutionMetricsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.GetSolutionMetrics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.GetSolutionMetrics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) GetSolutionMetricsAsync(ctx workflow.Context, input *personalize.GetSolutionMetricsInput) *PersonalizeGetSolutionMetricsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.GetSolutionMetrics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.GetSolutionMetrics", input)
 	return &PersonalizeGetSolutionMetricsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListBatchInferenceJobs(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) (*personalize.ListBatchInferenceJobsOutput, error) {
 	var output personalize.ListBatchInferenceJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListBatchInferenceJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListBatchInferenceJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListBatchInferenceJobsAsync(ctx workflow.Context, input *personalize.ListBatchInferenceJobsInput) *PersonalizeListBatchInferenceJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListBatchInferenceJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListBatchInferenceJobs", input)
 	return &PersonalizeListBatchInferenceJobsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListCampaigns(ctx workflow.Context, input *personalize.ListCampaignsInput) (*personalize.ListCampaignsOutput, error) {
 	var output personalize.ListCampaignsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListCampaigns", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListCampaigns", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListCampaignsAsync(ctx workflow.Context, input *personalize.ListCampaignsInput) *PersonalizeListCampaignsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListCampaigns", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListCampaigns", input)
 	return &PersonalizeListCampaignsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListDatasetGroups(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) (*personalize.ListDatasetGroupsOutput, error) {
 	var output personalize.ListDatasetGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListDatasetGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListDatasetGroupsAsync(ctx workflow.Context, input *personalize.ListDatasetGroupsInput) *PersonalizeListDatasetGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListDatasetGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetGroups", input)
 	return &PersonalizeListDatasetGroupsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListDatasetImportJobs(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) (*personalize.ListDatasetImportJobsOutput, error) {
 	var output personalize.ListDatasetImportJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListDatasetImportJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetImportJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListDatasetImportJobsAsync(ctx workflow.Context, input *personalize.ListDatasetImportJobsInput) *PersonalizeListDatasetImportJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListDatasetImportJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasetImportJobs", input)
 	return &PersonalizeListDatasetImportJobsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListDatasets(ctx workflow.Context, input *personalize.ListDatasetsInput) (*personalize.ListDatasetsOutput, error) {
 	var output personalize.ListDatasetsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListDatasets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListDatasetsAsync(ctx workflow.Context, input *personalize.ListDatasetsInput) *PersonalizeListDatasetsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListDatasets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListDatasets", input)
 	return &PersonalizeListDatasetsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListEventTrackers(ctx workflow.Context, input *personalize.ListEventTrackersInput) (*personalize.ListEventTrackersOutput, error) {
 	var output personalize.ListEventTrackersOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListEventTrackers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListEventTrackers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListEventTrackersAsync(ctx workflow.Context, input *personalize.ListEventTrackersInput) *PersonalizeListEventTrackersResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListEventTrackers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListEventTrackers", input)
 	return &PersonalizeListEventTrackersResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListFilters(ctx workflow.Context, input *personalize.ListFiltersInput) (*personalize.ListFiltersOutput, error) {
 	var output personalize.ListFiltersOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListFilters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListFilters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListFiltersAsync(ctx workflow.Context, input *personalize.ListFiltersInput) *PersonalizeListFiltersResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListFilters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListFilters", input)
 	return &PersonalizeListFiltersResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListRecipes(ctx workflow.Context, input *personalize.ListRecipesInput) (*personalize.ListRecipesOutput, error) {
 	var output personalize.ListRecipesOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListRecipes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListRecipes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListRecipesAsync(ctx workflow.Context, input *personalize.ListRecipesInput) *PersonalizeListRecipesResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListRecipes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListRecipes", input)
 	return &PersonalizeListRecipesResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListSchemas(ctx workflow.Context, input *personalize.ListSchemasInput) (*personalize.ListSchemasOutput, error) {
 	var output personalize.ListSchemasOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListSchemas", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListSchemas", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListSchemasAsync(ctx workflow.Context, input *personalize.ListSchemasInput) *PersonalizeListSchemasResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListSchemas", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSchemas", input)
 	return &PersonalizeListSchemasResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListSolutionVersions(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) (*personalize.ListSolutionVersionsOutput, error) {
 	var output personalize.ListSolutionVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListSolutionVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutionVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListSolutionVersionsAsync(ctx workflow.Context, input *personalize.ListSolutionVersionsInput) *PersonalizeListSolutionVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListSolutionVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutionVersions", input)
 	return &PersonalizeListSolutionVersionsResult{Result: future}
 }
 
 func (a *PersonalizeStub) ListSolutions(ctx workflow.Context, input *personalize.ListSolutionsInput) (*personalize.ListSolutionsOutput, error) {
 	var output personalize.ListSolutionsOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.ListSolutions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) ListSolutionsAsync(ctx workflow.Context, input *personalize.ListSolutionsInput) *PersonalizeListSolutionsResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.ListSolutions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.ListSolutions", input)
 	return &PersonalizeListSolutionsResult{Result: future}
 }
 
 func (a *PersonalizeStub) UpdateCampaign(ctx workflow.Context, input *personalize.UpdateCampaignInput) (*personalize.UpdateCampaignOutput, error) {
 	var output personalize.UpdateCampaignOutput
-	err := workflow.ExecuteActivity(ctx, "Personalize.UpdateCampaign", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalize.UpdateCampaign", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeStub) UpdateCampaignAsync(ctx workflow.Context, input *personalize.UpdateCampaignInput) *PersonalizeUpdateCampaignResult {
-	future := workflow.ExecuteActivity(ctx, "Personalize.UpdateCampaign", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalize.UpdateCampaign", input)
 	return &PersonalizeUpdateCampaignResult{Result: future}
 }

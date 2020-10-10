@@ -67,8 +67,7 @@ type SecretsManagerClient interface {
 	ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsmanagerValidateResourcePolicyResult
 }
 
-type SecretsManagerStub struct {
-}
+type SecretsManagerStub struct{}
 
 func NewSecretsManagerStub() SecretsManagerClient {
 	return &SecretsManagerStub{}
@@ -266,209 +265,209 @@ func (r *SecretsmanagerValidateResourcePolicyResult) Get(ctx workflow.Context) (
 
 func (a *SecretsManagerStub) CancelRotateSecret(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) (*secretsmanager.CancelRotateSecretOutput, error) {
 	var output secretsmanager.CancelRotateSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.CancelRotateSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CancelRotateSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) CancelRotateSecretAsync(ctx workflow.Context, input *secretsmanager.CancelRotateSecretInput) *SecretsmanagerCancelRotateSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.CancelRotateSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CancelRotateSecret", input)
 	return &SecretsmanagerCancelRotateSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) CreateSecret(ctx workflow.Context, input *secretsmanager.CreateSecretInput) (*secretsmanager.CreateSecretOutput, error) {
 	var output secretsmanager.CreateSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.CreateSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CreateSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) CreateSecretAsync(ctx workflow.Context, input *secretsmanager.CreateSecretInput) *SecretsmanagerCreateSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.CreateSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.CreateSecret", input)
 	return &SecretsmanagerCreateSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) DeleteResourcePolicy(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) (*secretsmanager.DeleteResourcePolicyOutput, error) {
 	var output secretsmanager.DeleteResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.DeleteResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) DeleteResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.DeleteResourcePolicyInput) *SecretsmanagerDeleteResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.DeleteResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteResourcePolicy", input)
 	return &SecretsmanagerDeleteResourcePolicyResult{Result: future}
 }
 
 func (a *SecretsManagerStub) DeleteSecret(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) (*secretsmanager.DeleteSecretOutput, error) {
 	var output secretsmanager.DeleteSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.DeleteSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) DeleteSecretAsync(ctx workflow.Context, input *secretsmanager.DeleteSecretInput) *SecretsmanagerDeleteSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.DeleteSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DeleteSecret", input)
 	return &SecretsmanagerDeleteSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) DescribeSecret(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) (*secretsmanager.DescribeSecretOutput, error) {
 	var output secretsmanager.DescribeSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.DescribeSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DescribeSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) DescribeSecretAsync(ctx workflow.Context, input *secretsmanager.DescribeSecretInput) *SecretsmanagerDescribeSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.DescribeSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.DescribeSecret", input)
 	return &SecretsmanagerDescribeSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) GetRandomPassword(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) (*secretsmanager.GetRandomPasswordOutput, error) {
 	var output secretsmanager.GetRandomPasswordOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.GetRandomPassword", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetRandomPassword", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) GetRandomPasswordAsync(ctx workflow.Context, input *secretsmanager.GetRandomPasswordInput) *SecretsmanagerGetRandomPasswordResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.GetRandomPassword", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetRandomPassword", input)
 	return &SecretsmanagerGetRandomPasswordResult{Result: future}
 }
 
 func (a *SecretsManagerStub) GetResourcePolicy(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) (*secretsmanager.GetResourcePolicyOutput, error) {
 	var output secretsmanager.GetResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.GetResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) GetResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.GetResourcePolicyInput) *SecretsmanagerGetResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.GetResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetResourcePolicy", input)
 	return &SecretsmanagerGetResourcePolicyResult{Result: future}
 }
 
 func (a *SecretsManagerStub) GetSecretValue(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) (*secretsmanager.GetSecretValueOutput, error) {
 	var output secretsmanager.GetSecretValueOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.GetSecretValue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetSecretValue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) GetSecretValueAsync(ctx workflow.Context, input *secretsmanager.GetSecretValueInput) *SecretsmanagerGetSecretValueResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.GetSecretValue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.GetSecretValue", input)
 	return &SecretsmanagerGetSecretValueResult{Result: future}
 }
 
 func (a *SecretsManagerStub) ListSecretVersionIds(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) (*secretsmanager.ListSecretVersionIdsOutput, error) {
 	var output secretsmanager.ListSecretVersionIdsOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.ListSecretVersionIds", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecretVersionIds", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) ListSecretVersionIdsAsync(ctx workflow.Context, input *secretsmanager.ListSecretVersionIdsInput) *SecretsmanagerListSecretVersionIdsResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.ListSecretVersionIds", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecretVersionIds", input)
 	return &SecretsmanagerListSecretVersionIdsResult{Result: future}
 }
 
 func (a *SecretsManagerStub) ListSecrets(ctx workflow.Context, input *secretsmanager.ListSecretsInput) (*secretsmanager.ListSecretsOutput, error) {
 	var output secretsmanager.ListSecretsOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.ListSecrets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecrets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) ListSecretsAsync(ctx workflow.Context, input *secretsmanager.ListSecretsInput) *SecretsmanagerListSecretsResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.ListSecrets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ListSecrets", input)
 	return &SecretsmanagerListSecretsResult{Result: future}
 }
 
 func (a *SecretsManagerStub) PutResourcePolicy(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) (*secretsmanager.PutResourcePolicyOutput, error) {
 	var output secretsmanager.PutResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.PutResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) PutResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.PutResourcePolicyInput) *SecretsmanagerPutResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.PutResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutResourcePolicy", input)
 	return &SecretsmanagerPutResourcePolicyResult{Result: future}
 }
 
 func (a *SecretsManagerStub) PutSecretValue(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) (*secretsmanager.PutSecretValueOutput, error) {
 	var output secretsmanager.PutSecretValueOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.PutSecretValue", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutSecretValue", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) PutSecretValueAsync(ctx workflow.Context, input *secretsmanager.PutSecretValueInput) *SecretsmanagerPutSecretValueResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.PutSecretValue", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.PutSecretValue", input)
 	return &SecretsmanagerPutSecretValueResult{Result: future}
 }
 
 func (a *SecretsManagerStub) RestoreSecret(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) (*secretsmanager.RestoreSecretOutput, error) {
 	var output secretsmanager.RestoreSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.RestoreSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RestoreSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) RestoreSecretAsync(ctx workflow.Context, input *secretsmanager.RestoreSecretInput) *SecretsmanagerRestoreSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.RestoreSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RestoreSecret", input)
 	return &SecretsmanagerRestoreSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) RotateSecret(ctx workflow.Context, input *secretsmanager.RotateSecretInput) (*secretsmanager.RotateSecretOutput, error) {
 	var output secretsmanager.RotateSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.RotateSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RotateSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) RotateSecretAsync(ctx workflow.Context, input *secretsmanager.RotateSecretInput) *SecretsmanagerRotateSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.RotateSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.RotateSecret", input)
 	return &SecretsmanagerRotateSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) TagResource(ctx workflow.Context, input *secretsmanager.TagResourceInput) (*secretsmanager.TagResourceOutput, error) {
 	var output secretsmanager.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) TagResourceAsync(ctx workflow.Context, input *secretsmanager.TagResourceInput) *SecretsmanagerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.TagResource", input)
 	return &SecretsmanagerTagResourceResult{Result: future}
 }
 
 func (a *SecretsManagerStub) UntagResource(ctx workflow.Context, input *secretsmanager.UntagResourceInput) (*secretsmanager.UntagResourceOutput, error) {
 	var output secretsmanager.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) UntagResourceAsync(ctx workflow.Context, input *secretsmanager.UntagResourceInput) *SecretsmanagerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UntagResource", input)
 	return &SecretsmanagerUntagResourceResult{Result: future}
 }
 
 func (a *SecretsManagerStub) UpdateSecret(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) (*secretsmanager.UpdateSecretOutput, error) {
 	var output secretsmanager.UpdateSecretOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.UpdateSecret", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecret", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) UpdateSecretAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretInput) *SecretsmanagerUpdateSecretResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.UpdateSecret", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecret", input)
 	return &SecretsmanagerUpdateSecretResult{Result: future}
 }
 
 func (a *SecretsManagerStub) UpdateSecretVersionStage(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) (*secretsmanager.UpdateSecretVersionStageOutput, error) {
 	var output secretsmanager.UpdateSecretVersionStageOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.UpdateSecretVersionStage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecretVersionStage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) UpdateSecretVersionStageAsync(ctx workflow.Context, input *secretsmanager.UpdateSecretVersionStageInput) *SecretsmanagerUpdateSecretVersionStageResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.UpdateSecretVersionStage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.UpdateSecretVersionStage", input)
 	return &SecretsmanagerUpdateSecretVersionStageResult{Result: future}
 }
 
 func (a *SecretsManagerStub) ValidateResourcePolicy(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) (*secretsmanager.ValidateResourcePolicyOutput, error) {
 	var output secretsmanager.ValidateResourcePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "SecretsManager.ValidateResourcePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ValidateResourcePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SecretsManagerStub) ValidateResourcePolicyAsync(ctx workflow.Context, input *secretsmanager.ValidateResourcePolicyInput) *SecretsmanagerValidateResourcePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "SecretsManager.ValidateResourcePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.secretsmanager.ValidateResourcePolicy", input)
 	return &SecretsmanagerValidateResourcePolicyResult{Result: future}
 }

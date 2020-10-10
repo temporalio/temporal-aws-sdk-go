@@ -187,11 +187,9 @@ type NeptuneClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-}
+	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error}
 
-type NeptuneStub struct {
-}
+type NeptuneStub struct{}
 
 func NewNeptuneStub() NeptuneClient {
 	return &NeptuneStub{}
@@ -787,667 +785,669 @@ func (r *NeptuneStopDBClusterResult) Get(ctx workflow.Context) (*neptune.StopDBC
 	return &output, err
 }
 
+
+
 func (a *NeptuneStub) AddRoleToDBCluster(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error) {
 	var output neptune.AddRoleToDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.AddRoleToDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.AddRoleToDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) AddRoleToDBClusterAsync(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) *NeptuneAddRoleToDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.AddRoleToDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddRoleToDBCluster", input)
 	return &NeptuneAddRoleToDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) AddSourceIdentifierToSubscription(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) (*neptune.AddSourceIdentifierToSubscriptionOutput, error) {
 	var output neptune.AddSourceIdentifierToSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.AddSourceIdentifierToSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.AddSourceIdentifierToSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) AddSourceIdentifierToSubscriptionAsync(ctx workflow.Context, input *neptune.AddSourceIdentifierToSubscriptionInput) *NeptuneAddSourceIdentifierToSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.AddSourceIdentifierToSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddSourceIdentifierToSubscription", input)
 	return &NeptuneAddSourceIdentifierToSubscriptionResult{Result: future}
 }
 
 func (a *NeptuneStub) AddTagsToResource(ctx workflow.Context, input *neptune.AddTagsToResourceInput) (*neptune.AddTagsToResourceOutput, error) {
 	var output neptune.AddTagsToResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.AddTagsToResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.AddTagsToResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) AddTagsToResourceAsync(ctx workflow.Context, input *neptune.AddTagsToResourceInput) *NeptuneAddTagsToResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.AddTagsToResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.AddTagsToResource", input)
 	return &NeptuneAddTagsToResourceResult{Result: future}
 }
 
 func (a *NeptuneStub) ApplyPendingMaintenanceAction(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) (*neptune.ApplyPendingMaintenanceActionOutput, error) {
 	var output neptune.ApplyPendingMaintenanceActionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ApplyPendingMaintenanceAction", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ApplyPendingMaintenanceAction", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ApplyPendingMaintenanceActionAsync(ctx workflow.Context, input *neptune.ApplyPendingMaintenanceActionInput) *NeptuneApplyPendingMaintenanceActionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ApplyPendingMaintenanceAction", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ApplyPendingMaintenanceAction", input)
 	return &NeptuneApplyPendingMaintenanceActionResult{Result: future}
 }
 
 func (a *NeptuneStub) CopyDBClusterParameterGroup(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) (*neptune.CopyDBClusterParameterGroupOutput, error) {
 	var output neptune.CopyDBClusterParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CopyDBClusterParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CopyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBClusterParameterGroupInput) *NeptuneCopyDBClusterParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CopyDBClusterParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterParameterGroup", input)
 	return &NeptuneCopyDBClusterParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) CopyDBClusterSnapshot(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) (*neptune.CopyDBClusterSnapshotOutput, error) {
 	var output neptune.CopyDBClusterSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CopyDBClusterSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CopyDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CopyDBClusterSnapshotInput) *NeptuneCopyDBClusterSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CopyDBClusterSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBClusterSnapshot", input)
 	return &NeptuneCopyDBClusterSnapshotResult{Result: future}
 }
 
 func (a *NeptuneStub) CopyDBParameterGroup(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) (*neptune.CopyDBParameterGroupOutput, error) {
 	var output neptune.CopyDBParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CopyDBParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CopyDBParameterGroupAsync(ctx workflow.Context, input *neptune.CopyDBParameterGroupInput) *NeptuneCopyDBParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CopyDBParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CopyDBParameterGroup", input)
 	return &NeptuneCopyDBParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBCluster(ctx workflow.Context, input *neptune.CreateDBClusterInput) (*neptune.CreateDBClusterOutput, error) {
 	var output neptune.CreateDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBClusterAsync(ctx workflow.Context, input *neptune.CreateDBClusterInput) *NeptuneCreateDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBCluster", input)
 	return &NeptuneCreateDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBClusterParameterGroup(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) (*neptune.CreateDBClusterParameterGroupOutput, error) {
 	var output neptune.CreateDBClusterParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBClusterParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBClusterParameterGroupInput) *NeptuneCreateDBClusterParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBClusterParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterParameterGroup", input)
 	return &NeptuneCreateDBClusterParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBClusterSnapshot(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) (*neptune.CreateDBClusterSnapshotOutput, error) {
 	var output neptune.CreateDBClusterSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBClusterSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.CreateDBClusterSnapshotInput) *NeptuneCreateDBClusterSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBClusterSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBClusterSnapshot", input)
 	return &NeptuneCreateDBClusterSnapshotResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBInstance(ctx workflow.Context, input *neptune.CreateDBInstanceInput) (*neptune.CreateDBInstanceOutput, error) {
 	var output neptune.CreateDBInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBInstanceAsync(ctx workflow.Context, input *neptune.CreateDBInstanceInput) *NeptuneCreateDBInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBInstance", input)
 	return &NeptuneCreateDBInstanceResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBParameterGroup(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) (*neptune.CreateDBParameterGroupOutput, error) {
 	var output neptune.CreateDBParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBParameterGroupAsync(ctx workflow.Context, input *neptune.CreateDBParameterGroupInput) *NeptuneCreateDBParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBParameterGroup", input)
 	return &NeptuneCreateDBParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateDBSubnetGroup(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) (*neptune.CreateDBSubnetGroupOutput, error) {
 	var output neptune.CreateDBSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateDBSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateDBSubnetGroupAsync(ctx workflow.Context, input *neptune.CreateDBSubnetGroupInput) *NeptuneCreateDBSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateDBSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateDBSubnetGroup", input)
 	return &NeptuneCreateDBSubnetGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) CreateEventSubscription(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) (*neptune.CreateEventSubscriptionOutput, error) {
 	var output neptune.CreateEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.CreateEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.CreateEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) CreateEventSubscriptionAsync(ctx workflow.Context, input *neptune.CreateEventSubscriptionInput) *NeptuneCreateEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.CreateEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.CreateEventSubscription", input)
 	return &NeptuneCreateEventSubscriptionResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBCluster(ctx workflow.Context, input *neptune.DeleteDBClusterInput) (*neptune.DeleteDBClusterOutput, error) {
 	var output neptune.DeleteDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBClusterAsync(ctx workflow.Context, input *neptune.DeleteDBClusterInput) *NeptuneDeleteDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBCluster", input)
 	return &NeptuneDeleteDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBClusterParameterGroup(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) (*neptune.DeleteDBClusterParameterGroupOutput, error) {
 	var output neptune.DeleteDBClusterParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBClusterParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBClusterParameterGroupInput) *NeptuneDeleteDBClusterParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBClusterParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterParameterGroup", input)
 	return &NeptuneDeleteDBClusterParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBClusterSnapshot(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) (*neptune.DeleteDBClusterSnapshotOutput, error) {
 	var output neptune.DeleteDBClusterSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBClusterSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBClusterSnapshotAsync(ctx workflow.Context, input *neptune.DeleteDBClusterSnapshotInput) *NeptuneDeleteDBClusterSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBClusterSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBClusterSnapshot", input)
 	return &NeptuneDeleteDBClusterSnapshotResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBInstance(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) (*neptune.DeleteDBInstanceOutput, error) {
 	var output neptune.DeleteDBInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBInstanceAsync(ctx workflow.Context, input *neptune.DeleteDBInstanceInput) *NeptuneDeleteDBInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBInstance", input)
 	return &NeptuneDeleteDBInstanceResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBParameterGroup(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) (*neptune.DeleteDBParameterGroupOutput, error) {
 	var output neptune.DeleteDBParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBParameterGroupAsync(ctx workflow.Context, input *neptune.DeleteDBParameterGroupInput) *NeptuneDeleteDBParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBParameterGroup", input)
 	return &NeptuneDeleteDBParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteDBSubnetGroup(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) (*neptune.DeleteDBSubnetGroupOutput, error) {
 	var output neptune.DeleteDBSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteDBSubnetGroupAsync(ctx workflow.Context, input *neptune.DeleteDBSubnetGroupInput) *NeptuneDeleteDBSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteDBSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteDBSubnetGroup", input)
 	return &NeptuneDeleteDBSubnetGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) DeleteEventSubscription(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) (*neptune.DeleteEventSubscriptionOutput, error) {
 	var output neptune.DeleteEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DeleteEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DeleteEventSubscriptionAsync(ctx workflow.Context, input *neptune.DeleteEventSubscriptionInput) *NeptuneDeleteEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DeleteEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DeleteEventSubscription", input)
 	return &NeptuneDeleteEventSubscriptionResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterParameterGroups(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) (*neptune.DescribeDBClusterParameterGroupsOutput, error) {
 	var output neptune.DescribeDBClusterParameterGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterParameterGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameterGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBClusterParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParameterGroupsInput) *NeptuneDescribeDBClusterParameterGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterParameterGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameterGroups", input)
 	return &NeptuneDescribeDBClusterParameterGroupsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterParameters(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) (*neptune.DescribeDBClusterParametersOutput, error) {
 	var output neptune.DescribeDBClusterParametersOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeDBClusterParametersInput) *NeptuneDescribeDBClusterParametersResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterParameters", input)
 	return &NeptuneDescribeDBClusterParametersResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshotAttributes(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) (*neptune.DescribeDBClusterSnapshotAttributesOutput, error) {
 	var output neptune.DescribeDBClusterSnapshotAttributesOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterSnapshotAttributes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshotAttributes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshotAttributesAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotAttributesInput) *NeptuneDescribeDBClusterSnapshotAttributesResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterSnapshotAttributes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshotAttributes", input)
 	return &NeptuneDescribeDBClusterSnapshotAttributesResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshots(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) (*neptune.DescribeDBClusterSnapshotsOutput, error) {
 	var output neptune.DescribeDBClusterSnapshotsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterSnapshots", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshots", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBClusterSnapshotsAsync(ctx workflow.Context, input *neptune.DescribeDBClusterSnapshotsInput) *NeptuneDescribeDBClusterSnapshotsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusterSnapshots", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusterSnapshots", input)
 	return &NeptuneDescribeDBClusterSnapshotsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBClusters(ctx workflow.Context, input *neptune.DescribeDBClustersInput) (*neptune.DescribeDBClustersOutput, error) {
 	var output neptune.DescribeDBClustersOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBClustersAsync(ctx workflow.Context, input *neptune.DescribeDBClustersInput) *NeptuneDescribeDBClustersResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBClusters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBClusters", input)
 	return &NeptuneDescribeDBClustersResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBEngineVersions(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) (*neptune.DescribeDBEngineVersionsOutput, error) {
 	var output neptune.DescribeDBEngineVersionsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBEngineVersions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBEngineVersions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBEngineVersionsAsync(ctx workflow.Context, input *neptune.DescribeDBEngineVersionsInput) *NeptuneDescribeDBEngineVersionsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBEngineVersions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBEngineVersions", input)
 	return &NeptuneDescribeDBEngineVersionsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBInstances(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) (*neptune.DescribeDBInstancesOutput, error) {
 	var output neptune.DescribeDBInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBInstancesAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) *NeptuneDescribeDBInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBInstances", input)
 	return &NeptuneDescribeDBInstancesResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBParameterGroups(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) (*neptune.DescribeDBParameterGroupsOutput, error) {
 	var output neptune.DescribeDBParameterGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBParameterGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameterGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBParameterGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBParameterGroupsInput) *NeptuneDescribeDBParameterGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBParameterGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameterGroups", input)
 	return &NeptuneDescribeDBParameterGroupsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBParameters(ctx workflow.Context, input *neptune.DescribeDBParametersInput) (*neptune.DescribeDBParametersOutput, error) {
 	var output neptune.DescribeDBParametersOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBParametersAsync(ctx workflow.Context, input *neptune.DescribeDBParametersInput) *NeptuneDescribeDBParametersResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBParameters", input)
 	return &NeptuneDescribeDBParametersResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeDBSubnetGroups(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) (*neptune.DescribeDBSubnetGroupsOutput, error) {
 	var output neptune.DescribeDBSubnetGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBSubnetGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBSubnetGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeDBSubnetGroupsAsync(ctx workflow.Context, input *neptune.DescribeDBSubnetGroupsInput) *NeptuneDescribeDBSubnetGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeDBSubnetGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeDBSubnetGroups", input)
 	return &NeptuneDescribeDBSubnetGroupsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultClusterParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) (*neptune.DescribeEngineDefaultClusterParametersOutput, error) {
 	var output neptune.DescribeEngineDefaultClusterParametersOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeEngineDefaultClusterParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultClusterParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultClusterParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultClusterParametersInput) *NeptuneDescribeEngineDefaultClusterParametersResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeEngineDefaultClusterParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultClusterParameters", input)
 	return &NeptuneDescribeEngineDefaultClusterParametersResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultParameters(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) (*neptune.DescribeEngineDefaultParametersOutput, error) {
 	var output neptune.DescribeEngineDefaultParametersOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeEngineDefaultParameters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultParameters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeEngineDefaultParametersAsync(ctx workflow.Context, input *neptune.DescribeEngineDefaultParametersInput) *NeptuneDescribeEngineDefaultParametersResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeEngineDefaultParameters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEngineDefaultParameters", input)
 	return &NeptuneDescribeEngineDefaultParametersResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeEventCategories(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) (*neptune.DescribeEventCategoriesOutput, error) {
 	var output neptune.DescribeEventCategoriesOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeEventCategories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventCategories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeEventCategoriesAsync(ctx workflow.Context, input *neptune.DescribeEventCategoriesInput) *NeptuneDescribeEventCategoriesResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeEventCategories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventCategories", input)
 	return &NeptuneDescribeEventCategoriesResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeEventSubscriptions(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) (*neptune.DescribeEventSubscriptionsOutput, error) {
 	var output neptune.DescribeEventSubscriptionsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeEventSubscriptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventSubscriptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeEventSubscriptionsAsync(ctx workflow.Context, input *neptune.DescribeEventSubscriptionsInput) *NeptuneDescribeEventSubscriptionsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeEventSubscriptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEventSubscriptions", input)
 	return &NeptuneDescribeEventSubscriptionsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeEvents(ctx workflow.Context, input *neptune.DescribeEventsInput) (*neptune.DescribeEventsOutput, error) {
 	var output neptune.DescribeEventsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeEvents", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEvents", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeEventsAsync(ctx workflow.Context, input *neptune.DescribeEventsInput) *NeptuneDescribeEventsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeEvents", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeEvents", input)
 	return &NeptuneDescribeEventsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeOrderableDBInstanceOptions(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) (*neptune.DescribeOrderableDBInstanceOptionsOutput, error) {
 	var output neptune.DescribeOrderableDBInstanceOptionsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeOrderableDBInstanceOptions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeOrderableDBInstanceOptions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeOrderableDBInstanceOptionsAsync(ctx workflow.Context, input *neptune.DescribeOrderableDBInstanceOptionsInput) *NeptuneDescribeOrderableDBInstanceOptionsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeOrderableDBInstanceOptions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeOrderableDBInstanceOptions", input)
 	return &NeptuneDescribeOrderableDBInstanceOptionsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribePendingMaintenanceActions(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) (*neptune.DescribePendingMaintenanceActionsOutput, error) {
 	var output neptune.DescribePendingMaintenanceActionsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribePendingMaintenanceActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribePendingMaintenanceActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribePendingMaintenanceActionsAsync(ctx workflow.Context, input *neptune.DescribePendingMaintenanceActionsInput) *NeptuneDescribePendingMaintenanceActionsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribePendingMaintenanceActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribePendingMaintenanceActions", input)
 	return &NeptuneDescribePendingMaintenanceActionsResult{Result: future}
 }
 
 func (a *NeptuneStub) DescribeValidDBInstanceModifications(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) (*neptune.DescribeValidDBInstanceModificationsOutput, error) {
 	var output neptune.DescribeValidDBInstanceModificationsOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.DescribeValidDBInstanceModifications", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeValidDBInstanceModifications", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) DescribeValidDBInstanceModificationsAsync(ctx workflow.Context, input *neptune.DescribeValidDBInstanceModificationsInput) *NeptuneDescribeValidDBInstanceModificationsResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.DescribeValidDBInstanceModifications", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.DescribeValidDBInstanceModifications", input)
 	return &NeptuneDescribeValidDBInstanceModificationsResult{Result: future}
 }
 
 func (a *NeptuneStub) FailoverDBCluster(ctx workflow.Context, input *neptune.FailoverDBClusterInput) (*neptune.FailoverDBClusterOutput, error) {
 	var output neptune.FailoverDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.FailoverDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.FailoverDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) FailoverDBClusterAsync(ctx workflow.Context, input *neptune.FailoverDBClusterInput) *NeptuneFailoverDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.FailoverDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.FailoverDBCluster", input)
 	return &NeptuneFailoverDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) ListTagsForResource(ctx workflow.Context, input *neptune.ListTagsForResourceInput) (*neptune.ListTagsForResourceOutput, error) {
 	var output neptune.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ListTagsForResourceAsync(ctx workflow.Context, input *neptune.ListTagsForResourceInput) *NeptuneListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ListTagsForResource", input)
 	return &NeptuneListTagsForResourceResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBCluster(ctx workflow.Context, input *neptune.ModifyDBClusterInput) (*neptune.ModifyDBClusterOutput, error) {
 	var output neptune.ModifyDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBClusterAsync(ctx workflow.Context, input *neptune.ModifyDBClusterInput) *NeptuneModifyDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBCluster", input)
 	return &NeptuneModifyDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBClusterParameterGroup(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
 	var output neptune.ResetDBClusterParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBClusterParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBClusterParameterGroupInput) *NeptuneModifyDBClusterParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBClusterParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterParameterGroup", input)
 	return &NeptuneModifyDBClusterParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBClusterSnapshotAttribute(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) (*neptune.ModifyDBClusterSnapshotAttributeOutput, error) {
 	var output neptune.ModifyDBClusterSnapshotAttributeOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBClusterSnapshotAttribute", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterSnapshotAttribute", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBClusterSnapshotAttributeAsync(ctx workflow.Context, input *neptune.ModifyDBClusterSnapshotAttributeInput) *NeptuneModifyDBClusterSnapshotAttributeResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBClusterSnapshotAttribute", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBClusterSnapshotAttribute", input)
 	return &NeptuneModifyDBClusterSnapshotAttributeResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBInstance(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) (*neptune.ModifyDBInstanceOutput, error) {
 	var output neptune.ModifyDBInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBInstanceAsync(ctx workflow.Context, input *neptune.ModifyDBInstanceInput) *NeptuneModifyDBInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBInstance", input)
 	return &NeptuneModifyDBInstanceResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBParameterGroup(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
 	var output neptune.ResetDBParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBParameterGroupAsync(ctx workflow.Context, input *neptune.ModifyDBParameterGroupInput) *NeptuneModifyDBParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBParameterGroup", input)
 	return &NeptuneModifyDBParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyDBSubnetGroup(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) (*neptune.ModifyDBSubnetGroupOutput, error) {
 	var output neptune.ModifyDBSubnetGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBSubnetGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBSubnetGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyDBSubnetGroupAsync(ctx workflow.Context, input *neptune.ModifyDBSubnetGroupInput) *NeptuneModifyDBSubnetGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyDBSubnetGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyDBSubnetGroup", input)
 	return &NeptuneModifyDBSubnetGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) ModifyEventSubscription(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) (*neptune.ModifyEventSubscriptionOutput, error) {
 	var output neptune.ModifyEventSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ModifyEventSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyEventSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ModifyEventSubscriptionAsync(ctx workflow.Context, input *neptune.ModifyEventSubscriptionInput) *NeptuneModifyEventSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ModifyEventSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ModifyEventSubscription", input)
 	return &NeptuneModifyEventSubscriptionResult{Result: future}
 }
 
 func (a *NeptuneStub) PromoteReadReplicaDBCluster(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) (*neptune.PromoteReadReplicaDBClusterOutput, error) {
 	var output neptune.PromoteReadReplicaDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.PromoteReadReplicaDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.PromoteReadReplicaDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) PromoteReadReplicaDBClusterAsync(ctx workflow.Context, input *neptune.PromoteReadReplicaDBClusterInput) *NeptunePromoteReadReplicaDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.PromoteReadReplicaDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.PromoteReadReplicaDBCluster", input)
 	return &NeptunePromoteReadReplicaDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) RebootDBInstance(ctx workflow.Context, input *neptune.RebootDBInstanceInput) (*neptune.RebootDBInstanceOutput, error) {
 	var output neptune.RebootDBInstanceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RebootDBInstance", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RebootDBInstance", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RebootDBInstanceAsync(ctx workflow.Context, input *neptune.RebootDBInstanceInput) *NeptuneRebootDBInstanceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RebootDBInstance", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RebootDBInstance", input)
 	return &NeptuneRebootDBInstanceResult{Result: future}
 }
 
 func (a *NeptuneStub) RemoveRoleFromDBCluster(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) (*neptune.RemoveRoleFromDBClusterOutput, error) {
 	var output neptune.RemoveRoleFromDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RemoveRoleFromDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveRoleFromDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RemoveRoleFromDBClusterAsync(ctx workflow.Context, input *neptune.RemoveRoleFromDBClusterInput) *NeptuneRemoveRoleFromDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RemoveRoleFromDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveRoleFromDBCluster", input)
 	return &NeptuneRemoveRoleFromDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) RemoveSourceIdentifierFromSubscription(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) (*neptune.RemoveSourceIdentifierFromSubscriptionOutput, error) {
 	var output neptune.RemoveSourceIdentifierFromSubscriptionOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RemoveSourceIdentifierFromSubscription", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveSourceIdentifierFromSubscription", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RemoveSourceIdentifierFromSubscriptionAsync(ctx workflow.Context, input *neptune.RemoveSourceIdentifierFromSubscriptionInput) *NeptuneRemoveSourceIdentifierFromSubscriptionResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RemoveSourceIdentifierFromSubscription", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveSourceIdentifierFromSubscription", input)
 	return &NeptuneRemoveSourceIdentifierFromSubscriptionResult{Result: future}
 }
 
 func (a *NeptuneStub) RemoveTagsFromResource(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) (*neptune.RemoveTagsFromResourceOutput, error) {
 	var output neptune.RemoveTagsFromResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RemoveTagsFromResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveTagsFromResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RemoveTagsFromResourceAsync(ctx workflow.Context, input *neptune.RemoveTagsFromResourceInput) *NeptuneRemoveTagsFromResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RemoveTagsFromResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RemoveTagsFromResource", input)
 	return &NeptuneRemoveTagsFromResourceResult{Result: future}
 }
 
 func (a *NeptuneStub) ResetDBClusterParameterGroup(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) (*neptune.ResetDBClusterParameterGroupOutput, error) {
 	var output neptune.ResetDBClusterParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ResetDBClusterParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBClusterParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ResetDBClusterParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBClusterParameterGroupInput) *NeptuneResetDBClusterParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ResetDBClusterParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBClusterParameterGroup", input)
 	return &NeptuneResetDBClusterParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) ResetDBParameterGroup(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) (*neptune.ResetDBParameterGroupOutput, error) {
 	var output neptune.ResetDBParameterGroupOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.ResetDBParameterGroup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBParameterGroup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) ResetDBParameterGroupAsync(ctx workflow.Context, input *neptune.ResetDBParameterGroupInput) *NeptuneResetDBParameterGroupResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.ResetDBParameterGroup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.ResetDBParameterGroup", input)
 	return &NeptuneResetDBParameterGroupResult{Result: future}
 }
 
 func (a *NeptuneStub) RestoreDBClusterFromSnapshot(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) (*neptune.RestoreDBClusterFromSnapshotOutput, error) {
 	var output neptune.RestoreDBClusterFromSnapshotOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RestoreDBClusterFromSnapshot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterFromSnapshot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RestoreDBClusterFromSnapshotAsync(ctx workflow.Context, input *neptune.RestoreDBClusterFromSnapshotInput) *NeptuneRestoreDBClusterFromSnapshotResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RestoreDBClusterFromSnapshot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterFromSnapshot", input)
 	return &NeptuneRestoreDBClusterFromSnapshotResult{Result: future}
 }
 
 func (a *NeptuneStub) RestoreDBClusterToPointInTime(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) (*neptune.RestoreDBClusterToPointInTimeOutput, error) {
 	var output neptune.RestoreDBClusterToPointInTimeOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.RestoreDBClusterToPointInTime", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterToPointInTime", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) RestoreDBClusterToPointInTimeAsync(ctx workflow.Context, input *neptune.RestoreDBClusterToPointInTimeInput) *NeptuneRestoreDBClusterToPointInTimeResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.RestoreDBClusterToPointInTime", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.RestoreDBClusterToPointInTime", input)
 	return &NeptuneRestoreDBClusterToPointInTimeResult{Result: future}
 }
 
 func (a *NeptuneStub) StartDBCluster(ctx workflow.Context, input *neptune.StartDBClusterInput) (*neptune.StartDBClusterOutput, error) {
 	var output neptune.StartDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.StartDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.StartDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) StartDBClusterAsync(ctx workflow.Context, input *neptune.StartDBClusterInput) *NeptuneStartDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.StartDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.StartDBCluster", input)
 	return &NeptuneStartDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) StopDBCluster(ctx workflow.Context, input *neptune.StopDBClusterInput) (*neptune.StopDBClusterOutput, error) {
 	var output neptune.StopDBClusterOutput
-	err := workflow.ExecuteActivity(ctx, "Neptune.StopDBCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.neptune.StopDBCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *NeptuneStub) StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult {
-	future := workflow.ExecuteActivity(ctx, "Neptune.StopDBCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.neptune.StopDBCluster", input)
 	return &NeptuneStopDBClusterResult{Result: future}
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "Neptune.WaitUntilDBInstanceAvailable", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceAvailable", input).Get(ctx, nil)
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceAvailableAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "Neptune.WaitUntilDBInstanceAvailable", input)
+	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceAvailable", input)
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error {
-	return workflow.ExecuteActivity(ctx, "Neptune.WaitUntilDBInstanceDeleted", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceDeleted", input).Get(ctx, nil)
 }
 
 func (a *NeptuneStub) WaitUntilDBInstanceDeletedAsync(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "Neptune.WaitUntilDBInstanceDeleted", input)
+	return workflow.ExecuteActivity(ctx, "aws.neptune.WaitUntilDBInstanceDeleted", input)
 }

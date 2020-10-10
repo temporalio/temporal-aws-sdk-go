@@ -31,8 +31,7 @@ type MacieClient interface {
 	UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult
 }
 
-type MacieStub struct {
-}
+type MacieStub struct{}
 
 func NewMacieStub() MacieClient {
 	return &MacieStub{}
@@ -110,77 +109,77 @@ func (r *MacieUpdateS3ResourcesResult) Get(ctx workflow.Context) (*macie.UpdateS
 
 func (a *MacieStub) AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error) {
 	var output macie.AssociateMemberAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.AssociateMemberAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.AssociateMemberAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *MacieAssociateMemberAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.AssociateMemberAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.AssociateMemberAccount", input)
 	return &MacieAssociateMemberAccountResult{Result: future}
 }
 
 func (a *MacieStub) AssociateS3Resources(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) (*macie.AssociateS3ResourcesOutput, error) {
 	var output macie.AssociateS3ResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.AssociateS3Resources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.AssociateS3Resources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) AssociateS3ResourcesAsync(ctx workflow.Context, input *macie.AssociateS3ResourcesInput) *MacieAssociateS3ResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.AssociateS3Resources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.AssociateS3Resources", input)
 	return &MacieAssociateS3ResourcesResult{Result: future}
 }
 
 func (a *MacieStub) DisassociateMemberAccount(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) (*macie.DisassociateMemberAccountOutput, error) {
 	var output macie.DisassociateMemberAccountOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.DisassociateMemberAccount", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.DisassociateMemberAccount", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) DisassociateMemberAccountAsync(ctx workflow.Context, input *macie.DisassociateMemberAccountInput) *MacieDisassociateMemberAccountResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.DisassociateMemberAccount", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.DisassociateMemberAccount", input)
 	return &MacieDisassociateMemberAccountResult{Result: future}
 }
 
 func (a *MacieStub) DisassociateS3Resources(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) (*macie.DisassociateS3ResourcesOutput, error) {
 	var output macie.DisassociateS3ResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.DisassociateS3Resources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.DisassociateS3Resources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) DisassociateS3ResourcesAsync(ctx workflow.Context, input *macie.DisassociateS3ResourcesInput) *MacieDisassociateS3ResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.DisassociateS3Resources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.DisassociateS3Resources", input)
 	return &MacieDisassociateS3ResourcesResult{Result: future}
 }
 
 func (a *MacieStub) ListMemberAccounts(ctx workflow.Context, input *macie.ListMemberAccountsInput) (*macie.ListMemberAccountsOutput, error) {
 	var output macie.ListMemberAccountsOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.ListMemberAccounts", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.ListMemberAccounts", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) ListMemberAccountsAsync(ctx workflow.Context, input *macie.ListMemberAccountsInput) *MacieListMemberAccountsResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.ListMemberAccounts", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.ListMemberAccounts", input)
 	return &MacieListMemberAccountsResult{Result: future}
 }
 
 func (a *MacieStub) ListS3Resources(ctx workflow.Context, input *macie.ListS3ResourcesInput) (*macie.ListS3ResourcesOutput, error) {
 	var output macie.ListS3ResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.ListS3Resources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.ListS3Resources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) ListS3ResourcesAsync(ctx workflow.Context, input *macie.ListS3ResourcesInput) *MacieListS3ResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.ListS3Resources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.ListS3Resources", input)
 	return &MacieListS3ResourcesResult{Result: future}
 }
 
 func (a *MacieStub) UpdateS3Resources(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) (*macie.UpdateS3ResourcesOutput, error) {
 	var output macie.UpdateS3ResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "Macie.UpdateS3Resources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.macie.UpdateS3Resources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MacieStub) UpdateS3ResourcesAsync(ctx workflow.Context, input *macie.UpdateS3ResourcesInput) *MacieUpdateS3ResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "Macie.UpdateS3Resources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.macie.UpdateS3Resources", input)
 	return &MacieUpdateS3ResourcesResult{Result: future}
 }

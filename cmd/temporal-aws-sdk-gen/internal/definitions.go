@@ -34,7 +34,9 @@ func (m *MethodDefinition) String() string {
 }
 
 type InterfaceDefinition struct {
-	// Service name
+	// Service name (lower-cased, URL compatible service name)
+	ID string
+	// Service name (friendly name)
 	Name string
 	// Service methods
 	Methods []*MethodDefinition

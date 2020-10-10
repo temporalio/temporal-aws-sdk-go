@@ -16,106 +16,216 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type ServiceDiscoveryActivities struct {
 	client servicediscoveryiface.ServiceDiscoveryAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewServiceDiscoveryActivities(session *session.Session, config ...*aws.Config) *ServiceDiscoveryActivities {
-	client := servicediscovery.New(session, config...)
+func NewServiceDiscoveryActivities(sess *session.Session, config ...*aws.Config) *ServiceDiscoveryActivities {
+	client := servicediscovery.New(sess, config...)
 	return &ServiceDiscoveryActivities{client: client}
 }
 
+func NewServiceDiscoveryActivitiesWithSessionFactory(sessionFactory SessionFactory) *ServiceDiscoveryActivities {
+	return &ServiceDiscoveryActivities{sessionFactory: sessionFactory}
+}
+
+func (a *ServiceDiscoveryActivities) getClient(ctx context.Context) (servicediscoveryiface.ServiceDiscoveryAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return servicediscovery.New(sess), nil
+}
+
 func (a *ServiceDiscoveryActivities) CreateHttpNamespace(ctx context.Context, input *servicediscovery.CreateHttpNamespaceInput) (*servicediscovery.CreateHttpNamespaceOutput, error) {
-	return a.client.CreateHttpNamespaceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateHttpNamespaceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) CreatePrivateDnsNamespace(ctx context.Context, input *servicediscovery.CreatePrivateDnsNamespaceInput) (*servicediscovery.CreatePrivateDnsNamespaceOutput, error) {
-	return a.client.CreatePrivateDnsNamespaceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreatePrivateDnsNamespaceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) CreatePublicDnsNamespace(ctx context.Context, input *servicediscovery.CreatePublicDnsNamespaceInput) (*servicediscovery.CreatePublicDnsNamespaceOutput, error) {
-	return a.client.CreatePublicDnsNamespaceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreatePublicDnsNamespaceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) CreateService(ctx context.Context, input *servicediscovery.CreateServiceInput) (*servicediscovery.CreateServiceOutput, error) {
-	return a.client.CreateServiceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateServiceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) DeleteNamespace(ctx context.Context, input *servicediscovery.DeleteNamespaceInput) (*servicediscovery.DeleteNamespaceOutput, error) {
-	return a.client.DeleteNamespaceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteNamespaceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) DeleteService(ctx context.Context, input *servicediscovery.DeleteServiceInput) (*servicediscovery.DeleteServiceOutput, error) {
-	return a.client.DeleteServiceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteServiceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) DeregisterInstance(ctx context.Context, input *servicediscovery.DeregisterInstanceInput) (*servicediscovery.DeregisterInstanceOutput, error) {
-	return a.client.DeregisterInstanceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeregisterInstanceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) DiscoverInstances(ctx context.Context, input *servicediscovery.DiscoverInstancesInput) (*servicediscovery.DiscoverInstancesOutput, error) {
-	return a.client.DiscoverInstancesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DiscoverInstancesWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) GetInstance(ctx context.Context, input *servicediscovery.GetInstanceInput) (*servicediscovery.GetInstanceOutput, error) {
-	return a.client.GetInstanceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetInstanceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) GetInstancesHealthStatus(ctx context.Context, input *servicediscovery.GetInstancesHealthStatusInput) (*servicediscovery.GetInstancesHealthStatusOutput, error) {
-	return a.client.GetInstancesHealthStatusWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetInstancesHealthStatusWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) GetNamespace(ctx context.Context, input *servicediscovery.GetNamespaceInput) (*servicediscovery.GetNamespaceOutput, error) {
-	return a.client.GetNamespaceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetNamespaceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) GetOperation(ctx context.Context, input *servicediscovery.GetOperationInput) (*servicediscovery.GetOperationOutput, error) {
-	return a.client.GetOperationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetOperationWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) GetService(ctx context.Context, input *servicediscovery.GetServiceInput) (*servicediscovery.GetServiceOutput, error) {
-	return a.client.GetServiceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetServiceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) ListInstances(ctx context.Context, input *servicediscovery.ListInstancesInput) (*servicediscovery.ListInstancesOutput, error) {
-	return a.client.ListInstancesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListInstancesWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) ListNamespaces(ctx context.Context, input *servicediscovery.ListNamespacesInput) (*servicediscovery.ListNamespacesOutput, error) {
-	return a.client.ListNamespacesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListNamespacesWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) ListOperations(ctx context.Context, input *servicediscovery.ListOperationsInput) (*servicediscovery.ListOperationsOutput, error) {
-	return a.client.ListOperationsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListOperationsWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) ListServices(ctx context.Context, input *servicediscovery.ListServicesInput) (*servicediscovery.ListServicesOutput, error) {
-	return a.client.ListServicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListServicesWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) ListTagsForResource(ctx context.Context, input *servicediscovery.ListTagsForResourceInput) (*servicediscovery.ListTagsForResourceOutput, error) {
-	return a.client.ListTagsForResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsForResourceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) RegisterInstance(ctx context.Context, input *servicediscovery.RegisterInstanceInput) (*servicediscovery.RegisterInstanceOutput, error) {
-	return a.client.RegisterInstanceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterInstanceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) TagResource(ctx context.Context, input *servicediscovery.TagResourceInput) (*servicediscovery.TagResourceOutput, error) {
-	return a.client.TagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.TagResourceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) UntagResource(ctx context.Context, input *servicediscovery.UntagResourceInput) (*servicediscovery.UntagResourceOutput, error) {
-	return a.client.UntagResourceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UntagResourceWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) UpdateInstanceCustomHealthStatus(ctx context.Context, input *servicediscovery.UpdateInstanceCustomHealthStatusInput) (*servicediscovery.UpdateInstanceCustomHealthStatusOutput, error) {
-	return a.client.UpdateInstanceCustomHealthStatusWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateInstanceCustomHealthStatusWithContext(ctx, input)
 }
 
 func (a *ServiceDiscoveryActivities) UpdateService(ctx context.Context, input *servicediscovery.UpdateServiceInput) (*servicediscovery.UpdateServiceOutput, error) {
-	return a.client.UpdateServiceWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateServiceWithContext(ctx, input)
 }

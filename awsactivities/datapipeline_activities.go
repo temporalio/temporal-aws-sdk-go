@@ -16,90 +16,184 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type DataPipelineActivities struct {
 	client datapipelineiface.DataPipelineAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewDataPipelineActivities(session *session.Session, config ...*aws.Config) *DataPipelineActivities {
-	client := datapipeline.New(session, config...)
+func NewDataPipelineActivities(sess *session.Session, config ...*aws.Config) *DataPipelineActivities {
+	client := datapipeline.New(sess, config...)
 	return &DataPipelineActivities{client: client}
 }
 
+func NewDataPipelineActivitiesWithSessionFactory(sessionFactory SessionFactory) *DataPipelineActivities {
+	return &DataPipelineActivities{sessionFactory: sessionFactory}
+}
+
+func (a *DataPipelineActivities) getClient(ctx context.Context) (datapipelineiface.DataPipelineAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return datapipeline.New(sess), nil
+}
+
 func (a *DataPipelineActivities) ActivatePipeline(ctx context.Context, input *datapipeline.ActivatePipelineInput) (*datapipeline.ActivatePipelineOutput, error) {
-	return a.client.ActivatePipelineWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ActivatePipelineWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) AddTags(ctx context.Context, input *datapipeline.AddTagsInput) (*datapipeline.AddTagsOutput, error) {
-	return a.client.AddTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) CreatePipeline(ctx context.Context, input *datapipeline.CreatePipelineInput) (*datapipeline.CreatePipelineOutput, error) {
-	return a.client.CreatePipelineWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreatePipelineWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) DeactivatePipeline(ctx context.Context, input *datapipeline.DeactivatePipelineInput) (*datapipeline.DeactivatePipelineOutput, error) {
-	return a.client.DeactivatePipelineWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeactivatePipelineWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) DeletePipeline(ctx context.Context, input *datapipeline.DeletePipelineInput) (*datapipeline.DeletePipelineOutput, error) {
-	return a.client.DeletePipelineWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeletePipelineWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) DescribeObjects(ctx context.Context, input *datapipeline.DescribeObjectsInput) (*datapipeline.DescribeObjectsOutput, error) {
-	return a.client.DescribeObjectsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeObjectsWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) DescribePipelines(ctx context.Context, input *datapipeline.DescribePipelinesInput) (*datapipeline.DescribePipelinesOutput, error) {
-	return a.client.DescribePipelinesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribePipelinesWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) EvaluateExpression(ctx context.Context, input *datapipeline.EvaluateExpressionInput) (*datapipeline.EvaluateExpressionOutput, error) {
-	return a.client.EvaluateExpressionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.EvaluateExpressionWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) GetPipelineDefinition(ctx context.Context, input *datapipeline.GetPipelineDefinitionInput) (*datapipeline.GetPipelineDefinitionOutput, error) {
-	return a.client.GetPipelineDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetPipelineDefinitionWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) ListPipelines(ctx context.Context, input *datapipeline.ListPipelinesInput) (*datapipeline.ListPipelinesOutput, error) {
-	return a.client.ListPipelinesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListPipelinesWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) PollForTask(ctx context.Context, input *datapipeline.PollForTaskInput) (*datapipeline.PollForTaskOutput, error) {
-	return a.client.PollForTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PollForTaskWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) PutPipelineDefinition(ctx context.Context, input *datapipeline.PutPipelineDefinitionInput) (*datapipeline.PutPipelineDefinitionOutput, error) {
-	return a.client.PutPipelineDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutPipelineDefinitionWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) QueryObjects(ctx context.Context, input *datapipeline.QueryObjectsInput) (*datapipeline.QueryObjectsOutput, error) {
-	return a.client.QueryObjectsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.QueryObjectsWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) RemoveTags(ctx context.Context, input *datapipeline.RemoveTagsInput) (*datapipeline.RemoveTagsOutput, error) {
-	return a.client.RemoveTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveTagsWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) ReportTaskProgress(ctx context.Context, input *datapipeline.ReportTaskProgressInput) (*datapipeline.ReportTaskProgressOutput, error) {
-	return a.client.ReportTaskProgressWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ReportTaskProgressWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) ReportTaskRunnerHeartbeat(ctx context.Context, input *datapipeline.ReportTaskRunnerHeartbeatInput) (*datapipeline.ReportTaskRunnerHeartbeatOutput, error) {
-	return a.client.ReportTaskRunnerHeartbeatWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ReportTaskRunnerHeartbeatWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) SetStatus(ctx context.Context, input *datapipeline.SetStatusInput) (*datapipeline.SetStatusOutput, error) {
-	return a.client.SetStatusWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetStatusWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) SetTaskStatus(ctx context.Context, input *datapipeline.SetTaskStatusInput) (*datapipeline.SetTaskStatusOutput, error) {
-	return a.client.SetTaskStatusWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SetTaskStatusWithContext(ctx, input)
 }
 
 func (a *DataPipelineActivities) ValidatePipelineDefinition(ctx context.Context, input *datapipeline.ValidatePipelineDefinitionInput) (*datapipeline.ValidatePipelineDefinitionOutput, error) {
-	return a.client.ValidatePipelineDefinitionWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ValidatePipelineDefinitionWithContext(ctx, input)
 }

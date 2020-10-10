@@ -100,11 +100,9 @@ type CloudWatchClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult
 
 	WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-}
+	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error}
 
-type CloudWatchStub struct {
-}
+type CloudWatchStub struct{}
 
 func NewCloudWatchStub() CloudWatchClient {
 	return &CloudWatchStub{}
@@ -410,348 +408,350 @@ func (r *CloudwatchUntagResourceResult) Get(ctx workflow.Context) (*cloudwatch.U
 	return &output, err
 }
 
+
+
 func (a *CloudWatchStub) DeleteAlarms(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error) {
 	var output cloudwatch.DeleteAlarmsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteAlarms", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteAlarms", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DeleteAlarmsAsync(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) *CloudwatchDeleteAlarmsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteAlarms", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteAlarms", input)
 	return &CloudwatchDeleteAlarmsResult{Result: future}
 }
 
 func (a *CloudWatchStub) DeleteAnomalyDetector(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) (*cloudwatch.DeleteAnomalyDetectorOutput, error) {
 	var output cloudwatch.DeleteAnomalyDetectorOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteAnomalyDetector", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteAnomalyDetector", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DeleteAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.DeleteAnomalyDetectorInput) *CloudwatchDeleteAnomalyDetectorResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteAnomalyDetector", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteAnomalyDetector", input)
 	return &CloudwatchDeleteAnomalyDetectorResult{Result: future}
 }
 
 func (a *CloudWatchStub) DeleteDashboards(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) (*cloudwatch.DeleteDashboardsOutput, error) {
 	var output cloudwatch.DeleteDashboardsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteDashboards", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteDashboards", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DeleteDashboardsAsync(ctx workflow.Context, input *cloudwatch.DeleteDashboardsInput) *CloudwatchDeleteDashboardsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteDashboards", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteDashboards", input)
 	return &CloudwatchDeleteDashboardsResult{Result: future}
 }
 
 func (a *CloudWatchStub) DeleteInsightRules(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) (*cloudwatch.DeleteInsightRulesOutput, error) {
 	var output cloudwatch.DeleteInsightRulesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteInsightRules", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteInsightRules", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DeleteInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DeleteInsightRulesInput) *CloudwatchDeleteInsightRulesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DeleteInsightRules", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DeleteInsightRules", input)
 	return &CloudwatchDeleteInsightRulesResult{Result: future}
 }
 
 func (a *CloudWatchStub) DescribeAlarmHistory(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) (*cloudwatch.DescribeAlarmHistoryOutput, error) {
 	var output cloudwatch.DescribeAlarmHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarmHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarmHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DescribeAlarmHistoryAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmHistoryInput) *CloudwatchDescribeAlarmHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarmHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarmHistory", input)
 	return &CloudwatchDescribeAlarmHistoryResult{Result: future}
 }
 
 func (a *CloudWatchStub) DescribeAlarms(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) (*cloudwatch.DescribeAlarmsOutput, error) {
 	var output cloudwatch.DescribeAlarmsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarms", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarms", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DescribeAlarmsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) *CloudwatchDescribeAlarmsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarms", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarms", input)
 	return &CloudwatchDescribeAlarmsResult{Result: future}
 }
 
 func (a *CloudWatchStub) DescribeAlarmsForMetric(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) (*cloudwatch.DescribeAlarmsForMetricOutput, error) {
 	var output cloudwatch.DescribeAlarmsForMetricOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarmsForMetric", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarmsForMetric", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DescribeAlarmsForMetricAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsForMetricInput) *CloudwatchDescribeAlarmsForMetricResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAlarmsForMetric", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAlarmsForMetric", input)
 	return &CloudwatchDescribeAlarmsForMetricResult{Result: future}
 }
 
 func (a *CloudWatchStub) DescribeAnomalyDetectors(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) (*cloudwatch.DescribeAnomalyDetectorsOutput, error) {
 	var output cloudwatch.DescribeAnomalyDetectorsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAnomalyDetectors", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAnomalyDetectors", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DescribeAnomalyDetectorsAsync(ctx workflow.Context, input *cloudwatch.DescribeAnomalyDetectorsInput) *CloudwatchDescribeAnomalyDetectorsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeAnomalyDetectors", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeAnomalyDetectors", input)
 	return &CloudwatchDescribeAnomalyDetectorsResult{Result: future}
 }
 
 func (a *CloudWatchStub) DescribeInsightRules(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) (*cloudwatch.DescribeInsightRulesOutput, error) {
 	var output cloudwatch.DescribeInsightRulesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeInsightRules", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeInsightRules", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DescribeInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DescribeInsightRulesInput) *CloudwatchDescribeInsightRulesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DescribeInsightRules", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DescribeInsightRules", input)
 	return &CloudwatchDescribeInsightRulesResult{Result: future}
 }
 
 func (a *CloudWatchStub) DisableAlarmActions(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) (*cloudwatch.DisableAlarmActionsOutput, error) {
 	var output cloudwatch.DisableAlarmActionsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DisableAlarmActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DisableAlarmActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DisableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.DisableAlarmActionsInput) *CloudwatchDisableAlarmActionsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DisableAlarmActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DisableAlarmActions", input)
 	return &CloudwatchDisableAlarmActionsResult{Result: future}
 }
 
 func (a *CloudWatchStub) DisableInsightRules(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) (*cloudwatch.DisableInsightRulesOutput, error) {
 	var output cloudwatch.DisableInsightRulesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.DisableInsightRules", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DisableInsightRules", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) DisableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.DisableInsightRulesInput) *CloudwatchDisableInsightRulesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.DisableInsightRules", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.DisableInsightRules", input)
 	return &CloudwatchDisableInsightRulesResult{Result: future}
 }
 
 func (a *CloudWatchStub) EnableAlarmActions(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) (*cloudwatch.EnableAlarmActionsOutput, error) {
 	var output cloudwatch.EnableAlarmActionsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.EnableAlarmActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.EnableAlarmActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) EnableAlarmActionsAsync(ctx workflow.Context, input *cloudwatch.EnableAlarmActionsInput) *CloudwatchEnableAlarmActionsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.EnableAlarmActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.EnableAlarmActions", input)
 	return &CloudwatchEnableAlarmActionsResult{Result: future}
 }
 
 func (a *CloudWatchStub) EnableInsightRules(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) (*cloudwatch.EnableInsightRulesOutput, error) {
 	var output cloudwatch.EnableInsightRulesOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.EnableInsightRules", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.EnableInsightRules", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) EnableInsightRulesAsync(ctx workflow.Context, input *cloudwatch.EnableInsightRulesInput) *CloudwatchEnableInsightRulesResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.EnableInsightRules", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.EnableInsightRules", input)
 	return &CloudwatchEnableInsightRulesResult{Result: future}
 }
 
 func (a *CloudWatchStub) GetDashboard(ctx workflow.Context, input *cloudwatch.GetDashboardInput) (*cloudwatch.GetDashboardOutput, error) {
 	var output cloudwatch.GetDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.GetDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) GetDashboardAsync(ctx workflow.Context, input *cloudwatch.GetDashboardInput) *CloudwatchGetDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.GetDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetDashboard", input)
 	return &CloudwatchGetDashboardResult{Result: future}
 }
 
 func (a *CloudWatchStub) GetInsightRuleReport(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) (*cloudwatch.GetInsightRuleReportOutput, error) {
 	var output cloudwatch.GetInsightRuleReportOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.GetInsightRuleReport", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetInsightRuleReport", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) GetInsightRuleReportAsync(ctx workflow.Context, input *cloudwatch.GetInsightRuleReportInput) *CloudwatchGetInsightRuleReportResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.GetInsightRuleReport", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetInsightRuleReport", input)
 	return &CloudwatchGetInsightRuleReportResult{Result: future}
 }
 
 func (a *CloudWatchStub) GetMetricData(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) (*cloudwatch.GetMetricDataOutput, error) {
 	var output cloudwatch.GetMetricDataOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricData", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricData", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) GetMetricDataAsync(ctx workflow.Context, input *cloudwatch.GetMetricDataInput) *CloudwatchGetMetricDataResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricData", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricData", input)
 	return &CloudwatchGetMetricDataResult{Result: future}
 }
 
 func (a *CloudWatchStub) GetMetricStatistics(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) (*cloudwatch.GetMetricStatisticsOutput, error) {
 	var output cloudwatch.GetMetricStatisticsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricStatistics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricStatistics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) GetMetricStatisticsAsync(ctx workflow.Context, input *cloudwatch.GetMetricStatisticsInput) *CloudwatchGetMetricStatisticsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricStatistics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricStatistics", input)
 	return &CloudwatchGetMetricStatisticsResult{Result: future}
 }
 
 func (a *CloudWatchStub) GetMetricWidgetImage(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) (*cloudwatch.GetMetricWidgetImageOutput, error) {
 	var output cloudwatch.GetMetricWidgetImageOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricWidgetImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricWidgetImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) GetMetricWidgetImageAsync(ctx workflow.Context, input *cloudwatch.GetMetricWidgetImageInput) *CloudwatchGetMetricWidgetImageResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.GetMetricWidgetImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.GetMetricWidgetImage", input)
 	return &CloudwatchGetMetricWidgetImageResult{Result: future}
 }
 
 func (a *CloudWatchStub) ListDashboards(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) (*cloudwatch.ListDashboardsOutput, error) {
 	var output cloudwatch.ListDashboardsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.ListDashboards", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListDashboards", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) ListDashboardsAsync(ctx workflow.Context, input *cloudwatch.ListDashboardsInput) *CloudwatchListDashboardsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.ListDashboards", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListDashboards", input)
 	return &CloudwatchListDashboardsResult{Result: future}
 }
 
 func (a *CloudWatchStub) ListMetrics(ctx workflow.Context, input *cloudwatch.ListMetricsInput) (*cloudwatch.ListMetricsOutput, error) {
 	var output cloudwatch.ListMetricsOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.ListMetrics", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListMetrics", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) ListMetricsAsync(ctx workflow.Context, input *cloudwatch.ListMetricsInput) *CloudwatchListMetricsResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.ListMetrics", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListMetrics", input)
 	return &CloudwatchListMetricsResult{Result: future}
 }
 
 func (a *CloudWatchStub) ListTagsForResource(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) (*cloudwatch.ListTagsForResourceOutput, error) {
 	var output cloudwatch.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) ListTagsForResourceAsync(ctx workflow.Context, input *cloudwatch.ListTagsForResourceInput) *CloudwatchListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.ListTagsForResource", input)
 	return &CloudwatchListTagsForResourceResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutAnomalyDetector(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) (*cloudwatch.PutAnomalyDetectorOutput, error) {
 	var output cloudwatch.PutAnomalyDetectorOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutAnomalyDetector", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutAnomalyDetector", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutAnomalyDetectorAsync(ctx workflow.Context, input *cloudwatch.PutAnomalyDetectorInput) *CloudwatchPutAnomalyDetectorResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutAnomalyDetector", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutAnomalyDetector", input)
 	return &CloudwatchPutAnomalyDetectorResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutCompositeAlarm(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) (*cloudwatch.PutCompositeAlarmOutput, error) {
 	var output cloudwatch.PutCompositeAlarmOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutCompositeAlarm", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutCompositeAlarm", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutCompositeAlarmAsync(ctx workflow.Context, input *cloudwatch.PutCompositeAlarmInput) *CloudwatchPutCompositeAlarmResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutCompositeAlarm", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutCompositeAlarm", input)
 	return &CloudwatchPutCompositeAlarmResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutDashboard(ctx workflow.Context, input *cloudwatch.PutDashboardInput) (*cloudwatch.PutDashboardOutput, error) {
 	var output cloudwatch.PutDashboardOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutDashboard", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutDashboard", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutDashboardAsync(ctx workflow.Context, input *cloudwatch.PutDashboardInput) *CloudwatchPutDashboardResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutDashboard", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutDashboard", input)
 	return &CloudwatchPutDashboardResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutInsightRule(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) (*cloudwatch.PutInsightRuleOutput, error) {
 	var output cloudwatch.PutInsightRuleOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutInsightRule", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutInsightRule", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutInsightRuleAsync(ctx workflow.Context, input *cloudwatch.PutInsightRuleInput) *CloudwatchPutInsightRuleResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutInsightRule", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutInsightRule", input)
 	return &CloudwatchPutInsightRuleResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutMetricAlarm(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) (*cloudwatch.PutMetricAlarmOutput, error) {
 	var output cloudwatch.PutMetricAlarmOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutMetricAlarm", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutMetricAlarm", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutMetricAlarmAsync(ctx workflow.Context, input *cloudwatch.PutMetricAlarmInput) *CloudwatchPutMetricAlarmResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutMetricAlarm", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutMetricAlarm", input)
 	return &CloudwatchPutMetricAlarmResult{Result: future}
 }
 
 func (a *CloudWatchStub) PutMetricData(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) (*cloudwatch.PutMetricDataOutput, error) {
 	var output cloudwatch.PutMetricDataOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.PutMetricData", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutMetricData", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) PutMetricDataAsync(ctx workflow.Context, input *cloudwatch.PutMetricDataInput) *CloudwatchPutMetricDataResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.PutMetricData", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.PutMetricData", input)
 	return &CloudwatchPutMetricDataResult{Result: future}
 }
 
 func (a *CloudWatchStub) SetAlarmState(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) (*cloudwatch.SetAlarmStateOutput, error) {
 	var output cloudwatch.SetAlarmStateOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.SetAlarmState", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.SetAlarmState", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) SetAlarmStateAsync(ctx workflow.Context, input *cloudwatch.SetAlarmStateInput) *CloudwatchSetAlarmStateResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.SetAlarmState", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.SetAlarmState", input)
 	return &CloudwatchSetAlarmStateResult{Result: future}
 }
 
 func (a *CloudWatchStub) TagResource(ctx workflow.Context, input *cloudwatch.TagResourceInput) (*cloudwatch.TagResourceOutput, error) {
 	var output cloudwatch.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) TagResourceAsync(ctx workflow.Context, input *cloudwatch.TagResourceInput) *CloudwatchTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.TagResource", input)
 	return &CloudwatchTagResourceResult{Result: future}
 }
 
 func (a *CloudWatchStub) UntagResource(ctx workflow.Context, input *cloudwatch.UntagResourceInput) (*cloudwatch.UntagResourceOutput, error) {
 	var output cloudwatch.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "CloudWatch.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.cloudwatch.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *CloudWatchStub) UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "CloudWatch.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.cloudwatch.UntagResource", input)
 	return &CloudwatchUntagResourceResult{Result: future}
 }
 
 func (a *CloudWatchStub) WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudWatch.WaitUntilAlarmExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilAlarmExists", input).Get(ctx, nil)
 }
 
 func (a *CloudWatchStub) WaitUntilAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudWatch.WaitUntilAlarmExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilAlarmExists", input)
 }
 
 func (a *CloudWatchStub) WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error {
-	return workflow.ExecuteActivity(ctx, "CloudWatch.WaitUntilCompositeAlarmExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilCompositeAlarmExists", input).Get(ctx, nil)
 }
 
 func (a *CloudWatchStub) WaitUntilCompositeAlarmExistsAsync(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "CloudWatch.WaitUntilCompositeAlarmExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.cloudwatch.WaitUntilCompositeAlarmExists", input)
 }

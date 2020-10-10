@@ -64,8 +64,7 @@ type AppflowClient interface {
 	UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowResult
 }
 
-type AppflowStub struct {
-}
+type AppflowStub struct{}
 
 func NewAppflowStub() AppflowClient {
 	return &AppflowStub{}
@@ -253,198 +252,198 @@ func (r *AppflowUpdateFlowResult) Get(ctx workflow.Context) (*appflow.UpdateFlow
 
 func (a *AppflowStub) CreateConnectorProfile(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) (*appflow.CreateConnectorProfileOutput, error) {
 	var output appflow.CreateConnectorProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.CreateConnectorProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.CreateConnectorProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) CreateConnectorProfileAsync(ctx workflow.Context, input *appflow.CreateConnectorProfileInput) *AppflowCreateConnectorProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.CreateConnectorProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.CreateConnectorProfile", input)
 	return &AppflowCreateConnectorProfileResult{Result: future}
 }
 
 func (a *AppflowStub) CreateFlow(ctx workflow.Context, input *appflow.CreateFlowInput) (*appflow.CreateFlowOutput, error) {
 	var output appflow.CreateFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.CreateFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.CreateFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) CreateFlowAsync(ctx workflow.Context, input *appflow.CreateFlowInput) *AppflowCreateFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.CreateFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.CreateFlow", input)
 	return &AppflowCreateFlowResult{Result: future}
 }
 
 func (a *AppflowStub) DeleteConnectorProfile(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) (*appflow.DeleteConnectorProfileOutput, error) {
 	var output appflow.DeleteConnectorProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DeleteConnectorProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteConnectorProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DeleteConnectorProfileAsync(ctx workflow.Context, input *appflow.DeleteConnectorProfileInput) *AppflowDeleteConnectorProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DeleteConnectorProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteConnectorProfile", input)
 	return &AppflowDeleteConnectorProfileResult{Result: future}
 }
 
 func (a *AppflowStub) DeleteFlow(ctx workflow.Context, input *appflow.DeleteFlowInput) (*appflow.DeleteFlowOutput, error) {
 	var output appflow.DeleteFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DeleteFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DeleteFlowAsync(ctx workflow.Context, input *appflow.DeleteFlowInput) *AppflowDeleteFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DeleteFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DeleteFlow", input)
 	return &AppflowDeleteFlowResult{Result: future}
 }
 
 func (a *AppflowStub) DescribeConnectorEntity(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) (*appflow.DescribeConnectorEntityOutput, error) {
 	var output appflow.DescribeConnectorEntityOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectorEntity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorEntity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DescribeConnectorEntityAsync(ctx workflow.Context, input *appflow.DescribeConnectorEntityInput) *AppflowDescribeConnectorEntityResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectorEntity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorEntity", input)
 	return &AppflowDescribeConnectorEntityResult{Result: future}
 }
 
 func (a *AppflowStub) DescribeConnectorProfiles(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) (*appflow.DescribeConnectorProfilesOutput, error) {
 	var output appflow.DescribeConnectorProfilesOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectorProfiles", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorProfiles", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DescribeConnectorProfilesAsync(ctx workflow.Context, input *appflow.DescribeConnectorProfilesInput) *AppflowDescribeConnectorProfilesResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectorProfiles", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectorProfiles", input)
 	return &AppflowDescribeConnectorProfilesResult{Result: future}
 }
 
 func (a *AppflowStub) DescribeConnectors(ctx workflow.Context, input *appflow.DescribeConnectorsInput) (*appflow.DescribeConnectorsOutput, error) {
 	var output appflow.DescribeConnectorsOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectors", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectors", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DescribeConnectorsAsync(ctx workflow.Context, input *appflow.DescribeConnectorsInput) *AppflowDescribeConnectorsResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DescribeConnectors", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeConnectors", input)
 	return &AppflowDescribeConnectorsResult{Result: future}
 }
 
 func (a *AppflowStub) DescribeFlow(ctx workflow.Context, input *appflow.DescribeFlowInput) (*appflow.DescribeFlowOutput, error) {
 	var output appflow.DescribeFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DescribeFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DescribeFlowAsync(ctx workflow.Context, input *appflow.DescribeFlowInput) *AppflowDescribeFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DescribeFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlow", input)
 	return &AppflowDescribeFlowResult{Result: future}
 }
 
 func (a *AppflowStub) DescribeFlowExecutionRecords(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) (*appflow.DescribeFlowExecutionRecordsOutput, error) {
 	var output appflow.DescribeFlowExecutionRecordsOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.DescribeFlowExecutionRecords", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlowExecutionRecords", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) DescribeFlowExecutionRecordsAsync(ctx workflow.Context, input *appflow.DescribeFlowExecutionRecordsInput) *AppflowDescribeFlowExecutionRecordsResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.DescribeFlowExecutionRecords", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.DescribeFlowExecutionRecords", input)
 	return &AppflowDescribeFlowExecutionRecordsResult{Result: future}
 }
 
 func (a *AppflowStub) ListConnectorEntities(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) (*appflow.ListConnectorEntitiesOutput, error) {
 	var output appflow.ListConnectorEntitiesOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.ListConnectorEntities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.ListConnectorEntities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) ListConnectorEntitiesAsync(ctx workflow.Context, input *appflow.ListConnectorEntitiesInput) *AppflowListConnectorEntitiesResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.ListConnectorEntities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListConnectorEntities", input)
 	return &AppflowListConnectorEntitiesResult{Result: future}
 }
 
 func (a *AppflowStub) ListFlows(ctx workflow.Context, input *appflow.ListFlowsInput) (*appflow.ListFlowsOutput, error) {
 	var output appflow.ListFlowsOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.ListFlows", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.ListFlows", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) ListFlowsAsync(ctx workflow.Context, input *appflow.ListFlowsInput) *AppflowListFlowsResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.ListFlows", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListFlows", input)
 	return &AppflowListFlowsResult{Result: future}
 }
 
 func (a *AppflowStub) ListTagsForResource(ctx workflow.Context, input *appflow.ListTagsForResourceInput) (*appflow.ListTagsForResourceOutput, error) {
 	var output appflow.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) ListTagsForResourceAsync(ctx workflow.Context, input *appflow.ListTagsForResourceInput) *AppflowListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.ListTagsForResource", input)
 	return &AppflowListTagsForResourceResult{Result: future}
 }
 
 func (a *AppflowStub) StartFlow(ctx workflow.Context, input *appflow.StartFlowInput) (*appflow.StartFlowOutput, error) {
 	var output appflow.StartFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.StartFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.StartFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) StartFlowAsync(ctx workflow.Context, input *appflow.StartFlowInput) *AppflowStartFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.StartFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.StartFlow", input)
 	return &AppflowStartFlowResult{Result: future}
 }
 
 func (a *AppflowStub) StopFlow(ctx workflow.Context, input *appflow.StopFlowInput) (*appflow.StopFlowOutput, error) {
 	var output appflow.StopFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.StopFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.StopFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) StopFlowAsync(ctx workflow.Context, input *appflow.StopFlowInput) *AppflowStopFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.StopFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.StopFlow", input)
 	return &AppflowStopFlowResult{Result: future}
 }
 
 func (a *AppflowStub) TagResource(ctx workflow.Context, input *appflow.TagResourceInput) (*appflow.TagResourceOutput, error) {
 	var output appflow.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) TagResourceAsync(ctx workflow.Context, input *appflow.TagResourceInput) *AppflowTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.TagResource", input)
 	return &AppflowTagResourceResult{Result: future}
 }
 
 func (a *AppflowStub) UntagResource(ctx workflow.Context, input *appflow.UntagResourceInput) (*appflow.UntagResourceOutput, error) {
 	var output appflow.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) UntagResourceAsync(ctx workflow.Context, input *appflow.UntagResourceInput) *AppflowUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.UntagResource", input)
 	return &AppflowUntagResourceResult{Result: future}
 }
 
 func (a *AppflowStub) UpdateConnectorProfile(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) (*appflow.UpdateConnectorProfileOutput, error) {
 	var output appflow.UpdateConnectorProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.UpdateConnectorProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateConnectorProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) UpdateConnectorProfileAsync(ctx workflow.Context, input *appflow.UpdateConnectorProfileInput) *AppflowUpdateConnectorProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.UpdateConnectorProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateConnectorProfile", input)
 	return &AppflowUpdateConnectorProfileResult{Result: future}
 }
 
 func (a *AppflowStub) UpdateFlow(ctx workflow.Context, input *appflow.UpdateFlowInput) (*appflow.UpdateFlowOutput, error) {
 	var output appflow.UpdateFlowOutput
-	err := workflow.ExecuteActivity(ctx, "Appflow.UpdateFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *AppflowStub) UpdateFlowAsync(ctx workflow.Context, input *appflow.UpdateFlowInput) *AppflowUpdateFlowResult {
-	future := workflow.ExecuteActivity(ctx, "Appflow.UpdateFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.appflow.UpdateFlow", input)
 	return &AppflowUpdateFlowResult{Result: future}
 }

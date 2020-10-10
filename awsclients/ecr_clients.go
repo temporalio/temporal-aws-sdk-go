@@ -97,11 +97,9 @@ type ECRClient interface {
 	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *EcrUploadLayerPartResult
 
 	WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error
-	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error
-}
+	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error}
 
-type ECRStub struct {
-}
+type ECRStub struct{}
 
 func NewECRStub() ECRClient {
 	return &ECRStub{}
@@ -397,337 +395,339 @@ func (r *EcrUploadLayerPartResult) Get(ctx workflow.Context) (*ecr.UploadLayerPa
 	return &output, err
 }
 
+
+
 func (a *ECRStub) BatchCheckLayerAvailability(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) (*ecr.BatchCheckLayerAvailabilityOutput, error) {
 	var output ecr.BatchCheckLayerAvailabilityOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.BatchCheckLayerAvailability", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.BatchCheckLayerAvailability", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) BatchCheckLayerAvailabilityAsync(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) *EcrBatchCheckLayerAvailabilityResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.BatchCheckLayerAvailability", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.BatchCheckLayerAvailability", input)
 	return &EcrBatchCheckLayerAvailabilityResult{Result: future}
 }
 
 func (a *ECRStub) BatchDeleteImage(ctx workflow.Context, input *ecr.BatchDeleteImageInput) (*ecr.BatchDeleteImageOutput, error) {
 	var output ecr.BatchDeleteImageOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.BatchDeleteImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.BatchDeleteImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) BatchDeleteImageAsync(ctx workflow.Context, input *ecr.BatchDeleteImageInput) *EcrBatchDeleteImageResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.BatchDeleteImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.BatchDeleteImage", input)
 	return &EcrBatchDeleteImageResult{Result: future}
 }
 
 func (a *ECRStub) BatchGetImage(ctx workflow.Context, input *ecr.BatchGetImageInput) (*ecr.BatchGetImageOutput, error) {
 	var output ecr.BatchGetImageOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.BatchGetImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.BatchGetImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) BatchGetImageAsync(ctx workflow.Context, input *ecr.BatchGetImageInput) *EcrBatchGetImageResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.BatchGetImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.BatchGetImage", input)
 	return &EcrBatchGetImageResult{Result: future}
 }
 
 func (a *ECRStub) CompleteLayerUpload(ctx workflow.Context, input *ecr.CompleteLayerUploadInput) (*ecr.CompleteLayerUploadOutput, error) {
 	var output ecr.CompleteLayerUploadOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.CompleteLayerUpload", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.CompleteLayerUpload", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) CompleteLayerUploadAsync(ctx workflow.Context, input *ecr.CompleteLayerUploadInput) *EcrCompleteLayerUploadResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.CompleteLayerUpload", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.CompleteLayerUpload", input)
 	return &EcrCompleteLayerUploadResult{Result: future}
 }
 
 func (a *ECRStub) CreateRepository(ctx workflow.Context, input *ecr.CreateRepositoryInput) (*ecr.CreateRepositoryOutput, error) {
 	var output ecr.CreateRepositoryOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.CreateRepository", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.CreateRepository", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) CreateRepositoryAsync(ctx workflow.Context, input *ecr.CreateRepositoryInput) *EcrCreateRepositoryResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.CreateRepository", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.CreateRepository", input)
 	return &EcrCreateRepositoryResult{Result: future}
 }
 
 func (a *ECRStub) DeleteLifecyclePolicy(ctx workflow.Context, input *ecr.DeleteLifecyclePolicyInput) (*ecr.DeleteLifecyclePolicyOutput, error) {
 	var output ecr.DeleteLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DeleteLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DeleteLifecyclePolicyAsync(ctx workflow.Context, input *ecr.DeleteLifecyclePolicyInput) *EcrDeleteLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DeleteLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteLifecyclePolicy", input)
 	return &EcrDeleteLifecyclePolicyResult{Result: future}
 }
 
 func (a *ECRStub) DeleteRepository(ctx workflow.Context, input *ecr.DeleteRepositoryInput) (*ecr.DeleteRepositoryOutput, error) {
 	var output ecr.DeleteRepositoryOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DeleteRepository", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteRepository", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DeleteRepositoryAsync(ctx workflow.Context, input *ecr.DeleteRepositoryInput) *EcrDeleteRepositoryResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DeleteRepository", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteRepository", input)
 	return &EcrDeleteRepositoryResult{Result: future}
 }
 
 func (a *ECRStub) DeleteRepositoryPolicy(ctx workflow.Context, input *ecr.DeleteRepositoryPolicyInput) (*ecr.DeleteRepositoryPolicyOutput, error) {
 	var output ecr.DeleteRepositoryPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DeleteRepositoryPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteRepositoryPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DeleteRepositoryPolicyAsync(ctx workflow.Context, input *ecr.DeleteRepositoryPolicyInput) *EcrDeleteRepositoryPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DeleteRepositoryPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DeleteRepositoryPolicy", input)
 	return &EcrDeleteRepositoryPolicyResult{Result: future}
 }
 
 func (a *ECRStub) DescribeImageScanFindings(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) (*ecr.DescribeImageScanFindingsOutput, error) {
 	var output ecr.DescribeImageScanFindingsOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DescribeImageScanFindings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeImageScanFindings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DescribeImageScanFindingsAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) *EcrDescribeImageScanFindingsResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DescribeImageScanFindings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeImageScanFindings", input)
 	return &EcrDescribeImageScanFindingsResult{Result: future}
 }
 
 func (a *ECRStub) DescribeImages(ctx workflow.Context, input *ecr.DescribeImagesInput) (*ecr.DescribeImagesOutput, error) {
 	var output ecr.DescribeImagesOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DescribeImages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeImages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DescribeImagesAsync(ctx workflow.Context, input *ecr.DescribeImagesInput) *EcrDescribeImagesResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DescribeImages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeImages", input)
 	return &EcrDescribeImagesResult{Result: future}
 }
 
 func (a *ECRStub) DescribeRepositories(ctx workflow.Context, input *ecr.DescribeRepositoriesInput) (*ecr.DescribeRepositoriesOutput, error) {
 	var output ecr.DescribeRepositoriesOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.DescribeRepositories", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeRepositories", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) DescribeRepositoriesAsync(ctx workflow.Context, input *ecr.DescribeRepositoriesInput) *EcrDescribeRepositoriesResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.DescribeRepositories", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.DescribeRepositories", input)
 	return &EcrDescribeRepositoriesResult{Result: future}
 }
 
 func (a *ECRStub) GetAuthorizationToken(ctx workflow.Context, input *ecr.GetAuthorizationTokenInput) (*ecr.GetAuthorizationTokenOutput, error) {
 	var output ecr.GetAuthorizationTokenOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.GetAuthorizationToken", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.GetAuthorizationToken", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) GetAuthorizationTokenAsync(ctx workflow.Context, input *ecr.GetAuthorizationTokenInput) *EcrGetAuthorizationTokenResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.GetAuthorizationToken", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.GetAuthorizationToken", input)
 	return &EcrGetAuthorizationTokenResult{Result: future}
 }
 
 func (a *ECRStub) GetDownloadUrlForLayer(ctx workflow.Context, input *ecr.GetDownloadUrlForLayerInput) (*ecr.GetDownloadUrlForLayerOutput, error) {
 	var output ecr.GetDownloadUrlForLayerOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.GetDownloadUrlForLayer", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.GetDownloadUrlForLayer", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) GetDownloadUrlForLayerAsync(ctx workflow.Context, input *ecr.GetDownloadUrlForLayerInput) *EcrGetDownloadUrlForLayerResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.GetDownloadUrlForLayer", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.GetDownloadUrlForLayer", input)
 	return &EcrGetDownloadUrlForLayerResult{Result: future}
 }
 
 func (a *ECRStub) GetLifecyclePolicy(ctx workflow.Context, input *ecr.GetLifecyclePolicyInput) (*ecr.GetLifecyclePolicyOutput, error) {
 	var output ecr.GetLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.GetLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.GetLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) GetLifecyclePolicyAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyInput) *EcrGetLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.GetLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.GetLifecyclePolicy", input)
 	return &EcrGetLifecyclePolicyResult{Result: future}
 }
 
 func (a *ECRStub) GetLifecyclePolicyPreview(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) (*ecr.GetLifecyclePolicyPreviewOutput, error) {
 	var output ecr.GetLifecyclePolicyPreviewOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.GetLifecyclePolicyPreview", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.GetLifecyclePolicyPreview", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) GetLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) *EcrGetLifecyclePolicyPreviewResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.GetLifecyclePolicyPreview", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.GetLifecyclePolicyPreview", input)
 	return &EcrGetLifecyclePolicyPreviewResult{Result: future}
 }
 
 func (a *ECRStub) GetRepositoryPolicy(ctx workflow.Context, input *ecr.GetRepositoryPolicyInput) (*ecr.GetRepositoryPolicyOutput, error) {
 	var output ecr.GetRepositoryPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.GetRepositoryPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.GetRepositoryPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) GetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.GetRepositoryPolicyInput) *EcrGetRepositoryPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.GetRepositoryPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.GetRepositoryPolicy", input)
 	return &EcrGetRepositoryPolicyResult{Result: future}
 }
 
 func (a *ECRStub) InitiateLayerUpload(ctx workflow.Context, input *ecr.InitiateLayerUploadInput) (*ecr.InitiateLayerUploadOutput, error) {
 	var output ecr.InitiateLayerUploadOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.InitiateLayerUpload", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.InitiateLayerUpload", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) InitiateLayerUploadAsync(ctx workflow.Context, input *ecr.InitiateLayerUploadInput) *EcrInitiateLayerUploadResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.InitiateLayerUpload", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.InitiateLayerUpload", input)
 	return &EcrInitiateLayerUploadResult{Result: future}
 }
 
 func (a *ECRStub) ListImages(ctx workflow.Context, input *ecr.ListImagesInput) (*ecr.ListImagesOutput, error) {
 	var output ecr.ListImagesOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.ListImages", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.ListImages", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) ListImagesAsync(ctx workflow.Context, input *ecr.ListImagesInput) *EcrListImagesResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.ListImages", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.ListImages", input)
 	return &EcrListImagesResult{Result: future}
 }
 
 func (a *ECRStub) ListTagsForResource(ctx workflow.Context, input *ecr.ListTagsForResourceInput) (*ecr.ListTagsForResourceOutput, error) {
 	var output ecr.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) ListTagsForResourceAsync(ctx workflow.Context, input *ecr.ListTagsForResourceInput) *EcrListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.ListTagsForResource", input)
 	return &EcrListTagsForResourceResult{Result: future}
 }
 
 func (a *ECRStub) PutImage(ctx workflow.Context, input *ecr.PutImageInput) (*ecr.PutImageOutput, error) {
 	var output ecr.PutImageOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.PutImage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.PutImage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) PutImageAsync(ctx workflow.Context, input *ecr.PutImageInput) *EcrPutImageResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.PutImage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.PutImage", input)
 	return &EcrPutImageResult{Result: future}
 }
 
 func (a *ECRStub) PutImageScanningConfiguration(ctx workflow.Context, input *ecr.PutImageScanningConfigurationInput) (*ecr.PutImageScanningConfigurationOutput, error) {
 	var output ecr.PutImageScanningConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.PutImageScanningConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.PutImageScanningConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) PutImageScanningConfigurationAsync(ctx workflow.Context, input *ecr.PutImageScanningConfigurationInput) *EcrPutImageScanningConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.PutImageScanningConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.PutImageScanningConfiguration", input)
 	return &EcrPutImageScanningConfigurationResult{Result: future}
 }
 
 func (a *ECRStub) PutImageTagMutability(ctx workflow.Context, input *ecr.PutImageTagMutabilityInput) (*ecr.PutImageTagMutabilityOutput, error) {
 	var output ecr.PutImageTagMutabilityOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.PutImageTagMutability", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.PutImageTagMutability", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) PutImageTagMutabilityAsync(ctx workflow.Context, input *ecr.PutImageTagMutabilityInput) *EcrPutImageTagMutabilityResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.PutImageTagMutability", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.PutImageTagMutability", input)
 	return &EcrPutImageTagMutabilityResult{Result: future}
 }
 
 func (a *ECRStub) PutLifecyclePolicy(ctx workflow.Context, input *ecr.PutLifecyclePolicyInput) (*ecr.PutLifecyclePolicyOutput, error) {
 	var output ecr.PutLifecyclePolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.PutLifecyclePolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.PutLifecyclePolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) PutLifecyclePolicyAsync(ctx workflow.Context, input *ecr.PutLifecyclePolicyInput) *EcrPutLifecyclePolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.PutLifecyclePolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.PutLifecyclePolicy", input)
 	return &EcrPutLifecyclePolicyResult{Result: future}
 }
 
 func (a *ECRStub) SetRepositoryPolicy(ctx workflow.Context, input *ecr.SetRepositoryPolicyInput) (*ecr.SetRepositoryPolicyOutput, error) {
 	var output ecr.SetRepositoryPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.SetRepositoryPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.SetRepositoryPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) SetRepositoryPolicyAsync(ctx workflow.Context, input *ecr.SetRepositoryPolicyInput) *EcrSetRepositoryPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.SetRepositoryPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.SetRepositoryPolicy", input)
 	return &EcrSetRepositoryPolicyResult{Result: future}
 }
 
 func (a *ECRStub) StartImageScan(ctx workflow.Context, input *ecr.StartImageScanInput) (*ecr.StartImageScanOutput, error) {
 	var output ecr.StartImageScanOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.StartImageScan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.StartImageScan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) StartImageScanAsync(ctx workflow.Context, input *ecr.StartImageScanInput) *EcrStartImageScanResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.StartImageScan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.StartImageScan", input)
 	return &EcrStartImageScanResult{Result: future}
 }
 
 func (a *ECRStub) StartLifecyclePolicyPreview(ctx workflow.Context, input *ecr.StartLifecyclePolicyPreviewInput) (*ecr.StartLifecyclePolicyPreviewOutput, error) {
 	var output ecr.StartLifecyclePolicyPreviewOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.StartLifecyclePolicyPreview", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.StartLifecyclePolicyPreview", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) StartLifecyclePolicyPreviewAsync(ctx workflow.Context, input *ecr.StartLifecyclePolicyPreviewInput) *EcrStartLifecyclePolicyPreviewResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.StartLifecyclePolicyPreview", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.StartLifecyclePolicyPreview", input)
 	return &EcrStartLifecyclePolicyPreviewResult{Result: future}
 }
 
 func (a *ECRStub) TagResource(ctx workflow.Context, input *ecr.TagResourceInput) (*ecr.TagResourceOutput, error) {
 	var output ecr.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) TagResourceAsync(ctx workflow.Context, input *ecr.TagResourceInput) *EcrTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.TagResource", input)
 	return &EcrTagResourceResult{Result: future}
 }
 
 func (a *ECRStub) UntagResource(ctx workflow.Context, input *ecr.UntagResourceInput) (*ecr.UntagResourceOutput, error) {
 	var output ecr.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) UntagResourceAsync(ctx workflow.Context, input *ecr.UntagResourceInput) *EcrUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.UntagResource", input)
 	return &EcrUntagResourceResult{Result: future}
 }
 
 func (a *ECRStub) UploadLayerPart(ctx workflow.Context, input *ecr.UploadLayerPartInput) (*ecr.UploadLayerPartOutput, error) {
 	var output ecr.UploadLayerPartOutput
-	err := workflow.ExecuteActivity(ctx, "ECR.UploadLayerPart", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ecr.UploadLayerPart", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ECRStub) UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *EcrUploadLayerPartResult {
-	future := workflow.ExecuteActivity(ctx, "ECR.UploadLayerPart", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ecr.UploadLayerPart", input)
 	return &EcrUploadLayerPartResult{Result: future}
 }
 
 func (a *ECRStub) WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error {
-	return workflow.ExecuteActivity(ctx, "ECR.WaitUntilImageScanComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilImageScanComplete", input).Get(ctx, nil)
 }
 
 func (a *ECRStub) WaitUntilImageScanCompleteAsync(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "ECR.WaitUntilImageScanComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilImageScanComplete", input)
 }
 
 func (a *ECRStub) WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error {
-	return workflow.ExecuteActivity(ctx, "ECR.WaitUntilLifecyclePolicyPreviewComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilLifecyclePolicyPreviewComplete", input).Get(ctx, nil)
 }
 
 func (a *ECRStub) WaitUntilLifecyclePolicyPreviewCompleteAsync(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "ECR.WaitUntilLifecyclePolicyPreviewComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.ecr.WaitUntilLifecyclePolicyPreviewComplete", input)
 }

@@ -122,11 +122,9 @@ type EMRClient interface {
 
 	WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
 	WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
-	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error
-}
+	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error}
 
-type EMRStub struct {
-}
+type EMRStub struct{}
 
 func NewEMRStub() EMRClient {
 	return &EMRStub{}
@@ -502,433 +500,436 @@ func (r *EmrTerminateJobFlowsResult) Get(ctx workflow.Context) (*emr.TerminateJo
 	return &output, err
 }
 
+
+
+
 func (a *EMRStub) AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error) {
 	var output emr.AddInstanceFleetOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.AddInstanceFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) AddInstanceFleetAsync(ctx workflow.Context, input *emr.AddInstanceFleetInput) *EmrAddInstanceFleetResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.AddInstanceFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceFleet", input)
 	return &EmrAddInstanceFleetResult{Result: future}
 }
 
 func (a *EMRStub) AddInstanceGroups(ctx workflow.Context, input *emr.AddInstanceGroupsInput) (*emr.AddInstanceGroupsOutput, error) {
 	var output emr.AddInstanceGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.AddInstanceGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) AddInstanceGroupsAsync(ctx workflow.Context, input *emr.AddInstanceGroupsInput) *EmrAddInstanceGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.AddInstanceGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.AddInstanceGroups", input)
 	return &EmrAddInstanceGroupsResult{Result: future}
 }
 
 func (a *EMRStub) AddJobFlowSteps(ctx workflow.Context, input *emr.AddJobFlowStepsInput) (*emr.AddJobFlowStepsOutput, error) {
 	var output emr.AddJobFlowStepsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.AddJobFlowSteps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.AddJobFlowSteps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) AddJobFlowStepsAsync(ctx workflow.Context, input *emr.AddJobFlowStepsInput) *EmrAddJobFlowStepsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.AddJobFlowSteps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.AddJobFlowSteps", input)
 	return &EmrAddJobFlowStepsResult{Result: future}
 }
 
 func (a *EMRStub) AddTags(ctx workflow.Context, input *emr.AddTagsInput) (*emr.AddTagsOutput, error) {
 	var output emr.AddTagsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.AddTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.AddTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) AddTagsAsync(ctx workflow.Context, input *emr.AddTagsInput) *EmrAddTagsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.AddTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.AddTags", input)
 	return &EmrAddTagsResult{Result: future}
 }
 
 func (a *EMRStub) CancelSteps(ctx workflow.Context, input *emr.CancelStepsInput) (*emr.CancelStepsOutput, error) {
 	var output emr.CancelStepsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.CancelSteps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.CancelSteps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) CancelStepsAsync(ctx workflow.Context, input *emr.CancelStepsInput) *EmrCancelStepsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.CancelSteps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.CancelSteps", input)
 	return &EmrCancelStepsResult{Result: future}
 }
 
 func (a *EMRStub) CreateSecurityConfiguration(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) (*emr.CreateSecurityConfigurationOutput, error) {
 	var output emr.CreateSecurityConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.CreateSecurityConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.CreateSecurityConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) CreateSecurityConfigurationAsync(ctx workflow.Context, input *emr.CreateSecurityConfigurationInput) *EmrCreateSecurityConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.CreateSecurityConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.CreateSecurityConfiguration", input)
 	return &EmrCreateSecurityConfigurationResult{Result: future}
 }
 
 func (a *EMRStub) DeleteSecurityConfiguration(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) (*emr.DeleteSecurityConfigurationOutput, error) {
 	var output emr.DeleteSecurityConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DeleteSecurityConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DeleteSecurityConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DeleteSecurityConfigurationAsync(ctx workflow.Context, input *emr.DeleteSecurityConfigurationInput) *EmrDeleteSecurityConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DeleteSecurityConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DeleteSecurityConfiguration", input)
 	return &EmrDeleteSecurityConfigurationResult{Result: future}
 }
 
 func (a *EMRStub) DescribeCluster(ctx workflow.Context, input *emr.DescribeClusterInput) (*emr.DescribeClusterOutput, error) {
 	var output emr.DescribeClusterOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DescribeCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DescribeCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DescribeClusterAsync(ctx workflow.Context, input *emr.DescribeClusterInput) *EmrDescribeClusterResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DescribeCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeCluster", input)
 	return &EmrDescribeClusterResult{Result: future}
 }
 
 func (a *EMRStub) DescribeJobFlows(ctx workflow.Context, input *emr.DescribeJobFlowsInput) (*emr.DescribeJobFlowsOutput, error) {
 	var output emr.DescribeJobFlowsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DescribeJobFlows", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DescribeJobFlows", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DescribeJobFlowsAsync(ctx workflow.Context, input *emr.DescribeJobFlowsInput) *EmrDescribeJobFlowsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DescribeJobFlows", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeJobFlows", input)
 	return &EmrDescribeJobFlowsResult{Result: future}
 }
 
 func (a *EMRStub) DescribeNotebookExecution(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) (*emr.DescribeNotebookExecutionOutput, error) {
 	var output emr.DescribeNotebookExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DescribeNotebookExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DescribeNotebookExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DescribeNotebookExecutionAsync(ctx workflow.Context, input *emr.DescribeNotebookExecutionInput) *EmrDescribeNotebookExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DescribeNotebookExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeNotebookExecution", input)
 	return &EmrDescribeNotebookExecutionResult{Result: future}
 }
 
 func (a *EMRStub) DescribeSecurityConfiguration(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) (*emr.DescribeSecurityConfigurationOutput, error) {
 	var output emr.DescribeSecurityConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DescribeSecurityConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DescribeSecurityConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DescribeSecurityConfigurationAsync(ctx workflow.Context, input *emr.DescribeSecurityConfigurationInput) *EmrDescribeSecurityConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DescribeSecurityConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeSecurityConfiguration", input)
 	return &EmrDescribeSecurityConfigurationResult{Result: future}
 }
 
 func (a *EMRStub) DescribeStep(ctx workflow.Context, input *emr.DescribeStepInput) (*emr.DescribeStepOutput, error) {
 	var output emr.DescribeStepOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.DescribeStep", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.DescribeStep", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) DescribeStepAsync(ctx workflow.Context, input *emr.DescribeStepInput) *EmrDescribeStepResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.DescribeStep", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.DescribeStep", input)
 	return &EmrDescribeStepResult{Result: future}
 }
 
 func (a *EMRStub) GetBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) (*emr.GetBlockPublicAccessConfigurationOutput, error) {
 	var output emr.GetBlockPublicAccessConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.GetBlockPublicAccessConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.GetBlockPublicAccessConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) GetBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.GetBlockPublicAccessConfigurationInput) *EmrGetBlockPublicAccessConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.GetBlockPublicAccessConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.GetBlockPublicAccessConfiguration", input)
 	return &EmrGetBlockPublicAccessConfigurationResult{Result: future}
 }
 
 func (a *EMRStub) GetManagedScalingPolicy(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) (*emr.GetManagedScalingPolicyOutput, error) {
 	var output emr.GetManagedScalingPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.GetManagedScalingPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.GetManagedScalingPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) GetManagedScalingPolicyAsync(ctx workflow.Context, input *emr.GetManagedScalingPolicyInput) *EmrGetManagedScalingPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.GetManagedScalingPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.GetManagedScalingPolicy", input)
 	return &EmrGetManagedScalingPolicyResult{Result: future}
 }
 
 func (a *EMRStub) ListBootstrapActions(ctx workflow.Context, input *emr.ListBootstrapActionsInput) (*emr.ListBootstrapActionsOutput, error) {
 	var output emr.ListBootstrapActionsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListBootstrapActions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListBootstrapActions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListBootstrapActionsAsync(ctx workflow.Context, input *emr.ListBootstrapActionsInput) *EmrListBootstrapActionsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListBootstrapActions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListBootstrapActions", input)
 	return &EmrListBootstrapActionsResult{Result: future}
 }
 
 func (a *EMRStub) ListClusters(ctx workflow.Context, input *emr.ListClustersInput) (*emr.ListClustersOutput, error) {
 	var output emr.ListClustersOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListClusters", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListClusters", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListClustersAsync(ctx workflow.Context, input *emr.ListClustersInput) *EmrListClustersResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListClusters", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListClusters", input)
 	return &EmrListClustersResult{Result: future}
 }
 
 func (a *EMRStub) ListInstanceFleets(ctx workflow.Context, input *emr.ListInstanceFleetsInput) (*emr.ListInstanceFleetsOutput, error) {
 	var output emr.ListInstanceFleetsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListInstanceFleets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceFleets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListInstanceFleetsAsync(ctx workflow.Context, input *emr.ListInstanceFleetsInput) *EmrListInstanceFleetsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListInstanceFleets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceFleets", input)
 	return &EmrListInstanceFleetsResult{Result: future}
 }
 
 func (a *EMRStub) ListInstanceGroups(ctx workflow.Context, input *emr.ListInstanceGroupsInput) (*emr.ListInstanceGroupsOutput, error) {
 	var output emr.ListInstanceGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListInstanceGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListInstanceGroupsAsync(ctx workflow.Context, input *emr.ListInstanceGroupsInput) *EmrListInstanceGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListInstanceGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstanceGroups", input)
 	return &EmrListInstanceGroupsResult{Result: future}
 }
 
 func (a *EMRStub) ListInstances(ctx workflow.Context, input *emr.ListInstancesInput) (*emr.ListInstancesOutput, error) {
 	var output emr.ListInstancesOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListInstances", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListInstances", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListInstancesAsync(ctx workflow.Context, input *emr.ListInstancesInput) *EmrListInstancesResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListInstances", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListInstances", input)
 	return &EmrListInstancesResult{Result: future}
 }
 
 func (a *EMRStub) ListNotebookExecutions(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) (*emr.ListNotebookExecutionsOutput, error) {
 	var output emr.ListNotebookExecutionsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListNotebookExecutions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListNotebookExecutions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListNotebookExecutionsAsync(ctx workflow.Context, input *emr.ListNotebookExecutionsInput) *EmrListNotebookExecutionsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListNotebookExecutions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListNotebookExecutions", input)
 	return &EmrListNotebookExecutionsResult{Result: future}
 }
 
 func (a *EMRStub) ListSecurityConfigurations(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) (*emr.ListSecurityConfigurationsOutput, error) {
 	var output emr.ListSecurityConfigurationsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListSecurityConfigurations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListSecurityConfigurations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListSecurityConfigurationsAsync(ctx workflow.Context, input *emr.ListSecurityConfigurationsInput) *EmrListSecurityConfigurationsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListSecurityConfigurations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListSecurityConfigurations", input)
 	return &EmrListSecurityConfigurationsResult{Result: future}
 }
 
 func (a *EMRStub) ListSteps(ctx workflow.Context, input *emr.ListStepsInput) (*emr.ListStepsOutput, error) {
 	var output emr.ListStepsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ListSteps", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ListSteps", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ListStepsAsync(ctx workflow.Context, input *emr.ListStepsInput) *EmrListStepsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ListSteps", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ListSteps", input)
 	return &EmrListStepsResult{Result: future}
 }
 
 func (a *EMRStub) ModifyCluster(ctx workflow.Context, input *emr.ModifyClusterInput) (*emr.ModifyClusterOutput, error) {
 	var output emr.ModifyClusterOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ModifyCluster", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ModifyCluster", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ModifyClusterAsync(ctx workflow.Context, input *emr.ModifyClusterInput) *EmrModifyClusterResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ModifyCluster", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyCluster", input)
 	return &EmrModifyClusterResult{Result: future}
 }
 
 func (a *EMRStub) ModifyInstanceFleet(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) (*emr.ModifyInstanceFleetOutput, error) {
 	var output emr.ModifyInstanceFleetOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ModifyInstanceFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ModifyInstanceFleetAsync(ctx workflow.Context, input *emr.ModifyInstanceFleetInput) *EmrModifyInstanceFleetResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ModifyInstanceFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceFleet", input)
 	return &EmrModifyInstanceFleetResult{Result: future}
 }
 
 func (a *EMRStub) ModifyInstanceGroups(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) (*emr.ModifyInstanceGroupsOutput, error) {
 	var output emr.ModifyInstanceGroupsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.ModifyInstanceGroups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceGroups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) ModifyInstanceGroupsAsync(ctx workflow.Context, input *emr.ModifyInstanceGroupsInput) *EmrModifyInstanceGroupsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.ModifyInstanceGroups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.ModifyInstanceGroups", input)
 	return &EmrModifyInstanceGroupsResult{Result: future}
 }
 
 func (a *EMRStub) PutAutoScalingPolicy(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) (*emr.PutAutoScalingPolicyOutput, error) {
 	var output emr.PutAutoScalingPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.PutAutoScalingPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.PutAutoScalingPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) PutAutoScalingPolicyAsync(ctx workflow.Context, input *emr.PutAutoScalingPolicyInput) *EmrPutAutoScalingPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.PutAutoScalingPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.PutAutoScalingPolicy", input)
 	return &EmrPutAutoScalingPolicyResult{Result: future}
 }
 
 func (a *EMRStub) PutBlockPublicAccessConfiguration(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) (*emr.PutBlockPublicAccessConfigurationOutput, error) {
 	var output emr.PutBlockPublicAccessConfigurationOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.PutBlockPublicAccessConfiguration", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.PutBlockPublicAccessConfiguration", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) PutBlockPublicAccessConfigurationAsync(ctx workflow.Context, input *emr.PutBlockPublicAccessConfigurationInput) *EmrPutBlockPublicAccessConfigurationResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.PutBlockPublicAccessConfiguration", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.PutBlockPublicAccessConfiguration", input)
 	return &EmrPutBlockPublicAccessConfigurationResult{Result: future}
 }
 
 func (a *EMRStub) PutManagedScalingPolicy(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) (*emr.PutManagedScalingPolicyOutput, error) {
 	var output emr.PutManagedScalingPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.PutManagedScalingPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.PutManagedScalingPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) PutManagedScalingPolicyAsync(ctx workflow.Context, input *emr.PutManagedScalingPolicyInput) *EmrPutManagedScalingPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.PutManagedScalingPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.PutManagedScalingPolicy", input)
 	return &EmrPutManagedScalingPolicyResult{Result: future}
 }
 
 func (a *EMRStub) RemoveAutoScalingPolicy(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) (*emr.RemoveAutoScalingPolicyOutput, error) {
 	var output emr.RemoveAutoScalingPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.RemoveAutoScalingPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.RemoveAutoScalingPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) RemoveAutoScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveAutoScalingPolicyInput) *EmrRemoveAutoScalingPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.RemoveAutoScalingPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveAutoScalingPolicy", input)
 	return &EmrRemoveAutoScalingPolicyResult{Result: future}
 }
 
 func (a *EMRStub) RemoveManagedScalingPolicy(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) (*emr.RemoveManagedScalingPolicyOutput, error) {
 	var output emr.RemoveManagedScalingPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.RemoveManagedScalingPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.RemoveManagedScalingPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) RemoveManagedScalingPolicyAsync(ctx workflow.Context, input *emr.RemoveManagedScalingPolicyInput) *EmrRemoveManagedScalingPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.RemoveManagedScalingPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveManagedScalingPolicy", input)
 	return &EmrRemoveManagedScalingPolicyResult{Result: future}
 }
 
 func (a *EMRStub) RemoveTags(ctx workflow.Context, input *emr.RemoveTagsInput) (*emr.RemoveTagsOutput, error) {
 	var output emr.RemoveTagsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.RemoveTags", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.RemoveTags", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) RemoveTagsAsync(ctx workflow.Context, input *emr.RemoveTagsInput) *EmrRemoveTagsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.RemoveTags", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.RemoveTags", input)
 	return &EmrRemoveTagsResult{Result: future}
 }
 
 func (a *EMRStub) RunJobFlow(ctx workflow.Context, input *emr.RunJobFlowInput) (*emr.RunJobFlowOutput, error) {
 	var output emr.RunJobFlowOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.RunJobFlow", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.RunJobFlow", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) RunJobFlowAsync(ctx workflow.Context, input *emr.RunJobFlowInput) *EmrRunJobFlowResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.RunJobFlow", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.RunJobFlow", input)
 	return &EmrRunJobFlowResult{Result: future}
 }
 
 func (a *EMRStub) SetTerminationProtection(ctx workflow.Context, input *emr.SetTerminationProtectionInput) (*emr.SetTerminationProtectionOutput, error) {
 	var output emr.SetTerminationProtectionOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.SetTerminationProtection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.SetTerminationProtection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) SetTerminationProtectionAsync(ctx workflow.Context, input *emr.SetTerminationProtectionInput) *EmrSetTerminationProtectionResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.SetTerminationProtection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.SetTerminationProtection", input)
 	return &EmrSetTerminationProtectionResult{Result: future}
 }
 
 func (a *EMRStub) SetVisibleToAllUsers(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) (*emr.SetVisibleToAllUsersOutput, error) {
 	var output emr.SetVisibleToAllUsersOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.SetVisibleToAllUsers", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.SetVisibleToAllUsers", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) SetVisibleToAllUsersAsync(ctx workflow.Context, input *emr.SetVisibleToAllUsersInput) *EmrSetVisibleToAllUsersResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.SetVisibleToAllUsers", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.SetVisibleToAllUsers", input)
 	return &EmrSetVisibleToAllUsersResult{Result: future}
 }
 
 func (a *EMRStub) StartNotebookExecution(ctx workflow.Context, input *emr.StartNotebookExecutionInput) (*emr.StartNotebookExecutionOutput, error) {
 	var output emr.StartNotebookExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.StartNotebookExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.StartNotebookExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) StartNotebookExecutionAsync(ctx workflow.Context, input *emr.StartNotebookExecutionInput) *EmrStartNotebookExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.StartNotebookExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.StartNotebookExecution", input)
 	return &EmrStartNotebookExecutionResult{Result: future}
 }
 
 func (a *EMRStub) StopNotebookExecution(ctx workflow.Context, input *emr.StopNotebookExecutionInput) (*emr.StopNotebookExecutionOutput, error) {
 	var output emr.StopNotebookExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.StopNotebookExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.StopNotebookExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) StopNotebookExecutionAsync(ctx workflow.Context, input *emr.StopNotebookExecutionInput) *EmrStopNotebookExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.StopNotebookExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.StopNotebookExecution", input)
 	return &EmrStopNotebookExecutionResult{Result: future}
 }
 
 func (a *EMRStub) TerminateJobFlows(ctx workflow.Context, input *emr.TerminateJobFlowsInput) (*emr.TerminateJobFlowsOutput, error) {
 	var output emr.TerminateJobFlowsOutput
-	err := workflow.ExecuteActivity(ctx, "EMR.TerminateJobFlows", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.emr.TerminateJobFlows", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *EMRStub) TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult {
-	future := workflow.ExecuteActivity(ctx, "EMR.TerminateJobFlows", input)
+	future := workflow.ExecuteActivity(ctx, "aws.emr.TerminateJobFlows", input)
 	return &EmrTerminateJobFlowsResult{Result: future}
 }
 
 func (a *EMRStub) WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilClusterRunning", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input).Get(ctx, nil)
 }
 
 func (a *EMRStub) WaitUntilClusterRunningAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilClusterRunning", input)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterRunning", input)
 }
 
 func (a *EMRStub) WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilClusterTerminated", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input).Get(ctx, nil)
 }
 
 func (a *EMRStub) WaitUntilClusterTerminatedAsync(ctx workflow.Context, input *emr.DescribeClusterInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilClusterTerminated", input)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilClusterTerminated", input)
 }
 
 func (a *EMRStub) WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilStepComplete", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input).Get(ctx, nil)
 }
 
 func (a *EMRStub) WaitUntilStepCompleteAsync(ctx workflow.Context, input *emr.DescribeStepInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "EMR.WaitUntilStepComplete", input)
+	return workflow.ExecuteActivity(ctx, "aws.emr.WaitUntilStepComplete", input)
 }

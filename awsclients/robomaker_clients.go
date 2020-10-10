@@ -181,8 +181,7 @@ type RoboMakerClient interface {
 	UpdateWorldTemplateAsync(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) *RobomakerUpdateWorldTemplateResult
 }
 
-type RoboMakerStub struct {
-}
+type RoboMakerStub struct{}
 
 func NewRoboMakerStub() RoboMakerClient {
 	return &RoboMakerStub{}
@@ -760,627 +759,627 @@ func (r *RobomakerUpdateWorldTemplateResult) Get(ctx workflow.Context) (*robomak
 
 func (a *RoboMakerStub) BatchDeleteWorlds(ctx workflow.Context, input *robomaker.BatchDeleteWorldsInput) (*robomaker.BatchDeleteWorldsOutput, error) {
 	var output robomaker.BatchDeleteWorldsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.BatchDeleteWorlds", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.BatchDeleteWorlds", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) BatchDeleteWorldsAsync(ctx workflow.Context, input *robomaker.BatchDeleteWorldsInput) *RobomakerBatchDeleteWorldsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.BatchDeleteWorlds", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.BatchDeleteWorlds", input)
 	return &RobomakerBatchDeleteWorldsResult{Result: future}
 }
 
 func (a *RoboMakerStub) BatchDescribeSimulationJob(ctx workflow.Context, input *robomaker.BatchDescribeSimulationJobInput) (*robomaker.BatchDescribeSimulationJobOutput, error) {
 	var output robomaker.BatchDescribeSimulationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.BatchDescribeSimulationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.BatchDescribeSimulationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) BatchDescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.BatchDescribeSimulationJobInput) *RobomakerBatchDescribeSimulationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.BatchDescribeSimulationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.BatchDescribeSimulationJob", input)
 	return &RobomakerBatchDescribeSimulationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CancelDeploymentJob(ctx workflow.Context, input *robomaker.CancelDeploymentJobInput) (*robomaker.CancelDeploymentJobOutput, error) {
 	var output robomaker.CancelDeploymentJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CancelDeploymentJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelDeploymentJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CancelDeploymentJobAsync(ctx workflow.Context, input *robomaker.CancelDeploymentJobInput) *RobomakerCancelDeploymentJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CancelDeploymentJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelDeploymentJob", input)
 	return &RobomakerCancelDeploymentJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CancelSimulationJob(ctx workflow.Context, input *robomaker.CancelSimulationJobInput) (*robomaker.CancelSimulationJobOutput, error) {
 	var output robomaker.CancelSimulationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CancelSimulationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelSimulationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CancelSimulationJobAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobInput) *RobomakerCancelSimulationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CancelSimulationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelSimulationJob", input)
 	return &RobomakerCancelSimulationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CancelSimulationJobBatch(ctx workflow.Context, input *robomaker.CancelSimulationJobBatchInput) (*robomaker.CancelSimulationJobBatchOutput, error) {
 	var output robomaker.CancelSimulationJobBatchOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CancelSimulationJobBatch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelSimulationJobBatch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CancelSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.CancelSimulationJobBatchInput) *RobomakerCancelSimulationJobBatchResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CancelSimulationJobBatch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelSimulationJobBatch", input)
 	return &RobomakerCancelSimulationJobBatchResult{Result: future}
 }
 
 func (a *RoboMakerStub) CancelWorldExportJob(ctx workflow.Context, input *robomaker.CancelWorldExportJobInput) (*robomaker.CancelWorldExportJobOutput, error) {
 	var output robomaker.CancelWorldExportJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CancelWorldExportJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelWorldExportJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CancelWorldExportJobAsync(ctx workflow.Context, input *robomaker.CancelWorldExportJobInput) *RobomakerCancelWorldExportJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CancelWorldExportJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelWorldExportJob", input)
 	return &RobomakerCancelWorldExportJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CancelWorldGenerationJob(ctx workflow.Context, input *robomaker.CancelWorldGenerationJobInput) (*robomaker.CancelWorldGenerationJobOutput, error) {
 	var output robomaker.CancelWorldGenerationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CancelWorldGenerationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelWorldGenerationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CancelWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CancelWorldGenerationJobInput) *RobomakerCancelWorldGenerationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CancelWorldGenerationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CancelWorldGenerationJob", input)
 	return &RobomakerCancelWorldGenerationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateDeploymentJob(ctx workflow.Context, input *robomaker.CreateDeploymentJobInput) (*robomaker.CreateDeploymentJobOutput, error) {
 	var output robomaker.CreateDeploymentJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateDeploymentJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateDeploymentJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateDeploymentJobAsync(ctx workflow.Context, input *robomaker.CreateDeploymentJobInput) *RobomakerCreateDeploymentJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateDeploymentJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateDeploymentJob", input)
 	return &RobomakerCreateDeploymentJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateFleet(ctx workflow.Context, input *robomaker.CreateFleetInput) (*robomaker.CreateFleetOutput, error) {
 	var output robomaker.CreateFleetOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateFleetAsync(ctx workflow.Context, input *robomaker.CreateFleetInput) *RobomakerCreateFleetResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateFleet", input)
 	return &RobomakerCreateFleetResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateRobot(ctx workflow.Context, input *robomaker.CreateRobotInput) (*robomaker.CreateRobotOutput, error) {
 	var output robomaker.CreateRobotOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateRobotAsync(ctx workflow.Context, input *robomaker.CreateRobotInput) *RobomakerCreateRobotResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobot", input)
 	return &RobomakerCreateRobotResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateRobotApplication(ctx workflow.Context, input *robomaker.CreateRobotApplicationInput) (*robomaker.CreateRobotApplicationOutput, error) {
 	var output robomaker.CreateRobotApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobotApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobotApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateRobotApplicationAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationInput) *RobomakerCreateRobotApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobotApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobotApplication", input)
 	return &RobomakerCreateRobotApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateRobotApplicationVersion(ctx workflow.Context, input *robomaker.CreateRobotApplicationVersionInput) (*robomaker.CreateRobotApplicationVersionOutput, error) {
 	var output robomaker.CreateRobotApplicationVersionOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobotApplicationVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobotApplicationVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateRobotApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateRobotApplicationVersionInput) *RobomakerCreateRobotApplicationVersionResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateRobotApplicationVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateRobotApplicationVersion", input)
 	return &RobomakerCreateRobotApplicationVersionResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateSimulationApplication(ctx workflow.Context, input *robomaker.CreateSimulationApplicationInput) (*robomaker.CreateSimulationApplicationOutput, error) {
 	var output robomaker.CreateSimulationApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationInput) *RobomakerCreateSimulationApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationApplication", input)
 	return &RobomakerCreateSimulationApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateSimulationApplicationVersion(ctx workflow.Context, input *robomaker.CreateSimulationApplicationVersionInput) (*robomaker.CreateSimulationApplicationVersionOutput, error) {
 	var output robomaker.CreateSimulationApplicationVersionOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationApplicationVersion", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationApplicationVersion", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateSimulationApplicationVersionAsync(ctx workflow.Context, input *robomaker.CreateSimulationApplicationVersionInput) *RobomakerCreateSimulationApplicationVersionResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationApplicationVersion", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationApplicationVersion", input)
 	return &RobomakerCreateSimulationApplicationVersionResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateSimulationJob(ctx workflow.Context, input *robomaker.CreateSimulationJobInput) (*robomaker.CreateSimulationJobOutput, error) {
 	var output robomaker.CreateSimulationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateSimulationJobAsync(ctx workflow.Context, input *robomaker.CreateSimulationJobInput) *RobomakerCreateSimulationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateSimulationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateSimulationJob", input)
 	return &RobomakerCreateSimulationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateWorldExportJob(ctx workflow.Context, input *robomaker.CreateWorldExportJobInput) (*robomaker.CreateWorldExportJobOutput, error) {
 	var output robomaker.CreateWorldExportJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldExportJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldExportJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateWorldExportJobAsync(ctx workflow.Context, input *robomaker.CreateWorldExportJobInput) *RobomakerCreateWorldExportJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldExportJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldExportJob", input)
 	return &RobomakerCreateWorldExportJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateWorldGenerationJob(ctx workflow.Context, input *robomaker.CreateWorldGenerationJobInput) (*robomaker.CreateWorldGenerationJobOutput, error) {
 	var output robomaker.CreateWorldGenerationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldGenerationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldGenerationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.CreateWorldGenerationJobInput) *RobomakerCreateWorldGenerationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldGenerationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldGenerationJob", input)
 	return &RobomakerCreateWorldGenerationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) CreateWorldTemplate(ctx workflow.Context, input *robomaker.CreateWorldTemplateInput) (*robomaker.CreateWorldTemplateOutput, error) {
 	var output robomaker.CreateWorldTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) CreateWorldTemplateAsync(ctx workflow.Context, input *robomaker.CreateWorldTemplateInput) *RobomakerCreateWorldTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.CreateWorldTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.CreateWorldTemplate", input)
 	return &RobomakerCreateWorldTemplateResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeleteFleet(ctx workflow.Context, input *robomaker.DeleteFleetInput) (*robomaker.DeleteFleetOutput, error) {
 	var output robomaker.DeleteFleetOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeleteFleetAsync(ctx workflow.Context, input *robomaker.DeleteFleetInput) *RobomakerDeleteFleetResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteFleet", input)
 	return &RobomakerDeleteFleetResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeleteRobot(ctx workflow.Context, input *robomaker.DeleteRobotInput) (*robomaker.DeleteRobotOutput, error) {
 	var output robomaker.DeleteRobotOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteRobot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteRobot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeleteRobotAsync(ctx workflow.Context, input *robomaker.DeleteRobotInput) *RobomakerDeleteRobotResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteRobot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteRobot", input)
 	return &RobomakerDeleteRobotResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeleteRobotApplication(ctx workflow.Context, input *robomaker.DeleteRobotApplicationInput) (*robomaker.DeleteRobotApplicationOutput, error) {
 	var output robomaker.DeleteRobotApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteRobotApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteRobotApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeleteRobotApplicationAsync(ctx workflow.Context, input *robomaker.DeleteRobotApplicationInput) *RobomakerDeleteRobotApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteRobotApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteRobotApplication", input)
 	return &RobomakerDeleteRobotApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeleteSimulationApplication(ctx workflow.Context, input *robomaker.DeleteSimulationApplicationInput) (*robomaker.DeleteSimulationApplicationOutput, error) {
 	var output robomaker.DeleteSimulationApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteSimulationApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteSimulationApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeleteSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DeleteSimulationApplicationInput) *RobomakerDeleteSimulationApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteSimulationApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteSimulationApplication", input)
 	return &RobomakerDeleteSimulationApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeleteWorldTemplate(ctx workflow.Context, input *robomaker.DeleteWorldTemplateInput) (*robomaker.DeleteWorldTemplateOutput, error) {
 	var output robomaker.DeleteWorldTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteWorldTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteWorldTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeleteWorldTemplateAsync(ctx workflow.Context, input *robomaker.DeleteWorldTemplateInput) *RobomakerDeleteWorldTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeleteWorldTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeleteWorldTemplate", input)
 	return &RobomakerDeleteWorldTemplateResult{Result: future}
 }
 
 func (a *RoboMakerStub) DeregisterRobot(ctx workflow.Context, input *robomaker.DeregisterRobotInput) (*robomaker.DeregisterRobotOutput, error) {
 	var output robomaker.DeregisterRobotOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DeregisterRobot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DeregisterRobot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DeregisterRobotAsync(ctx workflow.Context, input *robomaker.DeregisterRobotInput) *RobomakerDeregisterRobotResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DeregisterRobot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DeregisterRobot", input)
 	return &RobomakerDeregisterRobotResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeDeploymentJob(ctx workflow.Context, input *robomaker.DescribeDeploymentJobInput) (*robomaker.DescribeDeploymentJobOutput, error) {
 	var output robomaker.DescribeDeploymentJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeDeploymentJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeDeploymentJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeDeploymentJobAsync(ctx workflow.Context, input *robomaker.DescribeDeploymentJobInput) *RobomakerDescribeDeploymentJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeDeploymentJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeDeploymentJob", input)
 	return &RobomakerDescribeDeploymentJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeFleet(ctx workflow.Context, input *robomaker.DescribeFleetInput) (*robomaker.DescribeFleetOutput, error) {
 	var output robomaker.DescribeFleetOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeFleet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeFleet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeFleetAsync(ctx workflow.Context, input *robomaker.DescribeFleetInput) *RobomakerDescribeFleetResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeFleet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeFleet", input)
 	return &RobomakerDescribeFleetResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeRobot(ctx workflow.Context, input *robomaker.DescribeRobotInput) (*robomaker.DescribeRobotOutput, error) {
 	var output robomaker.DescribeRobotOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeRobot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeRobot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeRobotAsync(ctx workflow.Context, input *robomaker.DescribeRobotInput) *RobomakerDescribeRobotResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeRobot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeRobot", input)
 	return &RobomakerDescribeRobotResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeRobotApplication(ctx workflow.Context, input *robomaker.DescribeRobotApplicationInput) (*robomaker.DescribeRobotApplicationOutput, error) {
 	var output robomaker.DescribeRobotApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeRobotApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeRobotApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeRobotApplicationAsync(ctx workflow.Context, input *robomaker.DescribeRobotApplicationInput) *RobomakerDescribeRobotApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeRobotApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeRobotApplication", input)
 	return &RobomakerDescribeRobotApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeSimulationApplication(ctx workflow.Context, input *robomaker.DescribeSimulationApplicationInput) (*robomaker.DescribeSimulationApplicationOutput, error) {
 	var output robomaker.DescribeSimulationApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeSimulationApplicationAsync(ctx workflow.Context, input *robomaker.DescribeSimulationApplicationInput) *RobomakerDescribeSimulationApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationApplication", input)
 	return &RobomakerDescribeSimulationApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeSimulationJob(ctx workflow.Context, input *robomaker.DescribeSimulationJobInput) (*robomaker.DescribeSimulationJobOutput, error) {
 	var output robomaker.DescribeSimulationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeSimulationJobAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobInput) *RobomakerDescribeSimulationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationJob", input)
 	return &RobomakerDescribeSimulationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeSimulationJobBatch(ctx workflow.Context, input *robomaker.DescribeSimulationJobBatchInput) (*robomaker.DescribeSimulationJobBatchOutput, error) {
 	var output robomaker.DescribeSimulationJobBatchOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationJobBatch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationJobBatch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.DescribeSimulationJobBatchInput) *RobomakerDescribeSimulationJobBatchResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeSimulationJobBatch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeSimulationJobBatch", input)
 	return &RobomakerDescribeSimulationJobBatchResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeWorld(ctx workflow.Context, input *robomaker.DescribeWorldInput) (*robomaker.DescribeWorldOutput, error) {
 	var output robomaker.DescribeWorldOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorld", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorld", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeWorldAsync(ctx workflow.Context, input *robomaker.DescribeWorldInput) *RobomakerDescribeWorldResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorld", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorld", input)
 	return &RobomakerDescribeWorldResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeWorldExportJob(ctx workflow.Context, input *robomaker.DescribeWorldExportJobInput) (*robomaker.DescribeWorldExportJobOutput, error) {
 	var output robomaker.DescribeWorldExportJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldExportJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldExportJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeWorldExportJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldExportJobInput) *RobomakerDescribeWorldExportJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldExportJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldExportJob", input)
 	return &RobomakerDescribeWorldExportJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeWorldGenerationJob(ctx workflow.Context, input *robomaker.DescribeWorldGenerationJobInput) (*robomaker.DescribeWorldGenerationJobOutput, error) {
 	var output robomaker.DescribeWorldGenerationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldGenerationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldGenerationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeWorldGenerationJobAsync(ctx workflow.Context, input *robomaker.DescribeWorldGenerationJobInput) *RobomakerDescribeWorldGenerationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldGenerationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldGenerationJob", input)
 	return &RobomakerDescribeWorldGenerationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) DescribeWorldTemplate(ctx workflow.Context, input *robomaker.DescribeWorldTemplateInput) (*robomaker.DescribeWorldTemplateOutput, error) {
 	var output robomaker.DescribeWorldTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) DescribeWorldTemplateAsync(ctx workflow.Context, input *robomaker.DescribeWorldTemplateInput) *RobomakerDescribeWorldTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.DescribeWorldTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.DescribeWorldTemplate", input)
 	return &RobomakerDescribeWorldTemplateResult{Result: future}
 }
 
 func (a *RoboMakerStub) GetWorldTemplateBody(ctx workflow.Context, input *robomaker.GetWorldTemplateBodyInput) (*robomaker.GetWorldTemplateBodyOutput, error) {
 	var output robomaker.GetWorldTemplateBodyOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.GetWorldTemplateBody", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.GetWorldTemplateBody", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) GetWorldTemplateBodyAsync(ctx workflow.Context, input *robomaker.GetWorldTemplateBodyInput) *RobomakerGetWorldTemplateBodyResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.GetWorldTemplateBody", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.GetWorldTemplateBody", input)
 	return &RobomakerGetWorldTemplateBodyResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListDeploymentJobs(ctx workflow.Context, input *robomaker.ListDeploymentJobsInput) (*robomaker.ListDeploymentJobsOutput, error) {
 	var output robomaker.ListDeploymentJobsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListDeploymentJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListDeploymentJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListDeploymentJobsAsync(ctx workflow.Context, input *robomaker.ListDeploymentJobsInput) *RobomakerListDeploymentJobsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListDeploymentJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListDeploymentJobs", input)
 	return &RobomakerListDeploymentJobsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListFleets(ctx workflow.Context, input *robomaker.ListFleetsInput) (*robomaker.ListFleetsOutput, error) {
 	var output robomaker.ListFleetsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListFleets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListFleets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListFleetsAsync(ctx workflow.Context, input *robomaker.ListFleetsInput) *RobomakerListFleetsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListFleets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListFleets", input)
 	return &RobomakerListFleetsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListRobotApplications(ctx workflow.Context, input *robomaker.ListRobotApplicationsInput) (*robomaker.ListRobotApplicationsOutput, error) {
 	var output robomaker.ListRobotApplicationsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListRobotApplications", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListRobotApplications", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListRobotApplicationsAsync(ctx workflow.Context, input *robomaker.ListRobotApplicationsInput) *RobomakerListRobotApplicationsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListRobotApplications", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListRobotApplications", input)
 	return &RobomakerListRobotApplicationsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListRobots(ctx workflow.Context, input *robomaker.ListRobotsInput) (*robomaker.ListRobotsOutput, error) {
 	var output robomaker.ListRobotsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListRobots", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListRobots", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListRobotsAsync(ctx workflow.Context, input *robomaker.ListRobotsInput) *RobomakerListRobotsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListRobots", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListRobots", input)
 	return &RobomakerListRobotsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListSimulationApplications(ctx workflow.Context, input *robomaker.ListSimulationApplicationsInput) (*robomaker.ListSimulationApplicationsOutput, error) {
 	var output robomaker.ListSimulationApplicationsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationApplications", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationApplications", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListSimulationApplicationsAsync(ctx workflow.Context, input *robomaker.ListSimulationApplicationsInput) *RobomakerListSimulationApplicationsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationApplications", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationApplications", input)
 	return &RobomakerListSimulationApplicationsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListSimulationJobBatches(ctx workflow.Context, input *robomaker.ListSimulationJobBatchesInput) (*robomaker.ListSimulationJobBatchesOutput, error) {
 	var output robomaker.ListSimulationJobBatchesOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationJobBatches", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationJobBatches", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListSimulationJobBatchesAsync(ctx workflow.Context, input *robomaker.ListSimulationJobBatchesInput) *RobomakerListSimulationJobBatchesResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationJobBatches", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationJobBatches", input)
 	return &RobomakerListSimulationJobBatchesResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListSimulationJobs(ctx workflow.Context, input *robomaker.ListSimulationJobsInput) (*robomaker.ListSimulationJobsOutput, error) {
 	var output robomaker.ListSimulationJobsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListSimulationJobsAsync(ctx workflow.Context, input *robomaker.ListSimulationJobsInput) *RobomakerListSimulationJobsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListSimulationJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListSimulationJobs", input)
 	return &RobomakerListSimulationJobsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListTagsForResource(ctx workflow.Context, input *robomaker.ListTagsForResourceInput) (*robomaker.ListTagsForResourceOutput, error) {
 	var output robomaker.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListTagsForResourceAsync(ctx workflow.Context, input *robomaker.ListTagsForResourceInput) *RobomakerListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListTagsForResource", input)
 	return &RobomakerListTagsForResourceResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListWorldExportJobs(ctx workflow.Context, input *robomaker.ListWorldExportJobsInput) (*robomaker.ListWorldExportJobsOutput, error) {
 	var output robomaker.ListWorldExportJobsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldExportJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldExportJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListWorldExportJobsAsync(ctx workflow.Context, input *robomaker.ListWorldExportJobsInput) *RobomakerListWorldExportJobsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldExportJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldExportJobs", input)
 	return &RobomakerListWorldExportJobsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListWorldGenerationJobs(ctx workflow.Context, input *robomaker.ListWorldGenerationJobsInput) (*robomaker.ListWorldGenerationJobsOutput, error) {
 	var output robomaker.ListWorldGenerationJobsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldGenerationJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldGenerationJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListWorldGenerationJobsAsync(ctx workflow.Context, input *robomaker.ListWorldGenerationJobsInput) *RobomakerListWorldGenerationJobsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldGenerationJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldGenerationJobs", input)
 	return &RobomakerListWorldGenerationJobsResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListWorldTemplates(ctx workflow.Context, input *robomaker.ListWorldTemplatesInput) (*robomaker.ListWorldTemplatesOutput, error) {
 	var output robomaker.ListWorldTemplatesOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldTemplates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldTemplates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListWorldTemplatesAsync(ctx workflow.Context, input *robomaker.ListWorldTemplatesInput) *RobomakerListWorldTemplatesResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorldTemplates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorldTemplates", input)
 	return &RobomakerListWorldTemplatesResult{Result: future}
 }
 
 func (a *RoboMakerStub) ListWorlds(ctx workflow.Context, input *robomaker.ListWorldsInput) (*robomaker.ListWorldsOutput, error) {
 	var output robomaker.ListWorldsOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorlds", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorlds", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) ListWorldsAsync(ctx workflow.Context, input *robomaker.ListWorldsInput) *RobomakerListWorldsResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.ListWorlds", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.ListWorlds", input)
 	return &RobomakerListWorldsResult{Result: future}
 }
 
 func (a *RoboMakerStub) RegisterRobot(ctx workflow.Context, input *robomaker.RegisterRobotInput) (*robomaker.RegisterRobotOutput, error) {
 	var output robomaker.RegisterRobotOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.RegisterRobot", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.RegisterRobot", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) RegisterRobotAsync(ctx workflow.Context, input *robomaker.RegisterRobotInput) *RobomakerRegisterRobotResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.RegisterRobot", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.RegisterRobot", input)
 	return &RobomakerRegisterRobotResult{Result: future}
 }
 
 func (a *RoboMakerStub) RestartSimulationJob(ctx workflow.Context, input *robomaker.RestartSimulationJobInput) (*robomaker.RestartSimulationJobOutput, error) {
 	var output robomaker.RestartSimulationJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.RestartSimulationJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.RestartSimulationJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) RestartSimulationJobAsync(ctx workflow.Context, input *robomaker.RestartSimulationJobInput) *RobomakerRestartSimulationJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.RestartSimulationJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.RestartSimulationJob", input)
 	return &RobomakerRestartSimulationJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) StartSimulationJobBatch(ctx workflow.Context, input *robomaker.StartSimulationJobBatchInput) (*robomaker.StartSimulationJobBatchOutput, error) {
 	var output robomaker.StartSimulationJobBatchOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.StartSimulationJobBatch", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.StartSimulationJobBatch", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) StartSimulationJobBatchAsync(ctx workflow.Context, input *robomaker.StartSimulationJobBatchInput) *RobomakerStartSimulationJobBatchResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.StartSimulationJobBatch", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.StartSimulationJobBatch", input)
 	return &RobomakerStartSimulationJobBatchResult{Result: future}
 }
 
 func (a *RoboMakerStub) SyncDeploymentJob(ctx workflow.Context, input *robomaker.SyncDeploymentJobInput) (*robomaker.SyncDeploymentJobOutput, error) {
 	var output robomaker.SyncDeploymentJobOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.SyncDeploymentJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.SyncDeploymentJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) SyncDeploymentJobAsync(ctx workflow.Context, input *robomaker.SyncDeploymentJobInput) *RobomakerSyncDeploymentJobResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.SyncDeploymentJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.SyncDeploymentJob", input)
 	return &RobomakerSyncDeploymentJobResult{Result: future}
 }
 
 func (a *RoboMakerStub) TagResource(ctx workflow.Context, input *robomaker.TagResourceInput) (*robomaker.TagResourceOutput, error) {
 	var output robomaker.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) TagResourceAsync(ctx workflow.Context, input *robomaker.TagResourceInput) *RobomakerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.TagResource", input)
 	return &RobomakerTagResourceResult{Result: future}
 }
 
 func (a *RoboMakerStub) UntagResource(ctx workflow.Context, input *robomaker.UntagResourceInput) (*robomaker.UntagResourceOutput, error) {
 	var output robomaker.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) UntagResourceAsync(ctx workflow.Context, input *robomaker.UntagResourceInput) *RobomakerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.UntagResource", input)
 	return &RobomakerUntagResourceResult{Result: future}
 }
 
 func (a *RoboMakerStub) UpdateRobotApplication(ctx workflow.Context, input *robomaker.UpdateRobotApplicationInput) (*robomaker.UpdateRobotApplicationOutput, error) {
 	var output robomaker.UpdateRobotApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateRobotApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateRobotApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) UpdateRobotApplicationAsync(ctx workflow.Context, input *robomaker.UpdateRobotApplicationInput) *RobomakerUpdateRobotApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateRobotApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateRobotApplication", input)
 	return &RobomakerUpdateRobotApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) UpdateSimulationApplication(ctx workflow.Context, input *robomaker.UpdateSimulationApplicationInput) (*robomaker.UpdateSimulationApplicationOutput, error) {
 	var output robomaker.UpdateSimulationApplicationOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateSimulationApplication", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateSimulationApplication", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) UpdateSimulationApplicationAsync(ctx workflow.Context, input *robomaker.UpdateSimulationApplicationInput) *RobomakerUpdateSimulationApplicationResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateSimulationApplication", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateSimulationApplication", input)
 	return &RobomakerUpdateSimulationApplicationResult{Result: future}
 }
 
 func (a *RoboMakerStub) UpdateWorldTemplate(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) (*robomaker.UpdateWorldTemplateOutput, error) {
 	var output robomaker.UpdateWorldTemplateOutput
-	err := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateWorldTemplate", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateWorldTemplate", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RoboMakerStub) UpdateWorldTemplateAsync(ctx workflow.Context, input *robomaker.UpdateWorldTemplateInput) *RobomakerUpdateWorldTemplateResult {
-	future := workflow.ExecuteActivity(ctx, "RoboMaker.UpdateWorldTemplate", input)
+	future := workflow.ExecuteActivity(ctx, "aws.robomaker.UpdateWorldTemplate", input)
 	return &RobomakerUpdateWorldTemplateResult{Result: future}
 }

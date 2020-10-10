@@ -16,86 +16,176 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type CloudTrailActivities struct {
 	client cloudtrailiface.CloudTrailAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewCloudTrailActivities(session *session.Session, config ...*aws.Config) *CloudTrailActivities {
-	client := cloudtrail.New(session, config...)
+func NewCloudTrailActivities(sess *session.Session, config ...*aws.Config) *CloudTrailActivities {
+	client := cloudtrail.New(sess, config...)
 	return &CloudTrailActivities{client: client}
 }
 
+func NewCloudTrailActivitiesWithSessionFactory(sessionFactory SessionFactory) *CloudTrailActivities {
+	return &CloudTrailActivities{sessionFactory: sessionFactory}
+}
+
+func (a *CloudTrailActivities) getClient(ctx context.Context) (cloudtrailiface.CloudTrailAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return cloudtrail.New(sess), nil
+}
+
 func (a *CloudTrailActivities) AddTags(ctx context.Context, input *cloudtrail.AddTagsInput) (*cloudtrail.AddTagsOutput, error) {
-	return a.client.AddTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.AddTagsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) CreateTrail(ctx context.Context, input *cloudtrail.CreateTrailInput) (*cloudtrail.CreateTrailOutput, error) {
-	return a.client.CreateTrailWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateTrailWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) DeleteTrail(ctx context.Context, input *cloudtrail.DeleteTrailInput) (*cloudtrail.DeleteTrailOutput, error) {
-	return a.client.DeleteTrailWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteTrailWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) DescribeTrails(ctx context.Context, input *cloudtrail.DescribeTrailsInput) (*cloudtrail.DescribeTrailsOutput, error) {
-	return a.client.DescribeTrailsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeTrailsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) GetEventSelectors(ctx context.Context, input *cloudtrail.GetEventSelectorsInput) (*cloudtrail.GetEventSelectorsOutput, error) {
-	return a.client.GetEventSelectorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetEventSelectorsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) GetInsightSelectors(ctx context.Context, input *cloudtrail.GetInsightSelectorsInput) (*cloudtrail.GetInsightSelectorsOutput, error) {
-	return a.client.GetInsightSelectorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetInsightSelectorsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) GetTrail(ctx context.Context, input *cloudtrail.GetTrailInput) (*cloudtrail.GetTrailOutput, error) {
-	return a.client.GetTrailWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTrailWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) GetTrailStatus(ctx context.Context, input *cloudtrail.GetTrailStatusInput) (*cloudtrail.GetTrailStatusOutput, error) {
-	return a.client.GetTrailStatusWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetTrailStatusWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) ListPublicKeys(ctx context.Context, input *cloudtrail.ListPublicKeysInput) (*cloudtrail.ListPublicKeysOutput, error) {
-	return a.client.ListPublicKeysWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListPublicKeysWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) ListTags(ctx context.Context, input *cloudtrail.ListTagsInput) (*cloudtrail.ListTagsOutput, error) {
-	return a.client.ListTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTagsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) ListTrails(ctx context.Context, input *cloudtrail.ListTrailsInput) (*cloudtrail.ListTrailsOutput, error) {
-	return a.client.ListTrailsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListTrailsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) LookupEvents(ctx context.Context, input *cloudtrail.LookupEventsInput) (*cloudtrail.LookupEventsOutput, error) {
-	return a.client.LookupEventsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.LookupEventsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) PutEventSelectors(ctx context.Context, input *cloudtrail.PutEventSelectorsInput) (*cloudtrail.PutEventSelectorsOutput, error) {
-	return a.client.PutEventSelectorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutEventSelectorsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) PutInsightSelectors(ctx context.Context, input *cloudtrail.PutInsightSelectorsInput) (*cloudtrail.PutInsightSelectorsOutput, error) {
-	return a.client.PutInsightSelectorsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutInsightSelectorsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) RemoveTags(ctx context.Context, input *cloudtrail.RemoveTagsInput) (*cloudtrail.RemoveTagsOutput, error) {
-	return a.client.RemoveTagsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RemoveTagsWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) StartLogging(ctx context.Context, input *cloudtrail.StartLoggingInput) (*cloudtrail.StartLoggingOutput, error) {
-	return a.client.StartLoggingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartLoggingWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) StopLogging(ctx context.Context, input *cloudtrail.StopLoggingInput) (*cloudtrail.StopLoggingOutput, error) {
-	return a.client.StopLoggingWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StopLoggingWithContext(ctx, input)
 }
 
 func (a *CloudTrailActivities) UpdateTrail(ctx context.Context, input *cloudtrail.UpdateTrailInput) (*cloudtrail.UpdateTrailOutput, error) {
-	return a.client.UpdateTrailWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.UpdateTrailWithContext(ctx, input)
 }

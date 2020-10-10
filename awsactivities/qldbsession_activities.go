@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type QLDBSessionActivities struct {
 	client qldbsessioniface.QLDBSessionAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewQLDBSessionActivities(session *session.Session, config ...*aws.Config) *QLDBSessionActivities {
-	client := qldbsession.New(session, config...)
+func NewQLDBSessionActivities(sess *session.Session, config ...*aws.Config) *QLDBSessionActivities {
+	client := qldbsession.New(sess, config...)
 	return &QLDBSessionActivities{client: client}
 }
 
+func NewQLDBSessionActivitiesWithSessionFactory(sessionFactory SessionFactory) *QLDBSessionActivities {
+	return &QLDBSessionActivities{sessionFactory: sessionFactory}
+}
+
+func (a *QLDBSessionActivities) getClient(ctx context.Context) (qldbsessioniface.QLDBSessionAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return qldbsession.New(sess), nil
+}
+
 func (a *QLDBSessionActivities) SendCommand(ctx context.Context, input *qldbsession.SendCommandInput) (*qldbsession.SendCommandOutput, error) {
-	return a.client.SendCommandWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SendCommandWithContext(ctx, input)
 }

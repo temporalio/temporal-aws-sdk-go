@@ -19,8 +19,7 @@ type ApiGatewayManagementApiClient interface {
 	PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionResult
 }
 
-type ApiGatewayManagementApiStub struct {
-}
+type ApiGatewayManagementApiStub struct{}
 
 func NewApiGatewayManagementApiStub() ApiGatewayManagementApiClient {
 	return &ApiGatewayManagementApiStub{}
@@ -58,33 +57,33 @@ func (r *ApigatewaymanagementapiPostToConnectionResult) Get(ctx workflow.Context
 
 func (a *ApiGatewayManagementApiStub) DeleteConnection(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) (*apigatewaymanagementapi.DeleteConnectionOutput, error) {
 	var output apigatewaymanagementapi.DeleteConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.DeleteConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.DeleteConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ApiGatewayManagementApiStub) DeleteConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.DeleteConnectionInput) *ApigatewaymanagementapiDeleteConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.DeleteConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.DeleteConnection", input)
 	return &ApigatewaymanagementapiDeleteConnectionResult{Result: future}
 }
 
 func (a *ApiGatewayManagementApiStub) GetConnection(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) (*apigatewaymanagementapi.GetConnectionOutput, error) {
 	var output apigatewaymanagementapi.GetConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.GetConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.GetConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ApiGatewayManagementApiStub) GetConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.GetConnectionInput) *ApigatewaymanagementapiGetConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.GetConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.GetConnection", input)
 	return &ApigatewaymanagementapiGetConnectionResult{Result: future}
 }
 
 func (a *ApiGatewayManagementApiStub) PostToConnection(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) (*apigatewaymanagementapi.PostToConnectionOutput, error) {
 	var output apigatewaymanagementapi.PostToConnectionOutput
-	err := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.PostToConnection", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.PostToConnection", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *ApiGatewayManagementApiStub) PostToConnectionAsync(ctx workflow.Context, input *apigatewaymanagementapi.PostToConnectionInput) *ApigatewaymanagementapiPostToConnectionResult {
-	future := workflow.ExecuteActivity(ctx, "ApiGatewayManagementApi.PostToConnection", input)
+	future := workflow.ExecuteActivity(ctx, "aws.apigatewaymanagementapi.PostToConnection", input)
 	return &ApigatewaymanagementapiPostToConnectionResult{Result: future}
 }

@@ -16,50 +16,104 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type PollyActivities struct {
 	client pollyiface.PollyAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewPollyActivities(session *session.Session, config ...*aws.Config) *PollyActivities {
-	client := polly.New(session, config...)
+func NewPollyActivities(sess *session.Session, config ...*aws.Config) *PollyActivities {
+	client := polly.New(sess, config...)
 	return &PollyActivities{client: client}
 }
 
+func NewPollyActivitiesWithSessionFactory(sessionFactory SessionFactory) *PollyActivities {
+	return &PollyActivities{sessionFactory: sessionFactory}
+}
+
+func (a *PollyActivities) getClient(ctx context.Context) (pollyiface.PollyAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return polly.New(sess), nil
+}
+
 func (a *PollyActivities) DeleteLexicon(ctx context.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error) {
-	return a.client.DeleteLexiconWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DeleteLexiconWithContext(ctx, input)
 }
 
 func (a *PollyActivities) DescribeVoices(ctx context.Context, input *polly.DescribeVoicesInput) (*polly.DescribeVoicesOutput, error) {
-	return a.client.DescribeVoicesWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.DescribeVoicesWithContext(ctx, input)
 }
 
 func (a *PollyActivities) GetLexicon(ctx context.Context, input *polly.GetLexiconInput) (*polly.GetLexiconOutput, error) {
-	return a.client.GetLexiconWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetLexiconWithContext(ctx, input)
 }
 
 func (a *PollyActivities) GetSpeechSynthesisTask(ctx context.Context, input *polly.GetSpeechSynthesisTaskInput) (*polly.GetSpeechSynthesisTaskOutput, error) {
-	return a.client.GetSpeechSynthesisTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetSpeechSynthesisTaskWithContext(ctx, input)
 }
 
 func (a *PollyActivities) ListLexicons(ctx context.Context, input *polly.ListLexiconsInput) (*polly.ListLexiconsOutput, error) {
-	return a.client.ListLexiconsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListLexiconsWithContext(ctx, input)
 }
 
 func (a *PollyActivities) ListSpeechSynthesisTasks(ctx context.Context, input *polly.ListSpeechSynthesisTasksInput) (*polly.ListSpeechSynthesisTasksOutput, error) {
-	return a.client.ListSpeechSynthesisTasksWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.ListSpeechSynthesisTasksWithContext(ctx, input)
 }
 
 func (a *PollyActivities) PutLexicon(ctx context.Context, input *polly.PutLexiconInput) (*polly.PutLexiconOutput, error) {
-	return a.client.PutLexiconWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.PutLexiconWithContext(ctx, input)
 }
 
 func (a *PollyActivities) StartSpeechSynthesisTask(ctx context.Context, input *polly.StartSpeechSynthesisTaskInput) (*polly.StartSpeechSynthesisTaskOutput, error) {
-	return a.client.StartSpeechSynthesisTaskWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartSpeechSynthesisTaskWithContext(ctx, input)
 }
 
 func (a *PollyActivities) SynthesizeSpeech(ctx context.Context, input *polly.SynthesizeSpeechInput) (*polly.SynthesizeSpeechOutput, error) {
-	return a.client.SynthesizeSpeechWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SynthesizeSpeechWithContext(ctx, input)
 }

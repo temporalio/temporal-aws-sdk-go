@@ -82,8 +82,7 @@ type RAMClient interface {
 	UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RamUpdateResourceShareResult
 }
 
-type RAMStub struct {
-}
+type RAMStub struct{}
 
 func NewRAMStub() RAMClient {
 	return &RAMStub{}
@@ -331,264 +330,264 @@ func (r *RamUpdateResourceShareResult) Get(ctx workflow.Context) (*ram.UpdateRes
 
 func (a *RAMStub) AcceptResourceShareInvitation(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) (*ram.AcceptResourceShareInvitationOutput, error) {
 	var output ram.AcceptResourceShareInvitationOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.AcceptResourceShareInvitation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.AcceptResourceShareInvitation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) AcceptResourceShareInvitationAsync(ctx workflow.Context, input *ram.AcceptResourceShareInvitationInput) *RamAcceptResourceShareInvitationResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.AcceptResourceShareInvitation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.AcceptResourceShareInvitation", input)
 	return &RamAcceptResourceShareInvitationResult{Result: future}
 }
 
 func (a *RAMStub) AssociateResourceShare(ctx workflow.Context, input *ram.AssociateResourceShareInput) (*ram.AssociateResourceShareOutput, error) {
 	var output ram.AssociateResourceShareOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.AssociateResourceShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) AssociateResourceShareAsync(ctx workflow.Context, input *ram.AssociateResourceShareInput) *RamAssociateResourceShareResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.AssociateResourceShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceShare", input)
 	return &RamAssociateResourceShareResult{Result: future}
 }
 
 func (a *RAMStub) AssociateResourceSharePermission(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) (*ram.AssociateResourceSharePermissionOutput, error) {
 	var output ram.AssociateResourceSharePermissionOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.AssociateResourceSharePermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceSharePermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) AssociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.AssociateResourceSharePermissionInput) *RamAssociateResourceSharePermissionResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.AssociateResourceSharePermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.AssociateResourceSharePermission", input)
 	return &RamAssociateResourceSharePermissionResult{Result: future}
 }
 
 func (a *RAMStub) CreateResourceShare(ctx workflow.Context, input *ram.CreateResourceShareInput) (*ram.CreateResourceShareOutput, error) {
 	var output ram.CreateResourceShareOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.CreateResourceShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.CreateResourceShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) CreateResourceShareAsync(ctx workflow.Context, input *ram.CreateResourceShareInput) *RamCreateResourceShareResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.CreateResourceShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.CreateResourceShare", input)
 	return &RamCreateResourceShareResult{Result: future}
 }
 
 func (a *RAMStub) DeleteResourceShare(ctx workflow.Context, input *ram.DeleteResourceShareInput) (*ram.DeleteResourceShareOutput, error) {
 	var output ram.DeleteResourceShareOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.DeleteResourceShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.DeleteResourceShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) DeleteResourceShareAsync(ctx workflow.Context, input *ram.DeleteResourceShareInput) *RamDeleteResourceShareResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.DeleteResourceShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.DeleteResourceShare", input)
 	return &RamDeleteResourceShareResult{Result: future}
 }
 
 func (a *RAMStub) DisassociateResourceShare(ctx workflow.Context, input *ram.DisassociateResourceShareInput) (*ram.DisassociateResourceShareOutput, error) {
 	var output ram.DisassociateResourceShareOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.DisassociateResourceShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) DisassociateResourceShareAsync(ctx workflow.Context, input *ram.DisassociateResourceShareInput) *RamDisassociateResourceShareResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.DisassociateResourceShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceShare", input)
 	return &RamDisassociateResourceShareResult{Result: future}
 }
 
 func (a *RAMStub) DisassociateResourceSharePermission(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) (*ram.DisassociateResourceSharePermissionOutput, error) {
 	var output ram.DisassociateResourceSharePermissionOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.DisassociateResourceSharePermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceSharePermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) DisassociateResourceSharePermissionAsync(ctx workflow.Context, input *ram.DisassociateResourceSharePermissionInput) *RamDisassociateResourceSharePermissionResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.DisassociateResourceSharePermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.DisassociateResourceSharePermission", input)
 	return &RamDisassociateResourceSharePermissionResult{Result: future}
 }
 
 func (a *RAMStub) EnableSharingWithAwsOrganization(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) (*ram.EnableSharingWithAwsOrganizationOutput, error) {
 	var output ram.EnableSharingWithAwsOrganizationOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.EnableSharingWithAwsOrganization", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.EnableSharingWithAwsOrganization", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) EnableSharingWithAwsOrganizationAsync(ctx workflow.Context, input *ram.EnableSharingWithAwsOrganizationInput) *RamEnableSharingWithAwsOrganizationResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.EnableSharingWithAwsOrganization", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.EnableSharingWithAwsOrganization", input)
 	return &RamEnableSharingWithAwsOrganizationResult{Result: future}
 }
 
 func (a *RAMStub) GetPermission(ctx workflow.Context, input *ram.GetPermissionInput) (*ram.GetPermissionOutput, error) {
 	var output ram.GetPermissionOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.GetPermission", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.GetPermission", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) GetPermissionAsync(ctx workflow.Context, input *ram.GetPermissionInput) *RamGetPermissionResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.GetPermission", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.GetPermission", input)
 	return &RamGetPermissionResult{Result: future}
 }
 
 func (a *RAMStub) GetResourcePolicies(ctx workflow.Context, input *ram.GetResourcePoliciesInput) (*ram.GetResourcePoliciesOutput, error) {
 	var output ram.GetResourcePoliciesOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.GetResourcePolicies", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.GetResourcePolicies", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) GetResourcePoliciesAsync(ctx workflow.Context, input *ram.GetResourcePoliciesInput) *RamGetResourcePoliciesResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.GetResourcePolicies", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourcePolicies", input)
 	return &RamGetResourcePoliciesResult{Result: future}
 }
 
 func (a *RAMStub) GetResourceShareAssociations(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) (*ram.GetResourceShareAssociationsOutput, error) {
 	var output ram.GetResourceShareAssociationsOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.GetResourceShareAssociations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareAssociations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) GetResourceShareAssociationsAsync(ctx workflow.Context, input *ram.GetResourceShareAssociationsInput) *RamGetResourceShareAssociationsResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.GetResourceShareAssociations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareAssociations", input)
 	return &RamGetResourceShareAssociationsResult{Result: future}
 }
 
 func (a *RAMStub) GetResourceShareInvitations(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) (*ram.GetResourceShareInvitationsOutput, error) {
 	var output ram.GetResourceShareInvitationsOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.GetResourceShareInvitations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareInvitations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) GetResourceShareInvitationsAsync(ctx workflow.Context, input *ram.GetResourceShareInvitationsInput) *RamGetResourceShareInvitationsResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.GetResourceShareInvitations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShareInvitations", input)
 	return &RamGetResourceShareInvitationsResult{Result: future}
 }
 
 func (a *RAMStub) GetResourceShares(ctx workflow.Context, input *ram.GetResourceSharesInput) (*ram.GetResourceSharesOutput, error) {
 	var output ram.GetResourceSharesOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.GetResourceShares", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShares", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) GetResourceSharesAsync(ctx workflow.Context, input *ram.GetResourceSharesInput) *RamGetResourceSharesResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.GetResourceShares", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.GetResourceShares", input)
 	return &RamGetResourceSharesResult{Result: future}
 }
 
 func (a *RAMStub) ListPendingInvitationResources(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) (*ram.ListPendingInvitationResourcesOutput, error) {
 	var output ram.ListPendingInvitationResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListPendingInvitationResources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListPendingInvitationResources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListPendingInvitationResourcesAsync(ctx workflow.Context, input *ram.ListPendingInvitationResourcesInput) *RamListPendingInvitationResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListPendingInvitationResources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPendingInvitationResources", input)
 	return &RamListPendingInvitationResourcesResult{Result: future}
 }
 
 func (a *RAMStub) ListPermissions(ctx workflow.Context, input *ram.ListPermissionsInput) (*ram.ListPermissionsOutput, error) {
 	var output ram.ListPermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListPermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListPermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListPermissionsAsync(ctx workflow.Context, input *ram.ListPermissionsInput) *RamListPermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListPermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPermissions", input)
 	return &RamListPermissionsResult{Result: future}
 }
 
 func (a *RAMStub) ListPrincipals(ctx workflow.Context, input *ram.ListPrincipalsInput) (*ram.ListPrincipalsOutput, error) {
 	var output ram.ListPrincipalsOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListPrincipals", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListPrincipals", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListPrincipalsAsync(ctx workflow.Context, input *ram.ListPrincipalsInput) *RamListPrincipalsResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListPrincipals", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListPrincipals", input)
 	return &RamListPrincipalsResult{Result: future}
 }
 
 func (a *RAMStub) ListResourceSharePermissions(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) (*ram.ListResourceSharePermissionsOutput, error) {
 	var output ram.ListResourceSharePermissionsOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListResourceSharePermissions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceSharePermissions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListResourceSharePermissionsAsync(ctx workflow.Context, input *ram.ListResourceSharePermissionsInput) *RamListResourceSharePermissionsResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListResourceSharePermissions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceSharePermissions", input)
 	return &RamListResourceSharePermissionsResult{Result: future}
 }
 
 func (a *RAMStub) ListResourceTypes(ctx workflow.Context, input *ram.ListResourceTypesInput) (*ram.ListResourceTypesOutput, error) {
 	var output ram.ListResourceTypesOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListResourceTypes", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceTypes", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListResourceTypesAsync(ctx workflow.Context, input *ram.ListResourceTypesInput) *RamListResourceTypesResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListResourceTypes", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResourceTypes", input)
 	return &RamListResourceTypesResult{Result: future}
 }
 
 func (a *RAMStub) ListResources(ctx workflow.Context, input *ram.ListResourcesInput) (*ram.ListResourcesOutput, error) {
 	var output ram.ListResourcesOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.ListResources", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.ListResources", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) ListResourcesAsync(ctx workflow.Context, input *ram.ListResourcesInput) *RamListResourcesResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.ListResources", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.ListResources", input)
 	return &RamListResourcesResult{Result: future}
 }
 
 func (a *RAMStub) PromoteResourceShareCreatedFromPolicy(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) (*ram.PromoteResourceShareCreatedFromPolicyOutput, error) {
 	var output ram.PromoteResourceShareCreatedFromPolicyOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.PromoteResourceShareCreatedFromPolicy", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.PromoteResourceShareCreatedFromPolicy", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) PromoteResourceShareCreatedFromPolicyAsync(ctx workflow.Context, input *ram.PromoteResourceShareCreatedFromPolicyInput) *RamPromoteResourceShareCreatedFromPolicyResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.PromoteResourceShareCreatedFromPolicy", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.PromoteResourceShareCreatedFromPolicy", input)
 	return &RamPromoteResourceShareCreatedFromPolicyResult{Result: future}
 }
 
 func (a *RAMStub) RejectResourceShareInvitation(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) (*ram.RejectResourceShareInvitationOutput, error) {
 	var output ram.RejectResourceShareInvitationOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.RejectResourceShareInvitation", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.RejectResourceShareInvitation", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) RejectResourceShareInvitationAsync(ctx workflow.Context, input *ram.RejectResourceShareInvitationInput) *RamRejectResourceShareInvitationResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.RejectResourceShareInvitation", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.RejectResourceShareInvitation", input)
 	return &RamRejectResourceShareInvitationResult{Result: future}
 }
 
 func (a *RAMStub) TagResource(ctx workflow.Context, input *ram.TagResourceInput) (*ram.TagResourceOutput, error) {
 	var output ram.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) TagResourceAsync(ctx workflow.Context, input *ram.TagResourceInput) *RamTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.TagResource", input)
 	return &RamTagResourceResult{Result: future}
 }
 
 func (a *RAMStub) UntagResource(ctx workflow.Context, input *ram.UntagResourceInput) (*ram.UntagResourceOutput, error) {
 	var output ram.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) UntagResourceAsync(ctx workflow.Context, input *ram.UntagResourceInput) *RamUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.UntagResource", input)
 	return &RamUntagResourceResult{Result: future}
 }
 
 func (a *RAMStub) UpdateResourceShare(ctx workflow.Context, input *ram.UpdateResourceShareInput) (*ram.UpdateResourceShareOutput, error) {
 	var output ram.UpdateResourceShareOutput
-	err := workflow.ExecuteActivity(ctx, "RAM.UpdateResourceShare", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.ram.UpdateResourceShare", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *RAMStub) UpdateResourceShareAsync(ctx workflow.Context, input *ram.UpdateResourceShareInput) *RamUpdateResourceShareResult {
-	future := workflow.ExecuteActivity(ctx, "RAM.UpdateResourceShare", input)
+	future := workflow.ExecuteActivity(ctx, "aws.ram.UpdateResourceShare", input)
 	return &RamUpdateResourceShareResult{Result: future}
 }

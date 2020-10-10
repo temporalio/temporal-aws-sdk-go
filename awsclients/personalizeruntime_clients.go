@@ -16,8 +16,7 @@ type PersonalizeRuntimeClient interface {
 	GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult
 }
 
-type PersonalizeRuntimeStub struct {
-}
+type PersonalizeRuntimeStub struct{}
 
 func NewPersonalizeRuntimeStub() PersonalizeRuntimeClient {
 	return &PersonalizeRuntimeStub{}
@@ -45,22 +44,22 @@ func (r *PersonalizeruntimeGetRecommendationsResult) Get(ctx workflow.Context) (
 
 func (a *PersonalizeRuntimeStub) GetPersonalizedRanking(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) (*personalizeruntime.GetPersonalizedRankingOutput, error) {
 	var output personalizeruntime.GetPersonalizedRankingOutput
-	err := workflow.ExecuteActivity(ctx, "PersonalizeRuntime.GetPersonalizedRanking", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetPersonalizedRanking", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeRuntimeStub) GetPersonalizedRankingAsync(ctx workflow.Context, input *personalizeruntime.GetPersonalizedRankingInput) *PersonalizeruntimeGetPersonalizedRankingResult {
-	future := workflow.ExecuteActivity(ctx, "PersonalizeRuntime.GetPersonalizedRanking", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetPersonalizedRanking", input)
 	return &PersonalizeruntimeGetPersonalizedRankingResult{Result: future}
 }
 
 func (a *PersonalizeRuntimeStub) GetRecommendations(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) (*personalizeruntime.GetRecommendationsOutput, error) {
 	var output personalizeruntime.GetRecommendationsOutput
-	err := workflow.ExecuteActivity(ctx, "PersonalizeRuntime.GetRecommendations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetRecommendations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PersonalizeRuntimeStub) GetRecommendationsAsync(ctx workflow.Context, input *personalizeruntime.GetRecommendationsInput) *PersonalizeruntimeGetRecommendationsResult {
-	future := workflow.ExecuteActivity(ctx, "PersonalizeRuntime.GetRecommendations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.personalizeruntime.GetRecommendations", input)
 	return &PersonalizeruntimeGetRecommendationsResult{Result: future}
 }

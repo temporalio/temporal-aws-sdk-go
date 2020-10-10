@@ -45,11 +45,9 @@ type SignerClient interface {
 	UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error)
 	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceResult
 
-	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error
-}
+	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error}
 
-type SignerStub struct {
-}
+type SignerStub struct{}
 
 func NewSignerStub() SignerClient {
 	return &SignerStub{}
@@ -175,142 +173,143 @@ func (r *SignerUntagResourceResult) Get(ctx workflow.Context) (*signer.UntagReso
 	return &output, err
 }
 
+
 func (a *SignerStub) CancelSigningProfile(ctx workflow.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
 	var output signer.CancelSigningProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.CancelSigningProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.CancelSigningProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) CancelSigningProfileAsync(ctx workflow.Context, input *signer.CancelSigningProfileInput) *SignerCancelSigningProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.CancelSigningProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.CancelSigningProfile", input)
 	return &SignerCancelSigningProfileResult{Result: future}
 }
 
 func (a *SignerStub) DescribeSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) (*signer.DescribeSigningJobOutput, error) {
 	var output signer.DescribeSigningJobOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.DescribeSigningJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.DescribeSigningJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) DescribeSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) *SignerDescribeSigningJobResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.DescribeSigningJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.DescribeSigningJob", input)
 	return &SignerDescribeSigningJobResult{Result: future}
 }
 
 func (a *SignerStub) GetSigningPlatform(ctx workflow.Context, input *signer.GetSigningPlatformInput) (*signer.GetSigningPlatformOutput, error) {
 	var output signer.GetSigningPlatformOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.GetSigningPlatform", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.GetSigningPlatform", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) GetSigningPlatformAsync(ctx workflow.Context, input *signer.GetSigningPlatformInput) *SignerGetSigningPlatformResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.GetSigningPlatform", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.GetSigningPlatform", input)
 	return &SignerGetSigningPlatformResult{Result: future}
 }
 
 func (a *SignerStub) GetSigningProfile(ctx workflow.Context, input *signer.GetSigningProfileInput) (*signer.GetSigningProfileOutput, error) {
 	var output signer.GetSigningProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.GetSigningProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.GetSigningProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) GetSigningProfileAsync(ctx workflow.Context, input *signer.GetSigningProfileInput) *SignerGetSigningProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.GetSigningProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.GetSigningProfile", input)
 	return &SignerGetSigningProfileResult{Result: future}
 }
 
 func (a *SignerStub) ListSigningJobs(ctx workflow.Context, input *signer.ListSigningJobsInput) (*signer.ListSigningJobsOutput, error) {
 	var output signer.ListSigningJobsOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.ListSigningJobs", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningJobs", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) ListSigningJobsAsync(ctx workflow.Context, input *signer.ListSigningJobsInput) *SignerListSigningJobsResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.ListSigningJobs", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningJobs", input)
 	return &SignerListSigningJobsResult{Result: future}
 }
 
 func (a *SignerStub) ListSigningPlatforms(ctx workflow.Context, input *signer.ListSigningPlatformsInput) (*signer.ListSigningPlatformsOutput, error) {
 	var output signer.ListSigningPlatformsOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.ListSigningPlatforms", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningPlatforms", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) ListSigningPlatformsAsync(ctx workflow.Context, input *signer.ListSigningPlatformsInput) *SignerListSigningPlatformsResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.ListSigningPlatforms", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningPlatforms", input)
 	return &SignerListSigningPlatformsResult{Result: future}
 }
 
 func (a *SignerStub) ListSigningProfiles(ctx workflow.Context, input *signer.ListSigningProfilesInput) (*signer.ListSigningProfilesOutput, error) {
 	var output signer.ListSigningProfilesOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.ListSigningProfiles", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningProfiles", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) ListSigningProfilesAsync(ctx workflow.Context, input *signer.ListSigningProfilesInput) *SignerListSigningProfilesResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.ListSigningProfiles", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.ListSigningProfiles", input)
 	return &SignerListSigningProfilesResult{Result: future}
 }
 
 func (a *SignerStub) ListTagsForResource(ctx workflow.Context, input *signer.ListTagsForResourceInput) (*signer.ListTagsForResourceOutput, error) {
 	var output signer.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) ListTagsForResourceAsync(ctx workflow.Context, input *signer.ListTagsForResourceInput) *SignerListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.ListTagsForResource", input)
 	return &SignerListTagsForResourceResult{Result: future}
 }
 
 func (a *SignerStub) PutSigningProfile(ctx workflow.Context, input *signer.PutSigningProfileInput) (*signer.PutSigningProfileOutput, error) {
 	var output signer.PutSigningProfileOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.PutSigningProfile", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.PutSigningProfile", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) PutSigningProfileAsync(ctx workflow.Context, input *signer.PutSigningProfileInput) *SignerPutSigningProfileResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.PutSigningProfile", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.PutSigningProfile", input)
 	return &SignerPutSigningProfileResult{Result: future}
 }
 
 func (a *SignerStub) StartSigningJob(ctx workflow.Context, input *signer.StartSigningJobInput) (*signer.StartSigningJobOutput, error) {
 	var output signer.StartSigningJobOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.StartSigningJob", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.StartSigningJob", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) StartSigningJobAsync(ctx workflow.Context, input *signer.StartSigningJobInput) *SignerStartSigningJobResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.StartSigningJob", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.StartSigningJob", input)
 	return &SignerStartSigningJobResult{Result: future}
 }
 
 func (a *SignerStub) TagResource(ctx workflow.Context, input *signer.TagResourceInput) (*signer.TagResourceOutput, error) {
 	var output signer.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) TagResourceAsync(ctx workflow.Context, input *signer.TagResourceInput) *SignerTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.TagResource", input)
 	return &SignerTagResourceResult{Result: future}
 }
 
 func (a *SignerStub) UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error) {
 	var output signer.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "Signer.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.signer.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SignerStub) UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "Signer.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.signer.UntagResource", input)
 	return &SignerUntagResourceResult{Result: future}
 }
 
 func (a *SignerStub) WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error {
-	return workflow.ExecuteActivity(ctx, "Signer.WaitUntilSuccessfulSigningJob", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.signer.WaitUntilSuccessfulSigningJob", input).Get(ctx, nil)
 }
 
 func (a *SignerStub) WaitUntilSuccessfulSigningJobAsync(ctx workflow.Context, input *signer.DescribeSigningJobInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "Signer.WaitUntilSuccessfulSigningJob", input)
+	return workflow.ExecuteActivity(ctx, "aws.signer.WaitUntilSuccessfulSigningJob", input)
 }

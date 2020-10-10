@@ -16,22 +16,48 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type KinesisVideoSignalingChannelsActivities struct {
 	client kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewKinesisVideoSignalingChannelsActivities(session *session.Session, config ...*aws.Config) *KinesisVideoSignalingChannelsActivities {
-	client := kinesisvideosignalingchannels.New(session, config...)
+func NewKinesisVideoSignalingChannelsActivities(sess *session.Session, config ...*aws.Config) *KinesisVideoSignalingChannelsActivities {
+	client := kinesisvideosignalingchannels.New(sess, config...)
 	return &KinesisVideoSignalingChannelsActivities{client: client}
 }
 
+func NewKinesisVideoSignalingChannelsActivitiesWithSessionFactory(sessionFactory SessionFactory) *KinesisVideoSignalingChannelsActivities {
+	return &KinesisVideoSignalingChannelsActivities{sessionFactory: sessionFactory}
+}
+
+func (a *KinesisVideoSignalingChannelsActivities) getClient(ctx context.Context) (kinesisvideosignalingchannelsiface.KinesisVideoSignalingChannelsAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return kinesisvideosignalingchannels.New(sess), nil
+}
+
 func (a *KinesisVideoSignalingChannelsActivities) GetIceServerConfig(ctx context.Context, input *kinesisvideosignalingchannels.GetIceServerConfigInput) (*kinesisvideosignalingchannels.GetIceServerConfigOutput, error) {
-	return a.client.GetIceServerConfigWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetIceServerConfigWithContext(ctx, input)
 }
 
 func (a *KinesisVideoSignalingChannelsActivities) SendAlexaOfferToMaster(ctx context.Context, input *kinesisvideosignalingchannels.SendAlexaOfferToMasterInput) (*kinesisvideosignalingchannels.SendAlexaOfferToMasterOutput, error) {
-	return a.client.SendAlexaOfferToMasterWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.SendAlexaOfferToMasterWithContext(ctx, input)
 }

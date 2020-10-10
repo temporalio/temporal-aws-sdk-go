@@ -34,8 +34,7 @@ type PinpointSMSVoiceClient interface {
 	UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) *PinpointsmsvoiceUpdateConfigurationSetEventDestinationResult
 }
 
-type PinpointSMSVoiceStub struct {
-}
+type PinpointSMSVoiceStub struct{}
 
 func NewPinpointSMSVoiceStub() PinpointSMSVoiceClient {
 	return &PinpointSMSVoiceStub{}
@@ -123,88 +122,88 @@ func (r *PinpointsmsvoiceUpdateConfigurationSetEventDestinationResult) Get(ctx w
 
 func (a *PinpointSMSVoiceStub) CreateConfigurationSet(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) (*pinpointsmsvoice.CreateConfigurationSetOutput, error) {
 	var output pinpointsmsvoice.CreateConfigurationSetOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.CreateConfigurationSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) CreateConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetInput) *PinpointsmsvoiceCreateConfigurationSetResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.CreateConfigurationSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSet", input)
 	return &PinpointsmsvoiceCreateConfigurationSetResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) CreateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.CreateConfigurationSetEventDestinationOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.CreateConfigurationSetEventDestination", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSetEventDestination", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) CreateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.CreateConfigurationSetEventDestinationInput) *PinpointsmsvoiceCreateConfigurationSetEventDestinationResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.CreateConfigurationSetEventDestination", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.CreateConfigurationSetEventDestination", input)
 	return &PinpointsmsvoiceCreateConfigurationSetEventDestinationResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) DeleteConfigurationSet(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) (*pinpointsmsvoice.DeleteConfigurationSetOutput, error) {
 	var output pinpointsmsvoice.DeleteConfigurationSetOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.DeleteConfigurationSet", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSet", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) DeleteConfigurationSetAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetInput) *PinpointsmsvoiceDeleteConfigurationSetResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.DeleteConfigurationSet", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSet", input)
 	return &PinpointsmsvoiceDeleteConfigurationSetResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) DeleteConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) (*pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.DeleteConfigurationSetEventDestinationOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.DeleteConfigurationSetEventDestination", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSetEventDestination", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) DeleteConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.DeleteConfigurationSetEventDestinationInput) *PinpointsmsvoiceDeleteConfigurationSetEventDestinationResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.DeleteConfigurationSetEventDestination", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.DeleteConfigurationSetEventDestination", input)
 	return &PinpointsmsvoiceDeleteConfigurationSetEventDestinationResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) GetConfigurationSetEventDestinations(ctx workflow.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) (*pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput, error) {
 	var output pinpointsmsvoice.GetConfigurationSetEventDestinationsOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.GetConfigurationSetEventDestinations", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.GetConfigurationSetEventDestinations", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) GetConfigurationSetEventDestinationsAsync(ctx workflow.Context, input *pinpointsmsvoice.GetConfigurationSetEventDestinationsInput) *PinpointsmsvoiceGetConfigurationSetEventDestinationsResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.GetConfigurationSetEventDestinations", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.GetConfigurationSetEventDestinations", input)
 	return &PinpointsmsvoiceGetConfigurationSetEventDestinationsResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) ListConfigurationSets(ctx workflow.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) (*pinpointsmsvoice.ListConfigurationSetsOutput, error) {
 	var output pinpointsmsvoice.ListConfigurationSetsOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.ListConfigurationSets", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.ListConfigurationSets", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) ListConfigurationSetsAsync(ctx workflow.Context, input *pinpointsmsvoice.ListConfigurationSetsInput) *PinpointsmsvoiceListConfigurationSetsResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.ListConfigurationSets", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.ListConfigurationSets", input)
 	return &PinpointsmsvoiceListConfigurationSetsResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) SendVoiceMessage(ctx workflow.Context, input *pinpointsmsvoice.SendVoiceMessageInput) (*pinpointsmsvoice.SendVoiceMessageOutput, error) {
 	var output pinpointsmsvoice.SendVoiceMessageOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.SendVoiceMessage", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.SendVoiceMessage", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) SendVoiceMessageAsync(ctx workflow.Context, input *pinpointsmsvoice.SendVoiceMessageInput) *PinpointsmsvoiceSendVoiceMessageResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.SendVoiceMessage", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.SendVoiceMessage", input)
 	return &PinpointsmsvoiceSendVoiceMessageResult{Result: future}
 }
 
 func (a *PinpointSMSVoiceStub) UpdateConfigurationSetEventDestination(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) (*pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput, error) {
 	var output pinpointsmsvoice.UpdateConfigurationSetEventDestinationOutput
-	err := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.UpdateConfigurationSetEventDestination", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.UpdateConfigurationSetEventDestination", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *PinpointSMSVoiceStub) UpdateConfigurationSetEventDestinationAsync(ctx workflow.Context, input *pinpointsmsvoice.UpdateConfigurationSetEventDestinationInput) *PinpointsmsvoiceUpdateConfigurationSetEventDestinationResult {
-	future := workflow.ExecuteActivity(ctx, "PinpointSMSVoice.UpdateConfigurationSetEventDestination", input)
+	future := workflow.ExecuteActivity(ctx, "aws.pinpointsmsvoice.UpdateConfigurationSetEventDestination", input)
 	return &PinpointsmsvoiceUpdateConfigurationSetEventDestinationResult{Result: future}
 }

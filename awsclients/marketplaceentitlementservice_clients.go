@@ -13,8 +13,7 @@ type MarketplaceEntitlementServiceClient interface {
 	GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsResult
 }
 
-type MarketplaceEntitlementServiceStub struct {
-}
+type MarketplaceEntitlementServiceStub struct{}
 
 func NewMarketplaceEntitlementServiceStub() MarketplaceEntitlementServiceClient {
 	return &MarketplaceEntitlementServiceStub{}
@@ -32,11 +31,11 @@ func (r *MarketplaceentitlementserviceGetEntitlementsResult) Get(ctx workflow.Co
 
 func (a *MarketplaceEntitlementServiceStub) GetEntitlements(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
 	var output marketplaceentitlementservice.GetEntitlementsOutput
-	err := workflow.ExecuteActivity(ctx, "MarketplaceEntitlementService.GetEntitlements", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.marketplaceentitlementservice.GetEntitlements", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *MarketplaceEntitlementServiceStub) GetEntitlementsAsync(ctx workflow.Context, input *marketplaceentitlementservice.GetEntitlementsInput) *MarketplaceentitlementserviceGetEntitlementsResult {
-	future := workflow.ExecuteActivity(ctx, "MarketplaceEntitlementService.GetEntitlements", input)
+	future := workflow.ExecuteActivity(ctx, "aws.marketplaceentitlementservice.GetEntitlements", input)
 	return &MarketplaceentitlementserviceGetEntitlementsResult{Result: future}
 }

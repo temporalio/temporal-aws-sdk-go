@@ -34,8 +34,7 @@ type SavingsPlansClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceResult
 }
 
-type SavingsPlansStub struct {
-}
+type SavingsPlansStub struct{}
 
 func NewSavingsPlansStub() SavingsPlansClient {
 	return &SavingsPlansStub{}
@@ -123,88 +122,88 @@ func (r *SavingsplansUntagResourceResult) Get(ctx workflow.Context) (*savingspla
 
 func (a *SavingsPlansStub) CreateSavingsPlan(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) (*savingsplans.CreateSavingsPlanOutput, error) {
 	var output savingsplans.CreateSavingsPlanOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.CreateSavingsPlan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.CreateSavingsPlan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) CreateSavingsPlanAsync(ctx workflow.Context, input *savingsplans.CreateSavingsPlanInput) *SavingsplansCreateSavingsPlanResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.CreateSavingsPlan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.CreateSavingsPlan", input)
 	return &SavingsplansCreateSavingsPlanResult{Result: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlanRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) (*savingsplans.DescribeSavingsPlanRatesOutput, error) {
 	var output savingsplans.DescribeSavingsPlanRatesOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlanRates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlanRates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlanRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlanRatesInput) *SavingsplansDescribeSavingsPlanRatesResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlanRates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlanRates", input)
 	return &SavingsplansDescribeSavingsPlanRatesResult{Result: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlans(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) (*savingsplans.DescribeSavingsPlansOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlans", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlans", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansInput) *SavingsplansDescribeSavingsPlansResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlans", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlans", input)
 	return &SavingsplansDescribeSavingsPlansResult{Result: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRates(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) (*savingsplans.DescribeSavingsPlansOfferingRatesOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOfferingRatesOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlansOfferingRates", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferingRates", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferingRatesAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingRatesInput) *SavingsplansDescribeSavingsPlansOfferingRatesResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlansOfferingRates", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferingRates", input)
 	return &SavingsplansDescribeSavingsPlansOfferingRatesResult{Result: future}
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferings(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) (*savingsplans.DescribeSavingsPlansOfferingsOutput, error) {
 	var output savingsplans.DescribeSavingsPlansOfferingsOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlansOfferings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) DescribeSavingsPlansOfferingsAsync(ctx workflow.Context, input *savingsplans.DescribeSavingsPlansOfferingsInput) *SavingsplansDescribeSavingsPlansOfferingsResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.DescribeSavingsPlansOfferings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.DescribeSavingsPlansOfferings", input)
 	return &SavingsplansDescribeSavingsPlansOfferingsResult{Result: future}
 }
 
 func (a *SavingsPlansStub) ListTagsForResource(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) (*savingsplans.ListTagsForResourceOutput, error) {
 	var output savingsplans.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) ListTagsForResourceAsync(ctx workflow.Context, input *savingsplans.ListTagsForResourceInput) *SavingsplansListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.ListTagsForResource", input)
 	return &SavingsplansListTagsForResourceResult{Result: future}
 }
 
 func (a *SavingsPlansStub) TagResource(ctx workflow.Context, input *savingsplans.TagResourceInput) (*savingsplans.TagResourceOutput, error) {
 	var output savingsplans.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) TagResourceAsync(ctx workflow.Context, input *savingsplans.TagResourceInput) *SavingsplansTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.TagResource", input)
 	return &SavingsplansTagResourceResult{Result: future}
 }
 
 func (a *SavingsPlansStub) UntagResource(ctx workflow.Context, input *savingsplans.UntagResourceInput) (*savingsplans.UntagResourceOutput, error) {
 	var output savingsplans.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SavingsPlans.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.savingsplans.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SavingsPlansStub) UntagResourceAsync(ctx workflow.Context, input *savingsplans.UntagResourceInput) *SavingsplansUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SavingsPlans.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.savingsplans.UntagResource", input)
 	return &SavingsplansUntagResourceResult{Result: future}
 }

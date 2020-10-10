@@ -133,11 +133,9 @@ type DynamoDBClient interface {
 	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamodbUpdateTimeToLiveResult
 
 	WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-}
+	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error}
 
-type DynamoDBStub struct {
-}
+type DynamoDBStub struct{}
 
 func NewDynamoDBStub() DynamoDBClient {
 	return &DynamoDBStub{}
@@ -553,469 +551,471 @@ func (r *DynamodbUpdateTimeToLiveResult) Get(ctx workflow.Context) (*dynamodb.Up
 	return &output, err
 }
 
+
+
 func (a *DynamoDBStub) BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
 	var output dynamodb.BatchGetItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.BatchGetItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchGetItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) BatchGetItemAsync(ctx workflow.Context, input *dynamodb.BatchGetItemInput) *DynamodbBatchGetItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.BatchGetItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchGetItem", input)
 	return &DynamodbBatchGetItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) BatchWriteItem(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) (*dynamodb.BatchWriteItemOutput, error) {
 	var output dynamodb.BatchWriteItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.BatchWriteItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchWriteItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) BatchWriteItemAsync(ctx workflow.Context, input *dynamodb.BatchWriteItemInput) *DynamodbBatchWriteItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.BatchWriteItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.BatchWriteItem", input)
 	return &DynamodbBatchWriteItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) CreateBackup(ctx workflow.Context, input *dynamodb.CreateBackupInput) (*dynamodb.CreateBackupOutput, error) {
 	var output dynamodb.CreateBackupOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.CreateBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) CreateBackupAsync(ctx workflow.Context, input *dynamodb.CreateBackupInput) *DynamodbCreateBackupResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.CreateBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateBackup", input)
 	return &DynamodbCreateBackupResult{Result: future}
 }
 
 func (a *DynamoDBStub) CreateGlobalTable(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) (*dynamodb.CreateGlobalTableOutput, error) {
 	var output dynamodb.CreateGlobalTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.CreateGlobalTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateGlobalTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) CreateGlobalTableAsync(ctx workflow.Context, input *dynamodb.CreateGlobalTableInput) *DynamodbCreateGlobalTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.CreateGlobalTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateGlobalTable", input)
 	return &DynamodbCreateGlobalTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) CreateTable(ctx workflow.Context, input *dynamodb.CreateTableInput) (*dynamodb.CreateTableOutput, error) {
 	var output dynamodb.CreateTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.CreateTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) CreateTableAsync(ctx workflow.Context, input *dynamodb.CreateTableInput) *DynamodbCreateTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.CreateTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.CreateTable", input)
 	return &DynamodbCreateTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) DeleteBackup(ctx workflow.Context, input *dynamodb.DeleteBackupInput) (*dynamodb.DeleteBackupOutput, error) {
 	var output dynamodb.DeleteBackupOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DeleteBackupAsync(ctx workflow.Context, input *dynamodb.DeleteBackupInput) *DynamodbDeleteBackupResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteBackup", input)
 	return &DynamodbDeleteBackupResult{Result: future}
 }
 
 func (a *DynamoDBStub) DeleteItem(ctx workflow.Context, input *dynamodb.DeleteItemInput) (*dynamodb.DeleteItemOutput, error) {
 	var output dynamodb.DeleteItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DeleteItemAsync(ctx workflow.Context, input *dynamodb.DeleteItemInput) *DynamodbDeleteItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteItem", input)
 	return &DynamodbDeleteItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) DeleteTable(ctx workflow.Context, input *dynamodb.DeleteTableInput) (*dynamodb.DeleteTableOutput, error) {
 	var output dynamodb.DeleteTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DeleteTableAsync(ctx workflow.Context, input *dynamodb.DeleteTableInput) *DynamodbDeleteTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DeleteTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DeleteTable", input)
 	return &DynamodbDeleteTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeBackup(ctx workflow.Context, input *dynamodb.DescribeBackupInput) (*dynamodb.DescribeBackupOutput, error) {
 	var output dynamodb.DescribeBackupOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeBackupAsync(ctx workflow.Context, input *dynamodb.DescribeBackupInput) *DynamodbDescribeBackupResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeBackup", input)
 	return &DynamodbDescribeBackupResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeContinuousBackups(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) (*dynamodb.DescribeContinuousBackupsOutput, error) {
 	var output dynamodb.DescribeContinuousBackupsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeContinuousBackups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContinuousBackups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.DescribeContinuousBackupsInput) *DynamodbDescribeContinuousBackupsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeContinuousBackups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContinuousBackups", input)
 	return &DynamodbDescribeContinuousBackupsResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeContributorInsights(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) (*dynamodb.DescribeContributorInsightsOutput, error) {
 	var output dynamodb.DescribeContributorInsightsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeContributorInsights", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContributorInsights", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeContributorInsightsAsync(ctx workflow.Context, input *dynamodb.DescribeContributorInsightsInput) *DynamodbDescribeContributorInsightsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeContributorInsights", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeContributorInsights", input)
 	return &DynamodbDescribeContributorInsightsResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeEndpoints(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) (*dynamodb.DescribeEndpointsOutput, error) {
 	var output dynamodb.DescribeEndpointsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeEndpoints", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeEndpoints", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeEndpointsAsync(ctx workflow.Context, input *dynamodb.DescribeEndpointsInput) *DynamodbDescribeEndpointsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeEndpoints", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeEndpoints", input)
 	return &DynamodbDescribeEndpointsResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeGlobalTable(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) (*dynamodb.DescribeGlobalTableOutput, error) {
 	var output dynamodb.DescribeGlobalTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeGlobalTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeGlobalTableAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableInput) *DynamodbDescribeGlobalTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeGlobalTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTable", input)
 	return &DynamodbDescribeGlobalTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeGlobalTableSettings(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) (*dynamodb.DescribeGlobalTableSettingsOutput, error) {
 	var output dynamodb.DescribeGlobalTableSettingsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeGlobalTableSettings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTableSettings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.DescribeGlobalTableSettingsInput) *DynamodbDescribeGlobalTableSettingsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeGlobalTableSettings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeGlobalTableSettings", input)
 	return &DynamodbDescribeGlobalTableSettingsResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeLimits(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) (*dynamodb.DescribeLimitsOutput, error) {
 	var output dynamodb.DescribeLimitsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeLimits", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeLimits", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeLimitsAsync(ctx workflow.Context, input *dynamodb.DescribeLimitsInput) *DynamodbDescribeLimitsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeLimits", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeLimits", input)
 	return &DynamodbDescribeLimitsResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeTable(ctx workflow.Context, input *dynamodb.DescribeTableInput) (*dynamodb.DescribeTableOutput, error) {
 	var output dynamodb.DescribeTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeTableAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) *DynamodbDescribeTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTable", input)
 	return &DynamodbDescribeTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) (*dynamodb.DescribeTableReplicaAutoScalingOutput, error) {
 	var output dynamodb.DescribeTableReplicaAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTableReplicaAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTableReplicaAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.DescribeTableReplicaAutoScalingInput) *DynamodbDescribeTableReplicaAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTableReplicaAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTableReplicaAutoScaling", input)
 	return &DynamodbDescribeTableReplicaAutoScalingResult{Result: future}
 }
 
 func (a *DynamoDBStub) DescribeTimeToLive(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) (*dynamodb.DescribeTimeToLiveOutput, error) {
 	var output dynamodb.DescribeTimeToLiveOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTimeToLive", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTimeToLive", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) DescribeTimeToLiveAsync(ctx workflow.Context, input *dynamodb.DescribeTimeToLiveInput) *DynamodbDescribeTimeToLiveResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.DescribeTimeToLive", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.DescribeTimeToLive", input)
 	return &DynamodbDescribeTimeToLiveResult{Result: future}
 }
 
 func (a *DynamoDBStub) GetItem(ctx workflow.Context, input *dynamodb.GetItemInput) (*dynamodb.GetItemOutput, error) {
 	var output dynamodb.GetItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.GetItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.GetItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) GetItemAsync(ctx workflow.Context, input *dynamodb.GetItemInput) *DynamodbGetItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.GetItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.GetItem", input)
 	return &DynamodbGetItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) ListBackups(ctx workflow.Context, input *dynamodb.ListBackupsInput) (*dynamodb.ListBackupsOutput, error) {
 	var output dynamodb.ListBackupsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.ListBackups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListBackups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ListBackupsAsync(ctx workflow.Context, input *dynamodb.ListBackupsInput) *DynamodbListBackupsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.ListBackups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListBackups", input)
 	return &DynamodbListBackupsResult{Result: future}
 }
 
 func (a *DynamoDBStub) ListContributorInsights(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) (*dynamodb.ListContributorInsightsOutput, error) {
 	var output dynamodb.ListContributorInsightsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.ListContributorInsights", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListContributorInsights", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ListContributorInsightsAsync(ctx workflow.Context, input *dynamodb.ListContributorInsightsInput) *DynamodbListContributorInsightsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.ListContributorInsights", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListContributorInsights", input)
 	return &DynamodbListContributorInsightsResult{Result: future}
 }
 
 func (a *DynamoDBStub) ListGlobalTables(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) (*dynamodb.ListGlobalTablesOutput, error) {
 	var output dynamodb.ListGlobalTablesOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.ListGlobalTables", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListGlobalTables", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ListGlobalTablesAsync(ctx workflow.Context, input *dynamodb.ListGlobalTablesInput) *DynamodbListGlobalTablesResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.ListGlobalTables", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListGlobalTables", input)
 	return &DynamodbListGlobalTablesResult{Result: future}
 }
 
 func (a *DynamoDBStub) ListTables(ctx workflow.Context, input *dynamodb.ListTablesInput) (*dynamodb.ListTablesOutput, error) {
 	var output dynamodb.ListTablesOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.ListTables", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTables", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ListTablesAsync(ctx workflow.Context, input *dynamodb.ListTablesInput) *DynamodbListTablesResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.ListTables", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTables", input)
 	return &DynamodbListTablesResult{Result: future}
 }
 
 func (a *DynamoDBStub) ListTagsOfResource(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) (*dynamodb.ListTagsOfResourceOutput, error) {
 	var output dynamodb.ListTagsOfResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.ListTagsOfResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTagsOfResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ListTagsOfResourceAsync(ctx workflow.Context, input *dynamodb.ListTagsOfResourceInput) *DynamodbListTagsOfResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.ListTagsOfResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.ListTagsOfResource", input)
 	return &DynamodbListTagsOfResourceResult{Result: future}
 }
 
 func (a *DynamoDBStub) PutItem(ctx workflow.Context, input *dynamodb.PutItemInput) (*dynamodb.PutItemOutput, error) {
 	var output dynamodb.PutItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.PutItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.PutItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) PutItemAsync(ctx workflow.Context, input *dynamodb.PutItemInput) *DynamodbPutItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.PutItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.PutItem", input)
 	return &DynamodbPutItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) Query(ctx workflow.Context, input *dynamodb.QueryInput) (*dynamodb.QueryOutput, error) {
 	var output dynamodb.QueryOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.Query", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.Query", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) QueryAsync(ctx workflow.Context, input *dynamodb.QueryInput) *DynamodbQueryResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.Query", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.Query", input)
 	return &DynamodbQueryResult{Result: future}
 }
 
 func (a *DynamoDBStub) RestoreTableFromBackup(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) (*dynamodb.RestoreTableFromBackupOutput, error) {
 	var output dynamodb.RestoreTableFromBackupOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.RestoreTableFromBackup", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableFromBackup", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) RestoreTableFromBackupAsync(ctx workflow.Context, input *dynamodb.RestoreTableFromBackupInput) *DynamodbRestoreTableFromBackupResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.RestoreTableFromBackup", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableFromBackup", input)
 	return &DynamodbRestoreTableFromBackupResult{Result: future}
 }
 
 func (a *DynamoDBStub) RestoreTableToPointInTime(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) (*dynamodb.RestoreTableToPointInTimeOutput, error) {
 	var output dynamodb.RestoreTableToPointInTimeOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.RestoreTableToPointInTime", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableToPointInTime", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) RestoreTableToPointInTimeAsync(ctx workflow.Context, input *dynamodb.RestoreTableToPointInTimeInput) *DynamodbRestoreTableToPointInTimeResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.RestoreTableToPointInTime", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.RestoreTableToPointInTime", input)
 	return &DynamodbRestoreTableToPointInTimeResult{Result: future}
 }
 
 func (a *DynamoDBStub) Scan(ctx workflow.Context, input *dynamodb.ScanInput) (*dynamodb.ScanOutput, error) {
 	var output dynamodb.ScanOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.Scan", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.Scan", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) ScanAsync(ctx workflow.Context, input *dynamodb.ScanInput) *DynamodbScanResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.Scan", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.Scan", input)
 	return &DynamodbScanResult{Result: future}
 }
 
 func (a *DynamoDBStub) TagResource(ctx workflow.Context, input *dynamodb.TagResourceInput) (*dynamodb.TagResourceOutput, error) {
 	var output dynamodb.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) TagResourceAsync(ctx workflow.Context, input *dynamodb.TagResourceInput) *DynamodbTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TagResource", input)
 	return &DynamodbTagResourceResult{Result: future}
 }
 
 func (a *DynamoDBStub) TransactGetItems(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) (*dynamodb.TransactGetItemsOutput, error) {
 	var output dynamodb.TransactGetItemsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.TransactGetItems", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactGetItems", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) TransactGetItemsAsync(ctx workflow.Context, input *dynamodb.TransactGetItemsInput) *DynamodbTransactGetItemsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.TransactGetItems", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactGetItems", input)
 	return &DynamodbTransactGetItemsResult{Result: future}
 }
 
 func (a *DynamoDBStub) TransactWriteItems(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) (*dynamodb.TransactWriteItemsOutput, error) {
 	var output dynamodb.TransactWriteItemsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.TransactWriteItems", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactWriteItems", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) TransactWriteItemsAsync(ctx workflow.Context, input *dynamodb.TransactWriteItemsInput) *DynamodbTransactWriteItemsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.TransactWriteItems", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.TransactWriteItems", input)
 	return &DynamodbTransactWriteItemsResult{Result: future}
 }
 
 func (a *DynamoDBStub) UntagResource(ctx workflow.Context, input *dynamodb.UntagResourceInput) (*dynamodb.UntagResourceOutput, error) {
 	var output dynamodb.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UntagResourceAsync(ctx workflow.Context, input *dynamodb.UntagResourceInput) *DynamodbUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UntagResource", input)
 	return &DynamodbUntagResourceResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateContinuousBackups(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) (*dynamodb.UpdateContinuousBackupsOutput, error) {
 	var output dynamodb.UpdateContinuousBackupsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateContinuousBackups", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContinuousBackups", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateContinuousBackupsAsync(ctx workflow.Context, input *dynamodb.UpdateContinuousBackupsInput) *DynamodbUpdateContinuousBackupsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateContinuousBackups", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContinuousBackups", input)
 	return &DynamodbUpdateContinuousBackupsResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateContributorInsights(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) (*dynamodb.UpdateContributorInsightsOutput, error) {
 	var output dynamodb.UpdateContributorInsightsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateContributorInsights", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContributorInsights", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateContributorInsightsAsync(ctx workflow.Context, input *dynamodb.UpdateContributorInsightsInput) *DynamodbUpdateContributorInsightsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateContributorInsights", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateContributorInsights", input)
 	return &DynamodbUpdateContributorInsightsResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateGlobalTable(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) (*dynamodb.UpdateGlobalTableOutput, error) {
 	var output dynamodb.UpdateGlobalTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateGlobalTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateGlobalTableAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableInput) *DynamodbUpdateGlobalTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateGlobalTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTable", input)
 	return &DynamodbUpdateGlobalTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateGlobalTableSettings(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) (*dynamodb.UpdateGlobalTableSettingsOutput, error) {
 	var output dynamodb.UpdateGlobalTableSettingsOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateGlobalTableSettings", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTableSettings", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateGlobalTableSettingsAsync(ctx workflow.Context, input *dynamodb.UpdateGlobalTableSettingsInput) *DynamodbUpdateGlobalTableSettingsResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateGlobalTableSettings", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateGlobalTableSettings", input)
 	return &DynamodbUpdateGlobalTableSettingsResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateItem(ctx workflow.Context, input *dynamodb.UpdateItemInput) (*dynamodb.UpdateItemOutput, error) {
 	var output dynamodb.UpdateItemOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateItem", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateItem", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateItemAsync(ctx workflow.Context, input *dynamodb.UpdateItemInput) *DynamodbUpdateItemResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateItem", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateItem", input)
 	return &DynamodbUpdateItemResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateTable(ctx workflow.Context, input *dynamodb.UpdateTableInput) (*dynamodb.UpdateTableOutput, error) {
 	var output dynamodb.UpdateTableOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTable", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTable", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateTableAsync(ctx workflow.Context, input *dynamodb.UpdateTableInput) *DynamodbUpdateTableResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTable", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTable", input)
 	return &DynamodbUpdateTableResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateTableReplicaAutoScaling(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) (*dynamodb.UpdateTableReplicaAutoScalingOutput, error) {
 	var output dynamodb.UpdateTableReplicaAutoScalingOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTableReplicaAutoScaling", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTableReplicaAutoScaling", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateTableReplicaAutoScalingAsync(ctx workflow.Context, input *dynamodb.UpdateTableReplicaAutoScalingInput) *DynamodbUpdateTableReplicaAutoScalingResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTableReplicaAutoScaling", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTableReplicaAutoScaling", input)
 	return &DynamodbUpdateTableReplicaAutoScalingResult{Result: future}
 }
 
 func (a *DynamoDBStub) UpdateTimeToLive(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) (*dynamodb.UpdateTimeToLiveOutput, error) {
 	var output dynamodb.UpdateTimeToLiveOutput
-	err := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTimeToLive", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTimeToLive", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *DynamoDBStub) UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamodbUpdateTimeToLiveResult {
-	future := workflow.ExecuteActivity(ctx, "DynamoDB.UpdateTimeToLive", input)
+	future := workflow.ExecuteActivity(ctx, "aws.dynamodb.UpdateTimeToLive", input)
 	return &DynamodbUpdateTimeToLiveResult{Result: future}
 }
 
 func (a *DynamoDBStub) WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error {
-	return workflow.ExecuteActivity(ctx, "DynamoDB.WaitUntilTableExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableExists", input).Get(ctx, nil)
 }
 
 func (a *DynamoDBStub) WaitUntilTableExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DynamoDB.WaitUntilTableExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableExists", input)
 }
 
 func (a *DynamoDBStub) WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error {
-	return workflow.ExecuteActivity(ctx, "DynamoDB.WaitUntilTableNotExists", input).Get(ctx, nil)
+	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableNotExists", input).Get(ctx, nil)
 }
 
 func (a *DynamoDBStub) WaitUntilTableNotExistsAsync(ctx workflow.Context, input *dynamodb.DescribeTableInput) workflow.Future {
-	return workflow.ExecuteActivity(ctx, "DynamoDB.WaitUntilTableNotExists", input)
+	return workflow.ExecuteActivity(ctx, "aws.dynamodb.WaitUntilTableNotExists", input)
 }

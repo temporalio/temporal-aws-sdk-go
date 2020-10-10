@@ -16,18 +16,40 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type MarketplaceEntitlementServiceActivities struct {
 	client marketplaceentitlementserviceiface.MarketplaceEntitlementServiceAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewMarketplaceEntitlementServiceActivities(session *session.Session, config ...*aws.Config) *MarketplaceEntitlementServiceActivities {
-	client := marketplaceentitlementservice.New(session, config...)
+func NewMarketplaceEntitlementServiceActivities(sess *session.Session, config ...*aws.Config) *MarketplaceEntitlementServiceActivities {
+	client := marketplaceentitlementservice.New(sess, config...)
 	return &MarketplaceEntitlementServiceActivities{client: client}
 }
 
+func NewMarketplaceEntitlementServiceActivitiesWithSessionFactory(sessionFactory SessionFactory) *MarketplaceEntitlementServiceActivities {
+	return &MarketplaceEntitlementServiceActivities{sessionFactory: sessionFactory}
+}
+
+func (a *MarketplaceEntitlementServiceActivities) getClient(ctx context.Context) (marketplaceentitlementserviceiface.MarketplaceEntitlementServiceAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return marketplaceentitlementservice.New(sess), nil
+}
+
 func (a *MarketplaceEntitlementServiceActivities) GetEntitlements(ctx context.Context, input *marketplaceentitlementservice.GetEntitlementsInput) (*marketplaceentitlementservice.GetEntitlementsOutput, error) {
-	return a.client.GetEntitlementsWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.GetEntitlementsWithContext(ctx, input)
 }

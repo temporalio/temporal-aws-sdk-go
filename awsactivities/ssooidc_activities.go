@@ -16,26 +16,56 @@ import (
 
 // ensure that imports are valid even if not used by the generated code
 var _ = internal.SetClientToken
-
 type _ request.Option
 
 type SSOOIDCActivities struct {
 	client ssooidciface.SSOOIDCAPI
+
+	sessionFactory SessionFactory
 }
 
-func NewSSOOIDCActivities(session *session.Session, config ...*aws.Config) *SSOOIDCActivities {
-	client := ssooidc.New(session, config...)
+func NewSSOOIDCActivities(sess *session.Session, config ...*aws.Config) *SSOOIDCActivities {
+	client := ssooidc.New(sess, config...)
 	return &SSOOIDCActivities{client: client}
 }
 
+func NewSSOOIDCActivitiesWithSessionFactory(sessionFactory SessionFactory) *SSOOIDCActivities {
+	return &SSOOIDCActivities{sessionFactory: sessionFactory}
+}
+
+func (a *SSOOIDCActivities) getClient(ctx context.Context) (ssooidciface.SSOOIDCAPI, error) {
+	if a.client != nil { // No need to protect with mutex: we know the client never changes
+		return a.client, nil
+	}
+
+	sess, err := a.sessionFactory.Session(ctx)
+	if err != nil {
+		return nil, err
+	}
+
+	return ssooidc.New(sess), nil
+}
+
 func (a *SSOOIDCActivities) CreateToken(ctx context.Context, input *ssooidc.CreateTokenInput) (*ssooidc.CreateTokenOutput, error) {
-	return a.client.CreateTokenWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.CreateTokenWithContext(ctx, input)
 }
 
 func (a *SSOOIDCActivities) RegisterClient(ctx context.Context, input *ssooidc.RegisterClientInput) (*ssooidc.RegisterClientOutput, error) {
-	return a.client.RegisterClientWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.RegisterClientWithContext(ctx, input)
 }
 
 func (a *SSOOIDCActivities) StartDeviceAuthorization(ctx context.Context, input *ssooidc.StartDeviceAuthorizationInput) (*ssooidc.StartDeviceAuthorizationOutput, error) {
-	return a.client.StartDeviceAuthorizationWithContext(ctx, input)
+	client, err := a.getClient(ctx)
+	if err != nil {
+		return nil, err
+	}
+	return client.StartDeviceAuthorizationWithContext(ctx, input)
 }

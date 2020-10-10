@@ -76,8 +76,7 @@ type SFNClient interface {
 	UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SfnUpdateStateMachineResult
 }
 
-type SFNStub struct {
-}
+type SFNStub struct{}
 
 func NewSFNStub() SFNClient {
 	return &SFNStub{}
@@ -305,242 +304,242 @@ func (r *SfnUpdateStateMachineResult) Get(ctx workflow.Context) (*sfn.UpdateStat
 
 func (a *SFNStub) CreateActivity(ctx workflow.Context, input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error) {
 	var output sfn.CreateActivityOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.CreateActivity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.CreateActivity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *SfnCreateActivityResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.CreateActivity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.CreateActivity", input)
 	return &SfnCreateActivityResult{Result: future}
 }
 
 func (a *SFNStub) CreateStateMachine(ctx workflow.Context, input *sfn.CreateStateMachineInput) (*sfn.CreateStateMachineOutput, error) {
 	var output sfn.CreateStateMachineOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.CreateStateMachine", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.CreateStateMachine", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) CreateStateMachineAsync(ctx workflow.Context, input *sfn.CreateStateMachineInput) *SfnCreateStateMachineResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.CreateStateMachine", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.CreateStateMachine", input)
 	return &SfnCreateStateMachineResult{Result: future}
 }
 
 func (a *SFNStub) DeleteActivity(ctx workflow.Context, input *sfn.DeleteActivityInput) (*sfn.DeleteActivityOutput, error) {
 	var output sfn.DeleteActivityOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DeleteActivity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DeleteActivity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DeleteActivityAsync(ctx workflow.Context, input *sfn.DeleteActivityInput) *SfnDeleteActivityResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DeleteActivity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DeleteActivity", input)
 	return &SfnDeleteActivityResult{Result: future}
 }
 
 func (a *SFNStub) DeleteStateMachine(ctx workflow.Context, input *sfn.DeleteStateMachineInput) (*sfn.DeleteStateMachineOutput, error) {
 	var output sfn.DeleteStateMachineOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DeleteStateMachine", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DeleteStateMachine", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DeleteStateMachineAsync(ctx workflow.Context, input *sfn.DeleteStateMachineInput) *SfnDeleteStateMachineResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DeleteStateMachine", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DeleteStateMachine", input)
 	return &SfnDeleteStateMachineResult{Result: future}
 }
 
 func (a *SFNStub) DescribeActivity(ctx workflow.Context, input *sfn.DescribeActivityInput) (*sfn.DescribeActivityOutput, error) {
 	var output sfn.DescribeActivityOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DescribeActivity", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeActivity", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DescribeActivityAsync(ctx workflow.Context, input *sfn.DescribeActivityInput) *SfnDescribeActivityResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DescribeActivity", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeActivity", input)
 	return &SfnDescribeActivityResult{Result: future}
 }
 
 func (a *SFNStub) DescribeExecution(ctx workflow.Context, input *sfn.DescribeExecutionInput) (*sfn.DescribeExecutionOutput, error) {
 	var output sfn.DescribeExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DescribeExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DescribeExecutionAsync(ctx workflow.Context, input *sfn.DescribeExecutionInput) *SfnDescribeExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DescribeExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeExecution", input)
 	return &SfnDescribeExecutionResult{Result: future}
 }
 
 func (a *SFNStub) DescribeStateMachine(ctx workflow.Context, input *sfn.DescribeStateMachineInput) (*sfn.DescribeStateMachineOutput, error) {
 	var output sfn.DescribeStateMachineOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DescribeStateMachine", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeStateMachine", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DescribeStateMachineAsync(ctx workflow.Context, input *sfn.DescribeStateMachineInput) *SfnDescribeStateMachineResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DescribeStateMachine", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeStateMachine", input)
 	return &SfnDescribeStateMachineResult{Result: future}
 }
 
 func (a *SFNStub) DescribeStateMachineForExecution(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) (*sfn.DescribeStateMachineForExecutionOutput, error) {
 	var output sfn.DescribeStateMachineForExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.DescribeStateMachineForExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeStateMachineForExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) DescribeStateMachineForExecutionAsync(ctx workflow.Context, input *sfn.DescribeStateMachineForExecutionInput) *SfnDescribeStateMachineForExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.DescribeStateMachineForExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.DescribeStateMachineForExecution", input)
 	return &SfnDescribeStateMachineForExecutionResult{Result: future}
 }
 
 func (a *SFNStub) GetActivityTask(ctx workflow.Context, input *sfn.GetActivityTaskInput) (*sfn.GetActivityTaskOutput, error) {
 	var output sfn.GetActivityTaskOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.GetActivityTask", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.GetActivityTask", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) GetActivityTaskAsync(ctx workflow.Context, input *sfn.GetActivityTaskInput) *SfnGetActivityTaskResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.GetActivityTask", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.GetActivityTask", input)
 	return &SfnGetActivityTaskResult{Result: future}
 }
 
 func (a *SFNStub) GetExecutionHistory(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) (*sfn.GetExecutionHistoryOutput, error) {
 	var output sfn.GetExecutionHistoryOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.GetExecutionHistory", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.GetExecutionHistory", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) GetExecutionHistoryAsync(ctx workflow.Context, input *sfn.GetExecutionHistoryInput) *SfnGetExecutionHistoryResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.GetExecutionHistory", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.GetExecutionHistory", input)
 	return &SfnGetExecutionHistoryResult{Result: future}
 }
 
 func (a *SFNStub) ListActivities(ctx workflow.Context, input *sfn.ListActivitiesInput) (*sfn.ListActivitiesOutput, error) {
 	var output sfn.ListActivitiesOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.ListActivities", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.ListActivities", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) ListActivitiesAsync(ctx workflow.Context, input *sfn.ListActivitiesInput) *SfnListActivitiesResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.ListActivities", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.ListActivities", input)
 	return &SfnListActivitiesResult{Result: future}
 }
 
 func (a *SFNStub) ListExecutions(ctx workflow.Context, input *sfn.ListExecutionsInput) (*sfn.ListExecutionsOutput, error) {
 	var output sfn.ListExecutionsOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.ListExecutions", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.ListExecutions", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) ListExecutionsAsync(ctx workflow.Context, input *sfn.ListExecutionsInput) *SfnListExecutionsResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.ListExecutions", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.ListExecutions", input)
 	return &SfnListExecutionsResult{Result: future}
 }
 
 func (a *SFNStub) ListStateMachines(ctx workflow.Context, input *sfn.ListStateMachinesInput) (*sfn.ListStateMachinesOutput, error) {
 	var output sfn.ListStateMachinesOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.ListStateMachines", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.ListStateMachines", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) ListStateMachinesAsync(ctx workflow.Context, input *sfn.ListStateMachinesInput) *SfnListStateMachinesResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.ListStateMachines", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.ListStateMachines", input)
 	return &SfnListStateMachinesResult{Result: future}
 }
 
 func (a *SFNStub) ListTagsForResource(ctx workflow.Context, input *sfn.ListTagsForResourceInput) (*sfn.ListTagsForResourceOutput, error) {
 	var output sfn.ListTagsForResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.ListTagsForResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.ListTagsForResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) ListTagsForResourceAsync(ctx workflow.Context, input *sfn.ListTagsForResourceInput) *SfnListTagsForResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.ListTagsForResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.ListTagsForResource", input)
 	return &SfnListTagsForResourceResult{Result: future}
 }
 
 func (a *SFNStub) SendTaskFailure(ctx workflow.Context, input *sfn.SendTaskFailureInput) (*sfn.SendTaskFailureOutput, error) {
 	var output sfn.SendTaskFailureOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.SendTaskFailure", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskFailure", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) SendTaskFailureAsync(ctx workflow.Context, input *sfn.SendTaskFailureInput) *SfnSendTaskFailureResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.SendTaskFailure", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskFailure", input)
 	return &SfnSendTaskFailureResult{Result: future}
 }
 
 func (a *SFNStub) SendTaskHeartbeat(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) (*sfn.SendTaskHeartbeatOutput, error) {
 	var output sfn.SendTaskHeartbeatOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.SendTaskHeartbeat", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskHeartbeat", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) SendTaskHeartbeatAsync(ctx workflow.Context, input *sfn.SendTaskHeartbeatInput) *SfnSendTaskHeartbeatResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.SendTaskHeartbeat", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskHeartbeat", input)
 	return &SfnSendTaskHeartbeatResult{Result: future}
 }
 
 func (a *SFNStub) SendTaskSuccess(ctx workflow.Context, input *sfn.SendTaskSuccessInput) (*sfn.SendTaskSuccessOutput, error) {
 	var output sfn.SendTaskSuccessOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.SendTaskSuccess", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskSuccess", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) SendTaskSuccessAsync(ctx workflow.Context, input *sfn.SendTaskSuccessInput) *SfnSendTaskSuccessResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.SendTaskSuccess", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.SendTaskSuccess", input)
 	return &SfnSendTaskSuccessResult{Result: future}
 }
 
 func (a *SFNStub) StartExecution(ctx workflow.Context, input *sfn.StartExecutionInput) (*sfn.StartExecutionOutput, error) {
 	var output sfn.StartExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.StartExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.StartExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) StartExecutionAsync(ctx workflow.Context, input *sfn.StartExecutionInput) *SfnStartExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.StartExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.StartExecution", input)
 	return &SfnStartExecutionResult{Result: future}
 }
 
 func (a *SFNStub) StopExecution(ctx workflow.Context, input *sfn.StopExecutionInput) (*sfn.StopExecutionOutput, error) {
 	var output sfn.StopExecutionOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.StopExecution", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.StopExecution", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) StopExecutionAsync(ctx workflow.Context, input *sfn.StopExecutionInput) *SfnStopExecutionResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.StopExecution", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.StopExecution", input)
 	return &SfnStopExecutionResult{Result: future}
 }
 
 func (a *SFNStub) TagResource(ctx workflow.Context, input *sfn.TagResourceInput) (*sfn.TagResourceOutput, error) {
 	var output sfn.TagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.TagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.TagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) TagResourceAsync(ctx workflow.Context, input *sfn.TagResourceInput) *SfnTagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.TagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.TagResource", input)
 	return &SfnTagResourceResult{Result: future}
 }
 
 func (a *SFNStub) UntagResource(ctx workflow.Context, input *sfn.UntagResourceInput) (*sfn.UntagResourceOutput, error) {
 	var output sfn.UntagResourceOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.UntagResource", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.UntagResource", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) UntagResourceAsync(ctx workflow.Context, input *sfn.UntagResourceInput) *SfnUntagResourceResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.UntagResource", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.UntagResource", input)
 	return &SfnUntagResourceResult{Result: future}
 }
 
 func (a *SFNStub) UpdateStateMachine(ctx workflow.Context, input *sfn.UpdateStateMachineInput) (*sfn.UpdateStateMachineOutput, error) {
 	var output sfn.UpdateStateMachineOutput
-	err := workflow.ExecuteActivity(ctx, "SFN.UpdateStateMachine", input).Get(ctx, &output)
+	err := workflow.ExecuteActivity(ctx, "aws.sfn.UpdateStateMachine", input).Get(ctx, &output)
 	return &output, err
 }
 
 func (a *SFNStub) UpdateStateMachineAsync(ctx workflow.Context, input *sfn.UpdateStateMachineInput) *SfnUpdateStateMachineResult {
-	future := workflow.ExecuteActivity(ctx, "SFN.UpdateStateMachine", input)
+	future := workflow.ExecuteActivity(ctx, "aws.sfn.UpdateStateMachine", input)
 	return &SfnUpdateStateMachineResult{Result: future}
 }
