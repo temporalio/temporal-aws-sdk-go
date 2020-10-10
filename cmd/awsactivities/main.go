@@ -20,7 +20,7 @@ func main() {
 
 	// TODO(maxim): command line flags to override session and config options
 	sess, err := session.NewSession(&aws.Config{
-		Region: aws.String("us-west-2")},
+		Region: aws.String("us-east-1")},
 	)
 	if err != nil {
 		log.Fatalln("Failed to create AWS session", err)

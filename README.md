@@ -53,11 +53,28 @@ See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/develop
 go run cmd/awsactivities/main.go
 ```
 
-## S3 Sample
+## Samples
+
+### S3 List Bucket
 
 `cmd/s3list` directory contains very simple example of a workflow that lists S3 buckets under an account. The sample
 assumes that AWS SDK activities are already running.
 
 ```bash
 go run cmd/s3list/worker/main.go
+```
+
+### EC2 Instance
+
+`cmd/ec2demo` directory contains an example of a workflow that launches an EC2 instance and keeps
+restarting it when terminated. The sample assumes that AWS SDK activities are already running.
+
+To start workflow worker:
+```bash
+go run cmd/ec2demo/worker/main.go
+```
+
+To initiate workflow
+```bash
+go run cmd/ec2demo/starter/main.go
 ```
