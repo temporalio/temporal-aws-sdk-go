@@ -32,6 +32,7 @@ func NewIoTDataPlaneStub() IoTDataPlaneClient {
 	return &IoTDataPlaneStub{}
 }
 
+
 type IotdataplaneDeleteThingShadowResult struct {
 	Result workflow.Future
 }

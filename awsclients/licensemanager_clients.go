@@ -65,6 +65,7 @@ func NewLicenseManagerStub() LicenseManagerClient {
 	return &LicenseManagerStub{}
 }
 
+
 type LicensemanagerCreateLicenseConfigurationResult struct {
 	Result workflow.Future
 }

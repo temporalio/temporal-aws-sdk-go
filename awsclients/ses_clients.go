@@ -232,6 +232,7 @@ func NewSESStub() SESClient {
 	return &SESStub{}
 }
 
+
 type SesCloneReceiptRuleSetResult struct {
 	Result workflow.Future
 }
@@ -941,7 +942,6 @@ func (r *SesVerifyEmailIdentityResult) Get(ctx workflow.Context) (*ses.VerifyEma
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *SESStub) CloneReceiptRuleSet(ctx workflow.Context, input *ses.CloneReceiptRuleSetInput) (*ses.CloneReceiptRuleSetOutput, error) {
 	var output ses.CloneReceiptRuleSetOutput

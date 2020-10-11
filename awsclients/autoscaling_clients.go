@@ -194,6 +194,7 @@ func NewAutoScalingStub() AutoScalingClient {
 	return &AutoScalingStub{}
 }
 
+
 type AutoscalingAttachInstancesResult struct {
 	Result workflow.Future
 }
@@ -763,9 +764,6 @@ func (r *AutoscalingUpdateAutoScalingGroupResult) Get(ctx workflow.Context) (*au
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *AutoScalingStub) AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error) {
 	var output autoscaling.AttachInstancesOutput

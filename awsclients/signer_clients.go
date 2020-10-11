@@ -55,6 +55,7 @@ func NewSignerStub() SignerClient {
 	return &SignerStub{}
 }
 
+
 type SignerCancelSigningProfileResult struct {
 	Result workflow.Future
 }
@@ -174,7 +175,6 @@ func (r *SignerUntagResourceResult) Get(ctx workflow.Context) (*signer.UntagReso
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *SignerStub) CancelSigningProfile(ctx workflow.Context, input *signer.CancelSigningProfileInput) (*signer.CancelSigningProfileOutput, error) {
 	var output signer.CancelSigningProfileOutput

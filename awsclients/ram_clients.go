@@ -89,6 +89,7 @@ func NewRAMStub() RAMClient {
 	return &RAMStub{}
 }
 
+
 type RamAcceptResourceShareInvitationResult struct {
 	Result workflow.Future
 }

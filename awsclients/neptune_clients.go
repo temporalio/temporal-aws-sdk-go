@@ -198,6 +198,7 @@ func NewNeptuneStub() NeptuneClient {
 	return &NeptuneStub{}
 }
 
+
 type NeptuneAddRoleToDBClusterResult struct {
 	Result workflow.Future
 }
@@ -787,8 +788,6 @@ func (r *NeptuneStopDBClusterResult) Get(ctx workflow.Context) (*neptune.StopDBC
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *NeptuneStub) AddRoleToDBCluster(ctx workflow.Context, input *neptune.AddRoleToDBClusterInput) (*neptune.AddRoleToDBClusterOutput, error) {
 	var output neptune.AddRoleToDBClusterOutput

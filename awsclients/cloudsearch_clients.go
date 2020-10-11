@@ -95,6 +95,7 @@ func NewCloudSearchStub() CloudSearchClient {
 	return &CloudSearchStub{}
 }
 
+
 type CloudsearchBuildSuggestersResult struct {
 	Result workflow.Future
 }

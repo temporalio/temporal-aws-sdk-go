@@ -26,6 +26,7 @@ func NewPricingStub() PricingClient {
 	return &PricingStub{}
 }
 
+
 type PricingDescribeServicesResult struct {
 	Result workflow.Future
 }

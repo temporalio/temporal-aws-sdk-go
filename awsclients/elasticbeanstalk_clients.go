@@ -164,6 +164,7 @@ func NewElasticBeanstalkStub() ElasticBeanstalkClient {
 	return &ElasticBeanstalkStub{}
 }
 
+
 type ElasticbeanstalkAbortEnvironmentUpdateResult struct {
 	Result workflow.Future
 }
@@ -633,9 +634,6 @@ func (r *ElasticbeanstalkValidateConfigurationSettingsResult) Get(ctx workflow.C
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *ElasticBeanstalkStub) AbortEnvironmentUpdate(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error) {
 	var output elasticbeanstalk.AbortEnvironmentUpdateOutput

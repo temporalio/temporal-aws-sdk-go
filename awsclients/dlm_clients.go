@@ -41,6 +41,7 @@ func NewDLMStub() DLMClient {
 	return &DLMStub{}
 }
 
+
 type DlmCreateLifecyclePolicyResult struct {
 	Result workflow.Future
 }

@@ -35,6 +35,7 @@ func NewRDSDataServiceStub() RDSDataServiceClient {
 	return &RDSDataServiceStub{}
 }
 
+
 type RdsdataserviceBatchExecuteStatementResult struct {
 	Result workflow.Future
 }

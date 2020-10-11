@@ -109,6 +109,7 @@ func NewMachineLearningStub() MachineLearningClient {
 	return &MachineLearningStub{}
 }
 
+
 type MachinelearningAddTagsResult struct {
 	Result workflow.Future
 }
@@ -388,10 +389,6 @@ func (r *MachinelearningUpdateMLModelResult) Get(ctx workflow.Context) (*machine
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *MachineLearningStub) AddTags(ctx workflow.Context, input *machinelearning.AddTagsInput) (*machinelearning.AddTagsOutput, error) {
 	var output machinelearning.AddTagsOutput

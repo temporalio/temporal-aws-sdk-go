@@ -444,6 +444,7 @@ func NewSageMakerStub() SageMakerClient {
 	return &SageMakerStub{}
 }
 
+
 type SagemakerAddTagsResult struct {
 	Result workflow.Future
 }
@@ -1813,14 +1814,6 @@ func (r *SagemakerUpdateWorkteamResult) Get(ctx workflow.Context) (*sagemaker.Up
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
-
-
 
 func (a *SageMakerStub) AddTags(ctx workflow.Context, input *sagemaker.AddTagsInput) (*sagemaker.AddTagsOutput, error) {
 	var output sagemaker.AddTagsOutput

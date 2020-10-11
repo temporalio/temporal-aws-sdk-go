@@ -110,6 +110,7 @@ func NewELBStub() ELBClient {
 	return &ELBStub{}
 }
 
+
 type ElbAddTagsResult struct {
 	Result workflow.Future
 }
@@ -399,9 +400,6 @@ func (r *ElbSetLoadBalancerPoliciesOfListenerResult) Get(ctx workflow.Context) (
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *ELBStub) AddTags(ctx workflow.Context, input *elb.AddTagsInput) (*elb.AddTagsOutput, error) {
 	var output elb.AddTagsOutput

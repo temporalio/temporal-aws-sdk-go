@@ -44,6 +44,7 @@ func NewComputeOptimizerStub() ComputeOptimizerClient {
 	return &ComputeOptimizerStub{}
 }
 
+
 type ComputeoptimizerDescribeRecommendationExportJobsResult struct {
 	Result workflow.Future
 }

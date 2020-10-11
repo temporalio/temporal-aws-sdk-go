@@ -92,6 +92,7 @@ func NewMediaConvertStub() MediaConvertClient {
 	return &MediaConvertStub{}
 }
 
+
 type MediaconvertAssociateCertificateResult struct {
 	Result workflow.Future
 }

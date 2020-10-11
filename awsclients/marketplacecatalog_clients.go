@@ -35,6 +35,7 @@ func NewMarketplaceCatalogStub() MarketplaceCatalogClient {
 	return &MarketplaceCatalogStub{}
 }
 
+
 type MarketplacecatalogCancelChangeSetResult struct {
 	Result workflow.Future
 }

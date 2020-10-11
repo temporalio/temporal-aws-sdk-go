@@ -29,6 +29,7 @@ func NewDynamoDBStreamsStub() DynamoDBStreamsClient {
 	return &DynamoDBStreamsStub{}
 }
 
+
 type DynamodbstreamsDescribeStreamResult struct {
 	Result workflow.Future
 }

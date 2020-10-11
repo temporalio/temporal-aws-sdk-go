@@ -377,6 +377,7 @@ func NewAPIGatewayStub() APIGatewayClient {
 	return &APIGatewayStub{}
 }
 
+
 type ApigatewayCreateApiKeyResult struct {
 	Result workflow.Future
 }

@@ -95,6 +95,7 @@ func NewKinesisAnalyticsV2Stub() KinesisAnalyticsV2Client {
 	return &KinesisAnalyticsV2Stub{}
 }
 
+
 type Kinesisanalyticsv2AddApplicationCloudWatchLoggingOptionResult struct {
 	Result workflow.Future
 }

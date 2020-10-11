@@ -32,6 +32,7 @@ func NewLexRuntimeServiceStub() LexRuntimeServiceClient {
 	return &LexRuntimeServiceStub{}
 }
 
+
 type LexruntimeserviceDeleteSessionResult struct {
 	Result workflow.Future
 }

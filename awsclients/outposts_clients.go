@@ -38,6 +38,7 @@ func NewOutpostsStub() OutpostsClient {
 	return &OutpostsStub{}
 }
 
+
 type OutpostsCreateOutpostResult struct {
 	Result workflow.Future
 }

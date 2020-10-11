@@ -445,6 +445,7 @@ func NewIAMStub() IAMClient {
 	return &IAMStub{}
 }
 
+
 type IamAddClientIDToOpenIDConnectProviderResult struct {
 	Result workflow.Future
 }
@@ -1844,10 +1845,6 @@ func (r *IamUploadSigningCertificateResult) Get(ctx workflow.Context) (*iam.Uplo
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *IAMStub) AddClientIDToOpenIDConnectProvider(ctx workflow.Context, input *iam.AddClientIDToOpenIDConnectProviderInput) (*iam.AddClientIDToOpenIDConnectProviderOutput, error) {
 	var output iam.AddClientIDToOpenIDConnectProviderOutput

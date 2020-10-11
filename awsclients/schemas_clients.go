@@ -112,6 +112,7 @@ func NewSchemasStub() SchemasClient {
 	return &SchemasStub{}
 }
 
+
 type SchemasCreateDiscovererResult struct {
 	Result workflow.Future
 }
@@ -421,7 +422,6 @@ func (r *SchemasUpdateSchemaResult) Get(ctx workflow.Context) (*schemas.UpdateSc
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *SchemasStub) CreateDiscoverer(ctx workflow.Context, input *schemas.CreateDiscovererInput) (*schemas.CreateDiscovererOutput, error) {
 	var output schemas.CreateDiscovererOutput

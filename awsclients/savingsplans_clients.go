@@ -44,6 +44,7 @@ func NewSavingsPlansStub() SavingsPlansClient {
 	return &SavingsPlansStub{}
 }
 
+
 type SavingsplansCreateSavingsPlanResult struct {
 	Result workflow.Future
 }

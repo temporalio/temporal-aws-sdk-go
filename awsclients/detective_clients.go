@@ -53,6 +53,7 @@ func NewDetectiveStub() DetectiveClient {
 	return &DetectiveStub{}
 }
 
+
 type DetectiveAcceptInvitationResult struct {
 	Result workflow.Future
 }

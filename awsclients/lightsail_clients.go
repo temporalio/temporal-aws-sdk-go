@@ -398,6 +398,7 @@ func NewLightsailStub() LightsailClient {
 	return &LightsailStub{}
 }
 
+
 type LightsailAllocateStaticIpResult struct {
 	Result workflow.Future
 }

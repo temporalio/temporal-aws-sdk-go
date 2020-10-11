@@ -35,6 +35,7 @@ func NewElasticInferenceStub() ElasticInferenceClient {
 	return &ElasticInferenceStub{}
 }
 
+
 type ElasticinferenceDescribeAcceleratorOfferingsResult struct {
 	Result workflow.Future
 }

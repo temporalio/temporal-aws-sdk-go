@@ -248,6 +248,7 @@ func NewWAFStub() WAFClient {
 	return &WAFStub{}
 }
 
+
 type WafCreateByteMatchSetResult struct {
 	Result workflow.Future
 }

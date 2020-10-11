@@ -88,6 +88,7 @@ func NewEKSStub() EKSClient {
 	return &EKSStub{}
 }
 
+
 type EksCreateClusterResult struct {
 	Result workflow.Future
 }
@@ -297,10 +298,6 @@ func (r *EksUpdateNodegroupVersionResult) Get(ctx workflow.Context) (*eks.Update
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *EKSStub) CreateCluster(ctx workflow.Context, input *eks.CreateClusterInput) (*eks.CreateClusterOutput, error) {
 	var output eks.CreateClusterOutput

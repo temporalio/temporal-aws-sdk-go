@@ -104,6 +104,7 @@ func NewForecastServiceStub() ForecastServiceClient {
 	return &ForecastServiceStub{}
 }
 
+
 type ForecastserviceCreateDatasetResult struct {
 	Result workflow.Future
 }

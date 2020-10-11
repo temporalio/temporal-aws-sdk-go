@@ -83,6 +83,7 @@ func NewSnowballStub() SnowballClient {
 	return &SnowballStub{}
 }
 
+
 type SnowballCancelClusterResult struct {
 	Result workflow.Future
 }

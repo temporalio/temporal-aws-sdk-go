@@ -50,6 +50,7 @@ func NewCodeStarConnectionsStub() CodeStarConnectionsClient {
 	return &CodeStarConnectionsStub{}
 }
 
+
 type CodestarconnectionsCreateConnectionResult struct {
 	Result workflow.Future
 }

@@ -129,6 +129,7 @@ func NewELBV2Stub() ELBV2Client {
 	return &ELBV2Stub{}
 }
 
+
 type Elbv2AddListenerCertificatesResult struct {
 	Result workflow.Future
 }
@@ -468,11 +469,6 @@ func (r *Elbv2SetSubnetsResult) Get(ctx workflow.Context) (*elbv2.SetSubnetsOutp
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
 
 func (a *ELBV2Stub) AddListenerCertificates(ctx workflow.Context, input *elbv2.AddListenerCertificatesInput) (*elbv2.AddListenerCertificatesOutput, error) {
 	var output elbv2.AddListenerCertificatesOutput

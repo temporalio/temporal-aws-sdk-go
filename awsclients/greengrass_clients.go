@@ -293,6 +293,7 @@ func NewGreengrassStub() GreengrassClient {
 	return &GreengrassStub{}
 }
 
+
 type GreengrassAssociateRoleToGroupResult struct {
 	Result workflow.Future
 }

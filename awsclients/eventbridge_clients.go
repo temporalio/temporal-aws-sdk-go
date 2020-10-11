@@ -110,6 +110,7 @@ func NewEventBridgeStub() EventBridgeClient {
 	return &EventBridgeStub{}
 }
 
+
 type EventbridgeActivateEventSourceResult struct {
 	Result workflow.Future
 }

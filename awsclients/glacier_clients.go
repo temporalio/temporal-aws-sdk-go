@@ -120,6 +120,7 @@ func NewGlacierStub() GlacierClient {
 	return &GlacierStub{}
 }
 
+
 type GlacierAbortMultipartUploadResult struct {
 	Result workflow.Future
 }
@@ -449,8 +450,6 @@ func (r *GlacierUploadMultipartPartResult) Get(ctx workflow.Context) (*glacier.U
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *GlacierStub) AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) (*glacier.AbortMultipartUploadOutput, error) {
 	var output glacier.AbortMultipartUploadOutput

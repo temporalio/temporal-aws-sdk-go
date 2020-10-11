@@ -76,6 +76,7 @@ func NewOpsWorksCMStub() OpsWorksCMClient {
 	return &OpsWorksCMStub{}
 }
 
+
 type OpsworkscmAssociateNodeResult struct {
 	Result workflow.Future
 }
@@ -265,7 +266,6 @@ func (r *OpsworkscmUpdateServerEngineAttributesResult) Get(ctx workflow.Context)
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *OpsWorksCMStub) AssociateNode(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error) {
 	var output opsworkscm.AssociateNodeOutput

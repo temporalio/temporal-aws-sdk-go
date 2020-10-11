@@ -146,6 +146,7 @@ func NewSecurityHubStub() SecurityHubClient {
 	return &SecurityHubStub{}
 }
 
+
 type SecurityhubAcceptInvitationResult struct {
 	Result workflow.Future
 }

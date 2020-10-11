@@ -104,6 +104,7 @@ func NewCostExplorerStub() CostExplorerClient {
 	return &CostExplorerStub{}
 }
 
+
 type CostexplorerCreateAnomalyMonitorResult struct {
 	Result workflow.Future
 }

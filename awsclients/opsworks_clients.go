@@ -251,6 +251,7 @@ func NewOpsWorksStub() OpsWorksClient {
 	return &OpsWorksStub{}
 }
 
+
 type OpsworksAssignInstanceResult struct {
 	Result workflow.Future
 }
@@ -990,12 +991,6 @@ func (r *OpsworksUpdateVolumeResult) Get(ctx workflow.Context) (*opsworks.Update
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
 
 func (a *OpsWorksStub) AssignInstance(ctx workflow.Context, input *opsworks.AssignInstanceInput) (*opsworks.AssignInstanceOutput, error) {
 	var output opsworks.AssignInstanceOutput

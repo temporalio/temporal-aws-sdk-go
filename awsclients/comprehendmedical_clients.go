@@ -80,6 +80,7 @@ func NewComprehendMedicalStub() ComprehendMedicalClient {
 	return &ComprehendMedicalStub{}
 }
 
+
 type ComprehendmedicalDescribeEntitiesDetectionV2JobResult struct {
 	Result workflow.Future
 }

@@ -58,6 +58,7 @@ func NewACMStub() ACMClient {
 	return &ACMStub{}
 }
 
+
 type AcmAddTagsToCertificateResult struct {
 	Result workflow.Future
 }
@@ -187,7 +188,6 @@ func (r *AcmUpdateCertificateOptionsResult) Get(ctx workflow.Context) (*acm.Upda
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *ACMStub) AddTagsToCertificate(ctx workflow.Context, input *acm.AddTagsToCertificateInput) (*acm.AddTagsToCertificateOutput, error) {
 	var output acm.AddTagsToCertificateOutput

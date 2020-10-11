@@ -86,6 +86,7 @@ func NewXRayStub() XRayClient {
 	return &XRayStub{}
 }
 
+
 type XrayBatchGetTracesResult struct {
 	Result workflow.Future
 }

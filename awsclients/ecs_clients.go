@@ -172,6 +172,7 @@ func NewECSStub() ECSClient {
 	return &ECSStub{}
 }
 
+
 type EcsCreateCapacityProviderResult struct {
 	Result workflow.Future
 }
@@ -661,10 +662,6 @@ func (r *EcsUpdateTaskSetResult) Get(ctx workflow.Context) (*ecs.UpdateTaskSetOu
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *ECSStub) CreateCapacityProvider(ctx workflow.Context, input *ecs.CreateCapacityProviderInput) (*ecs.CreateCapacityProviderOutput, error) {
 	var output ecs.CreateCapacityProviderOutput

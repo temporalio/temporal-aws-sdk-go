@@ -137,6 +137,7 @@ func NewWAFV2Stub() WAFV2Client {
 	return &WAFV2Stub{}
 }
 
+
 type Wafv2AssociateWebACLResult struct {
 	Result workflow.Future
 }

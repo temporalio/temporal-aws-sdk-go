@@ -98,6 +98,7 @@ func NewMediaConnectStub() MediaConnectClient {
 	return &MediaConnectStub{}
 }
 
+
 type MediaconnectAddFlowOutputsResult struct {
 	Result workflow.Future
 }

@@ -74,6 +74,7 @@ func NewKinesisVideoStub() KinesisVideoClient {
 	return &KinesisVideoStub{}
 }
 
+
 type KinesisvideoCreateSignalingChannelResult struct {
 	Result workflow.Future
 }

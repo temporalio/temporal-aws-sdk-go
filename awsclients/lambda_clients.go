@@ -167,6 +167,7 @@ func NewLambdaStub() LambdaClient {
 	return &LambdaStub{}
 }
 
+
 type LambdaAddLayerVersionPermissionResult struct {
 	Result workflow.Future
 }
@@ -646,9 +647,6 @@ func (r *LambdaUpdateFunctionEventInvokeConfigResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *LambdaStub) AddLayerVersionPermission(ctx workflow.Context, input *lambda.AddLayerVersionPermissionInput) (*lambda.AddLayerVersionPermissionOutput, error) {
 	var output lambda.AddLayerVersionPermissionOutput

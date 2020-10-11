@@ -92,6 +92,7 @@ func NewGroundStationStub() GroundStationClient {
 	return &GroundStationStub{}
 }
 
+
 type GroundstationCancelContactResult struct {
 	Result workflow.Future
 }

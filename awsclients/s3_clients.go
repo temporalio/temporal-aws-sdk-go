@@ -298,6 +298,7 @@ func NewS3Stub() S3Client {
 	return &S3Stub{}
 }
 
+
 type S3AbortMultipartUploadResult struct {
 	Result workflow.Future
 }
@@ -1207,10 +1208,6 @@ func (r *S3UploadPartCopyResult) Get(ctx workflow.Context) (*s3.UploadPartCopyOu
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *S3Stub) AbortMultipartUpload(ctx workflow.Context, input *s3.AbortMultipartUploadInput) (*s3.AbortMultipartUploadOutput, error) {
 	var output s3.AbortMultipartUploadOutput

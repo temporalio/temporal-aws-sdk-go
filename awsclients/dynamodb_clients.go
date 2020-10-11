@@ -144,6 +144,7 @@ func NewDynamoDBStub() DynamoDBClient {
 	return &DynamoDBStub{}
 }
 
+
 type DynamodbBatchGetItemResult struct {
 	Result workflow.Future
 }
@@ -553,8 +554,6 @@ func (r *DynamodbUpdateTimeToLiveResult) Get(ctx workflow.Context) (*dynamodb.Up
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *DynamoDBStub) BatchGetItem(ctx workflow.Context, input *dynamodb.BatchGetItemInput) (*dynamodb.BatchGetItemOutput, error) {
 	var output dynamodb.BatchGetItemOutput

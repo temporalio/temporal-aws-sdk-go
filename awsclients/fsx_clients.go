@@ -59,6 +59,7 @@ func NewFSxStub() FSxClient {
 	return &FSxStub{}
 }
 
+
 type FsxCancelDataRepositoryTaskResult struct {
 	Result workflow.Future
 }

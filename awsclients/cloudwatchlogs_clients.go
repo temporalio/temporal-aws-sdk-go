@@ -143,6 +143,7 @@ func NewCloudWatchLogsStub() CloudWatchLogsClient {
 	return &CloudWatchLogsStub{}
 }
 
+
 type CloudwatchlogsAssociateKmsKeyResult struct {
 	Result workflow.Future
 }

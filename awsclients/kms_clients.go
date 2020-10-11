@@ -155,6 +155,7 @@ func NewKMSStub() KMSClient {
 	return &KMSStub{}
 }
 
+
 type KmsCancelKeyDeletionResult struct {
 	Result workflow.Future
 }

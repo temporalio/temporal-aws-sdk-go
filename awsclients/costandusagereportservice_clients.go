@@ -29,6 +29,7 @@ func NewCostandUsageReportServiceStub() CostandUsageReportServiceClient {
 	return &CostandUsageReportServiceStub{}
 }
 
+
 type CostandusagereportserviceDeleteReportDefinitionResult struct {
 	Result workflow.Future
 }

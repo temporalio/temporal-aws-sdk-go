@@ -122,6 +122,7 @@ func NewSMSStub() SMSClient {
 	return &SMSStub{}
 }
 
+
 type SmsCreateAppResult struct {
 	Result workflow.Future
 }

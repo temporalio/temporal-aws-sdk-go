@@ -80,6 +80,7 @@ func NewMediaStoreStub() MediaStoreClient {
 	return &MediaStoreStub{}
 }
 
+
 type MediastoreCreateContainerResult struct {
 	Result workflow.Future
 }

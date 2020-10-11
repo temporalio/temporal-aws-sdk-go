@@ -128,6 +128,7 @@ func NewSWFStub() SWFClient {
 	return &SWFStub{}
 }
 
+
 type SwfCountClosedWorkflowExecutionsResult struct {
 	Result workflow.Future
 }

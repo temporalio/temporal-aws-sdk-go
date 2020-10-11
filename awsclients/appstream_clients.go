@@ -162,6 +162,7 @@ func NewAppStreamStub() AppStreamClient {
 	return &AppStreamStub{}
 }
 
+
 type AppstreamAssociateFleetResult struct {
 	Result workflow.Future
 }
@@ -631,8 +632,6 @@ func (r *AppstreamUpdateStackResult) Get(ctx workflow.Context) (*appstream.Updat
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *AppStreamStub) AssociateFleet(ctx workflow.Context, input *appstream.AssociateFleetInput) (*appstream.AssociateFleetOutput, error) {
 	var output appstream.AssociateFleetOutput

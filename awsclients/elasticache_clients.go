@@ -220,6 +220,7 @@ func NewElastiCacheStub() ElastiCacheClient {
 	return &ElastiCacheStub{}
 }
 
+
 type ElasticacheAddTagsToResourceResult struct {
 	Result workflow.Future
 }
@@ -869,10 +870,6 @@ func (r *ElasticacheTestFailoverResult) Get(ctx workflow.Context) (*elasticache.
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *ElastiCacheStub) AddTagsToResource(ctx workflow.Context, input *elasticache.AddTagsToResourceInput) (*elasticache.TagListMessage, error) {
 	var output elasticache.TagListMessage

@@ -44,6 +44,7 @@ func NewTranslateStub() TranslateClient {
 	return &TranslateStub{}
 }
 
+
 type TranslateDeleteTerminologyResult struct {
 	Result workflow.Future
 }

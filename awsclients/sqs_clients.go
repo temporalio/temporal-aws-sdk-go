@@ -77,6 +77,7 @@ func NewSQSStub() SQSClient {
 	return &SQSStub{}
 }
 
+
 type SqsAddPermissionResult struct {
 	Result workflow.Future
 }

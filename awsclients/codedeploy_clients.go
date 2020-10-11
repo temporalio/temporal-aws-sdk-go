@@ -160,6 +160,7 @@ func NewCodeDeployStub() CodeDeployClient {
 	return &CodeDeployStub{}
 }
 
+
 type CodedeployAddTagsToOnPremisesInstancesResult struct {
 	Result workflow.Future
 }
@@ -629,7 +630,6 @@ func (r *CodedeployUpdateDeploymentGroupResult) Get(ctx workflow.Context) (*code
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *CodeDeployStub) AddTagsToOnPremisesInstances(ctx workflow.Context, input *codedeploy.AddTagsToOnPremisesInstancesInput) (*codedeploy.AddTagsToOnPremisesInstancesOutput, error) {
 	var output codedeploy.AddTagsToOnPremisesInstancesOutput

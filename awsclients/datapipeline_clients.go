@@ -74,6 +74,7 @@ func NewDataPipelineStub() DataPipelineClient {
 	return &DataPipelineStub{}
 }
 
+
 type DatapipelineActivatePipelineResult struct {
 	Result workflow.Future
 }

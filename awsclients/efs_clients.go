@@ -92,6 +92,7 @@ func NewEFSStub() EFSClient {
 	return &EFSStub{}
 }
 
+
 type EfsCreateAccessPointResult struct {
 	Result workflow.Future
 }

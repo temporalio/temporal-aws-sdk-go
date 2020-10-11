@@ -29,6 +29,7 @@ func NewIdentityStoreStub() IdentityStoreClient {
 	return &IdentityStoreStub{}
 }
 
+
 type IdentitystoreDescribeGroupResult struct {
 	Result workflow.Future
 }

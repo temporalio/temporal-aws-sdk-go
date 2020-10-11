@@ -251,6 +251,7 @@ func NewConfigServiceStub() ConfigServiceClient {
 	return &ConfigServiceStub{}
 }
 
+
 type ConfigserviceBatchGetAggregateResourceConfigResult struct {
 	Result workflow.Future
 }

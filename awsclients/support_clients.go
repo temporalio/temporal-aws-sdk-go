@@ -59,6 +59,7 @@ func NewSupportStub() SupportClient {
 	return &SupportStub{}
 }
 
+
 type SupportAddAttachmentsToSetResult struct {
 	Result workflow.Future
 }

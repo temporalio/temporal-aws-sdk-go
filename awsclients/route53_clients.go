@@ -190,6 +190,7 @@ func NewRoute53Stub() Route53Client {
 	return &Route53Stub{}
 }
 
+
 type Route53AssociateVPCWithHostedZoneResult struct {
 	Result workflow.Future
 }
@@ -759,7 +760,6 @@ func (r *Route53UpdateTrafficPolicyInstanceResult) Get(ctx workflow.Context) (*r
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *Route53Stub) AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error) {
 	var output route53.AssociateVPCWithHostedZoneOutput

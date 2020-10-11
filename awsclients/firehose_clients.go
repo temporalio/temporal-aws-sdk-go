@@ -53,6 +53,7 @@ func NewFirehoseStub() FirehoseClient {
 	return &FirehoseStub{}
 }
 
+
 type FirehoseCreateDeliveryStreamResult struct {
 	Result workflow.Future
 }

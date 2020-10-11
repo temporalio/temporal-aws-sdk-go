@@ -20,6 +20,7 @@ func NewMarketplaceEntitlementServiceStub() MarketplaceEntitlementServiceClient 
 	return &MarketplaceEntitlementServiceStub{}
 }
 
+
 type MarketplaceentitlementserviceGetEntitlementsResult struct {
 	Result workflow.Future
 }

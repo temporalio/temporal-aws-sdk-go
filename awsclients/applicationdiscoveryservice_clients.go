@@ -92,6 +92,7 @@ func NewApplicationDiscoveryServiceStub() ApplicationDiscoveryServiceClient {
 	return &ApplicationDiscoveryServiceStub{}
 }
 
+
 type ApplicationdiscoveryserviceAssociateConfigurationItemsToApplicationResult struct {
 	Result workflow.Future
 }

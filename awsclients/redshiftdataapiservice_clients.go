@@ -44,6 +44,7 @@ func NewRedshiftDataAPIServiceStub() RedshiftDataAPIServiceClient {
 	return &RedshiftDataAPIServiceStub{}
 }
 
+
 type RedshiftdataapiserviceCancelStatementResult struct {
 	Result workflow.Future
 }

@@ -20,6 +20,7 @@ func NewMobileAnalyticsStub() MobileAnalyticsClient {
 	return &MobileAnalyticsStub{}
 }
 
+
 type MobileanalyticsPutEventsResult struct {
 	Result workflow.Future
 }

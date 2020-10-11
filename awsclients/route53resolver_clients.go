@@ -113,6 +113,7 @@ func NewRoute53ResolverStub() Route53ResolverClient {
 	return &Route53ResolverStub{}
 }
 
+
 type Route53resolverAssociateResolverEndpointIpAddressResult struct {
 	Result workflow.Future
 }

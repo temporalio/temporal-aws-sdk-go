@@ -26,6 +26,7 @@ func NewS3OutpostsStub() S3OutpostsClient {
 	return &S3OutpostsStub{}
 }
 
+
 type S3outpostsCreateEndpointResult struct {
 	Result workflow.Future
 }

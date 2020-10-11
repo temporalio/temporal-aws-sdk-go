@@ -70,6 +70,7 @@ func NewElasticTranscoderStub() ElasticTranscoderClient {
 	return &ElasticTranscoderStub{}
 }
 
+
 type ElastictranscoderCancelJobResult struct {
 	Result workflow.Future
 }
@@ -239,7 +240,6 @@ func (r *ElastictranscoderUpdatePipelineStatusResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
 
 func (a *ElasticTranscoderStub) CancelJob(ctx workflow.Context, input *elastictranscoder.CancelJobInput) (*elastictranscoder.CancelJobOutput, error) {
 	var output elastictranscoder.CancelJobOutput

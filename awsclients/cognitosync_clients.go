@@ -68,6 +68,7 @@ func NewCognitoSyncStub() CognitoSyncClient {
 	return &CognitoSyncStub{}
 }
 
+
 type CognitosyncBulkPublishResult struct {
 	Result workflow.Future
 }

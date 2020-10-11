@@ -158,6 +158,7 @@ func NewConnectStub() ConnectClient {
 	return &ConnectStub{}
 }
 
+
 type ConnectAssociateRoutingProfileQueuesResult struct {
 	Result workflow.Future
 }

@@ -26,6 +26,7 @@ func NewPersonalizeEventsStub() PersonalizeEventsClient {
 	return &PersonalizeEventsStub{}
 }
 
+
 type PersonalizeeventsPutEventsResult struct {
 	Result workflow.Future
 }

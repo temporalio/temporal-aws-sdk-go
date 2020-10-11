@@ -128,6 +128,7 @@ func NewInspectorStub() InspectorClient {
 	return &InspectorStub{}
 }
 
+
 type InspectorAddAttributesToFindingsResult struct {
 	Result workflow.Future
 }

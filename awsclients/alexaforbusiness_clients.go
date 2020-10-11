@@ -296,6 +296,7 @@ func NewAlexaForBusinessStub() AlexaForBusinessClient {
 	return &AlexaForBusinessStub{}
 }
 
+
 type AlexaforbusinessApproveSkillResult struct {
 	Result workflow.Future
 }

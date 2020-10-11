@@ -191,6 +191,7 @@ func NewGuardDutyStub() GuardDutyClient {
 	return &GuardDutyStub{}
 }
 
+
 type GuarddutyAcceptInvitationResult struct {
 	Result workflow.Future
 }

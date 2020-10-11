@@ -198,6 +198,7 @@ func NewCloudFormationStub() CloudFormationClient {
 	return &CloudFormationStub{}
 }
 
+
 type CloudformationCancelUpdateStackResult struct {
 	Result workflow.Future
 }
@@ -747,14 +748,6 @@ func (r *CloudformationValidateTemplateResult) Get(ctx workflow.Context) (*cloud
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
-
-
 
 func (a *CloudFormationStub) CancelUpdateStack(ctx workflow.Context, input *cloudformation.CancelUpdateStackInput) (*cloudformation.CancelUpdateStackOutput, error) {
 	var output cloudformation.CancelUpdateStackOutput

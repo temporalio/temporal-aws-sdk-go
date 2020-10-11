@@ -122,6 +122,7 @@ func NewIoTThingsGraphStub() IoTThingsGraphClient {
 	return &IoTThingsGraphStub{}
 }
 
+
 type IotthingsgraphAssociateEntityToThingResult struct {
 	Result workflow.Future
 }

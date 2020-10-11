@@ -98,6 +98,7 @@ func NewApplicationInsightsStub() ApplicationInsightsClient {
 	return &ApplicationInsightsStub{}
 }
 
+
 type ApplicationinsightsCreateApplicationResult struct {
 	Result workflow.Future
 }

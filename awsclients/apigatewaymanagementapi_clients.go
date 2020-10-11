@@ -26,6 +26,7 @@ func NewApiGatewayManagementApiStub() ApiGatewayManagementApiClient {
 	return &ApiGatewayManagementApiStub{}
 }
 
+
 type ApigatewaymanagementapiDeleteConnectionResult struct {
 	Result workflow.Future
 }

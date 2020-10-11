@@ -227,6 +227,7 @@ func NewCloudFrontStub() CloudFrontClient {
 	return &CloudFrontStub{}
 }
 
+
 type CloudfrontCreateCachePolicyResult struct {
 	Result workflow.Future
 }
@@ -906,9 +907,6 @@ func (r *CloudfrontUpdateStreamingDistributionResult) Get(ctx workflow.Context) 
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *CloudFrontStub) CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error) {
 	var output cloudfront.CreateCachePolicyOutput

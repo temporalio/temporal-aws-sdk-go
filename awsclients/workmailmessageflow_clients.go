@@ -20,6 +20,7 @@ func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
 	return &WorkMailMessageFlowStub{}
 }
 
+
 type WorkmailmessageflowGetRawMessageContentResult struct {
 	Result workflow.Future
 }

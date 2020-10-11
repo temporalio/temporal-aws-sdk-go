@@ -189,6 +189,7 @@ func NewMediaLiveStub() MediaLiveClient {
 	return &MediaLiveStub{}
 }
 
+
 type MedialiveBatchDeleteResult struct {
 	Result workflow.Future
 }
@@ -688,17 +689,6 @@ func (r *MedialiveUpdateReservationResult) Get(ctx workflow.Context) (*medialive
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
-
-
-
-
-
 
 func (a *MediaLiveStub) BatchDelete(ctx workflow.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error) {
 	var output medialive.BatchDeleteOutput

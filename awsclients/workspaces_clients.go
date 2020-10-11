@@ -167,6 +167,7 @@ func NewWorkSpacesStub() WorkSpacesClient {
 	return &WorkSpacesStub{}
 }
 
+
 type WorkspacesAssociateConnectionAliasResult struct {
 	Result workflow.Future
 }

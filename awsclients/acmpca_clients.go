@@ -92,6 +92,7 @@ func NewACMPCAStub() ACMPCAClient {
 	return &ACMPCAStub{}
 }
 
+
 type AcmpcaCreateCertificateAuthorityResult struct {
 	Result workflow.Future
 }
@@ -321,9 +322,6 @@ func (r *AcmpcaUpdateCertificateAuthorityResult) Get(ctx workflow.Context) (*acm
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *ACMPCAStub) CreateCertificateAuthority(ctx workflow.Context, input *acmpca.CreateCertificateAuthorityInput) (*acmpca.CreateCertificateAuthorityOutput, error) {
 	var output acmpca.CreateCertificateAuthorityOutput

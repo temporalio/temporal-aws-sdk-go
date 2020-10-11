@@ -140,6 +140,7 @@ func NewWorkDocsStub() WorkDocsClient {
 	return &WorkDocsStub{}
 }
 
+
 type WorkdocsAbortDocumentVersionUploadResult struct {
 	Result workflow.Future
 }

@@ -108,6 +108,7 @@ func NewECRStub() ECRClient {
 	return &ECRStub{}
 }
 
+
 type EcrBatchCheckLayerAvailabilityResult struct {
 	Result workflow.Future
 }
@@ -397,8 +398,6 @@ func (r *EcrUploadLayerPartResult) Get(ctx workflow.Context) (*ecr.UploadLayerPa
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *ECRStub) BatchCheckLayerAvailability(ctx workflow.Context, input *ecr.BatchCheckLayerAvailabilityInput) (*ecr.BatchCheckLayerAvailabilityOutput, error) {
 	var output ecr.BatchCheckLayerAvailabilityOutput

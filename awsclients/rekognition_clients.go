@@ -162,6 +162,7 @@ func NewRekognitionStub() RekognitionClient {
 	return &RekognitionStub{}
 }
 
+
 type RekognitionCompareFacesResult struct {
 	Result workflow.Future
 }
@@ -631,8 +632,6 @@ func (r *RekognitionStopStreamProcessorResult) Get(ctx workflow.Context) (*rekog
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *RekognitionStub) CompareFaces(ctx workflow.Context, input *rekognition.CompareFacesInput) (*rekognition.CompareFacesOutput, error) {
 	var output rekognition.CompareFacesOutput

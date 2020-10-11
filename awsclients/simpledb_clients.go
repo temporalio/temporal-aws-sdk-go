@@ -47,6 +47,7 @@ func NewSimpleDBStub() SimpleDBClient {
 	return &SimpleDBStub{}
 }
 
+
 type SimpledbBatchDeleteAttributesResult struct {
 	Result workflow.Future
 }

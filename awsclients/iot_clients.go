@@ -653,6 +653,7 @@ func NewIoTStub() IoTClient {
 	return &IoTStub{}
 }
 
+
 type IotAcceptCertificateTransferResult struct {
 	Result workflow.Future
 }

@@ -269,6 +269,7 @@ func NewServiceCatalogStub() ServiceCatalogClient {
 	return &ServiceCatalogStub{}
 }
 
+
 type ServicecatalogAcceptPortfolioShareResult struct {
 	Result workflow.Future
 }

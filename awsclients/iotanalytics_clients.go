@@ -119,6 +119,7 @@ func NewIoTAnalyticsStub() IoTAnalyticsClient {
 	return &IoTAnalyticsStub{}
 }
 
+
 type IotanalyticsBatchPutMessageResult struct {
 	Result workflow.Future
 }

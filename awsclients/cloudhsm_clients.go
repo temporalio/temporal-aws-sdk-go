@@ -77,6 +77,7 @@ func NewCloudHSMStub() CloudHSMClient {
 	return &CloudHSMStub{}
 }
 
+
 type CloudhsmAddTagsToResourceResult struct {
 	Result workflow.Future
 }

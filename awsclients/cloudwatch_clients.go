@@ -111,6 +111,7 @@ func NewCloudWatchStub() CloudWatchClient {
 	return &CloudWatchStub{}
 }
 
+
 type CloudwatchDeleteAlarmsResult struct {
 	Result workflow.Future
 }
@@ -410,8 +411,6 @@ func (r *CloudwatchUntagResourceResult) Get(ctx workflow.Context) (*cloudwatch.U
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *CloudWatchStub) DeleteAlarms(ctx workflow.Context, input *cloudwatch.DeleteAlarmsInput) (*cloudwatch.DeleteAlarmsOutput, error) {
 	var output cloudwatch.DeleteAlarmsOutput

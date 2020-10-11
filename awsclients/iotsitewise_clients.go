@@ -194,6 +194,7 @@ func NewIoTSiteWiseStub() IoTSiteWiseClient {
 	return &IoTSiteWiseStub{}
 }
 
+
 type IotsitewiseAssociateAssetsResult struct {
 	Result workflow.Future
 }
@@ -743,12 +744,6 @@ func (r *IotsitewiseUpdateProjectResult) Get(ctx workflow.Context) (*iotsitewise
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
 
 func (a *IoTSiteWiseStub) AssociateAssets(ctx workflow.Context, input *iotsitewise.AssociateAssetsInput) (*iotsitewise.AssociateAssetsOutput, error) {
 	var output iotsitewise.AssociateAssetsOutput

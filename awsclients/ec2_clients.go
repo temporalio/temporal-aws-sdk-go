@@ -1338,6 +1338,7 @@ func NewEC2Stub() EC2Client {
 	return &EC2Stub{}
 }
 
+
 type Ec2AcceptReservedInstancesExchangeQuoteResult struct {
 	Result workflow.Future
 }
@@ -5527,38 +5528,6 @@ func (r *Ec2WithdrawByoipCidrResult) Get(ctx workflow.Context) (*ec2.WithdrawByo
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 func (a *EC2Stub) AcceptReservedInstancesExchangeQuote(ctx workflow.Context, input *ec2.AcceptReservedInstancesExchangeQuoteInput) (*ec2.AcceptReservedInstancesExchangeQuoteOutput, error) {
 	var output ec2.AcceptReservedInstancesExchangeQuoteOutput

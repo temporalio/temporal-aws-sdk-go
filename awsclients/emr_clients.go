@@ -134,6 +134,7 @@ func NewEMRStub() EMRClient {
 	return &EMRStub{}
 }
 
+
 type EmrAddInstanceFleetResult struct {
 	Result workflow.Future
 }
@@ -503,9 +504,6 @@ func (r *EmrTerminateJobFlowsResult) Get(ctx workflow.Context) (*emr.TerminateJo
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
 
 func (a *EMRStub) AddInstanceFleet(ctx workflow.Context, input *emr.AddInstanceFleetInput) (*emr.AddInstanceFleetOutput, error) {
 	var output emr.AddInstanceFleetOutput

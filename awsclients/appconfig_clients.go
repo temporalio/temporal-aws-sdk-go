@@ -116,6 +116,7 @@ func NewAppConfigStub() AppConfigClient {
 	return &AppConfigStub{}
 }
 
+
 type AppconfigCreateApplicationResult struct {
 	Result workflow.Future
 }

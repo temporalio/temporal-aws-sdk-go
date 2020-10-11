@@ -147,6 +147,7 @@ func NewDocDBStub() DocDBClient {
 	return &DocDBStub{}
 }
 
+
 type DocdbAddTagsToResourceResult struct {
 	Result workflow.Future
 }
@@ -566,8 +567,6 @@ func (r *DocdbStopDBClusterResult) Get(ctx workflow.Context) (*docdb.StopDBClust
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *DocDBStub) AddTagsToResource(ctx workflow.Context, input *docdb.AddTagsToResourceInput) (*docdb.AddTagsToResourceOutput, error) {
 	var output docdb.AddTagsToResourceOutput

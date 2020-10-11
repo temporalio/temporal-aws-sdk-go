@@ -301,6 +301,7 @@ func NewRedshiftStub() RedshiftClient {
 	return &RedshiftStub{}
 }
 
+
 type RedshiftAcceptReservedNodeExchangeResult struct {
 	Result workflow.Future
 }
@@ -1220,10 +1221,6 @@ func (r *RedshiftRotateEncryptionKeyResult) Get(ctx workflow.Context) (*redshift
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
 
 func (a *RedshiftStub) AcceptReservedNodeExchange(ctx workflow.Context, input *redshift.AcceptReservedNodeExchangeInput) (*redshift.AcceptReservedNodeExchangeOutput, error) {
 	var output redshift.AcceptReservedNodeExchangeOutput

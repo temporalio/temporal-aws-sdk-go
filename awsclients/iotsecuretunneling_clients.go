@@ -38,6 +38,7 @@ func NewIoTSecureTunnelingStub() IoTSecureTunnelingClient {
 	return &IoTSecureTunnelingStub{}
 }
 
+
 type IotsecuretunnelingCloseTunnelResult struct {
 	Result workflow.Future
 }

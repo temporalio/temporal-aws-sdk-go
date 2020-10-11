@@ -110,6 +110,7 @@ func NewCloudWatchEventsStub() CloudWatchEventsClient {
 	return &CloudWatchEventsStub{}
 }
 
+
 type CloudwatcheventsActivateEventSourceResult struct {
 	Result workflow.Future
 }

@@ -170,6 +170,7 @@ func NewOrganizationsStub() OrganizationsClient {
 	return &OrganizationsStub{}
 }
 
+
 type OrganizationsAcceptHandshakeResult struct {
 	Result workflow.Future
 }

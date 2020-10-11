@@ -192,6 +192,7 @@ func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
 	return &DatabaseMigrationServiceStub{}
 }
 
+
 type DatabasemigrationserviceAddTagsToResourceResult struct {
 	Result workflow.Future
 }
@@ -721,14 +722,6 @@ func (r *DatabasemigrationserviceTestConnectionResult) Get(ctx workflow.Context)
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
-
-
 
 func (a *DatabaseMigrationServiceStub) AddTagsToResource(ctx workflow.Context, input *databasemigrationservice.AddTagsToResourceInput) (*databasemigrationservice.AddTagsToResourceOutput, error) {
 	var output databasemigrationservice.AddTagsToResourceOutput

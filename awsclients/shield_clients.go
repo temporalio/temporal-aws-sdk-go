@@ -86,6 +86,7 @@ func NewShieldStub() ShieldClient {
 	return &ShieldStub{}
 }
 
+
 type ShieldAssociateDRTLogBucketResult struct {
 	Result workflow.Future
 }

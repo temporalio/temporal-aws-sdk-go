@@ -374,6 +374,7 @@ func NewChimeStub() ChimeClient {
 	return &ChimeStub{}
 }
 
+
 type ChimeAssociatePhoneNumberWithUserResult struct {
 	Result workflow.Future
 }

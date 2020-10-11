@@ -71,6 +71,7 @@ func NewAccessAnalyzerStub() AccessAnalyzerClient {
 	return &AccessAnalyzerStub{}
 }
 
+
 type AccessanalyzerCreateAnalyzerResult struct {
 	Result workflow.Future
 }

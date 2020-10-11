@@ -29,6 +29,7 @@ func NewIoTJobsDataPlaneStub() IoTJobsDataPlaneClient {
 	return &IoTJobsDataPlaneStub{}
 }
 
+
 type IotjobsdataplaneDescribeJobExecutionResult struct {
 	Result workflow.Future
 }

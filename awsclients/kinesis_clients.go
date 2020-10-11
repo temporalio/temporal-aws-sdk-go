@@ -105,6 +105,7 @@ func NewKinesisStub() KinesisClient {
 	return &KinesisStub{}
 }
 
+
 type KinesisAddTagsToStreamResult struct {
 	Result workflow.Future
 }
@@ -384,8 +385,6 @@ func (r *KinesisUpdateShardCountResult) Get(ctx workflow.Context) (*kinesis.Upda
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
 
 func (a *KinesisStub) AddTagsToStream(ctx workflow.Context, input *kinesis.AddTagsToStreamInput) (*kinesis.AddTagsToStreamOutput, error) {
 	var output kinesis.AddTagsToStreamOutput

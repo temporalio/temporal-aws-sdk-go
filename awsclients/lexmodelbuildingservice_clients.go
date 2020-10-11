@@ -134,6 +134,7 @@ func NewLexModelBuildingServiceStub() LexModelBuildingServiceClient {
 	return &LexModelBuildingServiceStub{}
 }
 
+
 type LexmodelbuildingserviceCreateBotVersionResult struct {
 	Result workflow.Future
 }

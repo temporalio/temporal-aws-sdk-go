@@ -20,6 +20,7 @@ func NewSageMakerRuntimeStub() SageMakerRuntimeClient {
 	return &SageMakerRuntimeStub{}
 }
 
+
 type SagemakerruntimeInvokeEndpointResult struct {
 	Result workflow.Future
 }

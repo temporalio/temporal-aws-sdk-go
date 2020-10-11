@@ -419,6 +419,7 @@ func NewRDSStub() RDSClient {
 	return &RDSStub{}
 }
 
+
 type RdsAddRoleToDBClusterResult struct {
 	Result workflow.Future
 }
@@ -1718,12 +1719,6 @@ func (r *RdsStopDBInstanceResult) Get(ctx workflow.Context) (*rds.StopDBInstance
 	err := r.Result.Get(ctx, &output)
 	return &output, err
 }
-
-
-
-
-
-
 
 func (a *RDSStub) AddRoleToDBCluster(ctx workflow.Context, input *rds.AddRoleToDBClusterInput) (*rds.AddRoleToDBClusterOutput, error) {
 	var output rds.AddRoleToDBClusterOutput

@@ -62,6 +62,7 @@ func NewTimestreamWriteStub() TimestreamWriteClient {
 	return &TimestreamWriteStub{}
 }
 
+
 type TimestreamwriteCreateDatabaseResult struct {
 	Result workflow.Future
 }

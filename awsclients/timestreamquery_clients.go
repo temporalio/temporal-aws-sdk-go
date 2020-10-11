@@ -26,6 +26,7 @@ func NewTimestreamQueryStub() TimestreamQueryClient {
 	return &TimestreamQueryStub{}
 }
 
+
 type TimestreamqueryCancelQueryResult struct {
 	Result workflow.Future
 }

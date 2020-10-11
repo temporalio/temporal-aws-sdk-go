@@ -128,6 +128,7 @@ func NewElasticsearchServiceStub() ElasticsearchServiceClient {
 	return &ElasticsearchServiceStub{}
 }
 
+
 type ElasticsearchserviceAcceptInboundCrossClusterSearchConnectionResult struct {
 	Result workflow.Future
 }

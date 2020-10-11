@@ -80,6 +80,7 @@ func NewCognitoIdentityStub() CognitoIdentityClient {
 	return &CognitoIdentityStub{}
 }
 
+
 type CognitoidentityCreateIdentityPoolResult struct {
 	Result workflow.Future
 }
