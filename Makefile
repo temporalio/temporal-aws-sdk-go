@@ -16,8 +16,12 @@ $(BUILD)/generate: $(BUILD) $(ALL_TEMPLATES) ## generate code based on templates
 	aws-sdk-generator --template-dir templates --output-dir .
 	touch $(BUILD)/generate
 
-$(BUILD)/awsactivities: $(BUILD)/generate
-	go build -o $@ cmd/awsactivities/main.go
+$(BUILD)/clients: $(BUILD)/generate
+	go build ./clients/...
+	touch $(BUILD)/clients
+
+$(BUILD)/activities: $(BUILD)/generate
+	go build -o $@ cmd/activities/main.go
 
 $(BUILD)/ec2demo/starter: $(BUILD)/generate
 	go build -o $@ cmd/ec2demo/starter/main.go
@@ -28,9 +32,11 @@ $(BUILD)/ec2demo/worker: $(BUILD)/generate
 $(BUILD)/s3list/worker: $(BUILD)/generate
 	go build -o $@ cmd/s3list/worker/main.go
 
+
+
 generate: $(BUILD)/generate ## Regenerate code if templates changed
 
-bins: $(BUILD)/awsactivities $(BUILD)/ec2demo/worker $(BUILD)/ec2demo/starter $(BUILD)/s3list/worker ## Build binaries
+bins: $(BUILD)/clients $(BUILD)/activities $(BUILD)/ec2demo/worker $(BUILD)/ec2demo/starter $(BUILD)/s3list/worker ## Build binaries
 
 clean: ## Remove .build directory. Doesn't revert generated code changes.
 	rm -rf $(BUILD)

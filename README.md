@@ -13,9 +13,9 @@ This repository relies on the [temporal-aws-sdk-generator](https://github.com/te
 
 ## Generated Code
 
-`awsactivities` package contains generated code for activities that call AWS APIs through AWS Go SDK.
+`activities` package contains generated code for activities that call AWS APIs through AWS Go SDK.
 
-`awsclients` package contains generated code that workflows can use to call these activities in a
+`clients` package contains generated code that workflows can use to call these activities in a
 strongly typed manner.
 
 ## Regenerating Code
@@ -48,7 +48,7 @@ aws_secret_access_key = <SECRET>
 ```
 See [AWS Go SDK documentation](https://docs.aws.amazon.com/sdk-for-go/v1/developer-guide/configuring-sdk.html) for details.
 ```bash
-go run cmd/awsactivities/main.go
+go run cmd/activities/main.go
 ```
 
 ## Samples

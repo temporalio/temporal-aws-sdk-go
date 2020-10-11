@@ -3,7 +3,7 @@ package ec2demo
 import (
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/ec2"
-	"go.temporal.io/aws-sdk/awsclients"
+	"go.temporal.io/aws-sdk/clients/ec2stub"
 	"go.temporal.io/sdk/temporal"
 	"go.temporal.io/sdk/workflow"
 	"time"
@@ -23,7 +23,7 @@ func KeepInstance(ctx workflow.Context) error {
 		},
 	})
 	logger := workflow.GetLogger(ctx)
-	ec2Client := awsclients.NewEC2Stub()
+	ec2Client := ec2stub.NewClient()
 	for i := 0; i < 1000; i++ {
 		reservation, err := ec2Client.RunInstances(ctx1, &ec2.RunInstancesInput{
 			ImageId:      aws.String("ami-0947d2ba12ee1ff75"),
