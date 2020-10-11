@@ -134,7 +134,9 @@ type DynamoDBClient interface {
 	UpdateTimeToLiveAsync(ctx workflow.Context, input *dynamodb.UpdateTimeToLiveInput) *DynamodbUpdateTimeToLiveResult
 
 	WaitUntilTableExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
-	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error}
+
+	WaitUntilTableNotExists(ctx workflow.Context, input *dynamodb.DescribeTableInput) error
+}
 
 type DynamoDBStub struct{}
 

@@ -49,7 +49,8 @@ type ACMClient interface {
 	UpdateCertificateOptions(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) (*acm.UpdateCertificateOptionsOutput, error)
 	UpdateCertificateOptionsAsync(ctx workflow.Context, input *acm.UpdateCertificateOptionsInput) *AcmUpdateCertificateOptionsResult
 
-	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error}
+	WaitUntilCertificateValidated(ctx workflow.Context, input *acm.DescribeCertificateInput) error
+}
 
 type ACMStub struct{}
 

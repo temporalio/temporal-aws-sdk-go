@@ -1268,37 +1268,69 @@ type EC2Client interface {
 	WithdrawByoipCidrAsync(ctx workflow.Context, input *ec2.WithdrawByoipCidrInput) *Ec2WithdrawByoipCidrResult
 
 	WaitUntilBundleTaskComplete(ctx workflow.Context, input *ec2.DescribeBundleTasksInput) error
+
 	WaitUntilConversionTaskCancelled(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
+
 	WaitUntilConversionTaskCompleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
+
 	WaitUntilConversionTaskDeleted(ctx workflow.Context, input *ec2.DescribeConversionTasksInput) error
+
 	WaitUntilCustomerGatewayAvailable(ctx workflow.Context, input *ec2.DescribeCustomerGatewaysInput) error
+
 	WaitUntilExportTaskCancelled(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error
+
 	WaitUntilExportTaskCompleted(ctx workflow.Context, input *ec2.DescribeExportTasksInput) error
+
 	WaitUntilImageAvailable(ctx workflow.Context, input *ec2.DescribeImagesInput) error
+
 	WaitUntilImageExists(ctx workflow.Context, input *ec2.DescribeImagesInput) error
+
 	WaitUntilInstanceExists(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
+
 	WaitUntilInstanceRunning(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
+
 	WaitUntilInstanceStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error
+
 	WaitUntilInstanceStopped(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
+
 	WaitUntilInstanceTerminated(ctx workflow.Context, input *ec2.DescribeInstancesInput) error
+
 	WaitUntilKeyPairExists(ctx workflow.Context, input *ec2.DescribeKeyPairsInput) error
+
 	WaitUntilNatGatewayAvailable(ctx workflow.Context, input *ec2.DescribeNatGatewaysInput) error
+
 	WaitUntilNetworkInterfaceAvailable(ctx workflow.Context, input *ec2.DescribeNetworkInterfacesInput) error
+
 	WaitUntilPasswordDataAvailable(ctx workflow.Context, input *ec2.GetPasswordDataInput) error
+
 	WaitUntilSecurityGroupExists(ctx workflow.Context, input *ec2.DescribeSecurityGroupsInput) error
+
 	WaitUntilSnapshotCompleted(ctx workflow.Context, input *ec2.DescribeSnapshotsInput) error
+
 	WaitUntilSpotInstanceRequestFulfilled(ctx workflow.Context, input *ec2.DescribeSpotInstanceRequestsInput) error
+
 	WaitUntilSubnetAvailable(ctx workflow.Context, input *ec2.DescribeSubnetsInput) error
+
 	WaitUntilSystemStatusOk(ctx workflow.Context, input *ec2.DescribeInstanceStatusInput) error
+
 	WaitUntilVolumeAvailable(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
+
 	WaitUntilVolumeDeleted(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
+
 	WaitUntilVolumeInUse(ctx workflow.Context, input *ec2.DescribeVolumesInput) error
+
 	WaitUntilVpcAvailable(ctx workflow.Context, input *ec2.DescribeVpcsInput) error
+
 	WaitUntilVpcExists(ctx workflow.Context, input *ec2.DescribeVpcsInput) error
+
 	WaitUntilVpcPeeringConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
+
 	WaitUntilVpcPeeringConnectionExists(ctx workflow.Context, input *ec2.DescribeVpcPeeringConnectionsInput) error
+
 	WaitUntilVpnConnectionAvailable(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
-	WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error}
+
+	WaitUntilVpnConnectionDeleted(ctx workflow.Context, input *ec2.DescribeVpnConnectionsInput) error
+}
 
 type EC2Stub struct{}
 

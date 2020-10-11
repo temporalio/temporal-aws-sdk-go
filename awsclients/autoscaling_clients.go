@@ -182,8 +182,11 @@ type AutoScalingClient interface {
 	UpdateAutoScalingGroupAsync(ctx workflow.Context, input *autoscaling.UpdateAutoScalingGroupInput) *AutoscalingUpdateAutoScalingGroupResult
 
 	WaitUntilGroupExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
+
 	WaitUntilGroupInService(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
-	WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error}
+
+	WaitUntilGroupNotExists(ctx workflow.Context, input *autoscaling.DescribeAutoScalingGroupsInput) error
+}
 
 type AutoScalingStub struct{}
 

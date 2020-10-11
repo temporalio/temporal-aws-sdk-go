@@ -176,11 +176,17 @@ type IoTSiteWiseClient interface {
 	UpdateProjectAsync(ctx workflow.Context, input *iotsitewise.UpdateProjectInput) *IotsitewiseUpdateProjectResult
 
 	WaitUntilAssetActive(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
+
 	WaitUntilAssetModelActive(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error
+
 	WaitUntilAssetModelNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetModelInput) error
+
 	WaitUntilAssetNotExists(ctx workflow.Context, input *iotsitewise.DescribeAssetInput) error
+
 	WaitUntilPortalActive(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
-	WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error}
+
+	WaitUntilPortalNotExists(ctx workflow.Context, input *iotsitewise.DescribePortalInput) error
+}
 
 type IoTSiteWiseStub struct{}
 

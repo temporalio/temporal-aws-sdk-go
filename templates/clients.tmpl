@@ -23,7 +23,7 @@ type {{ $name }}Client interface {
 {{- range $i, $method := .Methods }}
 {{- if HasPrefix $method.Name "Wait" }}
 {{"	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) error
-{{- else }}
+{{ else }}
 {{- $prefix := CapitalizeFirstLetter $method.Output.Package }}
 {{ "	"}}{{ $method.Name }}(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) (*{{ $method.Output.Package }}.{{ $method.Output.Name }}, error)
 {{ "	"}}{{ $method.Name }}Async(ctx workflow.Context, input *{{ $method.Input.Package }}.{{ $method.Input.Name }}) *{{$prefix}}{{ $method.Name }}Result

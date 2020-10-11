@@ -206,9 +206,13 @@ type ElastiCacheClient interface {
 	TestFailoverAsync(ctx workflow.Context, input *elasticache.TestFailoverInput) *ElasticacheTestFailoverResult
 
 	WaitUntilCacheClusterAvailable(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
+
 	WaitUntilCacheClusterDeleted(ctx workflow.Context, input *elasticache.DescribeCacheClustersInput) error
+
 	WaitUntilReplicationGroupAvailable(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
-	WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error}
+
+	WaitUntilReplicationGroupDeleted(ctx workflow.Context, input *elasticache.DescribeReplicationGroupsInput) error
+}
 
 type ElastiCacheStub struct{}
 

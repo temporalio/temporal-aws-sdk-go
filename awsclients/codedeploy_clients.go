@@ -151,7 +151,8 @@ type CodeDeployClient interface {
 	UpdateDeploymentGroup(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) (*codedeploy.UpdateDeploymentGroupOutput, error)
 	UpdateDeploymentGroupAsync(ctx workflow.Context, input *codedeploy.UpdateDeploymentGroupInput) *CodedeployUpdateDeploymentGroupResult
 
-	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error}
+	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *codedeploy.GetDeploymentInput) error
+}
 
 type CodeDeployStub struct{}
 

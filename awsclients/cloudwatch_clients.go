@@ -101,7 +101,9 @@ type CloudWatchClient interface {
 	UntagResourceAsync(ctx workflow.Context, input *cloudwatch.UntagResourceInput) *CloudwatchUntagResourceResult
 
 	WaitUntilAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
-	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error}
+
+	WaitUntilCompositeAlarmExists(ctx workflow.Context, input *cloudwatch.DescribeAlarmsInput) error
+}
 
 type CloudWatchStub struct{}
 

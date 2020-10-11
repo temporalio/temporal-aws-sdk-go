@@ -158,9 +158,13 @@ type ECSClient interface {
 	UpdateTaskSetAsync(ctx workflow.Context, input *ecs.UpdateTaskSetInput) *EcsUpdateTaskSetResult
 
 	WaitUntilServicesInactive(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+
 	WaitUntilServicesStable(ctx workflow.Context, input *ecs.DescribeServicesInput) error
+
 	WaitUntilTasksRunning(ctx workflow.Context, input *ecs.DescribeTasksInput) error
-	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error}
+
+	WaitUntilTasksStopped(ctx workflow.Context, input *ecs.DescribeTasksInput) error
+}
 
 type ECSStub struct{}
 

@@ -170,13 +170,21 @@ type DatabaseMigrationServiceClient interface {
 	TestConnectionAsync(ctx workflow.Context, input *databasemigrationservice.TestConnectionInput) *DatabasemigrationserviceTestConnectionResult
 
 	WaitUntilEndpointDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeEndpointsInput) error
+
 	WaitUntilReplicationInstanceAvailable(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
+
 	WaitUntilReplicationInstanceDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationInstancesInput) error
+
 	WaitUntilReplicationTaskDeleted(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+
 	WaitUntilReplicationTaskReady(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+
 	WaitUntilReplicationTaskRunning(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
+
 	WaitUntilReplicationTaskStopped(ctx workflow.Context, input *databasemigrationservice.DescribeReplicationTasksInput) error
-	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error}
+
+	WaitUntilTestConnectionSucceeds(ctx workflow.Context, input *databasemigrationservice.DescribeConnectionsInput) error
+}
 
 type DatabaseMigrationServiceStub struct{}
 

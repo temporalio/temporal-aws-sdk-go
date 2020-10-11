@@ -74,9 +74,13 @@ type EKSClient interface {
 	UpdateNodegroupVersionAsync(ctx workflow.Context, input *eks.UpdateNodegroupVersionInput) *EksUpdateNodegroupVersionResult
 
 	WaitUntilClusterActive(ctx workflow.Context, input *eks.DescribeClusterInput) error
+
 	WaitUntilClusterDeleted(ctx workflow.Context, input *eks.DescribeClusterInput) error
+
 	WaitUntilNodegroupActive(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
-	WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error}
+
+	WaitUntilNodegroupDeleted(ctx workflow.Context, input *eks.DescribeNodegroupInput) error
+}
 
 type EKSStub struct{}
 

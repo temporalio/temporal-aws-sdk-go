@@ -152,7 +152,9 @@ type AppStreamClient interface {
 	UpdateStackAsync(ctx workflow.Context, input *appstream.UpdateStackInput) *AppstreamUpdateStackResult
 
 	WaitUntilFleetStarted(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
-	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error}
+
+	WaitUntilFleetStopped(ctx workflow.Context, input *appstream.DescribeFleetsInput) error
+}
 
 type AppStreamStub struct{}
 

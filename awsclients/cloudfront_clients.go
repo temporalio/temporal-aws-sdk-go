@@ -215,8 +215,11 @@ type CloudFrontClient interface {
 	UpdateStreamingDistributionAsync(ctx workflow.Context, input *cloudfront.UpdateStreamingDistributionInput) *CloudfrontUpdateStreamingDistributionResult
 
 	WaitUntilDistributionDeployed(ctx workflow.Context, input *cloudfront.GetDistributionInput) error
+
 	WaitUntilInvalidationCompleted(ctx workflow.Context, input *cloudfront.GetInvalidationInput) error
-	WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error}
+
+	WaitUntilStreamingDistributionDeployed(ctx workflow.Context, input *cloudfront.GetStreamingDistributionInput) error
+}
 
 type CloudFrontStub struct{}
 

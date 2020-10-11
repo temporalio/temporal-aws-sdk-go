@@ -122,8 +122,11 @@ type EMRClient interface {
 	TerminateJobFlowsAsync(ctx workflow.Context, input *emr.TerminateJobFlowsInput) *EmrTerminateJobFlowsResult
 
 	WaitUntilClusterRunning(ctx workflow.Context, input *emr.DescribeClusterInput) error
+
 	WaitUntilClusterTerminated(ctx workflow.Context, input *emr.DescribeClusterInput) error
-	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error}
+
+	WaitUntilStepComplete(ctx workflow.Context, input *emr.DescribeStepInput) error
+}
 
 type EMRStub struct{}
 

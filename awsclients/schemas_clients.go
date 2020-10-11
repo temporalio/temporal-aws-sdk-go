@@ -103,7 +103,8 @@ type SchemasClient interface {
 	UpdateSchema(ctx workflow.Context, input *schemas.UpdateSchemaInput) (*schemas.UpdateSchemaOutput, error)
 	UpdateSchemaAsync(ctx workflow.Context, input *schemas.UpdateSchemaInput) *SchemasUpdateSchemaResult
 
-	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error}
+	WaitUntilCodeBindingExists(ctx workflow.Context, input *schemas.DescribeCodeBindingInput) error
+}
 
 type SchemasStub struct{}
 

@@ -67,7 +67,8 @@ type OpsWorksCMClient interface {
 	UpdateServerEngineAttributes(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) (*opsworkscm.UpdateServerEngineAttributesOutput, error)
 	UpdateServerEngineAttributesAsync(ctx workflow.Context, input *opsworkscm.UpdateServerEngineAttributesInput) *OpsworkscmUpdateServerEngineAttributesResult
 
-	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error}
+	WaitUntilNodeAssociated(ctx workflow.Context, input *opsworkscm.DescribeNodeAssociationStatusInput) error
+}
 
 type OpsWorksCMStub struct{}
 

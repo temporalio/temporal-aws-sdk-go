@@ -61,7 +61,8 @@ type ElasticTranscoderClient interface {
 	UpdatePipelineStatus(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) (*elastictranscoder.UpdatePipelineStatusOutput, error)
 	UpdatePipelineStatusAsync(ctx workflow.Context, input *elastictranscoder.UpdatePipelineStatusInput) *ElastictranscoderUpdatePipelineStatusResult
 
-	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error}
+	WaitUntilJobComplete(ctx workflow.Context, input *elastictranscoder.ReadJobInput) error
+}
 
 type ElasticTranscoderStub struct{}
 

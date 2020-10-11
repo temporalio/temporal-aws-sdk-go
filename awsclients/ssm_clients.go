@@ -376,7 +376,8 @@ type SSMClient interface {
 	UpdateServiceSetting(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) (*ssm.UpdateServiceSettingOutput, error)
 	UpdateServiceSettingAsync(ctx workflow.Context, input *ssm.UpdateServiceSettingInput) *SsmUpdateServiceSettingResult
 
-	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error}
+	WaitUntilCommandExecuted(ctx workflow.Context, input *ssm.GetCommandInvocationInput) error
+}
 
 type SSMStub struct{}
 

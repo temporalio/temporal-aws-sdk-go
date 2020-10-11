@@ -46,7 +46,8 @@ type SignerClient interface {
 	UntagResource(ctx workflow.Context, input *signer.UntagResourceInput) (*signer.UntagResourceOutput, error)
 	UntagResourceAsync(ctx workflow.Context, input *signer.UntagResourceInput) *SignerUntagResourceResult
 
-	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error}
+	WaitUntilSuccessfulSigningJob(ctx workflow.Context, input *signer.DescribeSigningJobInput) error
+}
 
 type SignerStub struct{}
 

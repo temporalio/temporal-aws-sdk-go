@@ -110,7 +110,9 @@ type GlacierClient interface {
 	UploadMultipartPartAsync(ctx workflow.Context, input *glacier.UploadMultipartPartInput) *GlacierUploadMultipartPartResult
 
 	WaitUntilVaultExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
-	WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error}
+
+	WaitUntilVaultNotExists(ctx workflow.Context, input *glacier.DescribeVaultInput) error
+}
 
 type GlacierStub struct{}
 

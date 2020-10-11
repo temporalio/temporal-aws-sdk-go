@@ -401,11 +401,17 @@ type RDSClient interface {
 	StopDBInstanceAsync(ctx workflow.Context, input *rds.StopDBInstanceInput) *RdsStopDBInstanceResult
 
 	WaitUntilDBClusterSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
+
 	WaitUntilDBClusterSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBClusterSnapshotsInput) error
+
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
+
 	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *rds.DescribeDBInstancesInput) error
+
 	WaitUntilDBSnapshotAvailable(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
-	WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error}
+
+	WaitUntilDBSnapshotDeleted(ctx workflow.Context, input *rds.DescribeDBSnapshotsInput) error
+}
 
 type RDSStub struct{}
 

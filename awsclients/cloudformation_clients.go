@@ -176,13 +176,21 @@ type CloudFormationClient interface {
 	ValidateTemplateAsync(ctx workflow.Context, input *cloudformation.ValidateTemplateInput) *CloudformationValidateTemplateResult
 
 	WaitUntilChangeSetCreateComplete(ctx workflow.Context, input *cloudformation.DescribeChangeSetInput) error
+
 	WaitUntilStackCreateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
+
 	WaitUntilStackDeleteComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
+
 	WaitUntilStackExists(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
+
 	WaitUntilStackImportComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
+
 	WaitUntilStackRollbackComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
+
 	WaitUntilStackUpdateComplete(ctx workflow.Context, input *cloudformation.DescribeStacksInput) error
-	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error}
+
+	WaitUntilTypeRegistrationComplete(ctx workflow.Context, input *cloudformation.DescribeTypeRegistrationInput) error
+}
 
 type CloudFormationStub struct{}
 

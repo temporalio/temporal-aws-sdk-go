@@ -161,16 +161,27 @@ type MediaLiveClient interface {
 	UpdateReservationAsync(ctx workflow.Context, input *medialive.UpdateReservationInput) *MedialiveUpdateReservationResult
 
 	WaitUntilChannelCreated(ctx workflow.Context, input *medialive.DescribeChannelInput) error
+
 	WaitUntilChannelDeleted(ctx workflow.Context, input *medialive.DescribeChannelInput) error
+
 	WaitUntilChannelRunning(ctx workflow.Context, input *medialive.DescribeChannelInput) error
+
 	WaitUntilChannelStopped(ctx workflow.Context, input *medialive.DescribeChannelInput) error
+
 	WaitUntilInputAttached(ctx workflow.Context, input *medialive.DescribeInputInput) error
+
 	WaitUntilInputDeleted(ctx workflow.Context, input *medialive.DescribeInputInput) error
+
 	WaitUntilInputDetached(ctx workflow.Context, input *medialive.DescribeInputInput) error
+
 	WaitUntilMultiplexCreated(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
+
 	WaitUntilMultiplexDeleted(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
+
 	WaitUntilMultiplexRunning(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
-	WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error}
+
+	WaitUntilMultiplexStopped(ctx workflow.Context, input *medialive.DescribeMultiplexInput) error
+}
 
 type MediaLiveStub struct{}
 

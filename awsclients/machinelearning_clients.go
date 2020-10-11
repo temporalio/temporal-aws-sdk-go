@@ -95,9 +95,13 @@ type MachineLearningClient interface {
 	UpdateMLModelAsync(ctx workflow.Context, input *machinelearning.UpdateMLModelInput) *MachinelearningUpdateMLModelResult
 
 	WaitUntilBatchPredictionAvailable(ctx workflow.Context, input *machinelearning.DescribeBatchPredictionsInput) error
+
 	WaitUntilDataSourceAvailable(ctx workflow.Context, input *machinelearning.DescribeDataSourcesInput) error
+
 	WaitUntilEvaluationAvailable(ctx workflow.Context, input *machinelearning.DescribeEvaluationsInput) error
-	WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error}
+
+	WaitUntilMLModelAvailable(ctx workflow.Context, input *machinelearning.DescribeMLModelsInput) error
+}
 
 type MachineLearningStub struct{}
 

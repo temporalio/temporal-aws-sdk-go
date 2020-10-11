@@ -113,10 +113,15 @@ type ELBV2Client interface {
 	SetSubnetsAsync(ctx workflow.Context, input *elbv2.SetSubnetsInput) *Elbv2SetSubnetsResult
 
 	WaitUntilLoadBalancerAvailable(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
+
 	WaitUntilLoadBalancerExists(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
+
 	WaitUntilLoadBalancersDeleted(ctx workflow.Context, input *elbv2.DescribeLoadBalancersInput) error
+
 	WaitUntilTargetDeregistered(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
-	WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error}
+
+	WaitUntilTargetInService(ctx workflow.Context, input *elbv2.DescribeTargetHealthInput) error
+}
 
 type ELBV2Stub struct{}
 

@@ -188,7 +188,9 @@ type NeptuneClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *neptune.StopDBClusterInput) *NeptuneStopDBClusterResult
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error}
+
+	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *neptune.DescribeDBInstancesInput) error
+}
 
 type NeptuneStub struct{}
 

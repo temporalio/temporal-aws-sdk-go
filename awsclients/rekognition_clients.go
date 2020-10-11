@@ -152,7 +152,9 @@ type RekognitionClient interface {
 	StopStreamProcessorAsync(ctx workflow.Context, input *rekognition.StopStreamProcessorInput) *RekognitionStopStreamProcessorResult
 
 	WaitUntilProjectVersionRunning(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
-	WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error}
+
+	WaitUntilProjectVersionTrainingCompleted(ctx workflow.Context, input *rekognition.DescribeProjectVersionsInput) error
+}
 
 type RekognitionStub struct{}
 

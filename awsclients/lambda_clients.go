@@ -155,8 +155,11 @@ type LambdaClient interface {
 	UpdateFunctionEventInvokeConfigAsync(ctx workflow.Context, input *lambda.UpdateFunctionEventInvokeConfigInput) *LambdaUpdateFunctionEventInvokeConfigResult
 
 	WaitUntilFunctionActive(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
+
 	WaitUntilFunctionExists(ctx workflow.Context, input *lambda.GetFunctionInput) error
-	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error}
+
+	WaitUntilFunctionUpdated(ctx workflow.Context, input *lambda.GetFunctionConfigurationInput) error
+}
 
 type LambdaStub struct{}
 

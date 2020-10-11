@@ -431,9 +431,13 @@ type IAMClient interface {
 	UploadSigningCertificateAsync(ctx workflow.Context, input *iam.UploadSigningCertificateInput) *IamUploadSigningCertificateResult
 
 	WaitUntilInstanceProfileExists(ctx workflow.Context, input *iam.GetInstanceProfileInput) error
+
 	WaitUntilPolicyExists(ctx workflow.Context, input *iam.GetPolicyInput) error
+
 	WaitUntilRoleExists(ctx workflow.Context, input *iam.GetRoleInput) error
-	WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error}
+
+	WaitUntilUserExists(ctx workflow.Context, input *iam.GetUserInput) error
+}
 
 type IAMStub struct{}
 

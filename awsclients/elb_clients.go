@@ -98,8 +98,11 @@ type ELBClient interface {
 	SetLoadBalancerPoliciesOfListenerAsync(ctx workflow.Context, input *elb.SetLoadBalancerPoliciesOfListenerInput) *ElbSetLoadBalancerPoliciesOfListenerResult
 
 	WaitUntilAnyInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
+
 	WaitUntilInstanceDeregistered(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
-	WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error}
+
+	WaitUntilInstanceInService(ctx workflow.Context, input *elb.DescribeInstanceHealthInput) error
+}
 
 type ELBStub struct{}
 

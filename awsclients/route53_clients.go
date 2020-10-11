@@ -181,7 +181,8 @@ type Route53Client interface {
 	UpdateTrafficPolicyInstance(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) (*route53.UpdateTrafficPolicyInstanceOutput, error)
 	UpdateTrafficPolicyInstanceAsync(ctx workflow.Context, input *route53.UpdateTrafficPolicyInstanceInput) *Route53UpdateTrafficPolicyInstanceResult
 
-	WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error}
+	WaitUntilResourceRecordSetsChanged(ctx workflow.Context, input *route53.GetChangeInput) error
+}
 
 type Route53Stub struct{}
 

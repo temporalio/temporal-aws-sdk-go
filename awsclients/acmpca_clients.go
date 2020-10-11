@@ -80,8 +80,11 @@ type ACMPCAClient interface {
 	UpdateCertificateAuthorityAsync(ctx workflow.Context, input *acmpca.UpdateCertificateAuthorityInput) *AcmpcaUpdateCertificateAuthorityResult
 
 	WaitUntilAuditReportCreated(ctx workflow.Context, input *acmpca.DescribeCertificateAuthorityAuditReportInput) error
+
 	WaitUntilCertificateAuthorityCSRCreated(ctx workflow.Context, input *acmpca.GetCertificateAuthorityCsrInput) error
-	WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error}
+
+	WaitUntilCertificateIssued(ctx workflow.Context, input *acmpca.GetCertificateInput) error
+}
 
 type ACMPCAStub struct{}
 

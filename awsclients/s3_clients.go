@@ -284,9 +284,13 @@ type S3Client interface {
 	UploadPartCopyAsync(ctx workflow.Context, input *s3.UploadPartCopyInput) *S3UploadPartCopyResult
 
 	WaitUntilBucketExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+
 	WaitUntilBucketNotExists(ctx workflow.Context, input *s3.HeadBucketInput) error
+
 	WaitUntilObjectExists(ctx workflow.Context, input *s3.HeadObjectInput) error
-	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error}
+
+	WaitUntilObjectNotExists(ctx workflow.Context, input *s3.HeadObjectInput) error
+}
 
 type S3Stub struct{}
 

@@ -98,7 +98,9 @@ type ECRClient interface {
 	UploadLayerPartAsync(ctx workflow.Context, input *ecr.UploadLayerPartInput) *EcrUploadLayerPartResult
 
 	WaitUntilImageScanComplete(ctx workflow.Context, input *ecr.DescribeImageScanFindingsInput) error
-	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error}
+
+	WaitUntilLifecyclePolicyPreviewComplete(ctx workflow.Context, input *ecr.GetLifecyclePolicyPreviewInput) error
+}
 
 type ECRStub struct{}
 

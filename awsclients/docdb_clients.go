@@ -137,7 +137,9 @@ type DocDBClient interface {
 	StopDBClusterAsync(ctx workflow.Context, input *docdb.StopDBClusterInput) *DocdbStopDBClusterResult
 
 	WaitUntilDBInstanceAvailable(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
-	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error}
+
+	WaitUntilDBInstanceDeleted(ctx workflow.Context, input *docdb.DescribeDBInstancesInput) error
+}
 
 type DocDBStub struct{}
 

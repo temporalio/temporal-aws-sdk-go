@@ -287,9 +287,13 @@ type RedshiftClient interface {
 	RotateEncryptionKeyAsync(ctx workflow.Context, input *redshift.RotateEncryptionKeyInput) *RedshiftRotateEncryptionKeyResult
 
 	WaitUntilClusterAvailable(ctx workflow.Context, input *redshift.DescribeClustersInput) error
+
 	WaitUntilClusterDeleted(ctx workflow.Context, input *redshift.DescribeClustersInput) error
+
 	WaitUntilClusterRestored(ctx workflow.Context, input *redshift.DescribeClustersInput) error
-	WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error}
+
+	WaitUntilSnapshotAvailable(ctx workflow.Context, input *redshift.DescribeClusterSnapshotsInput) error
+}
 
 type RedshiftStub struct{}
 

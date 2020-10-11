@@ -95,7 +95,9 @@ type KinesisClient interface {
 	UpdateShardCountAsync(ctx workflow.Context, input *kinesis.UpdateShardCountInput) *KinesisUpdateShardCountResult
 
 	WaitUntilStreamExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
-	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error}
+
+	WaitUntilStreamNotExists(ctx workflow.Context, input *kinesis.DescribeStreamInput) error
+}
 
 type KinesisStub struct{}
 

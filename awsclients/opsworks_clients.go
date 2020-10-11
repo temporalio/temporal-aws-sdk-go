@@ -233,11 +233,17 @@ type OpsWorksClient interface {
 	UpdateVolumeAsync(ctx workflow.Context, input *opsworks.UpdateVolumeInput) *OpsworksUpdateVolumeResult
 
 	WaitUntilAppExists(ctx workflow.Context, input *opsworks.DescribeAppsInput) error
+
 	WaitUntilDeploymentSuccessful(ctx workflow.Context, input *opsworks.DescribeDeploymentsInput) error
+
 	WaitUntilInstanceOnline(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+
 	WaitUntilInstanceRegistered(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+
 	WaitUntilInstanceStopped(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
-	WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error}
+
+	WaitUntilInstanceTerminated(ctx workflow.Context, input *opsworks.DescribeInstancesInput) error
+}
 
 type OpsWorksStub struct{}
 

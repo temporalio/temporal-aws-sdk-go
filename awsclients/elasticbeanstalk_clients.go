@@ -152,8 +152,11 @@ type ElasticBeanstalkClient interface {
 	ValidateConfigurationSettingsAsync(ctx workflow.Context, input *elasticbeanstalk.ValidateConfigurationSettingsInput) *ElasticbeanstalkValidateConfigurationSettingsResult
 
 	WaitUntilEnvironmentExists(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
+
 	WaitUntilEnvironmentTerminated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
-	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error}
+
+	WaitUntilEnvironmentUpdated(ctx workflow.Context, input *elasticbeanstalk.DescribeEnvironmentsInput) error
+}
 
 type ElasticBeanstalkStub struct{}
 

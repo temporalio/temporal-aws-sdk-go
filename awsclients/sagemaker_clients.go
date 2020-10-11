@@ -422,13 +422,21 @@ type SageMakerClient interface {
 	UpdateWorkteamAsync(ctx workflow.Context, input *sagemaker.UpdateWorkteamInput) *SagemakerUpdateWorkteamResult
 
 	WaitUntilEndpointDeleted(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
+
 	WaitUntilEndpointInService(ctx workflow.Context, input *sagemaker.DescribeEndpointInput) error
+
 	WaitUntilNotebookInstanceDeleted(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+
 	WaitUntilNotebookInstanceInService(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+
 	WaitUntilNotebookInstanceStopped(ctx workflow.Context, input *sagemaker.DescribeNotebookInstanceInput) error
+
 	WaitUntilProcessingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeProcessingJobInput) error
+
 	WaitUntilTrainingJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTrainingJobInput) error
-	WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error}
+
+	WaitUntilTransformJobCompletedOrStopped(ctx workflow.Context, input *sagemaker.DescribeTransformJobInput) error
+}
 
 type SageMakerStub struct{}
 

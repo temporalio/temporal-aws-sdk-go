@@ -223,7 +223,8 @@ type SESClient interface {
 	VerifyEmailIdentity(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) (*ses.VerifyEmailIdentityOutput, error)
 	VerifyEmailIdentityAsync(ctx workflow.Context, input *ses.VerifyEmailIdentityInput) *SesVerifyEmailIdentityResult
 
-	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error}
+	WaitUntilIdentityExists(ctx workflow.Context, input *ses.GetIdentityVerificationAttributesInput) error
+}
 
 type SESStub struct{}
 
