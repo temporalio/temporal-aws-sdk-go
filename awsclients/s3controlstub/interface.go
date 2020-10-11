@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateAccessPoint(ctx workflow.Context, input *s3control.CreateAccessPointInput) (*s3control.CreateAccessPointOutput, error)
 	CreateAccessPointAsync(ctx workflow.Context, input *s3control.CreateAccessPointInput) *S3ControlCreateAccessPointFuture

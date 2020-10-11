@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateCachePolicy(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) (*cloudfront.CreateCachePolicyOutput, error)
 	CreateCachePolicyAsync(ctx workflow.Context, input *cloudfront.CreateCachePolicyInput) *CloudFrontCreateCachePolicyFuture

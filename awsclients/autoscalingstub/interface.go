@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AttachInstances(ctx workflow.Context, input *autoscaling.AttachInstancesInput) (*autoscaling.AttachInstancesOutput, error)
 	AttachInstancesAsync(ctx workflow.Context, input *autoscaling.AttachInstancesInput) *AutoScalingAttachInstancesFuture

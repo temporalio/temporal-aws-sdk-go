@@ -11,6 +11,9 @@ import (
 
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type stub struct{}
 
 type QLDBCancelJournalKinesisStreamFuture struct {

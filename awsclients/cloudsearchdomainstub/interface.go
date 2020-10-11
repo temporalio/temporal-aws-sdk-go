@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	Search(ctx workflow.Context, input *cloudsearchdomain.SearchInput) (*cloudsearchdomain.SearchOutput, error)
 	SearchAsync(ctx workflow.Context, input *cloudsearchdomain.SearchInput) *CloudSearchDomainSearchFuture

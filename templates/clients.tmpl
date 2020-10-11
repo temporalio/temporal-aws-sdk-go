@@ -20,6 +20,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 {{- range $i, $method := .Methods }}
 {{- if HasPrefix $method.Name "Wait" }}
@@ -47,11 +50,14 @@ package {{ $lowerName }}stub
 import (
 {{- range .Imports }}
 	"github.com/aws/aws-sdk-go/service/{{ . }}"
-    "go.temporal.io/aws-sdk/awsclients"
 {{- end }}
+    "go.temporal.io/aws-sdk/awsclients"
 	"go.temporal.io/sdk/workflow"
 
 )
+
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
 
 type stub struct{}
 

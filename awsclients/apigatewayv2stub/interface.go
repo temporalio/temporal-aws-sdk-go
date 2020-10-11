@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateApi(ctx workflow.Context, input *apigatewayv2.CreateApiInput) (*apigatewayv2.CreateApiOutput, error)
 	CreateApiAsync(ctx workflow.Context, input *apigatewayv2.CreateApiInput) *ApiGatewayV2CreateApiFuture

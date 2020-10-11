@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AddAttributesToFindings(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) (*inspector.AddAttributesToFindingsOutput, error)
 	AddAttributesToFindingsAsync(ctx workflow.Context, input *inspector.AddAttributesToFindingsInput) *InspectorAddAttributesToFindingsFuture

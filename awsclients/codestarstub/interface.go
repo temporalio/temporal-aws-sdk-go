@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateTeamMember(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) (*codestar.AssociateTeamMemberOutput, error)
 	AssociateTeamMemberAsync(ctx workflow.Context, input *codestar.AssociateTeamMemberInput) *CodeStarAssociateTeamMemberFuture

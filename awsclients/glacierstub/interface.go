@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AbortMultipartUpload(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) (*glacier.AbortMultipartUploadOutput, error)
 	AbortMultipartUploadAsync(ctx workflow.Context, input *glacier.AbortMultipartUploadInput) *GlacierAbortMultipartUploadFuture

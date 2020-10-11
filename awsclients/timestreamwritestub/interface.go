@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateDatabase(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) (*timestreamwrite.CreateDatabaseOutput, error)
 	CreateDatabaseAsync(ctx workflow.Context, input *timestreamwrite.CreateDatabaseInput) *TimestreamWriteCreateDatabaseFuture

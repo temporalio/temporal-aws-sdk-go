@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateEnvironmentEC2(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) (*cloud9.CreateEnvironmentEC2Output, error)
 	CreateEnvironmentEC2Async(ctx workflow.Context, input *cloud9.CreateEnvironmentEC2Input) *Cloud9CreateEnvironmentEC2Future

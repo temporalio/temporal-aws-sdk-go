@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CancelImageCreation(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) (*imagebuilder.CancelImageCreationOutput, error)
 	CancelImageCreationAsync(ctx workflow.Context, input *imagebuilder.CancelImageCreationInput) *ImagebuilderCancelImageCreationFuture

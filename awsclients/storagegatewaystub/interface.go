@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	ActivateGateway(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) (*storagegateway.ActivateGatewayOutput, error)
 	ActivateGatewayAsync(ctx workflow.Context, input *storagegateway.ActivateGatewayInput) *StorageGatewayActivateGatewayFuture

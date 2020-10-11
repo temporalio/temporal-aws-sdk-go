@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateDeliveryStream(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) (*firehose.CreateDeliveryStreamOutput, error)
 	CreateDeliveryStreamAsync(ctx workflow.Context, input *firehose.CreateDeliveryStreamInput) *FirehoseCreateDeliveryStreamFuture

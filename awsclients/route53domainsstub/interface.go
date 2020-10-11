@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AcceptDomainTransferFromAnotherAwsAccount(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) (*route53domains.AcceptDomainTransferFromAnotherAwsAccountOutput, error)
 	AcceptDomainTransferFromAnotherAwsAccountAsync(ctx workflow.Context, input *route53domains.AcceptDomainTransferFromAnotherAwsAccountInput) *Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture

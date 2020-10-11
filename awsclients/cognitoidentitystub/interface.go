@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateIdentityPool(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) (*cognitoidentity.IdentityPool, error)
 	CreateIdentityPoolAsync(ctx workflow.Context, input *cognitoidentity.CreateIdentityPoolInput) *CognitoIdentityCreateIdentityPoolFuture

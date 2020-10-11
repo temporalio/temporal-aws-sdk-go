@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateVPCWithHostedZone(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) (*route53.AssociateVPCWithHostedZoneOutput, error)
 	AssociateVPCWithHostedZoneAsync(ctx workflow.Context, input *route53.AssociateVPCWithHostedZoneInput) *Route53AssociateVPCWithHostedZoneFuture

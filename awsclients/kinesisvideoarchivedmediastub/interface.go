@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	GetClip(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) (*kinesisvideoarchivedmedia.GetClipOutput, error)
 	GetClipAsync(ctx workflow.Context, input *kinesisvideoarchivedmedia.GetClipInput) *KinesisVideoArchivedMediaGetClipFuture

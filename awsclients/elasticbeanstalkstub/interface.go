@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AbortEnvironmentUpdate(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) (*elasticbeanstalk.AbortEnvironmentUpdateOutput, error)
 	AbortEnvironmentUpdateAsync(ctx workflow.Context, input *elasticbeanstalk.AbortEnvironmentUpdateInput) *ElasticBeanstalkAbortEnvironmentUpdateFuture

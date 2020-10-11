@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateActivity(ctx workflow.Context, input *sfn.CreateActivityInput) (*sfn.CreateActivityOutput, error)
 	CreateActivityAsync(ctx workflow.Context, input *sfn.CreateActivityInput) *SFNCreateActivityFuture

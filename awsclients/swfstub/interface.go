@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CountClosedWorkflowExecutions(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) (*swf.WorkflowExecutionCount, error)
 	CountClosedWorkflowExecutionsAsync(ctx workflow.Context, input *swf.CountClosedWorkflowExecutionsInput) *SWFCountClosedWorkflowExecutionsFuture

@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateNode(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) (*opsworkscm.AssociateNodeOutput, error)
 	AssociateNodeAsync(ctx workflow.Context, input *opsworkscm.AssociateNodeInput) *OpsWorksCMAssociateNodeFuture

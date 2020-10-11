@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AcceptInvitation(ctx workflow.Context, input *macie2.AcceptInvitationInput) (*macie2.AcceptInvitationOutput, error)
 	AcceptInvitationAsync(ctx workflow.Context, input *macie2.AcceptInvitationInput) *Macie2AcceptInvitationFuture

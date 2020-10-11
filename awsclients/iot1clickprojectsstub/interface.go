@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateDeviceWithPlacement(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) (*iot1clickprojects.AssociateDeviceWithPlacementOutput, error)
 	AssociateDeviceWithPlacementAsync(ctx workflow.Context, input *iot1clickprojects.AssociateDeviceWithPlacementInput) *IoT1ClickProjectsAssociateDeviceWithPlacementFuture

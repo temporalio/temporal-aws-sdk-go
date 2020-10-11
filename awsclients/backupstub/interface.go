@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateBackupPlan(ctx workflow.Context, input *backup.CreateBackupPlanInput) (*backup.CreateBackupPlanOutput, error)
 	CreateBackupPlanAsync(ctx workflow.Context, input *backup.CreateBackupPlanInput) *BackupCreateBackupPlanFuture

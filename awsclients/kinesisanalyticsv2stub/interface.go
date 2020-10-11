@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AddApplicationCloudWatchLoggingOption(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionInput) (*kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionOutput, error)
 	AddApplicationCloudWatchLoggingOptionAsync(ctx workflow.Context, input *kinesisanalyticsv2.AddApplicationCloudWatchLoggingOptionInput) *KinesisAnalyticsV2AddApplicationCloudWatchLoggingOptionFuture

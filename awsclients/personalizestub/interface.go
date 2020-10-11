@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateBatchInferenceJob(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) (*personalize.CreateBatchInferenceJobOutput, error)
 	CreateBatchInferenceJobAsync(ctx workflow.Context, input *personalize.CreateBatchInferenceJobInput) *PersonalizeCreateBatchInferenceJobFuture

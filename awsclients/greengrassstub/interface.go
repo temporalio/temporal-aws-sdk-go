@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateRoleToGroup(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) (*greengrass.AssociateRoleToGroupOutput, error)
 	AssociateRoleToGroupAsync(ctx workflow.Context, input *greengrass.AssociateRoleToGroupInput) *GreengrassAssociateRoleToGroupFuture

@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateBudget(ctx workflow.Context, input *budgets.CreateBudgetInput) (*budgets.CreateBudgetOutput, error)
 	CreateBudgetAsync(ctx workflow.Context, input *budgets.CreateBudgetInput) *BudgetsCreateBudgetFuture

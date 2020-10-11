@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateExternalConnection(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) (*codeartifact.AssociateExternalConnectionOutput, error)
 	AssociateExternalConnectionAsync(ctx workflow.Context, input *codeartifact.AssociateExternalConnectionInput) *CodeArtifactAssociateExternalConnectionFuture

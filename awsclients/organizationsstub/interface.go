@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AcceptHandshake(ctx workflow.Context, input *organizations.AcceptHandshakeInput) (*organizations.AcceptHandshakeOutput, error)
 	AcceptHandshakeAsync(ctx workflow.Context, input *organizations.AcceptHandshakeInput) *OrganizationsAcceptHandshakeFuture

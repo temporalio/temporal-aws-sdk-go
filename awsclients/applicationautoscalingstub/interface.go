@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	DeleteScalingPolicy(ctx workflow.Context, input *applicationautoscaling.DeleteScalingPolicyInput) (*applicationautoscaling.DeleteScalingPolicyOutput, error)
 	DeleteScalingPolicyAsync(ctx workflow.Context, input *applicationautoscaling.DeleteScalingPolicyInput) *ApplicationAutoScalingDeleteScalingPolicyFuture

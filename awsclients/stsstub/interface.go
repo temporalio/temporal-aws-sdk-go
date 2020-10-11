@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssumeRole(ctx workflow.Context, input *sts.AssumeRoleInput) (*sts.AssumeRoleOutput, error)
 	AssumeRoleAsync(ctx workflow.Context, input *sts.AssumeRoleInput) *STSAssumeRoleFuture

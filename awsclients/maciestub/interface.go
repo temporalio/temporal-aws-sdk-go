@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateMemberAccount(ctx workflow.Context, input *macie.AssociateMemberAccountInput) (*macie.AssociateMemberAccountOutput, error)
 	AssociateMemberAccountAsync(ctx workflow.Context, input *macie.AssociateMemberAccountInput) *MacieAssociateMemberAccountFuture

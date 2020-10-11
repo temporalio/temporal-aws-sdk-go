@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	DeleteLexicon(ctx workflow.Context, input *polly.DeleteLexiconInput) (*polly.DeleteLexiconOutput, error)
 	DeleteLexiconAsync(ctx workflow.Context, input *polly.DeleteLexiconInput) *PollyDeleteLexiconFuture

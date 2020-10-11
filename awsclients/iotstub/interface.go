@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AcceptCertificateTransfer(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) (*iot.AcceptCertificateTransferOutput, error)
 	AcceptCertificateTransferAsync(ctx workflow.Context, input *iot.AcceptCertificateTransferInput) *IoTAcceptCertificateTransferFuture

@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateCanary(ctx workflow.Context, input *synthetics.CreateCanaryInput) (*synthetics.CreateCanaryOutput, error)
 	CreateCanaryAsync(ctx workflow.Context, input *synthetics.CreateCanaryInput) *SyntheticsCreateCanaryFuture

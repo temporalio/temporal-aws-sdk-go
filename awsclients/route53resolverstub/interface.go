@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	AssociateResolverEndpointIpAddress(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) (*route53resolver.AssociateResolverEndpointIpAddressOutput, error)
 	AssociateResolverEndpointIpAddressAsync(ctx workflow.Context, input *route53resolver.AssociateResolverEndpointIpAddressInput) *Route53ResolverAssociateResolverEndpointIpAddressFuture

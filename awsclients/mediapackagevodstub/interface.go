@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	CreateAsset(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) (*mediapackagevod.CreateAssetOutput, error)
 	CreateAssetAsync(ctx workflow.Context, input *mediapackagevod.CreateAssetInput) *MediaPackageVodCreateAssetFuture

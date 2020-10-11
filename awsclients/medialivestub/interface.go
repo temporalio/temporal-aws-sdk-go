@@ -10,6 +10,9 @@ import (
 	"go.temporal.io/sdk/workflow"
 )
 
+// ensure that imports are valid even if not used by the generated code
+var _ awsclients.VoidFuture
+
 type Client interface {
 	BatchDelete(ctx workflow.Context, input *medialive.BatchDeleteInput) (*medialive.BatchDeleteOutput, error)
 	BatchDeleteAsync(ctx workflow.Context, input *medialive.BatchDeleteInput) *MediaLiveBatchDeleteFuture
