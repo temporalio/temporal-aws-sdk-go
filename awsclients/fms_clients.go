@@ -96,6 +96,7 @@ func NewFMSStub() FMSClient {
 }
 
 type FMSAssociateAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +107,7 @@ func (r *FMSAssociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.Associa
 }
 
 type FMSDeleteAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +118,7 @@ func (r *FMSDeleteAppsListFuture) Get(ctx workflow.Context) (*fms.DeleteAppsList
 }
 
 type FMSDeleteNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +129,7 @@ func (r *FMSDeleteNotificationChannelFuture) Get(ctx workflow.Context) (*fms.Del
 }
 
 type FMSDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +140,7 @@ func (r *FMSDeletePolicyFuture) Get(ctx workflow.Context) (*fms.DeletePolicyOutp
 }
 
 type FMSDeleteProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +151,7 @@ func (r *FMSDeleteProtocolsListFuture) Get(ctx workflow.Context) (*fms.DeletePro
 }
 
 type FMSDisassociateAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +162,7 @@ func (r *FMSDisassociateAdminAccountFuture) Get(ctx workflow.Context) (*fms.Disa
 }
 
 type FMSGetAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +173,7 @@ func (r *FMSGetAdminAccountFuture) Get(ctx workflow.Context) (*fms.GetAdminAccou
 }
 
 type FMSGetAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +184,7 @@ func (r *FMSGetAppsListFuture) Get(ctx workflow.Context) (*fms.GetAppsListOutput
 }
 
 type FMSGetComplianceDetailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +195,7 @@ func (r *FMSGetComplianceDetailFuture) Get(ctx workflow.Context) (*fms.GetCompli
 }
 
 type FMSGetNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +206,7 @@ func (r *FMSGetNotificationChannelFuture) Get(ctx workflow.Context) (*fms.GetNot
 }
 
 type FMSGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +217,7 @@ func (r *FMSGetPolicyFuture) Get(ctx workflow.Context) (*fms.GetPolicyOutput, er
 }
 
 type FMSGetProtectionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +228,7 @@ func (r *FMSGetProtectionStatusFuture) Get(ctx workflow.Context) (*fms.GetProtec
 }
 
 type FMSGetProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +239,7 @@ func (r *FMSGetProtocolsListFuture) Get(ctx workflow.Context) (*fms.GetProtocols
 }
 
 type FMSGetViolationDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +250,7 @@ func (r *FMSGetViolationDetailsFuture) Get(ctx workflow.Context) (*fms.GetViolat
 }
 
 type FMSListAppsListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +261,7 @@ func (r *FMSListAppsListsFuture) Get(ctx workflow.Context) (*fms.ListAppsListsOu
 }
 
 type FMSListComplianceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +272,7 @@ func (r *FMSListComplianceStatusFuture) Get(ctx workflow.Context) (*fms.ListComp
 }
 
 type FMSListMemberAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +283,7 @@ func (r *FMSListMemberAccountsFuture) Get(ctx workflow.Context) (*fms.ListMember
 }
 
 type FMSListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +294,7 @@ func (r *FMSListPoliciesFuture) Get(ctx workflow.Context) (*fms.ListPoliciesOutp
 }
 
 type FMSListProtocolsListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +305,7 @@ func (r *FMSListProtocolsListsFuture) Get(ctx workflow.Context) (*fms.ListProtoc
 }
 
 type FMSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +316,7 @@ func (r *FMSListTagsForResourceFuture) Get(ctx workflow.Context) (*fms.ListTagsF
 }
 
 type FMSPutAppsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +327,7 @@ func (r *FMSPutAppsListFuture) Get(ctx workflow.Context) (*fms.PutAppsListOutput
 }
 
 type FMSPutNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +338,7 @@ func (r *FMSPutNotificationChannelFuture) Get(ctx workflow.Context) (*fms.PutNot
 }
 
 type FMSPutPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +349,7 @@ func (r *FMSPutPolicyFuture) Get(ctx workflow.Context) (*fms.PutPolicyOutput, er
 }
 
 type FMSPutProtocolsListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +360,7 @@ func (r *FMSPutProtocolsListFuture) Get(ctx workflow.Context) (*fms.PutProtocols
 }
 
 type FMSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +371,7 @@ func (r *FMSTagResourceFuture) Get(ctx workflow.Context) (*fms.TagResourceOutput
 }
 
 type FMSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

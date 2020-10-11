@@ -66,6 +66,7 @@ func NewLicenseManagerStub() LicenseManagerClient {
 }
 
 type LicenseManagerCreateLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +77,7 @@ func (r *LicenseManagerCreateLicenseConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type LicenseManagerDeleteLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +88,7 @@ func (r *LicenseManagerDeleteLicenseConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type LicenseManagerGetLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -96,6 +99,7 @@ func (r *LicenseManagerGetLicenseConfigurationFuture) Get(ctx workflow.Context) 
 }
 
 type LicenseManagerGetServiceSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +110,7 @@ func (r *LicenseManagerGetServiceSettingsFuture) Get(ctx workflow.Context) (*lic
 }
 
 type LicenseManagerListAssociationsForLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +121,7 @@ func (r *LicenseManagerListAssociationsForLicenseConfigurationFuture) Get(ctx wo
 }
 
 type LicenseManagerListFailuresForLicenseConfigurationOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +132,7 @@ func (r *LicenseManagerListFailuresForLicenseConfigurationOperationsFuture) Get(
 }
 
 type LicenseManagerListLicenseConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +143,7 @@ func (r *LicenseManagerListLicenseConfigurationsFuture) Get(ctx workflow.Context
 }
 
 type LicenseManagerListLicenseSpecificationsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +154,7 @@ func (r *LicenseManagerListLicenseSpecificationsForResourceFuture) Get(ctx workf
 }
 
 type LicenseManagerListResourceInventoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +165,7 @@ func (r *LicenseManagerListResourceInventoryFuture) Get(ctx workflow.Context) (*
 }
 
 type LicenseManagerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +176,7 @@ func (r *LicenseManagerListTagsForResourceFuture) Get(ctx workflow.Context) (*li
 }
 
 type LicenseManagerListUsageForLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +187,7 @@ func (r *LicenseManagerListUsageForLicenseConfigurationFuture) Get(ctx workflow.
 }
 
 type LicenseManagerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +198,7 @@ func (r *LicenseManagerTagResourceFuture) Get(ctx workflow.Context) (*licenseman
 }
 
 type LicenseManagerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +209,7 @@ func (r *LicenseManagerUntagResourceFuture) Get(ctx workflow.Context) (*licensem
 }
 
 type LicenseManagerUpdateLicenseConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +220,7 @@ func (r *LicenseManagerUpdateLicenseConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type LicenseManagerUpdateLicenseSpecificationsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +231,7 @@ func (r *LicenseManagerUpdateLicenseSpecificationsForResourceFuture) Get(ctx wor
 }
 
 type LicenseManagerUpdateServiceSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

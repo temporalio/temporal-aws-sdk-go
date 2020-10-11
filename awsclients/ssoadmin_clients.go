@@ -99,6 +99,7 @@ func NewSSOAdminStub() SSOAdminClient {
 }
 
 type SSOAdminAttachManagedPolicyToPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +110,7 @@ func (r *SSOAdminAttachManagedPolicyToPermissionSetFuture) Get(ctx workflow.Cont
 }
 
 type SSOAdminCreateAccountAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +121,7 @@ func (r *SSOAdminCreateAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoa
 }
 
 type SSOAdminCreatePermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +132,7 @@ func (r *SSOAdminCreatePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin
 }
 
 type SSOAdminDeleteAccountAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +143,7 @@ func (r *SSOAdminDeleteAccountAssignmentFuture) Get(ctx workflow.Context) (*ssoa
 }
 
 type SSOAdminDeleteInlinePolicyFromPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +154,7 @@ func (r *SSOAdminDeleteInlinePolicyFromPermissionSetFuture) Get(ctx workflow.Con
 }
 
 type SSOAdminDeletePermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +165,7 @@ func (r *SSOAdminDeletePermissionSetFuture) Get(ctx workflow.Context) (*ssoadmin
 }
 
 type SSOAdminDescribeAccountAssignmentCreationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +176,7 @@ func (r *SSOAdminDescribeAccountAssignmentCreationStatusFuture) Get(ctx workflow
 }
 
 type SSOAdminDescribeAccountAssignmentDeletionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +187,7 @@ func (r *SSOAdminDescribeAccountAssignmentDeletionStatusFuture) Get(ctx workflow
 }
 
 type SSOAdminDescribePermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +198,7 @@ func (r *SSOAdminDescribePermissionSetFuture) Get(ctx workflow.Context) (*ssoadm
 }
 
 type SSOAdminDescribePermissionSetProvisioningStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +209,7 @@ func (r *SSOAdminDescribePermissionSetProvisioningStatusFuture) Get(ctx workflow
 }
 
 type SSOAdminDetachManagedPolicyFromPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +220,7 @@ func (r *SSOAdminDetachManagedPolicyFromPermissionSetFuture) Get(ctx workflow.Co
 }
 
 type SSOAdminGetInlinePolicyForPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +231,7 @@ func (r *SSOAdminGetInlinePolicyForPermissionSetFuture) Get(ctx workflow.Context
 }
 
 type SSOAdminListAccountAssignmentCreationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +242,7 @@ func (r *SSOAdminListAccountAssignmentCreationStatusFuture) Get(ctx workflow.Con
 }
 
 type SSOAdminListAccountAssignmentDeletionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +253,7 @@ func (r *SSOAdminListAccountAssignmentDeletionStatusFuture) Get(ctx workflow.Con
 }
 
 type SSOAdminListAccountAssignmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +264,7 @@ func (r *SSOAdminListAccountAssignmentsFuture) Get(ctx workflow.Context) (*ssoad
 }
 
 type SSOAdminListAccountsForProvisionedPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +275,7 @@ func (r *SSOAdminListAccountsForProvisionedPermissionSetFuture) Get(ctx workflow
 }
 
 type SSOAdminListInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +286,7 @@ func (r *SSOAdminListInstancesFuture) Get(ctx workflow.Context) (*ssoadmin.ListI
 }
 
 type SSOAdminListManagedPoliciesInPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +297,7 @@ func (r *SSOAdminListManagedPoliciesInPermissionSetFuture) Get(ctx workflow.Cont
 }
 
 type SSOAdminListPermissionSetProvisioningStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +308,7 @@ func (r *SSOAdminListPermissionSetProvisioningStatusFuture) Get(ctx workflow.Con
 }
 
 type SSOAdminListPermissionSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +319,7 @@ func (r *SSOAdminListPermissionSetsFuture) Get(ctx workflow.Context) (*ssoadmin.
 }
 
 type SSOAdminListPermissionSetsProvisionedToAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +330,7 @@ func (r *SSOAdminListPermissionSetsProvisionedToAccountFuture) Get(ctx workflow.
 }
 
 type SSOAdminListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +341,7 @@ func (r *SSOAdminListTagsForResourceFuture) Get(ctx workflow.Context) (*ssoadmin
 }
 
 type SSOAdminProvisionPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +352,7 @@ func (r *SSOAdminProvisionPermissionSetFuture) Get(ctx workflow.Context) (*ssoad
 }
 
 type SSOAdminPutInlinePolicyToPermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +363,7 @@ func (r *SSOAdminPutInlinePolicyToPermissionSetFuture) Get(ctx workflow.Context)
 }
 
 type SSOAdminTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +374,7 @@ func (r *SSOAdminTagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.TagReso
 }
 
 type SSOAdminUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +385,7 @@ func (r *SSOAdminUntagResourceFuture) Get(ctx workflow.Context) (*ssoadmin.Untag
 }
 
 type SSOAdminUpdatePermissionSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

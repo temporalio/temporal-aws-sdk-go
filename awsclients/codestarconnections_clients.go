@@ -51,6 +51,7 @@ func NewCodeStarConnectionsStub() CodeStarConnectionsClient {
 }
 
 type CodeStarConnectionsCreateConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -61,6 +62,7 @@ func (r *CodeStarConnectionsCreateConnectionFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeStarConnectionsCreateHostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -71,6 +73,7 @@ func (r *CodeStarConnectionsCreateHostFuture) Get(ctx workflow.Context) (*codest
 }
 
 type CodeStarConnectionsDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -81,6 +84,7 @@ func (r *CodeStarConnectionsDeleteConnectionFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeStarConnectionsDeleteHostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +95,7 @@ func (r *CodeStarConnectionsDeleteHostFuture) Get(ctx workflow.Context) (*codest
 }
 
 type CodeStarConnectionsGetConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +106,7 @@ func (r *CodeStarConnectionsGetConnectionFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeStarConnectionsGetHostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +117,7 @@ func (r *CodeStarConnectionsGetHostFuture) Get(ctx workflow.Context) (*codestarc
 }
 
 type CodeStarConnectionsListConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +128,7 @@ func (r *CodeStarConnectionsListConnectionsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeStarConnectionsListHostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +139,7 @@ func (r *CodeStarConnectionsListHostsFuture) Get(ctx workflow.Context) (*codesta
 }
 
 type CodeStarConnectionsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +150,7 @@ func (r *CodeStarConnectionsListTagsForResourceFuture) Get(ctx workflow.Context)
 }
 
 type CodeStarConnectionsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +161,7 @@ func (r *CodeStarConnectionsTagResourceFuture) Get(ctx workflow.Context) (*codes
 }
 
 type CodeStarConnectionsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

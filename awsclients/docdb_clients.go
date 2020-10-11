@@ -150,6 +150,7 @@ func NewDocDBStub() DocDBClient {
 }
 
 type DocDBAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +161,7 @@ func (r *DocDBAddTagsToResourceFuture) Get(ctx workflow.Context) (*docdb.AddTags
 }
 
 type DocDBApplyPendingMaintenanceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +172,7 @@ func (r *DocDBApplyPendingMaintenanceActionFuture) Get(ctx workflow.Context) (*d
 }
 
 type DocDBCopyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +183,7 @@ func (r *DocDBCopyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*doc
 }
 
 type DocDBCopyDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +194,7 @@ func (r *DocDBCopyDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.Cop
 }
 
 type DocDBCreateDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -200,6 +205,7 @@ func (r *DocDBCreateDBClusterFuture) Get(ctx workflow.Context) (*docdb.CreateDBC
 }
 
 type DocDBCreateDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -210,6 +216,7 @@ func (r *DocDBCreateDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*d
 }
 
 type DocDBCreateDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -220,6 +227,7 @@ func (r *DocDBCreateDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.C
 }
 
 type DocDBCreateDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -230,6 +238,7 @@ func (r *DocDBCreateDBInstanceFuture) Get(ctx workflow.Context) (*docdb.CreateDB
 }
 
 type DocDBCreateDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -240,6 +249,7 @@ func (r *DocDBCreateDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.Creat
 }
 
 type DocDBDeleteDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -250,6 +260,7 @@ func (r *DocDBDeleteDBClusterFuture) Get(ctx workflow.Context) (*docdb.DeleteDBC
 }
 
 type DocDBDeleteDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -260,6 +271,7 @@ func (r *DocDBDeleteDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*d
 }
 
 type DocDBDeleteDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -270,6 +282,7 @@ func (r *DocDBDeleteDBClusterSnapshotFuture) Get(ctx workflow.Context) (*docdb.D
 }
 
 type DocDBDeleteDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -280,6 +293,7 @@ func (r *DocDBDeleteDBInstanceFuture) Get(ctx workflow.Context) (*docdb.DeleteDB
 }
 
 type DocDBDeleteDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -290,6 +304,7 @@ func (r *DocDBDeleteDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.Delet
 }
 
 type DocDBDescribeCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -300,6 +315,7 @@ func (r *DocDBDescribeCertificatesFuture) Get(ctx workflow.Context) (*docdb.Desc
 }
 
 type DocDBDescribeDBClusterParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -310,6 +326,7 @@ func (r *DocDBDescribeDBClusterParameterGroupsFuture) Get(ctx workflow.Context) 
 }
 
 type DocDBDescribeDBClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -320,6 +337,7 @@ func (r *DocDBDescribeDBClusterParametersFuture) Get(ctx workflow.Context) (*doc
 }
 
 type DocDBDescribeDBClusterSnapshotAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -330,6 +348,7 @@ func (r *DocDBDescribeDBClusterSnapshotAttributesFuture) Get(ctx workflow.Contex
 }
 
 type DocDBDescribeDBClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -340,6 +359,7 @@ func (r *DocDBDescribeDBClusterSnapshotsFuture) Get(ctx workflow.Context) (*docd
 }
 
 type DocDBDescribeDBClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -350,6 +370,7 @@ func (r *DocDBDescribeDBClustersFuture) Get(ctx workflow.Context) (*docdb.Descri
 }
 
 type DocDBDescribeDBEngineVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -360,6 +381,7 @@ func (r *DocDBDescribeDBEngineVersionsFuture) Get(ctx workflow.Context) (*docdb.
 }
 
 type DocDBDescribeDBInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -370,6 +392,7 @@ func (r *DocDBDescribeDBInstancesFuture) Get(ctx workflow.Context) (*docdb.Descr
 }
 
 type DocDBDescribeDBSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -380,6 +403,7 @@ func (r *DocDBDescribeDBSubnetGroupsFuture) Get(ctx workflow.Context) (*docdb.De
 }
 
 type DocDBDescribeEngineDefaultClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -390,6 +414,7 @@ func (r *DocDBDescribeEngineDefaultClusterParametersFuture) Get(ctx workflow.Con
 }
 
 type DocDBDescribeEventCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -400,6 +425,7 @@ func (r *DocDBDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*docdb.D
 }
 
 type DocDBDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -410,6 +436,7 @@ func (r *DocDBDescribeEventsFuture) Get(ctx workflow.Context) (*docdb.DescribeEv
 }
 
 type DocDBDescribeOrderableDBInstanceOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -420,6 +447,7 @@ func (r *DocDBDescribeOrderableDBInstanceOptionsFuture) Get(ctx workflow.Context
 }
 
 type DocDBDescribePendingMaintenanceActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -430,6 +458,7 @@ func (r *DocDBDescribePendingMaintenanceActionsFuture) Get(ctx workflow.Context)
 }
 
 type DocDBFailoverDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -440,6 +469,7 @@ func (r *DocDBFailoverDBClusterFuture) Get(ctx workflow.Context) (*docdb.Failove
 }
 
 type DocDBListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -450,6 +480,7 @@ func (r *DocDBListTagsForResourceFuture) Get(ctx workflow.Context) (*docdb.ListT
 }
 
 type DocDBModifyDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -460,6 +491,7 @@ func (r *DocDBModifyDBClusterFuture) Get(ctx workflow.Context) (*docdb.ModifyDBC
 }
 
 type DocDBModifyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -470,6 +502,7 @@ func (r *DocDBModifyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*d
 }
 
 type DocDBModifyDBClusterSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -480,6 +513,7 @@ func (r *DocDBModifyDBClusterSnapshotAttributeFuture) Get(ctx workflow.Context) 
 }
 
 type DocDBModifyDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -490,6 +524,7 @@ func (r *DocDBModifyDBInstanceFuture) Get(ctx workflow.Context) (*docdb.ModifyDB
 }
 
 type DocDBModifyDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -500,6 +535,7 @@ func (r *DocDBModifyDBSubnetGroupFuture) Get(ctx workflow.Context) (*docdb.Modif
 }
 
 type DocDBRebootDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -510,6 +546,7 @@ func (r *DocDBRebootDBInstanceFuture) Get(ctx workflow.Context) (*docdb.RebootDB
 }
 
 type DocDBRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -520,6 +557,7 @@ func (r *DocDBRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*docdb.Re
 }
 
 type DocDBResetDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -530,6 +568,7 @@ func (r *DocDBResetDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*do
 }
 
 type DocDBRestoreDBClusterFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -540,6 +579,7 @@ func (r *DocDBRestoreDBClusterFromSnapshotFuture) Get(ctx workflow.Context) (*do
 }
 
 type DocDBRestoreDBClusterToPointInTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -550,6 +590,7 @@ func (r *DocDBRestoreDBClusterToPointInTimeFuture) Get(ctx workflow.Context) (*d
 }
 
 type DocDBStartDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -560,6 +601,7 @@ func (r *DocDBStartDBClusterFuture) Get(ctx workflow.Context) (*docdb.StartDBClu
 }
 
 type DocDBStopDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

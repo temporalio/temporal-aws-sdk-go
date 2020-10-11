@@ -159,6 +159,7 @@ func NewWorkMailStub() WorkMailClient {
 }
 
 type WorkMailAssociateDelegateToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +170,7 @@ func (r *WorkMailAssociateDelegateToResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type WorkMailAssociateMemberToGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +181,7 @@ func (r *WorkMailAssociateMemberToGroupFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailCancelMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +192,7 @@ func (r *WorkMailCancelMailboxExportJobFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailCreateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +203,7 @@ func (r *WorkMailCreateAliasFuture) Get(ctx workflow.Context) (*workmail.CreateA
 }
 
 type WorkMailCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +214,7 @@ func (r *WorkMailCreateGroupFuture) Get(ctx workflow.Context) (*workmail.CreateG
 }
 
 type WorkMailCreateResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +225,7 @@ func (r *WorkMailCreateResourceFuture) Get(ctx workflow.Context) (*workmail.Crea
 }
 
 type WorkMailCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +236,7 @@ func (r *WorkMailCreateUserFuture) Get(ctx workflow.Context) (*workmail.CreateUs
 }
 
 type WorkMailDeleteAccessControlRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +247,7 @@ func (r *WorkMailDeleteAccessControlRuleFuture) Get(ctx workflow.Context) (*work
 }
 
 type WorkMailDeleteAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +258,7 @@ func (r *WorkMailDeleteAliasFuture) Get(ctx workflow.Context) (*workmail.DeleteA
 }
 
 type WorkMailDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +269,7 @@ func (r *WorkMailDeleteGroupFuture) Get(ctx workflow.Context) (*workmail.DeleteG
 }
 
 type WorkMailDeleteMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +280,7 @@ func (r *WorkMailDeleteMailboxPermissionsFuture) Get(ctx workflow.Context) (*wor
 }
 
 type WorkMailDeleteResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +291,7 @@ func (r *WorkMailDeleteResourceFuture) Get(ctx workflow.Context) (*workmail.Dele
 }
 
 type WorkMailDeleteRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +302,7 @@ func (r *WorkMailDeleteRetentionPolicyFuture) Get(ctx workflow.Context) (*workma
 }
 
 type WorkMailDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +313,7 @@ func (r *WorkMailDeleteUserFuture) Get(ctx workflow.Context) (*workmail.DeleteUs
 }
 
 type WorkMailDeregisterFromWorkMailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +324,7 @@ func (r *WorkMailDeregisterFromWorkMailFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailDescribeGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +335,7 @@ func (r *WorkMailDescribeGroupFuture) Get(ctx workflow.Context) (*workmail.Descr
 }
 
 type WorkMailDescribeMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +346,7 @@ func (r *WorkMailDescribeMailboxExportJobFuture) Get(ctx workflow.Context) (*wor
 }
 
 type WorkMailDescribeOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +357,7 @@ func (r *WorkMailDescribeOrganizationFuture) Get(ctx workflow.Context) (*workmai
 }
 
 type WorkMailDescribeResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +368,7 @@ func (r *WorkMailDescribeResourceFuture) Get(ctx workflow.Context) (*workmail.De
 }
 
 type WorkMailDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +379,7 @@ func (r *WorkMailDescribeUserFuture) Get(ctx workflow.Context) (*workmail.Descri
 }
 
 type WorkMailDisassociateDelegateFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +390,7 @@ func (r *WorkMailDisassociateDelegateFromResourceFuture) Get(ctx workflow.Contex
 }
 
 type WorkMailDisassociateMemberFromGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +401,7 @@ func (r *WorkMailDisassociateMemberFromGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type WorkMailGetAccessControlEffectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +412,7 @@ func (r *WorkMailGetAccessControlEffectFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailGetDefaultRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +423,7 @@ func (r *WorkMailGetDefaultRetentionPolicyFuture) Get(ctx workflow.Context) (*wo
 }
 
 type WorkMailGetMailboxDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +434,7 @@ func (r *WorkMailGetMailboxDetailsFuture) Get(ctx workflow.Context) (*workmail.G
 }
 
 type WorkMailListAccessControlRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +445,7 @@ func (r *WorkMailListAccessControlRulesFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailListAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +456,7 @@ func (r *WorkMailListAliasesFuture) Get(ctx workflow.Context) (*workmail.ListAli
 }
 
 type WorkMailListGroupMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +467,7 @@ func (r *WorkMailListGroupMembersFuture) Get(ctx workflow.Context) (*workmail.Li
 }
 
 type WorkMailListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +478,7 @@ func (r *WorkMailListGroupsFuture) Get(ctx workflow.Context) (*workmail.ListGrou
 }
 
 type WorkMailListMailboxExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +489,7 @@ func (r *WorkMailListMailboxExportJobsFuture) Get(ctx workflow.Context) (*workma
 }
 
 type WorkMailListMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +500,7 @@ func (r *WorkMailListMailboxPermissionsFuture) Get(ctx workflow.Context) (*workm
 }
 
 type WorkMailListOrganizationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +511,7 @@ func (r *WorkMailListOrganizationsFuture) Get(ctx workflow.Context) (*workmail.L
 }
 
 type WorkMailListResourceDelegatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +522,7 @@ func (r *WorkMailListResourceDelegatesFuture) Get(ctx workflow.Context) (*workma
 }
 
 type WorkMailListResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +533,7 @@ func (r *WorkMailListResourcesFuture) Get(ctx workflow.Context) (*workmail.ListR
 }
 
 type WorkMailListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +544,7 @@ func (r *WorkMailListTagsForResourceFuture) Get(ctx workflow.Context) (*workmail
 }
 
 type WorkMailListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +555,7 @@ func (r *WorkMailListUsersFuture) Get(ctx workflow.Context) (*workmail.ListUsers
 }
 
 type WorkMailPutAccessControlRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +566,7 @@ func (r *WorkMailPutAccessControlRuleFuture) Get(ctx workflow.Context) (*workmai
 }
 
 type WorkMailPutMailboxPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +577,7 @@ func (r *WorkMailPutMailboxPermissionsFuture) Get(ctx workflow.Context) (*workma
 }
 
 type WorkMailPutRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +588,7 @@ func (r *WorkMailPutRetentionPolicyFuture) Get(ctx workflow.Context) (*workmail.
 }
 
 type WorkMailRegisterToWorkMailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +599,7 @@ func (r *WorkMailRegisterToWorkMailFuture) Get(ctx workflow.Context) (*workmail.
 }
 
 type WorkMailResetPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +610,7 @@ func (r *WorkMailResetPasswordFuture) Get(ctx workflow.Context) (*workmail.Reset
 }
 
 type WorkMailStartMailboxExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +621,7 @@ func (r *WorkMailStartMailboxExportJobFuture) Get(ctx workflow.Context) (*workma
 }
 
 type WorkMailTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +632,7 @@ func (r *WorkMailTagResourceFuture) Get(ctx workflow.Context) (*workmail.TagReso
 }
 
 type WorkMailUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +643,7 @@ func (r *WorkMailUntagResourceFuture) Get(ctx workflow.Context) (*workmail.Untag
 }
 
 type WorkMailUpdateMailboxQuotaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +654,7 @@ func (r *WorkMailUpdateMailboxQuotaFuture) Get(ctx workflow.Context) (*workmail.
 }
 
 type WorkMailUpdatePrimaryEmailAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +665,7 @@ func (r *WorkMailUpdatePrimaryEmailAddressFuture) Get(ctx workflow.Context) (*wo
 }
 
 type WorkMailUpdateResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

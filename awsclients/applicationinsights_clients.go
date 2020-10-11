@@ -99,6 +99,7 @@ func NewApplicationInsightsStub() ApplicationInsightsClient {
 }
 
 type ApplicationInsightsCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +110,7 @@ func (r *ApplicationInsightsCreateApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type ApplicationInsightsCreateComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +121,7 @@ func (r *ApplicationInsightsCreateComponentFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApplicationInsightsCreateLogPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +132,7 @@ func (r *ApplicationInsightsCreateLogPatternFuture) Get(ctx workflow.Context) (*
 }
 
 type ApplicationInsightsDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +143,7 @@ func (r *ApplicationInsightsDeleteApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type ApplicationInsightsDeleteComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +154,7 @@ func (r *ApplicationInsightsDeleteComponentFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApplicationInsightsDeleteLogPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +165,7 @@ func (r *ApplicationInsightsDeleteLogPatternFuture) Get(ctx workflow.Context) (*
 }
 
 type ApplicationInsightsDescribeApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +176,7 @@ func (r *ApplicationInsightsDescribeApplicationFuture) Get(ctx workflow.Context)
 }
 
 type ApplicationInsightsDescribeComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +187,7 @@ func (r *ApplicationInsightsDescribeComponentFuture) Get(ctx workflow.Context) (
 }
 
 type ApplicationInsightsDescribeComponentConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +198,7 @@ func (r *ApplicationInsightsDescribeComponentConfigurationFuture) Get(ctx workfl
 }
 
 type ApplicationInsightsDescribeComponentConfigurationRecommendationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +209,7 @@ func (r *ApplicationInsightsDescribeComponentConfigurationRecommendationFuture) 
 }
 
 type ApplicationInsightsDescribeLogPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +220,7 @@ func (r *ApplicationInsightsDescribeLogPatternFuture) Get(ctx workflow.Context) 
 }
 
 type ApplicationInsightsDescribeObservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +231,7 @@ func (r *ApplicationInsightsDescribeObservationFuture) Get(ctx workflow.Context)
 }
 
 type ApplicationInsightsDescribeProblemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +242,7 @@ func (r *ApplicationInsightsDescribeProblemFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApplicationInsightsDescribeProblemObservationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +253,7 @@ func (r *ApplicationInsightsDescribeProblemObservationsFuture) Get(ctx workflow.
 }
 
 type ApplicationInsightsListApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +264,7 @@ func (r *ApplicationInsightsListApplicationsFuture) Get(ctx workflow.Context) (*
 }
 
 type ApplicationInsightsListComponentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +275,7 @@ func (r *ApplicationInsightsListComponentsFuture) Get(ctx workflow.Context) (*ap
 }
 
 type ApplicationInsightsListConfigurationHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +286,7 @@ func (r *ApplicationInsightsListConfigurationHistoryFuture) Get(ctx workflow.Con
 }
 
 type ApplicationInsightsListLogPatternSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +297,7 @@ func (r *ApplicationInsightsListLogPatternSetsFuture) Get(ctx workflow.Context) 
 }
 
 type ApplicationInsightsListLogPatternsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +308,7 @@ func (r *ApplicationInsightsListLogPatternsFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApplicationInsightsListProblemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +319,7 @@ func (r *ApplicationInsightsListProblemsFuture) Get(ctx workflow.Context) (*appl
 }
 
 type ApplicationInsightsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +330,7 @@ func (r *ApplicationInsightsListTagsForResourceFuture) Get(ctx workflow.Context)
 }
 
 type ApplicationInsightsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +341,7 @@ func (r *ApplicationInsightsTagResourceFuture) Get(ctx workflow.Context) (*appli
 }
 
 type ApplicationInsightsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +352,7 @@ func (r *ApplicationInsightsUntagResourceFuture) Get(ctx workflow.Context) (*app
 }
 
 type ApplicationInsightsUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +363,7 @@ func (r *ApplicationInsightsUpdateApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type ApplicationInsightsUpdateComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +374,7 @@ func (r *ApplicationInsightsUpdateComponentFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApplicationInsightsUpdateComponentConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +385,7 @@ func (r *ApplicationInsightsUpdateComponentConfigurationFuture) Get(ctx workflow
 }
 
 type ApplicationInsightsUpdateLogPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

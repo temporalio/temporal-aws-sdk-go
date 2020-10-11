@@ -21,6 +21,7 @@ func NewMobileAnalyticsStub() MobileAnalyticsClient {
 }
 
 type MobileAnalyticsPutEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

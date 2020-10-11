@@ -129,6 +129,7 @@ func NewCodePipelineStub() CodePipelineClient {
 }
 
 type CodePipelineAcknowledgeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *CodePipelineAcknowledgeJobFuture) Get(ctx workflow.Context) (*codepipel
 }
 
 type CodePipelineAcknowledgeThirdPartyJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *CodePipelineAcknowledgeThirdPartyJobFuture) Get(ctx workflow.Context) (
 }
 
 type CodePipelineCreateCustomActionTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *CodePipelineCreateCustomActionTypeFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodePipelineCreatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *CodePipelineCreatePipelineFuture) Get(ctx workflow.Context) (*codepipel
 }
 
 type CodePipelineDeleteCustomActionTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *CodePipelineDeleteCustomActionTypeFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodePipelineDeletePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *CodePipelineDeletePipelineFuture) Get(ctx workflow.Context) (*codepipel
 }
 
 type CodePipelineDeleteWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *CodePipelineDeleteWebhookFuture) Get(ctx workflow.Context) (*codepipeli
 }
 
 type CodePipelineDeregisterWebhookWithThirdPartyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *CodePipelineDeregisterWebhookWithThirdPartyFuture) Get(ctx workflow.Con
 }
 
 type CodePipelineDisableStageTransitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *CodePipelineDisableStageTransitionFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodePipelineEnableStageTransitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *CodePipelineEnableStageTransitionFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodePipelineGetJobDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *CodePipelineGetJobDetailsFuture) Get(ctx workflow.Context) (*codepipeli
 }
 
 type CodePipelineGetPipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *CodePipelineGetPipelineFuture) Get(ctx workflow.Context) (*codepipeline
 }
 
 type CodePipelineGetPipelineExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *CodePipelineGetPipelineExecutionFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodePipelineGetPipelineStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *CodePipelineGetPipelineStateFuture) Get(ctx workflow.Context) (*codepip
 }
 
 type CodePipelineGetThirdPartyJobDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *CodePipelineGetThirdPartyJobDetailsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodePipelineListActionExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *CodePipelineListActionExecutionsFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodePipelineListActionTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *CodePipelineListActionTypesFuture) Get(ctx workflow.Context) (*codepipe
 }
 
 type CodePipelineListPipelineExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *CodePipelineListPipelineExecutionsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodePipelineListPipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *CodePipelineListPipelinesFuture) Get(ctx workflow.Context) (*codepipeli
 }
 
 type CodePipelineListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *CodePipelineListTagsForResourceFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodePipelineListWebhooksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *CodePipelineListWebhooksFuture) Get(ctx workflow.Context) (*codepipelin
 }
 
 type CodePipelinePollForJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *CodePipelinePollForJobsFuture) Get(ctx workflow.Context) (*codepipeline
 }
 
 type CodePipelinePollForThirdPartyJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *CodePipelinePollForThirdPartyJobsFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodePipelinePutActionRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *CodePipelinePutActionRevisionFuture) Get(ctx workflow.Context) (*codepi
 }
 
 type CodePipelinePutApprovalResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *CodePipelinePutApprovalResultFuture) Get(ctx workflow.Context) (*codepi
 }
 
 type CodePipelinePutJobFailureResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *CodePipelinePutJobFailureResultFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodePipelinePutJobSuccessResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *CodePipelinePutJobSuccessResultFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodePipelinePutThirdPartyJobFailureResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *CodePipelinePutThirdPartyJobFailureResultFuture) Get(ctx workflow.Conte
 }
 
 type CodePipelinePutThirdPartyJobSuccessResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *CodePipelinePutThirdPartyJobSuccessResultFuture) Get(ctx workflow.Conte
 }
 
 type CodePipelinePutWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *CodePipelinePutWebhookFuture) Get(ctx workflow.Context) (*codepipeline.
 }
 
 type CodePipelineRegisterWebhookWithThirdPartyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *CodePipelineRegisterWebhookWithThirdPartyFuture) Get(ctx workflow.Conte
 }
 
 type CodePipelineRetryStageExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *CodePipelineRetryStageExecutionFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodePipelineStartPipelineExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *CodePipelineStartPipelineExecutionFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodePipelineStopPipelineExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *CodePipelineStopPipelineExecutionFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodePipelineTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *CodePipelineTagResourceFuture) Get(ctx workflow.Context) (*codepipeline
 }
 
 type CodePipelineUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *CodePipelineUntagResourceFuture) Get(ctx workflow.Context) (*codepipeli
 }
 
 type CodePipelineUpdatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

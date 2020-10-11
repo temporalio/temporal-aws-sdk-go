@@ -114,6 +114,7 @@ func NewS3ControlStub() S3ControlClient {
 }
 
 type S3ControlCreateAccessPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *S3ControlCreateAccessPointFuture) Get(ctx workflow.Context) (*s3control
 }
 
 type S3ControlCreateBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *S3ControlCreateBucketFuture) Get(ctx workflow.Context) (*s3control.Crea
 }
 
 type S3ControlCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *S3ControlCreateJobFuture) Get(ctx workflow.Context) (*s3control.CreateJ
 }
 
 type S3ControlDeleteAccessPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *S3ControlDeleteAccessPointFuture) Get(ctx workflow.Context) (*s3control
 }
 
 type S3ControlDeleteAccessPointPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *S3ControlDeleteAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3c
 }
 
 type S3ControlDeleteBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *S3ControlDeleteBucketFuture) Get(ctx workflow.Context) (*s3control.Dele
 }
 
 type S3ControlDeleteBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *S3ControlDeleteBucketLifecycleConfigurationFuture) Get(ctx workflow.Con
 }
 
 type S3ControlDeleteBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *S3ControlDeleteBucketPolicyFuture) Get(ctx workflow.Context) (*s3contro
 }
 
 type S3ControlDeleteBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *S3ControlDeleteBucketTaggingFuture) Get(ctx workflow.Context) (*s3contr
 }
 
 type S3ControlDeleteJobTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *S3ControlDeleteJobTaggingFuture) Get(ctx workflow.Context) (*s3control.
 }
 
 type S3ControlDeletePublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *S3ControlDeletePublicAccessBlockFuture) Get(ctx workflow.Context) (*s3c
 }
 
 type S3ControlDescribeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *S3ControlDescribeJobFuture) Get(ctx workflow.Context) (*s3control.Descr
 }
 
 type S3ControlGetAccessPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *S3ControlGetAccessPointFuture) Get(ctx workflow.Context) (*s3control.Ge
 }
 
 type S3ControlGetAccessPointPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *S3ControlGetAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3cont
 }
 
 type S3ControlGetAccessPointPolicyStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *S3ControlGetAccessPointPolicyStatusFuture) Get(ctx workflow.Context) (*
 }
 
 type S3ControlGetBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *S3ControlGetBucketFuture) Get(ctx workflow.Context) (*s3control.GetBuck
 }
 
 type S3ControlGetBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *S3ControlGetBucketLifecycleConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type S3ControlGetBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *S3ControlGetBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.G
 }
 
 type S3ControlGetBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *S3ControlGetBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.
 }
 
 type S3ControlGetJobTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *S3ControlGetJobTaggingFuture) Get(ctx workflow.Context) (*s3control.Get
 }
 
 type S3ControlGetPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *S3ControlGetPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3cont
 }
 
 type S3ControlListAccessPointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *S3ControlListAccessPointsFuture) Get(ctx workflow.Context) (*s3control.
 }
 
 type S3ControlListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *S3ControlListJobsFuture) Get(ctx workflow.Context) (*s3control.ListJobs
 }
 
 type S3ControlListRegionalBucketsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *S3ControlListRegionalBucketsFuture) Get(ctx workflow.Context) (*s3contr
 }
 
 type S3ControlPutAccessPointPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *S3ControlPutAccessPointPolicyFuture) Get(ctx workflow.Context) (*s3cont
 }
 
 type S3ControlPutBucketLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *S3ControlPutBucketLifecycleConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type S3ControlPutBucketPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *S3ControlPutBucketPolicyFuture) Get(ctx workflow.Context) (*s3control.P
 }
 
 type S3ControlPutBucketTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +422,7 @@ func (r *S3ControlPutBucketTaggingFuture) Get(ctx workflow.Context) (*s3control.
 }
 
 type S3ControlPutJobTaggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +433,7 @@ func (r *S3ControlPutJobTaggingFuture) Get(ctx workflow.Context) (*s3control.Put
 }
 
 type S3ControlPutPublicAccessBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +444,7 @@ func (r *S3ControlPutPublicAccessBlockFuture) Get(ctx workflow.Context) (*s3cont
 }
 
 type S3ControlUpdateJobPriorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +455,7 @@ func (r *S3ControlUpdateJobPriorityFuture) Get(ctx workflow.Context) (*s3control
 }
 
 type S3ControlUpdateJobStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -375,6 +375,7 @@ func NewChimeStub() ChimeClient {
 }
 
 type ChimeAssociatePhoneNumberWithUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +386,7 @@ func (r *ChimeAssociatePhoneNumberWithUserFuture) Get(ctx workflow.Context) (*ch
 }
 
 type ChimeAssociatePhoneNumbersWithVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +397,7 @@ func (r *ChimeAssociatePhoneNumbersWithVoiceConnectorFuture) Get(ctx workflow.Co
 }
 
 type ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +408,7 @@ func (r *ChimeAssociatePhoneNumbersWithVoiceConnectorGroupFuture) Get(ctx workfl
 }
 
 type ChimeAssociateSigninDelegateGroupsWithAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +419,7 @@ func (r *ChimeAssociateSigninDelegateGroupsWithAccountFuture) Get(ctx workflow.C
 }
 
 type ChimeBatchCreateAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +430,7 @@ func (r *ChimeBatchCreateAttendeeFuture) Get(ctx workflow.Context) (*chime.Batch
 }
 
 type ChimeBatchCreateRoomMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +441,7 @@ func (r *ChimeBatchCreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeBatchDeletePhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +452,7 @@ func (r *ChimeBatchDeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.Ba
 }
 
 type ChimeBatchSuspendUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +463,7 @@ func (r *ChimeBatchSuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchSus
 }
 
 type ChimeBatchUnsuspendUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +474,7 @@ func (r *ChimeBatchUnsuspendUserFuture) Get(ctx workflow.Context) (*chime.BatchU
 }
 
 type ChimeBatchUpdatePhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +485,7 @@ func (r *ChimeBatchUpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.Ba
 }
 
 type ChimeBatchUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +496,7 @@ func (r *ChimeBatchUpdateUserFuture) Get(ctx workflow.Context) (*chime.BatchUpda
 }
 
 type ChimeCreateAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +507,7 @@ func (r *ChimeCreateAccountFuture) Get(ctx workflow.Context) (*chime.CreateAccou
 }
 
 type ChimeCreateAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +518,7 @@ func (r *ChimeCreateAttendeeFuture) Get(ctx workflow.Context) (*chime.CreateAtte
 }
 
 type ChimeCreateBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +529,7 @@ func (r *ChimeCreateBotFuture) Get(ctx workflow.Context) (*chime.CreateBotOutput
 }
 
 type ChimeCreateMeetingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -525,6 +540,7 @@ func (r *ChimeCreateMeetingFuture) Get(ctx workflow.Context) (*chime.CreateMeeti
 }
 
 type ChimeCreateMeetingWithAttendeesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -535,6 +551,7 @@ func (r *ChimeCreateMeetingWithAttendeesFuture) Get(ctx workflow.Context) (*chim
 }
 
 type ChimeCreatePhoneNumberOrderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -545,6 +562,7 @@ func (r *ChimeCreatePhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.Cr
 }
 
 type ChimeCreateProxySessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -555,6 +573,7 @@ func (r *ChimeCreateProxySessionFuture) Get(ctx workflow.Context) (*chime.Create
 }
 
 type ChimeCreateRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -565,6 +584,7 @@ func (r *ChimeCreateRoomFuture) Get(ctx workflow.Context) (*chime.CreateRoomOutp
 }
 
 type ChimeCreateRoomMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -575,6 +595,7 @@ func (r *ChimeCreateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.Crea
 }
 
 type ChimeCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -585,6 +606,7 @@ func (r *ChimeCreateUserFuture) Get(ctx workflow.Context) (*chime.CreateUserOutp
 }
 
 type ChimeCreateVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -595,6 +617,7 @@ func (r *ChimeCreateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.Crea
 }
 
 type ChimeCreateVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -605,6 +628,7 @@ func (r *ChimeCreateVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeDeleteAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -615,6 +639,7 @@ func (r *ChimeDeleteAccountFuture) Get(ctx workflow.Context) (*chime.DeleteAccou
 }
 
 type ChimeDeleteAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -625,6 +650,7 @@ func (r *ChimeDeleteAttendeeFuture) Get(ctx workflow.Context) (*chime.DeleteAtte
 }
 
 type ChimeDeleteEventsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -635,6 +661,7 @@ func (r *ChimeDeleteEventsConfigurationFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeDeleteMeetingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -645,6 +672,7 @@ func (r *ChimeDeleteMeetingFuture) Get(ctx workflow.Context) (*chime.DeleteMeeti
 }
 
 type ChimeDeletePhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -655,6 +683,7 @@ func (r *ChimeDeletePhoneNumberFuture) Get(ctx workflow.Context) (*chime.DeleteP
 }
 
 type ChimeDeleteProxySessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -665,6 +694,7 @@ func (r *ChimeDeleteProxySessionFuture) Get(ctx workflow.Context) (*chime.Delete
 }
 
 type ChimeDeleteRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -675,6 +705,7 @@ func (r *ChimeDeleteRoomFuture) Get(ctx workflow.Context) (*chime.DeleteRoomOutp
 }
 
 type ChimeDeleteRoomMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -685,6 +716,7 @@ func (r *ChimeDeleteRoomMembershipFuture) Get(ctx workflow.Context) (*chime.Dele
 }
 
 type ChimeDeleteVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -695,6 +727,7 @@ func (r *ChimeDeleteVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.Dele
 }
 
 type ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -705,6 +738,7 @@ func (r *ChimeDeleteVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx w
 }
 
 type ChimeDeleteVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -715,6 +749,7 @@ func (r *ChimeDeleteVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeDeleteVoiceConnectorOriginationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -725,6 +760,7 @@ func (r *ChimeDeleteVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (
 }
 
 type ChimeDeleteVoiceConnectorProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -735,6 +771,7 @@ func (r *ChimeDeleteVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeDeleteVoiceConnectorStreamingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -745,6 +782,7 @@ func (r *ChimeDeleteVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow
 }
 
 type ChimeDeleteVoiceConnectorTerminationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -755,6 +793,7 @@ func (r *ChimeDeleteVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (
 }
 
 type ChimeDeleteVoiceConnectorTerminationCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -765,6 +804,7 @@ func (r *ChimeDeleteVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow
 }
 
 type ChimeDisassociatePhoneNumberFromUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -775,6 +815,7 @@ func (r *ChimeDisassociatePhoneNumberFromUserFuture) Get(ctx workflow.Context) (
 }
 
 type ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -785,6 +826,7 @@ func (r *ChimeDisassociatePhoneNumbersFromVoiceConnectorFuture) Get(ctx workflow
 }
 
 type ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -795,6 +837,7 @@ func (r *ChimeDisassociatePhoneNumbersFromVoiceConnectorGroupFuture) Get(ctx wor
 }
 
 type ChimeDisassociateSigninDelegateGroupsFromAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -805,6 +848,7 @@ func (r *ChimeDisassociateSigninDelegateGroupsFromAccountFuture) Get(ctx workflo
 }
 
 type ChimeGetAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -815,6 +859,7 @@ func (r *ChimeGetAccountFuture) Get(ctx workflow.Context) (*chime.GetAccountOutp
 }
 
 type ChimeGetAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -825,6 +870,7 @@ func (r *ChimeGetAccountSettingsFuture) Get(ctx workflow.Context) (*chime.GetAcc
 }
 
 type ChimeGetAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -835,6 +881,7 @@ func (r *ChimeGetAttendeeFuture) Get(ctx workflow.Context) (*chime.GetAttendeeOu
 }
 
 type ChimeGetBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -845,6 +892,7 @@ func (r *ChimeGetBotFuture) Get(ctx workflow.Context) (*chime.GetBotOutput, erro
 }
 
 type ChimeGetEventsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -855,6 +903,7 @@ func (r *ChimeGetEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.Ge
 }
 
 type ChimeGetGlobalSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -865,6 +914,7 @@ func (r *ChimeGetGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.GetGlob
 }
 
 type ChimeGetMeetingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -875,6 +925,7 @@ func (r *ChimeGetMeetingFuture) Get(ctx workflow.Context) (*chime.GetMeetingOutp
 }
 
 type ChimeGetPhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -885,6 +936,7 @@ func (r *ChimeGetPhoneNumberFuture) Get(ctx workflow.Context) (*chime.GetPhoneNu
 }
 
 type ChimeGetPhoneNumberOrderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -895,6 +947,7 @@ func (r *ChimeGetPhoneNumberOrderFuture) Get(ctx workflow.Context) (*chime.GetPh
 }
 
 type ChimeGetPhoneNumberSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -905,6 +958,7 @@ func (r *ChimeGetPhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime.Ge
 }
 
 type ChimeGetProxySessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -915,6 +969,7 @@ func (r *ChimeGetProxySessionFuture) Get(ctx workflow.Context) (*chime.GetProxyS
 }
 
 type ChimeGetRetentionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -925,6 +980,7 @@ func (r *ChimeGetRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.GetR
 }
 
 type ChimeGetRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -935,6 +991,7 @@ func (r *ChimeGetRoomFuture) Get(ctx workflow.Context) (*chime.GetRoomOutput, er
 }
 
 type ChimeGetUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -945,6 +1002,7 @@ func (r *ChimeGetUserFuture) Get(ctx workflow.Context) (*chime.GetUserOutput, er
 }
 
 type ChimeGetUserSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -955,6 +1013,7 @@ func (r *ChimeGetUserSettingsFuture) Get(ctx workflow.Context) (*chime.GetUserSe
 }
 
 type ChimeGetVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -965,6 +1024,7 @@ func (r *ChimeGetVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.GetVoic
 }
 
 type ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -975,6 +1035,7 @@ func (r *ChimeGetVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx work
 }
 
 type ChimeGetVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -985,6 +1046,7 @@ func (r *ChimeGetVoiceConnectorGroupFuture) Get(ctx workflow.Context) (*chime.Ge
 }
 
 type ChimeGetVoiceConnectorLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -995,6 +1057,7 @@ func (r *ChimeGetVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type ChimeGetVoiceConnectorOriginationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1005,6 +1068,7 @@ func (r *ChimeGetVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*ch
 }
 
 type ChimeGetVoiceConnectorProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1015,6 +1079,7 @@ func (r *ChimeGetVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.Ge
 }
 
 type ChimeGetVoiceConnectorStreamingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1025,6 +1090,7 @@ func (r *ChimeGetVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Co
 }
 
 type ChimeGetVoiceConnectorTerminationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1035,6 +1101,7 @@ func (r *ChimeGetVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*ch
 }
 
 type ChimeGetVoiceConnectorTerminationHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1045,6 +1112,7 @@ func (r *ChimeGetVoiceConnectorTerminationHealthFuture) Get(ctx workflow.Context
 }
 
 type ChimeInviteUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1055,6 +1123,7 @@ func (r *ChimeInviteUsersFuture) Get(ctx workflow.Context) (*chime.InviteUsersOu
 }
 
 type ChimeListAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1065,6 +1134,7 @@ func (r *ChimeListAccountsFuture) Get(ctx workflow.Context) (*chime.ListAccounts
 }
 
 type ChimeListAttendeeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1075,6 +1145,7 @@ func (r *ChimeListAttendeeTagsFuture) Get(ctx workflow.Context) (*chime.ListAtte
 }
 
 type ChimeListAttendeesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1085,6 +1156,7 @@ func (r *ChimeListAttendeesFuture) Get(ctx workflow.Context) (*chime.ListAttende
 }
 
 type ChimeListBotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1095,6 +1167,7 @@ func (r *ChimeListBotsFuture) Get(ctx workflow.Context) (*chime.ListBotsOutput, 
 }
 
 type ChimeListMeetingTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1105,6 +1178,7 @@ func (r *ChimeListMeetingTagsFuture) Get(ctx workflow.Context) (*chime.ListMeeti
 }
 
 type ChimeListMeetingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1115,6 +1189,7 @@ func (r *ChimeListMeetingsFuture) Get(ctx workflow.Context) (*chime.ListMeetings
 }
 
 type ChimeListPhoneNumberOrdersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1125,6 +1200,7 @@ func (r *ChimeListPhoneNumberOrdersFuture) Get(ctx workflow.Context) (*chime.Lis
 }
 
 type ChimeListPhoneNumbersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1135,6 +1211,7 @@ func (r *ChimeListPhoneNumbersFuture) Get(ctx workflow.Context) (*chime.ListPhon
 }
 
 type ChimeListProxySessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1145,6 +1222,7 @@ func (r *ChimeListProxySessionsFuture) Get(ctx workflow.Context) (*chime.ListPro
 }
 
 type ChimeListRoomMembershipsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1155,6 +1233,7 @@ func (r *ChimeListRoomMembershipsFuture) Get(ctx workflow.Context) (*chime.ListR
 }
 
 type ChimeListRoomsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1165,6 +1244,7 @@ func (r *ChimeListRoomsFuture) Get(ctx workflow.Context) (*chime.ListRoomsOutput
 }
 
 type ChimeListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1175,6 +1255,7 @@ func (r *ChimeListTagsForResourceFuture) Get(ctx workflow.Context) (*chime.ListT
 }
 
 type ChimeListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1185,6 +1266,7 @@ func (r *ChimeListUsersFuture) Get(ctx workflow.Context) (*chime.ListUsersOutput
 }
 
 type ChimeListVoiceConnectorGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1195,6 +1277,7 @@ func (r *ChimeListVoiceConnectorGroupsFuture) Get(ctx workflow.Context) (*chime.
 }
 
 type ChimeListVoiceConnectorTerminationCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1205,6 +1288,7 @@ func (r *ChimeListVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.C
 }
 
 type ChimeListVoiceConnectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1215,6 +1299,7 @@ func (r *ChimeListVoiceConnectorsFuture) Get(ctx workflow.Context) (*chime.ListV
 }
 
 type ChimeLogoutUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1225,6 +1310,7 @@ func (r *ChimeLogoutUserFuture) Get(ctx workflow.Context) (*chime.LogoutUserOutp
 }
 
 type ChimePutEventsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1235,6 +1321,7 @@ func (r *ChimePutEventsConfigurationFuture) Get(ctx workflow.Context) (*chime.Pu
 }
 
 type ChimePutRetentionSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1245,6 +1332,7 @@ func (r *ChimePutRetentionSettingsFuture) Get(ctx workflow.Context) (*chime.PutR
 }
 
 type ChimePutVoiceConnectorEmergencyCallingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1255,6 +1343,7 @@ func (r *ChimePutVoiceConnectorEmergencyCallingConfigurationFuture) Get(ctx work
 }
 
 type ChimePutVoiceConnectorLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1265,6 +1354,7 @@ func (r *ChimePutVoiceConnectorLoggingConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type ChimePutVoiceConnectorOriginationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1275,6 +1365,7 @@ func (r *ChimePutVoiceConnectorOriginationFuture) Get(ctx workflow.Context) (*ch
 }
 
 type ChimePutVoiceConnectorProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1285,6 +1376,7 @@ func (r *ChimePutVoiceConnectorProxyFuture) Get(ctx workflow.Context) (*chime.Pu
 }
 
 type ChimePutVoiceConnectorStreamingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1295,6 +1387,7 @@ func (r *ChimePutVoiceConnectorStreamingConfigurationFuture) Get(ctx workflow.Co
 }
 
 type ChimePutVoiceConnectorTerminationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1305,6 +1398,7 @@ func (r *ChimePutVoiceConnectorTerminationFuture) Get(ctx workflow.Context) (*ch
 }
 
 type ChimePutVoiceConnectorTerminationCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1315,6 +1409,7 @@ func (r *ChimePutVoiceConnectorTerminationCredentialsFuture) Get(ctx workflow.Co
 }
 
 type ChimeRedactConversationMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1325,6 +1420,7 @@ func (r *ChimeRedactConversationMessageFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeRedactRoomMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1335,6 +1431,7 @@ func (r *ChimeRedactRoomMessageFuture) Get(ctx workflow.Context) (*chime.RedactR
 }
 
 type ChimeRegenerateSecurityTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1345,6 +1442,7 @@ func (r *ChimeRegenerateSecurityTokenFuture) Get(ctx workflow.Context) (*chime.R
 }
 
 type ChimeResetPersonalPINFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1355,6 +1453,7 @@ func (r *ChimeResetPersonalPINFuture) Get(ctx workflow.Context) (*chime.ResetPer
 }
 
 type ChimeRestorePhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1365,6 +1464,7 @@ func (r *ChimeRestorePhoneNumberFuture) Get(ctx workflow.Context) (*chime.Restor
 }
 
 type ChimeSearchAvailablePhoneNumbersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1375,6 +1475,7 @@ func (r *ChimeSearchAvailablePhoneNumbersFuture) Get(ctx workflow.Context) (*chi
 }
 
 type ChimeTagAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1385,6 +1486,7 @@ func (r *ChimeTagAttendeeFuture) Get(ctx workflow.Context) (*chime.TagAttendeeOu
 }
 
 type ChimeTagMeetingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1395,6 +1497,7 @@ func (r *ChimeTagMeetingFuture) Get(ctx workflow.Context) (*chime.TagMeetingOutp
 }
 
 type ChimeTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1405,6 +1508,7 @@ func (r *ChimeTagResourceFuture) Get(ctx workflow.Context) (*chime.TagResourceOu
 }
 
 type ChimeUntagAttendeeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1415,6 +1519,7 @@ func (r *ChimeUntagAttendeeFuture) Get(ctx workflow.Context) (*chime.UntagAttend
 }
 
 type ChimeUntagMeetingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1425,6 +1530,7 @@ func (r *ChimeUntagMeetingFuture) Get(ctx workflow.Context) (*chime.UntagMeeting
 }
 
 type ChimeUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1435,6 +1541,7 @@ func (r *ChimeUntagResourceFuture) Get(ctx workflow.Context) (*chime.UntagResour
 }
 
 type ChimeUpdateAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1445,6 +1552,7 @@ func (r *ChimeUpdateAccountFuture) Get(ctx workflow.Context) (*chime.UpdateAccou
 }
 
 type ChimeUpdateAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1455,6 +1563,7 @@ func (r *ChimeUpdateAccountSettingsFuture) Get(ctx workflow.Context) (*chime.Upd
 }
 
 type ChimeUpdateBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1465,6 +1574,7 @@ func (r *ChimeUpdateBotFuture) Get(ctx workflow.Context) (*chime.UpdateBotOutput
 }
 
 type ChimeUpdateGlobalSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1475,6 +1585,7 @@ func (r *ChimeUpdateGlobalSettingsFuture) Get(ctx workflow.Context) (*chime.Upda
 }
 
 type ChimeUpdatePhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1485,6 +1596,7 @@ func (r *ChimeUpdatePhoneNumberFuture) Get(ctx workflow.Context) (*chime.UpdateP
 }
 
 type ChimeUpdatePhoneNumberSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1495,6 +1607,7 @@ func (r *ChimeUpdatePhoneNumberSettingsFuture) Get(ctx workflow.Context) (*chime
 }
 
 type ChimeUpdateProxySessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1505,6 +1618,7 @@ func (r *ChimeUpdateProxySessionFuture) Get(ctx workflow.Context) (*chime.Update
 }
 
 type ChimeUpdateRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1515,6 +1629,7 @@ func (r *ChimeUpdateRoomFuture) Get(ctx workflow.Context) (*chime.UpdateRoomOutp
 }
 
 type ChimeUpdateRoomMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1525,6 +1640,7 @@ func (r *ChimeUpdateRoomMembershipFuture) Get(ctx workflow.Context) (*chime.Upda
 }
 
 type ChimeUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1535,6 +1651,7 @@ func (r *ChimeUpdateUserFuture) Get(ctx workflow.Context) (*chime.UpdateUserOutp
 }
 
 type ChimeUpdateUserSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1545,6 +1662,7 @@ func (r *ChimeUpdateUserSettingsFuture) Get(ctx workflow.Context) (*chime.Update
 }
 
 type ChimeUpdateVoiceConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1555,6 +1673,7 @@ func (r *ChimeUpdateVoiceConnectorFuture) Get(ctx workflow.Context) (*chime.Upda
 }
 
 type ChimeUpdateVoiceConnectorGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

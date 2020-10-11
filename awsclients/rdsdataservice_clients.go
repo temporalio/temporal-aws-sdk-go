@@ -36,6 +36,7 @@ func NewRDSDataServiceStub() RDSDataServiceClient {
 }
 
 type RDSDataServiceBatchExecuteStatementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *RDSDataServiceBatchExecuteStatementFuture) Get(ctx workflow.Context) (*
 }
 
 type RDSDataServiceBeginTransactionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *RDSDataServiceBeginTransactionFuture) Get(ctx workflow.Context) (*rdsda
 }
 
 type RDSDataServiceCommitTransactionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *RDSDataServiceCommitTransactionFuture) Get(ctx workflow.Context) (*rdsd
 }
 
 type RDSDataServiceExecuteSqlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *RDSDataServiceExecuteSqlFuture) Get(ctx workflow.Context) (*rdsdataserv
 }
 
 type RDSDataServiceExecuteStatementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *RDSDataServiceExecuteStatementFuture) Get(ctx workflow.Context) (*rdsda
 }
 
 type RDSDataServiceRollbackTransactionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

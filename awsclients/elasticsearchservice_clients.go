@@ -129,6 +129,7 @@ func NewElasticsearchServiceStub() ElasticsearchServiceClient {
 }
 
 type ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *ElasticsearchServiceAcceptInboundCrossClusterSearchConnectionFuture) Ge
 }
 
 type ElasticsearchServiceAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *ElasticsearchServiceAddTagsFuture) Get(ctx workflow.Context) (*elastics
 }
 
 type ElasticsearchServiceAssociatePackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *ElasticsearchServiceAssociatePackageFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *ElasticsearchServiceCancelElasticsearchServiceSoftwareUpdateFuture) Get
 }
 
 type ElasticsearchServiceCreateElasticsearchDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *ElasticsearchServiceCreateElasticsearchDomainFuture) Get(ctx workflow.C
 }
 
 type ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *ElasticsearchServiceCreateOutboundCrossClusterSearchConnectionFuture) G
 }
 
 type ElasticsearchServiceCreatePackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *ElasticsearchServiceCreatePackageFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticsearchServiceDeleteElasticsearchDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *ElasticsearchServiceDeleteElasticsearchDomainFuture) Get(ctx workflow.C
 }
 
 type ElasticsearchServiceDeleteElasticsearchServiceRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *ElasticsearchServiceDeleteElasticsearchServiceRoleFuture) Get(ctx workf
 }
 
 type ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *ElasticsearchServiceDeleteInboundCrossClusterSearchConnectionFuture) Ge
 }
 
 type ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *ElasticsearchServiceDeleteOutboundCrossClusterSearchConnectionFuture) G
 }
 
 type ElasticsearchServiceDeletePackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *ElasticsearchServiceDeletePackageFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticsearchServiceDescribeElasticsearchDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *ElasticsearchServiceDescribeElasticsearchDomainFuture) Get(ctx workflow
 }
 
 type ElasticsearchServiceDescribeElasticsearchDomainConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *ElasticsearchServiceDescribeElasticsearchDomainConfigFuture) Get(ctx wo
 }
 
 type ElasticsearchServiceDescribeElasticsearchDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *ElasticsearchServiceDescribeElasticsearchDomainsFuture) Get(ctx workflo
 }
 
 type ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *ElasticsearchServiceDescribeElasticsearchInstanceTypeLimitsFuture) Get(
 }
 
 type ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *ElasticsearchServiceDescribeInboundCrossClusterSearchConnectionsFuture)
 }
 
 type ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *ElasticsearchServiceDescribeOutboundCrossClusterSearchConnectionsFuture
 }
 
 type ElasticsearchServiceDescribePackagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *ElasticsearchServiceDescribePackagesFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *ElasticsearchServiceDescribeReservedElasticsearchInstanceOfferingsFutur
 }
 
 type ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *ElasticsearchServiceDescribeReservedElasticsearchInstancesFuture) Get(c
 }
 
 type ElasticsearchServiceDissociatePackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *ElasticsearchServiceDissociatePackageFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *ElasticsearchServiceGetCompatibleElasticsearchVersionsFuture) Get(ctx w
 }
 
 type ElasticsearchServiceGetUpgradeHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *ElasticsearchServiceGetUpgradeHistoryFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticsearchServiceGetUpgradeStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *ElasticsearchServiceGetUpgradeStatusFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticsearchServiceListDomainNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *ElasticsearchServiceListDomainNamesFuture) Get(ctx workflow.Context) (*
 }
 
 type ElasticsearchServiceListDomainsForPackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *ElasticsearchServiceListDomainsForPackageFuture) Get(ctx workflow.Conte
 }
 
 type ElasticsearchServiceListElasticsearchInstanceTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *ElasticsearchServiceListElasticsearchInstanceTypesFuture) Get(ctx workf
 }
 
 type ElasticsearchServiceListElasticsearchVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *ElasticsearchServiceListElasticsearchVersionsFuture) Get(ctx workflow.C
 }
 
 type ElasticsearchServiceListPackagesForDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *ElasticsearchServiceListPackagesForDomainFuture) Get(ctx workflow.Conte
 }
 
 type ElasticsearchServiceListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *ElasticsearchServiceListTagsFuture) Get(ctx workflow.Context) (*elastic
 }
 
 type ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *ElasticsearchServicePurchaseReservedElasticsearchInstanceOfferingFuture
 }
 
 type ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *ElasticsearchServiceRejectInboundCrossClusterSearchConnectionFuture) Ge
 }
 
 type ElasticsearchServiceRemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *ElasticsearchServiceRemoveTagsFuture) Get(ctx workflow.Context) (*elast
 }
 
 type ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *ElasticsearchServiceStartElasticsearchServiceSoftwareUpdateFuture) Get(
 }
 
 type ElasticsearchServiceUpdateElasticsearchDomainConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *ElasticsearchServiceUpdateElasticsearchDomainConfigFuture) Get(ctx work
 }
 
 type ElasticsearchServiceUpgradeElasticsearchDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

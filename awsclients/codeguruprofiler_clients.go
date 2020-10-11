@@ -87,6 +87,7 @@ func NewCodeGuruProfilerStub() CodeGuruProfilerClient {
 }
 
 type CodeGuruProfilerAddNotificationChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +98,7 @@ func (r *CodeGuruProfilerAddNotificationChannelsFuture) Get(ctx workflow.Context
 }
 
 type CodeGuruProfilerBatchGetFrameMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +109,7 @@ func (r *CodeGuruProfilerBatchGetFrameMetricDataFuture) Get(ctx workflow.Context
 }
 
 type CodeGuruProfilerConfigureAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +120,7 @@ func (r *CodeGuruProfilerConfigureAgentFuture) Get(ctx workflow.Context) (*codeg
 }
 
 type CodeGuruProfilerCreateProfilingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +131,7 @@ func (r *CodeGuruProfilerCreateProfilingGroupFuture) Get(ctx workflow.Context) (
 }
 
 type CodeGuruProfilerDeleteProfilingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +142,7 @@ func (r *CodeGuruProfilerDeleteProfilingGroupFuture) Get(ctx workflow.Context) (
 }
 
 type CodeGuruProfilerDescribeProfilingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +153,7 @@ func (r *CodeGuruProfilerDescribeProfilingGroupFuture) Get(ctx workflow.Context)
 }
 
 type CodeGuruProfilerGetFindingsReportAccountSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +164,7 @@ func (r *CodeGuruProfilerGetFindingsReportAccountSummaryFuture) Get(ctx workflow
 }
 
 type CodeGuruProfilerGetNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +175,7 @@ func (r *CodeGuruProfilerGetNotificationConfigurationFuture) Get(ctx workflow.Co
 }
 
 type CodeGuruProfilerGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +186,7 @@ func (r *CodeGuruProfilerGetPolicyFuture) Get(ctx workflow.Context) (*codegurupr
 }
 
 type CodeGuruProfilerGetProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +197,7 @@ func (r *CodeGuruProfilerGetProfileFuture) Get(ctx workflow.Context) (*codegurup
 }
 
 type CodeGuruProfilerGetRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +208,7 @@ func (r *CodeGuruProfilerGetRecommendationsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeGuruProfilerListFindingsReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +219,7 @@ func (r *CodeGuruProfilerListFindingsReportsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeGuruProfilerListProfileTimesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +230,7 @@ func (r *CodeGuruProfilerListProfileTimesFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeGuruProfilerListProfilingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +241,7 @@ func (r *CodeGuruProfilerListProfilingGroupsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeGuruProfilerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +252,7 @@ func (r *CodeGuruProfilerListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeGuruProfilerPostAgentProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +263,7 @@ func (r *CodeGuruProfilerPostAgentProfileFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeGuruProfilerPutPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +274,7 @@ func (r *CodeGuruProfilerPutPermissionFuture) Get(ctx workflow.Context) (*codegu
 }
 
 type CodeGuruProfilerRemoveNotificationChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +285,7 @@ func (r *CodeGuruProfilerRemoveNotificationChannelFuture) Get(ctx workflow.Conte
 }
 
 type CodeGuruProfilerRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +296,7 @@ func (r *CodeGuruProfilerRemovePermissionFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeGuruProfilerSubmitFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +307,7 @@ func (r *CodeGuruProfilerSubmitFeedbackFuture) Get(ctx workflow.Context) (*codeg
 }
 
 type CodeGuruProfilerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +318,7 @@ func (r *CodeGuruProfilerTagResourceFuture) Get(ctx workflow.Context) (*codeguru
 }
 
 type CodeGuruProfilerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +329,7 @@ func (r *CodeGuruProfilerUntagResourceFuture) Get(ctx workflow.Context) (*codegu
 }
 
 type CodeGuruProfilerUpdateProfilingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

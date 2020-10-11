@@ -168,6 +168,7 @@ func NewElasticBeanstalkStub() ElasticBeanstalkClient {
 }
 
 type ElasticBeanstalkAbortEnvironmentUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +179,7 @@ func (r *ElasticBeanstalkAbortEnvironmentUpdateFuture) Get(ctx workflow.Context)
 }
 
 type ElasticBeanstalkApplyEnvironmentManagedActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +190,7 @@ func (r *ElasticBeanstalkApplyEnvironmentManagedActionFuture) Get(ctx workflow.C
 }
 
 type ElasticBeanstalkAssociateEnvironmentOperationsRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +201,7 @@ func (r *ElasticBeanstalkAssociateEnvironmentOperationsRoleFuture) Get(ctx workf
 }
 
 type ElasticBeanstalkCheckDNSAvailabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +212,7 @@ func (r *ElasticBeanstalkCheckDNSAvailabilityFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkComposeEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +223,7 @@ func (r *ElasticBeanstalkComposeEnvironmentsFuture) Get(ctx workflow.Context) (*
 }
 
 type ElasticBeanstalkCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +234,7 @@ func (r *ElasticBeanstalkCreateApplicationFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticBeanstalkCreateApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +245,7 @@ func (r *ElasticBeanstalkCreateApplicationVersionFuture) Get(ctx workflow.Contex
 }
 
 type ElasticBeanstalkCreateConfigurationTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +256,7 @@ func (r *ElasticBeanstalkCreateConfigurationTemplateFuture) Get(ctx workflow.Con
 }
 
 type ElasticBeanstalkCreateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +267,7 @@ func (r *ElasticBeanstalkCreateEnvironmentFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticBeanstalkCreatePlatformVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +278,7 @@ func (r *ElasticBeanstalkCreatePlatformVersionFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticBeanstalkCreateStorageLocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +289,7 @@ func (r *ElasticBeanstalkCreateStorageLocationFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticBeanstalkDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +300,7 @@ func (r *ElasticBeanstalkDeleteApplicationFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticBeanstalkDeleteApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +311,7 @@ func (r *ElasticBeanstalkDeleteApplicationVersionFuture) Get(ctx workflow.Contex
 }
 
 type ElasticBeanstalkDeleteConfigurationTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +322,7 @@ func (r *ElasticBeanstalkDeleteConfigurationTemplateFuture) Get(ctx workflow.Con
 }
 
 type ElasticBeanstalkDeleteEnvironmentConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +333,7 @@ func (r *ElasticBeanstalkDeleteEnvironmentConfigurationFuture) Get(ctx workflow.
 }
 
 type ElasticBeanstalkDeletePlatformVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +344,7 @@ func (r *ElasticBeanstalkDeletePlatformVersionFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticBeanstalkDescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +355,7 @@ func (r *ElasticBeanstalkDescribeAccountAttributesFuture) Get(ctx workflow.Conte
 }
 
 type ElasticBeanstalkDescribeApplicationVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +366,7 @@ func (r *ElasticBeanstalkDescribeApplicationVersionsFuture) Get(ctx workflow.Con
 }
 
 type ElasticBeanstalkDescribeApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +377,7 @@ func (r *ElasticBeanstalkDescribeApplicationsFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkDescribeConfigurationOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +388,7 @@ func (r *ElasticBeanstalkDescribeConfigurationOptionsFuture) Get(ctx workflow.Co
 }
 
 type ElasticBeanstalkDescribeConfigurationSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +399,7 @@ func (r *ElasticBeanstalkDescribeConfigurationSettingsFuture) Get(ctx workflow.C
 }
 
 type ElasticBeanstalkDescribeEnvironmentHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +410,7 @@ func (r *ElasticBeanstalkDescribeEnvironmentHealthFuture) Get(ctx workflow.Conte
 }
 
 type ElasticBeanstalkDescribeEnvironmentManagedActionHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +421,7 @@ func (r *ElasticBeanstalkDescribeEnvironmentManagedActionHistoryFuture) Get(ctx 
 }
 
 type ElasticBeanstalkDescribeEnvironmentManagedActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +432,7 @@ func (r *ElasticBeanstalkDescribeEnvironmentManagedActionsFuture) Get(ctx workfl
 }
 
 type ElasticBeanstalkDescribeEnvironmentResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +443,7 @@ func (r *ElasticBeanstalkDescribeEnvironmentResourcesFuture) Get(ctx workflow.Co
 }
 
 type ElasticBeanstalkDescribeEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +454,7 @@ func (r *ElasticBeanstalkDescribeEnvironmentsFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +465,7 @@ func (r *ElasticBeanstalkDescribeEventsFuture) Get(ctx workflow.Context) (*elast
 }
 
 type ElasticBeanstalkDescribeInstancesHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +476,7 @@ func (r *ElasticBeanstalkDescribeInstancesHealthFuture) Get(ctx workflow.Context
 }
 
 type ElasticBeanstalkDescribePlatformVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +487,7 @@ func (r *ElasticBeanstalkDescribePlatformVersionFuture) Get(ctx workflow.Context
 }
 
 type ElasticBeanstalkDisassociateEnvironmentOperationsRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +498,7 @@ func (r *ElasticBeanstalkDisassociateEnvironmentOperationsRoleFuture) Get(ctx wo
 }
 
 type ElasticBeanstalkListAvailableSolutionStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +509,7 @@ func (r *ElasticBeanstalkListAvailableSolutionStacksFuture) Get(ctx workflow.Con
 }
 
 type ElasticBeanstalkListPlatformBranchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +520,7 @@ func (r *ElasticBeanstalkListPlatformBranchesFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkListPlatformVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +531,7 @@ func (r *ElasticBeanstalkListPlatformVersionsFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +542,7 @@ func (r *ElasticBeanstalkListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type ElasticBeanstalkRebuildEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +553,7 @@ func (r *ElasticBeanstalkRebuildEnvironmentFuture) Get(ctx workflow.Context) (*e
 }
 
 type ElasticBeanstalkRequestEnvironmentInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +564,7 @@ func (r *ElasticBeanstalkRequestEnvironmentInfoFuture) Get(ctx workflow.Context)
 }
 
 type ElasticBeanstalkRestartAppServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +575,7 @@ func (r *ElasticBeanstalkRestartAppServerFuture) Get(ctx workflow.Context) (*ela
 }
 
 type ElasticBeanstalkRetrieveEnvironmentInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +586,7 @@ func (r *ElasticBeanstalkRetrieveEnvironmentInfoFuture) Get(ctx workflow.Context
 }
 
 type ElasticBeanstalkSwapEnvironmentCNAMEsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +597,7 @@ func (r *ElasticBeanstalkSwapEnvironmentCNAMEsFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticBeanstalkTerminateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +608,7 @@ func (r *ElasticBeanstalkTerminateEnvironmentFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticBeanstalkUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +619,7 @@ func (r *ElasticBeanstalkUpdateApplicationFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticBeanstalkUpdateApplicationResourceLifecycleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +630,7 @@ func (r *ElasticBeanstalkUpdateApplicationResourceLifecycleFuture) Get(ctx workf
 }
 
 type ElasticBeanstalkUpdateApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +641,7 @@ func (r *ElasticBeanstalkUpdateApplicationVersionFuture) Get(ctx workflow.Contex
 }
 
 type ElasticBeanstalkUpdateConfigurationTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +652,7 @@ func (r *ElasticBeanstalkUpdateConfigurationTemplateFuture) Get(ctx workflow.Con
 }
 
 type ElasticBeanstalkUpdateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +663,7 @@ func (r *ElasticBeanstalkUpdateEnvironmentFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticBeanstalkUpdateTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +674,7 @@ func (r *ElasticBeanstalkUpdateTagsForResourceFuture) Get(ctx workflow.Context) 
 }
 
 type ElasticBeanstalkValidateConfigurationSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -93,6 +93,7 @@ func NewEFSStub() EFSClient {
 }
 
 type EFSCreateAccessPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *EFSCreateAccessPointFuture) Get(ctx workflow.Context) (*efs.CreateAcces
 }
 
 type EFSCreateFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *EFSCreateFileSystemFuture) Get(ctx workflow.Context) (*efs.FileSystemDe
 }
 
 type EFSCreateMountTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *EFSCreateMountTargetFuture) Get(ctx workflow.Context) (*efs.MountTarget
 }
 
 type EFSCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *EFSCreateTagsFuture) Get(ctx workflow.Context) (*efs.CreateTagsOutput, 
 }
 
 type EFSDeleteAccessPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *EFSDeleteAccessPointFuture) Get(ctx workflow.Context) (*efs.DeleteAcces
 }
 
 type EFSDeleteFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *EFSDeleteFileSystemFuture) Get(ctx workflow.Context) (*efs.DeleteFileSy
 }
 
 type EFSDeleteFileSystemPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *EFSDeleteFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.Delete
 }
 
 type EFSDeleteMountTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *EFSDeleteMountTargetFuture) Get(ctx workflow.Context) (*efs.DeleteMount
 }
 
 type EFSDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *EFSDeleteTagsFuture) Get(ctx workflow.Context) (*efs.DeleteTagsOutput, 
 }
 
 type EFSDescribeAccessPointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *EFSDescribeAccessPointsFuture) Get(ctx workflow.Context) (*efs.Describe
 }
 
 type EFSDescribeBackupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *EFSDescribeBackupPolicyFuture) Get(ctx workflow.Context) (*efs.Describe
 }
 
 type EFSDescribeFileSystemPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *EFSDescribeFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.Desc
 }
 
 type EFSDescribeFileSystemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *EFSDescribeFileSystemsFuture) Get(ctx workflow.Context) (*efs.DescribeF
 }
 
 type EFSDescribeLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *EFSDescribeLifecycleConfigurationFuture) Get(ctx workflow.Context) (*ef
 }
 
 type EFSDescribeMountTargetSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *EFSDescribeMountTargetSecurityGroupsFuture) Get(ctx workflow.Context) (
 }
 
 type EFSDescribeMountTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *EFSDescribeMountTargetsFuture) Get(ctx workflow.Context) (*efs.Describe
 }
 
 type EFSDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *EFSDescribeTagsFuture) Get(ctx workflow.Context) (*efs.DescribeTagsOutp
 }
 
 type EFSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *EFSListTagsForResourceFuture) Get(ctx workflow.Context) (*efs.ListTagsF
 }
 
 type EFSModifyMountTargetSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *EFSModifyMountTargetSecurityGroupsFuture) Get(ctx workflow.Context) (*e
 }
 
 type EFSPutBackupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *EFSPutBackupPolicyFuture) Get(ctx workflow.Context) (*efs.PutBackupPoli
 }
 
 type EFSPutFileSystemPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +324,7 @@ func (r *EFSPutFileSystemPolicyFuture) Get(ctx workflow.Context) (*efs.PutFileSy
 }
 
 type EFSPutLifecycleConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +335,7 @@ func (r *EFSPutLifecycleConfigurationFuture) Get(ctx workflow.Context) (*efs.Put
 }
 
 type EFSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +346,7 @@ func (r *EFSTagResourceFuture) Get(ctx workflow.Context) (*efs.TagResourceOutput
 }
 
 type EFSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +357,7 @@ func (r *EFSUntagResourceFuture) Get(ctx workflow.Context) (*efs.UntagResourceOu
 }
 
 type EFSUpdateFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

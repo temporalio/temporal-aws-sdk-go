@@ -84,6 +84,7 @@ func NewDataExchangeStub() DataExchangeClient {
 }
 
 type DataExchangeCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +95,7 @@ func (r *DataExchangeCancelJobFuture) Get(ctx workflow.Context) (*dataexchange.C
 }
 
 type DataExchangeCreateDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +106,7 @@ func (r *DataExchangeCreateDataSetFuture) Get(ctx workflow.Context) (*dataexchan
 }
 
 type DataExchangeCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +117,7 @@ func (r *DataExchangeCreateJobFuture) Get(ctx workflow.Context) (*dataexchange.C
 }
 
 type DataExchangeCreateRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +128,7 @@ func (r *DataExchangeCreateRevisionFuture) Get(ctx workflow.Context) (*dataexcha
 }
 
 type DataExchangeDeleteAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +139,7 @@ func (r *DataExchangeDeleteAssetFuture) Get(ctx workflow.Context) (*dataexchange
 }
 
 type DataExchangeDeleteDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +150,7 @@ func (r *DataExchangeDeleteDataSetFuture) Get(ctx workflow.Context) (*dataexchan
 }
 
 type DataExchangeDeleteRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +161,7 @@ func (r *DataExchangeDeleteRevisionFuture) Get(ctx workflow.Context) (*dataexcha
 }
 
 type DataExchangeGetAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +172,7 @@ func (r *DataExchangeGetAssetFuture) Get(ctx workflow.Context) (*dataexchange.Ge
 }
 
 type DataExchangeGetDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +183,7 @@ func (r *DataExchangeGetDataSetFuture) Get(ctx workflow.Context) (*dataexchange.
 }
 
 type DataExchangeGetJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +194,7 @@ func (r *DataExchangeGetJobFuture) Get(ctx workflow.Context) (*dataexchange.GetJ
 }
 
 type DataExchangeGetRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +205,7 @@ func (r *DataExchangeGetRevisionFuture) Get(ctx workflow.Context) (*dataexchange
 }
 
 type DataExchangeListDataSetRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +216,7 @@ func (r *DataExchangeListDataSetRevisionsFuture) Get(ctx workflow.Context) (*dat
 }
 
 type DataExchangeListDataSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +227,7 @@ func (r *DataExchangeListDataSetsFuture) Get(ctx workflow.Context) (*dataexchang
 }
 
 type DataExchangeListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +238,7 @@ func (r *DataExchangeListJobsFuture) Get(ctx workflow.Context) (*dataexchange.Li
 }
 
 type DataExchangeListRevisionAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +249,7 @@ func (r *DataExchangeListRevisionAssetsFuture) Get(ctx workflow.Context) (*datae
 }
 
 type DataExchangeListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +260,7 @@ func (r *DataExchangeListTagsForResourceFuture) Get(ctx workflow.Context) (*data
 }
 
 type DataExchangeStartJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +271,7 @@ func (r *DataExchangeStartJobFuture) Get(ctx workflow.Context) (*dataexchange.St
 }
 
 type DataExchangeTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +282,7 @@ func (r *DataExchangeTagResourceFuture) Get(ctx workflow.Context) (*dataexchange
 }
 
 type DataExchangeUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +293,7 @@ func (r *DataExchangeUntagResourceFuture) Get(ctx workflow.Context) (*dataexchan
 }
 
 type DataExchangeUpdateAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +304,7 @@ func (r *DataExchangeUpdateAssetFuture) Get(ctx workflow.Context) (*dataexchange
 }
 
 type DataExchangeUpdateDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +315,7 @@ func (r *DataExchangeUpdateDataSetFuture) Get(ctx workflow.Context) (*dataexchan
 }
 
 type DataExchangeUpdateRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

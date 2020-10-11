@@ -144,6 +144,7 @@ func NewCloudWatchLogsStub() CloudWatchLogsClient {
 }
 
 type CloudWatchLogsAssociateKmsKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +155,7 @@ func (r *CloudWatchLogsAssociateKmsKeyFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsCancelExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +166,7 @@ func (r *CloudWatchLogsCancelExportTaskFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchLogsCreateExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +177,7 @@ func (r *CloudWatchLogsCreateExportTaskFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchLogsCreateLogGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +188,7 @@ func (r *CloudWatchLogsCreateLogGroupFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchLogsCreateLogStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +199,7 @@ func (r *CloudWatchLogsCreateLogStreamFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsDeleteDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +210,7 @@ func (r *CloudWatchLogsDeleteDestinationFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudWatchLogsDeleteLogGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +221,7 @@ func (r *CloudWatchLogsDeleteLogGroupFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchLogsDeleteLogStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +232,7 @@ func (r *CloudWatchLogsDeleteLogStreamFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsDeleteMetricFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +243,7 @@ func (r *CloudWatchLogsDeleteMetricFilterFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchLogsDeleteQueryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +254,7 @@ func (r *CloudWatchLogsDeleteQueryDefinitionFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchLogsDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +265,7 @@ func (r *CloudWatchLogsDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudWatchLogsDeleteRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +276,7 @@ func (r *CloudWatchLogsDeleteRetentionPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchLogsDeleteSubscriptionFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +287,7 @@ func (r *CloudWatchLogsDeleteSubscriptionFilterFuture) Get(ctx workflow.Context)
 }
 
 type CloudWatchLogsDescribeDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +298,7 @@ func (r *CloudWatchLogsDescribeDestinationsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudWatchLogsDescribeExportTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +309,7 @@ func (r *CloudWatchLogsDescribeExportTasksFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudWatchLogsDescribeLogGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +320,7 @@ func (r *CloudWatchLogsDescribeLogGroupsFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudWatchLogsDescribeLogStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +331,7 @@ func (r *CloudWatchLogsDescribeLogStreamsFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchLogsDescribeMetricFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +342,7 @@ func (r *CloudWatchLogsDescribeMetricFiltersFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchLogsDescribeQueriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +353,7 @@ func (r *CloudWatchLogsDescribeQueriesFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsDescribeQueryDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +364,7 @@ func (r *CloudWatchLogsDescribeQueryDefinitionsFuture) Get(ctx workflow.Context)
 }
 
 type CloudWatchLogsDescribeResourcePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +375,7 @@ func (r *CloudWatchLogsDescribeResourcePoliciesFuture) Get(ctx workflow.Context)
 }
 
 type CloudWatchLogsDescribeSubscriptionFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +386,7 @@ func (r *CloudWatchLogsDescribeSubscriptionFiltersFuture) Get(ctx workflow.Conte
 }
 
 type CloudWatchLogsDisassociateKmsKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +397,7 @@ func (r *CloudWatchLogsDisassociateKmsKeyFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchLogsFilterLogEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +408,7 @@ func (r *CloudWatchLogsFilterLogEventsFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsGetLogEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +419,7 @@ func (r *CloudWatchLogsGetLogEventsFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchLogsGetLogGroupFieldsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +430,7 @@ func (r *CloudWatchLogsGetLogGroupFieldsFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudWatchLogsGetLogRecordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +441,7 @@ func (r *CloudWatchLogsGetLogRecordFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchLogsGetQueryResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +452,7 @@ func (r *CloudWatchLogsGetQueryResultsFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsListTagsLogGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +463,7 @@ func (r *CloudWatchLogsListTagsLogGroupFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchLogsPutDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +474,7 @@ func (r *CloudWatchLogsPutDestinationFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchLogsPutDestinationPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +485,7 @@ func (r *CloudWatchLogsPutDestinationPolicyFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudWatchLogsPutLogEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +496,7 @@ func (r *CloudWatchLogsPutLogEventsFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchLogsPutMetricFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +507,7 @@ func (r *CloudWatchLogsPutMetricFilterFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchLogsPutQueryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +518,7 @@ func (r *CloudWatchLogsPutQueryDefinitionFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchLogsPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +529,7 @@ func (r *CloudWatchLogsPutResourcePolicyFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudWatchLogsPutRetentionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +540,7 @@ func (r *CloudWatchLogsPutRetentionPolicyFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchLogsPutSubscriptionFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +551,7 @@ func (r *CloudWatchLogsPutSubscriptionFilterFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchLogsStartQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +562,7 @@ func (r *CloudWatchLogsStartQueryFuture) Get(ctx workflow.Context) (*cloudwatchl
 }
 
 type CloudWatchLogsStopQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +573,7 @@ func (r *CloudWatchLogsStopQueryFuture) Get(ctx workflow.Context) (*cloudwatchlo
 }
 
 type CloudWatchLogsTagLogGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +584,7 @@ func (r *CloudWatchLogsTagLogGroupFuture) Get(ctx workflow.Context) (*cloudwatch
 }
 
 type CloudWatchLogsTestMetricFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +595,7 @@ func (r *CloudWatchLogsTestMetricFilterFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchLogsUntagLogGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

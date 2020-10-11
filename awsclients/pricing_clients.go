@@ -27,6 +27,7 @@ func NewPricingStub() PricingClient {
 }
 
 type PricingDescribeServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *PricingDescribeServicesFuture) Get(ctx workflow.Context) (*pricing.Desc
 }
 
 type PricingGetAttributeValuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *PricingGetAttributeValuesFuture) Get(ctx workflow.Context) (*pricing.Ge
 }
 
 type PricingGetProductsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -117,6 +117,7 @@ func NewWorkLinkStub() WorkLinkClient {
 }
 
 type WorkLinkAssociateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +128,7 @@ func (r *WorkLinkAssociateDomainFuture) Get(ctx workflow.Context) (*worklink.Ass
 }
 
 type WorkLinkAssociateWebsiteAuthorizationProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +139,7 @@ func (r *WorkLinkAssociateWebsiteAuthorizationProviderFuture) Get(ctx workflow.C
 }
 
 type WorkLinkAssociateWebsiteCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +150,7 @@ func (r *WorkLinkAssociateWebsiteCertificateAuthorityFuture) Get(ctx workflow.Co
 }
 
 type WorkLinkCreateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +161,7 @@ func (r *WorkLinkCreateFleetFuture) Get(ctx workflow.Context) (*worklink.CreateF
 }
 
 type WorkLinkDeleteFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +172,7 @@ func (r *WorkLinkDeleteFleetFuture) Get(ctx workflow.Context) (*worklink.DeleteF
 }
 
 type WorkLinkDescribeAuditStreamConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +183,7 @@ func (r *WorkLinkDescribeAuditStreamConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type WorkLinkDescribeCompanyNetworkConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +194,7 @@ func (r *WorkLinkDescribeCompanyNetworkConfigurationFuture) Get(ctx workflow.Con
 }
 
 type WorkLinkDescribeDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +205,7 @@ func (r *WorkLinkDescribeDeviceFuture) Get(ctx workflow.Context) (*worklink.Desc
 }
 
 type WorkLinkDescribeDevicePolicyConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +216,7 @@ func (r *WorkLinkDescribeDevicePolicyConfigurationFuture) Get(ctx workflow.Conte
 }
 
 type WorkLinkDescribeDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +227,7 @@ func (r *WorkLinkDescribeDomainFuture) Get(ctx workflow.Context) (*worklink.Desc
 }
 
 type WorkLinkDescribeFleetMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +238,7 @@ func (r *WorkLinkDescribeFleetMetadataFuture) Get(ctx workflow.Context) (*workli
 }
 
 type WorkLinkDescribeIdentityProviderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +249,7 @@ func (r *WorkLinkDescribeIdentityProviderConfigurationFuture) Get(ctx workflow.C
 }
 
 type WorkLinkDescribeWebsiteCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +260,7 @@ func (r *WorkLinkDescribeWebsiteCertificateAuthorityFuture) Get(ctx workflow.Con
 }
 
 type WorkLinkDisassociateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +271,7 @@ func (r *WorkLinkDisassociateDomainFuture) Get(ctx workflow.Context) (*worklink.
 }
 
 type WorkLinkDisassociateWebsiteAuthorizationProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +282,7 @@ func (r *WorkLinkDisassociateWebsiteAuthorizationProviderFuture) Get(ctx workflo
 }
 
 type WorkLinkDisassociateWebsiteCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +293,7 @@ func (r *WorkLinkDisassociateWebsiteCertificateAuthorityFuture) Get(ctx workflow
 }
 
 type WorkLinkListDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +304,7 @@ func (r *WorkLinkListDevicesFuture) Get(ctx workflow.Context) (*worklink.ListDev
 }
 
 type WorkLinkListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +315,7 @@ func (r *WorkLinkListDomainsFuture) Get(ctx workflow.Context) (*worklink.ListDom
 }
 
 type WorkLinkListFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +326,7 @@ func (r *WorkLinkListFleetsFuture) Get(ctx workflow.Context) (*worklink.ListFlee
 }
 
 type WorkLinkListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +337,7 @@ func (r *WorkLinkListTagsForResourceFuture) Get(ctx workflow.Context) (*worklink
 }
 
 type WorkLinkListWebsiteAuthorizationProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +348,7 @@ func (r *WorkLinkListWebsiteAuthorizationProvidersFuture) Get(ctx workflow.Conte
 }
 
 type WorkLinkListWebsiteCertificateAuthoritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +359,7 @@ func (r *WorkLinkListWebsiteCertificateAuthoritiesFuture) Get(ctx workflow.Conte
 }
 
 type WorkLinkRestoreDomainAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +370,7 @@ func (r *WorkLinkRestoreDomainAccessFuture) Get(ctx workflow.Context) (*worklink
 }
 
 type WorkLinkRevokeDomainAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +381,7 @@ func (r *WorkLinkRevokeDomainAccessFuture) Get(ctx workflow.Context) (*worklink.
 }
 
 type WorkLinkSignOutUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +392,7 @@ func (r *WorkLinkSignOutUserFuture) Get(ctx workflow.Context) (*worklink.SignOut
 }
 
 type WorkLinkTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +403,7 @@ func (r *WorkLinkTagResourceFuture) Get(ctx workflow.Context) (*worklink.TagReso
 }
 
 type WorkLinkUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +414,7 @@ func (r *WorkLinkUntagResourceFuture) Get(ctx workflow.Context) (*worklink.Untag
 }
 
 type WorkLinkUpdateAuditStreamConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +425,7 @@ func (r *WorkLinkUpdateAuditStreamConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type WorkLinkUpdateCompanyNetworkConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +436,7 @@ func (r *WorkLinkUpdateCompanyNetworkConfigurationFuture) Get(ctx workflow.Conte
 }
 
 type WorkLinkUpdateDevicePolicyConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +447,7 @@ func (r *WorkLinkUpdateDevicePolicyConfigurationFuture) Get(ctx workflow.Context
 }
 
 type WorkLinkUpdateDomainMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +458,7 @@ func (r *WorkLinkUpdateDomainMetadataFuture) Get(ctx workflow.Context) (*worklin
 }
 
 type WorkLinkUpdateFleetMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +469,7 @@ func (r *WorkLinkUpdateFleetMetadataFuture) Get(ctx workflow.Context) (*worklink
 }
 
 type WorkLinkUpdateIdentityProviderConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

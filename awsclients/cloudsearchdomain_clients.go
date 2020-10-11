@@ -27,6 +27,7 @@ func NewCloudSearchDomainStub() CloudSearchDomainClient {
 }
 
 type CloudSearchDomainSearchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *CloudSearchDomainSearchFuture) Get(ctx workflow.Context) (*cloudsearchd
 }
 
 type CloudSearchDomainSuggestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *CloudSearchDomainSuggestFuture) Get(ctx workflow.Context) (*cloudsearch
 }
 
 type CloudSearchDomainUploadDocumentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

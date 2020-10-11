@@ -81,6 +81,7 @@ func NewDAXStub() DAXClient {
 }
 
 type DAXCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +92,7 @@ func (r *DAXCreateClusterFuture) Get(ctx workflow.Context) (*dax.CreateClusterOu
 }
 
 type DAXCreateParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +103,7 @@ func (r *DAXCreateParameterGroupFuture) Get(ctx workflow.Context) (*dax.CreatePa
 }
 
 type DAXCreateSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +114,7 @@ func (r *DAXCreateSubnetGroupFuture) Get(ctx workflow.Context) (*dax.CreateSubne
 }
 
 type DAXDecreaseReplicationFactorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +125,7 @@ func (r *DAXDecreaseReplicationFactorFuture) Get(ctx workflow.Context) (*dax.Dec
 }
 
 type DAXDeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +136,7 @@ func (r *DAXDeleteClusterFuture) Get(ctx workflow.Context) (*dax.DeleteClusterOu
 }
 
 type DAXDeleteParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +147,7 @@ func (r *DAXDeleteParameterGroupFuture) Get(ctx workflow.Context) (*dax.DeletePa
 }
 
 type DAXDeleteSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +158,7 @@ func (r *DAXDeleteSubnetGroupFuture) Get(ctx workflow.Context) (*dax.DeleteSubne
 }
 
 type DAXDescribeClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +169,7 @@ func (r *DAXDescribeClustersFuture) Get(ctx workflow.Context) (*dax.DescribeClus
 }
 
 type DAXDescribeDefaultParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +180,7 @@ func (r *DAXDescribeDefaultParametersFuture) Get(ctx workflow.Context) (*dax.Des
 }
 
 type DAXDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +191,7 @@ func (r *DAXDescribeEventsFuture) Get(ctx workflow.Context) (*dax.DescribeEvents
 }
 
 type DAXDescribeParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +202,7 @@ func (r *DAXDescribeParameterGroupsFuture) Get(ctx workflow.Context) (*dax.Descr
 }
 
 type DAXDescribeParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +213,7 @@ func (r *DAXDescribeParametersFuture) Get(ctx workflow.Context) (*dax.DescribePa
 }
 
 type DAXDescribeSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +224,7 @@ func (r *DAXDescribeSubnetGroupsFuture) Get(ctx workflow.Context) (*dax.Describe
 }
 
 type DAXIncreaseReplicationFactorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +235,7 @@ func (r *DAXIncreaseReplicationFactorFuture) Get(ctx workflow.Context) (*dax.Inc
 }
 
 type DAXListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +246,7 @@ func (r *DAXListTagsFuture) Get(ctx workflow.Context) (*dax.ListTagsOutput, erro
 }
 
 type DAXRebootNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +257,7 @@ func (r *DAXRebootNodeFuture) Get(ctx workflow.Context) (*dax.RebootNodeOutput, 
 }
 
 type DAXTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +268,7 @@ func (r *DAXTagResourceFuture) Get(ctx workflow.Context) (*dax.TagResourceOutput
 }
 
 type DAXUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +279,7 @@ func (r *DAXUntagResourceFuture) Get(ctx workflow.Context) (*dax.UntagResourceOu
 }
 
 type DAXUpdateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +290,7 @@ func (r *DAXUpdateClusterFuture) Get(ctx workflow.Context) (*dax.UpdateClusterOu
 }
 
 type DAXUpdateParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +301,7 @@ func (r *DAXUpdateParameterGroupFuture) Get(ctx workflow.Context) (*dax.UpdatePa
 }
 
 type DAXUpdateSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

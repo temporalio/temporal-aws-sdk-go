@@ -42,6 +42,7 @@ func NewDLMStub() DLMClient {
 }
 
 type DLMCreateLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -52,6 +53,7 @@ func (r *DLMCreateLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.CreateL
 }
 
 type DLMDeleteLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -62,6 +64,7 @@ func (r *DLMDeleteLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.DeleteL
 }
 
 type DLMGetLifecyclePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -72,6 +75,7 @@ func (r *DLMGetLifecyclePoliciesFuture) Get(ctx workflow.Context) (*dlm.GetLifec
 }
 
 type DLMGetLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +86,7 @@ func (r *DLMGetLifecyclePolicyFuture) Get(ctx workflow.Context) (*dlm.GetLifecyc
 }
 
 type DLMListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +97,7 @@ func (r *DLMListTagsForResourceFuture) Get(ctx workflow.Context) (*dlm.ListTagsF
 }
 
 type DLMTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +108,7 @@ func (r *DLMTagResourceFuture) Get(ctx workflow.Context) (*dlm.TagResourceOutput
 }
 
 type DLMUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +119,7 @@ func (r *DLMUntagResourceFuture) Get(ctx workflow.Context) (*dlm.UntagResourceOu
 }
 
 type DLMUpdateLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

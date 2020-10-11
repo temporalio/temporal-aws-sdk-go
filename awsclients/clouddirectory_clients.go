@@ -216,6 +216,7 @@ func NewCloudDirectoryStub() CloudDirectoryClient {
 }
 
 type CloudDirectoryAddFacetToObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +227,7 @@ func (r *CloudDirectoryAddFacetToObjectFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudDirectoryApplySchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +238,7 @@ func (r *CloudDirectoryApplySchemaFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryAttachObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +249,7 @@ func (r *CloudDirectoryAttachObjectFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryAttachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +260,7 @@ func (r *CloudDirectoryAttachPolicyFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryAttachToIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +271,7 @@ func (r *CloudDirectoryAttachToIndexFuture) Get(ctx workflow.Context) (*clouddir
 }
 
 type CloudDirectoryAttachTypedLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +282,7 @@ func (r *CloudDirectoryAttachTypedLinkFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryBatchReadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +293,7 @@ func (r *CloudDirectoryBatchReadFuture) Get(ctx workflow.Context) (*clouddirecto
 }
 
 type CloudDirectoryBatchWriteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +304,7 @@ func (r *CloudDirectoryBatchWriteFuture) Get(ctx workflow.Context) (*clouddirect
 }
 
 type CloudDirectoryCreateDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +315,7 @@ func (r *CloudDirectoryCreateDirectoryFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryCreateFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +326,7 @@ func (r *CloudDirectoryCreateFacetFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryCreateIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +337,7 @@ func (r *CloudDirectoryCreateIndexFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryCreateObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +348,7 @@ func (r *CloudDirectoryCreateObjectFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryCreateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +359,7 @@ func (r *CloudDirectoryCreateSchemaFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryCreateTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -356,6 +370,7 @@ func (r *CloudDirectoryCreateTypedLinkFacetFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryDeleteDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -366,6 +381,7 @@ func (r *CloudDirectoryDeleteDirectoryFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryDeleteFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -376,6 +392,7 @@ func (r *CloudDirectoryDeleteFacetFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryDeleteObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -386,6 +403,7 @@ func (r *CloudDirectoryDeleteObjectFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryDeleteSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -396,6 +414,7 @@ func (r *CloudDirectoryDeleteSchemaFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryDeleteTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -406,6 +425,7 @@ func (r *CloudDirectoryDeleteTypedLinkFacetFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryDetachFromIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -416,6 +436,7 @@ func (r *CloudDirectoryDetachFromIndexFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryDetachObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -426,6 +447,7 @@ func (r *CloudDirectoryDetachObjectFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryDetachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +458,7 @@ func (r *CloudDirectoryDetachPolicyFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryDetachTypedLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +469,7 @@ func (r *CloudDirectoryDetachTypedLinkFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryDisableDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +480,7 @@ func (r *CloudDirectoryDisableDirectoryFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudDirectoryEnableDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +491,7 @@ func (r *CloudDirectoryEnableDirectoryFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryGetAppliedSchemaVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +502,7 @@ func (r *CloudDirectoryGetAppliedSchemaVersionFuture) Get(ctx workflow.Context) 
 }
 
 type CloudDirectoryGetDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +513,7 @@ func (r *CloudDirectoryGetDirectoryFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryGetFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +524,7 @@ func (r *CloudDirectoryGetFacetFuture) Get(ctx workflow.Context) (*clouddirector
 }
 
 type CloudDirectoryGetLinkAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +535,7 @@ func (r *CloudDirectoryGetLinkAttributesFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudDirectoryGetObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +546,7 @@ func (r *CloudDirectoryGetObjectAttributesFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudDirectoryGetObjectInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +557,7 @@ func (r *CloudDirectoryGetObjectInformationFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryGetSchemaAsJsonFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +568,7 @@ func (r *CloudDirectoryGetSchemaAsJsonFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryGetTypedLinkFacetInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +579,7 @@ func (r *CloudDirectoryGetTypedLinkFacetInformationFuture) Get(ctx workflow.Cont
 }
 
 type CloudDirectoryListAppliedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +590,7 @@ func (r *CloudDirectoryListAppliedSchemaArnsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudDirectoryListAttachedIndicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +601,7 @@ func (r *CloudDirectoryListAttachedIndicesFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudDirectoryListDevelopmentSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +612,7 @@ func (r *CloudDirectoryListDevelopmentSchemaArnsFuture) Get(ctx workflow.Context
 }
 
 type CloudDirectoryListDirectoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +623,7 @@ func (r *CloudDirectoryListDirectoriesFuture) Get(ctx workflow.Context) (*cloudd
 }
 
 type CloudDirectoryListFacetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +634,7 @@ func (r *CloudDirectoryListFacetAttributesFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudDirectoryListFacetNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +645,7 @@ func (r *CloudDirectoryListFacetNamesFuture) Get(ctx workflow.Context) (*clouddi
 }
 
 type CloudDirectoryListIncomingTypedLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -616,6 +656,7 @@ func (r *CloudDirectoryListIncomingTypedLinksFuture) Get(ctx workflow.Context) (
 }
 
 type CloudDirectoryListIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -626,6 +667,7 @@ func (r *CloudDirectoryListIndexFuture) Get(ctx workflow.Context) (*clouddirecto
 }
 
 type CloudDirectoryListManagedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -636,6 +678,7 @@ func (r *CloudDirectoryListManagedSchemaArnsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudDirectoryListObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -646,6 +689,7 @@ func (r *CloudDirectoryListObjectAttributesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryListObjectChildrenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -656,6 +700,7 @@ func (r *CloudDirectoryListObjectChildrenFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudDirectoryListObjectParentPathsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -666,6 +711,7 @@ func (r *CloudDirectoryListObjectParentPathsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudDirectoryListObjectParentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -676,6 +722,7 @@ func (r *CloudDirectoryListObjectParentsFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudDirectoryListObjectPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -686,6 +733,7 @@ func (r *CloudDirectoryListObjectPoliciesFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudDirectoryListOutgoingTypedLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -696,6 +744,7 @@ func (r *CloudDirectoryListOutgoingTypedLinksFuture) Get(ctx workflow.Context) (
 }
 
 type CloudDirectoryListPolicyAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -706,6 +755,7 @@ func (r *CloudDirectoryListPolicyAttachmentsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudDirectoryListPublishedSchemaArnsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -716,6 +766,7 @@ func (r *CloudDirectoryListPublishedSchemaArnsFuture) Get(ctx workflow.Context) 
 }
 
 type CloudDirectoryListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -726,6 +777,7 @@ func (r *CloudDirectoryListTagsForResourceFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudDirectoryListTypedLinkFacetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -736,6 +788,7 @@ func (r *CloudDirectoryListTypedLinkFacetAttributesFuture) Get(ctx workflow.Cont
 }
 
 type CloudDirectoryListTypedLinkFacetNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -746,6 +799,7 @@ func (r *CloudDirectoryListTypedLinkFacetNamesFuture) Get(ctx workflow.Context) 
 }
 
 type CloudDirectoryLookupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -756,6 +810,7 @@ func (r *CloudDirectoryLookupPolicyFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryPublishSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -766,6 +821,7 @@ func (r *CloudDirectoryPublishSchemaFuture) Get(ctx workflow.Context) (*clouddir
 }
 
 type CloudDirectoryPutSchemaFromJsonFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -776,6 +832,7 @@ func (r *CloudDirectoryPutSchemaFromJsonFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudDirectoryRemoveFacetFromObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -786,6 +843,7 @@ func (r *CloudDirectoryRemoveFacetFromObjectFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudDirectoryTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -796,6 +854,7 @@ func (r *CloudDirectoryTagResourceFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -806,6 +865,7 @@ func (r *CloudDirectoryUntagResourceFuture) Get(ctx workflow.Context) (*clouddir
 }
 
 type CloudDirectoryUpdateFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -816,6 +876,7 @@ func (r *CloudDirectoryUpdateFacetFuture) Get(ctx workflow.Context) (*clouddirec
 }
 
 type CloudDirectoryUpdateLinkAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -826,6 +887,7 @@ func (r *CloudDirectoryUpdateLinkAttributesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryUpdateObjectAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -836,6 +898,7 @@ func (r *CloudDirectoryUpdateObjectAttributesFuture) Get(ctx workflow.Context) (
 }
 
 type CloudDirectoryUpdateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -846,6 +909,7 @@ func (r *CloudDirectoryUpdateSchemaFuture) Get(ctx workflow.Context) (*clouddire
 }
 
 type CloudDirectoryUpdateTypedLinkFacetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -856,6 +920,7 @@ func (r *CloudDirectoryUpdateTypedLinkFacetFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryUpgradeAppliedSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -866,6 +931,7 @@ func (r *CloudDirectoryUpgradeAppliedSchemaFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudDirectoryUpgradePublishedSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

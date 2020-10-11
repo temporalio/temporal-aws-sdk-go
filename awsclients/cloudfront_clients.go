@@ -231,6 +231,7 @@ func NewCloudFrontStub() CloudFrontClient {
 }
 
 type CloudFrontCreateCachePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +242,7 @@ func (r *CloudFrontCreateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontCreateCloudFrontOriginAccessIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +253,7 @@ func (r *CloudFrontCreateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.
 }
 
 type CloudFrontCreateDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +264,7 @@ func (r *CloudFrontCreateDistributionFuture) Get(ctx workflow.Context) (*cloudfr
 }
 
 type CloudFrontCreateDistributionWithTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +275,7 @@ func (r *CloudFrontCreateDistributionWithTagsFuture) Get(ctx workflow.Context) (
 }
 
 type CloudFrontCreateFieldLevelEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +286,7 @@ func (r *CloudFrontCreateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Cont
 }
 
 type CloudFrontCreateFieldLevelEncryptionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +297,7 @@ func (r *CloudFrontCreateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Con
 }
 
 type CloudFrontCreateInvalidationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +308,7 @@ func (r *CloudFrontCreateInvalidationFuture) Get(ctx workflow.Context) (*cloudfr
 }
 
 type CloudFrontCreateMonitoringSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +319,7 @@ func (r *CloudFrontCreateMonitoringSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type CloudFrontCreateOriginRequestPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +330,7 @@ func (r *CloudFrontCreateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFrontCreatePublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +341,7 @@ func (r *CloudFrontCreatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront
 }
 
 type CloudFrontCreateRealtimeLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +352,7 @@ func (r *CloudFrontCreateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFrontCreateStreamingDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +363,7 @@ func (r *CloudFrontCreateStreamingDistributionFuture) Get(ctx workflow.Context) 
 }
 
 type CloudFrontCreateStreamingDistributionWithTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +374,7 @@ func (r *CloudFrontCreateStreamingDistributionWithTagsFuture) Get(ctx workflow.C
 }
 
 type CloudFrontDeleteCachePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +385,7 @@ func (r *CloudFrontDeleteCachePolicyFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontDeleteCloudFrontOriginAccessIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +396,7 @@ func (r *CloudFrontDeleteCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.
 }
 
 type CloudFrontDeleteDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +407,7 @@ func (r *CloudFrontDeleteDistributionFuture) Get(ctx workflow.Context) (*cloudfr
 }
 
 type CloudFrontDeleteFieldLevelEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +418,7 @@ func (r *CloudFrontDeleteFieldLevelEncryptionConfigFuture) Get(ctx workflow.Cont
 }
 
 type CloudFrontDeleteFieldLevelEncryptionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +429,7 @@ func (r *CloudFrontDeleteFieldLevelEncryptionProfileFuture) Get(ctx workflow.Con
 }
 
 type CloudFrontDeleteMonitoringSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +440,7 @@ func (r *CloudFrontDeleteMonitoringSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type CloudFrontDeleteOriginRequestPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +451,7 @@ func (r *CloudFrontDeleteOriginRequestPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFrontDeletePublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +462,7 @@ func (r *CloudFrontDeletePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront
 }
 
 type CloudFrontDeleteRealtimeLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +473,7 @@ func (r *CloudFrontDeleteRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFrontDeleteStreamingDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +484,7 @@ func (r *CloudFrontDeleteStreamingDistributionFuture) Get(ctx workflow.Context) 
 }
 
 type CloudFrontGetCachePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +495,7 @@ func (r *CloudFrontGetCachePolicyFuture) Get(ctx workflow.Context) (*cloudfront.
 }
 
 type CloudFrontGetCachePolicyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +506,7 @@ func (r *CloudFrontGetCachePolicyConfigFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFrontGetCloudFrontOriginAccessIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +517,7 @@ func (r *CloudFrontGetCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.Con
 }
 
 type CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +528,7 @@ func (r *CloudFrontGetCloudFrontOriginAccessIdentityConfigFuture) Get(ctx workfl
 }
 
 type CloudFrontGetDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +539,7 @@ func (r *CloudFrontGetDistributionFuture) Get(ctx workflow.Context) (*cloudfront
 }
 
 type CloudFrontGetDistributionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +550,7 @@ func (r *CloudFrontGetDistributionConfigFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudFrontGetFieldLevelEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +561,7 @@ func (r *CloudFrontGetFieldLevelEncryptionFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFrontGetFieldLevelEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +572,7 @@ func (r *CloudFrontGetFieldLevelEncryptionConfigFuture) Get(ctx workflow.Context
 }
 
 type CloudFrontGetFieldLevelEncryptionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +583,7 @@ func (r *CloudFrontGetFieldLevelEncryptionProfileFuture) Get(ctx workflow.Contex
 }
 
 type CloudFrontGetFieldLevelEncryptionProfileConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +594,7 @@ func (r *CloudFrontGetFieldLevelEncryptionProfileConfigFuture) Get(ctx workflow.
 }
 
 type CloudFrontGetInvalidationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +605,7 @@ func (r *CloudFrontGetInvalidationFuture) Get(ctx workflow.Context) (*cloudfront
 }
 
 type CloudFrontGetMonitoringSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +616,7 @@ func (r *CloudFrontGetMonitoringSubscriptionFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFrontGetOriginRequestPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +627,7 @@ func (r *CloudFrontGetOriginRequestPolicyFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudFrontGetOriginRequestPolicyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +638,7 @@ func (r *CloudFrontGetOriginRequestPolicyConfigFuture) Get(ctx workflow.Context)
 }
 
 type CloudFrontGetPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +649,7 @@ func (r *CloudFrontGetPublicKeyFuture) Get(ctx workflow.Context) (*cloudfront.Ge
 }
 
 type CloudFrontGetPublicKeyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +660,7 @@ func (r *CloudFrontGetPublicKeyConfigFuture) Get(ctx workflow.Context) (*cloudfr
 }
 
 type CloudFrontGetRealtimeLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +671,7 @@ func (r *CloudFrontGetRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFrontGetStreamingDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +682,7 @@ func (r *CloudFrontGetStreamingDistributionFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudFrontGetStreamingDistributionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +693,7 @@ func (r *CloudFrontGetStreamingDistributionConfigFuture) Get(ctx workflow.Contex
 }
 
 type CloudFrontListCachePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +704,7 @@ func (r *CloudFrontListCachePoliciesFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontListCloudFrontOriginAccessIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +715,7 @@ func (r *CloudFrontListCloudFrontOriginAccessIdentitiesFuture) Get(ctx workflow.
 }
 
 type CloudFrontListDistributionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +726,7 @@ func (r *CloudFrontListDistributionsFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontListDistributionsByCachePolicyIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +737,7 @@ func (r *CloudFrontListDistributionsByCachePolicyIdFuture) Get(ctx workflow.Cont
 }
 
 type CloudFrontListDistributionsByOriginRequestPolicyIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -701,6 +748,7 @@ func (r *CloudFrontListDistributionsByOriginRequestPolicyIdFuture) Get(ctx workf
 }
 
 type CloudFrontListDistributionsByRealtimeLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -711,6 +759,7 @@ func (r *CloudFrontListDistributionsByRealtimeLogConfigFuture) Get(ctx workflow.
 }
 
 type CloudFrontListDistributionsByWebACLIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -721,6 +770,7 @@ func (r *CloudFrontListDistributionsByWebACLIdFuture) Get(ctx workflow.Context) 
 }
 
 type CloudFrontListFieldLevelEncryptionConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -731,6 +781,7 @@ func (r *CloudFrontListFieldLevelEncryptionConfigsFuture) Get(ctx workflow.Conte
 }
 
 type CloudFrontListFieldLevelEncryptionProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -741,6 +792,7 @@ func (r *CloudFrontListFieldLevelEncryptionProfilesFuture) Get(ctx workflow.Cont
 }
 
 type CloudFrontListInvalidationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -751,6 +803,7 @@ func (r *CloudFrontListInvalidationsFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontListOriginRequestPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -761,6 +814,7 @@ func (r *CloudFrontListOriginRequestPoliciesFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFrontListPublicKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -771,6 +825,7 @@ func (r *CloudFrontListPublicKeysFuture) Get(ctx workflow.Context) (*cloudfront.
 }
 
 type CloudFrontListRealtimeLogConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -781,6 +836,7 @@ func (r *CloudFrontListRealtimeLogConfigsFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudFrontListStreamingDistributionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -791,6 +847,7 @@ func (r *CloudFrontListStreamingDistributionsFuture) Get(ctx workflow.Context) (
 }
 
 type CloudFrontListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -801,6 +858,7 @@ func (r *CloudFrontListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudf
 }
 
 type CloudFrontTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -811,6 +869,7 @@ func (r *CloudFrontTagResourceFuture) Get(ctx workflow.Context) (*cloudfront.Tag
 }
 
 type CloudFrontUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -821,6 +880,7 @@ func (r *CloudFrontUntagResourceFuture) Get(ctx workflow.Context) (*cloudfront.U
 }
 
 type CloudFrontUpdateCachePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -831,6 +891,7 @@ func (r *CloudFrontUpdateCachePolicyFuture) Get(ctx workflow.Context) (*cloudfro
 }
 
 type CloudFrontUpdateCloudFrontOriginAccessIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -841,6 +902,7 @@ func (r *CloudFrontUpdateCloudFrontOriginAccessIdentityFuture) Get(ctx workflow.
 }
 
 type CloudFrontUpdateDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -851,6 +913,7 @@ func (r *CloudFrontUpdateDistributionFuture) Get(ctx workflow.Context) (*cloudfr
 }
 
 type CloudFrontUpdateFieldLevelEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -861,6 +924,7 @@ func (r *CloudFrontUpdateFieldLevelEncryptionConfigFuture) Get(ctx workflow.Cont
 }
 
 type CloudFrontUpdateFieldLevelEncryptionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -871,6 +935,7 @@ func (r *CloudFrontUpdateFieldLevelEncryptionProfileFuture) Get(ctx workflow.Con
 }
 
 type CloudFrontUpdateOriginRequestPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -881,6 +946,7 @@ func (r *CloudFrontUpdateOriginRequestPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFrontUpdatePublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -891,6 +957,7 @@ func (r *CloudFrontUpdatePublicKeyFuture) Get(ctx workflow.Context) (*cloudfront
 }
 
 type CloudFrontUpdateRealtimeLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -901,6 +968,7 @@ func (r *CloudFrontUpdateRealtimeLogConfigFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFrontUpdateStreamingDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

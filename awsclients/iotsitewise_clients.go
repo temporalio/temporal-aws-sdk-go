@@ -201,6 +201,7 @@ func NewIoTSiteWiseStub() IoTSiteWiseClient {
 }
 
 type IoTSiteWiseAssociateAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +212,7 @@ func (r *IoTSiteWiseAssociateAssetsFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseBatchAssociateProjectAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +223,7 @@ func (r *IoTSiteWiseBatchAssociateProjectAssetsFuture) Get(ctx workflow.Context)
 }
 
 type IoTSiteWiseBatchDisassociateProjectAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +234,7 @@ func (r *IoTSiteWiseBatchDisassociateProjectAssetsFuture) Get(ctx workflow.Conte
 }
 
 type IoTSiteWiseBatchPutAssetPropertyValueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +245,7 @@ func (r *IoTSiteWiseBatchPutAssetPropertyValueFuture) Get(ctx workflow.Context) 
 }
 
 type IoTSiteWiseCreateAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +256,7 @@ func (r *IoTSiteWiseCreateAccessPolicyFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseCreateAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +267,7 @@ func (r *IoTSiteWiseCreateAssetFuture) Get(ctx workflow.Context) (*iotsitewise.C
 }
 
 type IoTSiteWiseCreateAssetModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +278,7 @@ func (r *IoTSiteWiseCreateAssetModelFuture) Get(ctx workflow.Context) (*iotsitew
 }
 
 type IoTSiteWiseCreateDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +289,7 @@ func (r *IoTSiteWiseCreateDashboardFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseCreateGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +300,7 @@ func (r *IoTSiteWiseCreateGatewayFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseCreatePortalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +311,7 @@ func (r *IoTSiteWiseCreatePortalFuture) Get(ctx workflow.Context) (*iotsitewise.
 }
 
 type IoTSiteWiseCreatePresignedPortalUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +322,7 @@ func (r *IoTSiteWiseCreatePresignedPortalUrlFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTSiteWiseCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +333,7 @@ func (r *IoTSiteWiseCreateProjectFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseDeleteAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +344,7 @@ func (r *IoTSiteWiseDeleteAccessPolicyFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseDeleteAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +355,7 @@ func (r *IoTSiteWiseDeleteAssetFuture) Get(ctx workflow.Context) (*iotsitewise.D
 }
 
 type IoTSiteWiseDeleteAssetModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +366,7 @@ func (r *IoTSiteWiseDeleteAssetModelFuture) Get(ctx workflow.Context) (*iotsitew
 }
 
 type IoTSiteWiseDeleteDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +377,7 @@ func (r *IoTSiteWiseDeleteDashboardFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseDeleteGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +388,7 @@ func (r *IoTSiteWiseDeleteGatewayFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseDeletePortalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +399,7 @@ func (r *IoTSiteWiseDeletePortalFuture) Get(ctx workflow.Context) (*iotsitewise.
 }
 
 type IoTSiteWiseDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +410,7 @@ func (r *IoTSiteWiseDeleteProjectFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseDescribeAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +421,7 @@ func (r *IoTSiteWiseDescribeAccessPolicyFuture) Get(ctx workflow.Context) (*iots
 }
 
 type IoTSiteWiseDescribeAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +432,7 @@ func (r *IoTSiteWiseDescribeAssetFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseDescribeAssetModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +443,7 @@ func (r *IoTSiteWiseDescribeAssetModelFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseDescribeAssetPropertyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +454,7 @@ func (r *IoTSiteWiseDescribeAssetPropertyFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTSiteWiseDescribeDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +465,7 @@ func (r *IoTSiteWiseDescribeDashboardFuture) Get(ctx workflow.Context) (*iotsite
 }
 
 type IoTSiteWiseDescribeGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +476,7 @@ func (r *IoTSiteWiseDescribeGatewayFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseDescribeGatewayCapabilityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +487,7 @@ func (r *IoTSiteWiseDescribeGatewayCapabilityConfigurationFuture) Get(ctx workfl
 }
 
 type IoTSiteWiseDescribeLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +498,7 @@ func (r *IoTSiteWiseDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*io
 }
 
 type IoTSiteWiseDescribePortalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +509,7 @@ func (r *IoTSiteWiseDescribePortalFuture) Get(ctx workflow.Context) (*iotsitewis
 }
 
 type IoTSiteWiseDescribeProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +520,7 @@ func (r *IoTSiteWiseDescribeProjectFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseDisassociateAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +531,7 @@ func (r *IoTSiteWiseDisassociateAssetsFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseGetAssetPropertyAggregatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +542,7 @@ func (r *IoTSiteWiseGetAssetPropertyAggregatesFuture) Get(ctx workflow.Context) 
 }
 
 type IoTSiteWiseGetAssetPropertyValueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +553,7 @@ func (r *IoTSiteWiseGetAssetPropertyValueFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTSiteWiseGetAssetPropertyValueHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +564,7 @@ func (r *IoTSiteWiseGetAssetPropertyValueHistoryFuture) Get(ctx workflow.Context
 }
 
 type IoTSiteWiseListAccessPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +575,7 @@ func (r *IoTSiteWiseListAccessPoliciesFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseListAssetModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +586,7 @@ func (r *IoTSiteWiseListAssetModelsFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseListAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +597,7 @@ func (r *IoTSiteWiseListAssetsFuture) Get(ctx workflow.Context) (*iotsitewise.Li
 }
 
 type IoTSiteWiseListAssociatedAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +608,7 @@ func (r *IoTSiteWiseListAssociatedAssetsFuture) Get(ctx workflow.Context) (*iots
 }
 
 type IoTSiteWiseListDashboardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +619,7 @@ func (r *IoTSiteWiseListDashboardsFuture) Get(ctx workflow.Context) (*iotsitewis
 }
 
 type IoTSiteWiseListGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +630,7 @@ func (r *IoTSiteWiseListGatewaysFuture) Get(ctx workflow.Context) (*iotsitewise.
 }
 
 type IoTSiteWiseListPortalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +641,7 @@ func (r *IoTSiteWiseListPortalsFuture) Get(ctx workflow.Context) (*iotsitewise.L
 }
 
 type IoTSiteWiseListProjectAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +652,7 @@ func (r *IoTSiteWiseListProjectAssetsFuture) Get(ctx workflow.Context) (*iotsite
 }
 
 type IoTSiteWiseListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +663,7 @@ func (r *IoTSiteWiseListProjectsFuture) Get(ctx workflow.Context) (*iotsitewise.
 }
 
 type IoTSiteWiseListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +674,7 @@ func (r *IoTSiteWiseListTagsForResourceFuture) Get(ctx workflow.Context) (*iotsi
 }
 
 type IoTSiteWisePutLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +685,7 @@ func (r *IoTSiteWisePutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotsite
 }
 
 type IoTSiteWiseTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +696,7 @@ func (r *IoTSiteWiseTagResourceFuture) Get(ctx workflow.Context) (*iotsitewise.T
 }
 
 type IoTSiteWiseUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +707,7 @@ func (r *IoTSiteWiseUntagResourceFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseUpdateAccessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +718,7 @@ func (r *IoTSiteWiseUpdateAccessPolicyFuture) Get(ctx workflow.Context) (*iotsit
 }
 
 type IoTSiteWiseUpdateAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +729,7 @@ func (r *IoTSiteWiseUpdateAssetFuture) Get(ctx workflow.Context) (*iotsitewise.U
 }
 
 type IoTSiteWiseUpdateAssetModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +740,7 @@ func (r *IoTSiteWiseUpdateAssetModelFuture) Get(ctx workflow.Context) (*iotsitew
 }
 
 type IoTSiteWiseUpdateAssetPropertyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -701,6 +751,7 @@ func (r *IoTSiteWiseUpdateAssetPropertyFuture) Get(ctx workflow.Context) (*iotsi
 }
 
 type IoTSiteWiseUpdateDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -711,6 +762,7 @@ func (r *IoTSiteWiseUpdateDashboardFuture) Get(ctx workflow.Context) (*iotsitewi
 }
 
 type IoTSiteWiseUpdateGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -721,6 +773,7 @@ func (r *IoTSiteWiseUpdateGatewayFuture) Get(ctx workflow.Context) (*iotsitewise
 }
 
 type IoTSiteWiseUpdateGatewayCapabilityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -731,6 +784,7 @@ func (r *IoTSiteWiseUpdateGatewayCapabilityConfigurationFuture) Get(ctx workflow
 }
 
 type IoTSiteWiseUpdatePortalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -741,6 +795,7 @@ func (r *IoTSiteWiseUpdatePortalFuture) Get(ctx workflow.Context) (*iotsitewise.
 }
 
 type IoTSiteWiseUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

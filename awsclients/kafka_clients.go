@@ -105,6 +105,7 @@ func NewKafkaStub() KafkaClient {
 }
 
 type KafkaBatchAssociateScramSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +116,7 @@ func (r *KafkaBatchAssociateScramSecretFuture) Get(ctx workflow.Context) (*kafka
 }
 
 type KafkaBatchDisassociateScramSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +127,7 @@ func (r *KafkaBatchDisassociateScramSecretFuture) Get(ctx workflow.Context) (*ka
 }
 
 type KafkaCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +138,7 @@ func (r *KafkaCreateClusterFuture) Get(ctx workflow.Context) (*kafka.CreateClust
 }
 
 type KafkaCreateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +149,7 @@ func (r *KafkaCreateConfigurationFuture) Get(ctx workflow.Context) (*kafka.Creat
 }
 
 type KafkaDeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +160,7 @@ func (r *KafkaDeleteClusterFuture) Get(ctx workflow.Context) (*kafka.DeleteClust
 }
 
 type KafkaDeleteConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +171,7 @@ func (r *KafkaDeleteConfigurationFuture) Get(ctx workflow.Context) (*kafka.Delet
 }
 
 type KafkaDescribeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +182,7 @@ func (r *KafkaDescribeClusterFuture) Get(ctx workflow.Context) (*kafka.DescribeC
 }
 
 type KafkaDescribeClusterOperationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +193,7 @@ func (r *KafkaDescribeClusterOperationFuture) Get(ctx workflow.Context) (*kafka.
 }
 
 type KafkaDescribeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +204,7 @@ func (r *KafkaDescribeConfigurationFuture) Get(ctx workflow.Context) (*kafka.Des
 }
 
 type KafkaDescribeConfigurationRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +215,7 @@ func (r *KafkaDescribeConfigurationRevisionFuture) Get(ctx workflow.Context) (*k
 }
 
 type KafkaGetBootstrapBrokersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +226,7 @@ func (r *KafkaGetBootstrapBrokersFuture) Get(ctx workflow.Context) (*kafka.GetBo
 }
 
 type KafkaGetCompatibleKafkaVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +237,7 @@ func (r *KafkaGetCompatibleKafkaVersionsFuture) Get(ctx workflow.Context) (*kafk
 }
 
 type KafkaListClusterOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +248,7 @@ func (r *KafkaListClusterOperationsFuture) Get(ctx workflow.Context) (*kafka.Lis
 }
 
 type KafkaListClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +259,7 @@ func (r *KafkaListClustersFuture) Get(ctx workflow.Context) (*kafka.ListClusters
 }
 
 type KafkaListConfigurationRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +270,7 @@ func (r *KafkaListConfigurationRevisionsFuture) Get(ctx workflow.Context) (*kafk
 }
 
 type KafkaListConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +281,7 @@ func (r *KafkaListConfigurationsFuture) Get(ctx workflow.Context) (*kafka.ListCo
 }
 
 type KafkaListKafkaVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +292,7 @@ func (r *KafkaListKafkaVersionsFuture) Get(ctx workflow.Context) (*kafka.ListKaf
 }
 
 type KafkaListNodesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +303,7 @@ func (r *KafkaListNodesFuture) Get(ctx workflow.Context) (*kafka.ListNodesOutput
 }
 
 type KafkaListScramSecretsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +314,7 @@ func (r *KafkaListScramSecretsFuture) Get(ctx workflow.Context) (*kafka.ListScra
 }
 
 type KafkaListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +325,7 @@ func (r *KafkaListTagsForResourceFuture) Get(ctx workflow.Context) (*kafka.ListT
 }
 
 type KafkaRebootBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +336,7 @@ func (r *KafkaRebootBrokerFuture) Get(ctx workflow.Context) (*kafka.RebootBroker
 }
 
 type KafkaTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +347,7 @@ func (r *KafkaTagResourceFuture) Get(ctx workflow.Context) (*kafka.TagResourceOu
 }
 
 type KafkaUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +358,7 @@ func (r *KafkaUntagResourceFuture) Get(ctx workflow.Context) (*kafka.UntagResour
 }
 
 type KafkaUpdateBrokerCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +369,7 @@ func (r *KafkaUpdateBrokerCountFuture) Get(ctx workflow.Context) (*kafka.UpdateB
 }
 
 type KafkaUpdateBrokerStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +380,7 @@ func (r *KafkaUpdateBrokerStorageFuture) Get(ctx workflow.Context) (*kafka.Updat
 }
 
 type KafkaUpdateClusterConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +391,7 @@ func (r *KafkaUpdateClusterConfigurationFuture) Get(ctx workflow.Context) (*kafk
 }
 
 type KafkaUpdateClusterKafkaVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +402,7 @@ func (r *KafkaUpdateClusterKafkaVersionFuture) Get(ctx workflow.Context) (*kafka
 }
 
 type KafkaUpdateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +413,7 @@ func (r *KafkaUpdateConfigurationFuture) Get(ctx workflow.Context) (*kafka.Updat
 }
 
 type KafkaUpdateMonitoringFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -93,6 +93,7 @@ func NewApplicationDiscoveryServiceStub() ApplicationDiscoveryServiceClient {
 }
 
 type ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *ApplicationDiscoveryServiceAssociateConfigurationItemsToApplicationFutu
 }
 
 type ApplicationDiscoveryServiceBatchDeleteImportDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *ApplicationDiscoveryServiceBatchDeleteImportDataFuture) Get(ctx workflo
 }
 
 type ApplicationDiscoveryServiceCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *ApplicationDiscoveryServiceCreateApplicationFuture) Get(ctx workflow.Co
 }
 
 type ApplicationDiscoveryServiceCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *ApplicationDiscoveryServiceCreateTagsFuture) Get(ctx workflow.Context) 
 }
 
 type ApplicationDiscoveryServiceDeleteApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *ApplicationDiscoveryServiceDeleteApplicationsFuture) Get(ctx workflow.C
 }
 
 type ApplicationDiscoveryServiceDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *ApplicationDiscoveryServiceDeleteTagsFuture) Get(ctx workflow.Context) 
 }
 
 type ApplicationDiscoveryServiceDescribeAgentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *ApplicationDiscoveryServiceDescribeAgentsFuture) Get(ctx workflow.Conte
 }
 
 type ApplicationDiscoveryServiceDescribeConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *ApplicationDiscoveryServiceDescribeConfigurationsFuture) Get(ctx workfl
 }
 
 type ApplicationDiscoveryServiceDescribeContinuousExportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *ApplicationDiscoveryServiceDescribeContinuousExportsFuture) Get(ctx wor
 }
 
 type ApplicationDiscoveryServiceDescribeExportConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *ApplicationDiscoveryServiceDescribeExportConfigurationsFuture) Get(ctx 
 }
 
 type ApplicationDiscoveryServiceDescribeExportTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *ApplicationDiscoveryServiceDescribeExportTasksFuture) Get(ctx workflow.
 }
 
 type ApplicationDiscoveryServiceDescribeImportTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *ApplicationDiscoveryServiceDescribeImportTasksFuture) Get(ctx workflow.
 }
 
 type ApplicationDiscoveryServiceDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *ApplicationDiscoveryServiceDescribeTagsFuture) Get(ctx workflow.Context
 }
 
 type ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *ApplicationDiscoveryServiceDisassociateConfigurationItemsFromApplicatio
 }
 
 type ApplicationDiscoveryServiceExportConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *ApplicationDiscoveryServiceExportConfigurationsFuture) Get(ctx workflow
 }
 
 type ApplicationDiscoveryServiceGetDiscoverySummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *ApplicationDiscoveryServiceGetDiscoverySummaryFuture) Get(ctx workflow.
 }
 
 type ApplicationDiscoveryServiceListConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *ApplicationDiscoveryServiceListConfigurationsFuture) Get(ctx workflow.C
 }
 
 type ApplicationDiscoveryServiceListServerNeighborsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *ApplicationDiscoveryServiceListServerNeighborsFuture) Get(ctx workflow.
 }
 
 type ApplicationDiscoveryServiceStartContinuousExportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *ApplicationDiscoveryServiceStartContinuousExportFuture) Get(ctx workflo
 }
 
 type ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *ApplicationDiscoveryServiceStartDataCollectionByAgentIdsFuture) Get(ctx
 }
 
 type ApplicationDiscoveryServiceStartExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +324,7 @@ func (r *ApplicationDiscoveryServiceStartExportTaskFuture) Get(ctx workflow.Cont
 }
 
 type ApplicationDiscoveryServiceStartImportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +335,7 @@ func (r *ApplicationDiscoveryServiceStartImportTaskFuture) Get(ctx workflow.Cont
 }
 
 type ApplicationDiscoveryServiceStopContinuousExportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +346,7 @@ func (r *ApplicationDiscoveryServiceStopContinuousExportFuture) Get(ctx workflow
 }
 
 type ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +357,7 @@ func (r *ApplicationDiscoveryServiceStopDataCollectionByAgentIdsFuture) Get(ctx 
 }
 
 type ApplicationDiscoveryServiceUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

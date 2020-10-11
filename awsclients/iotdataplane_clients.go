@@ -33,6 +33,7 @@ func NewIoTDataPlaneStub() IoTDataPlaneClient {
 }
 
 type IoTDataPlaneDeleteThingShadowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *IoTDataPlaneDeleteThingShadowFuture) Get(ctx workflow.Context) (*iotdat
 }
 
 type IoTDataPlaneGetThingShadowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *IoTDataPlaneGetThingShadowFuture) Get(ctx workflow.Context) (*iotdatapl
 }
 
 type IoTDataPlaneListNamedShadowsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *IoTDataPlaneListNamedShadowsForThingFuture) Get(ctx workflow.Context) (
 }
 
 type IoTDataPlanePublishFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *IoTDataPlanePublishFuture) Get(ctx workflow.Context) (*iotdataplane.Pub
 }
 
 type IoTDataPlaneUpdateThingShadowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

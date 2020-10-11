@@ -24,6 +24,7 @@ func NewPIStub() PIClient {
 }
 
 type PIDescribeDimensionKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -34,6 +35,7 @@ func (r *PIDescribeDimensionKeysFuture) Get(ctx workflow.Context) (*pi.DescribeD
 }
 
 type PIGetResourceMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

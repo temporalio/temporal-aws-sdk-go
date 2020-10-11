@@ -207,6 +207,7 @@ func NewCloudFormationStub() CloudFormationClient {
 }
 
 type CloudFormationCancelUpdateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +218,7 @@ func (r *CloudFormationCancelUpdateStackFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudFormationContinueUpdateRollbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +229,7 @@ func (r *CloudFormationContinueUpdateRollbackFuture) Get(ctx workflow.Context) (
 }
 
 type CloudFormationCreateChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +240,7 @@ func (r *CloudFormationCreateChangeSetFuture) Get(ctx workflow.Context) (*cloudf
 }
 
 type CloudFormationCreateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +251,7 @@ func (r *CloudFormationCreateStackFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationCreateStackInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +262,7 @@ func (r *CloudFormationCreateStackInstancesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudFormationCreateStackSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +273,7 @@ func (r *CloudFormationCreateStackSetFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationDeleteChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +284,7 @@ func (r *CloudFormationDeleteChangeSetFuture) Get(ctx workflow.Context) (*cloudf
 }
 
 type CloudFormationDeleteStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +295,7 @@ func (r *CloudFormationDeleteStackFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationDeleteStackInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +306,7 @@ func (r *CloudFormationDeleteStackInstancesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudFormationDeleteStackSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +317,7 @@ func (r *CloudFormationDeleteStackSetFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationDeregisterTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +328,7 @@ func (r *CloudFormationDeregisterTypeFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationDescribeAccountLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +339,7 @@ func (r *CloudFormationDescribeAccountLimitsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationDescribeChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +350,7 @@ func (r *CloudFormationDescribeChangeSetFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudFormationDescribeStackDriftDetectionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +361,7 @@ func (r *CloudFormationDescribeStackDriftDetectionStatusFuture) Get(ctx workflow
 }
 
 type CloudFormationDescribeStackEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +372,7 @@ func (r *CloudFormationDescribeStackEventsFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFormationDescribeStackInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +383,7 @@ func (r *CloudFormationDescribeStackInstanceFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationDescribeStackResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +394,7 @@ func (r *CloudFormationDescribeStackResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationDescribeStackResourceDriftsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +405,7 @@ func (r *CloudFormationDescribeStackResourceDriftsFuture) Get(ctx workflow.Conte
 }
 
 type CloudFormationDescribeStackResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +416,7 @@ func (r *CloudFormationDescribeStackResourcesFuture) Get(ctx workflow.Context) (
 }
 
 type CloudFormationDescribeStackSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +427,7 @@ func (r *CloudFormationDescribeStackSetFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFormationDescribeStackSetOperationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +438,7 @@ func (r *CloudFormationDescribeStackSetOperationFuture) Get(ctx workflow.Context
 }
 
 type CloudFormationDescribeStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +449,7 @@ func (r *CloudFormationDescribeStacksFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationDescribeTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +460,7 @@ func (r *CloudFormationDescribeTypeFuture) Get(ctx workflow.Context) (*cloudform
 }
 
 type CloudFormationDescribeTypeRegistrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +471,7 @@ func (r *CloudFormationDescribeTypeRegistrationFuture) Get(ctx workflow.Context)
 }
 
 type CloudFormationDetectStackDriftFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +482,7 @@ func (r *CloudFormationDetectStackDriftFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFormationDetectStackResourceDriftFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +493,7 @@ func (r *CloudFormationDetectStackResourceDriftFuture) Get(ctx workflow.Context)
 }
 
 type CloudFormationDetectStackSetDriftFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +504,7 @@ func (r *CloudFormationDetectStackSetDriftFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudFormationEstimateTemplateCostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +515,7 @@ func (r *CloudFormationEstimateTemplateCostFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudFormationExecuteChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +526,7 @@ func (r *CloudFormationExecuteChangeSetFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFormationGetStackPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +537,7 @@ func (r *CloudFormationGetStackPolicyFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationGetTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +548,7 @@ func (r *CloudFormationGetTemplateFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationGetTemplateSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +559,7 @@ func (r *CloudFormationGetTemplateSummaryFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudFormationListChangeSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +570,7 @@ func (r *CloudFormationListChangeSetsFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationListExportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +581,7 @@ func (r *CloudFormationListExportsFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationListImportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +592,7 @@ func (r *CloudFormationListImportsFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationListStackInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +603,7 @@ func (r *CloudFormationListStackInstancesFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudFormationListStackResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -577,6 +614,7 @@ func (r *CloudFormationListStackResourcesFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudFormationListStackSetOperationResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -587,6 +625,7 @@ func (r *CloudFormationListStackSetOperationResultsFuture) Get(ctx workflow.Cont
 }
 
 type CloudFormationListStackSetOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -597,6 +636,7 @@ func (r *CloudFormationListStackSetOperationsFuture) Get(ctx workflow.Context) (
 }
 
 type CloudFormationListStackSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -607,6 +647,7 @@ func (r *CloudFormationListStackSetsFuture) Get(ctx workflow.Context) (*cloudfor
 }
 
 type CloudFormationListStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -617,6 +658,7 @@ func (r *CloudFormationListStacksFuture) Get(ctx workflow.Context) (*cloudformat
 }
 
 type CloudFormationListTypeRegistrationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -627,6 +669,7 @@ func (r *CloudFormationListTypeRegistrationsFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationListTypeVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -637,6 +680,7 @@ func (r *CloudFormationListTypeVersionsFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudFormationListTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -647,6 +691,7 @@ func (r *CloudFormationListTypesFuture) Get(ctx workflow.Context) (*cloudformati
 }
 
 type CloudFormationRecordHandlerProgressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -657,6 +702,7 @@ func (r *CloudFormationRecordHandlerProgressFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationRegisterTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -667,6 +713,7 @@ func (r *CloudFormationRegisterTypeFuture) Get(ctx workflow.Context) (*cloudform
 }
 
 type CloudFormationSetStackPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -677,6 +724,7 @@ func (r *CloudFormationSetStackPolicyFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationSetTypeDefaultVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -687,6 +735,7 @@ func (r *CloudFormationSetTypeDefaultVersionFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationSignalResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -697,6 +746,7 @@ func (r *CloudFormationSignalResourceFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationStopStackSetOperationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -707,6 +757,7 @@ func (r *CloudFormationStopStackSetOperationFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudFormationUpdateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -717,6 +768,7 @@ func (r *CloudFormationUpdateStackFuture) Get(ctx workflow.Context) (*cloudforma
 }
 
 type CloudFormationUpdateStackInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -727,6 +779,7 @@ func (r *CloudFormationUpdateStackInstancesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudFormationUpdateStackSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -737,6 +790,7 @@ func (r *CloudFormationUpdateStackSetFuture) Get(ctx workflow.Context) (*cloudfo
 }
 
 type CloudFormationUpdateTerminationProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -747,6 +801,7 @@ func (r *CloudFormationUpdateTerminationProtectionFuture) Get(ctx workflow.Conte
 }
 
 type CloudFormationValidateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -33,6 +33,7 @@ func NewConnectParticipantStub() ConnectParticipantClient {
 }
 
 type ConnectParticipantCreateParticipantConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *ConnectParticipantCreateParticipantConnectionFuture) Get(ctx workflow.C
 }
 
 type ConnectParticipantDisconnectParticipantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *ConnectParticipantDisconnectParticipantFuture) Get(ctx workflow.Context
 }
 
 type ConnectParticipantGetTranscriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *ConnectParticipantGetTranscriptFuture) Get(ctx workflow.Context) (*conn
 }
 
 type ConnectParticipantSendEventFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *ConnectParticipantSendEventFuture) Get(ctx workflow.Context) (*connectp
 }
 
 type ConnectParticipantSendMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -147,6 +147,7 @@ func NewDynamoDBStub() DynamoDBClient {
 }
 
 type DynamoDBBatchGetItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +158,7 @@ func (r *DynamoDBBatchGetItemFuture) Get(ctx workflow.Context) (*dynamodb.BatchG
 }
 
 type DynamoDBBatchWriteItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +169,7 @@ func (r *DynamoDBBatchWriteItemFuture) Get(ctx workflow.Context) (*dynamodb.Batc
 }
 
 type DynamoDBCreateBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +180,7 @@ func (r *DynamoDBCreateBackupFuture) Get(ctx workflow.Context) (*dynamodb.Create
 }
 
 type DynamoDBCreateGlobalTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +191,7 @@ func (r *DynamoDBCreateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.C
 }
 
 type DynamoDBCreateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +202,7 @@ func (r *DynamoDBCreateTableFuture) Get(ctx workflow.Context) (*dynamodb.CreateT
 }
 
 type DynamoDBDeleteBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +213,7 @@ func (r *DynamoDBDeleteBackupFuture) Get(ctx workflow.Context) (*dynamodb.Delete
 }
 
 type DynamoDBDeleteItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +224,7 @@ func (r *DynamoDBDeleteItemFuture) Get(ctx workflow.Context) (*dynamodb.DeleteIt
 }
 
 type DynamoDBDeleteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +235,7 @@ func (r *DynamoDBDeleteTableFuture) Get(ctx workflow.Context) (*dynamodb.DeleteT
 }
 
 type DynamoDBDescribeBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +246,7 @@ func (r *DynamoDBDescribeBackupFuture) Get(ctx workflow.Context) (*dynamodb.Desc
 }
 
 type DynamoDBDescribeContinuousBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +257,7 @@ func (r *DynamoDBDescribeContinuousBackupsFuture) Get(ctx workflow.Context) (*dy
 }
 
 type DynamoDBDescribeContributorInsightsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +268,7 @@ func (r *DynamoDBDescribeContributorInsightsFuture) Get(ctx workflow.Context) (*
 }
 
 type DynamoDBDescribeEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +279,7 @@ func (r *DynamoDBDescribeEndpointsFuture) Get(ctx workflow.Context) (*dynamodb.D
 }
 
 type DynamoDBDescribeGlobalTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +290,7 @@ func (r *DynamoDBDescribeGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb
 }
 
 type DynamoDBDescribeGlobalTableSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +301,7 @@ func (r *DynamoDBDescribeGlobalTableSettingsFuture) Get(ctx workflow.Context) (*
 }
 
 type DynamoDBDescribeLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +312,7 @@ func (r *DynamoDBDescribeLimitsFuture) Get(ctx workflow.Context) (*dynamodb.Desc
 }
 
 type DynamoDBDescribeTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +323,7 @@ func (r *DynamoDBDescribeTableFuture) Get(ctx workflow.Context) (*dynamodb.Descr
 }
 
 type DynamoDBDescribeTableReplicaAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +334,7 @@ func (r *DynamoDBDescribeTableReplicaAutoScalingFuture) Get(ctx workflow.Context
 }
 
 type DynamoDBDescribeTimeToLiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +345,7 @@ func (r *DynamoDBDescribeTimeToLiveFuture) Get(ctx workflow.Context) (*dynamodb.
 }
 
 type DynamoDBGetItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +356,7 @@ func (r *DynamoDBGetItemFuture) Get(ctx workflow.Context) (*dynamodb.GetItemOutp
 }
 
 type DynamoDBListBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +367,7 @@ func (r *DynamoDBListBackupsFuture) Get(ctx workflow.Context) (*dynamodb.ListBac
 }
 
 type DynamoDBListContributorInsightsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +378,7 @@ func (r *DynamoDBListContributorInsightsFuture) Get(ctx workflow.Context) (*dyna
 }
 
 type DynamoDBListGlobalTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +389,7 @@ func (r *DynamoDBListGlobalTablesFuture) Get(ctx workflow.Context) (*dynamodb.Li
 }
 
 type DynamoDBListTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +400,7 @@ func (r *DynamoDBListTablesFuture) Get(ctx workflow.Context) (*dynamodb.ListTabl
 }
 
 type DynamoDBListTagsOfResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +411,7 @@ func (r *DynamoDBListTagsOfResourceFuture) Get(ctx workflow.Context) (*dynamodb.
 }
 
 type DynamoDBPutItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +422,7 @@ func (r *DynamoDBPutItemFuture) Get(ctx workflow.Context) (*dynamodb.PutItemOutp
 }
 
 type DynamoDBQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +433,7 @@ func (r *DynamoDBQueryFuture) Get(ctx workflow.Context) (*dynamodb.QueryOutput, 
 }
 
 type DynamoDBRestoreTableFromBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +444,7 @@ func (r *DynamoDBRestoreTableFromBackupFuture) Get(ctx workflow.Context) (*dynam
 }
 
 type DynamoDBRestoreTableToPointInTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +455,7 @@ func (r *DynamoDBRestoreTableToPointInTimeFuture) Get(ctx workflow.Context) (*dy
 }
 
 type DynamoDBScanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +466,7 @@ func (r *DynamoDBScanFuture) Get(ctx workflow.Context) (*dynamodb.ScanOutput, er
 }
 
 type DynamoDBTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +477,7 @@ func (r *DynamoDBTagResourceFuture) Get(ctx workflow.Context) (*dynamodb.TagReso
 }
 
 type DynamoDBTransactGetItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +488,7 @@ func (r *DynamoDBTransactGetItemsFuture) Get(ctx workflow.Context) (*dynamodb.Tr
 }
 
 type DynamoDBTransactWriteItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +499,7 @@ func (r *DynamoDBTransactWriteItemsFuture) Get(ctx workflow.Context) (*dynamodb.
 }
 
 type DynamoDBUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +510,7 @@ func (r *DynamoDBUntagResourceFuture) Get(ctx workflow.Context) (*dynamodb.Untag
 }
 
 type DynamoDBUpdateContinuousBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +521,7 @@ func (r *DynamoDBUpdateContinuousBackupsFuture) Get(ctx workflow.Context) (*dyna
 }
 
 type DynamoDBUpdateContributorInsightsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +532,7 @@ func (r *DynamoDBUpdateContributorInsightsFuture) Get(ctx workflow.Context) (*dy
 }
 
 type DynamoDBUpdateGlobalTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +543,7 @@ func (r *DynamoDBUpdateGlobalTableFuture) Get(ctx workflow.Context) (*dynamodb.U
 }
 
 type DynamoDBUpdateGlobalTableSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +554,7 @@ func (r *DynamoDBUpdateGlobalTableSettingsFuture) Get(ctx workflow.Context) (*dy
 }
 
 type DynamoDBUpdateItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +565,7 @@ func (r *DynamoDBUpdateItemFuture) Get(ctx workflow.Context) (*dynamodb.UpdateIt
 }
 
 type DynamoDBUpdateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +576,7 @@ func (r *DynamoDBUpdateTableFuture) Get(ctx workflow.Context) (*dynamodb.UpdateT
 }
 
 type DynamoDBUpdateTableReplicaAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +587,7 @@ func (r *DynamoDBUpdateTableReplicaAutoScalingFuture) Get(ctx workflow.Context) 
 }
 
 type DynamoDBUpdateTimeToLiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

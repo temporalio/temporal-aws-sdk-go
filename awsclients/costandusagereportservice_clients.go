@@ -30,6 +30,7 @@ func NewCostandUsageReportServiceStub() CostandUsageReportServiceClient {
 }
 
 type CostandUsageReportServiceDeleteReportDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *CostandUsageReportServiceDeleteReportDefinitionFuture) Get(ctx workflow
 }
 
 type CostandUsageReportServiceDescribeReportDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *CostandUsageReportServiceDescribeReportDefinitionsFuture) Get(ctx workf
 }
 
 type CostandUsageReportServiceModifyReportDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *CostandUsageReportServiceModifyReportDefinitionFuture) Get(ctx workflow
 }
 
 type CostandUsageReportServicePutReportDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

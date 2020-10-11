@@ -129,6 +129,7 @@ func NewMTurkStub() MTurkClient {
 }
 
 type MTurkApproveAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *MTurkApproveAssignmentFuture) Get(ctx workflow.Context) (*mturk.Approve
 }
 
 type MTurkAssociateQualificationWithWorkerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *MTurkAssociateQualificationWithWorkerFuture) Get(ctx workflow.Context) 
 }
 
 type MTurkCreateAdditionalAssignmentsForHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *MTurkCreateAdditionalAssignmentsForHITFuture) Get(ctx workflow.Context)
 }
 
 type MTurkCreateHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *MTurkCreateHITFuture) Get(ctx workflow.Context) (*mturk.CreateHITOutput
 }
 
 type MTurkCreateHITTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *MTurkCreateHITTypeFuture) Get(ctx workflow.Context) (*mturk.CreateHITTy
 }
 
 type MTurkCreateHITWithHITTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *MTurkCreateHITWithHITTypeFuture) Get(ctx workflow.Context) (*mturk.Crea
 }
 
 type MTurkCreateQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *MTurkCreateQualificationTypeFuture) Get(ctx workflow.Context) (*mturk.C
 }
 
 type MTurkCreateWorkerBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *MTurkCreateWorkerBlockFuture) Get(ctx workflow.Context) (*mturk.CreateW
 }
 
 type MTurkDeleteHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *MTurkDeleteHITFuture) Get(ctx workflow.Context) (*mturk.DeleteHITOutput
 }
 
 type MTurkDeleteQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *MTurkDeleteQualificationTypeFuture) Get(ctx workflow.Context) (*mturk.D
 }
 
 type MTurkDeleteWorkerBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *MTurkDeleteWorkerBlockFuture) Get(ctx workflow.Context) (*mturk.DeleteW
 }
 
 type MTurkDisassociateQualificationFromWorkerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *MTurkDisassociateQualificationFromWorkerFuture) Get(ctx workflow.Contex
 }
 
 type MTurkGetAccountBalanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *MTurkGetAccountBalanceFuture) Get(ctx workflow.Context) (*mturk.GetAcco
 }
 
 type MTurkGetAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *MTurkGetAssignmentFuture) Get(ctx workflow.Context) (*mturk.GetAssignme
 }
 
 type MTurkGetFileUploadURLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *MTurkGetFileUploadURLFuture) Get(ctx workflow.Context) (*mturk.GetFileU
 }
 
 type MTurkGetHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *MTurkGetHITFuture) Get(ctx workflow.Context) (*mturk.GetHITOutput, erro
 }
 
 type MTurkGetQualificationScoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *MTurkGetQualificationScoreFuture) Get(ctx workflow.Context) (*mturk.Get
 }
 
 type MTurkGetQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *MTurkGetQualificationTypeFuture) Get(ctx workflow.Context) (*mturk.GetQ
 }
 
 type MTurkListAssignmentsForHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *MTurkListAssignmentsForHITFuture) Get(ctx workflow.Context) (*mturk.Lis
 }
 
 type MTurkListBonusPaymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *MTurkListBonusPaymentsFuture) Get(ctx workflow.Context) (*mturk.ListBon
 }
 
 type MTurkListHITsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *MTurkListHITsFuture) Get(ctx workflow.Context) (*mturk.ListHITsOutput, 
 }
 
 type MTurkListHITsForQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *MTurkListHITsForQualificationTypeFuture) Get(ctx workflow.Context) (*mt
 }
 
 type MTurkListQualificationRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *MTurkListQualificationRequestsFuture) Get(ctx workflow.Context) (*mturk
 }
 
 type MTurkListQualificationTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *MTurkListQualificationTypesFuture) Get(ctx workflow.Context) (*mturk.Li
 }
 
 type MTurkListReviewPolicyResultsForHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *MTurkListReviewPolicyResultsForHITFuture) Get(ctx workflow.Context) (*m
 }
 
 type MTurkListReviewableHITsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *MTurkListReviewableHITsFuture) Get(ctx workflow.Context) (*mturk.ListRe
 }
 
 type MTurkListWorkerBlocksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *MTurkListWorkerBlocksFuture) Get(ctx workflow.Context) (*mturk.ListWork
 }
 
 type MTurkListWorkersWithQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *MTurkListWorkersWithQualificationTypeFuture) Get(ctx workflow.Context) 
 }
 
 type MTurkNotifyWorkersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *MTurkNotifyWorkersFuture) Get(ctx workflow.Context) (*mturk.NotifyWorke
 }
 
 type MTurkRejectAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *MTurkRejectAssignmentFuture) Get(ctx workflow.Context) (*mturk.RejectAs
 }
 
 type MTurkSendBonusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *MTurkSendBonusFuture) Get(ctx workflow.Context) (*mturk.SendBonusOutput
 }
 
 type MTurkSendTestEventNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *MTurkSendTestEventNotificationFuture) Get(ctx workflow.Context) (*mturk
 }
 
 type MTurkUpdateExpirationForHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *MTurkUpdateExpirationForHITFuture) Get(ctx workflow.Context) (*mturk.Up
 }
 
 type MTurkUpdateHITReviewStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *MTurkUpdateHITReviewStatusFuture) Get(ctx workflow.Context) (*mturk.Upd
 }
 
 type MTurkUpdateHITTypeOfHITFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *MTurkUpdateHITTypeOfHITFuture) Get(ctx workflow.Context) (*mturk.Update
 }
 
 type MTurkUpdateNotificationSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *MTurkUpdateNotificationSettingsFuture) Get(ctx workflow.Context) (*mtur
 }
 
 type MTurkUpdateQualificationTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -33,6 +33,7 @@ func NewAugmentedAIRuntimeStub() AugmentedAIRuntimeClient {
 }
 
 type AugmentedAIRuntimeDeleteHumanLoopFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *AugmentedAIRuntimeDeleteHumanLoopFuture) Get(ctx workflow.Context) (*au
 }
 
 type AugmentedAIRuntimeDescribeHumanLoopFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *AugmentedAIRuntimeDescribeHumanLoopFuture) Get(ctx workflow.Context) (*
 }
 
 type AugmentedAIRuntimeListHumanLoopsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *AugmentedAIRuntimeListHumanLoopsFuture) Get(ctx workflow.Context) (*aug
 }
 
 type AugmentedAIRuntimeStartHumanLoopFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *AugmentedAIRuntimeStartHumanLoopFuture) Get(ctx workflow.Context) (*aug
 }
 
 type AugmentedAIRuntimeStopHumanLoopFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -39,6 +39,7 @@ func NewIoTSecureTunnelingStub() IoTSecureTunnelingClient {
 }
 
 type IoTSecureTunnelingCloseTunnelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -49,6 +50,7 @@ func (r *IoTSecureTunnelingCloseTunnelFuture) Get(ctx workflow.Context) (*iotsec
 }
 
 type IoTSecureTunnelingDescribeTunnelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -59,6 +61,7 @@ func (r *IoTSecureTunnelingDescribeTunnelFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTSecureTunnelingListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -69,6 +72,7 @@ func (r *IoTSecureTunnelingListTagsForResourceFuture) Get(ctx workflow.Context) 
 }
 
 type IoTSecureTunnelingListTunnelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +83,7 @@ func (r *IoTSecureTunnelingListTunnelsFuture) Get(ctx workflow.Context) (*iotsec
 }
 
 type IoTSecureTunnelingOpenTunnelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +94,7 @@ func (r *IoTSecureTunnelingOpenTunnelFuture) Get(ctx workflow.Context) (*iotsecu
 }
 
 type IoTSecureTunnelingTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +105,7 @@ func (r *IoTSecureTunnelingTagResourceFuture) Get(ctx workflow.Context) (*iotsec
 }
 
 type IoTSecureTunnelingUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

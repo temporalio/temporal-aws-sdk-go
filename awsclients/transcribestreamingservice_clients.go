@@ -21,6 +21,7 @@ func NewTranscribeStreamingServiceStub() TranscribeStreamingServiceClient {
 }
 
 type TranscribeStreamingServiceStartStreamTranscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

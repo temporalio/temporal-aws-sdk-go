@@ -75,6 +75,7 @@ func NewQLDBStub() QLDBClient {
 }
 
 type QLDBCancelJournalKinesisStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *QLDBCancelJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qldb.
 }
 
 type QLDBCreateLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *QLDBCreateLedgerFuture) Get(ctx workflow.Context) (*qldb.CreateLedgerOu
 }
 
 type QLDBDeleteLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *QLDBDeleteLedgerFuture) Get(ctx workflow.Context) (*qldb.DeleteLedgerOu
 }
 
 type QLDBDescribeJournalKinesisStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *QLDBDescribeJournalKinesisStreamFuture) Get(ctx workflow.Context) (*qld
 }
 
 type QLDBDescribeJournalS3ExportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *QLDBDescribeJournalS3ExportFuture) Get(ctx workflow.Context) (*qldb.Des
 }
 
 type QLDBDescribeLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *QLDBDescribeLedgerFuture) Get(ctx workflow.Context) (*qldb.DescribeLedg
 }
 
 type QLDBExportJournalToS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *QLDBExportJournalToS3Future) Get(ctx workflow.Context) (*qldb.ExportJou
 }
 
 type QLDBGetBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *QLDBGetBlockFuture) Get(ctx workflow.Context) (*qldb.GetBlockOutput, er
 }
 
 type QLDBGetDigestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *QLDBGetDigestFuture) Get(ctx workflow.Context) (*qldb.GetDigestOutput, 
 }
 
 type QLDBGetRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *QLDBGetRevisionFuture) Get(ctx workflow.Context) (*qldb.GetRevisionOutp
 }
 
 type QLDBListJournalKinesisStreamsForLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *QLDBListJournalKinesisStreamsForLedgerFuture) Get(ctx workflow.Context)
 }
 
 type QLDBListJournalS3ExportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *QLDBListJournalS3ExportsFuture) Get(ctx workflow.Context) (*qldb.ListJo
 }
 
 type QLDBListJournalS3ExportsForLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *QLDBListJournalS3ExportsForLedgerFuture) Get(ctx workflow.Context) (*ql
 }
 
 type QLDBListLedgersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *QLDBListLedgersFuture) Get(ctx workflow.Context) (*qldb.ListLedgersOutp
 }
 
 type QLDBListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *QLDBListTagsForResourceFuture) Get(ctx workflow.Context) (*qldb.ListTag
 }
 
 type QLDBStreamJournalToKinesisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *QLDBStreamJournalToKinesisFuture) Get(ctx workflow.Context) (*qldb.Stre
 }
 
 type QLDBTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *QLDBTagResourceFuture) Get(ctx workflow.Context) (*qldb.TagResourceOutp
 }
 
 type QLDBUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *QLDBUntagResourceFuture) Get(ctx workflow.Context) (*qldb.UntagResource
 }
 
 type QLDBUpdateLedgerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

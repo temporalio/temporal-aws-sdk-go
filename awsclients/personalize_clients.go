@@ -147,6 +147,7 @@ func NewPersonalizeStub() PersonalizeClient {
 }
 
 type PersonalizeCreateBatchInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +158,7 @@ func (r *PersonalizeCreateBatchInferenceJobFuture) Get(ctx workflow.Context) (*p
 }
 
 type PersonalizeCreateCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +169,7 @@ func (r *PersonalizeCreateCampaignFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeCreateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +180,7 @@ func (r *PersonalizeCreateDatasetFuture) Get(ctx workflow.Context) (*personalize
 }
 
 type PersonalizeCreateDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +191,7 @@ func (r *PersonalizeCreateDatasetGroupFuture) Get(ctx workflow.Context) (*person
 }
 
 type PersonalizeCreateDatasetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +202,7 @@ func (r *PersonalizeCreateDatasetImportJobFuture) Get(ctx workflow.Context) (*pe
 }
 
 type PersonalizeCreateEventTrackerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +213,7 @@ func (r *PersonalizeCreateEventTrackerFuture) Get(ctx workflow.Context) (*person
 }
 
 type PersonalizeCreateFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +224,7 @@ func (r *PersonalizeCreateFilterFuture) Get(ctx workflow.Context) (*personalize.
 }
 
 type PersonalizeCreateSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +235,7 @@ func (r *PersonalizeCreateSchemaFuture) Get(ctx workflow.Context) (*personalize.
 }
 
 type PersonalizeCreateSolutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +246,7 @@ func (r *PersonalizeCreateSolutionFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeCreateSolutionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +257,7 @@ func (r *PersonalizeCreateSolutionVersionFuture) Get(ctx workflow.Context) (*per
 }
 
 type PersonalizeDeleteCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +268,7 @@ func (r *PersonalizeDeleteCampaignFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeDeleteDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +279,7 @@ func (r *PersonalizeDeleteDatasetFuture) Get(ctx workflow.Context) (*personalize
 }
 
 type PersonalizeDeleteDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +290,7 @@ func (r *PersonalizeDeleteDatasetGroupFuture) Get(ctx workflow.Context) (*person
 }
 
 type PersonalizeDeleteEventTrackerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +301,7 @@ func (r *PersonalizeDeleteEventTrackerFuture) Get(ctx workflow.Context) (*person
 }
 
 type PersonalizeDeleteFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +312,7 @@ func (r *PersonalizeDeleteFilterFuture) Get(ctx workflow.Context) (*personalize.
 }
 
 type PersonalizeDeleteSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +323,7 @@ func (r *PersonalizeDeleteSchemaFuture) Get(ctx workflow.Context) (*personalize.
 }
 
 type PersonalizeDeleteSolutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +334,7 @@ func (r *PersonalizeDeleteSolutionFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeDescribeAlgorithmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +345,7 @@ func (r *PersonalizeDescribeAlgorithmFuture) Get(ctx workflow.Context) (*persona
 }
 
 type PersonalizeDescribeBatchInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +356,7 @@ func (r *PersonalizeDescribeBatchInferenceJobFuture) Get(ctx workflow.Context) (
 }
 
 type PersonalizeDescribeCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +367,7 @@ func (r *PersonalizeDescribeCampaignFuture) Get(ctx workflow.Context) (*personal
 }
 
 type PersonalizeDescribeDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +378,7 @@ func (r *PersonalizeDescribeDatasetFuture) Get(ctx workflow.Context) (*personali
 }
 
 type PersonalizeDescribeDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +389,7 @@ func (r *PersonalizeDescribeDatasetGroupFuture) Get(ctx workflow.Context) (*pers
 }
 
 type PersonalizeDescribeDatasetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +400,7 @@ func (r *PersonalizeDescribeDatasetImportJobFuture) Get(ctx workflow.Context) (*
 }
 
 type PersonalizeDescribeEventTrackerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +411,7 @@ func (r *PersonalizeDescribeEventTrackerFuture) Get(ctx workflow.Context) (*pers
 }
 
 type PersonalizeDescribeFeatureTransformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +422,7 @@ func (r *PersonalizeDescribeFeatureTransformationFuture) Get(ctx workflow.Contex
 }
 
 type PersonalizeDescribeFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +433,7 @@ func (r *PersonalizeDescribeFilterFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeDescribeRecipeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +444,7 @@ func (r *PersonalizeDescribeRecipeFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeDescribeSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +455,7 @@ func (r *PersonalizeDescribeSchemaFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeDescribeSolutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +466,7 @@ func (r *PersonalizeDescribeSolutionFuture) Get(ctx workflow.Context) (*personal
 }
 
 type PersonalizeDescribeSolutionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +477,7 @@ func (r *PersonalizeDescribeSolutionVersionFuture) Get(ctx workflow.Context) (*p
 }
 
 type PersonalizeGetSolutionMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +488,7 @@ func (r *PersonalizeGetSolutionMetricsFuture) Get(ctx workflow.Context) (*person
 }
 
 type PersonalizeListBatchInferenceJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +499,7 @@ func (r *PersonalizeListBatchInferenceJobsFuture) Get(ctx workflow.Context) (*pe
 }
 
 type PersonalizeListCampaignsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +510,7 @@ func (r *PersonalizeListCampaignsFuture) Get(ctx workflow.Context) (*personalize
 }
 
 type PersonalizeListDatasetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +521,7 @@ func (r *PersonalizeListDatasetGroupsFuture) Get(ctx workflow.Context) (*persona
 }
 
 type PersonalizeListDatasetImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +532,7 @@ func (r *PersonalizeListDatasetImportJobsFuture) Get(ctx workflow.Context) (*per
 }
 
 type PersonalizeListDatasetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +543,7 @@ func (r *PersonalizeListDatasetsFuture) Get(ctx workflow.Context) (*personalize.
 }
 
 type PersonalizeListEventTrackersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +554,7 @@ func (r *PersonalizeListEventTrackersFuture) Get(ctx workflow.Context) (*persona
 }
 
 type PersonalizeListFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +565,7 @@ func (r *PersonalizeListFiltersFuture) Get(ctx workflow.Context) (*personalize.L
 }
 
 type PersonalizeListRecipesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +576,7 @@ func (r *PersonalizeListRecipesFuture) Get(ctx workflow.Context) (*personalize.L
 }
 
 type PersonalizeListSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +587,7 @@ func (r *PersonalizeListSchemasFuture) Get(ctx workflow.Context) (*personalize.L
 }
 
 type PersonalizeListSolutionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +598,7 @@ func (r *PersonalizeListSolutionVersionsFuture) Get(ctx workflow.Context) (*pers
 }
 
 type PersonalizeListSolutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +609,7 @@ func (r *PersonalizeListSolutionsFuture) Get(ctx workflow.Context) (*personalize
 }
 
 type PersonalizeUpdateCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

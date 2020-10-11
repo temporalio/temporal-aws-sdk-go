@@ -33,6 +33,7 @@ func NewKinesisVideoArchivedMediaStub() KinesisVideoArchivedMediaClient {
 }
 
 type KinesisVideoArchivedMediaGetClipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *KinesisVideoArchivedMediaGetClipFuture) Get(ctx workflow.Context) (*kin
 }
 
 type KinesisVideoArchivedMediaGetDASHStreamingSessionURLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *KinesisVideoArchivedMediaGetDASHStreamingSessionURLFuture) Get(ctx work
 }
 
 type KinesisVideoArchivedMediaGetHLSStreamingSessionURLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *KinesisVideoArchivedMediaGetHLSStreamingSessionURLFuture) Get(ctx workf
 }
 
 type KinesisVideoArchivedMediaGetMediaForFragmentListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *KinesisVideoArchivedMediaGetMediaForFragmentListFuture) Get(ctx workflo
 }
 
 type KinesisVideoArchivedMediaListFragmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

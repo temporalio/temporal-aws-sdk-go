@@ -189,6 +189,7 @@ func NewDirectoryServiceStub() DirectoryServiceClient {
 }
 
 type DirectoryServiceAcceptSharedDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +200,7 @@ func (r *DirectoryServiceAcceptSharedDirectoryFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceAddIpRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +211,7 @@ func (r *DirectoryServiceAddIpRoutesFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +222,7 @@ func (r *DirectoryServiceAddTagsToResourceFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectoryServiceCancelSchemaExtensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +233,7 @@ func (r *DirectoryServiceCancelSchemaExtensionFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceConnectDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +244,7 @@ func (r *DirectoryServiceConnectDirectoryFuture) Get(ctx workflow.Context) (*dir
 }
 
 type DirectoryServiceCreateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +255,7 @@ func (r *DirectoryServiceCreateAliasFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceCreateComputerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +266,7 @@ func (r *DirectoryServiceCreateComputerFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceCreateConditionalForwarderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +277,7 @@ func (r *DirectoryServiceCreateConditionalForwarderFuture) Get(ctx workflow.Cont
 }
 
 type DirectoryServiceCreateDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +288,7 @@ func (r *DirectoryServiceCreateDirectoryFuture) Get(ctx workflow.Context) (*dire
 }
 
 type DirectoryServiceCreateLogSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +299,7 @@ func (r *DirectoryServiceCreateLogSubscriptionFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceCreateMicrosoftADFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +310,7 @@ func (r *DirectoryServiceCreateMicrosoftADFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectoryServiceCreateSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +321,7 @@ func (r *DirectoryServiceCreateSnapshotFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceCreateTrustFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +332,7 @@ func (r *DirectoryServiceCreateTrustFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceDeleteConditionalForwarderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +343,7 @@ func (r *DirectoryServiceDeleteConditionalForwarderFuture) Get(ctx workflow.Cont
 }
 
 type DirectoryServiceDeleteDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +354,7 @@ func (r *DirectoryServiceDeleteDirectoryFuture) Get(ctx workflow.Context) (*dire
 }
 
 type DirectoryServiceDeleteLogSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +365,7 @@ func (r *DirectoryServiceDeleteLogSubscriptionFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceDeleteSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +376,7 @@ func (r *DirectoryServiceDeleteSnapshotFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceDeleteTrustFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +387,7 @@ func (r *DirectoryServiceDeleteTrustFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceDeregisterCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +398,7 @@ func (r *DirectoryServiceDeregisterCertificateFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceDeregisterEventTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +409,7 @@ func (r *DirectoryServiceDeregisterEventTopicFuture) Get(ctx workflow.Context) (
 }
 
 type DirectoryServiceDescribeCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +420,7 @@ func (r *DirectoryServiceDescribeCertificateFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceDescribeConditionalForwardersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +431,7 @@ func (r *DirectoryServiceDescribeConditionalForwardersFuture) Get(ctx workflow.C
 }
 
 type DirectoryServiceDescribeDirectoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +442,7 @@ func (r *DirectoryServiceDescribeDirectoriesFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceDescribeDomainControllersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +453,7 @@ func (r *DirectoryServiceDescribeDomainControllersFuture) Get(ctx workflow.Conte
 }
 
 type DirectoryServiceDescribeEventTopicsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +464,7 @@ func (r *DirectoryServiceDescribeEventTopicsFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceDescribeLDAPSSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +475,7 @@ func (r *DirectoryServiceDescribeLDAPSSettingsFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceDescribeSharedDirectoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +486,7 @@ func (r *DirectoryServiceDescribeSharedDirectoriesFuture) Get(ctx workflow.Conte
 }
 
 type DirectoryServiceDescribeSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +497,7 @@ func (r *DirectoryServiceDescribeSnapshotsFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectoryServiceDescribeTrustsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +508,7 @@ func (r *DirectoryServiceDescribeTrustsFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceDisableLDAPSFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +519,7 @@ func (r *DirectoryServiceDisableLDAPSFuture) Get(ctx workflow.Context) (*directo
 }
 
 type DirectoryServiceDisableRadiusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +530,7 @@ func (r *DirectoryServiceDisableRadiusFuture) Get(ctx workflow.Context) (*direct
 }
 
 type DirectoryServiceDisableSsoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +541,7 @@ func (r *DirectoryServiceDisableSsoFuture) Get(ctx workflow.Context) (*directory
 }
 
 type DirectoryServiceEnableLDAPSFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +552,7 @@ func (r *DirectoryServiceEnableLDAPSFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceEnableRadiusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +563,7 @@ func (r *DirectoryServiceEnableRadiusFuture) Get(ctx workflow.Context) (*directo
 }
 
 type DirectoryServiceEnableSsoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +574,7 @@ func (r *DirectoryServiceEnableSsoFuture) Get(ctx workflow.Context) (*directorys
 }
 
 type DirectoryServiceGetDirectoryLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +585,7 @@ func (r *DirectoryServiceGetDirectoryLimitsFuture) Get(ctx workflow.Context) (*d
 }
 
 type DirectoryServiceGetSnapshotLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +596,7 @@ func (r *DirectoryServiceGetSnapshotLimitsFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectoryServiceListCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +607,7 @@ func (r *DirectoryServiceListCertificatesFuture) Get(ctx workflow.Context) (*dir
 }
 
 type DirectoryServiceListIpRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +618,7 @@ func (r *DirectoryServiceListIpRoutesFuture) Get(ctx workflow.Context) (*directo
 }
 
 type DirectoryServiceListLogSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +629,7 @@ func (r *DirectoryServiceListLogSubscriptionsFuture) Get(ctx workflow.Context) (
 }
 
 type DirectoryServiceListSchemaExtensionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +640,7 @@ func (r *DirectoryServiceListSchemaExtensionsFuture) Get(ctx workflow.Context) (
 }
 
 type DirectoryServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +651,7 @@ func (r *DirectoryServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceRegisterCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +662,7 @@ func (r *DirectoryServiceRegisterCertificateFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceRegisterEventTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -629,6 +673,7 @@ func (r *DirectoryServiceRegisterEventTopicFuture) Get(ctx workflow.Context) (*d
 }
 
 type DirectoryServiceRejectSharedDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -639,6 +684,7 @@ func (r *DirectoryServiceRejectSharedDirectoryFuture) Get(ctx workflow.Context) 
 }
 
 type DirectoryServiceRemoveIpRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -649,6 +695,7 @@ func (r *DirectoryServiceRemoveIpRoutesFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -659,6 +706,7 @@ func (r *DirectoryServiceRemoveTagsFromResourceFuture) Get(ctx workflow.Context)
 }
 
 type DirectoryServiceResetUserPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -669,6 +717,7 @@ func (r *DirectoryServiceResetUserPasswordFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectoryServiceRestoreFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -679,6 +728,7 @@ func (r *DirectoryServiceRestoreFromSnapshotFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectoryServiceShareDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -689,6 +739,7 @@ func (r *DirectoryServiceShareDirectoryFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectoryServiceStartSchemaExtensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -699,6 +750,7 @@ func (r *DirectoryServiceStartSchemaExtensionFuture) Get(ctx workflow.Context) (
 }
 
 type DirectoryServiceUnshareDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -709,6 +761,7 @@ func (r *DirectoryServiceUnshareDirectoryFuture) Get(ctx workflow.Context) (*dir
 }
 
 type DirectoryServiceUpdateConditionalForwarderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -719,6 +772,7 @@ func (r *DirectoryServiceUpdateConditionalForwarderFuture) Get(ctx workflow.Cont
 }
 
 type DirectoryServiceUpdateNumberOfDomainControllersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -729,6 +783,7 @@ func (r *DirectoryServiceUpdateNumberOfDomainControllersFuture) Get(ctx workflow
 }
 
 type DirectoryServiceUpdateRadiusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -739,6 +794,7 @@ func (r *DirectoryServiceUpdateRadiusFuture) Get(ctx workflow.Context) (*directo
 }
 
 type DirectoryServiceUpdateTrustFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -749,6 +805,7 @@ func (r *DirectoryServiceUpdateTrustFuture) Get(ctx workflow.Context) (*director
 }
 
 type DirectoryServiceVerifyTrustFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

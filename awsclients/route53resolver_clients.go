@@ -114,6 +114,7 @@ func NewRoute53ResolverStub() Route53ResolverClient {
 }
 
 type Route53ResolverAssociateResolverEndpointIpAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *Route53ResolverAssociateResolverEndpointIpAddressFuture) Get(ctx workfl
 }
 
 type Route53ResolverAssociateResolverQueryLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *Route53ResolverAssociateResolverQueryLogConfigFuture) Get(ctx workflow.
 }
 
 type Route53ResolverAssociateResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *Route53ResolverAssociateResolverRuleFuture) Get(ctx workflow.Context) (
 }
 
 type Route53ResolverCreateResolverEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *Route53ResolverCreateResolverEndpointFuture) Get(ctx workflow.Context) 
 }
 
 type Route53ResolverCreateResolverQueryLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *Route53ResolverCreateResolverQueryLogConfigFuture) Get(ctx workflow.Con
 }
 
 type Route53ResolverCreateResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *Route53ResolverCreateResolverRuleFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53ResolverDeleteResolverEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *Route53ResolverDeleteResolverEndpointFuture) Get(ctx workflow.Context) 
 }
 
 type Route53ResolverDeleteResolverQueryLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *Route53ResolverDeleteResolverQueryLogConfigFuture) Get(ctx workflow.Con
 }
 
 type Route53ResolverDeleteResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *Route53ResolverDeleteResolverRuleFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53ResolverDisassociateResolverEndpointIpAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *Route53ResolverDisassociateResolverEndpointIpAddressFuture) Get(ctx wor
 }
 
 type Route53ResolverDisassociateResolverQueryLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *Route53ResolverDisassociateResolverQueryLogConfigFuture) Get(ctx workfl
 }
 
 type Route53ResolverDisassociateResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *Route53ResolverDisassociateResolverRuleFuture) Get(ctx workflow.Context
 }
 
 type Route53ResolverGetResolverEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *Route53ResolverGetResolverEndpointFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53ResolverGetResolverQueryLogConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *Route53ResolverGetResolverQueryLogConfigFuture) Get(ctx workflow.Contex
 }
 
 type Route53ResolverGetResolverQueryLogConfigAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *Route53ResolverGetResolverQueryLogConfigAssociationFuture) Get(ctx work
 }
 
 type Route53ResolverGetResolverQueryLogConfigPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *Route53ResolverGetResolverQueryLogConfigPolicyFuture) Get(ctx workflow.
 }
 
 type Route53ResolverGetResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *Route53ResolverGetResolverRuleFuture) Get(ctx workflow.Context) (*route
 }
 
 type Route53ResolverGetResolverRuleAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *Route53ResolverGetResolverRuleAssociationFuture) Get(ctx workflow.Conte
 }
 
 type Route53ResolverGetResolverRulePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *Route53ResolverGetResolverRulePolicyFuture) Get(ctx workflow.Context) (
 }
 
 type Route53ResolverListResolverEndpointIpAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *Route53ResolverListResolverEndpointIpAddressesFuture) Get(ctx workflow.
 }
 
 type Route53ResolverListResolverEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *Route53ResolverListResolverEndpointsFuture) Get(ctx workflow.Context) (
 }
 
 type Route53ResolverListResolverQueryLogConfigAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *Route53ResolverListResolverQueryLogConfigAssociationsFuture) Get(ctx wo
 }
 
 type Route53ResolverListResolverQueryLogConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *Route53ResolverListResolverQueryLogConfigsFuture) Get(ctx workflow.Cont
 }
 
 type Route53ResolverListResolverRuleAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *Route53ResolverListResolverRuleAssociationsFuture) Get(ctx workflow.Con
 }
 
 type Route53ResolverListResolverRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *Route53ResolverListResolverRulesFuture) Get(ctx workflow.Context) (*rou
 }
 
 type Route53ResolverListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *Route53ResolverListTagsForResourceFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53ResolverPutResolverQueryLogConfigPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *Route53ResolverPutResolverQueryLogConfigPolicyFuture) Get(ctx workflow.
 }
 
 type Route53ResolverPutResolverRulePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +422,7 @@ func (r *Route53ResolverPutResolverRulePolicyFuture) Get(ctx workflow.Context) (
 }
 
 type Route53ResolverTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +433,7 @@ func (r *Route53ResolverTagResourceFuture) Get(ctx workflow.Context) (*route53re
 }
 
 type Route53ResolverUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +444,7 @@ func (r *Route53ResolverUntagResourceFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53ResolverUpdateResolverEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +455,7 @@ func (r *Route53ResolverUpdateResolverEndpointFuture) Get(ctx workflow.Context) 
 }
 
 type Route53ResolverUpdateResolverRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

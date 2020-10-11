@@ -249,6 +249,7 @@ func NewWAFStub() WAFClient {
 }
 
 type WAFCreateByteMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +260,7 @@ func (r *WAFCreateByteMatchSetFuture) Get(ctx workflow.Context) (*waf.CreateByte
 }
 
 type WAFCreateGeoMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +271,7 @@ func (r *WAFCreateGeoMatchSetFuture) Get(ctx workflow.Context) (*waf.CreateGeoMa
 }
 
 type WAFCreateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +282,7 @@ func (r *WAFCreateIPSetFuture) Get(ctx workflow.Context) (*waf.CreateIPSetOutput
 }
 
 type WAFCreateRateBasedRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +293,7 @@ func (r *WAFCreateRateBasedRuleFuture) Get(ctx workflow.Context) (*waf.CreateRat
 }
 
 type WAFCreateRegexMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +304,7 @@ func (r *WAFCreateRegexMatchSetFuture) Get(ctx workflow.Context) (*waf.CreateReg
 }
 
 type WAFCreateRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +315,7 @@ func (r *WAFCreateRegexPatternSetFuture) Get(ctx workflow.Context) (*waf.CreateR
 }
 
 type WAFCreateRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +326,7 @@ func (r *WAFCreateRuleFuture) Get(ctx workflow.Context) (*waf.CreateRuleOutput, 
 }
 
 type WAFCreateRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +337,7 @@ func (r *WAFCreateRuleGroupFuture) Get(ctx workflow.Context) (*waf.CreateRuleGro
 }
 
 type WAFCreateSizeConstraintSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +348,7 @@ func (r *WAFCreateSizeConstraintSetFuture) Get(ctx workflow.Context) (*waf.Creat
 }
 
 type WAFCreateSqlInjectionMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +359,7 @@ func (r *WAFCreateSqlInjectionMatchSetFuture) Get(ctx workflow.Context) (*waf.Cr
 }
 
 type WAFCreateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +370,7 @@ func (r *WAFCreateWebACLFuture) Get(ctx workflow.Context) (*waf.CreateWebACLOutp
 }
 
 type WAFCreateWebACLMigrationStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +381,7 @@ func (r *WAFCreateWebACLMigrationStackFuture) Get(ctx workflow.Context) (*waf.Cr
 }
 
 type WAFCreateXssMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +392,7 @@ func (r *WAFCreateXssMatchSetFuture) Get(ctx workflow.Context) (*waf.CreateXssMa
 }
 
 type WAFDeleteByteMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +403,7 @@ func (r *WAFDeleteByteMatchSetFuture) Get(ctx workflow.Context) (*waf.DeleteByte
 }
 
 type WAFDeleteGeoMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +414,7 @@ func (r *WAFDeleteGeoMatchSetFuture) Get(ctx workflow.Context) (*waf.DeleteGeoMa
 }
 
 type WAFDeleteIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +425,7 @@ func (r *WAFDeleteIPSetFuture) Get(ctx workflow.Context) (*waf.DeleteIPSetOutput
 }
 
 type WAFDeleteLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +436,7 @@ func (r *WAFDeleteLoggingConfigurationFuture) Get(ctx workflow.Context) (*waf.De
 }
 
 type WAFDeletePermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +447,7 @@ func (r *WAFDeletePermissionPolicyFuture) Get(ctx workflow.Context) (*waf.Delete
 }
 
 type WAFDeleteRateBasedRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +458,7 @@ func (r *WAFDeleteRateBasedRuleFuture) Get(ctx workflow.Context) (*waf.DeleteRat
 }
 
 type WAFDeleteRegexMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +469,7 @@ func (r *WAFDeleteRegexMatchSetFuture) Get(ctx workflow.Context) (*waf.DeleteReg
 }
 
 type WAFDeleteRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +480,7 @@ func (r *WAFDeleteRegexPatternSetFuture) Get(ctx workflow.Context) (*waf.DeleteR
 }
 
 type WAFDeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +491,7 @@ func (r *WAFDeleteRuleFuture) Get(ctx workflow.Context) (*waf.DeleteRuleOutput, 
 }
 
 type WAFDeleteRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +502,7 @@ func (r *WAFDeleteRuleGroupFuture) Get(ctx workflow.Context) (*waf.DeleteRuleGro
 }
 
 type WAFDeleteSizeConstraintSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +513,7 @@ func (r *WAFDeleteSizeConstraintSetFuture) Get(ctx workflow.Context) (*waf.Delet
 }
 
 type WAFDeleteSqlInjectionMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +524,7 @@ func (r *WAFDeleteSqlInjectionMatchSetFuture) Get(ctx workflow.Context) (*waf.De
 }
 
 type WAFDeleteWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +535,7 @@ func (r *WAFDeleteWebACLFuture) Get(ctx workflow.Context) (*waf.DeleteWebACLOutp
 }
 
 type WAFDeleteXssMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +546,7 @@ func (r *WAFDeleteXssMatchSetFuture) Get(ctx workflow.Context) (*waf.DeleteXssMa
 }
 
 type WAFGetByteMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +557,7 @@ func (r *WAFGetByteMatchSetFuture) Get(ctx workflow.Context) (*waf.GetByteMatchS
 }
 
 type WAFGetChangeTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +568,7 @@ func (r *WAFGetChangeTokenFuture) Get(ctx workflow.Context) (*waf.GetChangeToken
 }
 
 type WAFGetChangeTokenStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +579,7 @@ func (r *WAFGetChangeTokenStatusFuture) Get(ctx workflow.Context) (*waf.GetChang
 }
 
 type WAFGetGeoMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +590,7 @@ func (r *WAFGetGeoMatchSetFuture) Get(ctx workflow.Context) (*waf.GetGeoMatchSet
 }
 
 type WAFGetIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +601,7 @@ func (r *WAFGetIPSetFuture) Get(ctx workflow.Context) (*waf.GetIPSetOutput, erro
 }
 
 type WAFGetLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +612,7 @@ func (r *WAFGetLoggingConfigurationFuture) Get(ctx workflow.Context) (*waf.GetLo
 }
 
 type WAFGetPermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +623,7 @@ func (r *WAFGetPermissionPolicyFuture) Get(ctx workflow.Context) (*waf.GetPermis
 }
 
 type WAFGetRateBasedRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +634,7 @@ func (r *WAFGetRateBasedRuleFuture) Get(ctx workflow.Context) (*waf.GetRateBased
 }
 
 type WAFGetRateBasedRuleManagedKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +645,7 @@ func (r *WAFGetRateBasedRuleManagedKeysFuture) Get(ctx workflow.Context) (*waf.G
 }
 
 type WAFGetRegexMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +656,7 @@ func (r *WAFGetRegexMatchSetFuture) Get(ctx workflow.Context) (*waf.GetRegexMatc
 }
 
 type WAFGetRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -629,6 +667,7 @@ func (r *WAFGetRegexPatternSetFuture) Get(ctx workflow.Context) (*waf.GetRegexPa
 }
 
 type WAFGetRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -639,6 +678,7 @@ func (r *WAFGetRuleFuture) Get(ctx workflow.Context) (*waf.GetRuleOutput, error)
 }
 
 type WAFGetRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -649,6 +689,7 @@ func (r *WAFGetRuleGroupFuture) Get(ctx workflow.Context) (*waf.GetRuleGroupOutp
 }
 
 type WAFGetSampledRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -659,6 +700,7 @@ func (r *WAFGetSampledRequestsFuture) Get(ctx workflow.Context) (*waf.GetSampled
 }
 
 type WAFGetSizeConstraintSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -669,6 +711,7 @@ func (r *WAFGetSizeConstraintSetFuture) Get(ctx workflow.Context) (*waf.GetSizeC
 }
 
 type WAFGetSqlInjectionMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -679,6 +722,7 @@ func (r *WAFGetSqlInjectionMatchSetFuture) Get(ctx workflow.Context) (*waf.GetSq
 }
 
 type WAFGetWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -689,6 +733,7 @@ func (r *WAFGetWebACLFuture) Get(ctx workflow.Context) (*waf.GetWebACLOutput, er
 }
 
 type WAFGetXssMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -699,6 +744,7 @@ func (r *WAFGetXssMatchSetFuture) Get(ctx workflow.Context) (*waf.GetXssMatchSet
 }
 
 type WAFListActivatedRulesInRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -709,6 +755,7 @@ func (r *WAFListActivatedRulesInRuleGroupFuture) Get(ctx workflow.Context) (*waf
 }
 
 type WAFListByteMatchSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -719,6 +766,7 @@ func (r *WAFListByteMatchSetsFuture) Get(ctx workflow.Context) (*waf.ListByteMat
 }
 
 type WAFListGeoMatchSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -729,6 +777,7 @@ func (r *WAFListGeoMatchSetsFuture) Get(ctx workflow.Context) (*waf.ListGeoMatch
 }
 
 type WAFListIPSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -739,6 +788,7 @@ func (r *WAFListIPSetsFuture) Get(ctx workflow.Context) (*waf.ListIPSetsOutput, 
 }
 
 type WAFListLoggingConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -749,6 +799,7 @@ func (r *WAFListLoggingConfigurationsFuture) Get(ctx workflow.Context) (*waf.Lis
 }
 
 type WAFListRateBasedRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -759,6 +810,7 @@ func (r *WAFListRateBasedRulesFuture) Get(ctx workflow.Context) (*waf.ListRateBa
 }
 
 type WAFListRegexMatchSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -769,6 +821,7 @@ func (r *WAFListRegexMatchSetsFuture) Get(ctx workflow.Context) (*waf.ListRegexM
 }
 
 type WAFListRegexPatternSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -779,6 +832,7 @@ func (r *WAFListRegexPatternSetsFuture) Get(ctx workflow.Context) (*waf.ListRege
 }
 
 type WAFListRuleGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -789,6 +843,7 @@ func (r *WAFListRuleGroupsFuture) Get(ctx workflow.Context) (*waf.ListRuleGroups
 }
 
 type WAFListRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -799,6 +854,7 @@ func (r *WAFListRulesFuture) Get(ctx workflow.Context) (*waf.ListRulesOutput, er
 }
 
 type WAFListSizeConstraintSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -809,6 +865,7 @@ func (r *WAFListSizeConstraintSetsFuture) Get(ctx workflow.Context) (*waf.ListSi
 }
 
 type WAFListSqlInjectionMatchSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -819,6 +876,7 @@ func (r *WAFListSqlInjectionMatchSetsFuture) Get(ctx workflow.Context) (*waf.Lis
 }
 
 type WAFListSubscribedRuleGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -829,6 +887,7 @@ func (r *WAFListSubscribedRuleGroupsFuture) Get(ctx workflow.Context) (*waf.List
 }
 
 type WAFListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -839,6 +898,7 @@ func (r *WAFListTagsForResourceFuture) Get(ctx workflow.Context) (*waf.ListTagsF
 }
 
 type WAFListWebACLsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -849,6 +909,7 @@ func (r *WAFListWebACLsFuture) Get(ctx workflow.Context) (*waf.ListWebACLsOutput
 }
 
 type WAFListXssMatchSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -859,6 +920,7 @@ func (r *WAFListXssMatchSetsFuture) Get(ctx workflow.Context) (*waf.ListXssMatch
 }
 
 type WAFPutLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -869,6 +931,7 @@ func (r *WAFPutLoggingConfigurationFuture) Get(ctx workflow.Context) (*waf.PutLo
 }
 
 type WAFPutPermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -879,6 +942,7 @@ func (r *WAFPutPermissionPolicyFuture) Get(ctx workflow.Context) (*waf.PutPermis
 }
 
 type WAFTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -889,6 +953,7 @@ func (r *WAFTagResourceFuture) Get(ctx workflow.Context) (*waf.TagResourceOutput
 }
 
 type WAFUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -899,6 +964,7 @@ func (r *WAFUntagResourceFuture) Get(ctx workflow.Context) (*waf.UntagResourceOu
 }
 
 type WAFUpdateByteMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -909,6 +975,7 @@ func (r *WAFUpdateByteMatchSetFuture) Get(ctx workflow.Context) (*waf.UpdateByte
 }
 
 type WAFUpdateGeoMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -919,6 +986,7 @@ func (r *WAFUpdateGeoMatchSetFuture) Get(ctx workflow.Context) (*waf.UpdateGeoMa
 }
 
 type WAFUpdateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -929,6 +997,7 @@ func (r *WAFUpdateIPSetFuture) Get(ctx workflow.Context) (*waf.UpdateIPSetOutput
 }
 
 type WAFUpdateRateBasedRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -939,6 +1008,7 @@ func (r *WAFUpdateRateBasedRuleFuture) Get(ctx workflow.Context) (*waf.UpdateRat
 }
 
 type WAFUpdateRegexMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -949,6 +1019,7 @@ func (r *WAFUpdateRegexMatchSetFuture) Get(ctx workflow.Context) (*waf.UpdateReg
 }
 
 type WAFUpdateRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -959,6 +1030,7 @@ func (r *WAFUpdateRegexPatternSetFuture) Get(ctx workflow.Context) (*waf.UpdateR
 }
 
 type WAFUpdateRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -969,6 +1041,7 @@ func (r *WAFUpdateRuleFuture) Get(ctx workflow.Context) (*waf.UpdateRuleOutput, 
 }
 
 type WAFUpdateRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -979,6 +1052,7 @@ func (r *WAFUpdateRuleGroupFuture) Get(ctx workflow.Context) (*waf.UpdateRuleGro
 }
 
 type WAFUpdateSizeConstraintSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -989,6 +1063,7 @@ func (r *WAFUpdateSizeConstraintSetFuture) Get(ctx workflow.Context) (*waf.Updat
 }
 
 type WAFUpdateSqlInjectionMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -999,6 +1074,7 @@ func (r *WAFUpdateSqlInjectionMatchSetFuture) Get(ctx workflow.Context) (*waf.Up
 }
 
 type WAFUpdateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1009,6 +1085,7 @@ func (r *WAFUpdateWebACLFuture) Get(ctx workflow.Context) (*waf.UpdateWebACLOutp
 }
 
 type WAFUpdateXssMatchSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

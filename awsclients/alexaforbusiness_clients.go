@@ -297,6 +297,7 @@ func NewAlexaForBusinessStub() AlexaForBusinessClient {
 }
 
 type AlexaForBusinessApproveSkillFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +308,7 @@ func (r *AlexaForBusinessApproveSkillFuture) Get(ctx workflow.Context) (*alexafo
 }
 
 type AlexaForBusinessAssociateContactWithAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +319,7 @@ func (r *AlexaForBusinessAssociateContactWithAddressBookFuture) Get(ctx workflow
 }
 
 type AlexaForBusinessAssociateDeviceWithNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +330,7 @@ func (r *AlexaForBusinessAssociateDeviceWithNetworkProfileFuture) Get(ctx workfl
 }
 
 type AlexaForBusinessAssociateDeviceWithRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +341,7 @@ func (r *AlexaForBusinessAssociateDeviceWithRoomFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessAssociateSkillGroupWithRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +352,7 @@ func (r *AlexaForBusinessAssociateSkillGroupWithRoomFuture) Get(ctx workflow.Con
 }
 
 type AlexaForBusinessAssociateSkillWithSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +363,7 @@ func (r *AlexaForBusinessAssociateSkillWithSkillGroupFuture) Get(ctx workflow.Co
 }
 
 type AlexaForBusinessAssociateSkillWithUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +374,7 @@ func (r *AlexaForBusinessAssociateSkillWithUsersFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessCreateAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +385,7 @@ func (r *AlexaForBusinessCreateAddressBookFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessCreateBusinessReportScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +396,7 @@ func (r *AlexaForBusinessCreateBusinessReportScheduleFuture) Get(ctx workflow.Co
 }
 
 type AlexaForBusinessCreateConferenceProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +407,7 @@ func (r *AlexaForBusinessCreateConferenceProviderFuture) Get(ctx workflow.Contex
 }
 
 type AlexaForBusinessCreateContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +418,7 @@ func (r *AlexaForBusinessCreateContactFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessCreateGatewayGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +429,7 @@ func (r *AlexaForBusinessCreateGatewayGroupFuture) Get(ctx workflow.Context) (*a
 }
 
 type AlexaForBusinessCreateNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +440,7 @@ func (r *AlexaForBusinessCreateNetworkProfileFuture) Get(ctx workflow.Context) (
 }
 
 type AlexaForBusinessCreateProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +451,7 @@ func (r *AlexaForBusinessCreateProfileFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessCreateRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +462,7 @@ func (r *AlexaForBusinessCreateRoomFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessCreateSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +473,7 @@ func (r *AlexaForBusinessCreateSkillGroupFuture) Get(ctx workflow.Context) (*ale
 }
 
 type AlexaForBusinessCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +484,7 @@ func (r *AlexaForBusinessCreateUserFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessDeleteAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +495,7 @@ func (r *AlexaForBusinessDeleteAddressBookFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessDeleteBusinessReportScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +506,7 @@ func (r *AlexaForBusinessDeleteBusinessReportScheduleFuture) Get(ctx workflow.Co
 }
 
 type AlexaForBusinessDeleteConferenceProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +517,7 @@ func (r *AlexaForBusinessDeleteConferenceProviderFuture) Get(ctx workflow.Contex
 }
 
 type AlexaForBusinessDeleteContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +528,7 @@ func (r *AlexaForBusinessDeleteContactFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessDeleteDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +539,7 @@ func (r *AlexaForBusinessDeleteDeviceFuture) Get(ctx workflow.Context) (*alexafo
 }
 
 type AlexaForBusinessDeleteDeviceUsageDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +550,7 @@ func (r *AlexaForBusinessDeleteDeviceUsageDataFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessDeleteGatewayGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +561,7 @@ func (r *AlexaForBusinessDeleteGatewayGroupFuture) Get(ctx workflow.Context) (*a
 }
 
 type AlexaForBusinessDeleteNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +572,7 @@ func (r *AlexaForBusinessDeleteNetworkProfileFuture) Get(ctx workflow.Context) (
 }
 
 type AlexaForBusinessDeleteProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +583,7 @@ func (r *AlexaForBusinessDeleteProfileFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessDeleteRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +594,7 @@ func (r *AlexaForBusinessDeleteRoomFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessDeleteRoomSkillParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -577,6 +605,7 @@ func (r *AlexaForBusinessDeleteRoomSkillParameterFuture) Get(ctx workflow.Contex
 }
 
 type AlexaForBusinessDeleteSkillAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -587,6 +616,7 @@ func (r *AlexaForBusinessDeleteSkillAuthorizationFuture) Get(ctx workflow.Contex
 }
 
 type AlexaForBusinessDeleteSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -597,6 +627,7 @@ func (r *AlexaForBusinessDeleteSkillGroupFuture) Get(ctx workflow.Context) (*ale
 }
 
 type AlexaForBusinessDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -607,6 +638,7 @@ func (r *AlexaForBusinessDeleteUserFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessDisassociateContactFromAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -617,6 +649,7 @@ func (r *AlexaForBusinessDisassociateContactFromAddressBookFuture) Get(ctx workf
 }
 
 type AlexaForBusinessDisassociateDeviceFromRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -627,6 +660,7 @@ func (r *AlexaForBusinessDisassociateDeviceFromRoomFuture) Get(ctx workflow.Cont
 }
 
 type AlexaForBusinessDisassociateSkillFromSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -637,6 +671,7 @@ func (r *AlexaForBusinessDisassociateSkillFromSkillGroupFuture) Get(ctx workflow
 }
 
 type AlexaForBusinessDisassociateSkillFromUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -647,6 +682,7 @@ func (r *AlexaForBusinessDisassociateSkillFromUsersFuture) Get(ctx workflow.Cont
 }
 
 type AlexaForBusinessDisassociateSkillGroupFromRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -657,6 +693,7 @@ func (r *AlexaForBusinessDisassociateSkillGroupFromRoomFuture) Get(ctx workflow.
 }
 
 type AlexaForBusinessForgetSmartHomeAppliancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -667,6 +704,7 @@ func (r *AlexaForBusinessForgetSmartHomeAppliancesFuture) Get(ctx workflow.Conte
 }
 
 type AlexaForBusinessGetAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -677,6 +715,7 @@ func (r *AlexaForBusinessGetAddressBookFuture) Get(ctx workflow.Context) (*alexa
 }
 
 type AlexaForBusinessGetConferencePreferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -687,6 +726,7 @@ func (r *AlexaForBusinessGetConferencePreferenceFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessGetConferenceProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -697,6 +737,7 @@ func (r *AlexaForBusinessGetConferenceProviderFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessGetContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -707,6 +748,7 @@ func (r *AlexaForBusinessGetContactFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessGetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -717,6 +759,7 @@ func (r *AlexaForBusinessGetDeviceFuture) Get(ctx workflow.Context) (*alexaforbu
 }
 
 type AlexaForBusinessGetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -727,6 +770,7 @@ func (r *AlexaForBusinessGetGatewayFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessGetGatewayGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -737,6 +781,7 @@ func (r *AlexaForBusinessGetGatewayGroupFuture) Get(ctx workflow.Context) (*alex
 }
 
 type AlexaForBusinessGetInvitationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -747,6 +792,7 @@ func (r *AlexaForBusinessGetInvitationConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type AlexaForBusinessGetNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -757,6 +803,7 @@ func (r *AlexaForBusinessGetNetworkProfileFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessGetProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -767,6 +814,7 @@ func (r *AlexaForBusinessGetProfileFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessGetRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -777,6 +825,7 @@ func (r *AlexaForBusinessGetRoomFuture) Get(ctx workflow.Context) (*alexaforbusi
 }
 
 type AlexaForBusinessGetRoomSkillParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -787,6 +836,7 @@ func (r *AlexaForBusinessGetRoomSkillParameterFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessGetSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -797,6 +847,7 @@ func (r *AlexaForBusinessGetSkillGroupFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessListBusinessReportSchedulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -807,6 +858,7 @@ func (r *AlexaForBusinessListBusinessReportSchedulesFuture) Get(ctx workflow.Con
 }
 
 type AlexaForBusinessListConferenceProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -817,6 +869,7 @@ func (r *AlexaForBusinessListConferenceProvidersFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessListDeviceEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -827,6 +880,7 @@ func (r *AlexaForBusinessListDeviceEventsFuture) Get(ctx workflow.Context) (*ale
 }
 
 type AlexaForBusinessListGatewayGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -837,6 +891,7 @@ func (r *AlexaForBusinessListGatewayGroupsFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessListGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -847,6 +902,7 @@ func (r *AlexaForBusinessListGatewaysFuture) Get(ctx workflow.Context) (*alexafo
 }
 
 type AlexaForBusinessListSkillsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -857,6 +913,7 @@ func (r *AlexaForBusinessListSkillsFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessListSkillsStoreCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -867,6 +924,7 @@ func (r *AlexaForBusinessListSkillsStoreCategoriesFuture) Get(ctx workflow.Conte
 }
 
 type AlexaForBusinessListSkillsStoreSkillsByCategoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -877,6 +935,7 @@ func (r *AlexaForBusinessListSkillsStoreSkillsByCategoryFuture) Get(ctx workflow
 }
 
 type AlexaForBusinessListSmartHomeAppliancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -887,6 +946,7 @@ func (r *AlexaForBusinessListSmartHomeAppliancesFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -897,6 +957,7 @@ func (r *AlexaForBusinessListTagsFuture) Get(ctx workflow.Context) (*alexaforbus
 }
 
 type AlexaForBusinessPutConferencePreferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -907,6 +968,7 @@ func (r *AlexaForBusinessPutConferencePreferenceFuture) Get(ctx workflow.Context
 }
 
 type AlexaForBusinessPutInvitationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -917,6 +979,7 @@ func (r *AlexaForBusinessPutInvitationConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type AlexaForBusinessPutRoomSkillParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -927,6 +990,7 @@ func (r *AlexaForBusinessPutRoomSkillParameterFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessPutSkillAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -937,6 +1001,7 @@ func (r *AlexaForBusinessPutSkillAuthorizationFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessRegisterAVSDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -947,6 +1012,7 @@ func (r *AlexaForBusinessRegisterAVSDeviceFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessRejectSkillFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -957,6 +1023,7 @@ func (r *AlexaForBusinessRejectSkillFuture) Get(ctx workflow.Context) (*alexafor
 }
 
 type AlexaForBusinessResolveRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -967,6 +1034,7 @@ func (r *AlexaForBusinessResolveRoomFuture) Get(ctx workflow.Context) (*alexafor
 }
 
 type AlexaForBusinessRevokeInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -977,6 +1045,7 @@ func (r *AlexaForBusinessRevokeInvitationFuture) Get(ctx workflow.Context) (*ale
 }
 
 type AlexaForBusinessSearchAddressBooksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -987,6 +1056,7 @@ func (r *AlexaForBusinessSearchAddressBooksFuture) Get(ctx workflow.Context) (*a
 }
 
 type AlexaForBusinessSearchContactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -997,6 +1067,7 @@ func (r *AlexaForBusinessSearchContactsFuture) Get(ctx workflow.Context) (*alexa
 }
 
 type AlexaForBusinessSearchDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1007,6 +1078,7 @@ func (r *AlexaForBusinessSearchDevicesFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessSearchNetworkProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1017,6 +1089,7 @@ func (r *AlexaForBusinessSearchNetworkProfilesFuture) Get(ctx workflow.Context) 
 }
 
 type AlexaForBusinessSearchProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1027,6 +1100,7 @@ func (r *AlexaForBusinessSearchProfilesFuture) Get(ctx workflow.Context) (*alexa
 }
 
 type AlexaForBusinessSearchRoomsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1037,6 +1111,7 @@ func (r *AlexaForBusinessSearchRoomsFuture) Get(ctx workflow.Context) (*alexafor
 }
 
 type AlexaForBusinessSearchSkillGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1047,6 +1122,7 @@ func (r *AlexaForBusinessSearchSkillGroupsFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessSearchUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1057,6 +1133,7 @@ func (r *AlexaForBusinessSearchUsersFuture) Get(ctx workflow.Context) (*alexafor
 }
 
 type AlexaForBusinessSendAnnouncementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1067,6 +1144,7 @@ func (r *AlexaForBusinessSendAnnouncementFuture) Get(ctx workflow.Context) (*ale
 }
 
 type AlexaForBusinessSendInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1077,6 +1155,7 @@ func (r *AlexaForBusinessSendInvitationFuture) Get(ctx workflow.Context) (*alexa
 }
 
 type AlexaForBusinessStartDeviceSyncFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1087,6 +1166,7 @@ func (r *AlexaForBusinessStartDeviceSyncFuture) Get(ctx workflow.Context) (*alex
 }
 
 type AlexaForBusinessStartSmartHomeApplianceDiscoveryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1097,6 +1177,7 @@ func (r *AlexaForBusinessStartSmartHomeApplianceDiscoveryFuture) Get(ctx workflo
 }
 
 type AlexaForBusinessTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1107,6 +1188,7 @@ func (r *AlexaForBusinessTagResourceFuture) Get(ctx workflow.Context) (*alexafor
 }
 
 type AlexaForBusinessUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1117,6 +1199,7 @@ func (r *AlexaForBusinessUntagResourceFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessUpdateAddressBookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1127,6 +1210,7 @@ func (r *AlexaForBusinessUpdateAddressBookFuture) Get(ctx workflow.Context) (*al
 }
 
 type AlexaForBusinessUpdateBusinessReportScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1137,6 +1221,7 @@ func (r *AlexaForBusinessUpdateBusinessReportScheduleFuture) Get(ctx workflow.Co
 }
 
 type AlexaForBusinessUpdateConferenceProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1147,6 +1232,7 @@ func (r *AlexaForBusinessUpdateConferenceProviderFuture) Get(ctx workflow.Contex
 }
 
 type AlexaForBusinessUpdateContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1157,6 +1243,7 @@ func (r *AlexaForBusinessUpdateContactFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessUpdateDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1167,6 +1254,7 @@ func (r *AlexaForBusinessUpdateDeviceFuture) Get(ctx workflow.Context) (*alexafo
 }
 
 type AlexaForBusinessUpdateGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1177,6 +1265,7 @@ func (r *AlexaForBusinessUpdateGatewayFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessUpdateGatewayGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1187,6 +1276,7 @@ func (r *AlexaForBusinessUpdateGatewayGroupFuture) Get(ctx workflow.Context) (*a
 }
 
 type AlexaForBusinessUpdateNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1197,6 +1287,7 @@ func (r *AlexaForBusinessUpdateNetworkProfileFuture) Get(ctx workflow.Context) (
 }
 
 type AlexaForBusinessUpdateProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1207,6 +1298,7 @@ func (r *AlexaForBusinessUpdateProfileFuture) Get(ctx workflow.Context) (*alexaf
 }
 
 type AlexaForBusinessUpdateRoomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1217,6 +1309,7 @@ func (r *AlexaForBusinessUpdateRoomFuture) Get(ctx workflow.Context) (*alexaforb
 }
 
 type AlexaForBusinessUpdateSkillGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -72,6 +72,7 @@ func NewCloudTrailStub() CloudTrailClient {
 }
 
 type CloudTrailAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +83,7 @@ func (r *CloudTrailAddTagsFuture) Get(ctx workflow.Context) (*cloudtrail.AddTags
 }
 
 type CloudTrailCreateTrailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +94,7 @@ func (r *CloudTrailCreateTrailFuture) Get(ctx workflow.Context) (*cloudtrail.Cre
 }
 
 type CloudTrailDeleteTrailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +105,7 @@ func (r *CloudTrailDeleteTrailFuture) Get(ctx workflow.Context) (*cloudtrail.Del
 }
 
 type CloudTrailDescribeTrailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +116,7 @@ func (r *CloudTrailDescribeTrailsFuture) Get(ctx workflow.Context) (*cloudtrail.
 }
 
 type CloudTrailGetEventSelectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +127,7 @@ func (r *CloudTrailGetEventSelectorsFuture) Get(ctx workflow.Context) (*cloudtra
 }
 
 type CloudTrailGetInsightSelectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +138,7 @@ func (r *CloudTrailGetInsightSelectorsFuture) Get(ctx workflow.Context) (*cloudt
 }
 
 type CloudTrailGetTrailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +149,7 @@ func (r *CloudTrailGetTrailFuture) Get(ctx workflow.Context) (*cloudtrail.GetTra
 }
 
 type CloudTrailGetTrailStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +160,7 @@ func (r *CloudTrailGetTrailStatusFuture) Get(ctx workflow.Context) (*cloudtrail.
 }
 
 type CloudTrailListPublicKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +171,7 @@ func (r *CloudTrailListPublicKeysFuture) Get(ctx workflow.Context) (*cloudtrail.
 }
 
 type CloudTrailListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +182,7 @@ func (r *CloudTrailListTagsFuture) Get(ctx workflow.Context) (*cloudtrail.ListTa
 }
 
 type CloudTrailListTrailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +193,7 @@ func (r *CloudTrailListTrailsFuture) Get(ctx workflow.Context) (*cloudtrail.List
 }
 
 type CloudTrailLookupEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +204,7 @@ func (r *CloudTrailLookupEventsFuture) Get(ctx workflow.Context) (*cloudtrail.Lo
 }
 
 type CloudTrailPutEventSelectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +215,7 @@ func (r *CloudTrailPutEventSelectorsFuture) Get(ctx workflow.Context) (*cloudtra
 }
 
 type CloudTrailPutInsightSelectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +226,7 @@ func (r *CloudTrailPutInsightSelectorsFuture) Get(ctx workflow.Context) (*cloudt
 }
 
 type CloudTrailRemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +237,7 @@ func (r *CloudTrailRemoveTagsFuture) Get(ctx workflow.Context) (*cloudtrail.Remo
 }
 
 type CloudTrailStartLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +248,7 @@ func (r *CloudTrailStartLoggingFuture) Get(ctx workflow.Context) (*cloudtrail.St
 }
 
 type CloudTrailStopLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +259,7 @@ func (r *CloudTrailStopLoggingFuture) Get(ctx workflow.Context) (*cloudtrail.Sto
 }
 
 type CloudTrailUpdateTrailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

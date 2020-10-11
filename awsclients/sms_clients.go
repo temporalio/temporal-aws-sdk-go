@@ -123,6 +123,7 @@ func NewSMSStub() SMSClient {
 }
 
 type SMSCreateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +134,7 @@ func (r *SMSCreateAppFuture) Get(ctx workflow.Context) (*sms.CreateAppOutput, er
 }
 
 type SMSCreateReplicationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +145,7 @@ func (r *SMSCreateReplicationJobFuture) Get(ctx workflow.Context) (*sms.CreateRe
 }
 
 type SMSDeleteAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +156,7 @@ func (r *SMSDeleteAppFuture) Get(ctx workflow.Context) (*sms.DeleteAppOutput, er
 }
 
 type SMSDeleteAppLaunchConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +167,7 @@ func (r *SMSDeleteAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.
 }
 
 type SMSDeleteAppReplicationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +178,7 @@ func (r *SMSDeleteAppReplicationConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type SMSDeleteAppValidationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +189,7 @@ func (r *SMSDeleteAppValidationConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type SMSDeleteReplicationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +200,7 @@ func (r *SMSDeleteReplicationJobFuture) Get(ctx workflow.Context) (*sms.DeleteRe
 }
 
 type SMSDeleteServerCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +211,7 @@ func (r *SMSDeleteServerCatalogFuture) Get(ctx workflow.Context) (*sms.DeleteSer
 }
 
 type SMSDisassociateConnectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +222,7 @@ func (r *SMSDisassociateConnectorFuture) Get(ctx workflow.Context) (*sms.Disasso
 }
 
 type SMSGenerateChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +233,7 @@ func (r *SMSGenerateChangeSetFuture) Get(ctx workflow.Context) (*sms.GenerateCha
 }
 
 type SMSGenerateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +244,7 @@ func (r *SMSGenerateTemplateFuture) Get(ctx workflow.Context) (*sms.GenerateTemp
 }
 
 type SMSGetAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +255,7 @@ func (r *SMSGetAppFuture) Get(ctx workflow.Context) (*sms.GetAppOutput, error) {
 }
 
 type SMSGetAppLaunchConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +266,7 @@ func (r *SMSGetAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.Get
 }
 
 type SMSGetAppReplicationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +277,7 @@ func (r *SMSGetAppReplicationConfigurationFuture) Get(ctx workflow.Context) (*sm
 }
 
 type SMSGetAppValidationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +288,7 @@ func (r *SMSGetAppValidationConfigurationFuture) Get(ctx workflow.Context) (*sms
 }
 
 type SMSGetAppValidationOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +299,7 @@ func (r *SMSGetAppValidationOutputFuture) Get(ctx workflow.Context) (*sms.GetApp
 }
 
 type SMSGetConnectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +310,7 @@ func (r *SMSGetConnectorsFuture) Get(ctx workflow.Context) (*sms.GetConnectorsOu
 }
 
 type SMSGetReplicationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +321,7 @@ func (r *SMSGetReplicationJobsFuture) Get(ctx workflow.Context) (*sms.GetReplica
 }
 
 type SMSGetReplicationRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +332,7 @@ func (r *SMSGetReplicationRunsFuture) Get(ctx workflow.Context) (*sms.GetReplica
 }
 
 type SMSGetServersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +343,7 @@ func (r *SMSGetServersFuture) Get(ctx workflow.Context) (*sms.GetServersOutput, 
 }
 
 type SMSImportAppCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +354,7 @@ func (r *SMSImportAppCatalogFuture) Get(ctx workflow.Context) (*sms.ImportAppCat
 }
 
 type SMSImportServerCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -343,6 +365,7 @@ func (r *SMSImportServerCatalogFuture) Get(ctx workflow.Context) (*sms.ImportSer
 }
 
 type SMSLaunchAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -353,6 +376,7 @@ func (r *SMSLaunchAppFuture) Get(ctx workflow.Context) (*sms.LaunchAppOutput, er
 }
 
 type SMSListAppsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -363,6 +387,7 @@ func (r *SMSListAppsFuture) Get(ctx workflow.Context) (*sms.ListAppsOutput, erro
 }
 
 type SMSNotifyAppValidationOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -373,6 +398,7 @@ func (r *SMSNotifyAppValidationOutputFuture) Get(ctx workflow.Context) (*sms.Not
 }
 
 type SMSPutAppLaunchConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -383,6 +409,7 @@ func (r *SMSPutAppLaunchConfigurationFuture) Get(ctx workflow.Context) (*sms.Put
 }
 
 type SMSPutAppReplicationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -393,6 +420,7 @@ func (r *SMSPutAppReplicationConfigurationFuture) Get(ctx workflow.Context) (*sm
 }
 
 type SMSPutAppValidationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -403,6 +431,7 @@ func (r *SMSPutAppValidationConfigurationFuture) Get(ctx workflow.Context) (*sms
 }
 
 type SMSStartAppReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -413,6 +442,7 @@ func (r *SMSStartAppReplicationFuture) Get(ctx workflow.Context) (*sms.StartAppR
 }
 
 type SMSStartOnDemandAppReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -423,6 +453,7 @@ func (r *SMSStartOnDemandAppReplicationFuture) Get(ctx workflow.Context) (*sms.S
 }
 
 type SMSStartOnDemandReplicationRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +464,7 @@ func (r *SMSStartOnDemandReplicationRunFuture) Get(ctx workflow.Context) (*sms.S
 }
 
 type SMSStopAppReplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +475,7 @@ func (r *SMSStopAppReplicationFuture) Get(ctx workflow.Context) (*sms.StopAppRep
 }
 
 type SMSTerminateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -453,6 +486,7 @@ func (r *SMSTerminateAppFuture) Get(ctx workflow.Context) (*sms.TerminateAppOutp
 }
 
 type SMSUpdateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +497,7 @@ func (r *SMSUpdateAppFuture) Get(ctx workflow.Context) (*sms.UpdateAppOutput, er
 }
 
 type SMSUpdateReplicationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

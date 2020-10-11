@@ -114,6 +114,7 @@ func NewELBStub() ELBClient {
 }
 
 type ELBAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *ELBAddTagsFuture) Get(ctx workflow.Context) (*elb.AddTagsOutput, error)
 }
 
 type ELBApplySecurityGroupsToLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *ELBApplySecurityGroupsToLoadBalancerFuture) Get(ctx workflow.Context) (
 }
 
 type ELBAttachLoadBalancerToSubnetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *ELBAttachLoadBalancerToSubnetsFuture) Get(ctx workflow.Context) (*elb.A
 }
 
 type ELBConfigureHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *ELBConfigureHealthCheckFuture) Get(ctx workflow.Context) (*elb.Configur
 }
 
 type ELBCreateAppCookieStickinessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *ELBCreateAppCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*e
 }
 
 type ELBCreateLBCookieStickinessPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *ELBCreateLBCookieStickinessPolicyFuture) Get(ctx workflow.Context) (*el
 }
 
 type ELBCreateLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *ELBCreateLoadBalancerFuture) Get(ctx workflow.Context) (*elb.CreateLoad
 }
 
 type ELBCreateLoadBalancerListenersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *ELBCreateLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.C
 }
 
 type ELBCreateLoadBalancerPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *ELBCreateLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.Crea
 }
 
 type ELBDeleteLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *ELBDeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elb.DeleteLoad
 }
 
 type ELBDeleteLoadBalancerListenersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *ELBDeleteLoadBalancerListenersFuture) Get(ctx workflow.Context) (*elb.D
 }
 
 type ELBDeleteLoadBalancerPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *ELBDeleteLoadBalancerPolicyFuture) Get(ctx workflow.Context) (*elb.Dele
 }
 
 type ELBDeregisterInstancesFromLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *ELBDeregisterInstancesFromLoadBalancerFuture) Get(ctx workflow.Context)
 }
 
 type ELBDescribeAccountLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *ELBDescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elb.Describ
 }
 
 type ELBDescribeInstanceHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *ELBDescribeInstanceHealthFuture) Get(ctx workflow.Context) (*elb.Descri
 }
 
 type ELBDescribeLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *ELBDescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*el
 }
 
 type ELBDescribeLoadBalancerPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *ELBDescribeLoadBalancerPoliciesFuture) Get(ctx workflow.Context) (*elb.
 }
 
 type ELBDescribeLoadBalancerPolicyTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *ELBDescribeLoadBalancerPolicyTypesFuture) Get(ctx workflow.Context) (*e
 }
 
 type ELBDescribeLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *ELBDescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elb.Describ
 }
 
 type ELBDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *ELBDescribeTagsFuture) Get(ctx workflow.Context) (*elb.DescribeTagsOutp
 }
 
 type ELBDetachLoadBalancerFromSubnetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *ELBDetachLoadBalancerFromSubnetsFuture) Get(ctx workflow.Context) (*elb
 }
 
 type ELBDisableAvailabilityZonesForLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *ELBDisableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Cont
 }
 
 type ELBEnableAvailabilityZonesForLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *ELBEnableAvailabilityZonesForLoadBalancerFuture) Get(ctx workflow.Conte
 }
 
 type ELBModifyLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *ELBModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*elb.
 }
 
 type ELBRegisterInstancesWithLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *ELBRegisterInstancesWithLoadBalancerFuture) Get(ctx workflow.Context) (
 }
 
 type ELBRemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *ELBRemoveTagsFuture) Get(ctx workflow.Context) (*elb.RemoveTagsOutput, 
 }
 
 type ELBSetLoadBalancerListenerSSLCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *ELBSetLoadBalancerListenerSSLCertificateFuture) Get(ctx workflow.Contex
 }
 
 type ELBSetLoadBalancerPoliciesForBackendServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +422,7 @@ func (r *ELBSetLoadBalancerPoliciesForBackendServerFuture) Get(ctx workflow.Cont
 }
 
 type ELBSetLoadBalancerPoliciesOfListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

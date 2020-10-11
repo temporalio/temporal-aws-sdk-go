@@ -306,6 +306,7 @@ func NewRedshiftStub() RedshiftClient {
 }
 
 type RedshiftAcceptReservedNodeExchangeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +317,7 @@ func (r *RedshiftAcceptReservedNodeExchangeFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftAuthorizeClusterSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +328,7 @@ func (r *RedshiftAuthorizeClusterSecurityGroupIngressFuture) Get(ctx workflow.Co
 }
 
 type RedshiftAuthorizeSnapshotAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +339,7 @@ func (r *RedshiftAuthorizeSnapshotAccessFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftBatchDeleteClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +350,7 @@ func (r *RedshiftBatchDeleteClusterSnapshotsFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftBatchModifyClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -356,6 +361,7 @@ func (r *RedshiftBatchModifyClusterSnapshotsFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftCancelResizeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -366,6 +372,7 @@ func (r *RedshiftCancelResizeFuture) Get(ctx workflow.Context) (*redshift.Cancel
 }
 
 type RedshiftCopyClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -376,6 +383,7 @@ func (r *RedshiftCopyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshift
 }
 
 type RedshiftCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -386,6 +394,7 @@ func (r *RedshiftCreateClusterFuture) Get(ctx workflow.Context) (*redshift.Creat
 }
 
 type RedshiftCreateClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -396,6 +405,7 @@ func (r *RedshiftCreateClusterParameterGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftCreateClusterSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -406,6 +416,7 @@ func (r *RedshiftCreateClusterSecurityGroupFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftCreateClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -416,6 +427,7 @@ func (r *RedshiftCreateClusterSnapshotFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftCreateClusterSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -426,6 +438,7 @@ func (r *RedshiftCreateClusterSubnetGroupFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftCreateEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +449,7 @@ func (r *RedshiftCreateEventSubscriptionFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftCreateHsmClientCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +460,7 @@ func (r *RedshiftCreateHsmClientCertificateFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftCreateHsmConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +471,7 @@ func (r *RedshiftCreateHsmConfigurationFuture) Get(ctx workflow.Context) (*redsh
 }
 
 type RedshiftCreateScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +482,7 @@ func (r *RedshiftCreateScheduledActionFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftCreateSnapshotCopyGrantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +493,7 @@ func (r *RedshiftCreateSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftCreateSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +504,7 @@ func (r *RedshiftCreateSnapshotScheduleFuture) Get(ctx workflow.Context) (*redsh
 }
 
 type RedshiftCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +515,7 @@ func (r *RedshiftCreateTagsFuture) Get(ctx workflow.Context) (*redshift.CreateTa
 }
 
 type RedshiftCreateUsageLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +526,7 @@ func (r *RedshiftCreateUsageLimitFuture) Get(ctx workflow.Context) (*redshift.Cr
 }
 
 type RedshiftDeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +537,7 @@ func (r *RedshiftDeleteClusterFuture) Get(ctx workflow.Context) (*redshift.Delet
 }
 
 type RedshiftDeleteClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +548,7 @@ func (r *RedshiftDeleteClusterParameterGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftDeleteClusterSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +559,7 @@ func (r *RedshiftDeleteClusterSecurityGroupFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDeleteClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +570,7 @@ func (r *RedshiftDeleteClusterSnapshotFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftDeleteClusterSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +581,7 @@ func (r *RedshiftDeleteClusterSubnetGroupFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftDeleteEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +592,7 @@ func (r *RedshiftDeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftDeleteHsmClientCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +603,7 @@ func (r *RedshiftDeleteHsmClientCertificateFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDeleteHsmConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +614,7 @@ func (r *RedshiftDeleteHsmConfigurationFuture) Get(ctx workflow.Context) (*redsh
 }
 
 type RedshiftDeleteScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +625,7 @@ func (r *RedshiftDeleteScheduledActionFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftDeleteSnapshotCopyGrantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +636,7 @@ func (r *RedshiftDeleteSnapshotCopyGrantFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftDeleteSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -616,6 +647,7 @@ func (r *RedshiftDeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (*redsh
 }
 
 type RedshiftDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -626,6 +658,7 @@ func (r *RedshiftDeleteTagsFuture) Get(ctx workflow.Context) (*redshift.DeleteTa
 }
 
 type RedshiftDeleteUsageLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -636,6 +669,7 @@ func (r *RedshiftDeleteUsageLimitFuture) Get(ctx workflow.Context) (*redshift.De
 }
 
 type RedshiftDescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -646,6 +680,7 @@ func (r *RedshiftDescribeAccountAttributesFuture) Get(ctx workflow.Context) (*re
 }
 
 type RedshiftDescribeClusterDbRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -656,6 +691,7 @@ func (r *RedshiftDescribeClusterDbRevisionsFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDescribeClusterParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -666,6 +702,7 @@ func (r *RedshiftDescribeClusterParameterGroupsFuture) Get(ctx workflow.Context)
 }
 
 type RedshiftDescribeClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -676,6 +713,7 @@ func (r *RedshiftDescribeClusterParametersFuture) Get(ctx workflow.Context) (*re
 }
 
 type RedshiftDescribeClusterSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -686,6 +724,7 @@ func (r *RedshiftDescribeClusterSecurityGroupsFuture) Get(ctx workflow.Context) 
 }
 
 type RedshiftDescribeClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -696,6 +735,7 @@ func (r *RedshiftDescribeClusterSnapshotsFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftDescribeClusterSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -706,6 +746,7 @@ func (r *RedshiftDescribeClusterSubnetGroupsFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftDescribeClusterTracksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -716,6 +757,7 @@ func (r *RedshiftDescribeClusterTracksFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftDescribeClusterVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -726,6 +768,7 @@ func (r *RedshiftDescribeClusterVersionsFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftDescribeClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -736,6 +779,7 @@ func (r *RedshiftDescribeClustersFuture) Get(ctx workflow.Context) (*redshift.De
 }
 
 type RedshiftDescribeDefaultClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -746,6 +790,7 @@ func (r *RedshiftDescribeDefaultClusterParametersFuture) Get(ctx workflow.Contex
 }
 
 type RedshiftDescribeEventCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -756,6 +801,7 @@ func (r *RedshiftDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftDescribeEventSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -766,6 +812,7 @@ func (r *RedshiftDescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -776,6 +823,7 @@ func (r *RedshiftDescribeEventsFuture) Get(ctx workflow.Context) (*redshift.Desc
 }
 
 type RedshiftDescribeHsmClientCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -786,6 +834,7 @@ func (r *RedshiftDescribeHsmClientCertificatesFuture) Get(ctx workflow.Context) 
 }
 
 type RedshiftDescribeHsmConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -796,6 +845,7 @@ func (r *RedshiftDescribeHsmConfigurationsFuture) Get(ctx workflow.Context) (*re
 }
 
 type RedshiftDescribeLoggingStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -806,6 +856,7 @@ func (r *RedshiftDescribeLoggingStatusFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftDescribeNodeConfigurationOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -816,6 +867,7 @@ func (r *RedshiftDescribeNodeConfigurationOptionsFuture) Get(ctx workflow.Contex
 }
 
 type RedshiftDescribeOrderableClusterOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -826,6 +878,7 @@ func (r *RedshiftDescribeOrderableClusterOptionsFuture) Get(ctx workflow.Context
 }
 
 type RedshiftDescribeReservedNodeOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -836,6 +889,7 @@ func (r *RedshiftDescribeReservedNodeOfferingsFuture) Get(ctx workflow.Context) 
 }
 
 type RedshiftDescribeReservedNodesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -846,6 +900,7 @@ func (r *RedshiftDescribeReservedNodesFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftDescribeResizeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -856,6 +911,7 @@ func (r *RedshiftDescribeResizeFuture) Get(ctx workflow.Context) (*redshift.Desc
 }
 
 type RedshiftDescribeScheduledActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -866,6 +922,7 @@ func (r *RedshiftDescribeScheduledActionsFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftDescribeSnapshotCopyGrantsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -876,6 +933,7 @@ func (r *RedshiftDescribeSnapshotCopyGrantsFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDescribeSnapshotSchedulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -886,6 +944,7 @@ func (r *RedshiftDescribeSnapshotSchedulesFuture) Get(ctx workflow.Context) (*re
 }
 
 type RedshiftDescribeStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -896,6 +955,7 @@ func (r *RedshiftDescribeStorageFuture) Get(ctx workflow.Context) (*redshift.Des
 }
 
 type RedshiftDescribeTableRestoreStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -906,6 +966,7 @@ func (r *RedshiftDescribeTableRestoreStatusFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -916,6 +977,7 @@ func (r *RedshiftDescribeTagsFuture) Get(ctx workflow.Context) (*redshift.Descri
 }
 
 type RedshiftDescribeUsageLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -926,6 +988,7 @@ func (r *RedshiftDescribeUsageLimitsFuture) Get(ctx workflow.Context) (*redshift
 }
 
 type RedshiftDisableLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -936,6 +999,7 @@ func (r *RedshiftDisableLoggingFuture) Get(ctx workflow.Context) (*redshift.Logg
 }
 
 type RedshiftDisableSnapshotCopyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -946,6 +1010,7 @@ func (r *RedshiftDisableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift
 }
 
 type RedshiftEnableLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -956,6 +1021,7 @@ func (r *RedshiftEnableLoggingFuture) Get(ctx workflow.Context) (*redshift.Loggi
 }
 
 type RedshiftEnableSnapshotCopyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -966,6 +1032,7 @@ func (r *RedshiftEnableSnapshotCopyFuture) Get(ctx workflow.Context) (*redshift.
 }
 
 type RedshiftGetClusterCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -976,6 +1043,7 @@ func (r *RedshiftGetClusterCredentialsFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftGetReservedNodeExchangeOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -986,6 +1054,7 @@ func (r *RedshiftGetReservedNodeExchangeOfferingsFuture) Get(ctx workflow.Contex
 }
 
 type RedshiftModifyClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -996,6 +1065,7 @@ func (r *RedshiftModifyClusterFuture) Get(ctx workflow.Context) (*redshift.Modif
 }
 
 type RedshiftModifyClusterDbRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1006,6 +1076,7 @@ func (r *RedshiftModifyClusterDbRevisionFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftModifyClusterIamRolesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1016,6 +1087,7 @@ func (r *RedshiftModifyClusterIamRolesFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftModifyClusterMaintenanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1026,6 +1098,7 @@ func (r *RedshiftModifyClusterMaintenanceFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftModifyClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1036,6 +1109,7 @@ func (r *RedshiftModifyClusterParameterGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftModifyClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1046,6 +1120,7 @@ func (r *RedshiftModifyClusterSnapshotFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftModifyClusterSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1056,6 +1131,7 @@ func (r *RedshiftModifyClusterSnapshotScheduleFuture) Get(ctx workflow.Context) 
 }
 
 type RedshiftModifyClusterSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1066,6 +1142,7 @@ func (r *RedshiftModifyClusterSubnetGroupFuture) Get(ctx workflow.Context) (*red
 }
 
 type RedshiftModifyEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1076,6 +1153,7 @@ func (r *RedshiftModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*reds
 }
 
 type RedshiftModifyScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1086,6 +1164,7 @@ func (r *RedshiftModifyScheduledActionFuture) Get(ctx workflow.Context) (*redshi
 }
 
 type RedshiftModifySnapshotCopyRetentionPeriodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1096,6 +1175,7 @@ func (r *RedshiftModifySnapshotCopyRetentionPeriodFuture) Get(ctx workflow.Conte
 }
 
 type RedshiftModifySnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1106,6 +1186,7 @@ func (r *RedshiftModifySnapshotScheduleFuture) Get(ctx workflow.Context) (*redsh
 }
 
 type RedshiftModifyUsageLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1116,6 +1197,7 @@ func (r *RedshiftModifyUsageLimitFuture) Get(ctx workflow.Context) (*redshift.Mo
 }
 
 type RedshiftPauseClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1126,6 +1208,7 @@ func (r *RedshiftPauseClusterFuture) Get(ctx workflow.Context) (*redshift.PauseC
 }
 
 type RedshiftPurchaseReservedNodeOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1136,6 +1219,7 @@ func (r *RedshiftPurchaseReservedNodeOfferingFuture) Get(ctx workflow.Context) (
 }
 
 type RedshiftRebootClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1146,6 +1230,7 @@ func (r *RedshiftRebootClusterFuture) Get(ctx workflow.Context) (*redshift.Reboo
 }
 
 type RedshiftResetClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1156,6 +1241,7 @@ func (r *RedshiftResetClusterParameterGroupFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftResizeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1166,6 +1252,7 @@ func (r *RedshiftResizeClusterFuture) Get(ctx workflow.Context) (*redshift.Resiz
 }
 
 type RedshiftRestoreFromClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1176,6 +1263,7 @@ func (r *RedshiftRestoreFromClusterSnapshotFuture) Get(ctx workflow.Context) (*r
 }
 
 type RedshiftRestoreTableFromClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1186,6 +1274,7 @@ func (r *RedshiftRestoreTableFromClusterSnapshotFuture) Get(ctx workflow.Context
 }
 
 type RedshiftResumeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1196,6 +1285,7 @@ func (r *RedshiftResumeClusterFuture) Get(ctx workflow.Context) (*redshift.Resum
 }
 
 type RedshiftRevokeClusterSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1206,6 +1296,7 @@ func (r *RedshiftRevokeClusterSecurityGroupIngressFuture) Get(ctx workflow.Conte
 }
 
 type RedshiftRevokeSnapshotAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1216,6 +1307,7 @@ func (r *RedshiftRevokeSnapshotAccessFuture) Get(ctx workflow.Context) (*redshif
 }
 
 type RedshiftRotateEncryptionKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

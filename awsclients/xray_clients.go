@@ -87,6 +87,7 @@ func NewXRayStub() XRayClient {
 }
 
 type XRayBatchGetTracesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +98,7 @@ func (r *XRayBatchGetTracesFuture) Get(ctx workflow.Context) (*xray.BatchGetTrac
 }
 
 type XRayCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +109,7 @@ func (r *XRayCreateGroupFuture) Get(ctx workflow.Context) (*xray.CreateGroupOutp
 }
 
 type XRayCreateSamplingRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +120,7 @@ func (r *XRayCreateSamplingRuleFuture) Get(ctx workflow.Context) (*xray.CreateSa
 }
 
 type XRayDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +131,7 @@ func (r *XRayDeleteGroupFuture) Get(ctx workflow.Context) (*xray.DeleteGroupOutp
 }
 
 type XRayDeleteSamplingRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +142,7 @@ func (r *XRayDeleteSamplingRuleFuture) Get(ctx workflow.Context) (*xray.DeleteSa
 }
 
 type XRayGetEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +153,7 @@ func (r *XRayGetEncryptionConfigFuture) Get(ctx workflow.Context) (*xray.GetEncr
 }
 
 type XRayGetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +164,7 @@ func (r *XRayGetGroupFuture) Get(ctx workflow.Context) (*xray.GetGroupOutput, er
 }
 
 type XRayGetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +175,7 @@ func (r *XRayGetGroupsFuture) Get(ctx workflow.Context) (*xray.GetGroupsOutput, 
 }
 
 type XRayGetSamplingRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +186,7 @@ func (r *XRayGetSamplingRulesFuture) Get(ctx workflow.Context) (*xray.GetSamplin
 }
 
 type XRayGetSamplingStatisticSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +197,7 @@ func (r *XRayGetSamplingStatisticSummariesFuture) Get(ctx workflow.Context) (*xr
 }
 
 type XRayGetSamplingTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +208,7 @@ func (r *XRayGetSamplingTargetsFuture) Get(ctx workflow.Context) (*xray.GetSampl
 }
 
 type XRayGetServiceGraphFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +219,7 @@ func (r *XRayGetServiceGraphFuture) Get(ctx workflow.Context) (*xray.GetServiceG
 }
 
 type XRayGetTimeSeriesServiceStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +230,7 @@ func (r *XRayGetTimeSeriesServiceStatisticsFuture) Get(ctx workflow.Context) (*x
 }
 
 type XRayGetTraceGraphFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +241,7 @@ func (r *XRayGetTraceGraphFuture) Get(ctx workflow.Context) (*xray.GetTraceGraph
 }
 
 type XRayGetTraceSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +252,7 @@ func (r *XRayGetTraceSummariesFuture) Get(ctx workflow.Context) (*xray.GetTraceS
 }
 
 type XRayListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +263,7 @@ func (r *XRayListTagsForResourceFuture) Get(ctx workflow.Context) (*xray.ListTag
 }
 
 type XRayPutEncryptionConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +274,7 @@ func (r *XRayPutEncryptionConfigFuture) Get(ctx workflow.Context) (*xray.PutEncr
 }
 
 type XRayPutTelemetryRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +285,7 @@ func (r *XRayPutTelemetryRecordsFuture) Get(ctx workflow.Context) (*xray.PutTele
 }
 
 type XRayPutTraceSegmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +296,7 @@ func (r *XRayPutTraceSegmentsFuture) Get(ctx workflow.Context) (*xray.PutTraceSe
 }
 
 type XRayTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +307,7 @@ func (r *XRayTagResourceFuture) Get(ctx workflow.Context) (*xray.TagResourceOutp
 }
 
 type XRayUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +318,7 @@ func (r *XRayUntagResourceFuture) Get(ctx workflow.Context) (*xray.UntagResource
 }
 
 type XRayUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +329,7 @@ func (r *XRayUpdateGroupFuture) Get(ctx workflow.Context) (*xray.UpdateGroupOutp
 }
 
 type XRayUpdateSamplingRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

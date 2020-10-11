@@ -147,6 +147,7 @@ func NewSecurityHubStub() SecurityHubClient {
 }
 
 type SecurityHubAcceptInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +158,7 @@ func (r *SecurityHubAcceptInvitationFuture) Get(ctx workflow.Context) (*security
 }
 
 type SecurityHubBatchDisableStandardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +169,7 @@ func (r *SecurityHubBatchDisableStandardsFuture) Get(ctx workflow.Context) (*sec
 }
 
 type SecurityHubBatchEnableStandardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +180,7 @@ func (r *SecurityHubBatchEnableStandardsFuture) Get(ctx workflow.Context) (*secu
 }
 
 type SecurityHubBatchImportFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +191,7 @@ func (r *SecurityHubBatchImportFindingsFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubBatchUpdateFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +202,7 @@ func (r *SecurityHubBatchUpdateFindingsFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubCreateActionTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +213,7 @@ func (r *SecurityHubCreateActionTargetFuture) Get(ctx workflow.Context) (*securi
 }
 
 type SecurityHubCreateInsightFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +224,7 @@ func (r *SecurityHubCreateInsightFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubCreateMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +235,7 @@ func (r *SecurityHubCreateMembersFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubDeclineInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +246,7 @@ func (r *SecurityHubDeclineInvitationsFuture) Get(ctx workflow.Context) (*securi
 }
 
 type SecurityHubDeleteActionTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +257,7 @@ func (r *SecurityHubDeleteActionTargetFuture) Get(ctx workflow.Context) (*securi
 }
 
 type SecurityHubDeleteInsightFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +268,7 @@ func (r *SecurityHubDeleteInsightFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubDeleteInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +279,7 @@ func (r *SecurityHubDeleteInvitationsFuture) Get(ctx workflow.Context) (*securit
 }
 
 type SecurityHubDeleteMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +290,7 @@ func (r *SecurityHubDeleteMembersFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubDescribeActionTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +301,7 @@ func (r *SecurityHubDescribeActionTargetsFuture) Get(ctx workflow.Context) (*sec
 }
 
 type SecurityHubDescribeHubFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +312,7 @@ func (r *SecurityHubDescribeHubFuture) Get(ctx workflow.Context) (*securityhub.D
 }
 
 type SecurityHubDescribeProductsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +323,7 @@ func (r *SecurityHubDescribeProductsFuture) Get(ctx workflow.Context) (*security
 }
 
 type SecurityHubDescribeStandardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +334,7 @@ func (r *SecurityHubDescribeStandardsFuture) Get(ctx workflow.Context) (*securit
 }
 
 type SecurityHubDescribeStandardsControlsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +345,7 @@ func (r *SecurityHubDescribeStandardsControlsFuture) Get(ctx workflow.Context) (
 }
 
 type SecurityHubDisableImportFindingsForProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +356,7 @@ func (r *SecurityHubDisableImportFindingsForProductFuture) Get(ctx workflow.Cont
 }
 
 type SecurityHubDisableSecurityHubFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +367,7 @@ func (r *SecurityHubDisableSecurityHubFuture) Get(ctx workflow.Context) (*securi
 }
 
 type SecurityHubDisassociateFromMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +378,7 @@ func (r *SecurityHubDisassociateFromMasterAccountFuture) Get(ctx workflow.Contex
 }
 
 type SecurityHubDisassociateMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +389,7 @@ func (r *SecurityHubDisassociateMembersFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubEnableImportFindingsForProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +400,7 @@ func (r *SecurityHubEnableImportFindingsForProductFuture) Get(ctx workflow.Conte
 }
 
 type SecurityHubEnableSecurityHubFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +411,7 @@ func (r *SecurityHubEnableSecurityHubFuture) Get(ctx workflow.Context) (*securit
 }
 
 type SecurityHubGetEnabledStandardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +422,7 @@ func (r *SecurityHubGetEnabledStandardsFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubGetFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +433,7 @@ func (r *SecurityHubGetFindingsFuture) Get(ctx workflow.Context) (*securityhub.G
 }
 
 type SecurityHubGetInsightResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +444,7 @@ func (r *SecurityHubGetInsightResultsFuture) Get(ctx workflow.Context) (*securit
 }
 
 type SecurityHubGetInsightsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +455,7 @@ func (r *SecurityHubGetInsightsFuture) Get(ctx workflow.Context) (*securityhub.G
 }
 
 type SecurityHubGetInvitationsCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +466,7 @@ func (r *SecurityHubGetInvitationsCountFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubGetMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +477,7 @@ func (r *SecurityHubGetMasterAccountFuture) Get(ctx workflow.Context) (*security
 }
 
 type SecurityHubGetMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +488,7 @@ func (r *SecurityHubGetMembersFuture) Get(ctx workflow.Context) (*securityhub.Ge
 }
 
 type SecurityHubInviteMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +499,7 @@ func (r *SecurityHubInviteMembersFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubListEnabledProductsForImportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +510,7 @@ func (r *SecurityHubListEnabledProductsForImportFuture) Get(ctx workflow.Context
 }
 
 type SecurityHubListInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +521,7 @@ func (r *SecurityHubListInvitationsFuture) Get(ctx workflow.Context) (*securityh
 }
 
 type SecurityHubListMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +532,7 @@ func (r *SecurityHubListMembersFuture) Get(ctx workflow.Context) (*securityhub.L
 }
 
 type SecurityHubListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +543,7 @@ func (r *SecurityHubListTagsForResourceFuture) Get(ctx workflow.Context) (*secur
 }
 
 type SecurityHubTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +554,7 @@ func (r *SecurityHubTagResourceFuture) Get(ctx workflow.Context) (*securityhub.T
 }
 
 type SecurityHubUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +565,7 @@ func (r *SecurityHubUntagResourceFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubUpdateActionTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +576,7 @@ func (r *SecurityHubUpdateActionTargetFuture) Get(ctx workflow.Context) (*securi
 }
 
 type SecurityHubUpdateFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +587,7 @@ func (r *SecurityHubUpdateFindingsFuture) Get(ctx workflow.Context) (*securityhu
 }
 
 type SecurityHubUpdateInsightFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +598,7 @@ func (r *SecurityHubUpdateInsightFuture) Get(ctx workflow.Context) (*securityhub
 }
 
 type SecurityHubUpdateSecurityHubConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +609,7 @@ func (r *SecurityHubUpdateSecurityHubConfigurationFuture) Get(ctx workflow.Conte
 }
 
 type SecurityHubUpdateStandardsControlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

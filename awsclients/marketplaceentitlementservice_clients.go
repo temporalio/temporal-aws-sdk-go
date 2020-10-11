@@ -21,6 +21,7 @@ func NewMarketplaceEntitlementServiceStub() MarketplaceEntitlementServiceClient 
 }
 
 type MarketplaceEntitlementServiceGetEntitlementsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

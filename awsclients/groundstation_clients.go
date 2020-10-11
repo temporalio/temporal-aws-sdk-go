@@ -93,6 +93,7 @@ func NewGroundStationStub() GroundStationClient {
 }
 
 type GroundStationCancelContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *GroundStationCancelContactFuture) Get(ctx workflow.Context) (*groundsta
 }
 
 type GroundStationCreateConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *GroundStationCreateConfigFuture) Get(ctx workflow.Context) (*groundstat
 }
 
 type GroundStationCreateDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *GroundStationCreateDataflowEndpointGroupFuture) Get(ctx workflow.Contex
 }
 
 type GroundStationCreateMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *GroundStationCreateMissionProfileFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GroundStationDeleteConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *GroundStationDeleteConfigFuture) Get(ctx workflow.Context) (*groundstat
 }
 
 type GroundStationDeleteDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *GroundStationDeleteDataflowEndpointGroupFuture) Get(ctx workflow.Contex
 }
 
 type GroundStationDeleteMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *GroundStationDeleteMissionProfileFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GroundStationDescribeContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *GroundStationDescribeContactFuture) Get(ctx workflow.Context) (*grounds
 }
 
 type GroundStationGetConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *GroundStationGetConfigFuture) Get(ctx workflow.Context) (*groundstation
 }
 
 type GroundStationGetDataflowEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *GroundStationGetDataflowEndpointGroupFuture) Get(ctx workflow.Context) 
 }
 
 type GroundStationGetMinuteUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *GroundStationGetMinuteUsageFuture) Get(ctx workflow.Context) (*groundst
 }
 
 type GroundStationGetMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *GroundStationGetMissionProfileFuture) Get(ctx workflow.Context) (*groun
 }
 
 type GroundStationGetSatelliteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *GroundStationGetSatelliteFuture) Get(ctx workflow.Context) (*groundstat
 }
 
 type GroundStationListConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *GroundStationListConfigsFuture) Get(ctx workflow.Context) (*groundstati
 }
 
 type GroundStationListContactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *GroundStationListContactsFuture) Get(ctx workflow.Context) (*groundstat
 }
 
 type GroundStationListDataflowEndpointGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *GroundStationListDataflowEndpointGroupsFuture) Get(ctx workflow.Context
 }
 
 type GroundStationListGroundStationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *GroundStationListGroundStationsFuture) Get(ctx workflow.Context) (*grou
 }
 
 type GroundStationListMissionProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *GroundStationListMissionProfilesFuture) Get(ctx workflow.Context) (*gro
 }
 
 type GroundStationListSatellitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *GroundStationListSatellitesFuture) Get(ctx workflow.Context) (*groundst
 }
 
 type GroundStationListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *GroundStationListTagsForResourceFuture) Get(ctx workflow.Context) (*gro
 }
 
 type GroundStationReserveContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +324,7 @@ func (r *GroundStationReserveContactFuture) Get(ctx workflow.Context) (*groundst
 }
 
 type GroundStationTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +335,7 @@ func (r *GroundStationTagResourceFuture) Get(ctx workflow.Context) (*groundstati
 }
 
 type GroundStationUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +346,7 @@ func (r *GroundStationUntagResourceFuture) Get(ctx workflow.Context) (*groundsta
 }
 
 type GroundStationUpdateConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +357,7 @@ func (r *GroundStationUpdateConfigFuture) Get(ctx workflow.Context) (*groundstat
 }
 
 type GroundStationUpdateMissionProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

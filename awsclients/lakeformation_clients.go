@@ -57,6 +57,7 @@ func NewLakeFormationStub() LakeFormationClient {
 }
 
 type LakeFormationBatchGrantPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *LakeFormationBatchGrantPermissionsFuture) Get(ctx workflow.Context) (*l
 }
 
 type LakeFormationBatchRevokePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *LakeFormationBatchRevokePermissionsFuture) Get(ctx workflow.Context) (*
 }
 
 type LakeFormationDeregisterResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *LakeFormationDeregisterResourceFuture) Get(ctx workflow.Context) (*lake
 }
 
 type LakeFormationDescribeResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *LakeFormationDescribeResourceFuture) Get(ctx workflow.Context) (*lakefo
 }
 
 type LakeFormationGetDataLakeSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *LakeFormationGetDataLakeSettingsFuture) Get(ctx workflow.Context) (*lak
 }
 
 type LakeFormationGetEffectivePermissionsForPathFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *LakeFormationGetEffectivePermissionsForPathFuture) Get(ctx workflow.Con
 }
 
 type LakeFormationGrantPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *LakeFormationGrantPermissionsFuture) Get(ctx workflow.Context) (*lakefo
 }
 
 type LakeFormationListPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *LakeFormationListPermissionsFuture) Get(ctx workflow.Context) (*lakefor
 }
 
 type LakeFormationListResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *LakeFormationListResourcesFuture) Get(ctx workflow.Context) (*lakeforma
 }
 
 type LakeFormationPutDataLakeSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *LakeFormationPutDataLakeSettingsFuture) Get(ctx workflow.Context) (*lak
 }
 
 type LakeFormationRegisterResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *LakeFormationRegisterResourceFuture) Get(ctx workflow.Context) (*lakefo
 }
 
 type LakeFormationRevokePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *LakeFormationRevokePermissionsFuture) Get(ctx workflow.Context) (*lakef
 }
 
 type LakeFormationUpdateResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

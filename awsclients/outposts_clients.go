@@ -39,6 +39,7 @@ func NewOutpostsStub() OutpostsClient {
 }
 
 type OutpostsCreateOutpostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -49,6 +50,7 @@ func (r *OutpostsCreateOutpostFuture) Get(ctx workflow.Context) (*outposts.Creat
 }
 
 type OutpostsDeleteOutpostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -59,6 +61,7 @@ func (r *OutpostsDeleteOutpostFuture) Get(ctx workflow.Context) (*outposts.Delet
 }
 
 type OutpostsDeleteSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -69,6 +72,7 @@ func (r *OutpostsDeleteSiteFuture) Get(ctx workflow.Context) (*outposts.DeleteSi
 }
 
 type OutpostsGetOutpostFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +83,7 @@ func (r *OutpostsGetOutpostFuture) Get(ctx workflow.Context) (*outposts.GetOutpo
 }
 
 type OutpostsGetOutpostInstanceTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +94,7 @@ func (r *OutpostsGetOutpostInstanceTypesFuture) Get(ctx workflow.Context) (*outp
 }
 
 type OutpostsListOutpostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +105,7 @@ func (r *OutpostsListOutpostsFuture) Get(ctx workflow.Context) (*outposts.ListOu
 }
 
 type OutpostsListSitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

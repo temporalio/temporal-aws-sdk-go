@@ -21,6 +21,7 @@ func NewQLDBSessionStub() QLDBSessionClient {
 }
 
 type QLDBSessionSendCommandFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

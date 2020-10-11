@@ -450,6 +450,7 @@ func NewIAMStub() IAMClient {
 }
 
 type IAMAddClientIDToOpenIDConnectProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -460,6 +461,7 @@ func (r *IAMAddClientIDToOpenIDConnectProviderFuture) Get(ctx workflow.Context) 
 }
 
 type IAMAddRoleToInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -470,6 +472,7 @@ func (r *IAMAddRoleToInstanceProfileFuture) Get(ctx workflow.Context) (*iam.AddR
 }
 
 type IAMAddUserToGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -480,6 +483,7 @@ func (r *IAMAddUserToGroupFuture) Get(ctx workflow.Context) (*iam.AddUserToGroup
 }
 
 type IAMAttachGroupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -490,6 +494,7 @@ func (r *IAMAttachGroupPolicyFuture) Get(ctx workflow.Context) (*iam.AttachGroup
 }
 
 type IAMAttachRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -500,6 +505,7 @@ func (r *IAMAttachRolePolicyFuture) Get(ctx workflow.Context) (*iam.AttachRolePo
 }
 
 type IAMAttachUserPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -510,6 +516,7 @@ func (r *IAMAttachUserPolicyFuture) Get(ctx workflow.Context) (*iam.AttachUserPo
 }
 
 type IAMChangePasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -520,6 +527,7 @@ func (r *IAMChangePasswordFuture) Get(ctx workflow.Context) (*iam.ChangePassword
 }
 
 type IAMCreateAccessKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -530,6 +538,7 @@ func (r *IAMCreateAccessKeyFuture) Get(ctx workflow.Context) (*iam.CreateAccessK
 }
 
 type IAMCreateAccountAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -540,6 +549,7 @@ func (r *IAMCreateAccountAliasFuture) Get(ctx workflow.Context) (*iam.CreateAcco
 }
 
 type IAMCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -550,6 +560,7 @@ func (r *IAMCreateGroupFuture) Get(ctx workflow.Context) (*iam.CreateGroupOutput
 }
 
 type IAMCreateInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -560,6 +571,7 @@ func (r *IAMCreateInstanceProfileFuture) Get(ctx workflow.Context) (*iam.CreateI
 }
 
 type IAMCreateLoginProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -570,6 +582,7 @@ func (r *IAMCreateLoginProfileFuture) Get(ctx workflow.Context) (*iam.CreateLogi
 }
 
 type IAMCreateOpenIDConnectProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -580,6 +593,7 @@ func (r *IAMCreateOpenIDConnectProviderFuture) Get(ctx workflow.Context) (*iam.C
 }
 
 type IAMCreatePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -590,6 +604,7 @@ func (r *IAMCreatePolicyFuture) Get(ctx workflow.Context) (*iam.CreatePolicyOutp
 }
 
 type IAMCreatePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -600,6 +615,7 @@ func (r *IAMCreatePolicyVersionFuture) Get(ctx workflow.Context) (*iam.CreatePol
 }
 
 type IAMCreateRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -610,6 +626,7 @@ func (r *IAMCreateRoleFuture) Get(ctx workflow.Context) (*iam.CreateRoleOutput, 
 }
 
 type IAMCreateSAMLProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -620,6 +637,7 @@ func (r *IAMCreateSAMLProviderFuture) Get(ctx workflow.Context) (*iam.CreateSAML
 }
 
 type IAMCreateServiceLinkedRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -630,6 +648,7 @@ func (r *IAMCreateServiceLinkedRoleFuture) Get(ctx workflow.Context) (*iam.Creat
 }
 
 type IAMCreateServiceSpecificCredentialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -640,6 +659,7 @@ func (r *IAMCreateServiceSpecificCredentialFuture) Get(ctx workflow.Context) (*i
 }
 
 type IAMCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -650,6 +670,7 @@ func (r *IAMCreateUserFuture) Get(ctx workflow.Context) (*iam.CreateUserOutput, 
 }
 
 type IAMCreateVirtualMFADeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -660,6 +681,7 @@ func (r *IAMCreateVirtualMFADeviceFuture) Get(ctx workflow.Context) (*iam.Create
 }
 
 type IAMDeactivateMFADeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -670,6 +692,7 @@ func (r *IAMDeactivateMFADeviceFuture) Get(ctx workflow.Context) (*iam.Deactivat
 }
 
 type IAMDeleteAccessKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -680,6 +703,7 @@ func (r *IAMDeleteAccessKeyFuture) Get(ctx workflow.Context) (*iam.DeleteAccessK
 }
 
 type IAMDeleteAccountAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -690,6 +714,7 @@ func (r *IAMDeleteAccountAliasFuture) Get(ctx workflow.Context) (*iam.DeleteAcco
 }
 
 type IAMDeleteAccountPasswordPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -700,6 +725,7 @@ func (r *IAMDeleteAccountPasswordPolicyFuture) Get(ctx workflow.Context) (*iam.D
 }
 
 type IAMDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -710,6 +736,7 @@ func (r *IAMDeleteGroupFuture) Get(ctx workflow.Context) (*iam.DeleteGroupOutput
 }
 
 type IAMDeleteGroupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -720,6 +747,7 @@ func (r *IAMDeleteGroupPolicyFuture) Get(ctx workflow.Context) (*iam.DeleteGroup
 }
 
 type IAMDeleteInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -730,6 +758,7 @@ func (r *IAMDeleteInstanceProfileFuture) Get(ctx workflow.Context) (*iam.DeleteI
 }
 
 type IAMDeleteLoginProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -740,6 +769,7 @@ func (r *IAMDeleteLoginProfileFuture) Get(ctx workflow.Context) (*iam.DeleteLogi
 }
 
 type IAMDeleteOpenIDConnectProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -750,6 +780,7 @@ func (r *IAMDeleteOpenIDConnectProviderFuture) Get(ctx workflow.Context) (*iam.D
 }
 
 type IAMDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -760,6 +791,7 @@ func (r *IAMDeletePolicyFuture) Get(ctx workflow.Context) (*iam.DeletePolicyOutp
 }
 
 type IAMDeletePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -770,6 +802,7 @@ func (r *IAMDeletePolicyVersionFuture) Get(ctx workflow.Context) (*iam.DeletePol
 }
 
 type IAMDeleteRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -780,6 +813,7 @@ func (r *IAMDeleteRoleFuture) Get(ctx workflow.Context) (*iam.DeleteRoleOutput, 
 }
 
 type IAMDeleteRolePermissionsBoundaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -790,6 +824,7 @@ func (r *IAMDeleteRolePermissionsBoundaryFuture) Get(ctx workflow.Context) (*iam
 }
 
 type IAMDeleteRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -800,6 +835,7 @@ func (r *IAMDeleteRolePolicyFuture) Get(ctx workflow.Context) (*iam.DeleteRolePo
 }
 
 type IAMDeleteSAMLProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -810,6 +846,7 @@ func (r *IAMDeleteSAMLProviderFuture) Get(ctx workflow.Context) (*iam.DeleteSAML
 }
 
 type IAMDeleteSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -820,6 +857,7 @@ func (r *IAMDeleteSSHPublicKeyFuture) Get(ctx workflow.Context) (*iam.DeleteSSHP
 }
 
 type IAMDeleteServerCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -830,6 +868,7 @@ func (r *IAMDeleteServerCertificateFuture) Get(ctx workflow.Context) (*iam.Delet
 }
 
 type IAMDeleteServiceLinkedRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -840,6 +879,7 @@ func (r *IAMDeleteServiceLinkedRoleFuture) Get(ctx workflow.Context) (*iam.Delet
 }
 
 type IAMDeleteServiceSpecificCredentialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -850,6 +890,7 @@ func (r *IAMDeleteServiceSpecificCredentialFuture) Get(ctx workflow.Context) (*i
 }
 
 type IAMDeleteSigningCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -860,6 +901,7 @@ func (r *IAMDeleteSigningCertificateFuture) Get(ctx workflow.Context) (*iam.Dele
 }
 
 type IAMDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -870,6 +912,7 @@ func (r *IAMDeleteUserFuture) Get(ctx workflow.Context) (*iam.DeleteUserOutput, 
 }
 
 type IAMDeleteUserPermissionsBoundaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -880,6 +923,7 @@ func (r *IAMDeleteUserPermissionsBoundaryFuture) Get(ctx workflow.Context) (*iam
 }
 
 type IAMDeleteUserPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -890,6 +934,7 @@ func (r *IAMDeleteUserPolicyFuture) Get(ctx workflow.Context) (*iam.DeleteUserPo
 }
 
 type IAMDeleteVirtualMFADeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -900,6 +945,7 @@ func (r *IAMDeleteVirtualMFADeviceFuture) Get(ctx workflow.Context) (*iam.Delete
 }
 
 type IAMDetachGroupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -910,6 +956,7 @@ func (r *IAMDetachGroupPolicyFuture) Get(ctx workflow.Context) (*iam.DetachGroup
 }
 
 type IAMDetachRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -920,6 +967,7 @@ func (r *IAMDetachRolePolicyFuture) Get(ctx workflow.Context) (*iam.DetachRolePo
 }
 
 type IAMDetachUserPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -930,6 +978,7 @@ func (r *IAMDetachUserPolicyFuture) Get(ctx workflow.Context) (*iam.DetachUserPo
 }
 
 type IAMEnableMFADeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -940,6 +989,7 @@ func (r *IAMEnableMFADeviceFuture) Get(ctx workflow.Context) (*iam.EnableMFADevi
 }
 
 type IAMGenerateCredentialReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -950,6 +1000,7 @@ func (r *IAMGenerateCredentialReportFuture) Get(ctx workflow.Context) (*iam.Gene
 }
 
 type IAMGenerateOrganizationsAccessReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -960,6 +1011,7 @@ func (r *IAMGenerateOrganizationsAccessReportFuture) Get(ctx workflow.Context) (
 }
 
 type IAMGenerateServiceLastAccessedDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -970,6 +1022,7 @@ func (r *IAMGenerateServiceLastAccessedDetailsFuture) Get(ctx workflow.Context) 
 }
 
 type IAMGetAccessKeyLastUsedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -980,6 +1033,7 @@ func (r *IAMGetAccessKeyLastUsedFuture) Get(ctx workflow.Context) (*iam.GetAcces
 }
 
 type IAMGetAccountAuthorizationDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -990,6 +1044,7 @@ func (r *IAMGetAccountAuthorizationDetailsFuture) Get(ctx workflow.Context) (*ia
 }
 
 type IAMGetAccountPasswordPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1000,6 +1055,7 @@ func (r *IAMGetAccountPasswordPolicyFuture) Get(ctx workflow.Context) (*iam.GetA
 }
 
 type IAMGetAccountSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1010,6 +1066,7 @@ func (r *IAMGetAccountSummaryFuture) Get(ctx workflow.Context) (*iam.GetAccountS
 }
 
 type IAMGetContextKeysForCustomPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1020,6 +1077,7 @@ func (r *IAMGetContextKeysForCustomPolicyFuture) Get(ctx workflow.Context) (*iam
 }
 
 type IAMGetContextKeysForPrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1030,6 +1088,7 @@ func (r *IAMGetContextKeysForPrincipalPolicyFuture) Get(ctx workflow.Context) (*
 }
 
 type IAMGetCredentialReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1040,6 +1099,7 @@ func (r *IAMGetCredentialReportFuture) Get(ctx workflow.Context) (*iam.GetCreden
 }
 
 type IAMGetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1050,6 +1110,7 @@ func (r *IAMGetGroupFuture) Get(ctx workflow.Context) (*iam.GetGroupOutput, erro
 }
 
 type IAMGetGroupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1060,6 +1121,7 @@ func (r *IAMGetGroupPolicyFuture) Get(ctx workflow.Context) (*iam.GetGroupPolicy
 }
 
 type IAMGetInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1070,6 +1132,7 @@ func (r *IAMGetInstanceProfileFuture) Get(ctx workflow.Context) (*iam.GetInstanc
 }
 
 type IAMGetLoginProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1080,6 +1143,7 @@ func (r *IAMGetLoginProfileFuture) Get(ctx workflow.Context) (*iam.GetLoginProfi
 }
 
 type IAMGetOpenIDConnectProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1090,6 +1154,7 @@ func (r *IAMGetOpenIDConnectProviderFuture) Get(ctx workflow.Context) (*iam.GetO
 }
 
 type IAMGetOrganizationsAccessReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1100,6 +1165,7 @@ func (r *IAMGetOrganizationsAccessReportFuture) Get(ctx workflow.Context) (*iam.
 }
 
 type IAMGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1110,6 +1176,7 @@ func (r *IAMGetPolicyFuture) Get(ctx workflow.Context) (*iam.GetPolicyOutput, er
 }
 
 type IAMGetPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1120,6 +1187,7 @@ func (r *IAMGetPolicyVersionFuture) Get(ctx workflow.Context) (*iam.GetPolicyVer
 }
 
 type IAMGetRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1130,6 +1198,7 @@ func (r *IAMGetRoleFuture) Get(ctx workflow.Context) (*iam.GetRoleOutput, error)
 }
 
 type IAMGetRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1140,6 +1209,7 @@ func (r *IAMGetRolePolicyFuture) Get(ctx workflow.Context) (*iam.GetRolePolicyOu
 }
 
 type IAMGetSAMLProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1150,6 +1220,7 @@ func (r *IAMGetSAMLProviderFuture) Get(ctx workflow.Context) (*iam.GetSAMLProvid
 }
 
 type IAMGetSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1160,6 +1231,7 @@ func (r *IAMGetSSHPublicKeyFuture) Get(ctx workflow.Context) (*iam.GetSSHPublicK
 }
 
 type IAMGetServerCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1170,6 +1242,7 @@ func (r *IAMGetServerCertificateFuture) Get(ctx workflow.Context) (*iam.GetServe
 }
 
 type IAMGetServiceLastAccessedDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1180,6 +1253,7 @@ func (r *IAMGetServiceLastAccessedDetailsFuture) Get(ctx workflow.Context) (*iam
 }
 
 type IAMGetServiceLastAccessedDetailsWithEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1190,6 +1264,7 @@ func (r *IAMGetServiceLastAccessedDetailsWithEntitiesFuture) Get(ctx workflow.Co
 }
 
 type IAMGetServiceLinkedRoleDeletionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1200,6 +1275,7 @@ func (r *IAMGetServiceLinkedRoleDeletionStatusFuture) Get(ctx workflow.Context) 
 }
 
 type IAMGetUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1210,6 +1286,7 @@ func (r *IAMGetUserFuture) Get(ctx workflow.Context) (*iam.GetUserOutput, error)
 }
 
 type IAMGetUserPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1220,6 +1297,7 @@ func (r *IAMGetUserPolicyFuture) Get(ctx workflow.Context) (*iam.GetUserPolicyOu
 }
 
 type IAMListAccessKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1230,6 +1308,7 @@ func (r *IAMListAccessKeysFuture) Get(ctx workflow.Context) (*iam.ListAccessKeys
 }
 
 type IAMListAccountAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1240,6 +1319,7 @@ func (r *IAMListAccountAliasesFuture) Get(ctx workflow.Context) (*iam.ListAccoun
 }
 
 type IAMListAttachedGroupPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1250,6 +1330,7 @@ func (r *IAMListAttachedGroupPoliciesFuture) Get(ctx workflow.Context) (*iam.Lis
 }
 
 type IAMListAttachedRolePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1260,6 +1341,7 @@ func (r *IAMListAttachedRolePoliciesFuture) Get(ctx workflow.Context) (*iam.List
 }
 
 type IAMListAttachedUserPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1270,6 +1352,7 @@ func (r *IAMListAttachedUserPoliciesFuture) Get(ctx workflow.Context) (*iam.List
 }
 
 type IAMListEntitiesForPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1280,6 +1363,7 @@ func (r *IAMListEntitiesForPolicyFuture) Get(ctx workflow.Context) (*iam.ListEnt
 }
 
 type IAMListGroupPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1290,6 +1374,7 @@ func (r *IAMListGroupPoliciesFuture) Get(ctx workflow.Context) (*iam.ListGroupPo
 }
 
 type IAMListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1300,6 +1385,7 @@ func (r *IAMListGroupsFuture) Get(ctx workflow.Context) (*iam.ListGroupsOutput, 
 }
 
 type IAMListGroupsForUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1310,6 +1396,7 @@ func (r *IAMListGroupsForUserFuture) Get(ctx workflow.Context) (*iam.ListGroupsF
 }
 
 type IAMListInstanceProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1320,6 +1407,7 @@ func (r *IAMListInstanceProfilesFuture) Get(ctx workflow.Context) (*iam.ListInst
 }
 
 type IAMListInstanceProfilesForRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1330,6 +1418,7 @@ func (r *IAMListInstanceProfilesForRoleFuture) Get(ctx workflow.Context) (*iam.L
 }
 
 type IAMListMFADevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1340,6 +1429,7 @@ func (r *IAMListMFADevicesFuture) Get(ctx workflow.Context) (*iam.ListMFADevices
 }
 
 type IAMListOpenIDConnectProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1350,6 +1440,7 @@ func (r *IAMListOpenIDConnectProvidersFuture) Get(ctx workflow.Context) (*iam.Li
 }
 
 type IAMListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1360,6 +1451,7 @@ func (r *IAMListPoliciesFuture) Get(ctx workflow.Context) (*iam.ListPoliciesOutp
 }
 
 type IAMListPoliciesGrantingServiceAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1370,6 +1462,7 @@ func (r *IAMListPoliciesGrantingServiceAccessFuture) Get(ctx workflow.Context) (
 }
 
 type IAMListPolicyVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1380,6 +1473,7 @@ func (r *IAMListPolicyVersionsFuture) Get(ctx workflow.Context) (*iam.ListPolicy
 }
 
 type IAMListRolePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1390,6 +1484,7 @@ func (r *IAMListRolePoliciesFuture) Get(ctx workflow.Context) (*iam.ListRolePoli
 }
 
 type IAMListRoleTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1400,6 +1495,7 @@ func (r *IAMListRoleTagsFuture) Get(ctx workflow.Context) (*iam.ListRoleTagsOutp
 }
 
 type IAMListRolesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1410,6 +1506,7 @@ func (r *IAMListRolesFuture) Get(ctx workflow.Context) (*iam.ListRolesOutput, er
 }
 
 type IAMListSAMLProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1420,6 +1517,7 @@ func (r *IAMListSAMLProvidersFuture) Get(ctx workflow.Context) (*iam.ListSAMLPro
 }
 
 type IAMListSSHPublicKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1430,6 +1528,7 @@ func (r *IAMListSSHPublicKeysFuture) Get(ctx workflow.Context) (*iam.ListSSHPubl
 }
 
 type IAMListServerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1440,6 +1539,7 @@ func (r *IAMListServerCertificatesFuture) Get(ctx workflow.Context) (*iam.ListSe
 }
 
 type IAMListServiceSpecificCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1450,6 +1550,7 @@ func (r *IAMListServiceSpecificCredentialsFuture) Get(ctx workflow.Context) (*ia
 }
 
 type IAMListSigningCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1460,6 +1561,7 @@ func (r *IAMListSigningCertificatesFuture) Get(ctx workflow.Context) (*iam.ListS
 }
 
 type IAMListUserPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1470,6 +1572,7 @@ func (r *IAMListUserPoliciesFuture) Get(ctx workflow.Context) (*iam.ListUserPoli
 }
 
 type IAMListUserTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1480,6 +1583,7 @@ func (r *IAMListUserTagsFuture) Get(ctx workflow.Context) (*iam.ListUserTagsOutp
 }
 
 type IAMListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1490,6 +1594,7 @@ func (r *IAMListUsersFuture) Get(ctx workflow.Context) (*iam.ListUsersOutput, er
 }
 
 type IAMListVirtualMFADevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1500,6 +1605,7 @@ func (r *IAMListVirtualMFADevicesFuture) Get(ctx workflow.Context) (*iam.ListVir
 }
 
 type IAMPutGroupPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1510,6 +1616,7 @@ func (r *IAMPutGroupPolicyFuture) Get(ctx workflow.Context) (*iam.PutGroupPolicy
 }
 
 type IAMPutRolePermissionsBoundaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1520,6 +1627,7 @@ func (r *IAMPutRolePermissionsBoundaryFuture) Get(ctx workflow.Context) (*iam.Pu
 }
 
 type IAMPutRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1530,6 +1638,7 @@ func (r *IAMPutRolePolicyFuture) Get(ctx workflow.Context) (*iam.PutRolePolicyOu
 }
 
 type IAMPutUserPermissionsBoundaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1540,6 +1649,7 @@ func (r *IAMPutUserPermissionsBoundaryFuture) Get(ctx workflow.Context) (*iam.Pu
 }
 
 type IAMPutUserPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1550,6 +1660,7 @@ func (r *IAMPutUserPolicyFuture) Get(ctx workflow.Context) (*iam.PutUserPolicyOu
 }
 
 type IAMRemoveClientIDFromOpenIDConnectProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1560,6 +1671,7 @@ func (r *IAMRemoveClientIDFromOpenIDConnectProviderFuture) Get(ctx workflow.Cont
 }
 
 type IAMRemoveRoleFromInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1570,6 +1682,7 @@ func (r *IAMRemoveRoleFromInstanceProfileFuture) Get(ctx workflow.Context) (*iam
 }
 
 type IAMRemoveUserFromGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1580,6 +1693,7 @@ func (r *IAMRemoveUserFromGroupFuture) Get(ctx workflow.Context) (*iam.RemoveUse
 }
 
 type IAMResetServiceSpecificCredentialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1590,6 +1704,7 @@ func (r *IAMResetServiceSpecificCredentialFuture) Get(ctx workflow.Context) (*ia
 }
 
 type IAMResyncMFADeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1600,6 +1715,7 @@ func (r *IAMResyncMFADeviceFuture) Get(ctx workflow.Context) (*iam.ResyncMFADevi
 }
 
 type IAMSetDefaultPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1610,6 +1726,7 @@ func (r *IAMSetDefaultPolicyVersionFuture) Get(ctx workflow.Context) (*iam.SetDe
 }
 
 type IAMSetSecurityTokenServicePreferencesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1620,6 +1737,7 @@ func (r *IAMSetSecurityTokenServicePreferencesFuture) Get(ctx workflow.Context) 
 }
 
 type IAMSimulateCustomPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1630,6 +1748,7 @@ func (r *IAMSimulateCustomPolicyFuture) Get(ctx workflow.Context) (*iam.Simulate
 }
 
 type IAMSimulatePrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1640,6 +1759,7 @@ func (r *IAMSimulatePrincipalPolicyFuture) Get(ctx workflow.Context) (*iam.Simul
 }
 
 type IAMTagRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1650,6 +1770,7 @@ func (r *IAMTagRoleFuture) Get(ctx workflow.Context) (*iam.TagRoleOutput, error)
 }
 
 type IAMTagUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1660,6 +1781,7 @@ func (r *IAMTagUserFuture) Get(ctx workflow.Context) (*iam.TagUserOutput, error)
 }
 
 type IAMUntagRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1670,6 +1792,7 @@ func (r *IAMUntagRoleFuture) Get(ctx workflow.Context) (*iam.UntagRoleOutput, er
 }
 
 type IAMUntagUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1680,6 +1803,7 @@ func (r *IAMUntagUserFuture) Get(ctx workflow.Context) (*iam.UntagUserOutput, er
 }
 
 type IAMUpdateAccessKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1690,6 +1814,7 @@ func (r *IAMUpdateAccessKeyFuture) Get(ctx workflow.Context) (*iam.UpdateAccessK
 }
 
 type IAMUpdateAccountPasswordPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1700,6 +1825,7 @@ func (r *IAMUpdateAccountPasswordPolicyFuture) Get(ctx workflow.Context) (*iam.U
 }
 
 type IAMUpdateAssumeRolePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1710,6 +1836,7 @@ func (r *IAMUpdateAssumeRolePolicyFuture) Get(ctx workflow.Context) (*iam.Update
 }
 
 type IAMUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1720,6 +1847,7 @@ func (r *IAMUpdateGroupFuture) Get(ctx workflow.Context) (*iam.UpdateGroupOutput
 }
 
 type IAMUpdateLoginProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1730,6 +1858,7 @@ func (r *IAMUpdateLoginProfileFuture) Get(ctx workflow.Context) (*iam.UpdateLogi
 }
 
 type IAMUpdateOpenIDConnectProviderThumbprintFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1740,6 +1869,7 @@ func (r *IAMUpdateOpenIDConnectProviderThumbprintFuture) Get(ctx workflow.Contex
 }
 
 type IAMUpdateRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1750,6 +1880,7 @@ func (r *IAMUpdateRoleFuture) Get(ctx workflow.Context) (*iam.UpdateRoleOutput, 
 }
 
 type IAMUpdateRoleDescriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1760,6 +1891,7 @@ func (r *IAMUpdateRoleDescriptionFuture) Get(ctx workflow.Context) (*iam.UpdateR
 }
 
 type IAMUpdateSAMLProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1770,6 +1902,7 @@ func (r *IAMUpdateSAMLProviderFuture) Get(ctx workflow.Context) (*iam.UpdateSAML
 }
 
 type IAMUpdateSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1780,6 +1913,7 @@ func (r *IAMUpdateSSHPublicKeyFuture) Get(ctx workflow.Context) (*iam.UpdateSSHP
 }
 
 type IAMUpdateServerCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1790,6 +1924,7 @@ func (r *IAMUpdateServerCertificateFuture) Get(ctx workflow.Context) (*iam.Updat
 }
 
 type IAMUpdateServiceSpecificCredentialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1800,6 +1935,7 @@ func (r *IAMUpdateServiceSpecificCredentialFuture) Get(ctx workflow.Context) (*i
 }
 
 type IAMUpdateSigningCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1810,6 +1946,7 @@ func (r *IAMUpdateSigningCertificateFuture) Get(ctx workflow.Context) (*iam.Upda
 }
 
 type IAMUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1820,6 +1957,7 @@ func (r *IAMUpdateUserFuture) Get(ctx workflow.Context) (*iam.UpdateUserOutput, 
 }
 
 type IAMUploadSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1830,6 +1968,7 @@ func (r *IAMUploadSSHPublicKeyFuture) Get(ctx workflow.Context) (*iam.UploadSSHP
 }
 
 type IAMUploadServerCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1840,6 +1979,7 @@ func (r *IAMUploadServerCertificateFuture) Get(ctx workflow.Context) (*iam.Uploa
 }
 
 type IAMUploadSigningCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

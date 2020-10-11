@@ -57,6 +57,7 @@ func NewHealthStub() HealthClient {
 }
 
 type HealthDescribeAffectedAccountsForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *HealthDescribeAffectedAccountsForOrganizationFuture) Get(ctx workflow.C
 }
 
 type HealthDescribeAffectedEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *HealthDescribeAffectedEntitiesFuture) Get(ctx workflow.Context) (*healt
 }
 
 type HealthDescribeAffectedEntitiesForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *HealthDescribeAffectedEntitiesForOrganizationFuture) Get(ctx workflow.C
 }
 
 type HealthDescribeEntityAggregatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *HealthDescribeEntityAggregatesFuture) Get(ctx workflow.Context) (*healt
 }
 
 type HealthDescribeEventAggregatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *HealthDescribeEventAggregatesFuture) Get(ctx workflow.Context) (*health
 }
 
 type HealthDescribeEventDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *HealthDescribeEventDetailsFuture) Get(ctx workflow.Context) (*health.De
 }
 
 type HealthDescribeEventDetailsForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *HealthDescribeEventDetailsForOrganizationFuture) Get(ctx workflow.Conte
 }
 
 type HealthDescribeEventTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *HealthDescribeEventTypesFuture) Get(ctx workflow.Context) (*health.Desc
 }
 
 type HealthDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *HealthDescribeEventsFuture) Get(ctx workflow.Context) (*health.Describe
 }
 
 type HealthDescribeEventsForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *HealthDescribeEventsForOrganizationFuture) Get(ctx workflow.Context) (*
 }
 
 type HealthDescribeHealthServiceStatusForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *HealthDescribeHealthServiceStatusForOrganizationFuture) Get(ctx workflo
 }
 
 type HealthDisableHealthServiceAccessForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *HealthDisableHealthServiceAccessForOrganizationFuture) Get(ctx workflow
 }
 
 type HealthEnableHealthServiceAccessForOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

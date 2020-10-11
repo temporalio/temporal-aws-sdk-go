@@ -78,6 +78,7 @@ func NewCloudHSMStub() CloudHSMClient {
 }
 
 type CloudHSMAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +89,7 @@ func (r *CloudHSMAddTagsToResourceFuture) Get(ctx workflow.Context) (*cloudhsm.A
 }
 
 type CloudHSMCreateHapgFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +100,7 @@ func (r *CloudHSMCreateHapgFuture) Get(ctx workflow.Context) (*cloudhsm.CreateHa
 }
 
 type CloudHSMCreateHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +111,7 @@ func (r *CloudHSMCreateHsmFuture) Get(ctx workflow.Context) (*cloudhsm.CreateHsm
 }
 
 type CloudHSMCreateLunaClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +122,7 @@ func (r *CloudHSMCreateLunaClientFuture) Get(ctx workflow.Context) (*cloudhsm.Cr
 }
 
 type CloudHSMDeleteHapgFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +133,7 @@ func (r *CloudHSMDeleteHapgFuture) Get(ctx workflow.Context) (*cloudhsm.DeleteHa
 }
 
 type CloudHSMDeleteHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +144,7 @@ func (r *CloudHSMDeleteHsmFuture) Get(ctx workflow.Context) (*cloudhsm.DeleteHsm
 }
 
 type CloudHSMDeleteLunaClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +155,7 @@ func (r *CloudHSMDeleteLunaClientFuture) Get(ctx workflow.Context) (*cloudhsm.De
 }
 
 type CloudHSMDescribeHapgFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +166,7 @@ func (r *CloudHSMDescribeHapgFuture) Get(ctx workflow.Context) (*cloudhsm.Descri
 }
 
 type CloudHSMDescribeHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +177,7 @@ func (r *CloudHSMDescribeHsmFuture) Get(ctx workflow.Context) (*cloudhsm.Describ
 }
 
 type CloudHSMDescribeLunaClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +188,7 @@ func (r *CloudHSMDescribeLunaClientFuture) Get(ctx workflow.Context) (*cloudhsm.
 }
 
 type CloudHSMGetConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +199,7 @@ func (r *CloudHSMGetConfigFuture) Get(ctx workflow.Context) (*cloudhsm.GetConfig
 }
 
 type CloudHSMListAvailableZonesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +210,7 @@ func (r *CloudHSMListAvailableZonesFuture) Get(ctx workflow.Context) (*cloudhsm.
 }
 
 type CloudHSMListHapgsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +221,7 @@ func (r *CloudHSMListHapgsFuture) Get(ctx workflow.Context) (*cloudhsm.ListHapgs
 }
 
 type CloudHSMListHsmsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +232,7 @@ func (r *CloudHSMListHsmsFuture) Get(ctx workflow.Context) (*cloudhsm.ListHsmsOu
 }
 
 type CloudHSMListLunaClientsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +243,7 @@ func (r *CloudHSMListLunaClientsFuture) Get(ctx workflow.Context) (*cloudhsm.Lis
 }
 
 type CloudHSMListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +254,7 @@ func (r *CloudHSMListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudhsm
 }
 
 type CloudHSMModifyHapgFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +265,7 @@ func (r *CloudHSMModifyHapgFuture) Get(ctx workflow.Context) (*cloudhsm.ModifyHa
 }
 
 type CloudHSMModifyHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +276,7 @@ func (r *CloudHSMModifyHsmFuture) Get(ctx workflow.Context) (*cloudhsm.ModifyHsm
 }
 
 type CloudHSMModifyLunaClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +287,7 @@ func (r *CloudHSMModifyLunaClientFuture) Get(ctx workflow.Context) (*cloudhsm.Mo
 }
 
 type CloudHSMRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

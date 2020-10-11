@@ -39,6 +39,7 @@ func NewMediaTailorStub() MediaTailorClient {
 }
 
 type MediaTailorDeletePlaybackConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -49,6 +50,7 @@ func (r *MediaTailorDeletePlaybackConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type MediaTailorGetPlaybackConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -59,6 +61,7 @@ func (r *MediaTailorGetPlaybackConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaTailorListPlaybackConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -69,6 +72,7 @@ func (r *MediaTailorListPlaybackConfigurationsFuture) Get(ctx workflow.Context) 
 }
 
 type MediaTailorListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +83,7 @@ func (r *MediaTailorListTagsForResourceFuture) Get(ctx workflow.Context) (*media
 }
 
 type MediaTailorPutPlaybackConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +94,7 @@ func (r *MediaTailorPutPlaybackConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaTailorTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +105,7 @@ func (r *MediaTailorTagResourceFuture) Get(ctx workflow.Context) (*mediatailor.T
 }
 
 type MediaTailorUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

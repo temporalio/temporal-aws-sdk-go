@@ -168,6 +168,7 @@ func NewWorkSpacesStub() WorkSpacesClient {
 }
 
 type WorkSpacesAssociateConnectionAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +179,7 @@ func (r *WorkSpacesAssociateConnectionAliasFuture) Get(ctx workflow.Context) (*w
 }
 
 type WorkSpacesAssociateIpGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +190,7 @@ func (r *WorkSpacesAssociateIpGroupsFuture) Get(ctx workflow.Context) (*workspac
 }
 
 type WorkSpacesAuthorizeIpRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +201,7 @@ func (r *WorkSpacesAuthorizeIpRulesFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesCopyWorkspaceImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +212,7 @@ func (r *WorkSpacesCopyWorkspaceImageFuture) Get(ctx workflow.Context) (*workspa
 }
 
 type WorkSpacesCreateConnectionAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +223,7 @@ func (r *WorkSpacesCreateConnectionAliasFuture) Get(ctx workflow.Context) (*work
 }
 
 type WorkSpacesCreateIpGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +234,7 @@ func (r *WorkSpacesCreateIpGroupFuture) Get(ctx workflow.Context) (*workspaces.C
 }
 
 type WorkSpacesCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +245,7 @@ func (r *WorkSpacesCreateTagsFuture) Get(ctx workflow.Context) (*workspaces.Crea
 }
 
 type WorkSpacesCreateWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +256,7 @@ func (r *WorkSpacesCreateWorkspacesFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesDeleteConnectionAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +267,7 @@ func (r *WorkSpacesDeleteConnectionAliasFuture) Get(ctx workflow.Context) (*work
 }
 
 type WorkSpacesDeleteIpGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +278,7 @@ func (r *WorkSpacesDeleteIpGroupFuture) Get(ctx workflow.Context) (*workspaces.D
 }
 
 type WorkSpacesDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +289,7 @@ func (r *WorkSpacesDeleteTagsFuture) Get(ctx workflow.Context) (*workspaces.Dele
 }
 
 type WorkSpacesDeleteWorkspaceImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +300,7 @@ func (r *WorkSpacesDeleteWorkspaceImageFuture) Get(ctx workflow.Context) (*works
 }
 
 type WorkSpacesDeregisterWorkspaceDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +311,7 @@ func (r *WorkSpacesDeregisterWorkspaceDirectoryFuture) Get(ctx workflow.Context)
 }
 
 type WorkSpacesDescribeAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +322,7 @@ func (r *WorkSpacesDescribeAccountFuture) Get(ctx workflow.Context) (*workspaces
 }
 
 type WorkSpacesDescribeAccountModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +333,7 @@ func (r *WorkSpacesDescribeAccountModificationsFuture) Get(ctx workflow.Context)
 }
 
 type WorkSpacesDescribeClientPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +344,7 @@ func (r *WorkSpacesDescribeClientPropertiesFuture) Get(ctx workflow.Context) (*w
 }
 
 type WorkSpacesDescribeConnectionAliasPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +355,7 @@ func (r *WorkSpacesDescribeConnectionAliasPermissionsFuture) Get(ctx workflow.Co
 }
 
 type WorkSpacesDescribeConnectionAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +366,7 @@ func (r *WorkSpacesDescribeConnectionAliasesFuture) Get(ctx workflow.Context) (*
 }
 
 type WorkSpacesDescribeIpGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +377,7 @@ func (r *WorkSpacesDescribeIpGroupsFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +388,7 @@ func (r *WorkSpacesDescribeTagsFuture) Get(ctx workflow.Context) (*workspaces.De
 }
 
 type WorkSpacesDescribeWorkspaceBundlesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +399,7 @@ func (r *WorkSpacesDescribeWorkspaceBundlesFuture) Get(ctx workflow.Context) (*w
 }
 
 type WorkSpacesDescribeWorkspaceDirectoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +410,7 @@ func (r *WorkSpacesDescribeWorkspaceDirectoriesFuture) Get(ctx workflow.Context)
 }
 
 type WorkSpacesDescribeWorkspaceImagePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +421,7 @@ func (r *WorkSpacesDescribeWorkspaceImagePermissionsFuture) Get(ctx workflow.Con
 }
 
 type WorkSpacesDescribeWorkspaceImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +432,7 @@ func (r *WorkSpacesDescribeWorkspaceImagesFuture) Get(ctx workflow.Context) (*wo
 }
 
 type WorkSpacesDescribeWorkspaceSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +443,7 @@ func (r *WorkSpacesDescribeWorkspaceSnapshotsFuture) Get(ctx workflow.Context) (
 }
 
 type WorkSpacesDescribeWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +454,7 @@ func (r *WorkSpacesDescribeWorkspacesFuture) Get(ctx workflow.Context) (*workspa
 }
 
 type WorkSpacesDescribeWorkspacesConnectionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +465,7 @@ func (r *WorkSpacesDescribeWorkspacesConnectionStatusFuture) Get(ctx workflow.Co
 }
 
 type WorkSpacesDisassociateConnectionAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +476,7 @@ func (r *WorkSpacesDisassociateConnectionAliasFuture) Get(ctx workflow.Context) 
 }
 
 type WorkSpacesDisassociateIpGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +487,7 @@ func (r *WorkSpacesDisassociateIpGroupsFuture) Get(ctx workflow.Context) (*works
 }
 
 type WorkSpacesImportWorkspaceImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +498,7 @@ func (r *WorkSpacesImportWorkspaceImageFuture) Get(ctx workflow.Context) (*works
 }
 
 type WorkSpacesListAvailableManagementCidrRangesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +509,7 @@ func (r *WorkSpacesListAvailableManagementCidrRangesFuture) Get(ctx workflow.Con
 }
 
 type WorkSpacesMigrateWorkspaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +520,7 @@ func (r *WorkSpacesMigrateWorkspaceFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesModifyAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +531,7 @@ func (r *WorkSpacesModifyAccountFuture) Get(ctx workflow.Context) (*workspaces.M
 }
 
 type WorkSpacesModifyClientPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +542,7 @@ func (r *WorkSpacesModifyClientPropertiesFuture) Get(ctx workflow.Context) (*wor
 }
 
 type WorkSpacesModifySelfservicePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +553,7 @@ func (r *WorkSpacesModifySelfservicePermissionsFuture) Get(ctx workflow.Context)
 }
 
 type WorkSpacesModifyWorkspaceAccessPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +564,7 @@ func (r *WorkSpacesModifyWorkspaceAccessPropertiesFuture) Get(ctx workflow.Conte
 }
 
 type WorkSpacesModifyWorkspaceCreationPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +575,7 @@ func (r *WorkSpacesModifyWorkspaceCreationPropertiesFuture) Get(ctx workflow.Con
 }
 
 type WorkSpacesModifyWorkspacePropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +586,7 @@ func (r *WorkSpacesModifyWorkspacePropertiesFuture) Get(ctx workflow.Context) (*
 }
 
 type WorkSpacesModifyWorkspaceStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +597,7 @@ func (r *WorkSpacesModifyWorkspaceStateFuture) Get(ctx workflow.Context) (*works
 }
 
 type WorkSpacesRebootWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +608,7 @@ func (r *WorkSpacesRebootWorkspacesFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesRebuildWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +619,7 @@ func (r *WorkSpacesRebuildWorkspacesFuture) Get(ctx workflow.Context) (*workspac
 }
 
 type WorkSpacesRegisterWorkspaceDirectoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +630,7 @@ func (r *WorkSpacesRegisterWorkspaceDirectoryFuture) Get(ctx workflow.Context) (
 }
 
 type WorkSpacesRestoreWorkspaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +641,7 @@ func (r *WorkSpacesRestoreWorkspaceFuture) Get(ctx workflow.Context) (*workspace
 }
 
 type WorkSpacesRevokeIpRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +652,7 @@ func (r *WorkSpacesRevokeIpRulesFuture) Get(ctx workflow.Context) (*workspaces.R
 }
 
 type WorkSpacesStartWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +663,7 @@ func (r *WorkSpacesStartWorkspacesFuture) Get(ctx workflow.Context) (*workspaces
 }
 
 type WorkSpacesStopWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +674,7 @@ func (r *WorkSpacesStopWorkspacesFuture) Get(ctx workflow.Context) (*workspaces.
 }
 
 type WorkSpacesTerminateWorkspacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +685,7 @@ func (r *WorkSpacesTerminateWorkspacesFuture) Get(ctx workflow.Context) (*worksp
 }
 
 type WorkSpacesUpdateConnectionAliasPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +696,7 @@ func (r *WorkSpacesUpdateConnectionAliasPermissionFuture) Get(ctx workflow.Conte
 }
 
 type WorkSpacesUpdateRulesOfIpGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +707,7 @@ func (r *WorkSpacesUpdateRulesOfIpGroupFuture) Get(ctx workflow.Context) (*works
 }
 
 type WorkSpacesUpdateWorkspaceImagePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

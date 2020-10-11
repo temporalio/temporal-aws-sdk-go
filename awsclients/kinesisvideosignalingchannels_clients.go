@@ -24,6 +24,7 @@ func NewKinesisVideoSignalingChannelsStub() KinesisVideoSignalingChannelsClient 
 }
 
 type KinesisVideoSignalingChannelsGetIceServerConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -34,6 +35,7 @@ func (r *KinesisVideoSignalingChannelsGetIceServerConfigFuture) Get(ctx workflow
 }
 
 type KinesisVideoSignalingChannelsSendAlexaOfferToMasterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

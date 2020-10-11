@@ -111,6 +111,7 @@ func NewEventBridgeStub() EventBridgeClient {
 }
 
 type EventBridgeActivateEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +122,7 @@ func (r *EventBridgeActivateEventSourceFuture) Get(ctx workflow.Context) (*event
 }
 
 type EventBridgeCreateEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +133,7 @@ func (r *EventBridgeCreateEventBusFuture) Get(ctx workflow.Context) (*eventbridg
 }
 
 type EventBridgeCreatePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +144,7 @@ func (r *EventBridgeCreatePartnerEventSourceFuture) Get(ctx workflow.Context) (*
 }
 
 type EventBridgeDeactivateEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +155,7 @@ func (r *EventBridgeDeactivateEventSourceFuture) Get(ctx workflow.Context) (*eve
 }
 
 type EventBridgeDeleteEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +166,7 @@ func (r *EventBridgeDeleteEventBusFuture) Get(ctx workflow.Context) (*eventbridg
 }
 
 type EventBridgeDeletePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +177,7 @@ func (r *EventBridgeDeletePartnerEventSourceFuture) Get(ctx workflow.Context) (*
 }
 
 type EventBridgeDeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +188,7 @@ func (r *EventBridgeDeleteRuleFuture) Get(ctx workflow.Context) (*eventbridge.De
 }
 
 type EventBridgeDescribeEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +199,7 @@ func (r *EventBridgeDescribeEventBusFuture) Get(ctx workflow.Context) (*eventbri
 }
 
 type EventBridgeDescribeEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +210,7 @@ func (r *EventBridgeDescribeEventSourceFuture) Get(ctx workflow.Context) (*event
 }
 
 type EventBridgeDescribePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +221,7 @@ func (r *EventBridgeDescribePartnerEventSourceFuture) Get(ctx workflow.Context) 
 }
 
 type EventBridgeDescribeRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +232,7 @@ func (r *EventBridgeDescribeRuleFuture) Get(ctx workflow.Context) (*eventbridge.
 }
 
 type EventBridgeDisableRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +243,7 @@ func (r *EventBridgeDisableRuleFuture) Get(ctx workflow.Context) (*eventbridge.D
 }
 
 type EventBridgeEnableRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +254,7 @@ func (r *EventBridgeEnableRuleFuture) Get(ctx workflow.Context) (*eventbridge.En
 }
 
 type EventBridgeListEventBusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +265,7 @@ func (r *EventBridgeListEventBusesFuture) Get(ctx workflow.Context) (*eventbridg
 }
 
 type EventBridgeListEventSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +276,7 @@ func (r *EventBridgeListEventSourcesFuture) Get(ctx workflow.Context) (*eventbri
 }
 
 type EventBridgeListPartnerEventSourceAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +287,7 @@ func (r *EventBridgeListPartnerEventSourceAccountsFuture) Get(ctx workflow.Conte
 }
 
 type EventBridgeListPartnerEventSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +298,7 @@ func (r *EventBridgeListPartnerEventSourcesFuture) Get(ctx workflow.Context) (*e
 }
 
 type EventBridgeListRuleNamesByTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +309,7 @@ func (r *EventBridgeListRuleNamesByTargetFuture) Get(ctx workflow.Context) (*eve
 }
 
 type EventBridgeListRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +320,7 @@ func (r *EventBridgeListRulesFuture) Get(ctx workflow.Context) (*eventbridge.Lis
 }
 
 type EventBridgeListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +331,7 @@ func (r *EventBridgeListTagsForResourceFuture) Get(ctx workflow.Context) (*event
 }
 
 type EventBridgeListTargetsByRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +342,7 @@ func (r *EventBridgeListTargetsByRuleFuture) Get(ctx workflow.Context) (*eventbr
 }
 
 type EventBridgePutEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +353,7 @@ func (r *EventBridgePutEventsFuture) Get(ctx workflow.Context) (*eventbridge.Put
 }
 
 type EventBridgePutPartnerEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +364,7 @@ func (r *EventBridgePutPartnerEventsFuture) Get(ctx workflow.Context) (*eventbri
 }
 
 type EventBridgePutPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +375,7 @@ func (r *EventBridgePutPermissionFuture) Get(ctx workflow.Context) (*eventbridge
 }
 
 type EventBridgePutRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +386,7 @@ func (r *EventBridgePutRuleFuture) Get(ctx workflow.Context) (*eventbridge.PutRu
 }
 
 type EventBridgePutTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +397,7 @@ func (r *EventBridgePutTargetsFuture) Get(ctx workflow.Context) (*eventbridge.Pu
 }
 
 type EventBridgeRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +408,7 @@ func (r *EventBridgeRemovePermissionFuture) Get(ctx workflow.Context) (*eventbri
 }
 
 type EventBridgeRemoveTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +419,7 @@ func (r *EventBridgeRemoveTargetsFuture) Get(ctx workflow.Context) (*eventbridge
 }
 
 type EventBridgeTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +430,7 @@ func (r *EventBridgeTagResourceFuture) Get(ctx workflow.Context) (*eventbridge.T
 }
 
 type EventBridgeTestEventPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +441,7 @@ func (r *EventBridgeTestEventPatternFuture) Get(ctx workflow.Context) (*eventbri
 }
 
 type EventBridgeUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -156,6 +156,7 @@ func NewKMSStub() KMSClient {
 }
 
 type KMSCancelKeyDeletionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +167,7 @@ func (r *KMSCancelKeyDeletionFuture) Get(ctx workflow.Context) (*kms.CancelKeyDe
 }
 
 type KMSConnectCustomKeyStoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +178,7 @@ func (r *KMSConnectCustomKeyStoreFuture) Get(ctx workflow.Context) (*kms.Connect
 }
 
 type KMSCreateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +189,7 @@ func (r *KMSCreateAliasFuture) Get(ctx workflow.Context) (*kms.CreateAliasOutput
 }
 
 type KMSCreateCustomKeyStoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +200,7 @@ func (r *KMSCreateCustomKeyStoreFuture) Get(ctx workflow.Context) (*kms.CreateCu
 }
 
 type KMSCreateGrantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +211,7 @@ func (r *KMSCreateGrantFuture) Get(ctx workflow.Context) (*kms.CreateGrantOutput
 }
 
 type KMSCreateKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +222,7 @@ func (r *KMSCreateKeyFuture) Get(ctx workflow.Context) (*kms.CreateKeyOutput, er
 }
 
 type KMSDecryptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +233,7 @@ func (r *KMSDecryptFuture) Get(ctx workflow.Context) (*kms.DecryptOutput, error)
 }
 
 type KMSDeleteAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +244,7 @@ func (r *KMSDeleteAliasFuture) Get(ctx workflow.Context) (*kms.DeleteAliasOutput
 }
 
 type KMSDeleteCustomKeyStoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +255,7 @@ func (r *KMSDeleteCustomKeyStoreFuture) Get(ctx workflow.Context) (*kms.DeleteCu
 }
 
 type KMSDeleteImportedKeyMaterialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +266,7 @@ func (r *KMSDeleteImportedKeyMaterialFuture) Get(ctx workflow.Context) (*kms.Del
 }
 
 type KMSDescribeCustomKeyStoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +277,7 @@ func (r *KMSDescribeCustomKeyStoresFuture) Get(ctx workflow.Context) (*kms.Descr
 }
 
 type KMSDescribeKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +288,7 @@ func (r *KMSDescribeKeyFuture) Get(ctx workflow.Context) (*kms.DescribeKeyOutput
 }
 
 type KMSDisableKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +299,7 @@ func (r *KMSDisableKeyFuture) Get(ctx workflow.Context) (*kms.DisableKeyOutput, 
 }
 
 type KMSDisableKeyRotationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +310,7 @@ func (r *KMSDisableKeyRotationFuture) Get(ctx workflow.Context) (*kms.DisableKey
 }
 
 type KMSDisconnectCustomKeyStoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +321,7 @@ func (r *KMSDisconnectCustomKeyStoreFuture) Get(ctx workflow.Context) (*kms.Disc
 }
 
 type KMSEnableKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +332,7 @@ func (r *KMSEnableKeyFuture) Get(ctx workflow.Context) (*kms.EnableKeyOutput, er
 }
 
 type KMSEnableKeyRotationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +343,7 @@ func (r *KMSEnableKeyRotationFuture) Get(ctx workflow.Context) (*kms.EnableKeyRo
 }
 
 type KMSEncryptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +354,7 @@ func (r *KMSEncryptFuture) Get(ctx workflow.Context) (*kms.EncryptOutput, error)
 }
 
 type KMSGenerateDataKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +365,7 @@ func (r *KMSGenerateDataKeyFuture) Get(ctx workflow.Context) (*kms.GenerateDataK
 }
 
 type KMSGenerateDataKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -356,6 +376,7 @@ func (r *KMSGenerateDataKeyPairFuture) Get(ctx workflow.Context) (*kms.GenerateD
 }
 
 type KMSGenerateDataKeyPairWithoutPlaintextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -366,6 +387,7 @@ func (r *KMSGenerateDataKeyPairWithoutPlaintextFuture) Get(ctx workflow.Context)
 }
 
 type KMSGenerateDataKeyWithoutPlaintextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -376,6 +398,7 @@ func (r *KMSGenerateDataKeyWithoutPlaintextFuture) Get(ctx workflow.Context) (*k
 }
 
 type KMSGenerateRandomFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -386,6 +409,7 @@ func (r *KMSGenerateRandomFuture) Get(ctx workflow.Context) (*kms.GenerateRandom
 }
 
 type KMSGetKeyPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -396,6 +420,7 @@ func (r *KMSGetKeyPolicyFuture) Get(ctx workflow.Context) (*kms.GetKeyPolicyOutp
 }
 
 type KMSGetKeyRotationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -406,6 +431,7 @@ func (r *KMSGetKeyRotationStatusFuture) Get(ctx workflow.Context) (*kms.GetKeyRo
 }
 
 type KMSGetParametersForImportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -416,6 +442,7 @@ func (r *KMSGetParametersForImportFuture) Get(ctx workflow.Context) (*kms.GetPar
 }
 
 type KMSGetPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -426,6 +453,7 @@ func (r *KMSGetPublicKeyFuture) Get(ctx workflow.Context) (*kms.GetPublicKeyOutp
 }
 
 type KMSImportKeyMaterialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +464,7 @@ func (r *KMSImportKeyMaterialFuture) Get(ctx workflow.Context) (*kms.ImportKeyMa
 }
 
 type KMSListAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +475,7 @@ func (r *KMSListAliasesFuture) Get(ctx workflow.Context) (*kms.ListAliasesOutput
 }
 
 type KMSListGrantsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +486,7 @@ func (r *KMSListGrantsFuture) Get(ctx workflow.Context) (*kms.ListGrantsResponse
 }
 
 type KMSListKeyPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +497,7 @@ func (r *KMSListKeyPoliciesFuture) Get(ctx workflow.Context) (*kms.ListKeyPolici
 }
 
 type KMSListKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +508,7 @@ func (r *KMSListKeysFuture) Get(ctx workflow.Context) (*kms.ListKeysOutput, erro
 }
 
 type KMSListResourceTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +519,7 @@ func (r *KMSListResourceTagsFuture) Get(ctx workflow.Context) (*kms.ListResource
 }
 
 type KMSListRetirableGrantsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +530,7 @@ func (r *KMSListRetirableGrantsFuture) Get(ctx workflow.Context) (*kms.ListGrant
 }
 
 type KMSPutKeyPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +541,7 @@ func (r *KMSPutKeyPolicyFuture) Get(ctx workflow.Context) (*kms.PutKeyPolicyOutp
 }
 
 type KMSReEncryptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +552,7 @@ func (r *KMSReEncryptFuture) Get(ctx workflow.Context) (*kms.ReEncryptOutput, er
 }
 
 type KMSRetireGrantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +563,7 @@ func (r *KMSRetireGrantFuture) Get(ctx workflow.Context) (*kms.RetireGrantOutput
 }
 
 type KMSRevokeGrantFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +574,7 @@ func (r *KMSRevokeGrantFuture) Get(ctx workflow.Context) (*kms.RevokeGrantOutput
 }
 
 type KMSScheduleKeyDeletionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +585,7 @@ func (r *KMSScheduleKeyDeletionFuture) Get(ctx workflow.Context) (*kms.ScheduleK
 }
 
 type KMSSignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +596,7 @@ func (r *KMSSignFuture) Get(ctx workflow.Context) (*kms.SignOutput, error) {
 }
 
 type KMSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +607,7 @@ func (r *KMSTagResourceFuture) Get(ctx workflow.Context) (*kms.TagResourceOutput
 }
 
 type KMSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +618,7 @@ func (r *KMSUntagResourceFuture) Get(ctx workflow.Context) (*kms.UntagResourceOu
 }
 
 type KMSUpdateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +629,7 @@ func (r *KMSUpdateAliasFuture) Get(ctx workflow.Context) (*kms.UpdateAliasOutput
 }
 
 type KMSUpdateCustomKeyStoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +640,7 @@ func (r *KMSUpdateCustomKeyStoreFuture) Get(ctx workflow.Context) (*kms.UpdateCu
 }
 
 type KMSUpdateKeyDescriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +651,7 @@ func (r *KMSUpdateKeyDescriptionFuture) Get(ctx workflow.Context) (*kms.UpdateKe
 }
 
 type KMSVerifyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

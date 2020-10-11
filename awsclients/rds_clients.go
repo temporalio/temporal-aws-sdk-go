@@ -426,6 +426,7 @@ func NewRDSStub() RDSClient {
 }
 
 type RDSAddRoleToDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +437,7 @@ func (r *RDSAddRoleToDBClusterFuture) Get(ctx workflow.Context) (*rds.AddRoleToD
 }
 
 type RDSAddRoleToDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +448,7 @@ func (r *RDSAddRoleToDBInstanceFuture) Get(ctx workflow.Context) (*rds.AddRoleTo
 }
 
 type RDSAddSourceIdentifierToSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +459,7 @@ func (r *RDSAddSourceIdentifierToSubscriptionFuture) Get(ctx workflow.Context) (
 }
 
 type RDSAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +470,7 @@ func (r *RDSAddTagsToResourceFuture) Get(ctx workflow.Context) (*rds.AddTagsToRe
 }
 
 type RDSApplyPendingMaintenanceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +481,7 @@ func (r *RDSApplyPendingMaintenanceActionFuture) Get(ctx workflow.Context) (*rds
 }
 
 type RDSAuthorizeDBSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +492,7 @@ func (r *RDSAuthorizeDBSecurityGroupIngressFuture) Get(ctx workflow.Context) (*r
 }
 
 type RDSBacktrackDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +503,7 @@ func (r *RDSBacktrackDBClusterFuture) Get(ctx workflow.Context) (*rds.BacktrackD
 }
 
 type RDSCancelExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +514,7 @@ func (r *RDSCancelExportTaskFuture) Get(ctx workflow.Context) (*rds.CancelExport
 }
 
 type RDSCopyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +525,7 @@ func (r *RDSCopyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*rds.C
 }
 
 type RDSCopyDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +536,7 @@ func (r *RDSCopyDBClusterSnapshotFuture) Get(ctx workflow.Context) (*rds.CopyDBC
 }
 
 type RDSCopyDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +547,7 @@ func (r *RDSCopyDBParameterGroupFuture) Get(ctx workflow.Context) (*rds.CopyDBPa
 }
 
 type RDSCopyDBSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +558,7 @@ func (r *RDSCopyDBSnapshotFuture) Get(ctx workflow.Context) (*rds.CopyDBSnapshot
 }
 
 type RDSCopyOptionGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +569,7 @@ func (r *RDSCopyOptionGroupFuture) Get(ctx workflow.Context) (*rds.CopyOptionGro
 }
 
 type RDSCreateCustomAvailabilityZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +580,7 @@ func (r *RDSCreateCustomAvailabilityZoneFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSCreateDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +591,7 @@ func (r *RDSCreateDBClusterFuture) Get(ctx workflow.Context) (*rds.CreateDBClust
 }
 
 type RDSCreateDBClusterEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +602,7 @@ func (r *RDSCreateDBClusterEndpointFuture) Get(ctx workflow.Context) (*rds.Creat
 }
 
 type RDSCreateDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +613,7 @@ func (r *RDSCreateDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*rds
 }
 
 type RDSCreateDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +624,7 @@ func (r *RDSCreateDBClusterSnapshotFuture) Get(ctx workflow.Context) (*rds.Creat
 }
 
 type RDSCreateDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -616,6 +635,7 @@ func (r *RDSCreateDBInstanceFuture) Get(ctx workflow.Context) (*rds.CreateDBInst
 }
 
 type RDSCreateDBInstanceReadReplicaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -626,6 +646,7 @@ func (r *RDSCreateDBInstanceReadReplicaFuture) Get(ctx workflow.Context) (*rds.C
 }
 
 type RDSCreateDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -636,6 +657,7 @@ func (r *RDSCreateDBParameterGroupFuture) Get(ctx workflow.Context) (*rds.Create
 }
 
 type RDSCreateDBProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -646,6 +668,7 @@ func (r *RDSCreateDBProxyFuture) Get(ctx workflow.Context) (*rds.CreateDBProxyOu
 }
 
 type RDSCreateDBSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -656,6 +679,7 @@ func (r *RDSCreateDBSecurityGroupFuture) Get(ctx workflow.Context) (*rds.CreateD
 }
 
 type RDSCreateDBSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -666,6 +690,7 @@ func (r *RDSCreateDBSnapshotFuture) Get(ctx workflow.Context) (*rds.CreateDBSnap
 }
 
 type RDSCreateDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -676,6 +701,7 @@ func (r *RDSCreateDBSubnetGroupFuture) Get(ctx workflow.Context) (*rds.CreateDBS
 }
 
 type RDSCreateEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -686,6 +712,7 @@ func (r *RDSCreateEventSubscriptionFuture) Get(ctx workflow.Context) (*rds.Creat
 }
 
 type RDSCreateGlobalClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -696,6 +723,7 @@ func (r *RDSCreateGlobalClusterFuture) Get(ctx workflow.Context) (*rds.CreateGlo
 }
 
 type RDSCreateOptionGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -706,6 +734,7 @@ func (r *RDSCreateOptionGroupFuture) Get(ctx workflow.Context) (*rds.CreateOptio
 }
 
 type RDSDeleteCustomAvailabilityZoneFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -716,6 +745,7 @@ func (r *RDSDeleteCustomAvailabilityZoneFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSDeleteDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -726,6 +756,7 @@ func (r *RDSDeleteDBClusterFuture) Get(ctx workflow.Context) (*rds.DeleteDBClust
 }
 
 type RDSDeleteDBClusterEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -736,6 +767,7 @@ func (r *RDSDeleteDBClusterEndpointFuture) Get(ctx workflow.Context) (*rds.Delet
 }
 
 type RDSDeleteDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -746,6 +778,7 @@ func (r *RDSDeleteDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*rds
 }
 
 type RDSDeleteDBClusterSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -756,6 +789,7 @@ func (r *RDSDeleteDBClusterSnapshotFuture) Get(ctx workflow.Context) (*rds.Delet
 }
 
 type RDSDeleteDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -766,6 +800,7 @@ func (r *RDSDeleteDBInstanceFuture) Get(ctx workflow.Context) (*rds.DeleteDBInst
 }
 
 type RDSDeleteDBInstanceAutomatedBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -776,6 +811,7 @@ func (r *RDSDeleteDBInstanceAutomatedBackupFuture) Get(ctx workflow.Context) (*r
 }
 
 type RDSDeleteDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -786,6 +822,7 @@ func (r *RDSDeleteDBParameterGroupFuture) Get(ctx workflow.Context) (*rds.Delete
 }
 
 type RDSDeleteDBProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -796,6 +833,7 @@ func (r *RDSDeleteDBProxyFuture) Get(ctx workflow.Context) (*rds.DeleteDBProxyOu
 }
 
 type RDSDeleteDBSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -806,6 +844,7 @@ func (r *RDSDeleteDBSecurityGroupFuture) Get(ctx workflow.Context) (*rds.DeleteD
 }
 
 type RDSDeleteDBSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -816,6 +855,7 @@ func (r *RDSDeleteDBSnapshotFuture) Get(ctx workflow.Context) (*rds.DeleteDBSnap
 }
 
 type RDSDeleteDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -826,6 +866,7 @@ func (r *RDSDeleteDBSubnetGroupFuture) Get(ctx workflow.Context) (*rds.DeleteDBS
 }
 
 type RDSDeleteEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -836,6 +877,7 @@ func (r *RDSDeleteEventSubscriptionFuture) Get(ctx workflow.Context) (*rds.Delet
 }
 
 type RDSDeleteGlobalClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -846,6 +888,7 @@ func (r *RDSDeleteGlobalClusterFuture) Get(ctx workflow.Context) (*rds.DeleteGlo
 }
 
 type RDSDeleteInstallationMediaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -856,6 +899,7 @@ func (r *RDSDeleteInstallationMediaFuture) Get(ctx workflow.Context) (*rds.Delet
 }
 
 type RDSDeleteOptionGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -866,6 +910,7 @@ func (r *RDSDeleteOptionGroupFuture) Get(ctx workflow.Context) (*rds.DeleteOptio
 }
 
 type RDSDeregisterDBProxyTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -876,6 +921,7 @@ func (r *RDSDeregisterDBProxyTargetsFuture) Get(ctx workflow.Context) (*rds.Dere
 }
 
 type RDSDescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -886,6 +932,7 @@ func (r *RDSDescribeAccountAttributesFuture) Get(ctx workflow.Context) (*rds.Des
 }
 
 type RDSDescribeCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -896,6 +943,7 @@ func (r *RDSDescribeCertificatesFuture) Get(ctx workflow.Context) (*rds.Describe
 }
 
 type RDSDescribeCustomAvailabilityZonesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -906,6 +954,7 @@ func (r *RDSDescribeCustomAvailabilityZonesFuture) Get(ctx workflow.Context) (*r
 }
 
 type RDSDescribeDBClusterBacktracksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -916,6 +965,7 @@ func (r *RDSDescribeDBClusterBacktracksFuture) Get(ctx workflow.Context) (*rds.D
 }
 
 type RDSDescribeDBClusterEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -926,6 +976,7 @@ func (r *RDSDescribeDBClusterEndpointsFuture) Get(ctx workflow.Context) (*rds.De
 }
 
 type RDSDescribeDBClusterParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -936,6 +987,7 @@ func (r *RDSDescribeDBClusterParameterGroupsFuture) Get(ctx workflow.Context) (*
 }
 
 type RDSDescribeDBClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -946,6 +998,7 @@ func (r *RDSDescribeDBClusterParametersFuture) Get(ctx workflow.Context) (*rds.D
 }
 
 type RDSDescribeDBClusterSnapshotAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -956,6 +1009,7 @@ func (r *RDSDescribeDBClusterSnapshotAttributesFuture) Get(ctx workflow.Context)
 }
 
 type RDSDescribeDBClusterSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -966,6 +1020,7 @@ func (r *RDSDescribeDBClusterSnapshotsFuture) Get(ctx workflow.Context) (*rds.De
 }
 
 type RDSDescribeDBClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -976,6 +1031,7 @@ func (r *RDSDescribeDBClustersFuture) Get(ctx workflow.Context) (*rds.DescribeDB
 }
 
 type RDSDescribeDBEngineVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -986,6 +1042,7 @@ func (r *RDSDescribeDBEngineVersionsFuture) Get(ctx workflow.Context) (*rds.Desc
 }
 
 type RDSDescribeDBInstanceAutomatedBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -996,6 +1053,7 @@ func (r *RDSDescribeDBInstanceAutomatedBackupsFuture) Get(ctx workflow.Context) 
 }
 
 type RDSDescribeDBInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1006,6 +1064,7 @@ func (r *RDSDescribeDBInstancesFuture) Get(ctx workflow.Context) (*rds.DescribeD
 }
 
 type RDSDescribeDBLogFilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1016,6 +1075,7 @@ func (r *RDSDescribeDBLogFilesFuture) Get(ctx workflow.Context) (*rds.DescribeDB
 }
 
 type RDSDescribeDBParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1026,6 +1086,7 @@ func (r *RDSDescribeDBParameterGroupsFuture) Get(ctx workflow.Context) (*rds.Des
 }
 
 type RDSDescribeDBParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1036,6 +1097,7 @@ func (r *RDSDescribeDBParametersFuture) Get(ctx workflow.Context) (*rds.Describe
 }
 
 type RDSDescribeDBProxiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1046,6 +1108,7 @@ func (r *RDSDescribeDBProxiesFuture) Get(ctx workflow.Context) (*rds.DescribeDBP
 }
 
 type RDSDescribeDBProxyTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1056,6 +1119,7 @@ func (r *RDSDescribeDBProxyTargetGroupsFuture) Get(ctx workflow.Context) (*rds.D
 }
 
 type RDSDescribeDBProxyTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1066,6 +1130,7 @@ func (r *RDSDescribeDBProxyTargetsFuture) Get(ctx workflow.Context) (*rds.Descri
 }
 
 type RDSDescribeDBSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1076,6 +1141,7 @@ func (r *RDSDescribeDBSecurityGroupsFuture) Get(ctx workflow.Context) (*rds.Desc
 }
 
 type RDSDescribeDBSnapshotAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1086,6 +1152,7 @@ func (r *RDSDescribeDBSnapshotAttributesFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSDescribeDBSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1096,6 +1163,7 @@ func (r *RDSDescribeDBSnapshotsFuture) Get(ctx workflow.Context) (*rds.DescribeD
 }
 
 type RDSDescribeDBSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1106,6 +1174,7 @@ func (r *RDSDescribeDBSubnetGroupsFuture) Get(ctx workflow.Context) (*rds.Descri
 }
 
 type RDSDescribeEngineDefaultClusterParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1116,6 +1185,7 @@ func (r *RDSDescribeEngineDefaultClusterParametersFuture) Get(ctx workflow.Conte
 }
 
 type RDSDescribeEngineDefaultParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1126,6 +1196,7 @@ func (r *RDSDescribeEngineDefaultParametersFuture) Get(ctx workflow.Context) (*r
 }
 
 type RDSDescribeEventCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1136,6 +1207,7 @@ func (r *RDSDescribeEventCategoriesFuture) Get(ctx workflow.Context) (*rds.Descr
 }
 
 type RDSDescribeEventSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1146,6 +1218,7 @@ func (r *RDSDescribeEventSubscriptionsFuture) Get(ctx workflow.Context) (*rds.De
 }
 
 type RDSDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1156,6 +1229,7 @@ func (r *RDSDescribeEventsFuture) Get(ctx workflow.Context) (*rds.DescribeEvents
 }
 
 type RDSDescribeExportTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1166,6 +1240,7 @@ func (r *RDSDescribeExportTasksFuture) Get(ctx workflow.Context) (*rds.DescribeE
 }
 
 type RDSDescribeGlobalClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1176,6 +1251,7 @@ func (r *RDSDescribeGlobalClustersFuture) Get(ctx workflow.Context) (*rds.Descri
 }
 
 type RDSDescribeInstallationMediaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1186,6 +1262,7 @@ func (r *RDSDescribeInstallationMediaFuture) Get(ctx workflow.Context) (*rds.Des
 }
 
 type RDSDescribeOptionGroupOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1196,6 +1273,7 @@ func (r *RDSDescribeOptionGroupOptionsFuture) Get(ctx workflow.Context) (*rds.De
 }
 
 type RDSDescribeOptionGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1206,6 +1284,7 @@ func (r *RDSDescribeOptionGroupsFuture) Get(ctx workflow.Context) (*rds.Describe
 }
 
 type RDSDescribeOrderableDBInstanceOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1216,6 +1295,7 @@ func (r *RDSDescribeOrderableDBInstanceOptionsFuture) Get(ctx workflow.Context) 
 }
 
 type RDSDescribePendingMaintenanceActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1226,6 +1306,7 @@ func (r *RDSDescribePendingMaintenanceActionsFuture) Get(ctx workflow.Context) (
 }
 
 type RDSDescribeReservedDBInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1236,6 +1317,7 @@ func (r *RDSDescribeReservedDBInstancesFuture) Get(ctx workflow.Context) (*rds.D
 }
 
 type RDSDescribeReservedDBInstancesOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1246,6 +1328,7 @@ func (r *RDSDescribeReservedDBInstancesOfferingsFuture) Get(ctx workflow.Context
 }
 
 type RDSDescribeSourceRegionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1256,6 +1339,7 @@ func (r *RDSDescribeSourceRegionsFuture) Get(ctx workflow.Context) (*rds.Describ
 }
 
 type RDSDescribeValidDBInstanceModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1266,6 +1350,7 @@ func (r *RDSDescribeValidDBInstanceModificationsFuture) Get(ctx workflow.Context
 }
 
 type RDSDownloadDBLogFilePortionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1276,6 +1361,7 @@ func (r *RDSDownloadDBLogFilePortionFuture) Get(ctx workflow.Context) (*rds.Down
 }
 
 type RDSFailoverDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1286,6 +1372,7 @@ func (r *RDSFailoverDBClusterFuture) Get(ctx workflow.Context) (*rds.FailoverDBC
 }
 
 type RDSImportInstallationMediaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1296,6 +1383,7 @@ func (r *RDSImportInstallationMediaFuture) Get(ctx workflow.Context) (*rds.Impor
 }
 
 type RDSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1306,6 +1394,7 @@ func (r *RDSListTagsForResourceFuture) Get(ctx workflow.Context) (*rds.ListTagsF
 }
 
 type RDSModifyCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1316,6 +1405,7 @@ func (r *RDSModifyCertificatesFuture) Get(ctx workflow.Context) (*rds.ModifyCert
 }
 
 type RDSModifyCurrentDBClusterCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1326,6 +1416,7 @@ func (r *RDSModifyCurrentDBClusterCapacityFuture) Get(ctx workflow.Context) (*rd
 }
 
 type RDSModifyDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1336,6 +1427,7 @@ func (r *RDSModifyDBClusterFuture) Get(ctx workflow.Context) (*rds.ModifyDBClust
 }
 
 type RDSModifyDBClusterEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1346,6 +1438,7 @@ func (r *RDSModifyDBClusterEndpointFuture) Get(ctx workflow.Context) (*rds.Modif
 }
 
 type RDSModifyDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1356,6 +1449,7 @@ func (r *RDSModifyDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*rds
 }
 
 type RDSModifyDBClusterSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1366,6 +1460,7 @@ func (r *RDSModifyDBClusterSnapshotAttributeFuture) Get(ctx workflow.Context) (*
 }
 
 type RDSModifyDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1376,6 +1471,7 @@ func (r *RDSModifyDBInstanceFuture) Get(ctx workflow.Context) (*rds.ModifyDBInst
 }
 
 type RDSModifyDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1386,6 +1482,7 @@ func (r *RDSModifyDBParameterGroupFuture) Get(ctx workflow.Context) (*rds.DBPara
 }
 
 type RDSModifyDBProxyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1396,6 +1493,7 @@ func (r *RDSModifyDBProxyFuture) Get(ctx workflow.Context) (*rds.ModifyDBProxyOu
 }
 
 type RDSModifyDBProxyTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1406,6 +1504,7 @@ func (r *RDSModifyDBProxyTargetGroupFuture) Get(ctx workflow.Context) (*rds.Modi
 }
 
 type RDSModifyDBSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1416,6 +1515,7 @@ func (r *RDSModifyDBSnapshotFuture) Get(ctx workflow.Context) (*rds.ModifyDBSnap
 }
 
 type RDSModifyDBSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1426,6 +1526,7 @@ func (r *RDSModifyDBSnapshotAttributeFuture) Get(ctx workflow.Context) (*rds.Mod
 }
 
 type RDSModifyDBSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1436,6 +1537,7 @@ func (r *RDSModifyDBSubnetGroupFuture) Get(ctx workflow.Context) (*rds.ModifyDBS
 }
 
 type RDSModifyEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1446,6 +1548,7 @@ func (r *RDSModifyEventSubscriptionFuture) Get(ctx workflow.Context) (*rds.Modif
 }
 
 type RDSModifyGlobalClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1456,6 +1559,7 @@ func (r *RDSModifyGlobalClusterFuture) Get(ctx workflow.Context) (*rds.ModifyGlo
 }
 
 type RDSModifyOptionGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1466,6 +1570,7 @@ func (r *RDSModifyOptionGroupFuture) Get(ctx workflow.Context) (*rds.ModifyOptio
 }
 
 type RDSPromoteReadReplicaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1476,6 +1581,7 @@ func (r *RDSPromoteReadReplicaFuture) Get(ctx workflow.Context) (*rds.PromoteRea
 }
 
 type RDSPromoteReadReplicaDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1486,6 +1592,7 @@ func (r *RDSPromoteReadReplicaDBClusterFuture) Get(ctx workflow.Context) (*rds.P
 }
 
 type RDSPurchaseReservedDBInstancesOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1496,6 +1603,7 @@ func (r *RDSPurchaseReservedDBInstancesOfferingFuture) Get(ctx workflow.Context)
 }
 
 type RDSRebootDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1506,6 +1614,7 @@ func (r *RDSRebootDBInstanceFuture) Get(ctx workflow.Context) (*rds.RebootDBInst
 }
 
 type RDSRegisterDBProxyTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1516,6 +1625,7 @@ func (r *RDSRegisterDBProxyTargetsFuture) Get(ctx workflow.Context) (*rds.Regist
 }
 
 type RDSRemoveFromGlobalClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1526,6 +1636,7 @@ func (r *RDSRemoveFromGlobalClusterFuture) Get(ctx workflow.Context) (*rds.Remov
 }
 
 type RDSRemoveRoleFromDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1536,6 +1647,7 @@ func (r *RDSRemoveRoleFromDBClusterFuture) Get(ctx workflow.Context) (*rds.Remov
 }
 
 type RDSRemoveRoleFromDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1546,6 +1658,7 @@ func (r *RDSRemoveRoleFromDBInstanceFuture) Get(ctx workflow.Context) (*rds.Remo
 }
 
 type RDSRemoveSourceIdentifierFromSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1556,6 +1669,7 @@ func (r *RDSRemoveSourceIdentifierFromSubscriptionFuture) Get(ctx workflow.Conte
 }
 
 type RDSRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1566,6 +1680,7 @@ func (r *RDSRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*rds.Remove
 }
 
 type RDSResetDBClusterParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1576,6 +1691,7 @@ func (r *RDSResetDBClusterParameterGroupFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSResetDBParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1586,6 +1702,7 @@ func (r *RDSResetDBParameterGroupFuture) Get(ctx workflow.Context) (*rds.DBParam
 }
 
 type RDSRestoreDBClusterFromS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1596,6 +1713,7 @@ func (r *RDSRestoreDBClusterFromS3Future) Get(ctx workflow.Context) (*rds.Restor
 }
 
 type RDSRestoreDBClusterFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1606,6 +1724,7 @@ func (r *RDSRestoreDBClusterFromSnapshotFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSRestoreDBClusterToPointInTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1616,6 +1735,7 @@ func (r *RDSRestoreDBClusterToPointInTimeFuture) Get(ctx workflow.Context) (*rds
 }
 
 type RDSRestoreDBInstanceFromDBSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1626,6 +1746,7 @@ func (r *RDSRestoreDBInstanceFromDBSnapshotFuture) Get(ctx workflow.Context) (*r
 }
 
 type RDSRestoreDBInstanceFromS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1636,6 +1757,7 @@ func (r *RDSRestoreDBInstanceFromS3Future) Get(ctx workflow.Context) (*rds.Resto
 }
 
 type RDSRestoreDBInstanceToPointInTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1646,6 +1768,7 @@ func (r *RDSRestoreDBInstanceToPointInTimeFuture) Get(ctx workflow.Context) (*rd
 }
 
 type RDSRevokeDBSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1656,6 +1779,7 @@ func (r *RDSRevokeDBSecurityGroupIngressFuture) Get(ctx workflow.Context) (*rds.
 }
 
 type RDSStartActivityStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1666,6 +1790,7 @@ func (r *RDSStartActivityStreamFuture) Get(ctx workflow.Context) (*rds.StartActi
 }
 
 type RDSStartDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1676,6 +1801,7 @@ func (r *RDSStartDBClusterFuture) Get(ctx workflow.Context) (*rds.StartDBCluster
 }
 
 type RDSStartDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1686,6 +1812,7 @@ func (r *RDSStartDBInstanceFuture) Get(ctx workflow.Context) (*rds.StartDBInstan
 }
 
 type RDSStartExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1696,6 +1823,7 @@ func (r *RDSStartExportTaskFuture) Get(ctx workflow.Context) (*rds.StartExportTa
 }
 
 type RDSStopActivityStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1706,6 +1834,7 @@ func (r *RDSStopActivityStreamFuture) Get(ctx workflow.Context) (*rds.StopActivi
 }
 
 type RDSStopDBClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1716,6 +1845,7 @@ func (r *RDSStopDBClusterFuture) Get(ctx workflow.Context) (*rds.StopDBClusterOu
 }
 
 type RDSStopDBInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -78,6 +78,7 @@ func NewTransferStub() TransferClient {
 }
 
 type TransferCreateServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +89,7 @@ func (r *TransferCreateServerFuture) Get(ctx workflow.Context) (*transfer.Create
 }
 
 type TransferCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +100,7 @@ func (r *TransferCreateUserFuture) Get(ctx workflow.Context) (*transfer.CreateUs
 }
 
 type TransferDeleteServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +111,7 @@ func (r *TransferDeleteServerFuture) Get(ctx workflow.Context) (*transfer.Delete
 }
 
 type TransferDeleteSshPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +122,7 @@ func (r *TransferDeleteSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.
 }
 
 type TransferDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +133,7 @@ func (r *TransferDeleteUserFuture) Get(ctx workflow.Context) (*transfer.DeleteUs
 }
 
 type TransferDescribeSecurityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +144,7 @@ func (r *TransferDescribeSecurityPolicyFuture) Get(ctx workflow.Context) (*trans
 }
 
 type TransferDescribeServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +155,7 @@ func (r *TransferDescribeServerFuture) Get(ctx workflow.Context) (*transfer.Desc
 }
 
 type TransferDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +166,7 @@ func (r *TransferDescribeUserFuture) Get(ctx workflow.Context) (*transfer.Descri
 }
 
 type TransferImportSshPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +177,7 @@ func (r *TransferImportSshPublicKeyFuture) Get(ctx workflow.Context) (*transfer.
 }
 
 type TransferListSecurityPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +188,7 @@ func (r *TransferListSecurityPoliciesFuture) Get(ctx workflow.Context) (*transfe
 }
 
 type TransferListServersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +199,7 @@ func (r *TransferListServersFuture) Get(ctx workflow.Context) (*transfer.ListSer
 }
 
 type TransferListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +210,7 @@ func (r *TransferListTagsForResourceFuture) Get(ctx workflow.Context) (*transfer
 }
 
 type TransferListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +221,7 @@ func (r *TransferListUsersFuture) Get(ctx workflow.Context) (*transfer.ListUsers
 }
 
 type TransferStartServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +232,7 @@ func (r *TransferStartServerFuture) Get(ctx workflow.Context) (*transfer.StartSe
 }
 
 type TransferStopServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +243,7 @@ func (r *TransferStopServerFuture) Get(ctx workflow.Context) (*transfer.StopServ
 }
 
 type TransferTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +254,7 @@ func (r *TransferTagResourceFuture) Get(ctx workflow.Context) (*transfer.TagReso
 }
 
 type TransferTestIdentityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +265,7 @@ func (r *TransferTestIdentityProviderFuture) Get(ctx workflow.Context) (*transfe
 }
 
 type TransferUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +276,7 @@ func (r *TransferUntagResourceFuture) Get(ctx workflow.Context) (*transfer.Untag
 }
 
 type TransferUpdateServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +287,7 @@ func (r *TransferUpdateServerFuture) Get(ctx workflow.Context) (*transfer.Update
 }
 
 type TransferUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

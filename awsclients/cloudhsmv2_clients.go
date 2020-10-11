@@ -57,6 +57,7 @@ func NewCloudHSMV2Stub() CloudHSMV2Client {
 }
 
 type CloudHSMV2CopyBackupToRegionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *CloudHSMV2CopyBackupToRegionFuture) Get(ctx workflow.Context) (*cloudhs
 }
 
 type CloudHSMV2CreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *CloudHSMV2CreateClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.C
 }
 
 type CloudHSMV2CreateHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *CloudHSMV2CreateHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.Creat
 }
 
 type CloudHSMV2DeleteBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *CloudHSMV2DeleteBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.De
 }
 
 type CloudHSMV2DeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *CloudHSMV2DeleteClusterFuture) Get(ctx workflow.Context) (*cloudhsmv2.D
 }
 
 type CloudHSMV2DeleteHsmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *CloudHSMV2DeleteHsmFuture) Get(ctx workflow.Context) (*cloudhsmv2.Delet
 }
 
 type CloudHSMV2DescribeBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *CloudHSMV2DescribeBackupsFuture) Get(ctx workflow.Context) (*cloudhsmv2
 }
 
 type CloudHSMV2DescribeClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *CloudHSMV2DescribeClustersFuture) Get(ctx workflow.Context) (*cloudhsmv
 }
 
 type CloudHSMV2InitializeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *CloudHSMV2InitializeClusterFuture) Get(ctx workflow.Context) (*cloudhsm
 }
 
 type CloudHSMV2ListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *CloudHSMV2ListTagsFuture) Get(ctx workflow.Context) (*cloudhsmv2.ListTa
 }
 
 type CloudHSMV2RestoreBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *CloudHSMV2RestoreBackupFuture) Get(ctx workflow.Context) (*cloudhsmv2.R
 }
 
 type CloudHSMV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *CloudHSMV2TagResourceFuture) Get(ctx workflow.Context) (*cloudhsmv2.Tag
 }
 
 type CloudHSMV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -24,6 +24,7 @@ func NewPersonalizeRuntimeStub() PersonalizeRuntimeClient {
 }
 
 type PersonalizeRuntimeGetPersonalizedRankingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -34,6 +35,7 @@ func (r *PersonalizeRuntimeGetPersonalizedRankingFuture) Get(ctx workflow.Contex
 }
 
 type PersonalizeRuntimeGetRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

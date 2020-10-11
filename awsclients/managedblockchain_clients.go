@@ -78,6 +78,7 @@ func NewManagedBlockchainStub() ManagedBlockchainClient {
 }
 
 type ManagedBlockchainCreateMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +89,7 @@ func (r *ManagedBlockchainCreateMemberFuture) Get(ctx workflow.Context) (*manage
 }
 
 type ManagedBlockchainCreateNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +100,7 @@ func (r *ManagedBlockchainCreateNetworkFuture) Get(ctx workflow.Context) (*manag
 }
 
 type ManagedBlockchainCreateNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +111,7 @@ func (r *ManagedBlockchainCreateNodeFuture) Get(ctx workflow.Context) (*managedb
 }
 
 type ManagedBlockchainCreateProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +122,7 @@ func (r *ManagedBlockchainCreateProposalFuture) Get(ctx workflow.Context) (*mana
 }
 
 type ManagedBlockchainDeleteMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +133,7 @@ func (r *ManagedBlockchainDeleteMemberFuture) Get(ctx workflow.Context) (*manage
 }
 
 type ManagedBlockchainDeleteNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +144,7 @@ func (r *ManagedBlockchainDeleteNodeFuture) Get(ctx workflow.Context) (*managedb
 }
 
 type ManagedBlockchainGetMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +155,7 @@ func (r *ManagedBlockchainGetMemberFuture) Get(ctx workflow.Context) (*managedbl
 }
 
 type ManagedBlockchainGetNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +166,7 @@ func (r *ManagedBlockchainGetNetworkFuture) Get(ctx workflow.Context) (*managedb
 }
 
 type ManagedBlockchainGetNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +177,7 @@ func (r *ManagedBlockchainGetNodeFuture) Get(ctx workflow.Context) (*managedbloc
 }
 
 type ManagedBlockchainGetProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +188,7 @@ func (r *ManagedBlockchainGetProposalFuture) Get(ctx workflow.Context) (*managed
 }
 
 type ManagedBlockchainListInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +199,7 @@ func (r *ManagedBlockchainListInvitationsFuture) Get(ctx workflow.Context) (*man
 }
 
 type ManagedBlockchainListMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +210,7 @@ func (r *ManagedBlockchainListMembersFuture) Get(ctx workflow.Context) (*managed
 }
 
 type ManagedBlockchainListNetworksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +221,7 @@ func (r *ManagedBlockchainListNetworksFuture) Get(ctx workflow.Context) (*manage
 }
 
 type ManagedBlockchainListNodesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +232,7 @@ func (r *ManagedBlockchainListNodesFuture) Get(ctx workflow.Context) (*managedbl
 }
 
 type ManagedBlockchainListProposalVotesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +243,7 @@ func (r *ManagedBlockchainListProposalVotesFuture) Get(ctx workflow.Context) (*m
 }
 
 type ManagedBlockchainListProposalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +254,7 @@ func (r *ManagedBlockchainListProposalsFuture) Get(ctx workflow.Context) (*manag
 }
 
 type ManagedBlockchainRejectInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +265,7 @@ func (r *ManagedBlockchainRejectInvitationFuture) Get(ctx workflow.Context) (*ma
 }
 
 type ManagedBlockchainUpdateMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +276,7 @@ func (r *ManagedBlockchainUpdateMemberFuture) Get(ctx workflow.Context) (*manage
 }
 
 type ManagedBlockchainUpdateNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +287,7 @@ func (r *ManagedBlockchainUpdateNodeFuture) Get(ctx workflow.Context) (*managedb
 }
 
 type ManagedBlockchainVoteOnProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -141,6 +141,7 @@ func NewWorkDocsStub() WorkDocsClient {
 }
 
 type WorkDocsAbortDocumentVersionUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +152,7 @@ func (r *WorkDocsAbortDocumentVersionUploadFuture) Get(ctx workflow.Context) (*w
 }
 
 type WorkDocsActivateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +163,7 @@ func (r *WorkDocsActivateUserFuture) Get(ctx workflow.Context) (*workdocs.Activa
 }
 
 type WorkDocsAddResourcePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +174,7 @@ func (r *WorkDocsAddResourcePermissionsFuture) Get(ctx workflow.Context) (*workd
 }
 
 type WorkDocsCreateCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +185,7 @@ func (r *WorkDocsCreateCommentFuture) Get(ctx workflow.Context) (*workdocs.Creat
 }
 
 type WorkDocsCreateCustomMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +196,7 @@ func (r *WorkDocsCreateCustomMetadataFuture) Get(ctx workflow.Context) (*workdoc
 }
 
 type WorkDocsCreateFolderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +207,7 @@ func (r *WorkDocsCreateFolderFuture) Get(ctx workflow.Context) (*workdocs.Create
 }
 
 type WorkDocsCreateLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +218,7 @@ func (r *WorkDocsCreateLabelsFuture) Get(ctx workflow.Context) (*workdocs.Create
 }
 
 type WorkDocsCreateNotificationSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +229,7 @@ func (r *WorkDocsCreateNotificationSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type WorkDocsCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +240,7 @@ func (r *WorkDocsCreateUserFuture) Get(ctx workflow.Context) (*workdocs.CreateUs
 }
 
 type WorkDocsDeactivateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +251,7 @@ func (r *WorkDocsDeactivateUserFuture) Get(ctx workflow.Context) (*workdocs.Deac
 }
 
 type WorkDocsDeleteCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +262,7 @@ func (r *WorkDocsDeleteCommentFuture) Get(ctx workflow.Context) (*workdocs.Delet
 }
 
 type WorkDocsDeleteCustomMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +273,7 @@ func (r *WorkDocsDeleteCustomMetadataFuture) Get(ctx workflow.Context) (*workdoc
 }
 
 type WorkDocsDeleteDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +284,7 @@ func (r *WorkDocsDeleteDocumentFuture) Get(ctx workflow.Context) (*workdocs.Dele
 }
 
 type WorkDocsDeleteFolderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +295,7 @@ func (r *WorkDocsDeleteFolderFuture) Get(ctx workflow.Context) (*workdocs.Delete
 }
 
 type WorkDocsDeleteFolderContentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +306,7 @@ func (r *WorkDocsDeleteFolderContentsFuture) Get(ctx workflow.Context) (*workdoc
 }
 
 type WorkDocsDeleteLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +317,7 @@ func (r *WorkDocsDeleteLabelsFuture) Get(ctx workflow.Context) (*workdocs.Delete
 }
 
 type WorkDocsDeleteNotificationSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +328,7 @@ func (r *WorkDocsDeleteNotificationSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type WorkDocsDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +339,7 @@ func (r *WorkDocsDeleteUserFuture) Get(ctx workflow.Context) (*workdocs.DeleteUs
 }
 
 type WorkDocsDescribeActivitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +350,7 @@ func (r *WorkDocsDescribeActivitiesFuture) Get(ctx workflow.Context) (*workdocs.
 }
 
 type WorkDocsDescribeCommentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +361,7 @@ func (r *WorkDocsDescribeCommentsFuture) Get(ctx workflow.Context) (*workdocs.De
 }
 
 type WorkDocsDescribeDocumentVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +372,7 @@ func (r *WorkDocsDescribeDocumentVersionsFuture) Get(ctx workflow.Context) (*wor
 }
 
 type WorkDocsDescribeFolderContentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +383,7 @@ func (r *WorkDocsDescribeFolderContentsFuture) Get(ctx workflow.Context) (*workd
 }
 
 type WorkDocsDescribeGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +394,7 @@ func (r *WorkDocsDescribeGroupsFuture) Get(ctx workflow.Context) (*workdocs.Desc
 }
 
 type WorkDocsDescribeNotificationSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +405,7 @@ func (r *WorkDocsDescribeNotificationSubscriptionsFuture) Get(ctx workflow.Conte
 }
 
 type WorkDocsDescribeResourcePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +416,7 @@ func (r *WorkDocsDescribeResourcePermissionsFuture) Get(ctx workflow.Context) (*
 }
 
 type WorkDocsDescribeRootFoldersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +427,7 @@ func (r *WorkDocsDescribeRootFoldersFuture) Get(ctx workflow.Context) (*workdocs
 }
 
 type WorkDocsDescribeUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +438,7 @@ func (r *WorkDocsDescribeUsersFuture) Get(ctx workflow.Context) (*workdocs.Descr
 }
 
 type WorkDocsGetCurrentUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +449,7 @@ func (r *WorkDocsGetCurrentUserFuture) Get(ctx workflow.Context) (*workdocs.GetC
 }
 
 type WorkDocsGetDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +460,7 @@ func (r *WorkDocsGetDocumentFuture) Get(ctx workflow.Context) (*workdocs.GetDocu
 }
 
 type WorkDocsGetDocumentPathFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +471,7 @@ func (r *WorkDocsGetDocumentPathFuture) Get(ctx workflow.Context) (*workdocs.Get
 }
 
 type WorkDocsGetDocumentVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +482,7 @@ func (r *WorkDocsGetDocumentVersionFuture) Get(ctx workflow.Context) (*workdocs.
 }
 
 type WorkDocsGetFolderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +493,7 @@ func (r *WorkDocsGetFolderFuture) Get(ctx workflow.Context) (*workdocs.GetFolder
 }
 
 type WorkDocsGetFolderPathFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +504,7 @@ func (r *WorkDocsGetFolderPathFuture) Get(ctx workflow.Context) (*workdocs.GetFo
 }
 
 type WorkDocsGetResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +515,7 @@ func (r *WorkDocsGetResourcesFuture) Get(ctx workflow.Context) (*workdocs.GetRes
 }
 
 type WorkDocsInitiateDocumentVersionUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +526,7 @@ func (r *WorkDocsInitiateDocumentVersionUploadFuture) Get(ctx workflow.Context) 
 }
 
 type WorkDocsRemoveAllResourcePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +537,7 @@ func (r *WorkDocsRemoveAllResourcePermissionsFuture) Get(ctx workflow.Context) (
 }
 
 type WorkDocsRemoveResourcePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +548,7 @@ func (r *WorkDocsRemoveResourcePermissionFuture) Get(ctx workflow.Context) (*wor
 }
 
 type WorkDocsUpdateDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +559,7 @@ func (r *WorkDocsUpdateDocumentFuture) Get(ctx workflow.Context) (*workdocs.Upda
 }
 
 type WorkDocsUpdateDocumentVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +570,7 @@ func (r *WorkDocsUpdateDocumentVersionFuture) Get(ctx workflow.Context) (*workdo
 }
 
 type WorkDocsUpdateFolderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +581,7 @@ func (r *WorkDocsUpdateFolderFuture) Get(ctx workflow.Context) (*workdocs.Update
 }
 
 type WorkDocsUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

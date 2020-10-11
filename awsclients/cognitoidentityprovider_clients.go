@@ -318,6 +318,7 @@ func NewCognitoIdentityProviderStub() CognitoIdentityProviderClient {
 }
 
 type CognitoIdentityProviderAddCustomAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +329,7 @@ func (r *CognitoIdentityProviderAddCustomAttributesFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderAdminAddUserToGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +340,7 @@ func (r *CognitoIdentityProviderAdminAddUserToGroupFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderAdminConfirmSignUpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +351,7 @@ func (r *CognitoIdentityProviderAdminConfirmSignUpFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderAdminCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +362,7 @@ func (r *CognitoIdentityProviderAdminCreateUserFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityProviderAdminDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +373,7 @@ func (r *CognitoIdentityProviderAdminDeleteUserFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityProviderAdminDeleteUserAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +384,7 @@ func (r *CognitoIdentityProviderAdminDeleteUserAttributesFuture) Get(ctx workflo
 }
 
 type CognitoIdentityProviderAdminDisableProviderForUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +395,7 @@ func (r *CognitoIdentityProviderAdminDisableProviderForUserFuture) Get(ctx workf
 }
 
 type CognitoIdentityProviderAdminDisableUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +406,7 @@ func (r *CognitoIdentityProviderAdminDisableUserFuture) Get(ctx workflow.Context
 }
 
 type CognitoIdentityProviderAdminEnableUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +417,7 @@ func (r *CognitoIdentityProviderAdminEnableUserFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityProviderAdminForgetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +428,7 @@ func (r *CognitoIdentityProviderAdminForgetDeviceFuture) Get(ctx workflow.Contex
 }
 
 type CognitoIdentityProviderAdminGetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +439,7 @@ func (r *CognitoIdentityProviderAdminGetDeviceFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderAdminGetUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +450,7 @@ func (r *CognitoIdentityProviderAdminGetUserFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityProviderAdminInitiateAuthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +461,7 @@ func (r *CognitoIdentityProviderAdminInitiateAuthFuture) Get(ctx workflow.Contex
 }
 
 type CognitoIdentityProviderAdminLinkProviderForUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +472,7 @@ func (r *CognitoIdentityProviderAdminLinkProviderForUserFuture) Get(ctx workflow
 }
 
 type CognitoIdentityProviderAdminListDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +483,7 @@ func (r *CognitoIdentityProviderAdminListDevicesFuture) Get(ctx workflow.Context
 }
 
 type CognitoIdentityProviderAdminListGroupsForUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +494,7 @@ func (r *CognitoIdentityProviderAdminListGroupsForUserFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderAdminListUserAuthEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +505,7 @@ func (r *CognitoIdentityProviderAdminListUserAuthEventsFuture) Get(ctx workflow.
 }
 
 type CognitoIdentityProviderAdminRemoveUserFromGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +516,7 @@ func (r *CognitoIdentityProviderAdminRemoveUserFromGroupFuture) Get(ctx workflow
 }
 
 type CognitoIdentityProviderAdminResetUserPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +527,7 @@ func (r *CognitoIdentityProviderAdminResetUserPasswordFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderAdminRespondToAuthChallengeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +538,7 @@ func (r *CognitoIdentityProviderAdminRespondToAuthChallengeFuture) Get(ctx workf
 }
 
 type CognitoIdentityProviderAdminSetUserMFAPreferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +549,7 @@ func (r *CognitoIdentityProviderAdminSetUserMFAPreferenceFuture) Get(ctx workflo
 }
 
 type CognitoIdentityProviderAdminSetUserPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +560,7 @@ func (r *CognitoIdentityProviderAdminSetUserPasswordFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderAdminSetUserSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +571,7 @@ func (r *CognitoIdentityProviderAdminSetUserSettingsFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +582,7 @@ func (r *CognitoIdentityProviderAdminUpdateAuthEventFeedbackFuture) Get(ctx work
 }
 
 type CognitoIdentityProviderAdminUpdateDeviceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +593,7 @@ func (r *CognitoIdentityProviderAdminUpdateDeviceStatusFuture) Get(ctx workflow.
 }
 
 type CognitoIdentityProviderAdminUpdateUserAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +604,7 @@ func (r *CognitoIdentityProviderAdminUpdateUserAttributesFuture) Get(ctx workflo
 }
 
 type CognitoIdentityProviderAdminUserGlobalSignOutFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +615,7 @@ func (r *CognitoIdentityProviderAdminUserGlobalSignOutFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderAssociateSoftwareTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +626,7 @@ func (r *CognitoIdentityProviderAssociateSoftwareTokenFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderChangePasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +637,7 @@ func (r *CognitoIdentityProviderChangePasswordFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderConfirmDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +648,7 @@ func (r *CognitoIdentityProviderConfirmDeviceFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoIdentityProviderConfirmForgotPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +659,7 @@ func (r *CognitoIdentityProviderConfirmForgotPasswordFuture) Get(ctx workflow.Co
 }
 
 type CognitoIdentityProviderConfirmSignUpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +670,7 @@ func (r *CognitoIdentityProviderConfirmSignUpFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoIdentityProviderCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +681,7 @@ func (r *CognitoIdentityProviderCreateGroupFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityProviderCreateIdentityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +692,7 @@ func (r *CognitoIdentityProviderCreateIdentityProviderFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderCreateResourceServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -668,6 +703,7 @@ func (r *CognitoIdentityProviderCreateResourceServerFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderCreateUserImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -678,6 +714,7 @@ func (r *CognitoIdentityProviderCreateUserImportJobFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderCreateUserPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -688,6 +725,7 @@ func (r *CognitoIdentityProviderCreateUserPoolFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderCreateUserPoolClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -698,6 +736,7 @@ func (r *CognitoIdentityProviderCreateUserPoolClientFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderCreateUserPoolDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -708,6 +747,7 @@ func (r *CognitoIdentityProviderCreateUserPoolDomainFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -718,6 +758,7 @@ func (r *CognitoIdentityProviderDeleteGroupFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityProviderDeleteIdentityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -728,6 +769,7 @@ func (r *CognitoIdentityProviderDeleteIdentityProviderFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderDeleteResourceServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -738,6 +780,7 @@ func (r *CognitoIdentityProviderDeleteResourceServerFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -748,6 +791,7 @@ func (r *CognitoIdentityProviderDeleteUserFuture) Get(ctx workflow.Context) (*co
 }
 
 type CognitoIdentityProviderDeleteUserAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -758,6 +802,7 @@ func (r *CognitoIdentityProviderDeleteUserAttributesFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderDeleteUserPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -768,6 +813,7 @@ func (r *CognitoIdentityProviderDeleteUserPoolFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderDeleteUserPoolClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -778,6 +824,7 @@ func (r *CognitoIdentityProviderDeleteUserPoolClientFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderDeleteUserPoolDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -788,6 +835,7 @@ func (r *CognitoIdentityProviderDeleteUserPoolDomainFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderDescribeIdentityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -798,6 +846,7 @@ func (r *CognitoIdentityProviderDescribeIdentityProviderFuture) Get(ctx workflow
 }
 
 type CognitoIdentityProviderDescribeResourceServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -808,6 +857,7 @@ func (r *CognitoIdentityProviderDescribeResourceServerFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderDescribeRiskConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -818,6 +868,7 @@ func (r *CognitoIdentityProviderDescribeRiskConfigurationFuture) Get(ctx workflo
 }
 
 type CognitoIdentityProviderDescribeUserImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -828,6 +879,7 @@ func (r *CognitoIdentityProviderDescribeUserImportJobFuture) Get(ctx workflow.Co
 }
 
 type CognitoIdentityProviderDescribeUserPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -838,6 +890,7 @@ func (r *CognitoIdentityProviderDescribeUserPoolFuture) Get(ctx workflow.Context
 }
 
 type CognitoIdentityProviderDescribeUserPoolClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -848,6 +901,7 @@ func (r *CognitoIdentityProviderDescribeUserPoolClientFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderDescribeUserPoolDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -858,6 +912,7 @@ func (r *CognitoIdentityProviderDescribeUserPoolDomainFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderForgetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -868,6 +923,7 @@ func (r *CognitoIdentityProviderForgetDeviceFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityProviderForgotPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -878,6 +934,7 @@ func (r *CognitoIdentityProviderForgotPasswordFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderGetCSVHeaderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -888,6 +945,7 @@ func (r *CognitoIdentityProviderGetCSVHeaderFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityProviderGetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -898,6 +956,7 @@ func (r *CognitoIdentityProviderGetDeviceFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoIdentityProviderGetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -908,6 +967,7 @@ func (r *CognitoIdentityProviderGetGroupFuture) Get(ctx workflow.Context) (*cogn
 }
 
 type CognitoIdentityProviderGetIdentityProviderByIdentifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -918,6 +978,7 @@ func (r *CognitoIdentityProviderGetIdentityProviderByIdentifierFuture) Get(ctx w
 }
 
 type CognitoIdentityProviderGetSigningCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -928,6 +989,7 @@ func (r *CognitoIdentityProviderGetSigningCertificateFuture) Get(ctx workflow.Co
 }
 
 type CognitoIdentityProviderGetUICustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -938,6 +1000,7 @@ func (r *CognitoIdentityProviderGetUICustomizationFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderGetUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -948,6 +1011,7 @@ func (r *CognitoIdentityProviderGetUserFuture) Get(ctx workflow.Context) (*cogni
 }
 
 type CognitoIdentityProviderGetUserAttributeVerificationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -958,6 +1022,7 @@ func (r *CognitoIdentityProviderGetUserAttributeVerificationCodeFuture) Get(ctx 
 }
 
 type CognitoIdentityProviderGetUserPoolMfaConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -968,6 +1033,7 @@ func (r *CognitoIdentityProviderGetUserPoolMfaConfigFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderGlobalSignOutFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -978,6 +1044,7 @@ func (r *CognitoIdentityProviderGlobalSignOutFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoIdentityProviderInitiateAuthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -988,6 +1055,7 @@ func (r *CognitoIdentityProviderInitiateAuthFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityProviderListDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -998,6 +1066,7 @@ func (r *CognitoIdentityProviderListDevicesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityProviderListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1008,6 +1077,7 @@ func (r *CognitoIdentityProviderListGroupsFuture) Get(ctx workflow.Context) (*co
 }
 
 type CognitoIdentityProviderListIdentityProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1018,6 +1088,7 @@ func (r *CognitoIdentityProviderListIdentityProvidersFuture) Get(ctx workflow.Co
 }
 
 type CognitoIdentityProviderListResourceServersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1028,6 +1099,7 @@ func (r *CognitoIdentityProviderListResourceServersFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1038,6 +1110,7 @@ func (r *CognitoIdentityProviderListTagsForResourceFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderListUserImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1048,6 +1121,7 @@ func (r *CognitoIdentityProviderListUserImportJobsFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderListUserPoolClientsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1058,6 +1132,7 @@ func (r *CognitoIdentityProviderListUserPoolClientsFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderListUserPoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1068,6 +1143,7 @@ func (r *CognitoIdentityProviderListUserPoolsFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoIdentityProviderListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1078,6 +1154,7 @@ func (r *CognitoIdentityProviderListUsersFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoIdentityProviderListUsersInGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1088,6 +1165,7 @@ func (r *CognitoIdentityProviderListUsersInGroupFuture) Get(ctx workflow.Context
 }
 
 type CognitoIdentityProviderResendConfirmationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1098,6 +1176,7 @@ func (r *CognitoIdentityProviderResendConfirmationCodeFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderRespondToAuthChallengeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1108,6 +1187,7 @@ func (r *CognitoIdentityProviderRespondToAuthChallengeFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderSetRiskConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1118,6 +1198,7 @@ func (r *CognitoIdentityProviderSetRiskConfigurationFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderSetUICustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1128,6 +1209,7 @@ func (r *CognitoIdentityProviderSetUICustomizationFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderSetUserMFAPreferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1138,6 +1220,7 @@ func (r *CognitoIdentityProviderSetUserMFAPreferenceFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderSetUserPoolMfaConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1148,6 +1231,7 @@ func (r *CognitoIdentityProviderSetUserPoolMfaConfigFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderSetUserSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1158,6 +1242,7 @@ func (r *CognitoIdentityProviderSetUserSettingsFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityProviderSignUpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1168,6 +1253,7 @@ func (r *CognitoIdentityProviderSignUpFuture) Get(ctx workflow.Context) (*cognit
 }
 
 type CognitoIdentityProviderStartUserImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1178,6 +1264,7 @@ func (r *CognitoIdentityProviderStartUserImportJobFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderStopUserImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1188,6 +1275,7 @@ func (r *CognitoIdentityProviderStopUserImportJobFuture) Get(ctx workflow.Contex
 }
 
 type CognitoIdentityProviderTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1198,6 +1286,7 @@ func (r *CognitoIdentityProviderTagResourceFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityProviderUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1208,6 +1297,7 @@ func (r *CognitoIdentityProviderUntagResourceFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoIdentityProviderUpdateAuthEventFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1218,6 +1308,7 @@ func (r *CognitoIdentityProviderUpdateAuthEventFeedbackFuture) Get(ctx workflow.
 }
 
 type CognitoIdentityProviderUpdateDeviceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1228,6 +1319,7 @@ func (r *CognitoIdentityProviderUpdateDeviceStatusFuture) Get(ctx workflow.Conte
 }
 
 type CognitoIdentityProviderUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1238,6 +1330,7 @@ func (r *CognitoIdentityProviderUpdateGroupFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityProviderUpdateIdentityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1248,6 +1341,7 @@ func (r *CognitoIdentityProviderUpdateIdentityProviderFuture) Get(ctx workflow.C
 }
 
 type CognitoIdentityProviderUpdateResourceServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1258,6 +1352,7 @@ func (r *CognitoIdentityProviderUpdateResourceServerFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderUpdateUserAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1268,6 +1363,7 @@ func (r *CognitoIdentityProviderUpdateUserAttributesFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderUpdateUserPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1278,6 +1374,7 @@ func (r *CognitoIdentityProviderUpdateUserPoolFuture) Get(ctx workflow.Context) 
 }
 
 type CognitoIdentityProviderUpdateUserPoolClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1288,6 +1385,7 @@ func (r *CognitoIdentityProviderUpdateUserPoolClientFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderUpdateUserPoolDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1298,6 +1396,7 @@ func (r *CognitoIdentityProviderUpdateUserPoolDomainFuture) Get(ctx workflow.Con
 }
 
 type CognitoIdentityProviderVerifySoftwareTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1308,6 +1407,7 @@ func (r *CognitoIdentityProviderVerifySoftwareTokenFuture) Get(ctx workflow.Cont
 }
 
 type CognitoIdentityProviderVerifyUserAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

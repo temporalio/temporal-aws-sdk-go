@@ -30,6 +30,7 @@ func NewDynamoDBStreamsStub() DynamoDBStreamsClient {
 }
 
 type DynamoDBStreamsDescribeStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *DynamoDBStreamsDescribeStreamFuture) Get(ctx workflow.Context) (*dynamo
 }
 
 type DynamoDBStreamsGetRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *DynamoDBStreamsGetRecordsFuture) Get(ctx workflow.Context) (*dynamodbst
 }
 
 type DynamoDBStreamsGetShardIteratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *DynamoDBStreamsGetShardIteratorFuture) Get(ctx workflow.Context) (*dyna
 }
 
 type DynamoDBStreamsListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -249,6 +249,7 @@ func NewDeviceFarmStub() DeviceFarmClient {
 }
 
 type DeviceFarmCreateDevicePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +260,7 @@ func (r *DeviceFarmCreateDevicePoolFuture) Get(ctx workflow.Context) (*devicefar
 }
 
 type DeviceFarmCreateInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +271,7 @@ func (r *DeviceFarmCreateInstanceProfileFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmCreateNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +282,7 @@ func (r *DeviceFarmCreateNetworkProfileFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +293,7 @@ func (r *DeviceFarmCreateProjectFuture) Get(ctx workflow.Context) (*devicefarm.C
 }
 
 type DeviceFarmCreateRemoteAccessSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +304,7 @@ func (r *DeviceFarmCreateRemoteAccessSessionFuture) Get(ctx workflow.Context) (*
 }
 
 type DeviceFarmCreateTestGridProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +315,7 @@ func (r *DeviceFarmCreateTestGridProjectFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmCreateTestGridUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +326,7 @@ func (r *DeviceFarmCreateTestGridUrlFuture) Get(ctx workflow.Context) (*devicefa
 }
 
 type DeviceFarmCreateUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +337,7 @@ func (r *DeviceFarmCreateUploadFuture) Get(ctx workflow.Context) (*devicefarm.Cr
 }
 
 type DeviceFarmCreateVPCEConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +348,7 @@ func (r *DeviceFarmCreateVPCEConfigurationFuture) Get(ctx workflow.Context) (*de
 }
 
 type DeviceFarmDeleteDevicePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +359,7 @@ func (r *DeviceFarmDeleteDevicePoolFuture) Get(ctx workflow.Context) (*devicefar
 }
 
 type DeviceFarmDeleteInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +370,7 @@ func (r *DeviceFarmDeleteInstanceProfileFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmDeleteNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +381,7 @@ func (r *DeviceFarmDeleteNetworkProfileFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +392,7 @@ func (r *DeviceFarmDeleteProjectFuture) Get(ctx workflow.Context) (*devicefarm.D
 }
 
 type DeviceFarmDeleteRemoteAccessSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +403,7 @@ func (r *DeviceFarmDeleteRemoteAccessSessionFuture) Get(ctx workflow.Context) (*
 }
 
 type DeviceFarmDeleteRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +414,7 @@ func (r *DeviceFarmDeleteRunFuture) Get(ctx workflow.Context) (*devicefarm.Delet
 }
 
 type DeviceFarmDeleteTestGridProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +425,7 @@ func (r *DeviceFarmDeleteTestGridProjectFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmDeleteUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +436,7 @@ func (r *DeviceFarmDeleteUploadFuture) Get(ctx workflow.Context) (*devicefarm.De
 }
 
 type DeviceFarmDeleteVPCEConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +447,7 @@ func (r *DeviceFarmDeleteVPCEConfigurationFuture) Get(ctx workflow.Context) (*de
 }
 
 type DeviceFarmGetAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +458,7 @@ func (r *DeviceFarmGetAccountSettingsFuture) Get(ctx workflow.Context) (*devicef
 }
 
 type DeviceFarmGetDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +469,7 @@ func (r *DeviceFarmGetDeviceFuture) Get(ctx workflow.Context) (*devicefarm.GetDe
 }
 
 type DeviceFarmGetDeviceInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +480,7 @@ func (r *DeviceFarmGetDeviceInstanceFuture) Get(ctx workflow.Context) (*devicefa
 }
 
 type DeviceFarmGetDevicePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +491,7 @@ func (r *DeviceFarmGetDevicePoolFuture) Get(ctx workflow.Context) (*devicefarm.G
 }
 
 type DeviceFarmGetDevicePoolCompatibilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +502,7 @@ func (r *DeviceFarmGetDevicePoolCompatibilityFuture) Get(ctx workflow.Context) (
 }
 
 type DeviceFarmGetInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +513,7 @@ func (r *DeviceFarmGetInstanceProfileFuture) Get(ctx workflow.Context) (*devicef
 }
 
 type DeviceFarmGetJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +524,7 @@ func (r *DeviceFarmGetJobFuture) Get(ctx workflow.Context) (*devicefarm.GetJobOu
 }
 
 type DeviceFarmGetNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +535,7 @@ func (r *DeviceFarmGetNetworkProfileFuture) Get(ctx workflow.Context) (*devicefa
 }
 
 type DeviceFarmGetOfferingStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +546,7 @@ func (r *DeviceFarmGetOfferingStatusFuture) Get(ctx workflow.Context) (*devicefa
 }
 
 type DeviceFarmGetProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +557,7 @@ func (r *DeviceFarmGetProjectFuture) Get(ctx workflow.Context) (*devicefarm.GetP
 }
 
 type DeviceFarmGetRemoteAccessSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +568,7 @@ func (r *DeviceFarmGetRemoteAccessSessionFuture) Get(ctx workflow.Context) (*dev
 }
 
 type DeviceFarmGetRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +579,7 @@ func (r *DeviceFarmGetRunFuture) Get(ctx workflow.Context) (*devicefarm.GetRunOu
 }
 
 type DeviceFarmGetSuiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +590,7 @@ func (r *DeviceFarmGetSuiteFuture) Get(ctx workflow.Context) (*devicefarm.GetSui
 }
 
 type DeviceFarmGetTestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +601,7 @@ func (r *DeviceFarmGetTestFuture) Get(ctx workflow.Context) (*devicefarm.GetTest
 }
 
 type DeviceFarmGetTestGridProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +612,7 @@ func (r *DeviceFarmGetTestGridProjectFuture) Get(ctx workflow.Context) (*devicef
 }
 
 type DeviceFarmGetTestGridSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +623,7 @@ func (r *DeviceFarmGetTestGridSessionFuture) Get(ctx workflow.Context) (*devicef
 }
 
 type DeviceFarmGetUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +634,7 @@ func (r *DeviceFarmGetUploadFuture) Get(ctx workflow.Context) (*devicefarm.GetUp
 }
 
 type DeviceFarmGetVPCEConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +645,7 @@ func (r *DeviceFarmGetVPCEConfigurationFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmInstallToRemoteAccessSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +656,7 @@ func (r *DeviceFarmInstallToRemoteAccessSessionFuture) Get(ctx workflow.Context)
 }
 
 type DeviceFarmListArtifactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -629,6 +667,7 @@ func (r *DeviceFarmListArtifactsFuture) Get(ctx workflow.Context) (*devicefarm.L
 }
 
 type DeviceFarmListDeviceInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -639,6 +678,7 @@ func (r *DeviceFarmListDeviceInstancesFuture) Get(ctx workflow.Context) (*device
 }
 
 type DeviceFarmListDevicePoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -649,6 +689,7 @@ func (r *DeviceFarmListDevicePoolsFuture) Get(ctx workflow.Context) (*devicefarm
 }
 
 type DeviceFarmListDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -659,6 +700,7 @@ func (r *DeviceFarmListDevicesFuture) Get(ctx workflow.Context) (*devicefarm.Lis
 }
 
 type DeviceFarmListInstanceProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -669,6 +711,7 @@ func (r *DeviceFarmListInstanceProfilesFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -679,6 +722,7 @@ func (r *DeviceFarmListJobsFuture) Get(ctx workflow.Context) (*devicefarm.ListJo
 }
 
 type DeviceFarmListNetworkProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -689,6 +733,7 @@ func (r *DeviceFarmListNetworkProfilesFuture) Get(ctx workflow.Context) (*device
 }
 
 type DeviceFarmListOfferingPromotionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -699,6 +744,7 @@ func (r *DeviceFarmListOfferingPromotionsFuture) Get(ctx workflow.Context) (*dev
 }
 
 type DeviceFarmListOfferingTransactionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -709,6 +755,7 @@ func (r *DeviceFarmListOfferingTransactionsFuture) Get(ctx workflow.Context) (*d
 }
 
 type DeviceFarmListOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -719,6 +766,7 @@ func (r *DeviceFarmListOfferingsFuture) Get(ctx workflow.Context) (*devicefarm.L
 }
 
 type DeviceFarmListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -729,6 +777,7 @@ func (r *DeviceFarmListProjectsFuture) Get(ctx workflow.Context) (*devicefarm.Li
 }
 
 type DeviceFarmListRemoteAccessSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -739,6 +788,7 @@ func (r *DeviceFarmListRemoteAccessSessionsFuture) Get(ctx workflow.Context) (*d
 }
 
 type DeviceFarmListRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -749,6 +799,7 @@ func (r *DeviceFarmListRunsFuture) Get(ctx workflow.Context) (*devicefarm.ListRu
 }
 
 type DeviceFarmListSamplesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -759,6 +810,7 @@ func (r *DeviceFarmListSamplesFuture) Get(ctx workflow.Context) (*devicefarm.Lis
 }
 
 type DeviceFarmListSuitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -769,6 +821,7 @@ func (r *DeviceFarmListSuitesFuture) Get(ctx workflow.Context) (*devicefarm.List
 }
 
 type DeviceFarmListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -779,6 +832,7 @@ func (r *DeviceFarmListTagsForResourceFuture) Get(ctx workflow.Context) (*device
 }
 
 type DeviceFarmListTestGridProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -789,6 +843,7 @@ func (r *DeviceFarmListTestGridProjectsFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmListTestGridSessionActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -799,6 +854,7 @@ func (r *DeviceFarmListTestGridSessionActionsFuture) Get(ctx workflow.Context) (
 }
 
 type DeviceFarmListTestGridSessionArtifactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -809,6 +865,7 @@ func (r *DeviceFarmListTestGridSessionArtifactsFuture) Get(ctx workflow.Context)
 }
 
 type DeviceFarmListTestGridSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -819,6 +876,7 @@ func (r *DeviceFarmListTestGridSessionsFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmListTestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -829,6 +887,7 @@ func (r *DeviceFarmListTestsFuture) Get(ctx workflow.Context) (*devicefarm.ListT
 }
 
 type DeviceFarmListUniqueProblemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -839,6 +898,7 @@ func (r *DeviceFarmListUniqueProblemsFuture) Get(ctx workflow.Context) (*devicef
 }
 
 type DeviceFarmListUploadsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -849,6 +909,7 @@ func (r *DeviceFarmListUploadsFuture) Get(ctx workflow.Context) (*devicefarm.Lis
 }
 
 type DeviceFarmListVPCEConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -859,6 +920,7 @@ func (r *DeviceFarmListVPCEConfigurationsFuture) Get(ctx workflow.Context) (*dev
 }
 
 type DeviceFarmPurchaseOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -869,6 +931,7 @@ func (r *DeviceFarmPurchaseOfferingFuture) Get(ctx workflow.Context) (*devicefar
 }
 
 type DeviceFarmRenewOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -879,6 +942,7 @@ func (r *DeviceFarmRenewOfferingFuture) Get(ctx workflow.Context) (*devicefarm.R
 }
 
 type DeviceFarmScheduleRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -889,6 +953,7 @@ func (r *DeviceFarmScheduleRunFuture) Get(ctx workflow.Context) (*devicefarm.Sch
 }
 
 type DeviceFarmStopJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -899,6 +964,7 @@ func (r *DeviceFarmStopJobFuture) Get(ctx workflow.Context) (*devicefarm.StopJob
 }
 
 type DeviceFarmStopRemoteAccessSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -909,6 +975,7 @@ func (r *DeviceFarmStopRemoteAccessSessionFuture) Get(ctx workflow.Context) (*de
 }
 
 type DeviceFarmStopRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -919,6 +986,7 @@ func (r *DeviceFarmStopRunFuture) Get(ctx workflow.Context) (*devicefarm.StopRun
 }
 
 type DeviceFarmTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -929,6 +997,7 @@ func (r *DeviceFarmTagResourceFuture) Get(ctx workflow.Context) (*devicefarm.Tag
 }
 
 type DeviceFarmUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -939,6 +1008,7 @@ func (r *DeviceFarmUntagResourceFuture) Get(ctx workflow.Context) (*devicefarm.U
 }
 
 type DeviceFarmUpdateDeviceInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -949,6 +1019,7 @@ func (r *DeviceFarmUpdateDeviceInstanceFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmUpdateDevicePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -959,6 +1030,7 @@ func (r *DeviceFarmUpdateDevicePoolFuture) Get(ctx workflow.Context) (*devicefar
 }
 
 type DeviceFarmUpdateInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -969,6 +1041,7 @@ func (r *DeviceFarmUpdateInstanceProfileFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmUpdateNetworkProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -979,6 +1052,7 @@ func (r *DeviceFarmUpdateNetworkProfileFuture) Get(ctx workflow.Context) (*devic
 }
 
 type DeviceFarmUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -989,6 +1063,7 @@ func (r *DeviceFarmUpdateProjectFuture) Get(ctx workflow.Context) (*devicefarm.U
 }
 
 type DeviceFarmUpdateTestGridProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -999,6 +1074,7 @@ func (r *DeviceFarmUpdateTestGridProjectFuture) Get(ctx workflow.Context) (*devi
 }
 
 type DeviceFarmUpdateUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1009,6 +1085,7 @@ func (r *DeviceFarmUpdateUploadFuture) Get(ctx workflow.Context) (*devicefarm.Up
 }
 
 type DeviceFarmUpdateVPCEConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

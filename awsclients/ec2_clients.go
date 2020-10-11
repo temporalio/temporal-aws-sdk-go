@@ -1371,6 +1371,7 @@ func NewEC2Stub() EC2Client {
 }
 
 type EC2AcceptReservedInstancesExchangeQuoteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1381,6 +1382,7 @@ func (r *EC2AcceptReservedInstancesExchangeQuoteFuture) Get(ctx workflow.Context
 }
 
 type EC2AcceptTransitGatewayPeeringAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1391,6 +1393,7 @@ func (r *EC2AcceptTransitGatewayPeeringAttachmentFuture) Get(ctx workflow.Contex
 }
 
 type EC2AcceptTransitGatewayVpcAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1401,6 +1404,7 @@ func (r *EC2AcceptTransitGatewayVpcAttachmentFuture) Get(ctx workflow.Context) (
 }
 
 type EC2AcceptVpcEndpointConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1411,6 +1415,7 @@ func (r *EC2AcceptVpcEndpointConnectionsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2AcceptVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1421,6 +1426,7 @@ func (r *EC2AcceptVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*ec2.Ac
 }
 
 type EC2AdvertiseByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1431,6 +1437,7 @@ func (r *EC2AdvertiseByoipCidrFuture) Get(ctx workflow.Context) (*ec2.AdvertiseB
 }
 
 type EC2AllocateAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1441,6 +1448,7 @@ func (r *EC2AllocateAddressFuture) Get(ctx workflow.Context) (*ec2.AllocateAddre
 }
 
 type EC2AllocateHostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1451,6 +1459,7 @@ func (r *EC2AllocateHostsFuture) Get(ctx workflow.Context) (*ec2.AllocateHostsOu
 }
 
 type EC2ApplySecurityGroupsToClientVpnTargetNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1461,6 +1470,7 @@ func (r *EC2ApplySecurityGroupsToClientVpnTargetNetworkFuture) Get(ctx workflow.
 }
 
 type EC2AssignIpv6AddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1471,6 +1481,7 @@ func (r *EC2AssignIpv6AddressesFuture) Get(ctx workflow.Context) (*ec2.AssignIpv
 }
 
 type EC2AssignPrivateIpAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1481,6 +1492,7 @@ func (r *EC2AssignPrivateIpAddressesFuture) Get(ctx workflow.Context) (*ec2.Assi
 }
 
 type EC2AssociateAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1491,6 +1503,7 @@ func (r *EC2AssociateAddressFuture) Get(ctx workflow.Context) (*ec2.AssociateAdd
 }
 
 type EC2AssociateClientVpnTargetNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1501,6 +1514,7 @@ func (r *EC2AssociateClientVpnTargetNetworkFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2AssociateDhcpOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1511,6 +1525,7 @@ func (r *EC2AssociateDhcpOptionsFuture) Get(ctx workflow.Context) (*ec2.Associat
 }
 
 type EC2AssociateIamInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1521,6 +1536,7 @@ func (r *EC2AssociateIamInstanceProfileFuture) Get(ctx workflow.Context) (*ec2.A
 }
 
 type EC2AssociateRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1531,6 +1547,7 @@ func (r *EC2AssociateRouteTableFuture) Get(ctx workflow.Context) (*ec2.Associate
 }
 
 type EC2AssociateSubnetCidrBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1541,6 +1558,7 @@ func (r *EC2AssociateSubnetCidrBlockFuture) Get(ctx workflow.Context) (*ec2.Asso
 }
 
 type EC2AssociateTransitGatewayMulticastDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1551,6 +1569,7 @@ func (r *EC2AssociateTransitGatewayMulticastDomainFuture) Get(ctx workflow.Conte
 }
 
 type EC2AssociateTransitGatewayRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1561,6 +1580,7 @@ func (r *EC2AssociateTransitGatewayRouteTableFuture) Get(ctx workflow.Context) (
 }
 
 type EC2AssociateVpcCidrBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1571,6 +1591,7 @@ func (r *EC2AssociateVpcCidrBlockFuture) Get(ctx workflow.Context) (*ec2.Associa
 }
 
 type EC2AttachClassicLinkVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1581,6 +1602,7 @@ func (r *EC2AttachClassicLinkVpcFuture) Get(ctx workflow.Context) (*ec2.AttachCl
 }
 
 type EC2AttachInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1591,6 +1613,7 @@ func (r *EC2AttachInternetGatewayFuture) Get(ctx workflow.Context) (*ec2.AttachI
 }
 
 type EC2AttachNetworkInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1601,6 +1624,7 @@ func (r *EC2AttachNetworkInterfaceFuture) Get(ctx workflow.Context) (*ec2.Attach
 }
 
 type EC2AttachVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1611,6 +1635,7 @@ func (r *EC2AttachVolumeFuture) Get(ctx workflow.Context) (*ec2.VolumeAttachment
 }
 
 type EC2AttachVpnGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1621,6 +1646,7 @@ func (r *EC2AttachVpnGatewayFuture) Get(ctx workflow.Context) (*ec2.AttachVpnGat
 }
 
 type EC2AuthorizeClientVpnIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1631,6 +1657,7 @@ func (r *EC2AuthorizeClientVpnIngressFuture) Get(ctx workflow.Context) (*ec2.Aut
 }
 
 type EC2AuthorizeSecurityGroupEgressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1641,6 +1668,7 @@ func (r *EC2AuthorizeSecurityGroupEgressFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2AuthorizeSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1651,6 +1679,7 @@ func (r *EC2AuthorizeSecurityGroupIngressFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2BundleInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1661,6 +1690,7 @@ func (r *EC2BundleInstanceFuture) Get(ctx workflow.Context) (*ec2.BundleInstance
 }
 
 type EC2CancelBundleTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1671,6 +1701,7 @@ func (r *EC2CancelBundleTaskFuture) Get(ctx workflow.Context) (*ec2.CancelBundle
 }
 
 type EC2CancelCapacityReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1681,6 +1712,7 @@ func (r *EC2CancelCapacityReservationFuture) Get(ctx workflow.Context) (*ec2.Can
 }
 
 type EC2CancelConversionTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1691,6 +1723,7 @@ func (r *EC2CancelConversionTaskFuture) Get(ctx workflow.Context) (*ec2.CancelCo
 }
 
 type EC2CancelExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1701,6 +1734,7 @@ func (r *EC2CancelExportTaskFuture) Get(ctx workflow.Context) (*ec2.CancelExport
 }
 
 type EC2CancelImportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1711,6 +1745,7 @@ func (r *EC2CancelImportTaskFuture) Get(ctx workflow.Context) (*ec2.CancelImport
 }
 
 type EC2CancelReservedInstancesListingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1721,6 +1756,7 @@ func (r *EC2CancelReservedInstancesListingFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2CancelSpotFleetRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1731,6 +1767,7 @@ func (r *EC2CancelSpotFleetRequestsFuture) Get(ctx workflow.Context) (*ec2.Cance
 }
 
 type EC2CancelSpotInstanceRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1741,6 +1778,7 @@ func (r *EC2CancelSpotInstanceRequestsFuture) Get(ctx workflow.Context) (*ec2.Ca
 }
 
 type EC2ConfirmProductInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1751,6 +1789,7 @@ func (r *EC2ConfirmProductInstanceFuture) Get(ctx workflow.Context) (*ec2.Confir
 }
 
 type EC2CopyFpgaImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1761,6 +1800,7 @@ func (r *EC2CopyFpgaImageFuture) Get(ctx workflow.Context) (*ec2.CopyFpgaImageOu
 }
 
 type EC2CopyImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1771,6 +1811,7 @@ func (r *EC2CopyImageFuture) Get(ctx workflow.Context) (*ec2.CopyImageOutput, er
 }
 
 type EC2CopySnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1781,6 +1822,7 @@ func (r *EC2CopySnapshotFuture) Get(ctx workflow.Context) (*ec2.CopySnapshotOutp
 }
 
 type EC2CreateCapacityReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1791,6 +1833,7 @@ func (r *EC2CreateCapacityReservationFuture) Get(ctx workflow.Context) (*ec2.Cre
 }
 
 type EC2CreateCarrierGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1801,6 +1844,7 @@ func (r *EC2CreateCarrierGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateCa
 }
 
 type EC2CreateClientVpnEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1811,6 +1855,7 @@ func (r *EC2CreateClientVpnEndpointFuture) Get(ctx workflow.Context) (*ec2.Creat
 }
 
 type EC2CreateClientVpnRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1821,6 +1866,7 @@ func (r *EC2CreateClientVpnRouteFuture) Get(ctx workflow.Context) (*ec2.CreateCl
 }
 
 type EC2CreateCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1831,6 +1877,7 @@ func (r *EC2CreateCustomerGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateC
 }
 
 type EC2CreateDefaultSubnetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1841,6 +1888,7 @@ func (r *EC2CreateDefaultSubnetFuture) Get(ctx workflow.Context) (*ec2.CreateDef
 }
 
 type EC2CreateDefaultVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1851,6 +1899,7 @@ func (r *EC2CreateDefaultVpcFuture) Get(ctx workflow.Context) (*ec2.CreateDefaul
 }
 
 type EC2CreateDhcpOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1861,6 +1910,7 @@ func (r *EC2CreateDhcpOptionsFuture) Get(ctx workflow.Context) (*ec2.CreateDhcpO
 }
 
 type EC2CreateEgressOnlyInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1871,6 +1921,7 @@ func (r *EC2CreateEgressOnlyInternetGatewayFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2CreateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1881,6 +1932,7 @@ func (r *EC2CreateFleetFuture) Get(ctx workflow.Context) (*ec2.CreateFleetOutput
 }
 
 type EC2CreateFlowLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1891,6 +1943,7 @@ func (r *EC2CreateFlowLogsFuture) Get(ctx workflow.Context) (*ec2.CreateFlowLogs
 }
 
 type EC2CreateFpgaImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1901,6 +1954,7 @@ func (r *EC2CreateFpgaImageFuture) Get(ctx workflow.Context) (*ec2.CreateFpgaIma
 }
 
 type EC2CreateImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1911,6 +1965,7 @@ func (r *EC2CreateImageFuture) Get(ctx workflow.Context) (*ec2.CreateImageOutput
 }
 
 type EC2CreateInstanceExportTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1921,6 +1976,7 @@ func (r *EC2CreateInstanceExportTaskFuture) Get(ctx workflow.Context) (*ec2.Crea
 }
 
 type EC2CreateInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1931,6 +1987,7 @@ func (r *EC2CreateInternetGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateI
 }
 
 type EC2CreateKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1941,6 +1998,7 @@ func (r *EC2CreateKeyPairFuture) Get(ctx workflow.Context) (*ec2.CreateKeyPairOu
 }
 
 type EC2CreateLaunchTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1951,6 +2009,7 @@ func (r *EC2CreateLaunchTemplateFuture) Get(ctx workflow.Context) (*ec2.CreateLa
 }
 
 type EC2CreateLaunchTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1961,6 +2020,7 @@ func (r *EC2CreateLaunchTemplateVersionFuture) Get(ctx workflow.Context) (*ec2.C
 }
 
 type EC2CreateLocalGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1971,6 +2031,7 @@ func (r *EC2CreateLocalGatewayRouteFuture) Get(ctx workflow.Context) (*ec2.Creat
 }
 
 type EC2CreateLocalGatewayRouteTableVpcAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1981,6 +2042,7 @@ func (r *EC2CreateLocalGatewayRouteTableVpcAssociationFuture) Get(ctx workflow.C
 }
 
 type EC2CreateManagedPrefixListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1991,6 +2053,7 @@ func (r *EC2CreateManagedPrefixListFuture) Get(ctx workflow.Context) (*ec2.Creat
 }
 
 type EC2CreateNatGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2001,6 +2064,7 @@ func (r *EC2CreateNatGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateNatGat
 }
 
 type EC2CreateNetworkAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2011,6 +2075,7 @@ func (r *EC2CreateNetworkAclFuture) Get(ctx workflow.Context) (*ec2.CreateNetwor
 }
 
 type EC2CreateNetworkAclEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2021,6 +2086,7 @@ func (r *EC2CreateNetworkAclEntryFuture) Get(ctx workflow.Context) (*ec2.CreateN
 }
 
 type EC2CreateNetworkInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2031,6 +2097,7 @@ func (r *EC2CreateNetworkInterfaceFuture) Get(ctx workflow.Context) (*ec2.Create
 }
 
 type EC2CreateNetworkInterfacePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2041,6 +2108,7 @@ func (r *EC2CreateNetworkInterfacePermissionFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2CreatePlacementGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2051,6 +2119,7 @@ func (r *EC2CreatePlacementGroupFuture) Get(ctx workflow.Context) (*ec2.CreatePl
 }
 
 type EC2CreateReservedInstancesListingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2061,6 +2130,7 @@ func (r *EC2CreateReservedInstancesListingFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2CreateRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2071,6 +2141,7 @@ func (r *EC2CreateRouteFuture) Get(ctx workflow.Context) (*ec2.CreateRouteOutput
 }
 
 type EC2CreateRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2081,6 +2152,7 @@ func (r *EC2CreateRouteTableFuture) Get(ctx workflow.Context) (*ec2.CreateRouteT
 }
 
 type EC2CreateSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2091,6 +2163,7 @@ func (r *EC2CreateSecurityGroupFuture) Get(ctx workflow.Context) (*ec2.CreateSec
 }
 
 type EC2CreateSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2101,6 +2174,7 @@ func (r *EC2CreateSnapshotFuture) Get(ctx workflow.Context) (*ec2.Snapshot, erro
 }
 
 type EC2CreateSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2111,6 +2185,7 @@ func (r *EC2CreateSnapshotsFuture) Get(ctx workflow.Context) (*ec2.CreateSnapsho
 }
 
 type EC2CreateSpotDatafeedSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2121,6 +2196,7 @@ func (r *EC2CreateSpotDatafeedSubscriptionFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2CreateSubnetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2131,6 +2207,7 @@ func (r *EC2CreateSubnetFuture) Get(ctx workflow.Context) (*ec2.CreateSubnetOutp
 }
 
 type EC2CreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2141,6 +2218,7 @@ func (r *EC2CreateTagsFuture) Get(ctx workflow.Context) (*ec2.CreateTagsOutput, 
 }
 
 type EC2CreateTrafficMirrorFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2151,6 +2229,7 @@ func (r *EC2CreateTrafficMirrorFilterFuture) Get(ctx workflow.Context) (*ec2.Cre
 }
 
 type EC2CreateTrafficMirrorFilterRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2161,6 +2240,7 @@ func (r *EC2CreateTrafficMirrorFilterRuleFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2CreateTrafficMirrorSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2171,6 +2251,7 @@ func (r *EC2CreateTrafficMirrorSessionFuture) Get(ctx workflow.Context) (*ec2.Cr
 }
 
 type EC2CreateTrafficMirrorTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2181,6 +2262,7 @@ func (r *EC2CreateTrafficMirrorTargetFuture) Get(ctx workflow.Context) (*ec2.Cre
 }
 
 type EC2CreateTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2191,6 +2273,7 @@ func (r *EC2CreateTransitGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateTr
 }
 
 type EC2CreateTransitGatewayMulticastDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2201,6 +2284,7 @@ func (r *EC2CreateTransitGatewayMulticastDomainFuture) Get(ctx workflow.Context)
 }
 
 type EC2CreateTransitGatewayPeeringAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2211,6 +2295,7 @@ func (r *EC2CreateTransitGatewayPeeringAttachmentFuture) Get(ctx workflow.Contex
 }
 
 type EC2CreateTransitGatewayPrefixListReferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2221,6 +2306,7 @@ func (r *EC2CreateTransitGatewayPrefixListReferenceFuture) Get(ctx workflow.Cont
 }
 
 type EC2CreateTransitGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2231,6 +2317,7 @@ func (r *EC2CreateTransitGatewayRouteFuture) Get(ctx workflow.Context) (*ec2.Cre
 }
 
 type EC2CreateTransitGatewayRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2241,6 +2328,7 @@ func (r *EC2CreateTransitGatewayRouteTableFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2CreateTransitGatewayVpcAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2251,6 +2339,7 @@ func (r *EC2CreateTransitGatewayVpcAttachmentFuture) Get(ctx workflow.Context) (
 }
 
 type EC2CreateVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2261,6 +2350,7 @@ func (r *EC2CreateVolumeFuture) Get(ctx workflow.Context) (*ec2.Volume, error) {
 }
 
 type EC2CreateVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2271,6 +2361,7 @@ func (r *EC2CreateVpcFuture) Get(ctx workflow.Context) (*ec2.CreateVpcOutput, er
 }
 
 type EC2CreateVpcEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2281,6 +2372,7 @@ func (r *EC2CreateVpcEndpointFuture) Get(ctx workflow.Context) (*ec2.CreateVpcEn
 }
 
 type EC2CreateVpcEndpointConnectionNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2291,6 +2383,7 @@ func (r *EC2CreateVpcEndpointConnectionNotificationFuture) Get(ctx workflow.Cont
 }
 
 type EC2CreateVpcEndpointServiceConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2301,6 +2394,7 @@ func (r *EC2CreateVpcEndpointServiceConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type EC2CreateVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2311,6 +2405,7 @@ func (r *EC2CreateVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*ec2.Cr
 }
 
 type EC2CreateVpnConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2321,6 +2416,7 @@ func (r *EC2CreateVpnConnectionFuture) Get(ctx workflow.Context) (*ec2.CreateVpn
 }
 
 type EC2CreateVpnConnectionRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2331,6 +2427,7 @@ func (r *EC2CreateVpnConnectionRouteFuture) Get(ctx workflow.Context) (*ec2.Crea
 }
 
 type EC2CreateVpnGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2341,6 +2438,7 @@ func (r *EC2CreateVpnGatewayFuture) Get(ctx workflow.Context) (*ec2.CreateVpnGat
 }
 
 type EC2DeleteCarrierGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2351,6 +2449,7 @@ func (r *EC2DeleteCarrierGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteCa
 }
 
 type EC2DeleteClientVpnEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2361,6 +2460,7 @@ func (r *EC2DeleteClientVpnEndpointFuture) Get(ctx workflow.Context) (*ec2.Delet
 }
 
 type EC2DeleteClientVpnRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2371,6 +2471,7 @@ func (r *EC2DeleteClientVpnRouteFuture) Get(ctx workflow.Context) (*ec2.DeleteCl
 }
 
 type EC2DeleteCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2381,6 +2482,7 @@ func (r *EC2DeleteCustomerGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteC
 }
 
 type EC2DeleteDhcpOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2391,6 +2493,7 @@ func (r *EC2DeleteDhcpOptionsFuture) Get(ctx workflow.Context) (*ec2.DeleteDhcpO
 }
 
 type EC2DeleteEgressOnlyInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2401,6 +2504,7 @@ func (r *EC2DeleteEgressOnlyInternetGatewayFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DeleteFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2411,6 +2515,7 @@ func (r *EC2DeleteFleetsFuture) Get(ctx workflow.Context) (*ec2.DeleteFleetsOutp
 }
 
 type EC2DeleteFlowLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2421,6 +2526,7 @@ func (r *EC2DeleteFlowLogsFuture) Get(ctx workflow.Context) (*ec2.DeleteFlowLogs
 }
 
 type EC2DeleteFpgaImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2431,6 +2537,7 @@ func (r *EC2DeleteFpgaImageFuture) Get(ctx workflow.Context) (*ec2.DeleteFpgaIma
 }
 
 type EC2DeleteInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2441,6 +2548,7 @@ func (r *EC2DeleteInternetGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteI
 }
 
 type EC2DeleteKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2451,6 +2559,7 @@ func (r *EC2DeleteKeyPairFuture) Get(ctx workflow.Context) (*ec2.DeleteKeyPairOu
 }
 
 type EC2DeleteLaunchTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2461,6 +2570,7 @@ func (r *EC2DeleteLaunchTemplateFuture) Get(ctx workflow.Context) (*ec2.DeleteLa
 }
 
 type EC2DeleteLaunchTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2471,6 +2581,7 @@ func (r *EC2DeleteLaunchTemplateVersionsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DeleteLocalGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2481,6 +2592,7 @@ func (r *EC2DeleteLocalGatewayRouteFuture) Get(ctx workflow.Context) (*ec2.Delet
 }
 
 type EC2DeleteLocalGatewayRouteTableVpcAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2491,6 +2603,7 @@ func (r *EC2DeleteLocalGatewayRouteTableVpcAssociationFuture) Get(ctx workflow.C
 }
 
 type EC2DeleteManagedPrefixListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2501,6 +2614,7 @@ func (r *EC2DeleteManagedPrefixListFuture) Get(ctx workflow.Context) (*ec2.Delet
 }
 
 type EC2DeleteNatGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2511,6 +2625,7 @@ func (r *EC2DeleteNatGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteNatGat
 }
 
 type EC2DeleteNetworkAclFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2521,6 +2636,7 @@ func (r *EC2DeleteNetworkAclFuture) Get(ctx workflow.Context) (*ec2.DeleteNetwor
 }
 
 type EC2DeleteNetworkAclEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2531,6 +2647,7 @@ func (r *EC2DeleteNetworkAclEntryFuture) Get(ctx workflow.Context) (*ec2.DeleteN
 }
 
 type EC2DeleteNetworkInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2541,6 +2658,7 @@ func (r *EC2DeleteNetworkInterfaceFuture) Get(ctx workflow.Context) (*ec2.Delete
 }
 
 type EC2DeleteNetworkInterfacePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2551,6 +2669,7 @@ func (r *EC2DeleteNetworkInterfacePermissionFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2DeletePlacementGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2561,6 +2680,7 @@ func (r *EC2DeletePlacementGroupFuture) Get(ctx workflow.Context) (*ec2.DeletePl
 }
 
 type EC2DeleteQueuedReservedInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2571,6 +2691,7 @@ func (r *EC2DeleteQueuedReservedInstancesFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DeleteRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2581,6 +2702,7 @@ func (r *EC2DeleteRouteFuture) Get(ctx workflow.Context) (*ec2.DeleteRouteOutput
 }
 
 type EC2DeleteRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2591,6 +2713,7 @@ func (r *EC2DeleteRouteTableFuture) Get(ctx workflow.Context) (*ec2.DeleteRouteT
 }
 
 type EC2DeleteSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2601,6 +2724,7 @@ func (r *EC2DeleteSecurityGroupFuture) Get(ctx workflow.Context) (*ec2.DeleteSec
 }
 
 type EC2DeleteSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2611,6 +2735,7 @@ func (r *EC2DeleteSnapshotFuture) Get(ctx workflow.Context) (*ec2.DeleteSnapshot
 }
 
 type EC2DeleteSpotDatafeedSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2621,6 +2746,7 @@ func (r *EC2DeleteSpotDatafeedSubscriptionFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2DeleteSubnetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2631,6 +2757,7 @@ func (r *EC2DeleteSubnetFuture) Get(ctx workflow.Context) (*ec2.DeleteSubnetOutp
 }
 
 type EC2DeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2641,6 +2768,7 @@ func (r *EC2DeleteTagsFuture) Get(ctx workflow.Context) (*ec2.DeleteTagsOutput, 
 }
 
 type EC2DeleteTrafficMirrorFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2651,6 +2779,7 @@ func (r *EC2DeleteTrafficMirrorFilterFuture) Get(ctx workflow.Context) (*ec2.Del
 }
 
 type EC2DeleteTrafficMirrorFilterRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2661,6 +2790,7 @@ func (r *EC2DeleteTrafficMirrorFilterRuleFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DeleteTrafficMirrorSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2671,6 +2801,7 @@ func (r *EC2DeleteTrafficMirrorSessionFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DeleteTrafficMirrorTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2681,6 +2812,7 @@ func (r *EC2DeleteTrafficMirrorTargetFuture) Get(ctx workflow.Context) (*ec2.Del
 }
 
 type EC2DeleteTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2691,6 +2823,7 @@ func (r *EC2DeleteTransitGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteTr
 }
 
 type EC2DeleteTransitGatewayMulticastDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2701,6 +2834,7 @@ func (r *EC2DeleteTransitGatewayMulticastDomainFuture) Get(ctx workflow.Context)
 }
 
 type EC2DeleteTransitGatewayPeeringAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2711,6 +2845,7 @@ func (r *EC2DeleteTransitGatewayPeeringAttachmentFuture) Get(ctx workflow.Contex
 }
 
 type EC2DeleteTransitGatewayPrefixListReferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2721,6 +2856,7 @@ func (r *EC2DeleteTransitGatewayPrefixListReferenceFuture) Get(ctx workflow.Cont
 }
 
 type EC2DeleteTransitGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2731,6 +2867,7 @@ func (r *EC2DeleteTransitGatewayRouteFuture) Get(ctx workflow.Context) (*ec2.Del
 }
 
 type EC2DeleteTransitGatewayRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2741,6 +2878,7 @@ func (r *EC2DeleteTransitGatewayRouteTableFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2DeleteTransitGatewayVpcAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2751,6 +2889,7 @@ func (r *EC2DeleteTransitGatewayVpcAttachmentFuture) Get(ctx workflow.Context) (
 }
 
 type EC2DeleteVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2761,6 +2900,7 @@ func (r *EC2DeleteVolumeFuture) Get(ctx workflow.Context) (*ec2.DeleteVolumeOutp
 }
 
 type EC2DeleteVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2771,6 +2911,7 @@ func (r *EC2DeleteVpcFuture) Get(ctx workflow.Context) (*ec2.DeleteVpcOutput, er
 }
 
 type EC2DeleteVpcEndpointConnectionNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2781,6 +2922,7 @@ func (r *EC2DeleteVpcEndpointConnectionNotificationsFuture) Get(ctx workflow.Con
 }
 
 type EC2DeleteVpcEndpointServiceConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2791,6 +2933,7 @@ func (r *EC2DeleteVpcEndpointServiceConfigurationsFuture) Get(ctx workflow.Conte
 }
 
 type EC2DeleteVpcEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2801,6 +2944,7 @@ func (r *EC2DeleteVpcEndpointsFuture) Get(ctx workflow.Context) (*ec2.DeleteVpcE
 }
 
 type EC2DeleteVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2811,6 +2955,7 @@ func (r *EC2DeleteVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DeleteVpnConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2821,6 +2966,7 @@ func (r *EC2DeleteVpnConnectionFuture) Get(ctx workflow.Context) (*ec2.DeleteVpn
 }
 
 type EC2DeleteVpnConnectionRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2831,6 +2977,7 @@ func (r *EC2DeleteVpnConnectionRouteFuture) Get(ctx workflow.Context) (*ec2.Dele
 }
 
 type EC2DeleteVpnGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2841,6 +2988,7 @@ func (r *EC2DeleteVpnGatewayFuture) Get(ctx workflow.Context) (*ec2.DeleteVpnGat
 }
 
 type EC2DeprovisionByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2851,6 +2999,7 @@ func (r *EC2DeprovisionByoipCidrFuture) Get(ctx workflow.Context) (*ec2.Deprovis
 }
 
 type EC2DeregisterImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2861,6 +3010,7 @@ func (r *EC2DeregisterImageFuture) Get(ctx workflow.Context) (*ec2.DeregisterIma
 }
 
 type EC2DeregisterInstanceEventNotificationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2871,6 +3021,7 @@ func (r *EC2DeregisterInstanceEventNotificationAttributesFuture) Get(ctx workflo
 }
 
 type EC2DeregisterTransitGatewayMulticastGroupMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2881,6 +3032,7 @@ func (r *EC2DeregisterTransitGatewayMulticastGroupMembersFuture) Get(ctx workflo
 }
 
 type EC2DeregisterTransitGatewayMulticastGroupSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2891,6 +3043,7 @@ func (r *EC2DeregisterTransitGatewayMulticastGroupSourcesFuture) Get(ctx workflo
 }
 
 type EC2DescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2901,6 +3054,7 @@ func (r *EC2DescribeAccountAttributesFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2911,6 +3065,7 @@ func (r *EC2DescribeAddressesFuture) Get(ctx workflow.Context) (*ec2.DescribeAdd
 }
 
 type EC2DescribeAggregateIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2921,6 +3076,7 @@ func (r *EC2DescribeAggregateIdFormatFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeAvailabilityZonesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2931,6 +3087,7 @@ func (r *EC2DescribeAvailabilityZonesFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeBundleTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2941,6 +3098,7 @@ func (r *EC2DescribeBundleTasksFuture) Get(ctx workflow.Context) (*ec2.DescribeB
 }
 
 type EC2DescribeByoipCidrsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2951,6 +3109,7 @@ func (r *EC2DescribeByoipCidrsFuture) Get(ctx workflow.Context) (*ec2.DescribeBy
 }
 
 type EC2DescribeCapacityReservationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2961,6 +3120,7 @@ func (r *EC2DescribeCapacityReservationsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeCarrierGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2971,6 +3131,7 @@ func (r *EC2DescribeCarrierGatewaysFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeClassicLinkInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2981,6 +3142,7 @@ func (r *EC2DescribeClassicLinkInstancesFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeClientVpnAuthorizationRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2991,6 +3153,7 @@ func (r *EC2DescribeClientVpnAuthorizationRulesFuture) Get(ctx workflow.Context)
 }
 
 type EC2DescribeClientVpnConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3001,6 +3164,7 @@ func (r *EC2DescribeClientVpnConnectionsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeClientVpnEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3011,6 +3175,7 @@ func (r *EC2DescribeClientVpnEndpointsFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DescribeClientVpnRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3021,6 +3186,7 @@ func (r *EC2DescribeClientVpnRoutesFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeClientVpnTargetNetworksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3031,6 +3197,7 @@ func (r *EC2DescribeClientVpnTargetNetworksFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DescribeCoipPoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3041,6 +3208,7 @@ func (r *EC2DescribeCoipPoolsFuture) Get(ctx workflow.Context) (*ec2.DescribeCoi
 }
 
 type EC2DescribeConversionTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3051,6 +3219,7 @@ func (r *EC2DescribeConversionTasksFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeCustomerGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3061,6 +3230,7 @@ func (r *EC2DescribeCustomerGatewaysFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeDhcpOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3071,6 +3241,7 @@ func (r *EC2DescribeDhcpOptionsFuture) Get(ctx workflow.Context) (*ec2.DescribeD
 }
 
 type EC2DescribeEgressOnlyInternetGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3081,6 +3252,7 @@ func (r *EC2DescribeEgressOnlyInternetGatewaysFuture) Get(ctx workflow.Context) 
 }
 
 type EC2DescribeElasticGpusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3091,6 +3263,7 @@ func (r *EC2DescribeElasticGpusFuture) Get(ctx workflow.Context) (*ec2.DescribeE
 }
 
 type EC2DescribeExportImageTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3101,6 +3274,7 @@ func (r *EC2DescribeExportImageTasksFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeExportTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3111,6 +3285,7 @@ func (r *EC2DescribeExportTasksFuture) Get(ctx workflow.Context) (*ec2.DescribeE
 }
 
 type EC2DescribeFastSnapshotRestoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3121,6 +3296,7 @@ func (r *EC2DescribeFastSnapshotRestoresFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeFleetHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3131,6 +3307,7 @@ func (r *EC2DescribeFleetHistoryFuture) Get(ctx workflow.Context) (*ec2.Describe
 }
 
 type EC2DescribeFleetInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3141,6 +3318,7 @@ func (r *EC2DescribeFleetInstancesFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3151,6 +3329,7 @@ func (r *EC2DescribeFleetsFuture) Get(ctx workflow.Context) (*ec2.DescribeFleets
 }
 
 type EC2DescribeFlowLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3161,6 +3340,7 @@ func (r *EC2DescribeFlowLogsFuture) Get(ctx workflow.Context) (*ec2.DescribeFlow
 }
 
 type EC2DescribeFpgaImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3171,6 +3351,7 @@ func (r *EC2DescribeFpgaImageAttributeFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DescribeFpgaImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3181,6 +3362,7 @@ func (r *EC2DescribeFpgaImagesFuture) Get(ctx workflow.Context) (*ec2.DescribeFp
 }
 
 type EC2DescribeHostReservationOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3191,6 +3373,7 @@ func (r *EC2DescribeHostReservationOfferingsFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2DescribeHostReservationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3201,6 +3384,7 @@ func (r *EC2DescribeHostReservationsFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeHostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3211,6 +3395,7 @@ func (r *EC2DescribeHostsFuture) Get(ctx workflow.Context) (*ec2.DescribeHostsOu
 }
 
 type EC2DescribeIamInstanceProfileAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3221,6 +3406,7 @@ func (r *EC2DescribeIamInstanceProfileAssociationsFuture) Get(ctx workflow.Conte
 }
 
 type EC2DescribeIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3231,6 +3417,7 @@ func (r *EC2DescribeIdFormatFuture) Get(ctx workflow.Context) (*ec2.DescribeIdFo
 }
 
 type EC2DescribeIdentityIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3241,6 +3428,7 @@ func (r *EC2DescribeIdentityIdFormatFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3251,6 +3439,7 @@ func (r *EC2DescribeImageAttributeFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3261,6 +3450,7 @@ func (r *EC2DescribeImagesFuture) Get(ctx workflow.Context) (*ec2.DescribeImages
 }
 
 type EC2DescribeImportImageTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3271,6 +3461,7 @@ func (r *EC2DescribeImportImageTasksFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeImportSnapshotTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3281,6 +3472,7 @@ func (r *EC2DescribeImportSnapshotTasksFuture) Get(ctx workflow.Context) (*ec2.D
 }
 
 type EC2DescribeInstanceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3291,6 +3483,7 @@ func (r *EC2DescribeInstanceAttributeFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeInstanceCreditSpecificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3301,6 +3494,7 @@ func (r *EC2DescribeInstanceCreditSpecificationsFuture) Get(ctx workflow.Context
 }
 
 type EC2DescribeInstanceEventNotificationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3311,6 +3505,7 @@ func (r *EC2DescribeInstanceEventNotificationAttributesFuture) Get(ctx workflow.
 }
 
 type EC2DescribeInstanceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3321,6 +3516,7 @@ func (r *EC2DescribeInstanceStatusFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeInstanceTypeOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3331,6 +3527,7 @@ func (r *EC2DescribeInstanceTypeOfferingsFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DescribeInstanceTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3341,6 +3538,7 @@ func (r *EC2DescribeInstanceTypesFuture) Get(ctx workflow.Context) (*ec2.Describ
 }
 
 type EC2DescribeInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3351,6 +3549,7 @@ func (r *EC2DescribeInstancesFuture) Get(ctx workflow.Context) (*ec2.DescribeIns
 }
 
 type EC2DescribeInternetGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3361,6 +3560,7 @@ func (r *EC2DescribeInternetGatewaysFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeIpv6PoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3371,6 +3571,7 @@ func (r *EC2DescribeIpv6PoolsFuture) Get(ctx workflow.Context) (*ec2.DescribeIpv
 }
 
 type EC2DescribeKeyPairsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3381,6 +3582,7 @@ func (r *EC2DescribeKeyPairsFuture) Get(ctx workflow.Context) (*ec2.DescribeKeyP
 }
 
 type EC2DescribeLaunchTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3391,6 +3593,7 @@ func (r *EC2DescribeLaunchTemplateVersionsFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2DescribeLaunchTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3401,6 +3604,7 @@ func (r *EC2DescribeLaunchTemplatesFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3411,6 +3615,7 @@ func (r *EC2DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsFutur
 }
 
 type EC2DescribeLocalGatewayRouteTableVpcAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3421,6 +3626,7 @@ func (r *EC2DescribeLocalGatewayRouteTableVpcAssociationsFuture) Get(ctx workflo
 }
 
 type EC2DescribeLocalGatewayRouteTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3431,6 +3637,7 @@ func (r *EC2DescribeLocalGatewayRouteTablesFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DescribeLocalGatewayVirtualInterfaceGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3441,6 +3648,7 @@ func (r *EC2DescribeLocalGatewayVirtualInterfaceGroupsFuture) Get(ctx workflow.C
 }
 
 type EC2DescribeLocalGatewayVirtualInterfacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3451,6 +3659,7 @@ func (r *EC2DescribeLocalGatewayVirtualInterfacesFuture) Get(ctx workflow.Contex
 }
 
 type EC2DescribeLocalGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3461,6 +3670,7 @@ func (r *EC2DescribeLocalGatewaysFuture) Get(ctx workflow.Context) (*ec2.Describ
 }
 
 type EC2DescribeManagedPrefixListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3471,6 +3681,7 @@ func (r *EC2DescribeManagedPrefixListsFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DescribeMovingAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3481,6 +3692,7 @@ func (r *EC2DescribeMovingAddressesFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeNatGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3491,6 +3703,7 @@ func (r *EC2DescribeNatGatewaysFuture) Get(ctx workflow.Context) (*ec2.DescribeN
 }
 
 type EC2DescribeNetworkAclsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3501,6 +3714,7 @@ func (r *EC2DescribeNetworkAclsFuture) Get(ctx workflow.Context) (*ec2.DescribeN
 }
 
 type EC2DescribeNetworkInterfaceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3511,6 +3725,7 @@ func (r *EC2DescribeNetworkInterfaceAttributeFuture) Get(ctx workflow.Context) (
 }
 
 type EC2DescribeNetworkInterfacePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3521,6 +3736,7 @@ func (r *EC2DescribeNetworkInterfacePermissionsFuture) Get(ctx workflow.Context)
 }
 
 type EC2DescribeNetworkInterfacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3531,6 +3747,7 @@ func (r *EC2DescribeNetworkInterfacesFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribePlacementGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3541,6 +3758,7 @@ func (r *EC2DescribePlacementGroupsFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribePrefixListsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3551,6 +3769,7 @@ func (r *EC2DescribePrefixListsFuture) Get(ctx workflow.Context) (*ec2.DescribeP
 }
 
 type EC2DescribePrincipalIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3561,6 +3780,7 @@ func (r *EC2DescribePrincipalIdFormatFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribePublicIpv4PoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3571,6 +3791,7 @@ func (r *EC2DescribePublicIpv4PoolsFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeRegionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3581,6 +3802,7 @@ func (r *EC2DescribeRegionsFuture) Get(ctx workflow.Context) (*ec2.DescribeRegio
 }
 
 type EC2DescribeReservedInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3591,6 +3813,7 @@ func (r *EC2DescribeReservedInstancesFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeReservedInstancesListingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3601,6 +3824,7 @@ func (r *EC2DescribeReservedInstancesListingsFuture) Get(ctx workflow.Context) (
 }
 
 type EC2DescribeReservedInstancesModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3611,6 +3835,7 @@ func (r *EC2DescribeReservedInstancesModificationsFuture) Get(ctx workflow.Conte
 }
 
 type EC2DescribeReservedInstancesOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3621,6 +3846,7 @@ func (r *EC2DescribeReservedInstancesOfferingsFuture) Get(ctx workflow.Context) 
 }
 
 type EC2DescribeRouteTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3631,6 +3857,7 @@ func (r *EC2DescribeRouteTablesFuture) Get(ctx workflow.Context) (*ec2.DescribeR
 }
 
 type EC2DescribeScheduledInstanceAvailabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3641,6 +3868,7 @@ func (r *EC2DescribeScheduledInstanceAvailabilityFuture) Get(ctx workflow.Contex
 }
 
 type EC2DescribeScheduledInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3651,6 +3879,7 @@ func (r *EC2DescribeScheduledInstancesFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DescribeSecurityGroupReferencesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3661,6 +3890,7 @@ func (r *EC2DescribeSecurityGroupReferencesFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DescribeSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3671,6 +3901,7 @@ func (r *EC2DescribeSecurityGroupsFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3681,6 +3912,7 @@ func (r *EC2DescribeSnapshotAttributeFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3691,6 +3923,7 @@ func (r *EC2DescribeSnapshotsFuture) Get(ctx workflow.Context) (*ec2.DescribeSna
 }
 
 type EC2DescribeSpotDatafeedSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3701,6 +3934,7 @@ func (r *EC2DescribeSpotDatafeedSubscriptionFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2DescribeSpotFleetInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3711,6 +3945,7 @@ func (r *EC2DescribeSpotFleetInstancesFuture) Get(ctx workflow.Context) (*ec2.De
 }
 
 type EC2DescribeSpotFleetRequestHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3721,6 +3956,7 @@ func (r *EC2DescribeSpotFleetRequestHistoryFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DescribeSpotFleetRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3731,6 +3967,7 @@ func (r *EC2DescribeSpotFleetRequestsFuture) Get(ctx workflow.Context) (*ec2.Des
 }
 
 type EC2DescribeSpotInstanceRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3741,6 +3978,7 @@ func (r *EC2DescribeSpotInstanceRequestsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeSpotPriceHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3751,6 +3989,7 @@ func (r *EC2DescribeSpotPriceHistoryFuture) Get(ctx workflow.Context) (*ec2.Desc
 }
 
 type EC2DescribeStaleSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3761,6 +4000,7 @@ func (r *EC2DescribeStaleSecurityGroupsFuture) Get(ctx workflow.Context) (*ec2.D
 }
 
 type EC2DescribeSubnetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3771,6 +4011,7 @@ func (r *EC2DescribeSubnetsFuture) Get(ctx workflow.Context) (*ec2.DescribeSubne
 }
 
 type EC2DescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3781,6 +4022,7 @@ func (r *EC2DescribeTagsFuture) Get(ctx workflow.Context) (*ec2.DescribeTagsOutp
 }
 
 type EC2DescribeTrafficMirrorFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3791,6 +4033,7 @@ func (r *EC2DescribeTrafficMirrorFiltersFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeTrafficMirrorSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3801,6 +4044,7 @@ func (r *EC2DescribeTrafficMirrorSessionsFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DescribeTrafficMirrorTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3811,6 +4055,7 @@ func (r *EC2DescribeTrafficMirrorTargetsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeTransitGatewayAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3821,6 +4066,7 @@ func (r *EC2DescribeTransitGatewayAttachmentsFuture) Get(ctx workflow.Context) (
 }
 
 type EC2DescribeTransitGatewayMulticastDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3831,6 +4077,7 @@ func (r *EC2DescribeTransitGatewayMulticastDomainsFuture) Get(ctx workflow.Conte
 }
 
 type EC2DescribeTransitGatewayPeeringAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3841,6 +4088,7 @@ func (r *EC2DescribeTransitGatewayPeeringAttachmentsFuture) Get(ctx workflow.Con
 }
 
 type EC2DescribeTransitGatewayRouteTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3851,6 +4099,7 @@ func (r *EC2DescribeTransitGatewayRouteTablesFuture) Get(ctx workflow.Context) (
 }
 
 type EC2DescribeTransitGatewayVpcAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3861,6 +4110,7 @@ func (r *EC2DescribeTransitGatewayVpcAttachmentsFuture) Get(ctx workflow.Context
 }
 
 type EC2DescribeTransitGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3871,6 +4121,7 @@ func (r *EC2DescribeTransitGatewaysFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeVolumeAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3881,6 +4132,7 @@ func (r *EC2DescribeVolumeAttributeFuture) Get(ctx workflow.Context) (*ec2.Descr
 }
 
 type EC2DescribeVolumeStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3891,6 +4143,7 @@ func (r *EC2DescribeVolumeStatusFuture) Get(ctx workflow.Context) (*ec2.Describe
 }
 
 type EC2DescribeVolumesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3901,6 +4154,7 @@ func (r *EC2DescribeVolumesFuture) Get(ctx workflow.Context) (*ec2.DescribeVolum
 }
 
 type EC2DescribeVolumesModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3911,6 +4165,7 @@ func (r *EC2DescribeVolumesModificationsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2DescribeVpcAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3921,6 +4176,7 @@ func (r *EC2DescribeVpcAttributeFuture) Get(ctx workflow.Context) (*ec2.Describe
 }
 
 type EC2DescribeVpcClassicLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3931,6 +4187,7 @@ func (r *EC2DescribeVpcClassicLinkFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeVpcClassicLinkDnsSupportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3941,6 +4198,7 @@ func (r *EC2DescribeVpcClassicLinkDnsSupportFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2DescribeVpcEndpointConnectionNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3951,6 +4209,7 @@ func (r *EC2DescribeVpcEndpointConnectionNotificationsFuture) Get(ctx workflow.C
 }
 
 type EC2DescribeVpcEndpointConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3961,6 +4220,7 @@ func (r *EC2DescribeVpcEndpointConnectionsFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2DescribeVpcEndpointServiceConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3971,6 +4231,7 @@ func (r *EC2DescribeVpcEndpointServiceConfigurationsFuture) Get(ctx workflow.Con
 }
 
 type EC2DescribeVpcEndpointServicePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3981,6 +4242,7 @@ func (r *EC2DescribeVpcEndpointServicePermissionsFuture) Get(ctx workflow.Contex
 }
 
 type EC2DescribeVpcEndpointServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -3991,6 +4253,7 @@ func (r *EC2DescribeVpcEndpointServicesFuture) Get(ctx workflow.Context) (*ec2.D
 }
 
 type EC2DescribeVpcEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4001,6 +4264,7 @@ func (r *EC2DescribeVpcEndpointsFuture) Get(ctx workflow.Context) (*ec2.Describe
 }
 
 type EC2DescribeVpcPeeringConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4011,6 +4275,7 @@ func (r *EC2DescribeVpcPeeringConnectionsFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DescribeVpcsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4021,6 +4286,7 @@ func (r *EC2DescribeVpcsFuture) Get(ctx workflow.Context) (*ec2.DescribeVpcsOutp
 }
 
 type EC2DescribeVpnConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4031,6 +4297,7 @@ func (r *EC2DescribeVpnConnectionsFuture) Get(ctx workflow.Context) (*ec2.Descri
 }
 
 type EC2DescribeVpnGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4041,6 +4308,7 @@ func (r *EC2DescribeVpnGatewaysFuture) Get(ctx workflow.Context) (*ec2.DescribeV
 }
 
 type EC2DetachClassicLinkVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4051,6 +4319,7 @@ func (r *EC2DetachClassicLinkVpcFuture) Get(ctx workflow.Context) (*ec2.DetachCl
 }
 
 type EC2DetachInternetGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4061,6 +4330,7 @@ func (r *EC2DetachInternetGatewayFuture) Get(ctx workflow.Context) (*ec2.DetachI
 }
 
 type EC2DetachNetworkInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4071,6 +4341,7 @@ func (r *EC2DetachNetworkInterfaceFuture) Get(ctx workflow.Context) (*ec2.Detach
 }
 
 type EC2DetachVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4081,6 +4352,7 @@ func (r *EC2DetachVolumeFuture) Get(ctx workflow.Context) (*ec2.VolumeAttachment
 }
 
 type EC2DetachVpnGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4091,6 +4363,7 @@ func (r *EC2DetachVpnGatewayFuture) Get(ctx workflow.Context) (*ec2.DetachVpnGat
 }
 
 type EC2DisableEbsEncryptionByDefaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4101,6 +4374,7 @@ func (r *EC2DisableEbsEncryptionByDefaultFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2DisableFastSnapshotRestoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4111,6 +4385,7 @@ func (r *EC2DisableFastSnapshotRestoresFuture) Get(ctx workflow.Context) (*ec2.D
 }
 
 type EC2DisableTransitGatewayRouteTablePropagationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4121,6 +4396,7 @@ func (r *EC2DisableTransitGatewayRouteTablePropagationFuture) Get(ctx workflow.C
 }
 
 type EC2DisableVgwRoutePropagationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4131,6 +4407,7 @@ func (r *EC2DisableVgwRoutePropagationFuture) Get(ctx workflow.Context) (*ec2.Di
 }
 
 type EC2DisableVpcClassicLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4141,6 +4418,7 @@ func (r *EC2DisableVpcClassicLinkFuture) Get(ctx workflow.Context) (*ec2.Disable
 }
 
 type EC2DisableVpcClassicLinkDnsSupportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4151,6 +4429,7 @@ func (r *EC2DisableVpcClassicLinkDnsSupportFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2DisassociateAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4161,6 +4440,7 @@ func (r *EC2DisassociateAddressFuture) Get(ctx workflow.Context) (*ec2.Disassoci
 }
 
 type EC2DisassociateClientVpnTargetNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4171,6 +4451,7 @@ func (r *EC2DisassociateClientVpnTargetNetworkFuture) Get(ctx workflow.Context) 
 }
 
 type EC2DisassociateIamInstanceProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4181,6 +4462,7 @@ func (r *EC2DisassociateIamInstanceProfileFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2DisassociateRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4191,6 +4473,7 @@ func (r *EC2DisassociateRouteTableFuture) Get(ctx workflow.Context) (*ec2.Disass
 }
 
 type EC2DisassociateSubnetCidrBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4201,6 +4484,7 @@ func (r *EC2DisassociateSubnetCidrBlockFuture) Get(ctx workflow.Context) (*ec2.D
 }
 
 type EC2DisassociateTransitGatewayMulticastDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4211,6 +4495,7 @@ func (r *EC2DisassociateTransitGatewayMulticastDomainFuture) Get(ctx workflow.Co
 }
 
 type EC2DisassociateTransitGatewayRouteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4221,6 +4506,7 @@ func (r *EC2DisassociateTransitGatewayRouteTableFuture) Get(ctx workflow.Context
 }
 
 type EC2DisassociateVpcCidrBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4231,6 +4517,7 @@ func (r *EC2DisassociateVpcCidrBlockFuture) Get(ctx workflow.Context) (*ec2.Disa
 }
 
 type EC2EnableEbsEncryptionByDefaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4241,6 +4528,7 @@ func (r *EC2EnableEbsEncryptionByDefaultFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2EnableFastSnapshotRestoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4251,6 +4539,7 @@ func (r *EC2EnableFastSnapshotRestoresFuture) Get(ctx workflow.Context) (*ec2.En
 }
 
 type EC2EnableTransitGatewayRouteTablePropagationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4261,6 +4550,7 @@ func (r *EC2EnableTransitGatewayRouteTablePropagationFuture) Get(ctx workflow.Co
 }
 
 type EC2EnableVgwRoutePropagationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4271,6 +4561,7 @@ func (r *EC2EnableVgwRoutePropagationFuture) Get(ctx workflow.Context) (*ec2.Ena
 }
 
 type EC2EnableVolumeIOFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4281,6 +4572,7 @@ func (r *EC2EnableVolumeIOFuture) Get(ctx workflow.Context) (*ec2.EnableVolumeIO
 }
 
 type EC2EnableVpcClassicLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4291,6 +4583,7 @@ func (r *EC2EnableVpcClassicLinkFuture) Get(ctx workflow.Context) (*ec2.EnableVp
 }
 
 type EC2EnableVpcClassicLinkDnsSupportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4301,6 +4594,7 @@ func (r *EC2EnableVpcClassicLinkDnsSupportFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2ExportClientVpnClientCertificateRevocationListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4311,6 +4605,7 @@ func (r *EC2ExportClientVpnClientCertificateRevocationListFuture) Get(ctx workfl
 }
 
 type EC2ExportClientVpnClientConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4321,6 +4616,7 @@ func (r *EC2ExportClientVpnClientConfigurationFuture) Get(ctx workflow.Context) 
 }
 
 type EC2ExportImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4331,6 +4627,7 @@ func (r *EC2ExportImageFuture) Get(ctx workflow.Context) (*ec2.ExportImageOutput
 }
 
 type EC2ExportTransitGatewayRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4341,6 +4638,7 @@ func (r *EC2ExportTransitGatewayRoutesFuture) Get(ctx workflow.Context) (*ec2.Ex
 }
 
 type EC2GetAssociatedIpv6PoolCidrsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4351,6 +4649,7 @@ func (r *EC2GetAssociatedIpv6PoolCidrsFuture) Get(ctx workflow.Context) (*ec2.Ge
 }
 
 type EC2GetCapacityReservationUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4361,6 +4660,7 @@ func (r *EC2GetCapacityReservationUsageFuture) Get(ctx workflow.Context) (*ec2.G
 }
 
 type EC2GetCoipPoolUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4371,6 +4671,7 @@ func (r *EC2GetCoipPoolUsageFuture) Get(ctx workflow.Context) (*ec2.GetCoipPoolU
 }
 
 type EC2GetConsoleOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4381,6 +4682,7 @@ func (r *EC2GetConsoleOutputFuture) Get(ctx workflow.Context) (*ec2.GetConsoleOu
 }
 
 type EC2GetConsoleScreenshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4391,6 +4693,7 @@ func (r *EC2GetConsoleScreenshotFuture) Get(ctx workflow.Context) (*ec2.GetConso
 }
 
 type EC2GetDefaultCreditSpecificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4401,6 +4704,7 @@ func (r *EC2GetDefaultCreditSpecificationFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2GetEbsDefaultKmsKeyIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4411,6 +4715,7 @@ func (r *EC2GetEbsDefaultKmsKeyIdFuture) Get(ctx workflow.Context) (*ec2.GetEbsD
 }
 
 type EC2GetEbsEncryptionByDefaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4421,6 +4726,7 @@ func (r *EC2GetEbsEncryptionByDefaultFuture) Get(ctx workflow.Context) (*ec2.Get
 }
 
 type EC2GetGroupsForCapacityReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4431,6 +4737,7 @@ func (r *EC2GetGroupsForCapacityReservationFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2GetHostReservationPurchasePreviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4441,6 +4748,7 @@ func (r *EC2GetHostReservationPurchasePreviewFuture) Get(ctx workflow.Context) (
 }
 
 type EC2GetLaunchTemplateDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4451,6 +4759,7 @@ func (r *EC2GetLaunchTemplateDataFuture) Get(ctx workflow.Context) (*ec2.GetLaun
 }
 
 type EC2GetManagedPrefixListAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4461,6 +4770,7 @@ func (r *EC2GetManagedPrefixListAssociationsFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2GetManagedPrefixListEntriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4471,6 +4781,7 @@ func (r *EC2GetManagedPrefixListEntriesFuture) Get(ctx workflow.Context) (*ec2.G
 }
 
 type EC2GetPasswordDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4481,6 +4792,7 @@ func (r *EC2GetPasswordDataFuture) Get(ctx workflow.Context) (*ec2.GetPasswordDa
 }
 
 type EC2GetReservedInstancesExchangeQuoteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4491,6 +4803,7 @@ func (r *EC2GetReservedInstancesExchangeQuoteFuture) Get(ctx workflow.Context) (
 }
 
 type EC2GetTransitGatewayAttachmentPropagationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4501,6 +4814,7 @@ func (r *EC2GetTransitGatewayAttachmentPropagationsFuture) Get(ctx workflow.Cont
 }
 
 type EC2GetTransitGatewayMulticastDomainAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4511,6 +4825,7 @@ func (r *EC2GetTransitGatewayMulticastDomainAssociationsFuture) Get(ctx workflow
 }
 
 type EC2GetTransitGatewayPrefixListReferencesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4521,6 +4836,7 @@ func (r *EC2GetTransitGatewayPrefixListReferencesFuture) Get(ctx workflow.Contex
 }
 
 type EC2GetTransitGatewayRouteTableAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4531,6 +4847,7 @@ func (r *EC2GetTransitGatewayRouteTableAssociationsFuture) Get(ctx workflow.Cont
 }
 
 type EC2GetTransitGatewayRouteTablePropagationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4541,6 +4858,7 @@ func (r *EC2GetTransitGatewayRouteTablePropagationsFuture) Get(ctx workflow.Cont
 }
 
 type EC2ImportClientVpnClientCertificateRevocationListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4551,6 +4869,7 @@ func (r *EC2ImportClientVpnClientCertificateRevocationListFuture) Get(ctx workfl
 }
 
 type EC2ImportImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4561,6 +4880,7 @@ func (r *EC2ImportImageFuture) Get(ctx workflow.Context) (*ec2.ImportImageOutput
 }
 
 type EC2ImportInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4571,6 +4891,7 @@ func (r *EC2ImportInstanceFuture) Get(ctx workflow.Context) (*ec2.ImportInstance
 }
 
 type EC2ImportKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4581,6 +4902,7 @@ func (r *EC2ImportKeyPairFuture) Get(ctx workflow.Context) (*ec2.ImportKeyPairOu
 }
 
 type EC2ImportSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4591,6 +4913,7 @@ func (r *EC2ImportSnapshotFuture) Get(ctx workflow.Context) (*ec2.ImportSnapshot
 }
 
 type EC2ImportVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4601,6 +4924,7 @@ func (r *EC2ImportVolumeFuture) Get(ctx workflow.Context) (*ec2.ImportVolumeOutp
 }
 
 type EC2ModifyAvailabilityZoneGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4611,6 +4935,7 @@ func (r *EC2ModifyAvailabilityZoneGroupFuture) Get(ctx workflow.Context) (*ec2.M
 }
 
 type EC2ModifyCapacityReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4621,6 +4946,7 @@ func (r *EC2ModifyCapacityReservationFuture) Get(ctx workflow.Context) (*ec2.Mod
 }
 
 type EC2ModifyClientVpnEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4631,6 +4957,7 @@ func (r *EC2ModifyClientVpnEndpointFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifyDefaultCreditSpecificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4641,6 +4968,7 @@ func (r *EC2ModifyDefaultCreditSpecificationFuture) Get(ctx workflow.Context) (*
 }
 
 type EC2ModifyEbsDefaultKmsKeyIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4651,6 +4979,7 @@ func (r *EC2ModifyEbsDefaultKmsKeyIdFuture) Get(ctx workflow.Context) (*ec2.Modi
 }
 
 type EC2ModifyFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4661,6 +4990,7 @@ func (r *EC2ModifyFleetFuture) Get(ctx workflow.Context) (*ec2.ModifyFleetOutput
 }
 
 type EC2ModifyFpgaImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4671,6 +5001,7 @@ func (r *EC2ModifyFpgaImageAttributeFuture) Get(ctx workflow.Context) (*ec2.Modi
 }
 
 type EC2ModifyHostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4681,6 +5012,7 @@ func (r *EC2ModifyHostsFuture) Get(ctx workflow.Context) (*ec2.ModifyHostsOutput
 }
 
 type EC2ModifyIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4691,6 +5023,7 @@ func (r *EC2ModifyIdFormatFuture) Get(ctx workflow.Context) (*ec2.ModifyIdFormat
 }
 
 type EC2ModifyIdentityIdFormatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4701,6 +5034,7 @@ func (r *EC2ModifyIdentityIdFormatFuture) Get(ctx workflow.Context) (*ec2.Modify
 }
 
 type EC2ModifyImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4711,6 +5045,7 @@ func (r *EC2ModifyImageAttributeFuture) Get(ctx workflow.Context) (*ec2.ModifyIm
 }
 
 type EC2ModifyInstanceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4721,6 +5056,7 @@ func (r *EC2ModifyInstanceAttributeFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifyInstanceCapacityReservationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4731,6 +5067,7 @@ func (r *EC2ModifyInstanceCapacityReservationAttributesFuture) Get(ctx workflow.
 }
 
 type EC2ModifyInstanceCreditSpecificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4741,6 +5078,7 @@ func (r *EC2ModifyInstanceCreditSpecificationFuture) Get(ctx workflow.Context) (
 }
 
 type EC2ModifyInstanceEventStartTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4751,6 +5089,7 @@ func (r *EC2ModifyInstanceEventStartTimeFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2ModifyInstanceMetadataOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4761,6 +5100,7 @@ func (r *EC2ModifyInstanceMetadataOptionsFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2ModifyInstancePlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4771,6 +5111,7 @@ func (r *EC2ModifyInstancePlacementFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifyLaunchTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4781,6 +5122,7 @@ func (r *EC2ModifyLaunchTemplateFuture) Get(ctx workflow.Context) (*ec2.ModifyLa
 }
 
 type EC2ModifyManagedPrefixListFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4791,6 +5133,7 @@ func (r *EC2ModifyManagedPrefixListFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifyNetworkInterfaceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4801,6 +5144,7 @@ func (r *EC2ModifyNetworkInterfaceAttributeFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2ModifyReservedInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4811,6 +5155,7 @@ func (r *EC2ModifyReservedInstancesFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifySnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4821,6 +5166,7 @@ func (r *EC2ModifySnapshotAttributeFuture) Get(ctx workflow.Context) (*ec2.Modif
 }
 
 type EC2ModifySubnetAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4831,6 +5177,7 @@ func (r *EC2ModifySubnetAttributeFuture) Get(ctx workflow.Context) (*ec2.ModifyS
 }
 
 type EC2ModifyTrafficMirrorFilterNetworkServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4841,6 +5188,7 @@ func (r *EC2ModifyTrafficMirrorFilterNetworkServicesFuture) Get(ctx workflow.Con
 }
 
 type EC2ModifyTrafficMirrorFilterRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4851,6 +5199,7 @@ func (r *EC2ModifyTrafficMirrorFilterRuleFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2ModifyTrafficMirrorSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4861,6 +5210,7 @@ func (r *EC2ModifyTrafficMirrorSessionFuture) Get(ctx workflow.Context) (*ec2.Mo
 }
 
 type EC2ModifyTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4871,6 +5221,7 @@ func (r *EC2ModifyTransitGatewayFuture) Get(ctx workflow.Context) (*ec2.ModifyTr
 }
 
 type EC2ModifyTransitGatewayPrefixListReferenceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4881,6 +5232,7 @@ func (r *EC2ModifyTransitGatewayPrefixListReferenceFuture) Get(ctx workflow.Cont
 }
 
 type EC2ModifyTransitGatewayVpcAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4891,6 +5243,7 @@ func (r *EC2ModifyTransitGatewayVpcAttachmentFuture) Get(ctx workflow.Context) (
 }
 
 type EC2ModifyVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4901,6 +5254,7 @@ func (r *EC2ModifyVolumeFuture) Get(ctx workflow.Context) (*ec2.ModifyVolumeOutp
 }
 
 type EC2ModifyVolumeAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4911,6 +5265,7 @@ func (r *EC2ModifyVolumeAttributeFuture) Get(ctx workflow.Context) (*ec2.ModifyV
 }
 
 type EC2ModifyVpcAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4921,6 +5276,7 @@ func (r *EC2ModifyVpcAttributeFuture) Get(ctx workflow.Context) (*ec2.ModifyVpcA
 }
 
 type EC2ModifyVpcEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4931,6 +5287,7 @@ func (r *EC2ModifyVpcEndpointFuture) Get(ctx workflow.Context) (*ec2.ModifyVpcEn
 }
 
 type EC2ModifyVpcEndpointConnectionNotificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4941,6 +5298,7 @@ func (r *EC2ModifyVpcEndpointConnectionNotificationFuture) Get(ctx workflow.Cont
 }
 
 type EC2ModifyVpcEndpointServiceConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4951,6 +5309,7 @@ func (r *EC2ModifyVpcEndpointServiceConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type EC2ModifyVpcEndpointServicePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4961,6 +5320,7 @@ func (r *EC2ModifyVpcEndpointServicePermissionsFuture) Get(ctx workflow.Context)
 }
 
 type EC2ModifyVpcPeeringConnectionOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4971,6 +5331,7 @@ func (r *EC2ModifyVpcPeeringConnectionOptionsFuture) Get(ctx workflow.Context) (
 }
 
 type EC2ModifyVpcTenancyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4981,6 +5342,7 @@ func (r *EC2ModifyVpcTenancyFuture) Get(ctx workflow.Context) (*ec2.ModifyVpcTen
 }
 
 type EC2ModifyVpnConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -4991,6 +5353,7 @@ func (r *EC2ModifyVpnConnectionFuture) Get(ctx workflow.Context) (*ec2.ModifyVpn
 }
 
 type EC2ModifyVpnConnectionOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5001,6 +5364,7 @@ func (r *EC2ModifyVpnConnectionOptionsFuture) Get(ctx workflow.Context) (*ec2.Mo
 }
 
 type EC2ModifyVpnTunnelCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5011,6 +5375,7 @@ func (r *EC2ModifyVpnTunnelCertificateFuture) Get(ctx workflow.Context) (*ec2.Mo
 }
 
 type EC2ModifyVpnTunnelOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5021,6 +5386,7 @@ func (r *EC2ModifyVpnTunnelOptionsFuture) Get(ctx workflow.Context) (*ec2.Modify
 }
 
 type EC2MonitorInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5031,6 +5397,7 @@ func (r *EC2MonitorInstancesFuture) Get(ctx workflow.Context) (*ec2.MonitorInsta
 }
 
 type EC2MoveAddressToVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5041,6 +5408,7 @@ func (r *EC2MoveAddressToVpcFuture) Get(ctx workflow.Context) (*ec2.MoveAddressT
 }
 
 type EC2ProvisionByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5051,6 +5419,7 @@ func (r *EC2ProvisionByoipCidrFuture) Get(ctx workflow.Context) (*ec2.ProvisionB
 }
 
 type EC2PurchaseHostReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5061,6 +5430,7 @@ func (r *EC2PurchaseHostReservationFuture) Get(ctx workflow.Context) (*ec2.Purch
 }
 
 type EC2PurchaseReservedInstancesOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5071,6 +5441,7 @@ func (r *EC2PurchaseReservedInstancesOfferingFuture) Get(ctx workflow.Context) (
 }
 
 type EC2PurchaseScheduledInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5081,6 +5452,7 @@ func (r *EC2PurchaseScheduledInstancesFuture) Get(ctx workflow.Context) (*ec2.Pu
 }
 
 type EC2RebootInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5091,6 +5463,7 @@ func (r *EC2RebootInstancesFuture) Get(ctx workflow.Context) (*ec2.RebootInstanc
 }
 
 type EC2RegisterImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5101,6 +5474,7 @@ func (r *EC2RegisterImageFuture) Get(ctx workflow.Context) (*ec2.RegisterImageOu
 }
 
 type EC2RegisterInstanceEventNotificationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5111,6 +5485,7 @@ func (r *EC2RegisterInstanceEventNotificationAttributesFuture) Get(ctx workflow.
 }
 
 type EC2RegisterTransitGatewayMulticastGroupMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5121,6 +5496,7 @@ func (r *EC2RegisterTransitGatewayMulticastGroupMembersFuture) Get(ctx workflow.
 }
 
 type EC2RegisterTransitGatewayMulticastGroupSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5131,6 +5507,7 @@ func (r *EC2RegisterTransitGatewayMulticastGroupSourcesFuture) Get(ctx workflow.
 }
 
 type EC2RejectTransitGatewayPeeringAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5141,6 +5518,7 @@ func (r *EC2RejectTransitGatewayPeeringAttachmentFuture) Get(ctx workflow.Contex
 }
 
 type EC2RejectTransitGatewayVpcAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5151,6 +5529,7 @@ func (r *EC2RejectTransitGatewayVpcAttachmentFuture) Get(ctx workflow.Context) (
 }
 
 type EC2RejectVpcEndpointConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5161,6 +5540,7 @@ func (r *EC2RejectVpcEndpointConnectionsFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2RejectVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5171,6 +5551,7 @@ func (r *EC2RejectVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*ec2.Re
 }
 
 type EC2ReleaseAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5181,6 +5562,7 @@ func (r *EC2ReleaseAddressFuture) Get(ctx workflow.Context) (*ec2.ReleaseAddress
 }
 
 type EC2ReleaseHostsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5191,6 +5573,7 @@ func (r *EC2ReleaseHostsFuture) Get(ctx workflow.Context) (*ec2.ReleaseHostsOutp
 }
 
 type EC2ReplaceIamInstanceProfileAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5201,6 +5584,7 @@ func (r *EC2ReplaceIamInstanceProfileAssociationFuture) Get(ctx workflow.Context
 }
 
 type EC2ReplaceNetworkAclAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5211,6 +5595,7 @@ func (r *EC2ReplaceNetworkAclAssociationFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2ReplaceNetworkAclEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5221,6 +5606,7 @@ func (r *EC2ReplaceNetworkAclEntryFuture) Get(ctx workflow.Context) (*ec2.Replac
 }
 
 type EC2ReplaceRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5231,6 +5617,7 @@ func (r *EC2ReplaceRouteFuture) Get(ctx workflow.Context) (*ec2.ReplaceRouteOutp
 }
 
 type EC2ReplaceRouteTableAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5241,6 +5628,7 @@ func (r *EC2ReplaceRouteTableAssociationFuture) Get(ctx workflow.Context) (*ec2.
 }
 
 type EC2ReplaceTransitGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5251,6 +5639,7 @@ func (r *EC2ReplaceTransitGatewayRouteFuture) Get(ctx workflow.Context) (*ec2.Re
 }
 
 type EC2ReportInstanceStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5261,6 +5650,7 @@ func (r *EC2ReportInstanceStatusFuture) Get(ctx workflow.Context) (*ec2.ReportIn
 }
 
 type EC2RequestSpotFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5271,6 +5661,7 @@ func (r *EC2RequestSpotFleetFuture) Get(ctx workflow.Context) (*ec2.RequestSpotF
 }
 
 type EC2RequestSpotInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5281,6 +5672,7 @@ func (r *EC2RequestSpotInstancesFuture) Get(ctx workflow.Context) (*ec2.RequestS
 }
 
 type EC2ResetEbsDefaultKmsKeyIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5291,6 +5683,7 @@ func (r *EC2ResetEbsDefaultKmsKeyIdFuture) Get(ctx workflow.Context) (*ec2.Reset
 }
 
 type EC2ResetFpgaImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5301,6 +5694,7 @@ func (r *EC2ResetFpgaImageAttributeFuture) Get(ctx workflow.Context) (*ec2.Reset
 }
 
 type EC2ResetImageAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5311,6 +5705,7 @@ func (r *EC2ResetImageAttributeFuture) Get(ctx workflow.Context) (*ec2.ResetImag
 }
 
 type EC2ResetInstanceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5321,6 +5716,7 @@ func (r *EC2ResetInstanceAttributeFuture) Get(ctx workflow.Context) (*ec2.ResetI
 }
 
 type EC2ResetNetworkInterfaceAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5331,6 +5727,7 @@ func (r *EC2ResetNetworkInterfaceAttributeFuture) Get(ctx workflow.Context) (*ec
 }
 
 type EC2ResetSnapshotAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5341,6 +5738,7 @@ func (r *EC2ResetSnapshotAttributeFuture) Get(ctx workflow.Context) (*ec2.ResetS
 }
 
 type EC2RestoreAddressToClassicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5351,6 +5749,7 @@ func (r *EC2RestoreAddressToClassicFuture) Get(ctx workflow.Context) (*ec2.Resto
 }
 
 type EC2RestoreManagedPrefixListVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5361,6 +5760,7 @@ func (r *EC2RestoreManagedPrefixListVersionFuture) Get(ctx workflow.Context) (*e
 }
 
 type EC2RevokeClientVpnIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5371,6 +5771,7 @@ func (r *EC2RevokeClientVpnIngressFuture) Get(ctx workflow.Context) (*ec2.Revoke
 }
 
 type EC2RevokeSecurityGroupEgressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5381,6 +5782,7 @@ func (r *EC2RevokeSecurityGroupEgressFuture) Get(ctx workflow.Context) (*ec2.Rev
 }
 
 type EC2RevokeSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5391,6 +5793,7 @@ func (r *EC2RevokeSecurityGroupIngressFuture) Get(ctx workflow.Context) (*ec2.Re
 }
 
 type EC2RunInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5401,6 +5804,7 @@ func (r *EC2RunInstancesFuture) Get(ctx workflow.Context) (*ec2.Reservation, err
 }
 
 type EC2RunScheduledInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5411,6 +5815,7 @@ func (r *EC2RunScheduledInstancesFuture) Get(ctx workflow.Context) (*ec2.RunSche
 }
 
 type EC2SearchLocalGatewayRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5421,6 +5826,7 @@ func (r *EC2SearchLocalGatewayRoutesFuture) Get(ctx workflow.Context) (*ec2.Sear
 }
 
 type EC2SearchTransitGatewayMulticastGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5431,6 +5837,7 @@ func (r *EC2SearchTransitGatewayMulticastGroupsFuture) Get(ctx workflow.Context)
 }
 
 type EC2SearchTransitGatewayRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5441,6 +5848,7 @@ func (r *EC2SearchTransitGatewayRoutesFuture) Get(ctx workflow.Context) (*ec2.Se
 }
 
 type EC2SendDiagnosticInterruptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5451,6 +5859,7 @@ func (r *EC2SendDiagnosticInterruptFuture) Get(ctx workflow.Context) (*ec2.SendD
 }
 
 type EC2StartInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5461,6 +5870,7 @@ func (r *EC2StartInstancesFuture) Get(ctx workflow.Context) (*ec2.StartInstances
 }
 
 type EC2StartVpcEndpointServicePrivateDnsVerificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5471,6 +5881,7 @@ func (r *EC2StartVpcEndpointServicePrivateDnsVerificationFuture) Get(ctx workflo
 }
 
 type EC2StopInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5481,6 +5892,7 @@ func (r *EC2StopInstancesFuture) Get(ctx workflow.Context) (*ec2.StopInstancesOu
 }
 
 type EC2TerminateClientVpnConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5491,6 +5903,7 @@ func (r *EC2TerminateClientVpnConnectionsFuture) Get(ctx workflow.Context) (*ec2
 }
 
 type EC2TerminateInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5501,6 +5914,7 @@ func (r *EC2TerminateInstancesFuture) Get(ctx workflow.Context) (*ec2.TerminateI
 }
 
 type EC2UnassignIpv6AddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5511,6 +5925,7 @@ func (r *EC2UnassignIpv6AddressesFuture) Get(ctx workflow.Context) (*ec2.Unassig
 }
 
 type EC2UnassignPrivateIpAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5521,6 +5936,7 @@ func (r *EC2UnassignPrivateIpAddressesFuture) Get(ctx workflow.Context) (*ec2.Un
 }
 
 type EC2UnmonitorInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5531,6 +5947,7 @@ func (r *EC2UnmonitorInstancesFuture) Get(ctx workflow.Context) (*ec2.UnmonitorI
 }
 
 type EC2UpdateSecurityGroupRuleDescriptionsEgressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5541,6 +5958,7 @@ func (r *EC2UpdateSecurityGroupRuleDescriptionsEgressFuture) Get(ctx workflow.Co
 }
 
 type EC2UpdateSecurityGroupRuleDescriptionsIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -5551,6 +5969,7 @@ func (r *EC2UpdateSecurityGroupRuleDescriptionsIngressFuture) Get(ctx workflow.C
 }
 
 type EC2WithdrawByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

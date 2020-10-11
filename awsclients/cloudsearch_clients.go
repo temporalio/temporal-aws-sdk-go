@@ -96,6 +96,7 @@ func NewCloudSearchStub() CloudSearchClient {
 }
 
 type CloudSearchBuildSuggestersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +107,7 @@ func (r *CloudSearchBuildSuggestersFuture) Get(ctx workflow.Context) (*cloudsear
 }
 
 type CloudSearchCreateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +118,7 @@ func (r *CloudSearchCreateDomainFuture) Get(ctx workflow.Context) (*cloudsearch.
 }
 
 type CloudSearchDefineAnalysisSchemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +129,7 @@ func (r *CloudSearchDefineAnalysisSchemeFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudSearchDefineExpressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +140,7 @@ func (r *CloudSearchDefineExpressionFuture) Get(ctx workflow.Context) (*cloudsea
 }
 
 type CloudSearchDefineIndexFieldFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +151,7 @@ func (r *CloudSearchDefineIndexFieldFuture) Get(ctx workflow.Context) (*cloudsea
 }
 
 type CloudSearchDefineSuggesterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +162,7 @@ func (r *CloudSearchDefineSuggesterFuture) Get(ctx workflow.Context) (*cloudsear
 }
 
 type CloudSearchDeleteAnalysisSchemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +173,7 @@ func (r *CloudSearchDeleteAnalysisSchemeFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudSearchDeleteDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +184,7 @@ func (r *CloudSearchDeleteDomainFuture) Get(ctx workflow.Context) (*cloudsearch.
 }
 
 type CloudSearchDeleteExpressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +195,7 @@ func (r *CloudSearchDeleteExpressionFuture) Get(ctx workflow.Context) (*cloudsea
 }
 
 type CloudSearchDeleteIndexFieldFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +206,7 @@ func (r *CloudSearchDeleteIndexFieldFuture) Get(ctx workflow.Context) (*cloudsea
 }
 
 type CloudSearchDeleteSuggesterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +217,7 @@ func (r *CloudSearchDeleteSuggesterFuture) Get(ctx workflow.Context) (*cloudsear
 }
 
 type CloudSearchDescribeAnalysisSchemesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +228,7 @@ func (r *CloudSearchDescribeAnalysisSchemesFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudSearchDescribeAvailabilityOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +239,7 @@ func (r *CloudSearchDescribeAvailabilityOptionsFuture) Get(ctx workflow.Context)
 }
 
 type CloudSearchDescribeDomainEndpointOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +250,7 @@ func (r *CloudSearchDescribeDomainEndpointOptionsFuture) Get(ctx workflow.Contex
 }
 
 type CloudSearchDescribeDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +261,7 @@ func (r *CloudSearchDescribeDomainsFuture) Get(ctx workflow.Context) (*cloudsear
 }
 
 type CloudSearchDescribeExpressionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +272,7 @@ func (r *CloudSearchDescribeExpressionsFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudSearchDescribeIndexFieldsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +283,7 @@ func (r *CloudSearchDescribeIndexFieldsFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudSearchDescribeScalingParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +294,7 @@ func (r *CloudSearchDescribeScalingParametersFuture) Get(ctx workflow.Context) (
 }
 
 type CloudSearchDescribeServiceAccessPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +305,7 @@ func (r *CloudSearchDescribeServiceAccessPoliciesFuture) Get(ctx workflow.Contex
 }
 
 type CloudSearchDescribeSuggestersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +316,7 @@ func (r *CloudSearchDescribeSuggestersFuture) Get(ctx workflow.Context) (*clouds
 }
 
 type CloudSearchIndexDocumentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +327,7 @@ func (r *CloudSearchIndexDocumentsFuture) Get(ctx workflow.Context) (*cloudsearc
 }
 
 type CloudSearchListDomainNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +338,7 @@ func (r *CloudSearchListDomainNamesFuture) Get(ctx workflow.Context) (*cloudsear
 }
 
 type CloudSearchUpdateAvailabilityOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +349,7 @@ func (r *CloudSearchUpdateAvailabilityOptionsFuture) Get(ctx workflow.Context) (
 }
 
 type CloudSearchUpdateDomainEndpointOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +360,7 @@ func (r *CloudSearchUpdateDomainEndpointOptionsFuture) Get(ctx workflow.Context)
 }
 
 type CloudSearchUpdateScalingParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +371,7 @@ func (r *CloudSearchUpdateScalingParametersFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudSearchUpdateServiceAccessPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -84,6 +84,7 @@ func NewMQStub() MQClient {
 }
 
 type MQCreateBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +95,7 @@ func (r *MQCreateBrokerFuture) Get(ctx workflow.Context) (*mq.CreateBrokerRespon
 }
 
 type MQCreateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +106,7 @@ func (r *MQCreateConfigurationFuture) Get(ctx workflow.Context) (*mq.CreateConfi
 }
 
 type MQCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +117,7 @@ func (r *MQCreateTagsFuture) Get(ctx workflow.Context) (*mq.CreateTagsOutput, er
 }
 
 type MQCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +128,7 @@ func (r *MQCreateUserFuture) Get(ctx workflow.Context) (*mq.CreateUserOutput, er
 }
 
 type MQDeleteBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +139,7 @@ func (r *MQDeleteBrokerFuture) Get(ctx workflow.Context) (*mq.DeleteBrokerRespon
 }
 
 type MQDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +150,7 @@ func (r *MQDeleteTagsFuture) Get(ctx workflow.Context) (*mq.DeleteTagsOutput, er
 }
 
 type MQDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +161,7 @@ func (r *MQDeleteUserFuture) Get(ctx workflow.Context) (*mq.DeleteUserOutput, er
 }
 
 type MQDescribeBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +172,7 @@ func (r *MQDescribeBrokerFuture) Get(ctx workflow.Context) (*mq.DescribeBrokerRe
 }
 
 type MQDescribeBrokerEngineTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +183,7 @@ func (r *MQDescribeBrokerEngineTypesFuture) Get(ctx workflow.Context) (*mq.Descr
 }
 
 type MQDescribeBrokerInstanceOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +194,7 @@ func (r *MQDescribeBrokerInstanceOptionsFuture) Get(ctx workflow.Context) (*mq.D
 }
 
 type MQDescribeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +205,7 @@ func (r *MQDescribeConfigurationFuture) Get(ctx workflow.Context) (*mq.DescribeC
 }
 
 type MQDescribeConfigurationRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +216,7 @@ func (r *MQDescribeConfigurationRevisionFuture) Get(ctx workflow.Context) (*mq.D
 }
 
 type MQDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +227,7 @@ func (r *MQDescribeUserFuture) Get(ctx workflow.Context) (*mq.DescribeUserRespon
 }
 
 type MQListBrokersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +238,7 @@ func (r *MQListBrokersFuture) Get(ctx workflow.Context) (*mq.ListBrokersResponse
 }
 
 type MQListConfigurationRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +249,7 @@ func (r *MQListConfigurationRevisionsFuture) Get(ctx workflow.Context) (*mq.List
 }
 
 type MQListConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +260,7 @@ func (r *MQListConfigurationsFuture) Get(ctx workflow.Context) (*mq.ListConfigur
 }
 
 type MQListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +271,7 @@ func (r *MQListTagsFuture) Get(ctx workflow.Context) (*mq.ListTagsOutput, error)
 }
 
 type MQListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +282,7 @@ func (r *MQListUsersFuture) Get(ctx workflow.Context) (*mq.ListUsersResponse, er
 }
 
 type MQRebootBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +293,7 @@ func (r *MQRebootBrokerFuture) Get(ctx workflow.Context) (*mq.RebootBrokerOutput
 }
 
 type MQUpdateBrokerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +304,7 @@ func (r *MQUpdateBrokerFuture) Get(ctx workflow.Context) (*mq.UpdateBrokerRespon
 }
 
 type MQUpdateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +315,7 @@ func (r *MQUpdateConfigurationFuture) Get(ctx workflow.Context) (*mq.UpdateConfi
 }
 
 type MQUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

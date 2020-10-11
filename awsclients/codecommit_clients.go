@@ -237,6 +237,7 @@ func NewCodeCommitStub() CodeCommitClient {
 }
 
 type CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +248,7 @@ func (r *CodeCommitAssociateApprovalRuleTemplateWithRepositoryFuture) Get(ctx wo
 }
 
 type CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +259,7 @@ func (r *CodeCommitBatchAssociateApprovalRuleTemplateWithRepositoriesFuture) Get
 }
 
 type CodeCommitBatchDescribeMergeConflictsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +270,7 @@ func (r *CodeCommitBatchDescribeMergeConflictsFuture) Get(ctx workflow.Context) 
 }
 
 type CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +281,7 @@ func (r *CodeCommitBatchDisassociateApprovalRuleTemplateFromRepositoriesFuture) 
 }
 
 type CodeCommitBatchGetCommitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +292,7 @@ func (r *CodeCommitBatchGetCommitsFuture) Get(ctx workflow.Context) (*codecommit
 }
 
 type CodeCommitBatchGetRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +303,7 @@ func (r *CodeCommitBatchGetRepositoriesFuture) Get(ctx workflow.Context) (*codec
 }
 
 type CodeCommitCreateApprovalRuleTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +314,7 @@ func (r *CodeCommitCreateApprovalRuleTemplateFuture) Get(ctx workflow.Context) (
 }
 
 type CodeCommitCreateBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +325,7 @@ func (r *CodeCommitCreateBranchFuture) Get(ctx workflow.Context) (*codecommit.Cr
 }
 
 type CodeCommitCreateCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +336,7 @@ func (r *CodeCommitCreateCommitFuture) Get(ctx workflow.Context) (*codecommit.Cr
 }
 
 type CodeCommitCreatePullRequestApprovalRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +347,7 @@ func (r *CodeCommitCreatePullRequestApprovalRuleFuture) Get(ctx workflow.Context
 }
 
 type CodeCommitCreateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +358,7 @@ func (r *CodeCommitCreateRepositoryFuture) Get(ctx workflow.Context) (*codecommi
 }
 
 type CodeCommitCreateUnreferencedMergeCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +369,7 @@ func (r *CodeCommitCreateUnreferencedMergeCommitFuture) Get(ctx workflow.Context
 }
 
 type CodeCommitDeleteApprovalRuleTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +380,7 @@ func (r *CodeCommitDeleteApprovalRuleTemplateFuture) Get(ctx workflow.Context) (
 }
 
 type CodeCommitDeleteBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +391,7 @@ func (r *CodeCommitDeleteBranchFuture) Get(ctx workflow.Context) (*codecommit.De
 }
 
 type CodeCommitDeleteCommentContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +402,7 @@ func (r *CodeCommitDeleteCommentContentFuture) Get(ctx workflow.Context) (*codec
 }
 
 type CodeCommitDeleteFileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +413,7 @@ func (r *CodeCommitDeleteFileFuture) Get(ctx workflow.Context) (*codecommit.Dele
 }
 
 type CodeCommitDeletePullRequestApprovalRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +424,7 @@ func (r *CodeCommitDeletePullRequestApprovalRuleFuture) Get(ctx workflow.Context
 }
 
 type CodeCommitDeleteRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +435,7 @@ func (r *CodeCommitDeleteRepositoryFuture) Get(ctx workflow.Context) (*codecommi
 }
 
 type CodeCommitDescribeMergeConflictsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +446,7 @@ func (r *CodeCommitDescribeMergeConflictsFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeCommitDescribePullRequestEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +457,7 @@ func (r *CodeCommitDescribePullRequestEventsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +468,7 @@ func (r *CodeCommitDisassociateApprovalRuleTemplateFromRepositoryFuture) Get(ctx
 }
 
 type CodeCommitEvaluatePullRequestApprovalRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +479,7 @@ func (r *CodeCommitEvaluatePullRequestApprovalRulesFuture) Get(ctx workflow.Cont
 }
 
 type CodeCommitGetApprovalRuleTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +490,7 @@ func (r *CodeCommitGetApprovalRuleTemplateFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeCommitGetBlobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +501,7 @@ func (r *CodeCommitGetBlobFuture) Get(ctx workflow.Context) (*codecommit.GetBlob
 }
 
 type CodeCommitGetBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +512,7 @@ func (r *CodeCommitGetBranchFuture) Get(ctx workflow.Context) (*codecommit.GetBr
 }
 
 type CodeCommitGetCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +523,7 @@ func (r *CodeCommitGetCommentFuture) Get(ctx workflow.Context) (*codecommit.GetC
 }
 
 type CodeCommitGetCommentReactionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +534,7 @@ func (r *CodeCommitGetCommentReactionsFuture) Get(ctx workflow.Context) (*codeco
 }
 
 type CodeCommitGetCommentsForComparedCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +545,7 @@ func (r *CodeCommitGetCommentsForComparedCommitFuture) Get(ctx workflow.Context)
 }
 
 type CodeCommitGetCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +556,7 @@ func (r *CodeCommitGetCommitFuture) Get(ctx workflow.Context) (*codecommit.GetCo
 }
 
 type CodeCommitGetDifferencesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +567,7 @@ func (r *CodeCommitGetDifferencesFuture) Get(ctx workflow.Context) (*codecommit.
 }
 
 type CodeCommitGetFileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +578,7 @@ func (r *CodeCommitGetFileFuture) Get(ctx workflow.Context) (*codecommit.GetFile
 }
 
 type CodeCommitGetFolderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +589,7 @@ func (r *CodeCommitGetFolderFuture) Get(ctx workflow.Context) (*codecommit.GetFo
 }
 
 type CodeCommitGetMergeCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +600,7 @@ func (r *CodeCommitGetMergeCommitFuture) Get(ctx workflow.Context) (*codecommit.
 }
 
 type CodeCommitGetMergeConflictsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -577,6 +611,7 @@ func (r *CodeCommitGetMergeConflictsFuture) Get(ctx workflow.Context) (*codecomm
 }
 
 type CodeCommitGetMergeOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -587,6 +622,7 @@ func (r *CodeCommitGetMergeOptionsFuture) Get(ctx workflow.Context) (*codecommit
 }
 
 type CodeCommitGetPullRequestApprovalStatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -597,6 +633,7 @@ func (r *CodeCommitGetPullRequestApprovalStatesFuture) Get(ctx workflow.Context)
 }
 
 type CodeCommitGetPullRequestOverrideStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -607,6 +644,7 @@ func (r *CodeCommitGetPullRequestOverrideStateFuture) Get(ctx workflow.Context) 
 }
 
 type CodeCommitGetRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -617,6 +655,7 @@ func (r *CodeCommitGetRepositoryFuture) Get(ctx workflow.Context) (*codecommit.G
 }
 
 type CodeCommitGetRepositoryTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -627,6 +666,7 @@ func (r *CodeCommitGetRepositoryTriggersFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeCommitListApprovalRuleTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -637,6 +677,7 @@ func (r *CodeCommitListApprovalRuleTemplatesFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -647,6 +688,7 @@ func (r *CodeCommitListAssociatedApprovalRuleTemplatesForRepositoryFuture) Get(c
 }
 
 type CodeCommitListBranchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -657,6 +699,7 @@ func (r *CodeCommitListBranchesFuture) Get(ctx workflow.Context) (*codecommit.Li
 }
 
 type CodeCommitListPullRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -667,6 +710,7 @@ func (r *CodeCommitListPullRequestsFuture) Get(ctx workflow.Context) (*codecommi
 }
 
 type CodeCommitListRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -677,6 +721,7 @@ func (r *CodeCommitListRepositoriesFuture) Get(ctx workflow.Context) (*codecommi
 }
 
 type CodeCommitListRepositoriesForApprovalRuleTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -687,6 +732,7 @@ func (r *CodeCommitListRepositoriesForApprovalRuleTemplateFuture) Get(ctx workfl
 }
 
 type CodeCommitListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -697,6 +743,7 @@ func (r *CodeCommitListTagsForResourceFuture) Get(ctx workflow.Context) (*codeco
 }
 
 type CodeCommitMergeBranchesByFastForwardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -707,6 +754,7 @@ func (r *CodeCommitMergeBranchesByFastForwardFuture) Get(ctx workflow.Context) (
 }
 
 type CodeCommitMergeBranchesBySquashFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -717,6 +765,7 @@ func (r *CodeCommitMergeBranchesBySquashFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeCommitMergeBranchesByThreeWayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -727,6 +776,7 @@ func (r *CodeCommitMergeBranchesByThreeWayFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeCommitMergePullRequestByFastForwardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -737,6 +787,7 @@ func (r *CodeCommitMergePullRequestByFastForwardFuture) Get(ctx workflow.Context
 }
 
 type CodeCommitMergePullRequestBySquashFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -747,6 +798,7 @@ func (r *CodeCommitMergePullRequestBySquashFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeCommitMergePullRequestByThreeWayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -757,6 +809,7 @@ func (r *CodeCommitMergePullRequestByThreeWayFuture) Get(ctx workflow.Context) (
 }
 
 type CodeCommitOverridePullRequestApprovalRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -767,6 +820,7 @@ func (r *CodeCommitOverridePullRequestApprovalRulesFuture) Get(ctx workflow.Cont
 }
 
 type CodeCommitPostCommentForComparedCommitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -777,6 +831,7 @@ func (r *CodeCommitPostCommentForComparedCommitFuture) Get(ctx workflow.Context)
 }
 
 type CodeCommitPostCommentReplyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -787,6 +842,7 @@ func (r *CodeCommitPostCommentReplyFuture) Get(ctx workflow.Context) (*codecommi
 }
 
 type CodeCommitPutCommentReactionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -797,6 +853,7 @@ func (r *CodeCommitPutCommentReactionFuture) Get(ctx workflow.Context) (*codecom
 }
 
 type CodeCommitPutFileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -807,6 +864,7 @@ func (r *CodeCommitPutFileFuture) Get(ctx workflow.Context) (*codecommit.PutFile
 }
 
 type CodeCommitPutRepositoryTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -817,6 +875,7 @@ func (r *CodeCommitPutRepositoryTriggersFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeCommitTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -827,6 +886,7 @@ func (r *CodeCommitTagResourceFuture) Get(ctx workflow.Context) (*codecommit.Tag
 }
 
 type CodeCommitTestRepositoryTriggersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -837,6 +897,7 @@ func (r *CodeCommitTestRepositoryTriggersFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeCommitUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -847,6 +908,7 @@ func (r *CodeCommitUntagResourceFuture) Get(ctx workflow.Context) (*codecommit.U
 }
 
 type CodeCommitUpdateApprovalRuleTemplateContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -857,6 +919,7 @@ func (r *CodeCommitUpdateApprovalRuleTemplateContentFuture) Get(ctx workflow.Con
 }
 
 type CodeCommitUpdateApprovalRuleTemplateDescriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -867,6 +930,7 @@ func (r *CodeCommitUpdateApprovalRuleTemplateDescriptionFuture) Get(ctx workflow
 }
 
 type CodeCommitUpdateApprovalRuleTemplateNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -877,6 +941,7 @@ func (r *CodeCommitUpdateApprovalRuleTemplateNameFuture) Get(ctx workflow.Contex
 }
 
 type CodeCommitUpdateCommentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -887,6 +952,7 @@ func (r *CodeCommitUpdateCommentFuture) Get(ctx workflow.Context) (*codecommit.U
 }
 
 type CodeCommitUpdateDefaultBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -897,6 +963,7 @@ func (r *CodeCommitUpdateDefaultBranchFuture) Get(ctx workflow.Context) (*codeco
 }
 
 type CodeCommitUpdatePullRequestApprovalRuleContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -907,6 +974,7 @@ func (r *CodeCommitUpdatePullRequestApprovalRuleContentFuture) Get(ctx workflow.
 }
 
 type CodeCommitUpdatePullRequestApprovalStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -917,6 +985,7 @@ func (r *CodeCommitUpdatePullRequestApprovalStateFuture) Get(ctx workflow.Contex
 }
 
 type CodeCommitUpdatePullRequestDescriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -927,6 +996,7 @@ func (r *CodeCommitUpdatePullRequestDescriptionFuture) Get(ctx workflow.Context)
 }
 
 type CodeCommitUpdatePullRequestStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -937,6 +1007,7 @@ func (r *CodeCommitUpdatePullRequestStatusFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeCommitUpdatePullRequestTitleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -947,6 +1018,7 @@ func (r *CodeCommitUpdatePullRequestTitleFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeCommitUpdateRepositoryDescriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -957,6 +1029,7 @@ func (r *CodeCommitUpdateRepositoryDescriptionFuture) Get(ctx workflow.Context) 
 }
 
 type CodeCommitUpdateRepositoryNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

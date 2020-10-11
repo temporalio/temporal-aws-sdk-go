@@ -144,6 +144,7 @@ func NewPinpointEmailStub() PinpointEmailClient {
 }
 
 type PinpointEmailCreateConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +155,7 @@ func (r *PinpointEmailCreateConfigurationSetFuture) Get(ctx workflow.Context) (*
 }
 
 type PinpointEmailCreateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +166,7 @@ func (r *PinpointEmailCreateConfigurationSetEventDestinationFuture) Get(ctx work
 }
 
 type PinpointEmailCreateDedicatedIpPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +177,7 @@ func (r *PinpointEmailCreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*p
 }
 
 type PinpointEmailCreateDeliverabilityTestReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +188,7 @@ func (r *PinpointEmailCreateDeliverabilityTestReportFuture) Get(ctx workflow.Con
 }
 
 type PinpointEmailCreateEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +199,7 @@ func (r *PinpointEmailCreateEmailIdentityFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailDeleteConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +210,7 @@ func (r *PinpointEmailDeleteConfigurationSetFuture) Get(ctx workflow.Context) (*
 }
 
 type PinpointEmailDeleteConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +221,7 @@ func (r *PinpointEmailDeleteConfigurationSetEventDestinationFuture) Get(ctx work
 }
 
 type PinpointEmailDeleteDedicatedIpPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +232,7 @@ func (r *PinpointEmailDeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*p
 }
 
 type PinpointEmailDeleteEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +243,7 @@ func (r *PinpointEmailDeleteEmailIdentityFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailGetAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +254,7 @@ func (r *PinpointEmailGetAccountFuture) Get(ctx workflow.Context) (*pinpointemai
 }
 
 type PinpointEmailGetBlacklistReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +265,7 @@ func (r *PinpointEmailGetBlacklistReportsFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailGetConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +276,7 @@ func (r *PinpointEmailGetConfigurationSetFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailGetConfigurationSetEventDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +287,7 @@ func (r *PinpointEmailGetConfigurationSetEventDestinationsFuture) Get(ctx workfl
 }
 
 type PinpointEmailGetDedicatedIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +298,7 @@ func (r *PinpointEmailGetDedicatedIpFuture) Get(ctx workflow.Context) (*pinpoint
 }
 
 type PinpointEmailGetDedicatedIpsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +309,7 @@ func (r *PinpointEmailGetDedicatedIpsFuture) Get(ctx workflow.Context) (*pinpoin
 }
 
 type PinpointEmailGetDeliverabilityDashboardOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +320,7 @@ func (r *PinpointEmailGetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.
 }
 
 type PinpointEmailGetDeliverabilityTestReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +331,7 @@ func (r *PinpointEmailGetDeliverabilityTestReportFuture) Get(ctx workflow.Contex
 }
 
 type PinpointEmailGetDomainDeliverabilityCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +342,7 @@ func (r *PinpointEmailGetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Co
 }
 
 type PinpointEmailGetDomainStatisticsReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +353,7 @@ func (r *PinpointEmailGetDomainStatisticsReportFuture) Get(ctx workflow.Context)
 }
 
 type PinpointEmailGetEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +364,7 @@ func (r *PinpointEmailGetEmailIdentityFuture) Get(ctx workflow.Context) (*pinpoi
 }
 
 type PinpointEmailListConfigurationSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +375,7 @@ func (r *PinpointEmailListConfigurationSetsFuture) Get(ctx workflow.Context) (*p
 }
 
 type PinpointEmailListDedicatedIpPoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +386,7 @@ func (r *PinpointEmailListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*pi
 }
 
 type PinpointEmailListDeliverabilityTestReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +397,7 @@ func (r *PinpointEmailListDeliverabilityTestReportsFuture) Get(ctx workflow.Cont
 }
 
 type PinpointEmailListDomainDeliverabilityCampaignsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +408,7 @@ func (r *PinpointEmailListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.
 }
 
 type PinpointEmailListEmailIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +419,7 @@ func (r *PinpointEmailListEmailIdentitiesFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +430,7 @@ func (r *PinpointEmailListTagsForResourceFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +441,7 @@ func (r *PinpointEmailPutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workf
 }
 
 type PinpointEmailPutAccountSendingAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +452,7 @@ func (r *PinpointEmailPutAccountSendingAttributesFuture) Get(ctx workflow.Contex
 }
 
 type PinpointEmailPutConfigurationSetDeliveryOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +463,7 @@ func (r *PinpointEmailPutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow
 }
 
 type PinpointEmailPutConfigurationSetReputationOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +474,7 @@ func (r *PinpointEmailPutConfigurationSetReputationOptionsFuture) Get(ctx workfl
 }
 
 type PinpointEmailPutConfigurationSetSendingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +485,7 @@ func (r *PinpointEmailPutConfigurationSetSendingOptionsFuture) Get(ctx workflow.
 }
 
 type PinpointEmailPutConfigurationSetTrackingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +496,7 @@ func (r *PinpointEmailPutConfigurationSetTrackingOptionsFuture) Get(ctx workflow
 }
 
 type PinpointEmailPutDedicatedIpInPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +507,7 @@ func (r *PinpointEmailPutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*pi
 }
 
 type PinpointEmailPutDedicatedIpWarmupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +518,7 @@ func (r *PinpointEmailPutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Con
 }
 
 type PinpointEmailPutDeliverabilityDashboardOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +529,7 @@ func (r *PinpointEmailPutDeliverabilityDashboardOptionFuture) Get(ctx workflow.C
 }
 
 type PinpointEmailPutEmailIdentityDkimAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +540,7 @@ func (r *PinpointEmailPutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Con
 }
 
 type PinpointEmailPutEmailIdentityFeedbackAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +551,7 @@ func (r *PinpointEmailPutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow
 }
 
 type PinpointEmailPutEmailIdentityMailFromAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +562,7 @@ func (r *PinpointEmailPutEmailIdentityMailFromAttributesFuture) Get(ctx workflow
 }
 
 type PinpointEmailSendEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +573,7 @@ func (r *PinpointEmailSendEmailFuture) Get(ctx workflow.Context) (*pinpointemail
 }
 
 type PinpointEmailTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +584,7 @@ func (r *PinpointEmailTagResourceFuture) Get(ctx workflow.Context) (*pinpointema
 }
 
 type PinpointEmailUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +595,7 @@ func (r *PinpointEmailUntagResourceFuture) Get(ctx workflow.Context) (*pinpointe
 }
 
 type PinpointEmailUpdateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

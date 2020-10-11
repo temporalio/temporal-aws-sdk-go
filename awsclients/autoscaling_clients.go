@@ -198,6 +198,7 @@ func NewAutoScalingStub() AutoScalingClient {
 }
 
 type AutoScalingAttachInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +209,7 @@ func (r *AutoScalingAttachInstancesFuture) Get(ctx workflow.Context) (*autoscali
 }
 
 type AutoScalingAttachLoadBalancerTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +220,7 @@ func (r *AutoScalingAttachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Conte
 }
 
 type AutoScalingAttachLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +231,7 @@ func (r *AutoScalingAttachLoadBalancersFuture) Get(ctx workflow.Context) (*autos
 }
 
 type AutoScalingBatchDeleteScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +242,7 @@ func (r *AutoScalingBatchDeleteScheduledActionFuture) Get(ctx workflow.Context) 
 }
 
 type AutoScalingBatchPutScheduledUpdateGroupActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +253,7 @@ func (r *AutoScalingBatchPutScheduledUpdateGroupActionFuture) Get(ctx workflow.C
 }
 
 type AutoScalingCancelInstanceRefreshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +264,7 @@ func (r *AutoScalingCancelInstanceRefreshFuture) Get(ctx workflow.Context) (*aut
 }
 
 type AutoScalingCompleteLifecycleActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +275,7 @@ func (r *AutoScalingCompleteLifecycleActionFuture) Get(ctx workflow.Context) (*a
 }
 
 type AutoScalingCreateAutoScalingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +286,7 @@ func (r *AutoScalingCreateAutoScalingGroupFuture) Get(ctx workflow.Context) (*au
 }
 
 type AutoScalingCreateLaunchConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +297,7 @@ func (r *AutoScalingCreateLaunchConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingCreateOrUpdateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +308,7 @@ func (r *AutoScalingCreateOrUpdateTagsFuture) Get(ctx workflow.Context) (*autosc
 }
 
 type AutoScalingDeleteAutoScalingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +319,7 @@ func (r *AutoScalingDeleteAutoScalingGroupFuture) Get(ctx workflow.Context) (*au
 }
 
 type AutoScalingDeleteLaunchConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +330,7 @@ func (r *AutoScalingDeleteLaunchConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingDeleteLifecycleHookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +341,7 @@ func (r *AutoScalingDeleteLifecycleHookFuture) Get(ctx workflow.Context) (*autos
 }
 
 type AutoScalingDeleteNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +352,7 @@ func (r *AutoScalingDeleteNotificationConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type AutoScalingDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +363,7 @@ func (r *AutoScalingDeletePolicyFuture) Get(ctx workflow.Context) (*autoscaling.
 }
 
 type AutoScalingDeleteScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +374,7 @@ func (r *AutoScalingDeleteScheduledActionFuture) Get(ctx workflow.Context) (*aut
 }
 
 type AutoScalingDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +385,7 @@ func (r *AutoScalingDeleteTagsFuture) Get(ctx workflow.Context) (*autoscaling.De
 }
 
 type AutoScalingDescribeAccountLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +396,7 @@ func (r *AutoScalingDescribeAccountLimitsFuture) Get(ctx workflow.Context) (*aut
 }
 
 type AutoScalingDescribeAdjustmentTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +407,7 @@ func (r *AutoScalingDescribeAdjustmentTypesFuture) Get(ctx workflow.Context) (*a
 }
 
 type AutoScalingDescribeAutoScalingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +418,7 @@ func (r *AutoScalingDescribeAutoScalingGroupsFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingDescribeAutoScalingInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +429,7 @@ func (r *AutoScalingDescribeAutoScalingInstancesFuture) Get(ctx workflow.Context
 }
 
 type AutoScalingDescribeAutoScalingNotificationTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +440,7 @@ func (r *AutoScalingDescribeAutoScalingNotificationTypesFuture) Get(ctx workflow
 }
 
 type AutoScalingDescribeInstanceRefreshesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +451,7 @@ func (r *AutoScalingDescribeInstanceRefreshesFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingDescribeLaunchConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +462,7 @@ func (r *AutoScalingDescribeLaunchConfigurationsFuture) Get(ctx workflow.Context
 }
 
 type AutoScalingDescribeLifecycleHookTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +473,7 @@ func (r *AutoScalingDescribeLifecycleHookTypesFuture) Get(ctx workflow.Context) 
 }
 
 type AutoScalingDescribeLifecycleHooksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +484,7 @@ func (r *AutoScalingDescribeLifecycleHooksFuture) Get(ctx workflow.Context) (*au
 }
 
 type AutoScalingDescribeLoadBalancerTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +495,7 @@ func (r *AutoScalingDescribeLoadBalancerTargetGroupsFuture) Get(ctx workflow.Con
 }
 
 type AutoScalingDescribeLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +506,7 @@ func (r *AutoScalingDescribeLoadBalancersFuture) Get(ctx workflow.Context) (*aut
 }
 
 type AutoScalingDescribeMetricCollectionTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +517,7 @@ func (r *AutoScalingDescribeMetricCollectionTypesFuture) Get(ctx workflow.Contex
 }
 
 type AutoScalingDescribeNotificationConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +528,7 @@ func (r *AutoScalingDescribeNotificationConfigurationsFuture) Get(ctx workflow.C
 }
 
 type AutoScalingDescribePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +539,7 @@ func (r *AutoScalingDescribePoliciesFuture) Get(ctx workflow.Context) (*autoscal
 }
 
 type AutoScalingDescribeScalingActivitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +550,7 @@ func (r *AutoScalingDescribeScalingActivitiesFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingDescribeScalingProcessTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +561,7 @@ func (r *AutoScalingDescribeScalingProcessTypesFuture) Get(ctx workflow.Context)
 }
 
 type AutoScalingDescribeScheduledActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +572,7 @@ func (r *AutoScalingDescribeScheduledActionsFuture) Get(ctx workflow.Context) (*
 }
 
 type AutoScalingDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +583,7 @@ func (r *AutoScalingDescribeTagsFuture) Get(ctx workflow.Context) (*autoscaling.
 }
 
 type AutoScalingDescribeTerminationPolicyTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +594,7 @@ func (r *AutoScalingDescribeTerminationPolicyTypesFuture) Get(ctx workflow.Conte
 }
 
 type AutoScalingDetachInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +605,7 @@ func (r *AutoScalingDetachInstancesFuture) Get(ctx workflow.Context) (*autoscali
 }
 
 type AutoScalingDetachLoadBalancerTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +616,7 @@ func (r *AutoScalingDetachLoadBalancerTargetGroupsFuture) Get(ctx workflow.Conte
 }
 
 type AutoScalingDetachLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +627,7 @@ func (r *AutoScalingDetachLoadBalancersFuture) Get(ctx workflow.Context) (*autos
 }
 
 type AutoScalingDisableMetricsCollectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +638,7 @@ func (r *AutoScalingDisableMetricsCollectionFuture) Get(ctx workflow.Context) (*
 }
 
 type AutoScalingEnableMetricsCollectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +649,7 @@ func (r *AutoScalingEnableMetricsCollectionFuture) Get(ctx workflow.Context) (*a
 }
 
 type AutoScalingEnterStandbyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +660,7 @@ func (r *AutoScalingEnterStandbyFuture) Get(ctx workflow.Context) (*autoscaling.
 }
 
 type AutoScalingExecutePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +671,7 @@ func (r *AutoScalingExecutePolicyFuture) Get(ctx workflow.Context) (*autoscaling
 }
 
 type AutoScalingExitStandbyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +682,7 @@ func (r *AutoScalingExitStandbyFuture) Get(ctx workflow.Context) (*autoscaling.E
 }
 
 type AutoScalingPutLifecycleHookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +693,7 @@ func (r *AutoScalingPutLifecycleHookFuture) Get(ctx workflow.Context) (*autoscal
 }
 
 type AutoScalingPutNotificationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +704,7 @@ func (r *AutoScalingPutNotificationConfigurationFuture) Get(ctx workflow.Context
 }
 
 type AutoScalingPutScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -668,6 +715,7 @@ func (r *AutoScalingPutScalingPolicyFuture) Get(ctx workflow.Context) (*autoscal
 }
 
 type AutoScalingPutScheduledUpdateGroupActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -678,6 +726,7 @@ func (r *AutoScalingPutScheduledUpdateGroupActionFuture) Get(ctx workflow.Contex
 }
 
 type AutoScalingRecordLifecycleActionHeartbeatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -688,6 +737,7 @@ func (r *AutoScalingRecordLifecycleActionHeartbeatFuture) Get(ctx workflow.Conte
 }
 
 type AutoScalingResumeProcessesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -698,6 +748,7 @@ func (r *AutoScalingResumeProcessesFuture) Get(ctx workflow.Context) (*autoscali
 }
 
 type AutoScalingSetDesiredCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -708,6 +759,7 @@ func (r *AutoScalingSetDesiredCapacityFuture) Get(ctx workflow.Context) (*autosc
 }
 
 type AutoScalingSetInstanceHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -718,6 +770,7 @@ func (r *AutoScalingSetInstanceHealthFuture) Get(ctx workflow.Context) (*autosca
 }
 
 type AutoScalingSetInstanceProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -728,6 +781,7 @@ func (r *AutoScalingSetInstanceProtectionFuture) Get(ctx workflow.Context) (*aut
 }
 
 type AutoScalingStartInstanceRefreshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -738,6 +792,7 @@ func (r *AutoScalingStartInstanceRefreshFuture) Get(ctx workflow.Context) (*auto
 }
 
 type AutoScalingSuspendProcessesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -748,6 +803,7 @@ func (r *AutoScalingSuspendProcessesFuture) Get(ctx workflow.Context) (*autoscal
 }
 
 type AutoScalingTerminateInstanceInAutoScalingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -758,6 +814,7 @@ func (r *AutoScalingTerminateInstanceInAutoScalingGroupFuture) Get(ctx workflow.
 }
 
 type AutoScalingUpdateAutoScalingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

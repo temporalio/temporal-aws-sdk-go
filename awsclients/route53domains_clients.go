@@ -102,6 +102,7 @@ func NewRoute53DomainsStub() Route53DomainsClient {
 }
 
 type Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +113,7 @@ func (r *Route53DomainsAcceptDomainTransferFromAnotherAwsAccountFuture) Get(ctx 
 }
 
 type Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +124,7 @@ func (r *Route53DomainsCancelDomainTransferToAnotherAwsAccountFuture) Get(ctx wo
 }
 
 type Route53DomainsCheckDomainAvailabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +135,7 @@ func (r *Route53DomainsCheckDomainAvailabilityFuture) Get(ctx workflow.Context) 
 }
 
 type Route53DomainsCheckDomainTransferabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +146,7 @@ func (r *Route53DomainsCheckDomainTransferabilityFuture) Get(ctx workflow.Contex
 }
 
 type Route53DomainsDeleteTagsForDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +157,7 @@ func (r *Route53DomainsDeleteTagsForDomainFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53DomainsDisableDomainAutoRenewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +168,7 @@ func (r *Route53DomainsDisableDomainAutoRenewFuture) Get(ctx workflow.Context) (
 }
 
 type Route53DomainsDisableDomainTransferLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +179,7 @@ func (r *Route53DomainsDisableDomainTransferLockFuture) Get(ctx workflow.Context
 }
 
 type Route53DomainsEnableDomainAutoRenewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +190,7 @@ func (r *Route53DomainsEnableDomainAutoRenewFuture) Get(ctx workflow.Context) (*
 }
 
 type Route53DomainsEnableDomainTransferLockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +201,7 @@ func (r *Route53DomainsEnableDomainTransferLockFuture) Get(ctx workflow.Context)
 }
 
 type Route53DomainsGetContactReachabilityStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +212,7 @@ func (r *Route53DomainsGetContactReachabilityStatusFuture) Get(ctx workflow.Cont
 }
 
 type Route53DomainsGetDomainDetailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +223,7 @@ func (r *Route53DomainsGetDomainDetailFuture) Get(ctx workflow.Context) (*route5
 }
 
 type Route53DomainsGetDomainSuggestionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +234,7 @@ func (r *Route53DomainsGetDomainSuggestionsFuture) Get(ctx workflow.Context) (*r
 }
 
 type Route53DomainsGetOperationDetailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +245,7 @@ func (r *Route53DomainsGetOperationDetailFuture) Get(ctx workflow.Context) (*rou
 }
 
 type Route53DomainsListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +256,7 @@ func (r *Route53DomainsListDomainsFuture) Get(ctx workflow.Context) (*route53dom
 }
 
 type Route53DomainsListOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +267,7 @@ func (r *Route53DomainsListOperationsFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53DomainsListTagsForDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +278,7 @@ func (r *Route53DomainsListTagsForDomainFuture) Get(ctx workflow.Context) (*rout
 }
 
 type Route53DomainsRegisterDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +289,7 @@ func (r *Route53DomainsRegisterDomainFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +300,7 @@ func (r *Route53DomainsRejectDomainTransferFromAnotherAwsAccountFuture) Get(ctx 
 }
 
 type Route53DomainsRenewDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +311,7 @@ func (r *Route53DomainsRenewDomainFuture) Get(ctx workflow.Context) (*route53dom
 }
 
 type Route53DomainsResendContactReachabilityEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +322,7 @@ func (r *Route53DomainsResendContactReachabilityEmailFuture) Get(ctx workflow.Co
 }
 
 type Route53DomainsRetrieveDomainAuthCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +333,7 @@ func (r *Route53DomainsRetrieveDomainAuthCodeFuture) Get(ctx workflow.Context) (
 }
 
 type Route53DomainsTransferDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +344,7 @@ func (r *Route53DomainsTransferDomainFuture) Get(ctx workflow.Context) (*route53
 }
 
 type Route53DomainsTransferDomainToAnotherAwsAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +355,7 @@ func (r *Route53DomainsTransferDomainToAnotherAwsAccountFuture) Get(ctx workflow
 }
 
 type Route53DomainsUpdateDomainContactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +366,7 @@ func (r *Route53DomainsUpdateDomainContactFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53DomainsUpdateDomainContactPrivacyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +377,7 @@ func (r *Route53DomainsUpdateDomainContactPrivacyFuture) Get(ctx workflow.Contex
 }
 
 type Route53DomainsUpdateDomainNameserversFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +388,7 @@ func (r *Route53DomainsUpdateDomainNameserversFuture) Get(ctx workflow.Context) 
 }
 
 type Route53DomainsUpdateTagsForDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +399,7 @@ func (r *Route53DomainsUpdateTagsForDomainFuture) Get(ctx workflow.Context) (*ro
 }
 
 type Route53DomainsViewBillingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -78,6 +78,7 @@ func NewOpsWorksCMStub() OpsWorksCMClient {
 }
 
 type OpsWorksCMAssociateNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +89,7 @@ func (r *OpsWorksCMAssociateNodeFuture) Get(ctx workflow.Context) (*opsworkscm.A
 }
 
 type OpsWorksCMCreateBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +100,7 @@ func (r *OpsWorksCMCreateBackupFuture) Get(ctx workflow.Context) (*opsworkscm.Cr
 }
 
 type OpsWorksCMCreateServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +111,7 @@ func (r *OpsWorksCMCreateServerFuture) Get(ctx workflow.Context) (*opsworkscm.Cr
 }
 
 type OpsWorksCMDeleteBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +122,7 @@ func (r *OpsWorksCMDeleteBackupFuture) Get(ctx workflow.Context) (*opsworkscm.De
 }
 
 type OpsWorksCMDeleteServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +133,7 @@ func (r *OpsWorksCMDeleteServerFuture) Get(ctx workflow.Context) (*opsworkscm.De
 }
 
 type OpsWorksCMDescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +144,7 @@ func (r *OpsWorksCMDescribeAccountAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type OpsWorksCMDescribeBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +155,7 @@ func (r *OpsWorksCMDescribeBackupsFuture) Get(ctx workflow.Context) (*opsworkscm
 }
 
 type OpsWorksCMDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +166,7 @@ func (r *OpsWorksCMDescribeEventsFuture) Get(ctx workflow.Context) (*opsworkscm.
 }
 
 type OpsWorksCMDescribeNodeAssociationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +177,7 @@ func (r *OpsWorksCMDescribeNodeAssociationStatusFuture) Get(ctx workflow.Context
 }
 
 type OpsWorksCMDescribeServersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +188,7 @@ func (r *OpsWorksCMDescribeServersFuture) Get(ctx workflow.Context) (*opsworkscm
 }
 
 type OpsWorksCMDisassociateNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +199,7 @@ func (r *OpsWorksCMDisassociateNodeFuture) Get(ctx workflow.Context) (*opsworksc
 }
 
 type OpsWorksCMExportServerEngineAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +210,7 @@ func (r *OpsWorksCMExportServerEngineAttributeFuture) Get(ctx workflow.Context) 
 }
 
 type OpsWorksCMListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +221,7 @@ func (r *OpsWorksCMListTagsForResourceFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksCMRestoreServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +232,7 @@ func (r *OpsWorksCMRestoreServerFuture) Get(ctx workflow.Context) (*opsworkscm.R
 }
 
 type OpsWorksCMStartMaintenanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +243,7 @@ func (r *OpsWorksCMStartMaintenanceFuture) Get(ctx workflow.Context) (*opsworksc
 }
 
 type OpsWorksCMTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +254,7 @@ func (r *OpsWorksCMTagResourceFuture) Get(ctx workflow.Context) (*opsworkscm.Tag
 }
 
 type OpsWorksCMUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +265,7 @@ func (r *OpsWorksCMUntagResourceFuture) Get(ctx workflow.Context) (*opsworkscm.U
 }
 
 type OpsWorksCMUpdateServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +276,7 @@ func (r *OpsWorksCMUpdateServerFuture) Get(ctx workflow.Context) (*opsworkscm.Up
 }
 
 type OpsWorksCMUpdateServerEngineAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

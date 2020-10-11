@@ -102,6 +102,7 @@ func NewNetworkManagerStub() NetworkManagerClient {
 }
 
 type NetworkManagerAssociateCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +113,7 @@ func (r *NetworkManagerAssociateCustomerGatewayFuture) Get(ctx workflow.Context)
 }
 
 type NetworkManagerAssociateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +124,7 @@ func (r *NetworkManagerAssociateLinkFuture) Get(ctx workflow.Context) (*networkm
 }
 
 type NetworkManagerCreateDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +135,7 @@ func (r *NetworkManagerCreateDeviceFuture) Get(ctx workflow.Context) (*networkma
 }
 
 type NetworkManagerCreateGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +146,7 @@ func (r *NetworkManagerCreateGlobalNetworkFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NetworkManagerCreateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +157,7 @@ func (r *NetworkManagerCreateLinkFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerCreateSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +168,7 @@ func (r *NetworkManagerCreateSiteFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerDeleteDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +179,7 @@ func (r *NetworkManagerDeleteDeviceFuture) Get(ctx workflow.Context) (*networkma
 }
 
 type NetworkManagerDeleteGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +190,7 @@ func (r *NetworkManagerDeleteGlobalNetworkFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NetworkManagerDeleteLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +201,7 @@ func (r *NetworkManagerDeleteLinkFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerDeleteSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +212,7 @@ func (r *NetworkManagerDeleteSiteFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerDeregisterTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +223,7 @@ func (r *NetworkManagerDeregisterTransitGatewayFuture) Get(ctx workflow.Context)
 }
 
 type NetworkManagerDescribeGlobalNetworksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +234,7 @@ func (r *NetworkManagerDescribeGlobalNetworksFuture) Get(ctx workflow.Context) (
 }
 
 type NetworkManagerDisassociateCustomerGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +245,7 @@ func (r *NetworkManagerDisassociateCustomerGatewayFuture) Get(ctx workflow.Conte
 }
 
 type NetworkManagerDisassociateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +256,7 @@ func (r *NetworkManagerDisassociateLinkFuture) Get(ctx workflow.Context) (*netwo
 }
 
 type NetworkManagerGetCustomerGatewayAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +267,7 @@ func (r *NetworkManagerGetCustomerGatewayAssociationsFuture) Get(ctx workflow.Co
 }
 
 type NetworkManagerGetDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +278,7 @@ func (r *NetworkManagerGetDevicesFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerGetLinkAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +289,7 @@ func (r *NetworkManagerGetLinkAssociationsFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NetworkManagerGetLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +300,7 @@ func (r *NetworkManagerGetLinksFuture) Get(ctx workflow.Context) (*networkmanage
 }
 
 type NetworkManagerGetSitesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +311,7 @@ func (r *NetworkManagerGetSitesFuture) Get(ctx workflow.Context) (*networkmanage
 }
 
 type NetworkManagerGetTransitGatewayRegistrationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +322,7 @@ func (r *NetworkManagerGetTransitGatewayRegistrationsFuture) Get(ctx workflow.Co
 }
 
 type NetworkManagerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +333,7 @@ func (r *NetworkManagerListTagsForResourceFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NetworkManagerRegisterTransitGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +344,7 @@ func (r *NetworkManagerRegisterTransitGatewayFuture) Get(ctx workflow.Context) (
 }
 
 type NetworkManagerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +355,7 @@ func (r *NetworkManagerTagResourceFuture) Get(ctx workflow.Context) (*networkman
 }
 
 type NetworkManagerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +366,7 @@ func (r *NetworkManagerUntagResourceFuture) Get(ctx workflow.Context) (*networkm
 }
 
 type NetworkManagerUpdateDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +377,7 @@ func (r *NetworkManagerUpdateDeviceFuture) Get(ctx workflow.Context) (*networkma
 }
 
 type NetworkManagerUpdateGlobalNetworkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +388,7 @@ func (r *NetworkManagerUpdateGlobalNetworkFuture) Get(ctx workflow.Context) (*ne
 }
 
 type NetworkManagerUpdateLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +399,7 @@ func (r *NetworkManagerUpdateLinkFuture) Get(ctx workflow.Context) (*networkmana
 }
 
 type NetworkManagerUpdateSiteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

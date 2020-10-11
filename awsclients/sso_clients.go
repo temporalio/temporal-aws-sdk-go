@@ -30,6 +30,7 @@ func NewSSOStub() SSOClient {
 }
 
 type SSOGetRoleCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *SSOGetRoleCredentialsFuture) Get(ctx workflow.Context) (*sso.GetRoleCre
 }
 
 type SSOListAccountRolesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *SSOListAccountRolesFuture) Get(ctx workflow.Context) (*sso.ListAccountR
 }
 
 type SSOListAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *SSOListAccountsFuture) Get(ctx workflow.Context) (*sso.ListAccountsOutp
 }
 
 type SSOLogoutFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

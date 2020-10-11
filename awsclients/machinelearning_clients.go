@@ -114,6 +114,7 @@ func NewMachineLearningStub() MachineLearningClient {
 }
 
 type MachineLearningAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *MachineLearningAddTagsFuture) Get(ctx workflow.Context) (*machinelearni
 }
 
 type MachineLearningCreateBatchPredictionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *MachineLearningCreateBatchPredictionFuture) Get(ctx workflow.Context) (
 }
 
 type MachineLearningCreateDataSourceFromRDSFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *MachineLearningCreateDataSourceFromRDSFuture) Get(ctx workflow.Context)
 }
 
 type MachineLearningCreateDataSourceFromRedshiftFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *MachineLearningCreateDataSourceFromRedshiftFuture) Get(ctx workflow.Con
 }
 
 type MachineLearningCreateDataSourceFromS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *MachineLearningCreateDataSourceFromS3Future) Get(ctx workflow.Context) 
 }
 
 type MachineLearningCreateEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *MachineLearningCreateEvaluationFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningCreateMLModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *MachineLearningCreateMLModelFuture) Get(ctx workflow.Context) (*machine
 }
 
 type MachineLearningCreateRealtimeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *MachineLearningCreateRealtimeEndpointFuture) Get(ctx workflow.Context) 
 }
 
 type MachineLearningDeleteBatchPredictionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *MachineLearningDeleteBatchPredictionFuture) Get(ctx workflow.Context) (
 }
 
 type MachineLearningDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *MachineLearningDeleteDataSourceFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningDeleteEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *MachineLearningDeleteEvaluationFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningDeleteMLModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *MachineLearningDeleteMLModelFuture) Get(ctx workflow.Context) (*machine
 }
 
 type MachineLearningDeleteRealtimeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *MachineLearningDeleteRealtimeEndpointFuture) Get(ctx workflow.Context) 
 }
 
 type MachineLearningDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *MachineLearningDeleteTagsFuture) Get(ctx workflow.Context) (*machinelea
 }
 
 type MachineLearningDescribeBatchPredictionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *MachineLearningDescribeBatchPredictionsFuture) Get(ctx workflow.Context
 }
 
 type MachineLearningDescribeDataSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *MachineLearningDescribeDataSourcesFuture) Get(ctx workflow.Context) (*m
 }
 
 type MachineLearningDescribeEvaluationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *MachineLearningDescribeEvaluationsFuture) Get(ctx workflow.Context) (*m
 }
 
 type MachineLearningDescribeMLModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *MachineLearningDescribeMLModelsFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *MachineLearningDescribeTagsFuture) Get(ctx workflow.Context) (*machinel
 }
 
 type MachineLearningGetBatchPredictionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *MachineLearningGetBatchPredictionFuture) Get(ctx workflow.Context) (*ma
 }
 
 type MachineLearningGetDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *MachineLearningGetDataSourceFuture) Get(ctx workflow.Context) (*machine
 }
 
 type MachineLearningGetEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *MachineLearningGetEvaluationFuture) Get(ctx workflow.Context) (*machine
 }
 
 type MachineLearningGetMLModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *MachineLearningGetMLModelFuture) Get(ctx workflow.Context) (*machinelea
 }
 
 type MachineLearningPredictFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *MachineLearningPredictFuture) Get(ctx workflow.Context) (*machinelearni
 }
 
 type MachineLearningUpdateBatchPredictionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *MachineLearningUpdateBatchPredictionFuture) Get(ctx workflow.Context) (
 }
 
 type MachineLearningUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *MachineLearningUpdateDataSourceFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningUpdateEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *MachineLearningUpdateEvaluationFuture) Get(ctx workflow.Context) (*mach
 }
 
 type MachineLearningUpdateMLModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -111,6 +111,7 @@ func NewECRStub() ECRClient {
 }
 
 type ECRBatchCheckLayerAvailabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +122,7 @@ func (r *ECRBatchCheckLayerAvailabilityFuture) Get(ctx workflow.Context) (*ecr.B
 }
 
 type ECRBatchDeleteImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +133,7 @@ func (r *ECRBatchDeleteImageFuture) Get(ctx workflow.Context) (*ecr.BatchDeleteI
 }
 
 type ECRBatchGetImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +144,7 @@ func (r *ECRBatchGetImageFuture) Get(ctx workflow.Context) (*ecr.BatchGetImageOu
 }
 
 type ECRCompleteLayerUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +155,7 @@ func (r *ECRCompleteLayerUploadFuture) Get(ctx workflow.Context) (*ecr.CompleteL
 }
 
 type ECRCreateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +166,7 @@ func (r *ECRCreateRepositoryFuture) Get(ctx workflow.Context) (*ecr.CreateReposi
 }
 
 type ECRDeleteLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +177,7 @@ func (r *ECRDeleteLifecyclePolicyFuture) Get(ctx workflow.Context) (*ecr.DeleteL
 }
 
 type ECRDeleteRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +188,7 @@ func (r *ECRDeleteRepositoryFuture) Get(ctx workflow.Context) (*ecr.DeleteReposi
 }
 
 type ECRDeleteRepositoryPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +199,7 @@ func (r *ECRDeleteRepositoryPolicyFuture) Get(ctx workflow.Context) (*ecr.Delete
 }
 
 type ECRDescribeImageScanFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +210,7 @@ func (r *ECRDescribeImageScanFindingsFuture) Get(ctx workflow.Context) (*ecr.Des
 }
 
 type ECRDescribeImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +221,7 @@ func (r *ECRDescribeImagesFuture) Get(ctx workflow.Context) (*ecr.DescribeImages
 }
 
 type ECRDescribeRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +232,7 @@ func (r *ECRDescribeRepositoriesFuture) Get(ctx workflow.Context) (*ecr.Describe
 }
 
 type ECRGetAuthorizationTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +243,7 @@ func (r *ECRGetAuthorizationTokenFuture) Get(ctx workflow.Context) (*ecr.GetAuth
 }
 
 type ECRGetDownloadUrlForLayerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +254,7 @@ func (r *ECRGetDownloadUrlForLayerFuture) Get(ctx workflow.Context) (*ecr.GetDow
 }
 
 type ECRGetLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +265,7 @@ func (r *ECRGetLifecyclePolicyFuture) Get(ctx workflow.Context) (*ecr.GetLifecyc
 }
 
 type ECRGetLifecyclePolicyPreviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +276,7 @@ func (r *ECRGetLifecyclePolicyPreviewFuture) Get(ctx workflow.Context) (*ecr.Get
 }
 
 type ECRGetRepositoryPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +287,7 @@ func (r *ECRGetRepositoryPolicyFuture) Get(ctx workflow.Context) (*ecr.GetReposi
 }
 
 type ECRInitiateLayerUploadFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +298,7 @@ func (r *ECRInitiateLayerUploadFuture) Get(ctx workflow.Context) (*ecr.InitiateL
 }
 
 type ECRListImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +309,7 @@ func (r *ECRListImagesFuture) Get(ctx workflow.Context) (*ecr.ListImagesOutput, 
 }
 
 type ECRListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +320,7 @@ func (r *ECRListTagsForResourceFuture) Get(ctx workflow.Context) (*ecr.ListTagsF
 }
 
 type ECRPutImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +331,7 @@ func (r *ECRPutImageFuture) Get(ctx workflow.Context) (*ecr.PutImageOutput, erro
 }
 
 type ECRPutImageScanningConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +342,7 @@ func (r *ECRPutImageScanningConfigurationFuture) Get(ctx workflow.Context) (*ecr
 }
 
 type ECRPutImageTagMutabilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +353,7 @@ func (r *ECRPutImageTagMutabilityFuture) Get(ctx workflow.Context) (*ecr.PutImag
 }
 
 type ECRPutLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +364,7 @@ func (r *ECRPutLifecyclePolicyFuture) Get(ctx workflow.Context) (*ecr.PutLifecyc
 }
 
 type ECRSetRepositoryPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +375,7 @@ func (r *ECRSetRepositoryPolicyFuture) Get(ctx workflow.Context) (*ecr.SetReposi
 }
 
 type ECRStartImageScanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +386,7 @@ func (r *ECRStartImageScanFuture) Get(ctx workflow.Context) (*ecr.StartImageScan
 }
 
 type ECRStartLifecyclePolicyPreviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +397,7 @@ func (r *ECRStartLifecyclePolicyPreviewFuture) Get(ctx workflow.Context) (*ecr.S
 }
 
 type ECRTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +408,7 @@ func (r *ECRTagResourceFuture) Get(ctx workflow.Context) (*ecr.TagResourceOutput
 }
 
 type ECRUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +419,7 @@ func (r *ECRUntagResourceFuture) Get(ctx workflow.Context) (*ecr.UntagResourceOu
 }
 
 type ECRUploadLayerPartFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -138,6 +138,7 @@ func NewWAFV2Stub() WAFV2Client {
 }
 
 type WAFV2AssociateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +149,7 @@ func (r *WAFV2AssociateWebACLFuture) Get(ctx workflow.Context) (*wafv2.Associate
 }
 
 type WAFV2CheckCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +160,7 @@ func (r *WAFV2CheckCapacityFuture) Get(ctx workflow.Context) (*wafv2.CheckCapaci
 }
 
 type WAFV2CreateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +171,7 @@ func (r *WAFV2CreateIPSetFuture) Get(ctx workflow.Context) (*wafv2.CreateIPSetOu
 }
 
 type WAFV2CreateRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +182,7 @@ func (r *WAFV2CreateRegexPatternSetFuture) Get(ctx workflow.Context) (*wafv2.Cre
 }
 
 type WAFV2CreateRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +193,7 @@ func (r *WAFV2CreateRuleGroupFuture) Get(ctx workflow.Context) (*wafv2.CreateRul
 }
 
 type WAFV2CreateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +204,7 @@ func (r *WAFV2CreateWebACLFuture) Get(ctx workflow.Context) (*wafv2.CreateWebACL
 }
 
 type WAFV2DeleteFirewallManagerRuleGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +215,7 @@ func (r *WAFV2DeleteFirewallManagerRuleGroupsFuture) Get(ctx workflow.Context) (
 }
 
 type WAFV2DeleteIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +226,7 @@ func (r *WAFV2DeleteIPSetFuture) Get(ctx workflow.Context) (*wafv2.DeleteIPSetOu
 }
 
 type WAFV2DeleteLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +237,7 @@ func (r *WAFV2DeleteLoggingConfigurationFuture) Get(ctx workflow.Context) (*wafv
 }
 
 type WAFV2DeletePermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +248,7 @@ func (r *WAFV2DeletePermissionPolicyFuture) Get(ctx workflow.Context) (*wafv2.De
 }
 
 type WAFV2DeleteRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +259,7 @@ func (r *WAFV2DeleteRegexPatternSetFuture) Get(ctx workflow.Context) (*wafv2.Del
 }
 
 type WAFV2DeleteRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +270,7 @@ func (r *WAFV2DeleteRuleGroupFuture) Get(ctx workflow.Context) (*wafv2.DeleteRul
 }
 
 type WAFV2DeleteWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +281,7 @@ func (r *WAFV2DeleteWebACLFuture) Get(ctx workflow.Context) (*wafv2.DeleteWebACL
 }
 
 type WAFV2DescribeManagedRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +292,7 @@ func (r *WAFV2DescribeManagedRuleGroupFuture) Get(ctx workflow.Context) (*wafv2.
 }
 
 type WAFV2DisassociateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +303,7 @@ func (r *WAFV2DisassociateWebACLFuture) Get(ctx workflow.Context) (*wafv2.Disass
 }
 
 type WAFV2GetIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +314,7 @@ func (r *WAFV2GetIPSetFuture) Get(ctx workflow.Context) (*wafv2.GetIPSetOutput, 
 }
 
 type WAFV2GetLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +325,7 @@ func (r *WAFV2GetLoggingConfigurationFuture) Get(ctx workflow.Context) (*wafv2.G
 }
 
 type WAFV2GetPermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +336,7 @@ func (r *WAFV2GetPermissionPolicyFuture) Get(ctx workflow.Context) (*wafv2.GetPe
 }
 
 type WAFV2GetRateBasedStatementManagedKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +347,7 @@ func (r *WAFV2GetRateBasedStatementManagedKeysFuture) Get(ctx workflow.Context) 
 }
 
 type WAFV2GetRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +358,7 @@ func (r *WAFV2GetRegexPatternSetFuture) Get(ctx workflow.Context) (*wafv2.GetReg
 }
 
 type WAFV2GetRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +369,7 @@ func (r *WAFV2GetRuleGroupFuture) Get(ctx workflow.Context) (*wafv2.GetRuleGroup
 }
 
 type WAFV2GetSampledRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +380,7 @@ func (r *WAFV2GetSampledRequestsFuture) Get(ctx workflow.Context) (*wafv2.GetSam
 }
 
 type WAFV2GetWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +391,7 @@ func (r *WAFV2GetWebACLFuture) Get(ctx workflow.Context) (*wafv2.GetWebACLOutput
 }
 
 type WAFV2GetWebACLForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +402,7 @@ func (r *WAFV2GetWebACLForResourceFuture) Get(ctx workflow.Context) (*wafv2.GetW
 }
 
 type WAFV2ListAvailableManagedRuleGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +413,7 @@ func (r *WAFV2ListAvailableManagedRuleGroupsFuture) Get(ctx workflow.Context) (*
 }
 
 type WAFV2ListIPSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +424,7 @@ func (r *WAFV2ListIPSetsFuture) Get(ctx workflow.Context) (*wafv2.ListIPSetsOutp
 }
 
 type WAFV2ListLoggingConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +435,7 @@ func (r *WAFV2ListLoggingConfigurationsFuture) Get(ctx workflow.Context) (*wafv2
 }
 
 type WAFV2ListRegexPatternSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +446,7 @@ func (r *WAFV2ListRegexPatternSetsFuture) Get(ctx workflow.Context) (*wafv2.List
 }
 
 type WAFV2ListResourcesForWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +457,7 @@ func (r *WAFV2ListResourcesForWebACLFuture) Get(ctx workflow.Context) (*wafv2.Li
 }
 
 type WAFV2ListRuleGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +468,7 @@ func (r *WAFV2ListRuleGroupsFuture) Get(ctx workflow.Context) (*wafv2.ListRuleGr
 }
 
 type WAFV2ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +479,7 @@ func (r *WAFV2ListTagsForResourceFuture) Get(ctx workflow.Context) (*wafv2.ListT
 }
 
 type WAFV2ListWebACLsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +490,7 @@ func (r *WAFV2ListWebACLsFuture) Get(ctx workflow.Context) (*wafv2.ListWebACLsOu
 }
 
 type WAFV2PutLoggingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +501,7 @@ func (r *WAFV2PutLoggingConfigurationFuture) Get(ctx workflow.Context) (*wafv2.P
 }
 
 type WAFV2PutPermissionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +512,7 @@ func (r *WAFV2PutPermissionPolicyFuture) Get(ctx workflow.Context) (*wafv2.PutPe
 }
 
 type WAFV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +523,7 @@ func (r *WAFV2TagResourceFuture) Get(ctx workflow.Context) (*wafv2.TagResourceOu
 }
 
 type WAFV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +534,7 @@ func (r *WAFV2UntagResourceFuture) Get(ctx workflow.Context) (*wafv2.UntagResour
 }
 
 type WAFV2UpdateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +545,7 @@ func (r *WAFV2UpdateIPSetFuture) Get(ctx workflow.Context) (*wafv2.UpdateIPSetOu
 }
 
 type WAFV2UpdateRegexPatternSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +556,7 @@ func (r *WAFV2UpdateRegexPatternSetFuture) Get(ctx workflow.Context) (*wafv2.Upd
 }
 
 type WAFV2UpdateRuleGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +567,7 @@ func (r *WAFV2UpdateRuleGroupFuture) Get(ctx workflow.Context) (*wafv2.UpdateRul
 }
 
 type WAFV2UpdateWebACLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

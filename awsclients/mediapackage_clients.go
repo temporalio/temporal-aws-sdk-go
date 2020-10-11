@@ -75,6 +75,7 @@ func NewMediaPackageStub() MediaPackageClient {
 }
 
 type MediaPackageConfigureLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *MediaPackageConfigureLogsFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageCreateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *MediaPackageCreateChannelFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageCreateHarvestJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *MediaPackageCreateHarvestJobFuture) Get(ctx workflow.Context) (*mediapa
 }
 
 type MediaPackageCreateOriginEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *MediaPackageCreateOriginEndpointFuture) Get(ctx workflow.Context) (*med
 }
 
 type MediaPackageDeleteChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *MediaPackageDeleteChannelFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageDeleteOriginEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *MediaPackageDeleteOriginEndpointFuture) Get(ctx workflow.Context) (*med
 }
 
 type MediaPackageDescribeChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *MediaPackageDescribeChannelFuture) Get(ctx workflow.Context) (*mediapac
 }
 
 type MediaPackageDescribeHarvestJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *MediaPackageDescribeHarvestJobFuture) Get(ctx workflow.Context) (*media
 }
 
 type MediaPackageDescribeOriginEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *MediaPackageDescribeOriginEndpointFuture) Get(ctx workflow.Context) (*m
 }
 
 type MediaPackageListChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *MediaPackageListChannelsFuture) Get(ctx workflow.Context) (*mediapackag
 }
 
 type MediaPackageListHarvestJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *MediaPackageListHarvestJobsFuture) Get(ctx workflow.Context) (*mediapac
 }
 
 type MediaPackageListOriginEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *MediaPackageListOriginEndpointsFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaPackageListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *MediaPackageListTagsForResourceFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaPackageRotateChannelCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *MediaPackageRotateChannelCredentialsFuture) Get(ctx workflow.Context) (
 }
 
 type MediaPackageRotateIngestEndpointCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *MediaPackageRotateIngestEndpointCredentialsFuture) Get(ctx workflow.Con
 }
 
 type MediaPackageTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *MediaPackageTagResourceFuture) Get(ctx workflow.Context) (*mediapackage
 }
 
 type MediaPackageUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *MediaPackageUntagResourceFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageUpdateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *MediaPackageUpdateChannelFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageUpdateOriginEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

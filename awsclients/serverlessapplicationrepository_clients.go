@@ -60,6 +60,7 @@ func NewServerlessApplicationRepositoryStub() ServerlessApplicationRepositoryCli
 }
 
 type ServerlessApplicationRepositoryCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -70,6 +71,7 @@ func (r *ServerlessApplicationRepositoryCreateApplicationFuture) Get(ctx workflo
 }
 
 type ServerlessApplicationRepositoryCreateApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -80,6 +82,7 @@ func (r *ServerlessApplicationRepositoryCreateApplicationVersionFuture) Get(ctx 
 }
 
 type ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -90,6 +93,7 @@ func (r *ServerlessApplicationRepositoryCreateCloudFormationChangeSetFuture) Get
 }
 
 type ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +104,7 @@ func (r *ServerlessApplicationRepositoryCreateCloudFormationTemplateFuture) Get(
 }
 
 type ServerlessApplicationRepositoryDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +115,7 @@ func (r *ServerlessApplicationRepositoryDeleteApplicationFuture) Get(ctx workflo
 }
 
 type ServerlessApplicationRepositoryGetApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +126,7 @@ func (r *ServerlessApplicationRepositoryGetApplicationFuture) Get(ctx workflow.C
 }
 
 type ServerlessApplicationRepositoryGetApplicationPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +137,7 @@ func (r *ServerlessApplicationRepositoryGetApplicationPolicyFuture) Get(ctx work
 }
 
 type ServerlessApplicationRepositoryGetCloudFormationTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +148,7 @@ func (r *ServerlessApplicationRepositoryGetCloudFormationTemplateFuture) Get(ctx
 }
 
 type ServerlessApplicationRepositoryListApplicationDependenciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +159,7 @@ func (r *ServerlessApplicationRepositoryListApplicationDependenciesFuture) Get(c
 }
 
 type ServerlessApplicationRepositoryListApplicationVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +170,7 @@ func (r *ServerlessApplicationRepositoryListApplicationVersionsFuture) Get(ctx w
 }
 
 type ServerlessApplicationRepositoryListApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +181,7 @@ func (r *ServerlessApplicationRepositoryListApplicationsFuture) Get(ctx workflow
 }
 
 type ServerlessApplicationRepositoryPutApplicationPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +192,7 @@ func (r *ServerlessApplicationRepositoryPutApplicationPolicyFuture) Get(ctx work
 }
 
 type ServerlessApplicationRepositoryUnshareApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +203,7 @@ func (r *ServerlessApplicationRepositoryUnshareApplicationFuture) Get(ctx workfl
 }
 
 type ServerlessApplicationRepositoryUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

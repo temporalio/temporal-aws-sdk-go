@@ -72,6 +72,7 @@ func NewElasticTranscoderStub() ElasticTranscoderClient {
 }
 
 type ElasticTranscoderCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +83,7 @@ func (r *ElasticTranscoderCancelJobFuture) Get(ctx workflow.Context) (*elastictr
 }
 
 type ElasticTranscoderCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +94,7 @@ func (r *ElasticTranscoderCreateJobFuture) Get(ctx workflow.Context) (*elastictr
 }
 
 type ElasticTranscoderCreatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +105,7 @@ func (r *ElasticTranscoderCreatePipelineFuture) Get(ctx workflow.Context) (*elas
 }
 
 type ElasticTranscoderCreatePresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +116,7 @@ func (r *ElasticTranscoderCreatePresetFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElasticTranscoderDeletePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +127,7 @@ func (r *ElasticTranscoderDeletePipelineFuture) Get(ctx workflow.Context) (*elas
 }
 
 type ElasticTranscoderDeletePresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +138,7 @@ func (r *ElasticTranscoderDeletePresetFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElasticTranscoderListJobsByPipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +149,7 @@ func (r *ElasticTranscoderListJobsByPipelineFuture) Get(ctx workflow.Context) (*
 }
 
 type ElasticTranscoderListJobsByStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +160,7 @@ func (r *ElasticTranscoderListJobsByStatusFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElasticTranscoderListPipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +171,7 @@ func (r *ElasticTranscoderListPipelinesFuture) Get(ctx workflow.Context) (*elast
 }
 
 type ElasticTranscoderListPresetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +182,7 @@ func (r *ElasticTranscoderListPresetsFuture) Get(ctx workflow.Context) (*elastic
 }
 
 type ElasticTranscoderReadJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +193,7 @@ func (r *ElasticTranscoderReadJobFuture) Get(ctx workflow.Context) (*elastictran
 }
 
 type ElasticTranscoderReadPipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +204,7 @@ func (r *ElasticTranscoderReadPipelineFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElasticTranscoderReadPresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +215,7 @@ func (r *ElasticTranscoderReadPresetFuture) Get(ctx workflow.Context) (*elastict
 }
 
 type ElasticTranscoderTestRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +226,7 @@ func (r *ElasticTranscoderTestRoleFuture) Get(ctx workflow.Context) (*elastictra
 }
 
 type ElasticTranscoderUpdatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +237,7 @@ func (r *ElasticTranscoderUpdatePipelineFuture) Get(ctx workflow.Context) (*elas
 }
 
 type ElasticTranscoderUpdatePipelineNotificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +248,7 @@ func (r *ElasticTranscoderUpdatePipelineNotificationsFuture) Get(ctx workflow.Co
 }
 
 type ElasticTranscoderUpdatePipelineStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

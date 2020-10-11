@@ -27,6 +27,7 @@ func NewTimestreamQueryStub() TimestreamQueryClient {
 }
 
 type TimestreamQueryCancelQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *TimestreamQueryCancelQueryFuture) Get(ctx workflow.Context) (*timestrea
 }
 
 type TimestreamQueryDescribeEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *TimestreamQueryDescribeEndpointsFuture) Get(ctx workflow.Context) (*tim
 }
 
 type TimestreamQueryQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

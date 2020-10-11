@@ -66,6 +66,7 @@ func NewMediaPackageVodStub() MediaPackageVodClient {
 }
 
 type MediaPackageVodCreateAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +77,7 @@ func (r *MediaPackageVodCreateAssetFuture) Get(ctx workflow.Context) (*mediapack
 }
 
 type MediaPackageVodCreatePackagingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +88,7 @@ func (r *MediaPackageVodCreatePackagingConfigurationFuture) Get(ctx workflow.Con
 }
 
 type MediaPackageVodCreatePackagingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -96,6 +99,7 @@ func (r *MediaPackageVodCreatePackagingGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaPackageVodDeleteAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +110,7 @@ func (r *MediaPackageVodDeleteAssetFuture) Get(ctx workflow.Context) (*mediapack
 }
 
 type MediaPackageVodDeletePackagingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +121,7 @@ func (r *MediaPackageVodDeletePackagingConfigurationFuture) Get(ctx workflow.Con
 }
 
 type MediaPackageVodDeletePackagingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +132,7 @@ func (r *MediaPackageVodDeletePackagingGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaPackageVodDescribeAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +143,7 @@ func (r *MediaPackageVodDescribeAssetFuture) Get(ctx workflow.Context) (*mediapa
 }
 
 type MediaPackageVodDescribePackagingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +154,7 @@ func (r *MediaPackageVodDescribePackagingConfigurationFuture) Get(ctx workflow.C
 }
 
 type MediaPackageVodDescribePackagingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +165,7 @@ func (r *MediaPackageVodDescribePackagingGroupFuture) Get(ctx workflow.Context) 
 }
 
 type MediaPackageVodListAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +176,7 @@ func (r *MediaPackageVodListAssetsFuture) Get(ctx workflow.Context) (*mediapacka
 }
 
 type MediaPackageVodListPackagingConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +187,7 @@ func (r *MediaPackageVodListPackagingConfigurationsFuture) Get(ctx workflow.Cont
 }
 
 type MediaPackageVodListPackagingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +198,7 @@ func (r *MediaPackageVodListPackagingGroupsFuture) Get(ctx workflow.Context) (*m
 }
 
 type MediaPackageVodListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +209,7 @@ func (r *MediaPackageVodListTagsForResourceFuture) Get(ctx workflow.Context) (*m
 }
 
 type MediaPackageVodTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +220,7 @@ func (r *MediaPackageVodTagResourceFuture) Get(ctx workflow.Context) (*mediapack
 }
 
 type MediaPackageVodUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +231,7 @@ func (r *MediaPackageVodUntagResourceFuture) Get(ctx workflow.Context) (*mediapa
 }
 
 type MediaPackageVodUpdatePackagingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

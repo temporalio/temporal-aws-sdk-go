@@ -111,6 +111,7 @@ func NewDataSyncStub() DataSyncClient {
 }
 
 type DataSyncCancelTaskExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +122,7 @@ func (r *DataSyncCancelTaskExecutionFuture) Get(ctx workflow.Context) (*datasync
 }
 
 type DataSyncCreateAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +133,7 @@ func (r *DataSyncCreateAgentFuture) Get(ctx workflow.Context) (*datasync.CreateA
 }
 
 type DataSyncCreateLocationEfsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +144,7 @@ func (r *DataSyncCreateLocationEfsFuture) Get(ctx workflow.Context) (*datasync.C
 }
 
 type DataSyncCreateLocationFsxWindowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +155,7 @@ func (r *DataSyncCreateLocationFsxWindowsFuture) Get(ctx workflow.Context) (*dat
 }
 
 type DataSyncCreateLocationNfsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +166,7 @@ func (r *DataSyncCreateLocationNfsFuture) Get(ctx workflow.Context) (*datasync.C
 }
 
 type DataSyncCreateLocationObjectStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +177,7 @@ func (r *DataSyncCreateLocationObjectStorageFuture) Get(ctx workflow.Context) (*
 }
 
 type DataSyncCreateLocationS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +188,7 @@ func (r *DataSyncCreateLocationS3Future) Get(ctx workflow.Context) (*datasync.Cr
 }
 
 type DataSyncCreateLocationSmbFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +199,7 @@ func (r *DataSyncCreateLocationSmbFuture) Get(ctx workflow.Context) (*datasync.C
 }
 
 type DataSyncCreateTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +210,7 @@ func (r *DataSyncCreateTaskFuture) Get(ctx workflow.Context) (*datasync.CreateTa
 }
 
 type DataSyncDeleteAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +221,7 @@ func (r *DataSyncDeleteAgentFuture) Get(ctx workflow.Context) (*datasync.DeleteA
 }
 
 type DataSyncDeleteLocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +232,7 @@ func (r *DataSyncDeleteLocationFuture) Get(ctx workflow.Context) (*datasync.Dele
 }
 
 type DataSyncDeleteTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +243,7 @@ func (r *DataSyncDeleteTaskFuture) Get(ctx workflow.Context) (*datasync.DeleteTa
 }
 
 type DataSyncDescribeAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +254,7 @@ func (r *DataSyncDescribeAgentFuture) Get(ctx workflow.Context) (*datasync.Descr
 }
 
 type DataSyncDescribeLocationEfsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +265,7 @@ func (r *DataSyncDescribeLocationEfsFuture) Get(ctx workflow.Context) (*datasync
 }
 
 type DataSyncDescribeLocationFsxWindowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +276,7 @@ func (r *DataSyncDescribeLocationFsxWindowsFuture) Get(ctx workflow.Context) (*d
 }
 
 type DataSyncDescribeLocationNfsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +287,7 @@ func (r *DataSyncDescribeLocationNfsFuture) Get(ctx workflow.Context) (*datasync
 }
 
 type DataSyncDescribeLocationObjectStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +298,7 @@ func (r *DataSyncDescribeLocationObjectStorageFuture) Get(ctx workflow.Context) 
 }
 
 type DataSyncDescribeLocationS3Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +309,7 @@ func (r *DataSyncDescribeLocationS3Future) Get(ctx workflow.Context) (*datasync.
 }
 
 type DataSyncDescribeLocationSmbFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +320,7 @@ func (r *DataSyncDescribeLocationSmbFuture) Get(ctx workflow.Context) (*datasync
 }
 
 type DataSyncDescribeTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +331,7 @@ func (r *DataSyncDescribeTaskFuture) Get(ctx workflow.Context) (*datasync.Descri
 }
 
 type DataSyncDescribeTaskExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +342,7 @@ func (r *DataSyncDescribeTaskExecutionFuture) Get(ctx workflow.Context) (*datasy
 }
 
 type DataSyncListAgentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +353,7 @@ func (r *DataSyncListAgentsFuture) Get(ctx workflow.Context) (*datasync.ListAgen
 }
 
 type DataSyncListLocationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +364,7 @@ func (r *DataSyncListLocationsFuture) Get(ctx workflow.Context) (*datasync.ListL
 }
 
 type DataSyncListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +375,7 @@ func (r *DataSyncListTagsForResourceFuture) Get(ctx workflow.Context) (*datasync
 }
 
 type DataSyncListTaskExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +386,7 @@ func (r *DataSyncListTaskExecutionsFuture) Get(ctx workflow.Context) (*datasync.
 }
 
 type DataSyncListTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +397,7 @@ func (r *DataSyncListTasksFuture) Get(ctx workflow.Context) (*datasync.ListTasks
 }
 
 type DataSyncStartTaskExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +408,7 @@ func (r *DataSyncStartTaskExecutionFuture) Get(ctx workflow.Context) (*datasync.
 }
 
 type DataSyncTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +419,7 @@ func (r *DataSyncTagResourceFuture) Get(ctx workflow.Context) (*datasync.TagReso
 }
 
 type DataSyncUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +430,7 @@ func (r *DataSyncUntagResourceFuture) Get(ctx workflow.Context) (*datasync.Untag
 }
 
 type DataSyncUpdateAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +441,7 @@ func (r *DataSyncUpdateAgentFuture) Get(ctx workflow.Context) (*datasync.UpdateA
 }
 
 type DataSyncUpdateTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

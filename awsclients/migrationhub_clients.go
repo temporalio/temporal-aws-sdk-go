@@ -69,6 +69,7 @@ func NewMigrationHubStub() MigrationHubClient {
 }
 
 type MigrationHubAssociateCreatedArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +80,7 @@ func (r *MigrationHubAssociateCreatedArtifactFuture) Get(ctx workflow.Context) (
 }
 
 type MigrationHubAssociateDiscoveredResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +91,7 @@ func (r *MigrationHubAssociateDiscoveredResourceFuture) Get(ctx workflow.Context
 }
 
 type MigrationHubCreateProgressUpdateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +102,7 @@ func (r *MigrationHubCreateProgressUpdateStreamFuture) Get(ctx workflow.Context)
 }
 
 type MigrationHubDeleteProgressUpdateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +113,7 @@ func (r *MigrationHubDeleteProgressUpdateStreamFuture) Get(ctx workflow.Context)
 }
 
 type MigrationHubDescribeApplicationStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +124,7 @@ func (r *MigrationHubDescribeApplicationStateFuture) Get(ctx workflow.Context) (
 }
 
 type MigrationHubDescribeMigrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +135,7 @@ func (r *MigrationHubDescribeMigrationTaskFuture) Get(ctx workflow.Context) (*mi
 }
 
 type MigrationHubDisassociateCreatedArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +146,7 @@ func (r *MigrationHubDisassociateCreatedArtifactFuture) Get(ctx workflow.Context
 }
 
 type MigrationHubDisassociateDiscoveredResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +157,7 @@ func (r *MigrationHubDisassociateDiscoveredResourceFuture) Get(ctx workflow.Cont
 }
 
 type MigrationHubImportMigrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +168,7 @@ func (r *MigrationHubImportMigrationTaskFuture) Get(ctx workflow.Context) (*migr
 }
 
 type MigrationHubListApplicationStatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +179,7 @@ func (r *MigrationHubListApplicationStatesFuture) Get(ctx workflow.Context) (*mi
 }
 
 type MigrationHubListCreatedArtifactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +190,7 @@ func (r *MigrationHubListCreatedArtifactsFuture) Get(ctx workflow.Context) (*mig
 }
 
 type MigrationHubListDiscoveredResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +201,7 @@ func (r *MigrationHubListDiscoveredResourcesFuture) Get(ctx workflow.Context) (*
 }
 
 type MigrationHubListMigrationTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +212,7 @@ func (r *MigrationHubListMigrationTasksFuture) Get(ctx workflow.Context) (*migra
 }
 
 type MigrationHubListProgressUpdateStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +223,7 @@ func (r *MigrationHubListProgressUpdateStreamsFuture) Get(ctx workflow.Context) 
 }
 
 type MigrationHubNotifyApplicationStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +234,7 @@ func (r *MigrationHubNotifyApplicationStateFuture) Get(ctx workflow.Context) (*m
 }
 
 type MigrationHubNotifyMigrationTaskStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +245,7 @@ func (r *MigrationHubNotifyMigrationTaskStateFuture) Get(ctx workflow.Context) (
 }
 
 type MigrationHubPutResourceAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

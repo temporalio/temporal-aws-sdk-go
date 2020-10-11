@@ -654,6 +654,7 @@ func NewIoTStub() IoTClient {
 }
 
 type IoTAcceptCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -664,6 +665,7 @@ func (r *IoTAcceptCertificateTransferFuture) Get(ctx workflow.Context) (*iot.Acc
 }
 
 type IoTAddThingToBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -674,6 +676,7 @@ func (r *IoTAddThingToBillingGroupFuture) Get(ctx workflow.Context) (*iot.AddThi
 }
 
 type IoTAddThingToThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -684,6 +687,7 @@ func (r *IoTAddThingToThingGroupFuture) Get(ctx workflow.Context) (*iot.AddThing
 }
 
 type IoTAssociateTargetsWithJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -694,6 +698,7 @@ func (r *IoTAssociateTargetsWithJobFuture) Get(ctx workflow.Context) (*iot.Assoc
 }
 
 type IoTAttachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -704,6 +709,7 @@ func (r *IoTAttachPolicyFuture) Get(ctx workflow.Context) (*iot.AttachPolicyOutp
 }
 
 type IoTAttachPrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -714,6 +720,7 @@ func (r *IoTAttachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.AttachP
 }
 
 type IoTAttachSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -724,6 +731,7 @@ func (r *IoTAttachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.AttachS
 }
 
 type IoTAttachThingPrincipalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -734,6 +742,7 @@ func (r *IoTAttachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.AttachTh
 }
 
 type IoTCancelAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -744,6 +753,7 @@ func (r *IoTCancelAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTCancelAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -754,6 +764,7 @@ func (r *IoTCancelAuditTaskFuture) Get(ctx workflow.Context) (*iot.CancelAuditTa
 }
 
 type IoTCancelCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -764,6 +775,7 @@ func (r *IoTCancelCertificateTransferFuture) Get(ctx workflow.Context) (*iot.Can
 }
 
 type IoTCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -774,6 +786,7 @@ func (r *IoTCancelJobFuture) Get(ctx workflow.Context) (*iot.CancelJobOutput, er
 }
 
 type IoTCancelJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -784,6 +797,7 @@ func (r *IoTCancelJobExecutionFuture) Get(ctx workflow.Context) (*iot.CancelJobE
 }
 
 type IoTClearDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -794,6 +808,7 @@ func (r *IoTClearDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.ClearD
 }
 
 type IoTConfirmTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -804,6 +819,7 @@ func (r *IoTConfirmTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.C
 }
 
 type IoTCreateAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -814,6 +830,7 @@ func (r *IoTCreateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.Create
 }
 
 type IoTCreateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -824,6 +841,7 @@ func (r *IoTCreateAuthorizerFuture) Get(ctx workflow.Context) (*iot.CreateAuthor
 }
 
 type IoTCreateBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -834,6 +852,7 @@ func (r *IoTCreateBillingGroupFuture) Get(ctx workflow.Context) (*iot.CreateBill
 }
 
 type IoTCreateCertificateFromCsrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -844,6 +863,7 @@ func (r *IoTCreateCertificateFromCsrFuture) Get(ctx workflow.Context) (*iot.Crea
 }
 
 type IoTCreateDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -854,6 +874,7 @@ func (r *IoTCreateDimensionFuture) Get(ctx workflow.Context) (*iot.CreateDimensi
 }
 
 type IoTCreateDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -864,6 +885,7 @@ func (r *IoTCreateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.Cre
 }
 
 type IoTCreateDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -874,6 +896,7 @@ func (r *IoTCreateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.Creat
 }
 
 type IoTCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -884,6 +907,7 @@ func (r *IoTCreateJobFuture) Get(ctx workflow.Context) (*iot.CreateJobOutput, er
 }
 
 type IoTCreateKeysAndCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -894,6 +918,7 @@ func (r *IoTCreateKeysAndCertificateFuture) Get(ctx workflow.Context) (*iot.Crea
 }
 
 type IoTCreateMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -904,6 +929,7 @@ func (r *IoTCreateMitigationActionFuture) Get(ctx workflow.Context) (*iot.Create
 }
 
 type IoTCreateOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -914,6 +940,7 @@ func (r *IoTCreateOTAUpdateFuture) Get(ctx workflow.Context) (*iot.CreateOTAUpda
 }
 
 type IoTCreatePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -924,6 +951,7 @@ func (r *IoTCreatePolicyFuture) Get(ctx workflow.Context) (*iot.CreatePolicyOutp
 }
 
 type IoTCreatePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -934,6 +962,7 @@ func (r *IoTCreatePolicyVersionFuture) Get(ctx workflow.Context) (*iot.CreatePol
 }
 
 type IoTCreateProvisioningClaimFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -944,6 +973,7 @@ func (r *IoTCreateProvisioningClaimFuture) Get(ctx workflow.Context) (*iot.Creat
 }
 
 type IoTCreateProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -954,6 +984,7 @@ func (r *IoTCreateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.Cr
 }
 
 type IoTCreateProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -964,6 +995,7 @@ func (r *IoTCreateProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (
 }
 
 type IoTCreateRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -974,6 +1006,7 @@ func (r *IoTCreateRoleAliasFuture) Get(ctx workflow.Context) (*iot.CreateRoleAli
 }
 
 type IoTCreateScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -984,6 +1017,7 @@ func (r *IoTCreateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.CreateSc
 }
 
 type IoTCreateSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -994,6 +1028,7 @@ func (r *IoTCreateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.CreateS
 }
 
 type IoTCreateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1004,6 +1039,7 @@ func (r *IoTCreateStreamFuture) Get(ctx workflow.Context) (*iot.CreateStreamOutp
 }
 
 type IoTCreateThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1014,6 +1050,7 @@ func (r *IoTCreateThingFuture) Get(ctx workflow.Context) (*iot.CreateThingOutput
 }
 
 type IoTCreateThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1024,6 +1061,7 @@ func (r *IoTCreateThingGroupFuture) Get(ctx workflow.Context) (*iot.CreateThingG
 }
 
 type IoTCreateThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1034,6 +1072,7 @@ func (r *IoTCreateThingTypeFuture) Get(ctx workflow.Context) (*iot.CreateThingTy
 }
 
 type IoTCreateTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1044,6 +1083,7 @@ func (r *IoTCreateTopicRuleFuture) Get(ctx workflow.Context) (*iot.CreateTopicRu
 }
 
 type IoTCreateTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1054,6 +1094,7 @@ func (r *IoTCreateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.Cr
 }
 
 type IoTDeleteAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1064,6 +1105,7 @@ func (r *IoTDeleteAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTDeleteAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1074,6 +1116,7 @@ func (r *IoTDeleteAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.Delete
 }
 
 type IoTDeleteAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1084,6 +1127,7 @@ func (r *IoTDeleteAuthorizerFuture) Get(ctx workflow.Context) (*iot.DeleteAuthor
 }
 
 type IoTDeleteBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1094,6 +1138,7 @@ func (r *IoTDeleteBillingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteBill
 }
 
 type IoTDeleteCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1104,6 +1149,7 @@ func (r *IoTDeleteCACertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCAC
 }
 
 type IoTDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1114,6 +1160,7 @@ func (r *IoTDeleteCertificateFuture) Get(ctx workflow.Context) (*iot.DeleteCerti
 }
 
 type IoTDeleteDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1124,6 +1171,7 @@ func (r *IoTDeleteDimensionFuture) Get(ctx workflow.Context) (*iot.DeleteDimensi
 }
 
 type IoTDeleteDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1134,6 +1182,7 @@ func (r *IoTDeleteDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.Del
 }
 
 type IoTDeleteDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1144,6 +1193,7 @@ func (r *IoTDeleteDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.Delet
 }
 
 type IoTDeleteJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1154,6 +1204,7 @@ func (r *IoTDeleteJobFuture) Get(ctx workflow.Context) (*iot.DeleteJobOutput, er
 }
 
 type IoTDeleteJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1164,6 +1215,7 @@ func (r *IoTDeleteJobExecutionFuture) Get(ctx workflow.Context) (*iot.DeleteJobE
 }
 
 type IoTDeleteMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1174,6 +1226,7 @@ func (r *IoTDeleteMitigationActionFuture) Get(ctx workflow.Context) (*iot.Delete
 }
 
 type IoTDeleteOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1184,6 +1237,7 @@ func (r *IoTDeleteOTAUpdateFuture) Get(ctx workflow.Context) (*iot.DeleteOTAUpda
 }
 
 type IoTDeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1194,6 +1248,7 @@ func (r *IoTDeletePolicyFuture) Get(ctx workflow.Context) (*iot.DeletePolicyOutp
 }
 
 type IoTDeletePolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1204,6 +1259,7 @@ func (r *IoTDeletePolicyVersionFuture) Get(ctx workflow.Context) (*iot.DeletePol
 }
 
 type IoTDeleteProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1214,6 +1270,7 @@ func (r *IoTDeleteProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.De
 }
 
 type IoTDeleteProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1224,6 +1281,7 @@ func (r *IoTDeleteProvisioningTemplateVersionFuture) Get(ctx workflow.Context) (
 }
 
 type IoTDeleteRegistrationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1234,6 +1292,7 @@ func (r *IoTDeleteRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.Delete
 }
 
 type IoTDeleteRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1244,6 +1303,7 @@ func (r *IoTDeleteRoleAliasFuture) Get(ctx workflow.Context) (*iot.DeleteRoleAli
 }
 
 type IoTDeleteScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1254,6 +1314,7 @@ func (r *IoTDeleteScheduledAuditFuture) Get(ctx workflow.Context) (*iot.DeleteSc
 }
 
 type IoTDeleteSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1264,6 +1325,7 @@ func (r *IoTDeleteSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DeleteS
 }
 
 type IoTDeleteStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1274,6 +1336,7 @@ func (r *IoTDeleteStreamFuture) Get(ctx workflow.Context) (*iot.DeleteStreamOutp
 }
 
 type IoTDeleteThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1284,6 +1347,7 @@ func (r *IoTDeleteThingFuture) Get(ctx workflow.Context) (*iot.DeleteThingOutput
 }
 
 type IoTDeleteThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1294,6 +1358,7 @@ func (r *IoTDeleteThingGroupFuture) Get(ctx workflow.Context) (*iot.DeleteThingG
 }
 
 type IoTDeleteThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1304,6 +1369,7 @@ func (r *IoTDeleteThingTypeFuture) Get(ctx workflow.Context) (*iot.DeleteThingTy
 }
 
 type IoTDeleteTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1314,6 +1380,7 @@ func (r *IoTDeleteTopicRuleFuture) Get(ctx workflow.Context) (*iot.DeleteTopicRu
 }
 
 type IoTDeleteTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1324,6 +1391,7 @@ func (r *IoTDeleteTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.De
 }
 
 type IoTDeleteV2LoggingLevelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1334,6 +1402,7 @@ func (r *IoTDeleteV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.DeleteV2
 }
 
 type IoTDeprecateThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1344,6 +1413,7 @@ func (r *IoTDeprecateThingTypeFuture) Get(ctx workflow.Context) (*iot.DeprecateT
 }
 
 type IoTDescribeAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1354,6 +1424,7 @@ func (r *IoTDescribeAccountAuditConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type IoTDescribeAuditFindingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1364,6 +1435,7 @@ func (r *IoTDescribeAuditFindingFuture) Get(ctx workflow.Context) (*iot.Describe
 }
 
 type IoTDescribeAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1374,6 +1446,7 @@ func (r *IoTDescribeAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) 
 }
 
 type IoTDescribeAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1384,6 +1457,7 @@ func (r *IoTDescribeAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.Desc
 }
 
 type IoTDescribeAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1394,6 +1468,7 @@ func (r *IoTDescribeAuditTaskFuture) Get(ctx workflow.Context) (*iot.DescribeAud
 }
 
 type IoTDescribeAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1404,6 +1479,7 @@ func (r *IoTDescribeAuthorizerFuture) Get(ctx workflow.Context) (*iot.DescribeAu
 }
 
 type IoTDescribeBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1414,6 +1490,7 @@ func (r *IoTDescribeBillingGroupFuture) Get(ctx workflow.Context) (*iot.Describe
 }
 
 type IoTDescribeCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1424,6 +1501,7 @@ func (r *IoTDescribeCACertificateFuture) Get(ctx workflow.Context) (*iot.Describ
 }
 
 type IoTDescribeCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1434,6 +1512,7 @@ func (r *IoTDescribeCertificateFuture) Get(ctx workflow.Context) (*iot.DescribeC
 }
 
 type IoTDescribeDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1444,6 +1523,7 @@ func (r *IoTDescribeDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.Des
 }
 
 type IoTDescribeDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1454,6 +1534,7 @@ func (r *IoTDescribeDimensionFuture) Get(ctx workflow.Context) (*iot.DescribeDim
 }
 
 type IoTDescribeDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1464,6 +1545,7 @@ func (r *IoTDescribeDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.D
 }
 
 type IoTDescribeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1474,6 +1556,7 @@ func (r *IoTDescribeEndpointFuture) Get(ctx workflow.Context) (*iot.DescribeEndp
 }
 
 type IoTDescribeEventConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1484,6 +1567,7 @@ func (r *IoTDescribeEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.D
 }
 
 type IoTDescribeIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1494,6 +1578,7 @@ func (r *IoTDescribeIndexFuture) Get(ctx workflow.Context) (*iot.DescribeIndexOu
 }
 
 type IoTDescribeJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1504,6 +1589,7 @@ func (r *IoTDescribeJobFuture) Get(ctx workflow.Context) (*iot.DescribeJobOutput
 }
 
 type IoTDescribeJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1514,6 +1600,7 @@ func (r *IoTDescribeJobExecutionFuture) Get(ctx workflow.Context) (*iot.Describe
 }
 
 type IoTDescribeMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1524,6 +1611,7 @@ func (r *IoTDescribeMitigationActionFuture) Get(ctx workflow.Context) (*iot.Desc
 }
 
 type IoTDescribeProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1534,6 +1622,7 @@ func (r *IoTDescribeProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.
 }
 
 type IoTDescribeProvisioningTemplateVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1544,6 +1633,7 @@ func (r *IoTDescribeProvisioningTemplateVersionFuture) Get(ctx workflow.Context)
 }
 
 type IoTDescribeRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1554,6 +1644,7 @@ func (r *IoTDescribeRoleAliasFuture) Get(ctx workflow.Context) (*iot.DescribeRol
 }
 
 type IoTDescribeScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1564,6 +1655,7 @@ func (r *IoTDescribeScheduledAuditFuture) Get(ctx workflow.Context) (*iot.Descri
 }
 
 type IoTDescribeSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1574,6 +1666,7 @@ func (r *IoTDescribeSecurityProfileFuture) Get(ctx workflow.Context) (*iot.Descr
 }
 
 type IoTDescribeStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1584,6 +1677,7 @@ func (r *IoTDescribeStreamFuture) Get(ctx workflow.Context) (*iot.DescribeStream
 }
 
 type IoTDescribeThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1594,6 +1688,7 @@ func (r *IoTDescribeThingFuture) Get(ctx workflow.Context) (*iot.DescribeThingOu
 }
 
 type IoTDescribeThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1604,6 +1699,7 @@ func (r *IoTDescribeThingGroupFuture) Get(ctx workflow.Context) (*iot.DescribeTh
 }
 
 type IoTDescribeThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1614,6 +1710,7 @@ func (r *IoTDescribeThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTDescribeThingTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1624,6 +1721,7 @@ func (r *IoTDescribeThingTypeFuture) Get(ctx workflow.Context) (*iot.DescribeThi
 }
 
 type IoTDetachPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1634,6 +1732,7 @@ func (r *IoTDetachPolicyFuture) Get(ctx workflow.Context) (*iot.DetachPolicyOutp
 }
 
 type IoTDetachPrincipalPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1644,6 +1743,7 @@ func (r *IoTDetachPrincipalPolicyFuture) Get(ctx workflow.Context) (*iot.DetachP
 }
 
 type IoTDetachSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1654,6 +1754,7 @@ func (r *IoTDetachSecurityProfileFuture) Get(ctx workflow.Context) (*iot.DetachS
 }
 
 type IoTDetachThingPrincipalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1664,6 +1765,7 @@ func (r *IoTDetachThingPrincipalFuture) Get(ctx workflow.Context) (*iot.DetachTh
 }
 
 type IoTDisableTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1674,6 +1776,7 @@ func (r *IoTDisableTopicRuleFuture) Get(ctx workflow.Context) (*iot.DisableTopic
 }
 
 type IoTEnableTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1684,6 +1787,7 @@ func (r *IoTEnableTopicRuleFuture) Get(ctx workflow.Context) (*iot.EnableTopicRu
 }
 
 type IoTGetCardinalityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1694,6 +1798,7 @@ func (r *IoTGetCardinalityFuture) Get(ctx workflow.Context) (*iot.GetCardinality
 }
 
 type IoTGetEffectivePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1704,6 +1809,7 @@ func (r *IoTGetEffectivePoliciesFuture) Get(ctx workflow.Context) (*iot.GetEffec
 }
 
 type IoTGetIndexingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1714,6 +1820,7 @@ func (r *IoTGetIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.GetI
 }
 
 type IoTGetJobDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1724,6 +1831,7 @@ func (r *IoTGetJobDocumentFuture) Get(ctx workflow.Context) (*iot.GetJobDocument
 }
 
 type IoTGetLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1734,6 +1842,7 @@ func (r *IoTGetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetLoggingO
 }
 
 type IoTGetOTAUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1744,6 +1853,7 @@ func (r *IoTGetOTAUpdateFuture) Get(ctx workflow.Context) (*iot.GetOTAUpdateOutp
 }
 
 type IoTGetPercentilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1754,6 +1864,7 @@ func (r *IoTGetPercentilesFuture) Get(ctx workflow.Context) (*iot.GetPercentiles
 }
 
 type IoTGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1764,6 +1875,7 @@ func (r *IoTGetPolicyFuture) Get(ctx workflow.Context) (*iot.GetPolicyOutput, er
 }
 
 type IoTGetPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1774,6 +1886,7 @@ func (r *IoTGetPolicyVersionFuture) Get(ctx workflow.Context) (*iot.GetPolicyVer
 }
 
 type IoTGetRegistrationCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1784,6 +1897,7 @@ func (r *IoTGetRegistrationCodeFuture) Get(ctx workflow.Context) (*iot.GetRegist
 }
 
 type IoTGetStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1794,6 +1908,7 @@ func (r *IoTGetStatisticsFuture) Get(ctx workflow.Context) (*iot.GetStatisticsOu
 }
 
 type IoTGetTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1804,6 +1919,7 @@ func (r *IoTGetTopicRuleFuture) Get(ctx workflow.Context) (*iot.GetTopicRuleOutp
 }
 
 type IoTGetTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1814,6 +1930,7 @@ func (r *IoTGetTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.GetTo
 }
 
 type IoTGetV2LoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1824,6 +1941,7 @@ func (r *IoTGetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.GetV2Logg
 }
 
 type IoTListActiveViolationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1834,6 +1952,7 @@ func (r *IoTListActiveViolationsFuture) Get(ctx workflow.Context) (*iot.ListActi
 }
 
 type IoTListAttachedPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1844,6 +1963,7 @@ func (r *IoTListAttachedPoliciesFuture) Get(ctx workflow.Context) (*iot.ListAtta
 }
 
 type IoTListAuditFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1854,6 +1974,7 @@ func (r *IoTListAuditFindingsFuture) Get(ctx workflow.Context) (*iot.ListAuditFi
 }
 
 type IoTListAuditMitigationActionsExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1864,6 +1985,7 @@ func (r *IoTListAuditMitigationActionsExecutionsFuture) Get(ctx workflow.Context
 }
 
 type IoTListAuditMitigationActionsTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1874,6 +1996,7 @@ func (r *IoTListAuditMitigationActionsTasksFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTListAuditSuppressionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1884,6 +2007,7 @@ func (r *IoTListAuditSuppressionsFuture) Get(ctx workflow.Context) (*iot.ListAud
 }
 
 type IoTListAuditTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1894,6 +2018,7 @@ func (r *IoTListAuditTasksFuture) Get(ctx workflow.Context) (*iot.ListAuditTasks
 }
 
 type IoTListAuthorizersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1904,6 +2029,7 @@ func (r *IoTListAuthorizersFuture) Get(ctx workflow.Context) (*iot.ListAuthorize
 }
 
 type IoTListBillingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1914,6 +2040,7 @@ func (r *IoTListBillingGroupsFuture) Get(ctx workflow.Context) (*iot.ListBilling
 }
 
 type IoTListCACertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1924,6 +2051,7 @@ func (r *IoTListCACertificatesFuture) Get(ctx workflow.Context) (*iot.ListCACert
 }
 
 type IoTListCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1934,6 +2062,7 @@ func (r *IoTListCertificatesFuture) Get(ctx workflow.Context) (*iot.ListCertific
 }
 
 type IoTListCertificatesByCAFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1944,6 +2073,7 @@ func (r *IoTListCertificatesByCAFuture) Get(ctx workflow.Context) (*iot.ListCert
 }
 
 type IoTListDimensionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1954,6 +2084,7 @@ func (r *IoTListDimensionsFuture) Get(ctx workflow.Context) (*iot.ListDimensions
 }
 
 type IoTListDomainConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1964,6 +2095,7 @@ func (r *IoTListDomainConfigurationsFuture) Get(ctx workflow.Context) (*iot.List
 }
 
 type IoTListIndicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1974,6 +2106,7 @@ func (r *IoTListIndicesFuture) Get(ctx workflow.Context) (*iot.ListIndicesOutput
 }
 
 type IoTListJobExecutionsForJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1984,6 +2117,7 @@ func (r *IoTListJobExecutionsForJobFuture) Get(ctx workflow.Context) (*iot.ListJ
 }
 
 type IoTListJobExecutionsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1994,6 +2128,7 @@ func (r *IoTListJobExecutionsForThingFuture) Get(ctx workflow.Context) (*iot.Lis
 }
 
 type IoTListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2004,6 +2139,7 @@ func (r *IoTListJobsFuture) Get(ctx workflow.Context) (*iot.ListJobsOutput, erro
 }
 
 type IoTListMitigationActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2014,6 +2150,7 @@ func (r *IoTListMitigationActionsFuture) Get(ctx workflow.Context) (*iot.ListMit
 }
 
 type IoTListOTAUpdatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2024,6 +2161,7 @@ func (r *IoTListOTAUpdatesFuture) Get(ctx workflow.Context) (*iot.ListOTAUpdates
 }
 
 type IoTListOutgoingCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2034,6 +2172,7 @@ func (r *IoTListOutgoingCertificatesFuture) Get(ctx workflow.Context) (*iot.List
 }
 
 type IoTListPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2044,6 +2183,7 @@ func (r *IoTListPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPoliciesOutp
 }
 
 type IoTListPolicyPrincipalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2054,6 +2194,7 @@ func (r *IoTListPolicyPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListPoli
 }
 
 type IoTListPolicyVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2064,6 +2205,7 @@ func (r *IoTListPolicyVersionsFuture) Get(ctx workflow.Context) (*iot.ListPolicy
 }
 
 type IoTListPrincipalPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2074,6 +2216,7 @@ func (r *IoTListPrincipalPoliciesFuture) Get(ctx workflow.Context) (*iot.ListPri
 }
 
 type IoTListPrincipalThingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2084,6 +2227,7 @@ func (r *IoTListPrincipalThingsFuture) Get(ctx workflow.Context) (*iot.ListPrinc
 }
 
 type IoTListProvisioningTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2094,6 +2238,7 @@ func (r *IoTListProvisioningTemplateVersionsFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTListProvisioningTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2104,6 +2249,7 @@ func (r *IoTListProvisioningTemplatesFuture) Get(ctx workflow.Context) (*iot.Lis
 }
 
 type IoTListRoleAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2114,6 +2260,7 @@ func (r *IoTListRoleAliasesFuture) Get(ctx workflow.Context) (*iot.ListRoleAlias
 }
 
 type IoTListScheduledAuditsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2124,6 +2271,7 @@ func (r *IoTListScheduledAuditsFuture) Get(ctx workflow.Context) (*iot.ListSched
 }
 
 type IoTListSecurityProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2134,6 +2282,7 @@ func (r *IoTListSecurityProfilesFuture) Get(ctx workflow.Context) (*iot.ListSecu
 }
 
 type IoTListSecurityProfilesForTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2144,6 +2293,7 @@ func (r *IoTListSecurityProfilesForTargetFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2154,6 +2304,7 @@ func (r *IoTListStreamsFuture) Get(ctx workflow.Context) (*iot.ListStreamsOutput
 }
 
 type IoTListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2164,6 +2315,7 @@ func (r *IoTListTagsForResourceFuture) Get(ctx workflow.Context) (*iot.ListTagsF
 }
 
 type IoTListTargetsForPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2174,6 +2326,7 @@ func (r *IoTListTargetsForPolicyFuture) Get(ctx workflow.Context) (*iot.ListTarg
 }
 
 type IoTListTargetsForSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2184,6 +2337,7 @@ func (r *IoTListTargetsForSecurityProfileFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTListThingGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2194,6 +2348,7 @@ func (r *IoTListThingGroupsFuture) Get(ctx workflow.Context) (*iot.ListThingGrou
 }
 
 type IoTListThingGroupsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2204,6 +2359,7 @@ func (r *IoTListThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.ListT
 }
 
 type IoTListThingPrincipalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2214,6 +2370,7 @@ func (r *IoTListThingPrincipalsFuture) Get(ctx workflow.Context) (*iot.ListThing
 }
 
 type IoTListThingRegistrationTaskReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2224,6 +2381,7 @@ func (r *IoTListThingRegistrationTaskReportsFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTListThingRegistrationTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2234,6 +2392,7 @@ func (r *IoTListThingRegistrationTasksFuture) Get(ctx workflow.Context) (*iot.Li
 }
 
 type IoTListThingTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2244,6 +2403,7 @@ func (r *IoTListThingTypesFuture) Get(ctx workflow.Context) (*iot.ListThingTypes
 }
 
 type IoTListThingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2254,6 +2414,7 @@ func (r *IoTListThingsFuture) Get(ctx workflow.Context) (*iot.ListThingsOutput, 
 }
 
 type IoTListThingsInBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2264,6 +2425,7 @@ func (r *IoTListThingsInBillingGroupFuture) Get(ctx workflow.Context) (*iot.List
 }
 
 type IoTListThingsInThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2274,6 +2436,7 @@ func (r *IoTListThingsInThingGroupFuture) Get(ctx workflow.Context) (*iot.ListTh
 }
 
 type IoTListTopicRuleDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2284,6 +2447,7 @@ func (r *IoTListTopicRuleDestinationsFuture) Get(ctx workflow.Context) (*iot.Lis
 }
 
 type IoTListTopicRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2294,6 +2458,7 @@ func (r *IoTListTopicRulesFuture) Get(ctx workflow.Context) (*iot.ListTopicRules
 }
 
 type IoTListV2LoggingLevelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2304,6 +2469,7 @@ func (r *IoTListV2LoggingLevelsFuture) Get(ctx workflow.Context) (*iot.ListV2Log
 }
 
 type IoTListViolationEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2314,6 +2480,7 @@ func (r *IoTListViolationEventsFuture) Get(ctx workflow.Context) (*iot.ListViola
 }
 
 type IoTRegisterCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2324,6 +2491,7 @@ func (r *IoTRegisterCACertificateFuture) Get(ctx workflow.Context) (*iot.Registe
 }
 
 type IoTRegisterCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2334,6 +2502,7 @@ func (r *IoTRegisterCertificateFuture) Get(ctx workflow.Context) (*iot.RegisterC
 }
 
 type IoTRegisterCertificateWithoutCAFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2344,6 +2513,7 @@ func (r *IoTRegisterCertificateWithoutCAFuture) Get(ctx workflow.Context) (*iot.
 }
 
 type IoTRegisterThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2354,6 +2524,7 @@ func (r *IoTRegisterThingFuture) Get(ctx workflow.Context) (*iot.RegisterThingOu
 }
 
 type IoTRejectCertificateTransferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2364,6 +2535,7 @@ func (r *IoTRejectCertificateTransferFuture) Get(ctx workflow.Context) (*iot.Rej
 }
 
 type IoTRemoveThingFromBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2374,6 +2546,7 @@ func (r *IoTRemoveThingFromBillingGroupFuture) Get(ctx workflow.Context) (*iot.R
 }
 
 type IoTRemoveThingFromThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2384,6 +2557,7 @@ func (r *IoTRemoveThingFromThingGroupFuture) Get(ctx workflow.Context) (*iot.Rem
 }
 
 type IoTReplaceTopicRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2394,6 +2568,7 @@ func (r *IoTReplaceTopicRuleFuture) Get(ctx workflow.Context) (*iot.ReplaceTopic
 }
 
 type IoTSearchIndexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2404,6 +2579,7 @@ func (r *IoTSearchIndexFuture) Get(ctx workflow.Context) (*iot.SearchIndexOutput
 }
 
 type IoTSetDefaultAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2414,6 +2590,7 @@ func (r *IoTSetDefaultAuthorizerFuture) Get(ctx workflow.Context) (*iot.SetDefau
 }
 
 type IoTSetDefaultPolicyVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2424,6 +2601,7 @@ func (r *IoTSetDefaultPolicyVersionFuture) Get(ctx workflow.Context) (*iot.SetDe
 }
 
 type IoTSetLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2434,6 +2612,7 @@ func (r *IoTSetLoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetLoggingO
 }
 
 type IoTSetV2LoggingLevelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2444,6 +2623,7 @@ func (r *IoTSetV2LoggingLevelFuture) Get(ctx workflow.Context) (*iot.SetV2Loggin
 }
 
 type IoTSetV2LoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2454,6 +2634,7 @@ func (r *IoTSetV2LoggingOptionsFuture) Get(ctx workflow.Context) (*iot.SetV2Logg
 }
 
 type IoTStartAuditMitigationActionsTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2464,6 +2645,7 @@ func (r *IoTStartAuditMitigationActionsTaskFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTStartOnDemandAuditTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2474,6 +2656,7 @@ func (r *IoTStartOnDemandAuditTaskFuture) Get(ctx workflow.Context) (*iot.StartO
 }
 
 type IoTStartThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2484,6 +2667,7 @@ func (r *IoTStartThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.St
 }
 
 type IoTStopThingRegistrationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2494,6 +2678,7 @@ func (r *IoTStopThingRegistrationTaskFuture) Get(ctx workflow.Context) (*iot.Sto
 }
 
 type IoTTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2504,6 +2689,7 @@ func (r *IoTTagResourceFuture) Get(ctx workflow.Context) (*iot.TagResourceOutput
 }
 
 type IoTTestAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2514,6 +2700,7 @@ func (r *IoTTestAuthorizationFuture) Get(ctx workflow.Context) (*iot.TestAuthori
 }
 
 type IoTTestInvokeAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2524,6 +2711,7 @@ func (r *IoTTestInvokeAuthorizerFuture) Get(ctx workflow.Context) (*iot.TestInvo
 }
 
 type IoTTransferCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2534,6 +2722,7 @@ func (r *IoTTransferCertificateFuture) Get(ctx workflow.Context) (*iot.TransferC
 }
 
 type IoTUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2544,6 +2733,7 @@ func (r *IoTUntagResourceFuture) Get(ctx workflow.Context) (*iot.UntagResourceOu
 }
 
 type IoTUpdateAccountAuditConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2554,6 +2744,7 @@ func (r *IoTUpdateAccountAuditConfigurationFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTUpdateAuditSuppressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2564,6 +2755,7 @@ func (r *IoTUpdateAuditSuppressionFuture) Get(ctx workflow.Context) (*iot.Update
 }
 
 type IoTUpdateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2574,6 +2766,7 @@ func (r *IoTUpdateAuthorizerFuture) Get(ctx workflow.Context) (*iot.UpdateAuthor
 }
 
 type IoTUpdateBillingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2584,6 +2777,7 @@ func (r *IoTUpdateBillingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateBill
 }
 
 type IoTUpdateCACertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2594,6 +2788,7 @@ func (r *IoTUpdateCACertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCAC
 }
 
 type IoTUpdateCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2604,6 +2799,7 @@ func (r *IoTUpdateCertificateFuture) Get(ctx workflow.Context) (*iot.UpdateCerti
 }
 
 type IoTUpdateDimensionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2614,6 +2810,7 @@ func (r *IoTUpdateDimensionFuture) Get(ctx workflow.Context) (*iot.UpdateDimensi
 }
 
 type IoTUpdateDomainConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2624,6 +2821,7 @@ func (r *IoTUpdateDomainConfigurationFuture) Get(ctx workflow.Context) (*iot.Upd
 }
 
 type IoTUpdateDynamicThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2634,6 +2832,7 @@ func (r *IoTUpdateDynamicThingGroupFuture) Get(ctx workflow.Context) (*iot.Updat
 }
 
 type IoTUpdateEventConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2644,6 +2843,7 @@ func (r *IoTUpdateEventConfigurationsFuture) Get(ctx workflow.Context) (*iot.Upd
 }
 
 type IoTUpdateIndexingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2654,6 +2854,7 @@ func (r *IoTUpdateIndexingConfigurationFuture) Get(ctx workflow.Context) (*iot.U
 }
 
 type IoTUpdateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2664,6 +2865,7 @@ func (r *IoTUpdateJobFuture) Get(ctx workflow.Context) (*iot.UpdateJobOutput, er
 }
 
 type IoTUpdateMitigationActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2674,6 +2876,7 @@ func (r *IoTUpdateMitigationActionFuture) Get(ctx workflow.Context) (*iot.Update
 }
 
 type IoTUpdateProvisioningTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2684,6 +2887,7 @@ func (r *IoTUpdateProvisioningTemplateFuture) Get(ctx workflow.Context) (*iot.Up
 }
 
 type IoTUpdateRoleAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2694,6 +2898,7 @@ func (r *IoTUpdateRoleAliasFuture) Get(ctx workflow.Context) (*iot.UpdateRoleAli
 }
 
 type IoTUpdateScheduledAuditFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2704,6 +2909,7 @@ func (r *IoTUpdateScheduledAuditFuture) Get(ctx workflow.Context) (*iot.UpdateSc
 }
 
 type IoTUpdateSecurityProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2714,6 +2920,7 @@ func (r *IoTUpdateSecurityProfileFuture) Get(ctx workflow.Context) (*iot.UpdateS
 }
 
 type IoTUpdateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2724,6 +2931,7 @@ func (r *IoTUpdateStreamFuture) Get(ctx workflow.Context) (*iot.UpdateStreamOutp
 }
 
 type IoTUpdateThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2734,6 +2942,7 @@ func (r *IoTUpdateThingFuture) Get(ctx workflow.Context) (*iot.UpdateThingOutput
 }
 
 type IoTUpdateThingGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2744,6 +2953,7 @@ func (r *IoTUpdateThingGroupFuture) Get(ctx workflow.Context) (*iot.UpdateThingG
 }
 
 type IoTUpdateThingGroupsForThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2754,6 +2964,7 @@ func (r *IoTUpdateThingGroupsForThingFuture) Get(ctx workflow.Context) (*iot.Upd
 }
 
 type IoTUpdateTopicRuleDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -2764,6 +2975,7 @@ func (r *IoTUpdateTopicRuleDestinationFuture) Get(ctx workflow.Context) (*iot.Up
 }
 
 type IoTValidateSecurityProfileBehaviorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

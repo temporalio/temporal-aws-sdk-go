@@ -63,6 +63,7 @@ func NewTimestreamWriteStub() TimestreamWriteClient {
 }
 
 type TimestreamWriteCreateDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +74,7 @@ func (r *TimestreamWriteCreateDatabaseFuture) Get(ctx workflow.Context) (*timest
 }
 
 type TimestreamWriteCreateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -83,6 +85,7 @@ func (r *TimestreamWriteCreateTableFuture) Get(ctx workflow.Context) (*timestrea
 }
 
 type TimestreamWriteDeleteDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -93,6 +96,7 @@ func (r *TimestreamWriteDeleteDatabaseFuture) Get(ctx workflow.Context) (*timest
 }
 
 type TimestreamWriteDeleteTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +107,7 @@ func (r *TimestreamWriteDeleteTableFuture) Get(ctx workflow.Context) (*timestrea
 }
 
 type TimestreamWriteDescribeDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +118,7 @@ func (r *TimestreamWriteDescribeDatabaseFuture) Get(ctx workflow.Context) (*time
 }
 
 type TimestreamWriteDescribeEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +129,7 @@ func (r *TimestreamWriteDescribeEndpointsFuture) Get(ctx workflow.Context) (*tim
 }
 
 type TimestreamWriteDescribeTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +140,7 @@ func (r *TimestreamWriteDescribeTableFuture) Get(ctx workflow.Context) (*timestr
 }
 
 type TimestreamWriteListDatabasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +151,7 @@ func (r *TimestreamWriteListDatabasesFuture) Get(ctx workflow.Context) (*timestr
 }
 
 type TimestreamWriteListTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +162,7 @@ func (r *TimestreamWriteListTablesFuture) Get(ctx workflow.Context) (*timestream
 }
 
 type TimestreamWriteListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +173,7 @@ func (r *TimestreamWriteListTagsForResourceFuture) Get(ctx workflow.Context) (*t
 }
 
 type TimestreamWriteTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +184,7 @@ func (r *TimestreamWriteTagResourceFuture) Get(ctx workflow.Context) (*timestrea
 }
 
 type TimestreamWriteUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +195,7 @@ func (r *TimestreamWriteUntagResourceFuture) Get(ctx workflow.Context) (*timestr
 }
 
 type TimestreamWriteUpdateDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +206,7 @@ func (r *TimestreamWriteUpdateDatabaseFuture) Get(ctx workflow.Context) (*timest
 }
 
 type TimestreamWriteUpdateTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +217,7 @@ func (r *TimestreamWriteUpdateTableFuture) Get(ctx workflow.Context) (*timestrea
 }
 
 type TimestreamWriteWriteRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

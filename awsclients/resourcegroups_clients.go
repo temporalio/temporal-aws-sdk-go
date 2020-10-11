@@ -63,6 +63,7 @@ func NewResourceGroupsStub() ResourceGroupsClient {
 }
 
 type ResourceGroupsCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +74,7 @@ func (r *ResourceGroupsCreateGroupFuture) Get(ctx workflow.Context) (*resourcegr
 }
 
 type ResourceGroupsDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -83,6 +85,7 @@ func (r *ResourceGroupsDeleteGroupFuture) Get(ctx workflow.Context) (*resourcegr
 }
 
 type ResourceGroupsGetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -93,6 +96,7 @@ func (r *ResourceGroupsGetGroupFuture) Get(ctx workflow.Context) (*resourcegroup
 }
 
 type ResourceGroupsGetGroupConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +107,7 @@ func (r *ResourceGroupsGetGroupConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type ResourceGroupsGetGroupQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +118,7 @@ func (r *ResourceGroupsGetGroupQueryFuture) Get(ctx workflow.Context) (*resource
 }
 
 type ResourceGroupsGetTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +129,7 @@ func (r *ResourceGroupsGetTagsFuture) Get(ctx workflow.Context) (*resourcegroups
 }
 
 type ResourceGroupsGroupResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +140,7 @@ func (r *ResourceGroupsGroupResourcesFuture) Get(ctx workflow.Context) (*resourc
 }
 
 type ResourceGroupsListGroupResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +151,7 @@ func (r *ResourceGroupsListGroupResourcesFuture) Get(ctx workflow.Context) (*res
 }
 
 type ResourceGroupsListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +162,7 @@ func (r *ResourceGroupsListGroupsFuture) Get(ctx workflow.Context) (*resourcegro
 }
 
 type ResourceGroupsSearchResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +173,7 @@ func (r *ResourceGroupsSearchResourcesFuture) Get(ctx workflow.Context) (*resour
 }
 
 type ResourceGroupsTagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +184,7 @@ func (r *ResourceGroupsTagFuture) Get(ctx workflow.Context) (*resourcegroups.Tag
 }
 
 type ResourceGroupsUngroupResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +195,7 @@ func (r *ResourceGroupsUngroupResourcesFuture) Get(ctx workflow.Context) (*resou
 }
 
 type ResourceGroupsUntagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +206,7 @@ func (r *ResourceGroupsUntagFuture) Get(ctx workflow.Context) (*resourcegroups.U
 }
 
 type ResourceGroupsUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +217,7 @@ func (r *ResourceGroupsUpdateGroupFuture) Get(ctx workflow.Context) (*resourcegr
 }
 
 type ResourceGroupsUpdateGroupQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

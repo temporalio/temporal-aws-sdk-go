@@ -21,6 +21,7 @@ func NewWorkMailMessageFlowStub() WorkMailMessageFlowClient {
 }
 
 type WorkMailMessageFlowGetRawMessageContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -24,6 +24,7 @@ func NewMarketplaceCommerceAnalyticsStub() MarketplaceCommerceAnalyticsClient {
 }
 
 type MarketplaceCommerceAnalyticsGenerateDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -34,6 +35,7 @@ func (r *MarketplaceCommerceAnalyticsGenerateDataSetFuture) Get(ctx workflow.Con
 }
 
 type MarketplaceCommerceAnalyticsStartSupportDataExportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

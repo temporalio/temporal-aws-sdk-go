@@ -45,6 +45,7 @@ func NewSavingsPlansStub() SavingsPlansClient {
 }
 
 type SavingsPlansCreateSavingsPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *SavingsPlansCreateSavingsPlanFuture) Get(ctx workflow.Context) (*saving
 }
 
 type SavingsPlansDeleteQueuedSavingsPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *SavingsPlansDeleteQueuedSavingsPlanFuture) Get(ctx workflow.Context) (*
 }
 
 type SavingsPlansDescribeSavingsPlanRatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *SavingsPlansDescribeSavingsPlanRatesFuture) Get(ctx workflow.Context) (
 }
 
 type SavingsPlansDescribeSavingsPlansFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *SavingsPlansDescribeSavingsPlansFuture) Get(ctx workflow.Context) (*sav
 }
 
 type SavingsPlansDescribeSavingsPlansOfferingRatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *SavingsPlansDescribeSavingsPlansOfferingRatesFuture) Get(ctx workflow.C
 }
 
 type SavingsPlansDescribeSavingsPlansOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *SavingsPlansDescribeSavingsPlansOfferingsFuture) Get(ctx workflow.Conte
 }
 
 type SavingsPlansListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *SavingsPlansListTagsForResourceFuture) Get(ctx workflow.Context) (*savi
 }
 
 type SavingsPlansTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *SavingsPlansTagResourceFuture) Get(ctx workflow.Context) (*savingsplans
 }
 
 type SavingsPlansUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

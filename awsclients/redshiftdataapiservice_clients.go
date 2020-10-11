@@ -45,6 +45,7 @@ func NewRedshiftDataAPIServiceStub() RedshiftDataAPIServiceClient {
 }
 
 type RedshiftDataAPIServiceCancelStatementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *RedshiftDataAPIServiceCancelStatementFuture) Get(ctx workflow.Context) 
 }
 
 type RedshiftDataAPIServiceDescribeStatementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *RedshiftDataAPIServiceDescribeStatementFuture) Get(ctx workflow.Context
 }
 
 type RedshiftDataAPIServiceDescribeTableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *RedshiftDataAPIServiceDescribeTableFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftDataAPIServiceExecuteStatementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *RedshiftDataAPIServiceExecuteStatementFuture) Get(ctx workflow.Context)
 }
 
 type RedshiftDataAPIServiceGetStatementResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *RedshiftDataAPIServiceGetStatementResultFuture) Get(ctx workflow.Contex
 }
 
 type RedshiftDataAPIServiceListDatabasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *RedshiftDataAPIServiceListDatabasesFuture) Get(ctx workflow.Context) (*
 }
 
 type RedshiftDataAPIServiceListSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *RedshiftDataAPIServiceListSchemasFuture) Get(ctx workflow.Context) (*re
 }
 
 type RedshiftDataAPIServiceListStatementsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *RedshiftDataAPIServiceListStatementsFuture) Get(ctx workflow.Context) (
 }
 
 type RedshiftDataAPIServiceListTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

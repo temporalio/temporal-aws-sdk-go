@@ -30,6 +30,7 @@ func NewMarketplaceMeteringStub() MarketplaceMeteringClient {
 }
 
 type MarketplaceMeteringBatchMeterUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *MarketplaceMeteringBatchMeterUsageFuture) Get(ctx workflow.Context) (*m
 }
 
 type MarketplaceMeteringMeterUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *MarketplaceMeteringMeterUsageFuture) Get(ctx workflow.Context) (*market
 }
 
 type MarketplaceMeteringRegisterUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *MarketplaceMeteringRegisterUsageFuture) Get(ctx workflow.Context) (*mar
 }
 
 type MarketplaceMeteringResolveCustomerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -30,6 +30,7 @@ func NewIdentityStoreStub() IdentityStoreClient {
 }
 
 type IdentityStoreDescribeGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *IdentityStoreDescribeGroupFuture) Get(ctx workflow.Context) (*identitys
 }
 
 type IdentityStoreDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *IdentityStoreDescribeUserFuture) Get(ctx workflow.Context) (*identityst
 }
 
 type IdentityStoreListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *IdentityStoreListGroupsFuture) Get(ctx workflow.Context) (*identitystor
 }
 
 type IdentityStoreListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -93,6 +93,7 @@ func NewEKSStub() EKSClient {
 }
 
 type EKSCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *EKSCreateClusterFuture) Get(ctx workflow.Context) (*eks.CreateClusterOu
 }
 
 type EKSCreateFargateProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *EKSCreateFargateProfileFuture) Get(ctx workflow.Context) (*eks.CreateFa
 }
 
 type EKSCreateNodegroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *EKSCreateNodegroupFuture) Get(ctx workflow.Context) (*eks.CreateNodegro
 }
 
 type EKSDeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *EKSDeleteClusterFuture) Get(ctx workflow.Context) (*eks.DeleteClusterOu
 }
 
 type EKSDeleteFargateProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *EKSDeleteFargateProfileFuture) Get(ctx workflow.Context) (*eks.DeleteFa
 }
 
 type EKSDeleteNodegroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *EKSDeleteNodegroupFuture) Get(ctx workflow.Context) (*eks.DeleteNodegro
 }
 
 type EKSDescribeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *EKSDescribeClusterFuture) Get(ctx workflow.Context) (*eks.DescribeClust
 }
 
 type EKSDescribeFargateProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *EKSDescribeFargateProfileFuture) Get(ctx workflow.Context) (*eks.Descri
 }
 
 type EKSDescribeNodegroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *EKSDescribeNodegroupFuture) Get(ctx workflow.Context) (*eks.DescribeNod
 }
 
 type EKSDescribeUpdateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *EKSDescribeUpdateFuture) Get(ctx workflow.Context) (*eks.DescribeUpdate
 }
 
 type EKSListClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *EKSListClustersFuture) Get(ctx workflow.Context) (*eks.ListClustersOutp
 }
 
 type EKSListFargateProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *EKSListFargateProfilesFuture) Get(ctx workflow.Context) (*eks.ListFarga
 }
 
 type EKSListNodegroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *EKSListNodegroupsFuture) Get(ctx workflow.Context) (*eks.ListNodegroups
 }
 
 type EKSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *EKSListTagsForResourceFuture) Get(ctx workflow.Context) (*eks.ListTagsF
 }
 
 type EKSListUpdatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *EKSListUpdatesFuture) Get(ctx workflow.Context) (*eks.ListUpdatesOutput
 }
 
 type EKSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *EKSTagResourceFuture) Get(ctx workflow.Context) (*eks.TagResourceOutput
 }
 
 type EKSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *EKSUntagResourceFuture) Get(ctx workflow.Context) (*eks.UntagResourceOu
 }
 
 type EKSUpdateClusterConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *EKSUpdateClusterConfigFuture) Get(ctx workflow.Context) (*eks.UpdateClu
 }
 
 type EKSUpdateClusterVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *EKSUpdateClusterVersionFuture) Get(ctx workflow.Context) (*eks.UpdateCl
 }
 
 type EKSUpdateNodegroupConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *EKSUpdateNodegroupConfigFuture) Get(ctx workflow.Context) (*eks.UpdateN
 }
 
 type EKSUpdateNodegroupVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

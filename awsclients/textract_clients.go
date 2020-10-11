@@ -36,6 +36,7 @@ func NewTextractStub() TextractClient {
 }
 
 type TextractAnalyzeDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *TextractAnalyzeDocumentFuture) Get(ctx workflow.Context) (*textract.Ana
 }
 
 type TextractDetectDocumentTextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *TextractDetectDocumentTextFuture) Get(ctx workflow.Context) (*textract.
 }
 
 type TextractGetDocumentAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *TextractGetDocumentAnalysisFuture) Get(ctx workflow.Context) (*textract
 }
 
 type TextractGetDocumentTextDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *TextractGetDocumentTextDetectionFuture) Get(ctx workflow.Context) (*tex
 }
 
 type TextractStartDocumentAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *TextractStartDocumentAnalysisFuture) Get(ctx workflow.Context) (*textra
 }
 
 type TextractStartDocumentTextDetectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

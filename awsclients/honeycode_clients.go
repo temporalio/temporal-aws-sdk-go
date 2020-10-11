@@ -24,6 +24,7 @@ func NewHoneycodeStub() HoneycodeClient {
 }
 
 type HoneycodeGetScreenDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -34,6 +35,7 @@ func (r *HoneycodeGetScreenDataFuture) Get(ctx workflow.Context) (*honeycode.Get
 }
 
 type HoneycodeInvokeScreenAutomationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

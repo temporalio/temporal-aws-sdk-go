@@ -288,6 +288,7 @@ func NewGameLiftStub() GameLiftClient {
 }
 
 type GameLiftAcceptMatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +299,7 @@ func (r *GameLiftAcceptMatchFuture) Get(ctx workflow.Context) (*gamelift.AcceptM
 }
 
 type GameLiftClaimGameServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +310,7 @@ func (r *GameLiftClaimGameServerFuture) Get(ctx workflow.Context) (*gamelift.Cla
 }
 
 type GameLiftCreateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +321,7 @@ func (r *GameLiftCreateAliasFuture) Get(ctx workflow.Context) (*gamelift.CreateA
 }
 
 type GameLiftCreateBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +332,7 @@ func (r *GameLiftCreateBuildFuture) Get(ctx workflow.Context) (*gamelift.CreateB
 }
 
 type GameLiftCreateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +343,7 @@ func (r *GameLiftCreateFleetFuture) Get(ctx workflow.Context) (*gamelift.CreateF
 }
 
 type GameLiftCreateGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +354,7 @@ func (r *GameLiftCreateGameServerGroupFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftCreateGameSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +365,7 @@ func (r *GameLiftCreateGameSessionFuture) Get(ctx workflow.Context) (*gamelift.C
 }
 
 type GameLiftCreateGameSessionQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +376,7 @@ func (r *GameLiftCreateGameSessionQueueFuture) Get(ctx workflow.Context) (*gamel
 }
 
 type GameLiftCreateMatchmakingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +387,7 @@ func (r *GameLiftCreateMatchmakingConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type GameLiftCreateMatchmakingRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +398,7 @@ func (r *GameLiftCreateMatchmakingRuleSetFuture) Get(ctx workflow.Context) (*gam
 }
 
 type GameLiftCreatePlayerSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +409,7 @@ func (r *GameLiftCreatePlayerSessionFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftCreatePlayerSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +420,7 @@ func (r *GameLiftCreatePlayerSessionsFuture) Get(ctx workflow.Context) (*gamelif
 }
 
 type GameLiftCreateScriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +431,7 @@ func (r *GameLiftCreateScriptFuture) Get(ctx workflow.Context) (*gamelift.Create
 }
 
 type GameLiftCreateVpcPeeringAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +442,7 @@ func (r *GameLiftCreateVpcPeeringAuthorizationFuture) Get(ctx workflow.Context) 
 }
 
 type GameLiftCreateVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +453,7 @@ func (r *GameLiftCreateVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GameLiftDeleteAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +464,7 @@ func (r *GameLiftDeleteAliasFuture) Get(ctx workflow.Context) (*gamelift.DeleteA
 }
 
 type GameLiftDeleteBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +475,7 @@ func (r *GameLiftDeleteBuildFuture) Get(ctx workflow.Context) (*gamelift.DeleteB
 }
 
 type GameLiftDeleteFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +486,7 @@ func (r *GameLiftDeleteFleetFuture) Get(ctx workflow.Context) (*gamelift.DeleteF
 }
 
 type GameLiftDeleteGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +497,7 @@ func (r *GameLiftDeleteGameServerGroupFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftDeleteGameSessionQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +508,7 @@ func (r *GameLiftDeleteGameSessionQueueFuture) Get(ctx workflow.Context) (*gamel
 }
 
 type GameLiftDeleteMatchmakingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +519,7 @@ func (r *GameLiftDeleteMatchmakingConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type GameLiftDeleteMatchmakingRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +530,7 @@ func (r *GameLiftDeleteMatchmakingRuleSetFuture) Get(ctx workflow.Context) (*gam
 }
 
 type GameLiftDeleteScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +541,7 @@ func (r *GameLiftDeleteScalingPolicyFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftDeleteScriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +552,7 @@ func (r *GameLiftDeleteScriptFuture) Get(ctx workflow.Context) (*gamelift.Delete
 }
 
 type GameLiftDeleteVpcPeeringAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +563,7 @@ func (r *GameLiftDeleteVpcPeeringAuthorizationFuture) Get(ctx workflow.Context) 
 }
 
 type GameLiftDeleteVpcPeeringConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +574,7 @@ func (r *GameLiftDeleteVpcPeeringConnectionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GameLiftDeregisterGameServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +585,7 @@ func (r *GameLiftDeregisterGameServerFuture) Get(ctx workflow.Context) (*gamelif
 }
 
 type GameLiftDescribeAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +596,7 @@ func (r *GameLiftDescribeAliasFuture) Get(ctx workflow.Context) (*gamelift.Descr
 }
 
 type GameLiftDescribeBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +607,7 @@ func (r *GameLiftDescribeBuildFuture) Get(ctx workflow.Context) (*gamelift.Descr
 }
 
 type GameLiftDescribeEC2InstanceLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +618,7 @@ func (r *GameLiftDescribeEC2InstanceLimitsFuture) Get(ctx workflow.Context) (*ga
 }
 
 type GameLiftDescribeFleetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +629,7 @@ func (r *GameLiftDescribeFleetAttributesFuture) Get(ctx workflow.Context) (*game
 }
 
 type GameLiftDescribeFleetCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +640,7 @@ func (r *GameLiftDescribeFleetCapacityFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftDescribeFleetEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +651,7 @@ func (r *GameLiftDescribeFleetEventsFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftDescribeFleetPortSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +662,7 @@ func (r *GameLiftDescribeFleetPortSettingsFuture) Get(ctx workflow.Context) (*ga
 }
 
 type GameLiftDescribeFleetUtilizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +673,7 @@ func (r *GameLiftDescribeFleetUtilizationFuture) Get(ctx workflow.Context) (*gam
 }
 
 type GameLiftDescribeGameServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +684,7 @@ func (r *GameLiftDescribeGameServerFuture) Get(ctx workflow.Context) (*gamelift.
 }
 
 type GameLiftDescribeGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +695,7 @@ func (r *GameLiftDescribeGameServerGroupFuture) Get(ctx workflow.Context) (*game
 }
 
 type GameLiftDescribeGameServerInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -668,6 +706,7 @@ func (r *GameLiftDescribeGameServerInstancesFuture) Get(ctx workflow.Context) (*
 }
 
 type GameLiftDescribeGameSessionDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -678,6 +717,7 @@ func (r *GameLiftDescribeGameSessionDetailsFuture) Get(ctx workflow.Context) (*g
 }
 
 type GameLiftDescribeGameSessionPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -688,6 +728,7 @@ func (r *GameLiftDescribeGameSessionPlacementFuture) Get(ctx workflow.Context) (
 }
 
 type GameLiftDescribeGameSessionQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -698,6 +739,7 @@ func (r *GameLiftDescribeGameSessionQueuesFuture) Get(ctx workflow.Context) (*ga
 }
 
 type GameLiftDescribeGameSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -708,6 +750,7 @@ func (r *GameLiftDescribeGameSessionsFuture) Get(ctx workflow.Context) (*gamelif
 }
 
 type GameLiftDescribeInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -718,6 +761,7 @@ func (r *GameLiftDescribeInstancesFuture) Get(ctx workflow.Context) (*gamelift.D
 }
 
 type GameLiftDescribeMatchmakingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -728,6 +772,7 @@ func (r *GameLiftDescribeMatchmakingFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftDescribeMatchmakingConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -738,6 +783,7 @@ func (r *GameLiftDescribeMatchmakingConfigurationsFuture) Get(ctx workflow.Conte
 }
 
 type GameLiftDescribeMatchmakingRuleSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -748,6 +794,7 @@ func (r *GameLiftDescribeMatchmakingRuleSetsFuture) Get(ctx workflow.Context) (*
 }
 
 type GameLiftDescribePlayerSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -758,6 +805,7 @@ func (r *GameLiftDescribePlayerSessionsFuture) Get(ctx workflow.Context) (*gamel
 }
 
 type GameLiftDescribeRuntimeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -768,6 +816,7 @@ func (r *GameLiftDescribeRuntimeConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type GameLiftDescribeScalingPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -778,6 +827,7 @@ func (r *GameLiftDescribeScalingPoliciesFuture) Get(ctx workflow.Context) (*game
 }
 
 type GameLiftDescribeScriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -788,6 +838,7 @@ func (r *GameLiftDescribeScriptFuture) Get(ctx workflow.Context) (*gamelift.Desc
 }
 
 type GameLiftDescribeVpcPeeringAuthorizationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -798,6 +849,7 @@ func (r *GameLiftDescribeVpcPeeringAuthorizationsFuture) Get(ctx workflow.Contex
 }
 
 type GameLiftDescribeVpcPeeringConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -808,6 +860,7 @@ func (r *GameLiftDescribeVpcPeeringConnectionsFuture) Get(ctx workflow.Context) 
 }
 
 type GameLiftGetGameSessionLogUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -818,6 +871,7 @@ func (r *GameLiftGetGameSessionLogUrlFuture) Get(ctx workflow.Context) (*gamelif
 }
 
 type GameLiftGetInstanceAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -828,6 +882,7 @@ func (r *GameLiftGetInstanceAccessFuture) Get(ctx workflow.Context) (*gamelift.G
 }
 
 type GameLiftListAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -838,6 +893,7 @@ func (r *GameLiftListAliasesFuture) Get(ctx workflow.Context) (*gamelift.ListAli
 }
 
 type GameLiftListBuildsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -848,6 +904,7 @@ func (r *GameLiftListBuildsFuture) Get(ctx workflow.Context) (*gamelift.ListBuil
 }
 
 type GameLiftListFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -858,6 +915,7 @@ func (r *GameLiftListFleetsFuture) Get(ctx workflow.Context) (*gamelift.ListFlee
 }
 
 type GameLiftListGameServerGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -868,6 +926,7 @@ func (r *GameLiftListGameServerGroupsFuture) Get(ctx workflow.Context) (*gamelif
 }
 
 type GameLiftListGameServersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -878,6 +937,7 @@ func (r *GameLiftListGameServersFuture) Get(ctx workflow.Context) (*gamelift.Lis
 }
 
 type GameLiftListScriptsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -888,6 +948,7 @@ func (r *GameLiftListScriptsFuture) Get(ctx workflow.Context) (*gamelift.ListScr
 }
 
 type GameLiftListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -898,6 +959,7 @@ func (r *GameLiftListTagsForResourceFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftPutScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -908,6 +970,7 @@ func (r *GameLiftPutScalingPolicyFuture) Get(ctx workflow.Context) (*gamelift.Pu
 }
 
 type GameLiftRegisterGameServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -918,6 +981,7 @@ func (r *GameLiftRegisterGameServerFuture) Get(ctx workflow.Context) (*gamelift.
 }
 
 type GameLiftRequestUploadCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -928,6 +992,7 @@ func (r *GameLiftRequestUploadCredentialsFuture) Get(ctx workflow.Context) (*gam
 }
 
 type GameLiftResolveAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -938,6 +1003,7 @@ func (r *GameLiftResolveAliasFuture) Get(ctx workflow.Context) (*gamelift.Resolv
 }
 
 type GameLiftResumeGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -948,6 +1014,7 @@ func (r *GameLiftResumeGameServerGroupFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftSearchGameSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -958,6 +1025,7 @@ func (r *GameLiftSearchGameSessionsFuture) Get(ctx workflow.Context) (*gamelift.
 }
 
 type GameLiftStartFleetActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -968,6 +1036,7 @@ func (r *GameLiftStartFleetActionsFuture) Get(ctx workflow.Context) (*gamelift.S
 }
 
 type GameLiftStartGameSessionPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -978,6 +1047,7 @@ func (r *GameLiftStartGameSessionPlacementFuture) Get(ctx workflow.Context) (*ga
 }
 
 type GameLiftStartMatchBackfillFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -988,6 +1058,7 @@ func (r *GameLiftStartMatchBackfillFuture) Get(ctx workflow.Context) (*gamelift.
 }
 
 type GameLiftStartMatchmakingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -998,6 +1069,7 @@ func (r *GameLiftStartMatchmakingFuture) Get(ctx workflow.Context) (*gamelift.St
 }
 
 type GameLiftStopFleetActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1008,6 +1080,7 @@ func (r *GameLiftStopFleetActionsFuture) Get(ctx workflow.Context) (*gamelift.St
 }
 
 type GameLiftStopGameSessionPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1018,6 +1091,7 @@ func (r *GameLiftStopGameSessionPlacementFuture) Get(ctx workflow.Context) (*gam
 }
 
 type GameLiftStopMatchmakingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1028,6 +1102,7 @@ func (r *GameLiftStopMatchmakingFuture) Get(ctx workflow.Context) (*gamelift.Sto
 }
 
 type GameLiftSuspendGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1038,6 +1113,7 @@ func (r *GameLiftSuspendGameServerGroupFuture) Get(ctx workflow.Context) (*gamel
 }
 
 type GameLiftTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1048,6 +1124,7 @@ func (r *GameLiftTagResourceFuture) Get(ctx workflow.Context) (*gamelift.TagReso
 }
 
 type GameLiftUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1058,6 +1135,7 @@ func (r *GameLiftUntagResourceFuture) Get(ctx workflow.Context) (*gamelift.Untag
 }
 
 type GameLiftUpdateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1068,6 +1146,7 @@ func (r *GameLiftUpdateAliasFuture) Get(ctx workflow.Context) (*gamelift.UpdateA
 }
 
 type GameLiftUpdateBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1078,6 +1157,7 @@ func (r *GameLiftUpdateBuildFuture) Get(ctx workflow.Context) (*gamelift.UpdateB
 }
 
 type GameLiftUpdateFleetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1088,6 +1168,7 @@ func (r *GameLiftUpdateFleetAttributesFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftUpdateFleetCapacityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1098,6 +1179,7 @@ func (r *GameLiftUpdateFleetCapacityFuture) Get(ctx workflow.Context) (*gamelift
 }
 
 type GameLiftUpdateFleetPortSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1108,6 +1190,7 @@ func (r *GameLiftUpdateFleetPortSettingsFuture) Get(ctx workflow.Context) (*game
 }
 
 type GameLiftUpdateGameServerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1118,6 +1201,7 @@ func (r *GameLiftUpdateGameServerFuture) Get(ctx workflow.Context) (*gamelift.Up
 }
 
 type GameLiftUpdateGameServerGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1128,6 +1212,7 @@ func (r *GameLiftUpdateGameServerGroupFuture) Get(ctx workflow.Context) (*gameli
 }
 
 type GameLiftUpdateGameSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1138,6 +1223,7 @@ func (r *GameLiftUpdateGameSessionFuture) Get(ctx workflow.Context) (*gamelift.U
 }
 
 type GameLiftUpdateGameSessionQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1148,6 +1234,7 @@ func (r *GameLiftUpdateGameSessionQueueFuture) Get(ctx workflow.Context) (*gamel
 }
 
 type GameLiftUpdateMatchmakingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1158,6 +1245,7 @@ func (r *GameLiftUpdateMatchmakingConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type GameLiftUpdateRuntimeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1168,6 +1256,7 @@ func (r *GameLiftUpdateRuntimeConfigurationFuture) Get(ctx workflow.Context) (*g
 }
 
 type GameLiftUpdateScriptFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1178,6 +1267,7 @@ func (r *GameLiftUpdateScriptFuture) Get(ctx workflow.Context) (*gamelift.Update
 }
 
 type GameLiftValidateMatchmakingRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

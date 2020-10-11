@@ -177,6 +177,7 @@ func NewECSStub() ECSClient {
 }
 
 type ECSCreateCapacityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +188,7 @@ func (r *ECSCreateCapacityProviderFuture) Get(ctx workflow.Context) (*ecs.Create
 }
 
 type ECSCreateClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +199,7 @@ func (r *ECSCreateClusterFuture) Get(ctx workflow.Context) (*ecs.CreateClusterOu
 }
 
 type ECSCreateServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +210,7 @@ func (r *ECSCreateServiceFuture) Get(ctx workflow.Context) (*ecs.CreateServiceOu
 }
 
 type ECSCreateTaskSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +221,7 @@ func (r *ECSCreateTaskSetFuture) Get(ctx workflow.Context) (*ecs.CreateTaskSetOu
 }
 
 type ECSDeleteAccountSettingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +232,7 @@ func (r *ECSDeleteAccountSettingFuture) Get(ctx workflow.Context) (*ecs.DeleteAc
 }
 
 type ECSDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +243,7 @@ func (r *ECSDeleteAttributesFuture) Get(ctx workflow.Context) (*ecs.DeleteAttrib
 }
 
 type ECSDeleteCapacityProviderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +254,7 @@ func (r *ECSDeleteCapacityProviderFuture) Get(ctx workflow.Context) (*ecs.Delete
 }
 
 type ECSDeleteClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +265,7 @@ func (r *ECSDeleteClusterFuture) Get(ctx workflow.Context) (*ecs.DeleteClusterOu
 }
 
 type ECSDeleteServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +276,7 @@ func (r *ECSDeleteServiceFuture) Get(ctx workflow.Context) (*ecs.DeleteServiceOu
 }
 
 type ECSDeleteTaskSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +287,7 @@ func (r *ECSDeleteTaskSetFuture) Get(ctx workflow.Context) (*ecs.DeleteTaskSetOu
 }
 
 type ECSDeregisterContainerInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +298,7 @@ func (r *ECSDeregisterContainerInstanceFuture) Get(ctx workflow.Context) (*ecs.D
 }
 
 type ECSDeregisterTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +309,7 @@ func (r *ECSDeregisterTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.Dere
 }
 
 type ECSDescribeCapacityProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +320,7 @@ func (r *ECSDescribeCapacityProvidersFuture) Get(ctx workflow.Context) (*ecs.Des
 }
 
 type ECSDescribeClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +331,7 @@ func (r *ECSDescribeClustersFuture) Get(ctx workflow.Context) (*ecs.DescribeClus
 }
 
 type ECSDescribeContainerInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +342,7 @@ func (r *ECSDescribeContainerInstancesFuture) Get(ctx workflow.Context) (*ecs.De
 }
 
 type ECSDescribeServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +353,7 @@ func (r *ECSDescribeServicesFuture) Get(ctx workflow.Context) (*ecs.DescribeServ
 }
 
 type ECSDescribeTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +364,7 @@ func (r *ECSDescribeTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.Descri
 }
 
 type ECSDescribeTaskSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +375,7 @@ func (r *ECSDescribeTaskSetsFuture) Get(ctx workflow.Context) (*ecs.DescribeTask
 }
 
 type ECSDescribeTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +386,7 @@ func (r *ECSDescribeTasksFuture) Get(ctx workflow.Context) (*ecs.DescribeTasksOu
 }
 
 type ECSDiscoverPollEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +397,7 @@ func (r *ECSDiscoverPollEndpointFuture) Get(ctx workflow.Context) (*ecs.Discover
 }
 
 type ECSListAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +408,7 @@ func (r *ECSListAccountSettingsFuture) Get(ctx workflow.Context) (*ecs.ListAccou
 }
 
 type ECSListAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +419,7 @@ func (r *ECSListAttributesFuture) Get(ctx workflow.Context) (*ecs.ListAttributes
 }
 
 type ECSListClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +430,7 @@ func (r *ECSListClustersFuture) Get(ctx workflow.Context) (*ecs.ListClustersOutp
 }
 
 type ECSListContainerInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +441,7 @@ func (r *ECSListContainerInstancesFuture) Get(ctx workflow.Context) (*ecs.ListCo
 }
 
 type ECSListServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +452,7 @@ func (r *ECSListServicesFuture) Get(ctx workflow.Context) (*ecs.ListServicesOutp
 }
 
 type ECSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +463,7 @@ func (r *ECSListTagsForResourceFuture) Get(ctx workflow.Context) (*ecs.ListTagsF
 }
 
 type ECSListTaskDefinitionFamiliesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +474,7 @@ func (r *ECSListTaskDefinitionFamiliesFuture) Get(ctx workflow.Context) (*ecs.Li
 }
 
 type ECSListTaskDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +485,7 @@ func (r *ECSListTaskDefinitionsFuture) Get(ctx workflow.Context) (*ecs.ListTaskD
 }
 
 type ECSListTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +496,7 @@ func (r *ECSListTasksFuture) Get(ctx workflow.Context) (*ecs.ListTasksOutput, er
 }
 
 type ECSPutAccountSettingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +507,7 @@ func (r *ECSPutAccountSettingFuture) Get(ctx workflow.Context) (*ecs.PutAccountS
 }
 
 type ECSPutAccountSettingDefaultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +518,7 @@ func (r *ECSPutAccountSettingDefaultFuture) Get(ctx workflow.Context) (*ecs.PutA
 }
 
 type ECSPutAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +529,7 @@ func (r *ECSPutAttributesFuture) Get(ctx workflow.Context) (*ecs.PutAttributesOu
 }
 
 type ECSPutClusterCapacityProvidersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +540,7 @@ func (r *ECSPutClusterCapacityProvidersFuture) Get(ctx workflow.Context) (*ecs.P
 }
 
 type ECSRegisterContainerInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +551,7 @@ func (r *ECSRegisterContainerInstanceFuture) Get(ctx workflow.Context) (*ecs.Reg
 }
 
 type ECSRegisterTaskDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +562,7 @@ func (r *ECSRegisterTaskDefinitionFuture) Get(ctx workflow.Context) (*ecs.Regist
 }
 
 type ECSRunTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +573,7 @@ func (r *ECSRunTaskFuture) Get(ctx workflow.Context) (*ecs.RunTaskOutput, error)
 }
 
 type ECSStartTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +584,7 @@ func (r *ECSStartTaskFuture) Get(ctx workflow.Context) (*ecs.StartTaskOutput, er
 }
 
 type ECSStopTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +595,7 @@ func (r *ECSStopTaskFuture) Get(ctx workflow.Context) (*ecs.StopTaskOutput, erro
 }
 
 type ECSSubmitAttachmentStateChangesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +606,7 @@ func (r *ECSSubmitAttachmentStateChangesFuture) Get(ctx workflow.Context) (*ecs.
 }
 
 type ECSSubmitContainerStateChangeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -577,6 +617,7 @@ func (r *ECSSubmitContainerStateChangeFuture) Get(ctx workflow.Context) (*ecs.Su
 }
 
 type ECSSubmitTaskStateChangeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -587,6 +628,7 @@ func (r *ECSSubmitTaskStateChangeFuture) Get(ctx workflow.Context) (*ecs.SubmitT
 }
 
 type ECSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -597,6 +639,7 @@ func (r *ECSTagResourceFuture) Get(ctx workflow.Context) (*ecs.TagResourceOutput
 }
 
 type ECSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -607,6 +650,7 @@ func (r *ECSUntagResourceFuture) Get(ctx workflow.Context) (*ecs.UntagResourceOu
 }
 
 type ECSUpdateClusterSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -617,6 +661,7 @@ func (r *ECSUpdateClusterSettingsFuture) Get(ctx workflow.Context) (*ecs.UpdateC
 }
 
 type ECSUpdateContainerAgentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -627,6 +672,7 @@ func (r *ECSUpdateContainerAgentFuture) Get(ctx workflow.Context) (*ecs.UpdateCo
 }
 
 type ECSUpdateContainerInstancesStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -637,6 +683,7 @@ func (r *ECSUpdateContainerInstancesStateFuture) Get(ctx workflow.Context) (*ecs
 }
 
 type ECSUpdateServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -647,6 +694,7 @@ func (r *ECSUpdateServiceFuture) Get(ctx workflow.Context) (*ecs.UpdateServiceOu
 }
 
 type ECSUpdateServicePrimaryTaskSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -657,6 +705,7 @@ func (r *ECSUpdateServicePrimaryTaskSetFuture) Get(ctx workflow.Context) (*ecs.U
 }
 
 type ECSUpdateTaskSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -27,6 +27,7 @@ func NewApiGatewayManagementApiStub() ApiGatewayManagementApiClient {
 }
 
 type ApiGatewayManagementApiDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *ApiGatewayManagementApiDeleteConnectionFuture) Get(ctx workflow.Context
 }
 
 type ApiGatewayManagementApiGetConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *ApiGatewayManagementApiGetConnectionFuture) Get(ctx workflow.Context) (
 }
 
 type ApiGatewayManagementApiPostToConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -51,6 +51,7 @@ func NewCodeGuruReviewerStub() CodeGuruReviewerClient {
 }
 
 type CodeGuruReviewerAssociateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -61,6 +62,7 @@ func (r *CodeGuruReviewerAssociateRepositoryFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeGuruReviewerCreateCodeReviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -71,6 +73,7 @@ func (r *CodeGuruReviewerCreateCodeReviewFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeGuruReviewerDescribeCodeReviewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -81,6 +84,7 @@ func (r *CodeGuruReviewerDescribeCodeReviewFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeGuruReviewerDescribeRecommendationFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +95,7 @@ func (r *CodeGuruReviewerDescribeRecommendationFeedbackFuture) Get(ctx workflow.
 }
 
 type CodeGuruReviewerDescribeRepositoryAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +106,7 @@ func (r *CodeGuruReviewerDescribeRepositoryAssociationFuture) Get(ctx workflow.C
 }
 
 type CodeGuruReviewerDisassociateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +117,7 @@ func (r *CodeGuruReviewerDisassociateRepositoryFuture) Get(ctx workflow.Context)
 }
 
 type CodeGuruReviewerListCodeReviewsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +128,7 @@ func (r *CodeGuruReviewerListCodeReviewsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeGuruReviewerListRecommendationFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +139,7 @@ func (r *CodeGuruReviewerListRecommendationFeedbackFuture) Get(ctx workflow.Cont
 }
 
 type CodeGuruReviewerListRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +150,7 @@ func (r *CodeGuruReviewerListRecommendationsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeGuruReviewerListRepositoryAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +161,7 @@ func (r *CodeGuruReviewerListRepositoryAssociationsFuture) Get(ctx workflow.Cont
 }
 
 type CodeGuruReviewerPutRecommendationFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -78,6 +78,7 @@ func NewSQSStub() SQSClient {
 }
 
 type SQSAddPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +89,7 @@ func (r *SQSAddPermissionFuture) Get(ctx workflow.Context) (*sqs.AddPermissionOu
 }
 
 type SQSChangeMessageVisibilityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +100,7 @@ func (r *SQSChangeMessageVisibilityFuture) Get(ctx workflow.Context) (*sqs.Chang
 }
 
 type SQSChangeMessageVisibilityBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +111,7 @@ func (r *SQSChangeMessageVisibilityBatchFuture) Get(ctx workflow.Context) (*sqs.
 }
 
 type SQSCreateQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +122,7 @@ func (r *SQSCreateQueueFuture) Get(ctx workflow.Context) (*sqs.CreateQueueOutput
 }
 
 type SQSDeleteMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +133,7 @@ func (r *SQSDeleteMessageFuture) Get(ctx workflow.Context) (*sqs.DeleteMessageOu
 }
 
 type SQSDeleteMessageBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +144,7 @@ func (r *SQSDeleteMessageBatchFuture) Get(ctx workflow.Context) (*sqs.DeleteMess
 }
 
 type SQSDeleteQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +155,7 @@ func (r *SQSDeleteQueueFuture) Get(ctx workflow.Context) (*sqs.DeleteQueueOutput
 }
 
 type SQSGetQueueAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +166,7 @@ func (r *SQSGetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.GetQueueAt
 }
 
 type SQSGetQueueUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +177,7 @@ func (r *SQSGetQueueUrlFuture) Get(ctx workflow.Context) (*sqs.GetQueueUrlOutput
 }
 
 type SQSListDeadLetterSourceQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +188,7 @@ func (r *SQSListDeadLetterSourceQueuesFuture) Get(ctx workflow.Context) (*sqs.Li
 }
 
 type SQSListQueueTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +199,7 @@ func (r *SQSListQueueTagsFuture) Get(ctx workflow.Context) (*sqs.ListQueueTagsOu
 }
 
 type SQSListQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +210,7 @@ func (r *SQSListQueuesFuture) Get(ctx workflow.Context) (*sqs.ListQueuesOutput, 
 }
 
 type SQSPurgeQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +221,7 @@ func (r *SQSPurgeQueueFuture) Get(ctx workflow.Context) (*sqs.PurgeQueueOutput, 
 }
 
 type SQSReceiveMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +232,7 @@ func (r *SQSReceiveMessageFuture) Get(ctx workflow.Context) (*sqs.ReceiveMessage
 }
 
 type SQSRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +243,7 @@ func (r *SQSRemovePermissionFuture) Get(ctx workflow.Context) (*sqs.RemovePermis
 }
 
 type SQSSendMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +254,7 @@ func (r *SQSSendMessageFuture) Get(ctx workflow.Context) (*sqs.SendMessageOutput
 }
 
 type SQSSendMessageBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +265,7 @@ func (r *SQSSendMessageBatchFuture) Get(ctx workflow.Context) (*sqs.SendMessageB
 }
 
 type SQSSetQueueAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +276,7 @@ func (r *SQSSetQueueAttributesFuture) Get(ctx workflow.Context) (*sqs.SetQueueAt
 }
 
 type SQSTagQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +287,7 @@ func (r *SQSTagQueueFuture) Get(ctx workflow.Context) (*sqs.TagQueueOutput, erro
 }
 
 type SQSUntagQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

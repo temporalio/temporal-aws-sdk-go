@@ -30,6 +30,7 @@ func NewIoTJobsDataPlaneStub() IoTJobsDataPlaneClient {
 }
 
 type IoTJobsDataPlaneDescribeJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *IoTJobsDataPlaneDescribeJobExecutionFuture) Get(ctx workflow.Context) (
 }
 
 type IoTJobsDataPlaneGetPendingJobExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *IoTJobsDataPlaneGetPendingJobExecutionsFuture) Get(ctx workflow.Context
 }
 
 type IoTJobsDataPlaneStartNextPendingJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *IoTJobsDataPlaneStartNextPendingJobExecutionFuture) Get(ctx workflow.Co
 }
 
 type IoTJobsDataPlaneUpdateJobExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

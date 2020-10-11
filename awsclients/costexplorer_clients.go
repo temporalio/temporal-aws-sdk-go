@@ -105,6 +105,7 @@ func NewCostExplorerStub() CostExplorerClient {
 }
 
 type CostExplorerCreateAnomalyMonitorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +116,7 @@ func (r *CostExplorerCreateAnomalyMonitorFuture) Get(ctx workflow.Context) (*cos
 }
 
 type CostExplorerCreateAnomalySubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +127,7 @@ func (r *CostExplorerCreateAnomalySubscriptionFuture) Get(ctx workflow.Context) 
 }
 
 type CostExplorerCreateCostCategoryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +138,7 @@ func (r *CostExplorerCreateCostCategoryDefinitionFuture) Get(ctx workflow.Contex
 }
 
 type CostExplorerDeleteAnomalyMonitorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +149,7 @@ func (r *CostExplorerDeleteAnomalyMonitorFuture) Get(ctx workflow.Context) (*cos
 }
 
 type CostExplorerDeleteAnomalySubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +160,7 @@ func (r *CostExplorerDeleteAnomalySubscriptionFuture) Get(ctx workflow.Context) 
 }
 
 type CostExplorerDeleteCostCategoryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +171,7 @@ func (r *CostExplorerDeleteCostCategoryDefinitionFuture) Get(ctx workflow.Contex
 }
 
 type CostExplorerDescribeCostCategoryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +182,7 @@ func (r *CostExplorerDescribeCostCategoryDefinitionFuture) Get(ctx workflow.Cont
 }
 
 type CostExplorerGetAnomaliesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +193,7 @@ func (r *CostExplorerGetAnomaliesFuture) Get(ctx workflow.Context) (*costexplore
 }
 
 type CostExplorerGetAnomalyMonitorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +204,7 @@ func (r *CostExplorerGetAnomalyMonitorsFuture) Get(ctx workflow.Context) (*coste
 }
 
 type CostExplorerGetAnomalySubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +215,7 @@ func (r *CostExplorerGetAnomalySubscriptionsFuture) Get(ctx workflow.Context) (*
 }
 
 type CostExplorerGetCostAndUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +226,7 @@ func (r *CostExplorerGetCostAndUsageFuture) Get(ctx workflow.Context) (*costexpl
 }
 
 type CostExplorerGetCostAndUsageWithResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +237,7 @@ func (r *CostExplorerGetCostAndUsageWithResourcesFuture) Get(ctx workflow.Contex
 }
 
 type CostExplorerGetCostForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +248,7 @@ func (r *CostExplorerGetCostForecastFuture) Get(ctx workflow.Context) (*costexpl
 }
 
 type CostExplorerGetDimensionValuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +259,7 @@ func (r *CostExplorerGetDimensionValuesFuture) Get(ctx workflow.Context) (*coste
 }
 
 type CostExplorerGetReservationCoverageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +270,7 @@ func (r *CostExplorerGetReservationCoverageFuture) Get(ctx workflow.Context) (*c
 }
 
 type CostExplorerGetReservationPurchaseRecommendationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +281,7 @@ func (r *CostExplorerGetReservationPurchaseRecommendationFuture) Get(ctx workflo
 }
 
 type CostExplorerGetReservationUtilizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +292,7 @@ func (r *CostExplorerGetReservationUtilizationFuture) Get(ctx workflow.Context) 
 }
 
 type CostExplorerGetRightsizingRecommendationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +303,7 @@ func (r *CostExplorerGetRightsizingRecommendationFuture) Get(ctx workflow.Contex
 }
 
 type CostExplorerGetSavingsPlansCoverageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +314,7 @@ func (r *CostExplorerGetSavingsPlansCoverageFuture) Get(ctx workflow.Context) (*
 }
 
 type CostExplorerGetSavingsPlansPurchaseRecommendationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +325,7 @@ func (r *CostExplorerGetSavingsPlansPurchaseRecommendationFuture) Get(ctx workfl
 }
 
 type CostExplorerGetSavingsPlansUtilizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +336,7 @@ func (r *CostExplorerGetSavingsPlansUtilizationFuture) Get(ctx workflow.Context)
 }
 
 type CostExplorerGetSavingsPlansUtilizationDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +347,7 @@ func (r *CostExplorerGetSavingsPlansUtilizationDetailsFuture) Get(ctx workflow.C
 }
 
 type CostExplorerGetTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +358,7 @@ func (r *CostExplorerGetTagsFuture) Get(ctx workflow.Context) (*costexplorer.Get
 }
 
 type CostExplorerGetUsageForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +369,7 @@ func (r *CostExplorerGetUsageForecastFuture) Get(ctx workflow.Context) (*costexp
 }
 
 type CostExplorerListCostCategoryDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +380,7 @@ func (r *CostExplorerListCostCategoryDefinitionsFuture) Get(ctx workflow.Context
 }
 
 type CostExplorerProvideAnomalyFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +391,7 @@ func (r *CostExplorerProvideAnomalyFeedbackFuture) Get(ctx workflow.Context) (*c
 }
 
 type CostExplorerUpdateAnomalyMonitorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +402,7 @@ func (r *CostExplorerUpdateAnomalyMonitorFuture) Get(ctx workflow.Context) (*cos
 }
 
 type CostExplorerUpdateAnomalySubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +413,7 @@ func (r *CostExplorerUpdateAnomalySubscriptionFuture) Get(ctx workflow.Context) 
 }
 
 type CostExplorerUpdateCostCategoryDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

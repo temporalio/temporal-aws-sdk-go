@@ -93,6 +93,7 @@ func NewGlobalAcceleratorStub() GlobalAcceleratorClient {
 }
 
 type GlobalAcceleratorAdvertiseByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *GlobalAcceleratorAdvertiseByoipCidrFuture) Get(ctx workflow.Context) (*
 }
 
 type GlobalAcceleratorCreateAcceleratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *GlobalAcceleratorCreateAcceleratorFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlobalAcceleratorCreateEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *GlobalAcceleratorCreateEndpointGroupFuture) Get(ctx workflow.Context) (
 }
 
 type GlobalAcceleratorCreateListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *GlobalAcceleratorCreateListenerFuture) Get(ctx workflow.Context) (*glob
 }
 
 type GlobalAcceleratorDeleteAcceleratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *GlobalAcceleratorDeleteAcceleratorFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlobalAcceleratorDeleteEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *GlobalAcceleratorDeleteEndpointGroupFuture) Get(ctx workflow.Context) (
 }
 
 type GlobalAcceleratorDeleteListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *GlobalAcceleratorDeleteListenerFuture) Get(ctx workflow.Context) (*glob
 }
 
 type GlobalAcceleratorDeprovisionByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *GlobalAcceleratorDeprovisionByoipCidrFuture) Get(ctx workflow.Context) 
 }
 
 type GlobalAcceleratorDescribeAcceleratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *GlobalAcceleratorDescribeAcceleratorFuture) Get(ctx workflow.Context) (
 }
 
 type GlobalAcceleratorDescribeAcceleratorAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *GlobalAcceleratorDescribeAcceleratorAttributesFuture) Get(ctx workflow.
 }
 
 type GlobalAcceleratorDescribeEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *GlobalAcceleratorDescribeEndpointGroupFuture) Get(ctx workflow.Context)
 }
 
 type GlobalAcceleratorDescribeListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *GlobalAcceleratorDescribeListenerFuture) Get(ctx workflow.Context) (*gl
 }
 
 type GlobalAcceleratorListAcceleratorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *GlobalAcceleratorListAcceleratorsFuture) Get(ctx workflow.Context) (*gl
 }
 
 type GlobalAcceleratorListByoipCidrsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *GlobalAcceleratorListByoipCidrsFuture) Get(ctx workflow.Context) (*glob
 }
 
 type GlobalAcceleratorListEndpointGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *GlobalAcceleratorListEndpointGroupsFuture) Get(ctx workflow.Context) (*
 }
 
 type GlobalAcceleratorListListenersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *GlobalAcceleratorListListenersFuture) Get(ctx workflow.Context) (*globa
 }
 
 type GlobalAcceleratorListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *GlobalAcceleratorListTagsForResourceFuture) Get(ctx workflow.Context) (
 }
 
 type GlobalAcceleratorProvisionByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *GlobalAcceleratorProvisionByoipCidrFuture) Get(ctx workflow.Context) (*
 }
 
 type GlobalAcceleratorTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *GlobalAcceleratorTagResourceFuture) Get(ctx workflow.Context) (*globala
 }
 
 type GlobalAcceleratorUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *GlobalAcceleratorUntagResourceFuture) Get(ctx workflow.Context) (*globa
 }
 
 type GlobalAcceleratorUpdateAcceleratorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +324,7 @@ func (r *GlobalAcceleratorUpdateAcceleratorFuture) Get(ctx workflow.Context) (*g
 }
 
 type GlobalAcceleratorUpdateAcceleratorAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +335,7 @@ func (r *GlobalAcceleratorUpdateAcceleratorAttributesFuture) Get(ctx workflow.Co
 }
 
 type GlobalAcceleratorUpdateEndpointGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +346,7 @@ func (r *GlobalAcceleratorUpdateEndpointGroupFuture) Get(ctx workflow.Context) (
 }
 
 type GlobalAcceleratorUpdateListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +357,7 @@ func (r *GlobalAcceleratorUpdateListenerFuture) Get(ctx workflow.Context) (*glob
 }
 
 type GlobalAcceleratorWithdrawByoipCidrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

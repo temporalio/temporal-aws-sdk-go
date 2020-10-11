@@ -99,6 +99,7 @@ func NewMediaConnectStub() MediaConnectClient {
 }
 
 type MediaConnectAddFlowOutputsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +110,7 @@ func (r *MediaConnectAddFlowOutputsFuture) Get(ctx workflow.Context) (*mediaconn
 }
 
 type MediaConnectAddFlowSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +121,7 @@ func (r *MediaConnectAddFlowSourcesFuture) Get(ctx workflow.Context) (*mediaconn
 }
 
 type MediaConnectAddFlowVpcInterfacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +132,7 @@ func (r *MediaConnectAddFlowVpcInterfacesFuture) Get(ctx workflow.Context) (*med
 }
 
 type MediaConnectCreateFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +143,7 @@ func (r *MediaConnectCreateFlowFuture) Get(ctx workflow.Context) (*mediaconnect.
 }
 
 type MediaConnectDeleteFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +154,7 @@ func (r *MediaConnectDeleteFlowFuture) Get(ctx workflow.Context) (*mediaconnect.
 }
 
 type MediaConnectDescribeFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +165,7 @@ func (r *MediaConnectDescribeFlowFuture) Get(ctx workflow.Context) (*mediaconnec
 }
 
 type MediaConnectDescribeOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +176,7 @@ func (r *MediaConnectDescribeOfferingFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectDescribeReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +187,7 @@ func (r *MediaConnectDescribeReservationFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaConnectGrantFlowEntitlementsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +198,7 @@ func (r *MediaConnectGrantFlowEntitlementsFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaConnectListEntitlementsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +209,7 @@ func (r *MediaConnectListEntitlementsFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectListFlowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +220,7 @@ func (r *MediaConnectListFlowsFuture) Get(ctx workflow.Context) (*mediaconnect.L
 }
 
 type MediaConnectListOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +231,7 @@ func (r *MediaConnectListOfferingsFuture) Get(ctx workflow.Context) (*mediaconne
 }
 
 type MediaConnectListReservationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +242,7 @@ func (r *MediaConnectListReservationsFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +253,7 @@ func (r *MediaConnectListTagsForResourceFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaConnectPurchaseOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +264,7 @@ func (r *MediaConnectPurchaseOfferingFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectRemoveFlowOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +275,7 @@ func (r *MediaConnectRemoveFlowOutputFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectRemoveFlowSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +286,7 @@ func (r *MediaConnectRemoveFlowSourceFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectRemoveFlowVpcInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +297,7 @@ func (r *MediaConnectRemoveFlowVpcInterfaceFuture) Get(ctx workflow.Context) (*m
 }
 
 type MediaConnectRevokeFlowEntitlementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +308,7 @@ func (r *MediaConnectRevokeFlowEntitlementFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaConnectStartFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +319,7 @@ func (r *MediaConnectStartFlowFuture) Get(ctx workflow.Context) (*mediaconnect.S
 }
 
 type MediaConnectStopFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +330,7 @@ func (r *MediaConnectStopFlowFuture) Get(ctx workflow.Context) (*mediaconnect.St
 }
 
 type MediaConnectTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +341,7 @@ func (r *MediaConnectTagResourceFuture) Get(ctx workflow.Context) (*mediaconnect
 }
 
 type MediaConnectUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +352,7 @@ func (r *MediaConnectUntagResourceFuture) Get(ctx workflow.Context) (*mediaconne
 }
 
 type MediaConnectUpdateFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +363,7 @@ func (r *MediaConnectUpdateFlowFuture) Get(ctx workflow.Context) (*mediaconnect.
 }
 
 type MediaConnectUpdateFlowEntitlementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +374,7 @@ func (r *MediaConnectUpdateFlowEntitlementFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaConnectUpdateFlowOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +385,7 @@ func (r *MediaConnectUpdateFlowOutputFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConnectUpdateFlowSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

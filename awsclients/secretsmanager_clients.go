@@ -75,6 +75,7 @@ func NewSecretsManagerStub() SecretsManagerClient {
 }
 
 type SecretsManagerCancelRotateSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *SecretsManagerCancelRotateSecretFuture) Get(ctx workflow.Context) (*sec
 }
 
 type SecretsManagerCreateSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *SecretsManagerCreateSecretFuture) Get(ctx workflow.Context) (*secretsma
 }
 
 type SecretsManagerDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *SecretsManagerDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*s
 }
 
 type SecretsManagerDeleteSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *SecretsManagerDeleteSecretFuture) Get(ctx workflow.Context) (*secretsma
 }
 
 type SecretsManagerDescribeSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *SecretsManagerDescribeSecretFuture) Get(ctx workflow.Context) (*secrets
 }
 
 type SecretsManagerGetRandomPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *SecretsManagerGetRandomPasswordFuture) Get(ctx workflow.Context) (*secr
 }
 
 type SecretsManagerGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *SecretsManagerGetResourcePolicyFuture) Get(ctx workflow.Context) (*secr
 }
 
 type SecretsManagerGetSecretValueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *SecretsManagerGetSecretValueFuture) Get(ctx workflow.Context) (*secrets
 }
 
 type SecretsManagerListSecretVersionIdsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *SecretsManagerListSecretVersionIdsFuture) Get(ctx workflow.Context) (*s
 }
 
 type SecretsManagerListSecretsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *SecretsManagerListSecretsFuture) Get(ctx workflow.Context) (*secretsman
 }
 
 type SecretsManagerPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *SecretsManagerPutResourcePolicyFuture) Get(ctx workflow.Context) (*secr
 }
 
 type SecretsManagerPutSecretValueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *SecretsManagerPutSecretValueFuture) Get(ctx workflow.Context) (*secrets
 }
 
 type SecretsManagerRestoreSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *SecretsManagerRestoreSecretFuture) Get(ctx workflow.Context) (*secretsm
 }
 
 type SecretsManagerRotateSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *SecretsManagerRotateSecretFuture) Get(ctx workflow.Context) (*secretsma
 }
 
 type SecretsManagerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *SecretsManagerTagResourceFuture) Get(ctx workflow.Context) (*secretsman
 }
 
 type SecretsManagerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *SecretsManagerUntagResourceFuture) Get(ctx workflow.Context) (*secretsm
 }
 
 type SecretsManagerUpdateSecretFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *SecretsManagerUpdateSecretFuture) Get(ctx workflow.Context) (*secretsma
 }
 
 type SecretsManagerUpdateSecretVersionStageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *SecretsManagerUpdateSecretVersionStageFuture) Get(ctx workflow.Context)
 }
 
 type SecretsManagerValidateResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

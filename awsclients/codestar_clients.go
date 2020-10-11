@@ -72,6 +72,7 @@ func NewCodeStarStub() CodeStarClient {
 }
 
 type CodeStarAssociateTeamMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +83,7 @@ func (r *CodeStarAssociateTeamMemberFuture) Get(ctx workflow.Context) (*codestar
 }
 
 type CodeStarCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +94,7 @@ func (r *CodeStarCreateProjectFuture) Get(ctx workflow.Context) (*codestar.Creat
 }
 
 type CodeStarCreateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +105,7 @@ func (r *CodeStarCreateUserProfileFuture) Get(ctx workflow.Context) (*codestar.C
 }
 
 type CodeStarDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +116,7 @@ func (r *CodeStarDeleteProjectFuture) Get(ctx workflow.Context) (*codestar.Delet
 }
 
 type CodeStarDeleteUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +127,7 @@ func (r *CodeStarDeleteUserProfileFuture) Get(ctx workflow.Context) (*codestar.D
 }
 
 type CodeStarDescribeProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +138,7 @@ func (r *CodeStarDescribeProjectFuture) Get(ctx workflow.Context) (*codestar.Des
 }
 
 type CodeStarDescribeUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +149,7 @@ func (r *CodeStarDescribeUserProfileFuture) Get(ctx workflow.Context) (*codestar
 }
 
 type CodeStarDisassociateTeamMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +160,7 @@ func (r *CodeStarDisassociateTeamMemberFuture) Get(ctx workflow.Context) (*codes
 }
 
 type CodeStarListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +171,7 @@ func (r *CodeStarListProjectsFuture) Get(ctx workflow.Context) (*codestar.ListPr
 }
 
 type CodeStarListResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +182,7 @@ func (r *CodeStarListResourcesFuture) Get(ctx workflow.Context) (*codestar.ListR
 }
 
 type CodeStarListTagsForProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +193,7 @@ func (r *CodeStarListTagsForProjectFuture) Get(ctx workflow.Context) (*codestar.
 }
 
 type CodeStarListTeamMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +204,7 @@ func (r *CodeStarListTeamMembersFuture) Get(ctx workflow.Context) (*codestar.Lis
 }
 
 type CodeStarListUserProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +215,7 @@ func (r *CodeStarListUserProfilesFuture) Get(ctx workflow.Context) (*codestar.Li
 }
 
 type CodeStarTagProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +226,7 @@ func (r *CodeStarTagProjectFuture) Get(ctx workflow.Context) (*codestar.TagProje
 }
 
 type CodeStarUntagProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +237,7 @@ func (r *CodeStarUntagProjectFuture) Get(ctx workflow.Context) (*codestar.UntagP
 }
 
 type CodeStarUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +248,7 @@ func (r *CodeStarUpdateProjectFuture) Get(ctx workflow.Context) (*codestar.Updat
 }
 
 type CodeStarUpdateTeamMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +259,7 @@ func (r *CodeStarUpdateTeamMemberFuture) Get(ctx workflow.Context) (*codestar.Up
 }
 
 type CodeStarUpdateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

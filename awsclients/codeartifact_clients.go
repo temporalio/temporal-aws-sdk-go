@@ -111,6 +111,7 @@ func NewCodeArtifactStub() CodeArtifactClient {
 }
 
 type CodeArtifactAssociateExternalConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +122,7 @@ func (r *CodeArtifactAssociateExternalConnectionFuture) Get(ctx workflow.Context
 }
 
 type CodeArtifactCopyPackageVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +133,7 @@ func (r *CodeArtifactCopyPackageVersionsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeArtifactCreateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +144,7 @@ func (r *CodeArtifactCreateDomainFuture) Get(ctx workflow.Context) (*codeartifac
 }
 
 type CodeArtifactCreateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +155,7 @@ func (r *CodeArtifactCreateRepositoryFuture) Get(ctx workflow.Context) (*codeart
 }
 
 type CodeArtifactDeleteDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +166,7 @@ func (r *CodeArtifactDeleteDomainFuture) Get(ctx workflow.Context) (*codeartifac
 }
 
 type CodeArtifactDeleteDomainPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +177,7 @@ func (r *CodeArtifactDeleteDomainPermissionsPolicyFuture) Get(ctx workflow.Conte
 }
 
 type CodeArtifactDeletePackageVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +188,7 @@ func (r *CodeArtifactDeletePackageVersionsFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeArtifactDeleteRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +199,7 @@ func (r *CodeArtifactDeleteRepositoryFuture) Get(ctx workflow.Context) (*codeart
 }
 
 type CodeArtifactDeleteRepositoryPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +210,7 @@ func (r *CodeArtifactDeleteRepositoryPermissionsPolicyFuture) Get(ctx workflow.C
 }
 
 type CodeArtifactDescribeDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +221,7 @@ func (r *CodeArtifactDescribeDomainFuture) Get(ctx workflow.Context) (*codeartif
 }
 
 type CodeArtifactDescribePackageVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +232,7 @@ func (r *CodeArtifactDescribePackageVersionFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeArtifactDescribeRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +243,7 @@ func (r *CodeArtifactDescribeRepositoryFuture) Get(ctx workflow.Context) (*codea
 }
 
 type CodeArtifactDisassociateExternalConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +254,7 @@ func (r *CodeArtifactDisassociateExternalConnectionFuture) Get(ctx workflow.Cont
 }
 
 type CodeArtifactDisposePackageVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +265,7 @@ func (r *CodeArtifactDisposePackageVersionsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeArtifactGetAuthorizationTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +276,7 @@ func (r *CodeArtifactGetAuthorizationTokenFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeArtifactGetDomainPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +287,7 @@ func (r *CodeArtifactGetDomainPermissionsPolicyFuture) Get(ctx workflow.Context)
 }
 
 type CodeArtifactGetPackageVersionAssetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +298,7 @@ func (r *CodeArtifactGetPackageVersionAssetFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeArtifactGetPackageVersionReadmeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +309,7 @@ func (r *CodeArtifactGetPackageVersionReadmeFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeArtifactGetRepositoryEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +320,7 @@ func (r *CodeArtifactGetRepositoryEndpointFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeArtifactGetRepositoryPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +331,7 @@ func (r *CodeArtifactGetRepositoryPermissionsPolicyFuture) Get(ctx workflow.Cont
 }
 
 type CodeArtifactListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +342,7 @@ func (r *CodeArtifactListDomainsFuture) Get(ctx workflow.Context) (*codeartifact
 }
 
 type CodeArtifactListPackageVersionAssetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +353,7 @@ func (r *CodeArtifactListPackageVersionAssetsFuture) Get(ctx workflow.Context) (
 }
 
 type CodeArtifactListPackageVersionDependenciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +364,7 @@ func (r *CodeArtifactListPackageVersionDependenciesFuture) Get(ctx workflow.Cont
 }
 
 type CodeArtifactListPackageVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +375,7 @@ func (r *CodeArtifactListPackageVersionsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeArtifactListPackagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +386,7 @@ func (r *CodeArtifactListPackagesFuture) Get(ctx workflow.Context) (*codeartifac
 }
 
 type CodeArtifactListRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +397,7 @@ func (r *CodeArtifactListRepositoriesFuture) Get(ctx workflow.Context) (*codeart
 }
 
 type CodeArtifactListRepositoriesInDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +408,7 @@ func (r *CodeArtifactListRepositoriesInDomainFuture) Get(ctx workflow.Context) (
 }
 
 type CodeArtifactPutDomainPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +419,7 @@ func (r *CodeArtifactPutDomainPermissionsPolicyFuture) Get(ctx workflow.Context)
 }
 
 type CodeArtifactPutRepositoryPermissionsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +430,7 @@ func (r *CodeArtifactPutRepositoryPermissionsPolicyFuture) Get(ctx workflow.Cont
 }
 
 type CodeArtifactUpdatePackageVersionsStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +441,7 @@ func (r *CodeArtifactUpdatePackageVersionsStatusFuture) Get(ctx workflow.Context
 }
 
 type CodeArtifactUpdateRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

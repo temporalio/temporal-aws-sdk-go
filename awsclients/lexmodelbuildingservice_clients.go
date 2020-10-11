@@ -135,6 +135,7 @@ func NewLexModelBuildingServiceStub() LexModelBuildingServiceClient {
 }
 
 type LexModelBuildingServiceCreateBotVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +146,7 @@ func (r *LexModelBuildingServiceCreateBotVersionFuture) Get(ctx workflow.Context
 }
 
 type LexModelBuildingServiceCreateIntentVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +157,7 @@ func (r *LexModelBuildingServiceCreateIntentVersionFuture) Get(ctx workflow.Cont
 }
 
 type LexModelBuildingServiceCreateSlotTypeVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +168,7 @@ func (r *LexModelBuildingServiceCreateSlotTypeVersionFuture) Get(ctx workflow.Co
 }
 
 type LexModelBuildingServiceDeleteBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +179,7 @@ func (r *LexModelBuildingServiceDeleteBotFuture) Get(ctx workflow.Context) (*lex
 }
 
 type LexModelBuildingServiceDeleteBotAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +190,7 @@ func (r *LexModelBuildingServiceDeleteBotAliasFuture) Get(ctx workflow.Context) 
 }
 
 type LexModelBuildingServiceDeleteBotChannelAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +201,7 @@ func (r *LexModelBuildingServiceDeleteBotChannelAssociationFuture) Get(ctx workf
 }
 
 type LexModelBuildingServiceDeleteBotVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +212,7 @@ func (r *LexModelBuildingServiceDeleteBotVersionFuture) Get(ctx workflow.Context
 }
 
 type LexModelBuildingServiceDeleteIntentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +223,7 @@ func (r *LexModelBuildingServiceDeleteIntentFuture) Get(ctx workflow.Context) (*
 }
 
 type LexModelBuildingServiceDeleteIntentVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +234,7 @@ func (r *LexModelBuildingServiceDeleteIntentVersionFuture) Get(ctx workflow.Cont
 }
 
 type LexModelBuildingServiceDeleteSlotTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +245,7 @@ func (r *LexModelBuildingServiceDeleteSlotTypeFuture) Get(ctx workflow.Context) 
 }
 
 type LexModelBuildingServiceDeleteSlotTypeVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +256,7 @@ func (r *LexModelBuildingServiceDeleteSlotTypeVersionFuture) Get(ctx workflow.Co
 }
 
 type LexModelBuildingServiceDeleteUtterancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +267,7 @@ func (r *LexModelBuildingServiceDeleteUtterancesFuture) Get(ctx workflow.Context
 }
 
 type LexModelBuildingServiceGetBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +278,7 @@ func (r *LexModelBuildingServiceGetBotFuture) Get(ctx workflow.Context) (*lexmod
 }
 
 type LexModelBuildingServiceGetBotAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +289,7 @@ func (r *LexModelBuildingServiceGetBotAliasFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServiceGetBotAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +300,7 @@ func (r *LexModelBuildingServiceGetBotAliasesFuture) Get(ctx workflow.Context) (
 }
 
 type LexModelBuildingServiceGetBotChannelAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +311,7 @@ func (r *LexModelBuildingServiceGetBotChannelAssociationFuture) Get(ctx workflow
 }
 
 type LexModelBuildingServiceGetBotChannelAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +322,7 @@ func (r *LexModelBuildingServiceGetBotChannelAssociationsFuture) Get(ctx workflo
 }
 
 type LexModelBuildingServiceGetBotVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +333,7 @@ func (r *LexModelBuildingServiceGetBotVersionsFuture) Get(ctx workflow.Context) 
 }
 
 type LexModelBuildingServiceGetBotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +344,7 @@ func (r *LexModelBuildingServiceGetBotsFuture) Get(ctx workflow.Context) (*lexmo
 }
 
 type LexModelBuildingServiceGetBuiltinIntentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +355,7 @@ func (r *LexModelBuildingServiceGetBuiltinIntentFuture) Get(ctx workflow.Context
 }
 
 type LexModelBuildingServiceGetBuiltinIntentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +366,7 @@ func (r *LexModelBuildingServiceGetBuiltinIntentsFuture) Get(ctx workflow.Contex
 }
 
 type LexModelBuildingServiceGetBuiltinSlotTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +377,7 @@ func (r *LexModelBuildingServiceGetBuiltinSlotTypesFuture) Get(ctx workflow.Cont
 }
 
 type LexModelBuildingServiceGetExportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +388,7 @@ func (r *LexModelBuildingServiceGetExportFuture) Get(ctx workflow.Context) (*lex
 }
 
 type LexModelBuildingServiceGetImportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +399,7 @@ func (r *LexModelBuildingServiceGetImportFuture) Get(ctx workflow.Context) (*lex
 }
 
 type LexModelBuildingServiceGetIntentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +410,7 @@ func (r *LexModelBuildingServiceGetIntentFuture) Get(ctx workflow.Context) (*lex
 }
 
 type LexModelBuildingServiceGetIntentVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +421,7 @@ func (r *LexModelBuildingServiceGetIntentVersionsFuture) Get(ctx workflow.Contex
 }
 
 type LexModelBuildingServiceGetIntentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +432,7 @@ func (r *LexModelBuildingServiceGetIntentsFuture) Get(ctx workflow.Context) (*le
 }
 
 type LexModelBuildingServiceGetSlotTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +443,7 @@ func (r *LexModelBuildingServiceGetSlotTypeFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServiceGetSlotTypeVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +454,7 @@ func (r *LexModelBuildingServiceGetSlotTypeVersionsFuture) Get(ctx workflow.Cont
 }
 
 type LexModelBuildingServiceGetSlotTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +465,7 @@ func (r *LexModelBuildingServiceGetSlotTypesFuture) Get(ctx workflow.Context) (*
 }
 
 type LexModelBuildingServiceGetUtterancesViewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +476,7 @@ func (r *LexModelBuildingServiceGetUtterancesViewFuture) Get(ctx workflow.Contex
 }
 
 type LexModelBuildingServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +487,7 @@ func (r *LexModelBuildingServiceListTagsForResourceFuture) Get(ctx workflow.Cont
 }
 
 type LexModelBuildingServicePutBotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +498,7 @@ func (r *LexModelBuildingServicePutBotFuture) Get(ctx workflow.Context) (*lexmod
 }
 
 type LexModelBuildingServicePutBotAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +509,7 @@ func (r *LexModelBuildingServicePutBotAliasFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServicePutIntentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +520,7 @@ func (r *LexModelBuildingServicePutIntentFuture) Get(ctx workflow.Context) (*lex
 }
 
 type LexModelBuildingServicePutSlotTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +531,7 @@ func (r *LexModelBuildingServicePutSlotTypeFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServiceStartImportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +542,7 @@ func (r *LexModelBuildingServiceStartImportFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServiceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +553,7 @@ func (r *LexModelBuildingServiceTagResourceFuture) Get(ctx workflow.Context) (*l
 }
 
 type LexModelBuildingServiceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

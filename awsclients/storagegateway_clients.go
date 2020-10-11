@@ -261,6 +261,7 @@ func NewStorageGatewayStub() StorageGatewayClient {
 }
 
 type StorageGatewayActivateGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +272,7 @@ func (r *StorageGatewayActivateGatewayFuture) Get(ctx workflow.Context) (*storag
 }
 
 type StorageGatewayAddCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +283,7 @@ func (r *StorageGatewayAddCacheFuture) Get(ctx workflow.Context) (*storagegatewa
 }
 
 type StorageGatewayAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +294,7 @@ func (r *StorageGatewayAddTagsToResourceFuture) Get(ctx workflow.Context) (*stor
 }
 
 type StorageGatewayAddUploadBufferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +305,7 @@ func (r *StorageGatewayAddUploadBufferFuture) Get(ctx workflow.Context) (*storag
 }
 
 type StorageGatewayAddWorkingStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +316,7 @@ func (r *StorageGatewayAddWorkingStorageFuture) Get(ctx workflow.Context) (*stor
 }
 
 type StorageGatewayAssignTapePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +327,7 @@ func (r *StorageGatewayAssignTapePoolFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayAttachVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +338,7 @@ func (r *StorageGatewayAttachVolumeFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayCancelArchivalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +349,7 @@ func (r *StorageGatewayCancelArchivalFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayCancelRetrievalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +360,7 @@ func (r *StorageGatewayCancelRetrievalFuture) Get(ctx workflow.Context) (*storag
 }
 
 type StorageGatewayCreateCachediSCSIVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +371,7 @@ func (r *StorageGatewayCreateCachediSCSIVolumeFuture) Get(ctx workflow.Context) 
 }
 
 type StorageGatewayCreateNFSFileShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +382,7 @@ func (r *StorageGatewayCreateNFSFileShareFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayCreateSMBFileShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +393,7 @@ func (r *StorageGatewayCreateSMBFileShareFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayCreateSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +404,7 @@ func (r *StorageGatewayCreateSnapshotFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +415,7 @@ func (r *StorageGatewayCreateSnapshotFromVolumeRecoveryPointFuture) Get(ctx work
 }
 
 type StorageGatewayCreateStorediSCSIVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +426,7 @@ func (r *StorageGatewayCreateStorediSCSIVolumeFuture) Get(ctx workflow.Context) 
 }
 
 type StorageGatewayCreateTapePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +437,7 @@ func (r *StorageGatewayCreateTapePoolFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayCreateTapeWithBarcodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +448,7 @@ func (r *StorageGatewayCreateTapeWithBarcodeFuture) Get(ctx workflow.Context) (*
 }
 
 type StorageGatewayCreateTapesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +459,7 @@ func (r *StorageGatewayCreateTapesFuture) Get(ctx workflow.Context) (*storagegat
 }
 
 type StorageGatewayDeleteAutomaticTapeCreationPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +470,7 @@ func (r *StorageGatewayDeleteAutomaticTapeCreationPolicyFuture) Get(ctx workflow
 }
 
 type StorageGatewayDeleteBandwidthRateLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +481,7 @@ func (r *StorageGatewayDeleteBandwidthRateLimitFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayDeleteChapCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +492,7 @@ func (r *StorageGatewayDeleteChapCredentialsFuture) Get(ctx workflow.Context) (*
 }
 
 type StorageGatewayDeleteFileShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +503,7 @@ func (r *StorageGatewayDeleteFileShareFuture) Get(ctx workflow.Context) (*storag
 }
 
 type StorageGatewayDeleteGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +514,7 @@ func (r *StorageGatewayDeleteGatewayFuture) Get(ctx workflow.Context) (*storageg
 }
 
 type StorageGatewayDeleteSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +525,7 @@ func (r *StorageGatewayDeleteSnapshotScheduleFuture) Get(ctx workflow.Context) (
 }
 
 type StorageGatewayDeleteTapeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +536,7 @@ func (r *StorageGatewayDeleteTapeFuture) Get(ctx workflow.Context) (*storagegate
 }
 
 type StorageGatewayDeleteTapeArchiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +547,7 @@ func (r *StorageGatewayDeleteTapeArchiveFuture) Get(ctx workflow.Context) (*stor
 }
 
 type StorageGatewayDeleteTapePoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +558,7 @@ func (r *StorageGatewayDeleteTapePoolFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayDeleteVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +569,7 @@ func (r *StorageGatewayDeleteVolumeFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayDescribeAvailabilityMonitorTestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +580,7 @@ func (r *StorageGatewayDescribeAvailabilityMonitorTestFuture) Get(ctx workflow.C
 }
 
 type StorageGatewayDescribeBandwidthRateLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +591,7 @@ func (r *StorageGatewayDescribeBandwidthRateLimitFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayDescribeCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +602,7 @@ func (r *StorageGatewayDescribeCacheFuture) Get(ctx workflow.Context) (*storageg
 }
 
 type StorageGatewayDescribeCachediSCSIVolumesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +613,7 @@ func (r *StorageGatewayDescribeCachediSCSIVolumesFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayDescribeChapCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +624,7 @@ func (r *StorageGatewayDescribeChapCredentialsFuture) Get(ctx workflow.Context) 
 }
 
 type StorageGatewayDescribeGatewayInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +635,7 @@ func (r *StorageGatewayDescribeGatewayInformationFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayDescribeMaintenanceStartTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +646,7 @@ func (r *StorageGatewayDescribeMaintenanceStartTimeFuture) Get(ctx workflow.Cont
 }
 
 type StorageGatewayDescribeNFSFileSharesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +657,7 @@ func (r *StorageGatewayDescribeNFSFileSharesFuture) Get(ctx workflow.Context) (*
 }
 
 type StorageGatewayDescribeSMBFileSharesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +668,7 @@ func (r *StorageGatewayDescribeSMBFileSharesFuture) Get(ctx workflow.Context) (*
 }
 
 type StorageGatewayDescribeSMBSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +679,7 @@ func (r *StorageGatewayDescribeSMBSettingsFuture) Get(ctx workflow.Context) (*st
 }
 
 type StorageGatewayDescribeSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +690,7 @@ func (r *StorageGatewayDescribeSnapshotScheduleFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayDescribeStorediSCSIVolumesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +701,7 @@ func (r *StorageGatewayDescribeStorediSCSIVolumesFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayDescribeTapeArchivesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +712,7 @@ func (r *StorageGatewayDescribeTapeArchivesFuture) Get(ctx workflow.Context) (*s
 }
 
 type StorageGatewayDescribeTapeRecoveryPointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +723,7 @@ func (r *StorageGatewayDescribeTapeRecoveryPointsFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayDescribeTapesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +734,7 @@ func (r *StorageGatewayDescribeTapesFuture) Get(ctx workflow.Context) (*storageg
 }
 
 type StorageGatewayDescribeUploadBufferFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -701,6 +745,7 @@ func (r *StorageGatewayDescribeUploadBufferFuture) Get(ctx workflow.Context) (*s
 }
 
 type StorageGatewayDescribeVTLDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -711,6 +756,7 @@ func (r *StorageGatewayDescribeVTLDevicesFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayDescribeWorkingStorageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -721,6 +767,7 @@ func (r *StorageGatewayDescribeWorkingStorageFuture) Get(ctx workflow.Context) (
 }
 
 type StorageGatewayDetachVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -731,6 +778,7 @@ func (r *StorageGatewayDetachVolumeFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayDisableGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -741,6 +789,7 @@ func (r *StorageGatewayDisableGatewayFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayJoinDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -751,6 +800,7 @@ func (r *StorageGatewayJoinDomainFuture) Get(ctx workflow.Context) (*storagegate
 }
 
 type StorageGatewayListAutomaticTapeCreationPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -761,6 +811,7 @@ func (r *StorageGatewayListAutomaticTapeCreationPoliciesFuture) Get(ctx workflow
 }
 
 type StorageGatewayListFileSharesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -771,6 +822,7 @@ func (r *StorageGatewayListFileSharesFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayListGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -781,6 +833,7 @@ func (r *StorageGatewayListGatewaysFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayListLocalDisksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -791,6 +844,7 @@ func (r *StorageGatewayListLocalDisksFuture) Get(ctx workflow.Context) (*storage
 }
 
 type StorageGatewayListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -801,6 +855,7 @@ func (r *StorageGatewayListTagsForResourceFuture) Get(ctx workflow.Context) (*st
 }
 
 type StorageGatewayListTapePoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -811,6 +866,7 @@ func (r *StorageGatewayListTapePoolsFuture) Get(ctx workflow.Context) (*storageg
 }
 
 type StorageGatewayListTapesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -821,6 +877,7 @@ func (r *StorageGatewayListTapesFuture) Get(ctx workflow.Context) (*storagegatew
 }
 
 type StorageGatewayListVolumeInitiatorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -831,6 +888,7 @@ func (r *StorageGatewayListVolumeInitiatorsFuture) Get(ctx workflow.Context) (*s
 }
 
 type StorageGatewayListVolumeRecoveryPointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -841,6 +899,7 @@ func (r *StorageGatewayListVolumeRecoveryPointsFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayListVolumesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -851,6 +910,7 @@ func (r *StorageGatewayListVolumesFuture) Get(ctx workflow.Context) (*storagegat
 }
 
 type StorageGatewayNotifyWhenUploadedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -861,6 +921,7 @@ func (r *StorageGatewayNotifyWhenUploadedFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayRefreshCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -871,6 +932,7 @@ func (r *StorageGatewayRefreshCacheFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -881,6 +943,7 @@ func (r *StorageGatewayRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (
 }
 
 type StorageGatewayResetCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -891,6 +954,7 @@ func (r *StorageGatewayResetCacheFuture) Get(ctx workflow.Context) (*storagegate
 }
 
 type StorageGatewayRetrieveTapeArchiveFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -901,6 +965,7 @@ func (r *StorageGatewayRetrieveTapeArchiveFuture) Get(ctx workflow.Context) (*st
 }
 
 type StorageGatewayRetrieveTapeRecoveryPointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -911,6 +976,7 @@ func (r *StorageGatewayRetrieveTapeRecoveryPointFuture) Get(ctx workflow.Context
 }
 
 type StorageGatewaySetLocalConsolePasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -921,6 +987,7 @@ func (r *StorageGatewaySetLocalConsolePasswordFuture) Get(ctx workflow.Context) 
 }
 
 type StorageGatewaySetSMBGuestPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -931,6 +998,7 @@ func (r *StorageGatewaySetSMBGuestPasswordFuture) Get(ctx workflow.Context) (*st
 }
 
 type StorageGatewayShutdownGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -941,6 +1009,7 @@ func (r *StorageGatewayShutdownGatewayFuture) Get(ctx workflow.Context) (*storag
 }
 
 type StorageGatewayStartAvailabilityMonitorTestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -951,6 +1020,7 @@ func (r *StorageGatewayStartAvailabilityMonitorTestFuture) Get(ctx workflow.Cont
 }
 
 type StorageGatewayStartGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -961,6 +1031,7 @@ func (r *StorageGatewayStartGatewayFuture) Get(ctx workflow.Context) (*storagega
 }
 
 type StorageGatewayUpdateAutomaticTapeCreationPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -971,6 +1042,7 @@ func (r *StorageGatewayUpdateAutomaticTapeCreationPolicyFuture) Get(ctx workflow
 }
 
 type StorageGatewayUpdateBandwidthRateLimitFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -981,6 +1053,7 @@ func (r *StorageGatewayUpdateBandwidthRateLimitFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayUpdateChapCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -991,6 +1064,7 @@ func (r *StorageGatewayUpdateChapCredentialsFuture) Get(ctx workflow.Context) (*
 }
 
 type StorageGatewayUpdateGatewayInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1001,6 +1075,7 @@ func (r *StorageGatewayUpdateGatewayInformationFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayUpdateGatewaySoftwareNowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1011,6 +1086,7 @@ func (r *StorageGatewayUpdateGatewaySoftwareNowFuture) Get(ctx workflow.Context)
 }
 
 type StorageGatewayUpdateMaintenanceStartTimeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1021,6 +1097,7 @@ func (r *StorageGatewayUpdateMaintenanceStartTimeFuture) Get(ctx workflow.Contex
 }
 
 type StorageGatewayUpdateNFSFileShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1031,6 +1108,7 @@ func (r *StorageGatewayUpdateNFSFileShareFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayUpdateSMBFileShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1041,6 +1119,7 @@ func (r *StorageGatewayUpdateSMBFileShareFuture) Get(ctx workflow.Context) (*sto
 }
 
 type StorageGatewayUpdateSMBSecurityStrategyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1051,6 +1130,7 @@ func (r *StorageGatewayUpdateSMBSecurityStrategyFuture) Get(ctx workflow.Context
 }
 
 type StorageGatewayUpdateSnapshotScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1061,6 +1141,7 @@ func (r *StorageGatewayUpdateSnapshotScheduleFuture) Get(ctx workflow.Context) (
 }
 
 type StorageGatewayUpdateVTLDeviceTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

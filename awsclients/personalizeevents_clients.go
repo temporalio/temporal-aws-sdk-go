@@ -27,6 +27,7 @@ func NewPersonalizeEventsStub() PersonalizeEventsClient {
 }
 
 type PersonalizeEventsPutEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *PersonalizeEventsPutEventsFuture) Get(ctx workflow.Context) (*personali
 }
 
 type PersonalizeEventsPutItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *PersonalizeEventsPutItemsFuture) Get(ctx workflow.Context) (*personaliz
 }
 
 type PersonalizeEventsPutUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

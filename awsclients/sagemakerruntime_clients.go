@@ -21,6 +21,7 @@ func NewSageMakerRuntimeStub() SageMakerRuntimeClient {
 }
 
 type SageMakerRuntimeInvokeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

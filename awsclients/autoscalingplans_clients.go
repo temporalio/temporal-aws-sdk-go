@@ -36,6 +36,7 @@ func NewAutoScalingPlansStub() AutoScalingPlansClient {
 }
 
 type AutoScalingPlansCreateScalingPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *AutoScalingPlansCreateScalingPlanFuture) Get(ctx workflow.Context) (*au
 }
 
 type AutoScalingPlansDeleteScalingPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *AutoScalingPlansDeleteScalingPlanFuture) Get(ctx workflow.Context) (*au
 }
 
 type AutoScalingPlansDescribeScalingPlanResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *AutoScalingPlansDescribeScalingPlanResourcesFuture) Get(ctx workflow.Co
 }
 
 type AutoScalingPlansDescribeScalingPlansFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *AutoScalingPlansDescribeScalingPlansFuture) Get(ctx workflow.Context) (
 }
 
 type AutoScalingPlansGetScalingPlanResourceForecastDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *AutoScalingPlansGetScalingPlanResourceForecastDataFuture) Get(ctx workf
 }
 
 type AutoScalingPlansUpdateScalingPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

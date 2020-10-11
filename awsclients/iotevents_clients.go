@@ -66,6 +66,7 @@ func NewIoTEventsStub() IoTEventsClient {
 }
 
 type IoTEventsCreateDetectorModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +77,7 @@ func (r *IoTEventsCreateDetectorModelFuture) Get(ctx workflow.Context) (*ioteven
 }
 
 type IoTEventsCreateInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +88,7 @@ func (r *IoTEventsCreateInputFuture) Get(ctx workflow.Context) (*iotevents.Creat
 }
 
 type IoTEventsDeleteDetectorModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -96,6 +99,7 @@ func (r *IoTEventsDeleteDetectorModelFuture) Get(ctx workflow.Context) (*ioteven
 }
 
 type IoTEventsDeleteInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +110,7 @@ func (r *IoTEventsDeleteInputFuture) Get(ctx workflow.Context) (*iotevents.Delet
 }
 
 type IoTEventsDescribeDetectorModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +121,7 @@ func (r *IoTEventsDescribeDetectorModelFuture) Get(ctx workflow.Context) (*iotev
 }
 
 type IoTEventsDescribeInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +132,7 @@ func (r *IoTEventsDescribeInputFuture) Get(ctx workflow.Context) (*iotevents.Des
 }
 
 type IoTEventsDescribeLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +143,7 @@ func (r *IoTEventsDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*iote
 }
 
 type IoTEventsListDetectorModelVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +154,7 @@ func (r *IoTEventsListDetectorModelVersionsFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTEventsListDetectorModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +165,7 @@ func (r *IoTEventsListDetectorModelsFuture) Get(ctx workflow.Context) (*iotevent
 }
 
 type IoTEventsListInputsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +176,7 @@ func (r *IoTEventsListInputsFuture) Get(ctx workflow.Context) (*iotevents.ListIn
 }
 
 type IoTEventsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +187,7 @@ func (r *IoTEventsListTagsForResourceFuture) Get(ctx workflow.Context) (*ioteven
 }
 
 type IoTEventsPutLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +198,7 @@ func (r *IoTEventsPutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotevents
 }
 
 type IoTEventsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +209,7 @@ func (r *IoTEventsTagResourceFuture) Get(ctx workflow.Context) (*iotevents.TagRe
 }
 
 type IoTEventsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +220,7 @@ func (r *IoTEventsUntagResourceFuture) Get(ctx workflow.Context) (*iotevents.Unt
 }
 
 type IoTEventsUpdateDetectorModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +231,7 @@ func (r *IoTEventsUpdateDetectorModelFuture) Get(ctx workflow.Context) (*ioteven
 }
 
 type IoTEventsUpdateInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

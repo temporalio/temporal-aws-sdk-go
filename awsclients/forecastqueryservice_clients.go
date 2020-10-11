@@ -21,6 +21,7 @@ func NewForecastQueryServiceStub() ForecastQueryServiceClient {
 }
 
 type ForecastQueryServiceQueryForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

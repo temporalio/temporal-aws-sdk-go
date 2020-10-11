@@ -69,6 +69,7 @@ func NewCognitoSyncStub() CognitoSyncClient {
 }
 
 type CognitoSyncBulkPublishFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -79,6 +80,7 @@ func (r *CognitoSyncBulkPublishFuture) Get(ctx workflow.Context) (*cognitosync.B
 }
 
 type CognitoSyncDeleteDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -89,6 +91,7 @@ func (r *CognitoSyncDeleteDatasetFuture) Get(ctx workflow.Context) (*cognitosync
 }
 
 type CognitoSyncDescribeDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -99,6 +102,7 @@ func (r *CognitoSyncDescribeDatasetFuture) Get(ctx workflow.Context) (*cognitosy
 }
 
 type CognitoSyncDescribeIdentityPoolUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +113,7 @@ func (r *CognitoSyncDescribeIdentityPoolUsageFuture) Get(ctx workflow.Context) (
 }
 
 type CognitoSyncDescribeIdentityUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +124,7 @@ func (r *CognitoSyncDescribeIdentityUsageFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoSyncGetBulkPublishDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +135,7 @@ func (r *CognitoSyncGetBulkPublishDetailsFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoSyncGetCognitoEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +146,7 @@ func (r *CognitoSyncGetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitos
 }
 
 type CognitoSyncGetIdentityPoolConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +157,7 @@ func (r *CognitoSyncGetIdentityPoolConfigurationFuture) Get(ctx workflow.Context
 }
 
 type CognitoSyncListDatasetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +168,7 @@ func (r *CognitoSyncListDatasetsFuture) Get(ctx workflow.Context) (*cognitosync.
 }
 
 type CognitoSyncListIdentityPoolUsageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +179,7 @@ func (r *CognitoSyncListIdentityPoolUsageFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoSyncListRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +190,7 @@ func (r *CognitoSyncListRecordsFuture) Get(ctx workflow.Context) (*cognitosync.L
 }
 
 type CognitoSyncRegisterDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +201,7 @@ func (r *CognitoSyncRegisterDeviceFuture) Get(ctx workflow.Context) (*cognitosyn
 }
 
 type CognitoSyncSetCognitoEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +212,7 @@ func (r *CognitoSyncSetCognitoEventsFuture) Get(ctx workflow.Context) (*cognitos
 }
 
 type CognitoSyncSetIdentityPoolConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +223,7 @@ func (r *CognitoSyncSetIdentityPoolConfigurationFuture) Get(ctx workflow.Context
 }
 
 type CognitoSyncSubscribeToDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +234,7 @@ func (r *CognitoSyncSubscribeToDatasetFuture) Get(ctx workflow.Context) (*cognit
 }
 
 type CognitoSyncUnsubscribeFromDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +245,7 @@ func (r *CognitoSyncUnsubscribeFromDatasetFuture) Get(ctx workflow.Context) (*co
 }
 
 type CognitoSyncUpdateRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -201,6 +201,7 @@ func NewDatabaseMigrationServiceStub() DatabaseMigrationServiceClient {
 }
 
 type DatabaseMigrationServiceAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +212,7 @@ func (r *DatabaseMigrationServiceAddTagsToResourceFuture) Get(ctx workflow.Conte
 }
 
 type DatabaseMigrationServiceApplyPendingMaintenanceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +223,7 @@ func (r *DatabaseMigrationServiceApplyPendingMaintenanceActionFuture) Get(ctx wo
 }
 
 type DatabaseMigrationServiceCancelReplicationTaskAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +234,7 @@ func (r *DatabaseMigrationServiceCancelReplicationTaskAssessmentRunFuture) Get(c
 }
 
 type DatabaseMigrationServiceCreateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +245,7 @@ func (r *DatabaseMigrationServiceCreateEndpointFuture) Get(ctx workflow.Context)
 }
 
 type DatabaseMigrationServiceCreateEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +256,7 @@ func (r *DatabaseMigrationServiceCreateEventSubscriptionFuture) Get(ctx workflow
 }
 
 type DatabaseMigrationServiceCreateReplicationInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +267,7 @@ func (r *DatabaseMigrationServiceCreateReplicationInstanceFuture) Get(ctx workfl
 }
 
 type DatabaseMigrationServiceCreateReplicationSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +278,7 @@ func (r *DatabaseMigrationServiceCreateReplicationSubnetGroupFuture) Get(ctx wor
 }
 
 type DatabaseMigrationServiceCreateReplicationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +289,7 @@ func (r *DatabaseMigrationServiceCreateReplicationTaskFuture) Get(ctx workflow.C
 }
 
 type DatabaseMigrationServiceDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +300,7 @@ func (r *DatabaseMigrationServiceDeleteCertificateFuture) Get(ctx workflow.Conte
 }
 
 type DatabaseMigrationServiceDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +311,7 @@ func (r *DatabaseMigrationServiceDeleteConnectionFuture) Get(ctx workflow.Contex
 }
 
 type DatabaseMigrationServiceDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +322,7 @@ func (r *DatabaseMigrationServiceDeleteEndpointFuture) Get(ctx workflow.Context)
 }
 
 type DatabaseMigrationServiceDeleteEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +333,7 @@ func (r *DatabaseMigrationServiceDeleteEventSubscriptionFuture) Get(ctx workflow
 }
 
 type DatabaseMigrationServiceDeleteReplicationInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +344,7 @@ func (r *DatabaseMigrationServiceDeleteReplicationInstanceFuture) Get(ctx workfl
 }
 
 type DatabaseMigrationServiceDeleteReplicationSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +355,7 @@ func (r *DatabaseMigrationServiceDeleteReplicationSubnetGroupFuture) Get(ctx wor
 }
 
 type DatabaseMigrationServiceDeleteReplicationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +366,7 @@ func (r *DatabaseMigrationServiceDeleteReplicationTaskFuture) Get(ctx workflow.C
 }
 
 type DatabaseMigrationServiceDeleteReplicationTaskAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +377,7 @@ func (r *DatabaseMigrationServiceDeleteReplicationTaskAssessmentRunFuture) Get(c
 }
 
 type DatabaseMigrationServiceDescribeAccountAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +388,7 @@ func (r *DatabaseMigrationServiceDescribeAccountAttributesFuture) Get(ctx workfl
 }
 
 type DatabaseMigrationServiceDescribeApplicableIndividualAssessmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +399,7 @@ func (r *DatabaseMigrationServiceDescribeApplicableIndividualAssessmentsFuture) 
 }
 
 type DatabaseMigrationServiceDescribeCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +410,7 @@ func (r *DatabaseMigrationServiceDescribeCertificatesFuture) Get(ctx workflow.Co
 }
 
 type DatabaseMigrationServiceDescribeConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +421,7 @@ func (r *DatabaseMigrationServiceDescribeConnectionsFuture) Get(ctx workflow.Con
 }
 
 type DatabaseMigrationServiceDescribeEndpointTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +432,7 @@ func (r *DatabaseMigrationServiceDescribeEndpointTypesFuture) Get(ctx workflow.C
 }
 
 type DatabaseMigrationServiceDescribeEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +443,7 @@ func (r *DatabaseMigrationServiceDescribeEndpointsFuture) Get(ctx workflow.Conte
 }
 
 type DatabaseMigrationServiceDescribeEventCategoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +454,7 @@ func (r *DatabaseMigrationServiceDescribeEventCategoriesFuture) Get(ctx workflow
 }
 
 type DatabaseMigrationServiceDescribeEventSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +465,7 @@ func (r *DatabaseMigrationServiceDescribeEventSubscriptionsFuture) Get(ctx workf
 }
 
 type DatabaseMigrationServiceDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +476,7 @@ func (r *DatabaseMigrationServiceDescribeEventsFuture) Get(ctx workflow.Context)
 }
 
 type DatabaseMigrationServiceDescribeOrderableReplicationInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +487,7 @@ func (r *DatabaseMigrationServiceDescribeOrderableReplicationInstancesFuture) Ge
 }
 
 type DatabaseMigrationServiceDescribePendingMaintenanceActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +498,7 @@ func (r *DatabaseMigrationServiceDescribePendingMaintenanceActionsFuture) Get(ct
 }
 
 type DatabaseMigrationServiceDescribeRefreshSchemasStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +509,7 @@ func (r *DatabaseMigrationServiceDescribeRefreshSchemasStatusFuture) Get(ctx wor
 }
 
 type DatabaseMigrationServiceDescribeReplicationInstanceTaskLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +520,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationInstanceTaskLogsFuture) Get(
 }
 
 type DatabaseMigrationServiceDescribeReplicationInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +531,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationInstancesFuture) Get(ctx wor
 }
 
 type DatabaseMigrationServiceDescribeReplicationSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +542,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationSubnetGroupsFuture) Get(ctx 
 }
 
 type DatabaseMigrationServiceDescribeReplicationTaskAssessmentResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +553,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationTaskAssessmentResultsFuture)
 }
 
 type DatabaseMigrationServiceDescribeReplicationTaskAssessmentRunsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +564,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationTaskAssessmentRunsFuture) Ge
 }
 
 type DatabaseMigrationServiceDescribeReplicationTaskIndividualAssessmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +575,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationTaskIndividualAssessmentsFut
 }
 
 type DatabaseMigrationServiceDescribeReplicationTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +586,7 @@ func (r *DatabaseMigrationServiceDescribeReplicationTasksFuture) Get(ctx workflo
 }
 
 type DatabaseMigrationServiceDescribeSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +597,7 @@ func (r *DatabaseMigrationServiceDescribeSchemasFuture) Get(ctx workflow.Context
 }
 
 type DatabaseMigrationServiceDescribeTableStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +608,7 @@ func (r *DatabaseMigrationServiceDescribeTableStatisticsFuture) Get(ctx workflow
 }
 
 type DatabaseMigrationServiceImportCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +619,7 @@ func (r *DatabaseMigrationServiceImportCertificateFuture) Get(ctx workflow.Conte
 }
 
 type DatabaseMigrationServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +630,7 @@ func (r *DatabaseMigrationServiceListTagsForResourceFuture) Get(ctx workflow.Con
 }
 
 type DatabaseMigrationServiceModifyEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +641,7 @@ func (r *DatabaseMigrationServiceModifyEndpointFuture) Get(ctx workflow.Context)
 }
 
 type DatabaseMigrationServiceModifyEventSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +652,7 @@ func (r *DatabaseMigrationServiceModifyEventSubscriptionFuture) Get(ctx workflow
 }
 
 type DatabaseMigrationServiceModifyReplicationInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +663,7 @@ func (r *DatabaseMigrationServiceModifyReplicationInstanceFuture) Get(ctx workfl
 }
 
 type DatabaseMigrationServiceModifyReplicationSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +674,7 @@ func (r *DatabaseMigrationServiceModifyReplicationSubnetGroupFuture) Get(ctx wor
 }
 
 type DatabaseMigrationServiceModifyReplicationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +685,7 @@ func (r *DatabaseMigrationServiceModifyReplicationTaskFuture) Get(ctx workflow.C
 }
 
 type DatabaseMigrationServiceRebootReplicationInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +696,7 @@ func (r *DatabaseMigrationServiceRebootReplicationInstanceFuture) Get(ctx workfl
 }
 
 type DatabaseMigrationServiceRefreshSchemasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +707,7 @@ func (r *DatabaseMigrationServiceRefreshSchemasFuture) Get(ctx workflow.Context)
 }
 
 type DatabaseMigrationServiceReloadTablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +718,7 @@ func (r *DatabaseMigrationServiceReloadTablesFuture) Get(ctx workflow.Context) (
 }
 
 type DatabaseMigrationServiceRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +729,7 @@ func (r *DatabaseMigrationServiceRemoveTagsFromResourceFuture) Get(ctx workflow.
 }
 
 type DatabaseMigrationServiceStartReplicationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +740,7 @@ func (r *DatabaseMigrationServiceStartReplicationTaskFuture) Get(ctx workflow.Co
 }
 
 type DatabaseMigrationServiceStartReplicationTaskAssessmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -701,6 +751,7 @@ func (r *DatabaseMigrationServiceStartReplicationTaskAssessmentFuture) Get(ctx w
 }
 
 type DatabaseMigrationServiceStartReplicationTaskAssessmentRunFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -711,6 +762,7 @@ func (r *DatabaseMigrationServiceStartReplicationTaskAssessmentRunFuture) Get(ct
 }
 
 type DatabaseMigrationServiceStopReplicationTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -721,6 +773,7 @@ func (r *DatabaseMigrationServiceStopReplicationTaskFuture) Get(ctx workflow.Con
 }
 
 type DatabaseMigrationServiceTestConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -87,6 +87,7 @@ func NewServiceDiscoveryStub() ServiceDiscoveryClient {
 }
 
 type ServiceDiscoveryCreateHttpNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +98,7 @@ func (r *ServiceDiscoveryCreateHttpNamespaceFuture) Get(ctx workflow.Context) (*
 }
 
 type ServiceDiscoveryCreatePrivateDnsNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +109,7 @@ func (r *ServiceDiscoveryCreatePrivateDnsNamespaceFuture) Get(ctx workflow.Conte
 }
 
 type ServiceDiscoveryCreatePublicDnsNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +120,7 @@ func (r *ServiceDiscoveryCreatePublicDnsNamespaceFuture) Get(ctx workflow.Contex
 }
 
 type ServiceDiscoveryCreateServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +131,7 @@ func (r *ServiceDiscoveryCreateServiceFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceDiscoveryDeleteNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +142,7 @@ func (r *ServiceDiscoveryDeleteNamespaceFuture) Get(ctx workflow.Context) (*serv
 }
 
 type ServiceDiscoveryDeleteServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +153,7 @@ func (r *ServiceDiscoveryDeleteServiceFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceDiscoveryDeregisterInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +164,7 @@ func (r *ServiceDiscoveryDeregisterInstanceFuture) Get(ctx workflow.Context) (*s
 }
 
 type ServiceDiscoveryDiscoverInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +175,7 @@ func (r *ServiceDiscoveryDiscoverInstancesFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceDiscoveryGetInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +186,7 @@ func (r *ServiceDiscoveryGetInstanceFuture) Get(ctx workflow.Context) (*serviced
 }
 
 type ServiceDiscoveryGetInstancesHealthStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +197,7 @@ func (r *ServiceDiscoveryGetInstancesHealthStatusFuture) Get(ctx workflow.Contex
 }
 
 type ServiceDiscoveryGetNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +208,7 @@ func (r *ServiceDiscoveryGetNamespaceFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceDiscoveryGetOperationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +219,7 @@ func (r *ServiceDiscoveryGetOperationFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceDiscoveryGetServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +230,7 @@ func (r *ServiceDiscoveryGetServiceFuture) Get(ctx workflow.Context) (*servicedi
 }
 
 type ServiceDiscoveryListInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +241,7 @@ func (r *ServiceDiscoveryListInstancesFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceDiscoveryListNamespacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +252,7 @@ func (r *ServiceDiscoveryListNamespacesFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceDiscoveryListOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +263,7 @@ func (r *ServiceDiscoveryListOperationsFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceDiscoveryListServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +274,7 @@ func (r *ServiceDiscoveryListServicesFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceDiscoveryListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +285,7 @@ func (r *ServiceDiscoveryListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type ServiceDiscoveryRegisterInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +296,7 @@ func (r *ServiceDiscoveryRegisterInstanceFuture) Get(ctx workflow.Context) (*ser
 }
 
 type ServiceDiscoveryTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +307,7 @@ func (r *ServiceDiscoveryTagResourceFuture) Get(ctx workflow.Context) (*serviced
 }
 
 type ServiceDiscoveryUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +318,7 @@ func (r *ServiceDiscoveryUntagResourceFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +329,7 @@ func (r *ServiceDiscoveryUpdateInstanceCustomHealthStatusFuture) Get(ctx workflo
 }
 
 type ServiceDiscoveryUpdateServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

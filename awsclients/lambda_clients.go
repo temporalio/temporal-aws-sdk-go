@@ -171,6 +171,7 @@ func NewLambdaStub() LambdaClient {
 }
 
 type LambdaAddLayerVersionPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +182,7 @@ func (r *LambdaAddLayerVersionPermissionFuture) Get(ctx workflow.Context) (*lamb
 }
 
 type LambdaAddPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +193,7 @@ func (r *LambdaAddPermissionFuture) Get(ctx workflow.Context) (*lambda.AddPermis
 }
 
 type LambdaCreateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +204,7 @@ func (r *LambdaCreateAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfig
 }
 
 type LambdaCreateEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +215,7 @@ func (r *LambdaCreateEventSourceMappingFuture) Get(ctx workflow.Context) (*lambd
 }
 
 type LambdaCreateFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +226,7 @@ func (r *LambdaCreateFunctionFuture) Get(ctx workflow.Context) (*lambda.Function
 }
 
 type LambdaDeleteAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +237,7 @@ func (r *LambdaDeleteAliasFuture) Get(ctx workflow.Context) (*lambda.DeleteAlias
 }
 
 type LambdaDeleteEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +248,7 @@ func (r *LambdaDeleteEventSourceMappingFuture) Get(ctx workflow.Context) (*lambd
 }
 
 type LambdaDeleteFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +259,7 @@ func (r *LambdaDeleteFunctionFuture) Get(ctx workflow.Context) (*lambda.DeleteFu
 }
 
 type LambdaDeleteFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +270,7 @@ func (r *LambdaDeleteFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lamb
 }
 
 type LambdaDeleteFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +281,7 @@ func (r *LambdaDeleteFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) 
 }
 
 type LambdaDeleteLayerVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +292,7 @@ func (r *LambdaDeleteLayerVersionFuture) Get(ctx workflow.Context) (*lambda.Dele
 }
 
 type LambdaDeleteProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +303,7 @@ func (r *LambdaDeleteProvisionedConcurrencyConfigFuture) Get(ctx workflow.Contex
 }
 
 type LambdaGetAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +314,7 @@ func (r *LambdaGetAccountSettingsFuture) Get(ctx workflow.Context) (*lambda.GetA
 }
 
 type LambdaGetAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +325,7 @@ func (r *LambdaGetAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfigura
 }
 
 type LambdaGetEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +336,7 @@ func (r *LambdaGetEventSourceMappingFuture) Get(ctx workflow.Context) (*lambda.E
 }
 
 type LambdaGetFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +347,7 @@ func (r *LambdaGetFunctionFuture) Get(ctx workflow.Context) (*lambda.GetFunction
 }
 
 type LambdaGetFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +358,7 @@ func (r *LambdaGetFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lambda.
 }
 
 type LambdaGetFunctionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +369,7 @@ func (r *LambdaGetFunctionConfigurationFuture) Get(ctx workflow.Context) (*lambd
 }
 
 type LambdaGetFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +380,7 @@ func (r *LambdaGetFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*l
 }
 
 type LambdaGetLayerVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +391,7 @@ func (r *LambdaGetLayerVersionFuture) Get(ctx workflow.Context) (*lambda.GetLaye
 }
 
 type LambdaGetLayerVersionByArnFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +402,7 @@ func (r *LambdaGetLayerVersionByArnFuture) Get(ctx workflow.Context) (*lambda.Ge
 }
 
 type LambdaGetLayerVersionPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +413,7 @@ func (r *LambdaGetLayerVersionPolicyFuture) Get(ctx workflow.Context) (*lambda.G
 }
 
 type LambdaGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +424,7 @@ func (r *LambdaGetPolicyFuture) Get(ctx workflow.Context) (*lambda.GetPolicyOutp
 }
 
 type LambdaGetProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +435,7 @@ func (r *LambdaGetProvisionedConcurrencyConfigFuture) Get(ctx workflow.Context) 
 }
 
 type LambdaInvokeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +446,7 @@ func (r *LambdaInvokeFuture) Get(ctx workflow.Context) (*lambda.InvokeOutput, er
 }
 
 type LambdaListAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +457,7 @@ func (r *LambdaListAliasesFuture) Get(ctx workflow.Context) (*lambda.ListAliases
 }
 
 type LambdaListEventSourceMappingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +468,7 @@ func (r *LambdaListEventSourceMappingsFuture) Get(ctx workflow.Context) (*lambda
 }
 
 type LambdaListFunctionEventInvokeConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +479,7 @@ func (r *LambdaListFunctionEventInvokeConfigsFuture) Get(ctx workflow.Context) (
 }
 
 type LambdaListFunctionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +490,7 @@ func (r *LambdaListFunctionsFuture) Get(ctx workflow.Context) (*lambda.ListFunct
 }
 
 type LambdaListLayerVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +501,7 @@ func (r *LambdaListLayerVersionsFuture) Get(ctx workflow.Context) (*lambda.ListL
 }
 
 type LambdaListLayersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +512,7 @@ func (r *LambdaListLayersFuture) Get(ctx workflow.Context) (*lambda.ListLayersOu
 }
 
 type LambdaListProvisionedConcurrencyConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +523,7 @@ func (r *LambdaListProvisionedConcurrencyConfigsFuture) Get(ctx workflow.Context
 }
 
 type LambdaListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +534,7 @@ func (r *LambdaListTagsFuture) Get(ctx workflow.Context) (*lambda.ListTagsOutput
 }
 
 type LambdaListVersionsByFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +545,7 @@ func (r *LambdaListVersionsByFunctionFuture) Get(ctx workflow.Context) (*lambda.
 }
 
 type LambdaPublishLayerVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +556,7 @@ func (r *LambdaPublishLayerVersionFuture) Get(ctx workflow.Context) (*lambda.Pub
 }
 
 type LambdaPublishVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +567,7 @@ func (r *LambdaPublishVersionFuture) Get(ctx workflow.Context) (*lambda.Function
 }
 
 type LambdaPutFunctionConcurrencyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +578,7 @@ func (r *LambdaPutFunctionConcurrencyFuture) Get(ctx workflow.Context) (*lambda.
 }
 
 type LambdaPutFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +589,7 @@ func (r *LambdaPutFunctionEventInvokeConfigFuture) Get(ctx workflow.Context) (*l
 }
 
 type LambdaPutProvisionedConcurrencyConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +600,7 @@ func (r *LambdaPutProvisionedConcurrencyConfigFuture) Get(ctx workflow.Context) 
 }
 
 type LambdaRemoveLayerVersionPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +611,7 @@ func (r *LambdaRemoveLayerVersionPermissionFuture) Get(ctx workflow.Context) (*l
 }
 
 type LambdaRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +622,7 @@ func (r *LambdaRemovePermissionFuture) Get(ctx workflow.Context) (*lambda.Remove
 }
 
 type LambdaTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +633,7 @@ func (r *LambdaTagResourceFuture) Get(ctx workflow.Context) (*lambda.TagResource
 }
 
 type LambdaUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +644,7 @@ func (r *LambdaUntagResourceFuture) Get(ctx workflow.Context) (*lambda.UntagReso
 }
 
 type LambdaUpdateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +655,7 @@ func (r *LambdaUpdateAliasFuture) Get(ctx workflow.Context) (*lambda.AliasConfig
 }
 
 type LambdaUpdateEventSourceMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +666,7 @@ func (r *LambdaUpdateEventSourceMappingFuture) Get(ctx workflow.Context) (*lambd
 }
 
 type LambdaUpdateFunctionCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +677,7 @@ func (r *LambdaUpdateFunctionCodeFuture) Get(ctx workflow.Context) (*lambda.Func
 }
 
 type LambdaUpdateFunctionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +688,7 @@ func (r *LambdaUpdateFunctionConfigurationFuture) Get(ctx workflow.Context) (*la
 }
 
 type LambdaUpdateFunctionEventInvokeConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

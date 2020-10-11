@@ -141,6 +141,7 @@ func NewAppSyncStub() AppSyncClient {
 }
 
 type AppSyncCreateApiCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +152,7 @@ func (r *AppSyncCreateApiCacheFuture) Get(ctx workflow.Context) (*appsync.Create
 }
 
 type AppSyncCreateApiKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +163,7 @@ func (r *AppSyncCreateApiKeyFuture) Get(ctx workflow.Context) (*appsync.CreateAp
 }
 
 type AppSyncCreateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +174,7 @@ func (r *AppSyncCreateDataSourceFuture) Get(ctx workflow.Context) (*appsync.Crea
 }
 
 type AppSyncCreateFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +185,7 @@ func (r *AppSyncCreateFunctionFuture) Get(ctx workflow.Context) (*appsync.Create
 }
 
 type AppSyncCreateGraphqlApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +196,7 @@ func (r *AppSyncCreateGraphqlApiFuture) Get(ctx workflow.Context) (*appsync.Crea
 }
 
 type AppSyncCreateResolverFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +207,7 @@ func (r *AppSyncCreateResolverFuture) Get(ctx workflow.Context) (*appsync.Create
 }
 
 type AppSyncCreateTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +218,7 @@ func (r *AppSyncCreateTypeFuture) Get(ctx workflow.Context) (*appsync.CreateType
 }
 
 type AppSyncDeleteApiCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +229,7 @@ func (r *AppSyncDeleteApiCacheFuture) Get(ctx workflow.Context) (*appsync.Delete
 }
 
 type AppSyncDeleteApiKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +240,7 @@ func (r *AppSyncDeleteApiKeyFuture) Get(ctx workflow.Context) (*appsync.DeleteAp
 }
 
 type AppSyncDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +251,7 @@ func (r *AppSyncDeleteDataSourceFuture) Get(ctx workflow.Context) (*appsync.Dele
 }
 
 type AppSyncDeleteFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +262,7 @@ func (r *AppSyncDeleteFunctionFuture) Get(ctx workflow.Context) (*appsync.Delete
 }
 
 type AppSyncDeleteGraphqlApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +273,7 @@ func (r *AppSyncDeleteGraphqlApiFuture) Get(ctx workflow.Context) (*appsync.Dele
 }
 
 type AppSyncDeleteResolverFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +284,7 @@ func (r *AppSyncDeleteResolverFuture) Get(ctx workflow.Context) (*appsync.Delete
 }
 
 type AppSyncDeleteTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +295,7 @@ func (r *AppSyncDeleteTypeFuture) Get(ctx workflow.Context) (*appsync.DeleteType
 }
 
 type AppSyncFlushApiCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +306,7 @@ func (r *AppSyncFlushApiCacheFuture) Get(ctx workflow.Context) (*appsync.FlushAp
 }
 
 type AppSyncGetApiCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +317,7 @@ func (r *AppSyncGetApiCacheFuture) Get(ctx workflow.Context) (*appsync.GetApiCac
 }
 
 type AppSyncGetDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +328,7 @@ func (r *AppSyncGetDataSourceFuture) Get(ctx workflow.Context) (*appsync.GetData
 }
 
 type AppSyncGetFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +339,7 @@ func (r *AppSyncGetFunctionFuture) Get(ctx workflow.Context) (*appsync.GetFuncti
 }
 
 type AppSyncGetGraphqlApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +350,7 @@ func (r *AppSyncGetGraphqlApiFuture) Get(ctx workflow.Context) (*appsync.GetGrap
 }
 
 type AppSyncGetIntrospectionSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +361,7 @@ func (r *AppSyncGetIntrospectionSchemaFuture) Get(ctx workflow.Context) (*appsyn
 }
 
 type AppSyncGetResolverFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +372,7 @@ func (r *AppSyncGetResolverFuture) Get(ctx workflow.Context) (*appsync.GetResolv
 }
 
 type AppSyncGetSchemaCreationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +383,7 @@ func (r *AppSyncGetSchemaCreationStatusFuture) Get(ctx workflow.Context) (*appsy
 }
 
 type AppSyncGetTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +394,7 @@ func (r *AppSyncGetTypeFuture) Get(ctx workflow.Context) (*appsync.GetTypeOutput
 }
 
 type AppSyncListApiKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +405,7 @@ func (r *AppSyncListApiKeysFuture) Get(ctx workflow.Context) (*appsync.ListApiKe
 }
 
 type AppSyncListDataSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +416,7 @@ func (r *AppSyncListDataSourcesFuture) Get(ctx workflow.Context) (*appsync.ListD
 }
 
 type AppSyncListFunctionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +427,7 @@ func (r *AppSyncListFunctionsFuture) Get(ctx workflow.Context) (*appsync.ListFun
 }
 
 type AppSyncListGraphqlApisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +438,7 @@ func (r *AppSyncListGraphqlApisFuture) Get(ctx workflow.Context) (*appsync.ListG
 }
 
 type AppSyncListResolversFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +449,7 @@ func (r *AppSyncListResolversFuture) Get(ctx workflow.Context) (*appsync.ListRes
 }
 
 type AppSyncListResolversByFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +460,7 @@ func (r *AppSyncListResolversByFunctionFuture) Get(ctx workflow.Context) (*appsy
 }
 
 type AppSyncListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +471,7 @@ func (r *AppSyncListTagsForResourceFuture) Get(ctx workflow.Context) (*appsync.L
 }
 
 type AppSyncListTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +482,7 @@ func (r *AppSyncListTypesFuture) Get(ctx workflow.Context) (*appsync.ListTypesOu
 }
 
 type AppSyncStartSchemaCreationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +493,7 @@ func (r *AppSyncStartSchemaCreationFuture) Get(ctx workflow.Context) (*appsync.S
 }
 
 type AppSyncTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +504,7 @@ func (r *AppSyncTagResourceFuture) Get(ctx workflow.Context) (*appsync.TagResour
 }
 
 type AppSyncUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +515,7 @@ func (r *AppSyncUntagResourceFuture) Get(ctx workflow.Context) (*appsync.UntagRe
 }
 
 type AppSyncUpdateApiCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +526,7 @@ func (r *AppSyncUpdateApiCacheFuture) Get(ctx workflow.Context) (*appsync.Update
 }
 
 type AppSyncUpdateApiKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +537,7 @@ func (r *AppSyncUpdateApiKeyFuture) Get(ctx workflow.Context) (*appsync.UpdateAp
 }
 
 type AppSyncUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +548,7 @@ func (r *AppSyncUpdateDataSourceFuture) Get(ctx workflow.Context) (*appsync.Upda
 }
 
 type AppSyncUpdateFunctionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +559,7 @@ func (r *AppSyncUpdateFunctionFuture) Get(ctx workflow.Context) (*appsync.Update
 }
 
 type AppSyncUpdateGraphqlApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +570,7 @@ func (r *AppSyncUpdateGraphqlApiFuture) Get(ctx workflow.Context) (*appsync.Upda
 }
 
 type AppSyncUpdateResolverFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +581,7 @@ func (r *AppSyncUpdateResolverFuture) Get(ctx workflow.Context) (*appsync.Update
 }
 
 type AppSyncUpdateTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

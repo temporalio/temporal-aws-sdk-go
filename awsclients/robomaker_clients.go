@@ -189,6 +189,7 @@ func NewRoboMakerStub() RoboMakerClient {
 }
 
 type RoboMakerBatchDeleteWorldsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +200,7 @@ func (r *RoboMakerBatchDeleteWorldsFuture) Get(ctx workflow.Context) (*robomaker
 }
 
 type RoboMakerBatchDescribeSimulationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +211,7 @@ func (r *RoboMakerBatchDescribeSimulationJobFuture) Get(ctx workflow.Context) (*
 }
 
 type RoboMakerCancelDeploymentJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +222,7 @@ func (r *RoboMakerCancelDeploymentJobFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerCancelSimulationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +233,7 @@ func (r *RoboMakerCancelSimulationJobFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerCancelSimulationJobBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +244,7 @@ func (r *RoboMakerCancelSimulationJobBatchFuture) Get(ctx workflow.Context) (*ro
 }
 
 type RoboMakerCancelWorldExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +255,7 @@ func (r *RoboMakerCancelWorldExportJobFuture) Get(ctx workflow.Context) (*roboma
 }
 
 type RoboMakerCancelWorldGenerationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +266,7 @@ func (r *RoboMakerCancelWorldGenerationJobFuture) Get(ctx workflow.Context) (*ro
 }
 
 type RoboMakerCreateDeploymentJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +277,7 @@ func (r *RoboMakerCreateDeploymentJobFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerCreateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +288,7 @@ func (r *RoboMakerCreateFleetFuture) Get(ctx workflow.Context) (*robomaker.Creat
 }
 
 type RoboMakerCreateRobotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +299,7 @@ func (r *RoboMakerCreateRobotFuture) Get(ctx workflow.Context) (*robomaker.Creat
 }
 
 type RoboMakerCreateRobotApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +310,7 @@ func (r *RoboMakerCreateRobotApplicationFuture) Get(ctx workflow.Context) (*robo
 }
 
 type RoboMakerCreateRobotApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +321,7 @@ func (r *RoboMakerCreateRobotApplicationVersionFuture) Get(ctx workflow.Context)
 }
 
 type RoboMakerCreateSimulationApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +332,7 @@ func (r *RoboMakerCreateSimulationApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type RoboMakerCreateSimulationApplicationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +343,7 @@ func (r *RoboMakerCreateSimulationApplicationVersionFuture) Get(ctx workflow.Con
 }
 
 type RoboMakerCreateSimulationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +354,7 @@ func (r *RoboMakerCreateSimulationJobFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerCreateWorldExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +365,7 @@ func (r *RoboMakerCreateWorldExportJobFuture) Get(ctx workflow.Context) (*roboma
 }
 
 type RoboMakerCreateWorldGenerationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +376,7 @@ func (r *RoboMakerCreateWorldGenerationJobFuture) Get(ctx workflow.Context) (*ro
 }
 
 type RoboMakerCreateWorldTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +387,7 @@ func (r *RoboMakerCreateWorldTemplateFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerDeleteFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +398,7 @@ func (r *RoboMakerDeleteFleetFuture) Get(ctx workflow.Context) (*robomaker.Delet
 }
 
 type RoboMakerDeleteRobotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +409,7 @@ func (r *RoboMakerDeleteRobotFuture) Get(ctx workflow.Context) (*robomaker.Delet
 }
 
 type RoboMakerDeleteRobotApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +420,7 @@ func (r *RoboMakerDeleteRobotApplicationFuture) Get(ctx workflow.Context) (*robo
 }
 
 type RoboMakerDeleteSimulationApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +431,7 @@ func (r *RoboMakerDeleteSimulationApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type RoboMakerDeleteWorldTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +442,7 @@ func (r *RoboMakerDeleteWorldTemplateFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerDeregisterRobotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +453,7 @@ func (r *RoboMakerDeregisterRobotFuture) Get(ctx workflow.Context) (*robomaker.D
 }
 
 type RoboMakerDescribeDeploymentJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +464,7 @@ func (r *RoboMakerDescribeDeploymentJobFuture) Get(ctx workflow.Context) (*robom
 }
 
 type RoboMakerDescribeFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +475,7 @@ func (r *RoboMakerDescribeFleetFuture) Get(ctx workflow.Context) (*robomaker.Des
 }
 
 type RoboMakerDescribeRobotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +486,7 @@ func (r *RoboMakerDescribeRobotFuture) Get(ctx workflow.Context) (*robomaker.Des
 }
 
 type RoboMakerDescribeRobotApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +497,7 @@ func (r *RoboMakerDescribeRobotApplicationFuture) Get(ctx workflow.Context) (*ro
 }
 
 type RoboMakerDescribeSimulationApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +508,7 @@ func (r *RoboMakerDescribeSimulationApplicationFuture) Get(ctx workflow.Context)
 }
 
 type RoboMakerDescribeSimulationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +519,7 @@ func (r *RoboMakerDescribeSimulationJobFuture) Get(ctx workflow.Context) (*robom
 }
 
 type RoboMakerDescribeSimulationJobBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +530,7 @@ func (r *RoboMakerDescribeSimulationJobBatchFuture) Get(ctx workflow.Context) (*
 }
 
 type RoboMakerDescribeWorldFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +541,7 @@ func (r *RoboMakerDescribeWorldFuture) Get(ctx workflow.Context) (*robomaker.Des
 }
 
 type RoboMakerDescribeWorldExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +552,7 @@ func (r *RoboMakerDescribeWorldExportJobFuture) Get(ctx workflow.Context) (*robo
 }
 
 type RoboMakerDescribeWorldGenerationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +563,7 @@ func (r *RoboMakerDescribeWorldGenerationJobFuture) Get(ctx workflow.Context) (*
 }
 
 type RoboMakerDescribeWorldTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +574,7 @@ func (r *RoboMakerDescribeWorldTemplateFuture) Get(ctx workflow.Context) (*robom
 }
 
 type RoboMakerGetWorldTemplateBodyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +585,7 @@ func (r *RoboMakerGetWorldTemplateBodyFuture) Get(ctx workflow.Context) (*roboma
 }
 
 type RoboMakerListDeploymentJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +596,7 @@ func (r *RoboMakerListDeploymentJobsFuture) Get(ctx workflow.Context) (*robomake
 }
 
 type RoboMakerListFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +607,7 @@ func (r *RoboMakerListFleetsFuture) Get(ctx workflow.Context) (*robomaker.ListFl
 }
 
 type RoboMakerListRobotApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +618,7 @@ func (r *RoboMakerListRobotApplicationsFuture) Get(ctx workflow.Context) (*robom
 }
 
 type RoboMakerListRobotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +629,7 @@ func (r *RoboMakerListRobotsFuture) Get(ctx workflow.Context) (*robomaker.ListRo
 }
 
 type RoboMakerListSimulationApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +640,7 @@ func (r *RoboMakerListSimulationApplicationsFuture) Get(ctx workflow.Context) (*
 }
 
 type RoboMakerListSimulationJobBatchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +651,7 @@ func (r *RoboMakerListSimulationJobBatchesFuture) Get(ctx workflow.Context) (*ro
 }
 
 type RoboMakerListSimulationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +662,7 @@ func (r *RoboMakerListSimulationJobsFuture) Get(ctx workflow.Context) (*robomake
 }
 
 type RoboMakerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -629,6 +673,7 @@ func (r *RoboMakerListTagsForResourceFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerListWorldExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -639,6 +684,7 @@ func (r *RoboMakerListWorldExportJobsFuture) Get(ctx workflow.Context) (*robomak
 }
 
 type RoboMakerListWorldGenerationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -649,6 +695,7 @@ func (r *RoboMakerListWorldGenerationJobsFuture) Get(ctx workflow.Context) (*rob
 }
 
 type RoboMakerListWorldTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -659,6 +706,7 @@ func (r *RoboMakerListWorldTemplatesFuture) Get(ctx workflow.Context) (*robomake
 }
 
 type RoboMakerListWorldsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -669,6 +717,7 @@ func (r *RoboMakerListWorldsFuture) Get(ctx workflow.Context) (*robomaker.ListWo
 }
 
 type RoboMakerRegisterRobotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -679,6 +728,7 @@ func (r *RoboMakerRegisterRobotFuture) Get(ctx workflow.Context) (*robomaker.Reg
 }
 
 type RoboMakerRestartSimulationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -689,6 +739,7 @@ func (r *RoboMakerRestartSimulationJobFuture) Get(ctx workflow.Context) (*roboma
 }
 
 type RoboMakerStartSimulationJobBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -699,6 +750,7 @@ func (r *RoboMakerStartSimulationJobBatchFuture) Get(ctx workflow.Context) (*rob
 }
 
 type RoboMakerSyncDeploymentJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -709,6 +761,7 @@ func (r *RoboMakerSyncDeploymentJobFuture) Get(ctx workflow.Context) (*robomaker
 }
 
 type RoboMakerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -719,6 +772,7 @@ func (r *RoboMakerTagResourceFuture) Get(ctx workflow.Context) (*robomaker.TagRe
 }
 
 type RoboMakerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -729,6 +783,7 @@ func (r *RoboMakerUntagResourceFuture) Get(ctx workflow.Context) (*robomaker.Unt
 }
 
 type RoboMakerUpdateRobotApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -739,6 +794,7 @@ func (r *RoboMakerUpdateRobotApplicationFuture) Get(ctx workflow.Context) (*robo
 }
 
 type RoboMakerUpdateSimulationApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -749,6 +805,7 @@ func (r *RoboMakerUpdateSimulationApplicationFuture) Get(ctx workflow.Context) (
 }
 
 type RoboMakerUpdateWorldTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -57,6 +57,7 @@ func NewIoT1ClickDevicesServiceStub() IoT1ClickDevicesServiceClient {
 }
 
 type IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *IoT1ClickDevicesServiceClaimDevicesByClaimCodeFuture) Get(ctx workflow.
 }
 
 type IoT1ClickDevicesServiceDescribeDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *IoT1ClickDevicesServiceDescribeDeviceFuture) Get(ctx workflow.Context) 
 }
 
 type IoT1ClickDevicesServiceFinalizeDeviceClaimFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *IoT1ClickDevicesServiceFinalizeDeviceClaimFuture) Get(ctx workflow.Cont
 }
 
 type IoT1ClickDevicesServiceGetDeviceMethodsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *IoT1ClickDevicesServiceGetDeviceMethodsFuture) Get(ctx workflow.Context
 }
 
 type IoT1ClickDevicesServiceInitiateDeviceClaimFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *IoT1ClickDevicesServiceInitiateDeviceClaimFuture) Get(ctx workflow.Cont
 }
 
 type IoT1ClickDevicesServiceInvokeDeviceMethodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *IoT1ClickDevicesServiceInvokeDeviceMethodFuture) Get(ctx workflow.Conte
 }
 
 type IoT1ClickDevicesServiceListDeviceEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *IoT1ClickDevicesServiceListDeviceEventsFuture) Get(ctx workflow.Context
 }
 
 type IoT1ClickDevicesServiceListDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *IoT1ClickDevicesServiceListDevicesFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoT1ClickDevicesServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *IoT1ClickDevicesServiceListTagsForResourceFuture) Get(ctx workflow.Cont
 }
 
 type IoT1ClickDevicesServiceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *IoT1ClickDevicesServiceTagResourceFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoT1ClickDevicesServiceUnclaimDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *IoT1ClickDevicesServiceUnclaimDeviceFuture) Get(ctx workflow.Context) (
 }
 
 type IoT1ClickDevicesServiceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *IoT1ClickDevicesServiceUntagResourceFuture) Get(ctx workflow.Context) (
 }
 
 type IoT1ClickDevicesServiceUpdateDeviceStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

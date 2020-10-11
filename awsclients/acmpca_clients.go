@@ -96,6 +96,7 @@ func NewACMPCAStub() ACMPCAClient {
 }
 
 type ACMPCACreateCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +107,7 @@ func (r *ACMPCACreateCertificateAuthorityFuture) Get(ctx workflow.Context) (*acm
 }
 
 type ACMPCACreateCertificateAuthorityAuditReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +118,7 @@ func (r *ACMPCACreateCertificateAuthorityAuditReportFuture) Get(ctx workflow.Con
 }
 
 type ACMPCACreatePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +129,7 @@ func (r *ACMPCACreatePermissionFuture) Get(ctx workflow.Context) (*acmpca.Create
 }
 
 type ACMPCADeleteCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +140,7 @@ func (r *ACMPCADeleteCertificateAuthorityFuture) Get(ctx workflow.Context) (*acm
 }
 
 type ACMPCADeletePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +151,7 @@ func (r *ACMPCADeletePermissionFuture) Get(ctx workflow.Context) (*acmpca.Delete
 }
 
 type ACMPCADeletePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +162,7 @@ func (r *ACMPCADeletePolicyFuture) Get(ctx workflow.Context) (*acmpca.DeletePoli
 }
 
 type ACMPCADescribeCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +173,7 @@ func (r *ACMPCADescribeCertificateAuthorityFuture) Get(ctx workflow.Context) (*a
 }
 
 type ACMPCADescribeCertificateAuthorityAuditReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +184,7 @@ func (r *ACMPCADescribeCertificateAuthorityAuditReportFuture) Get(ctx workflow.C
 }
 
 type ACMPCAGetCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +195,7 @@ func (r *ACMPCAGetCertificateFuture) Get(ctx workflow.Context) (*acmpca.GetCerti
 }
 
 type ACMPCAGetCertificateAuthorityCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +206,7 @@ func (r *ACMPCAGetCertificateAuthorityCertificateFuture) Get(ctx workflow.Contex
 }
 
 type ACMPCAGetCertificateAuthorityCsrFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +217,7 @@ func (r *ACMPCAGetCertificateAuthorityCsrFuture) Get(ctx workflow.Context) (*acm
 }
 
 type ACMPCAGetPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +228,7 @@ func (r *ACMPCAGetPolicyFuture) Get(ctx workflow.Context) (*acmpca.GetPolicyOutp
 }
 
 type ACMPCAImportCertificateAuthorityCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +239,7 @@ func (r *ACMPCAImportCertificateAuthorityCertificateFuture) Get(ctx workflow.Con
 }
 
 type ACMPCAIssueCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +250,7 @@ func (r *ACMPCAIssueCertificateFuture) Get(ctx workflow.Context) (*acmpca.IssueC
 }
 
 type ACMPCAListCertificateAuthoritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +261,7 @@ func (r *ACMPCAListCertificateAuthoritiesFuture) Get(ctx workflow.Context) (*acm
 }
 
 type ACMPCAListPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +272,7 @@ func (r *ACMPCAListPermissionsFuture) Get(ctx workflow.Context) (*acmpca.ListPer
 }
 
 type ACMPCAListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +283,7 @@ func (r *ACMPCAListTagsFuture) Get(ctx workflow.Context) (*acmpca.ListTagsOutput
 }
 
 type ACMPCAPutPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +294,7 @@ func (r *ACMPCAPutPolicyFuture) Get(ctx workflow.Context) (*acmpca.PutPolicyOutp
 }
 
 type ACMPCARestoreCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +305,7 @@ func (r *ACMPCARestoreCertificateAuthorityFuture) Get(ctx workflow.Context) (*ac
 }
 
 type ACMPCARevokeCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +316,7 @@ func (r *ACMPCARevokeCertificateFuture) Get(ctx workflow.Context) (*acmpca.Revok
 }
 
 type ACMPCATagCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +327,7 @@ func (r *ACMPCATagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmpca
 }
 
 type ACMPCAUntagCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +338,7 @@ func (r *ACMPCAUntagCertificateAuthorityFuture) Get(ctx workflow.Context) (*acmp
 }
 
 type ACMPCAUpdateCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

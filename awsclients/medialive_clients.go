@@ -201,6 +201,7 @@ func NewMediaLiveStub() MediaLiveClient {
 }
 
 type MediaLiveBatchDeleteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +212,7 @@ func (r *MediaLiveBatchDeleteFuture) Get(ctx workflow.Context) (*medialive.Batch
 }
 
 type MediaLiveBatchStartFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +223,7 @@ func (r *MediaLiveBatchStartFuture) Get(ctx workflow.Context) (*medialive.BatchS
 }
 
 type MediaLiveBatchStopFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +234,7 @@ func (r *MediaLiveBatchStopFuture) Get(ctx workflow.Context) (*medialive.BatchSt
 }
 
 type MediaLiveBatchUpdateScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +245,7 @@ func (r *MediaLiveBatchUpdateScheduleFuture) Get(ctx workflow.Context) (*mediali
 }
 
 type MediaLiveCreateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +256,7 @@ func (r *MediaLiveCreateChannelFuture) Get(ctx workflow.Context) (*medialive.Cre
 }
 
 type MediaLiveCreateInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +267,7 @@ func (r *MediaLiveCreateInputFuture) Get(ctx workflow.Context) (*medialive.Creat
 }
 
 type MediaLiveCreateInputSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +278,7 @@ func (r *MediaLiveCreateInputSecurityGroupFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaLiveCreateMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +289,7 @@ func (r *MediaLiveCreateMultiplexFuture) Get(ctx workflow.Context) (*medialive.C
 }
 
 type MediaLiveCreateMultiplexProgramFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +300,7 @@ func (r *MediaLiveCreateMultiplexProgramFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaLiveCreateTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +311,7 @@ func (r *MediaLiveCreateTagsFuture) Get(ctx workflow.Context) (*medialive.Create
 }
 
 type MediaLiveDeleteChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +322,7 @@ func (r *MediaLiveDeleteChannelFuture) Get(ctx workflow.Context) (*medialive.Del
 }
 
 type MediaLiveDeleteInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +333,7 @@ func (r *MediaLiveDeleteInputFuture) Get(ctx workflow.Context) (*medialive.Delet
 }
 
 type MediaLiveDeleteInputSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +344,7 @@ func (r *MediaLiveDeleteInputSecurityGroupFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaLiveDeleteMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +355,7 @@ func (r *MediaLiveDeleteMultiplexFuture) Get(ctx workflow.Context) (*medialive.D
 }
 
 type MediaLiveDeleteMultiplexProgramFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +366,7 @@ func (r *MediaLiveDeleteMultiplexProgramFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaLiveDeleteReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +377,7 @@ func (r *MediaLiveDeleteReservationFuture) Get(ctx workflow.Context) (*medialive
 }
 
 type MediaLiveDeleteScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +388,7 @@ func (r *MediaLiveDeleteScheduleFuture) Get(ctx workflow.Context) (*medialive.De
 }
 
 type MediaLiveDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +399,7 @@ func (r *MediaLiveDeleteTagsFuture) Get(ctx workflow.Context) (*medialive.Delete
 }
 
 type MediaLiveDescribeChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +410,7 @@ func (r *MediaLiveDescribeChannelFuture) Get(ctx workflow.Context) (*medialive.D
 }
 
 type MediaLiveDescribeInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +421,7 @@ func (r *MediaLiveDescribeInputFuture) Get(ctx workflow.Context) (*medialive.Des
 }
 
 type MediaLiveDescribeInputDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +432,7 @@ func (r *MediaLiveDescribeInputDeviceFuture) Get(ctx workflow.Context) (*mediali
 }
 
 type MediaLiveDescribeInputDeviceThumbnailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +443,7 @@ func (r *MediaLiveDescribeInputDeviceThumbnailFuture) Get(ctx workflow.Context) 
 }
 
 type MediaLiveDescribeInputSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +454,7 @@ func (r *MediaLiveDescribeInputSecurityGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaLiveDescribeMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +465,7 @@ func (r *MediaLiveDescribeMultiplexFuture) Get(ctx workflow.Context) (*medialive
 }
 
 type MediaLiveDescribeMultiplexProgramFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +476,7 @@ func (r *MediaLiveDescribeMultiplexProgramFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaLiveDescribeOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +487,7 @@ func (r *MediaLiveDescribeOfferingFuture) Get(ctx workflow.Context) (*medialive.
 }
 
 type MediaLiveDescribeReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +498,7 @@ func (r *MediaLiveDescribeReservationFuture) Get(ctx workflow.Context) (*mediali
 }
 
 type MediaLiveDescribeScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +509,7 @@ func (r *MediaLiveDescribeScheduleFuture) Get(ctx workflow.Context) (*medialive.
 }
 
 type MediaLiveListChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +520,7 @@ func (r *MediaLiveListChannelsFuture) Get(ctx workflow.Context) (*medialive.List
 }
 
 type MediaLiveListInputDevicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +531,7 @@ func (r *MediaLiveListInputDevicesFuture) Get(ctx workflow.Context) (*medialive.
 }
 
 type MediaLiveListInputSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +542,7 @@ func (r *MediaLiveListInputSecurityGroupsFuture) Get(ctx workflow.Context) (*med
 }
 
 type MediaLiveListInputsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +553,7 @@ func (r *MediaLiveListInputsFuture) Get(ctx workflow.Context) (*medialive.ListIn
 }
 
 type MediaLiveListMultiplexProgramsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +564,7 @@ func (r *MediaLiveListMultiplexProgramsFuture) Get(ctx workflow.Context) (*media
 }
 
 type MediaLiveListMultiplexesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +575,7 @@ func (r *MediaLiveListMultiplexesFuture) Get(ctx workflow.Context) (*medialive.L
 }
 
 type MediaLiveListOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +586,7 @@ func (r *MediaLiveListOfferingsFuture) Get(ctx workflow.Context) (*medialive.Lis
 }
 
 type MediaLiveListReservationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +597,7 @@ func (r *MediaLiveListReservationsFuture) Get(ctx workflow.Context) (*medialive.
 }
 
 type MediaLiveListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +608,7 @@ func (r *MediaLiveListTagsForResourceFuture) Get(ctx workflow.Context) (*mediali
 }
 
 type MediaLivePurchaseOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +619,7 @@ func (r *MediaLivePurchaseOfferingFuture) Get(ctx workflow.Context) (*medialive.
 }
 
 type MediaLiveStartChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +630,7 @@ func (r *MediaLiveStartChannelFuture) Get(ctx workflow.Context) (*medialive.Star
 }
 
 type MediaLiveStartMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +641,7 @@ func (r *MediaLiveStartMultiplexFuture) Get(ctx workflow.Context) (*medialive.St
 }
 
 type MediaLiveStopChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +652,7 @@ func (r *MediaLiveStopChannelFuture) Get(ctx workflow.Context) (*medialive.StopC
 }
 
 type MediaLiveStopMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +663,7 @@ func (r *MediaLiveStopMultiplexFuture) Get(ctx workflow.Context) (*medialive.Sto
 }
 
 type MediaLiveUpdateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +674,7 @@ func (r *MediaLiveUpdateChannelFuture) Get(ctx workflow.Context) (*medialive.Upd
 }
 
 type MediaLiveUpdateChannelClassFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +685,7 @@ func (r *MediaLiveUpdateChannelClassFuture) Get(ctx workflow.Context) (*medialiv
 }
 
 type MediaLiveUpdateInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +696,7 @@ func (r *MediaLiveUpdateInputFuture) Get(ctx workflow.Context) (*medialive.Updat
 }
 
 type MediaLiveUpdateInputDeviceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +707,7 @@ func (r *MediaLiveUpdateInputDeviceFuture) Get(ctx workflow.Context) (*medialive
 }
 
 type MediaLiveUpdateInputSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +718,7 @@ func (r *MediaLiveUpdateInputSecurityGroupFuture) Get(ctx workflow.Context) (*me
 }
 
 type MediaLiveUpdateMultiplexFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -681,6 +729,7 @@ func (r *MediaLiveUpdateMultiplexFuture) Get(ctx workflow.Context) (*medialive.U
 }
 
 type MediaLiveUpdateMultiplexProgramFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -691,6 +740,7 @@ func (r *MediaLiveUpdateMultiplexProgramFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaLiveUpdateReservationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -66,6 +66,7 @@ func NewServiceQuotasStub() ServiceQuotasClient {
 }
 
 type ServiceQuotasAssociateServiceQuotaTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +77,7 @@ func (r *ServiceQuotasAssociateServiceQuotaTemplateFuture) Get(ctx workflow.Cont
 }
 
 type ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +88,7 @@ func (r *ServiceQuotasDeleteServiceQuotaIncreaseRequestFromTemplateFuture) Get(c
 }
 
 type ServiceQuotasDisassociateServiceQuotaTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -96,6 +99,7 @@ func (r *ServiceQuotasDisassociateServiceQuotaTemplateFuture) Get(ctx workflow.C
 }
 
 type ServiceQuotasGetAWSDefaultServiceQuotaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +110,7 @@ func (r *ServiceQuotasGetAWSDefaultServiceQuotaFuture) Get(ctx workflow.Context)
 }
 
 type ServiceQuotasGetAssociationForServiceQuotaTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +121,7 @@ func (r *ServiceQuotasGetAssociationForServiceQuotaTemplateFuture) Get(ctx workf
 }
 
 type ServiceQuotasGetRequestedServiceQuotaChangeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +132,7 @@ func (r *ServiceQuotasGetRequestedServiceQuotaChangeFuture) Get(ctx workflow.Con
 }
 
 type ServiceQuotasGetServiceQuotaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +143,7 @@ func (r *ServiceQuotasGetServiceQuotaFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +154,7 @@ func (r *ServiceQuotasGetServiceQuotaIncreaseRequestFromTemplateFuture) Get(ctx 
 }
 
 type ServiceQuotasListAWSDefaultServiceQuotasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +165,7 @@ func (r *ServiceQuotasListAWSDefaultServiceQuotasFuture) Get(ctx workflow.Contex
 }
 
 type ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +176,7 @@ func (r *ServiceQuotasListRequestedServiceQuotaChangeHistoryFuture) Get(ctx work
 }
 
 type ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +187,7 @@ func (r *ServiceQuotasListRequestedServiceQuotaChangeHistoryByQuotaFuture) Get(c
 }
 
 type ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +198,7 @@ func (r *ServiceQuotasListServiceQuotaIncreaseRequestsInTemplateFuture) Get(ctx 
 }
 
 type ServiceQuotasListServiceQuotasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +209,7 @@ func (r *ServiceQuotasListServiceQuotasFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceQuotasListServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +220,7 @@ func (r *ServiceQuotasListServicesFuture) Get(ctx workflow.Context) (*servicequo
 }
 
 type ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +231,7 @@ func (r *ServiceQuotasPutServiceQuotaIncreaseRequestIntoTemplateFuture) Get(ctx 
 }
 
 type ServiceQuotasRequestServiceQuotaIncreaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

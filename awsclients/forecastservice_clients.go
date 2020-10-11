@@ -105,6 +105,7 @@ func NewForecastServiceStub() ForecastServiceClient {
 }
 
 type ForecastServiceCreateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +116,7 @@ func (r *ForecastServiceCreateDatasetFuture) Get(ctx workflow.Context) (*forecas
 }
 
 type ForecastServiceCreateDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +127,7 @@ func (r *ForecastServiceCreateDatasetGroupFuture) Get(ctx workflow.Context) (*fo
 }
 
 type ForecastServiceCreateDatasetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +138,7 @@ func (r *ForecastServiceCreateDatasetImportJobFuture) Get(ctx workflow.Context) 
 }
 
 type ForecastServiceCreateForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +149,7 @@ func (r *ForecastServiceCreateForecastFuture) Get(ctx workflow.Context) (*foreca
 }
 
 type ForecastServiceCreateForecastExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +160,7 @@ func (r *ForecastServiceCreateForecastExportJobFuture) Get(ctx workflow.Context)
 }
 
 type ForecastServiceCreatePredictorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +171,7 @@ func (r *ForecastServiceCreatePredictorFuture) Get(ctx workflow.Context) (*forec
 }
 
 type ForecastServiceDeleteDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +182,7 @@ func (r *ForecastServiceDeleteDatasetFuture) Get(ctx workflow.Context) (*forecas
 }
 
 type ForecastServiceDeleteDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +193,7 @@ func (r *ForecastServiceDeleteDatasetGroupFuture) Get(ctx workflow.Context) (*fo
 }
 
 type ForecastServiceDeleteDatasetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +204,7 @@ func (r *ForecastServiceDeleteDatasetImportJobFuture) Get(ctx workflow.Context) 
 }
 
 type ForecastServiceDeleteForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +215,7 @@ func (r *ForecastServiceDeleteForecastFuture) Get(ctx workflow.Context) (*foreca
 }
 
 type ForecastServiceDeleteForecastExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +226,7 @@ func (r *ForecastServiceDeleteForecastExportJobFuture) Get(ctx workflow.Context)
 }
 
 type ForecastServiceDeletePredictorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +237,7 @@ func (r *ForecastServiceDeletePredictorFuture) Get(ctx workflow.Context) (*forec
 }
 
 type ForecastServiceDescribeDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +248,7 @@ func (r *ForecastServiceDescribeDatasetFuture) Get(ctx workflow.Context) (*forec
 }
 
 type ForecastServiceDescribeDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +259,7 @@ func (r *ForecastServiceDescribeDatasetGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type ForecastServiceDescribeDatasetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +270,7 @@ func (r *ForecastServiceDescribeDatasetImportJobFuture) Get(ctx workflow.Context
 }
 
 type ForecastServiceDescribeForecastFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +281,7 @@ func (r *ForecastServiceDescribeForecastFuture) Get(ctx workflow.Context) (*fore
 }
 
 type ForecastServiceDescribeForecastExportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +292,7 @@ func (r *ForecastServiceDescribeForecastExportJobFuture) Get(ctx workflow.Contex
 }
 
 type ForecastServiceDescribePredictorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +303,7 @@ func (r *ForecastServiceDescribePredictorFuture) Get(ctx workflow.Context) (*for
 }
 
 type ForecastServiceGetAccuracyMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +314,7 @@ func (r *ForecastServiceGetAccuracyMetricsFuture) Get(ctx workflow.Context) (*fo
 }
 
 type ForecastServiceListDatasetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +325,7 @@ func (r *ForecastServiceListDatasetGroupsFuture) Get(ctx workflow.Context) (*for
 }
 
 type ForecastServiceListDatasetImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +336,7 @@ func (r *ForecastServiceListDatasetImportJobsFuture) Get(ctx workflow.Context) (
 }
 
 type ForecastServiceListDatasetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +347,7 @@ func (r *ForecastServiceListDatasetsFuture) Get(ctx workflow.Context) (*forecast
 }
 
 type ForecastServiceListForecastExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +358,7 @@ func (r *ForecastServiceListForecastExportJobsFuture) Get(ctx workflow.Context) 
 }
 
 type ForecastServiceListForecastsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +369,7 @@ func (r *ForecastServiceListForecastsFuture) Get(ctx workflow.Context) (*forecas
 }
 
 type ForecastServiceListPredictorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +380,7 @@ func (r *ForecastServiceListPredictorsFuture) Get(ctx workflow.Context) (*foreca
 }
 
 type ForecastServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +391,7 @@ func (r *ForecastServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*f
 }
 
 type ForecastServiceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +402,7 @@ func (r *ForecastServiceTagResourceFuture) Get(ctx workflow.Context) (*forecasts
 }
 
 type ForecastServiceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +413,7 @@ func (r *ForecastServiceUntagResourceFuture) Get(ctx workflow.Context) (*forecas
 }
 
 type ForecastServiceUpdateDatasetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

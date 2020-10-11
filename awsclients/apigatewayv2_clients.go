@@ -234,6 +234,7 @@ func NewApiGatewayV2Stub() ApiGatewayV2Client {
 }
 
 type ApiGatewayV2CreateApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +245,7 @@ func (r *ApiGatewayV2CreateApiFuture) Get(ctx workflow.Context) (*apigatewayv2.C
 }
 
 type ApiGatewayV2CreateApiMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +256,7 @@ func (r *ApiGatewayV2CreateApiMappingFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2CreateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +267,7 @@ func (r *ApiGatewayV2CreateAuthorizerFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2CreateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +278,7 @@ func (r *ApiGatewayV2CreateDeploymentFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2CreateDomainNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +289,7 @@ func (r *ApiGatewayV2CreateDomainNameFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2CreateIntegrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +300,7 @@ func (r *ApiGatewayV2CreateIntegrationFuture) Get(ctx workflow.Context) (*apigat
 }
 
 type ApiGatewayV2CreateIntegrationResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +311,7 @@ func (r *ApiGatewayV2CreateIntegrationResponseFuture) Get(ctx workflow.Context) 
 }
 
 type ApiGatewayV2CreateModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +322,7 @@ func (r *ApiGatewayV2CreateModelFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2CreateRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +333,7 @@ func (r *ApiGatewayV2CreateRouteFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2CreateRouteResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +344,7 @@ func (r *ApiGatewayV2CreateRouteResponseFuture) Get(ctx workflow.Context) (*apig
 }
 
 type ApiGatewayV2CreateStageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +355,7 @@ func (r *ApiGatewayV2CreateStageFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2CreateVpcLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +366,7 @@ func (r *ApiGatewayV2CreateVpcLinkFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2DeleteAccessLogSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +377,7 @@ func (r *ApiGatewayV2DeleteAccessLogSettingsFuture) Get(ctx workflow.Context) (*
 }
 
 type ApiGatewayV2DeleteApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +388,7 @@ func (r *ApiGatewayV2DeleteApiFuture) Get(ctx workflow.Context) (*apigatewayv2.D
 }
 
 type ApiGatewayV2DeleteApiMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +399,7 @@ func (r *ApiGatewayV2DeleteApiMappingFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2DeleteAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +410,7 @@ func (r *ApiGatewayV2DeleteAuthorizerFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2DeleteCorsConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +421,7 @@ func (r *ApiGatewayV2DeleteCorsConfigurationFuture) Get(ctx workflow.Context) (*
 }
 
 type ApiGatewayV2DeleteDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +432,7 @@ func (r *ApiGatewayV2DeleteDeploymentFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2DeleteDomainNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +443,7 @@ func (r *ApiGatewayV2DeleteDomainNameFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2DeleteIntegrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +454,7 @@ func (r *ApiGatewayV2DeleteIntegrationFuture) Get(ctx workflow.Context) (*apigat
 }
 
 type ApiGatewayV2DeleteIntegrationResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +465,7 @@ func (r *ApiGatewayV2DeleteIntegrationResponseFuture) Get(ctx workflow.Context) 
 }
 
 type ApiGatewayV2DeleteModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +476,7 @@ func (r *ApiGatewayV2DeleteModelFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2DeleteRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +487,7 @@ func (r *ApiGatewayV2DeleteRouteFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2DeleteRouteRequestParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +498,7 @@ func (r *ApiGatewayV2DeleteRouteRequestParameterFuture) Get(ctx workflow.Context
 }
 
 type ApiGatewayV2DeleteRouteResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +509,7 @@ func (r *ApiGatewayV2DeleteRouteResponseFuture) Get(ctx workflow.Context) (*apig
 }
 
 type ApiGatewayV2DeleteRouteSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +520,7 @@ func (r *ApiGatewayV2DeleteRouteSettingsFuture) Get(ctx workflow.Context) (*apig
 }
 
 type ApiGatewayV2DeleteStageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +531,7 @@ func (r *ApiGatewayV2DeleteStageFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2DeleteVpcLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +542,7 @@ func (r *ApiGatewayV2DeleteVpcLinkFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2ExportApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +553,7 @@ func (r *ApiGatewayV2ExportApiFuture) Get(ctx workflow.Context) (*apigatewayv2.E
 }
 
 type ApiGatewayV2GetApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +564,7 @@ func (r *ApiGatewayV2GetApiFuture) Get(ctx workflow.Context) (*apigatewayv2.GetA
 }
 
 type ApiGatewayV2GetApiMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +575,7 @@ func (r *ApiGatewayV2GetApiMappingFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2GetApiMappingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +586,7 @@ func (r *ApiGatewayV2GetApiMappingsFuture) Get(ctx workflow.Context) (*apigatewa
 }
 
 type ApiGatewayV2GetApisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -564,6 +597,7 @@ func (r *ApiGatewayV2GetApisFuture) Get(ctx workflow.Context) (*apigatewayv2.Get
 }
 
 type ApiGatewayV2GetAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -574,6 +608,7 @@ func (r *ApiGatewayV2GetAuthorizerFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2GetAuthorizersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -584,6 +619,7 @@ func (r *ApiGatewayV2GetAuthorizersFuture) Get(ctx workflow.Context) (*apigatewa
 }
 
 type ApiGatewayV2GetDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -594,6 +630,7 @@ func (r *ApiGatewayV2GetDeploymentFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2GetDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -604,6 +641,7 @@ func (r *ApiGatewayV2GetDeploymentsFuture) Get(ctx workflow.Context) (*apigatewa
 }
 
 type ApiGatewayV2GetDomainNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -614,6 +652,7 @@ func (r *ApiGatewayV2GetDomainNameFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2GetDomainNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -624,6 +663,7 @@ func (r *ApiGatewayV2GetDomainNamesFuture) Get(ctx workflow.Context) (*apigatewa
 }
 
 type ApiGatewayV2GetIntegrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -634,6 +674,7 @@ func (r *ApiGatewayV2GetIntegrationFuture) Get(ctx workflow.Context) (*apigatewa
 }
 
 type ApiGatewayV2GetIntegrationResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -644,6 +685,7 @@ func (r *ApiGatewayV2GetIntegrationResponseFuture) Get(ctx workflow.Context) (*a
 }
 
 type ApiGatewayV2GetIntegrationResponsesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -654,6 +696,7 @@ func (r *ApiGatewayV2GetIntegrationResponsesFuture) Get(ctx workflow.Context) (*
 }
 
 type ApiGatewayV2GetIntegrationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -664,6 +707,7 @@ func (r *ApiGatewayV2GetIntegrationsFuture) Get(ctx workflow.Context) (*apigatew
 }
 
 type ApiGatewayV2GetModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -674,6 +718,7 @@ func (r *ApiGatewayV2GetModelFuture) Get(ctx workflow.Context) (*apigatewayv2.Ge
 }
 
 type ApiGatewayV2GetModelTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -684,6 +729,7 @@ func (r *ApiGatewayV2GetModelTemplateFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2GetModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -694,6 +740,7 @@ func (r *ApiGatewayV2GetModelsFuture) Get(ctx workflow.Context) (*apigatewayv2.G
 }
 
 type ApiGatewayV2GetRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -704,6 +751,7 @@ func (r *ApiGatewayV2GetRouteFuture) Get(ctx workflow.Context) (*apigatewayv2.Ge
 }
 
 type ApiGatewayV2GetRouteResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -714,6 +762,7 @@ func (r *ApiGatewayV2GetRouteResponseFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2GetRouteResponsesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -724,6 +773,7 @@ func (r *ApiGatewayV2GetRouteResponsesFuture) Get(ctx workflow.Context) (*apigat
 }
 
 type ApiGatewayV2GetRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -734,6 +784,7 @@ func (r *ApiGatewayV2GetRoutesFuture) Get(ctx workflow.Context) (*apigatewayv2.G
 }
 
 type ApiGatewayV2GetStageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -744,6 +795,7 @@ func (r *ApiGatewayV2GetStageFuture) Get(ctx workflow.Context) (*apigatewayv2.Ge
 }
 
 type ApiGatewayV2GetStagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -754,6 +806,7 @@ func (r *ApiGatewayV2GetStagesFuture) Get(ctx workflow.Context) (*apigatewayv2.G
 }
 
 type ApiGatewayV2GetTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -764,6 +817,7 @@ func (r *ApiGatewayV2GetTagsFuture) Get(ctx workflow.Context) (*apigatewayv2.Get
 }
 
 type ApiGatewayV2GetVpcLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -774,6 +828,7 @@ func (r *ApiGatewayV2GetVpcLinkFuture) Get(ctx workflow.Context) (*apigatewayv2.
 }
 
 type ApiGatewayV2GetVpcLinksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -784,6 +839,7 @@ func (r *ApiGatewayV2GetVpcLinksFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2ImportApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -794,6 +850,7 @@ func (r *ApiGatewayV2ImportApiFuture) Get(ctx workflow.Context) (*apigatewayv2.I
 }
 
 type ApiGatewayV2ReimportApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -804,6 +861,7 @@ func (r *ApiGatewayV2ReimportApiFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2ResetAuthorizersCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -814,6 +872,7 @@ func (r *ApiGatewayV2ResetAuthorizersCacheFuture) Get(ctx workflow.Context) (*ap
 }
 
 type ApiGatewayV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -824,6 +883,7 @@ func (r *ApiGatewayV2TagResourceFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -834,6 +894,7 @@ func (r *ApiGatewayV2UntagResourceFuture) Get(ctx workflow.Context) (*apigateway
 }
 
 type ApiGatewayV2UpdateApiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -844,6 +905,7 @@ func (r *ApiGatewayV2UpdateApiFuture) Get(ctx workflow.Context) (*apigatewayv2.U
 }
 
 type ApiGatewayV2UpdateApiMappingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -854,6 +916,7 @@ func (r *ApiGatewayV2UpdateApiMappingFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2UpdateAuthorizerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -864,6 +927,7 @@ func (r *ApiGatewayV2UpdateAuthorizerFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2UpdateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -874,6 +938,7 @@ func (r *ApiGatewayV2UpdateDeploymentFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2UpdateDomainNameFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -884,6 +949,7 @@ func (r *ApiGatewayV2UpdateDomainNameFuture) Get(ctx workflow.Context) (*apigate
 }
 
 type ApiGatewayV2UpdateIntegrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -894,6 +960,7 @@ func (r *ApiGatewayV2UpdateIntegrationFuture) Get(ctx workflow.Context) (*apigat
 }
 
 type ApiGatewayV2UpdateIntegrationResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -904,6 +971,7 @@ func (r *ApiGatewayV2UpdateIntegrationResponseFuture) Get(ctx workflow.Context) 
 }
 
 type ApiGatewayV2UpdateModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -914,6 +982,7 @@ func (r *ApiGatewayV2UpdateModelFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2UpdateRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -924,6 +993,7 @@ func (r *ApiGatewayV2UpdateRouteFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2UpdateRouteResponseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -934,6 +1004,7 @@ func (r *ApiGatewayV2UpdateRouteResponseFuture) Get(ctx workflow.Context) (*apig
 }
 
 type ApiGatewayV2UpdateStageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -944,6 +1015,7 @@ func (r *ApiGatewayV2UpdateStageFuture) Get(ctx workflow.Context) (*apigatewayv2
 }
 
 type ApiGatewayV2UpdateVpcLinkFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -72,6 +72,7 @@ func NewAccessAnalyzerStub() AccessAnalyzerClient {
 }
 
 type AccessAnalyzerCreateAnalyzerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +83,7 @@ func (r *AccessAnalyzerCreateAnalyzerFuture) Get(ctx workflow.Context) (*accessa
 }
 
 type AccessAnalyzerCreateArchiveRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +94,7 @@ func (r *AccessAnalyzerCreateArchiveRuleFuture) Get(ctx workflow.Context) (*acce
 }
 
 type AccessAnalyzerDeleteAnalyzerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +105,7 @@ func (r *AccessAnalyzerDeleteAnalyzerFuture) Get(ctx workflow.Context) (*accessa
 }
 
 type AccessAnalyzerDeleteArchiveRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +116,7 @@ func (r *AccessAnalyzerDeleteArchiveRuleFuture) Get(ctx workflow.Context) (*acce
 }
 
 type AccessAnalyzerGetAnalyzedResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +127,7 @@ func (r *AccessAnalyzerGetAnalyzedResourceFuture) Get(ctx workflow.Context) (*ac
 }
 
 type AccessAnalyzerGetAnalyzerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +138,7 @@ func (r *AccessAnalyzerGetAnalyzerFuture) Get(ctx workflow.Context) (*accessanal
 }
 
 type AccessAnalyzerGetArchiveRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +149,7 @@ func (r *AccessAnalyzerGetArchiveRuleFuture) Get(ctx workflow.Context) (*accessa
 }
 
 type AccessAnalyzerGetFindingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +160,7 @@ func (r *AccessAnalyzerGetFindingFuture) Get(ctx workflow.Context) (*accessanaly
 }
 
 type AccessAnalyzerListAnalyzedResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +171,7 @@ func (r *AccessAnalyzerListAnalyzedResourcesFuture) Get(ctx workflow.Context) (*
 }
 
 type AccessAnalyzerListAnalyzersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +182,7 @@ func (r *AccessAnalyzerListAnalyzersFuture) Get(ctx workflow.Context) (*accessan
 }
 
 type AccessAnalyzerListArchiveRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +193,7 @@ func (r *AccessAnalyzerListArchiveRulesFuture) Get(ctx workflow.Context) (*acces
 }
 
 type AccessAnalyzerListFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +204,7 @@ func (r *AccessAnalyzerListFindingsFuture) Get(ctx workflow.Context) (*accessana
 }
 
 type AccessAnalyzerListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +215,7 @@ func (r *AccessAnalyzerListTagsForResourceFuture) Get(ctx workflow.Context) (*ac
 }
 
 type AccessAnalyzerStartResourceScanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +226,7 @@ func (r *AccessAnalyzerStartResourceScanFuture) Get(ctx workflow.Context) (*acce
 }
 
 type AccessAnalyzerTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +237,7 @@ func (r *AccessAnalyzerTagResourceFuture) Get(ctx workflow.Context) (*accessanal
 }
 
 type AccessAnalyzerUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +248,7 @@ func (r *AccessAnalyzerUntagResourceFuture) Get(ctx workflow.Context) (*accessan
 }
 
 type AccessAnalyzerUpdateArchiveRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +259,7 @@ func (r *AccessAnalyzerUpdateArchiveRuleFuture) Get(ctx workflow.Context) (*acce
 }
 
 type AccessAnalyzerUpdateFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

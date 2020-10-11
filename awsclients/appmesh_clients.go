@@ -132,6 +132,7 @@ func NewAppMeshStub() AppMeshClient {
 }
 
 type AppMeshCreateGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +143,7 @@ func (r *AppMeshCreateGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.Cr
 }
 
 type AppMeshCreateMeshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +154,7 @@ func (r *AppMeshCreateMeshFuture) Get(ctx workflow.Context) (*appmesh.CreateMesh
 }
 
 type AppMeshCreateRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +165,7 @@ func (r *AppMeshCreateRouteFuture) Get(ctx workflow.Context) (*appmesh.CreateRou
 }
 
 type AppMeshCreateVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +176,7 @@ func (r *AppMeshCreateVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshCreateVirtualNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +187,7 @@ func (r *AppMeshCreateVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.Cre
 }
 
 type AppMeshCreateVirtualRouterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +198,7 @@ func (r *AppMeshCreateVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.C
 }
 
 type AppMeshCreateVirtualServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +209,7 @@ func (r *AppMeshCreateVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshDeleteGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +220,7 @@ func (r *AppMeshDeleteGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.De
 }
 
 type AppMeshDeleteMeshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +231,7 @@ func (r *AppMeshDeleteMeshFuture) Get(ctx workflow.Context) (*appmesh.DeleteMesh
 }
 
 type AppMeshDeleteRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +242,7 @@ func (r *AppMeshDeleteRouteFuture) Get(ctx workflow.Context) (*appmesh.DeleteRou
 }
 
 type AppMeshDeleteVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +253,7 @@ func (r *AppMeshDeleteVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshDeleteVirtualNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +264,7 @@ func (r *AppMeshDeleteVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.Del
 }
 
 type AppMeshDeleteVirtualRouterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +275,7 @@ func (r *AppMeshDeleteVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.D
 }
 
 type AppMeshDeleteVirtualServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +286,7 @@ func (r *AppMeshDeleteVirtualServiceFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshDescribeGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +297,7 @@ func (r *AppMeshDescribeGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshDescribeMeshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +308,7 @@ func (r *AppMeshDescribeMeshFuture) Get(ctx workflow.Context) (*appmesh.Describe
 }
 
 type AppMeshDescribeRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +319,7 @@ func (r *AppMeshDescribeRouteFuture) Get(ctx workflow.Context) (*appmesh.Describ
 }
 
 type AppMeshDescribeVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +330,7 @@ func (r *AppMeshDescribeVirtualGatewayFuture) Get(ctx workflow.Context) (*appmes
 }
 
 type AppMeshDescribeVirtualNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +341,7 @@ func (r *AppMeshDescribeVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.D
 }
 
 type AppMeshDescribeVirtualRouterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +352,7 @@ func (r *AppMeshDescribeVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh
 }
 
 type AppMeshDescribeVirtualServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +363,7 @@ func (r *AppMeshDescribeVirtualServiceFuture) Get(ctx workflow.Context) (*appmes
 }
 
 type AppMeshListGatewayRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +374,7 @@ func (r *AppMeshListGatewayRoutesFuture) Get(ctx workflow.Context) (*appmesh.Lis
 }
 
 type AppMeshListMeshesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +385,7 @@ func (r *AppMeshListMeshesFuture) Get(ctx workflow.Context) (*appmesh.ListMeshes
 }
 
 type AppMeshListRoutesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +396,7 @@ func (r *AppMeshListRoutesFuture) Get(ctx workflow.Context) (*appmesh.ListRoutes
 }
 
 type AppMeshListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +407,7 @@ func (r *AppMeshListTagsForResourceFuture) Get(ctx workflow.Context) (*appmesh.L
 }
 
 type AppMeshListVirtualGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +418,7 @@ func (r *AppMeshListVirtualGatewaysFuture) Get(ctx workflow.Context) (*appmesh.L
 }
 
 type AppMeshListVirtualNodesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +429,7 @@ func (r *AppMeshListVirtualNodesFuture) Get(ctx workflow.Context) (*appmesh.List
 }
 
 type AppMeshListVirtualRoutersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +440,7 @@ func (r *AppMeshListVirtualRoutersFuture) Get(ctx workflow.Context) (*appmesh.Li
 }
 
 type AppMeshListVirtualServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +451,7 @@ func (r *AppMeshListVirtualServicesFuture) Get(ctx workflow.Context) (*appmesh.L
 }
 
 type AppMeshTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +462,7 @@ func (r *AppMeshTagResourceFuture) Get(ctx workflow.Context) (*appmesh.TagResour
 }
 
 type AppMeshUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +473,7 @@ func (r *AppMeshUntagResourceFuture) Get(ctx workflow.Context) (*appmesh.UntagRe
 }
 
 type AppMeshUpdateGatewayRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +484,7 @@ func (r *AppMeshUpdateGatewayRouteFuture) Get(ctx workflow.Context) (*appmesh.Up
 }
 
 type AppMeshUpdateMeshFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +495,7 @@ func (r *AppMeshUpdateMeshFuture) Get(ctx workflow.Context) (*appmesh.UpdateMesh
 }
 
 type AppMeshUpdateRouteFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +506,7 @@ func (r *AppMeshUpdateRouteFuture) Get(ctx workflow.Context) (*appmesh.UpdateRou
 }
 
 type AppMeshUpdateVirtualGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +517,7 @@ func (r *AppMeshUpdateVirtualGatewayFuture) Get(ctx workflow.Context) (*appmesh.
 }
 
 type AppMeshUpdateVirtualNodeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +528,7 @@ func (r *AppMeshUpdateVirtualNodeFuture) Get(ctx workflow.Context) (*appmesh.Upd
 }
 
 type AppMeshUpdateVirtualRouterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +539,7 @@ func (r *AppMeshUpdateVirtualRouterFuture) Get(ctx workflow.Context) (*appmesh.U
 }
 
 type AppMeshUpdateVirtualServiceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

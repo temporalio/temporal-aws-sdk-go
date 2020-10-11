@@ -75,6 +75,7 @@ func NewBatchStub() BatchClient {
 }
 
 type BatchCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *BatchCancelJobFuture) Get(ctx workflow.Context) (*batch.CancelJobOutput
 }
 
 type BatchCreateComputeEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *BatchCreateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.
 }
 
 type BatchCreateJobQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *BatchCreateJobQueueFuture) Get(ctx workflow.Context) (*batch.CreateJobQ
 }
 
 type BatchDeleteComputeEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *BatchDeleteComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.
 }
 
 type BatchDeleteJobQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *BatchDeleteJobQueueFuture) Get(ctx workflow.Context) (*batch.DeleteJobQ
 }
 
 type BatchDeregisterJobDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *BatchDeregisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.D
 }
 
 type BatchDescribeComputeEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *BatchDescribeComputeEnvironmentsFuture) Get(ctx workflow.Context) (*bat
 }
 
 type BatchDescribeJobDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *BatchDescribeJobDefinitionsFuture) Get(ctx workflow.Context) (*batch.De
 }
 
 type BatchDescribeJobQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *BatchDescribeJobQueuesFuture) Get(ctx workflow.Context) (*batch.Describ
 }
 
 type BatchDescribeJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *BatchDescribeJobsFuture) Get(ctx workflow.Context) (*batch.DescribeJobs
 }
 
 type BatchListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *BatchListJobsFuture) Get(ctx workflow.Context) (*batch.ListJobsOutput, 
 }
 
 type BatchListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *BatchListTagsForResourceFuture) Get(ctx workflow.Context) (*batch.ListT
 }
 
 type BatchRegisterJobDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *BatchRegisterJobDefinitionFuture) Get(ctx workflow.Context) (*batch.Reg
 }
 
 type BatchSubmitJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *BatchSubmitJobFuture) Get(ctx workflow.Context) (*batch.SubmitJobOutput
 }
 
 type BatchTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *BatchTagResourceFuture) Get(ctx workflow.Context) (*batch.TagResourceOu
 }
 
 type BatchTerminateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *BatchTerminateJobFuture) Get(ctx workflow.Context) (*batch.TerminateJob
 }
 
 type BatchUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *BatchUntagResourceFuture) Get(ctx workflow.Context) (*batch.UntagResour
 }
 
 type BatchUpdateComputeEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *BatchUpdateComputeEnvironmentFuture) Get(ctx workflow.Context) (*batch.
 }
 
 type BatchUpdateJobQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

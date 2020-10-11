@@ -81,6 +81,7 @@ func NewComprehendMedicalStub() ComprehendMedicalClient {
 }
 
 type ComprehendMedicalDescribeEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +92,7 @@ func (r *ComprehendMedicalDescribeEntitiesDetectionV2JobFuture) Get(ctx workflow
 }
 
 type ComprehendMedicalDescribeICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +103,7 @@ func (r *ComprehendMedicalDescribeICD10CMInferenceJobFuture) Get(ctx workflow.Co
 }
 
 type ComprehendMedicalDescribePHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +114,7 @@ func (r *ComprehendMedicalDescribePHIDetectionJobFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendMedicalDescribeRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +125,7 @@ func (r *ComprehendMedicalDescribeRxNormInferenceJobFuture) Get(ctx workflow.Con
 }
 
 type ComprehendMedicalDetectEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +136,7 @@ func (r *ComprehendMedicalDetectEntitiesFuture) Get(ctx workflow.Context) (*comp
 }
 
 type ComprehendMedicalDetectEntitiesV2Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +147,7 @@ func (r *ComprehendMedicalDetectEntitiesV2Future) Get(ctx workflow.Context) (*co
 }
 
 type ComprehendMedicalDetectPHIFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +158,7 @@ func (r *ComprehendMedicalDetectPHIFuture) Get(ctx workflow.Context) (*comprehen
 }
 
 type ComprehendMedicalInferICD10CMFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +169,7 @@ func (r *ComprehendMedicalInferICD10CMFuture) Get(ctx workflow.Context) (*compre
 }
 
 type ComprehendMedicalInferRxNormFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +180,7 @@ func (r *ComprehendMedicalInferRxNormFuture) Get(ctx workflow.Context) (*compreh
 }
 
 type ComprehendMedicalListEntitiesDetectionV2JobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +191,7 @@ func (r *ComprehendMedicalListEntitiesDetectionV2JobsFuture) Get(ctx workflow.Co
 }
 
 type ComprehendMedicalListICD10CMInferenceJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +202,7 @@ func (r *ComprehendMedicalListICD10CMInferenceJobsFuture) Get(ctx workflow.Conte
 }
 
 type ComprehendMedicalListPHIDetectionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +213,7 @@ func (r *ComprehendMedicalListPHIDetectionJobsFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendMedicalListRxNormInferenceJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +224,7 @@ func (r *ComprehendMedicalListRxNormInferenceJobsFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendMedicalStartEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +235,7 @@ func (r *ComprehendMedicalStartEntitiesDetectionV2JobFuture) Get(ctx workflow.Co
 }
 
 type ComprehendMedicalStartICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +246,7 @@ func (r *ComprehendMedicalStartICD10CMInferenceJobFuture) Get(ctx workflow.Conte
 }
 
 type ComprehendMedicalStartPHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +257,7 @@ func (r *ComprehendMedicalStartPHIDetectionJobFuture) Get(ctx workflow.Context) 
 }
 
 type ComprehendMedicalStartRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +268,7 @@ func (r *ComprehendMedicalStartRxNormInferenceJobFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendMedicalStopEntitiesDetectionV2JobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +279,7 @@ func (r *ComprehendMedicalStopEntitiesDetectionV2JobFuture) Get(ctx workflow.Con
 }
 
 type ComprehendMedicalStopICD10CMInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +290,7 @@ func (r *ComprehendMedicalStopICD10CMInferenceJobFuture) Get(ctx workflow.Contex
 }
 
 type ComprehendMedicalStopPHIDetectionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +301,7 @@ func (r *ComprehendMedicalStopPHIDetectionJobFuture) Get(ctx workflow.Context) (
 }
 
 type ComprehendMedicalStopRxNormInferenceJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

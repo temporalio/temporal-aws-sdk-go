@@ -99,6 +99,7 @@ func NewTranscribeServiceStub() TranscribeServiceClient {
 }
 
 type TranscribeServiceCreateLanguageModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -109,6 +110,7 @@ func (r *TranscribeServiceCreateLanguageModelFuture) Get(ctx workflow.Context) (
 }
 
 type TranscribeServiceCreateMedicalVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -119,6 +121,7 @@ func (r *TranscribeServiceCreateMedicalVocabularyFuture) Get(ctx workflow.Contex
 }
 
 type TranscribeServiceCreateVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -129,6 +132,7 @@ func (r *TranscribeServiceCreateVocabularyFuture) Get(ctx workflow.Context) (*tr
 }
 
 type TranscribeServiceCreateVocabularyFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +143,7 @@ func (r *TranscribeServiceCreateVocabularyFilterFuture) Get(ctx workflow.Context
 }
 
 type TranscribeServiceDeleteLanguageModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +154,7 @@ func (r *TranscribeServiceDeleteLanguageModelFuture) Get(ctx workflow.Context) (
 }
 
 type TranscribeServiceDeleteMedicalTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +165,7 @@ func (r *TranscribeServiceDeleteMedicalTranscriptionJobFuture) Get(ctx workflow.
 }
 
 type TranscribeServiceDeleteMedicalVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +176,7 @@ func (r *TranscribeServiceDeleteMedicalVocabularyFuture) Get(ctx workflow.Contex
 }
 
 type TranscribeServiceDeleteTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +187,7 @@ func (r *TranscribeServiceDeleteTranscriptionJobFuture) Get(ctx workflow.Context
 }
 
 type TranscribeServiceDeleteVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +198,7 @@ func (r *TranscribeServiceDeleteVocabularyFuture) Get(ctx workflow.Context) (*tr
 }
 
 type TranscribeServiceDeleteVocabularyFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +209,7 @@ func (r *TranscribeServiceDeleteVocabularyFilterFuture) Get(ctx workflow.Context
 }
 
 type TranscribeServiceDescribeLanguageModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +220,7 @@ func (r *TranscribeServiceDescribeLanguageModelFuture) Get(ctx workflow.Context)
 }
 
 type TranscribeServiceGetMedicalTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +231,7 @@ func (r *TranscribeServiceGetMedicalTranscriptionJobFuture) Get(ctx workflow.Con
 }
 
 type TranscribeServiceGetMedicalVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +242,7 @@ func (r *TranscribeServiceGetMedicalVocabularyFuture) Get(ctx workflow.Context) 
 }
 
 type TranscribeServiceGetTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +253,7 @@ func (r *TranscribeServiceGetTranscriptionJobFuture) Get(ctx workflow.Context) (
 }
 
 type TranscribeServiceGetVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +264,7 @@ func (r *TranscribeServiceGetVocabularyFuture) Get(ctx workflow.Context) (*trans
 }
 
 type TranscribeServiceGetVocabularyFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +275,7 @@ func (r *TranscribeServiceGetVocabularyFilterFuture) Get(ctx workflow.Context) (
 }
 
 type TranscribeServiceListLanguageModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +286,7 @@ func (r *TranscribeServiceListLanguageModelsFuture) Get(ctx workflow.Context) (*
 }
 
 type TranscribeServiceListMedicalTranscriptionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +297,7 @@ func (r *TranscribeServiceListMedicalTranscriptionJobsFuture) Get(ctx workflow.C
 }
 
 type TranscribeServiceListMedicalVocabulariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +308,7 @@ func (r *TranscribeServiceListMedicalVocabulariesFuture) Get(ctx workflow.Contex
 }
 
 type TranscribeServiceListTranscriptionJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +319,7 @@ func (r *TranscribeServiceListTranscriptionJobsFuture) Get(ctx workflow.Context)
 }
 
 type TranscribeServiceListVocabulariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +330,7 @@ func (r *TranscribeServiceListVocabulariesFuture) Get(ctx workflow.Context) (*tr
 }
 
 type TranscribeServiceListVocabularyFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +341,7 @@ func (r *TranscribeServiceListVocabularyFiltersFuture) Get(ctx workflow.Context)
 }
 
 type TranscribeServiceStartMedicalTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +352,7 @@ func (r *TranscribeServiceStartMedicalTranscriptionJobFuture) Get(ctx workflow.C
 }
 
 type TranscribeServiceStartTranscriptionJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +363,7 @@ func (r *TranscribeServiceStartTranscriptionJobFuture) Get(ctx workflow.Context)
 }
 
 type TranscribeServiceUpdateMedicalVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +374,7 @@ func (r *TranscribeServiceUpdateMedicalVocabularyFuture) Get(ctx workflow.Contex
 }
 
 type TranscribeServiceUpdateVocabularyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +385,7 @@ func (r *TranscribeServiceUpdateVocabularyFuture) Get(ctx workflow.Context) (*tr
 }
 
 type TranscribeServiceUpdateVocabularyFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

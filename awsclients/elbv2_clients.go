@@ -135,6 +135,7 @@ func NewELBV2Stub() ELBV2Client {
 }
 
 type ELBV2AddListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +146,7 @@ func (r *ELBV2AddListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv2.A
 }
 
 type ELBV2AddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +157,7 @@ func (r *ELBV2AddTagsFuture) Get(ctx workflow.Context) (*elbv2.AddTagsOutput, er
 }
 
 type ELBV2CreateListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +168,7 @@ func (r *ELBV2CreateListenerFuture) Get(ctx workflow.Context) (*elbv2.CreateList
 }
 
 type ELBV2CreateLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +179,7 @@ func (r *ELBV2CreateLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.Create
 }
 
 type ELBV2CreateRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +190,7 @@ func (r *ELBV2CreateRuleFuture) Get(ctx workflow.Context) (*elbv2.CreateRuleOutp
 }
 
 type ELBV2CreateTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +201,7 @@ func (r *ELBV2CreateTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.CreateT
 }
 
 type ELBV2DeleteListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +212,7 @@ func (r *ELBV2DeleteListenerFuture) Get(ctx workflow.Context) (*elbv2.DeleteList
 }
 
 type ELBV2DeleteLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +223,7 @@ func (r *ELBV2DeleteLoadBalancerFuture) Get(ctx workflow.Context) (*elbv2.Delete
 }
 
 type ELBV2DeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +234,7 @@ func (r *ELBV2DeleteRuleFuture) Get(ctx workflow.Context) (*elbv2.DeleteRuleOutp
 }
 
 type ELBV2DeleteTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +245,7 @@ func (r *ELBV2DeleteTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.DeleteT
 }
 
 type ELBV2DeregisterTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +256,7 @@ func (r *ELBV2DeregisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.Deregis
 }
 
 type ELBV2DescribeAccountLimitsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +267,7 @@ func (r *ELBV2DescribeAccountLimitsFuture) Get(ctx workflow.Context) (*elbv2.Des
 }
 
 type ELBV2DescribeListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +278,7 @@ func (r *ELBV2DescribeListenerCertificatesFuture) Get(ctx workflow.Context) (*el
 }
 
 type ELBV2DescribeListenersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +289,7 @@ func (r *ELBV2DescribeListenersFuture) Get(ctx workflow.Context) (*elbv2.Describ
 }
 
 type ELBV2DescribeLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +300,7 @@ func (r *ELBV2DescribeLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type ELBV2DescribeLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +311,7 @@ func (r *ELBV2DescribeLoadBalancersFuture) Get(ctx workflow.Context) (*elbv2.Des
 }
 
 type ELBV2DescribeRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +322,7 @@ func (r *ELBV2DescribeRulesFuture) Get(ctx workflow.Context) (*elbv2.DescribeRul
 }
 
 type ELBV2DescribeSSLPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +333,7 @@ func (r *ELBV2DescribeSSLPoliciesFuture) Get(ctx workflow.Context) (*elbv2.Descr
 }
 
 type ELBV2DescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +344,7 @@ func (r *ELBV2DescribeTagsFuture) Get(ctx workflow.Context) (*elbv2.DescribeTags
 }
 
 type ELBV2DescribeTargetGroupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +355,7 @@ func (r *ELBV2DescribeTargetGroupAttributesFuture) Get(ctx workflow.Context) (*e
 }
 
 type ELBV2DescribeTargetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +366,7 @@ func (r *ELBV2DescribeTargetGroupsFuture) Get(ctx workflow.Context) (*elbv2.Desc
 }
 
 type ELBV2DescribeTargetHealthFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +377,7 @@ func (r *ELBV2DescribeTargetHealthFuture) Get(ctx workflow.Context) (*elbv2.Desc
 }
 
 type ELBV2ModifyListenerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +388,7 @@ func (r *ELBV2ModifyListenerFuture) Get(ctx workflow.Context) (*elbv2.ModifyList
 }
 
 type ELBV2ModifyLoadBalancerAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +399,7 @@ func (r *ELBV2ModifyLoadBalancerAttributesFuture) Get(ctx workflow.Context) (*el
 }
 
 type ELBV2ModifyRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +410,7 @@ func (r *ELBV2ModifyRuleFuture) Get(ctx workflow.Context) (*elbv2.ModifyRuleOutp
 }
 
 type ELBV2ModifyTargetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +421,7 @@ func (r *ELBV2ModifyTargetGroupFuture) Get(ctx workflow.Context) (*elbv2.ModifyT
 }
 
 type ELBV2ModifyTargetGroupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +432,7 @@ func (r *ELBV2ModifyTargetGroupAttributesFuture) Get(ctx workflow.Context) (*elb
 }
 
 type ELBV2RegisterTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +443,7 @@ func (r *ELBV2RegisterTargetsFuture) Get(ctx workflow.Context) (*elbv2.RegisterT
 }
 
 type ELBV2RemoveListenerCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +454,7 @@ func (r *ELBV2RemoveListenerCertificatesFuture) Get(ctx workflow.Context) (*elbv
 }
 
 type ELBV2RemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +465,7 @@ func (r *ELBV2RemoveTagsFuture) Get(ctx workflow.Context) (*elbv2.RemoveTagsOutp
 }
 
 type ELBV2SetIpAddressTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +476,7 @@ func (r *ELBV2SetIpAddressTypeFuture) Get(ctx workflow.Context) (*elbv2.SetIpAdd
 }
 
 type ELBV2SetRulePrioritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +487,7 @@ func (r *ELBV2SetRulePrioritiesFuture) Get(ctx workflow.Context) (*elbv2.SetRule
 }
 
 type ELBV2SetSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +498,7 @@ func (r *ELBV2SetSecurityGroupsFuture) Get(ctx workflow.Context) (*elbv2.SetSecu
 }
 
 type ELBV2SetSubnetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

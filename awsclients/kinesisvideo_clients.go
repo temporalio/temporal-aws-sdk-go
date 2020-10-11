@@ -75,6 +75,7 @@ func NewKinesisVideoStub() KinesisVideoClient {
 }
 
 type KinesisVideoCreateSignalingChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *KinesisVideoCreateSignalingChannelFuture) Get(ctx workflow.Context) (*k
 }
 
 type KinesisVideoCreateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *KinesisVideoCreateStreamFuture) Get(ctx workflow.Context) (*kinesisvide
 }
 
 type KinesisVideoDeleteSignalingChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *KinesisVideoDeleteSignalingChannelFuture) Get(ctx workflow.Context) (*k
 }
 
 type KinesisVideoDeleteStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *KinesisVideoDeleteStreamFuture) Get(ctx workflow.Context) (*kinesisvide
 }
 
 type KinesisVideoDescribeSignalingChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *KinesisVideoDescribeSignalingChannelFuture) Get(ctx workflow.Context) (
 }
 
 type KinesisVideoDescribeStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *KinesisVideoDescribeStreamFuture) Get(ctx workflow.Context) (*kinesisvi
 }
 
 type KinesisVideoGetDataEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *KinesisVideoGetDataEndpointFuture) Get(ctx workflow.Context) (*kinesisv
 }
 
 type KinesisVideoGetSignalingChannelEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *KinesisVideoGetSignalingChannelEndpointFuture) Get(ctx workflow.Context
 }
 
 type KinesisVideoListSignalingChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *KinesisVideoListSignalingChannelsFuture) Get(ctx workflow.Context) (*ki
 }
 
 type KinesisVideoListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *KinesisVideoListStreamsFuture) Get(ctx workflow.Context) (*kinesisvideo
 }
 
 type KinesisVideoListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *KinesisVideoListTagsForResourceFuture) Get(ctx workflow.Context) (*kine
 }
 
 type KinesisVideoListTagsForStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *KinesisVideoListTagsForStreamFuture) Get(ctx workflow.Context) (*kinesi
 }
 
 type KinesisVideoTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *KinesisVideoTagResourceFuture) Get(ctx workflow.Context) (*kinesisvideo
 }
 
 type KinesisVideoTagStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *KinesisVideoTagStreamFuture) Get(ctx workflow.Context) (*kinesisvideo.T
 }
 
 type KinesisVideoUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *KinesisVideoUntagResourceFuture) Get(ctx workflow.Context) (*kinesisvid
 }
 
 type KinesisVideoUntagStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *KinesisVideoUntagStreamFuture) Get(ctx workflow.Context) (*kinesisvideo
 }
 
 type KinesisVideoUpdateDataRetentionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *KinesisVideoUpdateDataRetentionFuture) Get(ctx workflow.Context) (*kine
 }
 
 type KinesisVideoUpdateSignalingChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *KinesisVideoUpdateSignalingChannelFuture) Get(ctx workflow.Context) (*k
 }
 
 type KinesisVideoUpdateStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

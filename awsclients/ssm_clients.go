@@ -387,6 +387,7 @@ func NewSSMStub() SSMClient {
 }
 
 type SSMAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +398,7 @@ func (r *SSMAddTagsToResourceFuture) Get(ctx workflow.Context) (*ssm.AddTagsToRe
 }
 
 type SSMCancelCommandFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +409,7 @@ func (r *SSMCancelCommandFuture) Get(ctx workflow.Context) (*ssm.CancelCommandOu
 }
 
 type SSMCancelMaintenanceWindowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +420,7 @@ func (r *SSMCancelMaintenanceWindowExecutionFuture) Get(ctx workflow.Context) (*
 }
 
 type SSMCreateActivationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +431,7 @@ func (r *SSMCreateActivationFuture) Get(ctx workflow.Context) (*ssm.CreateActiva
 }
 
 type SSMCreateAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +442,7 @@ func (r *SSMCreateAssociationFuture) Get(ctx workflow.Context) (*ssm.CreateAssoc
 }
 
 type SSMCreateAssociationBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +453,7 @@ func (r *SSMCreateAssociationBatchFuture) Get(ctx workflow.Context) (*ssm.Create
 }
 
 type SSMCreateDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +464,7 @@ func (r *SSMCreateDocumentFuture) Get(ctx workflow.Context) (*ssm.CreateDocument
 }
 
 type SSMCreateMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +475,7 @@ func (r *SSMCreateMaintenanceWindowFuture) Get(ctx workflow.Context) (*ssm.Creat
 }
 
 type SSMCreateOpsItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +486,7 @@ func (r *SSMCreateOpsItemFuture) Get(ctx workflow.Context) (*ssm.CreateOpsItemOu
 }
 
 type SSMCreatePatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +497,7 @@ func (r *SSMCreatePatchBaselineFuture) Get(ctx workflow.Context) (*ssm.CreatePat
 }
 
 type SSMCreateResourceDataSyncFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +508,7 @@ func (r *SSMCreateResourceDataSyncFuture) Get(ctx workflow.Context) (*ssm.Create
 }
 
 type SSMDeleteActivationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +519,7 @@ func (r *SSMDeleteActivationFuture) Get(ctx workflow.Context) (*ssm.DeleteActiva
 }
 
 type SSMDeleteAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +530,7 @@ func (r *SSMDeleteAssociationFuture) Get(ctx workflow.Context) (*ssm.DeleteAssoc
 }
 
 type SSMDeleteDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +541,7 @@ func (r *SSMDeleteDocumentFuture) Get(ctx workflow.Context) (*ssm.DeleteDocument
 }
 
 type SSMDeleteInventoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +552,7 @@ func (r *SSMDeleteInventoryFuture) Get(ctx workflow.Context) (*ssm.DeleteInvento
 }
 
 type SSMDeleteMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +563,7 @@ func (r *SSMDeleteMaintenanceWindowFuture) Get(ctx workflow.Context) (*ssm.Delet
 }
 
 type SSMDeleteParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +574,7 @@ func (r *SSMDeleteParameterFuture) Get(ctx workflow.Context) (*ssm.DeleteParamet
 }
 
 type SSMDeleteParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +585,7 @@ func (r *SSMDeleteParametersFuture) Get(ctx workflow.Context) (*ssm.DeleteParame
 }
 
 type SSMDeletePatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -577,6 +596,7 @@ func (r *SSMDeletePatchBaselineFuture) Get(ctx workflow.Context) (*ssm.DeletePat
 }
 
 type SSMDeleteResourceDataSyncFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -587,6 +607,7 @@ func (r *SSMDeleteResourceDataSyncFuture) Get(ctx workflow.Context) (*ssm.Delete
 }
 
 type SSMDeregisterManagedInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -597,6 +618,7 @@ func (r *SSMDeregisterManagedInstanceFuture) Get(ctx workflow.Context) (*ssm.Der
 }
 
 type SSMDeregisterPatchBaselineForPatchGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -607,6 +629,7 @@ func (r *SSMDeregisterPatchBaselineForPatchGroupFuture) Get(ctx workflow.Context
 }
 
 type SSMDeregisterTargetFromMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -617,6 +640,7 @@ func (r *SSMDeregisterTargetFromMaintenanceWindowFuture) Get(ctx workflow.Contex
 }
 
 type SSMDeregisterTaskFromMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -627,6 +651,7 @@ func (r *SSMDeregisterTaskFromMaintenanceWindowFuture) Get(ctx workflow.Context)
 }
 
 type SSMDescribeActivationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -637,6 +662,7 @@ func (r *SSMDescribeActivationsFuture) Get(ctx workflow.Context) (*ssm.DescribeA
 }
 
 type SSMDescribeAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -647,6 +673,7 @@ func (r *SSMDescribeAssociationFuture) Get(ctx workflow.Context) (*ssm.DescribeA
 }
 
 type SSMDescribeAssociationExecutionTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -657,6 +684,7 @@ func (r *SSMDescribeAssociationExecutionTargetsFuture) Get(ctx workflow.Context)
 }
 
 type SSMDescribeAssociationExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -667,6 +695,7 @@ func (r *SSMDescribeAssociationExecutionsFuture) Get(ctx workflow.Context) (*ssm
 }
 
 type SSMDescribeAutomationExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -677,6 +706,7 @@ func (r *SSMDescribeAutomationExecutionsFuture) Get(ctx workflow.Context) (*ssm.
 }
 
 type SSMDescribeAutomationStepExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -687,6 +717,7 @@ func (r *SSMDescribeAutomationStepExecutionsFuture) Get(ctx workflow.Context) (*
 }
 
 type SSMDescribeAvailablePatchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -697,6 +728,7 @@ func (r *SSMDescribeAvailablePatchesFuture) Get(ctx workflow.Context) (*ssm.Desc
 }
 
 type SSMDescribeDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -707,6 +739,7 @@ func (r *SSMDescribeDocumentFuture) Get(ctx workflow.Context) (*ssm.DescribeDocu
 }
 
 type SSMDescribeDocumentPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -717,6 +750,7 @@ func (r *SSMDescribeDocumentPermissionFuture) Get(ctx workflow.Context) (*ssm.De
 }
 
 type SSMDescribeEffectiveInstanceAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -727,6 +761,7 @@ func (r *SSMDescribeEffectiveInstanceAssociationsFuture) Get(ctx workflow.Contex
 }
 
 type SSMDescribeEffectivePatchesForPatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -737,6 +772,7 @@ func (r *SSMDescribeEffectivePatchesForPatchBaselineFuture) Get(ctx workflow.Con
 }
 
 type SSMDescribeInstanceAssociationsStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -747,6 +783,7 @@ func (r *SSMDescribeInstanceAssociationsStatusFuture) Get(ctx workflow.Context) 
 }
 
 type SSMDescribeInstanceInformationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -757,6 +794,7 @@ func (r *SSMDescribeInstanceInformationFuture) Get(ctx workflow.Context) (*ssm.D
 }
 
 type SSMDescribeInstancePatchStatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -767,6 +805,7 @@ func (r *SSMDescribeInstancePatchStatesFuture) Get(ctx workflow.Context) (*ssm.D
 }
 
 type SSMDescribeInstancePatchStatesForPatchGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -777,6 +816,7 @@ func (r *SSMDescribeInstancePatchStatesForPatchGroupFuture) Get(ctx workflow.Con
 }
 
 type SSMDescribeInstancePatchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -787,6 +827,7 @@ func (r *SSMDescribeInstancePatchesFuture) Get(ctx workflow.Context) (*ssm.Descr
 }
 
 type SSMDescribeInventoryDeletionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -797,6 +838,7 @@ func (r *SSMDescribeInventoryDeletionsFuture) Get(ctx workflow.Context) (*ssm.De
 }
 
 type SSMDescribeMaintenanceWindowExecutionTaskInvocationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -807,6 +849,7 @@ func (r *SSMDescribeMaintenanceWindowExecutionTaskInvocationsFuture) Get(ctx wor
 }
 
 type SSMDescribeMaintenanceWindowExecutionTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -817,6 +860,7 @@ func (r *SSMDescribeMaintenanceWindowExecutionTasksFuture) Get(ctx workflow.Cont
 }
 
 type SSMDescribeMaintenanceWindowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -827,6 +871,7 @@ func (r *SSMDescribeMaintenanceWindowExecutionsFuture) Get(ctx workflow.Context)
 }
 
 type SSMDescribeMaintenanceWindowScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -837,6 +882,7 @@ func (r *SSMDescribeMaintenanceWindowScheduleFuture) Get(ctx workflow.Context) (
 }
 
 type SSMDescribeMaintenanceWindowTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -847,6 +893,7 @@ func (r *SSMDescribeMaintenanceWindowTargetsFuture) Get(ctx workflow.Context) (*
 }
 
 type SSMDescribeMaintenanceWindowTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -857,6 +904,7 @@ func (r *SSMDescribeMaintenanceWindowTasksFuture) Get(ctx workflow.Context) (*ss
 }
 
 type SSMDescribeMaintenanceWindowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -867,6 +915,7 @@ func (r *SSMDescribeMaintenanceWindowsFuture) Get(ctx workflow.Context) (*ssm.De
 }
 
 type SSMDescribeMaintenanceWindowsForTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -877,6 +926,7 @@ func (r *SSMDescribeMaintenanceWindowsForTargetFuture) Get(ctx workflow.Context)
 }
 
 type SSMDescribeOpsItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -887,6 +937,7 @@ func (r *SSMDescribeOpsItemsFuture) Get(ctx workflow.Context) (*ssm.DescribeOpsI
 }
 
 type SSMDescribeParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -897,6 +948,7 @@ func (r *SSMDescribeParametersFuture) Get(ctx workflow.Context) (*ssm.DescribePa
 }
 
 type SSMDescribePatchBaselinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -907,6 +959,7 @@ func (r *SSMDescribePatchBaselinesFuture) Get(ctx workflow.Context) (*ssm.Descri
 }
 
 type SSMDescribePatchGroupStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -917,6 +970,7 @@ func (r *SSMDescribePatchGroupStateFuture) Get(ctx workflow.Context) (*ssm.Descr
 }
 
 type SSMDescribePatchGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -927,6 +981,7 @@ func (r *SSMDescribePatchGroupsFuture) Get(ctx workflow.Context) (*ssm.DescribeP
 }
 
 type SSMDescribePatchPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -937,6 +992,7 @@ func (r *SSMDescribePatchPropertiesFuture) Get(ctx workflow.Context) (*ssm.Descr
 }
 
 type SSMDescribeSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -947,6 +1003,7 @@ func (r *SSMDescribeSessionsFuture) Get(ctx workflow.Context) (*ssm.DescribeSess
 }
 
 type SSMGetAutomationExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -957,6 +1014,7 @@ func (r *SSMGetAutomationExecutionFuture) Get(ctx workflow.Context) (*ssm.GetAut
 }
 
 type SSMGetCalendarStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -967,6 +1025,7 @@ func (r *SSMGetCalendarStateFuture) Get(ctx workflow.Context) (*ssm.GetCalendarS
 }
 
 type SSMGetCommandInvocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -977,6 +1036,7 @@ func (r *SSMGetCommandInvocationFuture) Get(ctx workflow.Context) (*ssm.GetComma
 }
 
 type SSMGetConnectionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -987,6 +1047,7 @@ func (r *SSMGetConnectionStatusFuture) Get(ctx workflow.Context) (*ssm.GetConnec
 }
 
 type SSMGetDefaultPatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -997,6 +1058,7 @@ func (r *SSMGetDefaultPatchBaselineFuture) Get(ctx workflow.Context) (*ssm.GetDe
 }
 
 type SSMGetDeployablePatchSnapshotForInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1007,6 +1069,7 @@ func (r *SSMGetDeployablePatchSnapshotForInstanceFuture) Get(ctx workflow.Contex
 }
 
 type SSMGetDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1017,6 +1080,7 @@ func (r *SSMGetDocumentFuture) Get(ctx workflow.Context) (*ssm.GetDocumentOutput
 }
 
 type SSMGetInventoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1027,6 +1091,7 @@ func (r *SSMGetInventoryFuture) Get(ctx workflow.Context) (*ssm.GetInventoryOutp
 }
 
 type SSMGetInventorySchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1037,6 +1102,7 @@ func (r *SSMGetInventorySchemaFuture) Get(ctx workflow.Context) (*ssm.GetInvento
 }
 
 type SSMGetMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1047,6 +1113,7 @@ func (r *SSMGetMaintenanceWindowFuture) Get(ctx workflow.Context) (*ssm.GetMaint
 }
 
 type SSMGetMaintenanceWindowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1057,6 +1124,7 @@ func (r *SSMGetMaintenanceWindowExecutionFuture) Get(ctx workflow.Context) (*ssm
 }
 
 type SSMGetMaintenanceWindowExecutionTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1067,6 +1135,7 @@ func (r *SSMGetMaintenanceWindowExecutionTaskFuture) Get(ctx workflow.Context) (
 }
 
 type SSMGetMaintenanceWindowExecutionTaskInvocationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1077,6 +1146,7 @@ func (r *SSMGetMaintenanceWindowExecutionTaskInvocationFuture) Get(ctx workflow.
 }
 
 type SSMGetMaintenanceWindowTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1087,6 +1157,7 @@ func (r *SSMGetMaintenanceWindowTaskFuture) Get(ctx workflow.Context) (*ssm.GetM
 }
 
 type SSMGetOpsItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1097,6 +1168,7 @@ func (r *SSMGetOpsItemFuture) Get(ctx workflow.Context) (*ssm.GetOpsItemOutput, 
 }
 
 type SSMGetOpsSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1107,6 +1179,7 @@ func (r *SSMGetOpsSummaryFuture) Get(ctx workflow.Context) (*ssm.GetOpsSummaryOu
 }
 
 type SSMGetParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1117,6 +1190,7 @@ func (r *SSMGetParameterFuture) Get(ctx workflow.Context) (*ssm.GetParameterOutp
 }
 
 type SSMGetParameterHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1127,6 +1201,7 @@ func (r *SSMGetParameterHistoryFuture) Get(ctx workflow.Context) (*ssm.GetParame
 }
 
 type SSMGetParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1137,6 +1212,7 @@ func (r *SSMGetParametersFuture) Get(ctx workflow.Context) (*ssm.GetParametersOu
 }
 
 type SSMGetParametersByPathFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1147,6 +1223,7 @@ func (r *SSMGetParametersByPathFuture) Get(ctx workflow.Context) (*ssm.GetParame
 }
 
 type SSMGetPatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1157,6 +1234,7 @@ func (r *SSMGetPatchBaselineFuture) Get(ctx workflow.Context) (*ssm.GetPatchBase
 }
 
 type SSMGetPatchBaselineForPatchGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1167,6 +1245,7 @@ func (r *SSMGetPatchBaselineForPatchGroupFuture) Get(ctx workflow.Context) (*ssm
 }
 
 type SSMGetServiceSettingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1177,6 +1256,7 @@ func (r *SSMGetServiceSettingFuture) Get(ctx workflow.Context) (*ssm.GetServiceS
 }
 
 type SSMLabelParameterVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1187,6 +1267,7 @@ func (r *SSMLabelParameterVersionFuture) Get(ctx workflow.Context) (*ssm.LabelPa
 }
 
 type SSMListAssociationVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1197,6 +1278,7 @@ func (r *SSMListAssociationVersionsFuture) Get(ctx workflow.Context) (*ssm.ListA
 }
 
 type SSMListAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1207,6 +1289,7 @@ func (r *SSMListAssociationsFuture) Get(ctx workflow.Context) (*ssm.ListAssociat
 }
 
 type SSMListCommandInvocationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1217,6 +1300,7 @@ func (r *SSMListCommandInvocationsFuture) Get(ctx workflow.Context) (*ssm.ListCo
 }
 
 type SSMListCommandsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1227,6 +1311,7 @@ func (r *SSMListCommandsFuture) Get(ctx workflow.Context) (*ssm.ListCommandsOutp
 }
 
 type SSMListComplianceItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1237,6 +1322,7 @@ func (r *SSMListComplianceItemsFuture) Get(ctx workflow.Context) (*ssm.ListCompl
 }
 
 type SSMListComplianceSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1247,6 +1333,7 @@ func (r *SSMListComplianceSummariesFuture) Get(ctx workflow.Context) (*ssm.ListC
 }
 
 type SSMListDocumentVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1257,6 +1344,7 @@ func (r *SSMListDocumentVersionsFuture) Get(ctx workflow.Context) (*ssm.ListDocu
 }
 
 type SSMListDocumentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1267,6 +1355,7 @@ func (r *SSMListDocumentsFuture) Get(ctx workflow.Context) (*ssm.ListDocumentsOu
 }
 
 type SSMListInventoryEntriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1277,6 +1366,7 @@ func (r *SSMListInventoryEntriesFuture) Get(ctx workflow.Context) (*ssm.ListInve
 }
 
 type SSMListResourceComplianceSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1287,6 +1377,7 @@ func (r *SSMListResourceComplianceSummariesFuture) Get(ctx workflow.Context) (*s
 }
 
 type SSMListResourceDataSyncFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1297,6 +1388,7 @@ func (r *SSMListResourceDataSyncFuture) Get(ctx workflow.Context) (*ssm.ListReso
 }
 
 type SSMListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1307,6 +1399,7 @@ func (r *SSMListTagsForResourceFuture) Get(ctx workflow.Context) (*ssm.ListTagsF
 }
 
 type SSMModifyDocumentPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1317,6 +1410,7 @@ func (r *SSMModifyDocumentPermissionFuture) Get(ctx workflow.Context) (*ssm.Modi
 }
 
 type SSMPutComplianceItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1327,6 +1421,7 @@ func (r *SSMPutComplianceItemsFuture) Get(ctx workflow.Context) (*ssm.PutComplia
 }
 
 type SSMPutInventoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1337,6 +1432,7 @@ func (r *SSMPutInventoryFuture) Get(ctx workflow.Context) (*ssm.PutInventoryOutp
 }
 
 type SSMPutParameterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1347,6 +1443,7 @@ func (r *SSMPutParameterFuture) Get(ctx workflow.Context) (*ssm.PutParameterOutp
 }
 
 type SSMRegisterDefaultPatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1357,6 +1454,7 @@ func (r *SSMRegisterDefaultPatchBaselineFuture) Get(ctx workflow.Context) (*ssm.
 }
 
 type SSMRegisterPatchBaselineForPatchGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1367,6 +1465,7 @@ func (r *SSMRegisterPatchBaselineForPatchGroupFuture) Get(ctx workflow.Context) 
 }
 
 type SSMRegisterTargetWithMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1377,6 +1476,7 @@ func (r *SSMRegisterTargetWithMaintenanceWindowFuture) Get(ctx workflow.Context)
 }
 
 type SSMRegisterTaskWithMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1387,6 +1487,7 @@ func (r *SSMRegisterTaskWithMaintenanceWindowFuture) Get(ctx workflow.Context) (
 }
 
 type SSMRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1397,6 +1498,7 @@ func (r *SSMRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*ssm.Remove
 }
 
 type SSMResetServiceSettingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1407,6 +1509,7 @@ func (r *SSMResetServiceSettingFuture) Get(ctx workflow.Context) (*ssm.ResetServ
 }
 
 type SSMResumeSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1417,6 +1520,7 @@ func (r *SSMResumeSessionFuture) Get(ctx workflow.Context) (*ssm.ResumeSessionOu
 }
 
 type SSMSendAutomationSignalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1427,6 +1531,7 @@ func (r *SSMSendAutomationSignalFuture) Get(ctx workflow.Context) (*ssm.SendAuto
 }
 
 type SSMSendCommandFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1437,6 +1542,7 @@ func (r *SSMSendCommandFuture) Get(ctx workflow.Context) (*ssm.SendCommandOutput
 }
 
 type SSMStartAssociationsOnceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1447,6 +1553,7 @@ func (r *SSMStartAssociationsOnceFuture) Get(ctx workflow.Context) (*ssm.StartAs
 }
 
 type SSMStartAutomationExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1457,6 +1564,7 @@ func (r *SSMStartAutomationExecutionFuture) Get(ctx workflow.Context) (*ssm.Star
 }
 
 type SSMStartSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1467,6 +1575,7 @@ func (r *SSMStartSessionFuture) Get(ctx workflow.Context) (*ssm.StartSessionOutp
 }
 
 type SSMStopAutomationExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1477,6 +1586,7 @@ func (r *SSMStopAutomationExecutionFuture) Get(ctx workflow.Context) (*ssm.StopA
 }
 
 type SSMTerminateSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1487,6 +1597,7 @@ func (r *SSMTerminateSessionFuture) Get(ctx workflow.Context) (*ssm.TerminateSes
 }
 
 type SSMUpdateAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1497,6 +1608,7 @@ func (r *SSMUpdateAssociationFuture) Get(ctx workflow.Context) (*ssm.UpdateAssoc
 }
 
 type SSMUpdateAssociationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1507,6 +1619,7 @@ func (r *SSMUpdateAssociationStatusFuture) Get(ctx workflow.Context) (*ssm.Updat
 }
 
 type SSMUpdateDocumentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1517,6 +1630,7 @@ func (r *SSMUpdateDocumentFuture) Get(ctx workflow.Context) (*ssm.UpdateDocument
 }
 
 type SSMUpdateDocumentDefaultVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1527,6 +1641,7 @@ func (r *SSMUpdateDocumentDefaultVersionFuture) Get(ctx workflow.Context) (*ssm.
 }
 
 type SSMUpdateMaintenanceWindowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1537,6 +1652,7 @@ func (r *SSMUpdateMaintenanceWindowFuture) Get(ctx workflow.Context) (*ssm.Updat
 }
 
 type SSMUpdateMaintenanceWindowTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1547,6 +1663,7 @@ func (r *SSMUpdateMaintenanceWindowTargetFuture) Get(ctx workflow.Context) (*ssm
 }
 
 type SSMUpdateMaintenanceWindowTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1557,6 +1674,7 @@ func (r *SSMUpdateMaintenanceWindowTaskFuture) Get(ctx workflow.Context) (*ssm.U
 }
 
 type SSMUpdateManagedInstanceRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1567,6 +1685,7 @@ func (r *SSMUpdateManagedInstanceRoleFuture) Get(ctx workflow.Context) (*ssm.Upd
 }
 
 type SSMUpdateOpsItemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1577,6 +1696,7 @@ func (r *SSMUpdateOpsItemFuture) Get(ctx workflow.Context) (*ssm.UpdateOpsItemOu
 }
 
 type SSMUpdatePatchBaselineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1587,6 +1707,7 @@ func (r *SSMUpdatePatchBaselineFuture) Get(ctx workflow.Context) (*ssm.UpdatePat
 }
 
 type SSMUpdateResourceDataSyncFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1597,6 +1718,7 @@ func (r *SSMUpdateResourceDataSyncFuture) Get(ctx workflow.Context) (*ssm.Update
 }
 
 type SSMUpdateServiceSettingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

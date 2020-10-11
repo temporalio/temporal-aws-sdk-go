@@ -81,6 +81,7 @@ func NewMediaStoreStub() MediaStoreClient {
 }
 
 type MediaStoreCreateContainerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +92,7 @@ func (r *MediaStoreCreateContainerFuture) Get(ctx workflow.Context) (*mediastore
 }
 
 type MediaStoreDeleteContainerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +103,7 @@ func (r *MediaStoreDeleteContainerFuture) Get(ctx workflow.Context) (*mediastore
 }
 
 type MediaStoreDeleteContainerPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +114,7 @@ func (r *MediaStoreDeleteContainerPolicyFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaStoreDeleteCorsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +125,7 @@ func (r *MediaStoreDeleteCorsPolicyFuture) Get(ctx workflow.Context) (*mediastor
 }
 
 type MediaStoreDeleteLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +136,7 @@ func (r *MediaStoreDeleteLifecyclePolicyFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaStoreDeleteMetricPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +147,7 @@ func (r *MediaStoreDeleteMetricPolicyFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStoreDescribeContainerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +158,7 @@ func (r *MediaStoreDescribeContainerFuture) Get(ctx workflow.Context) (*mediasto
 }
 
 type MediaStoreGetContainerPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +169,7 @@ func (r *MediaStoreGetContainerPolicyFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStoreGetCorsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +180,7 @@ func (r *MediaStoreGetCorsPolicyFuture) Get(ctx workflow.Context) (*mediastore.G
 }
 
 type MediaStoreGetLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +191,7 @@ func (r *MediaStoreGetLifecyclePolicyFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStoreGetMetricPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +202,7 @@ func (r *MediaStoreGetMetricPolicyFuture) Get(ctx workflow.Context) (*mediastore
 }
 
 type MediaStoreListContainersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +213,7 @@ func (r *MediaStoreListContainersFuture) Get(ctx workflow.Context) (*mediastore.
 }
 
 type MediaStoreListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +224,7 @@ func (r *MediaStoreListTagsForResourceFuture) Get(ctx workflow.Context) (*medias
 }
 
 type MediaStorePutContainerPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +235,7 @@ func (r *MediaStorePutContainerPolicyFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStorePutCorsPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +246,7 @@ func (r *MediaStorePutCorsPolicyFuture) Get(ctx workflow.Context) (*mediastore.P
 }
 
 type MediaStorePutLifecyclePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +257,7 @@ func (r *MediaStorePutLifecyclePolicyFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStorePutMetricPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +268,7 @@ func (r *MediaStorePutMetricPolicyFuture) Get(ctx workflow.Context) (*mediastore
 }
 
 type MediaStoreStartAccessLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +279,7 @@ func (r *MediaStoreStartAccessLoggingFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStoreStopAccessLoggingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +290,7 @@ func (r *MediaStoreStopAccessLoggingFuture) Get(ctx workflow.Context) (*mediasto
 }
 
 type MediaStoreTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +301,7 @@ func (r *MediaStoreTagResourceFuture) Get(ctx workflow.Context) (*mediastore.Tag
 }
 
 type MediaStoreUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

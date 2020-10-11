@@ -117,6 +117,7 @@ func NewSNSStub() SNSClient {
 }
 
 type SNSAddPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +128,7 @@ func (r *SNSAddPermissionFuture) Get(ctx workflow.Context) (*sns.AddPermissionOu
 }
 
 type SNSCheckIfPhoneNumberIsOptedOutFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +139,7 @@ func (r *SNSCheckIfPhoneNumberIsOptedOutFuture) Get(ctx workflow.Context) (*sns.
 }
 
 type SNSConfirmSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +150,7 @@ func (r *SNSConfirmSubscriptionFuture) Get(ctx workflow.Context) (*sns.ConfirmSu
 }
 
 type SNSCreatePlatformApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +161,7 @@ func (r *SNSCreatePlatformApplicationFuture) Get(ctx workflow.Context) (*sns.Cre
 }
 
 type SNSCreatePlatformEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +172,7 @@ func (r *SNSCreatePlatformEndpointFuture) Get(ctx workflow.Context) (*sns.Create
 }
 
 type SNSCreateTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +183,7 @@ func (r *SNSCreateTopicFuture) Get(ctx workflow.Context) (*sns.CreateTopicOutput
 }
 
 type SNSDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +194,7 @@ func (r *SNSDeleteEndpointFuture) Get(ctx workflow.Context) (*sns.DeleteEndpoint
 }
 
 type SNSDeletePlatformApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +205,7 @@ func (r *SNSDeletePlatformApplicationFuture) Get(ctx workflow.Context) (*sns.Del
 }
 
 type SNSDeleteTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +216,7 @@ func (r *SNSDeleteTopicFuture) Get(ctx workflow.Context) (*sns.DeleteTopicOutput
 }
 
 type SNSGetEndpointAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +227,7 @@ func (r *SNSGetEndpointAttributesFuture) Get(ctx workflow.Context) (*sns.GetEndp
 }
 
 type SNSGetPlatformApplicationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +238,7 @@ func (r *SNSGetPlatformApplicationAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type SNSGetSMSAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +249,7 @@ func (r *SNSGetSMSAttributesFuture) Get(ctx workflow.Context) (*sns.GetSMSAttrib
 }
 
 type SNSGetSubscriptionAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +260,7 @@ func (r *SNSGetSubscriptionAttributesFuture) Get(ctx workflow.Context) (*sns.Get
 }
 
 type SNSGetTopicAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +271,7 @@ func (r *SNSGetTopicAttributesFuture) Get(ctx workflow.Context) (*sns.GetTopicAt
 }
 
 type SNSListEndpointsByPlatformApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +282,7 @@ func (r *SNSListEndpointsByPlatformApplicationFuture) Get(ctx workflow.Context) 
 }
 
 type SNSListPhoneNumbersOptedOutFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +293,7 @@ func (r *SNSListPhoneNumbersOptedOutFuture) Get(ctx workflow.Context) (*sns.List
 }
 
 type SNSListPlatformApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +304,7 @@ func (r *SNSListPlatformApplicationsFuture) Get(ctx workflow.Context) (*sns.List
 }
 
 type SNSListSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +315,7 @@ func (r *SNSListSubscriptionsFuture) Get(ctx workflow.Context) (*sns.ListSubscri
 }
 
 type SNSListSubscriptionsByTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +326,7 @@ func (r *SNSListSubscriptionsByTopicFuture) Get(ctx workflow.Context) (*sns.List
 }
 
 type SNSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +337,7 @@ func (r *SNSListTagsForResourceFuture) Get(ctx workflow.Context) (*sns.ListTagsF
 }
 
 type SNSListTopicsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +348,7 @@ func (r *SNSListTopicsFuture) Get(ctx workflow.Context) (*sns.ListTopicsOutput, 
 }
 
 type SNSOptInPhoneNumberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +359,7 @@ func (r *SNSOptInPhoneNumberFuture) Get(ctx workflow.Context) (*sns.OptInPhoneNu
 }
 
 type SNSPublishFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +370,7 @@ func (r *SNSPublishFuture) Get(ctx workflow.Context) (*sns.PublishOutput, error)
 }
 
 type SNSRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +381,7 @@ func (r *SNSRemovePermissionFuture) Get(ctx workflow.Context) (*sns.RemovePermis
 }
 
 type SNSSetEndpointAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +392,7 @@ func (r *SNSSetEndpointAttributesFuture) Get(ctx workflow.Context) (*sns.SetEndp
 }
 
 type SNSSetPlatformApplicationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +403,7 @@ func (r *SNSSetPlatformApplicationAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type SNSSetSMSAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +414,7 @@ func (r *SNSSetSMSAttributesFuture) Get(ctx workflow.Context) (*sns.SetSMSAttrib
 }
 
 type SNSSetSubscriptionAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +425,7 @@ func (r *SNSSetSubscriptionAttributesFuture) Get(ctx workflow.Context) (*sns.Set
 }
 
 type SNSSetTopicAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +436,7 @@ func (r *SNSSetTopicAttributesFuture) Get(ctx workflow.Context) (*sns.SetTopicAt
 }
 
 type SNSSubscribeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +447,7 @@ func (r *SNSSubscribeFuture) Get(ctx workflow.Context) (*sns.SubscribeOutput, er
 }
 
 type SNSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +458,7 @@ func (r *SNSTagResourceFuture) Get(ctx workflow.Context) (*sns.TagResourceOutput
 }
 
 type SNSUnsubscribeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +469,7 @@ func (r *SNSUnsubscribeFuture) Get(ctx workflow.Context) (*sns.UnsubscribeOutput
 }
 
 type SNSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

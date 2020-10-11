@@ -54,6 +54,7 @@ func NewDetectiveStub() DetectiveClient {
 }
 
 type DetectiveAcceptInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -64,6 +65,7 @@ func (r *DetectiveAcceptInvitationFuture) Get(ctx workflow.Context) (*detective.
 }
 
 type DetectiveCreateGraphFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -74,6 +76,7 @@ func (r *DetectiveCreateGraphFuture) Get(ctx workflow.Context) (*detective.Creat
 }
 
 type DetectiveCreateMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -84,6 +87,7 @@ func (r *DetectiveCreateMembersFuture) Get(ctx workflow.Context) (*detective.Cre
 }
 
 type DetectiveDeleteGraphFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +98,7 @@ func (r *DetectiveDeleteGraphFuture) Get(ctx workflow.Context) (*detective.Delet
 }
 
 type DetectiveDeleteMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +109,7 @@ func (r *DetectiveDeleteMembersFuture) Get(ctx workflow.Context) (*detective.Del
 }
 
 type DetectiveDisassociateMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +120,7 @@ func (r *DetectiveDisassociateMembershipFuture) Get(ctx workflow.Context) (*dete
 }
 
 type DetectiveGetMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +131,7 @@ func (r *DetectiveGetMembersFuture) Get(ctx workflow.Context) (*detective.GetMem
 }
 
 type DetectiveListGraphsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +142,7 @@ func (r *DetectiveListGraphsFuture) Get(ctx workflow.Context) (*detective.ListGr
 }
 
 type DetectiveListInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +153,7 @@ func (r *DetectiveListInvitationsFuture) Get(ctx workflow.Context) (*detective.L
 }
 
 type DetectiveListMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +164,7 @@ func (r *DetectiveListMembersFuture) Get(ctx workflow.Context) (*detective.ListM
 }
 
 type DetectiveRejectInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +175,7 @@ func (r *DetectiveRejectInvitationFuture) Get(ctx workflow.Context) (*detective.
 }
 
 type DetectiveStartMonitoringMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

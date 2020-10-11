@@ -90,6 +90,7 @@ func NewRAMStub() RAMClient {
 }
 
 type RAMAcceptResourceShareInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +101,7 @@ func (r *RAMAcceptResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram
 }
 
 type RAMAssociateResourceShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +112,7 @@ func (r *RAMAssociateResourceShareFuture) Get(ctx workflow.Context) (*ram.Associ
 }
 
 type RAMAssociateResourceSharePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +123,7 @@ func (r *RAMAssociateResourceSharePermissionFuture) Get(ctx workflow.Context) (*
 }
 
 type RAMCreateResourceShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +134,7 @@ func (r *RAMCreateResourceShareFuture) Get(ctx workflow.Context) (*ram.CreateRes
 }
 
 type RAMDeleteResourceShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +145,7 @@ func (r *RAMDeleteResourceShareFuture) Get(ctx workflow.Context) (*ram.DeleteRes
 }
 
 type RAMDisassociateResourceShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +156,7 @@ func (r *RAMDisassociateResourceShareFuture) Get(ctx workflow.Context) (*ram.Dis
 }
 
 type RAMDisassociateResourceSharePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +167,7 @@ func (r *RAMDisassociateResourceSharePermissionFuture) Get(ctx workflow.Context)
 }
 
 type RAMEnableSharingWithAwsOrganizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +178,7 @@ func (r *RAMEnableSharingWithAwsOrganizationFuture) Get(ctx workflow.Context) (*
 }
 
 type RAMGetPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +189,7 @@ func (r *RAMGetPermissionFuture) Get(ctx workflow.Context) (*ram.GetPermissionOu
 }
 
 type RAMGetResourcePoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +200,7 @@ func (r *RAMGetResourcePoliciesFuture) Get(ctx workflow.Context) (*ram.GetResour
 }
 
 type RAMGetResourceShareAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -200,6 +211,7 @@ func (r *RAMGetResourceShareAssociationsFuture) Get(ctx workflow.Context) (*ram.
 }
 
 type RAMGetResourceShareInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -210,6 +222,7 @@ func (r *RAMGetResourceShareInvitationsFuture) Get(ctx workflow.Context) (*ram.G
 }
 
 type RAMGetResourceSharesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -220,6 +233,7 @@ func (r *RAMGetResourceSharesFuture) Get(ctx workflow.Context) (*ram.GetResource
 }
 
 type RAMListPendingInvitationResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -230,6 +244,7 @@ func (r *RAMListPendingInvitationResourcesFuture) Get(ctx workflow.Context) (*ra
 }
 
 type RAMListPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -240,6 +255,7 @@ func (r *RAMListPermissionsFuture) Get(ctx workflow.Context) (*ram.ListPermissio
 }
 
 type RAMListPrincipalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -250,6 +266,7 @@ func (r *RAMListPrincipalsFuture) Get(ctx workflow.Context) (*ram.ListPrincipals
 }
 
 type RAMListResourceSharePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -260,6 +277,7 @@ func (r *RAMListResourceSharePermissionsFuture) Get(ctx workflow.Context) (*ram.
 }
 
 type RAMListResourceTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -270,6 +288,7 @@ func (r *RAMListResourceTypesFuture) Get(ctx workflow.Context) (*ram.ListResourc
 }
 
 type RAMListResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -280,6 +299,7 @@ func (r *RAMListResourcesFuture) Get(ctx workflow.Context) (*ram.ListResourcesOu
 }
 
 type RAMPromoteResourceShareCreatedFromPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -290,6 +310,7 @@ func (r *RAMPromoteResourceShareCreatedFromPolicyFuture) Get(ctx workflow.Contex
 }
 
 type RAMRejectResourceShareInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -300,6 +321,7 @@ func (r *RAMRejectResourceShareInvitationFuture) Get(ctx workflow.Context) (*ram
 }
 
 type RAMTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -310,6 +332,7 @@ func (r *RAMTagResourceFuture) Get(ctx workflow.Context) (*ram.TagResourceOutput
 }
 
 type RAMUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -320,6 +343,7 @@ func (r *RAMUntagResourceFuture) Get(ctx workflow.Context) (*ram.UntagResourceOu
 }
 
 type RAMUpdateResourceShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

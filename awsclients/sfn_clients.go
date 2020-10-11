@@ -84,6 +84,7 @@ func NewSFNStub() SFNClient {
 }
 
 type SFNCreateActivityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +95,7 @@ func (r *SFNCreateActivityFuture) Get(ctx workflow.Context) (*sfn.CreateActivity
 }
 
 type SFNCreateStateMachineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +106,7 @@ func (r *SFNCreateStateMachineFuture) Get(ctx workflow.Context) (*sfn.CreateStat
 }
 
 type SFNDeleteActivityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +117,7 @@ func (r *SFNDeleteActivityFuture) Get(ctx workflow.Context) (*sfn.DeleteActivity
 }
 
 type SFNDeleteStateMachineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +128,7 @@ func (r *SFNDeleteStateMachineFuture) Get(ctx workflow.Context) (*sfn.DeleteStat
 }
 
 type SFNDescribeActivityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +139,7 @@ func (r *SFNDescribeActivityFuture) Get(ctx workflow.Context) (*sfn.DescribeActi
 }
 
 type SFNDescribeExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +150,7 @@ func (r *SFNDescribeExecutionFuture) Get(ctx workflow.Context) (*sfn.DescribeExe
 }
 
 type SFNDescribeStateMachineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +161,7 @@ func (r *SFNDescribeStateMachineFuture) Get(ctx workflow.Context) (*sfn.Describe
 }
 
 type SFNDescribeStateMachineForExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +172,7 @@ func (r *SFNDescribeStateMachineForExecutionFuture) Get(ctx workflow.Context) (*
 }
 
 type SFNGetActivityTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +183,7 @@ func (r *SFNGetActivityTaskFuture) Get(ctx workflow.Context) (*sfn.GetActivityTa
 }
 
 type SFNGetExecutionHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +194,7 @@ func (r *SFNGetExecutionHistoryFuture) Get(ctx workflow.Context) (*sfn.GetExecut
 }
 
 type SFNListActivitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +205,7 @@ func (r *SFNListActivitiesFuture) Get(ctx workflow.Context) (*sfn.ListActivities
 }
 
 type SFNListExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +216,7 @@ func (r *SFNListExecutionsFuture) Get(ctx workflow.Context) (*sfn.ListExecutions
 }
 
 type SFNListStateMachinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +227,7 @@ func (r *SFNListStateMachinesFuture) Get(ctx workflow.Context) (*sfn.ListStateMa
 }
 
 type SFNListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +238,7 @@ func (r *SFNListTagsForResourceFuture) Get(ctx workflow.Context) (*sfn.ListTagsF
 }
 
 type SFNSendTaskFailureFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +249,7 @@ func (r *SFNSendTaskFailureFuture) Get(ctx workflow.Context) (*sfn.SendTaskFailu
 }
 
 type SFNSendTaskHeartbeatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +260,7 @@ func (r *SFNSendTaskHeartbeatFuture) Get(ctx workflow.Context) (*sfn.SendTaskHea
 }
 
 type SFNSendTaskSuccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +271,7 @@ func (r *SFNSendTaskSuccessFuture) Get(ctx workflow.Context) (*sfn.SendTaskSucce
 }
 
 type SFNStartExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +282,7 @@ func (r *SFNStartExecutionFuture) Get(ctx workflow.Context) (*sfn.StartExecution
 }
 
 type SFNStopExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +293,7 @@ func (r *SFNStopExecutionFuture) Get(ctx workflow.Context) (*sfn.StopExecutionOu
 }
 
 type SFNTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +304,7 @@ func (r *SFNTagResourceFuture) Get(ctx workflow.Context) (*sfn.TagResourceOutput
 }
 
 type SFNUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +315,7 @@ func (r *SFNUntagResourceFuture) Get(ctx workflow.Context) (*sfn.UntagResourceOu
 }
 
 type SFNUpdateStateMachineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

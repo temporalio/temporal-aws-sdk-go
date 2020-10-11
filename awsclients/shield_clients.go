@@ -87,6 +87,7 @@ func NewShieldStub() ShieldClient {
 }
 
 type ShieldAssociateDRTLogBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +98,7 @@ func (r *ShieldAssociateDRTLogBucketFuture) Get(ctx workflow.Context) (*shield.A
 }
 
 type ShieldAssociateDRTRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +109,7 @@ func (r *ShieldAssociateDRTRoleFuture) Get(ctx workflow.Context) (*shield.Associ
 }
 
 type ShieldAssociateHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +120,7 @@ func (r *ShieldAssociateHealthCheckFuture) Get(ctx workflow.Context) (*shield.As
 }
 
 type ShieldAssociateProactiveEngagementDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +131,7 @@ func (r *ShieldAssociateProactiveEngagementDetailsFuture) Get(ctx workflow.Conte
 }
 
 type ShieldCreateProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +142,7 @@ func (r *ShieldCreateProtectionFuture) Get(ctx workflow.Context) (*shield.Create
 }
 
 type ShieldCreateSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +153,7 @@ func (r *ShieldCreateSubscriptionFuture) Get(ctx workflow.Context) (*shield.Crea
 }
 
 type ShieldDeleteProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +164,7 @@ func (r *ShieldDeleteProtectionFuture) Get(ctx workflow.Context) (*shield.Delete
 }
 
 type ShieldDeleteSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +175,7 @@ func (r *ShieldDeleteSubscriptionFuture) Get(ctx workflow.Context) (*shield.Dele
 }
 
 type ShieldDescribeAttackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +186,7 @@ func (r *ShieldDescribeAttackFuture) Get(ctx workflow.Context) (*shield.Describe
 }
 
 type ShieldDescribeDRTAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +197,7 @@ func (r *ShieldDescribeDRTAccessFuture) Get(ctx workflow.Context) (*shield.Descr
 }
 
 type ShieldDescribeEmergencyContactSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +208,7 @@ func (r *ShieldDescribeEmergencyContactSettingsFuture) Get(ctx workflow.Context)
 }
 
 type ShieldDescribeProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +219,7 @@ func (r *ShieldDescribeProtectionFuture) Get(ctx workflow.Context) (*shield.Desc
 }
 
 type ShieldDescribeSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +230,7 @@ func (r *ShieldDescribeSubscriptionFuture) Get(ctx workflow.Context) (*shield.De
 }
 
 type ShieldDisableProactiveEngagementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +241,7 @@ func (r *ShieldDisableProactiveEngagementFuture) Get(ctx workflow.Context) (*shi
 }
 
 type ShieldDisassociateDRTLogBucketFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +252,7 @@ func (r *ShieldDisassociateDRTLogBucketFuture) Get(ctx workflow.Context) (*shiel
 }
 
 type ShieldDisassociateDRTRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +263,7 @@ func (r *ShieldDisassociateDRTRoleFuture) Get(ctx workflow.Context) (*shield.Dis
 }
 
 type ShieldDisassociateHealthCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +274,7 @@ func (r *ShieldDisassociateHealthCheckFuture) Get(ctx workflow.Context) (*shield
 }
 
 type ShieldEnableProactiveEngagementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +285,7 @@ func (r *ShieldEnableProactiveEngagementFuture) Get(ctx workflow.Context) (*shie
 }
 
 type ShieldGetSubscriptionStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +296,7 @@ func (r *ShieldGetSubscriptionStateFuture) Get(ctx workflow.Context) (*shield.Ge
 }
 
 type ShieldListAttacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +307,7 @@ func (r *ShieldListAttacksFuture) Get(ctx workflow.Context) (*shield.ListAttacks
 }
 
 type ShieldListProtectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +318,7 @@ func (r *ShieldListProtectionsFuture) Get(ctx workflow.Context) (*shield.ListPro
 }
 
 type ShieldUpdateEmergencyContactSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +329,7 @@ func (r *ShieldUpdateEmergencyContactSettingsFuture) Get(ctx workflow.Context) (
 }
 
 type ShieldUpdateSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

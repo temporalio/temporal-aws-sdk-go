@@ -21,6 +21,7 @@ func NewKinesisVideoMediaStub() KinesisVideoMediaClient {
 }
 
 type KinesisVideoMediaGetMediaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

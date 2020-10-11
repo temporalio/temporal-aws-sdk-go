@@ -228,6 +228,7 @@ func NewSESV2Stub() SESV2Client {
 }
 
 type SESV2CreateConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +239,7 @@ func (r *SESV2CreateConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.Cr
 }
 
 type SESV2CreateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +250,7 @@ func (r *SESV2CreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Con
 }
 
 type SESV2CreateCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +261,7 @@ func (r *SESV2CreateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Cont
 }
 
 type SESV2CreateDedicatedIpPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +272,7 @@ func (r *SESV2CreateDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.Cre
 }
 
 type SESV2CreateDeliverabilityTestReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +283,7 @@ func (r *SESV2CreateDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*
 }
 
 type SESV2CreateEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +294,7 @@ func (r *SESV2CreateEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.Creat
 }
 
 type SESV2CreateEmailIdentityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +305,7 @@ func (r *SESV2CreateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2
 }
 
 type SESV2CreateEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +316,7 @@ func (r *SESV2CreateEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.Creat
 }
 
 type SESV2CreateImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +327,7 @@ func (r *SESV2CreateImportJobFuture) Get(ctx workflow.Context) (*sesv2.CreateImp
 }
 
 type SESV2DeleteConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +338,7 @@ func (r *SESV2DeleteConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.De
 }
 
 type SESV2DeleteConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +349,7 @@ func (r *SESV2DeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Con
 }
 
 type SESV2DeleteCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +360,7 @@ func (r *SESV2DeleteCustomVerificationEmailTemplateFuture) Get(ctx workflow.Cont
 }
 
 type SESV2DeleteDedicatedIpPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +371,7 @@ func (r *SESV2DeleteDedicatedIpPoolFuture) Get(ctx workflow.Context) (*sesv2.Del
 }
 
 type SESV2DeleteEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +382,7 @@ func (r *SESV2DeleteEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.Delet
 }
 
 type SESV2DeleteEmailIdentityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +393,7 @@ func (r *SESV2DeleteEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2
 }
 
 type SESV2DeleteEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +404,7 @@ func (r *SESV2DeleteEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.Delet
 }
 
 type SESV2DeleteSuppressedDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +415,7 @@ func (r *SESV2DeleteSuppressedDestinationFuture) Get(ctx workflow.Context) (*ses
 }
 
 type SESV2GetAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +426,7 @@ func (r *SESV2GetAccountFuture) Get(ctx workflow.Context) (*sesv2.GetAccountOutp
 }
 
 type SESV2GetBlacklistReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +437,7 @@ func (r *SESV2GetBlacklistReportsFuture) Get(ctx workflow.Context) (*sesv2.GetBl
 }
 
 type SESV2GetConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +448,7 @@ func (r *SESV2GetConfigurationSetFuture) Get(ctx workflow.Context) (*sesv2.GetCo
 }
 
 type SESV2GetConfigurationSetEventDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +459,7 @@ func (r *SESV2GetConfigurationSetEventDestinationsFuture) Get(ctx workflow.Conte
 }
 
 type SESV2GetCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +470,7 @@ func (r *SESV2GetCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context
 }
 
 type SESV2GetDedicatedIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +481,7 @@ func (r *SESV2GetDedicatedIpFuture) Get(ctx workflow.Context) (*sesv2.GetDedicat
 }
 
 type SESV2GetDedicatedIpsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +492,7 @@ func (r *SESV2GetDedicatedIpsFuture) Get(ctx workflow.Context) (*sesv2.GetDedica
 }
 
 type SESV2GetDeliverabilityDashboardOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +503,7 @@ func (r *SESV2GetDeliverabilityDashboardOptionsFuture) Get(ctx workflow.Context)
 }
 
 type SESV2GetDeliverabilityTestReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +514,7 @@ func (r *SESV2GetDeliverabilityTestReportFuture) Get(ctx workflow.Context) (*ses
 }
 
 type SESV2GetDomainDeliverabilityCampaignFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +525,7 @@ func (r *SESV2GetDomainDeliverabilityCampaignFuture) Get(ctx workflow.Context) (
 }
 
 type SESV2GetDomainStatisticsReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +536,7 @@ func (r *SESV2GetDomainStatisticsReportFuture) Get(ctx workflow.Context) (*sesv2
 }
 
 type SESV2GetEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +547,7 @@ func (r *SESV2GetEmailIdentityFuture) Get(ctx workflow.Context) (*sesv2.GetEmail
 }
 
 type SESV2GetEmailIdentityPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +558,7 @@ func (r *SESV2GetEmailIdentityPoliciesFuture) Get(ctx workflow.Context) (*sesv2.
 }
 
 type SESV2GetEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +569,7 @@ func (r *SESV2GetEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.GetEmail
 }
 
 type SESV2GetImportJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +580,7 @@ func (r *SESV2GetImportJobFuture) Get(ctx workflow.Context) (*sesv2.GetImportJob
 }
 
 type SESV2GetSuppressedDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +591,7 @@ func (r *SESV2GetSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.
 }
 
 type SESV2ListConfigurationSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +602,7 @@ func (r *SESV2ListConfigurationSetsFuture) Get(ctx workflow.Context) (*sesv2.Lis
 }
 
 type SESV2ListCustomVerificationEmailTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +613,7 @@ func (r *SESV2ListCustomVerificationEmailTemplatesFuture) Get(ctx workflow.Conte
 }
 
 type SESV2ListDedicatedIpPoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +624,7 @@ func (r *SESV2ListDedicatedIpPoolsFuture) Get(ctx workflow.Context) (*sesv2.List
 }
 
 type SESV2ListDeliverabilityTestReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +635,7 @@ func (r *SESV2ListDeliverabilityTestReportsFuture) Get(ctx workflow.Context) (*s
 }
 
 type SESV2ListDomainDeliverabilityCampaignsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +646,7 @@ func (r *SESV2ListDomainDeliverabilityCampaignsFuture) Get(ctx workflow.Context)
 }
 
 type SESV2ListEmailIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +657,7 @@ func (r *SESV2ListEmailIdentitiesFuture) Get(ctx workflow.Context) (*sesv2.ListE
 }
 
 type SESV2ListEmailTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +668,7 @@ func (r *SESV2ListEmailTemplatesFuture) Get(ctx workflow.Context) (*sesv2.ListEm
 }
 
 type SESV2ListImportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +679,7 @@ func (r *SESV2ListImportJobsFuture) Get(ctx workflow.Context) (*sesv2.ListImport
 }
 
 type SESV2ListSuppressedDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +690,7 @@ func (r *SESV2ListSuppressedDestinationsFuture) Get(ctx workflow.Context) (*sesv
 }
 
 type SESV2ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +701,7 @@ func (r *SESV2ListTagsForResourceFuture) Get(ctx workflow.Context) (*sesv2.ListT
 }
 
 type SESV2PutAccountDedicatedIpWarmupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -668,6 +712,7 @@ func (r *SESV2PutAccountDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Cont
 }
 
 type SESV2PutAccountDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -678,6 +723,7 @@ func (r *SESV2PutAccountDetailsFuture) Get(ctx workflow.Context) (*sesv2.PutAcco
 }
 
 type SESV2PutAccountSendingAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -688,6 +734,7 @@ func (r *SESV2PutAccountSendingAttributesFuture) Get(ctx workflow.Context) (*ses
 }
 
 type SESV2PutAccountSuppressionAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -698,6 +745,7 @@ func (r *SESV2PutAccountSuppressionAttributesFuture) Get(ctx workflow.Context) (
 }
 
 type SESV2PutConfigurationSetDeliveryOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -708,6 +756,7 @@ func (r *SESV2PutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context
 }
 
 type SESV2PutConfigurationSetReputationOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -718,6 +767,7 @@ func (r *SESV2PutConfigurationSetReputationOptionsFuture) Get(ctx workflow.Conte
 }
 
 type SESV2PutConfigurationSetSendingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -728,6 +778,7 @@ func (r *SESV2PutConfigurationSetSendingOptionsFuture) Get(ctx workflow.Context)
 }
 
 type SESV2PutConfigurationSetSuppressionOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -738,6 +789,7 @@ func (r *SESV2PutConfigurationSetSuppressionOptionsFuture) Get(ctx workflow.Cont
 }
 
 type SESV2PutConfigurationSetTrackingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -748,6 +800,7 @@ func (r *SESV2PutConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Context
 }
 
 type SESV2PutDedicatedIpInPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -758,6 +811,7 @@ func (r *SESV2PutDedicatedIpInPoolFuture) Get(ctx workflow.Context) (*sesv2.PutD
 }
 
 type SESV2PutDedicatedIpWarmupAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -768,6 +822,7 @@ func (r *SESV2PutDedicatedIpWarmupAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type SESV2PutDeliverabilityDashboardOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -778,6 +833,7 @@ func (r *SESV2PutDeliverabilityDashboardOptionFuture) Get(ctx workflow.Context) 
 }
 
 type SESV2PutEmailIdentityDkimAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -788,6 +844,7 @@ func (r *SESV2PutEmailIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*
 }
 
 type SESV2PutEmailIdentityDkimSigningAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -798,6 +855,7 @@ func (r *SESV2PutEmailIdentityDkimSigningAttributesFuture) Get(ctx workflow.Cont
 }
 
 type SESV2PutEmailIdentityFeedbackAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -808,6 +866,7 @@ func (r *SESV2PutEmailIdentityFeedbackAttributesFuture) Get(ctx workflow.Context
 }
 
 type SESV2PutEmailIdentityMailFromAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -818,6 +877,7 @@ func (r *SESV2PutEmailIdentityMailFromAttributesFuture) Get(ctx workflow.Context
 }
 
 type SESV2PutSuppressedDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -828,6 +888,7 @@ func (r *SESV2PutSuppressedDestinationFuture) Get(ctx workflow.Context) (*sesv2.
 }
 
 type SESV2SendBulkEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -838,6 +899,7 @@ func (r *SESV2SendBulkEmailFuture) Get(ctx workflow.Context) (*sesv2.SendBulkEma
 }
 
 type SESV2SendCustomVerificationEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -848,6 +910,7 @@ func (r *SESV2SendCustomVerificationEmailFuture) Get(ctx workflow.Context) (*ses
 }
 
 type SESV2SendEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -858,6 +921,7 @@ func (r *SESV2SendEmailFuture) Get(ctx workflow.Context) (*sesv2.SendEmailOutput
 }
 
 type SESV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -868,6 +932,7 @@ func (r *SESV2TagResourceFuture) Get(ctx workflow.Context) (*sesv2.TagResourceOu
 }
 
 type SESV2TestRenderEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -878,6 +943,7 @@ func (r *SESV2TestRenderEmailTemplateFuture) Get(ctx workflow.Context) (*sesv2.T
 }
 
 type SESV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -888,6 +954,7 @@ func (r *SESV2UntagResourceFuture) Get(ctx workflow.Context) (*sesv2.UntagResour
 }
 
 type SESV2UpdateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -898,6 +965,7 @@ func (r *SESV2UpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Con
 }
 
 type SESV2UpdateCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -908,6 +976,7 @@ func (r *SESV2UpdateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Cont
 }
 
 type SESV2UpdateEmailIdentityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -918,6 +987,7 @@ func (r *SESV2UpdateEmailIdentityPolicyFuture) Get(ctx workflow.Context) (*sesv2
 }
 
 type SESV2UpdateEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

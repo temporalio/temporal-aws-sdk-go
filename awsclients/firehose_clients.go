@@ -54,6 +54,7 @@ func NewFirehoseStub() FirehoseClient {
 }
 
 type FirehoseCreateDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -64,6 +65,7 @@ func (r *FirehoseCreateDeliveryStreamFuture) Get(ctx workflow.Context) (*firehos
 }
 
 type FirehoseDeleteDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -74,6 +76,7 @@ func (r *FirehoseDeleteDeliveryStreamFuture) Get(ctx workflow.Context) (*firehos
 }
 
 type FirehoseDescribeDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -84,6 +87,7 @@ func (r *FirehoseDescribeDeliveryStreamFuture) Get(ctx workflow.Context) (*fireh
 }
 
 type FirehoseListDeliveryStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +98,7 @@ func (r *FirehoseListDeliveryStreamsFuture) Get(ctx workflow.Context) (*firehose
 }
 
 type FirehoseListTagsForDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +109,7 @@ func (r *FirehoseListTagsForDeliveryStreamFuture) Get(ctx workflow.Context) (*fi
 }
 
 type FirehosePutRecordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +120,7 @@ func (r *FirehosePutRecordFuture) Get(ctx workflow.Context) (*firehose.PutRecord
 }
 
 type FirehosePutRecordBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +131,7 @@ func (r *FirehosePutRecordBatchFuture) Get(ctx workflow.Context) (*firehose.PutR
 }
 
 type FirehoseStartDeliveryStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +142,7 @@ func (r *FirehoseStartDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) 
 }
 
 type FirehoseStopDeliveryStreamEncryptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +153,7 @@ func (r *FirehoseStopDeliveryStreamEncryptionFuture) Get(ctx workflow.Context) (
 }
 
 type FirehoseTagDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +164,7 @@ func (r *FirehoseTagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose.T
 }
 
 type FirehoseUntagDeliveryStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +175,7 @@ func (r *FirehoseUntagDeliveryStreamFuture) Get(ctx workflow.Context) (*firehose
 }
 
 type FirehoseUpdateDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

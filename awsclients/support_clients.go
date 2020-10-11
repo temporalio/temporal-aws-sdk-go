@@ -60,6 +60,7 @@ func NewSupportStub() SupportClient {
 }
 
 type SupportAddAttachmentsToSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -70,6 +71,7 @@ func (r *SupportAddAttachmentsToSetFuture) Get(ctx workflow.Context) (*support.A
 }
 
 type SupportAddCommunicationToCaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -80,6 +82,7 @@ func (r *SupportAddCommunicationToCaseFuture) Get(ctx workflow.Context) (*suppor
 }
 
 type SupportCreateCaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -90,6 +93,7 @@ func (r *SupportCreateCaseFuture) Get(ctx workflow.Context) (*support.CreateCase
 }
 
 type SupportDescribeAttachmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +104,7 @@ func (r *SupportDescribeAttachmentFuture) Get(ctx workflow.Context) (*support.De
 }
 
 type SupportDescribeCasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +115,7 @@ func (r *SupportDescribeCasesFuture) Get(ctx workflow.Context) (*support.Describ
 }
 
 type SupportDescribeCommunicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +126,7 @@ func (r *SupportDescribeCommunicationsFuture) Get(ctx workflow.Context) (*suppor
 }
 
 type SupportDescribeServicesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +137,7 @@ func (r *SupportDescribeServicesFuture) Get(ctx workflow.Context) (*support.Desc
 }
 
 type SupportDescribeSeverityLevelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +148,7 @@ func (r *SupportDescribeSeverityLevelsFuture) Get(ctx workflow.Context) (*suppor
 }
 
 type SupportDescribeTrustedAdvisorCheckRefreshStatusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +159,7 @@ func (r *SupportDescribeTrustedAdvisorCheckRefreshStatusesFuture) Get(ctx workfl
 }
 
 type SupportDescribeTrustedAdvisorCheckResultFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +170,7 @@ func (r *SupportDescribeTrustedAdvisorCheckResultFuture) Get(ctx workflow.Contex
 }
 
 type SupportDescribeTrustedAdvisorCheckSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +181,7 @@ func (r *SupportDescribeTrustedAdvisorCheckSummariesFuture) Get(ctx workflow.Con
 }
 
 type SupportDescribeTrustedAdvisorChecksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +192,7 @@ func (r *SupportDescribeTrustedAdvisorChecksFuture) Get(ctx workflow.Context) (*
 }
 
 type SupportRefreshTrustedAdvisorCheckFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +203,7 @@ func (r *SupportRefreshTrustedAdvisorCheckFuture) Get(ctx workflow.Context) (*su
 }
 
 type SupportResolveCaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -30,6 +30,7 @@ func NewIoTEventsDataStub() IoTEventsDataClient {
 }
 
 type IoTEventsDataBatchPutMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -40,6 +41,7 @@ func (r *IoTEventsDataBatchPutMessageFuture) Get(ctx workflow.Context) (*ioteven
 }
 
 type IoTEventsDataBatchUpdateDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -50,6 +52,7 @@ func (r *IoTEventsDataBatchUpdateDetectorFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTEventsDataDescribeDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -60,6 +63,7 @@ func (r *IoTEventsDataDescribeDetectorFuture) Get(ctx workflow.Context) (*ioteve
 }
 
 type IoTEventsDataListDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

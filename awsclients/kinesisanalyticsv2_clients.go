@@ -96,6 +96,7 @@ func NewKinesisAnalyticsV2Stub() KinesisAnalyticsV2Client {
 }
 
 type KinesisAnalyticsV2AddApplicationCloudWatchLoggingOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +107,7 @@ func (r *KinesisAnalyticsV2AddApplicationCloudWatchLoggingOptionFuture) Get(ctx 
 }
 
 type KinesisAnalyticsV2AddApplicationInputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +118,7 @@ func (r *KinesisAnalyticsV2AddApplicationInputFuture) Get(ctx workflow.Context) 
 }
 
 type KinesisAnalyticsV2AddApplicationInputProcessingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +129,7 @@ func (r *KinesisAnalyticsV2AddApplicationInputProcessingConfigurationFuture) Get
 }
 
 type KinesisAnalyticsV2AddApplicationOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +140,7 @@ func (r *KinesisAnalyticsV2AddApplicationOutputFuture) Get(ctx workflow.Context)
 }
 
 type KinesisAnalyticsV2AddApplicationReferenceDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +151,7 @@ func (r *KinesisAnalyticsV2AddApplicationReferenceDataSourceFuture) Get(ctx work
 }
 
 type KinesisAnalyticsV2AddApplicationVpcConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +162,7 @@ func (r *KinesisAnalyticsV2AddApplicationVpcConfigurationFuture) Get(ctx workflo
 }
 
 type KinesisAnalyticsV2CreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +173,7 @@ func (r *KinesisAnalyticsV2CreateApplicationFuture) Get(ctx workflow.Context) (*
 }
 
 type KinesisAnalyticsV2CreateApplicationSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +184,7 @@ func (r *KinesisAnalyticsV2CreateApplicationSnapshotFuture) Get(ctx workflow.Con
 }
 
 type KinesisAnalyticsV2DeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +195,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationFuture) Get(ctx workflow.Context) (*
 }
 
 type KinesisAnalyticsV2DeleteApplicationCloudWatchLoggingOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +206,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationCloudWatchLoggingOptionFuture) Get(c
 }
 
 type KinesisAnalyticsV2DeleteApplicationInputProcessingConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +217,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationInputProcessingConfigurationFuture) 
 }
 
 type KinesisAnalyticsV2DeleteApplicationOutputFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +228,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationOutputFuture) Get(ctx workflow.Conte
 }
 
 type KinesisAnalyticsV2DeleteApplicationReferenceDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +239,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationReferenceDataSourceFuture) Get(ctx w
 }
 
 type KinesisAnalyticsV2DeleteApplicationSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +250,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationSnapshotFuture) Get(ctx workflow.Con
 }
 
 type KinesisAnalyticsV2DeleteApplicationVpcConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +261,7 @@ func (r *KinesisAnalyticsV2DeleteApplicationVpcConfigurationFuture) Get(ctx work
 }
 
 type KinesisAnalyticsV2DescribeApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +272,7 @@ func (r *KinesisAnalyticsV2DescribeApplicationFuture) Get(ctx workflow.Context) 
 }
 
 type KinesisAnalyticsV2DescribeApplicationSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +283,7 @@ func (r *KinesisAnalyticsV2DescribeApplicationSnapshotFuture) Get(ctx workflow.C
 }
 
 type KinesisAnalyticsV2DiscoverInputSchemaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +294,7 @@ func (r *KinesisAnalyticsV2DiscoverInputSchemaFuture) Get(ctx workflow.Context) 
 }
 
 type KinesisAnalyticsV2ListApplicationSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +305,7 @@ func (r *KinesisAnalyticsV2ListApplicationSnapshotsFuture) Get(ctx workflow.Cont
 }
 
 type KinesisAnalyticsV2ListApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +316,7 @@ func (r *KinesisAnalyticsV2ListApplicationsFuture) Get(ctx workflow.Context) (*k
 }
 
 type KinesisAnalyticsV2ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +327,7 @@ func (r *KinesisAnalyticsV2ListTagsForResourceFuture) Get(ctx workflow.Context) 
 }
 
 type KinesisAnalyticsV2StartApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +338,7 @@ func (r *KinesisAnalyticsV2StartApplicationFuture) Get(ctx workflow.Context) (*k
 }
 
 type KinesisAnalyticsV2StopApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +349,7 @@ func (r *KinesisAnalyticsV2StopApplicationFuture) Get(ctx workflow.Context) (*ki
 }
 
 type KinesisAnalyticsV2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +360,7 @@ func (r *KinesisAnalyticsV2TagResourceFuture) Get(ctx workflow.Context) (*kinesi
 }
 
 type KinesisAnalyticsV2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +371,7 @@ func (r *KinesisAnalyticsV2UntagResourceFuture) Get(ctx workflow.Context) (*kine
 }
 
 type KinesisAnalyticsV2UpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -162,6 +162,7 @@ func NewCodeDeployStub() CodeDeployClient {
 }
 
 type CodeDeployAddTagsToOnPremisesInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +173,7 @@ func (r *CodeDeployAddTagsToOnPremisesInstancesFuture) Get(ctx workflow.Context)
 }
 
 type CodeDeployBatchGetApplicationRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +184,7 @@ func (r *CodeDeployBatchGetApplicationRevisionsFuture) Get(ctx workflow.Context)
 }
 
 type CodeDeployBatchGetApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +195,7 @@ func (r *CodeDeployBatchGetApplicationsFuture) Get(ctx workflow.Context) (*coded
 }
 
 type CodeDeployBatchGetDeploymentGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +206,7 @@ func (r *CodeDeployBatchGetDeploymentGroupsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeDeployBatchGetDeploymentInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +217,7 @@ func (r *CodeDeployBatchGetDeploymentInstancesFuture) Get(ctx workflow.Context) 
 }
 
 type CodeDeployBatchGetDeploymentTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +228,7 @@ func (r *CodeDeployBatchGetDeploymentTargetsFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeDeployBatchGetDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +239,7 @@ func (r *CodeDeployBatchGetDeploymentsFuture) Get(ctx workflow.Context) (*codede
 }
 
 type CodeDeployBatchGetOnPremisesInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +250,7 @@ func (r *CodeDeployBatchGetOnPremisesInstancesFuture) Get(ctx workflow.Context) 
 }
 
 type CodeDeployContinueDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +261,7 @@ func (r *CodeDeployContinueDeploymentFuture) Get(ctx workflow.Context) (*codedep
 }
 
 type CodeDeployCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +272,7 @@ func (r *CodeDeployCreateApplicationFuture) Get(ctx workflow.Context) (*codedepl
 }
 
 type CodeDeployCreateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +283,7 @@ func (r *CodeDeployCreateDeploymentFuture) Get(ctx workflow.Context) (*codedeplo
 }
 
 type CodeDeployCreateDeploymentConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +294,7 @@ func (r *CodeDeployCreateDeploymentConfigFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeDeployCreateDeploymentGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +305,7 @@ func (r *CodeDeployCreateDeploymentGroupFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +316,7 @@ func (r *CodeDeployDeleteApplicationFuture) Get(ctx workflow.Context) (*codedepl
 }
 
 type CodeDeployDeleteDeploymentConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +327,7 @@ func (r *CodeDeployDeleteDeploymentConfigFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeDeployDeleteDeploymentGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +338,7 @@ func (r *CodeDeployDeleteDeploymentGroupFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployDeleteGitHubAccountTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +349,7 @@ func (r *CodeDeployDeleteGitHubAccountTokenFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeDeployDeleteResourcesByExternalIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +360,7 @@ func (r *CodeDeployDeleteResourcesByExternalIdFuture) Get(ctx workflow.Context) 
 }
 
 type CodeDeployDeregisterOnPremisesInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +371,7 @@ func (r *CodeDeployDeregisterOnPremisesInstanceFuture) Get(ctx workflow.Context)
 }
 
 type CodeDeployGetApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +382,7 @@ func (r *CodeDeployGetApplicationFuture) Get(ctx workflow.Context) (*codedeploy.
 }
 
 type CodeDeployGetApplicationRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +393,7 @@ func (r *CodeDeployGetApplicationRevisionFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeDeployGetDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +404,7 @@ func (r *CodeDeployGetDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.G
 }
 
 type CodeDeployGetDeploymentConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +415,7 @@ func (r *CodeDeployGetDeploymentConfigFuture) Get(ctx workflow.Context) (*codede
 }
 
 type CodeDeployGetDeploymentGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +426,7 @@ func (r *CodeDeployGetDeploymentGroupFuture) Get(ctx workflow.Context) (*codedep
 }
 
 type CodeDeployGetDeploymentInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +437,7 @@ func (r *CodeDeployGetDeploymentInstanceFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployGetDeploymentTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +448,7 @@ func (r *CodeDeployGetDeploymentTargetFuture) Get(ctx workflow.Context) (*codede
 }
 
 type CodeDeployGetOnPremisesInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +459,7 @@ func (r *CodeDeployGetOnPremisesInstanceFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployListApplicationRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +470,7 @@ func (r *CodeDeployListApplicationRevisionsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeDeployListApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +481,7 @@ func (r *CodeDeployListApplicationsFuture) Get(ctx workflow.Context) (*codedeplo
 }
 
 type CodeDeployListDeploymentConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +492,7 @@ func (r *CodeDeployListDeploymentConfigsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployListDeploymentGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +503,7 @@ func (r *CodeDeployListDeploymentGroupsFuture) Get(ctx workflow.Context) (*coded
 }
 
 type CodeDeployListDeploymentInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +514,7 @@ func (r *CodeDeployListDeploymentInstancesFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeDeployListDeploymentTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +525,7 @@ func (r *CodeDeployListDeploymentTargetsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeDeployListDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +536,7 @@ func (r *CodeDeployListDeploymentsFuture) Get(ctx workflow.Context) (*codedeploy
 }
 
 type CodeDeployListGitHubAccountTokenNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -512,6 +547,7 @@ func (r *CodeDeployListGitHubAccountTokenNamesFuture) Get(ctx workflow.Context) 
 }
 
 type CodeDeployListOnPremisesInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -522,6 +558,7 @@ func (r *CodeDeployListOnPremisesInstancesFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeDeployListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -532,6 +569,7 @@ func (r *CodeDeployListTagsForResourceFuture) Get(ctx workflow.Context) (*codede
 }
 
 type CodeDeployPutLifecycleEventHookExecutionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -542,6 +580,7 @@ func (r *CodeDeployPutLifecycleEventHookExecutionStatusFuture) Get(ctx workflow.
 }
 
 type CodeDeployRegisterApplicationRevisionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -552,6 +591,7 @@ func (r *CodeDeployRegisterApplicationRevisionFuture) Get(ctx workflow.Context) 
 }
 
 type CodeDeployRegisterOnPremisesInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -562,6 +602,7 @@ func (r *CodeDeployRegisterOnPremisesInstanceFuture) Get(ctx workflow.Context) (
 }
 
 type CodeDeployRemoveTagsFromOnPremisesInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -572,6 +613,7 @@ func (r *CodeDeployRemoveTagsFromOnPremisesInstancesFuture) Get(ctx workflow.Con
 }
 
 type CodeDeploySkipWaitTimeForInstanceTerminationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -582,6 +624,7 @@ func (r *CodeDeploySkipWaitTimeForInstanceTerminationFuture) Get(ctx workflow.Co
 }
 
 type CodeDeployStopDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -592,6 +635,7 @@ func (r *CodeDeployStopDeploymentFuture) Get(ctx workflow.Context) (*codedeploy.
 }
 
 type CodeDeployTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -602,6 +646,7 @@ func (r *CodeDeployTagResourceFuture) Get(ctx workflow.Context) (*codedeploy.Tag
 }
 
 type CodeDeployUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -612,6 +657,7 @@ func (r *CodeDeployUntagResourceFuture) Get(ctx workflow.Context) (*codedeploy.U
 }
 
 type CodeDeployUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -622,6 +668,7 @@ func (r *CodeDeployUpdateApplicationFuture) Get(ctx workflow.Context) (*codedepl
 }
 
 type CodeDeployUpdateDeploymentGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

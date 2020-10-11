@@ -234,6 +234,7 @@ func NewSESStub() SESClient {
 }
 
 type SESCloneReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +245,7 @@ func (r *SESCloneReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.CloneRece
 }
 
 type SESCreateConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +256,7 @@ func (r *SESCreateConfigurationSetFuture) Get(ctx workflow.Context) (*ses.Create
 }
 
 type SESCreateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +267,7 @@ func (r *SESCreateConfigurationSetEventDestinationFuture) Get(ctx workflow.Conte
 }
 
 type SESCreateConfigurationSetTrackingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +278,7 @@ func (r *SESCreateConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Contex
 }
 
 type SESCreateCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +289,7 @@ func (r *SESCreateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Contex
 }
 
 type SESCreateReceiptFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +300,7 @@ func (r *SESCreateReceiptFilterFuture) Get(ctx workflow.Context) (*ses.CreateRec
 }
 
 type SESCreateReceiptRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +311,7 @@ func (r *SESCreateReceiptRuleFuture) Get(ctx workflow.Context) (*ses.CreateRecei
 }
 
 type SESCreateReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +322,7 @@ func (r *SESCreateReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.CreateRe
 }
 
 type SESCreateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +333,7 @@ func (r *SESCreateTemplateFuture) Get(ctx workflow.Context) (*ses.CreateTemplate
 }
 
 type SESDeleteConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +344,7 @@ func (r *SESDeleteConfigurationSetFuture) Get(ctx workflow.Context) (*ses.Delete
 }
 
 type SESDeleteConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +355,7 @@ func (r *SESDeleteConfigurationSetEventDestinationFuture) Get(ctx workflow.Conte
 }
 
 type SESDeleteConfigurationSetTrackingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +366,7 @@ func (r *SESDeleteConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Contex
 }
 
 type SESDeleteCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +377,7 @@ func (r *SESDeleteCustomVerificationEmailTemplateFuture) Get(ctx workflow.Contex
 }
 
 type SESDeleteIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +388,7 @@ func (r *SESDeleteIdentityFuture) Get(ctx workflow.Context) (*ses.DeleteIdentity
 }
 
 type SESDeleteIdentityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +399,7 @@ func (r *SESDeleteIdentityPolicyFuture) Get(ctx workflow.Context) (*ses.DeleteId
 }
 
 type SESDeleteReceiptFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +410,7 @@ func (r *SESDeleteReceiptFilterFuture) Get(ctx workflow.Context) (*ses.DeleteRec
 }
 
 type SESDeleteReceiptRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +421,7 @@ func (r *SESDeleteReceiptRuleFuture) Get(ctx workflow.Context) (*ses.DeleteRecei
 }
 
 type SESDeleteReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +432,7 @@ func (r *SESDeleteReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.DeleteRe
 }
 
 type SESDeleteTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +443,7 @@ func (r *SESDeleteTemplateFuture) Get(ctx workflow.Context) (*ses.DeleteTemplate
 }
 
 type SESDeleteVerifiedEmailAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +454,7 @@ func (r *SESDeleteVerifiedEmailAddressFuture) Get(ctx workflow.Context) (*ses.De
 }
 
 type SESDescribeActiveReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +465,7 @@ func (r *SESDescribeActiveReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.
 }
 
 type SESDescribeConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +476,7 @@ func (r *SESDescribeConfigurationSetFuture) Get(ctx workflow.Context) (*ses.Desc
 }
 
 type SESDescribeReceiptRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +487,7 @@ func (r *SESDescribeReceiptRuleFuture) Get(ctx workflow.Context) (*ses.DescribeR
 }
 
 type SESDescribeReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +498,7 @@ func (r *SESDescribeReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.Descri
 }
 
 type SESGetAccountSendingEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +509,7 @@ func (r *SESGetAccountSendingEnabledFuture) Get(ctx workflow.Context) (*ses.GetA
 }
 
 type SESGetCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +520,7 @@ func (r *SESGetCustomVerificationEmailTemplateFuture) Get(ctx workflow.Context) 
 }
 
 type SESGetIdentityDkimAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +531,7 @@ func (r *SESGetIdentityDkimAttributesFuture) Get(ctx workflow.Context) (*ses.Get
 }
 
 type SESGetIdentityMailFromDomainAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +542,7 @@ func (r *SESGetIdentityMailFromDomainAttributesFuture) Get(ctx workflow.Context)
 }
 
 type SESGetIdentityNotificationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +553,7 @@ func (r *SESGetIdentityNotificationAttributesFuture) Get(ctx workflow.Context) (
 }
 
 type SESGetIdentityPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +564,7 @@ func (r *SESGetIdentityPoliciesFuture) Get(ctx workflow.Context) (*ses.GetIdenti
 }
 
 type SESGetIdentityVerificationAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +575,7 @@ func (r *SESGetIdentityVerificationAttributesFuture) Get(ctx workflow.Context) (
 }
 
 type SESGetSendQuotaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +586,7 @@ func (r *SESGetSendQuotaFuture) Get(ctx workflow.Context) (*ses.GetSendQuotaOutp
 }
 
 type SESGetSendStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -564,6 +597,7 @@ func (r *SESGetSendStatisticsFuture) Get(ctx workflow.Context) (*ses.GetSendStat
 }
 
 type SESGetTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -574,6 +608,7 @@ func (r *SESGetTemplateFuture) Get(ctx workflow.Context) (*ses.GetTemplateOutput
 }
 
 type SESListConfigurationSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -584,6 +619,7 @@ func (r *SESListConfigurationSetsFuture) Get(ctx workflow.Context) (*ses.ListCon
 }
 
 type SESListCustomVerificationEmailTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -594,6 +630,7 @@ func (r *SESListCustomVerificationEmailTemplatesFuture) Get(ctx workflow.Context
 }
 
 type SESListIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -604,6 +641,7 @@ func (r *SESListIdentitiesFuture) Get(ctx workflow.Context) (*ses.ListIdentities
 }
 
 type SESListIdentityPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -614,6 +652,7 @@ func (r *SESListIdentityPoliciesFuture) Get(ctx workflow.Context) (*ses.ListIden
 }
 
 type SESListReceiptFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -624,6 +663,7 @@ func (r *SESListReceiptFiltersFuture) Get(ctx workflow.Context) (*ses.ListReceip
 }
 
 type SESListReceiptRuleSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -634,6 +674,7 @@ func (r *SESListReceiptRuleSetsFuture) Get(ctx workflow.Context) (*ses.ListRecei
 }
 
 type SESListTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -644,6 +685,7 @@ func (r *SESListTemplatesFuture) Get(ctx workflow.Context) (*ses.ListTemplatesOu
 }
 
 type SESListVerifiedEmailAddressesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -654,6 +696,7 @@ func (r *SESListVerifiedEmailAddressesFuture) Get(ctx workflow.Context) (*ses.Li
 }
 
 type SESPutConfigurationSetDeliveryOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -664,6 +707,7 @@ func (r *SESPutConfigurationSetDeliveryOptionsFuture) Get(ctx workflow.Context) 
 }
 
 type SESPutIdentityPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -674,6 +718,7 @@ func (r *SESPutIdentityPolicyFuture) Get(ctx workflow.Context) (*ses.PutIdentity
 }
 
 type SESReorderReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -684,6 +729,7 @@ func (r *SESReorderReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.Reorder
 }
 
 type SESSendBounceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -694,6 +740,7 @@ func (r *SESSendBounceFuture) Get(ctx workflow.Context) (*ses.SendBounceOutput, 
 }
 
 type SESSendBulkTemplatedEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -704,6 +751,7 @@ func (r *SESSendBulkTemplatedEmailFuture) Get(ctx workflow.Context) (*ses.SendBu
 }
 
 type SESSendCustomVerificationEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -714,6 +762,7 @@ func (r *SESSendCustomVerificationEmailFuture) Get(ctx workflow.Context) (*ses.S
 }
 
 type SESSendEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -724,6 +773,7 @@ func (r *SESSendEmailFuture) Get(ctx workflow.Context) (*ses.SendEmailOutput, er
 }
 
 type SESSendRawEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -734,6 +784,7 @@ func (r *SESSendRawEmailFuture) Get(ctx workflow.Context) (*ses.SendRawEmailOutp
 }
 
 type SESSendTemplatedEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -744,6 +795,7 @@ func (r *SESSendTemplatedEmailFuture) Get(ctx workflow.Context) (*ses.SendTempla
 }
 
 type SESSetActiveReceiptRuleSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -754,6 +806,7 @@ func (r *SESSetActiveReceiptRuleSetFuture) Get(ctx workflow.Context) (*ses.SetAc
 }
 
 type SESSetIdentityDkimEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -764,6 +817,7 @@ func (r *SESSetIdentityDkimEnabledFuture) Get(ctx workflow.Context) (*ses.SetIde
 }
 
 type SESSetIdentityFeedbackForwardingEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -774,6 +828,7 @@ func (r *SESSetIdentityFeedbackForwardingEnabledFuture) Get(ctx workflow.Context
 }
 
 type SESSetIdentityHeadersInNotificationsEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -784,6 +839,7 @@ func (r *SESSetIdentityHeadersInNotificationsEnabledFuture) Get(ctx workflow.Con
 }
 
 type SESSetIdentityMailFromDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -794,6 +850,7 @@ func (r *SESSetIdentityMailFromDomainFuture) Get(ctx workflow.Context) (*ses.Set
 }
 
 type SESSetIdentityNotificationTopicFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -804,6 +861,7 @@ func (r *SESSetIdentityNotificationTopicFuture) Get(ctx workflow.Context) (*ses.
 }
 
 type SESSetReceiptRulePositionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -814,6 +872,7 @@ func (r *SESSetReceiptRulePositionFuture) Get(ctx workflow.Context) (*ses.SetRec
 }
 
 type SESTestRenderTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -824,6 +883,7 @@ func (r *SESTestRenderTemplateFuture) Get(ctx workflow.Context) (*ses.TestRender
 }
 
 type SESUpdateAccountSendingEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -834,6 +894,7 @@ func (r *SESUpdateAccountSendingEnabledFuture) Get(ctx workflow.Context) (*ses.U
 }
 
 type SESUpdateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -844,6 +905,7 @@ func (r *SESUpdateConfigurationSetEventDestinationFuture) Get(ctx workflow.Conte
 }
 
 type SESUpdateConfigurationSetReputationMetricsEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -854,6 +916,7 @@ func (r *SESUpdateConfigurationSetReputationMetricsEnabledFuture) Get(ctx workfl
 }
 
 type SESUpdateConfigurationSetSendingEnabledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -864,6 +927,7 @@ func (r *SESUpdateConfigurationSetSendingEnabledFuture) Get(ctx workflow.Context
 }
 
 type SESUpdateConfigurationSetTrackingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -874,6 +938,7 @@ func (r *SESUpdateConfigurationSetTrackingOptionsFuture) Get(ctx workflow.Contex
 }
 
 type SESUpdateCustomVerificationEmailTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -884,6 +949,7 @@ func (r *SESUpdateCustomVerificationEmailTemplateFuture) Get(ctx workflow.Contex
 }
 
 type SESUpdateReceiptRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -894,6 +960,7 @@ func (r *SESUpdateReceiptRuleFuture) Get(ctx workflow.Context) (*ses.UpdateRecei
 }
 
 type SESUpdateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -904,6 +971,7 @@ func (r *SESUpdateTemplateFuture) Get(ctx workflow.Context) (*ses.UpdateTemplate
 }
 
 type SESVerifyDomainDkimFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -914,6 +982,7 @@ func (r *SESVerifyDomainDkimFuture) Get(ctx workflow.Context) (*ses.VerifyDomain
 }
 
 type SESVerifyDomainIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -924,6 +993,7 @@ func (r *SESVerifyDomainIdentityFuture) Get(ctx workflow.Context) (*ses.VerifyDo
 }
 
 type SESVerifyEmailAddressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -934,6 +1004,7 @@ func (r *SESVerifyEmailAddressFuture) Get(ctx workflow.Context) (*ses.VerifyEmai
 }
 
 type SESVerifyEmailIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

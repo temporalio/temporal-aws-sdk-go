@@ -129,6 +129,7 @@ func NewAmplifyStub() AmplifyClient {
 }
 
 type AmplifyCreateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *AmplifyCreateAppFuture) Get(ctx workflow.Context) (*amplify.CreateAppOu
 }
 
 type AmplifyCreateBackendEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *AmplifyCreateBackendEnvironmentFuture) Get(ctx workflow.Context) (*ampl
 }
 
 type AmplifyCreateBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *AmplifyCreateBranchFuture) Get(ctx workflow.Context) (*amplify.CreateBr
 }
 
 type AmplifyCreateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *AmplifyCreateDeploymentFuture) Get(ctx workflow.Context) (*amplify.Crea
 }
 
 type AmplifyCreateDomainAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *AmplifyCreateDomainAssociationFuture) Get(ctx workflow.Context) (*ampli
 }
 
 type AmplifyCreateWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *AmplifyCreateWebhookFuture) Get(ctx workflow.Context) (*amplify.CreateW
 }
 
 type AmplifyDeleteAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *AmplifyDeleteAppFuture) Get(ctx workflow.Context) (*amplify.DeleteAppOu
 }
 
 type AmplifyDeleteBackendEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *AmplifyDeleteBackendEnvironmentFuture) Get(ctx workflow.Context) (*ampl
 }
 
 type AmplifyDeleteBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *AmplifyDeleteBranchFuture) Get(ctx workflow.Context) (*amplify.DeleteBr
 }
 
 type AmplifyDeleteDomainAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *AmplifyDeleteDomainAssociationFuture) Get(ctx workflow.Context) (*ampli
 }
 
 type AmplifyDeleteJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *AmplifyDeleteJobFuture) Get(ctx workflow.Context) (*amplify.DeleteJobOu
 }
 
 type AmplifyDeleteWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *AmplifyDeleteWebhookFuture) Get(ctx workflow.Context) (*amplify.DeleteW
 }
 
 type AmplifyGenerateAccessLogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *AmplifyGenerateAccessLogsFuture) Get(ctx workflow.Context) (*amplify.Ge
 }
 
 type AmplifyGetAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *AmplifyGetAppFuture) Get(ctx workflow.Context) (*amplify.GetAppOutput, 
 }
 
 type AmplifyGetArtifactUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *AmplifyGetArtifactUrlFuture) Get(ctx workflow.Context) (*amplify.GetArt
 }
 
 type AmplifyGetBackendEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *AmplifyGetBackendEnvironmentFuture) Get(ctx workflow.Context) (*amplify
 }
 
 type AmplifyGetBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *AmplifyGetBranchFuture) Get(ctx workflow.Context) (*amplify.GetBranchOu
 }
 
 type AmplifyGetDomainAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *AmplifyGetDomainAssociationFuture) Get(ctx workflow.Context) (*amplify.
 }
 
 type AmplifyGetJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *AmplifyGetJobFuture) Get(ctx workflow.Context) (*amplify.GetJobOutput, 
 }
 
 type AmplifyGetWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *AmplifyGetWebhookFuture) Get(ctx workflow.Context) (*amplify.GetWebhook
 }
 
 type AmplifyListAppsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *AmplifyListAppsFuture) Get(ctx workflow.Context) (*amplify.ListAppsOutp
 }
 
 type AmplifyListArtifactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *AmplifyListArtifactsFuture) Get(ctx workflow.Context) (*amplify.ListArt
 }
 
 type AmplifyListBackendEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *AmplifyListBackendEnvironmentsFuture) Get(ctx workflow.Context) (*ampli
 }
 
 type AmplifyListBranchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *AmplifyListBranchesFuture) Get(ctx workflow.Context) (*amplify.ListBran
 }
 
 type AmplifyListDomainAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *AmplifyListDomainAssociationsFuture) Get(ctx workflow.Context) (*amplif
 }
 
 type AmplifyListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *AmplifyListJobsFuture) Get(ctx workflow.Context) (*amplify.ListJobsOutp
 }
 
 type AmplifyListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *AmplifyListTagsForResourceFuture) Get(ctx workflow.Context) (*amplify.L
 }
 
 type AmplifyListWebhooksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *AmplifyListWebhooksFuture) Get(ctx workflow.Context) (*amplify.ListWebh
 }
 
 type AmplifyStartDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *AmplifyStartDeploymentFuture) Get(ctx workflow.Context) (*amplify.Start
 }
 
 type AmplifyStartJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *AmplifyStartJobFuture) Get(ctx workflow.Context) (*amplify.StartJobOutp
 }
 
 type AmplifyStopJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *AmplifyStopJobFuture) Get(ctx workflow.Context) (*amplify.StopJobOutput
 }
 
 type AmplifyTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *AmplifyTagResourceFuture) Get(ctx workflow.Context) (*amplify.TagResour
 }
 
 type AmplifyUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *AmplifyUntagResourceFuture) Get(ctx workflow.Context) (*amplify.UntagRe
 }
 
 type AmplifyUpdateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *AmplifyUpdateAppFuture) Get(ctx workflow.Context) (*amplify.UpdateAppOu
 }
 
 type AmplifyUpdateBranchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *AmplifyUpdateBranchFuture) Get(ctx workflow.Context) (*amplify.UpdateBr
 }
 
 type AmplifyUpdateDomainAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *AmplifyUpdateDomainAssociationFuture) Get(ctx workflow.Context) (*ampli
 }
 
 type AmplifyUpdateWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

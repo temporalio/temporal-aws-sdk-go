@@ -33,6 +33,7 @@ func NewLexRuntimeServiceStub() LexRuntimeServiceClient {
 }
 
 type LexRuntimeServiceDeleteSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *LexRuntimeServiceDeleteSessionFuture) Get(ctx workflow.Context) (*lexru
 }
 
 type LexRuntimeServiceGetSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *LexRuntimeServiceGetSessionFuture) Get(ctx workflow.Context) (*lexrunti
 }
 
 type LexRuntimeServicePostContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *LexRuntimeServicePostContentFuture) Get(ctx workflow.Context) (*lexrunt
 }
 
 type LexRuntimeServicePostTextFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *LexRuntimeServicePostTextFuture) Get(ctx workflow.Context) (*lexruntime
 }
 
 type LexRuntimeServicePutSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

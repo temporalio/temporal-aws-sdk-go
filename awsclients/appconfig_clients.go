@@ -117,6 +117,7 @@ func NewAppConfigStub() AppConfigClient {
 }
 
 type AppConfigCreateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +128,7 @@ func (r *AppConfigCreateApplicationFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigCreateConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +139,7 @@ func (r *AppConfigCreateConfigurationProfileFuture) Get(ctx workflow.Context) (*
 }
 
 type AppConfigCreateDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +150,7 @@ func (r *AppConfigCreateDeploymentStrategyFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppConfigCreateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +161,7 @@ func (r *AppConfigCreateEnvironmentFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigCreateHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +172,7 @@ func (r *AppConfigCreateHostedConfigurationVersionFuture) Get(ctx workflow.Conte
 }
 
 type AppConfigDeleteApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +183,7 @@ func (r *AppConfigDeleteApplicationFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigDeleteConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +194,7 @@ func (r *AppConfigDeleteConfigurationProfileFuture) Get(ctx workflow.Context) (*
 }
 
 type AppConfigDeleteDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +205,7 @@ func (r *AppConfigDeleteDeploymentStrategyFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppConfigDeleteEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +216,7 @@ func (r *AppConfigDeleteEnvironmentFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigDeleteHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +227,7 @@ func (r *AppConfigDeleteHostedConfigurationVersionFuture) Get(ctx workflow.Conte
 }
 
 type AppConfigGetApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +238,7 @@ func (r *AppConfigGetApplicationFuture) Get(ctx workflow.Context) (*appconfig.Ge
 }
 
 type AppConfigGetConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +249,7 @@ func (r *AppConfigGetConfigurationFuture) Get(ctx workflow.Context) (*appconfig.
 }
 
 type AppConfigGetConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +260,7 @@ func (r *AppConfigGetConfigurationProfileFuture) Get(ctx workflow.Context) (*app
 }
 
 type AppConfigGetDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +271,7 @@ func (r *AppConfigGetDeploymentFuture) Get(ctx workflow.Context) (*appconfig.Get
 }
 
 type AppConfigGetDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +282,7 @@ func (r *AppConfigGetDeploymentStrategyFuture) Get(ctx workflow.Context) (*appco
 }
 
 type AppConfigGetEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +293,7 @@ func (r *AppConfigGetEnvironmentFuture) Get(ctx workflow.Context) (*appconfig.Ge
 }
 
 type AppConfigGetHostedConfigurationVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +304,7 @@ func (r *AppConfigGetHostedConfigurationVersionFuture) Get(ctx workflow.Context)
 }
 
 type AppConfigListApplicationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +315,7 @@ func (r *AppConfigListApplicationsFuture) Get(ctx workflow.Context) (*appconfig.
 }
 
 type AppConfigListConfigurationProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +326,7 @@ func (r *AppConfigListConfigurationProfilesFuture) Get(ctx workflow.Context) (*a
 }
 
 type AppConfigListDeploymentStrategiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +337,7 @@ func (r *AppConfigListDeploymentStrategiesFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppConfigListDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +348,7 @@ func (r *AppConfigListDeploymentsFuture) Get(ctx workflow.Context) (*appconfig.L
 }
 
 type AppConfigListEnvironmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +359,7 @@ func (r *AppConfigListEnvironmentsFuture) Get(ctx workflow.Context) (*appconfig.
 }
 
 type AppConfigListHostedConfigurationVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +370,7 @@ func (r *AppConfigListHostedConfigurationVersionsFuture) Get(ctx workflow.Contex
 }
 
 type AppConfigListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +381,7 @@ func (r *AppConfigListTagsForResourceFuture) Get(ctx workflow.Context) (*appconf
 }
 
 type AppConfigStartDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +392,7 @@ func (r *AppConfigStartDeploymentFuture) Get(ctx workflow.Context) (*appconfig.S
 }
 
 type AppConfigStopDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +403,7 @@ func (r *AppConfigStopDeploymentFuture) Get(ctx workflow.Context) (*appconfig.St
 }
 
 type AppConfigTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +414,7 @@ func (r *AppConfigTagResourceFuture) Get(ctx workflow.Context) (*appconfig.TagRe
 }
 
 type AppConfigUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +425,7 @@ func (r *AppConfigUntagResourceFuture) Get(ctx workflow.Context) (*appconfig.Unt
 }
 
 type AppConfigUpdateApplicationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +436,7 @@ func (r *AppConfigUpdateApplicationFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigUpdateConfigurationProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +447,7 @@ func (r *AppConfigUpdateConfigurationProfileFuture) Get(ctx workflow.Context) (*
 }
 
 type AppConfigUpdateDeploymentStrategyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +458,7 @@ func (r *AppConfigUpdateDeploymentStrategyFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppConfigUpdateEnvironmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +469,7 @@ func (r *AppConfigUpdateEnvironmentFuture) Get(ctx workflow.Context) (*appconfig
 }
 
 type AppConfigValidateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

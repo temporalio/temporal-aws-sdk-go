@@ -270,6 +270,7 @@ func NewServiceCatalogStub() ServiceCatalogClient {
 }
 
 type ServiceCatalogAcceptPortfolioShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -280,6 +281,7 @@ func (r *ServiceCatalogAcceptPortfolioShareFuture) Get(ctx workflow.Context) (*s
 }
 
 type ServiceCatalogAssociateBudgetWithResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -290,6 +292,7 @@ func (r *ServiceCatalogAssociateBudgetWithResourceFuture) Get(ctx workflow.Conte
 }
 
 type ServiceCatalogAssociatePrincipalWithPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -300,6 +303,7 @@ func (r *ServiceCatalogAssociatePrincipalWithPortfolioFuture) Get(ctx workflow.C
 }
 
 type ServiceCatalogAssociateProductWithPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -310,6 +314,7 @@ func (r *ServiceCatalogAssociateProductWithPortfolioFuture) Get(ctx workflow.Con
 }
 
 type ServiceCatalogAssociateServiceActionWithProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -320,6 +325,7 @@ func (r *ServiceCatalogAssociateServiceActionWithProvisioningArtifactFuture) Get
 }
 
 type ServiceCatalogAssociateTagOptionWithResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -330,6 +336,7 @@ func (r *ServiceCatalogAssociateTagOptionWithResourceFuture) Get(ctx workflow.Co
 }
 
 type ServiceCatalogBatchAssociateServiceActionWithProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -340,6 +347,7 @@ func (r *ServiceCatalogBatchAssociateServiceActionWithProvisioningArtifactFuture
 }
 
 type ServiceCatalogBatchDisassociateServiceActionFromProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -350,6 +358,7 @@ func (r *ServiceCatalogBatchDisassociateServiceActionFromProvisioningArtifactFut
 }
 
 type ServiceCatalogCopyProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -360,6 +369,7 @@ func (r *ServiceCatalogCopyProductFuture) Get(ctx workflow.Context) (*servicecat
 }
 
 type ServiceCatalogCreateConstraintFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -370,6 +380,7 @@ func (r *ServiceCatalogCreateConstraintFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceCatalogCreatePortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -380,6 +391,7 @@ func (r *ServiceCatalogCreatePortfolioFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogCreatePortfolioShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -390,6 +402,7 @@ func (r *ServiceCatalogCreatePortfolioShareFuture) Get(ctx workflow.Context) (*s
 }
 
 type ServiceCatalogCreateProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -400,6 +413,7 @@ func (r *ServiceCatalogCreateProductFuture) Get(ctx workflow.Context) (*servicec
 }
 
 type ServiceCatalogCreateProvisionedProductPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -410,6 +424,7 @@ func (r *ServiceCatalogCreateProvisionedProductPlanFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogCreateProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -420,6 +435,7 @@ func (r *ServiceCatalogCreateProvisioningArtifactFuture) Get(ctx workflow.Contex
 }
 
 type ServiceCatalogCreateServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -430,6 +446,7 @@ func (r *ServiceCatalogCreateServiceActionFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceCatalogCreateTagOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -440,6 +457,7 @@ func (r *ServiceCatalogCreateTagOptionFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogDeleteConstraintFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -450,6 +468,7 @@ func (r *ServiceCatalogDeleteConstraintFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceCatalogDeletePortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -460,6 +479,7 @@ func (r *ServiceCatalogDeletePortfolioFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogDeletePortfolioShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -470,6 +490,7 @@ func (r *ServiceCatalogDeletePortfolioShareFuture) Get(ctx workflow.Context) (*s
 }
 
 type ServiceCatalogDeleteProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -480,6 +501,7 @@ func (r *ServiceCatalogDeleteProductFuture) Get(ctx workflow.Context) (*servicec
 }
 
 type ServiceCatalogDeleteProvisionedProductPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -490,6 +512,7 @@ func (r *ServiceCatalogDeleteProvisionedProductPlanFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogDeleteProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -500,6 +523,7 @@ func (r *ServiceCatalogDeleteProvisioningArtifactFuture) Get(ctx workflow.Contex
 }
 
 type ServiceCatalogDeleteServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -510,6 +534,7 @@ func (r *ServiceCatalogDeleteServiceActionFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceCatalogDeleteTagOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -520,6 +545,7 @@ func (r *ServiceCatalogDeleteTagOptionFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogDescribeConstraintFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -530,6 +556,7 @@ func (r *ServiceCatalogDescribeConstraintFuture) Get(ctx workflow.Context) (*ser
 }
 
 type ServiceCatalogDescribeCopyProductStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -540,6 +567,7 @@ func (r *ServiceCatalogDescribeCopyProductStatusFuture) Get(ctx workflow.Context
 }
 
 type ServiceCatalogDescribePortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -550,6 +578,7 @@ func (r *ServiceCatalogDescribePortfolioFuture) Get(ctx workflow.Context) (*serv
 }
 
 type ServiceCatalogDescribePortfolioShareStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -560,6 +589,7 @@ func (r *ServiceCatalogDescribePortfolioShareStatusFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogDescribeProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -570,6 +600,7 @@ func (r *ServiceCatalogDescribeProductFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogDescribeProductAsAdminFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -580,6 +611,7 @@ func (r *ServiceCatalogDescribeProductAsAdminFuture) Get(ctx workflow.Context) (
 }
 
 type ServiceCatalogDescribeProductViewFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -590,6 +622,7 @@ func (r *ServiceCatalogDescribeProductViewFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceCatalogDescribeProvisionedProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -600,6 +633,7 @@ func (r *ServiceCatalogDescribeProvisionedProductFuture) Get(ctx workflow.Contex
 }
 
 type ServiceCatalogDescribeProvisionedProductPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -610,6 +644,7 @@ func (r *ServiceCatalogDescribeProvisionedProductPlanFuture) Get(ctx workflow.Co
 }
 
 type ServiceCatalogDescribeProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -620,6 +655,7 @@ func (r *ServiceCatalogDescribeProvisioningArtifactFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogDescribeProvisioningParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -630,6 +666,7 @@ func (r *ServiceCatalogDescribeProvisioningParametersFuture) Get(ctx workflow.Co
 }
 
 type ServiceCatalogDescribeRecordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -640,6 +677,7 @@ func (r *ServiceCatalogDescribeRecordFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceCatalogDescribeServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -650,6 +688,7 @@ func (r *ServiceCatalogDescribeServiceActionFuture) Get(ctx workflow.Context) (*
 }
 
 type ServiceCatalogDescribeServiceActionExecutionParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -660,6 +699,7 @@ func (r *ServiceCatalogDescribeServiceActionExecutionParametersFuture) Get(ctx w
 }
 
 type ServiceCatalogDescribeTagOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -670,6 +710,7 @@ func (r *ServiceCatalogDescribeTagOptionFuture) Get(ctx workflow.Context) (*serv
 }
 
 type ServiceCatalogDisableAWSOrganizationsAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -680,6 +721,7 @@ func (r *ServiceCatalogDisableAWSOrganizationsAccessFuture) Get(ctx workflow.Con
 }
 
 type ServiceCatalogDisassociateBudgetFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -690,6 +732,7 @@ func (r *ServiceCatalogDisassociateBudgetFromResourceFuture) Get(ctx workflow.Co
 }
 
 type ServiceCatalogDisassociatePrincipalFromPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -700,6 +743,7 @@ func (r *ServiceCatalogDisassociatePrincipalFromPortfolioFuture) Get(ctx workflo
 }
 
 type ServiceCatalogDisassociateProductFromPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -710,6 +754,7 @@ func (r *ServiceCatalogDisassociateProductFromPortfolioFuture) Get(ctx workflow.
 }
 
 type ServiceCatalogDisassociateServiceActionFromProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -720,6 +765,7 @@ func (r *ServiceCatalogDisassociateServiceActionFromProvisioningArtifactFuture) 
 }
 
 type ServiceCatalogDisassociateTagOptionFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -730,6 +776,7 @@ func (r *ServiceCatalogDisassociateTagOptionFromResourceFuture) Get(ctx workflow
 }
 
 type ServiceCatalogEnableAWSOrganizationsAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -740,6 +787,7 @@ func (r *ServiceCatalogEnableAWSOrganizationsAccessFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogExecuteProvisionedProductPlanFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -750,6 +798,7 @@ func (r *ServiceCatalogExecuteProvisionedProductPlanFuture) Get(ctx workflow.Con
 }
 
 type ServiceCatalogExecuteProvisionedProductServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -760,6 +809,7 @@ func (r *ServiceCatalogExecuteProvisionedProductServiceActionFuture) Get(ctx wor
 }
 
 type ServiceCatalogGetAWSOrganizationsAccessStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -770,6 +820,7 @@ func (r *ServiceCatalogGetAWSOrganizationsAccessStatusFuture) Get(ctx workflow.C
 }
 
 type ServiceCatalogGetProvisionedProductOutputsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -780,6 +831,7 @@ func (r *ServiceCatalogGetProvisionedProductOutputsFuture) Get(ctx workflow.Cont
 }
 
 type ServiceCatalogListAcceptedPortfolioSharesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -790,6 +842,7 @@ func (r *ServiceCatalogListAcceptedPortfolioSharesFuture) Get(ctx workflow.Conte
 }
 
 type ServiceCatalogListBudgetsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -800,6 +853,7 @@ func (r *ServiceCatalogListBudgetsForResourceFuture) Get(ctx workflow.Context) (
 }
 
 type ServiceCatalogListConstraintsForPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -810,6 +864,7 @@ func (r *ServiceCatalogListConstraintsForPortfolioFuture) Get(ctx workflow.Conte
 }
 
 type ServiceCatalogListLaunchPathsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -820,6 +875,7 @@ func (r *ServiceCatalogListLaunchPathsFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogListOrganizationPortfolioAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -830,6 +886,7 @@ func (r *ServiceCatalogListOrganizationPortfolioAccessFuture) Get(ctx workflow.C
 }
 
 type ServiceCatalogListPortfolioAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -840,6 +897,7 @@ func (r *ServiceCatalogListPortfolioAccessFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceCatalogListPortfoliosFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -850,6 +908,7 @@ func (r *ServiceCatalogListPortfoliosFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceCatalogListPortfoliosForProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -860,6 +919,7 @@ func (r *ServiceCatalogListPortfoliosForProductFuture) Get(ctx workflow.Context)
 }
 
 type ServiceCatalogListPrincipalsForPortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -870,6 +930,7 @@ func (r *ServiceCatalogListPrincipalsForPortfolioFuture) Get(ctx workflow.Contex
 }
 
 type ServiceCatalogListProvisionedProductPlansFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -880,6 +941,7 @@ func (r *ServiceCatalogListProvisionedProductPlansFuture) Get(ctx workflow.Conte
 }
 
 type ServiceCatalogListProvisioningArtifactsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -890,6 +952,7 @@ func (r *ServiceCatalogListProvisioningArtifactsFuture) Get(ctx workflow.Context
 }
 
 type ServiceCatalogListProvisioningArtifactsForServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -900,6 +963,7 @@ func (r *ServiceCatalogListProvisioningArtifactsForServiceActionFuture) Get(ctx 
 }
 
 type ServiceCatalogListRecordHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -910,6 +974,7 @@ func (r *ServiceCatalogListRecordHistoryFuture) Get(ctx workflow.Context) (*serv
 }
 
 type ServiceCatalogListResourcesForTagOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -920,6 +985,7 @@ func (r *ServiceCatalogListResourcesForTagOptionFuture) Get(ctx workflow.Context
 }
 
 type ServiceCatalogListServiceActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -930,6 +996,7 @@ func (r *ServiceCatalogListServiceActionsFuture) Get(ctx workflow.Context) (*ser
 }
 
 type ServiceCatalogListServiceActionsForProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -940,6 +1007,7 @@ func (r *ServiceCatalogListServiceActionsForProvisioningArtifactFuture) Get(ctx 
 }
 
 type ServiceCatalogListStackInstancesForProvisionedProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -950,6 +1018,7 @@ func (r *ServiceCatalogListStackInstancesForProvisionedProductFuture) Get(ctx wo
 }
 
 type ServiceCatalogListTagOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -960,6 +1029,7 @@ func (r *ServiceCatalogListTagOptionsFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceCatalogProvisionProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -970,6 +1040,7 @@ func (r *ServiceCatalogProvisionProductFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceCatalogRejectPortfolioShareFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -980,6 +1051,7 @@ func (r *ServiceCatalogRejectPortfolioShareFuture) Get(ctx workflow.Context) (*s
 }
 
 type ServiceCatalogScanProvisionedProductsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -990,6 +1062,7 @@ func (r *ServiceCatalogScanProvisionedProductsFuture) Get(ctx workflow.Context) 
 }
 
 type ServiceCatalogSearchProductsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1000,6 +1073,7 @@ func (r *ServiceCatalogSearchProductsFuture) Get(ctx workflow.Context) (*service
 }
 
 type ServiceCatalogSearchProductsAsAdminFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1010,6 +1084,7 @@ func (r *ServiceCatalogSearchProductsAsAdminFuture) Get(ctx workflow.Context) (*
 }
 
 type ServiceCatalogSearchProvisionedProductsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1020,6 +1095,7 @@ func (r *ServiceCatalogSearchProvisionedProductsFuture) Get(ctx workflow.Context
 }
 
 type ServiceCatalogTerminateProvisionedProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1030,6 +1106,7 @@ func (r *ServiceCatalogTerminateProvisionedProductFuture) Get(ctx workflow.Conte
 }
 
 type ServiceCatalogUpdateConstraintFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1040,6 +1117,7 @@ func (r *ServiceCatalogUpdateConstraintFuture) Get(ctx workflow.Context) (*servi
 }
 
 type ServiceCatalogUpdatePortfolioFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1050,6 +1128,7 @@ func (r *ServiceCatalogUpdatePortfolioFuture) Get(ctx workflow.Context) (*servic
 }
 
 type ServiceCatalogUpdateProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1060,6 +1139,7 @@ func (r *ServiceCatalogUpdateProductFuture) Get(ctx workflow.Context) (*servicec
 }
 
 type ServiceCatalogUpdateProvisionedProductFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1070,6 +1150,7 @@ func (r *ServiceCatalogUpdateProvisionedProductFuture) Get(ctx workflow.Context)
 }
 
 type ServiceCatalogUpdateProvisionedProductPropertiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1080,6 +1161,7 @@ func (r *ServiceCatalogUpdateProvisionedProductPropertiesFuture) Get(ctx workflo
 }
 
 type ServiceCatalogUpdateProvisioningArtifactFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1090,6 +1172,7 @@ func (r *ServiceCatalogUpdateProvisioningArtifactFuture) Get(ctx workflow.Contex
 }
 
 type ServiceCatalogUpdateServiceActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1100,6 +1183,7 @@ func (r *ServiceCatalogUpdateServiceActionFuture) Get(ctx workflow.Context) (*se
 }
 
 type ServiceCatalogUpdateTagOptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

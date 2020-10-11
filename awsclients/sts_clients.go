@@ -42,6 +42,7 @@ func NewSTSStub() STSClient {
 }
 
 type STSAssumeRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -52,6 +53,7 @@ func (r *STSAssumeRoleFuture) Get(ctx workflow.Context) (*sts.AssumeRoleOutput, 
 }
 
 type STSAssumeRoleWithSAMLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -62,6 +64,7 @@ func (r *STSAssumeRoleWithSAMLFuture) Get(ctx workflow.Context) (*sts.AssumeRole
 }
 
 type STSAssumeRoleWithWebIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -72,6 +75,7 @@ func (r *STSAssumeRoleWithWebIdentityFuture) Get(ctx workflow.Context) (*sts.Ass
 }
 
 type STSDecodeAuthorizationMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +86,7 @@ func (r *STSDecodeAuthorizationMessageFuture) Get(ctx workflow.Context) (*sts.De
 }
 
 type STSGetAccessKeyInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +97,7 @@ func (r *STSGetAccessKeyInfoFuture) Get(ctx workflow.Context) (*sts.GetAccessKey
 }
 
 type STSGetCallerIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +108,7 @@ func (r *STSGetCallerIdentityFuture) Get(ctx workflow.Context) (*sts.GetCallerId
 }
 
 type STSGetFederationTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +119,7 @@ func (r *STSGetFederationTokenFuture) Get(ctx workflow.Context) (*sts.GetFederat
 }
 
 type STSGetSessionTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -120,6 +120,7 @@ func NewIoTAnalyticsStub() IoTAnalyticsClient {
 }
 
 type IoTAnalyticsBatchPutMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +131,7 @@ func (r *IoTAnalyticsBatchPutMessageFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsCancelPipelineReprocessingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +142,7 @@ func (r *IoTAnalyticsCancelPipelineReprocessingFuture) Get(ctx workflow.Context)
 }
 
 type IoTAnalyticsCreateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +153,7 @@ func (r *IoTAnalyticsCreateChannelFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsCreateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +164,7 @@ func (r *IoTAnalyticsCreateDatasetFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsCreateDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +175,7 @@ func (r *IoTAnalyticsCreateDatasetContentFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTAnalyticsCreateDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +186,7 @@ func (r *IoTAnalyticsCreateDatastoreFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsCreatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +197,7 @@ func (r *IoTAnalyticsCreatePipelineFuture) Get(ctx workflow.Context) (*iotanalyt
 }
 
 type IoTAnalyticsDeleteChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -200,6 +208,7 @@ func (r *IoTAnalyticsDeleteChannelFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsDeleteDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -210,6 +219,7 @@ func (r *IoTAnalyticsDeleteDatasetFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsDeleteDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -220,6 +230,7 @@ func (r *IoTAnalyticsDeleteDatasetContentFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTAnalyticsDeleteDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -230,6 +241,7 @@ func (r *IoTAnalyticsDeleteDatastoreFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsDeletePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -240,6 +252,7 @@ func (r *IoTAnalyticsDeletePipelineFuture) Get(ctx workflow.Context) (*iotanalyt
 }
 
 type IoTAnalyticsDescribeChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -250,6 +263,7 @@ func (r *IoTAnalyticsDescribeChannelFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsDescribeDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -260,6 +274,7 @@ func (r *IoTAnalyticsDescribeDatasetFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsDescribeDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -270,6 +285,7 @@ func (r *IoTAnalyticsDescribeDatastoreFuture) Get(ctx workflow.Context) (*iotana
 }
 
 type IoTAnalyticsDescribeLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -280,6 +296,7 @@ func (r *IoTAnalyticsDescribeLoggingOptionsFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTAnalyticsDescribePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -290,6 +307,7 @@ func (r *IoTAnalyticsDescribePipelineFuture) Get(ctx workflow.Context) (*iotanal
 }
 
 type IoTAnalyticsGetDatasetContentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -300,6 +318,7 @@ func (r *IoTAnalyticsGetDatasetContentFuture) Get(ctx workflow.Context) (*iotana
 }
 
 type IoTAnalyticsListChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -310,6 +329,7 @@ func (r *IoTAnalyticsListChannelsFuture) Get(ctx workflow.Context) (*iotanalytic
 }
 
 type IoTAnalyticsListDatasetContentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -320,6 +340,7 @@ func (r *IoTAnalyticsListDatasetContentsFuture) Get(ctx workflow.Context) (*iota
 }
 
 type IoTAnalyticsListDatasetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -330,6 +351,7 @@ func (r *IoTAnalyticsListDatasetsFuture) Get(ctx workflow.Context) (*iotanalytic
 }
 
 type IoTAnalyticsListDatastoresFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -340,6 +362,7 @@ func (r *IoTAnalyticsListDatastoresFuture) Get(ctx workflow.Context) (*iotanalyt
 }
 
 type IoTAnalyticsListPipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -350,6 +373,7 @@ func (r *IoTAnalyticsListPipelinesFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -360,6 +384,7 @@ func (r *IoTAnalyticsListTagsForResourceFuture) Get(ctx workflow.Context) (*iota
 }
 
 type IoTAnalyticsPutLoggingOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -370,6 +395,7 @@ func (r *IoTAnalyticsPutLoggingOptionsFuture) Get(ctx workflow.Context) (*iotana
 }
 
 type IoTAnalyticsRunPipelineActivityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -380,6 +406,7 @@ func (r *IoTAnalyticsRunPipelineActivityFuture) Get(ctx workflow.Context) (*iota
 }
 
 type IoTAnalyticsSampleChannelDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -390,6 +417,7 @@ func (r *IoTAnalyticsSampleChannelDataFuture) Get(ctx workflow.Context) (*iotana
 }
 
 type IoTAnalyticsStartPipelineReprocessingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -400,6 +428,7 @@ func (r *IoTAnalyticsStartPipelineReprocessingFuture) Get(ctx workflow.Context) 
 }
 
 type IoTAnalyticsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -410,6 +439,7 @@ func (r *IoTAnalyticsTagResourceFuture) Get(ctx workflow.Context) (*iotanalytics
 }
 
 type IoTAnalyticsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -420,6 +450,7 @@ func (r *IoTAnalyticsUntagResourceFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsUpdateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -430,6 +461,7 @@ func (r *IoTAnalyticsUpdateChannelFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsUpdateDatasetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -440,6 +472,7 @@ func (r *IoTAnalyticsUpdateDatasetFuture) Get(ctx workflow.Context) (*iotanalyti
 }
 
 type IoTAnalyticsUpdateDatastoreFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -450,6 +483,7 @@ func (r *IoTAnalyticsUpdateDatastoreFuture) Get(ctx workflow.Context) (*iotanaly
 }
 
 type IoTAnalyticsUpdatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

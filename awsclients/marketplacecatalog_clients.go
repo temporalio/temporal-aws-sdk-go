@@ -36,6 +36,7 @@ func NewMarketplaceCatalogStub() MarketplaceCatalogClient {
 }
 
 type MarketplaceCatalogCancelChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *MarketplaceCatalogCancelChangeSetFuture) Get(ctx workflow.Context) (*ma
 }
 
 type MarketplaceCatalogDescribeChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *MarketplaceCatalogDescribeChangeSetFuture) Get(ctx workflow.Context) (*
 }
 
 type MarketplaceCatalogDescribeEntityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *MarketplaceCatalogDescribeEntityFuture) Get(ctx workflow.Context) (*mar
 }
 
 type MarketplaceCatalogListChangeSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *MarketplaceCatalogListChangeSetsFuture) Get(ctx workflow.Context) (*mar
 }
 
 type MarketplaceCatalogListEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *MarketplaceCatalogListEntitiesFuture) Get(ctx workflow.Context) (*marke
 }
 
 type MarketplaceCatalogStartChangeSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

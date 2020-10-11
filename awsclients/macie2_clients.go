@@ -171,6 +171,7 @@ func NewMacie2Stub() Macie2Client {
 }
 
 type Macie2AcceptInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +182,7 @@ func (r *Macie2AcceptInvitationFuture) Get(ctx workflow.Context) (*macie2.Accept
 }
 
 type Macie2BatchGetCustomDataIdentifiersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +193,7 @@ func (r *Macie2BatchGetCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*
 }
 
 type Macie2CreateClassificationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +204,7 @@ func (r *Macie2CreateClassificationJobFuture) Get(ctx workflow.Context) (*macie2
 }
 
 type Macie2CreateCustomDataIdentifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +215,7 @@ func (r *Macie2CreateCustomDataIdentifierFuture) Get(ctx workflow.Context) (*mac
 }
 
 type Macie2CreateFindingsFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +226,7 @@ func (r *Macie2CreateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.Cr
 }
 
 type Macie2CreateInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +237,7 @@ func (r *Macie2CreateInvitationsFuture) Get(ctx workflow.Context) (*macie2.Creat
 }
 
 type Macie2CreateMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +248,7 @@ func (r *Macie2CreateMemberFuture) Get(ctx workflow.Context) (*macie2.CreateMemb
 }
 
 type Macie2CreateSampleFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +259,7 @@ func (r *Macie2CreateSampleFindingsFuture) Get(ctx workflow.Context) (*macie2.Cr
 }
 
 type Macie2DeclineInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +270,7 @@ func (r *Macie2DeclineInvitationsFuture) Get(ctx workflow.Context) (*macie2.Decl
 }
 
 type Macie2DeleteCustomDataIdentifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +281,7 @@ func (r *Macie2DeleteCustomDataIdentifierFuture) Get(ctx workflow.Context) (*mac
 }
 
 type Macie2DeleteFindingsFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +292,7 @@ func (r *Macie2DeleteFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.De
 }
 
 type Macie2DeleteInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +303,7 @@ func (r *Macie2DeleteInvitationsFuture) Get(ctx workflow.Context) (*macie2.Delet
 }
 
 type Macie2DeleteMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +314,7 @@ func (r *Macie2DeleteMemberFuture) Get(ctx workflow.Context) (*macie2.DeleteMemb
 }
 
 type Macie2DescribeBucketsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +325,7 @@ func (r *Macie2DescribeBucketsFuture) Get(ctx workflow.Context) (*macie2.Describ
 }
 
 type Macie2DescribeClassificationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +336,7 @@ func (r *Macie2DescribeClassificationJobFuture) Get(ctx workflow.Context) (*maci
 }
 
 type Macie2DescribeOrganizationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +347,7 @@ func (r *Macie2DescribeOrganizationConfigurationFuture) Get(ctx workflow.Context
 }
 
 type Macie2DisableMacieFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +358,7 @@ func (r *Macie2DisableMacieFuture) Get(ctx workflow.Context) (*macie2.DisableMac
 }
 
 type Macie2DisableOrganizationAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +369,7 @@ func (r *Macie2DisableOrganizationAdminAccountFuture) Get(ctx workflow.Context) 
 }
 
 type Macie2DisassociateFromMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +380,7 @@ func (r *Macie2DisassociateFromMasterAccountFuture) Get(ctx workflow.Context) (*
 }
 
 type Macie2DisassociateMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +391,7 @@ func (r *Macie2DisassociateMemberFuture) Get(ctx workflow.Context) (*macie2.Disa
 }
 
 type Macie2EnableMacieFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +402,7 @@ func (r *Macie2EnableMacieFuture) Get(ctx workflow.Context) (*macie2.EnableMacie
 }
 
 type Macie2EnableOrganizationAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +413,7 @@ func (r *Macie2EnableOrganizationAdminAccountFuture) Get(ctx workflow.Context) (
 }
 
 type Macie2GetBucketStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +424,7 @@ func (r *Macie2GetBucketStatisticsFuture) Get(ctx workflow.Context) (*macie2.Get
 }
 
 type Macie2GetClassificationExportConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +435,7 @@ func (r *Macie2GetClassificationExportConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type Macie2GetCustomDataIdentifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -421,6 +446,7 @@ func (r *Macie2GetCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie2
 }
 
 type Macie2GetFindingStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -431,6 +457,7 @@ func (r *Macie2GetFindingStatisticsFuture) Get(ctx workflow.Context) (*macie2.Ge
 }
 
 type Macie2GetFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -441,6 +468,7 @@ func (r *Macie2GetFindingsFuture) Get(ctx workflow.Context) (*macie2.GetFindings
 }
 
 type Macie2GetFindingsFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -451,6 +479,7 @@ func (r *Macie2GetFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.GetFi
 }
 
 type Macie2GetInvitationsCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -461,6 +490,7 @@ func (r *Macie2GetInvitationsCountFuture) Get(ctx workflow.Context) (*macie2.Get
 }
 
 type Macie2GetMacieSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -471,6 +501,7 @@ func (r *Macie2GetMacieSessionFuture) Get(ctx workflow.Context) (*macie2.GetMaci
 }
 
 type Macie2GetMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -481,6 +512,7 @@ func (r *Macie2GetMasterAccountFuture) Get(ctx workflow.Context) (*macie2.GetMas
 }
 
 type Macie2GetMemberFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -491,6 +523,7 @@ func (r *Macie2GetMemberFuture) Get(ctx workflow.Context) (*macie2.GetMemberOutp
 }
 
 type Macie2GetUsageStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -501,6 +534,7 @@ func (r *Macie2GetUsageStatisticsFuture) Get(ctx workflow.Context) (*macie2.GetU
 }
 
 type Macie2GetUsageTotalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -511,6 +545,7 @@ func (r *Macie2GetUsageTotalsFuture) Get(ctx workflow.Context) (*macie2.GetUsage
 }
 
 type Macie2ListClassificationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -521,6 +556,7 @@ func (r *Macie2ListClassificationJobsFuture) Get(ctx workflow.Context) (*macie2.
 }
 
 type Macie2ListCustomDataIdentifiersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -531,6 +567,7 @@ func (r *Macie2ListCustomDataIdentifiersFuture) Get(ctx workflow.Context) (*maci
 }
 
 type Macie2ListFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -541,6 +578,7 @@ func (r *Macie2ListFindingsFuture) Get(ctx workflow.Context) (*macie2.ListFindin
 }
 
 type Macie2ListFindingsFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -551,6 +589,7 @@ func (r *Macie2ListFindingsFiltersFuture) Get(ctx workflow.Context) (*macie2.Lis
 }
 
 type Macie2ListInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -561,6 +600,7 @@ func (r *Macie2ListInvitationsFuture) Get(ctx workflow.Context) (*macie2.ListInv
 }
 
 type Macie2ListMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -571,6 +611,7 @@ func (r *Macie2ListMembersFuture) Get(ctx workflow.Context) (*macie2.ListMembers
 }
 
 type Macie2ListOrganizationAdminAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -581,6 +622,7 @@ func (r *Macie2ListOrganizationAdminAccountsFuture) Get(ctx workflow.Context) (*
 }
 
 type Macie2ListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -591,6 +633,7 @@ func (r *Macie2ListTagsForResourceFuture) Get(ctx workflow.Context) (*macie2.Lis
 }
 
 type Macie2PutClassificationExportConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -601,6 +644,7 @@ func (r *Macie2PutClassificationExportConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type Macie2TagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -611,6 +655,7 @@ func (r *Macie2TagResourceFuture) Get(ctx workflow.Context) (*macie2.TagResource
 }
 
 type Macie2TestCustomDataIdentifierFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -621,6 +666,7 @@ func (r *Macie2TestCustomDataIdentifierFuture) Get(ctx workflow.Context) (*macie
 }
 
 type Macie2UntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -631,6 +677,7 @@ func (r *Macie2UntagResourceFuture) Get(ctx workflow.Context) (*macie2.UntagReso
 }
 
 type Macie2UpdateClassificationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -641,6 +688,7 @@ func (r *Macie2UpdateClassificationJobFuture) Get(ctx workflow.Context) (*macie2
 }
 
 type Macie2UpdateFindingsFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -651,6 +699,7 @@ func (r *Macie2UpdateFindingsFilterFuture) Get(ctx workflow.Context) (*macie2.Up
 }
 
 type Macie2UpdateMacieSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -661,6 +710,7 @@ func (r *Macie2UpdateMacieSessionFuture) Get(ctx workflow.Context) (*macie2.Upda
 }
 
 type Macie2UpdateMemberSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -671,6 +721,7 @@ func (r *Macie2UpdateMemberSessionFuture) Get(ctx workflow.Context) (*macie2.Upd
 }
 
 type Macie2UpdateOrganizationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

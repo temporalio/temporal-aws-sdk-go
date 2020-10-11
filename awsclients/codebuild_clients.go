@@ -147,6 +147,7 @@ func NewCodeBuildStub() CodeBuildClient {
 }
 
 type CodeBuildBatchDeleteBuildsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +158,7 @@ func (r *CodeBuildBatchDeleteBuildsFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildBatchGetBuildBatchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +169,7 @@ func (r *CodeBuildBatchGetBuildBatchesFuture) Get(ctx workflow.Context) (*codebu
 }
 
 type CodeBuildBatchGetBuildsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +180,7 @@ func (r *CodeBuildBatchGetBuildsFuture) Get(ctx workflow.Context) (*codebuild.Ba
 }
 
 type CodeBuildBatchGetProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -187,6 +191,7 @@ func (r *CodeBuildBatchGetProjectsFuture) Get(ctx workflow.Context) (*codebuild.
 }
 
 type CodeBuildBatchGetReportGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -197,6 +202,7 @@ func (r *CodeBuildBatchGetReportGroupsFuture) Get(ctx workflow.Context) (*codebu
 }
 
 type CodeBuildBatchGetReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -207,6 +213,7 @@ func (r *CodeBuildBatchGetReportsFuture) Get(ctx workflow.Context) (*codebuild.B
 }
 
 type CodeBuildCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -217,6 +224,7 @@ func (r *CodeBuildCreateProjectFuture) Get(ctx workflow.Context) (*codebuild.Cre
 }
 
 type CodeBuildCreateReportGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -227,6 +235,7 @@ func (r *CodeBuildCreateReportGroupFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildCreateWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -237,6 +246,7 @@ func (r *CodeBuildCreateWebhookFuture) Get(ctx workflow.Context) (*codebuild.Cre
 }
 
 type CodeBuildDeleteBuildBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -247,6 +257,7 @@ func (r *CodeBuildDeleteBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.
 }
 
 type CodeBuildDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -257,6 +268,7 @@ func (r *CodeBuildDeleteProjectFuture) Get(ctx workflow.Context) (*codebuild.Del
 }
 
 type CodeBuildDeleteReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -267,6 +279,7 @@ func (r *CodeBuildDeleteReportFuture) Get(ctx workflow.Context) (*codebuild.Dele
 }
 
 type CodeBuildDeleteReportGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -277,6 +290,7 @@ func (r *CodeBuildDeleteReportGroupFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildDeleteResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -287,6 +301,7 @@ func (r *CodeBuildDeleteResourcePolicyFuture) Get(ctx workflow.Context) (*codebu
 }
 
 type CodeBuildDeleteSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -297,6 +312,7 @@ func (r *CodeBuildDeleteSourceCredentialsFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeBuildDeleteWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -307,6 +323,7 @@ func (r *CodeBuildDeleteWebhookFuture) Get(ctx workflow.Context) (*codebuild.Del
 }
 
 type CodeBuildDescribeCodeCoveragesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -317,6 +334,7 @@ func (r *CodeBuildDescribeCodeCoveragesFuture) Get(ctx workflow.Context) (*codeb
 }
 
 type CodeBuildDescribeTestCasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -327,6 +345,7 @@ func (r *CodeBuildDescribeTestCasesFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildGetResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -337,6 +356,7 @@ func (r *CodeBuildGetResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildImportSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -347,6 +367,7 @@ func (r *CodeBuildImportSourceCredentialsFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeBuildInvalidateProjectCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -357,6 +378,7 @@ func (r *CodeBuildInvalidateProjectCacheFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeBuildListBuildBatchesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -367,6 +389,7 @@ func (r *CodeBuildListBuildBatchesFuture) Get(ctx workflow.Context) (*codebuild.
 }
 
 type CodeBuildListBuildBatchesForProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -377,6 +400,7 @@ func (r *CodeBuildListBuildBatchesForProjectFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeBuildListBuildsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -387,6 +411,7 @@ func (r *CodeBuildListBuildsFuture) Get(ctx workflow.Context) (*codebuild.ListBu
 }
 
 type CodeBuildListBuildsForProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -397,6 +422,7 @@ func (r *CodeBuildListBuildsForProjectFuture) Get(ctx workflow.Context) (*codebu
 }
 
 type CodeBuildListCuratedEnvironmentImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -407,6 +433,7 @@ func (r *CodeBuildListCuratedEnvironmentImagesFuture) Get(ctx workflow.Context) 
 }
 
 type CodeBuildListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -417,6 +444,7 @@ func (r *CodeBuildListProjectsFuture) Get(ctx workflow.Context) (*codebuild.List
 }
 
 type CodeBuildListReportGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -427,6 +455,7 @@ func (r *CodeBuildListReportGroupsFuture) Get(ctx workflow.Context) (*codebuild.
 }
 
 type CodeBuildListReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -437,6 +466,7 @@ func (r *CodeBuildListReportsFuture) Get(ctx workflow.Context) (*codebuild.ListR
 }
 
 type CodeBuildListReportsForReportGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -447,6 +477,7 @@ func (r *CodeBuildListReportsForReportGroupFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeBuildListSharedProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -457,6 +488,7 @@ func (r *CodeBuildListSharedProjectsFuture) Get(ctx workflow.Context) (*codebuil
 }
 
 type CodeBuildListSharedReportGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -467,6 +499,7 @@ func (r *CodeBuildListSharedReportGroupsFuture) Get(ctx workflow.Context) (*code
 }
 
 type CodeBuildListSourceCredentialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -477,6 +510,7 @@ func (r *CodeBuildListSourceCredentialsFuture) Get(ctx workflow.Context) (*codeb
 }
 
 type CodeBuildPutResourcePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -487,6 +521,7 @@ func (r *CodeBuildPutResourcePolicyFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildRetryBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -497,6 +532,7 @@ func (r *CodeBuildRetryBuildFuture) Get(ctx workflow.Context) (*codebuild.RetryB
 }
 
 type CodeBuildRetryBuildBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -507,6 +543,7 @@ func (r *CodeBuildRetryBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.R
 }
 
 type CodeBuildStartBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -517,6 +554,7 @@ func (r *CodeBuildStartBuildFuture) Get(ctx workflow.Context) (*codebuild.StartB
 }
 
 type CodeBuildStartBuildBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -527,6 +565,7 @@ func (r *CodeBuildStartBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.S
 }
 
 type CodeBuildStopBuildFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -537,6 +576,7 @@ func (r *CodeBuildStopBuildFuture) Get(ctx workflow.Context) (*codebuild.StopBui
 }
 
 type CodeBuildStopBuildBatchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -547,6 +587,7 @@ func (r *CodeBuildStopBuildBatchFuture) Get(ctx workflow.Context) (*codebuild.St
 }
 
 type CodeBuildUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -557,6 +598,7 @@ func (r *CodeBuildUpdateProjectFuture) Get(ctx workflow.Context) (*codebuild.Upd
 }
 
 type CodeBuildUpdateReportGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -567,6 +609,7 @@ func (r *CodeBuildUpdateReportGroupFuture) Get(ctx workflow.Context) (*codebuild
 }
 
 type CodeBuildUpdateWebhookFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

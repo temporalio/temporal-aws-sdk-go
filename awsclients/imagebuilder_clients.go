@@ -144,6 +144,7 @@ func NewImagebuilderStub() ImagebuilderClient {
 }
 
 type ImagebuilderCancelImageCreationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +155,7 @@ func (r *ImagebuilderCancelImageCreationFuture) Get(ctx workflow.Context) (*imag
 }
 
 type ImagebuilderCreateComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +166,7 @@ func (r *ImagebuilderCreateComponentFuture) Get(ctx workflow.Context) (*imagebui
 }
 
 type ImagebuilderCreateDistributionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +177,7 @@ func (r *ImagebuilderCreateDistributionConfigurationFuture) Get(ctx workflow.Con
 }
 
 type ImagebuilderCreateImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +188,7 @@ func (r *ImagebuilderCreateImageFuture) Get(ctx workflow.Context) (*imagebuilder
 }
 
 type ImagebuilderCreateImagePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +199,7 @@ func (r *ImagebuilderCreateImagePipelineFuture) Get(ctx workflow.Context) (*imag
 }
 
 type ImagebuilderCreateImageRecipeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +210,7 @@ func (r *ImagebuilderCreateImageRecipeFuture) Get(ctx workflow.Context) (*imageb
 }
 
 type ImagebuilderCreateInfrastructureConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +221,7 @@ func (r *ImagebuilderCreateInfrastructureConfigurationFuture) Get(ctx workflow.C
 }
 
 type ImagebuilderDeleteComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +232,7 @@ func (r *ImagebuilderDeleteComponentFuture) Get(ctx workflow.Context) (*imagebui
 }
 
 type ImagebuilderDeleteDistributionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +243,7 @@ func (r *ImagebuilderDeleteDistributionConfigurationFuture) Get(ctx workflow.Con
 }
 
 type ImagebuilderDeleteImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +254,7 @@ func (r *ImagebuilderDeleteImageFuture) Get(ctx workflow.Context) (*imagebuilder
 }
 
 type ImagebuilderDeleteImagePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +265,7 @@ func (r *ImagebuilderDeleteImagePipelineFuture) Get(ctx workflow.Context) (*imag
 }
 
 type ImagebuilderDeleteImageRecipeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +276,7 @@ func (r *ImagebuilderDeleteImageRecipeFuture) Get(ctx workflow.Context) (*imageb
 }
 
 type ImagebuilderDeleteInfrastructureConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +287,7 @@ func (r *ImagebuilderDeleteInfrastructureConfigurationFuture) Get(ctx workflow.C
 }
 
 type ImagebuilderGetComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +298,7 @@ func (r *ImagebuilderGetComponentFuture) Get(ctx workflow.Context) (*imagebuilde
 }
 
 type ImagebuilderGetComponentPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +309,7 @@ func (r *ImagebuilderGetComponentPolicyFuture) Get(ctx workflow.Context) (*image
 }
 
 type ImagebuilderGetDistributionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +320,7 @@ func (r *ImagebuilderGetDistributionConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type ImagebuilderGetImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +331,7 @@ func (r *ImagebuilderGetImageFuture) Get(ctx workflow.Context) (*imagebuilder.Ge
 }
 
 type ImagebuilderGetImagePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +342,7 @@ func (r *ImagebuilderGetImagePipelineFuture) Get(ctx workflow.Context) (*imagebu
 }
 
 type ImagebuilderGetImagePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +353,7 @@ func (r *ImagebuilderGetImagePolicyFuture) Get(ctx workflow.Context) (*imagebuil
 }
 
 type ImagebuilderGetImageRecipeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +364,7 @@ func (r *ImagebuilderGetImageRecipeFuture) Get(ctx workflow.Context) (*imagebuil
 }
 
 type ImagebuilderGetImageRecipePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +375,7 @@ func (r *ImagebuilderGetImageRecipePolicyFuture) Get(ctx workflow.Context) (*ima
 }
 
 type ImagebuilderGetInfrastructureConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +386,7 @@ func (r *ImagebuilderGetInfrastructureConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type ImagebuilderImportComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +397,7 @@ func (r *ImagebuilderImportComponentFuture) Get(ctx workflow.Context) (*imagebui
 }
 
 type ImagebuilderListComponentBuildVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +408,7 @@ func (r *ImagebuilderListComponentBuildVersionsFuture) Get(ctx workflow.Context)
 }
 
 type ImagebuilderListComponentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +419,7 @@ func (r *ImagebuilderListComponentsFuture) Get(ctx workflow.Context) (*imagebuil
 }
 
 type ImagebuilderListDistributionConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +430,7 @@ func (r *ImagebuilderListDistributionConfigurationsFuture) Get(ctx workflow.Cont
 }
 
 type ImagebuilderListImageBuildVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +441,7 @@ func (r *ImagebuilderListImageBuildVersionsFuture) Get(ctx workflow.Context) (*i
 }
 
 type ImagebuilderListImagePipelineImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +452,7 @@ func (r *ImagebuilderListImagePipelineImagesFuture) Get(ctx workflow.Context) (*
 }
 
 type ImagebuilderListImagePipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +463,7 @@ func (r *ImagebuilderListImagePipelinesFuture) Get(ctx workflow.Context) (*image
 }
 
 type ImagebuilderListImageRecipesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +474,7 @@ func (r *ImagebuilderListImageRecipesFuture) Get(ctx workflow.Context) (*imagebu
 }
 
 type ImagebuilderListImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +485,7 @@ func (r *ImagebuilderListImagesFuture) Get(ctx workflow.Context) (*imagebuilder.
 }
 
 type ImagebuilderListInfrastructureConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +496,7 @@ func (r *ImagebuilderListInfrastructureConfigurationsFuture) Get(ctx workflow.Co
 }
 
 type ImagebuilderListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +507,7 @@ func (r *ImagebuilderListTagsForResourceFuture) Get(ctx workflow.Context) (*imag
 }
 
 type ImagebuilderPutComponentPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +518,7 @@ func (r *ImagebuilderPutComponentPolicyFuture) Get(ctx workflow.Context) (*image
 }
 
 type ImagebuilderPutImagePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +529,7 @@ func (r *ImagebuilderPutImagePolicyFuture) Get(ctx workflow.Context) (*imagebuil
 }
 
 type ImagebuilderPutImageRecipePolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +540,7 @@ func (r *ImagebuilderPutImageRecipePolicyFuture) Get(ctx workflow.Context) (*ima
 }
 
 type ImagebuilderStartImagePipelineExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +551,7 @@ func (r *ImagebuilderStartImagePipelineExecutionFuture) Get(ctx workflow.Context
 }
 
 type ImagebuilderTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +562,7 @@ func (r *ImagebuilderTagResourceFuture) Get(ctx workflow.Context) (*imagebuilder
 }
 
 type ImagebuilderUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +573,7 @@ func (r *ImagebuilderUntagResourceFuture) Get(ctx workflow.Context) (*imagebuild
 }
 
 type ImagebuilderUpdateDistributionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +584,7 @@ func (r *ImagebuilderUpdateDistributionConfigurationFuture) Get(ctx workflow.Con
 }
 
 type ImagebuilderUpdateImagePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +595,7 @@ func (r *ImagebuilderUpdateImagePipelineFuture) Get(ctx workflow.Context) (*imag
 }
 
 type ImagebuilderUpdateInfrastructureConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

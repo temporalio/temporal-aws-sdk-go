@@ -60,6 +60,7 @@ func NewACMStub() ACMClient {
 }
 
 type ACMAddTagsToCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -70,6 +71,7 @@ func (r *ACMAddTagsToCertificateFuture) Get(ctx workflow.Context) (*acm.AddTagsT
 }
 
 type ACMDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -80,6 +82,7 @@ func (r *ACMDeleteCertificateFuture) Get(ctx workflow.Context) (*acm.DeleteCerti
 }
 
 type ACMDescribeCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -90,6 +93,7 @@ func (r *ACMDescribeCertificateFuture) Get(ctx workflow.Context) (*acm.DescribeC
 }
 
 type ACMExportCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +104,7 @@ func (r *ACMExportCertificateFuture) Get(ctx workflow.Context) (*acm.ExportCerti
 }
 
 type ACMGetCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +115,7 @@ func (r *ACMGetCertificateFuture) Get(ctx workflow.Context) (*acm.GetCertificate
 }
 
 type ACMImportCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +126,7 @@ func (r *ACMImportCertificateFuture) Get(ctx workflow.Context) (*acm.ImportCerti
 }
 
 type ACMListCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +137,7 @@ func (r *ACMListCertificatesFuture) Get(ctx workflow.Context) (*acm.ListCertific
 }
 
 type ACMListTagsForCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +148,7 @@ func (r *ACMListTagsForCertificateFuture) Get(ctx workflow.Context) (*acm.ListTa
 }
 
 type ACMRemoveTagsFromCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +159,7 @@ func (r *ACMRemoveTagsFromCertificateFuture) Get(ctx workflow.Context) (*acm.Rem
 }
 
 type ACMRenewCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +170,7 @@ func (r *ACMRenewCertificateFuture) Get(ctx workflow.Context) (*acm.RenewCertifi
 }
 
 type ACMRequestCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +181,7 @@ func (r *ACMRequestCertificateFuture) Get(ctx workflow.Context) (*acm.RequestCer
 }
 
 type ACMResendValidationEmailFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +192,7 @@ func (r *ACMResendValidationEmailFuture) Get(ctx workflow.Context) (*acm.ResendV
 }
 
 type ACMUpdateCertificateOptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

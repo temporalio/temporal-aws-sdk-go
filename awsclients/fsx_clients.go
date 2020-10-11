@@ -60,6 +60,7 @@ func NewFSxStub() FSxClient {
 }
 
 type FSxCancelDataRepositoryTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -70,6 +71,7 @@ func (r *FSxCancelDataRepositoryTaskFuture) Get(ctx workflow.Context) (*fsx.Canc
 }
 
 type FSxCreateBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -80,6 +82,7 @@ func (r *FSxCreateBackupFuture) Get(ctx workflow.Context) (*fsx.CreateBackupOutp
 }
 
 type FSxCreateDataRepositoryTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -90,6 +93,7 @@ func (r *FSxCreateDataRepositoryTaskFuture) Get(ctx workflow.Context) (*fsx.Crea
 }
 
 type FSxCreateFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -100,6 +104,7 @@ func (r *FSxCreateFileSystemFuture) Get(ctx workflow.Context) (*fsx.CreateFileSy
 }
 
 type FSxCreateFileSystemFromBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -110,6 +115,7 @@ func (r *FSxCreateFileSystemFromBackupFuture) Get(ctx workflow.Context) (*fsx.Cr
 }
 
 type FSxDeleteBackupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -120,6 +126,7 @@ func (r *FSxDeleteBackupFuture) Get(ctx workflow.Context) (*fsx.DeleteBackupOutp
 }
 
 type FSxDeleteFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -130,6 +137,7 @@ func (r *FSxDeleteFileSystemFuture) Get(ctx workflow.Context) (*fsx.DeleteFileSy
 }
 
 type FSxDescribeBackupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -140,6 +148,7 @@ func (r *FSxDescribeBackupsFuture) Get(ctx workflow.Context) (*fsx.DescribeBacku
 }
 
 type FSxDescribeDataRepositoryTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -150,6 +159,7 @@ func (r *FSxDescribeDataRepositoryTasksFuture) Get(ctx workflow.Context) (*fsx.D
 }
 
 type FSxDescribeFileSystemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -160,6 +170,7 @@ func (r *FSxDescribeFileSystemsFuture) Get(ctx workflow.Context) (*fsx.DescribeF
 }
 
 type FSxListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -170,6 +181,7 @@ func (r *FSxListTagsForResourceFuture) Get(ctx workflow.Context) (*fsx.ListTagsF
 }
 
 type FSxTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -180,6 +192,7 @@ func (r *FSxTagResourceFuture) Get(ctx workflow.Context) (*fsx.TagResourceOutput
 }
 
 type FSxUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -190,6 +203,7 @@ func (r *FSxUntagResourceFuture) Get(ctx workflow.Context) (*fsx.UntagResourceOu
 }
 
 type FSxUpdateFileSystemFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

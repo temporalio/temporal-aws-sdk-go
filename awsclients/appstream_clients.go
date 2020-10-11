@@ -165,6 +165,7 @@ func NewAppStreamStub() AppStreamClient {
 }
 
 type AppStreamAssociateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +176,7 @@ func (r *AppStreamAssociateFleetFuture) Get(ctx workflow.Context) (*appstream.As
 }
 
 type AppStreamBatchAssociateUserStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +187,7 @@ func (r *AppStreamBatchAssociateUserStackFuture) Get(ctx workflow.Context) (*app
 }
 
 type AppStreamBatchDisassociateUserStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +198,7 @@ func (r *AppStreamBatchDisassociateUserStackFuture) Get(ctx workflow.Context) (*
 }
 
 type AppStreamCopyImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +209,7 @@ func (r *AppStreamCopyImageFuture) Get(ctx workflow.Context) (*appstream.CopyIma
 }
 
 type AppStreamCreateDirectoryConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +220,7 @@ func (r *AppStreamCreateDirectoryConfigFuture) Get(ctx workflow.Context) (*appst
 }
 
 type AppStreamCreateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +231,7 @@ func (r *AppStreamCreateFleetFuture) Get(ctx workflow.Context) (*appstream.Creat
 }
 
 type AppStreamCreateImageBuilderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +242,7 @@ func (r *AppStreamCreateImageBuilderFuture) Get(ctx workflow.Context) (*appstrea
 }
 
 type AppStreamCreateImageBuilderStreamingURLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +253,7 @@ func (r *AppStreamCreateImageBuilderStreamingURLFuture) Get(ctx workflow.Context
 }
 
 type AppStreamCreateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +264,7 @@ func (r *AppStreamCreateStackFuture) Get(ctx workflow.Context) (*appstream.Creat
 }
 
 type AppStreamCreateStreamingURLFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +275,7 @@ func (r *AppStreamCreateStreamingURLFuture) Get(ctx workflow.Context) (*appstrea
 }
 
 type AppStreamCreateUsageReportSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +286,7 @@ func (r *AppStreamCreateUsageReportSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type AppStreamCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +297,7 @@ func (r *AppStreamCreateUserFuture) Get(ctx workflow.Context) (*appstream.Create
 }
 
 type AppStreamDeleteDirectoryConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +308,7 @@ func (r *AppStreamDeleteDirectoryConfigFuture) Get(ctx workflow.Context) (*appst
 }
 
 type AppStreamDeleteFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +319,7 @@ func (r *AppStreamDeleteFleetFuture) Get(ctx workflow.Context) (*appstream.Delet
 }
 
 type AppStreamDeleteImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +330,7 @@ func (r *AppStreamDeleteImageFuture) Get(ctx workflow.Context) (*appstream.Delet
 }
 
 type AppStreamDeleteImageBuilderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +341,7 @@ func (r *AppStreamDeleteImageBuilderFuture) Get(ctx workflow.Context) (*appstrea
 }
 
 type AppStreamDeleteImagePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +352,7 @@ func (r *AppStreamDeleteImagePermissionsFuture) Get(ctx workflow.Context) (*apps
 }
 
 type AppStreamDeleteStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +363,7 @@ func (r *AppStreamDeleteStackFuture) Get(ctx workflow.Context) (*appstream.Delet
 }
 
 type AppStreamDeleteUsageReportSubscriptionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +374,7 @@ func (r *AppStreamDeleteUsageReportSubscriptionFuture) Get(ctx workflow.Context)
 }
 
 type AppStreamDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +385,7 @@ func (r *AppStreamDeleteUserFuture) Get(ctx workflow.Context) (*appstream.Delete
 }
 
 type AppStreamDescribeDirectoryConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +396,7 @@ func (r *AppStreamDescribeDirectoryConfigsFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppStreamDescribeFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +407,7 @@ func (r *AppStreamDescribeFleetsFuture) Get(ctx workflow.Context) (*appstream.De
 }
 
 type AppStreamDescribeImageBuildersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +418,7 @@ func (r *AppStreamDescribeImageBuildersFuture) Get(ctx workflow.Context) (*appst
 }
 
 type AppStreamDescribeImagePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +429,7 @@ func (r *AppStreamDescribeImagePermissionsFuture) Get(ctx workflow.Context) (*ap
 }
 
 type AppStreamDescribeImagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +440,7 @@ func (r *AppStreamDescribeImagesFuture) Get(ctx workflow.Context) (*appstream.De
 }
 
 type AppStreamDescribeSessionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +451,7 @@ func (r *AppStreamDescribeSessionsFuture) Get(ctx workflow.Context) (*appstream.
 }
 
 type AppStreamDescribeStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +462,7 @@ func (r *AppStreamDescribeStacksFuture) Get(ctx workflow.Context) (*appstream.De
 }
 
 type AppStreamDescribeUsageReportSubscriptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +473,7 @@ func (r *AppStreamDescribeUsageReportSubscriptionsFuture) Get(ctx workflow.Conte
 }
 
 type AppStreamDescribeUserStackAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +484,7 @@ func (r *AppStreamDescribeUserStackAssociationsFuture) Get(ctx workflow.Context)
 }
 
 type AppStreamDescribeUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +495,7 @@ func (r *AppStreamDescribeUsersFuture) Get(ctx workflow.Context) (*appstream.Des
 }
 
 type AppStreamDisableUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +506,7 @@ func (r *AppStreamDisableUserFuture) Get(ctx workflow.Context) (*appstream.Disab
 }
 
 type AppStreamDisassociateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +517,7 @@ func (r *AppStreamDisassociateFleetFuture) Get(ctx workflow.Context) (*appstream
 }
 
 type AppStreamEnableUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +528,7 @@ func (r *AppStreamEnableUserFuture) Get(ctx workflow.Context) (*appstream.Enable
 }
 
 type AppStreamExpireSessionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +539,7 @@ func (r *AppStreamExpireSessionFuture) Get(ctx workflow.Context) (*appstream.Exp
 }
 
 type AppStreamListAssociatedFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +550,7 @@ func (r *AppStreamListAssociatedFleetsFuture) Get(ctx workflow.Context) (*appstr
 }
 
 type AppStreamListAssociatedStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -525,6 +561,7 @@ func (r *AppStreamListAssociatedStacksFuture) Get(ctx workflow.Context) (*appstr
 }
 
 type AppStreamListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -535,6 +572,7 @@ func (r *AppStreamListTagsForResourceFuture) Get(ctx workflow.Context) (*appstre
 }
 
 type AppStreamStartFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -545,6 +583,7 @@ func (r *AppStreamStartFleetFuture) Get(ctx workflow.Context) (*appstream.StartF
 }
 
 type AppStreamStartImageBuilderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -555,6 +594,7 @@ func (r *AppStreamStartImageBuilderFuture) Get(ctx workflow.Context) (*appstream
 }
 
 type AppStreamStopFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -565,6 +605,7 @@ func (r *AppStreamStopFleetFuture) Get(ctx workflow.Context) (*appstream.StopFle
 }
 
 type AppStreamStopImageBuilderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -575,6 +616,7 @@ func (r *AppStreamStopImageBuilderFuture) Get(ctx workflow.Context) (*appstream.
 }
 
 type AppStreamTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -585,6 +627,7 @@ func (r *AppStreamTagResourceFuture) Get(ctx workflow.Context) (*appstream.TagRe
 }
 
 type AppStreamUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -595,6 +638,7 @@ func (r *AppStreamUntagResourceFuture) Get(ctx workflow.Context) (*appstream.Unt
 }
 
 type AppStreamUpdateDirectoryConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -605,6 +649,7 @@ func (r *AppStreamUpdateDirectoryConfigFuture) Get(ctx workflow.Context) (*appst
 }
 
 type AppStreamUpdateFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -615,6 +660,7 @@ func (r *AppStreamUpdateFleetFuture) Get(ctx workflow.Context) (*appstream.Updat
 }
 
 type AppStreamUpdateImagePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -625,6 +671,7 @@ func (r *AppStreamUpdateImagePermissionsFuture) Get(ctx workflow.Context) (*apps
 }
 
 type AppStreamUpdateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

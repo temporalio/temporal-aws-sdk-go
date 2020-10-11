@@ -57,6 +57,7 @@ func NewCodeStarNotificationsStub() CodeStarNotificationsClient {
 }
 
 type CodeStarNotificationsCreateNotificationRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -67,6 +68,7 @@ func (r *CodeStarNotificationsCreateNotificationRuleFuture) Get(ctx workflow.Con
 }
 
 type CodeStarNotificationsDeleteNotificationRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -77,6 +79,7 @@ func (r *CodeStarNotificationsDeleteNotificationRuleFuture) Get(ctx workflow.Con
 }
 
 type CodeStarNotificationsDeleteTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -87,6 +90,7 @@ func (r *CodeStarNotificationsDeleteTargetFuture) Get(ctx workflow.Context) (*co
 }
 
 type CodeStarNotificationsDescribeNotificationRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -97,6 +101,7 @@ func (r *CodeStarNotificationsDescribeNotificationRuleFuture) Get(ctx workflow.C
 }
 
 type CodeStarNotificationsListEventTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -107,6 +112,7 @@ func (r *CodeStarNotificationsListEventTypesFuture) Get(ctx workflow.Context) (*
 }
 
 type CodeStarNotificationsListNotificationRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -117,6 +123,7 @@ func (r *CodeStarNotificationsListNotificationRulesFuture) Get(ctx workflow.Cont
 }
 
 type CodeStarNotificationsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -127,6 +134,7 @@ func (r *CodeStarNotificationsListTagsForResourceFuture) Get(ctx workflow.Contex
 }
 
 type CodeStarNotificationsListTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -137,6 +145,7 @@ func (r *CodeStarNotificationsListTargetsFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeStarNotificationsSubscribeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -147,6 +156,7 @@ func (r *CodeStarNotificationsSubscribeFuture) Get(ctx workflow.Context) (*codes
 }
 
 type CodeStarNotificationsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -157,6 +167,7 @@ func (r *CodeStarNotificationsTagResourceFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeStarNotificationsUnsubscribeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -167,6 +178,7 @@ func (r *CodeStarNotificationsUnsubscribeFuture) Get(ctx workflow.Context) (*cod
 }
 
 type CodeStarNotificationsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -177,6 +189,7 @@ func (r *CodeStarNotificationsUntagResourceFuture) Get(ctx workflow.Context) (*c
 }
 
 type CodeStarNotificationsUpdateNotificationRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

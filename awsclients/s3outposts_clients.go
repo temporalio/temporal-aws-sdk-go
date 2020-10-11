@@ -27,6 +27,7 @@ func NewS3OutpostsStub() S3OutpostsClient {
 }
 
 type S3OutpostsCreateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *S3OutpostsCreateEndpointFuture) Get(ctx workflow.Context) (*s3outposts.
 }
 
 type S3OutpostsDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *S3OutpostsDeleteEndpointFuture) Get(ctx workflow.Context) (*s3outposts.
 }
 
 type S3OutpostsListEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -138,6 +138,7 @@ func NewEMRStub() EMRClient {
 }
 
 type EMRAddInstanceFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -148,6 +149,7 @@ func (r *EMRAddInstanceFleetFuture) Get(ctx workflow.Context) (*emr.AddInstanceF
 }
 
 type EMRAddInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -158,6 +160,7 @@ func (r *EMRAddInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.AddInstance
 }
 
 type EMRAddJobFlowStepsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -168,6 +171,7 @@ func (r *EMRAddJobFlowStepsFuture) Get(ctx workflow.Context) (*emr.AddJobFlowSte
 }
 
 type EMRAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -178,6 +182,7 @@ func (r *EMRAddTagsFuture) Get(ctx workflow.Context) (*emr.AddTagsOutput, error)
 }
 
 type EMRCancelStepsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -188,6 +193,7 @@ func (r *EMRCancelStepsFuture) Get(ctx workflow.Context) (*emr.CancelStepsOutput
 }
 
 type EMRCreateSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -198,6 +204,7 @@ func (r *EMRCreateSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr.C
 }
 
 type EMRDeleteSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -208,6 +215,7 @@ func (r *EMRDeleteSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr.D
 }
 
 type EMRDescribeClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -218,6 +226,7 @@ func (r *EMRDescribeClusterFuture) Get(ctx workflow.Context) (*emr.DescribeClust
 }
 
 type EMRDescribeJobFlowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -228,6 +237,7 @@ func (r *EMRDescribeJobFlowsFuture) Get(ctx workflow.Context) (*emr.DescribeJobF
 }
 
 type EMRDescribeNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -238,6 +248,7 @@ func (r *EMRDescribeNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.Des
 }
 
 type EMRDescribeSecurityConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -248,6 +259,7 @@ func (r *EMRDescribeSecurityConfigurationFuture) Get(ctx workflow.Context) (*emr
 }
 
 type EMRDescribeStepFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -258,6 +270,7 @@ func (r *EMRDescribeStepFuture) Get(ctx workflow.Context) (*emr.DescribeStepOutp
 }
 
 type EMRGetBlockPublicAccessConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +281,7 @@ func (r *EMRGetBlockPublicAccessConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type EMRGetManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +292,7 @@ func (r *EMRGetManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.GetMa
 }
 
 type EMRListBootstrapActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +303,7 @@ func (r *EMRListBootstrapActionsFuture) Get(ctx workflow.Context) (*emr.ListBoot
 }
 
 type EMRListClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +314,7 @@ func (r *EMRListClustersFuture) Get(ctx workflow.Context) (*emr.ListClustersOutp
 }
 
 type EMRListInstanceFleetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +325,7 @@ func (r *EMRListInstanceFleetsFuture) Get(ctx workflow.Context) (*emr.ListInstan
 }
 
 type EMRListInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +336,7 @@ func (r *EMRListInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.ListInstan
 }
 
 type EMRListInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +347,7 @@ func (r *EMRListInstancesFuture) Get(ctx workflow.Context) (*emr.ListInstancesOu
 }
 
 type EMRListNotebookExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +358,7 @@ func (r *EMRListNotebookExecutionsFuture) Get(ctx workflow.Context) (*emr.ListNo
 }
 
 type EMRListSecurityConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +369,7 @@ func (r *EMRListSecurityConfigurationsFuture) Get(ctx workflow.Context) (*emr.Li
 }
 
 type EMRListStepsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +380,7 @@ func (r *EMRListStepsFuture) Get(ctx workflow.Context) (*emr.ListStepsOutput, er
 }
 
 type EMRModifyClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +391,7 @@ func (r *EMRModifyClusterFuture) Get(ctx workflow.Context) (*emr.ModifyClusterOu
 }
 
 type EMRModifyInstanceFleetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +402,7 @@ func (r *EMRModifyInstanceFleetFuture) Get(ctx workflow.Context) (*emr.ModifyIns
 }
 
 type EMRModifyInstanceGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +413,7 @@ func (r *EMRModifyInstanceGroupsFuture) Get(ctx workflow.Context) (*emr.ModifyIn
 }
 
 type EMRPutAutoScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +424,7 @@ func (r *EMRPutAutoScalingPolicyFuture) Get(ctx workflow.Context) (*emr.PutAutoS
 }
 
 type EMRPutBlockPublicAccessConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +435,7 @@ func (r *EMRPutBlockPublicAccessConfigurationFuture) Get(ctx workflow.Context) (
 }
 
 type EMRPutManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +446,7 @@ func (r *EMRPutManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.PutMa
 }
 
 type EMRRemoveAutoScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +457,7 @@ func (r *EMRRemoveAutoScalingPolicyFuture) Get(ctx workflow.Context) (*emr.Remov
 }
 
 type EMRRemoveManagedScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +468,7 @@ func (r *EMRRemoveManagedScalingPolicyFuture) Get(ctx workflow.Context) (*emr.Re
 }
 
 type EMRRemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +479,7 @@ func (r *EMRRemoveTagsFuture) Get(ctx workflow.Context) (*emr.RemoveTagsOutput, 
 }
 
 type EMRRunJobFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +490,7 @@ func (r *EMRRunJobFlowFuture) Get(ctx workflow.Context) (*emr.RunJobFlowOutput, 
 }
 
 type EMRSetTerminationProtectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +501,7 @@ func (r *EMRSetTerminationProtectionFuture) Get(ctx workflow.Context) (*emr.SetT
 }
 
 type EMRSetVisibleToAllUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +512,7 @@ func (r *EMRSetVisibleToAllUsersFuture) Get(ctx workflow.Context) (*emr.SetVisib
 }
 
 type EMRStartNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +523,7 @@ func (r *EMRStartNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.StartN
 }
 
 type EMRStopNotebookExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +534,7 @@ func (r *EMRStopNotebookExecutionFuture) Get(ctx workflow.Context) (*emr.StopNot
 }
 
 type EMRTerminateJobFlowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

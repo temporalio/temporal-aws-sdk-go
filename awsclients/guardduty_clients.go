@@ -192,6 +192,7 @@ func NewGuardDutyStub() GuardDutyClient {
 }
 
 type GuardDutyAcceptInvitationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +203,7 @@ func (r *GuardDutyAcceptInvitationFuture) Get(ctx workflow.Context) (*guardduty.
 }
 
 type GuardDutyArchiveFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +214,7 @@ func (r *GuardDutyArchiveFindingsFuture) Get(ctx workflow.Context) (*guardduty.A
 }
 
 type GuardDutyCreateDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +225,7 @@ func (r *GuardDutyCreateDetectorFuture) Get(ctx workflow.Context) (*guardduty.Cr
 }
 
 type GuardDutyCreateFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +236,7 @@ func (r *GuardDutyCreateFilterFuture) Get(ctx workflow.Context) (*guardduty.Crea
 }
 
 type GuardDutyCreateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +247,7 @@ func (r *GuardDutyCreateIPSetFuture) Get(ctx workflow.Context) (*guardduty.Creat
 }
 
 type GuardDutyCreateMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +258,7 @@ func (r *GuardDutyCreateMembersFuture) Get(ctx workflow.Context) (*guardduty.Cre
 }
 
 type GuardDutyCreatePublishingDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +269,7 @@ func (r *GuardDutyCreatePublishingDestinationFuture) Get(ctx workflow.Context) (
 }
 
 type GuardDutyCreateSampleFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +280,7 @@ func (r *GuardDutyCreateSampleFindingsFuture) Get(ctx workflow.Context) (*guardd
 }
 
 type GuardDutyCreateThreatIntelSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +291,7 @@ func (r *GuardDutyCreateThreatIntelSetFuture) Get(ctx workflow.Context) (*guardd
 }
 
 type GuardDutyDeclineInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +302,7 @@ func (r *GuardDutyDeclineInvitationsFuture) Get(ctx workflow.Context) (*guarddut
 }
 
 type GuardDutyDeleteDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +313,7 @@ func (r *GuardDutyDeleteDetectorFuture) Get(ctx workflow.Context) (*guardduty.De
 }
 
 type GuardDutyDeleteFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +324,7 @@ func (r *GuardDutyDeleteFilterFuture) Get(ctx workflow.Context) (*guardduty.Dele
 }
 
 type GuardDutyDeleteIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +335,7 @@ func (r *GuardDutyDeleteIPSetFuture) Get(ctx workflow.Context) (*guardduty.Delet
 }
 
 type GuardDutyDeleteInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +346,7 @@ func (r *GuardDutyDeleteInvitationsFuture) Get(ctx workflow.Context) (*guardduty
 }
 
 type GuardDutyDeleteMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +357,7 @@ func (r *GuardDutyDeleteMembersFuture) Get(ctx workflow.Context) (*guardduty.Del
 }
 
 type GuardDutyDeletePublishingDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +368,7 @@ func (r *GuardDutyDeletePublishingDestinationFuture) Get(ctx workflow.Context) (
 }
 
 type GuardDutyDeleteThreatIntelSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +379,7 @@ func (r *GuardDutyDeleteThreatIntelSetFuture) Get(ctx workflow.Context) (*guardd
 }
 
 type GuardDutyDescribeOrganizationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +390,7 @@ func (r *GuardDutyDescribeOrganizationConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type GuardDutyDescribePublishingDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +401,7 @@ func (r *GuardDutyDescribePublishingDestinationFuture) Get(ctx workflow.Context)
 }
 
 type GuardDutyDisableOrganizationAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +412,7 @@ func (r *GuardDutyDisableOrganizationAdminAccountFuture) Get(ctx workflow.Contex
 }
 
 type GuardDutyDisassociateFromMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +423,7 @@ func (r *GuardDutyDisassociateFromMasterAccountFuture) Get(ctx workflow.Context)
 }
 
 type GuardDutyDisassociateMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +434,7 @@ func (r *GuardDutyDisassociateMembersFuture) Get(ctx workflow.Context) (*guarddu
 }
 
 type GuardDutyEnableOrganizationAdminAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +445,7 @@ func (r *GuardDutyEnableOrganizationAdminAccountFuture) Get(ctx workflow.Context
 }
 
 type GuardDutyGetDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +456,7 @@ func (r *GuardDutyGetDetectorFuture) Get(ctx workflow.Context) (*guardduty.GetDe
 }
 
 type GuardDutyGetFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +467,7 @@ func (r *GuardDutyGetFilterFuture) Get(ctx workflow.Context) (*guardduty.GetFilt
 }
 
 type GuardDutyGetFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +478,7 @@ func (r *GuardDutyGetFindingsFuture) Get(ctx workflow.Context) (*guardduty.GetFi
 }
 
 type GuardDutyGetFindingsStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +489,7 @@ func (r *GuardDutyGetFindingsStatisticsFuture) Get(ctx workflow.Context) (*guard
 }
 
 type GuardDutyGetIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +500,7 @@ func (r *GuardDutyGetIPSetFuture) Get(ctx workflow.Context) (*guardduty.GetIPSet
 }
 
 type GuardDutyGetInvitationsCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +511,7 @@ func (r *GuardDutyGetInvitationsCountFuture) Get(ctx workflow.Context) (*guarddu
 }
 
 type GuardDutyGetMasterAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +522,7 @@ func (r *GuardDutyGetMasterAccountFuture) Get(ctx workflow.Context) (*guardduty.
 }
 
 type GuardDutyGetMemberDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +533,7 @@ func (r *GuardDutyGetMemberDetectorsFuture) Get(ctx workflow.Context) (*guarddut
 }
 
 type GuardDutyGetMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -512,6 +544,7 @@ func (r *GuardDutyGetMembersFuture) Get(ctx workflow.Context) (*guardduty.GetMem
 }
 
 type GuardDutyGetThreatIntelSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -522,6 +555,7 @@ func (r *GuardDutyGetThreatIntelSetFuture) Get(ctx workflow.Context) (*guardduty
 }
 
 type GuardDutyGetUsageStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -532,6 +566,7 @@ func (r *GuardDutyGetUsageStatisticsFuture) Get(ctx workflow.Context) (*guarddut
 }
 
 type GuardDutyInviteMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -542,6 +577,7 @@ func (r *GuardDutyInviteMembersFuture) Get(ctx workflow.Context) (*guardduty.Inv
 }
 
 type GuardDutyListDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -552,6 +588,7 @@ func (r *GuardDutyListDetectorsFuture) Get(ctx workflow.Context) (*guardduty.Lis
 }
 
 type GuardDutyListFiltersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -562,6 +599,7 @@ func (r *GuardDutyListFiltersFuture) Get(ctx workflow.Context) (*guardduty.ListF
 }
 
 type GuardDutyListFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -572,6 +610,7 @@ func (r *GuardDutyListFindingsFuture) Get(ctx workflow.Context) (*guardduty.List
 }
 
 type GuardDutyListIPSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -582,6 +621,7 @@ func (r *GuardDutyListIPSetsFuture) Get(ctx workflow.Context) (*guardduty.ListIP
 }
 
 type GuardDutyListInvitationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -592,6 +632,7 @@ func (r *GuardDutyListInvitationsFuture) Get(ctx workflow.Context) (*guardduty.L
 }
 
 type GuardDutyListMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -602,6 +643,7 @@ func (r *GuardDutyListMembersFuture) Get(ctx workflow.Context) (*guardduty.ListM
 }
 
 type GuardDutyListOrganizationAdminAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -612,6 +654,7 @@ func (r *GuardDutyListOrganizationAdminAccountsFuture) Get(ctx workflow.Context)
 }
 
 type GuardDutyListPublishingDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -622,6 +665,7 @@ func (r *GuardDutyListPublishingDestinationsFuture) Get(ctx workflow.Context) (*
 }
 
 type GuardDutyListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -632,6 +676,7 @@ func (r *GuardDutyListTagsForResourceFuture) Get(ctx workflow.Context) (*guarddu
 }
 
 type GuardDutyListThreatIntelSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -642,6 +687,7 @@ func (r *GuardDutyListThreatIntelSetsFuture) Get(ctx workflow.Context) (*guarddu
 }
 
 type GuardDutyStartMonitoringMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -652,6 +698,7 @@ func (r *GuardDutyStartMonitoringMembersFuture) Get(ctx workflow.Context) (*guar
 }
 
 type GuardDutyStopMonitoringMembersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -662,6 +709,7 @@ func (r *GuardDutyStopMonitoringMembersFuture) Get(ctx workflow.Context) (*guard
 }
 
 type GuardDutyTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -672,6 +720,7 @@ func (r *GuardDutyTagResourceFuture) Get(ctx workflow.Context) (*guardduty.TagRe
 }
 
 type GuardDutyUnarchiveFindingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -682,6 +731,7 @@ func (r *GuardDutyUnarchiveFindingsFuture) Get(ctx workflow.Context) (*guardduty
 }
 
 type GuardDutyUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -692,6 +742,7 @@ func (r *GuardDutyUntagResourceFuture) Get(ctx workflow.Context) (*guardduty.Unt
 }
 
 type GuardDutyUpdateDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -702,6 +753,7 @@ func (r *GuardDutyUpdateDetectorFuture) Get(ctx workflow.Context) (*guardduty.Up
 }
 
 type GuardDutyUpdateFilterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -712,6 +764,7 @@ func (r *GuardDutyUpdateFilterFuture) Get(ctx workflow.Context) (*guardduty.Upda
 }
 
 type GuardDutyUpdateFindingsFeedbackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -722,6 +775,7 @@ func (r *GuardDutyUpdateFindingsFeedbackFuture) Get(ctx workflow.Context) (*guar
 }
 
 type GuardDutyUpdateIPSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -732,6 +786,7 @@ func (r *GuardDutyUpdateIPSetFuture) Get(ctx workflow.Context) (*guardduty.Updat
 }
 
 type GuardDutyUpdateMemberDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -742,6 +797,7 @@ func (r *GuardDutyUpdateMemberDetectorsFuture) Get(ctx workflow.Context) (*guard
 }
 
 type GuardDutyUpdateOrganizationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -752,6 +808,7 @@ func (r *GuardDutyUpdateOrganizationConfigurationFuture) Get(ctx workflow.Contex
 }
 
 type GuardDutyUpdatePublishingDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -762,6 +819,7 @@ func (r *GuardDutyUpdatePublishingDestinationFuture) Get(ctx workflow.Context) (
 }
 
 type GuardDutyUpdateThreatIntelSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -258,6 +258,7 @@ func NewOpsWorksStub() OpsWorksClient {
 }
 
 type OpsWorksAssignInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -268,6 +269,7 @@ func (r *OpsWorksAssignInstanceFuture) Get(ctx workflow.Context) (*opsworks.Assi
 }
 
 type OpsWorksAssignVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -278,6 +280,7 @@ func (r *OpsWorksAssignVolumeFuture) Get(ctx workflow.Context) (*opsworks.Assign
 }
 
 type OpsWorksAssociateElasticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -288,6 +291,7 @@ func (r *OpsWorksAssociateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.
 }
 
 type OpsWorksAttachElasticLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -298,6 +302,7 @@ func (r *OpsWorksAttachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*op
 }
 
 type OpsWorksCloneStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -308,6 +313,7 @@ func (r *OpsWorksCloneStackFuture) Get(ctx workflow.Context) (*opsworks.CloneSta
 }
 
 type OpsWorksCreateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -318,6 +324,7 @@ func (r *OpsWorksCreateAppFuture) Get(ctx workflow.Context) (*opsworks.CreateApp
 }
 
 type OpsWorksCreateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -328,6 +335,7 @@ func (r *OpsWorksCreateDeploymentFuture) Get(ctx workflow.Context) (*opsworks.Cr
 }
 
 type OpsWorksCreateInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -338,6 +346,7 @@ func (r *OpsWorksCreateInstanceFuture) Get(ctx workflow.Context) (*opsworks.Crea
 }
 
 type OpsWorksCreateLayerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -348,6 +357,7 @@ func (r *OpsWorksCreateLayerFuture) Get(ctx workflow.Context) (*opsworks.CreateL
 }
 
 type OpsWorksCreateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -358,6 +368,7 @@ func (r *OpsWorksCreateStackFuture) Get(ctx workflow.Context) (*opsworks.CreateS
 }
 
 type OpsWorksCreateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -368,6 +379,7 @@ func (r *OpsWorksCreateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.C
 }
 
 type OpsWorksDeleteAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -378,6 +390,7 @@ func (r *OpsWorksDeleteAppFuture) Get(ctx workflow.Context) (*opsworks.DeleteApp
 }
 
 type OpsWorksDeleteInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -388,6 +401,7 @@ func (r *OpsWorksDeleteInstanceFuture) Get(ctx workflow.Context) (*opsworks.Dele
 }
 
 type OpsWorksDeleteLayerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -398,6 +412,7 @@ func (r *OpsWorksDeleteLayerFuture) Get(ctx workflow.Context) (*opsworks.DeleteL
 }
 
 type OpsWorksDeleteStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -408,6 +423,7 @@ func (r *OpsWorksDeleteStackFuture) Get(ctx workflow.Context) (*opsworks.DeleteS
 }
 
 type OpsWorksDeleteUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -418,6 +434,7 @@ func (r *OpsWorksDeleteUserProfileFuture) Get(ctx workflow.Context) (*opsworks.D
 }
 
 type OpsWorksDeregisterEcsClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -428,6 +445,7 @@ func (r *OpsWorksDeregisterEcsClusterFuture) Get(ctx workflow.Context) (*opswork
 }
 
 type OpsWorksDeregisterElasticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -438,6 +456,7 @@ func (r *OpsWorksDeregisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksDeregisterInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -448,6 +467,7 @@ func (r *OpsWorksDeregisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.
 }
 
 type OpsWorksDeregisterRdsDbInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -458,6 +478,7 @@ func (r *OpsWorksDeregisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsw
 }
 
 type OpsWorksDeregisterVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -468,6 +489,7 @@ func (r *OpsWorksDeregisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.De
 }
 
 type OpsWorksDescribeAgentVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -478,6 +500,7 @@ func (r *OpsWorksDescribeAgentVersionsFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksDescribeAppsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -488,6 +511,7 @@ func (r *OpsWorksDescribeAppsFuture) Get(ctx workflow.Context) (*opsworks.Descri
 }
 
 type OpsWorksDescribeCommandsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -498,6 +522,7 @@ func (r *OpsWorksDescribeCommandsFuture) Get(ctx workflow.Context) (*opsworks.De
 }
 
 type OpsWorksDescribeDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -508,6 +533,7 @@ func (r *OpsWorksDescribeDeploymentsFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksDescribeEcsClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -518,6 +544,7 @@ func (r *OpsWorksDescribeEcsClustersFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksDescribeElasticIpsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -528,6 +555,7 @@ func (r *OpsWorksDescribeElasticIpsFuture) Get(ctx workflow.Context) (*opsworks.
 }
 
 type OpsWorksDescribeElasticLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -538,6 +566,7 @@ func (r *OpsWorksDescribeElasticLoadBalancersFuture) Get(ctx workflow.Context) (
 }
 
 type OpsWorksDescribeInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -548,6 +577,7 @@ func (r *OpsWorksDescribeInstancesFuture) Get(ctx workflow.Context) (*opsworks.D
 }
 
 type OpsWorksDescribeLayersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -558,6 +588,7 @@ func (r *OpsWorksDescribeLayersFuture) Get(ctx workflow.Context) (*opsworks.Desc
 }
 
 type OpsWorksDescribeLoadBasedAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -568,6 +599,7 @@ func (r *OpsWorksDescribeLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (
 }
 
 type OpsWorksDescribeMyUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -578,6 +610,7 @@ func (r *OpsWorksDescribeMyUserProfileFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksDescribeOperatingSystemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -588,6 +621,7 @@ func (r *OpsWorksDescribeOperatingSystemsFuture) Get(ctx workflow.Context) (*ops
 }
 
 type OpsWorksDescribePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -598,6 +632,7 @@ func (r *OpsWorksDescribePermissionsFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksDescribeRaidArraysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -608,6 +643,7 @@ func (r *OpsWorksDescribeRaidArraysFuture) Get(ctx workflow.Context) (*opsworks.
 }
 
 type OpsWorksDescribeRdsDbInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -618,6 +654,7 @@ func (r *OpsWorksDescribeRdsDbInstancesFuture) Get(ctx workflow.Context) (*opswo
 }
 
 type OpsWorksDescribeServiceErrorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -628,6 +665,7 @@ func (r *OpsWorksDescribeServiceErrorsFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksDescribeStackProvisioningParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -638,6 +676,7 @@ func (r *OpsWorksDescribeStackProvisioningParametersFuture) Get(ctx workflow.Con
 }
 
 type OpsWorksDescribeStackSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -648,6 +687,7 @@ func (r *OpsWorksDescribeStackSummaryFuture) Get(ctx workflow.Context) (*opswork
 }
 
 type OpsWorksDescribeStacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -658,6 +698,7 @@ func (r *OpsWorksDescribeStacksFuture) Get(ctx workflow.Context) (*opsworks.Desc
 }
 
 type OpsWorksDescribeTimeBasedAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -668,6 +709,7 @@ func (r *OpsWorksDescribeTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (
 }
 
 type OpsWorksDescribeUserProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -678,6 +720,7 @@ func (r *OpsWorksDescribeUserProfilesFuture) Get(ctx workflow.Context) (*opswork
 }
 
 type OpsWorksDescribeVolumesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -688,6 +731,7 @@ func (r *OpsWorksDescribeVolumesFuture) Get(ctx workflow.Context) (*opsworks.Des
 }
 
 type OpsWorksDetachElasticLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -698,6 +742,7 @@ func (r *OpsWorksDetachElasticLoadBalancerFuture) Get(ctx workflow.Context) (*op
 }
 
 type OpsWorksDisassociateElasticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -708,6 +753,7 @@ func (r *OpsWorksDisassociateElasticIpFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksGetHostnameSuggestionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -718,6 +764,7 @@ func (r *OpsWorksGetHostnameSuggestionFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksGrantAccessFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -728,6 +775,7 @@ func (r *OpsWorksGrantAccessFuture) Get(ctx workflow.Context) (*opsworks.GrantAc
 }
 
 type OpsWorksListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -738,6 +786,7 @@ func (r *OpsWorksListTagsFuture) Get(ctx workflow.Context) (*opsworks.ListTagsOu
 }
 
 type OpsWorksRebootInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -748,6 +797,7 @@ func (r *OpsWorksRebootInstanceFuture) Get(ctx workflow.Context) (*opsworks.Rebo
 }
 
 type OpsWorksRegisterEcsClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -758,6 +808,7 @@ func (r *OpsWorksRegisterEcsClusterFuture) Get(ctx workflow.Context) (*opsworks.
 }
 
 type OpsWorksRegisterElasticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -768,6 +819,7 @@ func (r *OpsWorksRegisterElasticIpFuture) Get(ctx workflow.Context) (*opsworks.R
 }
 
 type OpsWorksRegisterInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -778,6 +830,7 @@ func (r *OpsWorksRegisterInstanceFuture) Get(ctx workflow.Context) (*opsworks.Re
 }
 
 type OpsWorksRegisterRdsDbInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -788,6 +841,7 @@ func (r *OpsWorksRegisterRdsDbInstanceFuture) Get(ctx workflow.Context) (*opswor
 }
 
 type OpsWorksRegisterVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -798,6 +852,7 @@ func (r *OpsWorksRegisterVolumeFuture) Get(ctx workflow.Context) (*opsworks.Regi
 }
 
 type OpsWorksSetLoadBasedAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -808,6 +863,7 @@ func (r *OpsWorksSetLoadBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsw
 }
 
 type OpsWorksSetPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -818,6 +874,7 @@ func (r *OpsWorksSetPermissionFuture) Get(ctx workflow.Context) (*opsworks.SetPe
 }
 
 type OpsWorksSetTimeBasedAutoScalingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -828,6 +885,7 @@ func (r *OpsWorksSetTimeBasedAutoScalingFuture) Get(ctx workflow.Context) (*opsw
 }
 
 type OpsWorksStartInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -838,6 +896,7 @@ func (r *OpsWorksStartInstanceFuture) Get(ctx workflow.Context) (*opsworks.Start
 }
 
 type OpsWorksStartStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -848,6 +907,7 @@ func (r *OpsWorksStartStackFuture) Get(ctx workflow.Context) (*opsworks.StartSta
 }
 
 type OpsWorksStopInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -858,6 +918,7 @@ func (r *OpsWorksStopInstanceFuture) Get(ctx workflow.Context) (*opsworks.StopIn
 }
 
 type OpsWorksStopStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -868,6 +929,7 @@ func (r *OpsWorksStopStackFuture) Get(ctx workflow.Context) (*opsworks.StopStack
 }
 
 type OpsWorksTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -878,6 +940,7 @@ func (r *OpsWorksTagResourceFuture) Get(ctx workflow.Context) (*opsworks.TagReso
 }
 
 type OpsWorksUnassignInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -888,6 +951,7 @@ func (r *OpsWorksUnassignInstanceFuture) Get(ctx workflow.Context) (*opsworks.Un
 }
 
 type OpsWorksUnassignVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -898,6 +962,7 @@ func (r *OpsWorksUnassignVolumeFuture) Get(ctx workflow.Context) (*opsworks.Unas
 }
 
 type OpsWorksUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -908,6 +973,7 @@ func (r *OpsWorksUntagResourceFuture) Get(ctx workflow.Context) (*opsworks.Untag
 }
 
 type OpsWorksUpdateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -918,6 +984,7 @@ func (r *OpsWorksUpdateAppFuture) Get(ctx workflow.Context) (*opsworks.UpdateApp
 }
 
 type OpsWorksUpdateElasticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -928,6 +995,7 @@ func (r *OpsWorksUpdateElasticIpFuture) Get(ctx workflow.Context) (*opsworks.Upd
 }
 
 type OpsWorksUpdateInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -938,6 +1006,7 @@ func (r *OpsWorksUpdateInstanceFuture) Get(ctx workflow.Context) (*opsworks.Upda
 }
 
 type OpsWorksUpdateLayerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -948,6 +1017,7 @@ func (r *OpsWorksUpdateLayerFuture) Get(ctx workflow.Context) (*opsworks.UpdateL
 }
 
 type OpsWorksUpdateMyUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -958,6 +1028,7 @@ func (r *OpsWorksUpdateMyUserProfileFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksUpdateRdsDbInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -968,6 +1039,7 @@ func (r *OpsWorksUpdateRdsDbInstanceFuture) Get(ctx workflow.Context) (*opsworks
 }
 
 type OpsWorksUpdateStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -978,6 +1050,7 @@ func (r *OpsWorksUpdateStackFuture) Get(ctx workflow.Context) (*opsworks.UpdateS
 }
 
 type OpsWorksUpdateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -988,6 +1061,7 @@ func (r *OpsWorksUpdateUserProfileFuture) Get(ctx workflow.Context) (*opsworks.U
 }
 
 type OpsWorksUpdateVolumeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

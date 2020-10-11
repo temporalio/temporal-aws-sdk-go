@@ -153,6 +153,7 @@ func NewFraudDetectorStub() FraudDetectorClient {
 }
 
 type FraudDetectorBatchCreateVariableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +164,7 @@ func (r *FraudDetectorBatchCreateVariableFuture) Get(ctx workflow.Context) (*fra
 }
 
 type FraudDetectorBatchGetVariableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +175,7 @@ func (r *FraudDetectorBatchGetVariableFuture) Get(ctx workflow.Context) (*fraudd
 }
 
 type FraudDetectorCreateDetectorVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +186,7 @@ func (r *FraudDetectorCreateDetectorVersionFuture) Get(ctx workflow.Context) (*f
 }
 
 type FraudDetectorCreateModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +197,7 @@ func (r *FraudDetectorCreateModelFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorCreateModelVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +208,7 @@ func (r *FraudDetectorCreateModelVersionFuture) Get(ctx workflow.Context) (*frau
 }
 
 type FraudDetectorCreateRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +219,7 @@ func (r *FraudDetectorCreateRuleFuture) Get(ctx workflow.Context) (*frauddetecto
 }
 
 type FraudDetectorCreateVariableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +230,7 @@ func (r *FraudDetectorCreateVariableFuture) Get(ctx workflow.Context) (*frauddet
 }
 
 type FraudDetectorDeleteDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +241,7 @@ func (r *FraudDetectorDeleteDetectorFuture) Get(ctx workflow.Context) (*frauddet
 }
 
 type FraudDetectorDeleteDetectorVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +252,7 @@ func (r *FraudDetectorDeleteDetectorVersionFuture) Get(ctx workflow.Context) (*f
 }
 
 type FraudDetectorDeleteEventFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +263,7 @@ func (r *FraudDetectorDeleteEventFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorDeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +274,7 @@ func (r *FraudDetectorDeleteRuleFuture) Get(ctx workflow.Context) (*frauddetecto
 }
 
 type FraudDetectorDescribeDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +285,7 @@ func (r *FraudDetectorDescribeDetectorFuture) Get(ctx workflow.Context) (*fraudd
 }
 
 type FraudDetectorDescribeModelVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +296,7 @@ func (r *FraudDetectorDescribeModelVersionsFuture) Get(ctx workflow.Context) (*f
 }
 
 type FraudDetectorGetDetectorVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +307,7 @@ func (r *FraudDetectorGetDetectorVersionFuture) Get(ctx workflow.Context) (*frau
 }
 
 type FraudDetectorGetDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +318,7 @@ func (r *FraudDetectorGetDetectorsFuture) Get(ctx workflow.Context) (*frauddetec
 }
 
 type FraudDetectorGetEntityTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +329,7 @@ func (r *FraudDetectorGetEntityTypesFuture) Get(ctx workflow.Context) (*frauddet
 }
 
 type FraudDetectorGetEventPredictionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +340,7 @@ func (r *FraudDetectorGetEventPredictionFuture) Get(ctx workflow.Context) (*frau
 }
 
 type FraudDetectorGetEventTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +351,7 @@ func (r *FraudDetectorGetEventTypesFuture) Get(ctx workflow.Context) (*frauddete
 }
 
 type FraudDetectorGetExternalModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -343,6 +362,7 @@ func (r *FraudDetectorGetExternalModelsFuture) Get(ctx workflow.Context) (*fraud
 }
 
 type FraudDetectorGetKMSEncryptionKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -353,6 +373,7 @@ func (r *FraudDetectorGetKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*fra
 }
 
 type FraudDetectorGetLabelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -363,6 +384,7 @@ func (r *FraudDetectorGetLabelsFuture) Get(ctx workflow.Context) (*frauddetector
 }
 
 type FraudDetectorGetModelVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -373,6 +395,7 @@ func (r *FraudDetectorGetModelVersionFuture) Get(ctx workflow.Context) (*fraudde
 }
 
 type FraudDetectorGetModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -383,6 +406,7 @@ func (r *FraudDetectorGetModelsFuture) Get(ctx workflow.Context) (*frauddetector
 }
 
 type FraudDetectorGetOutcomesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -393,6 +417,7 @@ func (r *FraudDetectorGetOutcomesFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorGetRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -403,6 +428,7 @@ func (r *FraudDetectorGetRulesFuture) Get(ctx workflow.Context) (*frauddetector.
 }
 
 type FraudDetectorGetVariablesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -413,6 +439,7 @@ func (r *FraudDetectorGetVariablesFuture) Get(ctx workflow.Context) (*frauddetec
 }
 
 type FraudDetectorListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -423,6 +450,7 @@ func (r *FraudDetectorListTagsForResourceFuture) Get(ctx workflow.Context) (*fra
 }
 
 type FraudDetectorPutDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +461,7 @@ func (r *FraudDetectorPutDetectorFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorPutEntityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +472,7 @@ func (r *FraudDetectorPutEntityTypeFuture) Get(ctx workflow.Context) (*frauddete
 }
 
 type FraudDetectorPutEventTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -453,6 +483,7 @@ func (r *FraudDetectorPutEventTypeFuture) Get(ctx workflow.Context) (*frauddetec
 }
 
 type FraudDetectorPutExternalModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +494,7 @@ func (r *FraudDetectorPutExternalModelFuture) Get(ctx workflow.Context) (*fraudd
 }
 
 type FraudDetectorPutKMSEncryptionKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -473,6 +505,7 @@ func (r *FraudDetectorPutKMSEncryptionKeyFuture) Get(ctx workflow.Context) (*fra
 }
 
 type FraudDetectorPutLabelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -483,6 +516,7 @@ func (r *FraudDetectorPutLabelFuture) Get(ctx workflow.Context) (*frauddetector.
 }
 
 type FraudDetectorPutOutcomeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -493,6 +527,7 @@ func (r *FraudDetectorPutOutcomeFuture) Get(ctx workflow.Context) (*frauddetecto
 }
 
 type FraudDetectorTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -503,6 +538,7 @@ func (r *FraudDetectorTagResourceFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -513,6 +549,7 @@ func (r *FraudDetectorUntagResourceFuture) Get(ctx workflow.Context) (*frauddete
 }
 
 type FraudDetectorUpdateDetectorVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -523,6 +560,7 @@ func (r *FraudDetectorUpdateDetectorVersionFuture) Get(ctx workflow.Context) (*f
 }
 
 type FraudDetectorUpdateDetectorVersionMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -533,6 +571,7 @@ func (r *FraudDetectorUpdateDetectorVersionMetadataFuture) Get(ctx workflow.Cont
 }
 
 type FraudDetectorUpdateDetectorVersionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -543,6 +582,7 @@ func (r *FraudDetectorUpdateDetectorVersionStatusFuture) Get(ctx workflow.Contex
 }
 
 type FraudDetectorUpdateModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -553,6 +593,7 @@ func (r *FraudDetectorUpdateModelFuture) Get(ctx workflow.Context) (*frauddetect
 }
 
 type FraudDetectorUpdateModelVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -563,6 +604,7 @@ func (r *FraudDetectorUpdateModelVersionFuture) Get(ctx workflow.Context) (*frau
 }
 
 type FraudDetectorUpdateModelVersionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -573,6 +615,7 @@ func (r *FraudDetectorUpdateModelVersionStatusFuture) Get(ctx workflow.Context) 
 }
 
 type FraudDetectorUpdateRuleMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -583,6 +626,7 @@ func (r *FraudDetectorUpdateRuleMetadataFuture) Get(ctx workflow.Context) (*frau
 }
 
 type FraudDetectorUpdateRuleVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -593,6 +637,7 @@ func (r *FraudDetectorUpdateRuleVersionFuture) Get(ctx workflow.Context) (*fraud
 }
 
 type FraudDetectorUpdateVariableFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -225,6 +225,7 @@ func NewElastiCacheStub() ElastiCacheClient {
 }
 
 type ElastiCacheAddTagsToResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +236,7 @@ func (r *ElastiCacheAddTagsToResourceFuture) Get(ctx workflow.Context) (*elastic
 }
 
 type ElastiCacheAuthorizeCacheSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +247,7 @@ func (r *ElastiCacheAuthorizeCacheSecurityGroupIngressFuture) Get(ctx workflow.C
 }
 
 type ElastiCacheBatchApplyUpdateActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +258,7 @@ func (r *ElastiCacheBatchApplyUpdateActionFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheBatchStopUpdateActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -265,6 +269,7 @@ func (r *ElastiCacheBatchStopUpdateActionFuture) Get(ctx workflow.Context) (*ela
 }
 
 type ElastiCacheCompleteMigrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -275,6 +280,7 @@ func (r *ElastiCacheCompleteMigrationFuture) Get(ctx workflow.Context) (*elastic
 }
 
 type ElastiCacheCopySnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -285,6 +291,7 @@ func (r *ElastiCacheCopySnapshotFuture) Get(ctx workflow.Context) (*elasticache.
 }
 
 type ElastiCacheCreateCacheClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -295,6 +302,7 @@ func (r *ElastiCacheCreateCacheClusterFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElastiCacheCreateCacheParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -305,6 +313,7 @@ func (r *ElastiCacheCreateCacheParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type ElastiCacheCreateCacheSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -315,6 +324,7 @@ func (r *ElastiCacheCreateCacheSecurityGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type ElastiCacheCreateCacheSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +335,7 @@ func (r *ElastiCacheCreateCacheSubnetGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheCreateGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +346,7 @@ func (r *ElastiCacheCreateGlobalReplicationGroupFuture) Get(ctx workflow.Context
 }
 
 type ElastiCacheCreateReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +357,7 @@ func (r *ElastiCacheCreateReplicationGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheCreateSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +368,7 @@ func (r *ElastiCacheCreateSnapshotFuture) Get(ctx workflow.Context) (*elasticach
 }
 
 type ElastiCacheCreateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +379,7 @@ func (r *ElastiCacheCreateUserFuture) Get(ctx workflow.Context) (*elasticache.Cr
 }
 
 type ElastiCacheCreateUserGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +390,7 @@ func (r *ElastiCacheCreateUserGroupFuture) Get(ctx workflow.Context) (*elasticac
 }
 
 type ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +401,7 @@ func (r *ElastiCacheDecreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx wo
 }
 
 type ElastiCacheDecreaseReplicaCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +412,7 @@ func (r *ElastiCacheDecreaseReplicaCountFuture) Get(ctx workflow.Context) (*elas
 }
 
 type ElastiCacheDeleteCacheClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +423,7 @@ func (r *ElastiCacheDeleteCacheClusterFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElastiCacheDeleteCacheParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +434,7 @@ func (r *ElastiCacheDeleteCacheParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type ElastiCacheDeleteCacheSecurityGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +445,7 @@ func (r *ElastiCacheDeleteCacheSecurityGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type ElastiCacheDeleteCacheSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +456,7 @@ func (r *ElastiCacheDeleteCacheSubnetGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheDeleteGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +467,7 @@ func (r *ElastiCacheDeleteGlobalReplicationGroupFuture) Get(ctx workflow.Context
 }
 
 type ElastiCacheDeleteReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +478,7 @@ func (r *ElastiCacheDeleteReplicationGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheDeleteSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +489,7 @@ func (r *ElastiCacheDeleteSnapshotFuture) Get(ctx workflow.Context) (*elasticach
 }
 
 type ElastiCacheDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +500,7 @@ func (r *ElastiCacheDeleteUserFuture) Get(ctx workflow.Context) (*elasticache.De
 }
 
 type ElastiCacheDeleteUserGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +511,7 @@ func (r *ElastiCacheDeleteUserGroupFuture) Get(ctx workflow.Context) (*elasticac
 }
 
 type ElastiCacheDescribeCacheClustersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +522,7 @@ func (r *ElastiCacheDescribeCacheClustersFuture) Get(ctx workflow.Context) (*ela
 }
 
 type ElastiCacheDescribeCacheEngineVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +533,7 @@ func (r *ElastiCacheDescribeCacheEngineVersionsFuture) Get(ctx workflow.Context)
 }
 
 type ElastiCacheDescribeCacheParameterGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +544,7 @@ func (r *ElastiCacheDescribeCacheParameterGroupsFuture) Get(ctx workflow.Context
 }
 
 type ElastiCacheDescribeCacheParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -525,6 +555,7 @@ func (r *ElastiCacheDescribeCacheParametersFuture) Get(ctx workflow.Context) (*e
 }
 
 type ElastiCacheDescribeCacheSecurityGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -535,6 +566,7 @@ func (r *ElastiCacheDescribeCacheSecurityGroupsFuture) Get(ctx workflow.Context)
 }
 
 type ElastiCacheDescribeCacheSubnetGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -545,6 +577,7 @@ func (r *ElastiCacheDescribeCacheSubnetGroupsFuture) Get(ctx workflow.Context) (
 }
 
 type ElastiCacheDescribeEngineDefaultParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -555,6 +588,7 @@ func (r *ElastiCacheDescribeEngineDefaultParametersFuture) Get(ctx workflow.Cont
 }
 
 type ElastiCacheDescribeEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -565,6 +599,7 @@ func (r *ElastiCacheDescribeEventsFuture) Get(ctx workflow.Context) (*elasticach
 }
 
 type ElastiCacheDescribeGlobalReplicationGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -575,6 +610,7 @@ func (r *ElastiCacheDescribeGlobalReplicationGroupsFuture) Get(ctx workflow.Cont
 }
 
 type ElastiCacheDescribeReplicationGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -585,6 +621,7 @@ func (r *ElastiCacheDescribeReplicationGroupsFuture) Get(ctx workflow.Context) (
 }
 
 type ElastiCacheDescribeReservedCacheNodesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -595,6 +632,7 @@ func (r *ElastiCacheDescribeReservedCacheNodesFuture) Get(ctx workflow.Context) 
 }
 
 type ElastiCacheDescribeReservedCacheNodesOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -605,6 +643,7 @@ func (r *ElastiCacheDescribeReservedCacheNodesOfferingsFuture) Get(ctx workflow.
 }
 
 type ElastiCacheDescribeServiceUpdatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -615,6 +654,7 @@ func (r *ElastiCacheDescribeServiceUpdatesFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheDescribeSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -625,6 +665,7 @@ func (r *ElastiCacheDescribeSnapshotsFuture) Get(ctx workflow.Context) (*elastic
 }
 
 type ElastiCacheDescribeUpdateActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -635,6 +676,7 @@ func (r *ElastiCacheDescribeUpdateActionsFuture) Get(ctx workflow.Context) (*ela
 }
 
 type ElastiCacheDescribeUserGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -645,6 +687,7 @@ func (r *ElastiCacheDescribeUserGroupsFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElastiCacheDescribeUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -655,6 +698,7 @@ func (r *ElastiCacheDescribeUsersFuture) Get(ctx workflow.Context) (*elasticache
 }
 
 type ElastiCacheDisassociateGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -665,6 +709,7 @@ func (r *ElastiCacheDisassociateGlobalReplicationGroupFuture) Get(ctx workflow.C
 }
 
 type ElastiCacheFailoverGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -675,6 +720,7 @@ func (r *ElastiCacheFailoverGlobalReplicationGroupFuture) Get(ctx workflow.Conte
 }
 
 type ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -685,6 +731,7 @@ func (r *ElastiCacheIncreaseNodeGroupsInGlobalReplicationGroupFuture) Get(ctx wo
 }
 
 type ElastiCacheIncreaseReplicaCountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -695,6 +742,7 @@ func (r *ElastiCacheIncreaseReplicaCountFuture) Get(ctx workflow.Context) (*elas
 }
 
 type ElastiCacheListAllowedNodeTypeModificationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -705,6 +753,7 @@ func (r *ElastiCacheListAllowedNodeTypeModificationsFuture) Get(ctx workflow.Con
 }
 
 type ElastiCacheListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -715,6 +764,7 @@ func (r *ElastiCacheListTagsForResourceFuture) Get(ctx workflow.Context) (*elast
 }
 
 type ElastiCacheModifyCacheClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -725,6 +775,7 @@ func (r *ElastiCacheModifyCacheClusterFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElastiCacheModifyCacheParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -735,6 +786,7 @@ func (r *ElastiCacheModifyCacheParameterGroupFuture) Get(ctx workflow.Context) (
 }
 
 type ElastiCacheModifyCacheSubnetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -745,6 +797,7 @@ func (r *ElastiCacheModifyCacheSubnetGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheModifyGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -755,6 +808,7 @@ func (r *ElastiCacheModifyGlobalReplicationGroupFuture) Get(ctx workflow.Context
 }
 
 type ElastiCacheModifyReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -765,6 +819,7 @@ func (r *ElastiCacheModifyReplicationGroupFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheModifyReplicationGroupShardConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -775,6 +830,7 @@ func (r *ElastiCacheModifyReplicationGroupShardConfigurationFuture) Get(ctx work
 }
 
 type ElastiCacheModifyUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -785,6 +841,7 @@ func (r *ElastiCacheModifyUserFuture) Get(ctx workflow.Context) (*elasticache.Mo
 }
 
 type ElastiCacheModifyUserGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -795,6 +852,7 @@ func (r *ElastiCacheModifyUserGroupFuture) Get(ctx workflow.Context) (*elasticac
 }
 
 type ElastiCachePurchaseReservedCacheNodesOfferingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -805,6 +863,7 @@ func (r *ElastiCachePurchaseReservedCacheNodesOfferingFuture) Get(ctx workflow.C
 }
 
 type ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -815,6 +874,7 @@ func (r *ElastiCacheRebalanceSlotsInGlobalReplicationGroupFuture) Get(ctx workfl
 }
 
 type ElastiCacheRebootCacheClusterFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -825,6 +885,7 @@ func (r *ElastiCacheRebootCacheClusterFuture) Get(ctx workflow.Context) (*elasti
 }
 
 type ElastiCacheRemoveTagsFromResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -835,6 +896,7 @@ func (r *ElastiCacheRemoveTagsFromResourceFuture) Get(ctx workflow.Context) (*el
 }
 
 type ElastiCacheResetCacheParameterGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -845,6 +907,7 @@ func (r *ElastiCacheResetCacheParameterGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type ElastiCacheRevokeCacheSecurityGroupIngressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -855,6 +918,7 @@ func (r *ElastiCacheRevokeCacheSecurityGroupIngressFuture) Get(ctx workflow.Cont
 }
 
 type ElastiCacheStartMigrationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -865,6 +929,7 @@ func (r *ElastiCacheStartMigrationFuture) Get(ctx workflow.Context) (*elasticach
 }
 
 type ElastiCacheTestFailoverFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

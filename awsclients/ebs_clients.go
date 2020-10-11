@@ -36,6 +36,7 @@ func NewEBSStub() EBSClient {
 }
 
 type EBSCompleteSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *EBSCompleteSnapshotFuture) Get(ctx workflow.Context) (*ebs.CompleteSnap
 }
 
 type EBSGetSnapshotBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *EBSGetSnapshotBlockFuture) Get(ctx workflow.Context) (*ebs.GetSnapshotB
 }
 
 type EBSListChangedBlocksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *EBSListChangedBlocksFuture) Get(ctx workflow.Context) (*ebs.ListChanged
 }
 
 type EBSListSnapshotBlocksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *EBSListSnapshotBlocksFuture) Get(ctx workflow.Context) (*ebs.ListSnapsh
 }
 
 type EBSPutSnapshotBlockFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *EBSPutSnapshotBlockFuture) Get(ctx workflow.Context) (*ebs.PutSnapshotB
 }
 
 type EBSStartSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

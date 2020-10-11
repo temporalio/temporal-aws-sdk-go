@@ -72,6 +72,7 @@ func NewAppflowStub() AppflowClient {
 }
 
 type AppflowCreateConnectorProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +83,7 @@ func (r *AppflowCreateConnectorProfileFuture) Get(ctx workflow.Context) (*appflo
 }
 
 type AppflowCreateFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +94,7 @@ func (r *AppflowCreateFlowFuture) Get(ctx workflow.Context) (*appflow.CreateFlow
 }
 
 type AppflowDeleteConnectorProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +105,7 @@ func (r *AppflowDeleteConnectorProfileFuture) Get(ctx workflow.Context) (*appflo
 }
 
 type AppflowDeleteFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +116,7 @@ func (r *AppflowDeleteFlowFuture) Get(ctx workflow.Context) (*appflow.DeleteFlow
 }
 
 type AppflowDescribeConnectorEntityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +127,7 @@ func (r *AppflowDescribeConnectorEntityFuture) Get(ctx workflow.Context) (*appfl
 }
 
 type AppflowDescribeConnectorProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +138,7 @@ func (r *AppflowDescribeConnectorProfilesFuture) Get(ctx workflow.Context) (*app
 }
 
 type AppflowDescribeConnectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +149,7 @@ func (r *AppflowDescribeConnectorsFuture) Get(ctx workflow.Context) (*appflow.De
 }
 
 type AppflowDescribeFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +160,7 @@ func (r *AppflowDescribeFlowFuture) Get(ctx workflow.Context) (*appflow.Describe
 }
 
 type AppflowDescribeFlowExecutionRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +171,7 @@ func (r *AppflowDescribeFlowExecutionRecordsFuture) Get(ctx workflow.Context) (*
 }
 
 type AppflowListConnectorEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +182,7 @@ func (r *AppflowListConnectorEntitiesFuture) Get(ctx workflow.Context) (*appflow
 }
 
 type AppflowListFlowsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +193,7 @@ func (r *AppflowListFlowsFuture) Get(ctx workflow.Context) (*appflow.ListFlowsOu
 }
 
 type AppflowListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +204,7 @@ func (r *AppflowListTagsForResourceFuture) Get(ctx workflow.Context) (*appflow.L
 }
 
 type AppflowStartFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +215,7 @@ func (r *AppflowStartFlowFuture) Get(ctx workflow.Context) (*appflow.StartFlowOu
 }
 
 type AppflowStopFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +226,7 @@ func (r *AppflowStopFlowFuture) Get(ctx workflow.Context) (*appflow.StopFlowOutp
 }
 
 type AppflowTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +237,7 @@ func (r *AppflowTagResourceFuture) Get(ctx workflow.Context) (*appflow.TagResour
 }
 
 type AppflowUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +248,7 @@ func (r *AppflowUntagResourceFuture) Get(ctx workflow.Context) (*appflow.UntagRe
 }
 
 type AppflowUpdateConnectorProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +259,7 @@ func (r *AppflowUpdateConnectorProfileFuture) Get(ctx workflow.Context) (*appflo
 }
 
 type AppflowUpdateFlowFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

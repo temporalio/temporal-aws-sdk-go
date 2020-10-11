@@ -42,6 +42,7 @@ func NewPinpointSMSVoiceStub() PinpointSMSVoiceClient {
 }
 
 type PinpointSMSVoiceCreateConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -52,6 +53,7 @@ func (r *PinpointSMSVoiceCreateConfigurationSetFuture) Get(ctx workflow.Context)
 }
 
 type PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -62,6 +64,7 @@ func (r *PinpointSMSVoiceCreateConfigurationSetEventDestinationFuture) Get(ctx w
 }
 
 type PinpointSMSVoiceDeleteConfigurationSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -72,6 +75,7 @@ func (r *PinpointSMSVoiceDeleteConfigurationSetFuture) Get(ctx workflow.Context)
 }
 
 type PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +86,7 @@ func (r *PinpointSMSVoiceDeleteConfigurationSetEventDestinationFuture) Get(ctx w
 }
 
 type PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +97,7 @@ func (r *PinpointSMSVoiceGetConfigurationSetEventDestinationsFuture) Get(ctx wor
 }
 
 type PinpointSMSVoiceListConfigurationSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +108,7 @@ func (r *PinpointSMSVoiceListConfigurationSetsFuture) Get(ctx workflow.Context) 
 }
 
 type PinpointSMSVoiceSendVoiceMessageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +119,7 @@ func (r *PinpointSMSVoiceSendVoiceMessageFuture) Get(ctx workflow.Context) (*pin
 }
 
 type PinpointSMSVoiceUpdateConfigurationSetEventDestinationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

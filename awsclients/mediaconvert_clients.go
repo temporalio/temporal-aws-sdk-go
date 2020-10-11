@@ -93,6 +93,7 @@ func NewMediaConvertStub() MediaConvertClient {
 }
 
 type MediaConvertAssociateCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -103,6 +104,7 @@ func (r *MediaConvertAssociateCertificateFuture) Get(ctx workflow.Context) (*med
 }
 
 type MediaConvertCancelJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -113,6 +115,7 @@ func (r *MediaConvertCancelJobFuture) Get(ctx workflow.Context) (*mediaconvert.C
 }
 
 type MediaConvertCreateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -123,6 +126,7 @@ func (r *MediaConvertCreateJobFuture) Get(ctx workflow.Context) (*mediaconvert.C
 }
 
 type MediaConvertCreateJobTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +137,7 @@ func (r *MediaConvertCreateJobTemplateFuture) Get(ctx workflow.Context) (*mediac
 }
 
 type MediaConvertCreatePresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +148,7 @@ func (r *MediaConvertCreatePresetFuture) Get(ctx workflow.Context) (*mediaconver
 }
 
 type MediaConvertCreateQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +159,7 @@ func (r *MediaConvertCreateQueueFuture) Get(ctx workflow.Context) (*mediaconvert
 }
 
 type MediaConvertDeleteJobTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +170,7 @@ func (r *MediaConvertDeleteJobTemplateFuture) Get(ctx workflow.Context) (*mediac
 }
 
 type MediaConvertDeletePresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +181,7 @@ func (r *MediaConvertDeletePresetFuture) Get(ctx workflow.Context) (*mediaconver
 }
 
 type MediaConvertDeleteQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +192,7 @@ func (r *MediaConvertDeleteQueueFuture) Get(ctx workflow.Context) (*mediaconvert
 }
 
 type MediaConvertDescribeEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +203,7 @@ func (r *MediaConvertDescribeEndpointsFuture) Get(ctx workflow.Context) (*mediac
 }
 
 type MediaConvertDisassociateCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +214,7 @@ func (r *MediaConvertDisassociateCertificateFuture) Get(ctx workflow.Context) (*
 }
 
 type MediaConvertGetJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +225,7 @@ func (r *MediaConvertGetJobFuture) Get(ctx workflow.Context) (*mediaconvert.GetJ
 }
 
 type MediaConvertGetJobTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +236,7 @@ func (r *MediaConvertGetJobTemplateFuture) Get(ctx workflow.Context) (*mediaconv
 }
 
 type MediaConvertGetPresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +247,7 @@ func (r *MediaConvertGetPresetFuture) Get(ctx workflow.Context) (*mediaconvert.G
 }
 
 type MediaConvertGetQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +258,7 @@ func (r *MediaConvertGetQueueFuture) Get(ctx workflow.Context) (*mediaconvert.Ge
 }
 
 type MediaConvertListJobTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +269,7 @@ func (r *MediaConvertListJobTemplatesFuture) Get(ctx workflow.Context) (*mediaco
 }
 
 type MediaConvertListJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +280,7 @@ func (r *MediaConvertListJobsFuture) Get(ctx workflow.Context) (*mediaconvert.Li
 }
 
 type MediaConvertListPresetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +291,7 @@ func (r *MediaConvertListPresetsFuture) Get(ctx workflow.Context) (*mediaconvert
 }
 
 type MediaConvertListQueuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +302,7 @@ func (r *MediaConvertListQueuesFuture) Get(ctx workflow.Context) (*mediaconvert.
 }
 
 type MediaConvertListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +313,7 @@ func (r *MediaConvertListTagsForResourceFuture) Get(ctx workflow.Context) (*medi
 }
 
 type MediaConvertTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +324,7 @@ func (r *MediaConvertTagResourceFuture) Get(ctx workflow.Context) (*mediaconvert
 }
 
 type MediaConvertUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +335,7 @@ func (r *MediaConvertUntagResourceFuture) Get(ctx workflow.Context) (*mediaconve
 }
 
 type MediaConvertUpdateJobTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +346,7 @@ func (r *MediaConvertUpdateJobTemplateFuture) Get(ctx workflow.Context) (*mediac
 }
 
 type MediaConvertUpdatePresetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +357,7 @@ func (r *MediaConvertUpdatePresetFuture) Get(ctx workflow.Context) (*mediaconver
 }
 
 type MediaConvertUpdateQueueFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

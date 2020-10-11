@@ -186,6 +186,7 @@ func NewDirectConnectStub() DirectConnectClient {
 }
 
 type DirectConnectAcceptDirectConnectGatewayAssociationProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +197,7 @@ func (r *DirectConnectAcceptDirectConnectGatewayAssociationProposalFuture) Get(c
 }
 
 type DirectConnectAllocateConnectionOnInterconnectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +208,7 @@ func (r *DirectConnectAllocateConnectionOnInterconnectFuture) Get(ctx workflow.C
 }
 
 type DirectConnectAllocateHostedConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +219,7 @@ func (r *DirectConnectAllocateHostedConnectionFuture) Get(ctx workflow.Context) 
 }
 
 type DirectConnectAllocatePrivateVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -226,6 +230,7 @@ func (r *DirectConnectAllocatePrivateVirtualInterfaceFuture) Get(ctx workflow.Co
 }
 
 type DirectConnectAllocatePublicVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -236,6 +241,7 @@ func (r *DirectConnectAllocatePublicVirtualInterfaceFuture) Get(ctx workflow.Con
 }
 
 type DirectConnectAllocateTransitVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -246,6 +252,7 @@ func (r *DirectConnectAllocateTransitVirtualInterfaceFuture) Get(ctx workflow.Co
 }
 
 type DirectConnectAssociateConnectionWithLagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -256,6 +263,7 @@ func (r *DirectConnectAssociateConnectionWithLagFuture) Get(ctx workflow.Context
 }
 
 type DirectConnectAssociateHostedConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -266,6 +274,7 @@ func (r *DirectConnectAssociateHostedConnectionFuture) Get(ctx workflow.Context)
 }
 
 type DirectConnectAssociateVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -276,6 +285,7 @@ func (r *DirectConnectAssociateVirtualInterfaceFuture) Get(ctx workflow.Context)
 }
 
 type DirectConnectConfirmConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -286,6 +296,7 @@ func (r *DirectConnectConfirmConnectionFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectConnectConfirmPrivateVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -296,6 +307,7 @@ func (r *DirectConnectConfirmPrivateVirtualInterfaceFuture) Get(ctx workflow.Con
 }
 
 type DirectConnectConfirmPublicVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -306,6 +318,7 @@ func (r *DirectConnectConfirmPublicVirtualInterfaceFuture) Get(ctx workflow.Cont
 }
 
 type DirectConnectConfirmTransitVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -316,6 +329,7 @@ func (r *DirectConnectConfirmTransitVirtualInterfaceFuture) Get(ctx workflow.Con
 }
 
 type DirectConnectCreateBGPPeerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -326,6 +340,7 @@ func (r *DirectConnectCreateBGPPeerFuture) Get(ctx workflow.Context) (*directcon
 }
 
 type DirectConnectCreateConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -336,6 +351,7 @@ func (r *DirectConnectCreateConnectionFuture) Get(ctx workflow.Context) (*direct
 }
 
 type DirectConnectCreateDirectConnectGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -346,6 +362,7 @@ func (r *DirectConnectCreateDirectConnectGatewayFuture) Get(ctx workflow.Context
 }
 
 type DirectConnectCreateDirectConnectGatewayAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -356,6 +373,7 @@ func (r *DirectConnectCreateDirectConnectGatewayAssociationFuture) Get(ctx workf
 }
 
 type DirectConnectCreateDirectConnectGatewayAssociationProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -366,6 +384,7 @@ func (r *DirectConnectCreateDirectConnectGatewayAssociationProposalFuture) Get(c
 }
 
 type DirectConnectCreateInterconnectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -376,6 +395,7 @@ func (r *DirectConnectCreateInterconnectFuture) Get(ctx workflow.Context) (*dire
 }
 
 type DirectConnectCreateLagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -386,6 +406,7 @@ func (r *DirectConnectCreateLagFuture) Get(ctx workflow.Context) (*directconnect
 }
 
 type DirectConnectCreatePrivateVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -396,6 +417,7 @@ func (r *DirectConnectCreatePrivateVirtualInterfaceFuture) Get(ctx workflow.Cont
 }
 
 type DirectConnectCreatePublicVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -406,6 +428,7 @@ func (r *DirectConnectCreatePublicVirtualInterfaceFuture) Get(ctx workflow.Conte
 }
 
 type DirectConnectCreateTransitVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -416,6 +439,7 @@ func (r *DirectConnectCreateTransitVirtualInterfaceFuture) Get(ctx workflow.Cont
 }
 
 type DirectConnectDeleteBGPPeerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -426,6 +450,7 @@ func (r *DirectConnectDeleteBGPPeerFuture) Get(ctx workflow.Context) (*directcon
 }
 
 type DirectConnectDeleteConnectionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -436,6 +461,7 @@ func (r *DirectConnectDeleteConnectionFuture) Get(ctx workflow.Context) (*direct
 }
 
 type DirectConnectDeleteDirectConnectGatewayFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -446,6 +472,7 @@ func (r *DirectConnectDeleteDirectConnectGatewayFuture) Get(ctx workflow.Context
 }
 
 type DirectConnectDeleteDirectConnectGatewayAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -456,6 +483,7 @@ func (r *DirectConnectDeleteDirectConnectGatewayAssociationFuture) Get(ctx workf
 }
 
 type DirectConnectDeleteDirectConnectGatewayAssociationProposalFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -466,6 +494,7 @@ func (r *DirectConnectDeleteDirectConnectGatewayAssociationProposalFuture) Get(c
 }
 
 type DirectConnectDeleteInterconnectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -476,6 +505,7 @@ func (r *DirectConnectDeleteInterconnectFuture) Get(ctx workflow.Context) (*dire
 }
 
 type DirectConnectDeleteLagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -486,6 +516,7 @@ func (r *DirectConnectDeleteLagFuture) Get(ctx workflow.Context) (*directconnect
 }
 
 type DirectConnectDeleteVirtualInterfaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -496,6 +527,7 @@ func (r *DirectConnectDeleteVirtualInterfaceFuture) Get(ctx workflow.Context) (*
 }
 
 type DirectConnectDescribeConnectionLoaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -506,6 +538,7 @@ func (r *DirectConnectDescribeConnectionLoaFuture) Get(ctx workflow.Context) (*d
 }
 
 type DirectConnectDescribeConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -516,6 +549,7 @@ func (r *DirectConnectDescribeConnectionsFuture) Get(ctx workflow.Context) (*dir
 }
 
 type DirectConnectDescribeConnectionsOnInterconnectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -526,6 +560,7 @@ func (r *DirectConnectDescribeConnectionsOnInterconnectFuture) Get(ctx workflow.
 }
 
 type DirectConnectDescribeDirectConnectGatewayAssociationProposalsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -536,6 +571,7 @@ func (r *DirectConnectDescribeDirectConnectGatewayAssociationProposalsFuture) Ge
 }
 
 type DirectConnectDescribeDirectConnectGatewayAssociationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -546,6 +582,7 @@ func (r *DirectConnectDescribeDirectConnectGatewayAssociationsFuture) Get(ctx wo
 }
 
 type DirectConnectDescribeDirectConnectGatewayAttachmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -556,6 +593,7 @@ func (r *DirectConnectDescribeDirectConnectGatewayAttachmentsFuture) Get(ctx wor
 }
 
 type DirectConnectDescribeDirectConnectGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -566,6 +604,7 @@ func (r *DirectConnectDescribeDirectConnectGatewaysFuture) Get(ctx workflow.Cont
 }
 
 type DirectConnectDescribeHostedConnectionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -576,6 +615,7 @@ func (r *DirectConnectDescribeHostedConnectionsFuture) Get(ctx workflow.Context)
 }
 
 type DirectConnectDescribeInterconnectLoaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -586,6 +626,7 @@ func (r *DirectConnectDescribeInterconnectLoaFuture) Get(ctx workflow.Context) (
 }
 
 type DirectConnectDescribeInterconnectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -596,6 +637,7 @@ func (r *DirectConnectDescribeInterconnectsFuture) Get(ctx workflow.Context) (*d
 }
 
 type DirectConnectDescribeLagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -606,6 +648,7 @@ func (r *DirectConnectDescribeLagsFuture) Get(ctx workflow.Context) (*directconn
 }
 
 type DirectConnectDescribeLoaFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -616,6 +659,7 @@ func (r *DirectConnectDescribeLoaFuture) Get(ctx workflow.Context) (*directconne
 }
 
 type DirectConnectDescribeLocationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -626,6 +670,7 @@ func (r *DirectConnectDescribeLocationsFuture) Get(ctx workflow.Context) (*direc
 }
 
 type DirectConnectDescribeTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -636,6 +681,7 @@ func (r *DirectConnectDescribeTagsFuture) Get(ctx workflow.Context) (*directconn
 }
 
 type DirectConnectDescribeVirtualGatewaysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -646,6 +692,7 @@ func (r *DirectConnectDescribeVirtualGatewaysFuture) Get(ctx workflow.Context) (
 }
 
 type DirectConnectDescribeVirtualInterfacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -656,6 +703,7 @@ func (r *DirectConnectDescribeVirtualInterfacesFuture) Get(ctx workflow.Context)
 }
 
 type DirectConnectDisassociateConnectionFromLagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -666,6 +714,7 @@ func (r *DirectConnectDisassociateConnectionFromLagFuture) Get(ctx workflow.Cont
 }
 
 type DirectConnectListVirtualInterfaceTestHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -676,6 +725,7 @@ func (r *DirectConnectListVirtualInterfaceTestHistoryFuture) Get(ctx workflow.Co
 }
 
 type DirectConnectStartBgpFailoverTestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -686,6 +736,7 @@ func (r *DirectConnectStartBgpFailoverTestFuture) Get(ctx workflow.Context) (*di
 }
 
 type DirectConnectStopBgpFailoverTestFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -696,6 +747,7 @@ func (r *DirectConnectStopBgpFailoverTestFuture) Get(ctx workflow.Context) (*dir
 }
 
 type DirectConnectTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -706,6 +758,7 @@ func (r *DirectConnectTagResourceFuture) Get(ctx workflow.Context) (*directconne
 }
 
 type DirectConnectUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -716,6 +769,7 @@ func (r *DirectConnectUntagResourceFuture) Get(ctx workflow.Context) (*directcon
 }
 
 type DirectConnectUpdateDirectConnectGatewayAssociationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -726,6 +780,7 @@ func (r *DirectConnectUpdateDirectConnectGatewayAssociationFuture) Get(ctx workf
 }
 
 type DirectConnectUpdateLagFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -736,6 +791,7 @@ func (r *DirectConnectUpdateLagFuture) Get(ctx workflow.Context) (*directconnect
 }
 
 type DirectConnectUpdateVirtualInterfaceAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

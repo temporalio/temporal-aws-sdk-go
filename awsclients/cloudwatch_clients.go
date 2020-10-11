@@ -114,6 +114,7 @@ func NewCloudWatchStub() CloudWatchClient {
 }
 
 type CloudWatchDeleteAlarmsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +125,7 @@ func (r *CloudWatchDeleteAlarmsFuture) Get(ctx workflow.Context) (*cloudwatch.De
 }
 
 type CloudWatchDeleteAnomalyDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +136,7 @@ func (r *CloudWatchDeleteAnomalyDetectorFuture) Get(ctx workflow.Context) (*clou
 }
 
 type CloudWatchDeleteDashboardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +147,7 @@ func (r *CloudWatchDeleteDashboardsFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchDeleteInsightRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +158,7 @@ func (r *CloudWatchDeleteInsightRulesFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchDescribeAlarmHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +169,7 @@ func (r *CloudWatchDescribeAlarmHistoryFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchDescribeAlarmsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +180,7 @@ func (r *CloudWatchDescribeAlarmsFuture) Get(ctx workflow.Context) (*cloudwatch.
 }
 
 type CloudWatchDescribeAlarmsForMetricFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +191,7 @@ func (r *CloudWatchDescribeAlarmsForMetricFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudWatchDescribeAnomalyDetectorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +202,7 @@ func (r *CloudWatchDescribeAnomalyDetectorsFuture) Get(ctx workflow.Context) (*c
 }
 
 type CloudWatchDescribeInsightRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +213,7 @@ func (r *CloudWatchDescribeInsightRulesFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchDisableAlarmActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +224,7 @@ func (r *CloudWatchDisableAlarmActionsFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchDisableInsightRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +235,7 @@ func (r *CloudWatchDisableInsightRulesFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchEnableAlarmActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +246,7 @@ func (r *CloudWatchEnableAlarmActionsFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchEnableInsightRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +257,7 @@ func (r *CloudWatchEnableInsightRulesFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchGetDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +268,7 @@ func (r *CloudWatchGetDashboardFuture) Get(ctx workflow.Context) (*cloudwatch.Ge
 }
 
 type CloudWatchGetInsightRuleReportFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +279,7 @@ func (r *CloudWatchGetInsightRuleReportFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchGetMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +290,7 @@ func (r *CloudWatchGetMetricDataFuture) Get(ctx workflow.Context) (*cloudwatch.G
 }
 
 type CloudWatchGetMetricStatisticsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +301,7 @@ func (r *CloudWatchGetMetricStatisticsFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchGetMetricWidgetImageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +312,7 @@ func (r *CloudWatchGetMetricWidgetImageFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchListDashboardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +323,7 @@ func (r *CloudWatchListDashboardsFuture) Get(ctx workflow.Context) (*cloudwatch.
 }
 
 type CloudWatchListMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +334,7 @@ func (r *CloudWatchListMetricsFuture) Get(ctx workflow.Context) (*cloudwatch.Lis
 }
 
 type CloudWatchListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +345,7 @@ func (r *CloudWatchListTagsForResourceFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchPutAnomalyDetectorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +356,7 @@ func (r *CloudWatchPutAnomalyDetectorFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchPutCompositeAlarmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +367,7 @@ func (r *CloudWatchPutCompositeAlarmFuture) Get(ctx workflow.Context) (*cloudwat
 }
 
 type CloudWatchPutDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +378,7 @@ func (r *CloudWatchPutDashboardFuture) Get(ctx workflow.Context) (*cloudwatch.Pu
 }
 
 type CloudWatchPutInsightRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +389,7 @@ func (r *CloudWatchPutInsightRuleFuture) Get(ctx workflow.Context) (*cloudwatch.
 }
 
 type CloudWatchPutMetricAlarmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +400,7 @@ func (r *CloudWatchPutMetricAlarmFuture) Get(ctx workflow.Context) (*cloudwatch.
 }
 
 type CloudWatchPutMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +411,7 @@ func (r *CloudWatchPutMetricDataFuture) Get(ctx workflow.Context) (*cloudwatch.P
 }
 
 type CloudWatchSetAlarmStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +422,7 @@ func (r *CloudWatchSetAlarmStateFuture) Get(ctx workflow.Context) (*cloudwatch.S
 }
 
 type CloudWatchTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +433,7 @@ func (r *CloudWatchTagResourceFuture) Get(ctx workflow.Context) (*cloudwatch.Tag
 }
 
 type CloudWatchUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -48,6 +48,7 @@ func NewApplicationAutoScalingStub() ApplicationAutoScalingClient {
 }
 
 type ApplicationAutoScalingDeleteScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -58,6 +59,7 @@ func (r *ApplicationAutoScalingDeleteScalingPolicyFuture) Get(ctx workflow.Conte
 }
 
 type ApplicationAutoScalingDeleteScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -68,6 +70,7 @@ func (r *ApplicationAutoScalingDeleteScheduledActionFuture) Get(ctx workflow.Con
 }
 
 type ApplicationAutoScalingDeregisterScalableTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -78,6 +81,7 @@ func (r *ApplicationAutoScalingDeregisterScalableTargetFuture) Get(ctx workflow.
 }
 
 type ApplicationAutoScalingDescribeScalableTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +92,7 @@ func (r *ApplicationAutoScalingDescribeScalableTargetsFuture) Get(ctx workflow.C
 }
 
 type ApplicationAutoScalingDescribeScalingActivitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +103,7 @@ func (r *ApplicationAutoScalingDescribeScalingActivitiesFuture) Get(ctx workflow
 }
 
 type ApplicationAutoScalingDescribeScalingPoliciesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +114,7 @@ func (r *ApplicationAutoScalingDescribeScalingPoliciesFuture) Get(ctx workflow.C
 }
 
 type ApplicationAutoScalingDescribeScheduledActionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +125,7 @@ func (r *ApplicationAutoScalingDescribeScheduledActionsFuture) Get(ctx workflow.
 }
 
 type ApplicationAutoScalingPutScalingPolicyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +136,7 @@ func (r *ApplicationAutoScalingPutScalingPolicyFuture) Get(ctx workflow.Context)
 }
 
 type ApplicationAutoScalingPutScheduledActionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +147,7 @@ func (r *ApplicationAutoScalingPutScheduledActionFuture) Get(ctx workflow.Contex
 }
 
 type ApplicationAutoScalingRegisterScalableTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

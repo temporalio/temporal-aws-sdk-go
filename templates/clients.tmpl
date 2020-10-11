@@ -41,6 +41,7 @@ func New{{ $name }}Stub() {{ $name }}Client {
 {{- if not (IsNil $method.Output) }}
 {{ $prefix := CapitalizeFirstLetter $method.Output.Package }}
 type {{ $name }}{{ $method.Name }}Future struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

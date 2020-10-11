@@ -81,6 +81,7 @@ func NewCognitoIdentityStub() CognitoIdentityClient {
 }
 
 type CognitoIdentityCreateIdentityPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -91,6 +92,7 @@ func (r *CognitoIdentityCreateIdentityPoolFuture) Get(ctx workflow.Context) (*co
 }
 
 type CognitoIdentityDeleteIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -101,6 +103,7 @@ func (r *CognitoIdentityDeleteIdentitiesFuture) Get(ctx workflow.Context) (*cogn
 }
 
 type CognitoIdentityDeleteIdentityPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -111,6 +114,7 @@ func (r *CognitoIdentityDeleteIdentityPoolFuture) Get(ctx workflow.Context) (*co
 }
 
 type CognitoIdentityDescribeIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +125,7 @@ func (r *CognitoIdentityDescribeIdentityFuture) Get(ctx workflow.Context) (*cogn
 }
 
 type CognitoIdentityDescribeIdentityPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +136,7 @@ func (r *CognitoIdentityDescribeIdentityPoolFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityGetCredentialsForIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +147,7 @@ func (r *CognitoIdentityGetCredentialsForIdentityFuture) Get(ctx workflow.Contex
 }
 
 type CognitoIdentityGetIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +158,7 @@ func (r *CognitoIdentityGetIdFuture) Get(ctx workflow.Context) (*cognitoidentity
 }
 
 type CognitoIdentityGetIdentityPoolRolesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +169,7 @@ func (r *CognitoIdentityGetIdentityPoolRolesFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityGetOpenIdTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +180,7 @@ func (r *CognitoIdentityGetOpenIdTokenFuture) Get(ctx workflow.Context) (*cognit
 }
 
 type CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +191,7 @@ func (r *CognitoIdentityGetOpenIdTokenForDeveloperIdentityFuture) Get(ctx workfl
 }
 
 type CognitoIdentityListIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +202,7 @@ func (r *CognitoIdentityListIdentitiesFuture) Get(ctx workflow.Context) (*cognit
 }
 
 type CognitoIdentityListIdentityPoolsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +213,7 @@ func (r *CognitoIdentityListIdentityPoolsFuture) Get(ctx workflow.Context) (*cog
 }
 
 type CognitoIdentityListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +224,7 @@ func (r *CognitoIdentityListTagsForResourceFuture) Get(ctx workflow.Context) (*c
 }
 
 type CognitoIdentityLookupDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +235,7 @@ func (r *CognitoIdentityLookupDeveloperIdentityFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityMergeDeveloperIdentitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +246,7 @@ func (r *CognitoIdentityMergeDeveloperIdentitiesFuture) Get(ctx workflow.Context
 }
 
 type CognitoIdentitySetIdentityPoolRolesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +257,7 @@ func (r *CognitoIdentitySetIdentityPoolRolesFuture) Get(ctx workflow.Context) (*
 }
 
 type CognitoIdentityTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +268,7 @@ func (r *CognitoIdentityTagResourceFuture) Get(ctx workflow.Context) (*cognitoid
 }
 
 type CognitoIdentityUnlinkDeveloperIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +279,7 @@ func (r *CognitoIdentityUnlinkDeveloperIdentityFuture) Get(ctx workflow.Context)
 }
 
 type CognitoIdentityUnlinkIdentityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +290,7 @@ func (r *CognitoIdentityUnlinkIdentityFuture) Get(ctx workflow.Context) (*cognit
 }
 
 type CognitoIdentityUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +301,7 @@ func (r *CognitoIdentityUntagResourceFuture) Get(ctx workflow.Context) (*cognito
 }
 
 type CognitoIdentityUpdateIdentityPoolFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -42,6 +42,7 @@ func NewResourceGroupsTaggingAPIStub() ResourceGroupsTaggingAPIClient {
 }
 
 type ResourceGroupsTaggingAPIDescribeReportCreationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -52,6 +53,7 @@ func (r *ResourceGroupsTaggingAPIDescribeReportCreationFuture) Get(ctx workflow.
 }
 
 type ResourceGroupsTaggingAPIGetComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -62,6 +64,7 @@ func (r *ResourceGroupsTaggingAPIGetComplianceSummaryFuture) Get(ctx workflow.Co
 }
 
 type ResourceGroupsTaggingAPIGetResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -72,6 +75,7 @@ func (r *ResourceGroupsTaggingAPIGetResourcesFuture) Get(ctx workflow.Context) (
 }
 
 type ResourceGroupsTaggingAPIGetTagKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -82,6 +86,7 @@ func (r *ResourceGroupsTaggingAPIGetTagKeysFuture) Get(ctx workflow.Context) (*r
 }
 
 type ResourceGroupsTaggingAPIGetTagValuesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -92,6 +97,7 @@ func (r *ResourceGroupsTaggingAPIGetTagValuesFuture) Get(ctx workflow.Context) (
 }
 
 type ResourceGroupsTaggingAPIStartReportCreationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -102,6 +108,7 @@ func (r *ResourceGroupsTaggingAPIStartReportCreationFuture) Get(ctx workflow.Con
 }
 
 type ResourceGroupsTaggingAPITagResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +119,7 @@ func (r *ResourceGroupsTaggingAPITagResourcesFuture) Get(ctx workflow.Context) (
 }
 
 type ResourceGroupsTaggingAPIUntagResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

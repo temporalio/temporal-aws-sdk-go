@@ -111,6 +111,7 @@ func NewCloudWatchEventsStub() CloudWatchEventsClient {
 }
 
 type CloudWatchEventsActivateEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -121,6 +122,7 @@ func (r *CloudWatchEventsActivateEventSourceFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchEventsCreateEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -131,6 +133,7 @@ func (r *CloudWatchEventsCreateEventBusFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchEventsCreatePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -141,6 +144,7 @@ func (r *CloudWatchEventsCreatePartnerEventSourceFuture) Get(ctx workflow.Contex
 }
 
 type CloudWatchEventsDeactivateEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -151,6 +155,7 @@ func (r *CloudWatchEventsDeactivateEventSourceFuture) Get(ctx workflow.Context) 
 }
 
 type CloudWatchEventsDeleteEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -161,6 +166,7 @@ func (r *CloudWatchEventsDeleteEventBusFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchEventsDeletePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -171,6 +177,7 @@ func (r *CloudWatchEventsDeletePartnerEventSourceFuture) Get(ctx workflow.Contex
 }
 
 type CloudWatchEventsDeleteRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -181,6 +188,7 @@ func (r *CloudWatchEventsDeleteRuleFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchEventsDescribeEventBusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -191,6 +199,7 @@ func (r *CloudWatchEventsDescribeEventBusFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchEventsDescribeEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -201,6 +210,7 @@ func (r *CloudWatchEventsDescribeEventSourceFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchEventsDescribePartnerEventSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -211,6 +221,7 @@ func (r *CloudWatchEventsDescribePartnerEventSourceFuture) Get(ctx workflow.Cont
 }
 
 type CloudWatchEventsDescribeRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -221,6 +232,7 @@ func (r *CloudWatchEventsDescribeRuleFuture) Get(ctx workflow.Context) (*cloudwa
 }
 
 type CloudWatchEventsDisableRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -231,6 +243,7 @@ func (r *CloudWatchEventsDisableRuleFuture) Get(ctx workflow.Context) (*cloudwat
 }
 
 type CloudWatchEventsEnableRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -241,6 +254,7 @@ func (r *CloudWatchEventsEnableRuleFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchEventsListEventBusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -251,6 +265,7 @@ func (r *CloudWatchEventsListEventBusesFuture) Get(ctx workflow.Context) (*cloud
 }
 
 type CloudWatchEventsListEventSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -261,6 +276,7 @@ func (r *CloudWatchEventsListEventSourcesFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchEventsListPartnerEventSourceAccountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -271,6 +287,7 @@ func (r *CloudWatchEventsListPartnerEventSourceAccountsFuture) Get(ctx workflow.
 }
 
 type CloudWatchEventsListPartnerEventSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -281,6 +298,7 @@ func (r *CloudWatchEventsListPartnerEventSourcesFuture) Get(ctx workflow.Context
 }
 
 type CloudWatchEventsListRuleNamesByTargetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -291,6 +309,7 @@ func (r *CloudWatchEventsListRuleNamesByTargetFuture) Get(ctx workflow.Context) 
 }
 
 type CloudWatchEventsListRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -301,6 +320,7 @@ func (r *CloudWatchEventsListRulesFuture) Get(ctx workflow.Context) (*cloudwatch
 }
 
 type CloudWatchEventsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -311,6 +331,7 @@ func (r *CloudWatchEventsListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type CloudWatchEventsListTargetsByRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -321,6 +342,7 @@ func (r *CloudWatchEventsListTargetsByRuleFuture) Get(ctx workflow.Context) (*cl
 }
 
 type CloudWatchEventsPutEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -331,6 +353,7 @@ func (r *CloudWatchEventsPutEventsFuture) Get(ctx workflow.Context) (*cloudwatch
 }
 
 type CloudWatchEventsPutPartnerEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -341,6 +364,7 @@ func (r *CloudWatchEventsPutPartnerEventsFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchEventsPutPermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -351,6 +375,7 @@ func (r *CloudWatchEventsPutPermissionFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchEventsPutRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -361,6 +386,7 @@ func (r *CloudWatchEventsPutRuleFuture) Get(ctx workflow.Context) (*cloudwatchev
 }
 
 type CloudWatchEventsPutTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -371,6 +397,7 @@ func (r *CloudWatchEventsPutTargetsFuture) Get(ctx workflow.Context) (*cloudwatc
 }
 
 type CloudWatchEventsRemovePermissionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -381,6 +408,7 @@ func (r *CloudWatchEventsRemovePermissionFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchEventsRemoveTargetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -391,6 +419,7 @@ func (r *CloudWatchEventsRemoveTargetsFuture) Get(ctx workflow.Context) (*cloudw
 }
 
 type CloudWatchEventsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -401,6 +430,7 @@ func (r *CloudWatchEventsTagResourceFuture) Get(ctx workflow.Context) (*cloudwat
 }
 
 type CloudWatchEventsTestEventPatternFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -411,6 +441,7 @@ func (r *CloudWatchEventsTestEventPatternFuture) Get(ctx workflow.Context) (*clo
 }
 
 type CloudWatchEventsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

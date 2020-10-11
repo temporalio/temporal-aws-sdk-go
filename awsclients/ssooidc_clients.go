@@ -27,6 +27,7 @@ func NewSSOOIDCStub() SSOOIDCClient {
 }
 
 type SSOOIDCCreateTokenFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *SSOOIDCCreateTokenFuture) Get(ctx workflow.Context) (*ssooidc.CreateTok
 }
 
 type SSOOIDCRegisterClientFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *SSOOIDCRegisterClientFuture) Get(ctx workflow.Context) (*ssooidc.Regist
 }
 
 type SSOOIDCStartDeviceAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

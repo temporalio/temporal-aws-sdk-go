@@ -27,6 +27,7 @@ func NewMigrationHubConfigStub() MigrationHubConfigClient {
 }
 
 type MigrationHubConfigCreateHomeRegionControlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -37,6 +38,7 @@ func (r *MigrationHubConfigCreateHomeRegionControlFuture) Get(ctx workflow.Conte
 }
 
 type MigrationHubConfigDescribeHomeRegionControlsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -47,6 +49,7 @@ func (r *MigrationHubConfigDescribeHomeRegionControlsFuture) Get(ctx workflow.Co
 }
 
 type MigrationHubConfigGetHomeRegionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

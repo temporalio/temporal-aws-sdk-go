@@ -129,6 +129,7 @@ func NewSWFStub() SWFClient {
 }
 
 type SWFCountClosedWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -139,6 +140,7 @@ func (r *SWFCountClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf
 }
 
 type SWFCountOpenWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -149,6 +151,7 @@ func (r *SWFCountOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.W
 }
 
 type SWFCountPendingActivityTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -159,6 +162,7 @@ func (r *SWFCountPendingActivityTasksFuture) Get(ctx workflow.Context) (*swf.Pen
 }
 
 type SWFCountPendingDecisionTasksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -169,6 +173,7 @@ func (r *SWFCountPendingDecisionTasksFuture) Get(ctx workflow.Context) (*swf.Pen
 }
 
 type SWFDeprecateActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -179,6 +184,7 @@ func (r *SWFDeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.Depreca
 }
 
 type SWFDeprecateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -189,6 +195,7 @@ func (r *SWFDeprecateDomainFuture) Get(ctx workflow.Context) (*swf.DeprecateDoma
 }
 
 type SWFDeprecateWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -199,6 +206,7 @@ func (r *SWFDeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.Depreca
 }
 
 type SWFDescribeActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -209,6 +217,7 @@ func (r *SWFDescribeActivityTypeFuture) Get(ctx workflow.Context) (*swf.Describe
 }
 
 type SWFDescribeDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -219,6 +228,7 @@ func (r *SWFDescribeDomainFuture) Get(ctx workflow.Context) (*swf.DescribeDomain
 }
 
 type SWFDescribeWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -229,6 +239,7 @@ func (r *SWFDescribeWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.Des
 }
 
 type SWFDescribeWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -239,6 +250,7 @@ func (r *SWFDescribeWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.Describe
 }
 
 type SWFGetWorkflowExecutionHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -249,6 +261,7 @@ func (r *SWFGetWorkflowExecutionHistoryFuture) Get(ctx workflow.Context) (*swf.G
 }
 
 type SWFListActivityTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -259,6 +272,7 @@ func (r *SWFListActivityTypesFuture) Get(ctx workflow.Context) (*swf.ListActivit
 }
 
 type SWFListClosedWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -269,6 +283,7 @@ func (r *SWFListClosedWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.
 }
 
 type SWFListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -279,6 +294,7 @@ func (r *SWFListDomainsFuture) Get(ctx workflow.Context) (*swf.ListDomainsOutput
 }
 
 type SWFListOpenWorkflowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -289,6 +305,7 @@ func (r *SWFListOpenWorkflowExecutionsFuture) Get(ctx workflow.Context) (*swf.Wo
 }
 
 type SWFListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -299,6 +316,7 @@ func (r *SWFListTagsForResourceFuture) Get(ctx workflow.Context) (*swf.ListTagsF
 }
 
 type SWFListWorkflowTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -309,6 +327,7 @@ func (r *SWFListWorkflowTypesFuture) Get(ctx workflow.Context) (*swf.ListWorkflo
 }
 
 type SWFPollForActivityTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -319,6 +338,7 @@ func (r *SWFPollForActivityTaskFuture) Get(ctx workflow.Context) (*swf.PollForAc
 }
 
 type SWFPollForDecisionTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -329,6 +349,7 @@ func (r *SWFPollForDecisionTaskFuture) Get(ctx workflow.Context) (*swf.PollForDe
 }
 
 type SWFRecordActivityTaskHeartbeatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -339,6 +360,7 @@ func (r *SWFRecordActivityTaskHeartbeatFuture) Get(ctx workflow.Context) (*swf.R
 }
 
 type SWFRegisterActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -349,6 +371,7 @@ func (r *SWFRegisterActivityTypeFuture) Get(ctx workflow.Context) (*swf.Register
 }
 
 type SWFRegisterDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -359,6 +382,7 @@ func (r *SWFRegisterDomainFuture) Get(ctx workflow.Context) (*swf.RegisterDomain
 }
 
 type SWFRegisterWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -369,6 +393,7 @@ func (r *SWFRegisterWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.Register
 }
 
 type SWFRequestCancelWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -379,6 +404,7 @@ func (r *SWFRequestCancelWorkflowExecutionFuture) Get(ctx workflow.Context) (*sw
 }
 
 type SWFRespondActivityTaskCanceledFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -389,6 +415,7 @@ func (r *SWFRespondActivityTaskCanceledFuture) Get(ctx workflow.Context) (*swf.R
 }
 
 type SWFRespondActivityTaskCompletedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -399,6 +426,7 @@ func (r *SWFRespondActivityTaskCompletedFuture) Get(ctx workflow.Context) (*swf.
 }
 
 type SWFRespondActivityTaskFailedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +437,7 @@ func (r *SWFRespondActivityTaskFailedFuture) Get(ctx workflow.Context) (*swf.Res
 }
 
 type SWFRespondDecisionTaskCompletedFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +448,7 @@ func (r *SWFRespondDecisionTaskCompletedFuture) Get(ctx workflow.Context) (*swf.
 }
 
 type SWFSignalWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +459,7 @@ func (r *SWFSignalWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.Signa
 }
 
 type SWFStartWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +470,7 @@ func (r *SWFStartWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.StartW
 }
 
 type SWFTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +481,7 @@ func (r *SWFTagResourceFuture) Get(ctx workflow.Context) (*swf.TagResourceOutput
 }
 
 type SWFTerminateWorkflowExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +492,7 @@ func (r *SWFTerminateWorkflowExecutionFuture) Get(ctx workflow.Context) (*swf.Te
 }
 
 type SWFUndeprecateActivityTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +503,7 @@ func (r *SWFUndeprecateActivityTypeFuture) Get(ctx workflow.Context) (*swf.Undep
 }
 
 type SWFUndeprecateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +514,7 @@ func (r *SWFUndeprecateDomainFuture) Get(ctx workflow.Context) (*swf.Undeprecate
 }
 
 type SWFUndeprecateWorkflowTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +525,7 @@ func (r *SWFUndeprecateWorkflowTypeFuture) Get(ctx workflow.Context) (*swf.Undep
 }
 
 type SWFUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

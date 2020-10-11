@@ -252,6 +252,7 @@ func NewConfigServiceStub() ConfigServiceClient {
 }
 
 type ConfigServiceBatchGetAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +263,7 @@ func (r *ConfigServiceBatchGetAggregateResourceConfigFuture) Get(ctx workflow.Co
 }
 
 type ConfigServiceBatchGetResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +274,7 @@ func (r *ConfigServiceBatchGetResourceConfigFuture) Get(ctx workflow.Context) (*
 }
 
 type ConfigServiceDeleteAggregationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +285,7 @@ func (r *ConfigServiceDeleteAggregationAuthorizationFuture) Get(ctx workflow.Con
 }
 
 type ConfigServiceDeleteConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +296,7 @@ func (r *ConfigServiceDeleteConfigRuleFuture) Get(ctx workflow.Context) (*config
 }
 
 type ConfigServiceDeleteConfigurationAggregatorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +307,7 @@ func (r *ConfigServiceDeleteConfigurationAggregatorFuture) Get(ctx workflow.Cont
 }
 
 type ConfigServiceDeleteConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +318,7 @@ func (r *ConfigServiceDeleteConfigurationRecorderFuture) Get(ctx workflow.Contex
 }
 
 type ConfigServiceDeleteConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +329,7 @@ func (r *ConfigServiceDeleteConformancePackFuture) Get(ctx workflow.Context) (*c
 }
 
 type ConfigServiceDeleteDeliveryChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +340,7 @@ func (r *ConfigServiceDeleteDeliveryChannelFuture) Get(ctx workflow.Context) (*c
 }
 
 type ConfigServiceDeleteEvaluationResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +351,7 @@ func (r *ConfigServiceDeleteEvaluationResultsFuture) Get(ctx workflow.Context) (
 }
 
 type ConfigServiceDeleteOrganizationConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +362,7 @@ func (r *ConfigServiceDeleteOrganizationConfigRuleFuture) Get(ctx workflow.Conte
 }
 
 type ConfigServiceDeleteOrganizationConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +373,7 @@ func (r *ConfigServiceDeleteOrganizationConformancePackFuture) Get(ctx workflow.
 }
 
 type ConfigServiceDeleteRemediationConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +384,7 @@ func (r *ConfigServiceDeleteRemediationConfigurationFuture) Get(ctx workflow.Con
 }
 
 type ConfigServiceDeleteRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -382,6 +395,7 @@ func (r *ConfigServiceDeleteRemediationExceptionsFuture) Get(ctx workflow.Contex
 }
 
 type ConfigServiceDeleteResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -392,6 +406,7 @@ func (r *ConfigServiceDeleteResourceConfigFuture) Get(ctx workflow.Context) (*co
 }
 
 type ConfigServiceDeleteRetentionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -402,6 +417,7 @@ func (r *ConfigServiceDeleteRetentionConfigurationFuture) Get(ctx workflow.Conte
 }
 
 type ConfigServiceDeliverConfigSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -412,6 +428,7 @@ func (r *ConfigServiceDeliverConfigSnapshotFuture) Get(ctx workflow.Context) (*c
 }
 
 type ConfigServiceDescribeAggregateComplianceByConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -422,6 +439,7 @@ func (r *ConfigServiceDescribeAggregateComplianceByConfigRulesFuture) Get(ctx wo
 }
 
 type ConfigServiceDescribeAggregationAuthorizationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -432,6 +450,7 @@ func (r *ConfigServiceDescribeAggregationAuthorizationsFuture) Get(ctx workflow.
 }
 
 type ConfigServiceDescribeComplianceByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -442,6 +461,7 @@ func (r *ConfigServiceDescribeComplianceByConfigRuleFuture) Get(ctx workflow.Con
 }
 
 type ConfigServiceDescribeComplianceByResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -452,6 +472,7 @@ func (r *ConfigServiceDescribeComplianceByResourceFuture) Get(ctx workflow.Conte
 }
 
 type ConfigServiceDescribeConfigRuleEvaluationStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -462,6 +483,7 @@ func (r *ConfigServiceDescribeConfigRuleEvaluationStatusFuture) Get(ctx workflow
 }
 
 type ConfigServiceDescribeConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -472,6 +494,7 @@ func (r *ConfigServiceDescribeConfigRulesFuture) Get(ctx workflow.Context) (*con
 }
 
 type ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -482,6 +505,7 @@ func (r *ConfigServiceDescribeConfigurationAggregatorSourcesStatusFuture) Get(ct
 }
 
 type ConfigServiceDescribeConfigurationAggregatorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -492,6 +516,7 @@ func (r *ConfigServiceDescribeConfigurationAggregatorsFuture) Get(ctx workflow.C
 }
 
 type ConfigServiceDescribeConfigurationRecorderStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -502,6 +527,7 @@ func (r *ConfigServiceDescribeConfigurationRecorderStatusFuture) Get(ctx workflo
 }
 
 type ConfigServiceDescribeConfigurationRecordersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -512,6 +538,7 @@ func (r *ConfigServiceDescribeConfigurationRecordersFuture) Get(ctx workflow.Con
 }
 
 type ConfigServiceDescribeConformancePackComplianceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -522,6 +549,7 @@ func (r *ConfigServiceDescribeConformancePackComplianceFuture) Get(ctx workflow.
 }
 
 type ConfigServiceDescribeConformancePackStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -532,6 +560,7 @@ func (r *ConfigServiceDescribeConformancePackStatusFuture) Get(ctx workflow.Cont
 }
 
 type ConfigServiceDescribeConformancePacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -542,6 +571,7 @@ func (r *ConfigServiceDescribeConformancePacksFuture) Get(ctx workflow.Context) 
 }
 
 type ConfigServiceDescribeDeliveryChannelStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -552,6 +582,7 @@ func (r *ConfigServiceDescribeDeliveryChannelStatusFuture) Get(ctx workflow.Cont
 }
 
 type ConfigServiceDescribeDeliveryChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -562,6 +593,7 @@ func (r *ConfigServiceDescribeDeliveryChannelsFuture) Get(ctx workflow.Context) 
 }
 
 type ConfigServiceDescribeOrganizationConfigRuleStatusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -572,6 +604,7 @@ func (r *ConfigServiceDescribeOrganizationConfigRuleStatusesFuture) Get(ctx work
 }
 
 type ConfigServiceDescribeOrganizationConfigRulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -582,6 +615,7 @@ func (r *ConfigServiceDescribeOrganizationConfigRulesFuture) Get(ctx workflow.Co
 }
 
 type ConfigServiceDescribeOrganizationConformancePackStatusesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -592,6 +626,7 @@ func (r *ConfigServiceDescribeOrganizationConformancePackStatusesFuture) Get(ctx
 }
 
 type ConfigServiceDescribeOrganizationConformancePacksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -602,6 +637,7 @@ func (r *ConfigServiceDescribeOrganizationConformancePacksFuture) Get(ctx workfl
 }
 
 type ConfigServiceDescribePendingAggregationRequestsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -612,6 +648,7 @@ func (r *ConfigServiceDescribePendingAggregationRequestsFuture) Get(ctx workflow
 }
 
 type ConfigServiceDescribeRemediationConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -622,6 +659,7 @@ func (r *ConfigServiceDescribeRemediationConfigurationsFuture) Get(ctx workflow.
 }
 
 type ConfigServiceDescribeRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -632,6 +670,7 @@ func (r *ConfigServiceDescribeRemediationExceptionsFuture) Get(ctx workflow.Cont
 }
 
 type ConfigServiceDescribeRemediationExecutionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -642,6 +681,7 @@ func (r *ConfigServiceDescribeRemediationExecutionStatusFuture) Get(ctx workflow
 }
 
 type ConfigServiceDescribeRetentionConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -652,6 +692,7 @@ func (r *ConfigServiceDescribeRetentionConfigurationsFuture) Get(ctx workflow.Co
 }
 
 type ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -662,6 +703,7 @@ func (r *ConfigServiceGetAggregateComplianceDetailsByConfigRuleFuture) Get(ctx w
 }
 
 type ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -672,6 +714,7 @@ func (r *ConfigServiceGetAggregateConfigRuleComplianceSummaryFuture) Get(ctx wor
 }
 
 type ConfigServiceGetAggregateDiscoveredResourceCountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -682,6 +725,7 @@ func (r *ConfigServiceGetAggregateDiscoveredResourceCountsFuture) Get(ctx workfl
 }
 
 type ConfigServiceGetAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -692,6 +736,7 @@ func (r *ConfigServiceGetAggregateResourceConfigFuture) Get(ctx workflow.Context
 }
 
 type ConfigServiceGetComplianceDetailsByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -702,6 +747,7 @@ func (r *ConfigServiceGetComplianceDetailsByConfigRuleFuture) Get(ctx workflow.C
 }
 
 type ConfigServiceGetComplianceDetailsByResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -712,6 +758,7 @@ func (r *ConfigServiceGetComplianceDetailsByResourceFuture) Get(ctx workflow.Con
 }
 
 type ConfigServiceGetComplianceSummaryByConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -722,6 +769,7 @@ func (r *ConfigServiceGetComplianceSummaryByConfigRuleFuture) Get(ctx workflow.C
 }
 
 type ConfigServiceGetComplianceSummaryByResourceTypeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -732,6 +780,7 @@ func (r *ConfigServiceGetComplianceSummaryByResourceTypeFuture) Get(ctx workflow
 }
 
 type ConfigServiceGetConformancePackComplianceDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -742,6 +791,7 @@ func (r *ConfigServiceGetConformancePackComplianceDetailsFuture) Get(ctx workflo
 }
 
 type ConfigServiceGetConformancePackComplianceSummaryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -752,6 +802,7 @@ func (r *ConfigServiceGetConformancePackComplianceSummaryFuture) Get(ctx workflo
 }
 
 type ConfigServiceGetDiscoveredResourceCountsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -762,6 +813,7 @@ func (r *ConfigServiceGetDiscoveredResourceCountsFuture) Get(ctx workflow.Contex
 }
 
 type ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -772,6 +824,7 @@ func (r *ConfigServiceGetOrganizationConfigRuleDetailedStatusFuture) Get(ctx wor
 }
 
 type ConfigServiceGetOrganizationConformancePackDetailedStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -782,6 +835,7 @@ func (r *ConfigServiceGetOrganizationConformancePackDetailedStatusFuture) Get(ct
 }
 
 type ConfigServiceGetResourceConfigHistoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -792,6 +846,7 @@ func (r *ConfigServiceGetResourceConfigHistoryFuture) Get(ctx workflow.Context) 
 }
 
 type ConfigServiceListAggregateDiscoveredResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -802,6 +857,7 @@ func (r *ConfigServiceListAggregateDiscoveredResourcesFuture) Get(ctx workflow.C
 }
 
 type ConfigServiceListDiscoveredResourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -812,6 +868,7 @@ func (r *ConfigServiceListDiscoveredResourcesFuture) Get(ctx workflow.Context) (
 }
 
 type ConfigServiceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -822,6 +879,7 @@ func (r *ConfigServiceListTagsForResourceFuture) Get(ctx workflow.Context) (*con
 }
 
 type ConfigServicePutAggregationAuthorizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -832,6 +890,7 @@ func (r *ConfigServicePutAggregationAuthorizationFuture) Get(ctx workflow.Contex
 }
 
 type ConfigServicePutConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -842,6 +901,7 @@ func (r *ConfigServicePutConfigRuleFuture) Get(ctx workflow.Context) (*configser
 }
 
 type ConfigServicePutConfigurationAggregatorFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -852,6 +912,7 @@ func (r *ConfigServicePutConfigurationAggregatorFuture) Get(ctx workflow.Context
 }
 
 type ConfigServicePutConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -862,6 +923,7 @@ func (r *ConfigServicePutConfigurationRecorderFuture) Get(ctx workflow.Context) 
 }
 
 type ConfigServicePutConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -872,6 +934,7 @@ func (r *ConfigServicePutConformancePackFuture) Get(ctx workflow.Context) (*conf
 }
 
 type ConfigServicePutDeliveryChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -882,6 +945,7 @@ func (r *ConfigServicePutDeliveryChannelFuture) Get(ctx workflow.Context) (*conf
 }
 
 type ConfigServicePutEvaluationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -892,6 +956,7 @@ func (r *ConfigServicePutEvaluationsFuture) Get(ctx workflow.Context) (*configse
 }
 
 type ConfigServicePutOrganizationConfigRuleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -902,6 +967,7 @@ func (r *ConfigServicePutOrganizationConfigRuleFuture) Get(ctx workflow.Context)
 }
 
 type ConfigServicePutOrganizationConformancePackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -912,6 +978,7 @@ func (r *ConfigServicePutOrganizationConformancePackFuture) Get(ctx workflow.Con
 }
 
 type ConfigServicePutRemediationConfigurationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -922,6 +989,7 @@ func (r *ConfigServicePutRemediationConfigurationsFuture) Get(ctx workflow.Conte
 }
 
 type ConfigServicePutRemediationExceptionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -932,6 +1000,7 @@ func (r *ConfigServicePutRemediationExceptionsFuture) Get(ctx workflow.Context) 
 }
 
 type ConfigServicePutResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -942,6 +1011,7 @@ func (r *ConfigServicePutResourceConfigFuture) Get(ctx workflow.Context) (*confi
 }
 
 type ConfigServicePutRetentionConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -952,6 +1022,7 @@ func (r *ConfigServicePutRetentionConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type ConfigServiceSelectAggregateResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -962,6 +1033,7 @@ func (r *ConfigServiceSelectAggregateResourceConfigFuture) Get(ctx workflow.Cont
 }
 
 type ConfigServiceSelectResourceConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -972,6 +1044,7 @@ func (r *ConfigServiceSelectResourceConfigFuture) Get(ctx workflow.Context) (*co
 }
 
 type ConfigServiceStartConfigRulesEvaluationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -982,6 +1055,7 @@ func (r *ConfigServiceStartConfigRulesEvaluationFuture) Get(ctx workflow.Context
 }
 
 type ConfigServiceStartConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -992,6 +1066,7 @@ func (r *ConfigServiceStartConfigurationRecorderFuture) Get(ctx workflow.Context
 }
 
 type ConfigServiceStartRemediationExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1002,6 +1077,7 @@ func (r *ConfigServiceStartRemediationExecutionFuture) Get(ctx workflow.Context)
 }
 
 type ConfigServiceStopConfigurationRecorderFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1012,6 +1088,7 @@ func (r *ConfigServiceStopConfigurationRecorderFuture) Get(ctx workflow.Context)
 }
 
 type ConfigServiceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1022,6 +1099,7 @@ func (r *ConfigServiceTagResourceFuture) Get(ctx workflow.Context) (*configservi
 }
 
 type ConfigServiceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

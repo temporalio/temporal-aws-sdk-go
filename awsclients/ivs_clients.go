@@ -84,6 +84,7 @@ func NewIVSStub() IVSClient {
 }
 
 type IVSBatchGetChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -94,6 +95,7 @@ func (r *IVSBatchGetChannelFuture) Get(ctx workflow.Context) (*ivs.BatchGetChann
 }
 
 type IVSBatchGetStreamKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -104,6 +106,7 @@ func (r *IVSBatchGetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.BatchGetStr
 }
 
 type IVSCreateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -114,6 +117,7 @@ func (r *IVSCreateChannelFuture) Get(ctx workflow.Context) (*ivs.CreateChannelOu
 }
 
 type IVSCreateStreamKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -124,6 +128,7 @@ func (r *IVSCreateStreamKeyFuture) Get(ctx workflow.Context) (*ivs.CreateStreamK
 }
 
 type IVSDeleteChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -134,6 +139,7 @@ func (r *IVSDeleteChannelFuture) Get(ctx workflow.Context) (*ivs.DeleteChannelOu
 }
 
 type IVSDeletePlaybackKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -144,6 +150,7 @@ func (r *IVSDeletePlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.DeleteP
 }
 
 type IVSDeleteStreamKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -154,6 +161,7 @@ func (r *IVSDeleteStreamKeyFuture) Get(ctx workflow.Context) (*ivs.DeleteStreamK
 }
 
 type IVSGetChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -164,6 +172,7 @@ func (r *IVSGetChannelFuture) Get(ctx workflow.Context) (*ivs.GetChannelOutput, 
 }
 
 type IVSGetPlaybackKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -174,6 +183,7 @@ func (r *IVSGetPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.GetPlaybac
 }
 
 type IVSGetStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -184,6 +194,7 @@ func (r *IVSGetStreamFuture) Get(ctx workflow.Context) (*ivs.GetStreamOutput, er
 }
 
 type IVSGetStreamKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -194,6 +205,7 @@ func (r *IVSGetStreamKeyFuture) Get(ctx workflow.Context) (*ivs.GetStreamKeyOutp
 }
 
 type IVSImportPlaybackKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -204,6 +216,7 @@ func (r *IVSImportPlaybackKeyPairFuture) Get(ctx workflow.Context) (*ivs.ImportP
 }
 
 type IVSListChannelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -214,6 +227,7 @@ func (r *IVSListChannelsFuture) Get(ctx workflow.Context) (*ivs.ListChannelsOutp
 }
 
 type IVSListPlaybackKeyPairsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -224,6 +238,7 @@ func (r *IVSListPlaybackKeyPairsFuture) Get(ctx workflow.Context) (*ivs.ListPlay
 }
 
 type IVSListStreamKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -234,6 +249,7 @@ func (r *IVSListStreamKeysFuture) Get(ctx workflow.Context) (*ivs.ListStreamKeys
 }
 
 type IVSListStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -244,6 +260,7 @@ func (r *IVSListStreamsFuture) Get(ctx workflow.Context) (*ivs.ListStreamsOutput
 }
 
 type IVSListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -254,6 +271,7 @@ func (r *IVSListTagsForResourceFuture) Get(ctx workflow.Context) (*ivs.ListTagsF
 }
 
 type IVSPutMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -264,6 +282,7 @@ func (r *IVSPutMetadataFuture) Get(ctx workflow.Context) (*ivs.PutMetadataOutput
 }
 
 type IVSStopStreamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -274,6 +293,7 @@ func (r *IVSStopStreamFuture) Get(ctx workflow.Context) (*ivs.StopStreamOutput, 
 }
 
 type IVSTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -284,6 +304,7 @@ func (r *IVSTagResourceFuture) Get(ctx workflow.Context) (*ivs.TagResourceOutput
 }
 
 type IVSUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -294,6 +315,7 @@ func (r *IVSUntagResourceFuture) Get(ctx workflow.Context) (*ivs.UntagResourceOu
 }
 
 type IVSUpdateChannelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

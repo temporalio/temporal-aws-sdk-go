@@ -399,6 +399,7 @@ func NewLightsailStub() LightsailClient {
 }
 
 type LightsailAllocateStaticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -409,6 +410,7 @@ func (r *LightsailAllocateStaticIpFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailAttachCertificateToDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -419,6 +421,7 @@ func (r *LightsailAttachCertificateToDistributionFuture) Get(ctx workflow.Contex
 }
 
 type LightsailAttachDiskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -429,6 +432,7 @@ func (r *LightsailAttachDiskFuture) Get(ctx workflow.Context) (*lightsail.Attach
 }
 
 type LightsailAttachInstancesToLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -439,6 +443,7 @@ func (r *LightsailAttachInstancesToLoadBalancerFuture) Get(ctx workflow.Context)
 }
 
 type LightsailAttachLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -449,6 +454,7 @@ func (r *LightsailAttachLoadBalancerTlsCertificateFuture) Get(ctx workflow.Conte
 }
 
 type LightsailAttachStaticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -459,6 +465,7 @@ func (r *LightsailAttachStaticIpFuture) Get(ctx workflow.Context) (*lightsail.At
 }
 
 type LightsailCloseInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -469,6 +476,7 @@ func (r *LightsailCloseInstancePublicPortsFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailCopySnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -479,6 +487,7 @@ func (r *LightsailCopySnapshotFuture) Get(ctx workflow.Context) (*lightsail.Copy
 }
 
 type LightsailCreateCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -489,6 +498,7 @@ func (r *LightsailCreateCertificateFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailCreateCloudFormationStackFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -499,6 +509,7 @@ func (r *LightsailCreateCloudFormationStackFuture) Get(ctx workflow.Context) (*l
 }
 
 type LightsailCreateContactMethodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -509,6 +520,7 @@ func (r *LightsailCreateContactMethodFuture) Get(ctx workflow.Context) (*lightsa
 }
 
 type LightsailCreateDiskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -519,6 +531,7 @@ func (r *LightsailCreateDiskFuture) Get(ctx workflow.Context) (*lightsail.Create
 }
 
 type LightsailCreateDiskFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -529,6 +542,7 @@ func (r *LightsailCreateDiskFromSnapshotFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailCreateDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -539,6 +553,7 @@ func (r *LightsailCreateDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailCreateDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -549,6 +564,7 @@ func (r *LightsailCreateDistributionFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailCreateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -559,6 +575,7 @@ func (r *LightsailCreateDomainFuture) Get(ctx workflow.Context) (*lightsail.Crea
 }
 
 type LightsailCreateDomainEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -569,6 +586,7 @@ func (r *LightsailCreateDomainEntryFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailCreateInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -579,6 +597,7 @@ func (r *LightsailCreateInstanceSnapshotFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailCreateInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -589,6 +608,7 @@ func (r *LightsailCreateInstancesFuture) Get(ctx workflow.Context) (*lightsail.C
 }
 
 type LightsailCreateInstancesFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -599,6 +619,7 @@ func (r *LightsailCreateInstancesFromSnapshotFuture) Get(ctx workflow.Context) (
 }
 
 type LightsailCreateKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -609,6 +630,7 @@ func (r *LightsailCreateKeyPairFuture) Get(ctx workflow.Context) (*lightsail.Cre
 }
 
 type LightsailCreateLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -619,6 +641,7 @@ func (r *LightsailCreateLoadBalancerFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailCreateLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -629,6 +652,7 @@ func (r *LightsailCreateLoadBalancerTlsCertificateFuture) Get(ctx workflow.Conte
 }
 
 type LightsailCreateRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -639,6 +663,7 @@ func (r *LightsailCreateRelationalDatabaseFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailCreateRelationalDatabaseFromSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -649,6 +674,7 @@ func (r *LightsailCreateRelationalDatabaseFromSnapshotFuture) Get(ctx workflow.C
 }
 
 type LightsailCreateRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -659,6 +685,7 @@ func (r *LightsailCreateRelationalDatabaseSnapshotFuture) Get(ctx workflow.Conte
 }
 
 type LightsailDeleteAlarmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -669,6 +696,7 @@ func (r *LightsailDeleteAlarmFuture) Get(ctx workflow.Context) (*lightsail.Delet
 }
 
 type LightsailDeleteAutoSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -679,6 +707,7 @@ func (r *LightsailDeleteAutoSnapshotFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailDeleteCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -689,6 +718,7 @@ func (r *LightsailDeleteCertificateFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailDeleteContactMethodFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -699,6 +729,7 @@ func (r *LightsailDeleteContactMethodFuture) Get(ctx workflow.Context) (*lightsa
 }
 
 type LightsailDeleteDiskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -709,6 +740,7 @@ func (r *LightsailDeleteDiskFuture) Get(ctx workflow.Context) (*lightsail.Delete
 }
 
 type LightsailDeleteDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -719,6 +751,7 @@ func (r *LightsailDeleteDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailDeleteDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -729,6 +762,7 @@ func (r *LightsailDeleteDistributionFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailDeleteDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -739,6 +773,7 @@ func (r *LightsailDeleteDomainFuture) Get(ctx workflow.Context) (*lightsail.Dele
 }
 
 type LightsailDeleteDomainEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -749,6 +784,7 @@ func (r *LightsailDeleteDomainEntryFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailDeleteInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -759,6 +795,7 @@ func (r *LightsailDeleteInstanceFuture) Get(ctx workflow.Context) (*lightsail.De
 }
 
 type LightsailDeleteInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -769,6 +806,7 @@ func (r *LightsailDeleteInstanceSnapshotFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailDeleteKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -779,6 +817,7 @@ func (r *LightsailDeleteKeyPairFuture) Get(ctx workflow.Context) (*lightsail.Del
 }
 
 type LightsailDeleteKnownHostKeysFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -789,6 +828,7 @@ func (r *LightsailDeleteKnownHostKeysFuture) Get(ctx workflow.Context) (*lightsa
 }
 
 type LightsailDeleteLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -799,6 +839,7 @@ func (r *LightsailDeleteLoadBalancerFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailDeleteLoadBalancerTlsCertificateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -809,6 +850,7 @@ func (r *LightsailDeleteLoadBalancerTlsCertificateFuture) Get(ctx workflow.Conte
 }
 
 type LightsailDeleteRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -819,6 +861,7 @@ func (r *LightsailDeleteRelationalDatabaseFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailDeleteRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -829,6 +872,7 @@ func (r *LightsailDeleteRelationalDatabaseSnapshotFuture) Get(ctx workflow.Conte
 }
 
 type LightsailDetachCertificateFromDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -839,6 +883,7 @@ func (r *LightsailDetachCertificateFromDistributionFuture) Get(ctx workflow.Cont
 }
 
 type LightsailDetachDiskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -849,6 +894,7 @@ func (r *LightsailDetachDiskFuture) Get(ctx workflow.Context) (*lightsail.Detach
 }
 
 type LightsailDetachInstancesFromLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -859,6 +905,7 @@ func (r *LightsailDetachInstancesFromLoadBalancerFuture) Get(ctx workflow.Contex
 }
 
 type LightsailDetachStaticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -869,6 +916,7 @@ func (r *LightsailDetachStaticIpFuture) Get(ctx workflow.Context) (*lightsail.De
 }
 
 type LightsailDisableAddOnFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -879,6 +927,7 @@ func (r *LightsailDisableAddOnFuture) Get(ctx workflow.Context) (*lightsail.Disa
 }
 
 type LightsailDownloadDefaultKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -889,6 +938,7 @@ func (r *LightsailDownloadDefaultKeyPairFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailEnableAddOnFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -899,6 +949,7 @@ func (r *LightsailEnableAddOnFuture) Get(ctx workflow.Context) (*lightsail.Enabl
 }
 
 type LightsailExportSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -909,6 +960,7 @@ func (r *LightsailExportSnapshotFuture) Get(ctx workflow.Context) (*lightsail.Ex
 }
 
 type LightsailGetActiveNamesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -919,6 +971,7 @@ func (r *LightsailGetActiveNamesFuture) Get(ctx workflow.Context) (*lightsail.Ge
 }
 
 type LightsailGetAlarmsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -929,6 +982,7 @@ func (r *LightsailGetAlarmsFuture) Get(ctx workflow.Context) (*lightsail.GetAlar
 }
 
 type LightsailGetAutoSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -939,6 +993,7 @@ func (r *LightsailGetAutoSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailGetBlueprintsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -949,6 +1004,7 @@ func (r *LightsailGetBlueprintsFuture) Get(ctx workflow.Context) (*lightsail.Get
 }
 
 type LightsailGetBundlesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -959,6 +1015,7 @@ func (r *LightsailGetBundlesFuture) Get(ctx workflow.Context) (*lightsail.GetBun
 }
 
 type LightsailGetCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -969,6 +1026,7 @@ func (r *LightsailGetCertificatesFuture) Get(ctx workflow.Context) (*lightsail.G
 }
 
 type LightsailGetCloudFormationStackRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -979,6 +1037,7 @@ func (r *LightsailGetCloudFormationStackRecordsFuture) Get(ctx workflow.Context)
 }
 
 type LightsailGetContactMethodsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -989,6 +1048,7 @@ func (r *LightsailGetContactMethodsFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailGetDiskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -999,6 +1059,7 @@ func (r *LightsailGetDiskFuture) Get(ctx workflow.Context) (*lightsail.GetDiskOu
 }
 
 type LightsailGetDiskSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1009,6 +1070,7 @@ func (r *LightsailGetDiskSnapshotFuture) Get(ctx workflow.Context) (*lightsail.G
 }
 
 type LightsailGetDiskSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1019,6 +1081,7 @@ func (r *LightsailGetDiskSnapshotsFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailGetDisksFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1029,6 +1092,7 @@ func (r *LightsailGetDisksFuture) Get(ctx workflow.Context) (*lightsail.GetDisks
 }
 
 type LightsailGetDistributionBundlesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1039,6 +1103,7 @@ func (r *LightsailGetDistributionBundlesFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailGetDistributionLatestCacheResetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1049,6 +1114,7 @@ func (r *LightsailGetDistributionLatestCacheResetFuture) Get(ctx workflow.Contex
 }
 
 type LightsailGetDistributionMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1059,6 +1125,7 @@ func (r *LightsailGetDistributionMetricDataFuture) Get(ctx workflow.Context) (*l
 }
 
 type LightsailGetDistributionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1069,6 +1136,7 @@ func (r *LightsailGetDistributionsFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailGetDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1079,6 +1147,7 @@ func (r *LightsailGetDomainFuture) Get(ctx workflow.Context) (*lightsail.GetDoma
 }
 
 type LightsailGetDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1089,6 +1158,7 @@ func (r *LightsailGetDomainsFuture) Get(ctx workflow.Context) (*lightsail.GetDom
 }
 
 type LightsailGetExportSnapshotRecordsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1099,6 +1169,7 @@ func (r *LightsailGetExportSnapshotRecordsFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailGetInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1109,6 +1180,7 @@ func (r *LightsailGetInstanceFuture) Get(ctx workflow.Context) (*lightsail.GetIn
 }
 
 type LightsailGetInstanceAccessDetailsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1119,6 +1191,7 @@ func (r *LightsailGetInstanceAccessDetailsFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailGetInstanceMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1129,6 +1202,7 @@ func (r *LightsailGetInstanceMetricDataFuture) Get(ctx workflow.Context) (*light
 }
 
 type LightsailGetInstancePortStatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1139,6 +1213,7 @@ func (r *LightsailGetInstancePortStatesFuture) Get(ctx workflow.Context) (*light
 }
 
 type LightsailGetInstanceSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1149,6 +1224,7 @@ func (r *LightsailGetInstanceSnapshotFuture) Get(ctx workflow.Context) (*lightsa
 }
 
 type LightsailGetInstanceSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1159,6 +1235,7 @@ func (r *LightsailGetInstanceSnapshotsFuture) Get(ctx workflow.Context) (*lights
 }
 
 type LightsailGetInstanceStateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1169,6 +1246,7 @@ func (r *LightsailGetInstanceStateFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailGetInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1179,6 +1257,7 @@ func (r *LightsailGetInstancesFuture) Get(ctx workflow.Context) (*lightsail.GetI
 }
 
 type LightsailGetKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1189,6 +1268,7 @@ func (r *LightsailGetKeyPairFuture) Get(ctx workflow.Context) (*lightsail.GetKey
 }
 
 type LightsailGetKeyPairsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1199,6 +1279,7 @@ func (r *LightsailGetKeyPairsFuture) Get(ctx workflow.Context) (*lightsail.GetKe
 }
 
 type LightsailGetLoadBalancerFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1209,6 +1290,7 @@ func (r *LightsailGetLoadBalancerFuture) Get(ctx workflow.Context) (*lightsail.G
 }
 
 type LightsailGetLoadBalancerMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1219,6 +1301,7 @@ func (r *LightsailGetLoadBalancerMetricDataFuture) Get(ctx workflow.Context) (*l
 }
 
 type LightsailGetLoadBalancerTlsCertificatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1229,6 +1312,7 @@ func (r *LightsailGetLoadBalancerTlsCertificatesFuture) Get(ctx workflow.Context
 }
 
 type LightsailGetLoadBalancersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1239,6 +1323,7 @@ func (r *LightsailGetLoadBalancersFuture) Get(ctx workflow.Context) (*lightsail.
 }
 
 type LightsailGetOperationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1249,6 +1334,7 @@ func (r *LightsailGetOperationFuture) Get(ctx workflow.Context) (*lightsail.GetO
 }
 
 type LightsailGetOperationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1259,6 +1345,7 @@ func (r *LightsailGetOperationsFuture) Get(ctx workflow.Context) (*lightsail.Get
 }
 
 type LightsailGetOperationsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1269,6 +1356,7 @@ func (r *LightsailGetOperationsForResourceFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailGetRegionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1279,6 +1367,7 @@ func (r *LightsailGetRegionsFuture) Get(ctx workflow.Context) (*lightsail.GetReg
 }
 
 type LightsailGetRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1289,6 +1378,7 @@ func (r *LightsailGetRelationalDatabaseFuture) Get(ctx workflow.Context) (*light
 }
 
 type LightsailGetRelationalDatabaseBlueprintsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1299,6 +1389,7 @@ func (r *LightsailGetRelationalDatabaseBlueprintsFuture) Get(ctx workflow.Contex
 }
 
 type LightsailGetRelationalDatabaseBundlesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1309,6 +1400,7 @@ func (r *LightsailGetRelationalDatabaseBundlesFuture) Get(ctx workflow.Context) 
 }
 
 type LightsailGetRelationalDatabaseEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1319,6 +1411,7 @@ func (r *LightsailGetRelationalDatabaseEventsFuture) Get(ctx workflow.Context) (
 }
 
 type LightsailGetRelationalDatabaseLogEventsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1329,6 +1422,7 @@ func (r *LightsailGetRelationalDatabaseLogEventsFuture) Get(ctx workflow.Context
 }
 
 type LightsailGetRelationalDatabaseLogStreamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1339,6 +1433,7 @@ func (r *LightsailGetRelationalDatabaseLogStreamsFuture) Get(ctx workflow.Contex
 }
 
 type LightsailGetRelationalDatabaseMasterUserPasswordFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1349,6 +1444,7 @@ func (r *LightsailGetRelationalDatabaseMasterUserPasswordFuture) Get(ctx workflo
 }
 
 type LightsailGetRelationalDatabaseMetricDataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1359,6 +1455,7 @@ func (r *LightsailGetRelationalDatabaseMetricDataFuture) Get(ctx workflow.Contex
 }
 
 type LightsailGetRelationalDatabaseParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1369,6 +1466,7 @@ func (r *LightsailGetRelationalDatabaseParametersFuture) Get(ctx workflow.Contex
 }
 
 type LightsailGetRelationalDatabaseSnapshotFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1379,6 +1477,7 @@ func (r *LightsailGetRelationalDatabaseSnapshotFuture) Get(ctx workflow.Context)
 }
 
 type LightsailGetRelationalDatabaseSnapshotsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1389,6 +1488,7 @@ func (r *LightsailGetRelationalDatabaseSnapshotsFuture) Get(ctx workflow.Context
 }
 
 type LightsailGetRelationalDatabasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1399,6 +1499,7 @@ func (r *LightsailGetRelationalDatabasesFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailGetStaticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1409,6 +1510,7 @@ func (r *LightsailGetStaticIpFuture) Get(ctx workflow.Context) (*lightsail.GetSt
 }
 
 type LightsailGetStaticIpsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1419,6 +1521,7 @@ func (r *LightsailGetStaticIpsFuture) Get(ctx workflow.Context) (*lightsail.GetS
 }
 
 type LightsailImportKeyPairFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1429,6 +1532,7 @@ func (r *LightsailImportKeyPairFuture) Get(ctx workflow.Context) (*lightsail.Imp
 }
 
 type LightsailIsVpcPeeredFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1439,6 +1543,7 @@ func (r *LightsailIsVpcPeeredFuture) Get(ctx workflow.Context) (*lightsail.IsVpc
 }
 
 type LightsailOpenInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1449,6 +1554,7 @@ func (r *LightsailOpenInstancePublicPortsFuture) Get(ctx workflow.Context) (*lig
 }
 
 type LightsailPeerVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1459,6 +1565,7 @@ func (r *LightsailPeerVpcFuture) Get(ctx workflow.Context) (*lightsail.PeerVpcOu
 }
 
 type LightsailPutAlarmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1469,6 +1576,7 @@ func (r *LightsailPutAlarmFuture) Get(ctx workflow.Context) (*lightsail.PutAlarm
 }
 
 type LightsailPutInstancePublicPortsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1479,6 +1587,7 @@ func (r *LightsailPutInstancePublicPortsFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailRebootInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1489,6 +1598,7 @@ func (r *LightsailRebootInstanceFuture) Get(ctx workflow.Context) (*lightsail.Re
 }
 
 type LightsailRebootRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1499,6 +1609,7 @@ func (r *LightsailRebootRelationalDatabaseFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailReleaseStaticIpFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1509,6 +1620,7 @@ func (r *LightsailReleaseStaticIpFuture) Get(ctx workflow.Context) (*lightsail.R
 }
 
 type LightsailResetDistributionCacheFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1519,6 +1631,7 @@ func (r *LightsailResetDistributionCacheFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailSendContactMethodVerificationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1529,6 +1642,7 @@ func (r *LightsailSendContactMethodVerificationFuture) Get(ctx workflow.Context)
 }
 
 type LightsailStartInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1539,6 +1653,7 @@ func (r *LightsailStartInstanceFuture) Get(ctx workflow.Context) (*lightsail.Sta
 }
 
 type LightsailStartRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1549,6 +1664,7 @@ func (r *LightsailStartRelationalDatabaseFuture) Get(ctx workflow.Context) (*lig
 }
 
 type LightsailStopInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1559,6 +1675,7 @@ func (r *LightsailStopInstanceFuture) Get(ctx workflow.Context) (*lightsail.Stop
 }
 
 type LightsailStopRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1569,6 +1686,7 @@ func (r *LightsailStopRelationalDatabaseFuture) Get(ctx workflow.Context) (*ligh
 }
 
 type LightsailTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1579,6 +1697,7 @@ func (r *LightsailTagResourceFuture) Get(ctx workflow.Context) (*lightsail.TagRe
 }
 
 type LightsailTestAlarmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1589,6 +1708,7 @@ func (r *LightsailTestAlarmFuture) Get(ctx workflow.Context) (*lightsail.TestAla
 }
 
 type LightsailUnpeerVpcFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1599,6 +1719,7 @@ func (r *LightsailUnpeerVpcFuture) Get(ctx workflow.Context) (*lightsail.UnpeerV
 }
 
 type LightsailUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1609,6 +1730,7 @@ func (r *LightsailUntagResourceFuture) Get(ctx workflow.Context) (*lightsail.Unt
 }
 
 type LightsailUpdateDistributionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1619,6 +1741,7 @@ func (r *LightsailUpdateDistributionFuture) Get(ctx workflow.Context) (*lightsai
 }
 
 type LightsailUpdateDistributionBundleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1629,6 +1752,7 @@ func (r *LightsailUpdateDistributionBundleFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailUpdateDomainEntryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1639,6 +1763,7 @@ func (r *LightsailUpdateDomainEntryFuture) Get(ctx workflow.Context) (*lightsail
 }
 
 type LightsailUpdateLoadBalancerAttributeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1649,6 +1774,7 @@ func (r *LightsailUpdateLoadBalancerAttributeFuture) Get(ctx workflow.Context) (
 }
 
 type LightsailUpdateRelationalDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1659,6 +1785,7 @@ func (r *LightsailUpdateRelationalDatabaseFuture) Get(ctx workflow.Context) (*li
 }
 
 type LightsailUpdateRelationalDatabaseParametersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

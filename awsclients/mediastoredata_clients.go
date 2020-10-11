@@ -33,6 +33,7 @@ func NewMediaStoreDataStub() MediaStoreDataClient {
 }
 
 type MediaStoreDataDeleteObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -43,6 +44,7 @@ func (r *MediaStoreDataDeleteObjectFuture) Get(ctx workflow.Context) (*mediastor
 }
 
 type MediaStoreDataDescribeObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -53,6 +55,7 @@ func (r *MediaStoreDataDescribeObjectFuture) Get(ctx workflow.Context) (*mediast
 }
 
 type MediaStoreDataGetObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -63,6 +66,7 @@ func (r *MediaStoreDataGetObjectFuture) Get(ctx workflow.Context) (*mediastoreda
 }
 
 type MediaStoreDataListItemsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -73,6 +77,7 @@ func (r *MediaStoreDataListItemsFuture) Get(ctx workflow.Context) (*mediastoreda
 }
 
 type MediaStoreDataPutObjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

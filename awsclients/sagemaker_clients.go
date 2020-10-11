@@ -453,6 +453,7 @@ func NewSageMakerStub() SageMakerClient {
 }
 
 type SageMakerAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +464,7 @@ func (r *SageMakerAddTagsFuture) Get(ctx workflow.Context) (*sagemaker.AddTagsOu
 }
 
 type SageMakerAssociateTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -473,6 +475,7 @@ func (r *SageMakerAssociateTrialComponentFuture) Get(ctx workflow.Context) (*sag
 }
 
 type SageMakerCreateAlgorithmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -483,6 +486,7 @@ func (r *SageMakerCreateAlgorithmFuture) Get(ctx workflow.Context) (*sagemaker.C
 }
 
 type SageMakerCreateAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -493,6 +497,7 @@ func (r *SageMakerCreateAppFuture) Get(ctx workflow.Context) (*sagemaker.CreateA
 }
 
 type SageMakerCreateAutoMLJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -503,6 +508,7 @@ func (r *SageMakerCreateAutoMLJobFuture) Get(ctx workflow.Context) (*sagemaker.C
 }
 
 type SageMakerCreateCodeRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -513,6 +519,7 @@ func (r *SageMakerCreateCodeRepositoryFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerCreateCompilationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -523,6 +530,7 @@ func (r *SageMakerCreateCompilationJobFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerCreateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -533,6 +541,7 @@ func (r *SageMakerCreateDomainFuture) Get(ctx workflow.Context) (*sagemaker.Crea
 }
 
 type SageMakerCreateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -543,6 +552,7 @@ func (r *SageMakerCreateEndpointFuture) Get(ctx workflow.Context) (*sagemaker.Cr
 }
 
 type SageMakerCreateEndpointConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -553,6 +563,7 @@ func (r *SageMakerCreateEndpointConfigFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerCreateExperimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -563,6 +574,7 @@ func (r *SageMakerCreateExperimentFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerCreateFlowDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -573,6 +585,7 @@ func (r *SageMakerCreateFlowDefinitionFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerCreateHumanTaskUiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -583,6 +596,7 @@ func (r *SageMakerCreateHumanTaskUiFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerCreateHyperParameterTuningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -593,6 +607,7 @@ func (r *SageMakerCreateHyperParameterTuningJobFuture) Get(ctx workflow.Context)
 }
 
 type SageMakerCreateLabelingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -603,6 +618,7 @@ func (r *SageMakerCreateLabelingJobFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerCreateModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -613,6 +629,7 @@ func (r *SageMakerCreateModelFuture) Get(ctx workflow.Context) (*sagemaker.Creat
 }
 
 type SageMakerCreateModelPackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -623,6 +640,7 @@ func (r *SageMakerCreateModelPackageFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerCreateMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -633,6 +651,7 @@ func (r *SageMakerCreateMonitoringScheduleFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerCreateNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -643,6 +662,7 @@ func (r *SageMakerCreateNotebookInstanceFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerCreateNotebookInstanceLifecycleConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -653,6 +673,7 @@ func (r *SageMakerCreateNotebookInstanceLifecycleConfigFuture) Get(ctx workflow.
 }
 
 type SageMakerCreatePresignedDomainUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -663,6 +684,7 @@ func (r *SageMakerCreatePresignedDomainUrlFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerCreatePresignedNotebookInstanceUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -673,6 +695,7 @@ func (r *SageMakerCreatePresignedNotebookInstanceUrlFuture) Get(ctx workflow.Con
 }
 
 type SageMakerCreateProcessingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -683,6 +706,7 @@ func (r *SageMakerCreateProcessingJobFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerCreateTrainingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -693,6 +717,7 @@ func (r *SageMakerCreateTrainingJobFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerCreateTransformJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -703,6 +728,7 @@ func (r *SageMakerCreateTransformJobFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerCreateTrialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -713,6 +739,7 @@ func (r *SageMakerCreateTrialFuture) Get(ctx workflow.Context) (*sagemaker.Creat
 }
 
 type SageMakerCreateTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -723,6 +750,7 @@ func (r *SageMakerCreateTrialComponentFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerCreateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -733,6 +761,7 @@ func (r *SageMakerCreateUserProfileFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerCreateWorkforceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -743,6 +772,7 @@ func (r *SageMakerCreateWorkforceFuture) Get(ctx workflow.Context) (*sagemaker.C
 }
 
 type SageMakerCreateWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -753,6 +783,7 @@ func (r *SageMakerCreateWorkteamFuture) Get(ctx workflow.Context) (*sagemaker.Cr
 }
 
 type SageMakerDeleteAlgorithmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -763,6 +794,7 @@ func (r *SageMakerDeleteAlgorithmFuture) Get(ctx workflow.Context) (*sagemaker.D
 }
 
 type SageMakerDeleteAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -773,6 +805,7 @@ func (r *SageMakerDeleteAppFuture) Get(ctx workflow.Context) (*sagemaker.DeleteA
 }
 
 type SageMakerDeleteCodeRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -783,6 +816,7 @@ func (r *SageMakerDeleteCodeRepositoryFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDeleteDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -793,6 +827,7 @@ func (r *SageMakerDeleteDomainFuture) Get(ctx workflow.Context) (*sagemaker.Dele
 }
 
 type SageMakerDeleteEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -803,6 +838,7 @@ func (r *SageMakerDeleteEndpointFuture) Get(ctx workflow.Context) (*sagemaker.De
 }
 
 type SageMakerDeleteEndpointConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -813,6 +849,7 @@ func (r *SageMakerDeleteEndpointConfigFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDeleteExperimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -823,6 +860,7 @@ func (r *SageMakerDeleteExperimentFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerDeleteFlowDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -833,6 +871,7 @@ func (r *SageMakerDeleteFlowDefinitionFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDeleteHumanTaskUiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -843,6 +882,7 @@ func (r *SageMakerDeleteHumanTaskUiFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerDeleteModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -853,6 +893,7 @@ func (r *SageMakerDeleteModelFuture) Get(ctx workflow.Context) (*sagemaker.Delet
 }
 
 type SageMakerDeleteModelPackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -863,6 +904,7 @@ func (r *SageMakerDeleteModelPackageFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerDeleteMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -873,6 +915,7 @@ func (r *SageMakerDeleteMonitoringScheduleFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerDeleteNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -883,6 +926,7 @@ func (r *SageMakerDeleteNotebookInstanceFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDeleteNotebookInstanceLifecycleConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -893,6 +937,7 @@ func (r *SageMakerDeleteNotebookInstanceLifecycleConfigFuture) Get(ctx workflow.
 }
 
 type SageMakerDeleteTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -903,6 +948,7 @@ func (r *SageMakerDeleteTagsFuture) Get(ctx workflow.Context) (*sagemaker.Delete
 }
 
 type SageMakerDeleteTrialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -913,6 +959,7 @@ func (r *SageMakerDeleteTrialFuture) Get(ctx workflow.Context) (*sagemaker.Delet
 }
 
 type SageMakerDeleteTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -923,6 +970,7 @@ func (r *SageMakerDeleteTrialComponentFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDeleteUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -933,6 +981,7 @@ func (r *SageMakerDeleteUserProfileFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerDeleteWorkforceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -943,6 +992,7 @@ func (r *SageMakerDeleteWorkforceFuture) Get(ctx workflow.Context) (*sagemaker.D
 }
 
 type SageMakerDeleteWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -953,6 +1003,7 @@ func (r *SageMakerDeleteWorkteamFuture) Get(ctx workflow.Context) (*sagemaker.De
 }
 
 type SageMakerDescribeAlgorithmFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -963,6 +1014,7 @@ func (r *SageMakerDescribeAlgorithmFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerDescribeAppFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -973,6 +1025,7 @@ func (r *SageMakerDescribeAppFuture) Get(ctx workflow.Context) (*sagemaker.Descr
 }
 
 type SageMakerDescribeAutoMLJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -983,6 +1036,7 @@ func (r *SageMakerDescribeAutoMLJobFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerDescribeCodeRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -993,6 +1047,7 @@ func (r *SageMakerDescribeCodeRepositoryFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDescribeCompilationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1003,6 +1058,7 @@ func (r *SageMakerDescribeCompilationJobFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDescribeDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1013,6 +1069,7 @@ func (r *SageMakerDescribeDomainFuture) Get(ctx workflow.Context) (*sagemaker.De
 }
 
 type SageMakerDescribeEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1023,6 +1080,7 @@ func (r *SageMakerDescribeEndpointFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerDescribeEndpointConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1033,6 +1091,7 @@ func (r *SageMakerDescribeEndpointConfigFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDescribeExperimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1043,6 +1102,7 @@ func (r *SageMakerDescribeExperimentFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerDescribeFlowDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1053,6 +1113,7 @@ func (r *SageMakerDescribeFlowDefinitionFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDescribeHumanTaskUiFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1063,6 +1124,7 @@ func (r *SageMakerDescribeHumanTaskUiFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerDescribeHyperParameterTuningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1073,6 +1135,7 @@ func (r *SageMakerDescribeHyperParameterTuningJobFuture) Get(ctx workflow.Contex
 }
 
 type SageMakerDescribeLabelingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1083,6 +1146,7 @@ func (r *SageMakerDescribeLabelingJobFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerDescribeModelFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1093,6 +1157,7 @@ func (r *SageMakerDescribeModelFuture) Get(ctx workflow.Context) (*sagemaker.Des
 }
 
 type SageMakerDescribeModelPackageFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1103,6 +1168,7 @@ func (r *SageMakerDescribeModelPackageFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDescribeMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1113,6 +1179,7 @@ func (r *SageMakerDescribeMonitoringScheduleFuture) Get(ctx workflow.Context) (*
 }
 
 type SageMakerDescribeNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1123,6 +1190,7 @@ func (r *SageMakerDescribeNotebookInstanceFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerDescribeNotebookInstanceLifecycleConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1133,6 +1201,7 @@ func (r *SageMakerDescribeNotebookInstanceLifecycleConfigFuture) Get(ctx workflo
 }
 
 type SageMakerDescribeProcessingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1143,6 +1212,7 @@ func (r *SageMakerDescribeProcessingJobFuture) Get(ctx workflow.Context) (*sagem
 }
 
 type SageMakerDescribeSubscribedWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1153,6 +1223,7 @@ func (r *SageMakerDescribeSubscribedWorkteamFuture) Get(ctx workflow.Context) (*
 }
 
 type SageMakerDescribeTrainingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1163,6 +1234,7 @@ func (r *SageMakerDescribeTrainingJobFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerDescribeTransformJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1173,6 +1245,7 @@ func (r *SageMakerDescribeTransformJobFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerDescribeTrialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1183,6 +1256,7 @@ func (r *SageMakerDescribeTrialFuture) Get(ctx workflow.Context) (*sagemaker.Des
 }
 
 type SageMakerDescribeTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1193,6 +1267,7 @@ func (r *SageMakerDescribeTrialComponentFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerDescribeUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1203,6 +1278,7 @@ func (r *SageMakerDescribeUserProfileFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerDescribeWorkforceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1213,6 +1289,7 @@ func (r *SageMakerDescribeWorkforceFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerDescribeWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1223,6 +1300,7 @@ func (r *SageMakerDescribeWorkteamFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerDisassociateTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1233,6 +1311,7 @@ func (r *SageMakerDisassociateTrialComponentFuture) Get(ctx workflow.Context) (*
 }
 
 type SageMakerGetSearchSuggestionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1243,6 +1322,7 @@ func (r *SageMakerGetSearchSuggestionsFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerListAlgorithmsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1253,6 +1333,7 @@ func (r *SageMakerListAlgorithmsFuture) Get(ctx workflow.Context) (*sagemaker.Li
 }
 
 type SageMakerListAppsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1263,6 +1344,7 @@ func (r *SageMakerListAppsFuture) Get(ctx workflow.Context) (*sagemaker.ListApps
 }
 
 type SageMakerListAutoMLJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1273,6 +1355,7 @@ func (r *SageMakerListAutoMLJobsFuture) Get(ctx workflow.Context) (*sagemaker.Li
 }
 
 type SageMakerListCandidatesForAutoMLJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1283,6 +1366,7 @@ func (r *SageMakerListCandidatesForAutoMLJobFuture) Get(ctx workflow.Context) (*
 }
 
 type SageMakerListCodeRepositoriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1293,6 +1377,7 @@ func (r *SageMakerListCodeRepositoriesFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerListCompilationJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1303,6 +1388,7 @@ func (r *SageMakerListCompilationJobsFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1313,6 +1399,7 @@ func (r *SageMakerListDomainsFuture) Get(ctx workflow.Context) (*sagemaker.ListD
 }
 
 type SageMakerListEndpointConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1323,6 +1410,7 @@ func (r *SageMakerListEndpointConfigsFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerListEndpointsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1333,6 +1421,7 @@ func (r *SageMakerListEndpointsFuture) Get(ctx workflow.Context) (*sagemaker.Lis
 }
 
 type SageMakerListExperimentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1343,6 +1432,7 @@ func (r *SageMakerListExperimentsFuture) Get(ctx workflow.Context) (*sagemaker.L
 }
 
 type SageMakerListFlowDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1353,6 +1443,7 @@ func (r *SageMakerListFlowDefinitionsFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerListHumanTaskUisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1363,6 +1454,7 @@ func (r *SageMakerListHumanTaskUisFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerListHyperParameterTuningJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1373,6 +1465,7 @@ func (r *SageMakerListHyperParameterTuningJobsFuture) Get(ctx workflow.Context) 
 }
 
 type SageMakerListLabelingJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1383,6 +1476,7 @@ func (r *SageMakerListLabelingJobsFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerListLabelingJobsForWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1393,6 +1487,7 @@ func (r *SageMakerListLabelingJobsForWorkteamFuture) Get(ctx workflow.Context) (
 }
 
 type SageMakerListModelPackagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1403,6 +1498,7 @@ func (r *SageMakerListModelPackagesFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerListModelsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1413,6 +1509,7 @@ func (r *SageMakerListModelsFuture) Get(ctx workflow.Context) (*sagemaker.ListMo
 }
 
 type SageMakerListMonitoringExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1423,6 +1520,7 @@ func (r *SageMakerListMonitoringExecutionsFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerListMonitoringSchedulesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1433,6 +1531,7 @@ func (r *SageMakerListMonitoringSchedulesFuture) Get(ctx workflow.Context) (*sag
 }
 
 type SageMakerListNotebookInstanceLifecycleConfigsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1443,6 +1542,7 @@ func (r *SageMakerListNotebookInstanceLifecycleConfigsFuture) Get(ctx workflow.C
 }
 
 type SageMakerListNotebookInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1453,6 +1553,7 @@ func (r *SageMakerListNotebookInstancesFuture) Get(ctx workflow.Context) (*sagem
 }
 
 type SageMakerListProcessingJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1463,6 +1564,7 @@ func (r *SageMakerListProcessingJobsFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerListSubscribedWorkteamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1473,6 +1575,7 @@ func (r *SageMakerListSubscribedWorkteamsFuture) Get(ctx workflow.Context) (*sag
 }
 
 type SageMakerListTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1483,6 +1586,7 @@ func (r *SageMakerListTagsFuture) Get(ctx workflow.Context) (*sagemaker.ListTags
 }
 
 type SageMakerListTrainingJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1493,6 +1597,7 @@ func (r *SageMakerListTrainingJobsFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerListTrainingJobsForHyperParameterTuningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1503,6 +1608,7 @@ func (r *SageMakerListTrainingJobsForHyperParameterTuningJobFuture) Get(ctx work
 }
 
 type SageMakerListTransformJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1513,6 +1619,7 @@ func (r *SageMakerListTransformJobsFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerListTrialComponentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1523,6 +1630,7 @@ func (r *SageMakerListTrialComponentsFuture) Get(ctx workflow.Context) (*sagemak
 }
 
 type SageMakerListTrialsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1533,6 +1641,7 @@ func (r *SageMakerListTrialsFuture) Get(ctx workflow.Context) (*sagemaker.ListTr
 }
 
 type SageMakerListUserProfilesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1543,6 +1652,7 @@ func (r *SageMakerListUserProfilesFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerListWorkforcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1553,6 +1663,7 @@ func (r *SageMakerListWorkforcesFuture) Get(ctx workflow.Context) (*sagemaker.Li
 }
 
 type SageMakerListWorkteamsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1563,6 +1674,7 @@ func (r *SageMakerListWorkteamsFuture) Get(ctx workflow.Context) (*sagemaker.Lis
 }
 
 type SageMakerRenderUiTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1573,6 +1685,7 @@ func (r *SageMakerRenderUiTemplateFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerSearchFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1583,6 +1696,7 @@ func (r *SageMakerSearchFuture) Get(ctx workflow.Context) (*sagemaker.SearchOutp
 }
 
 type SageMakerStartMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1593,6 +1707,7 @@ func (r *SageMakerStartMonitoringScheduleFuture) Get(ctx workflow.Context) (*sag
 }
 
 type SageMakerStartNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1603,6 +1718,7 @@ func (r *SageMakerStartNotebookInstanceFuture) Get(ctx workflow.Context) (*sagem
 }
 
 type SageMakerStopAutoMLJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1613,6 +1729,7 @@ func (r *SageMakerStopAutoMLJobFuture) Get(ctx workflow.Context) (*sagemaker.Sto
 }
 
 type SageMakerStopCompilationJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1623,6 +1740,7 @@ func (r *SageMakerStopCompilationJobFuture) Get(ctx workflow.Context) (*sagemake
 }
 
 type SageMakerStopHyperParameterTuningJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1633,6 +1751,7 @@ func (r *SageMakerStopHyperParameterTuningJobFuture) Get(ctx workflow.Context) (
 }
 
 type SageMakerStopLabelingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1643,6 +1762,7 @@ func (r *SageMakerStopLabelingJobFuture) Get(ctx workflow.Context) (*sagemaker.S
 }
 
 type SageMakerStopMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1653,6 +1773,7 @@ func (r *SageMakerStopMonitoringScheduleFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerStopNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1663,6 +1784,7 @@ func (r *SageMakerStopNotebookInstanceFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerStopProcessingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1673,6 +1795,7 @@ func (r *SageMakerStopProcessingJobFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerStopTrainingJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1683,6 +1806,7 @@ func (r *SageMakerStopTrainingJobFuture) Get(ctx workflow.Context) (*sagemaker.S
 }
 
 type SageMakerStopTransformJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1693,6 +1817,7 @@ func (r *SageMakerStopTransformJobFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerUpdateCodeRepositoryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1703,6 +1828,7 @@ func (r *SageMakerUpdateCodeRepositoryFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerUpdateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1713,6 +1839,7 @@ func (r *SageMakerUpdateDomainFuture) Get(ctx workflow.Context) (*sagemaker.Upda
 }
 
 type SageMakerUpdateEndpointFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1723,6 +1850,7 @@ func (r *SageMakerUpdateEndpointFuture) Get(ctx workflow.Context) (*sagemaker.Up
 }
 
 type SageMakerUpdateEndpointWeightsAndCapacitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1733,6 +1861,7 @@ func (r *SageMakerUpdateEndpointWeightsAndCapacitiesFuture) Get(ctx workflow.Con
 }
 
 type SageMakerUpdateExperimentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1743,6 +1872,7 @@ func (r *SageMakerUpdateExperimentFuture) Get(ctx workflow.Context) (*sagemaker.
 }
 
 type SageMakerUpdateMonitoringScheduleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1753,6 +1883,7 @@ func (r *SageMakerUpdateMonitoringScheduleFuture) Get(ctx workflow.Context) (*sa
 }
 
 type SageMakerUpdateNotebookInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1763,6 +1894,7 @@ func (r *SageMakerUpdateNotebookInstanceFuture) Get(ctx workflow.Context) (*sage
 }
 
 type SageMakerUpdateNotebookInstanceLifecycleConfigFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1773,6 +1905,7 @@ func (r *SageMakerUpdateNotebookInstanceLifecycleConfigFuture) Get(ctx workflow.
 }
 
 type SageMakerUpdateTrialFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1783,6 +1916,7 @@ func (r *SageMakerUpdateTrialFuture) Get(ctx workflow.Context) (*sagemaker.Updat
 }
 
 type SageMakerUpdateTrialComponentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1793,6 +1927,7 @@ func (r *SageMakerUpdateTrialComponentFuture) Get(ctx workflow.Context) (*sagema
 }
 
 type SageMakerUpdateUserProfileFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1803,6 +1938,7 @@ func (r *SageMakerUpdateUserProfileFuture) Get(ctx workflow.Context) (*sagemaker
 }
 
 type SageMakerUpdateWorkforceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1813,6 +1949,7 @@ func (r *SageMakerUpdateWorkforceFuture) Get(ctx workflow.Context) (*sagemaker.U
 }
 
 type SageMakerUpdateWorkteamFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

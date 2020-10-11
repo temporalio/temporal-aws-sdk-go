@@ -45,6 +45,7 @@ func NewComputeOptimizerStub() ComputeOptimizerClient {
 }
 
 type ComputeOptimizerDescribeRecommendationExportJobsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -55,6 +56,7 @@ func (r *ComputeOptimizerDescribeRecommendationExportJobsFuture) Get(ctx workflo
 }
 
 type ComputeOptimizerExportAutoScalingGroupRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -65,6 +67,7 @@ func (r *ComputeOptimizerExportAutoScalingGroupRecommendationsFuture) Get(ctx wo
 }
 
 type ComputeOptimizerExportEC2InstanceRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -75,6 +78,7 @@ func (r *ComputeOptimizerExportEC2InstanceRecommendationsFuture) Get(ctx workflo
 }
 
 type ComputeOptimizerGetAutoScalingGroupRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +89,7 @@ func (r *ComputeOptimizerGetAutoScalingGroupRecommendationsFuture) Get(ctx workf
 }
 
 type ComputeOptimizerGetEC2InstanceRecommendationsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +100,7 @@ func (r *ComputeOptimizerGetEC2InstanceRecommendationsFuture) Get(ctx workflow.C
 }
 
 type ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +111,7 @@ func (r *ComputeOptimizerGetEC2RecommendationProjectedMetricsFuture) Get(ctx wor
 }
 
 type ComputeOptimizerGetEnrollmentStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +122,7 @@ func (r *ComputeOptimizerGetEnrollmentStatusFuture) Get(ctx workflow.Context) (*
 }
 
 type ComputeOptimizerGetRecommendationSummariesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +133,7 @@ func (r *ComputeOptimizerGetRecommendationSummariesFuture) Get(ctx workflow.Cont
 }
 
 type ComputeOptimizerUpdateEnrollmentStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

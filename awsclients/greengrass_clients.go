@@ -294,6 +294,7 @@ func NewGreengrassStub() GreengrassClient {
 }
 
 type GreengrassAssociateRoleToGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -304,6 +305,7 @@ func (r *GreengrassAssociateRoleToGroupFuture) Get(ctx workflow.Context) (*green
 }
 
 type GreengrassAssociateServiceRoleToAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -314,6 +316,7 @@ func (r *GreengrassAssociateServiceRoleToAccountFuture) Get(ctx workflow.Context
 }
 
 type GreengrassCreateConnectorDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -324,6 +327,7 @@ func (r *GreengrassCreateConnectorDefinitionFuture) Get(ctx workflow.Context) (*
 }
 
 type GreengrassCreateConnectorDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -334,6 +338,7 @@ func (r *GreengrassCreateConnectorDefinitionVersionFuture) Get(ctx workflow.Cont
 }
 
 type GreengrassCreateCoreDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -344,6 +349,7 @@ func (r *GreengrassCreateCoreDefinitionFuture) Get(ctx workflow.Context) (*green
 }
 
 type GreengrassCreateCoreDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -354,6 +360,7 @@ func (r *GreengrassCreateCoreDefinitionVersionFuture) Get(ctx workflow.Context) 
 }
 
 type GreengrassCreateDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -364,6 +371,7 @@ func (r *GreengrassCreateDeploymentFuture) Get(ctx workflow.Context) (*greengras
 }
 
 type GreengrassCreateDeviceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -374,6 +382,7 @@ func (r *GreengrassCreateDeviceDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassCreateDeviceDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -384,6 +393,7 @@ func (r *GreengrassCreateDeviceDefinitionVersionFuture) Get(ctx workflow.Context
 }
 
 type GreengrassCreateFunctionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -394,6 +404,7 @@ func (r *GreengrassCreateFunctionDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassCreateFunctionDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -404,6 +415,7 @@ func (r *GreengrassCreateFunctionDefinitionVersionFuture) Get(ctx workflow.Conte
 }
 
 type GreengrassCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -414,6 +426,7 @@ func (r *GreengrassCreateGroupFuture) Get(ctx workflow.Context) (*greengrass.Cre
 }
 
 type GreengrassCreateGroupCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -424,6 +437,7 @@ func (r *GreengrassCreateGroupCertificateAuthorityFuture) Get(ctx workflow.Conte
 }
 
 type GreengrassCreateGroupVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -434,6 +448,7 @@ func (r *GreengrassCreateGroupVersionFuture) Get(ctx workflow.Context) (*greengr
 }
 
 type GreengrassCreateLoggerDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -444,6 +459,7 @@ func (r *GreengrassCreateLoggerDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassCreateLoggerDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -454,6 +470,7 @@ func (r *GreengrassCreateLoggerDefinitionVersionFuture) Get(ctx workflow.Context
 }
 
 type GreengrassCreateResourceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -464,6 +481,7 @@ func (r *GreengrassCreateResourceDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassCreateResourceDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -474,6 +492,7 @@ func (r *GreengrassCreateResourceDefinitionVersionFuture) Get(ctx workflow.Conte
 }
 
 type GreengrassCreateSoftwareUpdateJobFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -484,6 +503,7 @@ func (r *GreengrassCreateSoftwareUpdateJobFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GreengrassCreateSubscriptionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -494,6 +514,7 @@ func (r *GreengrassCreateSubscriptionDefinitionFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassCreateSubscriptionDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -504,6 +525,7 @@ func (r *GreengrassCreateSubscriptionDefinitionVersionFuture) Get(ctx workflow.C
 }
 
 type GreengrassDeleteConnectorDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -514,6 +536,7 @@ func (r *GreengrassDeleteConnectorDefinitionFuture) Get(ctx workflow.Context) (*
 }
 
 type GreengrassDeleteCoreDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -524,6 +547,7 @@ func (r *GreengrassDeleteCoreDefinitionFuture) Get(ctx workflow.Context) (*green
 }
 
 type GreengrassDeleteDeviceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -534,6 +558,7 @@ func (r *GreengrassDeleteDeviceDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassDeleteFunctionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -544,6 +569,7 @@ func (r *GreengrassDeleteFunctionDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -554,6 +580,7 @@ func (r *GreengrassDeleteGroupFuture) Get(ctx workflow.Context) (*greengrass.Del
 }
 
 type GreengrassDeleteLoggerDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -564,6 +591,7 @@ func (r *GreengrassDeleteLoggerDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassDeleteResourceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -574,6 +602,7 @@ func (r *GreengrassDeleteResourceDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassDeleteSubscriptionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -584,6 +613,7 @@ func (r *GreengrassDeleteSubscriptionDefinitionFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassDisassociateRoleFromGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -594,6 +624,7 @@ func (r *GreengrassDisassociateRoleFromGroupFuture) Get(ctx workflow.Context) (*
 }
 
 type GreengrassDisassociateServiceRoleFromAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -604,6 +635,7 @@ func (r *GreengrassDisassociateServiceRoleFromAccountFuture) Get(ctx workflow.Co
 }
 
 type GreengrassGetAssociatedRoleFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -614,6 +646,7 @@ func (r *GreengrassGetAssociatedRoleFuture) Get(ctx workflow.Context) (*greengra
 }
 
 type GreengrassGetBulkDeploymentStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -624,6 +657,7 @@ func (r *GreengrassGetBulkDeploymentStatusFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GreengrassGetConnectivityInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -634,6 +668,7 @@ func (r *GreengrassGetConnectivityInfoFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassGetConnectorDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -644,6 +679,7 @@ func (r *GreengrassGetConnectorDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassGetConnectorDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -654,6 +690,7 @@ func (r *GreengrassGetConnectorDefinitionVersionFuture) Get(ctx workflow.Context
 }
 
 type GreengrassGetCoreDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -664,6 +701,7 @@ func (r *GreengrassGetCoreDefinitionFuture) Get(ctx workflow.Context) (*greengra
 }
 
 type GreengrassGetCoreDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -674,6 +712,7 @@ func (r *GreengrassGetCoreDefinitionVersionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassGetDeploymentStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -684,6 +723,7 @@ func (r *GreengrassGetDeploymentStatusFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassGetDeviceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -694,6 +734,7 @@ func (r *GreengrassGetDeviceDefinitionFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassGetDeviceDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -704,6 +745,7 @@ func (r *GreengrassGetDeviceDefinitionVersionFuture) Get(ctx workflow.Context) (
 }
 
 type GreengrassGetFunctionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -714,6 +756,7 @@ func (r *GreengrassGetFunctionDefinitionFuture) Get(ctx workflow.Context) (*gree
 }
 
 type GreengrassGetFunctionDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -724,6 +767,7 @@ func (r *GreengrassGetFunctionDefinitionVersionFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassGetGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -734,6 +778,7 @@ func (r *GreengrassGetGroupFuture) Get(ctx workflow.Context) (*greengrass.GetGro
 }
 
 type GreengrassGetGroupCertificateAuthorityFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -744,6 +789,7 @@ func (r *GreengrassGetGroupCertificateAuthorityFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassGetGroupCertificateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -754,6 +800,7 @@ func (r *GreengrassGetGroupCertificateConfigurationFuture) Get(ctx workflow.Cont
 }
 
 type GreengrassGetGroupVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -764,6 +811,7 @@ func (r *GreengrassGetGroupVersionFuture) Get(ctx workflow.Context) (*greengrass
 }
 
 type GreengrassGetLoggerDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -774,6 +822,7 @@ func (r *GreengrassGetLoggerDefinitionFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassGetLoggerDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -784,6 +833,7 @@ func (r *GreengrassGetLoggerDefinitionVersionFuture) Get(ctx workflow.Context) (
 }
 
 type GreengrassGetResourceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -794,6 +844,7 @@ func (r *GreengrassGetResourceDefinitionFuture) Get(ctx workflow.Context) (*gree
 }
 
 type GreengrassGetResourceDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -804,6 +855,7 @@ func (r *GreengrassGetResourceDefinitionVersionFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassGetServiceRoleForAccountFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -814,6 +866,7 @@ func (r *GreengrassGetServiceRoleForAccountFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassGetSubscriptionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -824,6 +877,7 @@ func (r *GreengrassGetSubscriptionDefinitionFuture) Get(ctx workflow.Context) (*
 }
 
 type GreengrassGetSubscriptionDefinitionVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -834,6 +888,7 @@ func (r *GreengrassGetSubscriptionDefinitionVersionFuture) Get(ctx workflow.Cont
 }
 
 type GreengrassGetThingRuntimeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -844,6 +899,7 @@ func (r *GreengrassGetThingRuntimeConfigurationFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassListBulkDeploymentDetailedReportsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -854,6 +910,7 @@ func (r *GreengrassListBulkDeploymentDetailedReportsFuture) Get(ctx workflow.Con
 }
 
 type GreengrassListBulkDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -864,6 +921,7 @@ func (r *GreengrassListBulkDeploymentsFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassListConnectorDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -874,6 +932,7 @@ func (r *GreengrassListConnectorDefinitionVersionsFuture) Get(ctx workflow.Conte
 }
 
 type GreengrassListConnectorDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -884,6 +943,7 @@ func (r *GreengrassListConnectorDefinitionsFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassListCoreDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -894,6 +954,7 @@ func (r *GreengrassListCoreDefinitionVersionsFuture) Get(ctx workflow.Context) (
 }
 
 type GreengrassListCoreDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -904,6 +965,7 @@ func (r *GreengrassListCoreDefinitionsFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassListDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -914,6 +976,7 @@ func (r *GreengrassListDeploymentsFuture) Get(ctx workflow.Context) (*greengrass
 }
 
 type GreengrassListDeviceDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -924,6 +987,7 @@ func (r *GreengrassListDeviceDefinitionVersionsFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassListDeviceDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -934,6 +998,7 @@ func (r *GreengrassListDeviceDefinitionsFuture) Get(ctx workflow.Context) (*gree
 }
 
 type GreengrassListFunctionDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -944,6 +1009,7 @@ func (r *GreengrassListFunctionDefinitionVersionsFuture) Get(ctx workflow.Contex
 }
 
 type GreengrassListFunctionDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -954,6 +1020,7 @@ func (r *GreengrassListFunctionDefinitionsFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GreengrassListGroupCertificateAuthoritiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -964,6 +1031,7 @@ func (r *GreengrassListGroupCertificateAuthoritiesFuture) Get(ctx workflow.Conte
 }
 
 type GreengrassListGroupVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -974,6 +1042,7 @@ func (r *GreengrassListGroupVersionsFuture) Get(ctx workflow.Context) (*greengra
 }
 
 type GreengrassListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -984,6 +1053,7 @@ func (r *GreengrassListGroupsFuture) Get(ctx workflow.Context) (*greengrass.List
 }
 
 type GreengrassListLoggerDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -994,6 +1064,7 @@ func (r *GreengrassListLoggerDefinitionVersionsFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassListLoggerDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1004,6 +1075,7 @@ func (r *GreengrassListLoggerDefinitionsFuture) Get(ctx workflow.Context) (*gree
 }
 
 type GreengrassListResourceDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1014,6 +1086,7 @@ func (r *GreengrassListResourceDefinitionVersionsFuture) Get(ctx workflow.Contex
 }
 
 type GreengrassListResourceDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1024,6 +1097,7 @@ func (r *GreengrassListResourceDefinitionsFuture) Get(ctx workflow.Context) (*gr
 }
 
 type GreengrassListSubscriptionDefinitionVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1034,6 +1108,7 @@ func (r *GreengrassListSubscriptionDefinitionVersionsFuture) Get(ctx workflow.Co
 }
 
 type GreengrassListSubscriptionDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1044,6 +1119,7 @@ func (r *GreengrassListSubscriptionDefinitionsFuture) Get(ctx workflow.Context) 
 }
 
 type GreengrassListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1054,6 +1130,7 @@ func (r *GreengrassListTagsForResourceFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassResetDeploymentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1064,6 +1141,7 @@ func (r *GreengrassResetDeploymentsFuture) Get(ctx workflow.Context) (*greengras
 }
 
 type GreengrassStartBulkDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1074,6 +1152,7 @@ func (r *GreengrassStartBulkDeploymentFuture) Get(ctx workflow.Context) (*greeng
 }
 
 type GreengrassStopBulkDeploymentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1084,6 +1163,7 @@ func (r *GreengrassStopBulkDeploymentFuture) Get(ctx workflow.Context) (*greengr
 }
 
 type GreengrassTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1094,6 +1174,7 @@ func (r *GreengrassTagResourceFuture) Get(ctx workflow.Context) (*greengrass.Tag
 }
 
 type GreengrassUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1104,6 +1185,7 @@ func (r *GreengrassUntagResourceFuture) Get(ctx workflow.Context) (*greengrass.U
 }
 
 type GreengrassUpdateConnectivityInfoFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1114,6 +1196,7 @@ func (r *GreengrassUpdateConnectivityInfoFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassUpdateConnectorDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1124,6 +1207,7 @@ func (r *GreengrassUpdateConnectorDefinitionFuture) Get(ctx workflow.Context) (*
 }
 
 type GreengrassUpdateCoreDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1134,6 +1218,7 @@ func (r *GreengrassUpdateCoreDefinitionFuture) Get(ctx workflow.Context) (*green
 }
 
 type GreengrassUpdateDeviceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1144,6 +1229,7 @@ func (r *GreengrassUpdateDeviceDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassUpdateFunctionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1154,6 +1240,7 @@ func (r *GreengrassUpdateFunctionDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1164,6 +1251,7 @@ func (r *GreengrassUpdateGroupFuture) Get(ctx workflow.Context) (*greengrass.Upd
 }
 
 type GreengrassUpdateGroupCertificateConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1174,6 +1262,7 @@ func (r *GreengrassUpdateGroupCertificateConfigurationFuture) Get(ctx workflow.C
 }
 
 type GreengrassUpdateLoggerDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1184,6 +1273,7 @@ func (r *GreengrassUpdateLoggerDefinitionFuture) Get(ctx workflow.Context) (*gre
 }
 
 type GreengrassUpdateResourceDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1194,6 +1284,7 @@ func (r *GreengrassUpdateResourceDefinitionFuture) Get(ctx workflow.Context) (*g
 }
 
 type GreengrassUpdateSubscriptionDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1204,6 +1295,7 @@ func (r *GreengrassUpdateSubscriptionDefinitionFuture) Get(ctx workflow.Context)
 }
 
 type GreengrassUpdateThingRuntimeConfigurationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -123,6 +123,7 @@ func NewIoTThingsGraphStub() IoTThingsGraphClient {
 }
 
 type IoTThingsGraphAssociateEntityToThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -133,6 +134,7 @@ func (r *IoTThingsGraphAssociateEntityToThingFuture) Get(ctx workflow.Context) (
 }
 
 type IoTThingsGraphCreateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -143,6 +145,7 @@ func (r *IoTThingsGraphCreateFlowTemplateFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTThingsGraphCreateSystemInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -153,6 +156,7 @@ func (r *IoTThingsGraphCreateSystemInstanceFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphCreateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -163,6 +167,7 @@ func (r *IoTThingsGraphCreateSystemTemplateFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphDeleteFlowTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -173,6 +178,7 @@ func (r *IoTThingsGraphDeleteFlowTemplateFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTThingsGraphDeleteNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -183,6 +189,7 @@ func (r *IoTThingsGraphDeleteNamespaceFuture) Get(ctx workflow.Context) (*iotthi
 }
 
 type IoTThingsGraphDeleteSystemInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -193,6 +200,7 @@ func (r *IoTThingsGraphDeleteSystemInstanceFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphDeleteSystemTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -203,6 +211,7 @@ func (r *IoTThingsGraphDeleteSystemTemplateFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphDeploySystemInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -213,6 +222,7 @@ func (r *IoTThingsGraphDeploySystemInstanceFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphDeprecateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -223,6 +233,7 @@ func (r *IoTThingsGraphDeprecateFlowTemplateFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTThingsGraphDeprecateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -233,6 +244,7 @@ func (r *IoTThingsGraphDeprecateSystemTemplateFuture) Get(ctx workflow.Context) 
 }
 
 type IoTThingsGraphDescribeNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -243,6 +255,7 @@ func (r *IoTThingsGraphDescribeNamespaceFuture) Get(ctx workflow.Context) (*iott
 }
 
 type IoTThingsGraphDissociateEntityFromThingFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -253,6 +266,7 @@ func (r *IoTThingsGraphDissociateEntityFromThingFuture) Get(ctx workflow.Context
 }
 
 type IoTThingsGraphGetEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -263,6 +277,7 @@ func (r *IoTThingsGraphGetEntitiesFuture) Get(ctx workflow.Context) (*iotthingsg
 }
 
 type IoTThingsGraphGetFlowTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -273,6 +288,7 @@ func (r *IoTThingsGraphGetFlowTemplateFuture) Get(ctx workflow.Context) (*iotthi
 }
 
 type IoTThingsGraphGetFlowTemplateRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -283,6 +299,7 @@ func (r *IoTThingsGraphGetFlowTemplateRevisionsFuture) Get(ctx workflow.Context)
 }
 
 type IoTThingsGraphGetNamespaceDeletionStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -293,6 +310,7 @@ func (r *IoTThingsGraphGetNamespaceDeletionStatusFuture) Get(ctx workflow.Contex
 }
 
 type IoTThingsGraphGetSystemInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -303,6 +321,7 @@ func (r *IoTThingsGraphGetSystemInstanceFuture) Get(ctx workflow.Context) (*iott
 }
 
 type IoTThingsGraphGetSystemTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -313,6 +332,7 @@ func (r *IoTThingsGraphGetSystemTemplateFuture) Get(ctx workflow.Context) (*iott
 }
 
 type IoTThingsGraphGetSystemTemplateRevisionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -323,6 +343,7 @@ func (r *IoTThingsGraphGetSystemTemplateRevisionsFuture) Get(ctx workflow.Contex
 }
 
 type IoTThingsGraphGetUploadStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -333,6 +354,7 @@ func (r *IoTThingsGraphGetUploadStatusFuture) Get(ctx workflow.Context) (*iotthi
 }
 
 type IoTThingsGraphListFlowExecutionMessagesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -343,6 +365,7 @@ func (r *IoTThingsGraphListFlowExecutionMessagesFuture) Get(ctx workflow.Context
 }
 
 type IoTThingsGraphListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -353,6 +376,7 @@ func (r *IoTThingsGraphListTagsForResourceFuture) Get(ctx workflow.Context) (*io
 }
 
 type IoTThingsGraphSearchEntitiesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -363,6 +387,7 @@ func (r *IoTThingsGraphSearchEntitiesFuture) Get(ctx workflow.Context) (*iotthin
 }
 
 type IoTThingsGraphSearchFlowExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -373,6 +398,7 @@ func (r *IoTThingsGraphSearchFlowExecutionsFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphSearchFlowTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -383,6 +409,7 @@ func (r *IoTThingsGraphSearchFlowTemplatesFuture) Get(ctx workflow.Context) (*io
 }
 
 type IoTThingsGraphSearchSystemInstancesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -393,6 +420,7 @@ func (r *IoTThingsGraphSearchSystemInstancesFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTThingsGraphSearchSystemTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -403,6 +431,7 @@ func (r *IoTThingsGraphSearchSystemTemplatesFuture) Get(ctx workflow.Context) (*
 }
 
 type IoTThingsGraphSearchThingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -413,6 +442,7 @@ func (r *IoTThingsGraphSearchThingsFuture) Get(ctx workflow.Context) (*iotthings
 }
 
 type IoTThingsGraphTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -423,6 +453,7 @@ func (r *IoTThingsGraphTagResourceFuture) Get(ctx workflow.Context) (*iotthingsg
 }
 
 type IoTThingsGraphUndeploySystemInstanceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -433,6 +464,7 @@ func (r *IoTThingsGraphUndeploySystemInstanceFuture) Get(ctx workflow.Context) (
 }
 
 type IoTThingsGraphUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -443,6 +475,7 @@ func (r *IoTThingsGraphUntagResourceFuture) Get(ctx workflow.Context) (*iotthing
 }
 
 type IoTThingsGraphUpdateFlowTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -453,6 +486,7 @@ func (r *IoTThingsGraphUpdateFlowTemplateFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoTThingsGraphUpdateSystemTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -463,6 +497,7 @@ func (r *IoTThingsGraphUpdateSystemTemplateFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoTThingsGraphUploadEntityDefinitionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

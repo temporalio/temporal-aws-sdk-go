@@ -75,6 +75,7 @@ func NewDataPipelineStub() DataPipelineClient {
 }
 
 type DataPipelineActivatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -85,6 +86,7 @@ func (r *DataPipelineActivatePipelineFuture) Get(ctx workflow.Context) (*datapip
 }
 
 type DataPipelineAddTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -95,6 +97,7 @@ func (r *DataPipelineAddTagsFuture) Get(ctx workflow.Context) (*datapipeline.Add
 }
 
 type DataPipelineCreatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -105,6 +108,7 @@ func (r *DataPipelineCreatePipelineFuture) Get(ctx workflow.Context) (*datapipel
 }
 
 type DataPipelineDeactivatePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -115,6 +119,7 @@ func (r *DataPipelineDeactivatePipelineFuture) Get(ctx workflow.Context) (*datap
 }
 
 type DataPipelineDeletePipelineFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -125,6 +130,7 @@ func (r *DataPipelineDeletePipelineFuture) Get(ctx workflow.Context) (*datapipel
 }
 
 type DataPipelineDescribeObjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -135,6 +141,7 @@ func (r *DataPipelineDescribeObjectsFuture) Get(ctx workflow.Context) (*datapipe
 }
 
 type DataPipelineDescribePipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -145,6 +152,7 @@ func (r *DataPipelineDescribePipelinesFuture) Get(ctx workflow.Context) (*datapi
 }
 
 type DataPipelineEvaluateExpressionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -155,6 +163,7 @@ func (r *DataPipelineEvaluateExpressionFuture) Get(ctx workflow.Context) (*datap
 }
 
 type DataPipelineGetPipelineDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -165,6 +174,7 @@ func (r *DataPipelineGetPipelineDefinitionFuture) Get(ctx workflow.Context) (*da
 }
 
 type DataPipelineListPipelinesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -175,6 +185,7 @@ func (r *DataPipelineListPipelinesFuture) Get(ctx workflow.Context) (*datapipeli
 }
 
 type DataPipelinePollForTaskFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -185,6 +196,7 @@ func (r *DataPipelinePollForTaskFuture) Get(ctx workflow.Context) (*datapipeline
 }
 
 type DataPipelinePutPipelineDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -195,6 +207,7 @@ func (r *DataPipelinePutPipelineDefinitionFuture) Get(ctx workflow.Context) (*da
 }
 
 type DataPipelineQueryObjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -205,6 +218,7 @@ func (r *DataPipelineQueryObjectsFuture) Get(ctx workflow.Context) (*datapipelin
 }
 
 type DataPipelineRemoveTagsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -215,6 +229,7 @@ func (r *DataPipelineRemoveTagsFuture) Get(ctx workflow.Context) (*datapipeline.
 }
 
 type DataPipelineReportTaskProgressFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -225,6 +240,7 @@ func (r *DataPipelineReportTaskProgressFuture) Get(ctx workflow.Context) (*datap
 }
 
 type DataPipelineReportTaskRunnerHeartbeatFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -235,6 +251,7 @@ func (r *DataPipelineReportTaskRunnerHeartbeatFuture) Get(ctx workflow.Context) 
 }
 
 type DataPipelineSetStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -245,6 +262,7 @@ func (r *DataPipelineSetStatusFuture) Get(ctx workflow.Context) (*datapipeline.S
 }
 
 type DataPipelineSetTaskStatusFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -255,6 +273,7 @@ func (r *DataPipelineSetTaskStatusFuture) Get(ctx workflow.Context) (*datapipeli
 }
 
 type DataPipelineValidatePipelineDefinitionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -48,6 +48,7 @@ func NewSimpleDBStub() SimpleDBClient {
 }
 
 type SimpleDBBatchDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -58,6 +59,7 @@ func (r *SimpleDBBatchDeleteAttributesFuture) Get(ctx workflow.Context) (*simple
 }
 
 type SimpleDBBatchPutAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -68,6 +70,7 @@ func (r *SimpleDBBatchPutAttributesFuture) Get(ctx workflow.Context) (*simpledb.
 }
 
 type SimpleDBCreateDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -78,6 +81,7 @@ func (r *SimpleDBCreateDomainFuture) Get(ctx workflow.Context) (*simpledb.Create
 }
 
 type SimpleDBDeleteAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -88,6 +92,7 @@ func (r *SimpleDBDeleteAttributesFuture) Get(ctx workflow.Context) (*simpledb.De
 }
 
 type SimpleDBDeleteDomainFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -98,6 +103,7 @@ func (r *SimpleDBDeleteDomainFuture) Get(ctx workflow.Context) (*simpledb.Delete
 }
 
 type SimpleDBDomainMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -108,6 +114,7 @@ func (r *SimpleDBDomainMetadataFuture) Get(ctx workflow.Context) (*simpledb.Doma
 }
 
 type SimpleDBGetAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -118,6 +125,7 @@ func (r *SimpleDBGetAttributesFuture) Get(ctx workflow.Context) (*simpledb.GetAt
 }
 
 type SimpleDBListDomainsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -128,6 +136,7 @@ func (r *SimpleDBListDomainsFuture) Get(ctx workflow.Context) (*simpledb.ListDom
 }
 
 type SimpleDBPutAttributesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -138,6 +147,7 @@ func (r *SimpleDBPutAttributesFuture) Get(ctx workflow.Context) (*simpledb.PutAt
 }
 
 type SimpleDBSelectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -66,6 +66,7 @@ func NewIoT1ClickProjectsStub() IoT1ClickProjectsClient {
 }
 
 type IoT1ClickProjectsAssociateDeviceWithPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +77,7 @@ func (r *IoT1ClickProjectsAssociateDeviceWithPlacementFuture) Get(ctx workflow.C
 }
 
 type IoT1ClickProjectsCreatePlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +88,7 @@ func (r *IoT1ClickProjectsCreatePlacementFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoT1ClickProjectsCreateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -96,6 +99,7 @@ func (r *IoT1ClickProjectsCreateProjectFuture) Get(ctx workflow.Context) (*iot1c
 }
 
 type IoT1ClickProjectsDeletePlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -106,6 +110,7 @@ func (r *IoT1ClickProjectsDeletePlacementFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoT1ClickProjectsDeleteProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -116,6 +121,7 @@ func (r *IoT1ClickProjectsDeleteProjectFuture) Get(ctx workflow.Context) (*iot1c
 }
 
 type IoT1ClickProjectsDescribePlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -126,6 +132,7 @@ func (r *IoT1ClickProjectsDescribePlacementFuture) Get(ctx workflow.Context) (*i
 }
 
 type IoT1ClickProjectsDescribeProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -136,6 +143,7 @@ func (r *IoT1ClickProjectsDescribeProjectFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoT1ClickProjectsDisassociateDeviceFromPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -146,6 +154,7 @@ func (r *IoT1ClickProjectsDisassociateDeviceFromPlacementFuture) Get(ctx workflo
 }
 
 type IoT1ClickProjectsGetDevicesInPlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -156,6 +165,7 @@ func (r *IoT1ClickProjectsGetDevicesInPlacementFuture) Get(ctx workflow.Context)
 }
 
 type IoT1ClickProjectsListPlacementsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -166,6 +176,7 @@ func (r *IoT1ClickProjectsListPlacementsFuture) Get(ctx workflow.Context) (*iot1
 }
 
 type IoT1ClickProjectsListProjectsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -176,6 +187,7 @@ func (r *IoT1ClickProjectsListProjectsFuture) Get(ctx workflow.Context) (*iot1cl
 }
 
 type IoT1ClickProjectsListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -186,6 +198,7 @@ func (r *IoT1ClickProjectsListTagsForResourceFuture) Get(ctx workflow.Context) (
 }
 
 type IoT1ClickProjectsTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -196,6 +209,7 @@ func (r *IoT1ClickProjectsTagResourceFuture) Get(ctx workflow.Context) (*iot1cli
 }
 
 type IoT1ClickProjectsUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -206,6 +220,7 @@ func (r *IoT1ClickProjectsUntagResourceFuture) Get(ctx workflow.Context) (*iot1c
 }
 
 type IoT1ClickProjectsUpdatePlacementFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -216,6 +231,7 @@ func (r *IoT1ClickProjectsUpdatePlacementFuture) Get(ctx workflow.Context) (*iot
 }
 
 type IoT1ClickProjectsUpdateProjectFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

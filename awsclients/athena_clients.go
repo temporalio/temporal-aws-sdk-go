@@ -102,6 +102,7 @@ func NewAthenaStub() AthenaClient {
 }
 
 type AthenaBatchGetNamedQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -112,6 +113,7 @@ func (r *AthenaBatchGetNamedQueryFuture) Get(ctx workflow.Context) (*athena.Batc
 }
 
 type AthenaBatchGetQueryExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -122,6 +124,7 @@ func (r *AthenaBatchGetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.
 }
 
 type AthenaCreateDataCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -132,6 +135,7 @@ func (r *AthenaCreateDataCatalogFuture) Get(ctx workflow.Context) (*athena.Creat
 }
 
 type AthenaCreateNamedQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -142,6 +146,7 @@ func (r *AthenaCreateNamedQueryFuture) Get(ctx workflow.Context) (*athena.Create
 }
 
 type AthenaCreateWorkGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -152,6 +157,7 @@ func (r *AthenaCreateWorkGroupFuture) Get(ctx workflow.Context) (*athena.CreateW
 }
 
 type AthenaDeleteDataCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -162,6 +168,7 @@ func (r *AthenaDeleteDataCatalogFuture) Get(ctx workflow.Context) (*athena.Delet
 }
 
 type AthenaDeleteNamedQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -172,6 +179,7 @@ func (r *AthenaDeleteNamedQueryFuture) Get(ctx workflow.Context) (*athena.Delete
 }
 
 type AthenaDeleteWorkGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -182,6 +190,7 @@ func (r *AthenaDeleteWorkGroupFuture) Get(ctx workflow.Context) (*athena.DeleteW
 }
 
 type AthenaGetDataCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -192,6 +201,7 @@ func (r *AthenaGetDataCatalogFuture) Get(ctx workflow.Context) (*athena.GetDataC
 }
 
 type AthenaGetDatabaseFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -202,6 +212,7 @@ func (r *AthenaGetDatabaseFuture) Get(ctx workflow.Context) (*athena.GetDatabase
 }
 
 type AthenaGetNamedQueryFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -212,6 +223,7 @@ func (r *AthenaGetNamedQueryFuture) Get(ctx workflow.Context) (*athena.GetNamedQ
 }
 
 type AthenaGetQueryExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -222,6 +234,7 @@ func (r *AthenaGetQueryExecutionFuture) Get(ctx workflow.Context) (*athena.GetQu
 }
 
 type AthenaGetQueryResultsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -232,6 +245,7 @@ func (r *AthenaGetQueryResultsFuture) Get(ctx workflow.Context) (*athena.GetQuer
 }
 
 type AthenaGetTableMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -242,6 +256,7 @@ func (r *AthenaGetTableMetadataFuture) Get(ctx workflow.Context) (*athena.GetTab
 }
 
 type AthenaGetWorkGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -252,6 +267,7 @@ func (r *AthenaGetWorkGroupFuture) Get(ctx workflow.Context) (*athena.GetWorkGro
 }
 
 type AthenaListDataCatalogsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -262,6 +278,7 @@ func (r *AthenaListDataCatalogsFuture) Get(ctx workflow.Context) (*athena.ListDa
 }
 
 type AthenaListDatabasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -272,6 +289,7 @@ func (r *AthenaListDatabasesFuture) Get(ctx workflow.Context) (*athena.ListDatab
 }
 
 type AthenaListNamedQueriesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -282,6 +300,7 @@ func (r *AthenaListNamedQueriesFuture) Get(ctx workflow.Context) (*athena.ListNa
 }
 
 type AthenaListQueryExecutionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -292,6 +311,7 @@ func (r *AthenaListQueryExecutionsFuture) Get(ctx workflow.Context) (*athena.Lis
 }
 
 type AthenaListTableMetadataFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -302,6 +322,7 @@ func (r *AthenaListTableMetadataFuture) Get(ctx workflow.Context) (*athena.ListT
 }
 
 type AthenaListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -312,6 +333,7 @@ func (r *AthenaListTagsForResourceFuture) Get(ctx workflow.Context) (*athena.Lis
 }
 
 type AthenaListWorkGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -322,6 +344,7 @@ func (r *AthenaListWorkGroupsFuture) Get(ctx workflow.Context) (*athena.ListWork
 }
 
 type AthenaStartQueryExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -332,6 +355,7 @@ func (r *AthenaStartQueryExecutionFuture) Get(ctx workflow.Context) (*athena.Sta
 }
 
 type AthenaStopQueryExecutionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -342,6 +366,7 @@ func (r *AthenaStopQueryExecutionFuture) Get(ctx workflow.Context) (*athena.Stop
 }
 
 type AthenaTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -352,6 +377,7 @@ func (r *AthenaTagResourceFuture) Get(ctx workflow.Context) (*athena.TagResource
 }
 
 type AthenaUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -362,6 +388,7 @@ func (r *AthenaUntagResourceFuture) Get(ctx workflow.Context) (*athena.UntagReso
 }
 
 type AthenaUpdateDataCatalogFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -372,6 +399,7 @@ func (r *AthenaUpdateDataCatalogFuture) Get(ctx workflow.Context) (*athena.Updat
 }
 
 type AthenaUpdateWorkGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

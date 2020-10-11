@@ -315,6 +315,7 @@ func NewQuickSightStub() QuickSightClient {
 }
 
 type QuickSightCancelIngestionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -325,6 +326,7 @@ func (r *QuickSightCancelIngestionFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightCreateAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -335,6 +337,7 @@ func (r *QuickSightCreateAccountCustomizationFuture) Get(ctx workflow.Context) (
 }
 
 type QuickSightCreateAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -345,6 +348,7 @@ func (r *QuickSightCreateAnalysisFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightCreateDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -355,6 +359,7 @@ func (r *QuickSightCreateDashboardFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightCreateDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -365,6 +370,7 @@ func (r *QuickSightCreateDataSetFuture) Get(ctx workflow.Context) (*quicksight.C
 }
 
 type QuickSightCreateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -375,6 +381,7 @@ func (r *QuickSightCreateDataSourceFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightCreateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -385,6 +392,7 @@ func (r *QuickSightCreateGroupFuture) Get(ctx workflow.Context) (*quicksight.Cre
 }
 
 type QuickSightCreateGroupMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -395,6 +403,7 @@ func (r *QuickSightCreateGroupMembershipFuture) Get(ctx workflow.Context) (*quic
 }
 
 type QuickSightCreateIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -405,6 +414,7 @@ func (r *QuickSightCreateIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*
 }
 
 type QuickSightCreateIngestionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -415,6 +425,7 @@ func (r *QuickSightCreateIngestionFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightCreateNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -425,6 +436,7 @@ func (r *QuickSightCreateNamespaceFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightCreateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -435,6 +447,7 @@ func (r *QuickSightCreateTemplateFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightCreateTemplateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -445,6 +458,7 @@ func (r *QuickSightCreateTemplateAliasFuture) Get(ctx workflow.Context) (*quicks
 }
 
 type QuickSightCreateThemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -455,6 +469,7 @@ func (r *QuickSightCreateThemeFuture) Get(ctx workflow.Context) (*quicksight.Cre
 }
 
 type QuickSightCreateThemeAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -465,6 +480,7 @@ func (r *QuickSightCreateThemeAliasFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightDeleteAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -475,6 +491,7 @@ func (r *QuickSightDeleteAccountCustomizationFuture) Get(ctx workflow.Context) (
 }
 
 type QuickSightDeleteAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -485,6 +502,7 @@ func (r *QuickSightDeleteAnalysisFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightDeleteDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -495,6 +513,7 @@ func (r *QuickSightDeleteDashboardFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightDeleteDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -505,6 +524,7 @@ func (r *QuickSightDeleteDataSetFuture) Get(ctx workflow.Context) (*quicksight.D
 }
 
 type QuickSightDeleteDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -515,6 +535,7 @@ func (r *QuickSightDeleteDataSourceFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightDeleteGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -525,6 +546,7 @@ func (r *QuickSightDeleteGroupFuture) Get(ctx workflow.Context) (*quicksight.Del
 }
 
 type QuickSightDeleteGroupMembershipFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -535,6 +557,7 @@ func (r *QuickSightDeleteGroupMembershipFuture) Get(ctx workflow.Context) (*quic
 }
 
 type QuickSightDeleteIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -545,6 +568,7 @@ func (r *QuickSightDeleteIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*
 }
 
 type QuickSightDeleteNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -555,6 +579,7 @@ func (r *QuickSightDeleteNamespaceFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightDeleteTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -565,6 +590,7 @@ func (r *QuickSightDeleteTemplateFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightDeleteTemplateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -575,6 +601,7 @@ func (r *QuickSightDeleteTemplateAliasFuture) Get(ctx workflow.Context) (*quicks
 }
 
 type QuickSightDeleteThemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -585,6 +612,7 @@ func (r *QuickSightDeleteThemeFuture) Get(ctx workflow.Context) (*quicksight.Del
 }
 
 type QuickSightDeleteThemeAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -595,6 +623,7 @@ func (r *QuickSightDeleteThemeAliasFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightDeleteUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -605,6 +634,7 @@ func (r *QuickSightDeleteUserFuture) Get(ctx workflow.Context) (*quicksight.Dele
 }
 
 type QuickSightDeleteUserByPrincipalIdFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -615,6 +645,7 @@ func (r *QuickSightDeleteUserByPrincipalIdFuture) Get(ctx workflow.Context) (*qu
 }
 
 type QuickSightDescribeAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -625,6 +656,7 @@ func (r *QuickSightDescribeAccountCustomizationFuture) Get(ctx workflow.Context)
 }
 
 type QuickSightDescribeAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -635,6 +667,7 @@ func (r *QuickSightDescribeAccountSettingsFuture) Get(ctx workflow.Context) (*qu
 }
 
 type QuickSightDescribeAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -645,6 +678,7 @@ func (r *QuickSightDescribeAnalysisFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightDescribeAnalysisPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -655,6 +689,7 @@ func (r *QuickSightDescribeAnalysisPermissionsFuture) Get(ctx workflow.Context) 
 }
 
 type QuickSightDescribeDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -665,6 +700,7 @@ func (r *QuickSightDescribeDashboardFuture) Get(ctx workflow.Context) (*quicksig
 }
 
 type QuickSightDescribeDashboardPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -675,6 +711,7 @@ func (r *QuickSightDescribeDashboardPermissionsFuture) Get(ctx workflow.Context)
 }
 
 type QuickSightDescribeDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -685,6 +722,7 @@ func (r *QuickSightDescribeDataSetFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightDescribeDataSetPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -695,6 +733,7 @@ func (r *QuickSightDescribeDataSetPermissionsFuture) Get(ctx workflow.Context) (
 }
 
 type QuickSightDescribeDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -705,6 +744,7 @@ func (r *QuickSightDescribeDataSourceFuture) Get(ctx workflow.Context) (*quicksi
 }
 
 type QuickSightDescribeDataSourcePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -715,6 +755,7 @@ func (r *QuickSightDescribeDataSourcePermissionsFuture) Get(ctx workflow.Context
 }
 
 type QuickSightDescribeGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -725,6 +766,7 @@ func (r *QuickSightDescribeGroupFuture) Get(ctx workflow.Context) (*quicksight.D
 }
 
 type QuickSightDescribeIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -735,6 +777,7 @@ func (r *QuickSightDescribeIAMPolicyAssignmentFuture) Get(ctx workflow.Context) 
 }
 
 type QuickSightDescribeIngestionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -745,6 +788,7 @@ func (r *QuickSightDescribeIngestionFuture) Get(ctx workflow.Context) (*quicksig
 }
 
 type QuickSightDescribeNamespaceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -755,6 +799,7 @@ func (r *QuickSightDescribeNamespaceFuture) Get(ctx workflow.Context) (*quicksig
 }
 
 type QuickSightDescribeTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -765,6 +810,7 @@ func (r *QuickSightDescribeTemplateFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightDescribeTemplateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -775,6 +821,7 @@ func (r *QuickSightDescribeTemplateAliasFuture) Get(ctx workflow.Context) (*quic
 }
 
 type QuickSightDescribeTemplatePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -785,6 +832,7 @@ func (r *QuickSightDescribeTemplatePermissionsFuture) Get(ctx workflow.Context) 
 }
 
 type QuickSightDescribeThemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -795,6 +843,7 @@ func (r *QuickSightDescribeThemeFuture) Get(ctx workflow.Context) (*quicksight.D
 }
 
 type QuickSightDescribeThemeAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -805,6 +854,7 @@ func (r *QuickSightDescribeThemeAliasFuture) Get(ctx workflow.Context) (*quicksi
 }
 
 type QuickSightDescribeThemePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -815,6 +865,7 @@ func (r *QuickSightDescribeThemePermissionsFuture) Get(ctx workflow.Context) (*q
 }
 
 type QuickSightDescribeUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -825,6 +876,7 @@ func (r *QuickSightDescribeUserFuture) Get(ctx workflow.Context) (*quicksight.De
 }
 
 type QuickSightGetDashboardEmbedUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -835,6 +887,7 @@ func (r *QuickSightGetDashboardEmbedUrlFuture) Get(ctx workflow.Context) (*quick
 }
 
 type QuickSightGetSessionEmbedUrlFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -845,6 +898,7 @@ func (r *QuickSightGetSessionEmbedUrlFuture) Get(ctx workflow.Context) (*quicksi
 }
 
 type QuickSightListAnalysesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -855,6 +909,7 @@ func (r *QuickSightListAnalysesFuture) Get(ctx workflow.Context) (*quicksight.Li
 }
 
 type QuickSightListDashboardVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -865,6 +920,7 @@ func (r *QuickSightListDashboardVersionsFuture) Get(ctx workflow.Context) (*quic
 }
 
 type QuickSightListDashboardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -875,6 +931,7 @@ func (r *QuickSightListDashboardsFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightListDataSetsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -885,6 +942,7 @@ func (r *QuickSightListDataSetsFuture) Get(ctx workflow.Context) (*quicksight.Li
 }
 
 type QuickSightListDataSourcesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -895,6 +953,7 @@ func (r *QuickSightListDataSourcesFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightListGroupMembershipsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -905,6 +964,7 @@ func (r *QuickSightListGroupMembershipsFuture) Get(ctx workflow.Context) (*quick
 }
 
 type QuickSightListGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -915,6 +975,7 @@ func (r *QuickSightListGroupsFuture) Get(ctx workflow.Context) (*quicksight.List
 }
 
 type QuickSightListIAMPolicyAssignmentsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -925,6 +986,7 @@ func (r *QuickSightListIAMPolicyAssignmentsFuture) Get(ctx workflow.Context) (*q
 }
 
 type QuickSightListIAMPolicyAssignmentsForUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -935,6 +997,7 @@ func (r *QuickSightListIAMPolicyAssignmentsForUserFuture) Get(ctx workflow.Conte
 }
 
 type QuickSightListIngestionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -945,6 +1008,7 @@ func (r *QuickSightListIngestionsFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightListNamespacesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -955,6 +1019,7 @@ func (r *QuickSightListNamespacesFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -965,6 +1030,7 @@ func (r *QuickSightListTagsForResourceFuture) Get(ctx workflow.Context) (*quicks
 }
 
 type QuickSightListTemplateAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -975,6 +1041,7 @@ func (r *QuickSightListTemplateAliasesFuture) Get(ctx workflow.Context) (*quicks
 }
 
 type QuickSightListTemplateVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -985,6 +1052,7 @@ func (r *QuickSightListTemplateVersionsFuture) Get(ctx workflow.Context) (*quick
 }
 
 type QuickSightListTemplatesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -995,6 +1063,7 @@ func (r *QuickSightListTemplatesFuture) Get(ctx workflow.Context) (*quicksight.L
 }
 
 type QuickSightListThemeAliasesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1005,6 +1074,7 @@ func (r *QuickSightListThemeAliasesFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightListThemeVersionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1015,6 +1085,7 @@ func (r *QuickSightListThemeVersionsFuture) Get(ctx workflow.Context) (*quicksig
 }
 
 type QuickSightListThemesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1025,6 +1096,7 @@ func (r *QuickSightListThemesFuture) Get(ctx workflow.Context) (*quicksight.List
 }
 
 type QuickSightListUserGroupsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1035,6 +1107,7 @@ func (r *QuickSightListUserGroupsFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightListUsersFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1045,6 +1118,7 @@ func (r *QuickSightListUsersFuture) Get(ctx workflow.Context) (*quicksight.ListU
 }
 
 type QuickSightRegisterUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1055,6 +1129,7 @@ func (r *QuickSightRegisterUserFuture) Get(ctx workflow.Context) (*quicksight.Re
 }
 
 type QuickSightRestoreAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1065,6 +1140,7 @@ func (r *QuickSightRestoreAnalysisFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightSearchAnalysesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1075,6 +1151,7 @@ func (r *QuickSightSearchAnalysesFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightSearchDashboardsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1085,6 +1162,7 @@ func (r *QuickSightSearchDashboardsFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1095,6 +1173,7 @@ func (r *QuickSightTagResourceFuture) Get(ctx workflow.Context) (*quicksight.Tag
 }
 
 type QuickSightUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1105,6 +1184,7 @@ func (r *QuickSightUntagResourceFuture) Get(ctx workflow.Context) (*quicksight.U
 }
 
 type QuickSightUpdateAccountCustomizationFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1115,6 +1195,7 @@ func (r *QuickSightUpdateAccountCustomizationFuture) Get(ctx workflow.Context) (
 }
 
 type QuickSightUpdateAccountSettingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1125,6 +1206,7 @@ func (r *QuickSightUpdateAccountSettingsFuture) Get(ctx workflow.Context) (*quic
 }
 
 type QuickSightUpdateAnalysisFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1135,6 +1217,7 @@ func (r *QuickSightUpdateAnalysisFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightUpdateAnalysisPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1145,6 +1228,7 @@ func (r *QuickSightUpdateAnalysisPermissionsFuture) Get(ctx workflow.Context) (*
 }
 
 type QuickSightUpdateDashboardFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1155,6 +1239,7 @@ func (r *QuickSightUpdateDashboardFuture) Get(ctx workflow.Context) (*quicksight
 }
 
 type QuickSightUpdateDashboardPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1165,6 +1250,7 @@ func (r *QuickSightUpdateDashboardPermissionsFuture) Get(ctx workflow.Context) (
 }
 
 type QuickSightUpdateDashboardPublishedVersionFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1175,6 +1261,7 @@ func (r *QuickSightUpdateDashboardPublishedVersionFuture) Get(ctx workflow.Conte
 }
 
 type QuickSightUpdateDataSetFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1185,6 +1272,7 @@ func (r *QuickSightUpdateDataSetFuture) Get(ctx workflow.Context) (*quicksight.U
 }
 
 type QuickSightUpdateDataSetPermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1195,6 +1283,7 @@ func (r *QuickSightUpdateDataSetPermissionsFuture) Get(ctx workflow.Context) (*q
 }
 
 type QuickSightUpdateDataSourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1205,6 +1294,7 @@ func (r *QuickSightUpdateDataSourceFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightUpdateDataSourcePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1215,6 +1305,7 @@ func (r *QuickSightUpdateDataSourcePermissionsFuture) Get(ctx workflow.Context) 
 }
 
 type QuickSightUpdateGroupFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1225,6 +1316,7 @@ func (r *QuickSightUpdateGroupFuture) Get(ctx workflow.Context) (*quicksight.Upd
 }
 
 type QuickSightUpdateIAMPolicyAssignmentFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1235,6 +1327,7 @@ func (r *QuickSightUpdateIAMPolicyAssignmentFuture) Get(ctx workflow.Context) (*
 }
 
 type QuickSightUpdateTemplateFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1245,6 +1338,7 @@ func (r *QuickSightUpdateTemplateFuture) Get(ctx workflow.Context) (*quicksight.
 }
 
 type QuickSightUpdateTemplateAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1255,6 +1349,7 @@ func (r *QuickSightUpdateTemplateAliasFuture) Get(ctx workflow.Context) (*quicks
 }
 
 type QuickSightUpdateTemplatePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1265,6 +1360,7 @@ func (r *QuickSightUpdateTemplatePermissionsFuture) Get(ctx workflow.Context) (*
 }
 
 type QuickSightUpdateThemeFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1275,6 +1371,7 @@ func (r *QuickSightUpdateThemeFuture) Get(ctx workflow.Context) (*quicksight.Upd
 }
 
 type QuickSightUpdateThemeAliasFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1285,6 +1382,7 @@ func (r *QuickSightUpdateThemeAliasFuture) Get(ctx workflow.Context) (*quicksigh
 }
 
 type QuickSightUpdateThemePermissionsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -1295,6 +1393,7 @@ func (r *QuickSightUpdateThemePermissionsFuture) Get(ctx workflow.Context) (*qui
 }
 
 type QuickSightUpdateUserFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

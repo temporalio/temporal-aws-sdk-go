@@ -36,6 +36,7 @@ func NewElasticInferenceStub() ElasticInferenceClient {
 }
 
 type ElasticInferenceDescribeAcceleratorOfferingsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -46,6 +47,7 @@ func (r *ElasticInferenceDescribeAcceleratorOfferingsFuture) Get(ctx workflow.Co
 }
 
 type ElasticInferenceDescribeAcceleratorTypesFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -56,6 +58,7 @@ func (r *ElasticInferenceDescribeAcceleratorTypesFuture) Get(ctx workflow.Contex
 }
 
 type ElasticInferenceDescribeAcceleratorsFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -66,6 +69,7 @@ func (r *ElasticInferenceDescribeAcceleratorsFuture) Get(ctx workflow.Context) (
 }
 
 type ElasticInferenceListTagsForResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -76,6 +80,7 @@ func (r *ElasticInferenceListTagsForResourceFuture) Get(ctx workflow.Context) (*
 }
 
 type ElasticInferenceTagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
@@ -86,6 +91,7 @@ func (r *ElasticInferenceTagResourceFuture) Get(ctx workflow.Context) (*elastici
 }
 
 type ElasticInferenceUntagResourceFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 

@@ -21,6 +21,7 @@ func NewEC2InstanceConnectStub() EC2InstanceConnectClient {
 }
 
 type EC2InstanceConnectSendSSHPublicKeyFuture struct {
+	// public to support Selector.addFuture
 	Future workflow.Future
 }
 
