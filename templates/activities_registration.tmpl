@@ -12,7 +12,7 @@ import (
 	{{- range $services }}
 	{{- $name := .Name }}
     {{- $lowerName := .Name |ToLower }}
-	"go.temporal.io/aws-sdk/awsactivities/{{ $lowerName }}activities"
+	"go.temporal.io/aws-sdk/awsactivities/{{ $lowerName }}"
     {{- end }}
 	"go.temporal.io/aws-sdk/sessionfactory"
 	"go.temporal.io/sdk/activity"
@@ -25,8 +25,8 @@ func RegisterAwsActivities(worker worker.Worker, sess *session.Session, config .
 {{- range $services }}
 {{- $name := .Name }}
 {{ $lowerName := .Name |ToLower }}
-	worker.RegisterActivity({{ $lowerName }}activities.NewActivities(sess, config...))
-	worker.RegisterActivityWithOptions({{ $lowerName }}activities.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.{{.ID}}."})
+	worker.RegisterActivity({{ $lowerName }}.NewActivities(sess, config...))
+	worker.RegisterActivityWithOptions({{ $lowerName }}.NewActivities(sess, config...), activity.RegisterOptions{Name: "aws.{{.ID}}."})
 {{- end }}
 }
 
@@ -36,7 +36,7 @@ func RegisterAwsActivitiesWithSessionFactory(worker worker.Worker, sessionFactor
 {{- range $services }}
 {{- $name := .Name }}
 {{ $lowerName := .Name |ToLower }}
-	worker.RegisterActivity({{ $lowerName }}activities.NewActivitiesWithSessionFactory(sessionFactory))
-	worker.RegisterActivityWithOptions({{ $lowerName }}activities.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.{{.ID}}."})
+	worker.RegisterActivity({{ $lowerName }}.NewActivitiesWithSessionFactory(sessionFactory))
+	worker.RegisterActivityWithOptions({{ $lowerName }}.NewActivitiesWithSessionFactory(sessionFactory), activity.RegisterOptions{Name: "aws.{{.ID}}."})
 {{- end }}
 }
